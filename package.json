@@ -1,0 +1,16 @@
+{
+  "name": "edulearn",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "client": "cd Frontend && npm run dev",
+    "server": "cd Backend && nodemon server.js",
+    "dev": "concurrently -n \"CLIENT,SERVER\" -c \"bgBlue,bgYellow\" \"npm run client\" \"npm run server\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
