@@ -227,9 +227,24 @@ export default function Chatbot() {
     }
   };
 
-  const sidebar = (
-    <aside className="h-full rounded-3xl border border-white/50 bg-white/35 backdrop-blur-2xl shadow-[0_24px_80px_rgba(15,23,42,0.16)] flex flex-col overflow-hidden">
-      <div className="p-4 border-b border-white/45 sticky top-0 z-10 bg-white/50 backdrop-blur-xl">
+  const renderSidebar = (isMobile = false) => (
+    <aside
+      className={`h-full flex flex-col overflow-hidden ${
+        isMobile
+          ? "rounded-2xl border border-slate-200 bg-white/95 backdrop-blur-xl shadow-[0_24px_70px_rgba(2,6,23,0.38)]"
+          : "rounded-3xl border border-white/50 bg-white/35 backdrop-blur-2xl shadow-[0_24px_80px_rgba(15,23,42,0.16)]"
+      }`}
+    >
+      <div
+        className={`p-4 border-b sticky top-0 z-10 backdrop-blur-xl ${
+          isMobile ? "border-slate-200 bg-white/95" : "border-white/45 bg-white/50"
+        }`}
+      >
+        {isMobile && (
+          <p className="mb-3 text-[11px] font-semibold tracking-[0.14em] text-slate-500 uppercase">
+            Conversations
+          </p>
+        )}
         <button
           onClick={handleNewChat}
           className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 text-white px-4 py-3 text-sm font-semibold hover:bg-slate-800 transition-all duration-300"
@@ -253,6 +268,8 @@ export default function Chatbot() {
               className={`w-full text-left rounded-xl border px-3 py-3 transition ${
                 active
                   ? "border-cyan-300 bg-cyan-50/85 shadow-[0_12px_28px_rgba(8,145,178,0.14)]"
+                  : isMobile
+                  ? "border-slate-200 bg-white hover:border-slate-300"
                   : "border-white/60 bg-white/55 hover:border-white/80 hover:bg-white/70"
               } relative`}
             >
@@ -284,7 +301,7 @@ export default function Chatbot() {
   );
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_12%_10%,_#dbeafe_0%,_#eff6ff_36%,_#ecfeff_64%,_#f8fafc_100%)] px-4 md:px-8 py-6 md:py-8 relative overflow-hidden">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_12%_10%,_#dbeafe_0%,_#eff6ff_36%,_#ecfeff_64%,_#f8fafc_100%)] px-3 md:px-8 py-4 md:py-8 relative overflow-hidden">
       <motion.div
         aria-hidden
         className="absolute -top-20 -left-16 h-72 w-72 rounded-full bg-cyan-300/25 blur-3xl"
@@ -298,15 +315,15 @@ export default function Chatbot() {
         transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-[320px_1fr] gap-6 h-[calc(100vh-7rem)] relative z-10">
-        <div className="hidden lg:block h-full">{sidebar}</div>
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-[320px_1fr] gap-4 md:gap-6 h-[calc(100dvh-6.5rem)] md:h-[calc(100vh-7rem)] relative z-10">
+        <div className="hidden lg:block h-full">{renderSidebar()}</div>
 
-        <section className="rounded-3xl border border-white/50 bg-white/35 backdrop-blur-2xl shadow-[0_24px_80px_rgba(15,23,42,0.16)] flex flex-col h-full overflow-hidden">
-          <div className="p-5 border-b border-white/45 bg-white/35 backdrop-blur-xl">
+        <section className="rounded-2xl md:rounded-3xl border border-white/50 bg-white/35 backdrop-blur-2xl shadow-[0_24px_80px_rgba(15,23,42,0.16)] flex flex-col h-full min-h-0 overflow-hidden">
+          <div className="p-4 md:p-5 border-b border-white/45 bg-white/35 backdrop-blur-xl">
             <div className="flex items-start md:items-center justify-between gap-4">
               <div>
-                <h1 className="text-2xl md:text-3xl font-black text-slate-900">Kanthast AI Support</h1>
-                <p className="text-slate-600 mt-1">
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900">Kanthast AI Support</h1>
+                <p className="text-sm md:text-base text-slate-600 mt-1">
                   Modern support assistant for platform issues and study workflow help.
                 </p>
               </div>
@@ -314,7 +331,7 @@ export default function Chatbot() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setSidebarOpen(true)}
-                  className="lg:hidden h-11 w-11 rounded-xl border border-white/70 bg-white/70 text-slate-700 grid place-items-center"
+                  className="lg:hidden h-11 w-11 rounded-xl border border-slate-900/80 bg-slate-900 text-white shadow-[0_10px_22px_rgba(15,23,42,0.28)] grid place-items-center"
                 >
                   <FaBars />
                 </button>
@@ -325,7 +342,7 @@ export default function Chatbot() {
             </div>
           </div>
 
-          <div ref={listRef} className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
+          <div ref={listRef} className="flex-1 min-h-0 overflow-y-auto px-4 md:px-5 py-4 space-y-4">
             {status === "loading" && <p className="text-slate-500">Loading conversations...</p>}
             {status === "loadingSession" && <p className="text-slate-500">Loading selected conversation...</p>}
 
@@ -386,8 +403,8 @@ export default function Chatbot() {
             })}
           </div>
 
-          <div className="px-5 pb-5 pt-3 border-t border-white/50 bg-white/28 backdrop-blur-xl">
-            <div className="flex flex-wrap gap-2 mb-3 max-h-20 overflow-y-auto pr-1">
+          <div className="px-4 md:px-5 pb-4 md:pb-5 pt-3 border-t border-white/50 bg-white/28 backdrop-blur-xl">
+            <div className="flex flex-wrap gap-2 mb-3 max-h-24 md:max-h-20 overflow-y-auto pr-1">
               {quickSuggestions.map((item) => (
                 <button
                   key={item}
@@ -426,7 +443,7 @@ export default function Chatbot() {
               </div>
             )}
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -479,20 +496,20 @@ export default function Chatbot() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-slate-900/45 backdrop-blur-[3px] lg:hidden"
+            className="fixed inset-0 z-50 bg-slate-950/55 backdrop-blur-sm lg:hidden"
           >
             <motion.div
-              initial={{ x: -36, opacity: 0 }}
+              initial={{ x: -42, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -36, opacity: 0 }}
-              transition={{ duration: 0.24 }}
-              className="h-full w-[86%] max-w-[340px] p-4"
+              exit={{ x: -42, opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="h-full w-[92%] max-w-[360px] p-3"
             >
               <div className="h-full relative">
-                {sidebar}
+                {renderSidebar(true)}
                 <button
                   onClick={() => setSidebarOpen(false)}
-                  className="absolute top-3 right-3 h-9 w-9 rounded-lg border border-white/70 bg-white/75 text-slate-700 grid place-items-center"
+                  className="absolute top-3 right-3 h-9 w-9 rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm grid place-items-center"
                 >
                   <FaTimes />
                 </button>
