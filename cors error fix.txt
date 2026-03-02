@@ -1,0 +1,33 @@
+CORS Error Fix (Vercel Frontend -> Render Backend)
+
+Issue
+- Browser error:
+  Access to fetch ... has been blocked by CORS policy
+  No 'Access-Control-Allow-Origin' header is present on the requested resource.
+- This happened because backend CORS allowlist did not include deployed frontend origin:
+  https://kanthast.vercel.app
+
+Code Changes Done
+- File changed: Backend/server.js
+- CORS allowlist now supports:
+  - CLIENT_URL
+  - FRONTEND_URL
+  - CORS_ORIGINS (comma-separated list)
+  - localhost dev URLs
+- Added explicit CORS preflight support:
+  - methods: GET, POST, PUT, PATCH, DELETE, OPTIONS
+  - allowedHeaders: Content-Type, Authorization
+
+What To Set On Render (Backend Service)
+- FRONTEND_URL=https://kanthast.vercel.app
+- Optional: CORS_ORIGINS=https://kanthast.vercel.app
+
+What To Do Next
+1. Push Backend/server.js to GitHub.
+2. Ensure above env vars are set in Render backend.
+3. Redeploy backend from latest commit.
+4. Retry login/signup from https://kanthast.vercel.app.
+
+Expected Result
+- Preflight OPTIONS request should pass.
+- Login/signup API requests should no longer fail due to CORS.

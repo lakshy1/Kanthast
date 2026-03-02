@@ -37,6 +37,11 @@ function App() {
   const isFirstRender = useRef(true);
 
   useLayoutEffect(() => {
+    if (location.hash) return;
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location.pathname, location.search, location.hash]);
+
+  useLayoutEffect(() => {
     const authRoutes = ["/login", "/signup"];
     if (authRoutes.includes(location.pathname)) {
       setLoading(false);
