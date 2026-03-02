@@ -13,6 +13,7 @@ import userRoutes from "./routes/User.js";
 import profileRoutes from "./routes/Profile.js";
 import paymentRoutes from "./routes/Payments.js";
 import courseRoutes from "./routes/Course.js";
+import chatRoutes from "./routes/Chat.js";
 
 dotenv.config();
 
@@ -33,9 +34,21 @@ const PORT = process.env.PORT || 4000;
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
+
+const allowedOrigins = [
+  process.env.CLIENT_URL,
+  "http://localhost:3000",
+  "http://localhost:5173",
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
   })
 );
@@ -54,6 +67,7 @@ app.use("/api/v1/auth", userRoutes);
 app.use("/api/v1/profile", profileRoutes);
 app.use("/api/v1/payments", paymentRoutes);
 app.use("/api/v1/courses", courseRoutes);
+app.use("/api/v1/chat", chatRoutes);
 
 // Default route
 app.get("/", (req, res) => {

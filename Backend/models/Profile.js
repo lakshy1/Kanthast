@@ -2,6 +2,13 @@ import mongoose from "mongoose";
 
 const profileSchema = new mongoose.Schema(
   {
+    email: {
+      type: String,
+      trim: true,
+      lowercase: true,
+      unique: true,
+      sparse: true,
+    },
     gender: {
       type: String,
       enum: ["Male", "Female", "Other"],

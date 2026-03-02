@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import video1 from "../assets/videos/Video-1.mp4";
 import video2 from "../assets/videos/Video-2.mp4";
+import video3 from "../assets/videos/Kanthast.mp4"
 import heroImage from "../assets/images/Image-1.png"
 
 const Homepage = () => {
@@ -56,9 +58,9 @@ const Homepage = () => {
   }, [currentRole, displayText, isDeleting, roles]);
 
   return (
-    <div className="bg-linear-to-br from-[#0B1120] via-blue-950 text-white overflow-x-hidden">
+    <div className="bg-gradient-to-br from-[#0B1120] via-blue-950 text-white overflow-x-hidden">
       <section className="relative py-32">
-        <div className="absolute inset-0 bg-linear-to-br from-[#0B1120] via-blue-950"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-blue-950"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -69,7 +71,7 @@ const Homepage = () => {
           >
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">
               Learn Medicine Through
-              <span className="block text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-cyan-500">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-cyan-500">
                 Immersive Animations
               </span>
             </h1>
@@ -80,12 +82,18 @@ const Homepage = () => {
             </p>
 
             <div className="flex gap-4">
-              <button className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-3 rounded-lg font-semibold transition">
+              <Link
+                to="/signup"
+                className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-3 rounded-lg font-semibold transition"
+              >
                 Get Started
-              </button>
-              <button className="border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10 transition">
+              </Link>
+              <Link
+                to="/lists"
+                className="border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10 transition"
+              >
                 Watch Demo
-              </button>
+              </Link>
             </div>
           </motion.div>
 
@@ -96,7 +104,7 @@ const Homepage = () => {
             className="rounded-2xl overflow-hidden shadow-2xl border border-white/10"
           >
             <video
-              src={video1}
+              src={video3}
               controls
               muted
               autoPlay
@@ -108,7 +116,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-linear-to-br from-[#0B1120] via-blue-950">
+      <section className="py-16 bg-gradient-to-br from-[#0B1120] via-blue-950">
         <div className="max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -117,7 +125,7 @@ const Homepage = () => {
             viewport={{ once: true }}
           >
             <video
-              src={video2}
+              src={video1}
               controls
               muted
               autoPlay
@@ -143,9 +151,9 @@ const Homepage = () => {
               animation-first lessons turn complex concepts into clarity.
             </p>
 
-            <button className="text-cyan-400 font-semibold flex items-center gap-2">
+            <Link to="/signup" className="text-cyan-400 font-semibold flex items-center gap-2">
               Try It Free <FaArrowRight />
-            </button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -175,7 +183,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="relative w-full bg-linear-to-b from-white to-slate-50 py-16 overflow-hidden">
+      <section className="relative w-full bg-gradient-to-b from-white to-slate-50 py-16 overflow-hidden">
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight text-center pb-12">
           How Kanthast Works?
         </h2>
@@ -184,7 +192,7 @@ const Homepage = () => {
           <span className="text-cyan-600">HYPERTENSION</span>
         </h2>
 
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-150 h-150 bg-cyan-100 blur-3xl rounded-full opacity-40 pointer-events-none"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[37.5rem] h-[37.5rem] bg-cyan-100 blur-3xl rounded-full opacity-40 pointer-events-none"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-20 items-center">
           <motion.div
@@ -280,7 +288,7 @@ const Homepage = () => {
       </section>
 
       <section className="relative bg-white py-16 overflow-hidden">
-        <div className="absolute top-40 left-1/2 -translate-x-1/2 w-175 min-h-screen bg-cyan-200/30 blur-3xl rounded-full pointer-events-none"></div>
+        <div className="absolute top-40 left-1/2 -translate-x-1/2 w-[43.75rem] min-h-screen bg-cyan-200/30 blur-3xl rounded-full pointer-events-none"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 text-center">
           <motion.h2
@@ -292,7 +300,7 @@ const Homepage = () => {
           >
             Think like a{" "}
             <span className="relative inline-block">
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-rose-500 to-red-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-600">
                 {displayText}
               </span>
 
@@ -350,13 +358,18 @@ const Homepage = () => {
             Join thousands of students learning with Kanthast
           </motion.h2>
 
-          <motion.button
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="bg-purple-600 text-white px-8 py-4 rounded-xl shadow-lg hover:bg-purple-700 transition-all duration-300 text-lg font-semibold"
+            className="inline-block"
           >
-            Try it Free
-          </motion.button>
+            <Link
+              to="/signup"
+              className="bg-purple-600 text-white px-8 py-4 rounded-xl shadow-lg hover:bg-purple-700 transition-all duration-300 text-lg font-semibold inline-block"
+            >
+              Try it Free
+            </Link>
+          </motion.div>
 
         </div>
       </section>

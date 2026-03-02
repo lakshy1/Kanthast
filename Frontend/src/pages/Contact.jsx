@@ -3,16 +3,28 @@ import { useState } from "react";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 34 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7 },
+    transition: { duration: 0.68, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
+const stagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.08,
+    },
+  },
+};
+
+const sectionViewport = { once: true, amount: 0.22 };
+
 export default function Contact() {
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [status, setStatus] = useState("idle");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,196 +34,182 @@ export default function Contact() {
     const formData = new FormData(form);
 
     try {
-      await fetch("/", {
-        method: "POST",
-        body: formData,
-      });
-
+      await fetch("/", { method: "POST", body: formData });
       setStatus("success");
       form.reset();
-
       setTimeout(() => setStatus("idle"), 3000);
-    } catch (error) {
+    } catch {
       setStatus("error");
       setTimeout(() => setStatus("idle"), 3000);
     }
   };
 
   return (
-    <div className="overflow-x-hidden relative">
+    <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#081124] via-[#0f1d42] to-[#0d182f] py-24 text-white">
+        <motion.div
+          animate={{ y: [0, -10, 0], opacity: [0.5, 0.75, 0.5] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          className="pointer-events-none absolute -top-20 -left-16 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl"
+        />
+        <motion.div
+          animate={{ y: [0, 12, 0], opacity: [0.45, 0.7, 0.45] }}
+          transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
+          className="pointer-events-none absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-blue-300/20 blur-3xl"
+        />
 
-      {/* ================= HERO ================= */}
-      <section className="bg-linear-to-br from-[#0B1120] via-blue-950 to-[#0f172a] text-white py-28">
-        <div className="max-w-5xl mx-auto px-6 md:px-16 text-center">
-          <motion.h1
-            variants={fadeUp}
+        <div className="relative mx-auto max-w-6xl px-6 md:px-16">
+          <motion.div
+            variants={stagger}
             initial="hidden"
             animate="show"
-            className="text-4xl md:text-6xl font-bold"
+            className="rounded-3xl border border-white/20 bg-white/10 px-6 py-10 text-center backdrop-blur-2xl shadow-[0_30px_110px_rgba(2,8,23,0.45)] md:px-12"
           >
-            Let’s Connect
-          </motion.h1>
-
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            transition={{ delay: 0.2 }}
-            className="mt-6 text-lg md:text-xl text-gray-300"
-          >
-            Have questions about Kanthast? We’d love to hear from you.
-            Our team is here to help.
-          </motion.p>
+            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-black">
+              Let&apos;s Connect
+            </motion.h1>
+            <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-cyan-100/90">
+              Have questions about Kanthast? Share your requirements and our team will respond quickly.
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
-      {/* ================= CONTACT INFO ================= */}
-      <section className="py-24 bg-linear-to-br from-slate-50 via-white to-cyan-50 text-slate-900">
-        <div className="max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-3 gap-10">
+      <section className="py-14">
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-3 md:px-16"
+        >
           {[
-            {
-              icon: <FaEnvelope />,
-              title: "Email Us",
-              desc: "support@kanthast.com",
-            },
-            {
-              icon: <FaPhoneAlt />,
-              title: "Call Us",
-              desc: "+91 98765 43210",
-            },
-            {
-              icon: <FaMapMarkerAlt />,
-              title: "Location",
-              desc: "Mumbai, India",
-            },
-          ].map((item, index) => (
+            { icon: <FaEnvelope />, title: "Email Us", desc: "support@kanthast.com" },
+            { icon: <FaPhoneAlt />, title: "Call Us", desc: "+91 98765 43210" },
+            { icon: <FaMapMarkerAlt />, title: "Location", desc: "Mumbai, India" },
+          ].map((item) => (
             <motion.div
-              key={index}
+              key={item.title}
               variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition"
+              whileHover={{ y: -8, scale: 1.02 }}
+              transition={{ duration: 0.28, ease: "easeOut" }}
+              className="rounded-2xl border border-white/60 bg-white/55 p-7 backdrop-blur-2xl shadow-[0_18px_55px_rgba(15,23,42,0.11)]"
             >
-              <div className="text-cyan-600 text-2xl mb-4">
+              <motion.div whileHover={{ rotate: -6, scale: 1.12 }} className="text-2xl text-cyan-600">
                 {item.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                {item.title}
-              </h3>
-              <p className="text-slate-600">{item.desc}</p>
+              </motion.div>
+              <h3 className="mt-4 text-xl font-bold text-slate-900">{item.title}</h3>
+              <p className="mt-2 text-slate-600">{item.desc}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
-      {/* ================= CONTACT FORM ================= */}
-      <section className="py-28 bg-linear-to-br from-slate-50 via-white to-cyan-50 text-slate-900 relative overflow-hidden">
-
-        {/* Glow Background */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w h-175 bg-cyan-200/40 blur-3xl rounded-full pointer-events-none"></div>
-
-        <div className="relative max-w-4xl mx-auto px-6 md:px-16">
+      <section className="pb-20 pt-10">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          className="mx-auto max-w-5xl px-6 md:px-16"
+        >
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-white border border-slate-200 rounded-3xl p-10 shadow-[0_30px_80px_rgba(0,0,0,0.08)]"
+            whileHover={{ y: -4 }}
+            className="relative overflow-hidden rounded-3xl border border-white/60 bg-white/62 p-8 backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:p-10"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-              Send Us a Message
-            </h2>
+            <motion.div
+              animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
+              transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
+              className="pointer-events-none absolute -top-16 -right-10 h-56 w-56 rounded-full bg-cyan-200/30 blur-3xl"
+            />
+
+            <h2 className="relative text-center text-3xl md:text-4xl font-black text-slate-900">Send Us a Message</h2>
 
             <form
               name="contact"
               method="POST"
               data-netlify="true"
               onSubmit={handleSubmit}
-              className="space-y-6"
+              className="relative mt-8 space-y-5"
             >
-              {/* Netlify Hidden Field */}
               <input type="hidden" name="form-name" value="contact" />
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <input
+              <div className="grid gap-5 md:grid-cols-2">
+                <motion.input
+                  whileFocus={{ scale: 1.01 }}
                   type="text"
                   name="name"
                   placeholder="Your Name"
                   required
-                  className="w-full px-5 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition"
+                  className="w-full rounded-xl border border-slate-300/70 bg-white/80 px-4 py-3 text-slate-900 outline-none transition focus:ring-2 focus:ring-cyan-400"
                 />
-
-                <input
+                <motion.input
+                  whileFocus={{ scale: 1.01 }}
                   type="email"
                   name="email"
                   placeholder="Your Email"
                   required
-                  className="w-full px-5 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition"
+                  className="w-full rounded-xl border border-slate-300/70 bg-white/80 px-4 py-3 text-slate-900 outline-none transition focus:ring-2 focus:ring-cyan-400"
                 />
               </div>
 
-              <input
+              <motion.input
+                whileFocus={{ scale: 1.01 }}
                 type="text"
                 name="subject"
                 placeholder="Subject"
-                className="w-full px-5 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition"
+                className="w-full rounded-xl border border-slate-300/70 bg-white/80 px-4 py-3 text-slate-900 outline-none transition focus:ring-2 focus:ring-cyan-400"
               />
 
-              <textarea
+              <motion.textarea
+                whileFocus={{ scale: 1.01 }}
                 name="message"
                 rows="5"
                 placeholder="Your Message"
                 required
-                className="w-full px-5 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition"
+                className="w-full rounded-xl border border-slate-300/70 bg-white/80 px-4 py-3 text-slate-900 outline-none transition focus:ring-2 focus:ring-cyan-400"
               />
 
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.98 }}
+                whileHover={{ y: -2, scale: 1.01 }}
                 type="submit"
                 disabled={status === "loading"}
-                className={`w-full font-semibold py-4 rounded-xl shadow-lg transition ${
+                className={`w-full rounded-xl py-3.5 font-semibold transition ${
                   status === "loading"
-                    ? "bg-yellow-300 cursor-not-allowed"
-                    : "bg-yellow-400 hover:bg-yellow-300"
-                } text-black`}
+                    ? "cursor-not-allowed bg-slate-300 text-slate-600"
+                    : "bg-slate-900 text-white hover:bg-slate-800"
+                }`}
               >
                 {status === "loading" ? "Sending..." : "Send Message"}
               </motion.button>
             </form>
           </motion.div>
-        </div>
+        </motion.div>
       </section>
 
-      {/* ================= TOAST NOTIFICATIONS ================= */}
       <AnimatePresence>
         {status === "success" && (
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 60 }}
-            transition={{ duration: 0.3 }}
-            className="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-4 rounded-xl shadow-2xl z-50"
+            initial={{ opacity: 0, y: 30, scale: 0.92 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 30, scale: 0.92 }}
+            className="fixed bottom-6 right-6 z-50 rounded-xl bg-emerald-500 px-5 py-3 text-white shadow-2xl"
           >
-            ✅ Message sent successfully!
+            Message sent successfully.
           </motion.div>
         )}
-
         {status === "error" && (
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 60 }}
-            transition={{ duration: 0.3 }}
-            className="fixed bottom-6 right-6 bg-red-500 text-white px-6 py-4 rounded-xl shadow-2xl z-50"
+            initial={{ opacity: 0, y: 30, scale: 0.92 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 30, scale: 0.92 }}
+            className="fixed bottom-6 right-6 z-50 rounded-xl bg-red-500 px-5 py-3 text-white shadow-2xl"
           >
-            ❌ Something went wrong. Please try again.
+            Something went wrong. Please try again.
           </motion.div>
         )}
       </AnimatePresence>
-
     </div>
   );
 }

@@ -4,195 +4,218 @@ import Image2 from "../assets/images/Image-4.png";
 import Image3 from "../assets/images/Image-5.png";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 60 },
+  hidden: { opacity: 0, y: 34 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8 },
+    transition: { duration: 0.68, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
+const stagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.08,
+    },
+  },
+};
+
+const sectionViewport = { once: true, amount: 0.22 };
+
 export default function Courses() {
   return (
-    <div className="scroll-smooth">
-      {/* ================= COURSES OVERVIEW STRIP ================= */}
-      <section className="py-24 bg-linear-to-br from-blue-900 via-blue-950 to-[#0f172a] text-white relative overflow-hidden">
-        {/* Glow effect */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-cyan-400/10 blur-3xl rounded-full pointer-events-none"></div>
+    <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
+      <section className="relative overflow-hidden py-24">
+        <motion.div
+          animate={{ y: [0, -10, 0], opacity: [0.5, 0.75, 0.5] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          className="pointer-events-none absolute -top-20 -left-16 h-72 w-72 rounded-full bg-cyan-300/25 blur-3xl"
+        />
+        <motion.div
+          animate={{ y: [0, 12, 0], opacity: [0.45, 0.7, 0.45] }}
+          transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
+          className="pointer-events-none absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-blue-300/25 blur-3xl"
+        />
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-16 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold mb-16"
+        <div className="relative mx-auto max-w-6xl px-6 md:px-16">
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            animate="show"
+            className="rounded-3xl border border-white/60 bg-white/70 px-6 py-10 text-center backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:px-12"
           >
-            Designed for Every Stage of Medical Mastery
-          </motion.h2>
+            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-black leading-tight text-slate-900">
+              Programs Built for Every Medical Stage
+            </motion.h1>
+            <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-slate-600">
+              Animation-first learning tracks with exam-focused pathways across USMLE, MCAT, and NCLEX.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-10">
-            {[
-              {
-                title: "Medicine / USMLE",
-                desc: "Advanced clinical reasoning and systems-based learning for future physicians.",
-              },
-              {
-                title: "Premedicine / MCAT",
-                desc: "Strong conceptual foundations in biology and chemistry with visual clarity.",
-              },
-              {
-                title: "Nursing / NCLEX",
-                desc: "Practical patient care thinking and exam-ready visual training.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition duration-300"
+      <section className="py-14">
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-3 md:px-16"
+        >
+          {[
+            {
+              title: "Medicine / USMLE",
+              desc: "Advanced clinical reasoning and systems-based learning for future physicians.",
+            },
+            {
+              title: "Premedicine / MCAT",
+              desc: "Strong conceptual foundations in biology and chemistry with visual clarity.",
+            },
+            {
+              title: "Nursing / NCLEX",
+              desc: "Practical patient-care thinking and exam-ready visual training.",
+            },
+          ].map((item) => (
+            <motion.div
+              key={item.title}
+              variants={fadeUp}
+              whileHover={{ y: -8, scale: 1.02 }}
+              transition={{ duration: 0.28, ease: "easeOut" }}
+              className="rounded-2xl border border-white/60 bg-white/55 p-7 backdrop-blur-2xl shadow-[0_18px_55px_rgba(15,23,42,0.11)]"
+            >
+              <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
+              <p className="mt-3 text-slate-600 leading-relaxed">{item.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
+
+      <section id="medicine" className="py-10 md:py-14">
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          className="mx-auto max-w-7xl px-6 md:px-16"
+        >
+          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:grid-cols-2 md:p-8">
+            <motion.div variants={fadeUp}>
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900">Medicine / USMLE</h2>
+              <p className="mt-4 text-slate-600 text-lg leading-relaxed">
+                Master complex physiology, pathology, and clinical reasoning through immersive visual lessons designed
+                for USMLE performance.
+              </p>
+              <motion.button
+                whileHover={{ y: -3, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="mt-7 rounded-xl bg-slate-900 px-7 py-3.5 font-semibold text-white transition hover:bg-slate-800"
               >
-                <h3 className="text-xl font-semibold mb-4 text-yellow-400">
-                  {item.title}
-                </h3>
+                Explore Medicine
+              </motion.button>
+            </motion.div>
 
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -6, scale: 1.01 }}
+              transition={{ duration: 0.35 }}
+              className="overflow-hidden rounded-2xl border border-slate-200 shadow-xl"
+            >
+              <motion.img
+                src={Image1}
+                alt="Medicine course preview"
+                className="h-[380px] w-full object-cover"
+                whileHover={{ scale: 1.04 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              />
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      {/* ================= MEDICINE (WHITE) ================= */}
-      <section
-        id="medicine"
-        className="h-screen bg-white text-slate-900 flex items-center"
-      >
-        <div className="max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Medicine / USMLE
-            </h1>
+      <section id="premed" className="py-10 md:py-14">
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          className="mx-auto max-w-7xl px-6 md:px-16"
+        >
+          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:grid-cols-2 md:p-8">
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -6, scale: 1.01 }}
+              transition={{ duration: 0.35 }}
+              className="overflow-hidden rounded-2xl border border-slate-200 shadow-xl"
+            >
+              <motion.img
+                src={Image2}
+                alt="Premedicine course preview"
+                className="h-[380px] w-full object-cover"
+                whileHover={{ scale: 1.04 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              />
+            </motion.div>
 
-            <p className="text-lg text-slate-600 mb-8">
-              Master complex physiology, pathology, and clinical reasoning
-              through immersive 3D animation-driven lessons designed
-              specifically for USMLE success.
-            </p>
-
-            <button className="bg-blue-950 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:bg-blue-900 transition">
-              Explore Medicine
-            </button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="h-105 rounded-3xl shadow-xl overflow-hidden"
-          >
-            <img
-              src={Image1}
-              alt="Course preview"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-        </div>
+            <motion.div variants={fadeUp}>
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900">Premedicine / MCAT</h2>
+              <p className="mt-4 text-slate-600 text-lg leading-relaxed">
+                Concept-driven animated lessons simplifying biology, chemistry, and reasoning skills to build strong
+                foundations for MCAT readiness.
+              </p>
+              <motion.button
+                whileHover={{ y: -2 }}
+                disabled
+                className="mt-7 rounded-xl border border-slate-400 bg-slate-200 px-7 py-3.5 font-semibold text-slate-600 cursor-not-allowed"
+              >
+                Coming Soon
+              </motion.button>
+            </motion.div>
+          </div>
+        </motion.div>
       </section>
 
-      {/* ================= PREMED (BLUE) ================= */}
-      <section
-        id="premed"
-        className="h-screen bg-linear-to-br from-blue-900 via-blue-950 to-[#0f172a] text-white flex items-center"
-      >
-        <div className="max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="h-105 rounded-3xl shadow-xl overflow-hidden"
-          >
-            <img
-              src={Image2}
-              alt="Course preview"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
+      <section id="nursing" className="pb-20 pt-10 md:pt-14">
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          className="mx-auto max-w-7xl px-6 md:px-16"
+        >
+          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:grid-cols-2 md:p-8">
+            <motion.div variants={fadeUp}>
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900">Nursing / NCLEX</h2>
+              <p className="mt-4 text-slate-600 text-lg leading-relaxed">
+                Interactive visual modules designed to simplify patient care, pharmacology, and real-world nursing
+                scenarios for NCLEX mastery.
+              </p>
+              <motion.button
+                whileHover={{ y: -2 }}
+                disabled
+                className="mt-7 rounded-xl border border-slate-400 bg-slate-200 px-7 py-3.5 font-semibold text-slate-600 cursor-not-allowed"
+              >
+                Coming Soon
+              </motion.button>
+            </motion.div>
 
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Premedicine / MCAT
-            </h1>
-
-            <p className="text-lg text-gray-300 mb-8">
-              Concept-driven animated lessons simplifying biology, chemistry,
-              and reasoning skills to build strong foundations for MCAT
-              excellence.
-            </p>
-
-            <button className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-semibold shadow-lg hover:bg-yellow-300 transition">
-              Explore Premed
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ================= NURSING (WHITE) ================= */}
-      <section
-        id="nursing"
-        className="h-screen bg-white text-slate-900 flex items-center"
-      >
-        <div className="max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Nursing / NCLEX
-            </h1>
-
-            <p className="text-lg text-slate-600 mb-8">
-              Interactive visual modules designed to simplify patient care,
-              pharmacology, and real-world nursing scenarios for NCLEX mastery.
-            </p>
-
-            <button className="bg-blue-950 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:bg-blue-900 transition">
-              Explore Nursing
-            </button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="h-105 rounded-3xl shadow-xl overflow-hidden"
-          >
-            <img
-              src={Image3}
-              alt="Course preview"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-        </div>
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -6, scale: 1.01 }}
+              transition={{ duration: 0.35 }}
+              className="overflow-hidden rounded-2xl border border-slate-200 shadow-xl"
+            >
+              <motion.img
+                src={Image3}
+                alt="Nursing course preview"
+                className="h-[380px] w-full object-cover"
+                whileHover={{ scale: 1.04 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              />
+            </motion.div>
+          </div>
+        </motion.div>
       </section>
     </div>
   );

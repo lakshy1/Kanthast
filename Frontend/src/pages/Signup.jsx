@@ -1,8 +1,26 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaEye, FaEyeSlash, FaCheck } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import { FaEye, FaEyeSlash, FaCheckCircle } from "react-icons/fa";
+import { sendOtp, signUp } from "../utils/authApi";
+
+const panelVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.98 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1], staggerChildren: 0.06 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } },
+};
 
 export default function Signup() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -12,198 +30,269 @@ export default function Signup() {
     password: "",
     role: "Student",
   });
-
-  const [generatedOtp, setGeneratedOtp] = useState(null);
   const [otpSent, setOtpSent] = useState(false);
-  const [otpStatus, setOtpStatus] = useState("idle"); // idle | loading | sent
-  const [signupStatus, setSignupStatus] = useState("idle"); // idle | loading | success
+  const [otpStatus, setOtpStatus] = useState("idle");
+  const [signupStatus, setSignupStatus] = useState("idle");
   const [showPassword, setShowPassword] = useState(false);
   const [toast, setToast] = useState(null);
+  const [apiError, setApiError] = useState("");
 
-  // ---------------- HANDLE CHANGE ----------------
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setApiError("");
   };
 
-  // ---------------- SEND OTP ----------------
-  const sendOtp = () => {
+  const sendOtpHandler = async () => {
     if (!form.email) {
-      setToast("Enter email before sending OTP");
-      setTimeout(() => setToast(null), 3000);
+      setToast("Enter email first");
+      setTimeout(() => setToast(null), 2200);
       return;
     }
 
     setOtpStatus("loading");
-
-    setTimeout(() => {
-      const otp = Math.floor(100000 + Math.random() * 900000).toString();
-      setGeneratedOtp(otp);
-      setOtpSent(true);
+    setApiError("");
+    try {
+      await sendOtp(form.email);
       setOtpStatus("sent");
-
-      console.log("Generated OTP:", otp);
-
-      setToast("OTP sent successfully!");
-      setTimeout(() => setToast(null), 3000);
-    }, 1200);
+      setOtpSent(true);
+      setToast("OTP sent successfully");
+      setTimeout(() => setToast(null), 2200);
+    } catch (error) {
+      setOtpStatus("idle");
+      setApiError(error.message || "Failed to send OTP");
+    }
   };
 
-  // ---------------- SIGNUP ----------------
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setApiError("");
 
-    if (!otpSent || form.otp !== generatedOtp) {
-      setToast("Invalid OTP");
-      setTimeout(() => setToast(null), 3000);
+    if (!otpSent) {
+      setApiError("Please send OTP first");
       return;
     }
 
     setSignupStatus("loading");
+    try {
+      await signUp({
+        firstName: form.firstName,
+        lastName: form.lastName,
+        email: form.email,
+        contactNumber: form.phone,
+        password: form.password,
+        accountType: form.role,
+        otp: form.otp,
+      });
 
-    setTimeout(() => {
-      console.log("Signup Data:", form);
       setSignupStatus("success");
-
-      setToast("Account created successfully!");
+      setToast("Account created successfully");
       setTimeout(() => {
         setToast(null);
-        setSignupStatus("idle");
-      }, 3000);
-    }, 2000);
+        navigate("/login");
+      }, 1200);
+    } catch (error) {
+      setSignupStatus("idle");
+      setApiError(error.message || "Signup failed");
+    }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-slate-50 via-white to-cyan-50 relative overflow-hidden">
-
-      <div className="absolute w-150 h-150 bg-cyan-300/30 blur-3xl rounded-full pointer-events-none"></div>
+    <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)] px-4 py-12 flex items-center justify-center">
+      <motion.div
+        animate={{ y: [0, -10, 0], opacity: [0.5, 0.72, 0.5] }}
+        transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute -top-20 -left-16 h-72 w-72 rounded-full bg-cyan-300/25 blur-3xl"
+      />
+      <motion.div
+        animate={{ y: [0, 12, 0], opacity: [0.42, 0.68, 0.42] }}
+        transition={{ duration: 6.2, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-blue-200/30 blur-3xl"
+      />
 
       <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative z-10 w-full max-w-lg bg-white border border-slate-200 rounded-3xl p-10 shadow-[0_40px_80px_rgba(0,0,0,0.08)]"
+        variants={panelVariants}
+        initial="hidden"
+        animate="show"
+        className="relative z-10 w-full max-w-2xl rounded-3xl border border-white/60 bg-white/70 p-7 md:p-9 backdrop-blur-2xl shadow-[0_30px_90px_rgba(15,23,42,0.15)]"
       >
-        <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-          Create Account
-        </h2>
+        <motion.div variants={itemVariants} className="mb-7">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">Start Learning</p>
+          <h2 className="mt-2 text-3xl md:text-4xl font-black text-slate-900">Create Your Account</h2>
+          <p className="mt-2 text-sm md:text-base text-slate-600">Secure signup with OTP verification.</p>
+          <div className="mt-5 h-px w-full bg-gradient-to-r from-cyan-300/0 via-cyan-400/45 to-cyan-300/0" />
+        </motion.div>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <motion.div variants={itemVariants} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label htmlFor="signup-firstName" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
+                First Name
+              </label>
+              <GlassInput id="signup-firstName" name="firstName" placeholder="First Name" value={form.firstName} onChange={handleChange} required />
+            </div>
+            <div>
+              <label htmlFor="signup-lastName" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
+                Last Name
+              </label>
+              <GlassInput id="signup-lastName" name="lastName" placeholder="Last Name" value={form.lastName} onChange={handleChange} required />
+            </div>
+          </motion.div>
 
-          {/* Names */}
-          <div className="grid grid-cols-2 gap-4">
-            <input name="firstName" placeholder="First Name" onChange={handleChange} className="inputStyle"/>
-            <input name="lastName" placeholder="Last Name" onChange={handleChange} className="inputStyle"/>
-          </div>
-
-          {/* Email + OTP */}
-          <div className="flex gap-3">
-            <input name="email" placeholder="Email" onChange={handleChange} className="inputStyle flex-1"/>
-            
-            <motion.button
-              type="button"
-              onClick={sendOtp}
-              whileTap={{ scale: 0.95 }}
-              className="px-4 rounded-xl bg-blue-950 text-white min-w-28 flex items-center justify-center"
-            >
-              {otpStatus === "loading" ? "Sending..." : otpStatus === "sent" ? "Sent ✓" : "Send OTP"}
-            </motion.button>
-          </div>
+          <motion.div variants={itemVariants}>
+            <label htmlFor="signup-email" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
+              Email
+            </label>
+            <div className="flex gap-3">
+              <GlassInput
+                id="signup-email"
+                name="email"
+                type="email"
+                placeholder="Email address"
+                value={form.email}
+                onChange={handleChange}
+                className="flex-1"
+                required
+              />
+              <motion.button
+                type="button"
+                whileTap={{ scale: 0.96 }}
+                whileHover={{ y: -1 }}
+                onClick={sendOtpHandler}
+                disabled={otpStatus === "loading"}
+                className={`shrink-0 min-w-[7.5rem] rounded-xl border px-4 py-3 font-bold text-white shadow-[0_10px_24px_rgba(8,145,178,0.24)] transition disabled:opacity-70 disabled:shadow-none ${
+                  otpStatus === "sent"
+                    ? "border-emerald-700 bg-emerald-600 hover:bg-emerald-700"
+                    : "border-cyan-700 bg-cyan-600 hover:bg-cyan-700"
+                }`}
+              >
+                {otpStatus === "loading" ? "Sending..." : otpStatus === "sent" ? "Sent" : "Send OTP"}
+              </motion.button>
+            </div>
+          </motion.div>
 
           <AnimatePresence>
             {otpSent && (
-              <motion.input
-                initial={{ opacity: 0, y: -10 }}
+              <motion.div
+                initial={{ opacity: 0, y: -8 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                name="otp"
-                placeholder="Enter OTP"
-                onChange={handleChange}
-                className="inputStyle"
-              />
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.3 }}
+              >
+                <label htmlFor="signup-otp" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
+                  OTP
+                </label>
+                <GlassInput id="signup-otp" name="otp" placeholder="Enter OTP" value={form.otp} onChange={handleChange} required />
+              </motion.div>
             )}
           </AnimatePresence>
 
-          {/* Phone */}
-          <input name="phone" placeholder="Phone Number" onChange={handleChange} className="inputStyle"/>
+          <motion.div variants={itemVariants}>
+            <label htmlFor="signup-phone" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
+              Phone Number
+            </label>
+            <GlassInput id="signup-phone" name="phone" placeholder="Phone Number" value={form.phone} onChange={handleChange} />
+          </motion.div>
 
-          {/* Password */}
-          <div className="relative">
-            <input
-              type={showPassword ? "text" : "password"}
+          <motion.div variants={itemVariants} className="relative">
+            <label htmlFor="signup-password" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
+              Password
+            </label>
+            <GlassInput
+              id="signup-password"
               name="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Password"
+              value={form.password}
               onChange={handleChange}
-              className="inputStyle"
+              required
             />
-            <div
-              className="absolute right-4 top-4 cursor-pointer text-slate-500"
-              onClick={() => setShowPassword(!showPassword)}
+            <button
+              type="button"
+              onClick={() => setShowPassword((s) => !s)}
+              className="absolute right-4 top-[2.45rem] text-slate-500 hover:text-slate-700 transition"
             >
               {showPassword ? <FaEyeSlash /> : <FaEye />}
-            </div>
-          </div>
+            </button>
+          </motion.div>
 
-          {/* Role */}
-          <select name="role" onChange={handleChange} className="inputStyle">
-            <option>Student</option>
-            <option>Instructor</option>
-          </select>
+          <motion.div variants={itemVariants}>
+            <label htmlFor="signup-role" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
+              Role
+            </label>
+            <select
+              id="signup-role"
+              name="role"
+              value={form.role}
+              onChange={handleChange}
+              className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200 transition"
+            >
+              <option value="Student">Student</option>
+              <option value="Instructor">Instructor</option>
+            </select>
+          </motion.div>
 
-          {/* Signup Button */}
           <motion.button
-            whileTap={{ scale: 0.95 }}
+            variants={itemVariants}
+            whileTap={{ scale: 0.985 }}
+            whileHover={{ y: -2 }}
             type="submit"
-            className="w-full py-4 rounded-xl font-semibold bg-yellow-400 text-black shadow-lg flex items-center justify-center gap-2"
+            disabled={signupStatus === "loading"}
+            className="w-full rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 py-3.5 font-bold text-white shadow-[0_14px_30px_rgba(8,145,178,0.28)] hover:from-cyan-600 hover:to-blue-700 disabled:opacity-60 disabled:shadow-none flex items-center justify-center gap-2 transition"
           >
             {signupStatus === "loading" && (
-              <motion.div
+              <motion.span
                 animate={{ rotate: 360 }}
                 transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-                className="w-5 h-5 border-2 border-black border-t-transparent rounded-full"
+                className="h-4 w-4 rounded-full border-2 border-white border-t-transparent"
               />
             )}
-
-            {signupStatus === "success" && <FaCheck />}
-
-            {signupStatus === "idle" && "Sign Up"}
-            {signupStatus === "loading" && "Creating..."}
-            {signupStatus === "success" && "Success"}
+            {signupStatus === "success" && <FaCheckCircle />}
+            {signupStatus === "loading" ? "Creating..." : signupStatus === "success" ? "Success" : "Sign Up"}
           </motion.button>
 
+          <motion.p variants={itemVariants} className="text-center text-sm text-slate-600">
+            Already have an account?{" "}
+            <Link to="/login" className="font-semibold text-cyan-700 hover:text-cyan-800">
+              Sign In
+            </Link>
+          </motion.p>
+
+          <AnimatePresence>
+            {apiError && (
+              <motion.p
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 8 }}
+                className="text-sm text-center text-rose-500"
+              >
+                {apiError}
+              </motion.p>
+            )}
+          </AnimatePresence>
         </form>
       </motion.div>
 
-      {/* Toast */}
       <AnimatePresence>
         {toast && (
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 60 }}
-            className="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-4 rounded-xl shadow-2xl z-9999"
+            exit={{ opacity: 0, y: 28 }}
+            className="fixed bottom-6 right-6 rounded-xl border border-emerald-200 bg-emerald-500 px-5 py-3 text-white shadow-[0_14px_30px_rgba(16,185,129,0.32)]"
           >
             {toast}
           </motion.div>
         )}
       </AnimatePresence>
-
-      <style>
-        {`
-          .inputStyle {
-            width: 100%;
-            padding: 12px 16px;
-            border-radius: 12px;
-            background: #f8fafc;
-            border: 1px solid #cbd5e1;
-            outline: none;
-            transition: all 0.3s ease;
-          }
-          .inputStyle:focus {
-            border-color: #06b6d4;
-            box-shadow: 0 0 0 2px rgba(6,182,212,0.2);
-          }
-        `}
-      </style>
     </div>
+  );
+}
+
+function GlassInput({ className = "", ...props }) {
+  return (
+    <input
+      {...props}
+      className={`w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200 transition ${className}`}
+    />
   );
 }

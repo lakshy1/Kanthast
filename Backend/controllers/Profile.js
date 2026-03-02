@@ -29,6 +29,16 @@ export const updateProfile = async (req, res) => {
       success: true,
       message: "Profile updated successfully",
       profile: updatedProfile,
+      user: {
+        _id: userDetails._id,
+        firstName: userDetails.firstName,
+        lastName: userDetails.lastName,
+        email: userDetails.email,
+        accountType: userDetails.accountType,
+        contactNumber: userDetails.contactNumber,
+        image: userDetails.image,
+        joinedAt: userDetails.createdAt,
+      },
     });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
@@ -49,6 +59,16 @@ export const getProfile = async (req, res) => {
       success: true,
       message: "Profile fetched successfully",
       profile: userDetails.additionalDetails,
+      user: {
+        _id: userDetails._id,
+        firstName: userDetails.firstName,
+        lastName: userDetails.lastName,
+        email: userDetails.email,
+        accountType: userDetails.accountType,
+        contactNumber: userDetails.contactNumber,
+        image: userDetails.image,
+        joinedAt: userDetails.createdAt,
+      },
     });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });

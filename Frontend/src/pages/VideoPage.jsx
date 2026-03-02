@@ -1,0 +1,115 @@
+import { motion } from "framer-motion";
+import { useLocation, Link } from "react-router-dom";
+import {
+  FaArrowLeft,
+  FaBookOpen,
+  FaClock,
+  FaLayerGroup,
+  FaPlay,
+  FaStepBackward,
+  FaStepForward,
+  FaVolumeUp,
+} from "react-icons/fa";
+
+function useLectureQuery() {
+  const { search } = useLocation();
+  const query = new URLSearchParams(search);
+  return {
+    module: query.get("module") || "Module",
+    section: query.get("section") || "Section",
+    title: query.get("title") || "Lecture",
+    duration: query.get("duration") || "--:--",
+  };
+}
+
+export default function VideoPage() {
+  const data = useLectureQuery();
+
+  return (
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top_right,_#dbeafe,_#f8fafc_35%,_#eef2ff_85%)] px-4 md:px-8 py-8">
+      <div className="max-w-7xl mx-auto">
+        <Link
+          to="/lists"
+          className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 font-medium"
+        >
+          <FaArrowLeft /> Back to Lists
+        </Link>
+
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+          className="mt-4 grid lg:grid-cols-[1.4fr_0.8fr] gap-6"
+        >
+          <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+            <div className="rounded-2xl overflow-hidden border border-slate-200 bg-gradient-to-br from-[#0b1324] via-[#10214b] to-[#12395f] aspect-video relative">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(125,211,252,0.18),transparent_40%)]" />
+              <div className="absolute inset-0 grid place-items-center">
+                <button className="w-20 h-20 rounded-full bg-white/20 backdrop-blur border border-white/40 text-white text-2xl grid place-items-center hover:scale-105 transition">
+                  <FaPlay className="ml-1" />
+                </button>
+              </div>
+              <div className="absolute left-4 right-4 bottom-4 text-white">
+                <p className="text-sm text-cyan-100">{data.module} • {data.section}</p>
+                <h1 className="text-xl md:text-3xl font-bold mt-1">{data.title}</h1>
+              </div>
+            </div>
+
+            <div className="mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <div className="h-2 rounded-full bg-slate-200 overflow-hidden">
+                <div className="h-full w-1/3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full" />
+              </div>
+              <div className="mt-3 flex items-center justify-between text-slate-600">
+                <span>08:45</span>
+                <span>{data.duration}</span>
+              </div>
+              <div className="mt-4 flex items-center justify-center gap-4 text-slate-700">
+                <button className="w-10 h-10 rounded-full border border-slate-300 grid place-items-center hover:bg-white transition">
+                  <FaStepBackward />
+                </button>
+                <button className="w-12 h-12 rounded-full bg-blue-950 text-white grid place-items-center hover:bg-blue-900 transition">
+                  <FaPlay className="ml-0.5" />
+                </button>
+                <button className="w-10 h-10 rounded-full border border-slate-300 grid place-items-center hover:bg-white transition">
+                  <FaStepForward />
+                </button>
+                <button className="w-10 h-10 rounded-full border border-slate-300 grid place-items-center hover:bg-white transition">
+                  <FaVolumeUp />
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <aside className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
+            <h2 className="text-xl font-bold text-slate-900">Lecture Context</h2>
+            <div className="mt-4 space-y-3">
+              <MetaCard icon={<FaLayerGroup />} label="Module" value={data.module} />
+              <MetaCard icon={<FaBookOpen />} label="Section" value={data.section} />
+              <MetaCard icon={<FaClock />} label="Duration" value={data.duration} />
+            </div>
+
+            <div className="mt-6 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-100 p-4">
+              <h3 className="text-slate-900 font-semibold">Focus Mode Tip</h3>
+              <p className="text-slate-700 text-sm mt-2">
+                Watch in 1.25x, pause at transitions, and summarize each segment in one line.
+              </p>
+            </div>
+          </aside>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+
+function MetaCard({ icon, label, value }) {
+  return (
+    <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+      <p className="text-xs uppercase tracking-wider text-slate-500 flex items-center gap-2">
+        {icon}
+        {label}
+      </p>
+      <p className="text-slate-900 font-semibold mt-1">{value}</p>
+    </div>
+  );
+}
+

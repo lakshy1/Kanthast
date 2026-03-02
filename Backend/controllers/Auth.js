@@ -32,8 +32,9 @@ export const sendOTP = async (req, res) => {
 
 export const signUp = async (req, res) => {
   try {
-    const { firstName, lastName, email, contactNumber, password, confirmPassword, accountType, otp } =
-      req.body;
+    // Signup now uses a single password input from the client.
+    // `confirmPassword` is intentionally removed from required flow.
+    const { firstName, lastName, email, contactNumber, password, accountType, otp } = req.body;
     const normalizedEmail = email?.trim().toLowerCase();
     const normalizedOtp = String(otp || "").trim();
 
@@ -42,7 +43,6 @@ export const signUp = async (req, res) => {
       !lastName ||
       !normalizedEmail ||
       !password ||
-      !confirmPassword ||
       !accountType ||
       !normalizedOtp
     ) {
@@ -51,10 +51,6 @@ export const signUp = async (req, res) => {
 
     if (!["Student", "Instructor"].includes(accountType)) {
       return res.status(400).json({ success: false, message: "Invalid account type" });
-    }
-
-    if (password !== confirmPassword) {
-      return res.status(400).json({ success: false, message: "Password and confirm password do not match" });
     }
 
     const existingUser = await User.findOne({ email: normalizedEmail });
@@ -69,12 +65,17 @@ export const signUp = async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const profileDetails = await Profile.create({
-      gender: null,
-      dateOfBirth: null,
-      about: null,
-      contactNumber: contactNumber || "",
-    });
+    const profileDetails = await Profile.findOneAndUpdate(
+      { email: normalizedEmail },
+      {
+        email: normalizedEmail,
+        gender: null,
+        dateOfBirth: null,
+        about: null,
+        contactNumber: contactNumber || "",
+      },
+      { new: true, upsert: true, setDefaultsOnInsert: true }
+    );
 
     const user = await User.create({
       firstName,

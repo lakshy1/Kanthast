@@ -1,0 +1,39 @@
+Mail Sending Error Fix
+
+Problem Summary
+- Signup OTP API (`POST /api/v1/auth/sendotp`) returned HTTP 500 in production on Render.
+- Render logs showed: `Error sending mail: Connection timeout`.
+
+What Was Happening In Code
+- OTP generation calls `OTP.create(...)`.
+- `OTP` model has a pre-save hook that sends email before save completes.
+- Email sending originally used SMTP via Nodemailer on port 587.
+- When SMTP call timed out, the hook threw an error, so OTP save failed, and API returned 500.
+
+Root Cause
+- Render free web services block outbound traffic on SMTP ports (25, 465, 587).
+- Because SMTP connection could not be established, mail sending failed with timeout.
+
+Why We Switched From SMTP To Brevo HTTP API
+- SMTP requires blocked ports on this hosting tier.
+- Brevo HTTP API uses HTTPS over port 443, which is allowed on Render free tier.
+- Port 443 is reliable and generally available across hosting environments.
+
+What Changed
+- Replaced Nodemailer SMTP transport with Brevo HTTP request:
+  - Endpoint: `https://api.brevo.com/v3/smtp/email`
+  - Method: POST
+  - Auth header: `api-key: BREVO_API_KEY`
+- Sender info now comes from env vars:
+  - `MAIL_FROM`
+  - `MAIL_FROM_NAME`
+  - `BREVO_API_KEY`
+
+Result
+- OTP and other email flows no longer depend on blocked SMTP ports.
+- Mail sending works through HTTPS (443), so signup OTP can succeed on Render free tier.
+
+Important Deployment Notes
+- Keep secrets only in Render environment variables; do not commit `.env`.
+- Ensure `MAIL_FROM` is a verified sender in Brevo.
+- Free-email senders (e.g., Gmail) may work for testing but can have lower deliverability due to DKIM/DMARC compliance warnings.

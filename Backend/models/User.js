@@ -1,5 +1,53 @@
 import mongoose from "mongoose";
 
+const chatMessageSchema = new mongoose.Schema(
+    {
+        role: {
+            type: String,
+            enum: ["user", "assistant"],
+            required: true,
+        },
+        content: {
+            type: String,
+            required: true,
+            trim: true,
+        },
+        fileUrl: {
+            type: String,
+            default: "",
+        },
+        fileName: {
+            type: String,
+            default: "",
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+        },
+    },
+    { _id: false }
+);
+
+const chatSessionSchema = new mongoose.Schema(
+    {
+        sessionId: {
+            type: String,
+            required: true,
+        },
+        title: {
+            type: String,
+            default: "New Chat",
+            trim: true,
+        },
+        messages: [chatMessageSchema],
+        lastMessageAt: {
+            type: Date,
+            default: Date.now,
+        },
+    },
+    { _id: false, timestamps: true }
+);
+
 const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
@@ -57,7 +105,11 @@ const userSchema = new mongoose.Schema({
     resetPasswordExpires: {
         type: Date,
     },
+    chatHistory: [
+        chatMessageSchema,
+    ],
+    chatSessions: [chatSessionSchema],
 
-});
+}, { timestamps: true });
 
 export default mongoose.model("User", userSchema);

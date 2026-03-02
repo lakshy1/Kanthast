@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
     {/* ================= DARK FOOTER ================= */}
-      <footer className="w-full bg-linear-to-br from-[#0B1120] via-blue-950 to-[#0f172a] text-white pt-10 pb-12">
+      <footer className="w-full bg-gradient-to-br from-[#0B1120] via-blue-950 to-[#0f172a] text-white pt-10 pb-12">
 
         <div className="max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-3 gap-16">
 
