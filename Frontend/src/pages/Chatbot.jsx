@@ -48,9 +48,11 @@ export default function Chatbot() {
   const [status, setStatus] = useState("loading"); // loading | ready | loadingSession | sending | error
   const [uploading, setUploading] = useState(false);
   const [attachment, setAttachment] = useState(null);
+  const [uploadNotice, setUploadNotice] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const fileInputRef = useRef(null);
   const listRef = useRef(null);
+  const uploadNoticeTimerRef = useRef(null);
 
   useEffect(() => {
     let mounted = true;
@@ -88,8 +90,27 @@ export default function Chatbot() {
     }
   }, [messages, activeSessionId]);
 
+  useEffect(() => {
+    return () => {
+      if (uploadNoticeTimerRef.current) {
+        clearTimeout(uploadNoticeTimerRef.current);
+      }
+    };
+  }, []);
+
   const displayedSessions = useMemo(() => [...sessions].reverse(), [sessions]);
-  const canSend = useMemo(() => input.trim().length > 0 && status !== "sending", [input, status]);
+  const canSend = useMemo(
+    () => input.trim().length > 0 && status !== "sending" && !uploading,
+    [input, status, uploading]
+  );
+
+  const showUploadNotice = (type, message) => {
+    setUploadNotice({ type, message });
+    if (uploadNoticeTimerRef.current) clearTimeout(uploadNoticeTimerRef.current);
+    uploadNoticeTimerRef.current = setTimeout(() => {
+      setUploadNotice(null);
+    }, 2600);
+  };
 
   const loadSession = async (sessionId) => {
     if (!token || !sessionId) return;
@@ -193,11 +214,14 @@ export default function Chatbot() {
 
     setUploading(true);
     setError("");
+    setUploadNotice({ type: "loading", message: `Uploading ${file.name}...` });
     try {
       const data = await uploadChatFile(token, file);
       setAttachment({ fileUrl: data.fileUrl, fileName: data.fileName });
+      showUploadNotice("success", `Uploaded: ${data.fileName || file.name}`);
     } catch (err) {
       setError(err.message || "Upload failed");
+      showUploadNotice("error", err.message || "Upload failed");
     } finally {
       setUploading(false);
     }
@@ -376,8 +400,29 @@ export default function Chatbot() {
             </div>
 
             {attachment && (
-              <div className="mb-3 rounded-xl border border-cyan-200 bg-cyan-50/80 px-3 py-2 text-sm text-cyan-800">
-                Attached: <span className="font-semibold">{attachment.fileName}</span>
+              <div className="mb-3 rounded-xl border border-cyan-200 bg-cyan-50/80 px-3 py-2 text-sm text-cyan-800 flex items-center justify-between gap-2">
+                <div className="min-w-0">
+                  Attached: <span className="font-semibold break-all">{attachment.fileName}</span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setAttachment(null);
+                    if (fileInputRef.current) fileInputRef.current.value = "";
+                    showUploadNotice("success", "Attachment removed");
+                  }}
+                  className="h-7 w-7 shrink-0 rounded-lg border border-cyan-200 bg-white/85 text-cyan-700 hover:bg-white"
+                  title="Remove attachment"
+                >
+                  <FaTimes className="mx-auto text-xs" />
+                </button>
+              </div>
+            )}
+
+            {uploading && (
+              <div className="mb-3 rounded-xl border border-blue-200 bg-blue-50/80 px-3 py-2 text-sm text-blue-700 flex items-center gap-2">
+                <span className="h-4 w-4 rounded-full border-2 border-blue-600 border-t-transparent animate-spin" />
+                Uploading file, please wait...
               </div>
             )}
 
@@ -408,6 +453,25 @@ export default function Chatbot() {
           </div>
         </section>
       </div>
+
+      <AnimatePresence>
+        {uploadNotice && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 12 }}
+            className={`fixed bottom-5 right-5 z-[60] rounded-xl border px-4 py-2.5 text-sm shadow-[0_14px_36px_rgba(15,23,42,0.22)] ${
+              uploadNotice.type === "success"
+                ? "border-emerald-200 bg-emerald-500 text-white"
+                : uploadNotice.type === "error"
+                ? "border-red-200 bg-red-500 text-white"
+                : "border-blue-200 bg-white text-blue-700"
+            }`}
+          >
+            {uploadNotice.message}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <AnimatePresence>
         {sidebarOpen && (
