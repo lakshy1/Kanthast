@@ -7,9 +7,6 @@ import {
   FaClock,
   FaLayerGroup,
   FaPlay,
-  FaStepBackward,
-  FaStepForward,
-  FaVolumeUp,
 } from "react-icons/fa";
 import { getMedicineUsmleVideoDetails } from "../utils/authApi";
 
@@ -27,10 +24,55 @@ function useLectureQuery() {
   };
 }
 
+function getEmbeddableUrl(rawUrl) {
+  if (!rawUrl) return { type: "none", url: "" };
+
+  const url = rawUrl.trim();
+  const lower = url.toLowerCase();
+
+  if (/\.(mp4|webm|ogg|m3u8)(\?.*)?$/.test(lower)) {
+    return { type: "file", url };
+  }
+
+  try {
+    const parsed = new URL(url);
+    const host = parsed.hostname.replace("www.", "").toLowerCase();
+
+    if (host.includes("youtube.com") || host.includes("youtu.be")) {
+      let videoId = "";
+      if (host.includes("youtu.be")) {
+        videoId = parsed.pathname.replace("/", "");
+      } else if (parsed.pathname === "/watch") {
+        videoId = parsed.searchParams.get("v") || "";
+      } else if (parsed.pathname.startsWith("/shorts/")) {
+        videoId = parsed.pathname.split("/shorts/")[1];
+      } else if (parsed.pathname.startsWith("/embed/")) {
+        videoId = parsed.pathname.split("/embed/")[1];
+      }
+      if (videoId) {
+        return { type: "youtube", url: `https://www.youtube.com/embed/${videoId}` };
+      }
+    }
+
+    if (host.includes("vimeo.com")) {
+      const segments = parsed.pathname.split("/").filter(Boolean);
+      const videoId = segments[segments.length - 1];
+      if (videoId && /^[0-9]+$/.test(videoId)) {
+        return { type: "vimeo", url: `https://player.vimeo.com/video/${videoId}` };
+      }
+    }
+  } catch {
+    return { type: "unknown", url };
+  }
+
+  return { type: "file", url };
+}
+
 export default function VideoPage() {
   const data = useLectureQuery();
   const [videoLink, setVideoLink] = useState("");
   const [dbTitle, setDbTitle] = useState("");
+  const embedded = getEmbeddableUrl(videoLink);
 
   useEffect(() => {
     let mounted = true;
@@ -76,11 +118,35 @@ export default function VideoPage() {
           className="mt-4 grid lg:grid-cols-[1.4fr_0.8fr] gap-6"
         >
           <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
-            {videoLink ? (
+            {embedded.type === "file" && embedded.url ? (
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
-                <video controls className="w-full aspect-video" src={videoLink}>
+                <video controls playsInline preload="metadata" className="w-full aspect-video" src={embedded.url}>
                   Your browser does not support video playback.
                 </video>
+              </div>
+            ) : (embedded.type === "youtube" || embedded.type === "vimeo") && embedded.url ? (
+              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
+                <iframe
+                  title={dbTitle || data.title}
+                  src={embedded.url}
+                  className="w-full aspect-video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            ) : embedded.type === "unknown" && embedded.url ? (
+              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 p-6">
+                <p className="text-slate-700">
+                  This link type cannot be embedded. Open directly:
+                </p>
+                <a
+                  href={embedded.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-700 underline break-all"
+                >
+                  {embedded.url}
+                </a>
               </div>
             ) : (
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-gradient-to-br from-[#0b1324] via-[#10214b] to-[#12395f] aspect-video relative">
@@ -96,30 +162,7 @@ export default function VideoPage() {
                 </div>
               </div>
             )}
-
-            <div className="mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4">
-              <div className="h-2 rounded-full bg-slate-200 overflow-hidden">
-                <div className="h-full w-1/3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full" />
-              </div>
-              <div className="mt-3 flex items-center justify-between text-slate-600">
-                <span>08:45</span>
-                <span>{data.duration}</span>
-              </div>
-              <div className="mt-4 flex items-center justify-center gap-4 text-slate-700">
-                <button className="w-10 h-10 rounded-full border border-slate-300 grid place-items-center hover:bg-white transition">
-                  <FaStepBackward />
-                </button>
-                <button className="w-12 h-12 rounded-full bg-blue-950 text-white grid place-items-center hover:bg-blue-900 transition">
-                  <FaPlay className="ml-0.5" />
-                </button>
-                <button className="w-10 h-10 rounded-full border border-slate-300 grid place-items-center hover:bg-white transition">
-                  <FaStepForward />
-                </button>
-                <button className="w-10 h-10 rounded-full border border-slate-300 grid place-items-center hover:bg-white transition">
-                  <FaVolumeUp />
-                </button>
-              </div>
-            </div>
+            <div className="mt-3 text-sm text-slate-500">Duration: {data.duration}</div>
           </section>
 
           <aside className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
