@@ -18,6 +18,7 @@ import {
   updateAdminUser,
   updateMedicineUsmleContent,
 } from "../utils/authApi";
+import { modules as legacyModules } from "./Lists";
 
 const tabs = [
   { id: "overview", label: "Overview", icon: <FaChartLine /> },
@@ -25,6 +26,32 @@ const tabs = [
   { id: "videos", label: "Videos", icon: <FaBookMedical /> },
   { id: "subscriptions", label: "Subscriptions", icon: <FaCrown /> },
 ];
+
+const buildSeedPayloadFromLegacyModules = () => {
+  const subjects = Object.entries(legacyModules).map(([subjectName, subjectMeta], subjectIndex) => ({
+    name: subjectName,
+    totalDuration: subjectMeta.totalDuration || "--:--",
+    order: subjectIndex,
+    chapters: (subjectMeta.sections || []).map((chapter, chapterIndex) => ({
+      name: chapter.title || `Chapter ${chapterIndex + 1}`,
+      totalDuration: chapter.total || "--:--",
+      order: chapterIndex,
+      videos: (chapter.lectures || []).map((lecture, videoIndex) => ({
+        name: lecture.title || `Video ${videoIndex + 1}`,
+        duration: lecture.duration || "--:--",
+        summary: lecture.summary || "",
+        videoLink: lecture.videoLink || "",
+        photos: Array.isArray(lecture.photos) ? lecture.photos : [],
+        order: videoIndex,
+      })),
+    })),
+  }));
+
+  return {
+    courseTitle: "Medicine/USMLE",
+    subjects,
+  };
+};
 
 export default function AdminPanel() {
   const navigate = useNavigate();
@@ -98,6 +125,27 @@ export default function AdminPanel() {
     } catch (error) {
       const message = error instanceof SyntaxError ? "Invalid JSON format" : error.message;
       toast.error(message || "Failed to update content");
+    } finally {
+      setContentSaving(false);
+    }
+  };
+
+  const seedCourseContentFromLegacy = async () => {
+    if (!token) return;
+    const confirmed = window.confirm(
+      "Seed full Medicine/USMLE catalog from existing legacy Lists data? This will overwrite current DB content."
+    );
+    if (!confirmed) return;
+
+    setContentSaving(true);
+    try {
+      const payload = buildSeedPayloadFromLegacyModules();
+      const data = await updateMedicineUsmleContent(token, payload);
+      setCourseContent(data.content || null);
+      setContentDraft(data.content ? JSON.stringify(data.content, null, 2) : "");
+      toast.success("Medicine/USMLE data seeded to database");
+    } catch (error) {
+      toast.error(error.message || "Failed to seed course content");
     } finally {
       setContentSaving(false);
     }
@@ -363,14 +411,24 @@ export default function AdminPanel() {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between gap-3 flex-wrap">
                       <h2 className="text-2xl font-black text-slate-900">Medicine/USMLE Content Manager</h2>
-                      <button
-                        type="button"
-                        onClick={saveCourseContent}
-                        disabled={contentSaving}
-                        className="rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 disabled:opacity-70"
-                      >
-                        {contentSaving ? "Saving..." : "Save Course Content"}
-                      </button>
+                      <div className="flex items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={seedCourseContentFromLegacy}
+                          disabled={contentSaving}
+                          className="rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50 disabled:opacity-70"
+                        >
+                          {contentSaving ? "Working..." : "Seed Legacy Data to DB"}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={saveCourseContent}
+                          disabled={contentSaving}
+                          className="rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 disabled:opacity-70"
+                        >
+                          {contentSaving ? "Saving..." : "Save Course Content"}
+                        </button>
+                      </div>
                     </div>
 
                     {contentLoading ? (

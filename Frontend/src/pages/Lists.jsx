@@ -1330,8 +1330,6 @@ export const modules = {
   },
 };
 
-const defaultTabs = ["Biochemistry", "Immunology", "Pharmacology", "Microbiology", "Neuroanatomy"];
-
 function buildModulesFromApi(content) {
   const moduleMap = {};
 
@@ -1367,7 +1365,8 @@ function buildModulesFromApi(content) {
 
 export default function Lists() {
   const [activeTab, setActiveTab] = useState("Biochemistry");
-  const [dbModules, setDbModules] = useState(null);
+  const [dbModules, setDbModules] = useState({});
+  const [catalogLoading, setCatalogLoading] = useState(true);
   const sectionRefs = useRef({});
   const navigate = useNavigate();
   const hasSubscription = useMemo(() => {
@@ -1383,14 +1382,16 @@ export default function Lists() {
 
     (async () => {
       try {
+        setCatalogLoading(true);
         const data = await getMedicineUsmleContent();
         if (!mounted) return;
         const mapped = buildModulesFromApi(data.content);
-        if (Object.keys(mapped).length) {
-          setDbModules(mapped);
-        }
+        setDbModules(mapped);
       } catch {
-        // Keep static fallback if DB content is unavailable.
+        if (!mounted) return;
+        setDbModules({});
+      } finally {
+        if (mounted) setCatalogLoading(false);
       }
     })();
 
@@ -1399,14 +1400,10 @@ export default function Lists() {
     };
   }, []);
 
-  const sourceModules = useMemo(() => {
-    if (dbModules && Object.keys(dbModules).length) return dbModules;
-    return modules;
-  }, [dbModules]);
-  const tabs = useMemo(() => Object.keys(sourceModules), [sourceModules]);
+  const tabs = useMemo(() => Object.keys(dbModules), [dbModules]);
   const activeModule = useMemo(
-    () => sourceModules[activeTab] || sourceModules[tabs[0]] || { totalDuration: "--:--", sections: [] },
-    [activeTab, sourceModules, tabs]
+    () => dbModules[activeTab] || dbModules[tabs[0]] || { totalDuration: "--:--", sections: [] },
+    [activeTab, dbModules, tabs]
   );
 
   useEffect(() => {
@@ -1446,7 +1443,7 @@ export default function Lists() {
           className="mb-8"
         >
           <div className="flex flex-wrap gap-3">
-            {(tabs.length ? tabs : defaultTabs).map((tab, index) => (
+            {tabs.map((tab, index) => (
               <motion.button
                 key={tab}
                 initial={{ opacity: 0, y: 6 }}
@@ -1466,6 +1463,18 @@ export default function Lists() {
         </motion.div>
 
         <div className="grid lg:grid-cols-[minmax(0,1fr)_360px] gap-8 items-start">
+          {catalogLoading ? (
+            <div className="rounded-3xl bg-white/80 border border-slate-200 p-8">
+              <p className="text-slate-700 text-lg font-semibold">Loading course catalog...</p>
+            </div>
+          ) : !tabs.length ? (
+            <div className="rounded-3xl bg-white/80 border border-slate-200 p-8">
+              <p className="text-slate-700 text-lg font-semibold">
+                No course data found in database. Ask admin to seed Medicine/USMLE data from Admin Panel.
+              </p>
+            </div>
+          ) : (
+          <>
           <div className="space-y-8">
             <div className="px-2">
               <h1 className="text-5xl font-black text-slate-900">
@@ -1550,6 +1559,8 @@ export default function Lists() {
               </div>
             </div>
           </aside>
+          </>
+          )}
         </div>
       </div>
     </div>
