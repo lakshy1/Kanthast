@@ -5,6 +5,15 @@ function getAuthHeaders(token) {
   return token ? { Authorization: `Bearer ${token}` } : {};
 }
 
+async function readResponseBody(response) {
+  const contentType = response.headers.get("content-type") || "";
+  if (contentType.includes("application/json")) {
+    return response.json().catch(() => ({}));
+  }
+  const text = await response.text().catch(() => "");
+  return { message: text || "" };
+}
+
 async function post(path, payload) {
   const response = await fetch(`${API_BASE_URL}${path}`, {
     method: "POST",
@@ -15,10 +24,10 @@ async function post(path, payload) {
     body: JSON.stringify(payload),
   });
 
-  const data = await response.json().catch(() => ({}));
+  const data = await readResponseBody(response);
 
   if (!response.ok || !data.success) {
-    throw new Error(data.message || "Request failed");
+    throw new Error(data.message || `Request failed (${response.status})`);
   }
 
   return data;
@@ -247,9 +256,9 @@ export async function getMedicineUsmleContent() {
     credentials: "include",
   });
 
-  const data = await response.json().catch(() => ({}));
+  const data = await readResponseBody(response);
   if (!response.ok || !data.success) {
-    throw new Error(data.message || "Failed to fetch Medicine/USMLE content");
+    throw new Error(data.message || `Failed to fetch Medicine/USMLE content (${response.status})`);
   }
   return data;
 }
@@ -266,9 +275,9 @@ export async function getMedicineUsmleVideoDetails({ subjectId, chapterId, video
     credentials: "include",
   });
 
-  const data = await response.json().catch(() => ({}));
+  const data = await readResponseBody(response);
   if (!response.ok || !data.success) {
-    throw new Error(data.message || "Failed to fetch lecture details");
+    throw new Error(data.message || `Failed to fetch lecture details (${response.status})`);
   }
   return data;
 }
@@ -284,9 +293,9 @@ export async function updateMedicineUsmleContent(token, payload) {
     body: JSON.stringify(payload),
   });
 
-  const data = await response.json().catch(() => ({}));
+  const data = await readResponseBody(response);
   if (!response.ok || !data.success) {
-    throw new Error(data.message || "Failed to update Medicine/USMLE content");
+    throw new Error(data.message || `Failed to update Medicine/USMLE content (${response.status})`);
   }
   return data;
 }
@@ -302,9 +311,9 @@ async function authedJsonRequest(path, method, token, payload) {
     body: JSON.stringify(payload || {}),
   });
 
-  const data = await response.json().catch(() => ({}));
+  const data = await readResponseBody(response);
   if (!response.ok || !data.success) {
-    throw new Error(data.message || "Medicine/USMLE admin request failed");
+    throw new Error(data.message || `Medicine/USMLE admin request failed (${response.status})`);
   }
   return data;
 }
