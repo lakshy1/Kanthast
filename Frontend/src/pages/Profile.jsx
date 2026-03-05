@@ -97,6 +97,9 @@ export default function Profile() {
   const avatarColor = avatarPalette[seed % avatarPalette.length];
 
   const joinedAt = user?.joinedAt || (user?._id ? new Date(parseInt(user._id.substring(0, 8), 16) * 1000) : null);
+  const subscriptionPurchased = Boolean(user?.subscriptionPurchased);
+  const subscriptionPurchasedOn = user?.subscriptionPurchasedOn || null;
+  const subscriptionValidTill = user?.subscriptionValidTill || null;
 
   const hasChanges =
     form.about !== (profile?.about || "") ||
@@ -203,6 +206,21 @@ export default function Profile() {
                   icon={<FaPhoneAlt />}
                   label="Contact Number"
                   value={profile?.contactNumber || user?.contactNumber || "-"}
+                />
+                <FieldCard
+                  icon={<FaIdBadge />}
+                  label="Subscription"
+                  value={subscriptionPurchased ? "Purchased" : "Not Purchased"}
+                />
+                <FieldCard
+                  icon={<FaCalendarAlt />}
+                  label="Purchased On"
+                  value={subscriptionPurchased ? formatDate(subscriptionPurchasedOn) : "-"}
+                />
+                <FieldCard
+                  icon={<FaCalendarAlt />}
+                  label="Valid Till"
+                  value={subscriptionPurchased ? formatDate(subscriptionValidTill) : "-"}
                 />
 
                 <EditableField label="Gender" icon={<FaIdBadge />}>

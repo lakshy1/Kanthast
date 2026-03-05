@@ -28,6 +28,7 @@ export default function SubscriptionPage() {
   const [loadingPlanId, setLoadingPlanId] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [paymentStep, setPaymentStep] = useState("");
 
   const [user, setUser] = useState(() => {
     try {
@@ -38,6 +39,22 @@ export default function SubscriptionPage() {
   });
 
   const hasSubscription = Boolean(user?.subscriptionPurchased);
+  const validTill = user?.subscriptionValidTill
+    ? new Date(user.subscriptionValidTill).toLocaleDateString("en-IN", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      })
+    : "-";
+  const purchasedOn = user?.subscriptionPurchasedOn
+    ? new Date(user.subscriptionPurchasedOn).toLocaleDateString("en-IN", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      })
+    : "-";
+
+  const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   const handlePurchase = async (plan) => {
     if (!token) return;
@@ -45,10 +62,20 @@ export default function SubscriptionPage() {
     setLoadingPlanId(plan.id);
     setError("");
     setMessage("");
+    setPaymentStep("Validating details...");
 
     try {
+      await wait(700);
+      setPaymentStep("Authorizing dummy card payment...");
+      await wait(1100);
+      setPaymentStep("Payment successful. Activating subscription...");
+      await wait(800);
+
+      const dummyPaymentId = `DUMMY_${Date.now()}`;
       const data = await purchaseSubscriptionPlan(token, {
         planDurationYears: plan.durationYears,
+        dummyPaymentStatus: "success",
+        dummyPaymentId,
       });
 
       const mergedUser = {
@@ -58,11 +85,12 @@ export default function SubscriptionPage() {
       };
       localStorage.setItem("kanthastUser", JSON.stringify(mergedUser));
       setUser(mergedUser);
-      setMessage("Subscription activated. All videos and images are now unlocked.");
+      setMessage("Dummy payment completed. Subscription activated and all videos/images are unlocked.");
     } catch (err) {
       setError(err.message || "Unable to activate subscription");
     } finally {
       setLoadingPlanId("");
+      setPaymentStep("");
     }
   };
 
@@ -96,7 +124,7 @@ export default function SubscriptionPage() {
           {hasSubscription && (
             <div className="mt-6 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-700 font-medium flex items-center gap-2">
               <FaCheckCircle />
-              Subscription already active on this account.
+              Subscription active. Purchased on: {purchasedOn} | Valid till: {validTill}
             </div>
           )}
 
@@ -143,6 +171,7 @@ export default function SubscriptionPage() {
           </div>
 
           {message && <p className="mt-5 text-emerald-700 font-medium">{message}</p>}
+          {paymentStep && <p className="mt-5 text-blue-700 font-medium">{paymentStep}</p>}
           {error && <p className="mt-5 text-red-600 font-medium">{error}</p>}
         </motion.div>
       </div>
