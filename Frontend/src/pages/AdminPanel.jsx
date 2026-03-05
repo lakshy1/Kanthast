@@ -11,8 +11,13 @@ import {
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { deleteAdminUser, getAdminUsers, updateAdminUser } from "../utils/authApi";
-import { modules } from "./Lists";
+import {
+  deleteAdminUser,
+  getAdminUsers,
+  getMedicineUsmleContent,
+  updateAdminUser,
+  updateMedicineUsmleContent,
+} from "../utils/authApi";
 
 const tabs = [
   { id: "overview", label: "Overview", icon: <FaChartLine /> },
@@ -39,6 +44,10 @@ export default function AdminPanel() {
   const [editUserId, setEditUserId] = useState("");
   const [editForm, setEditForm] = useState({});
   const [saving, setSaving] = useState(false);
+  const [contentLoading, setContentLoading] = useState(true);
+  const [contentSaving, setContentSaving] = useState(false);
+  const [courseContent, setCourseContent] = useState(null);
+  const [contentDraft, setContentDraft] = useState("");
 
   useEffect(() => {
     if (!token) {
@@ -46,6 +55,7 @@ export default function AdminPanel() {
       return;
     }
     loadUsers();
+    loadCourseContent();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
 
@@ -59,6 +69,37 @@ export default function AdminPanel() {
       toast.error(error.message || "Failed to load users");
     } finally {
       setLoading(false);
+    }
+  };
+
+  const loadCourseContent = async () => {
+    setContentLoading(true);
+    try {
+      const data = await getMedicineUsmleContent();
+      const content = data.content || null;
+      setCourseContent(content);
+      setContentDraft(content ? JSON.stringify(content, null, 2) : "");
+    } catch (error) {
+      toast.error(error.message || "Failed to load course content");
+    } finally {
+      setContentLoading(false);
+    }
+  };
+
+  const saveCourseContent = async () => {
+    if (!token) return;
+    setContentSaving(true);
+    try {
+      const payload = JSON.parse(contentDraft || "{}");
+      const data = await updateMedicineUsmleContent(token, payload);
+      setCourseContent(data.content || null);
+      setContentDraft(data.content ? JSON.stringify(data.content, null, 2) : "");
+      toast.success("Medicine/USMLE content updated");
+    } catch (error) {
+      const message = error instanceof SyntaxError ? "Invalid JSON format" : error.message;
+      toast.error(message || "Failed to update content");
+    } finally {
+      setContentSaving(false);
     }
   };
 
@@ -117,12 +158,17 @@ export default function AdminPanel() {
     navigate("/adminlogin");
   };
 
-  const subjects = Object.entries(modules).map(([name, meta]) => ({
-    name,
-    totalDuration: meta.totalDuration,
-    sections: meta.sections,
-    totalVideos: meta.sections.reduce((acc, s) => acc + s.lectures.length, 0),
-  }));
+  const subjects = (courseContent?.subjects || []).map((subject) => {
+    const chapters = subject.chapters || [];
+    const totalVideos = chapters.reduce((acc, chapter) => acc + (chapter.videos?.length || 0), 0);
+    return {
+      id: subject._id,
+      name: subject.name,
+      totalDuration: subject.totalDuration || "--:--",
+      chapters,
+      totalVideos,
+    };
+  });
 
   const stats = {
     totalUsers: users.length,
@@ -315,26 +361,48 @@ export default function AdminPanel() {
 
                 {activeTab === "videos" && (
                   <div className="space-y-4">
-                    <h2 className="text-2xl font-black text-slate-900">Subjects and Videos</h2>
-                    {subjects.map((subject) => (
-                      <article key={subject.name} className="rounded-2xl border border-slate-200 bg-white p-4">
-                        <h3 className="text-xl font-bold text-slate-900">
-                          {subject.name} ({subject.totalDuration})
-                        </h3>
-                        <p className="text-sm text-slate-600 mt-1">
-                          Sections: {subject.sections.length} | Videos: {subject.totalVideos}
-                        </p>
-                        <div className="mt-3 grid md:grid-cols-2 gap-3">
-                          {subject.sections.map((section) => (
-                            <div key={`${subject.name}-${section.id}`} className="rounded-xl border border-slate-200 bg-slate-50 p-3">
-                              <p className="font-semibold text-slate-800">{section.title}</p>
-                              <p className="text-xs text-slate-500">Duration: {section.total}</p>
-                              <p className="text-xs text-slate-500">Lectures: {section.lectures.length}</p>
-                            </div>
+                    <div className="flex items-center justify-between gap-3 flex-wrap">
+                      <h2 className="text-2xl font-black text-slate-900">Medicine/USMLE Content Manager</h2>
+                      <button
+                        type="button"
+                        onClick={saveCourseContent}
+                        disabled={contentSaving}
+                        className="rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 disabled:opacity-70"
+                      >
+                        {contentSaving ? "Saving..." : "Save Course Content"}
+                      </button>
+                    </div>
+
+                    {contentLoading ? (
+                      <p className="text-slate-600">Loading course content...</p>
+                    ) : (
+                      <>
+                        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                          {subjects.map((subject) => (
+                            <article key={subject.id || subject.name} className="rounded-2xl border border-slate-200 bg-white p-4">
+                              <h3 className="text-xl font-bold text-slate-900">
+                                {subject.name} ({subject.totalDuration})
+                              </h3>
+                              <p className="text-sm text-slate-600 mt-1">
+                                Chapters: {subject.chapters.length} | Videos: {subject.totalVideos}
+                              </p>
+                            </article>
                           ))}
                         </div>
-                      </article>
-                    ))}
+
+                        <div className="rounded-2xl border border-slate-200 bg-white p-4">
+                          <p className="text-sm text-slate-600 mb-2">
+                            Edit full nested content here: subjects, chapters, videos, summary, videoLink, and photos.
+                          </p>
+                          <textarea
+                            value={contentDraft}
+                            onChange={(e) => setContentDraft(e.target.value)}
+                            spellCheck={false}
+                            className="w-full min-h-[420px] rounded-xl border border-slate-300 p-3 font-mono text-xs outline-none focus:ring-2 focus:ring-cyan-400"
+                          />
+                        </div>
+                      </>
+                    )}
                   </div>
                 )}
 

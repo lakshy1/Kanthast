@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
 import { FaArrowLeft, FaBookOpen, FaClock, FaLayerGroup, FaRegCheckCircle } from "react-icons/fa";
+import { getMedicineUsmleVideoDetails } from "../utils/authApi";
 
 function useLectureQuery() {
   const { search } = useLocation();
@@ -10,18 +12,55 @@ function useLectureQuery() {
     section: query.get("section") || "Section",
     title: query.get("title") || "Lecture",
     duration: query.get("duration") || "--:--",
+    subjectId: query.get("subjectId") || "",
+    chapterId: query.get("chapterId") || "",
+    videoId: query.get("videoId") || "",
   };
 }
 
 export default function SummaryPage() {
   const data = useLectureQuery();
+  const [summary, setSummary] = useState("");
 
-  const bullets = [
-    "Core concept map for this lecture.",
-    "High-yield exam triggers and clinical links.",
-    "Common confusion points and how to avoid them.",
-    "Rapid recall checklist for revision day.",
-  ];
+  useEffect(() => {
+    let mounted = true;
+    if (!data.subjectId || !data.chapterId || !data.videoId) return undefined;
+
+    (async () => {
+      try {
+        const response = await getMedicineUsmleVideoDetails({
+          subjectId: data.subjectId,
+          chapterId: data.chapterId,
+          videoId: data.videoId,
+        });
+        if (!mounted) return;
+        setSummary(response.video?.summary || "");
+      } catch {
+        if (!mounted) return;
+        setSummary("");
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
+  }, [data.subjectId, data.chapterId, data.videoId]);
+
+  const bullets = useMemo(() => {
+    if (!summary.trim()) {
+      return [
+        "Core concept map for this lecture.",
+        "High-yield exam triggers and clinical links.",
+        "Common confusion points and how to avoid them.",
+        "Rapid recall checklist for revision day.",
+      ];
+    }
+
+    return summary
+      .split("\n")
+      .map((line) => line.replace(/^[\s\-*]+/, "").trim())
+      .filter(Boolean);
+  }, [summary]);
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_8%_12%,_#e0f2fe,_#f8fafc_40%,_#eef2ff_90%)] px-4 md:px-8 py-8">
@@ -103,4 +142,3 @@ function InfoChip({ icon, label }) {
     </span>
   );
 }
-

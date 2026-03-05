@@ -240,3 +240,53 @@ export async function deleteAdminUser(token, userId) {
   }
   return data;
 }
+
+export async function getMedicineUsmleContent() {
+  const response = await fetch(`${API_BASE_URL}/medicine-usmle`, {
+    method: "GET",
+    credentials: "include",
+  });
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to fetch Medicine/USMLE content");
+  }
+  return data;
+}
+
+export async function getMedicineUsmleVideoDetails({ subjectId, chapterId, videoId }) {
+  const query = new URLSearchParams({
+    subjectId,
+    chapterId,
+    videoId,
+  });
+
+  const response = await fetch(`${API_BASE_URL}/medicine-usmle/video?${query.toString()}`, {
+    method: "GET",
+    credentials: "include",
+  });
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to fetch lecture details");
+  }
+  return data;
+}
+
+export async function updateMedicineUsmleContent(token, payload) {
+  const response = await fetch(`${API_BASE_URL}/medicine-usmle/admin`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to update Medicine/USMLE content");
+  }
+  return data;
+}

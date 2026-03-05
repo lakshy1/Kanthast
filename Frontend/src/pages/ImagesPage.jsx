@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
 import { FaArrowLeft, FaBookOpen, FaClock, FaExpand, FaLayerGroup } from "react-icons/fa";
 import Image1 from "../assets/images/Image-1.png";
 import Image2 from "../assets/images/Image-2.png";
 import Image3 from "../assets/images/Image-3.png";
 import Image4 from "../assets/images/Image-4.png";
 import Image5 from "../assets/images/Image-5.png";
+import { getMedicineUsmleVideoDetails } from "../utils/authApi";
 
 function useLectureQuery() {
   const { search } = useLocation();
@@ -15,13 +17,54 @@ function useLectureQuery() {
     section: query.get("section") || "Section",
     title: query.get("title") || "Lecture",
     duration: query.get("duration") || "--:--",
+    subjectId: query.get("subjectId") || "",
+    chapterId: query.get("chapterId") || "",
+    videoId: query.get("videoId") || "",
   };
 }
 
-const gallery = [Image1, Image2, Image3, Image4, Image5, Image2];
+const fallbackGallery = [Image1, Image2, Image3, Image4, Image5, Image2];
 
 export default function ImagesPage() {
   const data = useLectureQuery();
+  const [photos, setPhotos] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    if (!data.subjectId || !data.chapterId || !data.videoId) return undefined;
+
+    (async () => {
+      try {
+        const response = await getMedicineUsmleVideoDetails({
+          subjectId: data.subjectId,
+          chapterId: data.chapterId,
+          videoId: data.videoId,
+        });
+        if (!mounted) return;
+        setPhotos(Array.isArray(response.video?.photos) ? response.video.photos : []);
+      } catch {
+        if (!mounted) return;
+        setPhotos([]);
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
+  }, [data.subjectId, data.chapterId, data.videoId]);
+
+  const gallery = useMemo(() => {
+    if (!photos.length) {
+      return fallbackGallery.map((src, idx) => ({ imageLink: src, imageText: `Slide ${idx + 1}` }));
+    }
+
+    return photos
+      .filter((item) => item?.imageLink)
+      .map((item, index) => ({
+        imageLink: item.imageLink,
+        imageText: item.imageText || `Image ${index + 1}`,
+      }));
+  }, [photos]);
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_20%_10%,_#dbeafe,_#f8fafc_40%,_#ecfeff_90%)] px-4 md:px-8 py-8">
@@ -54,14 +97,14 @@ export default function ImagesPage() {
           transition={{ delay: 0.08, duration: 0.45, ease: "easeOut" }}
           className="mt-6 grid sm:grid-cols-2 xl:grid-cols-3 gap-5"
         >
-          {gallery.map((src, idx) => (
+          {gallery.map((item, idx) => (
             <motion.article
-              key={`${src}-${idx}`}
+              key={`${item.imageLink}-${idx}`}
               whileHover={{ y: -4 }}
               className="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.08)]"
             >
               <div className="relative">
-                <img src={src} alt={`${data.title} visual ${idx + 1}`} className="w-full h-52 object-cover" />
+                <img src={item.imageLink} alt={`${data.title} visual ${idx + 1}`} className="w-full h-52 object-cover" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition" />
                 <button className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 text-slate-700 grid place-items-center opacity-0 group-hover:opacity-100 transition">
                   <FaExpand />
@@ -69,7 +112,7 @@ export default function ImagesPage() {
               </div>
               <div className="p-4">
                 <p className="font-semibold text-slate-900">Slide {idx + 1}</p>
-                <p className="text-sm text-slate-600 mt-1">Key visual aid for rapid recall.</p>
+                <p className="text-sm text-slate-600 mt-1">{item.imageText || "Key visual aid for rapid recall."}</p>
               </div>
             </motion.article>
           ))}
@@ -87,4 +130,3 @@ function Chip({ icon, label }) {
     </span>
   );
 }
-

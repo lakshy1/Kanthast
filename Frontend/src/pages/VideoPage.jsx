@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import {
   FaArrowLeft,
   FaBookOpen,
@@ -10,6 +11,7 @@ import {
   FaStepForward,
   FaVolumeUp,
 } from "react-icons/fa";
+import { getMedicineUsmleVideoDetails } from "../utils/authApi";
 
 function useLectureQuery() {
   const { search } = useLocation();
@@ -19,11 +21,43 @@ function useLectureQuery() {
     section: query.get("section") || "Section",
     title: query.get("title") || "Lecture",
     duration: query.get("duration") || "--:--",
+    subjectId: query.get("subjectId") || "",
+    chapterId: query.get("chapterId") || "",
+    videoId: query.get("videoId") || "",
   };
 }
 
 export default function VideoPage() {
   const data = useLectureQuery();
+  const [videoLink, setVideoLink] = useState("");
+  const [dbTitle, setDbTitle] = useState("");
+
+  useEffect(() => {
+    let mounted = true;
+    if (!data.subjectId || !data.chapterId || !data.videoId) return undefined;
+
+    (async () => {
+      try {
+        const response = await getMedicineUsmleVideoDetails({
+          subjectId: data.subjectId,
+          chapterId: data.chapterId,
+          videoId: data.videoId,
+        });
+
+        if (!mounted) return;
+        setVideoLink(response.video?.videoLink || "");
+        setDbTitle(response.video?.name || "");
+      } catch {
+        if (!mounted) return;
+        setVideoLink("");
+        setDbTitle("");
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
+  }, [data.subjectId, data.chapterId, data.videoId]);
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_right,_#dbeafe,_#f8fafc_35%,_#eef2ff_85%)] px-4 md:px-8 py-8">
@@ -42,18 +76,26 @@ export default function VideoPage() {
           className="mt-4 grid lg:grid-cols-[1.4fr_0.8fr] gap-6"
         >
           <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
-            <div className="rounded-2xl overflow-hidden border border-slate-200 bg-gradient-to-br from-[#0b1324] via-[#10214b] to-[#12395f] aspect-video relative">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(125,211,252,0.18),transparent_40%)]" />
-              <div className="absolute inset-0 grid place-items-center">
-                <button className="w-20 h-20 rounded-full bg-white/20 backdrop-blur border border-white/40 text-white text-2xl grid place-items-center hover:scale-105 transition">
-                  <FaPlay className="ml-1" />
-                </button>
+            {videoLink ? (
+              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
+                <video controls className="w-full aspect-video" src={videoLink}>
+                  Your browser does not support video playback.
+                </video>
               </div>
-              <div className="absolute left-4 right-4 bottom-4 text-white">
-                <p className="text-sm text-cyan-100">{data.module} • {data.section}</p>
-                <h1 className="text-xl md:text-3xl font-bold mt-1">{data.title}</h1>
+            ) : (
+              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-gradient-to-br from-[#0b1324] via-[#10214b] to-[#12395f] aspect-video relative">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(125,211,252,0.18),transparent_40%)]" />
+                <div className="absolute inset-0 grid place-items-center">
+                  <button className="w-20 h-20 rounded-full bg-white/20 backdrop-blur border border-white/40 text-white text-2xl grid place-items-center hover:scale-105 transition">
+                    <FaPlay className="ml-1" />
+                  </button>
+                </div>
+                <div className="absolute left-4 right-4 bottom-4 text-white">
+                  <p className="text-sm text-cyan-100">{data.module} - {data.section}</p>
+                  <h1 className="text-xl md:text-3xl font-bold mt-1">{dbTitle || data.title}</h1>
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4">
               <div className="h-2 rounded-full bg-slate-200 overflow-hidden">
@@ -112,4 +154,3 @@ function MetaCard({ icon, label, value }) {
     </div>
   );
 }
-

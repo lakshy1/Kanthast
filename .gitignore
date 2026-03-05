@@ -38,3 +38,5 @@ coverage/
 # Lock files (optional — keep if working in team)
 # package-lock.json
 # yarn.lock
+
+*.txt

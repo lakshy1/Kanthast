@@ -43,7 +43,7 @@ export default function AdminLogin() {
             value={form.adminId}
             onChange={(e) => setForm((prev) => ({ ...prev, adminId: e.target.value }))}
             className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:ring-2 focus:ring-cyan-400 outline-none"
-            placeholder="Admin"
+            placeholder="id"
           />
         </label>
 
@@ -54,7 +54,7 @@ export default function AdminLogin() {
             value={form.password}
             onChange={(e) => setForm((prev) => ({ ...prev, password: e.target.value }))}
             className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:ring-2 focus:ring-cyan-400 outline-none"
-            placeholder="Admin123456789"
+            placeholder="password"
           />
         </label>
 

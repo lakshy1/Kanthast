@@ -1,9 +1,8 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaRegFileAlt, FaPlay, FaRegImage, FaChevronRight, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
-const tabs = ["Biochemistry", "Immunology", "Pharmacology", "Microbiology", "Neuroanatomy"];
+import { getMedicineUsmleContent } from "../utils/authApi";
 
 const parseLectures = (text) =>
   text
@@ -1331,8 +1330,44 @@ export const modules = {
   },
 };
 
+const defaultTabs = ["Biochemistry", "Immunology", "Pharmacology", "Microbiology", "Neuroanatomy"];
+
+function buildModulesFromApi(content) {
+  const moduleMap = {};
+
+  for (const subject of content?.subjects || []) {
+    const subjectName = subject?.name?.trim();
+    if (!subjectName) continue;
+
+    moduleMap[subjectName] = {
+      totalDuration: subject.totalDuration || "--:--",
+      sections: (subject.chapters || []).map((chapter, chapterIndex) => ({
+        title: chapter.name || `Chapter ${chapterIndex + 1}`,
+        total: chapter.totalDuration || "--:--",
+        id:
+          chapter._id ||
+          chapter.name?.toLowerCase().replace(/[^a-z0-9]+/g, "-") ||
+          `chapter-${chapterIndex + 1}`,
+        lectures: (chapter.videos || []).map((video, videoIndex) => ({
+          title: video.name || `Video ${videoIndex + 1}`,
+          duration: video.duration || "--:--",
+          summary: video.summary || "",
+          videoLink: video.videoLink || "",
+          photos: Array.isArray(video.photos) ? video.photos : [],
+          videoId: video._id || "",
+          chapterId: chapter._id || "",
+          subjectId: subject._id || "",
+        })),
+      })),
+    };
+  }
+
+  return moduleMap;
+}
+
 export default function Lists() {
   const [activeTab, setActiveTab] = useState("Biochemistry");
+  const [dbModules, setDbModules] = useState(null);
   const sectionRefs = useRef({});
   const navigate = useNavigate();
   const hasSubscription = useMemo(() => {
@@ -1343,7 +1378,43 @@ export default function Lists() {
       return false;
     }
   }, []);
-  const activeModule = useMemo(() => modules[activeTab], [activeTab]);
+  useEffect(() => {
+    let mounted = true;
+
+    (async () => {
+      try {
+        const data = await getMedicineUsmleContent();
+        if (!mounted) return;
+        const mapped = buildModulesFromApi(data.content);
+        if (Object.keys(mapped).length) {
+          setDbModules(mapped);
+        }
+      } catch {
+        // Keep static fallback if DB content is unavailable.
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const sourceModules = useMemo(() => {
+    if (dbModules && Object.keys(dbModules).length) return dbModules;
+    return modules;
+  }, [dbModules]);
+  const tabs = useMemo(() => Object.keys(sourceModules), [sourceModules]);
+  const activeModule = useMemo(
+    () => sourceModules[activeTab] || sourceModules[tabs[0]] || { totalDuration: "--:--", sections: [] },
+    [activeTab, sourceModules, tabs]
+  );
+
+  useEffect(() => {
+    if (!tabs.length) return;
+    if (!tabs.includes(activeTab)) {
+      setActiveTab(tabs[0]);
+    }
+  }, [tabs, activeTab]);
 
   const jumpTo = (sectionId) => {
     const target = sectionRefs.current[sectionId];
@@ -1358,6 +1429,9 @@ export default function Lists() {
       title: lecture.title,
       duration: lecture.duration,
     });
+    if (lecture.subjectId) params.set("subjectId", lecture.subjectId);
+    if (lecture.chapterId) params.set("chapterId", lecture.chapterId);
+    if (lecture.videoId) params.set("videoId", lecture.videoId);
 
     navigate(`/${resourceType}?${params.toString()}`);
   };
@@ -1372,7 +1446,7 @@ export default function Lists() {
           className="mb-8"
         >
           <div className="flex flex-wrap gap-3">
-            {tabs.map((tab, index) => (
+            {(tabs.length ? tabs : defaultTabs).map((tab, index) => (
               <motion.button
                 key={tab}
                 initial={{ opacity: 0, y: 6 }}
