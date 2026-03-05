@@ -38,6 +38,18 @@ const formatTime = (value) => {
   });
 };
 
+const stripMarkdownFormatting = (text = "") =>
+  String(text)
+    .replace(/```[\s\S]*?```/g, (match) => match.replace(/`/g, ""))
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/\*([^*]+)\*/g, "$1")
+    .replace(/^(\s*)[*]\s+/gm, "$1- ")
+    .replace(/^(\s*)\d+\.\s+/gm, "$1- ")
+    .replace(/^(\s*)#+\s+/gm, "$1")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+
 export default function Chatbot() {
   const token = localStorage.getItem("kanthastToken");
   const [sessions, setSessions] = useState([]);
@@ -354,6 +366,9 @@ export default function Chatbot() {
 
             {messages.map((msg, idx) => {
               const isUser = msg.role === "user";
+              const safeContent = isUser
+                ? msg.content
+                : stripMarkdownFormatting(msg.content);
               return (
                 <motion.div
                   key={`${msg.createdAt || idx}-${idx}`}
@@ -383,7 +398,7 @@ export default function Chatbot() {
                           : "bg-white/62 text-slate-800 border-white/75 backdrop-blur-md"
                       }`}
                     >
-                      <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.content}</p>
+                      <p className="text-sm leading-relaxed whitespace-pre-wrap">{safeContent}</p>
                       {msg.fileUrl && (
                         <a
                           href={msg.fileUrl}
