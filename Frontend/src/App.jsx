@@ -20,6 +20,8 @@ import VideoPage from "./pages/VideoPage";
 import ImagesPage from "./pages/ImagesPage";
 import Chatbot from "./pages/Chatbot";
 import SubscriptionPage from "./pages/SubscriptionPage";
+import AdminLogin from "./pages/AdminLogin";
+import AdminPanel from "./pages/AdminPanel";
 
 const hasAuth = () =>
   Boolean(localStorage.getItem("kanthastToken") && localStorage.getItem("kanthastUser"));
@@ -32,10 +34,22 @@ function GuestOnly({ children }) {
   return hasAuth() ? <Navigate to="/dashboard" replace /> : children;
 }
 
+const hasAdminAuth = () =>
+  Boolean(localStorage.getItem("kanthastAdminToken") && localStorage.getItem("kanthastAdminUser"));
+
+function RequireAdmin({ children }) {
+  return hasAdminAuth() ? children : <Navigate to="/adminlogin" replace />;
+}
+
+function AdminGuestOnly({ children }) {
+  return hasAdminAuth() ? <Navigate to="/admin" replace /> : children;
+}
+
 function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(false);
   const isFirstRender = useRef(true);
+  const isAdminRoute = location.pathname.startsWith("/admin");
 
   useLayoutEffect(() => {
     if (location.hash) return;
@@ -71,7 +85,7 @@ function App() {
 
   return (
     <div className="min-h-screen w-screen">
-      <Navbar />
+      {!isAdminRoute && <Navbar />}
 
       <AnimatePresence mode="wait">
         {loading && <EdtechLoader />}
@@ -92,9 +106,11 @@ function App() {
         <Route path="/images" element={<RequireAuth><ImagesPage /></RequireAuth>} />
         <Route path="/chatbot" element={<RequireAuth><Chatbot /></RequireAuth>} />
         <Route path="/subscription" element={<RequireAuth><SubscriptionPage /></RequireAuth>} />
+        <Route path="/adminlogin" element={<AdminGuestOnly><AdminLogin /></AdminGuestOnly>} />
+        <Route path="/admin" element={<RequireAdmin><AdminPanel /></RequireAdmin>} />
       </Routes>
 
-      <Footer />
+      {!isAdminRoute && <Footer />}
     </div>
   );
 }

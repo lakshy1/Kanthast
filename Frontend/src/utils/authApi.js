@@ -36,6 +36,10 @@ export function login(payload) {
   return post("/auth/login", payload);
 }
 
+export function adminLogin(payload) {
+  return post("/auth/admin-login", payload);
+}
+
 export async function getProfile(token) {
   const response = await fetch(`${API_BASE_URL}/profile`, {
     method: "GET",
@@ -183,6 +187,56 @@ export async function uploadChatFile(token, file) {
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.success) {
     throw new Error(data.message || "Failed to upload file");
+  }
+  return data;
+}
+
+export async function getAdminUsers(token) {
+  const response = await fetch(`${API_BASE_URL}/auth/admin/users`, {
+    method: "GET",
+    headers: {
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+  });
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to fetch users");
+  }
+  return data;
+}
+
+export async function updateAdminUser(token, userId, payload) {
+  const response = await fetch(`${API_BASE_URL}/auth/admin/users/${encodeURIComponent(userId)}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to update user");
+  }
+  return data;
+}
+
+export async function deleteAdminUser(token, userId) {
+  const response = await fetch(`${API_BASE_URL}/auth/admin/users/${encodeURIComponent(userId)}`, {
+    method: "DELETE",
+    headers: {
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+  });
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to delete user");
   }
   return data;
 }

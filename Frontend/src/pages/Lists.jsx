@@ -1308,7 +1308,7 @@ Brown-Sequard Syndrome(08:24)`
   ),
 ];
 
-const modules = {
+export const modules = {
   Biochemistry: {
     totalDuration: "26:25:15",
     sections: biochemistrySections,
