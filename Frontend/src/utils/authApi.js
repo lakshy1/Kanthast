@@ -290,3 +290,87 @@ export async function updateMedicineUsmleContent(token, payload) {
   }
   return data;
 }
+
+async function authedJsonRequest(path, method, token, payload) {
+  const response = await fetch(`${API_BASE_URL}${path}`, {
+    method,
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+    body: JSON.stringify(payload || {}),
+  });
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Medicine/USMLE admin request failed");
+  }
+  return data;
+}
+
+export function createMedicineSubject(token, payload) {
+  return authedJsonRequest("/medicine-usmle/admin/subjects", "POST", token, payload);
+}
+
+export function updateMedicineSubject(token, subjectId, payload) {
+  return authedJsonRequest(`/medicine-usmle/admin/subjects/${encodeURIComponent(subjectId)}`, "PATCH", token, payload);
+}
+
+export function deleteMedicineSubject(token, subjectId) {
+  return authedJsonRequest(`/medicine-usmle/admin/subjects/${encodeURIComponent(subjectId)}`, "DELETE", token, {});
+}
+
+export function createMedicineChapter(token, subjectId, payload) {
+  return authedJsonRequest(
+    `/medicine-usmle/admin/subjects/${encodeURIComponent(subjectId)}/chapters`,
+    "POST",
+    token,
+    payload
+  );
+}
+
+export function updateMedicineChapter(token, subjectId, chapterId, payload) {
+  return authedJsonRequest(
+    `/medicine-usmle/admin/subjects/${encodeURIComponent(subjectId)}/chapters/${encodeURIComponent(chapterId)}`,
+    "PATCH",
+    token,
+    payload
+  );
+}
+
+export function deleteMedicineChapter(token, subjectId, chapterId) {
+  return authedJsonRequest(
+    `/medicine-usmle/admin/subjects/${encodeURIComponent(subjectId)}/chapters/${encodeURIComponent(chapterId)}`,
+    "DELETE",
+    token,
+    {}
+  );
+}
+
+export function createMedicineVideo(token, subjectId, chapterId, payload) {
+  return authedJsonRequest(
+    `/medicine-usmle/admin/subjects/${encodeURIComponent(subjectId)}/chapters/${encodeURIComponent(chapterId)}/videos`,
+    "POST",
+    token,
+    payload
+  );
+}
+
+export function updateMedicineVideo(token, subjectId, chapterId, videoId, payload) {
+  return authedJsonRequest(
+    `/medicine-usmle/admin/subjects/${encodeURIComponent(subjectId)}/chapters/${encodeURIComponent(chapterId)}/videos/${encodeURIComponent(videoId)}`,
+    "PATCH",
+    token,
+    payload
+  );
+}
+
+export function deleteMedicineVideo(token, subjectId, chapterId, videoId) {
+  return authedJsonRequest(
+    `/medicine-usmle/admin/subjects/${encodeURIComponent(subjectId)}/chapters/${encodeURIComponent(chapterId)}/videos/${encodeURIComponent(videoId)}`,
+    "DELETE",
+    token,
+    {}
+  );
+}

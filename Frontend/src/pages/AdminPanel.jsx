@@ -12,9 +12,18 @@ import {
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import {
+  createMedicineChapter,
+  createMedicineSubject,
+  createMedicineVideo,
+  deleteMedicineChapter,
+  deleteMedicineSubject,
+  deleteMedicineVideo,
   deleteAdminUser,
   getAdminUsers,
   getMedicineUsmleContent,
+  updateMedicineChapter,
+  updateMedicineSubject,
+  updateMedicineVideo,
   updateAdminUser,
   updateMedicineUsmleContent,
 } from "../utils/authApi";
@@ -75,6 +84,18 @@ export default function AdminPanel() {
   const [contentSaving, setContentSaving] = useState(false);
   const [courseContent, setCourseContent] = useState(null);
   const [contentDraft, setContentDraft] = useState("");
+  const [selectedSubjectId, setSelectedSubjectId] = useState("");
+  const [selectedChapterId, setSelectedChapterId] = useState("");
+  const [selectedVideoId, setSelectedVideoId] = useState("");
+  const [subjectForm, setSubjectForm] = useState({ name: "", totalDuration: "" });
+  const [chapterForm, setChapterForm] = useState({ name: "", totalDuration: "" });
+  const [videoForm, setVideoForm] = useState({
+    name: "",
+    duration: "",
+    summary: "",
+    videoLink: "",
+    photosText: "[]",
+  });
 
   useEffect(() => {
     if (!token) {
@@ -85,6 +106,23 @@ export default function AdminPanel() {
     loadCourseContent();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
+
+  const syncCourseState = (content) => {
+    const nextContent = content || null;
+    setCourseContent(nextContent);
+    setContentDraft(nextContent ? JSON.stringify(nextContent, null, 2) : "");
+
+    const firstSubject = nextContent?.subjects?.[0];
+    const nextSubjectId = firstSubject?._id || "";
+    const firstChapter = firstSubject?.chapters?.[0];
+    const nextChapterId = firstChapter?._id || "";
+    const firstVideo = firstChapter?.videos?.[0];
+    const nextVideoId = firstVideo?._id || "";
+
+    setSelectedSubjectId((prev) => prev || nextSubjectId);
+    setSelectedChapterId((prev) => prev || nextChapterId);
+    setSelectedVideoId((prev) => prev || nextVideoId);
+  };
 
   const loadUsers = async () => {
     if (!token) return;
@@ -104,8 +142,7 @@ export default function AdminPanel() {
     try {
       const data = await getMedicineUsmleContent();
       const content = data.content || null;
-      setCourseContent(content);
-      setContentDraft(content ? JSON.stringify(content, null, 2) : "");
+      syncCourseState(content);
     } catch (error) {
       toast.error(error.message || "Failed to load course content");
     } finally {
@@ -119,8 +156,7 @@ export default function AdminPanel() {
     try {
       const payload = JSON.parse(contentDraft || "{}");
       const data = await updateMedicineUsmleContent(token, payload);
-      setCourseContent(data.content || null);
-      setContentDraft(data.content ? JSON.stringify(data.content, null, 2) : "");
+      syncCourseState(data.content || null);
       toast.success("Medicine/USMLE content updated");
     } catch (error) {
       const message = error instanceof SyntaxError ? "Invalid JSON format" : error.message;
@@ -141,8 +177,7 @@ export default function AdminPanel() {
     try {
       const payload = buildSeedPayloadFromLegacyModules();
       const data = await updateMedicineUsmleContent(token, payload);
-      setCourseContent(data.content || null);
-      setContentDraft(data.content ? JSON.stringify(data.content, null, 2) : "");
+      syncCourseState(data.content || null);
       toast.success("Medicine/USMLE data seeded to database");
     } catch (error) {
       toast.error(error.message || "Failed to seed course content");
@@ -206,6 +241,172 @@ export default function AdminPanel() {
     navigate("/adminlogin");
   };
 
+  const handleCreateSubject = async () => {
+    if (!token) return;
+    if (!subjectForm.name.trim()) return toast.error("Subject name is required");
+    setContentSaving(true);
+    try {
+      const data = await createMedicineSubject(token, subjectForm);
+      syncCourseState(data.content || null);
+      setSelectedSubjectId(data.content?.subjects?.at(-1)?._id || "");
+      toast.success("Subject created");
+    } catch (error) {
+      toast.error(error.message || "Failed to create subject");
+    } finally {
+      setContentSaving(false);
+    }
+  };
+
+  const handleUpdateSubject = async () => {
+    if (!token || !selectedSubject?.id) return;
+    setContentSaving(true);
+    try {
+      const data = await updateMedicineSubject(token, selectedSubject.id, subjectForm);
+      syncCourseState(data.content || null);
+      toast.success("Subject updated");
+    } catch (error) {
+      toast.error(error.message || "Failed to update subject");
+    } finally {
+      setContentSaving(false);
+    }
+  };
+
+  const handleDeleteSubject = async () => {
+    if (!token || !selectedSubject?.id) return;
+    if (!window.confirm(`Delete subject "${selectedSubject.name}" and all nested data?`)) return;
+    setContentSaving(true);
+    try {
+      const data = await deleteMedicineSubject(token, selectedSubject.id);
+      syncCourseState(data.content || null);
+      toast.success("Subject deleted");
+    } catch (error) {
+      toast.error(error.message || "Failed to delete subject");
+    } finally {
+      setContentSaving(false);
+    }
+  };
+
+  const handleCreateChapter = async () => {
+    if (!token || !selectedSubject?.id) return toast.error("Select a subject first");
+    if (!chapterForm.name.trim()) return toast.error("Chapter name is required");
+    setContentSaving(true);
+    try {
+      const data = await createMedicineChapter(token, selectedSubject.id, chapterForm);
+      syncCourseState(data.content || null);
+      const refreshedSubject =
+        (data.content?.subjects || []).find((s) => s._id === selectedSubject.id) || null;
+      setSelectedChapterId(refreshedSubject?.chapters?.at(-1)?._id || "");
+      toast.success("Chapter created");
+    } catch (error) {
+      toast.error(error.message || "Failed to create chapter");
+    } finally {
+      setContentSaving(false);
+    }
+  };
+
+  const handleUpdateChapter = async () => {
+    if (!token || !selectedSubject?.id || !selectedChapter?._id) return;
+    setContentSaving(true);
+    try {
+      const data = await updateMedicineChapter(token, selectedSubject.id, selectedChapter._id, chapterForm);
+      syncCourseState(data.content || null);
+      toast.success("Chapter updated");
+    } catch (error) {
+      toast.error(error.message || "Failed to update chapter");
+    } finally {
+      setContentSaving(false);
+    }
+  };
+
+  const handleDeleteChapter = async () => {
+    if (!token || !selectedSubject?.id || !selectedChapter?._id) return;
+    if (!window.confirm(`Delete chapter "${selectedChapter.name}" and all videos?`)) return;
+    setContentSaving(true);
+    try {
+      const data = await deleteMedicineChapter(token, selectedSubject.id, selectedChapter._id);
+      syncCourseState(data.content || null);
+      toast.success("Chapter deleted");
+    } catch (error) {
+      toast.error(error.message || "Failed to delete chapter");
+    } finally {
+      setContentSaving(false);
+    }
+  };
+
+  const parsePhotos = () => {
+    try {
+      const parsed = JSON.parse(videoForm.photosText || "[]");
+      if (!Array.isArray(parsed)) throw new Error("Photos must be an array");
+      return parsed;
+    } catch {
+      throw new Error("Photos must be valid JSON array");
+    }
+  };
+
+  const handleCreateVideo = async () => {
+    if (!token || !selectedSubject?.id || !selectedChapter?._id) {
+      return toast.error("Select subject and chapter first");
+    }
+    if (!videoForm.name.trim()) return toast.error("Video name is required");
+    setContentSaving(true);
+    try {
+      const payload = { ...videoForm, photos: parsePhotos() };
+      const data = await createMedicineVideo(token, selectedSubject.id, selectedChapter._id, payload);
+      syncCourseState(data.content || null);
+      const refreshedSubject =
+        (data.content?.subjects || []).find((s) => s._id === selectedSubject.id) || null;
+      const refreshedChapter =
+        (refreshedSubject?.chapters || []).find((c) => c._id === selectedChapter._id) || null;
+      setSelectedVideoId(refreshedChapter?.videos?.at(-1)?._id || "");
+      toast.success("Video created");
+    } catch (error) {
+      toast.error(error.message || "Failed to create video");
+    } finally {
+      setContentSaving(false);
+    }
+  };
+
+  const handleUpdateVideo = async () => {
+    if (!token || !selectedSubject?.id || !selectedChapter?._id || !selectedVideo?._id) return;
+    setContentSaving(true);
+    try {
+      const payload = { ...videoForm, photos: parsePhotos() };
+      const data = await updateMedicineVideo(
+        token,
+        selectedSubject.id,
+        selectedChapter._id,
+        selectedVideo._id,
+        payload
+      );
+      syncCourseState(data.content || null);
+      toast.success("Video updated");
+    } catch (error) {
+      toast.error(error.message || "Failed to update video");
+    } finally {
+      setContentSaving(false);
+    }
+  };
+
+  const handleDeleteVideo = async () => {
+    if (!token || !selectedSubject?.id || !selectedChapter?._id || !selectedVideo?._id) return;
+    if (!window.confirm(`Delete video "${selectedVideo.name}"?`)) return;
+    setContentSaving(true);
+    try {
+      const data = await deleteMedicineVideo(
+        token,
+        selectedSubject.id,
+        selectedChapter._id,
+        selectedVideo._id
+      );
+      syncCourseState(data.content || null);
+      toast.success("Video deleted");
+    } catch (error) {
+      toast.error(error.message || "Failed to delete video");
+    } finally {
+      setContentSaving(false);
+    }
+  };
+
   const subjects = (courseContent?.subjects || []).map((subject) => {
     const chapters = subject.chapters || [];
     const totalVideos = chapters.reduce((acc, chapter) => acc + (chapter.videos?.length || 0), 0);
@@ -217,6 +418,51 @@ export default function AdminPanel() {
       totalVideos,
     };
   });
+
+  const selectedSubject = subjects.find((s) => s.id === selectedSubjectId) || subjects[0] || null;
+  const chapters = selectedSubject?.chapters || [];
+  const selectedChapter = chapters.find((c) => c._id === selectedChapterId) || chapters[0] || null;
+  const videos = selectedChapter?.videos || [];
+  const selectedVideo = videos.find((v) => v._id === selectedVideoId) || videos[0] || null;
+
+  useEffect(() => {
+    const nextSubjectId = selectedSubject?.id || "";
+    if (selectedSubjectId !== nextSubjectId) {
+      setSelectedSubjectId(nextSubjectId);
+    }
+    const nextChapterId = selectedChapter?._id || "";
+    if (selectedChapterId !== nextChapterId) {
+      setSelectedChapterId(nextChapterId);
+    }
+    const nextVideoId = selectedVideo?._id || "";
+    if (selectedVideoId !== nextVideoId) {
+      setSelectedVideoId(nextVideoId);
+    }
+  }, [selectedSubject, selectedChapter, selectedVideo, selectedSubjectId, selectedChapterId, selectedVideoId]);
+
+  useEffect(() => {
+    setSubjectForm({
+      name: selectedSubject?.name || "",
+      totalDuration: selectedSubject?.totalDuration || "",
+    });
+  }, [selectedSubject?.id]);
+
+  useEffect(() => {
+    setChapterForm({
+      name: selectedChapter?.name || "",
+      totalDuration: selectedChapter?.totalDuration || "",
+    });
+  }, [selectedChapter?._id]);
+
+  useEffect(() => {
+    setVideoForm({
+      name: selectedVideo?.name || "",
+      duration: selectedVideo?.duration || "",
+      summary: selectedVideo?.summary || "",
+      videoLink: selectedVideo?.videoLink || "",
+      photosText: JSON.stringify(selectedVideo?.photos || [], null, 2),
+    });
+  }, [selectedVideo?._id]);
 
   const stats = {
     totalUsers: users.length,
@@ -448,15 +694,129 @@ export default function AdminPanel() {
                           ))}
                         </div>
 
+                        <div className="grid xl:grid-cols-3 gap-4">
+                          <div className="rounded-2xl border border-slate-200 bg-white p-4 space-y-3">
+                            <p className="text-sm font-bold text-slate-900">Subject CRUD</p>
+                            <select
+                              value={selectedSubject?.id || ""}
+                              onChange={(e) => setSelectedSubjectId(e.target.value)}
+                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                            >
+                              {(subjects || []).map((item) => (
+                                <option key={item.id} value={item.id}>
+                                  {item.name}
+                                </option>
+                              ))}
+                            </select>
+                            <input
+                              value={subjectForm.name}
+                              onChange={(e) => setSubjectForm((p) => ({ ...p, name: e.target.value }))}
+                              placeholder="Subject name"
+                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                            />
+                            <input
+                              value={subjectForm.totalDuration}
+                              onChange={(e) => setSubjectForm((p) => ({ ...p, totalDuration: e.target.value }))}
+                              placeholder="Total duration (e.g. 26:25:15)"
+                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                            />
+                            <div className="grid grid-cols-3 gap-2">
+                              <button onClick={handleCreateSubject} className="rounded-lg bg-slate-900 text-white py-2 text-sm">Create</button>
+                              <button onClick={handleUpdateSubject} className="rounded-lg border border-slate-300 py-2 text-sm">Update</button>
+                              <button onClick={handleDeleteSubject} className="rounded-lg bg-red-500 text-white py-2 text-sm">Delete</button>
+                            </div>
+                          </div>
+
+                          <div className="rounded-2xl border border-slate-200 bg-white p-4 space-y-3">
+                            <p className="text-sm font-bold text-slate-900">Chapter CRUD</p>
+                            <select
+                              value={selectedChapter?._id || ""}
+                              onChange={(e) => setSelectedChapterId(e.target.value)}
+                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                            >
+                              {(chapters || []).map((item) => (
+                                <option key={item._id} value={item._id}>
+                                  {item.name}
+                                </option>
+                              ))}
+                            </select>
+                            <input
+                              value={chapterForm.name}
+                              onChange={(e) => setChapterForm((p) => ({ ...p, name: e.target.value }))}
+                              placeholder="Chapter name"
+                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                            />
+                            <input
+                              value={chapterForm.totalDuration}
+                              onChange={(e) => setChapterForm((p) => ({ ...p, totalDuration: e.target.value }))}
+                              placeholder="Total duration"
+                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                            />
+                            <div className="grid grid-cols-3 gap-2">
+                              <button onClick={handleCreateChapter} className="rounded-lg bg-slate-900 text-white py-2 text-sm">Create</button>
+                              <button onClick={handleUpdateChapter} className="rounded-lg border border-slate-300 py-2 text-sm">Update</button>
+                              <button onClick={handleDeleteChapter} className="rounded-lg bg-red-500 text-white py-2 text-sm">Delete</button>
+                            </div>
+                          </div>
+
+                          <div className="rounded-2xl border border-slate-200 bg-white p-4 space-y-3">
+                            <p className="text-sm font-bold text-slate-900">Video CRUD</p>
+                            <select
+                              value={selectedVideo?._id || ""}
+                              onChange={(e) => setSelectedVideoId(e.target.value)}
+                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                            >
+                              {(videos || []).map((item) => (
+                                <option key={item._id} value={item._id}>
+                                  {item.name}
+                                </option>
+                              ))}
+                            </select>
+                            <input
+                              value={videoForm.name}
+                              onChange={(e) => setVideoForm((p) => ({ ...p, name: e.target.value }))}
+                              placeholder="Video name"
+                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                            />
+                            <input
+                              value={videoForm.duration}
+                              onChange={(e) => setVideoForm((p) => ({ ...p, duration: e.target.value }))}
+                              placeholder="Duration (e.g. 07:19)"
+                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                            />
+                            <input
+                              value={videoForm.videoLink}
+                              onChange={(e) => setVideoForm((p) => ({ ...p, videoLink: e.target.value }))}
+                              placeholder="Video link"
+                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                            />
+                            <textarea
+                              value={videoForm.summary}
+                              onChange={(e) => setVideoForm((p) => ({ ...p, summary: e.target.value }))}
+                              placeholder="Summary"
+                              className="w-full min-h-[90px] rounded-lg border border-slate-300 px-3 py-2"
+                            />
+                            <textarea
+                              value={videoForm.photosText}
+                              onChange={(e) => setVideoForm((p) => ({ ...p, photosText: e.target.value }))}
+                              placeholder='Photos JSON array: [{"imageLink":"...","imageText":"..."}]'
+                              className="w-full min-h-[90px] rounded-lg border border-slate-300 px-3 py-2 font-mono text-xs"
+                            />
+                            <div className="grid grid-cols-3 gap-2">
+                              <button onClick={handleCreateVideo} className="rounded-lg bg-slate-900 text-white py-2 text-sm">Create</button>
+                              <button onClick={handleUpdateVideo} className="rounded-lg border border-slate-300 py-2 text-sm">Update</button>
+                              <button onClick={handleDeleteVideo} className="rounded-lg bg-red-500 text-white py-2 text-sm">Delete</button>
+                            </div>
+                          </div>
+                        </div>
+
                         <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                          <p className="text-sm text-slate-600 mb-2">
-                            Edit full nested content here: subjects, chapters, videos, summary, videoLink, and photos.
-                          </p>
+                          <p className="text-sm text-slate-600 mb-2">Raw JSON editor (advanced full-replace mode)</p>
                           <textarea
                             value={contentDraft}
                             onChange={(e) => setContentDraft(e.target.value)}
                             spellCheck={false}
-                            className="w-full min-h-[420px] rounded-xl border border-slate-300 p-3 font-mono text-xs outline-none focus:ring-2 focus:ring-cyan-400"
+                            className="w-full min-h-[260px] rounded-xl border border-slate-300 p-3 font-mono text-xs outline-none focus:ring-2 focus:ring-cyan-400"
                           />
                         </div>
                       </>
