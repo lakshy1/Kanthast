@@ -74,6 +74,26 @@ export async function updateProfile(token, payload) {
   return data;
 }
 
+export async function purchaseSubscriptionPlan(token, payload) {
+  const response = await fetch(`${API_BASE_URL}/profile/subscription`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json().catch(() => ({}));
+
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to activate subscription");
+  }
+
+  return data;
+}
+
 export async function getChatHistory(token, sessionId = "") {
   const query = sessionId ? `?sessionId=${encodeURIComponent(sessionId)}` : "";
   const response = await fetch(`${API_BASE_URL}/chat/history${query}`, {

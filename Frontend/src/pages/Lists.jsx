@@ -1335,6 +1335,14 @@ export default function Lists() {
   const [activeTab, setActiveTab] = useState("Biochemistry");
   const sectionRefs = useRef({});
   const navigate = useNavigate();
+  const hasSubscription = useMemo(() => {
+    try {
+      const user = JSON.parse(localStorage.getItem("kanthastUser") || "null");
+      return Boolean(user?.subscriptionPurchased);
+    } catch {
+      return false;
+    }
+  }, []);
   const activeModule = useMemo(() => modules[activeTab], [activeTab]);
 
   const jumpTo = (sectionId) => {
@@ -1430,14 +1438,16 @@ export default function Lists() {
                             <ActionButton
                               label="Video"
                               icon={<FaPlay />}
-                              locked={lectureIndex >= 2}
+                              locked={!hasSubscription && lectureIndex >= 2}
                               onClick={() => openLectureResource("video", sec.title, lecture)}
+                              onLockedClick={() => navigate("/subscription")}
                             />
                             <ActionButton
                               label="Photo"
                               icon={<FaRegImage />}
-                              locked={lectureIndex >= 2}
+                              locked={!hasSubscription && lectureIndex >= 2}
                               onClick={() => openLectureResource("images", sec.title, lecture)}
+                              onLockedClick={() => navigate("/subscription")}
                             />
                           </div>
                         </div>
@@ -1472,18 +1482,18 @@ export default function Lists() {
   );
 }
 
-function ActionButton({ icon, label, onClick, locked = false }) {
-  const lockedMessage = "Subscribe to access all the content";
+function ActionButton({ icon, label, onClick, locked = false, onLockedClick }) {
+  const lockedMessage = "Subscribe to access all the content (open subscription page)";
 
   return (
     <div className="relative group/lock">
       <motion.button
         whileHover={locked ? undefined : { scale: 1.06, y: -1 }}
         whileTap={locked ? undefined : { scale: 0.95 }}
-        onClick={locked ? undefined : onClick}
+        onClick={locked ? onLockedClick : onClick}
         className={`relative w-11 h-11 rounded-full border bg-white/90 transition flex items-center justify-center ${
           locked
-            ? "border-slate-300 text-slate-400 cursor-not-allowed"
+            ? "border-slate-300 text-slate-400 cursor-pointer"
             : "border-slate-300 text-slate-600 hover:text-slate-900 hover:border-slate-500"
         }`}
         aria-label={label}

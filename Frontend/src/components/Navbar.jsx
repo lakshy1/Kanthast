@@ -116,6 +116,10 @@ const Navbar = () => {
             Lists
           </NavLink>
 
+          <NavLink to="/subscription" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+            Subscription
+          </NavLink>
+
           <NavLink to="/about" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
             About
           </NavLink>
@@ -188,6 +192,12 @@ const Navbar = () => {
                         className="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100"
                       >
                         Lists
+                      </Link>
+                      <Link
+                        to="/subscription"
+                        className="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100"
+                      >
+                        Subscription
                       </Link>
                       <button
                         onClick={handleLogout}
@@ -264,6 +274,14 @@ const Navbar = () => {
             </NavLink>
 
             <NavLink
+              to="/subscription"
+              onClick={() => setIsMobileOpen(false)}
+              className={({ isActive }) => (isActive ? activeClass : normalClass)}
+            >
+              Subscription
+            </NavLink>
+
+            <NavLink
               to="/about"
               onClick={() => setIsMobileOpen(false)}
               className={({ isActive }) => (isActive ? activeClass : normalClass)}
@@ -319,6 +337,13 @@ const Navbar = () => {
                   className="px-4 py-2 rounded-lg bg-white/10 text-gray-200"
                 >
                   Lists
+                </Link>
+                <Link
+                  to="/subscription"
+                  onClick={() => setIsMobileOpen(false)}
+                  className="px-4 py-2 rounded-lg bg-white/10 text-gray-200"
+                >
+                  Subscription
                 </Link>
                 <button
                   onClick={handleLogout}

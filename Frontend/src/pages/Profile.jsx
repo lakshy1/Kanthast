@@ -69,6 +69,7 @@ export default function Profile() {
         const profileData = data.profile || null;
 
         setUser(userData);
+        localStorage.setItem("kanthastUser", JSON.stringify(userData));
         setProfile(profileData);
         setForm({
           about: profileData?.about || "",
@@ -122,6 +123,7 @@ export default function Profile() {
 
       setProfile(updatedProfile);
       setUser(updatedUser);
+      localStorage.setItem("kanthastUser", JSON.stringify(updatedUser));
       setSaveMessage("Profile updated successfully.");
       setIsEditing(false);
     } catch (err) {
@@ -305,4 +307,3 @@ function EditableField({ icon, label, children }) {
     </div>
   );
 }
-
