@@ -3,6 +3,7 @@ import { useLocation, Link } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import { FaArrowLeft, FaBookOpen, FaClock, FaLayerGroup, FaRegCheckCircle } from "react-icons/fa";
 import { getMedicineUsmleVideoDetails } from "../utils/authApi";
+import { SummaryPageSkeleton } from "../components/DataLoaderSkeletons";
 
 function useLectureQuery() {
   const { search } = useLocation();
@@ -21,13 +22,18 @@ function useLectureQuery() {
 export default function SummaryPage() {
   const data = useLectureQuery();
   const [summary, setSummary] = useState("");
+  const [loading, setLoading] = useState(Boolean(data.subjectId && data.chapterId && data.videoId));
 
   useEffect(() => {
     let mounted = true;
-    if (!data.subjectId || !data.chapterId || !data.videoId) return undefined;
+    if (!data.subjectId || !data.chapterId || !data.videoId) {
+      setLoading(false);
+      return undefined;
+    }
 
     (async () => {
       try {
+        setLoading(true);
         const response = await getMedicineUsmleVideoDetails({
           subjectId: data.subjectId,
           chapterId: data.chapterId,
@@ -38,6 +44,8 @@ export default function SummaryPage() {
       } catch {
         if (!mounted) return;
         setSummary("");
+      } finally {
+        if (mounted) setLoading(false);
       }
     })();
 
@@ -88,47 +96,51 @@ export default function SummaryPage() {
           </div>
         </motion.section>
 
-        <div className="mt-6 grid lg:grid-cols-[1.4fr_1fr] gap-6">
-          <motion.article
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.08, duration: 0.45, ease: "easeOut" }}
-            className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.06)]"
-          >
-            <h2 className="text-2xl font-bold text-slate-900">Concise Notes</h2>
-            <p className="mt-3 text-slate-600 leading-relaxed">
-              This summary panel is designed to hold the focused key takeaways for{" "}
-              <span className="font-semibold text-slate-800">{data.title}</span>. Keep this area short,
-              precise, and revision-friendly.
-            </p>
+        {loading ? (
+          <SummaryPageSkeleton />
+        ) : (
+          <div className="mt-6 grid lg:grid-cols-[1.4fr_1fr] gap-6">
+            <motion.article
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.08, duration: 0.45, ease: "easeOut" }}
+              className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.06)]"
+            >
+              <h2 className="text-2xl font-bold text-slate-900">Concise Notes</h2>
+              <p className="mt-3 text-slate-600 leading-relaxed">
+                This summary panel is designed to hold the focused key takeaways for{" "}
+                <span className="font-semibold text-slate-800">{data.title}</span>. Keep this area short,
+                precise, and revision-friendly.
+              </p>
 
-            <div className="mt-6 space-y-3">
-              {bullets.map((item) => (
-                <div key={item} className="flex items-start gap-3 rounded-xl bg-slate-50 border border-slate-200 p-4">
-                  <FaRegCheckCircle className="text-cyan-600 mt-1 shrink-0" />
-                  <p className="text-slate-700">{item}</p>
-                </div>
-              ))}
-            </div>
-          </motion.article>
+              <div className="mt-6 space-y-3">
+                {bullets.map((item) => (
+                  <div key={item} className="flex items-start gap-3 rounded-xl bg-slate-50 border border-slate-200 p-4">
+                    <FaRegCheckCircle className="text-cyan-600 mt-1 shrink-0" />
+                    <p className="text-slate-700">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.article>
 
-          <motion.aside
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.16, duration: 0.45, ease: "easeOut" }}
-            className="rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6 shadow-[0_18px_40px_rgba(14,116,144,0.12)]"
-          >
-            <h3 className="text-xl font-bold text-slate-900">Quick Revision Sprint</h3>
-            <p className="mt-3 text-slate-700">
-              Use this mini plan right after watching to lock in retention.
-            </p>
-            <ol className="mt-5 space-y-3 text-slate-700">
-              <li className="rounded-xl bg-white/80 border border-cyan-100 px-4 py-3">1. Read summary once.</li>
-              <li className="rounded-xl bg-white/80 border border-cyan-100 px-4 py-3">2. Say key points out loud.</li>
-              <li className="rounded-xl bg-white/80 border border-cyan-100 px-4 py-3">3. Test yourself in 2 minutes.</li>
-            </ol>
-          </motion.aside>
-        </div>
+            <motion.aside
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.16, duration: 0.45, ease: "easeOut" }}
+              className="rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6 shadow-[0_18px_40px_rgba(14,116,144,0.12)]"
+            >
+              <h3 className="text-xl font-bold text-slate-900">Quick Revision Sprint</h3>
+              <p className="mt-3 text-slate-700">
+                Use this mini plan right after watching to lock in retention.
+              </p>
+              <ol className="mt-5 space-y-3 text-slate-700">
+                <li className="rounded-xl bg-white/80 border border-cyan-100 px-4 py-3">1. Read summary once.</li>
+                <li className="rounded-xl bg-white/80 border border-cyan-100 px-4 py-3">2. Say key points out loud.</li>
+                <li className="rounded-xl bg-white/80 border border-cyan-100 px-4 py-3">3. Test yourself in 2 minutes.</li>
+              </ol>
+            </motion.aside>
+          </div>
+        )}
       </div>
     </div>
   );

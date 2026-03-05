@@ -9,6 +9,7 @@ import {
   FaPlay,
 } from "react-icons/fa";
 import { getMedicineUsmleVideoDetails } from "../utils/authApi";
+import { VideoMetaSkeleton, VideoPageSkeleton } from "../components/DataLoaderSkeletons";
 
 function useLectureQuery() {
   const { search } = useLocation();
@@ -72,14 +73,19 @@ export default function VideoPage() {
   const data = useLectureQuery();
   const [videoLink, setVideoLink] = useState("");
   const [dbTitle, setDbTitle] = useState("");
+  const [loading, setLoading] = useState(Boolean(data.subjectId && data.chapterId && data.videoId));
   const embedded = getEmbeddableUrl(videoLink);
 
   useEffect(() => {
     let mounted = true;
-    if (!data.subjectId || !data.chapterId || !data.videoId) return undefined;
+    if (!data.subjectId || !data.chapterId || !data.videoId) {
+      setLoading(false);
+      return undefined;
+    }
 
     (async () => {
       try {
+        setLoading(true);
         const response = await getMedicineUsmleVideoDetails({
           subjectId: data.subjectId,
           chapterId: data.chapterId,
@@ -93,6 +99,8 @@ export default function VideoPage() {
         if (!mounted) return;
         setVideoLink("");
         setDbTitle("");
+      } finally {
+        if (mounted) setLoading(false);
       }
     })();
 
@@ -117,7 +125,10 @@ export default function VideoPage() {
           transition={{ duration: 0.45, ease: "easeOut" }}
           className="mt-4 grid lg:grid-cols-[1.4fr_0.8fr] gap-6"
         >
-          <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+          {loading ? (
+            <VideoPageSkeleton />
+          ) : (
+            <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
             {embedded.type === "file" && embedded.url ? (
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
                 <video controls playsInline preload="metadata" className="w-full aspect-video" src={embedded.url}>
@@ -163,9 +174,13 @@ export default function VideoPage() {
               </div>
             )}
             <div className="mt-3 text-sm text-slate-500">Duration: {data.duration}</div>
-          </section>
+            </section>
+          )}
 
-          <aside className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
+          {loading ? (
+            <VideoMetaSkeleton />
+          ) : (
+            <aside className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
             <h2 className="text-xl font-bold text-slate-900">Lecture Context</h2>
             <div className="mt-4 space-y-3">
               <MetaCard icon={<FaLayerGroup />} label="Module" value={data.module} />
@@ -179,7 +194,8 @@ export default function VideoPage() {
                 Watch in 1.25x, pause at transitions, and summarize each segment in one line.
               </p>
             </div>
-          </aside>
+            </aside>
+          )}
         </motion.div>
       </div>
     </div>

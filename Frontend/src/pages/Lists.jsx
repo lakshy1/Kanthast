@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaRegFileAlt, FaPlay, FaRegImage, FaChevronRight, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { getMedicineUsmleContent } from "../utils/authApi";
+import { ListsPageSkeleton } from "../components/DataLoaderSkeletons";
 
 const parseLectures = (text) =>
   text
@@ -1464,9 +1465,7 @@ export default function Lists() {
 
         <div className="grid lg:grid-cols-[minmax(0,1fr)_360px] gap-8 items-start">
           {catalogLoading ? (
-            <div className="rounded-3xl bg-white/80 border border-slate-200 p-8">
-              <p className="text-slate-700 text-lg font-semibold">Loading course catalog...</p>
-            </div>
+            <ListsPageSkeleton />
           ) : !tabs.length ? (
             <div className="rounded-3xl bg-white/80 border border-slate-200 p-8">
               <p className="text-slate-700 text-lg font-semibold">

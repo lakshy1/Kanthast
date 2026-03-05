@@ -8,6 +8,7 @@ import Image3 from "../assets/images/Image-3.png";
 import Image4 from "../assets/images/Image-4.png";
 import Image5 from "../assets/images/Image-5.png";
 import { getMedicineUsmleVideoDetails } from "../utils/authApi";
+import { ImagesPageSkeleton } from "../components/DataLoaderSkeletons";
 
 function useLectureQuery() {
   const { search } = useLocation();
@@ -28,13 +29,18 @@ const fallbackGallery = [Image1, Image2, Image3, Image4, Image5, Image2];
 export default function ImagesPage() {
   const data = useLectureQuery();
   const [photos, setPhotos] = useState([]);
+  const [loading, setLoading] = useState(Boolean(data.subjectId && data.chapterId && data.videoId));
 
   useEffect(() => {
     let mounted = true;
-    if (!data.subjectId || !data.chapterId || !data.videoId) return undefined;
+    if (!data.subjectId || !data.chapterId || !data.videoId) {
+      setLoading(false);
+      return undefined;
+    }
 
     (async () => {
       try {
+        setLoading(true);
         const response = await getMedicineUsmleVideoDetails({
           subjectId: data.subjectId,
           chapterId: data.chapterId,
@@ -45,6 +51,8 @@ export default function ImagesPage() {
       } catch {
         if (!mounted) return;
         setPhotos([]);
+      } finally {
+        if (mounted) setLoading(false);
       }
     })();
 
@@ -91,32 +99,36 @@ export default function ImagesPage() {
           </div>
         </motion.header>
 
-        <motion.section
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.08, duration: 0.45, ease: "easeOut" }}
-          className="mt-6 grid sm:grid-cols-2 xl:grid-cols-3 gap-5"
-        >
-          {gallery.map((item, idx) => (
-            <motion.article
-              key={`${item.imageLink}-${idx}`}
-              whileHover={{ y: -4 }}
-              className="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.08)]"
-            >
-              <div className="relative">
-                <img src={item.imageLink} alt={`${data.title} visual ${idx + 1}`} className="w-full h-52 object-cover" />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition" />
-                <button className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 text-slate-700 grid place-items-center opacity-0 group-hover:opacity-100 transition">
-                  <FaExpand />
-                </button>
-              </div>
-              <div className="p-4">
-                <p className="font-semibold text-slate-900">Slide {idx + 1}</p>
-                <p className="text-sm text-slate-600 mt-1">{item.imageText || "Key visual aid for rapid recall."}</p>
-              </div>
-            </motion.article>
-          ))}
-        </motion.section>
+        {loading ? (
+          <ImagesPageSkeleton />
+        ) : (
+          <motion.section
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.08, duration: 0.45, ease: "easeOut" }}
+            className="mt-6 grid sm:grid-cols-2 xl:grid-cols-3 gap-5"
+          >
+            {gallery.map((item, idx) => (
+              <motion.article
+                key={`${item.imageLink}-${idx}`}
+                whileHover={{ y: -4 }}
+                className="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.08)]"
+              >
+                <div className="relative">
+                  <img src={item.imageLink} alt={`${data.title} visual ${idx + 1}`} className="w-full h-52 object-cover" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition" />
+                  <button className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 text-slate-700 grid place-items-center opacity-0 group-hover:opacity-100 transition">
+                    <FaExpand />
+                  </button>
+                </div>
+                <div className="p-4">
+                  <p className="font-semibold text-slate-900">Slide {idx + 1}</p>
+                  <p className="text-sm text-slate-600 mt-1">{item.imageText || "Key visual aid for rapid recall."}</p>
+                </div>
+              </motion.article>
+            ))}
+          </motion.section>
+        )}
       </div>
     </div>
   );
