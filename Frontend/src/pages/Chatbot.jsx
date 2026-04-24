@@ -359,9 +359,20 @@ export default function Chatbot() {
             {status === "loadingSession" && <p className="text-slate-500">Loading selected conversation...</p>}
 
             {messages.length === 0 && status !== "loading" && status !== "loadingSession" && (
-              <div className="rounded-2xl border border-white/70 bg-white/60 p-4">
-                <p className="text-slate-700">This session is fresh. Use a quick prompt below or type your message.</p>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="flex flex-col items-center justify-center h-full py-16 text-center gap-4"
+              >
+                <div className="w-16 h-16 rounded-full bg-cyan-50 border border-cyan-100 grid place-items-center text-cyan-500 text-3xl">
+                  <FaRobot />
+                </div>
+                <h3 className="text-xl font-bold text-slate-800">How can I help you?</h3>
+                <p className="text-slate-500 max-w-xs text-sm leading-relaxed">
+                  Ask about platform issues, subscription questions, or anything related to your study workflow.
+                </p>
+              </motion.div>
             )}
 
             {messages.map((msg, idx) => {
@@ -421,13 +432,14 @@ export default function Chatbot() {
           <div className="px-4 md:px-5 pb-4 md:pb-5 pt-3 border-t border-white/50 bg-white/28 backdrop-blur-xl">
             <div className="flex flex-wrap gap-2 mb-3 max-h-24 md:max-h-20 overflow-y-auto pr-1">
               {quickSuggestions.map((item) => (
-                <button
+                <motion.button
                   key={item}
+                  whileTap={{ scale: 0.96 }}
                   onClick={() => sendMessage(item)}
                   className="rounded-full border border-white/70 bg-white/68 px-3 py-1.5 text-xs text-slate-700 hover:bg-cyan-50/90 hover:border-cyan-200 transition-all duration-300"
                 >
                   {item}
-                </button>
+                </motion.button>
               ))}
             </div>
 

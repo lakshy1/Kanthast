@@ -117,7 +117,7 @@ export default function ImagesPage() {
                 <div className="relative">
                   <img src={item.imageLink} alt={`${data.title} visual ${idx + 1}`} className="w-full h-52 object-cover" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition" />
-                  <button className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 text-slate-700 grid place-items-center opacity-0 group-hover:opacity-100 transition">
+                  <button className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 text-slate-700 grid place-items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition">
                     <FaExpand />
                   </button>
                 </div>

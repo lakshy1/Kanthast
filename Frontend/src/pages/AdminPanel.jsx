@@ -27,7 +27,7 @@ import {
   updateAdminUser,
   updateMedicineUsmleContent,
 } from "../utils/authApi";
-import { modules as legacyModules } from "./Lists";
+import { modules as legacyModules } from "../data/modulesSeedData";
 
 const tabs = [
   { id: "overview", label: "Overview", icon: <FaChartLine /> },

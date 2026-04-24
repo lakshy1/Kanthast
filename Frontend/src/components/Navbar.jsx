@@ -12,8 +12,8 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const activeClass = "text-yellow-400 font-semibold";
-  const normalClass = "text-gray-300 hover:text-white transition duration-300";
+  const activeClass = "text-cyan-400 font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded";
+  const normalClass = "text-gray-300 hover:text-white transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded";
 
   const isCoursesActive = location.pathname === "/courses";
 
@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <nav className="w-full sticky top-0 z-50 bg-gradient-to-r from-[#0B1120] via-blue-950 to-[#0f172a] backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-16 flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center h-full">
+        <Link to="/" className="flex items-center h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded">
           <img src={Logo} alt="" className="h-full object-contain"/>
         </Link>
 
@@ -58,13 +58,11 @@ const Navbar = () => {
             onMouseEnter={() => setIsCoursesOpen(true)}
             onMouseLeave={() => setIsCoursesOpen(false)}
           >
-            <div
-              className="flex items-center gap-2 transition"
-            >
+            <div className="flex items-center gap-2 transition">
               <NavLink
                 to="/courses"
                 onClick={() => setIsCoursesOpen(false)}
-                className={isCoursesActive ? "text-yellow-400 font-semibold" : "text-gray-300 hover:text-white"}
+                className={isCoursesActive ? activeClass : normalClass}
               >
                 Courses
               </NavLink>
@@ -73,7 +71,7 @@ const Navbar = () => {
                 onClick={() => setIsCoursesOpen((prev) => !prev)}
                 animate={{ rotate: isCoursesOpen ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
-                className={isCoursesActive ? "text-yellow-400" : "text-gray-300 hover:text-white"}
+                className={`${isCoursesActive ? "text-cyan-400" : "text-gray-300 hover:text-white"} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded`}
                 aria-label="Toggle courses dropdown"
               >
                 <FaChevronDown className="text-xs" />
@@ -91,19 +89,19 @@ const Navbar = () => {
                 >
                   <HashLink
                     to="/courses#medicine"
-                    className="block px-4 py-3 rounded-lg hover:bg-slate-100 text-slate-700 transition"
+                    className="block px-4 py-3 rounded-lg hover:bg-slate-100 text-slate-700 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
                   >
                     Medicine / USMLE
                   </HashLink>
                   <HashLink
                     to="/courses#premed"
-                    className="block px-4 py-3 rounded-lg hover:bg-slate-100 text-slate-700 transition"
+                    className="block px-4 py-3 rounded-lg hover:bg-slate-100 text-slate-700 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
                   >
                     Premedicine / MCAT
                   </HashLink>
                   <HashLink
                     to="/courses#nursing"
-                    className="block px-4 py-3 rounded-lg hover:bg-slate-100 text-slate-700 transition"
+                    className="block px-4 py-3 rounded-lg hover:bg-slate-100 text-slate-700 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
                   >
                     Nursing / NCLEX
                   </HashLink>
@@ -134,14 +132,14 @@ const Navbar = () => {
             <>
               <Link
                 to="/login"
-                className="px-5 py-2 rounded-lg bg-white/10 text-gray-200 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300"
+                className="px-5 py-2 rounded-lg bg-white/10 text-gray-200 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
               >
                 Log In
               </Link>
 
               <Link
                 to="/signup"
-                className="px-5 py-2 rounded-lg bg-yellow-400 text-black font-semibold hover:bg-yellow-300 transition duration-300"
+                className="px-5 py-2 rounded-lg bg-cyan-500 text-white font-semibold hover:bg-cyan-400 transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
               >
                 Sign Up
               </Link>
@@ -153,12 +151,10 @@ const Navbar = () => {
                 onMouseEnter={() => setIsUserMenuOpen(true)}
                 onMouseLeave={() => setIsUserMenuOpen(false)}
               >
-                <button className="flex items-center gap-2 px-2 py-1 rounded-full bg-white/10 border border-white/20 text-white">
+                <button className="flex items-center gap-2 px-2 py-1 rounded-full bg-white/10 border border-white/20 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center border border-white/25 shadow-inner overflow-hidden"
-                    style={{
-                      backgroundColor: avatarBg,
-                    }}
+                    style={{ backgroundColor: avatarBg }}
                   >
                     <span className="text-base font-extrabold tracking-wide text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] select-none">
                       {initials}
@@ -175,33 +171,21 @@ const Navbar = () => {
                       exit={{ opacity: 0, y: 10 }}
                       className="absolute right-0 mt-2 w-44 bg-white rounded-xl shadow-xl p-2"
                     >
-                      <Link
-                        to="/profile"
-                        className="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100"
-                      >
+                      <Link to="/profile" className="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
                         My Profile
                       </Link>
-                      <Link
-                        to="/dashboard"
-                        className="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100"
-                      >
+                      <Link to="/dashboard" className="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
                         My Dashboard
                       </Link>
-                      <Link
-                        to="/lists"
-                        className="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100"
-                      >
+                      <Link to="/lists" className="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
                         Lists
                       </Link>
-                      <Link
-                        to="/subscription"
-                        className="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100"
-                      >
+                      <Link to="/subscription" className="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
                         Subscription
                       </Link>
                       <button
                         onClick={handleLogout}
-                        className="w-full text-left px-3 py-2 rounded-lg text-red-600 hover:bg-red-50"
+                        className="w-full text-left px-3 py-2 rounded-lg text-red-600 hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
                       >
                         Logout
                       </button>
@@ -213,7 +197,7 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={() => navigate("/chatbot")}
-                className="w-11 h-11 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition flex items-center justify-center"
+                className="w-11 h-11 rounded-full bg-cyan-500 text-white hover:bg-cyan-400 transition flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
                 aria-label="Open chatbot"
                 title="Chatbot"
               >
@@ -224,7 +208,10 @@ const Navbar = () => {
         </div>
 
         <div className="md:hidden text-white">
-          <button onClick={() => setIsMobileOpen(!isMobileOpen)}>
+          <button
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded p-1"
+          >
             {isMobileOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
           </button>
         </div>
@@ -239,22 +226,12 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-[#0f172a] px-6 pb-6 flex flex-col gap-6"
           >
-            <NavLink
-              to="/"
-              onClick={() => setIsMobileOpen(false)}
-              className={({ isActive }) => (isActive ? activeClass : normalClass)}
-            >
+            <NavLink to="/" onClick={() => setIsMobileOpen(false)} className={({ isActive }) => (isActive ? activeClass : normalClass)}>
               Home
             </NavLink>
-
-            <NavLink
-              to="/courses"
-              onClick={() => setIsMobileOpen(false)}
-              className={({ isActive }) => (isActive ? activeClass : normalClass)}
-            >
+            <NavLink to="/courses" onClick={() => setIsMobileOpen(false)} className={({ isActive }) => (isActive ? activeClass : normalClass)}>
               Courses
             </NavLink>
-
             <HashLink to="/courses#medicine" onClick={() => setIsMobileOpen(false)} className={normalClass}>
               Medicine / USMLE
             </HashLink>
@@ -264,36 +241,16 @@ const Navbar = () => {
             <HashLink to="/courses#nursing" onClick={() => setIsMobileOpen(false)} className={normalClass}>
               Nursing / NCLEX
             </HashLink>
-
-            <NavLink
-              to="/lists"
-              onClick={() => setIsMobileOpen(false)}
-              className={({ isActive }) => (isActive ? activeClass : normalClass)}
-            >
+            <NavLink to="/lists" onClick={() => setIsMobileOpen(false)} className={({ isActive }) => (isActive ? activeClass : normalClass)}>
               Lists
             </NavLink>
-
-            <NavLink
-              to="/subscription"
-              onClick={() => setIsMobileOpen(false)}
-              className={({ isActive }) => (isActive ? activeClass : normalClass)}
-            >
+            <NavLink to="/subscription" onClick={() => setIsMobileOpen(false)} className={({ isActive }) => (isActive ? activeClass : normalClass)}>
               Subscription
             </NavLink>
-
-            <NavLink
-              to="/about"
-              onClick={() => setIsMobileOpen(false)}
-              className={({ isActive }) => (isActive ? activeClass : normalClass)}
-            >
+            <NavLink to="/about" onClick={() => setIsMobileOpen(false)} className={({ isActive }) => (isActive ? activeClass : normalClass)}>
               About
             </NavLink>
-
-            <NavLink
-              to="/contact"
-              onClick={() => setIsMobileOpen(false)}
-              className={({ isActive }) => (isActive ? activeClass : normalClass)}
-            >
+            <NavLink to="/contact" onClick={() => setIsMobileOpen(false)} className={({ isActive }) => (isActive ? activeClass : normalClass)}>
               Contact
             </NavLink>
 
@@ -302,62 +259,42 @@ const Navbar = () => {
                 <Link
                   to="/login"
                   onClick={() => setIsMobileOpen(false)}
-                  className="px-4 py-2 rounded-lg bg-white/10 text-gray-200 backdrop-blur-md border border-white/10"
+                  className="px-4 py-2 rounded-lg bg-white/10 text-gray-200 backdrop-blur-md border border-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
                 >
                   Log In
                 </Link>
-
                 <Link
                   to="/signup"
                   onClick={() => setIsMobileOpen(false)}
-                  className="px-4 py-2 rounded-lg bg-yellow-400 text-black font-semibold"
+                  className="px-4 py-2 rounded-lg bg-cyan-500 text-white font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
                 >
                   Sign Up
                 </Link>
               </div>
             ) : (
               <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
-                <Link
-                  to="/profile"
-                  onClick={() => setIsMobileOpen(false)}
-                  className="px-4 py-2 rounded-lg bg-white/10 text-gray-200"
-                >
+                <Link to="/profile" onClick={() => setIsMobileOpen(false)} className="px-4 py-2 rounded-lg bg-white/10 text-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
                   My Profile
                 </Link>
-                <Link
-                  to="/dashboard"
-                  onClick={() => setIsMobileOpen(false)}
-                  className="px-4 py-2 rounded-lg bg-white/10 text-gray-200"
-                >
+                <Link to="/dashboard" onClick={() => setIsMobileOpen(false)} className="px-4 py-2 rounded-lg bg-white/10 text-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
                   My Dashboard
                 </Link>
-                <Link
-                  to="/lists"
-                  onClick={() => setIsMobileOpen(false)}
-                  className="px-4 py-2 rounded-lg bg-white/10 text-gray-200"
-                >
+                <Link to="/lists" onClick={() => setIsMobileOpen(false)} className="px-4 py-2 rounded-lg bg-white/10 text-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
                   Lists
                 </Link>
-                <Link
-                  to="/subscription"
-                  onClick={() => setIsMobileOpen(false)}
-                  className="px-4 py-2 rounded-lg bg-white/10 text-gray-200"
-                >
+                <Link to="/subscription" onClick={() => setIsMobileOpen(false)} className="px-4 py-2 rounded-lg bg-white/10 text-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
                   Subscription
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="px-4 py-2 rounded-lg bg-red-500/15 text-red-300 text-left"
+                  className="px-4 py-2 rounded-lg bg-red-500/15 text-red-300 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
                 >
                   Logout
                 </button>
                 <button
                   type="button"
-                  onClick={() => {
-                    setIsMobileOpen(false);
-                    navigate("/chatbot");
-                  }}
-                  className="px-4 py-2 rounded-lg bg-yellow-400 text-black font-semibold flex items-center gap-2 justify-center"
+                  onClick={() => { setIsMobileOpen(false); navigate("/chatbot"); }}
+                  className="px-4 py-2 rounded-lg bg-cyan-500 text-white font-semibold flex items-center gap-2 justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
                 >
                   <FaRobot />
                   Chatbot

@@ -123,6 +123,7 @@ export default function Login() {
               placeholder="Email address"
               value={form.email}
               onChange={handleChange}
+              hasError={!!errors.email}
             />
             {errors.email && <p className="mt-1 text-sm text-rose-500">{errors.email}</p>}
           </motion.div>
@@ -138,6 +139,7 @@ export default function Login() {
               placeholder="Password"
               value={form.password}
               onChange={handleChange}
+              hasError={!!errors.password}
             />
             <button
               type="button"
@@ -207,11 +209,15 @@ export default function Login() {
   );
 }
 
-function GlassInput(props) {
+function GlassInput({ hasError, ...props }) {
   return (
     <input
       {...props}
-      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200 transition"
+      className={`w-full rounded-xl border px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none transition ${
+        hasError
+          ? "border-rose-400 bg-rose-50/60 focus:border-rose-400 focus:ring-2 focus:ring-rose-200"
+          : "border-slate-200 bg-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200"
+      }`}
     />
   );
 }

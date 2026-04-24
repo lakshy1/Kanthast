@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   FaCheckCircle,
@@ -21,6 +21,7 @@ const plans = [
     amountUsd: 110,
     priceLabel: "110 USD",
     highlight: false,
+    desc: "Full access to all videos and images for one year. Great for a focused exam cycle.",
   },
   {
     id: "usmle-2y",
@@ -30,10 +31,9 @@ const plans = [
     amountUsd: 200,
     priceLabel: "200 USD",
     highlight: true,
+    desc: "Best value — just $100/year. Save $20 vs two annual plans. Ideal for med students who want uninterrupted access through clerkships and boards.",
   },
 ];
-
-const fakeOtp = "482916";
 
 const formatDate = (value) => {
   if (!value) return "-";
@@ -78,6 +78,7 @@ export default function SubscriptionPage() {
   const [paymentId, setPaymentId] = useState("");
   const [receiptTime, setReceiptTime] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [generatedOtp, setGeneratedOtp] = useState("");
   const [otpNotice, setOtpNotice] = useState("");
   const [formErrors, setFormErrors] = useState({});
   const [paymentForm, setPaymentForm] = useState({
@@ -106,6 +107,7 @@ export default function SubscriptionPage() {
     setPaymentId("");
     setReceiptTime("");
     setSubmitting(false);
+    setGeneratedOtp("");
     setOtpNotice("");
     setFormErrors({});
     setPaymentForm({
@@ -146,14 +148,16 @@ export default function SubscriptionPage() {
     await wait(600);
     setPaymentStep("Connecting to issuer bank...");
     await wait(700);
+    const otp = String(Math.floor(100000 + Math.random() * 900000));
+    setGeneratedOtp(otp);
     setSubmitting(false);
     setCheckoutStep("otp");
     setPaymentStep("");
-    setOtpNotice(`OTP sent to ${paymentForm.billingEmail}. Use demo OTP: ${fakeOtp}`);
+    setOtpNotice(`OTP sent to ${paymentForm.billingEmail}. Demo OTP: ${otp}`);
   };
 
   const onAuthorizePayment = async () => {
-    if (paymentForm.otp.trim() !== fakeOtp) {
+    if (paymentForm.otp.trim() !== generatedOtp) {
       setFormErrors({ otp: "Invalid OTP. Please retry." });
       return;
     }
@@ -200,6 +204,12 @@ export default function SubscriptionPage() {
     }
   };
 
+  useEffect(() => {
+    if (checkoutStep !== "success") return;
+    const timer = setTimeout(() => resetCheckout(), 4000);
+    return () => clearTimeout(timer);
+  }, [checkoutStep]);
+
   const subscriptionSummary = useMemo(() => {
     if (!hasSubscription) return "No active subscription";
     return `Purchased on ${formatDate(user?.subscriptionPurchasedOn)} | Valid till ${formatDate(
@@ -237,30 +247,39 @@ export default function SubscriptionPage() {
 
           <div className="mt-8 grid md:grid-cols-2 gap-5">
             {plans.map((plan) => (
-              <article
+              <motion.article
                 key={plan.id}
-                className={`rounded-2xl border p-6 ${
+                whileHover={{ y: -4, scale: 1.01 }}
+                transition={{ duration: 0.22, ease: "easeOut" }}
+                className={`relative rounded-2xl border p-6 pt-8 ${
                   plan.highlight
                     ? "border-cyan-300 bg-gradient-to-br from-cyan-50 to-blue-50"
                     : "border-slate-200 bg-white"
                 }`}
               >
+                {plan.highlight && (
+                  <span className="absolute -top-3 left-5 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md tracking-wide">
+                    Recommended
+                  </span>
+                )}
                 <p className="text-sm uppercase tracking-[0.14em] text-slate-500">{plan.title}</p>
                 <h2 className="mt-2 text-2xl font-black text-slate-900">{plan.durationLabel}</h2>
                 <p className="mt-4 text-4xl font-black text-slate-900">{plan.priceLabel}</p>
-                <p className="mt-3 text-sm text-slate-600">
-                  Includes full access to videos and image tabs for the selected duration.
-                </p>
+                <p className="mt-3 text-sm text-slate-600">{plan.desc}</p>
 
                 <button
                   type="button"
                   onClick={() => openCheckout(plan)}
                   disabled={hasSubscription}
-                  className="mt-6 w-full rounded-xl bg-slate-900 text-white py-3 font-semibold hover:bg-slate-800 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className={`mt-6 w-full rounded-xl py-3 font-semibold transition disabled:opacity-60 disabled:cursor-not-allowed ${
+                    plan.highlight
+                      ? "bg-cyan-600 text-white hover:bg-cyan-700"
+                      : "bg-slate-900 text-white hover:bg-slate-800"
+                  }`}
                 >
                   {hasSubscription ? "Already Active" : "Proceed to Secure Checkout"}
                 </button>
-              </article>
+              </motion.article>
             ))}
           </div>
 
@@ -314,7 +333,24 @@ export default function SubscriptionPage() {
                 </button>
               </div>
 
-              <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 flex items-center justify-between text-sm">
+              {(() => {
+                const stepIndex = { details: 0, otp: 1, processing: 2, success: 3 }[checkoutStep] ?? 0;
+                const stepLabels = ["Card Details", "Verify OTP", "Processing", "Complete"];
+                return (
+                  <div className="mt-4 flex items-center gap-1">
+                    {stepLabels.map((label, i) => (
+                      <div key={label} className="flex items-center gap-1 flex-1">
+                        <div className="flex flex-col items-center gap-1 flex-1">
+                          <div className={`h-1.5 w-full rounded-full transition-all duration-500 ${i <= stepIndex ? "bg-cyan-500" : "bg-slate-200"}`} />
+                          <span className={`text-[10px] font-medium ${i <= stepIndex ? "text-cyan-700" : "text-slate-400"}`}>{label}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                );
+              })()}
+
+              <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 flex items-center justify-between text-sm">
                 <span className="text-slate-600 flex items-center gap-2">
                   <FaShieldAlt className="text-cyan-700" /> TLS encrypted payment form
                 </span>
@@ -389,6 +425,7 @@ export default function SubscriptionPage() {
                     onChange={(v) => setPaymentForm((p) => ({ ...p, otp: onlyDigits(v).slice(0, 6) }))}
                     placeholder="Enter 6-digit OTP"
                     error={formErrors.otp}
+                    autoFocus
                   />
                   <p className="text-xs text-slate-500">
                     Card ending {maskCard(paymentForm.cardNumber)} | Merchant: Kanthast Edtech
@@ -458,14 +495,15 @@ export default function SubscriptionPage() {
   );
 }
 
-function Input({ label, value, onChange, placeholder, error }) {
+function Input({ label, value, onChange, placeholder, error, autoFocus }) {
   return (
     <label className="block">
-      <span className="text-sm font-medium text-slate-700">{label}</span>
+      <span className="text-sm font-semibold text-slate-700">{label}</span>
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
+        autoFocus={autoFocus}
         className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-slate-900 outline-none focus:ring-2 focus:ring-cyan-400"
       />
       {error && <span className="text-xs text-red-600 mt-1 block">{error}</span>}

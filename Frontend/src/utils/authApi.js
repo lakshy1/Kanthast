@@ -1,8 +1,25 @@
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api/v1";
 
+// SECURITY NOTE: tokens are currently stored in localStorage which is accessible
+// to any JS running on the page (XSS risk). To fully mitigate this, the backend
+// should issue httpOnly cookies instead, removing the need to store tokens here.
 function getAuthHeaders(token) {
   return token ? { Authorization: `Bearer ${token}` } : {};
+}
+
+// Clears stored credentials and hard-navigates to the appropriate login page.
+// Called whenever the server returns 401 so stale tokens are never silently retried.
+function handleUnauthorized(path) {
+  if (path.includes("/admin")) {
+    localStorage.removeItem("kanthastAdminToken");
+    localStorage.removeItem("kanthastAdminUser");
+    window.location.replace("/adminlogin");
+  } else {
+    localStorage.removeItem("kanthastToken");
+    localStorage.removeItem("kanthastUser");
+    window.location.replace("/login");
+  }
 }
 
 async function readResponseBody(response) {
@@ -25,6 +42,11 @@ async function post(path, payload) {
   });
 
   const data = await readResponseBody(response);
+
+  if (response.status === 401) {
+    handleUnauthorized(path);
+    throw new Error("Session expired. Please log in again.");
+  }
 
   if (!response.ok || !data.success) {
     throw new Error(data.message || `Request failed (${response.status})`);
@@ -58,6 +80,11 @@ export async function getProfile(token) {
     credentials: "include",
   });
 
+  if (response.status === 401) {
+    handleUnauthorized("/profile");
+    throw new Error("Session expired. Please log in again.");
+  }
+
   const data = await response.json().catch(() => ({}));
 
   if (!response.ok || !data.success) {
@@ -77,6 +104,11 @@ export async function updateProfile(token, payload) {
     credentials: "include",
     body: JSON.stringify(payload),
   });
+
+  if (response.status === 401) {
+    handleUnauthorized("/profile");
+    throw new Error("Session expired. Please log in again.");
+  }
 
   const data = await response.json().catch(() => ({}));
 
@@ -98,6 +130,11 @@ export async function purchaseSubscriptionPlan(token, payload) {
     body: JSON.stringify(payload),
   });
 
+  if (response.status === 401) {
+    handleUnauthorized("/profile/subscription");
+    throw new Error("Session expired. Please log in again.");
+  }
+
   const data = await response.json().catch(() => ({}));
 
   if (!response.ok || !data.success) {
@@ -117,6 +154,11 @@ export async function getChatHistory(token, sessionId = "") {
     credentials: "include",
   });
 
+  if (response.status === 401) {
+    handleUnauthorized("/chat");
+    throw new Error("Session expired. Please log in again.");
+  }
+
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.success) {
     throw new Error(data.message || "Failed to fetch chat history");
@@ -132,6 +174,11 @@ export async function createChatSession(token) {
     },
     credentials: "include",
   });
+
+  if (response.status === 401) {
+    handleUnauthorized("/chat");
+    throw new Error("Session expired. Please log in again.");
+  }
 
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.success) {
@@ -155,6 +202,11 @@ export async function deleteChatSession(token, sessionId, activeSessionId = "") 
     }
   );
 
+  if (response.status === 401) {
+    handleUnauthorized("/chat");
+    throw new Error("Session expired. Please log in again.");
+  }
+
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.success) {
     throw new Error(data.message || "Failed to delete chat session");
@@ -172,6 +224,11 @@ export async function sendChatMessage(token, payload) {
     credentials: "include",
     body: JSON.stringify(payload),
   });
+
+  if (response.status === 401) {
+    handleUnauthorized("/chat");
+    throw new Error("Session expired. Please log in again.");
+  }
 
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.success) {
@@ -193,6 +250,11 @@ export async function uploadChatFile(token, file) {
     body: formData,
   });
 
+  if (response.status === 401) {
+    handleUnauthorized("/chat");
+    throw new Error("Session expired. Please log in again.");
+  }
+
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.success) {
     throw new Error(data.message || "Failed to upload file");
@@ -208,6 +270,11 @@ export async function getAdminUsers(token) {
     },
     credentials: "include",
   });
+
+  if (response.status === 401) {
+    handleUnauthorized("/auth/admin");
+    throw new Error("Admin session expired. Please log in again.");
+  }
 
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.success) {
@@ -227,6 +294,11 @@ export async function updateAdminUser(token, userId, payload) {
     body: JSON.stringify(payload),
   });
 
+  if (response.status === 401) {
+    handleUnauthorized("/auth/admin");
+    throw new Error("Admin session expired. Please log in again.");
+  }
+
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.success) {
     throw new Error(data.message || "Failed to update user");
@@ -242,6 +314,11 @@ export async function deleteAdminUser(token, userId) {
     },
     credentials: "include",
   });
+
+  if (response.status === 401) {
+    handleUnauthorized("/auth/admin");
+    throw new Error("Admin session expired. Please log in again.");
+  }
 
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.success) {
@@ -293,6 +370,11 @@ export async function updateMedicineUsmleContent(token, payload) {
     body: JSON.stringify(payload),
   });
 
+  if (response.status === 401) {
+    handleUnauthorized("/medicine-usmle/admin");
+    throw new Error("Admin session expired. Please log in again.");
+  }
+
   const data = await readResponseBody(response);
   if (!response.ok || !data.success) {
     throw new Error(data.message || `Failed to update Medicine/USMLE content (${response.status})`);
@@ -310,6 +392,11 @@ async function authedJsonRequest(path, method, token, payload) {
     credentials: "include",
     body: JSON.stringify(payload || {}),
   });
+
+  if (response.status === 401) {
+    handleUnauthorized(path);
+    throw new Error("Session expired. Please log in again.");
+  }
 
   const data = await readResponseBody(response);
   if (!response.ok || !data.success) {

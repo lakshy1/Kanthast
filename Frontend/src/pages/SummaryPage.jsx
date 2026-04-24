@@ -54,6 +54,8 @@ export default function SummaryPage() {
     };
   }, [data.subjectId, data.chapterId, data.videoId]);
 
+  const isFallback = !summary.trim();
+
   const bullets = useMemo(() => {
     if (!summary.trim()) {
       return [
@@ -113,11 +115,14 @@ export default function SummaryPage() {
                 precise, and revision-friendly.
               </p>
 
-              <div className="mt-6 space-y-3">
-                {bullets.map((item) => (
-                  <div key={item} className="flex items-start gap-3 rounded-xl bg-slate-50 border border-slate-200 p-4">
-                    <FaRegCheckCircle className="text-cyan-600 mt-1 shrink-0" />
-                    <p className="text-slate-700">{item}</p>
+              {isFallback && (
+                <p className="mt-4 text-xs text-slate-400 italic">Summary not yet added for this lecture. Showing example structure.</p>
+              )}
+              <div className="mt-4 space-y-3">
+                {bullets.map((item, idx) => (
+                  <div key={idx} className={`flex items-start gap-3 rounded-xl border p-4 ${isFallback ? "bg-slate-50/50 border-slate-100" : "bg-slate-50 border-slate-200"}`}>
+                    <FaRegCheckCircle className={`mt-1 shrink-0 ${isFallback ? "text-slate-300" : "text-cyan-600"}`} />
+                    <p className={isFallback ? "text-slate-400 italic" : "text-slate-700"}>{item}</p>
                   </div>
                 ))}
               </div>

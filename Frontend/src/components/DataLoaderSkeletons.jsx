@@ -2,6 +2,31 @@ function SkeletonBlock({ className = "" }) {
   return <div className={`animate-pulse rounded-xl bg-slate-200/80 ${className}`} />;
 }
 
+export function ProfileSkeleton() {
+  return (
+    <div className="mt-6 grid lg:grid-cols-[1.2fr_0.8fr] gap-6">
+      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_16px_38px_rgba(15,23,42,0.06)]">
+        <div className="flex items-center justify-between mb-5">
+          <SkeletonBlock className="h-8 w-52" />
+          <SkeletonBlock className="h-9 w-28 rounded-lg" />
+        </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div key={i} className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+              <SkeletonBlock className="h-3 w-20 mb-2" />
+              <SkeletonBlock className="h-5 w-32" />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_16px_38px_rgba(15,23,42,0.06)]">
+        <SkeletonBlock className="h-8 w-24 mb-4" />
+        <SkeletonBlock className="h-52 w-full rounded-xl" />
+      </div>
+    </div>
+  );
+}
+
 export function ListsPageSkeleton() {
   return (
     <>
@@ -44,7 +69,7 @@ export function ListsPageSkeleton() {
       </div>
 
       <aside className="self-start lg:sticky lg:top-24 overflow-visible h-fit">
-        <div className="rounded-3xl bg-[#f4f2fa] border border-[#d8d3e7] p-6 shadow-[0_15px_35px_rgba(76,29,149,0.12)]">
+        <div className="rounded-3xl bg-slate-50 border border-slate-200 p-6 shadow-[0_15px_35px_rgba(15,23,42,0.07)]">
           <SkeletonBlock className="h-7 w-28 mb-4" />
           <div className="space-y-3">
             {[1, 2, 3, 4, 5].map((key) => (

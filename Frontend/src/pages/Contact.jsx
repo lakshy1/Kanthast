@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { FaCircleNotch } from "react-icons/fa";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const fadeUp = {
@@ -34,7 +35,8 @@ export default function Contact() {
     const formData = new FormData(form);
 
     try {
-      await fetch("/", { method: "POST", body: formData });
+      const res = await fetch("/", { method: "POST", body: formData });
+      if (!res.ok) throw new Error("Server error");
       setStatus("success");
       form.reset();
       setTimeout(() => setStatus("idle"), 3000);
@@ -65,7 +67,7 @@ export default function Contact() {
             animate="show"
             className="rounded-3xl border border-white/20 bg-white/10 px-6 py-10 text-center backdrop-blur-2xl shadow-[0_30px_110px_rgba(2,8,23,0.45)] md:px-12"
           >
-            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-black">
+            <motion.h1 variants={fadeUp} className="text-3xl sm:text-4xl md:text-6xl font-black">
               Let&apos;s Connect
             </motion.h1>
             <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-cyan-100/90">
@@ -172,15 +174,19 @@ export default function Contact() {
 
               <motion.button
                 whileTap={{ scale: 0.98 }}
-                whileHover={{ y: -2, scale: 1.01 }}
+                whileHover={status !== "loading" ? { y: -2, scale: 1.01 } : undefined}
                 type="submit"
                 disabled={status === "loading"}
-                className={`w-full rounded-xl py-3.5 font-semibold transition ${
-                  status === "loading"
-                    ? "cursor-not-allowed bg-slate-300 text-slate-600"
-                    : "bg-slate-900 text-white hover:bg-slate-800"
-                }`}
+                className="w-full rounded-xl py-3.5 font-semibold bg-slate-900 text-white hover:bg-slate-800 disabled:opacity-70 disabled:cursor-not-allowed transition flex items-center justify-center gap-2"
               >
+                {status === "loading" && (
+                  <motion.span
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 0.9, repeat: Infinity, ease: "linear" }}
+                  >
+                    <FaCircleNotch />
+                  </motion.span>
+                )}
                 {status === "loading" ? "Sending..." : "Send Message"}
               </motion.button>
             </form>

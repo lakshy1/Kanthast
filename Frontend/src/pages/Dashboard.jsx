@@ -108,15 +108,17 @@ export default function Dashboard() {
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
               <h2 className="text-lg font-bold text-slate-900">Progress Meter</h2>
               <div className="mt-5 flex items-center justify-between gap-6">
-                <div
-                  className="w-32 h-32 rounded-full grid place-items-center"
-                  style={{
-                    background: `conic-gradient(#0ea5e9 ${dailyPercent}%, #dbeafe ${dailyPercent}% 100%)`,
-                  }}
-                >
-                  <div className="w-24 h-24 rounded-full bg-white grid place-items-center border border-slate-200">
-                    <span className="text-xl font-black text-slate-900">{dailyPercent}%</span>
-                  </div>
+                <div className="relative w-32 h-32 grid place-items-center">
+                  <svg viewBox="0 0 36 36" className="absolute inset-0 w-full h-full -rotate-90">
+                    <circle cx="18" cy="18" r="15.9" fill="none" stroke="#dbeafe" strokeWidth="3" />
+                    <circle
+                      cx="18" cy="18" r="15.9" fill="none"
+                      stroke="#0ea5e9" strokeWidth="3"
+                      strokeDasharray={`${dailyPercent} ${100 - dailyPercent}`}
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <span className="text-xl font-black text-slate-900">{dailyPercent}%</span>
                 </div>
 
                 <div className="flex-1">
@@ -133,7 +135,7 @@ export default function Dashboard() {
                   <button
                     onClick={() => setCompletedToday((value) => Math.min(dailyGoal, value + 1))}
                     disabled={completedToday >= dailyGoal}
-                    className="mt-3 text-sm px-3 py-2 rounded-lg bg-blue-950 text-white hover:bg-blue-900 disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="mt-3 text-sm px-3 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     Mark One Complete
                   </button>

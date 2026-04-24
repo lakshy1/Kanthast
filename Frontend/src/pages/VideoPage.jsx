@@ -163,7 +163,7 @@ export default function VideoPage() {
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-gradient-to-br from-[#0b1324] via-[#10214b] to-[#12395f] aspect-video relative">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(125,211,252,0.18),transparent_40%)]" />
                 <div className="absolute inset-0 grid place-items-center">
-                  <button className="w-20 h-20 rounded-full bg-white/20 backdrop-blur border border-white/40 text-white text-2xl grid place-items-center hover:scale-105 transition">
+                  <button type="button" className="w-20 h-20 rounded-full bg-white/20 backdrop-blur border border-white/40 text-white text-2xl grid place-items-center hover:scale-105 transition">
                     <FaPlay className="ml-1" />
                   </button>
                 </div>
@@ -188,7 +188,7 @@ export default function VideoPage() {
               <MetaCard icon={<FaClock />} label="Duration" value={data.duration} />
             </div>
 
-            <div className="mt-6 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-100 p-4">
+            <div className="mt-6 rounded-2xl bg-cyan-50/60 border border-cyan-100 border-l-4 border-l-cyan-500 p-4">
               <h3 className="text-slate-900 font-semibold">Focus Mode Tip</h3>
               <p className="text-slate-700 text-sm mt-2">
                 Watch in 1.25x, pause at transitions, and summarize each segment in one line.

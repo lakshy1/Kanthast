@@ -1,11 +1,39 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import video1 from "../assets/videos/Video-1.mp4";
 import video2 from "../assets/videos/Video-2.mp4";
-import video3 from "../assets/videos/Kanthast.mp4"
-import heroImage from "../assets/images/Image-1.png"
+import video3 from "../assets/videos/Kanthast.mp4";
+import heroImage from "../assets/images/Image-1.png";
+
+// Plays the video once when `threshold` fraction of it enters the viewport.
+// Disconnects the observer after first play so it only fires once per mount.
+function usePlayOnVisible(ref, threshold = 0.35) {
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.currentTime = 0;
+          el.play().catch(() => {});
+          observer.disconnect();
+        }
+      },
+      { threshold }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [ref]);
+}
+
+function replayVideo(ref) {
+  const el = ref.current;
+  if (!el || (!el.paused && !el.ended)) return; // already playing — let it finish
+  el.currentTime = 0;
+  el.play().catch(() => {});
+}
 
 const Homepage = () => {
   const courses = [
@@ -33,6 +61,15 @@ const Homepage = () => {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
+  const video3Ref = useRef(null);
+  const video1Ref = useRef(null);
+  const video2Ref = useRef(null);
+
+  // Hero video fires almost immediately (low threshold — it's above the fold).
+  usePlayOnVisible(video3Ref, 0.1);
+  usePlayOnVisible(video1Ref);
+  usePlayOnVisible(video2Ref);
+
   useEffect(() => {
     const role = roles[currentRole];
     const speed = isDeleting ? 40 : 70;
@@ -58,7 +95,7 @@ const Homepage = () => {
   }, [currentRole, displayText, isDeleting, roles]);
 
   return (
-    <div className="bg-gradient-to-br from-[#0B1120] via-blue-950 text-white overflow-x-hidden">
+    <div className="bg-gradient-to-br from-[#0B1120] via-blue-950 to-[#0d1829] text-white overflow-x-hidden">
       <section className="relative py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-blue-950"></div>
 
@@ -69,7 +106,7 @@ const Homepage = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight">
               Learn Medicine Through
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-cyan-500">
                 Immersive Animations
@@ -101,37 +138,36 @@ const Homepage = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+            className="rounded-2xl overflow-hidden shadow-2xl border border-white/10 aspect-video"
           >
             <video
+              ref={video3Ref}
               src={video3}
-              controls
               muted
-              autoPlay
-              loop
               playsInline
-              className="w-full rounded-xl"
+              className="w-full h-full object-cover scale-[1.15]"
+              onMouseEnter={() => replayVideo(video3Ref)}
             />
           </motion.div>
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-[#0B1120] via-blue-950">
+      <section className="py-16 bg-gradient-to-br from-[#0B1120] via-blue-950 to-[#0d1829]">
         <div className="max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="rounded-2xl overflow-hidden shadow-2xl aspect-video"
           >
             <video
+              ref={video1Ref}
               src={video1}
-              controls
               muted
-              autoPlay
-              loop
               playsInline
-              className="rounded-2xl shadow-2xl"
+              className="w-full h-full object-cover scale-[1.15]"
+              onMouseEnter={() => replayVideo(video1Ref)}
             />
           </motion.div>
 
@@ -175,9 +211,9 @@ const Homepage = () => {
             >
               <h3 className="text-2xl font-semibold mb-4">{course.title}</h3>
               <p className="text-gray-600 mb-6">{course.desc}</p>
-              <button className="text-cyan-600 font-semibold">
+              <Link to="/courses" className="text-cyan-600 font-semibold hover:text-cyan-700 transition">
                 Learn More
-              </button>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -202,14 +238,14 @@ const Homepage = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.15)] border border-slate-200 bg-white">
+            <div className="rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.15)] border border-slate-200 bg-white aspect-video">
               <video
+                ref={video2Ref}
                 src={video2}
-                autoPlay
                 muted
-                loop
                 playsInline
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-[1.15]"
+                onMouseEnter={() => replayVideo(video2Ref)}
               />
             </div>
           </motion.div>
@@ -333,18 +369,18 @@ const Homepage = () => {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="mt-20 rounded-3xl overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.15)] border border-slate-200"
+            className="mt-20 rounded-3xl overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.15)] border border-slate-200 aspect-video"
           >
             <img
               src={heroImage}
               alt="Medical animation preview"
-              className="w-full rounded-2xl object-cover"
+              className="w-full h-full object-cover scale-[1.15]"
             />
           </motion.div>
         </div>
       </section>
 
-                {/* ================= CTA SECTION ================= */}
+      {/* ================= CTA SECTION ================= */}
       <section className="w-full bg-slate-50 py-16 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
 

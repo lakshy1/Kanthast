@@ -288,11 +288,15 @@ export default function Signup() {
   );
 }
 
-function GlassInput({ className = "", ...props }) {
+function GlassInput({ className = "", hasError, ...props }) {
   return (
     <input
       {...props}
-      className={`w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200 transition ${className}`}
+      className={`w-full rounded-xl border px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none transition ${
+        hasError
+          ? "border-rose-400 bg-rose-50/60 focus:border-rose-400 focus:ring-2 focus:ring-rose-200"
+          : "border-slate-200 bg-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200"
+      } ${className}`}
     />
   );
 }
