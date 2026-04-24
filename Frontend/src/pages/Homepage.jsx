@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -96,6 +97,21 @@ const Homepage = () => {
 
   return (
     <div className="bg-gradient-to-br from-[#0B1120] via-blue-950 to-[#0d1829] text-white overflow-x-hidden">
+      <Helmet>
+        <title>Kanthast | Learn Medicine Through Immersive Animations</title>
+        <meta name="description" content="Kanthast helps medical students master Medicine, USMLE, MCAT, and NCLEX through immersive 3D animations and visual learning. Start for free." />
+        <link rel="canonical" href="https://kanthast.in/" />
+        <meta property="og:title" content="Kanthast | Learn Medicine Through Immersive Animations" />
+        <meta property="og:description" content="Kanthast helps medical students master Medicine, USMLE, MCAT, and NCLEX through immersive 3D animations and visual learning. Start for free." />
+        <meta property="og:url" content="https://kanthast.in/" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "name": "Kanthast",
+          "url": "https://kanthast.in",
+          "description": "Immersive medical education platform using 3D animations for Medicine, USMLE, MCAT, and NCLEX preparation."
+        })}</script>
+      </Helmet>
       <section className="relative py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-blue-950"></div>
 

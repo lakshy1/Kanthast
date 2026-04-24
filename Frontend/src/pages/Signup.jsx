@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaCheckCircle } from "react-icons/fa";
@@ -98,6 +99,12 @@ export default function Signup() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)] px-4 py-12 flex items-center justify-center">
+      <Helmet>
+        <title>Sign Up | New Users — Kanthast</title>
+        <meta name="description" content="Create your free Kanthast account and start learning Medicine, USMLE, MCAT, and NCLEX through immersive 3D animations." />
+        <link rel="canonical" href="https://kanthast.in/signup" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <motion.div
         animate={{ y: [0, -10, 0], opacity: [0.5, 0.72, 0.5] }}
         transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}

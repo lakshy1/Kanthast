@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { FaCircleNotch } from "react-icons/fa";
@@ -48,6 +49,14 @@ export default function Contact() {
 
   return (
     <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
+      <Helmet>
+        <title>Contact Kanthast | Medical Education Support</title>
+        <meta name="description" content="Get in touch with the Kanthast team for support, partnership inquiries, or questions about our medical education courses and platform." />
+        <link rel="canonical" href="https://kanthast.in/contact" />
+        <meta property="og:title" content="Contact Kanthast | Medical Education Support" />
+        <meta property="og:description" content="Get in touch with the Kanthast team for support, partnership inquiries, or questions about our medical education courses and platform." />
+        <meta property="og:url" content="https://kanthast.in/contact" />
+      </Helmet>
       <section className="relative overflow-hidden bg-gradient-to-br from-[#081124] via-[#0f1d42] to-[#0d182f] py-24 text-white">
         <motion.div
           animate={{ y: [0, -10, 0], opacity: [0.5, 0.75, 0.5] }}
@@ -86,7 +95,7 @@ export default function Contact() {
           className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-3 md:px-16"
         >
           {[
-            { icon: <FaEnvelope />, title: "Email Us", desc: "support@kanthast.com" },
+            { icon: <FaEnvelope />, title: "Email Us", desc: "support@kanthast.in" },
             { icon: <FaPhoneAlt />, title: "Call Us", desc: "+91 98765 43210" },
             { icon: <FaMapMarkerAlt />, title: "Location", desc: "Mumbai, India" },
           ].map((item) => (

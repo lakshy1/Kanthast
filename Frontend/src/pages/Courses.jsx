@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Image1 from "../assets/images/Image-3.png";
 import Image2 from "../assets/images/Image-4.png";
@@ -27,6 +28,26 @@ const sectionViewport = { once: true, amount: 0.22 };
 export default function Courses() {
   return (
     <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
+      <Helmet>
+        <title>Medical Courses | USMLE, MCAT & NCLEX Prep — Kanthast</title>
+        <meta name="description" content="Explore Kanthast's visual medical courses for Medicine/USMLE, Premedicine/MCAT, and Nursing/NCLEX. 3D animations, clinical cases, and exam-focused preparation." />
+        <link rel="canonical" href="https://kanthast.in/courses" />
+        <meta property="og:title" content="Medical Courses | USMLE, MCAT & NCLEX Prep — Kanthast" />
+        <meta property="og:description" content="Explore Kanthast's visual medical courses for Medicine/USMLE, Premedicine/MCAT, and Nursing/NCLEX. 3D animations, clinical cases, and exam-focused preparation." />
+        <meta property="og:url" content="https://kanthast.in/courses" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Kanthast Medical Courses",
+          "description": "Visual medical education courses for USMLE, MCAT, and NCLEX preparation.",
+          "url": "https://kanthast.in/courses",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Medicine / USMLE", "url": "https://kanthast.in/courses#medicine" },
+            { "@type": "ListItem", "position": 2, "name": "Premedicine / MCAT", "url": "https://kanthast.in/courses#premed" },
+            { "@type": "ListItem", "position": 3, "name": "Nursing / NCLEX", "url": "https://kanthast.in/courses#nursing" }
+          ]
+        })}</script>
+      </Helmet>
       <section className="relative overflow-hidden py-24">
         <motion.div
           animate={{ y: [0, -10, 0], opacity: [0.5, 0.75, 0.5] }}

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Image from "../assets/images/Image-2.png";
 import { Link } from "react-router-dom";
@@ -26,6 +27,14 @@ const sectionViewport = { once: true, amount: 0.22 };
 export default function About() {
   return (
     <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
+      <Helmet>
+        <title>About Kanthast | Rethinking How Medicine Is Learned</title>
+        <meta name="description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, MCAT, and NCLEX students." />
+        <link rel="canonical" href="https://kanthast.in/about" />
+        <meta property="og:title" content="About Kanthast | Rethinking How Medicine Is Learned" />
+        <meta property="og:description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, MCAT, and NCLEX students." />
+        <meta property="og:url" content="https://kanthast.in/about" />
+      </Helmet>
       <section className="relative overflow-hidden bg-gradient-to-br from-[#081124] via-[#0f1d42] to-[#0d182f] py-24 text-white">
         <motion.div
           animate={{ y: [0, -10, 0], opacity: [0.5, 0.75, 0.5] }}

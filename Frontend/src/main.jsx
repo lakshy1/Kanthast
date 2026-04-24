@@ -5,8 +5,10 @@ import App from './App.jsx'
 import { BrowserRouter } from "react-router"
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { HelmetProvider } from "react-helmet-async";
 
 createRoot(document.getElementById('root')).render(
+  <HelmetProvider>
   <BrowserRouter>
     <App />
     <ToastContainer
@@ -18,4 +20,5 @@ createRoot(document.getElementById('root')).render(
       theme="light"
     />
   </BrowserRouter>
+  </HelmetProvider>
 )
