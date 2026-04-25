@@ -103,7 +103,6 @@ export default function Signup() {
         <title>Sign Up | New Users — Kanthast</title>
         <meta name="description" content="Create your free Kanthast account and start learning Medicine, USMLE, MCAT, and NCLEX through immersive 3D animations." />
         <link rel="canonical" href="https://kanthast.in/signup" />
-        <meta name="robots" content="noindex, follow" />
       </Helmet>
       <motion.div
         animate={{ y: [0, -10, 0], opacity: [0.5, 0.72, 0.5] }}

@@ -93,7 +93,6 @@ export default function Login() {
         <title>Log In | Existing Users — Kanthast</title>
         <meta name="description" content="Log in to your Kanthast account to access your medical courses, USMLE, MCAT, and NCLEX study materials." />
         <link rel="canonical" href="https://kanthast.in/login" />
-        <meta name="robots" content="noindex, follow" />
       </Helmet>
       <motion.div
         animate={{ y: [0, -10, 0], opacity: [0.52, 0.75, 0.52] }}
