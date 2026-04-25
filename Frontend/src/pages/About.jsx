@@ -95,6 +95,7 @@ export default function About() {
               <motion.img
                 src={Image}
                 alt="About Kanthast"
+                loading="lazy"
                 className="h-[380px] w-full object-cover"
                 whileHover={{ scale: 1.04 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}

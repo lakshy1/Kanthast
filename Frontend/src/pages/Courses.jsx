@@ -146,6 +146,7 @@ export default function Courses() {
               <motion.img
                 src={Image1}
                 alt="Medicine course preview"
+                loading="lazy"
                 className="h-[380px] w-full object-cover"
                 whileHover={{ scale: 1.04 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -173,6 +174,7 @@ export default function Courses() {
               <motion.img
                 src={Image2}
                 alt="NEET PG visual learning modules"
+                loading="lazy"
                 className="h-[380px] w-full object-cover"
                 whileHover={{ scale: 1.04 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -234,6 +236,7 @@ export default function Courses() {
               <motion.img
                 src={Image3}
                 alt="INI CET preparation for AIIMS and JIPMER"
+                loading="lazy"
                 className="h-[380px] w-full object-cover"
                 whileHover={{ scale: 1.04 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}

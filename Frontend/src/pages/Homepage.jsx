@@ -8,15 +8,18 @@ import video2 from "../assets/videos/Video-2.mp4";
 import video3 from "../assets/videos/Kanthast.mp4";
 import heroImage from "../assets/images/Image-1.png";
 
-// Plays the video once when `threshold` fraction of it enters the viewport.
-// Disconnects the observer after first play so it only fires once per mount.
-function usePlayOnVisible(ref, threshold = 0.35) {
+// Sets src only when the video enters the viewport, then plays it.
+// Zero bandwidth used until the user actually scrolls to the video.
+function useLazyVideo(ref, src, threshold = 0.35) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          if (!el.src || el.src === window.location.href) {
+            el.src = src;
+          }
           el.currentTime = 0;
           el.play().catch(() => {});
           observer.disconnect();
@@ -26,12 +29,12 @@ function usePlayOnVisible(ref, threshold = 0.35) {
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [ref]);
+  }, [ref, src]);
 }
 
 function replayVideo(ref) {
   const el = ref.current;
-  if (!el || (!el.paused && !el.ended)) return; // already playing — let it finish
+  if (!el || (!el.paused && !el.ended)) return;
   el.currentTime = 0;
   el.play().catch(() => {});
 }
@@ -66,10 +69,9 @@ const Homepage = () => {
   const video1Ref = useRef(null);
   const video2Ref = useRef(null);
 
-  // Hero video fires almost immediately (low threshold — it's above the fold).
-  usePlayOnVisible(video3Ref, 0.1);
-  usePlayOnVisible(video1Ref);
-  usePlayOnVisible(video2Ref);
+  useLazyVideo(video3Ref, video3, 0.1);
+  useLazyVideo(video1Ref, video1);
+  useLazyVideo(video2Ref, video2);
 
   useEffect(() => {
     const role = roles[currentRole];
@@ -158,9 +160,10 @@ const Homepage = () => {
           >
             <video
               ref={video3Ref}
-              src={video3}
+              poster={heroImage}
               muted
               playsInline
+              preload="none"
               className="w-full h-full object-cover scale-[1.15]"
               onMouseEnter={() => replayVideo(video3Ref)}
             />
@@ -179,9 +182,10 @@ const Homepage = () => {
           >
             <video
               ref={video1Ref}
-              src={video1}
+              poster={heroImage}
               muted
               playsInline
+              preload="none"
               className="w-full h-full object-cover scale-[1.15]"
               onMouseEnter={() => replayVideo(video1Ref)}
             />
@@ -257,9 +261,10 @@ const Homepage = () => {
             <div className="rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.15)] border border-slate-200 bg-white aspect-video">
               <video
                 ref={video2Ref}
-                src={video2}
+                poster={heroImage}
                 muted
                 playsInline
+                preload="none"
                 className="w-full h-full object-cover scale-[1.15]"
                 onMouseEnter={() => replayVideo(video2Ref)}
               />
@@ -390,6 +395,7 @@ const Homepage = () => {
             <img
               src={heroImage}
               alt="Medical animation preview"
+              loading="lazy"
               className="w-full h-full object-cover scale-[1.15]"
             />
           </motion.div>

@@ -1,10 +1,11 @@
 import "./App.css";
-import { lazy, Suspense, useLayoutEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { warmupBackend, prefetchImages } from "./utils/warmup";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const About = lazy(() => import("./pages/About"));
@@ -58,6 +59,14 @@ function App() {
   const [loading, setLoading] = useState(false);
   const isFirstRender = useRef(true);
   const isAdminRoute = location.pathname.startsWith("/admin");
+
+  // Parallel to the loading animation: wake up the Render backend and
+  // prefetch all page images into the browser cache using idle bandwidth.
+  useEffect(() => {
+    warmupBackend();
+    const timer = setTimeout(prefetchImages, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useLayoutEffect(() => {
     if (location.hash) return;
