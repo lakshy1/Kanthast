@@ -3,7 +3,7 @@ import { NavLink, Link, useLocation, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronDown, FaBars, FaTimes, FaRobot } from "react-icons/fa";
-import Logo from "../assets/images/Logo2.png"
+const Logo = "/Logo-Extended.png";
 
 const Navbar = () => {
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
