@@ -29,10 +29,10 @@ export default function About() {
     <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
       <Helmet>
         <title>About Kanthast | Rethinking How Medicine Is Learned</title>
-        <meta name="description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, MCAT, and NCLEX students." />
+        <meta name="description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, NEET PG, and INI CET students." />
         <link rel="canonical" href="https://kanthast.in/about" />
         <meta property="og:title" content="About Kanthast | Rethinking How Medicine Is Learned" />
-        <meta property="og:description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, MCAT, and NCLEX students." />
+        <meta property="og:description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, NEET PG, and INI CET students." />
         <meta property="og:url" content="https://kanthast.in/about" />
       </Helmet>
       <section className="relative overflow-hidden bg-gradient-to-br from-[#081124] via-[#0f1d42] to-[#0d182f] py-24 text-white">
@@ -129,7 +129,7 @@ export default function About() {
                 },
                 {
                   title: "Exam Focused",
-                  desc: "USMLE, MCAT, and NCLEX priorities are mapped into every module.",
+                  desc: "USMLE, NEET PG, and INI CET priorities are mapped into every module.",
                 },
                 {
                   title: "Clinical Thinking",

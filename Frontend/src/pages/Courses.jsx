@@ -29,22 +29,22 @@ export default function Courses() {
   return (
     <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
       <Helmet>
-        <title>Medical Courses | USMLE, MCAT & NCLEX Prep — Kanthast</title>
-        <meta name="description" content="Explore Kanthast's visual medical courses for Medicine/USMLE, Premedicine/MCAT, and Nursing/NCLEX. 3D animations, clinical cases, and exam-focused preparation." />
+        <title>Medical Courses | USMLE, NEET PG & INI CET Prep — Kanthast</title>
+        <meta name="description" content="Explore Kanthast's visual medical courses for USMLE, NEET PG, and INI CET. 3D animations, clinical cases, and high-yield exam-focused preparation." />
         <link rel="canonical" href="https://kanthast.in/courses" />
-        <meta property="og:title" content="Medical Courses | USMLE, MCAT & NCLEX Prep — Kanthast" />
-        <meta property="og:description" content="Explore Kanthast's visual medical courses for Medicine/USMLE, Premedicine/MCAT, and Nursing/NCLEX. 3D animations, clinical cases, and exam-focused preparation." />
+        <meta property="og:title" content="Medical Courses | USMLE, NEET PG & INI CET Prep — Kanthast" />
+        <meta property="og:description" content="Explore Kanthast's visual medical courses for USMLE, NEET PG, and INI CET. 3D animations, clinical cases, and high-yield exam-focused preparation." />
         <meta property="og:url" content="https://kanthast.in/courses" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
           "name": "Kanthast Medical Courses",
-          "description": "Visual medical education courses for USMLE, MCAT, and NCLEX preparation.",
+          "description": "Visual medical education courses for USMLE, NEET PG, and INI CET preparation.",
           "url": "https://kanthast.in/courses",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Medicine / USMLE", "url": "https://kanthast.in/courses#medicine" },
-            { "@type": "ListItem", "position": 2, "name": "Premedicine / MCAT", "url": "https://kanthast.in/courses#premed" },
-            { "@type": "ListItem", "position": 3, "name": "Nursing / NCLEX", "url": "https://kanthast.in/courses#nursing" }
+            { "@type": "ListItem", "position": 2, "name": "NEET PG", "url": "https://kanthast.in/courses#neet-pg" },
+            { "@type": "ListItem", "position": 3, "name": "INI CET", "url": "https://kanthast.in/courses#ini-cet" }
           ]
         })}</script>
       </Helmet>
@@ -71,7 +71,7 @@ export default function Courses() {
               Programs Built for Every Medical Stage
             </motion.h1>
             <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-slate-600">
-              Animation-first learning tracks with exam-focused pathways across USMLE, MCAT, and NCLEX.
+              Animation-first learning tracks with exam-focused pathways for USMLE, NEET PG, and INI CET.
             </motion.p>
           </motion.div>
         </div>
@@ -91,12 +91,12 @@ export default function Courses() {
               desc: "Advanced clinical reasoning and systems-based learning for future physicians.",
             },
             {
-              title: "Premedicine / MCAT",
-              desc: "Strong conceptual foundations in biology and chemistry with visual clarity.",
+              title: "NEET PG",
+              desc: "High-yield visual modules across Pathology, Pharmacology, Medicine, Surgery, and all 19 MBBS subjects.",
             },
             {
-              title: "Nursing / NCLEX",
-              desc: "Practical patient-care thinking and exam-ready visual training.",
+              title: "INI CET",
+              desc: "Focused preparation for AIIMS, JIPMER, PGIMER & NIMHANS with animation-driven clinical concepts.",
             },
           ].map((item) => (
             <motion.div
@@ -155,7 +155,7 @@ export default function Courses() {
         </motion.div>
       </section>
 
-      <section id="premed" className="py-10 md:py-14">
+      <section id="neet-pg" className="py-10 md:py-14">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -172,7 +172,7 @@ export default function Courses() {
             >
               <motion.img
                 src={Image2}
-                alt="Premedicine course preview"
+                alt="NEET PG visual learning modules"
                 className="h-[380px] w-full object-cover"
                 whileHover={{ scale: 1.04 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -180,10 +180,12 @@ export default function Courses() {
             </motion.div>
 
             <motion.div variants={fadeUp}>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900">Premedicine / MCAT</h2>
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900">NEET PG</h2>
               <p className="mt-4 text-slate-600 text-lg leading-relaxed">
-                Concept-driven animated lessons simplifying biology, chemistry, and reasoning skills to build strong
-                foundations for MCAT readiness.
+                India's most competitive PG medical entrance exam demands more than rote learning. Kanthast's
+                animation-driven modules cover all 19 MBBS subjects — Pathology, Pharmacology, Medicine, Surgery,
+                OBG, Paediatrics, and more — building the conceptual clarity that turns high-yield facts into
+                long-term memory.
               </p>
               <motion.button
                 whileHover={{ y: -2 }}
@@ -197,7 +199,7 @@ export default function Courses() {
         </motion.div>
       </section>
 
-      <section id="nursing" className="pb-20 pt-10 md:pt-14">
+      <section id="ini-cet" className="pb-20 pt-10 md:pt-14">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -207,10 +209,12 @@ export default function Courses() {
         >
           <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:grid-cols-2 md:p-8">
             <motion.div variants={fadeUp}>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900">Nursing / NCLEX</h2>
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900">INI CET</h2>
               <p className="mt-4 text-slate-600 text-lg leading-relaxed">
-                Interactive visual modules designed to simplify patient care, pharmacology, and real-world nursing
-                scenarios for NCLEX mastery.
+                The gateway to AIIMS, JIPMER, PGIMER, and NIMHANS — India's most prestigious postgraduate
+                institutions. INI CET demands deep clinical reasoning alongside subject mastery. Our visual
+                lessons make complex mechanisms intuitive, so you walk into the exam with clarity, not just
+                facts.
               </p>
               <motion.button
                 whileHover={{ y: -2 }}
@@ -229,7 +233,7 @@ export default function Courses() {
             >
               <motion.img
                 src={Image3}
-                alt="Nursing course preview"
+                alt="INI CET preparation for AIIMS and JIPMER"
                 className="h-[380px] w-full object-cover"
                 whileHover={{ scale: 1.04 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}

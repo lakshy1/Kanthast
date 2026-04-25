@@ -91,7 +91,7 @@ export default function Login() {
     <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)] px-4 py-12 flex items-center justify-center">
       <Helmet>
         <title>Log In | Existing Users — Kanthast</title>
-        <meta name="description" content="Log in to your Kanthast account to access your medical courses, USMLE, MCAT, and NCLEX study materials." />
+        <meta name="description" content="Log in to your Kanthast account to access your USMLE, NEET PG, and INI CET study materials." />
         <link rel="canonical" href="https://kanthast.in/login" />
       </Helmet>
       <motion.div

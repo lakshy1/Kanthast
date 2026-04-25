@@ -94,16 +94,16 @@ const Navbar = () => {
                     Medicine / USMLE
                   </HashLink>
                   <HashLink
-                    to="/courses#premed"
+                    to="/courses#neet-pg"
                     className="block px-4 py-3 rounded-lg hover:bg-slate-100 text-slate-700 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
                   >
-                    Premedicine / MCAT
+                    NEET PG
                   </HashLink>
                   <HashLink
-                    to="/courses#nursing"
+                    to="/courses#ini-cet"
                     className="block px-4 py-3 rounded-lg hover:bg-slate-100 text-slate-700 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
                   >
-                    Nursing / NCLEX
+                    INI CET
                   </HashLink>
                 </motion.div>
               )}
@@ -235,11 +235,11 @@ const Navbar = () => {
             <HashLink to="/courses#medicine" onClick={() => setIsMobileOpen(false)} className={normalClass}>
               Medicine / USMLE
             </HashLink>
-            <HashLink to="/courses#premed" onClick={() => setIsMobileOpen(false)} className={normalClass}>
-              Premedicine / MCAT
+            <HashLink to="/courses#neet-pg" onClick={() => setIsMobileOpen(false)} className={normalClass}>
+              NEET PG
             </HashLink>
-            <HashLink to="/courses#nursing" onClick={() => setIsMobileOpen(false)} className={normalClass}>
-              Nursing / NCLEX
+            <HashLink to="/courses#ini-cet" onClick={() => setIsMobileOpen(false)} className={normalClass}>
+              INI CET
             </HashLink>
             <NavLink to="/lists" onClick={() => setIsMobileOpen(false)} className={({ isActive }) => (isActive ? activeClass : normalClass)}>
               Lists

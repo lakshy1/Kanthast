@@ -101,7 +101,7 @@ export default function Signup() {
     <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)] px-4 py-12 flex items-center justify-center">
       <Helmet>
         <title>Sign Up | New Users — Kanthast</title>
-        <meta name="description" content="Create your free Kanthast account and start learning Medicine, USMLE, MCAT, and NCLEX through immersive 3D animations." />
+        <meta name="description" content="Create your free Kanthast account and start mastering USMLE, NEET PG, and INI CET through immersive 3D animations." />
         <link rel="canonical" href="https://kanthast.in/signup" />
       </Helmet>
       <motion.div
