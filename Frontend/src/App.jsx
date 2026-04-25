@@ -58,6 +58,7 @@ function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(false);
   const isFirstRender = useRef(true);
+  const isFirstEverVisit = useRef(!localStorage.getItem("kanthastVisited"));
   const isAdminRoute = location.pathname.startsWith("/admin");
 
   // Parallel to the loading animation: wake up the Render backend and
@@ -90,10 +91,16 @@ function App() {
 
     setLoading(true);
 
-    const timer = setTimeout(
-      () => setLoading(false),
-      isFirstRender.current ? 1100 : 520
-    );
+    let duration = 520;
+    if (isFirstRender.current) {
+      duration = isFirstEverVisit.current ? 2500 : 1100;
+      if (isFirstEverVisit.current) {
+        localStorage.setItem("kanthastVisited", "true");
+        isFirstEverVisit.current = false;
+      }
+    }
+
+    const timer = setTimeout(() => setLoading(false), duration);
 
     isFirstRender.current = false;
 

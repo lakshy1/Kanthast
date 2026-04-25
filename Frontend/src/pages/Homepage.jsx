@@ -8,18 +8,15 @@ import video2 from "../assets/videos/Video-2.mp4";
 import video3 from "../assets/videos/Kanthast.mp4";
 import heroImage from "../assets/images/Image-1.png";
 
-// Sets src only when the video enters the viewport, then plays it.
-// Zero bandwidth used until the user actually scrolls to the video.
-function useLazyVideo(ref, src, threshold = 0.35) {
+// Plays the video once it enters the viewport. src is already set at render
+// time so the browser buffers all videos during the loader animation.
+function usePlayOnVisible(ref, threshold = 0.35) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          if (!el.src || el.src === window.location.href) {
-            el.src = src;
-          }
           el.currentTime = 0;
           el.play().catch(() => {});
           observer.disconnect();
@@ -29,7 +26,7 @@ function useLazyVideo(ref, src, threshold = 0.35) {
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [ref, src]);
+  }, [ref]);
 }
 
 function replayVideo(ref) {
@@ -69,9 +66,9 @@ const Homepage = () => {
   const video1Ref = useRef(null);
   const video2Ref = useRef(null);
 
-  useLazyVideo(video3Ref, video3, 0.1);
-  useLazyVideo(video1Ref, video1);
-  useLazyVideo(video2Ref, video2);
+  usePlayOnVisible(video3Ref, 0.1);
+  usePlayOnVisible(video1Ref);
+  usePlayOnVisible(video2Ref);
 
   useEffect(() => {
     const role = roles[currentRole];
@@ -160,10 +157,10 @@ const Homepage = () => {
           >
             <video
               ref={video3Ref}
-              poster={heroImage}
+              src={video3}
               muted
               playsInline
-              preload="none"
+              preload="auto"
               className="w-full h-full object-cover scale-[1.15]"
               onMouseEnter={() => replayVideo(video3Ref)}
             />
@@ -182,10 +179,10 @@ const Homepage = () => {
           >
             <video
               ref={video1Ref}
-              poster={heroImage}
+              src={video1}
               muted
               playsInline
-              preload="none"
+              preload="metadata"
               className="w-full h-full object-cover scale-[1.15]"
               onMouseEnter={() => replayVideo(video1Ref)}
             />
@@ -261,10 +258,10 @@ const Homepage = () => {
             <div className="rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.15)] border border-slate-200 bg-white aspect-video">
               <video
                 ref={video2Ref}
-                poster={heroImage}
+                src={video2}
                 muted
                 playsInline
-                preload="none"
+                preload="metadata"
                 className="w-full h-full object-cover scale-[1.15]"
                 onMouseEnter={() => replayVideo(video2Ref)}
               />
