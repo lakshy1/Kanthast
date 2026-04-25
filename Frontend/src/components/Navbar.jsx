@@ -45,7 +45,7 @@ const Navbar = () => {
     <nav className="w-full sticky top-0 z-50 bg-gradient-to-r from-[#0B1120] via-blue-950 to-[#0f172a] backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-16 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded">
-          <img src={Logo} alt="Kanthast" className="h-full object-contain"/>
+          <img src={Logo} alt="Kanthast" className="h-8 w-auto object-contain"/>
         </Link>
 
         <div className="hidden md:flex items-center gap-10">
