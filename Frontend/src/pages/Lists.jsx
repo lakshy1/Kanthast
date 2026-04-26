@@ -42,6 +42,10 @@ export default function Lists() {
   const [activeTab, setActiveTab] = useState("Biochemistry");
   const [dbModules, setDbModules] = useState({});
   const [catalogLoading, setCatalogLoading] = useState(true);
+  const [watched, setWatched] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("kanthastWatched") || "{}"); }
+    catch { return {}; }
+  });
   const sectionRefs = useRef({});
   const navigate = useNavigate();
   const hasSubscription = useMemo(() => {
@@ -52,6 +56,17 @@ export default function Lists() {
       return false;
     }
   }, []);
+  useEffect(() => {
+    function syncWatched() {
+      if (document.visibilityState === "visible") {
+        try { setWatched(JSON.parse(localStorage.getItem("kanthastWatched") || "{}")); }
+        catch {}
+      }
+    }
+    document.addEventListener("visibilitychange", syncWatched);
+    return () => document.removeEventListener("visibilitychange", syncWatched);
+  }, []);
+
   useEffect(() => {
     let mounted = true;
 
@@ -195,6 +210,7 @@ export default function Lists() {
                               label="Video"
                               icon={<FaPlay />}
                               locked={!hasSubscription && lectureIndex >= 2}
+                              watched={Boolean(lecture.videoId && watched[lecture.videoId])}
                               onClick={() => openLectureResource("video", sec.title, lecture)}
                               onLockedClick={() => navigate("/subscription")}
                             />
@@ -240,7 +256,7 @@ export default function Lists() {
   );
 }
 
-function ActionButton({ icon, label, onClick, locked = false, onLockedClick }) {
+function ActionButton({ icon, label, onClick, locked = false, onLockedClick, watched = false }) {
   const lockedMessage = "Subscribe to access all the content (open subscription page)";
 
   return (
@@ -252,6 +268,8 @@ function ActionButton({ icon, label, onClick, locked = false, onLockedClick }) {
         className={`relative w-9 h-9 md:w-11 md:h-11 rounded-full border transition flex items-center justify-center ${
           locked
             ? "border-slate-200 bg-slate-100 text-slate-300 opacity-60 cursor-not-allowed"
+            : watched
+            ? "border-green-200 bg-green-50 text-green-600 hover:bg-green-100 hover:border-green-300"
             : "border-slate-300 bg-white/90 text-slate-600 hover:text-slate-900 hover:border-slate-500"
         }`}
         aria-label={label}

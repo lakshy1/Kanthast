@@ -7,9 +7,29 @@ import {
   FaClock,
   FaLayerGroup,
   FaPlay,
+  FaCheckCircle,
 } from "react-icons/fa";
 import { getMedicineUsmleVideoDetails } from "../utils/authApi";
 import { VideoMetaSkeleton, VideoPageSkeleton } from "../components/DataLoaderSkeletons";
+
+function markWatched(videoId) {
+  if (!videoId) return;
+  try {
+    const watched = JSON.parse(localStorage.getItem("kanthastWatched") || "{}");
+    if (watched[videoId]) return;
+    watched[videoId] = true;
+    localStorage.setItem("kanthastWatched", JSON.stringify(watched));
+
+    const today = new Date().toISOString().slice(0, 10);
+    const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+    const streak = JSON.parse(localStorage.getItem("kanthastStreak") || '{"lastDate":"","count":0}');
+    if (streak.lastDate !== today) {
+      streak.count = streak.lastDate === yesterday ? streak.count + 1 : 1;
+      streak.lastDate = today;
+      localStorage.setItem("kanthastStreak", JSON.stringify(streak));
+    }
+  } catch {}
+}
 
 function useLectureQuery() {
   const { search } = useLocation();
@@ -74,7 +94,18 @@ export default function VideoPage() {
   const [videoLink, setVideoLink] = useState("");
   const [dbTitle, setDbTitle] = useState("");
   const [loading, setLoading] = useState(Boolean(data.subjectId && data.chapterId && data.videoId));
+  const [isWatched, setIsWatched] = useState(() => {
+    try {
+      const w = JSON.parse(localStorage.getItem("kanthastWatched") || "{}");
+      return Boolean(data.videoId && w[data.videoId]);
+    } catch { return false; }
+  });
   const embedded = getEmbeddableUrl(videoLink);
+
+  function handleWatched() {
+    markWatched(data.videoId);
+    setIsWatched(true);
+  }
 
   useEffect(() => {
     let mounted = true;
@@ -131,7 +162,7 @@ export default function VideoPage() {
             <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
             {embedded.type === "file" && embedded.url ? (
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
-                <video controls playsInline preload="metadata" className="w-full aspect-video" src={embedded.url}>
+                <video controls playsInline preload="metadata" className="w-full aspect-video" src={embedded.url} onEnded={handleWatched}>
                   Your browser does not support video playback.
                 </video>
               </div>
@@ -188,7 +219,22 @@ export default function VideoPage() {
               <MetaCard icon={<FaClock />} label="Duration" value={data.duration} />
             </div>
 
-            <div className="mt-6 rounded-2xl bg-cyan-50/60 border border-cyan-100 border-l-4 border-l-cyan-500 p-4">
+            {embedded.type !== "file" && data.videoId && (
+              <button
+                onClick={handleWatched}
+                disabled={isWatched}
+                className={`mt-5 w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border font-semibold text-sm transition ${
+                  isWatched
+                    ? "bg-green-50 border-green-200 text-green-700 cursor-default"
+                    : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
+                }`}
+              >
+                <FaCheckCircle className={isWatched ? "text-green-500" : "text-slate-400"} />
+                {isWatched ? "Marked as Watched" : "Mark as Watched"}
+              </button>
+            )}
+
+            <div className="mt-5 rounded-2xl bg-cyan-50/60 border border-cyan-100 border-l-4 border-l-cyan-500 p-4">
               <h3 className="text-slate-900 font-semibold">Focus Mode Tip</h3>
               <p className="text-slate-700 text-sm mt-2">
                 Watch in 1.25x, pause at transitions, and summarize each segment in one line.
