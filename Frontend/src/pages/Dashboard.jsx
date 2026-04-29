@@ -9,6 +9,7 @@ import {
   FaPlay, FaCheck, FaChartBar, FaBolt,
   FaChevronLeft, FaChevronRight,
 } from "react-icons/fa";
+import { useAppSettings } from "../utils/settings";
 
 const IMAGES = [Image1, Image2, Image3, Image4, Image5];
 
@@ -140,7 +141,7 @@ function getStreak() {
 
 // ─── Circular SVG progress ─────────────────────────────────────────────────
 
-function CircleProgress({ percent, size = 54 }) {
+function CircleProgress({ percent, size = 54, showLabel = true }) {
   const sw = 4;
   const r = (size - sw) / 2;
   const circ = 2 * Math.PI * r;
@@ -157,22 +158,24 @@ function CircleProgress({ percent, size = 54 }) {
           style={{ transition: "stroke-dasharray 0.6s ease" }}
         />
       </svg>
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-white font-bold" style={{ fontSize: 11 }}>{percent}%</span>
-      </div>
+      {showLabel && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-white font-bold" style={{ fontSize: 11 }}>{percent}%</span>
+        </div>
+      )}
     </div>
   );
 }
 
 // ─── Chapter card ──────────────────────────────────────────────────────────
 
-function ChapterCard({ chapter, watched, index }) {
+function ChapterCard({ chapter, watched, index, compact, showProgressPercent }) {
   const chTotal = chapter.videoIds.length;
   const chWatched = chapter.videoIds.filter((id) => watched[id]).length;
   const chProgress = chTotal > 0 ? Math.round((chWatched / chTotal) * 100) : 0;
 
   return (
-    <article className="relative flex-shrink-0 w-64 h-52 rounded-2xl overflow-hidden border border-slate-200 shadow-[0_14px_35px_rgba(15,23,42,0.14)] group cursor-default">
+    <article className={`relative flex-shrink-0 ${compact ? "w-60 h-48" : "w-64 h-52"} rounded-2xl overflow-hidden border border-slate-200 shadow-[0_14px_35px_rgba(15,23,42,0.14)] group cursor-default`}>
       <img
         src={IMAGES[index % IMAGES.length]}
         alt={chapter.name}
@@ -188,9 +191,9 @@ function ChapterCard({ chapter, watched, index }) {
             {chTotal > 0 ? `${chWatched}/${chTotal} videos` : "No videos yet"}
           </p>
         </div>
-        {chTotal > 0 && (
+        {chTotal > 0 && showProgressPercent && (
           <div className="flex-shrink-0 bg-black/30 backdrop-blur-sm rounded-full p-0.5">
-            <CircleProgress percent={chProgress} />
+            <CircleProgress percent={chProgress} showLabel={showProgressPercent} />
           </div>
         )}
       </div>
@@ -200,7 +203,7 @@ function ChapterCard({ chapter, watched, index }) {
 
 // ─── Carousel ──────────────────────────────────────────────────────────────
 
-function ChapterCarousel({ chapters, watched }) {
+function ChapterCarousel({ chapters, watched, compact, showProgressPercent }) {
   const scrollRef = useRef(null);
   const [canLeft, setCanLeft] = useState(false);
   const [canRight, setCanRight] = useState(false);
@@ -239,7 +242,14 @@ function ChapterCarousel({ chapters, watched }) {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {chapters.map((chapter, i) => (
-          <ChapterCard key={chapter.chapterId || chapter.name} chapter={chapter} watched={watched} index={i} />
+          <ChapterCard
+            key={chapter.chapterId || chapter.name}
+            chapter={chapter}
+            watched={watched}
+            index={i}
+            compact={compact}
+            showProgressPercent={showProgressPercent}
+          />
         ))}
       </div>
 
@@ -259,6 +269,7 @@ function ChapterCarousel({ chapters, watched }) {
 
 export default function Dashboard() {
   const user = JSON.parse(localStorage.getItem("kanthastUser") || "null");
+  const settings = useAppSettings();
   const [subjects, setSubjects] = useState([]);
   const [contentLoading, setContentLoading] = useState(true);
 
@@ -293,13 +304,15 @@ export default function Dashboard() {
 
   const overallProgress = totalVideos > 0 ? Math.round((watchedVideos / totalVideos) * 100) : 0;
   const streak = getStreak();
+  const compact = settings.compactLayout;
+  const showProgressPercent = settings.showProgressPercent;
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_#e6f5ff,_#f8fafc_45%,_#eef2ff)] px-4 md:px-6 py-8 md:py-10">
+    <div className={`min-h-screen bg-[radial-gradient(circle_at_top_left,_#e6f5ff,_#f8fafc_45%,_#eef2ff)] ${compact ? "px-3 md:px-4 py-6 md:py-8" : "px-4 md:px-6 py-8 md:py-10"}`}>
       <div className="max-w-7xl mx-auto">
 
         {/* ── Top card ── */}
-        <div className="rounded-3xl bg-white border border-slate-200 p-6 md:p-8 shadow-[0_20px_60px_rgba(2,6,23,0.06)]">
+        <div className={`rounded-3xl bg-white border border-slate-200 ${compact ? "p-5 md:p-6" : "p-6 md:p-8"} shadow-[0_20px_60px_rgba(2,6,23,0.06)]`}>
 
           {/* Welcome row */}
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
@@ -311,7 +324,7 @@ export default function Dashboard() {
             </div>
 
             {/* Stat cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full lg:w-auto lg:min-w-[480px]">
+            <div className={`grid grid-cols-2 md:grid-cols-4 ${compact ? "gap-2" : "gap-3"} w-full lg:w-auto lg:min-w-[480px]`}>
               {contentLoading ? (
                 Array.from({ length: 4 }).map((_, i) => <StatCardSkeleton key={i} />)
               ) : (
@@ -412,7 +425,7 @@ export default function Dashboard() {
                   </div>
 
                   {/* Carousel */}
-                  <ChapterCarousel chapters={subject.chapters} watched={watched} />
+              <ChapterCarousel chapters={subject.chapters} watched={watched} compact={compact} showProgressPercent={showProgressPercent} />
                 </section>
               );
             })

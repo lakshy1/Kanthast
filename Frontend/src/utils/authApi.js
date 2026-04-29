@@ -11,17 +11,25 @@ function readContentCache() {
     if (!raw) return null;
     const { data, cachedAt } = JSON.parse(raw);
     return Date.now() - cachedAt < CONTENT_CACHE_TTL ? data : null;
-  } catch { return null; }
+  } catch {
+    return null;
+  }
 }
 
 function writeContentCache(data) {
   try {
     localStorage.setItem(CONTENT_CACHE_KEY, JSON.stringify({ data, cachedAt: Date.now() }));
-  } catch {}
+  } catch {
+    return;
+  }
 }
 
 export function invalidateContentCache() {
-  try { localStorage.removeItem(CONTENT_CACHE_KEY); } catch {}
+  try {
+    localStorage.removeItem(CONTENT_CACHE_KEY);
+  } catch {
+    return;
+  }
 }
 
 // SECURITY NOTE: tokens are currently stored in localStorage which is accessible
@@ -142,6 +150,79 @@ export async function updateProfile(token, payload) {
   return data;
 }
 
+export async function getSettings(token) {
+  const response = await fetch(`${API_BASE_URL}/profile/settings`, {
+    method: "GET",
+    headers: {
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+  });
+
+  if (response.status === 401) {
+    handleUnauthorized("/profile/settings");
+    throw new Error("Session expired. Please log in again.");
+  }
+
+  const data = await response.json().catch(() => ({}));
+
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to fetch settings");
+  }
+
+  return data;
+}
+
+export async function changePassword(token, payload) {
+  const response = await fetch(`${API_BASE_URL}/auth/change-password`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+    body: JSON.stringify(payload),
+  });
+
+  if (response.status === 401) {
+    handleUnauthorized("/auth/change-password");
+    throw new Error("Session expired. Please log in again.");
+  }
+
+  const data = await response.json().catch(() => ({}));
+
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to change password");
+  }
+
+  return data;
+}
+
+export async function updateSettings(token, payload) {
+  const response = await fetch(`${API_BASE_URL}/profile/settings`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+    body: JSON.stringify(payload),
+  });
+
+  if (response.status === 401) {
+    handleUnauthorized("/profile/settings");
+    throw new Error("Session expired. Please log in again.");
+  }
+
+  const data = await response.json().catch(() => ({}));
+
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to update settings");
+  }
+
+  return data;
+}
+
 export async function purchaseSubscriptionPlan(token, payload) {
   const response = await fetch(`${API_BASE_URL}/profile/subscription`, {
     method: "PUT",
@@ -162,6 +243,118 @@ export async function purchaseSubscriptionPlan(token, payload) {
 
   if (!response.ok || !data.success) {
     throw new Error(data.message || "Failed to activate subscription");
+  }
+
+  return data;
+}
+
+export async function deleteAccount(token) {
+  const response = await fetch(`${API_BASE_URL}/profile/account`, {
+    method: "DELETE",
+    headers: {
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+  });
+
+  if (response.status === 401) {
+    handleUnauthorized("/profile/account");
+    throw new Error("Session expired. Please log in again.");
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to delete account");
+  }
+
+  return data;
+}
+
+export async function getActiveSessions(token) {
+  const response = await fetch(`${API_BASE_URL}/profile/sessions`, {
+    method: "GET",
+    headers: {
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+  });
+
+  if (response.status === 401) {
+    handleUnauthorized("/profile/sessions");
+    throw new Error("Session expired. Please log in again.");
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to fetch sessions");
+  }
+
+  return data;
+}
+
+export async function logoutOtherSessions(token) {
+  const response = await fetch(`${API_BASE_URL}/profile/sessions/other/logout`, {
+    method: "PUT",
+    headers: {
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+  });
+
+  if (response.status === 401) {
+    handleUnauthorized("/profile/sessions/other/logout");
+    throw new Error("Session expired. Please log in again.");
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to log out other sessions");
+  }
+
+  return data;
+}
+
+export async function logoutSession(token, sessionId) {
+  const response = await fetch(`${API_BASE_URL}/profile/sessions/${encodeURIComponent(sessionId)}`, {
+    method: "DELETE",
+    headers: {
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+  });
+
+  if (response.status === 401) {
+    handleUnauthorized("/profile/sessions");
+    throw new Error("Session expired. Please log in again.");
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to log out session");
+  }
+
+  return data;
+}
+
+export async function updateCurrentSessionLocation(token, payload) {
+  const response = await fetch(`${API_BASE_URL}/profile/sessions/location`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+    body: JSON.stringify(payload),
+  });
+
+  if (response.status === 401) {
+    handleUnauthorized("/profile/sessions/location");
+    throw new Error("Session expired. Please log in again.");
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to update session location");
   }
 
   return data;

@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 import { getProfile, updateProfile } from "../utils/authApi";
 import { ProfileSkeleton } from "../components/DataLoaderSkeletons";
+import { trackAnalyticsEvent, useAppSettings } from "../utils/settings";
 
 function formatDate(value) {
   if (!value) return "-";
@@ -38,6 +39,12 @@ const MAX_ABOUT = 500;
 
 export default function Profile() {
   const token = localStorage.getItem("kanthastToken");
+  const settings = useAppSettings();
+  const compact = settings.compactLayout;
+  const profileVisibility = settings.profileVisibility;
+  const privacyIsPublic = profileVisibility === "public";
+  const MotionSection = motion.section;
+  const MotionDiv = motion.div;
 
   const localUser = useMemo(() => {
     try {
@@ -96,6 +103,14 @@ export default function Profile() {
 
   const joinedAt = user?.joinedAt || (user?._id ? new Date(parseInt(user._id.substring(0, 8), 16) * 1000) : null);
   const subscriptionPurchased = Boolean(user?.subscriptionPurchased);
+  const emailParts = String(user?.email || "").split("@");
+  const maskedEmail = privacyIsPublic || emailParts.length < 2
+    ? (user?.email || "No email available")
+    : `${emailParts[0].slice(0, 2)}***@${emailParts[1]}`;
+  const rawPhone = profile?.contactNumber || user?.contactNumber || "";
+  const maskedPhone = privacyIsPublic || !rawPhone
+    ? (rawPhone || "-")
+    : `${String(rawPhone).slice(0, 2)}******`;
 
   const hasChanges =
     form.about !== (profile?.about || "") ||
@@ -119,6 +134,7 @@ export default function Profile() {
       setProfile(updatedProfile);
       setUser(updatedUser);
       localStorage.setItem("kanthastUser", JSON.stringify(updatedUser));
+      trackAnalyticsEvent("profile_updated", { userId: updatedUser?._id });
       setToast("Profile updated successfully.");
       setTimeout(() => setToast(null), 2500);
       setIsEditing(false);
@@ -130,11 +146,11 @@ export default function Profile() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#f8fafc_38%,_#ecfeff_86%)] px-4 md:px-8 py-8">
+    <div className={`min-h-screen bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#f8fafc_38%,_#ecfeff_86%)] ${compact ? "px-3 md:px-6 py-6" : "px-4 md:px-8 py-8"}`}>
       <div className="max-w-6xl mx-auto">
 
         {/* ── HERO CARD ── */}
-        <motion.section
+        <MotionSection
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
@@ -156,17 +172,35 @@ export default function Profile() {
                   <h1 className="text-3xl md:text-4xl font-black text-white mt-0.5">
                     {user?.firstName || "User"} {user?.lastName || ""}
                   </h1>
-                  <p className="text-white/70 text-sm mt-1">{user?.email || "No email available"}</p>
+                  <p className="text-white/70 text-sm mt-1">{maskedEmail}</p>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-3">
                 <MetaPill icon={<FaUserCircle />} label="Account Type" value={user?.accountType || "-"} />
                 <MetaPill icon={<FaCalendarAlt />} label="Joined" value={formatDate(joinedAt)} />
+                <MetaPill
+                  icon={<FaIdBadge />}
+                  label="Visibility"
+                  value={
+                    profileVisibility === "public"
+                      ? "Public"
+                      : profileVisibility === "private"
+                        ? "Private"
+                        : "Enrolled learners"
+                  }
+                />
               </div>
             </div>
           </div>
-        </motion.section>
+        </MotionSection>
+
+        <div className="mt-6 rounded-2xl border border-stone-200 bg-stone-50 px-5 py-4 text-stone-700">
+          <p className="font-semibold text-stone-900">Privacy mode: {profileVisibility}</p>
+          <p className="mt-1 text-sm text-stone-600">
+            Contact details are {privacyIsPublic ? "shown" : "masked"} on this page to match your visibility setting.
+          </p>
+        </div>
 
         {status === "loading" && <ProfileSkeleton />}
 
@@ -175,7 +209,7 @@ export default function Profile() {
         )}
 
         {status === "ready" && (
-          <motion.div
+          <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.06, duration: 0.45, ease: "easeOut" }}
@@ -201,11 +235,11 @@ export default function Profile() {
               <div className="grid md:grid-cols-2 gap-4">
                 <FieldCard icon={<FaUserCircle />} iconBg="bg-blue-100" iconColor="text-blue-600" label="First Name" value={user?.firstName || "-"} />
                 <FieldCard icon={<FaUserCircle />} iconBg="bg-blue-100" iconColor="text-blue-600" label="Last Name" value={user?.lastName || "-"} />
-                <FieldCard icon={<FaEnvelope />} iconBg="bg-cyan-100" iconColor="text-cyan-600" label="Email Address" value={user?.email || "-"} />
+                <FieldCard icon={<FaEnvelope />} iconBg="bg-cyan-100" iconColor="text-cyan-600" label="Email Address" value={maskedEmail} />
                 <FieldCard
                   icon={<FaPhoneAlt />} iconBg="bg-slate-100" iconColor="text-slate-600"
                   label="Contact Number"
-                  value={profile?.contactNumber || user?.contactNumber || "-"}
+                  value={maskedPhone}
                 />
                 <FieldCard
                   icon={subscriptionPurchased ? <FaCheckCircle /> : <FaIdBadge />}
@@ -303,7 +337,7 @@ export default function Profile() {
 
               {error && <p className="mt-4 text-red-600 font-medium">{error}</p>}
             </section>
-          </motion.div>
+          </MotionDiv>
         )}
       </div>
 

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaCheckCircle } from "react-icons/fa";
 import { sendOtp, signUp } from "../utils/authApi";
+import { trackAnalyticsEvent } from "../utils/settings";
 
 const panelVariants = {
   hidden: { opacity: 0, y: 30, scale: 0.98 },
@@ -84,6 +85,7 @@ export default function Signup() {
         accountType: form.role,
         otp: form.otp,
       });
+      trackAnalyticsEvent("signup_success", { email: form.email, role: form.role });
 
       setSignupStatus("success");
       setToast("Account created successfully");

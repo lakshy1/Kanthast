@@ -1,11 +1,12 @@
 import "./App.css";
 import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, MotionConfig } from "framer-motion";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { warmupBackend, prefetchImages, prefetchContent } from "./utils/warmup";
+import { useAppSettings } from "./utils/settings";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const About = lazy(() => import("./pages/About"));
@@ -16,6 +17,7 @@ const Signup = lazy(() => import("./pages/Signup"));
 const EdtechLoader = lazy(() => import("./pages/EdtechLoader"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Profile = lazy(() => import("./pages/Profile"));
+const Settings = lazy(() => import("./pages/Settings"));
 const Lists = lazy(() => import("./pages/Lists"));
 const SummaryPage = lazy(() => import("./pages/SummaryPage"));
 const VideoPage = lazy(() => import("./pages/VideoPage"));
@@ -115,6 +117,7 @@ function App() {
   const isFirstRender = useRef(true);
   const isFirstEverVisit = useRef(!localStorage.getItem("kanthastVisited"));
   const isAdminRoute = location.pathname.startsWith("/admin");
+  const settings = useAppSettings();
 
   // Parallel to the loading animation: wake up the Render backend and
   // prefetch all page images into the browser cache using idle bandwidth.
@@ -132,19 +135,21 @@ function App() {
   useLayoutEffect(() => {
     const authRoutes = ["/login", "/signup"];
     if (authRoutes.includes(location.pathname)) {
-      setLoading(false);
-      isFirstRender.current = false;
-      return;
+      const timer = setTimeout(() => {
+        setLoading(false);
+        isFirstRender.current = false;
+      }, 0);
+      return () => clearTimeout(timer);
     }
 
     if (sessionStorage.getItem("kanthastSkipNextLoader") === "true") {
       sessionStorage.removeItem("kanthastSkipNextLoader");
-      setLoading(false);
-      isFirstRender.current = false;
-      return;
+      const timer = setTimeout(() => {
+        setLoading(false);
+        isFirstRender.current = false;
+      }, 0);
+      return () => clearTimeout(timer);
     }
-
-    setLoading(true);
 
     let duration = 520;
     if (isFirstRender.current) {
@@ -155,48 +160,64 @@ function App() {
       }
     }
 
-    const timer = setTimeout(() => setLoading(false), duration);
+    const startTimer = setTimeout(() => setLoading(true), 0);
+    const endTimer = setTimeout(() => setLoading(false), duration);
 
     isFirstRender.current = false;
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(startTimer);
+      clearTimeout(endTimer);
+    };
   }, [location.pathname, location.search, location.hash]);
 
+  useEffect(() => {
+    const root = document.documentElement;
+    const theme = settings.appearance.toLowerCase();
+    root.dataset.theme = theme;
+    root.dataset.compact = settings.compactLayout ? "true" : "false";
+    root.dataset.reduceMotion = settings.reduceMotion ? "true" : "false";
+    root.style.colorScheme = settings.appearance === "Dark" ? "dark" : "light";
+  }, [settings.appearance, settings.compactLayout, settings.reduceMotion]);
+
   return (
-    <div className="min-h-screen w-screen">
-      <GlobalScrollbar />
+    <MotionConfig reducedMotion={settings.reduceMotion ? "always" : "never"}>
+      <div className="min-h-screen w-screen">
+        <GlobalScrollbar />
 
-      {!isAdminRoute && <Navbar />}
+        {!isAdminRoute && <Navbar />}
 
-      <Suspense fallback={<ChunkFallback />}>
-        <AnimatePresence mode="wait">
-          {loading && <EdtechLoader />}
-        </AnimatePresence>
+        <Suspense fallback={<ChunkFallback />}>
+          <AnimatePresence mode="wait">
+            {loading && <EdtechLoader />}
+          </AnimatePresence>
 
-        <ErrorBoundary>
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/login" element={<GuestOnly><Login /></GuestOnly>} />
-            <Route path="/signup" element={<GuestOnly><Signup /></GuestOnly>} />
-            <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
-            <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
-            <Route path="/lists" element={<Lists />} />
-            <Route path="/summary" element={<RequireAuth><SummaryPage /></RequireAuth>} />
-            <Route path="/video" element={<RequireAuth><VideoPage /></RequireAuth>} />
-            <Route path="/images" element={<RequireAuth><ImagesPage /></RequireAuth>} />
-            <Route path="/chatbot" element={<RequireAuth><Chatbot /></RequireAuth>} />
-            <Route path="/subscription" element={<RequireAuth><SubscriptionPage /></RequireAuth>} />
-            <Route path="/adminlogin" element={<AdminGuestOnly><AdminLogin /></AdminGuestOnly>} />
-            <Route path="/admin" element={<RequireAdmin><AdminPanel /></RequireAdmin>} />
-          </Routes>
-        </ErrorBoundary>
-      </Suspense>
+          <ErrorBoundary>
+            <Routes>
+              <Route path="/" element={<Homepage />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/courses" element={<Courses />} />
+              <Route path="/login" element={<GuestOnly><Login /></GuestOnly>} />
+              <Route path="/signup" element={<GuestOnly><Signup /></GuestOnly>} />
+              <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
+              <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
+              <Route path="/settings" element={<RequireAuth><Settings /></RequireAuth>} />
+              <Route path="/lists" element={<Lists />} />
+              <Route path="/summary" element={<RequireAuth><SummaryPage /></RequireAuth>} />
+              <Route path="/video" element={<RequireAuth><VideoPage /></RequireAuth>} />
+              <Route path="/images" element={<RequireAuth><ImagesPage /></RequireAuth>} />
+              <Route path="/chatbot" element={<RequireAuth><Chatbot /></RequireAuth>} />
+              <Route path="/subscription" element={<RequireAuth><SubscriptionPage /></RequireAuth>} />
+              <Route path="/adminlogin" element={<AdminGuestOnly><AdminLogin /></AdminGuestOnly>} />
+              <Route path="/admin" element={<RequireAdmin><AdminPanel /></RequireAdmin>} />
+            </Routes>
+          </ErrorBoundary>
+        </Suspense>
 
-      {!isAdminRoute && <Footer />}
-    </div>
+        {!isAdminRoute && <Footer />}
+      </div>
+    </MotionConfig>
   );
 }
 

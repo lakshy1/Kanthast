@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { purchaseSubscriptionPlan } from "../utils/authApi";
+import { trackAnalyticsEvent } from "../utils/settings";
 
 const plans = [
   {
@@ -181,6 +182,10 @@ export default function SubscriptionPage() {
         planDurationYears: checkoutPlan.durationYears,
         dummyPaymentStatus: "success",
         dummyPaymentId: generatedPaymentId,
+      });
+      trackAnalyticsEvent("subscription_purchased", {
+        planDurationYears: checkoutPlan.durationYears,
+        paymentId: generatedPaymentId,
       });
 
       const mergedUser = {

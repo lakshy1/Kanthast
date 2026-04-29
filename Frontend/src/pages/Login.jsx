@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { login } from "../utils/authApi";
+import { trackAnalyticsEvent } from "../utils/settings";
+import { getClientDeviceInfo, requestBrowserLocation } from "../utils/device";
+import { updateCurrentSessionLocation } from "../utils/authApi";
 import EdtechLoader from "./EdtechLoader";
 
 const panelVariants = {
@@ -33,8 +36,9 @@ export default function Login() {
   const timersRef = useRef([]);
 
   useEffect(() => {
+    const timers = timersRef.current;
     return () => {
-      timersRef.current.forEach((timer) => clearTimeout(timer));
+      timers.forEach((timer) => clearTimeout(timer));
     };
   }, []);
 
@@ -61,9 +65,24 @@ export default function Login() {
     setApiError("");
 
     try {
-      const data = await login(form);
+      const deviceInfo = getClientDeviceInfo();
+      const data = await login({ ...form, deviceSession: deviceInfo });
       localStorage.setItem("kanthastToken", data.token);
       localStorage.setItem("kanthastUser", JSON.stringify(data.user));
+      trackAnalyticsEvent("login_success", { userId: data.user?._id, accountType: data.user?.accountType });
+
+      requestBrowserLocation().then((location) => {
+        if (!location) return;
+        updateCurrentSessionLocation(data.token, {
+          locationSource: location.source,
+          locationLabel: location.label,
+          geo: {
+            latitude: location.latitude,
+            longitude: location.longitude,
+            accuracy: location.accuracy,
+          },
+        }).catch(() => {});
+      });
 
       setStatus("success");
       setToast("Login successful");
@@ -94,31 +113,31 @@ export default function Login() {
         <meta name="description" content="Log in to your Kanthast account to access your USMLE, NEET PG, and INI CET study materials." />
         <link rel="canonical" href="https://kanthast.in/login" />
       </Helmet>
-      <motion.div
+      <Motion.div
         animate={{ y: [0, -10, 0], opacity: [0.52, 0.75, 0.52] }}
         transition={{ duration: 5.6, repeat: Infinity, ease: "easeInOut" }}
         className="pointer-events-none absolute -top-20 -left-16 h-72 w-72 rounded-full bg-cyan-300/25 blur-3xl"
       />
-      <motion.div
+      <Motion.div
         animate={{ y: [0, 12, 0], opacity: [0.4, 0.66, 0.4] }}
         transition={{ duration: 6.1, repeat: Infinity, ease: "easeInOut" }}
         className="pointer-events-none absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-blue-200/30 blur-3xl"
       />
-      <motion.div
+      <Motion.div
         variants={panelVariants}
         initial="hidden"
         animate="show"
         className="relative z-10 w-full max-w-md rounded-3xl border border-white/60 bg-white/70 p-7 md:p-9 backdrop-blur-2xl shadow-[0_30px_90px_rgba(15,23,42,0.15)]"
       >
-        <motion.div variants={itemVariants}>
+        <Motion.div variants={itemVariants}>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">Welcome Back</p>
           <h2 className="mt-2 text-3xl md:text-4xl font-black text-slate-900">Sign In</h2>
           <p className="mt-2 text-sm md:text-base text-slate-600">Continue your medical learning journey.</p>
           <div className="mt-5 h-px w-full bg-gradient-to-r from-cyan-300/0 via-cyan-400/45 to-cyan-300/0" />
-        </motion.div>
+        </Motion.div>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-          <motion.div variants={itemVariants}>
+          <Motion.div variants={itemVariants}>
             <label htmlFor="login-email" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
               Email
             </label>
@@ -132,9 +151,9 @@ export default function Login() {
               hasError={!!errors.email}
             />
             {errors.email && <p className="mt-1 text-sm text-rose-500">{errors.email}</p>}
-          </motion.div>
+          </Motion.div>
 
-          <motion.div variants={itemVariants} className="relative">
+          <Motion.div variants={itemVariants} className="relative">
             <label htmlFor="login-password" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
               Password
             </label>
@@ -155,9 +174,9 @@ export default function Login() {
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
             {errors.password && <p className="mt-1 text-sm text-rose-500">{errors.password}</p>}
-          </motion.div>
+          </Motion.div>
 
-          <motion.button
+          <Motion.button
             variants={itemVariants}
             whileTap={{ scale: 0.985 }}
             whileHover={{ y: -2 }}
@@ -166,47 +185,47 @@ export default function Login() {
             className="w-full py-3.5 rounded-xl font-bold bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-[0_14px_30px_rgba(8,145,178,0.28)] hover:from-cyan-600 hover:to-blue-700 disabled:opacity-60 disabled:shadow-none flex items-center justify-center gap-2 transition"
           >
             {status === "loading" && (
-              <motion.span
+              <Motion.span
                 animate={{ rotate: 360 }}
                 transition={{ duration: 0.9, repeat: Infinity, ease: "linear" }}
                 className="h-4 w-4 rounded-full border-2 border-white border-t-transparent"
               />
             )}
             {status === "loading" ? "Logging In..." : "Sign In"}
-          </motion.button>
+          </Motion.button>
 
-          <motion.p variants={itemVariants} className="text-center text-sm text-slate-600">
+          <Motion.p variants={itemVariants} className="text-center text-sm text-slate-600">
             Don't have an account?{" "}
             <Link to="/signup" className="font-semibold text-cyan-700 hover:text-cyan-800">
               Sign Up
             </Link>
-          </motion.p>
+          </Motion.p>
 
           <AnimatePresence>
             {apiError && (
-              <motion.p
+              <Motion.p
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 8 }}
                 className="text-sm text-center text-rose-500"
               >
                 {apiError}
-              </motion.p>
+              </Motion.p>
             )}
           </AnimatePresence>
         </form>
-      </motion.div>
+      </Motion.div>
 
       <AnimatePresence>
         {toast && (
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 28 }}
             className="fixed bottom-6 right-6 rounded-xl border border-emerald-200 bg-emerald-500 px-5 py-3 text-white shadow-[0_14px_30px_rgba(16,185,129,0.32)]"
           >
             {toast}
-          </motion.div>
+          </Motion.div>
         )}
       </AnimatePresence>
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   FaArrowLeft,
@@ -9,8 +9,9 @@ import {
   FaPlay,
   FaCheckCircle,
 } from "react-icons/fa";
-import { getMedicineUsmleVideoDetails } from "../utils/authApi";
+import { getMedicineUsmleContent, getMedicineUsmleVideoDetails } from "../utils/authApi";
 import { VideoMetaSkeleton, VideoPageSkeleton } from "../components/DataLoaderSkeletons";
+import { getPlaybackRate, trackAnalyticsEvent, useAppSettings } from "../utils/settings";
 
 // ─── watch tracking ────────────────────────────────────────────────────────
 
@@ -30,7 +31,9 @@ function markWatched(videoId) {
       streak.lastDate = today;
       localStorage.setItem("kanthastStreak", JSON.stringify(streak));
     }
-  } catch {}
+  } catch {
+    return;
+  }
 }
 
 // ─── YouTube IFrame API loader (module-level singleton) ────────────────────
@@ -95,9 +98,74 @@ function parseVideoUrl(rawUrl) {
       const vimeoId = segments[segments.length - 1];
       if (vimeoId && /^\d+$/.test(vimeoId)) return { type: "vimeo", vimeoId };
     }
-  } catch {}
+  } catch {
+    return;
+  }
 
   return { type: "unknown", url };
+}
+
+function findNextLecture(content, subjectId, chapterId, videoId) {
+  const subjects = content?.subjects || [];
+  const subjectIndex = subjects.findIndex((subject) => String(subject._id) === String(subjectId));
+  if (subjectIndex < 0) return null;
+
+  const subject = subjects[subjectIndex];
+  const chapters = subject?.chapters || [];
+  const chapterIndex = chapters.findIndex((chapter) => String(chapter._id) === String(chapterId));
+  if (chapterIndex < 0) return null;
+
+  const chapter = chapters[chapterIndex];
+  const videos = chapter?.videos || [];
+  const videoIndex = videos.findIndex((video) => String(video._id) === String(videoId));
+  if (videoIndex < 0) return null;
+
+  const nextVideo = videos[videoIndex + 1];
+  if (nextVideo) {
+    return {
+      subjectId: subject._id,
+      chapterId: chapter._id,
+      videoId: nextVideo._id,
+      module: subject.name || "Module",
+      section: chapter.name || "Section",
+      title: nextVideo.name || "Lecture",
+      duration: nextVideo.duration || "--:--",
+    };
+  }
+
+  const nextChapter = chapters[chapterIndex + 1];
+  if (nextChapter?.videos?.length) {
+    const firstVideo = nextChapter.videos[0];
+    return {
+      subjectId: subject._id,
+      chapterId: nextChapter._id,
+      videoId: firstVideo._id,
+      module: subject.name || "Module",
+      section: nextChapter.name || "Section",
+      title: firstVideo.name || "Lecture",
+      duration: firstVideo.duration || "--:--",
+    };
+  }
+
+  const nextSubject = subjects[subjectIndex + 1];
+  if (nextSubject?.chapters?.length) {
+    for (const nextChapterCandidate of nextSubject.chapters) {
+      if (nextChapterCandidate?.videos?.length) {
+        const firstVideo = nextChapterCandidate.videos[0];
+        return {
+          subjectId: nextSubject._id,
+          chapterId: nextChapterCandidate._id,
+          videoId: firstVideo._id,
+          module: nextSubject.name || "Module",
+          section: nextChapterCandidate.name || "Section",
+          title: firstVideo.name || "Lecture",
+          duration: firstVideo.duration || "--:--",
+        };
+      }
+    }
+  }
+
+  return null;
 }
 
 // ─── YouTube player component ──────────────────────────────────────────────
@@ -106,7 +174,7 @@ function parseVideoUrl(rawUrl) {
 // detached. Fix: keep wrapperRef (React-owned, never replaced) and
 // imperatively create a fresh inner div for YT.Player to replace each time.
 
-function YouTubePlayer({ ytId, onEnded, title }) {
+function YouTubePlayer({ ytId, onEnded, title, playbackRate }) {
   const wrapperRef = useRef(null);
   const playerRef = useRef(null);
 
@@ -134,6 +202,13 @@ function YouTubePlayer({ ytId, onEnded, title }) {
               if (iframe) {
                 iframe.style.cssText = "position:absolute;inset:0;width:100%;height:100%;";
               }
+              if (playbackRate && typeof e.target.setPlaybackRate === "function") {
+                try {
+                  e.target.setPlaybackRate(playbackRate);
+                } catch {
+                  return;
+                }
+              }
             },
             onStateChange(e) {
               if (e.data === 0) onEnded(); // 0 = YT.PlayerState.ENDED
@@ -147,14 +222,16 @@ function YouTubePlayer({ ytId, onEnded, title }) {
 
     return () => {
       cancelled = true;
-      try { playerRef.current?.destroy(); } catch {}
+      try { playerRef.current?.destroy(); } catch {
+        return;
+      }
       playerRef.current = null;
       if (mountDiv.isConnected) mountDiv.remove();
     };
-  }, [ytId, onEnded]);
+  }, [ytId, onEnded, playbackRate]);
 
   return (
-    <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black aspect-video relative">
+    <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black aspect-video relative" title={title}>
       <div ref={wrapperRef} className="absolute inset-0" />
     </div>
   );
@@ -179,7 +256,9 @@ function VimeoPlayer({ vimeoId, onEnded, title }) {
           );
         }
         if (msg.event === "finish") onEnded();
-      } catch {}
+      } catch {
+        return;
+      }
     }
 
     window.addEventListener("message", onMessage);
@@ -203,9 +282,13 @@ function VimeoPlayer({ vimeoId, onEnded, title }) {
 // ─── page ──────────────────────────────────────────────────────────────────
 
 export default function VideoPage() {
+  const settings = useAppSettings();
+  const navigate = useNavigate();
   const data = useLectureQuery();
+  const videoRef = useRef(null);
   const [videoLink, setVideoLink] = useState("");
   const [dbTitle, setDbTitle] = useState("");
+  const [courseContent, setCourseContent] = useState(null);
   const [loading, setLoading] = useState(Boolean(data.subjectId && data.chapterId && data.videoId));
   const [isWatched, setIsWatched] = useState(() => {
     try {
@@ -215,11 +298,38 @@ export default function VideoPage() {
   });
 
   const parsed = parseVideoUrl(videoLink);
+  const playbackRate = getPlaybackRate(settings.defaultPlaybackSpeed);
+  const MotionDiv = motion.div;
+  const nextLecture = courseContent
+    ? findNextLecture(courseContent, data.subjectId, data.chapterId, data.videoId)
+    : null;
 
   const handleWatched = useCallback(() => {
     markWatched(data.videoId);
     setIsWatched(true);
-  }, [data.videoId]);
+    trackAnalyticsEvent("video_watched", {
+      videoId: data.videoId,
+      chapterId: data.chapterId,
+      subjectId: data.subjectId,
+    });
+  }, [data.videoId, data.chapterId, data.subjectId]);
+
+  const handleEnded = useCallback(() => {
+    handleWatched();
+    if (settings.autoplayNextLecture && nextLecture) {
+      const params = new URLSearchParams({
+        module: nextLecture.module,
+        section: nextLecture.section,
+        title: nextLecture.title,
+        duration: nextLecture.duration,
+        subjectId: nextLecture.subjectId,
+        chapterId: nextLecture.chapterId,
+        videoId: nextLecture.videoId,
+      });
+      sessionStorage.setItem("kanthastSkipNextLoader", "true");
+      navigate(`/video?${params.toString()}`, { replace: true });
+    }
+  }, [handleWatched, nextLecture, settings.autoplayNextLecture, navigate]);
 
   useEffect(() => {
     let mounted = true;
@@ -230,24 +340,34 @@ export default function VideoPage() {
     (async () => {
       try {
         setLoading(true);
-        const response = await getMedicineUsmleVideoDetails({
-          subjectId: data.subjectId,
-          chapterId: data.chapterId,
-          videoId: data.videoId,
-        });
+        const [response, catalog] = await Promise.all([
+          getMedicineUsmleVideoDetails({
+            subjectId: data.subjectId,
+            chapterId: data.chapterId,
+            videoId: data.videoId,
+          }),
+          getMedicineUsmleContent().catch(() => null),
+        ]);
         if (!mounted) return;
+        setCourseContent(catalog?.content || null);
         setVideoLink(response.video?.videoLink || "");
         setDbTitle(response.video?.name || "");
       } catch {
         if (!mounted) return;
         setVideoLink("");
         setDbTitle("");
+        setCourseContent(null);
       } finally {
         if (mounted) setLoading(false);
       }
     })();
     return () => { mounted = false; };
   }, [data.subjectId, data.chapterId, data.videoId]);
+
+  useEffect(() => {
+    if (parsed.type !== "file" || !videoRef.current) return;
+    videoRef.current.playbackRate = playbackRate;
+  }, [parsed.type, playbackRate, videoLink]);
 
   const displayTitle = dbTitle || data.title;
 
@@ -261,7 +381,7 @@ export default function VideoPage() {
           <FaArrowLeft /> Back to Lists
         </Link>
 
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
@@ -270,7 +390,7 @@ export default function VideoPage() {
           {loading ? (
             <VideoPageSkeleton />
           ) : (
-            <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+          <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
               {parsed.type === "file" ? (
                 <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
                   <video
@@ -279,15 +399,21 @@ export default function VideoPage() {
                     preload="metadata"
                     className="w-full aspect-video"
                     src={parsed.url}
-                    onEnded={handleWatched}
+                    ref={videoRef}
+                    onLoadedMetadata={() => {
+                      if (videoRef.current) {
+                        videoRef.current.playbackRate = playbackRate;
+                      }
+                    }}
+                    onEnded={handleEnded}
                   >
                     Your browser does not support video playback.
                   </video>
                 </div>
               ) : parsed.type === "youtube" ? (
-                <YouTubePlayer ytId={parsed.ytId} onEnded={handleWatched} title={displayTitle} />
+                <YouTubePlayer ytId={parsed.ytId} onEnded={handleEnded} title={displayTitle} playbackRate={playbackRate} />
               ) : parsed.type === "vimeo" ? (
-                <VimeoPlayer vimeoId={parsed.vimeoId} onEnded={handleWatched} title={displayTitle} />
+                <VimeoPlayer vimeoId={parsed.vimeoId} onEnded={handleEnded} title={displayTitle} />
               ) : parsed.type === "unknown" ? (
                 <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 p-6">
                   <p className="text-slate-700">This link type cannot be embedded. Open directly:</p>
@@ -347,7 +473,7 @@ export default function VideoPage() {
               </div>
             </aside>
           )}
-        </motion.div>
+        </MotionDiv>
       </div>
     </div>
   );
