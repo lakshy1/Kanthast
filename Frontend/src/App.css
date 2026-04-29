@@ -1,1 +1,18 @@
 
+/* ── Hide native scrollbar on html (replaced by JS overlay in App.jsx) ───── */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Hide scrollbar utility (e.g. chatbot messages area) ─────────────────── */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   FaArrowLeft,
   FaBookOpen,
@@ -11,6 +11,8 @@ import {
 } from "react-icons/fa";
 import { getMedicineUsmleVideoDetails } from "../utils/authApi";
 import { VideoMetaSkeleton, VideoPageSkeleton } from "../components/DataLoaderSkeletons";
+
+// ─── watch tracking ────────────────────────────────────────────────────────
 
 function markWatched(videoId) {
   if (!videoId) return;
@@ -31,6 +33,29 @@ function markWatched(videoId) {
   } catch {}
 }
 
+// ─── YouTube IFrame API loader (module-level singleton) ────────────────────
+
+let ytApiPromise = null;
+function loadYouTubeApi() {
+  if (ytApiPromise) return ytApiPromise;
+  ytApiPromise = new Promise((resolve) => {
+    if (window.YT && window.YT.Player) { resolve(); return; }
+    const prev = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => { if (prev) prev(); resolve(); };
+    if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
+      const s = document.createElement("script");
+      s.src = "https://www.youtube.com/iframe_api";
+      document.head.appendChild(s);
+    }
+  });
+  return ytApiPromise;
+}
+
+// Reset so a failed load can be retried on next mount
+function resetYtApiPromise() { ytApiPromise = null; }
+
+// ─── helpers ───────────────────────────────────────────────────────────────
+
 function useLectureQuery() {
   const { search } = useLocation();
   const query = new URLSearchParams(search);
@@ -45,49 +70,137 @@ function useLectureQuery() {
   };
 }
 
-function getEmbeddableUrl(rawUrl) {
-  if (!rawUrl) return { type: "none", url: "" };
-
+function parseVideoUrl(rawUrl) {
+  if (!rawUrl) return { type: "none" };
   const url = rawUrl.trim();
   const lower = url.toLowerCase();
 
-  if (/\.(mp4|webm|ogg|m3u8)(\?.*)?$/.test(lower)) {
-    return { type: "file", url };
-  }
+  if (/\.(mp4|webm|ogg|m3u8)(\?.*)?$/.test(lower)) return { type: "file", url };
 
   try {
     const parsed = new URL(url);
     const host = parsed.hostname.replace("www.", "").toLowerCase();
 
     if (host.includes("youtube.com") || host.includes("youtu.be")) {
-      let videoId = "";
-      if (host.includes("youtu.be")) {
-        videoId = parsed.pathname.replace("/", "");
-      } else if (parsed.pathname === "/watch") {
-        videoId = parsed.searchParams.get("v") || "";
-      } else if (parsed.pathname.startsWith("/shorts/")) {
-        videoId = parsed.pathname.split("/shorts/")[1];
-      } else if (parsed.pathname.startsWith("/embed/")) {
-        videoId = parsed.pathname.split("/embed/")[1];
-      }
-      if (videoId) {
-        return { type: "youtube", url: `https://www.youtube.com/embed/${videoId}` };
-      }
+      let ytId = "";
+      if (host.includes("youtu.be")) ytId = parsed.pathname.slice(1);
+      else if (parsed.pathname === "/watch") ytId = parsed.searchParams.get("v") || "";
+      else if (parsed.pathname.startsWith("/shorts/")) ytId = parsed.pathname.split("/shorts/")[1];
+      else if (parsed.pathname.startsWith("/embed/")) ytId = parsed.pathname.split("/embed/")[1];
+      if (ytId) return { type: "youtube", ytId };
     }
 
     if (host.includes("vimeo.com")) {
       const segments = parsed.pathname.split("/").filter(Boolean);
-      const videoId = segments[segments.length - 1];
-      if (videoId && /^[0-9]+$/.test(videoId)) {
-        return { type: "vimeo", url: `https://player.vimeo.com/video/${videoId}` };
-      }
+      const vimeoId = segments[segments.length - 1];
+      if (vimeoId && /^\d+$/.test(vimeoId)) return { type: "vimeo", vimeoId };
     }
-  } catch {
-    return { type: "unknown", url };
-  }
+  } catch {}
 
-  return { type: "file", url };
+  return { type: "unknown", url };
 }
+
+// ─── YouTube player component ──────────────────────────────────────────────
+// Root cause of the old bug: YT.Player REPLACES the target element with an
+// iframe, so passing containerRef.current caused React's ref to become
+// detached. Fix: keep wrapperRef (React-owned, never replaced) and
+// imperatively create a fresh inner div for YT.Player to replace each time.
+
+function YouTubePlayer({ ytId, onEnded, title }) {
+  const wrapperRef = useRef(null);
+  const playerRef = useRef(null);
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    if (!wrapper) return;
+
+    // Fresh div each effect run — YT replaces this, not wrapperRef
+    const mountDiv = document.createElement("div");
+    mountDiv.style.cssText = "width:100%;height:100%;";
+    wrapper.appendChild(mountDiv);
+
+    let cancelled = false;
+
+    loadYouTubeApi()
+      .then(() => {
+        if (cancelled || !mountDiv.isConnected) return;
+        playerRef.current = new window.YT.Player(mountDiv, {
+          videoId: ytId,
+          playerVars: { rel: 0, modestbranding: 1 },
+          events: {
+            onReady(e) {
+              // Size the injected iframe to fill the wrapper
+              const iframe = e.target.getIframe();
+              if (iframe) {
+                iframe.style.cssText = "position:absolute;inset:0;width:100%;height:100%;";
+              }
+            },
+            onStateChange(e) {
+              if (e.data === 0) onEnded(); // 0 = YT.PlayerState.ENDED
+            },
+            onError() {
+              resetYtApiPromise(); // allow retry on next mount
+            },
+          },
+        });
+      });
+
+    return () => {
+      cancelled = true;
+      try { playerRef.current?.destroy(); } catch {}
+      playerRef.current = null;
+      if (mountDiv.isConnected) mountDiv.remove();
+    };
+  }, [ytId, onEnded]);
+
+  return (
+    <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black aspect-video relative">
+      <div ref={wrapperRef} className="absolute inset-0" />
+    </div>
+  );
+}
+
+// ─── Vimeo player component ────────────────────────────────────────────────
+
+function VimeoPlayer({ vimeoId, onEnded, title }) {
+  const iframeRef = useRef(null);
+
+  useEffect(() => {
+    const origin = "https://player.vimeo.com";
+
+    function onMessage(e) {
+      if (e.origin !== origin) return;
+      try {
+        const msg = JSON.parse(e.data);
+        if (msg.event === "ready") {
+          iframeRef.current?.contentWindow?.postMessage(
+            JSON.stringify({ method: "addEventListener", value: "finish" }),
+            origin
+          );
+        }
+        if (msg.event === "finish") onEnded();
+      } catch {}
+    }
+
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, [vimeoId, onEnded]);
+
+  return (
+    <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
+      <iframe
+        ref={iframeRef}
+        src={`https://player.vimeo.com/video/${vimeoId}?api=1`}
+        className="w-full aspect-video"
+        title={title}
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  );
+}
+
+// ─── page ──────────────────────────────────────────────────────────────────
 
 export default function VideoPage() {
   const data = useLectureQuery();
@@ -100,12 +213,13 @@ export default function VideoPage() {
       return Boolean(data.videoId && w[data.videoId]);
     } catch { return false; }
   });
-  const embedded = getEmbeddableUrl(videoLink);
 
-  function handleWatched() {
+  const parsed = parseVideoUrl(videoLink);
+
+  const handleWatched = useCallback(() => {
     markWatched(data.videoId);
     setIsWatched(true);
-  }
+  }, [data.videoId]);
 
   useEffect(() => {
     let mounted = true;
@@ -113,7 +227,6 @@ export default function VideoPage() {
       setLoading(false);
       return undefined;
     }
-
     (async () => {
       try {
         setLoading(true);
@@ -122,7 +235,6 @@ export default function VideoPage() {
           chapterId: data.chapterId,
           videoId: data.videoId,
         });
-
         if (!mounted) return;
         setVideoLink(response.video?.videoLink || "");
         setDbTitle(response.video?.name || "");
@@ -134,11 +246,10 @@ export default function VideoPage() {
         if (mounted) setLoading(false);
       }
     })();
-
-    return () => {
-      mounted = false;
-    };
+    return () => { mounted = false; };
   }, [data.subjectId, data.chapterId, data.videoId]);
+
+  const displayTitle = dbTitle || data.title;
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_right,_#dbeafe,_#f8fafc_35%,_#eef2ff_85%)] px-4 md:px-8 py-8">
@@ -160,51 +271,45 @@ export default function VideoPage() {
             <VideoPageSkeleton />
           ) : (
             <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
-            {embedded.type === "file" && embedded.url ? (
-              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
-                <video controls playsInline preload="metadata" className="w-full aspect-video" src={embedded.url} onEnded={handleWatched}>
-                  Your browser does not support video playback.
-                </video>
-              </div>
-            ) : (embedded.type === "youtube" || embedded.type === "vimeo") && embedded.url ? (
-              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
-                <iframe
-                  title={dbTitle || data.title}
-                  src={embedded.url}
-                  className="w-full aspect-video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              </div>
-            ) : embedded.type === "unknown" && embedded.url ? (
-              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 p-6">
-                <p className="text-slate-700">
-                  This link type cannot be embedded. Open directly:
-                </p>
-                <a
-                  href={embedded.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-700 underline break-all"
-                >
-                  {embedded.url}
-                </a>
-              </div>
-            ) : (
-              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-gradient-to-br from-[#0b1324] via-[#10214b] to-[#12395f] aspect-video relative">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(125,211,252,0.18),transparent_40%)]" />
-                <div className="absolute inset-0 grid place-items-center">
-                  <button type="button" className="w-20 h-20 rounded-full bg-white/20 backdrop-blur border border-white/40 text-white text-2xl grid place-items-center hover:scale-105 transition">
-                    <FaPlay className="ml-1" />
-                  </button>
+              {parsed.type === "file" ? (
+                <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
+                  <video
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full aspect-video"
+                    src={parsed.url}
+                    onEnded={handleWatched}
+                  >
+                    Your browser does not support video playback.
+                  </video>
                 </div>
-                <div className="absolute left-4 right-4 bottom-4 text-white">
-                  <p className="text-sm text-cyan-100">{data.module} - {data.section}</p>
-                  <h1 className="text-xl md:text-3xl font-bold mt-1">{dbTitle || data.title}</h1>
+              ) : parsed.type === "youtube" ? (
+                <YouTubePlayer ytId={parsed.ytId} onEnded={handleWatched} title={displayTitle} />
+              ) : parsed.type === "vimeo" ? (
+                <VimeoPlayer vimeoId={parsed.vimeoId} onEnded={handleWatched} title={displayTitle} />
+              ) : parsed.type === "unknown" ? (
+                <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 p-6">
+                  <p className="text-slate-700">This link type cannot be embedded. Open directly:</p>
+                  <a href={parsed.url} target="_blank" rel="noreferrer" className="text-blue-700 underline break-all">
+                    {parsed.url}
+                  </a>
                 </div>
-              </div>
-            )}
-            <div className="mt-3 text-sm text-slate-500">Duration: {data.duration}</div>
+              ) : (
+                <div className="rounded-2xl overflow-hidden border border-slate-200 bg-gradient-to-br from-[#0b1324] via-[#10214b] to-[#12395f] aspect-video relative">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(125,211,252,0.18),transparent_40%)]" />
+                  <div className="absolute inset-0 grid place-items-center">
+                    <button type="button" className="w-20 h-20 rounded-full bg-white/20 backdrop-blur border border-white/40 text-white text-2xl grid place-items-center hover:scale-105 transition">
+                      <FaPlay className="ml-1" />
+                    </button>
+                  </div>
+                  <div className="absolute left-4 right-4 bottom-4 text-white">
+                    <p className="text-sm text-cyan-100">{data.module} — {data.section}</p>
+                    <h1 className="text-xl md:text-3xl font-bold mt-1">{displayTitle}</h1>
+                  </div>
+                </div>
+              )}
+              <div className="mt-3 text-sm text-slate-500">Duration: {data.duration}</div>
             </section>
           )}
 
@@ -212,34 +317,34 @@ export default function VideoPage() {
             <VideoMetaSkeleton />
           ) : (
             <aside className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
-            <h2 className="text-xl font-bold text-slate-900">Lecture Context</h2>
-            <div className="mt-4 space-y-3">
-              <MetaCard icon={<FaLayerGroup />} label="Module" value={data.module} />
-              <MetaCard icon={<FaBookOpen />} label="Section" value={data.section} />
-              <MetaCard icon={<FaClock />} label="Duration" value={data.duration} />
-            </div>
+              <h2 className="text-xl font-bold text-slate-900">Lecture Context</h2>
+              <div className="mt-4 space-y-3">
+                <MetaCard icon={<FaLayerGroup />} label="Module" value={data.module} />
+                <MetaCard icon={<FaBookOpen />} label="Section" value={data.section} />
+                <MetaCard icon={<FaClock />} label="Duration" value={data.duration} />
+              </div>
 
-            {embedded.type !== "file" && data.videoId && (
-              <button
-                onClick={handleWatched}
-                disabled={isWatched}
-                className={`mt-5 w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border font-semibold text-sm transition ${
-                  isWatched
-                    ? "bg-green-50 border-green-200 text-green-700 cursor-default"
-                    : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
-                }`}
-              >
-                <FaCheckCircle className={isWatched ? "text-green-500" : "text-slate-400"} />
-                {isWatched ? "Marked as Watched" : "Mark as Watched"}
-              </button>
-            )}
+              {data.videoId && (
+                <button
+                  onClick={handleWatched}
+                  disabled={isWatched}
+                  className={`mt-5 w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border font-semibold text-sm transition ${
+                    isWatched
+                      ? "bg-green-50 border-green-200 text-green-700 cursor-default"
+                      : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
+                  }`}
+                >
+                  <FaCheckCircle className={isWatched ? "text-green-500" : "text-slate-400"} />
+                  {isWatched ? "Marked as Watched" : "Mark as Watched"}
+                </button>
+              )}
 
-            <div className="mt-5 rounded-2xl bg-cyan-50/60 border border-cyan-100 border-l-4 border-l-cyan-500 p-4">
-              <h3 className="text-slate-900 font-semibold">Focus Mode Tip</h3>
-              <p className="text-slate-700 text-sm mt-2">
-                Watch in 1.25x, pause at transitions, and summarize each segment in one line.
-              </p>
-            </div>
+              <div className="mt-5 rounded-2xl bg-cyan-50/60 border border-cyan-100 border-l-4 border-l-cyan-500 p-4">
+                <h3 className="text-slate-900 font-semibold">Focus Mode Tip</h3>
+                <p className="text-slate-700 text-sm mt-2">
+                  Watch in 1.25x, pause at transitions, and summarize each segment in one line.
+                </p>
+              </div>
             </aside>
           )}
         </motion.div>
@@ -252,8 +357,7 @@ function MetaCard({ icon, label, value }) {
   return (
     <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
       <p className="text-xs uppercase tracking-wider text-slate-500 flex items-center gap-2">
-        {icon}
-        {label}
+        {icon} {label}
       </p>
       <p className="text-slate-900 font-semibold mt-1">{value}</p>
     </div>

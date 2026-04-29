@@ -1,6 +1,29 @@
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api/v1";
 
+// ─── Content cache (localStorage, 30-min TTL) ─────────────────────────────
+const CONTENT_CACHE_KEY = "kanthastContentCache";
+const CONTENT_CACHE_TTL = 5 * 60 * 1000;
+
+function readContentCache() {
+  try {
+    const raw = localStorage.getItem(CONTENT_CACHE_KEY);
+    if (!raw) return null;
+    const { data, cachedAt } = JSON.parse(raw);
+    return Date.now() - cachedAt < CONTENT_CACHE_TTL ? data : null;
+  } catch { return null; }
+}
+
+function writeContentCache(data) {
+  try {
+    localStorage.setItem(CONTENT_CACHE_KEY, JSON.stringify({ data, cachedAt: Date.now() }));
+  } catch {}
+}
+
+export function invalidateContentCache() {
+  try { localStorage.removeItem(CONTENT_CACHE_KEY); } catch {}
+}
+
 // SECURITY NOTE: tokens are currently stored in localStorage which is accessible
 // to any JS running on the page (XSS risk). To fully mitigate this, the backend
 // should issue httpOnly cookies instead, removing the need to store tokens here.
@@ -328,6 +351,9 @@ export async function deleteAdminUser(token, userId) {
 }
 
 export async function getMedicineUsmleContent() {
+  const cached = readContentCache();
+  if (cached) return cached;
+
   const response = await fetch(`${API_BASE_URL}/medicine-usmle`, {
     method: "GET",
     credentials: "include",
@@ -337,6 +363,7 @@ export async function getMedicineUsmleContent() {
   if (!response.ok || !data.success) {
     throw new Error(data.message || `Failed to fetch Medicine/USMLE content (${response.status})`);
   }
+  writeContentCache(data);
   return data;
 }
 
@@ -379,6 +406,7 @@ export async function updateMedicineUsmleContent(token, payload) {
   if (!response.ok || !data.success) {
     throw new Error(data.message || `Failed to update Medicine/USMLE content (${response.status})`);
   }
+  invalidateContentCache();
   return data;
 }
 
@@ -402,6 +430,8 @@ async function authedJsonRequest(path, method, token, payload) {
   if (!response.ok || !data.success) {
     throw new Error(data.message || `Medicine/USMLE admin request failed (${response.status})`);
   }
+  // Any successful admin mutation invalidates the content cache
+  if (path.includes("/medicine-usmle/admin")) invalidateContentCache();
   return data;
 }
 

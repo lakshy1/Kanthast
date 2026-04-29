@@ -18,38 +18,173 @@ import {
   uploadChatFile,
 } from "../utils/authApi";
 
-const quickSuggestions = [
-  "I am facing OTP issue during signup. Help me.",
-  "How can I update my profile details?",
-  "My video is locked. What subscription is needed?",
-  "File upload is not working. Show troubleshooting steps.",
-  "Give me quick steps to fix login issues.",
+const SUGGESTIONS = [
+  { emoji: "🔐", label: "OTP signup issue", text: "I am facing OTP issue during signup. Help me." },
+  { emoji: "👤", label: "Update profile", text: "How can I update my profile details?" },
+  { emoji: "🎥", label: "Video locked", text: "My video is locked. What subscription is needed?" },
+  { emoji: "📎", label: "File upload issue", text: "File upload is not working. Show troubleshooting steps." },
+  { emoji: "🔑", label: "Login help", text: "Give me quick steps to fix login issues." },
 ];
 
 const formatTime = (value) => {
   if (!value) return "";
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return "";
-  return date.toLocaleString([], {
-    day: "2-digit",
-    month: "short",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  return date.toLocaleString([], { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" });
 };
 
-const stripMarkdownFormatting = (text = "") =>
-  String(text)
-    .replace(/```[\s\S]*?```/g, (match) => match.replace(/`/g, ""))
+function renderContent(text = "") {
+  // Convert markdown-lite to readable text with basic structure
+  const cleaned = String(text)
+    .replace(/```[\s\S]*?```/g, (m) => m.replace(/`/g, ""))
     .replace(/`([^`]+)`/g, "$1")
     .replace(/\*\*([^*]+)\*\*/g, "$1")
     .replace(/\*([^*]+)\*/g, "$1")
-    .replace(/^(\s*)[*]\s+/gm, "$1- ")
-    .replace(/^(\s*)\d+\.\s+/gm, "$1- ")
-    .replace(/^(\s*)#+\s+/gm, "$1")
+    .replace(/^#+\s+/gm, "")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
+  return cleaned;
+}
 
+// ─── Typing dots indicator ─────────────────────────────────────────────────
+function TypingDots() {
+  return (
+    <div className="flex justify-start px-4 md:px-6 py-1">
+      <div className="flex items-center gap-1.5 bg-slate-100 border border-slate-200 rounded-2xl rounded-tl-sm px-4 py-3">
+        {[0, 150, 300].map((delay) => (
+          <span
+            key={delay}
+            className="w-2 h-2 rounded-full bg-slate-400 animate-bounce"
+            style={{ animationDelay: `${delay}ms`, animationDuration: "0.9s" }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Sidebar content (shared between desktop and mobile drawer) ────────────
+function SidebarContent({ sessions, activeSessionId, onLoad, onNew, onDelete, onClose }) {
+  return (
+    <div className="flex flex-col h-full">
+      {/* Brand + close (mobile) */}
+      <div className="flex items-center justify-between p-4 pb-3 flex-shrink-0">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-xl bg-cyan-500 flex items-center justify-center shadow-lg shadow-cyan-500/30">
+            <FaRobot className="text-white text-sm" />
+          </div>
+          <span className="text-white font-bold text-sm tracking-tight">Kanthast AI</span>
+        </div>
+        {onClose && (
+          <button
+            onClick={onClose}
+            className="w-8 h-8 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 flex items-center justify-center transition"
+          >
+            <FaTimes size={14} />
+          </button>
+        )}
+      </div>
+
+      {/* New chat */}
+      <div className="px-3 pb-4 flex-shrink-0">
+        <button
+          onClick={onNew}
+          className="w-full flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/18 border border-white/10 text-white/90 text-sm font-medium transition group"
+        >
+          <FaPlus size={11} className="group-hover:rotate-90 transition-transform duration-200" />
+          New conversation
+        </button>
+      </div>
+
+      <div className="px-4 pb-2 flex-shrink-0">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">Recent</p>
+      </div>
+
+      {/* Session list */}
+      <div className="flex-1 overflow-y-auto px-2 pb-4 space-y-0.5" style={{ scrollbarWidth: "none" }}>
+        {sessions.length === 0 && (
+          <p className="text-slate-600 text-xs px-3 py-2">No conversations yet.</p>
+        )}
+        {sessions.map((session) => {
+          const active = activeSessionId === session.sessionId;
+          return (
+            <div
+              key={session.sessionId}
+              className={`group relative rounded-xl transition-all duration-150 ${
+                active ? "bg-white/15" : "hover:bg-white/8"
+              }`}
+            >
+              <button
+                onClick={() => onLoad(session.sessionId)}
+                className="w-full text-left px-3 py-2.5 pr-10 rounded-xl"
+              >
+                <p className={`text-sm truncate font-medium leading-snug ${active ? "text-white" : "text-slate-300"}`}>
+                  {session.title || "New Chat"}
+                </p>
+                <p className="text-[11px] text-slate-500 mt-0.5 truncate">
+                  {session.preview || formatTime(session.lastMessageAt) || "No messages yet"}
+                </p>
+              </button>
+              <button
+                onClick={(e) => { e.stopPropagation(); onDelete(session.sessionId); }}
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-lg text-slate-500 hover:text-red-400 hover:bg-red-400/10 hidden group-hover:flex items-center justify-center transition"
+                title="Delete"
+              >
+                <FaTrash size={10} />
+              </button>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ─── Custom scrollbar ─────────────────────────────────────────────────────
+function useCustomScrollbar(elRef) {
+  const thumbRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+  const hideTimer = useRef(null);
+
+  useEffect(() => {
+    const el = elRef.current;
+    if (!el) return;
+
+    const updateThumb = () => {
+      const thumb = thumbRef.current;
+      if (!thumb) return;
+      const ratio = el.clientHeight / el.scrollHeight;
+      if (ratio >= 1) { setVisible(false); return; }
+      const thumbH = Math.max(ratio * el.clientHeight, 28);
+      const maxScroll = el.scrollHeight - el.clientHeight;
+      const thumbTop = maxScroll > 0 ? (el.scrollTop / maxScroll) * (el.clientHeight - thumbH) : 0;
+      thumb.style.height = thumbH + "px";
+      thumb.style.top = thumbTop + "px";
+    };
+
+    const onScroll = () => {
+      updateThumb();
+      setVisible(true);
+      if (hideTimer.current) clearTimeout(hideTimer.current);
+      hideTimer.current = setTimeout(() => setVisible(false), 1500);
+    };
+
+    updateThumb();
+    el.addEventListener("scroll", onScroll);
+    const ro = new ResizeObserver(updateThumb);
+    ro.observe(el);
+
+    return () => {
+      el.removeEventListener("scroll", onScroll);
+      ro.disconnect();
+      if (hideTimer.current) clearTimeout(hideTimer.current);
+    };
+  }, [elRef]);
+
+  return { thumbRef, visible };
+}
+
+// ─── Main page ─────────────────────────────────────────────────────────────
 export default function Chatbot() {
   const token = localStorage.getItem("kanthastToken");
   const [sessions, setSessions] = useState([]);
@@ -57,25 +192,32 @@ export default function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [error, setError] = useState("");
-  const [status, setStatus] = useState("loading"); // loading | ready | loadingSession | sending | error
+  const [status, setStatus] = useState("loading");
   const [uploading, setUploading] = useState(false);
   const [attachment, setAttachment] = useState(null);
   const [uploadNotice, setUploadNotice] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const fileInputRef = useRef(null);
   const listRef = useRef(null);
-  const uploadNoticeTimerRef = useRef(null);
+  const textareaRef = useRef(null);
+  const noticeTimer = useRef(null);
 
+  const { thumbRef, visible: scrollbarVisible } = useCustomScrollbar(listRef);
+
+  // Auto-grow textarea
+  useEffect(() => {
+    const el = textareaRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = Math.min(el.scrollHeight, 180) + "px";
+  }, [input]);
+
+  // Load initial chat
   useEffect(() => {
     let mounted = true;
-
-    const loadInitial = async () => {
-      if (!token) {
-        setStatus("error");
-        setError("Login required.");
-        return;
-      }
-
+    if (!token) { setStatus("error"); setError("Login required."); return; }
+    (async () => {
       try {
         const data = await getChatHistory(token);
         if (!mounted) return;
@@ -88,27 +230,18 @@ export default function Chatbot() {
         setStatus("error");
         setError(err.message || "Failed to load chat");
       }
-    };
-
-    loadInitial();
-    return () => {
-      mounted = false;
-    };
+    })();
+    return () => { mounted = false; };
   }, [token]);
 
+  // Scroll to bottom on new message
   useEffect(() => {
     if (listRef.current) {
-      listRef.current.scrollTop = listRef.current.scrollHeight;
+      listRef.current.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
     }
-  }, [messages, activeSessionId]);
+  }, [messages, status]);
 
-  useEffect(() => {
-    return () => {
-      if (uploadNoticeTimerRef.current) {
-        clearTimeout(uploadNoticeTimerRef.current);
-      }
-    };
-  }, []);
+  useEffect(() => () => { if (noticeTimer.current) clearTimeout(noticeTimer.current); }, []);
 
   const displayedSessions = useMemo(() => [...sessions].reverse(), [sessions]);
   const canSend = useMemo(
@@ -116,12 +249,10 @@ export default function Chatbot() {
     [input, status, uploading]
   );
 
-  const showUploadNotice = (type, message) => {
+  const showNotice = (type, message) => {
     setUploadNotice({ type, message });
-    if (uploadNoticeTimerRef.current) clearTimeout(uploadNoticeTimerRef.current);
-    uploadNoticeTimerRef.current = setTimeout(() => {
-      setUploadNotice(null);
-    }, 2600);
+    if (noticeTimer.current) clearTimeout(noticeTimer.current);
+    noticeTimer.current = setTimeout(() => setUploadNotice(null), 2600);
   };
 
   const loadSession = async (sessionId) => {
@@ -139,7 +270,7 @@ export default function Chatbot() {
       setSidebarOpen(false);
     } catch (err) {
       setStatus("ready");
-      setError(err.message || "Failed to load selected conversation");
+      setError(err.message || "Failed to load conversation");
     }
   };
 
@@ -163,10 +294,7 @@ export default function Chatbot() {
 
   const handleDeleteSession = async (sessionId) => {
     if (!token || !sessionId) return;
-
-    const confirmed = window.confirm("Delete this chat session permanently?");
-    if (!confirmed) return;
-
+    if (!window.confirm("Delete this conversation permanently?")) return;
     setError("");
     try {
       const data = await deleteChatSession(token, sessionId, activeSessionId);
@@ -178,36 +306,26 @@ export default function Chatbot() {
         if (fileInputRef.current) fileInputRef.current.value = "";
       }
     } catch (err) {
-      setError(err.message || "Failed to delete chat session");
+      setError(err.message || "Failed to delete conversation");
     }
   };
 
   const sendMessage = async (overrideText = "") => {
     const text = (overrideText || input).trim();
     if (!text || !token || status === "sending") return;
-
     setStatus("sending");
     setError("");
-
-    const optimisticUserMessage = {
-      role: "user",
-      content: text,
-      fileName: attachment?.fileName || "",
-      fileUrl: attachment?.fileUrl || "",
+    setMessages((prev) => [...prev, {
+      role: "user", content: text,
+      fileName: attachment?.fileName || "", fileUrl: attachment?.fileUrl || "",
       createdAt: new Date().toISOString(),
-    };
-
-    setMessages((prev) => [...prev, optimisticUserMessage]);
+    }]);
     setInput("");
-
     try {
       const data = await sendChatMessage(token, {
-        message: text,
-        fileUrl: attachment?.fileUrl || "",
-        fileName: attachment?.fileName || "",
-        sessionId: activeSessionId,
+        message: text, fileUrl: attachment?.fileUrl || "",
+        fileName: attachment?.fileName || "", sessionId: activeSessionId,
       });
-
       setSessions(data.sessions || []);
       setMessages(data.messages || []);
       setActiveSessionId(data.currentSessionId || data.sessionId || activeSessionId);
@@ -223,325 +341,301 @@ export default function Chatbot() {
   const onFileChange = async (e) => {
     const file = e.target.files?.[0];
     if (!file || !token) return;
-
     setUploading(true);
     setError("");
-    setUploadNotice({ type: "loading", message: `Uploading ${file.name}...` });
+    showNotice("loading", `Uploading ${file.name}…`);
     try {
       const data = await uploadChatFile(token, file);
       setAttachment({ fileUrl: data.fileUrl, fileName: data.fileName });
-      showUploadNotice("success", `Uploaded: ${data.fileName || file.name}`);
+      showNotice("success", `Attached: ${data.fileName || file.name}`);
     } catch (err) {
       setError(err.message || "Upload failed");
-      showUploadNotice("error", err.message || "Upload failed");
+      showNotice("error", err.message || "Upload failed");
     } finally {
       setUploading(false);
     }
   };
 
-  const renderSidebar = (isMobile = false) => (
-    <aside
-      className={`h-full flex flex-col overflow-hidden ${
-        isMobile
-          ? "rounded-2xl border border-slate-200 bg-white/95 backdrop-blur-xl shadow-[0_24px_70px_rgba(2,6,23,0.38)]"
-          : "rounded-3xl border border-white/50 bg-white/35 backdrop-blur-2xl shadow-[0_24px_80px_rgba(15,23,42,0.16)]"
-      }`}
-    >
-      <div
-        className={`p-4 border-b sticky top-0 z-10 backdrop-blur-xl ${
-          isMobile ? "border-slate-200 bg-white/95" : "border-white/45 bg-white/50"
-        }`}
-      >
-        {isMobile && (
-          <p className="mb-3 text-[11px] font-semibold tracking-[0.14em] text-slate-500 uppercase">
-            Conversations
-          </p>
-        )}
-        <button
-          onClick={handleNewChat}
-          className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 text-white px-4 py-3 text-sm font-semibold hover:bg-slate-800 transition-all duration-300"
-        >
-          <FaPlus /> New Chat
-        </button>
-      </div>
-
-      <div className="px-4 pt-3 text-[11px] font-semibold tracking-[0.14em] text-slate-500 uppercase">
-        Chat History
-      </div>
-
-      <div className="flex-1 overflow-y-auto p-3 space-y-2">
-        {displayedSessions.map((session) => {
-          const active = activeSessionId === session.sessionId;
-          return (
-            <motion.div
-              key={session.sessionId}
-              whileHover={{ y: -1 }}
-              transition={{ duration: 0.18 }}
-              className={`w-full text-left rounded-xl border px-3 py-3 transition ${
-                active
-                  ? "border-cyan-300 bg-cyan-50/85 shadow-[0_12px_28px_rgba(8,145,178,0.14)]"
-                  : isMobile
-                  ? "border-slate-200 bg-white hover:border-slate-300"
-                  : "border-white/60 bg-white/55 hover:border-white/80 hover:bg-white/70"
-              } relative`}
-            >
-              <button
-                onClick={() => loadSession(session.sessionId)}
-                className="w-full pr-8 text-left"
-              >
-                <p className="font-semibold text-slate-900 truncate">{session.title || "New Chat"}</p>
-                <p className="text-xs text-slate-500 mt-1 truncate">{session.preview || "No messages yet"}</p>
-                <p className="text-[11px] text-slate-400 mt-2">{formatTime(session.lastMessageAt)}</p>
-              </button>
-
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleDeleteSession(session.sessionId);
-                }}
-                className="absolute top-2.5 right-2.5 h-7 w-7 rounded-lg border border-white/70 bg-white/80 text-slate-500 hover:text-red-600 hover:border-red-200 transition grid place-items-center"
-                title="Delete chat"
-              >
-                <FaTrash className="text-xs" />
-              </button>
-            </motion.div>
-          );
-        })}
-      </div>
-    </aside>
-  );
+  const isIdle = status !== "loading" && status !== "loadingSession";
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_12%_10%,_#dbeafe_0%,_#eff6ff_36%,_#ecfeff_64%,_#f8fafc_100%)] px-3 md:px-8 py-4 md:py-8 relative overflow-hidden">
-      <motion.div
-        aria-hidden
-        className="absolute -top-20 -left-16 h-72 w-72 rounded-full bg-cyan-300/25 blur-3xl"
-        animate={{ x: [0, 24, 0], y: [0, 16, 0] }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        aria-hidden
-        className="absolute bottom-6 right-0 h-80 w-80 rounded-full bg-indigo-300/20 blur-3xl"
-        animate={{ x: [0, -18, 0], y: [0, -12, 0] }}
-        transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
-      />
+    <div
+      className="flex bg-slate-50 overflow-hidden"
+      style={{ height: "calc(100dvh - 4rem)" }}
+    >
+      {/* ── Desktop sidebar ── */}
+      <div className="hidden lg:flex w-64 xl:w-72 flex-col bg-slate-950 border-r border-slate-800 flex-shrink-0">
+        <SidebarContent
+          sessions={displayedSessions}
+          activeSessionId={activeSessionId}
+          onLoad={loadSession}
+          onNew={handleNewChat}
+          onDelete={handleDeleteSession}
+        />
+      </div>
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-[320px_1fr] gap-4 md:gap-6 h-[calc(100dvh-6.5rem)] md:h-[calc(100vh-7rem)] relative z-10">
-        <div className="hidden lg:block h-full">{renderSidebar()}</div>
+      {/* ── Main chat area ── */}
+      <div className="flex-1 flex flex-col min-w-0" style={{ background: "linear-gradient(160deg,#f5f8ff 0%,#eef3ff 50%,#f8faff 100%)" }}>
 
-        <section className="rounded-2xl md:rounded-3xl border border-white/50 bg-white/35 backdrop-blur-2xl shadow-[0_24px_80px_rgba(15,23,42,0.16)] flex flex-col h-full min-h-0 overflow-hidden">
-          <div className="p-4 md:p-5 border-b border-white/45 bg-white/35 backdrop-blur-xl">
-            <div className="flex items-start md:items-center justify-between gap-4">
-              <div>
-                <h1 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900">Kanthast AI Support</h1>
-                <p className="text-sm md:text-base text-slate-600 mt-1">
-                  Modern support assistant for platform issues and study workflow help.
-                </p>
-              </div>
+        {/* Header */}
+        <div className="flex items-center gap-3 px-4 md:px-6 py-3 border-b border-slate-200/80 bg-white/70 backdrop-blur-md flex-shrink-0">
+          <button
+            onClick={() => setSidebarOpen(true)}
+            className="lg:hidden p-2 -ml-1 rounded-xl text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition"
+            aria-label="Open sidebar"
+          >
+            <FaBars size={16} />
+          </button>
 
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setSidebarOpen(true)}
-                  className="lg:hidden h-11 w-11 rounded-xl border border-slate-900/80 bg-slate-900 text-white shadow-[0_10px_22px_rgba(15,23,42,0.28)] grid place-items-center"
-                >
-                  <FaBars />
-                </button>
-                <span className="inline-flex items-center gap-2 rounded-full bg-cyan-50/75 text-cyan-700 border border-cyan-200/80 px-3 py-1.5 text-sm font-medium">
-                  <FaRobot /> Live Assistant
-                </span>
-              </div>
+          <div className="flex items-center gap-2.5 flex-1 min-w-0">
+            <div className="w-8 h-8 rounded-xl bg-cyan-500 flex items-center justify-center shadow-sm shadow-cyan-500/30 flex-shrink-0">
+              <FaRobot className="text-white text-xs" />
+            </div>
+            <div className="min-w-0">
+              <h1 className="font-bold text-slate-900 text-sm md:text-base leading-tight truncate">Kanthast AI Support</h1>
+              <p className="text-[11px] text-slate-500 leading-tight hidden sm:block">Medical platform assistant</p>
             </div>
           </div>
 
-          <div ref={listRef} className="flex-1 min-h-0 overflow-y-auto px-4 md:px-5 py-4 space-y-4">
-            {status === "loading" && <p className="text-slate-500">Loading conversations...</p>}
-            {status === "loadingSession" && <p className="text-slate-500">Loading selected conversation...</p>}
-
-            {messages.length === 0 && status !== "loading" && status !== "loadingSession" && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="flex flex-col items-center justify-center h-full py-16 text-center gap-4"
-              >
-                <div className="w-16 h-16 rounded-full bg-cyan-50 border border-cyan-100 grid place-items-center text-cyan-500 text-3xl">
-                  <FaRobot />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800">How can I help you?</h3>
-                <p className="text-slate-500 max-w-xs text-sm leading-relaxed">
-                  Ask about platform issues, subscription questions, or anything related to your study workflow.
-                </p>
-              </motion.div>
-            )}
-
-            {messages.map((msg, idx) => {
-              const isUser = msg.role === "user";
-              const safeContent = isUser
-                ? msg.content
-                : stripMarkdownFormatting(msg.content);
-              return (
-                <motion.div
-                  key={`${msg.createdAt || idx}-${idx}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className={`flex ${isUser ? "justify-end" : "justify-start"}`}
-                >
-                  <div className="max-w-[88%] md:max-w-[76%]">
-                    <div className="flex items-center gap-2 mb-1 px-1">
-                      <span
-                        className={`h-6 w-6 rounded-full grid place-items-center text-xs ${
-                          isUser ? "bg-blue-100/90 text-blue-700" : "bg-cyan-100/90 text-cyan-700"
-                        }`}
-                      >
-                        {isUser ? <FaUser /> : <FaRobot />}
-                      </span>
-                      <span className="text-xs text-slate-500">
-                        {isUser ? "You" : "Assistant"} | {formatTime(msg.createdAt)}
-                      </span>
-                    </div>
-
-                    <div
-                      className={`rounded-2xl px-4 py-3 border ${
-                        isUser
-                          ? "bg-slate-900 text-white border-slate-800 shadow-[0_10px_28px_rgba(15,23,42,0.25)]"
-                          : "bg-white/62 text-slate-800 border-white/75 backdrop-blur-md"
-                      }`}
-                    >
-                      <p className="text-sm leading-relaxed whitespace-pre-wrap">{safeContent}</p>
-                      {msg.fileUrl && (
-                        <a
-                          href={msg.fileUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={`text-xs mt-2 inline-block underline ${
-                            isUser ? "text-cyan-200" : "text-cyan-700"
-                          }`}
-                        >
-                          {msg.fileName || "Attachment"}
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+          <div className="flex items-center gap-1.5 text-xs text-emerald-600 bg-emerald-50 border border-emerald-200 px-2.5 py-1.5 rounded-full font-medium flex-shrink-0">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="hidden sm:inline">Online</span>
           </div>
+        </div>
 
-          <div className="px-4 md:px-5 pb-4 md:pb-5 pt-3 border-t border-white/50 bg-white/28 backdrop-blur-xl">
-            <div className="flex flex-wrap gap-2 mb-3 max-h-24 md:max-h-20 overflow-y-auto pr-1">
-              {quickSuggestions.map((item) => (
+        {/* Messages */}
+        <div className="relative flex-1 min-h-0">
+        <div
+          ref={listRef}
+          className="h-full overflow-y-auto py-6 space-y-1 no-scrollbar"
+        >
+          {(status === "loading" || status === "loadingSession") && (
+            <div className="flex items-center justify-center h-full gap-3 text-slate-500">
+              <span className="w-5 h-5 rounded-full border-2 border-slate-300 border-t-cyan-500 animate-spin" />
+              <span className="text-sm">{status === "loading" ? "Loading conversations…" : "Loading messages…"}</span>
+            </div>
+          )}
+
+          {/* Empty state */}
+          {messages.length === 0 && isIdle && (
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="flex flex-col items-center justify-center h-full px-6 text-center"
+            >
+              {/* Glow icon */}
+              <div className="relative mb-6">
+                <div className="absolute inset-0 rounded-3xl bg-cyan-400/25 blur-2xl scale-150" />
+                <div className="relative w-20 h-20 rounded-3xl bg-gradient-to-br from-cyan-400 to-blue-700 flex items-center justify-center shadow-2xl shadow-cyan-500/30">
+                  <FaRobot className="text-white text-3xl" />
+                </div>
+              </div>
+
+              <h2 className="text-3xl font-black text-slate-900 mb-2 tracking-tight">How can I help?</h2>
+              <p className="text-slate-400 text-sm max-w-sm leading-relaxed mb-8">
+                Ask about subscriptions, platform features, or anything related to your medical study journey.
+              </p>
+
+            </motion.div>
+          )}
+
+          {/* Message list */}
+          {messages.map((msg, idx) => {
+            const isUser = msg.role === "user";
+            const content = isUser ? msg.content : renderContent(msg.content);
+            return (
+              <motion.div
+                key={`${msg.createdAt || idx}-${idx}`}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2 }}
+                className={`flex gap-3 px-4 md:px-6 py-1 ${isUser ? "flex-row-reverse" : "flex-row"}`}
+              >
+                {/* Avatar */}
+                <div className={`w-7 h-7 rounded-xl flex items-center justify-center flex-shrink-0 mt-1 text-xs ${
+                  isUser
+                    ? "bg-slate-900 text-white"
+                    : "bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-sm"
+                }`}>
+                  {isUser ? <FaUser size={10} /> : <FaRobot size={10} />}
+                </div>
+
+                {/* Bubble */}
+                <div className={`max-w-[78%] md:max-w-[70%] ${isUser ? "items-end" : "items-start"} flex flex-col gap-1`}>
+                  <div className={`px-4 py-3 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap ${
+                    isUser
+                      ? "bg-slate-900 text-white rounded-tr-sm shadow-lg shadow-slate-900/20"
+                      : "bg-slate-50 text-slate-800 border border-slate-200 rounded-tl-sm"
+                  }`}>
+                    {content}
+                    {msg.fileUrl && (
+                      <a
+                        href={msg.fileUrl} target="_blank" rel="noreferrer"
+                        className={`text-xs mt-2 block underline underline-offset-2 ${isUser ? "text-cyan-300" : "text-cyan-600"}`}
+                      >
+                        📎 {msg.fileName || "Attachment"}
+                      </a>
+                    )}
+                  </div>
+                  <p className="text-[11px] text-slate-400 px-1">
+                    {isUser ? "You" : "AI"} · {formatTime(msg.createdAt)}
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
+
+          {/* Typing indicator */}
+          {status === "sending" && <TypingDots />}
+        </div>
+
+        {/* Custom scrollbar overlay */}
+        <div
+          className="absolute right-1 top-2 bottom-2 w-1.5 rounded-full pointer-events-none transition-opacity duration-300"
+          style={{ opacity: scrollbarVisible ? 1 : 0 }}
+        >
+          <div ref={thumbRef} className="absolute w-full rounded-full bg-cyan-400/75" />
+        </div>
+        </div>
+
+        {/* Input area */}
+        <div className="flex-shrink-0 border-t border-slate-200/80 bg-white/70 backdrop-blur-md px-4 md:px-6 pt-3 pb-4">
+
+          {/* Quick suggestion pills — shown only on empty chat */}
+          {messages.length === 0 && isIdle && (
+            <div className="flex gap-2 mb-3 w-full overflow-x-auto no-scrollbar">
+              {SUGGESTIONS.map((s) => (
                 <motion.button
-                  key={item}
-                  whileTap={{ scale: 0.96 }}
-                  onClick={() => sendMessage(item)}
-                  className="rounded-full border border-white/70 bg-white/68 px-3 py-1.5 text-xs text-slate-700 hover:bg-cyan-50/90 hover:border-cyan-200 transition-all duration-300"
+                  key={s.text}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.97 }}
+                  onClick={() => sendMessage(s.text)}
+                  className="flex-shrink-0 md:flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-full border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 hover:shadow-md transition-all duration-200 text-xs text-slate-600 hover:text-slate-900 shadow-sm"
                 >
-                  {item}
+                  <span>{s.emoji}</span>
+                  <span className="font-medium whitespace-nowrap">{s.label}</span>
                 </motion.button>
               ))}
             </div>
+          )}
 
-            {attachment && (
-              <div className="mb-3 rounded-xl border border-cyan-200 bg-cyan-50/80 px-3 py-2 text-sm text-cyan-800 flex items-center justify-between gap-2">
-                <div className="min-w-0">
-                  Attached: <span className="font-semibold break-all">{attachment.fileName}</span>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setAttachment(null);
-                    if (fileInputRef.current) fileInputRef.current.value = "";
-                    showUploadNotice("success", "Attachment removed");
-                  }}
-                  className="h-7 w-7 shrink-0 rounded-lg border border-cyan-200 bg-white/85 text-cyan-700 hover:bg-white"
-                  title="Remove attachment"
-                >
-                  <FaTimes className="mx-auto text-xs" />
-                </button>
-              </div>
-            )}
-
-            {uploading && (
-              <div className="mb-3 rounded-xl border border-blue-200 bg-blue-50/80 px-3 py-2 text-sm text-blue-700 flex items-center gap-2">
-                <span className="h-4 w-4 rounded-full border-2 border-blue-600 border-t-transparent animate-spin" />
-                Uploading file, please wait...
-              </div>
-            )}
-
-            <div className="flex gap-2 items-center">
-              <input
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") sendMessage();
-                }}
-                placeholder="Describe your issue or ask your question..."
-                className="flex-1 rounded-xl border border-white/75 bg-white/75 backdrop-blur-sm px-4 py-3 outline-none focus:ring-2 focus:ring-cyan-400"
-              />
-              <label className="w-12 h-12 rounded-xl border border-white/75 bg-white/75 grid place-items-center cursor-pointer hover:bg-white transition">
-                <FaPaperclip className={uploading ? "animate-pulse" : ""} />
-                <input ref={fileInputRef} type="file" className="hidden" onChange={onFileChange} />
-              </label>
+          {/* Attachment preview */}
+          {attachment && (
+            <div className="mb-3 flex items-center gap-2 bg-cyan-50 border border-cyan-200 rounded-xl px-3 py-2 text-sm text-cyan-800">
+              <span className="text-base">📎</span>
+              <span className="flex-1 truncate font-medium">{attachment.fileName}</span>
               <button
-                onClick={() => sendMessage()}
-                disabled={!canSend}
-                className="w-12 h-12 rounded-xl bg-slate-900 text-white grid place-items-center disabled:opacity-60 hover:bg-slate-800 transition"
+                onClick={() => {
+                  setAttachment(null);
+                  if (fileInputRef.current) fileInputRef.current.value = "";
+                  showNotice("success", "Attachment removed");
+                }}
+                className="w-6 h-6 rounded-lg text-cyan-600 hover:bg-cyan-200 flex items-center justify-center transition"
               >
-                <FaPaperPlane />
+                <FaTimes size={11} />
               </button>
             </div>
+          )}
 
-            {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
+          {uploading && (
+            <div className="mb-3 flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-xl px-3 py-2 text-sm text-blue-700">
+              <span className="w-4 h-4 rounded-full border-2 border-blue-500 border-t-transparent animate-spin flex-shrink-0" />
+              Uploading file…
+            </div>
+          )}
+
+          {/* Input box */}
+          <div className="relative flex items-end gap-2 bg-slate-50 border border-slate-300 rounded-2xl focus-within:border-cyan-400 focus-within:ring-2 focus-within:ring-cyan-100 transition-all duration-200 shadow-sm">
+            <label className="flex-shrink-0 p-3 cursor-pointer text-slate-400 hover:text-slate-600 transition self-end mb-0.5">
+              <FaPaperclip size={15} className={uploading ? "animate-pulse" : ""} />
+              <input ref={fileInputRef} type="file" className="hidden" onChange={onFileChange} />
+            </label>
+
+            <textarea
+              ref={textareaRef}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  sendMessage();
+                }
+              }}
+              placeholder="Message Kanthast AI"
+              className="flex-1 bg-transparent text-slate-900 placeholder-slate-400 text-sm py-3 outline-none resize-none leading-relaxed"
+              rows={1}
+              style={{ maxHeight: 180, overflowY: "auto" }}
+            />
+
+            <button
+              onClick={() => sendMessage()}
+              disabled={!canSend}
+              className="flex-shrink-0 w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center disabled:opacity-30 hover:bg-slate-700 transition self-end m-1.5"
+              title="Send"
+            >
+              <FaPaperPlane size={12} />
+            </button>
           </div>
-        </section>
+
+          {error && (
+            <p className="mt-2 text-xs text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2">{error}</p>
+          )}
+        </div>
       </div>
 
-      <AnimatePresence>
-        {uploadNotice && (
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 12 }}
-            className={`fixed bottom-5 right-5 z-[60] rounded-xl border px-4 py-2.5 text-sm shadow-[0_14px_36px_rgba(15,23,42,0.22)] ${
-              uploadNotice.type === "success"
-                ? "border-emerald-200 bg-emerald-500 text-white"
-                : uploadNotice.type === "error"
-                ? "border-red-200 bg-red-500 text-white"
-                : "border-blue-200 bg-white text-blue-700"
-            }`}
-          >
-            {uploadNotice.message}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
+      {/* ── Mobile sidebar drawer ── */}
       <AnimatePresence>
         {sidebarOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-slate-950/55 backdrop-blur-sm lg:hidden"
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 lg:hidden"
+            onClick={() => setSidebarOpen(false)}
           >
+            <div className="absolute inset-0 bg-slate-950/70 backdrop-blur-sm" />
             <motion.div
-              initial={{ x: -42, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -42, opacity: 0 }}
-              transition={{ duration: 0.25 }}
-              className="h-full w-[92%] max-w-[360px] p-3"
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "spring", damping: 28, stiffness: 280 }}
+              className="absolute left-0 top-0 h-full w-72 bg-slate-950 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
             >
-              <div className="h-full relative">
-                {renderSidebar(true)}
-                <button
-                  onClick={() => setSidebarOpen(false)}
-                  className="absolute top-3 right-3 h-9 w-9 rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm grid place-items-center"
-                >
-                  <FaTimes />
-                </button>
-              </div>
+              <SidebarContent
+                sessions={displayedSessions}
+                activeSessionId={activeSessionId}
+                onLoad={loadSession}
+                onNew={handleNewChat}
+                onDelete={handleDeleteSession}
+                onClose={() => setSidebarOpen(false)}
+              />
             </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ── Upload toast ── */}
+      <AnimatePresence>
+        {uploadNotice && (
+          <motion.div
+            initial={{ opacity: 0, y: 16, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 16, scale: 0.96 }}
+            className={`fixed bottom-6 right-5 z-[60] rounded-2xl px-4 py-3 text-sm font-medium shadow-xl flex items-center gap-2 ${
+              uploadNotice.type === "success"
+                ? "bg-emerald-500 text-white"
+                : uploadNotice.type === "error"
+                ? "bg-red-500 text-white"
+                : "bg-white text-slate-700 border border-slate-200"
+            }`}
+          >
+            {uploadNotice.type === "loading" && (
+              <span className="w-4 h-4 rounded-full border-2 border-slate-400 border-t-transparent animate-spin" />
+            )}
+            {uploadNotice.message}
           </motion.div>
         )}
       </AnimatePresence>

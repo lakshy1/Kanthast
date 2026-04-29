@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { warmupBackend, prefetchImages } from "./utils/warmup";
+import { warmupBackend, prefetchImages, prefetchContent } from "./utils/warmup";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const About = lazy(() => import("./pages/About"));
@@ -54,6 +54,61 @@ function ChunkFallback() {
   return <div className="min-h-screen bg-white" />;
 }
 
+// Fixed overlay scrollbar — replaces the native browser scrollbar globally.
+// Hidden at rest, fades in on scroll, auto-hides after 1.2 s of inactivity.
+function GlobalScrollbar() {
+  const thumbRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+  const hideTimer = useRef(null);
+
+  useEffect(() => {
+    const updateThumb = () => {
+      const thumb = thumbRef.current;
+      if (!thumb) return;
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = window.innerHeight;
+      if (scrollHeight <= clientHeight) return;
+      const ratio = clientHeight / scrollHeight;
+      const thumbH = Math.max(ratio * clientHeight, 32);
+      const maxScroll = scrollHeight - clientHeight;
+      const thumbTop = (scrollTop / maxScroll) * (clientHeight - thumbH);
+      thumb.style.height = thumbH + "px";
+      thumb.style.top = thumbTop + "px";
+    };
+
+    const onScroll = () => {
+      updateThumb();
+      setVisible(true);
+      if (hideTimer.current) clearTimeout(hideTimer.current);
+      hideTimer.current = setTimeout(() => setVisible(false), 1200);
+    };
+
+    updateThumb();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", updateThumb, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", updateThumb);
+      if (hideTimer.current) clearTimeout(hideTimer.current);
+    };
+  }, []);
+
+  return (
+    <div
+      className="fixed right-0 top-0 bottom-0 w-1.5 pointer-events-none z-[9999]"
+      style={{ opacity: visible ? 1 : 0, transition: "opacity 0.3s" }}
+    >
+      <div
+        ref={thumbRef}
+        className="absolute w-full bg-[#0a1530]"
+        style={{ top: 0 }}
+      />
+    </div>
+  );
+}
+
 function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(false);
@@ -64,7 +119,7 @@ function App() {
   // Parallel to the loading animation: wake up the Render backend and
   // prefetch all page images into the browser cache using idle bandwidth.
   useEffect(() => {
-    warmupBackend();
+    warmupBackend().then(() => prefetchContent());
     const timer = setTimeout(prefetchImages, 2000);
     return () => clearTimeout(timer);
   }, []);
@@ -109,6 +164,8 @@ function App() {
 
   return (
     <div className="min-h-screen w-screen">
+      <GlobalScrollbar />
+
       {!isAdminRoute && <Navbar />}
 
       <Suspense fallback={<ChunkFallback />}>
@@ -126,7 +183,7 @@ function App() {
             <Route path="/signup" element={<GuestOnly><Signup /></GuestOnly>} />
             <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
             <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
-            <Route path="/lists" element={<RequireAuth><Lists /></RequireAuth>} />
+            <Route path="/lists" element={<Lists />} />
             <Route path="/summary" element={<RequireAuth><SummaryPage /></RequireAuth>} />
             <Route path="/video" element={<RequireAuth><VideoPage /></RequireAuth>} />
             <Route path="/images" element={<RequireAuth><ImagesPage /></RequireAuth>} />
