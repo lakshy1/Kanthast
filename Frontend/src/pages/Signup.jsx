@@ -30,7 +30,6 @@ export default function Signup() {
     otp: "",
     phone: "",
     password: "",
-    role: "Student",
   });
   const [otpSent, setOtpSent] = useState(false);
   const [otpStatus, setOtpStatus] = useState("idle");
@@ -82,10 +81,10 @@ export default function Signup() {
         email: form.email,
         contactNumber: form.phone,
         password: form.password,
-        accountType: form.role,
+        accountType: "Student",
         otp: form.otp,
       });
-      trackAnalyticsEvent("signup_success", { email: form.email, role: form.role });
+      trackAnalyticsEvent("signup_success", { email: form.email });
 
       setSignupStatus("success");
       setToast("Account created successfully");
@@ -221,22 +220,6 @@ export default function Signup() {
             >
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
-          </motion.div>
-
-          <motion.div variants={itemVariants}>
-            <label htmlFor="signup-role" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
-              Role
-            </label>
-            <select
-              id="signup-role"
-              name="role"
-              value={form.role}
-              onChange={handleChange}
-              className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200 transition"
-            >
-              <option value="Student">Student</option>
-              <option value="Instructor">Instructor</option>
-            </select>
           </motion.div>
 
           <motion.button

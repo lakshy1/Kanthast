@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { FaRegFileAlt, FaPlay, FaRegImage, FaChevronRight, FaLock } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaRegFileAlt, FaPlay, FaRegImage, FaChevronRight, FaLock, FaThList, FaTimes, FaChevronDown } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { getMedicineUsmleContent } from "../utils/authApi";
 import { ListsPageSkeleton } from "../components/DataLoaderSkeletons";
@@ -43,6 +43,8 @@ export default function Lists() {
   const [catalogLoading, setCatalogLoading] = useState(true);
   const [activeSection, setActiveSection] = useState(null);
   const [colHeight, setColHeight] = useState(null);
+  const [isSectionsOpen, setIsSectionsOpen] = useState(false);
+  const [isSubjectsOpen, setIsSubjectsOpen] = useState(false);
   const [watched, setWatched] = useState(() => {
     try { return JSON.parse(localStorage.getItem("kanthastWatched") || "{}"); }
     catch { return {}; }
@@ -98,6 +100,16 @@ export default function Lists() {
     () => dbModules[activeTab] || dbModules[tabs[0]] || { totalDuration: "--:--", sections: [] },
     [activeTab, dbModules, tabs]
   );
+
+  const activeSectionTitle = useMemo(() => {
+    const sec = activeModule.sections.find((s) => s.id === activeSection);
+    return sec?.title ?? "Chapters";
+  }, [activeModule.sections, activeSection]);
+
+  const activeSectionDuration = useMemo(() => {
+    const sec = activeModule.sections.find((s) => s.id === activeSection);
+    return sec?.total ?? "--:--";
+  }, [activeModule.sections, activeSection]);
 
   useEffect(() => {
     if (!tabs.length) return;
@@ -182,12 +194,12 @@ export default function Lists() {
     <div className={`min-h-screen bg-[radial-gradient(circle_at_10%_20%,_#f5f7ff,_#edf2ff_35%,_#eef4ff_70%)] ${compact ? "px-3 md:px-6 py-6" : "px-4 md:px-8 py-8"}`}>
       <div className="max-w-[1400px] mx-auto">
 
-        {/* ── Subject tabs ── */}
+        {/* ── Subject tabs (desktop only — mobile uses bottom sheet pill) ── */}
         <MotionDiv
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className={compact ? "mb-6" : "mb-8"}
+          className={`hidden lg:block ${compact ? "mb-6" : "mb-8"}`}
         >
           <div className="flex gap-3 overflow-x-auto pb-1" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
             {tabs.map((tab, index) => (
@@ -197,7 +209,7 @@ export default function Lists() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.04, duration: 0.35, ease: "easeOut" }}
                 onClick={() => setActiveTab(tab)}
-                className={`shrink-0 ${compact ? "px-6 py-2.5 text-base" : "px-8 py-3 text-lg"} rounded-2xl border font-bold transition ${
+                className={`shrink-0 ${compact ? "px-3 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base" : "px-4 py-2 text-sm sm:px-8 sm:py-3 sm:text-lg"} rounded-2xl border font-bold transition ${
                   activeTab === tab
                     ? "bg-white shadow-md border-slate-200 text-slate-900"
                     : "bg-transparent border-slate-300 text-slate-700 hover:bg-white/70"
@@ -232,9 +244,22 @@ export default function Lists() {
             >
               <div className="space-y-8 pb-6">
                 <div className="px-2">
-                  <h1 className="text-5xl font-black text-slate-900">
+                  {/* Mobile: subject selector opens bottom sheet */}
+                  <button
+                    onClick={() => setIsSubjectsOpen(true)}
+                    className="lg:hidden w-full flex items-center justify-between text-left group"
+                  >
+                    <span className="text-2xl font-black text-slate-900 truncate">{activeTab}</span>
+                    <div className="flex items-center gap-1.5 shrink-0 ml-3">
+                      <span className="text-lg text-slate-500 font-medium">({activeModule.totalDuration})</span>
+                      <FaChevronDown className="text-slate-400 text-xs transition group-hover:text-slate-600" />
+                    </div>
+                  </button>
+
+                  {/* Desktop: plain title */}
+                  <h1 className="hidden lg:block text-4xl md:text-5xl font-black text-slate-900">
                     {activeTab}{" "}
-                    <span className="text-4xl text-slate-500 font-medium">({activeModule.totalDuration})</span>
+                    <span className="text-2xl md:text-4xl text-slate-500 font-medium">({activeModule.totalDuration})</span>
                   </h1>
                 </div>
 
@@ -248,8 +273,8 @@ export default function Lists() {
                     transition={{ delay: sectionIndex * 0.015, duration: 0.45, ease: "easeOut" }}
                   >
                     <div className={`rounded-3xl bg-white/80 border border-slate-200 ${compact ? "p-5 md:p-6" : "p-6 md:p-7"} shadow-[0_18px_40px_rgba(15,23,42,0.06)] backdrop-blur`}>
-                      <h2 className={`font-black text-slate-900 ${compact ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"}`}>
-                        {sec.title} <span className={`${compact ? "text-2xl" : "text-3xl"} text-slate-500 font-medium`}>({sec.total})</span>
+                      <h2 className={`font-black text-slate-900 ${compact ? "text-xl sm:text-2xl md:text-4xl" : "text-xl sm:text-3xl md:text-5xl"}`}>
+                        {sec.title} <span className={`${compact ? "text-base sm:text-xl" : "text-base sm:text-2xl"} text-slate-500 font-medium`}>({sec.total})</span>
                       </h2>
 
                       <div className="mt-6 space-y-2">
@@ -260,7 +285,7 @@ export default function Lists() {
                           >
                             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
                               <div className="min-w-0 pr-2">
-                                <p className="text-[1.65rem] leading-tight font-medium text-slate-800 line-clamp-2">{lecture.title}</p>
+                                <p className="text-sm sm:text-base md:text-[1.35rem] leading-tight font-medium text-slate-800 line-clamp-2">{lecture.title}</p>
                                 <p className="text-sm text-slate-500 mt-1">({lecture.duration})</p>
                               </div>
                               <div className="flex items-center gap-1.5 md:gap-2 shrink-0">
@@ -335,6 +360,168 @@ export default function Lists() {
           </div>
         )}
       </div>
+
+      {/* ── Mobile: chapters pill + both bottom sheets ── */}
+      {!catalogLoading && tabs.length > 0 && (
+        <>
+          {/* Chapters floating pill (right) — hidden while any sheet is open */}
+          <AnimatePresence>
+            {!isSectionsOpen && !isSubjectsOpen && (
+              <motion.button
+                key="chapters-pill"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 8 }}
+                transition={{ duration: 0.2 }}
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                onClick={() => setIsSectionsOpen(true)}
+                className="fixed bottom-[4.75rem] right-4 z-30 lg:hidden flex items-center gap-2 rounded-full bg-white border border-slate-200 shadow-lg px-4 py-2.5 text-slate-800 font-semibold text-sm"
+              >
+                <FaThList className="text-cyan-600 text-sm shrink-0" />
+                <span className="max-w-[140px] truncate">{activeSectionTitle}</span>
+                <FaChevronDown className="text-slate-400 text-xs shrink-0" />
+              </motion.button>
+            )}
+          </AnimatePresence>
+
+          {/* Subjects bottom sheet */}
+          <AnimatePresence>
+            {isSubjectsOpen && (
+              <>
+                <motion.div
+                  key="subjects-backdrop"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+                  onClick={() => setIsSubjectsOpen(false)}
+                />
+                <motion.div
+                  key="subjects-sheet"
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "100%" }}
+                  transition={{ type: "spring", stiffness: 320, damping: 32 }}
+                  className="fixed bottom-0 left-0 right-0 z-50 lg:hidden rounded-t-3xl bg-white shadow-[0_-8px_30px_rgba(15,23,42,0.12)] max-h-[70vh] flex flex-col"
+                >
+                  <div className="flex justify-center pt-3 pb-1 shrink-0">
+                    <div className="w-10 h-1 rounded-full bg-slate-200" />
+                  </div>
+                  <div className="flex items-center justify-between px-5 py-3 border-b border-slate-100 shrink-0">
+                    <p className="text-base font-bold text-slate-900">Select subject</p>
+                    <button
+                      onClick={() => setIsSubjectsOpen(false)}
+                      className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 transition"
+                    >
+                      <FaTimes className="text-sm" />
+                    </button>
+                  </div>
+                  <div
+                    className="overflow-y-auto px-3 py-3 space-y-0.5"
+                    style={{ paddingBottom: "calc(4.5rem + env(safe-area-inset-bottom))" }}
+                  >
+                    {tabs.map((tab) => {
+                      const isActive = activeTab === tab;
+                      return (
+                        <button
+                          key={`mobile-subject-${tab}`}
+                          onClick={() => { setActiveTab(tab); setIsSubjectsOpen(false); }}
+                          className={`w-full flex items-center justify-between text-left px-4 py-3 rounded-xl font-semibold transition-all duration-200 ${
+                            isActive
+                              ? "bg-blue-50 text-blue-700 border border-blue-200"
+                              : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
+                          }`}
+                        >
+                          <span className="text-[0.95rem] leading-snug pr-2">{tab}</span>
+                          <FaChevronRight
+                            className={`text-xs shrink-0 transition-colors ${
+                              isActive ? "text-blue-400" : "text-slate-400"
+                            }`}
+                          />
+                        </button>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
+
+          {/* Chapters bottom sheet */}
+          <AnimatePresence>
+            {isSectionsOpen && (
+              <>
+                {/* Backdrop */}
+                <motion.div
+                  key="chapters-backdrop"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+                  onClick={() => setIsSectionsOpen(false)}
+                />
+
+                {/* Sheet */}
+                <motion.div
+                  key="chapters-sheet"
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "100%" }}
+                  transition={{ type: "spring", stiffness: 320, damping: 32 }}
+                  className="fixed bottom-0 left-0 right-0 z-50 lg:hidden rounded-t-3xl bg-white shadow-[0_-8px_30px_rgba(15,23,42,0.12)] max-h-[70vh] flex flex-col"
+                >
+                  {/* Drag handle */}
+                  <div className="flex justify-center pt-3 pb-1 shrink-0">
+                    <div className="w-10 h-1 rounded-full bg-slate-200" />
+                  </div>
+
+                  {/* Header */}
+                  <div className="flex items-center justify-between px-5 py-3 border-b border-slate-100 shrink-0">
+                    <p className="text-base font-bold text-slate-900">Jump to chapter</p>
+                    <button
+                      onClick={() => setIsSectionsOpen(false)}
+                      className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 transition"
+                    >
+                      <FaTimes className="text-sm" />
+                    </button>
+                  </div>
+
+                  {/* Chapters list */}
+                  <div
+                    className="overflow-y-auto px-3 py-3 space-y-0.5"
+                    style={{ paddingBottom: "calc(4.5rem + env(safe-area-inset-bottom))" }}
+                  >
+                    {activeModule.sections.map((sec) => {
+                      const isActive = activeSection === sec.id;
+                      return (
+                        <button
+                          key={`mobile-jump-${sec.id}`}
+                          onClick={() => { jumpTo(sec.id); setIsSectionsOpen(false); }}
+                          className={`w-full flex items-center justify-between text-left px-4 py-3 rounded-xl font-semibold transition-all duration-200 ${
+                            isActive
+                              ? "bg-cyan-50 text-cyan-700 border border-cyan-200"
+                              : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
+                          }`}
+                        >
+                          <span className="text-[0.95rem] leading-snug pr-2">{sec.title}</span>
+                          <FaChevronRight
+                            className={`text-xs shrink-0 transition-colors ${
+                              isActive ? "text-cyan-400" : "text-slate-400"
+                            }`}
+                          />
+                        </button>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
+        </>
+      )}
     </div>
   );
 }

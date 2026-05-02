@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep -E \"\\\\.jsx$\")"
+      "Bash(grep -E \"\\\\.jsx$\")",
+      "Read(//c/c/Users/laksh/OneDrive/Desktop/Projects/05-Kanthast/Frontend/**)"
     ]
   }
 }

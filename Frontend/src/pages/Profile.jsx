@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaEnvelope,
@@ -9,6 +9,7 @@ import {
   FaPencilAlt,
   FaSave,
   FaCheckCircle,
+  FaChevronDown,
 } from "react-icons/fa";
 import { getProfile, updateProfile } from "../utils/authApi";
 import { ProfileSkeleton } from "../components/DataLoaderSkeletons";
@@ -157,27 +158,26 @@ export default function Profile() {
           className="rounded-3xl border border-slate-200 bg-white/90 backdrop-blur overflow-hidden shadow-[0_28px_60px_rgba(15,23,42,0.09)]"
         >
           {/* Banner with avatar + name + pills all inline */}
-          <div className="bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 relative px-6 md:px-8 py-7">
+          <div className="bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 relative px-4 sm:px-6 md:px-8 py-6">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_50%,rgba(255,255,255,0.14),transparent_55%)]" />
-            <div className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
-              <div className="flex items-center gap-5">
+            <div className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div className="flex items-center gap-4">
                 <div
-                  className="w-20 h-20 rounded-full border-4 border-white/40 shadow-xl grid place-items-center text-white text-3xl font-black shrink-0"
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white/40 shadow-xl grid place-items-center text-white text-2xl sm:text-3xl font-black shrink-0"
                   style={{ backgroundColor: avatarColor }}
                 >
                   {initials}
                 </div>
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/65">Profile</p>
-                  <h1 className="text-3xl md:text-4xl font-black text-white mt-0.5">
+                <div className="min-w-0">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/65">Profile</p>
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mt-0.5 truncate">
                     {user?.firstName || "User"} {user?.lastName || ""}
                   </h1>
-                  <p className="text-white/70 text-sm mt-1">{maskedEmail}</p>
+                  <p className="text-white/70 text-xs sm:text-sm mt-0.5 truncate">{maskedEmail}</p>
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-3">
-                <MetaPill icon={<FaUserCircle />} label="Account Type" value={user?.accountType || "-"} />
+              <div className="flex gap-2 sm:gap-3 overflow-x-auto no-scrollbar pb-1 sm:pb-0 sm:flex-wrap">
                 <MetaPill icon={<FaCalendarAlt />} label="Joined" value={formatDate(joinedAt)} />
                 <MetaPill
                   icon={<FaIdBadge />}
@@ -232,7 +232,7 @@ export default function Profile() {
                 </button>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <FieldCard icon={<FaUserCircle />} iconBg="bg-blue-100" iconColor="text-blue-600" label="First Name" value={user?.firstName || "-"} />
                 <FieldCard icon={<FaUserCircle />} iconBg="bg-blue-100" iconColor="text-blue-600" label="Last Name" value={user?.lastName || "-"} />
                 <FieldCard icon={<FaEnvelope />} iconBg="bg-cyan-100" iconColor="text-cyan-600" label="Email Address" value={maskedEmail} />
@@ -262,16 +262,16 @@ export default function Profile() {
 
                 <EditableField label="Gender" icon={<FaIdBadge />} iconBg="bg-pink-100" iconColor="text-pink-600">
                   {isEditing ? (
-                    <select
+                    <CustomSelect
                       value={form.gender}
-                      onChange={(e) => setForm((prev) => ({ ...prev, gender: e.target.value }))}
-                      className="mt-2 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-cyan-400"
-                    >
-                      <option value="">Select</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                      <option value="Other">Other</option>
-                    </select>
+                      onChange={(val) => setForm((prev) => ({ ...prev, gender: val }))}
+                      options={[
+                        { value: "", label: "Select" },
+                        { value: "Male", label: "Male" },
+                        { value: "Female", label: "Female" },
+                        { value: "Other", label: "Other" },
+                      ]}
+                    />
                   ) : (
                     <p className="mt-1 text-slate-900 font-semibold">{profile?.gender || "-"}</p>
                   )}
@@ -359,13 +359,13 @@ export default function Profile() {
 
 function MetaPill({ icon, label, value }) {
   return (
-    <div className="flex items-center gap-3 rounded-xl border border-white/25 bg-white/15 backdrop-blur px-4 py-2.5">
-      <span className="w-8 h-8 rounded-full bg-white/20 text-white grid place-items-center text-sm shrink-0">
+    <div className="flex items-center gap-2 rounded-xl border border-white/25 bg-white/15 backdrop-blur px-3 py-2 shrink-0">
+      <span className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/20 text-white grid place-items-center text-xs sm:text-sm shrink-0">
         {icon}
       </span>
-      <div>
-        <p className="text-[11px] uppercase tracking-[0.14em] text-white/65 font-medium">{label}</p>
-        <p className="text-sm font-bold text-white">{value}</p>
+      <div className="min-w-0">
+        <p className="text-[10px] uppercase tracking-[0.12em] text-white/65 font-medium">{label}</p>
+        <p className="text-xs sm:text-sm font-bold text-white truncate">{value}</p>
       </div>
     </div>
   );
@@ -392,6 +392,61 @@ function FieldCard({ icon, iconBg = "bg-slate-100", iconColor = "text-slate-500"
         <p className="text-xs uppercase tracking-[0.14em] text-slate-500">{label}</p>
       </div>
       <p className={`font-semibold ${valueColor}`}>{value}</p>
+    </div>
+  );
+}
+
+function CustomSelect({ value, onChange, options }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [open]);
+
+  const selectedLabel = (() => {
+    const match = options.find((o) => (typeof o === "string" ? o : o.value) === value);
+    return match ? (typeof match === "string" ? match : match.label) : (value || "Select");
+  })();
+
+  return (
+    <div ref={ref} className="relative mt-2">
+      <button
+        type="button"
+        onClick={() => setOpen((p) => !p)}
+        className={`w-full flex items-center justify-between gap-3 rounded-lg border px-3 py-2 text-left text-sm font-medium text-slate-900 transition-all duration-150 ${
+          open ? "border-cyan-400 ring-2 ring-cyan-100 bg-white" : "border-slate-300 bg-white hover:border-slate-400"
+        }`}
+      >
+        <span className={value ? "text-slate-900" : "text-slate-400"}>{selectedLabel}</span>
+        <FaChevronDown className={`shrink-0 text-slate-400 text-[10px] transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+      </button>
+
+      {open && (
+        <div className="absolute z-50 top-full mt-1.5 w-full rounded-xl border border-slate-200 bg-white shadow-[0_10px_40px_rgba(15,23,42,0.13)] overflow-hidden">
+          {options.map((opt) => {
+            const optValue = typeof opt === "string" ? opt : opt.value;
+            const optLabel = typeof opt === "string" ? opt : opt.label;
+            const isActive = optValue === value;
+            return (
+              <button
+                key={optValue ?? optLabel}
+                type="button"
+                onClick={() => { onChange(optValue); setOpen(false); }}
+                className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors ${
+                  isActive ? "bg-cyan-50 text-cyan-700 font-semibold" : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
+                }`}
+              >
+                <span>{optLabel}</span>
+                {isActive && <span className="text-xs text-cyan-500">✓</span>}
+              </button>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

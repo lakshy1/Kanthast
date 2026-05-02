@@ -1,8 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  FaArrowLeft,
   FaBell,
   FaBookOpen,
+  FaChevronDown,
   FaClock,
   FaDatabase,
   FaLock,
@@ -14,7 +14,6 @@ import {
   FaSignOutAlt,
   FaTrash,
   FaUserCircle,
-  FaUsers,
 } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -70,13 +69,13 @@ function formatDateTime(value) {
 
 function StatChip({ icon, label, value }) {
   return (
-    <div className="flex items-center gap-3 rounded-2xl border border-stone-200 bg-white px-4 py-3 shadow-sm">
-      <span className="grid h-10 w-10 place-items-center rounded-xl bg-stone-100 text-stone-700">
+    <div className="flex items-center gap-2.5 rounded-2xl border border-stone-200 bg-white px-3 py-2.5 shadow-sm min-w-0">
+      <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-stone-100 text-stone-700 text-sm">
         {icon}
       </span>
-      <div>
-        <p className="text-[11px] uppercase tracking-[0.18em] text-stone-500">{label}</p>
-        <p className="font-semibold text-stone-900">{value}</p>
+      <div className="min-w-0">
+        <p className="text-[10px] uppercase tracking-[0.15em] text-stone-500 truncate">{label}</p>
+        <p className="font-semibold text-stone-900 text-sm truncate">{value}</p>
       </div>
     </div>
   );
@@ -140,24 +139,24 @@ function SectionCard({ accent = "cyan", icon, title, description, children, acti
   const accentClasses = getAccentClasses(accent);
   return (
     <section
-      className={`rounded-3xl border p-6 shadow-[0_18px_50px_rgba(15,23,42,0.06)] ${accentClasses.shell}`}
+      className={`rounded-3xl border p-5 sm:p-6 shadow-[0_18px_50px_rgba(15,23,42,0.06)] ${accentClasses.shell}`}
     >
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <div className="flex items-start gap-4">
-          <div className={`grid h-12 w-12 place-items-center rounded-2xl border ${accentClasses.icon}`}>
-            {icon}
-          </div>
-          <div>
-            <p className={`text-xs font-semibold uppercase tracking-[0.18em] ${accentClasses.eyebrow}`}>
-              {accent === "cyan" ? "General" : accent === "blue" ? "Security" : "Privacy"}
-            </p>
-            <h2 className={`mt-1 text-2xl font-black ${accentClasses.title}`}>{title}</h2>
-            <p className="mt-1 text-sm text-stone-500">{description}</p>
-          </div>
+      <div className="flex items-start gap-3">
+        <div className={`grid h-10 w-10 shrink-0 place-items-center rounded-2xl border ${accentClasses.icon}`}>
+          {icon}
         </div>
-        {actions}
+        <div className="min-w-0 flex-1">
+          <p className={`text-xs font-semibold uppercase tracking-[0.18em] ${accentClasses.eyebrow}`}>
+            {accent === "cyan" ? "General" : accent === "blue" ? "Security" : "Privacy"}
+          </p>
+          <h2 className={`mt-0.5 text-xl sm:text-2xl font-black ${accentClasses.title}`}>{title}</h2>
+          <p className="mt-0.5 text-sm text-stone-500">{description}</p>
+        </div>
       </div>
-      <div className="mt-6">{children}</div>
+      <div className="mt-4">{children}</div>
+      {actions && (
+        <div className="mt-5">{actions}</div>
+      )}
     </section>
   );
 }
@@ -174,7 +173,7 @@ function TabButton({ active, accent = "cyan", children, onClick }) {
     <button
       type="button"
       onClick={onClick}
-      className={`flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold transition ${
+      className={`flex items-center justify-center gap-1.5 rounded-2xl px-2 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-semibold transition ${
         active
           ? activeClasses
           : "border border-transparent bg-transparent text-stone-500 hover:border-stone-200 hover:bg-white hover:text-stone-900"
@@ -215,6 +214,76 @@ function Field({ label, children }) {
       <span className="mb-2 block text-sm font-semibold text-stone-700">{label}</span>
       {children}
     </label>
+  );
+}
+
+function CustomSelect({ value, onChange, options, accent = "cyan" }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [open]);
+
+  const selectedLabel = (() => {
+    const match = options.find((o) => (typeof o === "string" ? o : o.value) === value);
+    return match ? (typeof match === "string" ? match : match.label) : String(value);
+  })();
+
+  const focusRing =
+    accent === "blue" ? "border-blue-400 ring-2 ring-blue-100" :
+    accent === "emerald" ? "border-emerald-400 ring-2 ring-emerald-100" :
+    "border-cyan-400 ring-2 ring-cyan-100";
+
+  const activeOption =
+    accent === "blue" ? "bg-blue-50 text-blue-700 font-semibold" :
+    accent === "emerald" ? "bg-emerald-50 text-emerald-700 font-semibold" :
+    "bg-cyan-50 text-cyan-700 font-semibold";
+
+  const checkColor =
+    accent === "blue" ? "text-blue-500" :
+    accent === "emerald" ? "text-emerald-500" :
+    "text-cyan-500";
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((p) => !p)}
+        className={`w-full flex items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left text-sm font-medium text-stone-900 transition-all duration-150 ${
+          open ? `bg-white ${focusRing}` : "border-stone-200 bg-stone-50 hover:border-stone-300 hover:bg-white"
+        }`}
+      >
+        <span>{selectedLabel}</span>
+        <FaChevronDown className={`shrink-0 text-stone-400 text-[10px] transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+      </button>
+
+      {open && (
+        <div className="absolute z-50 top-full mt-1.5 w-full rounded-xl border border-stone-200 bg-white shadow-[0_10px_40px_rgba(15,23,42,0.13)] overflow-hidden">
+          {options.map((opt) => {
+            const optValue = typeof opt === "string" ? opt : opt.value;
+            const optLabel = typeof opt === "string" ? opt : opt.label;
+            const isActive = optValue === value;
+            return (
+              <button
+                key={optValue ?? optLabel}
+                type="button"
+                onClick={() => { onChange(optValue); setOpen(false); }}
+                className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors ${
+                  isActive ? activeOption : "text-stone-700 hover:bg-stone-50 hover:text-stone-900"
+                }`}
+              >
+                <span>{optLabel}</span>
+                {isActive && <span className={`text-xs ${checkColor}`}>✓</span>}
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -543,11 +612,7 @@ export default function Settings() {
   return (
     <div className="min-h-screen bg-stone-50 px-4 py-8 md:px-8">
       <div className="mx-auto max-w-7xl">
-        <Link to="/profile" className="inline-flex items-center gap-2 font-medium text-stone-600 hover:text-stone-900">
-          <FaArrowLeft /> Back to Profile
-        </Link>
-
-        <section className="mt-4 overflow-hidden rounded-3xl border border-cyan-100 bg-gradient-to-br from-white via-stone-50 to-cyan-50/40 p-6 shadow-[0_22px_60px_rgba(15,23,42,0.06)] md:p-8">
+        <section className="overflow-hidden rounded-3xl border border-cyan-100 bg-gradient-to-br from-white via-stone-50 to-cyan-50/40 p-6 shadow-[0_22px_60px_rgba(15,23,42,0.06)] md:p-8">
           <div className="flex flex-wrap items-center justify-between gap-5">
             <div className="flex items-center gap-4">
               <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-cyan-600 to-blue-700 text-lg font-black text-white shadow-lg shadow-cyan-200/60">
@@ -555,33 +620,33 @@ export default function Settings() {
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700">Account settings</p>
-                <h1 className="mt-1 text-3xl font-black text-stone-900 md:text-4xl">
+                <h1 className="mt-1 text-2xl font-black text-stone-900 md:text-4xl">
                   {user?.firstName || "Your"} settings
                 </h1>
-                <p className="mt-1 text-stone-500">
+                <p className="mt-1 text-sm text-stone-500 hidden sm:block">
                   Manage account details, password, sessions, privacy, and learning preferences.
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="hidden sm:flex flex-wrap gap-3">
               <Link
                 to="/profile"
-                className="inline-flex items-center gap-2 rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-stone-700 hover:bg-stone-100"
+                className="inline-flex items-center gap-2 rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-700 hover:bg-stone-100"
               >
                 <FaUserCircle />
                 Profile
               </Link>
               <Link
                 to="/subscription"
-                className="inline-flex items-center gap-2 rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-stone-700 hover:bg-stone-100"
+                className="inline-flex items-center gap-2 rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-700 hover:bg-stone-100"
               >
                 <FaBookOpen />
                 Subscription
               </Link>
               <Link
                 to="/chatbot"
-                className="inline-flex items-center gap-2 rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-stone-700 hover:bg-stone-100"
+                className="inline-flex items-center gap-2 rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-700 hover:bg-stone-100"
               >
                 <FaRobot />
                 Chatbot
@@ -589,8 +654,7 @@ export default function Settings() {
             </div>
           </div>
 
-          <div className="mt-6 grid gap-3 md:grid-cols-3">
-            <StatChip icon={<FaUsers />} label="Account type" value={user?.accountType || "-"} />
+          <div className="mt-6 grid gap-3 grid-cols-2">
             <StatChip icon={<FaClock />} label="Joined" value={formatDate(user?.joinedAt || user?.createdAt)} />
             <StatChip
               icon={<FaShieldAlt />}
@@ -601,7 +665,7 @@ export default function Settings() {
         </section>
 
         <div className="sticky top-4 z-20 mt-4 overflow-hidden rounded-3xl border border-stone-200 bg-white/90 p-2 shadow-lg backdrop-blur-xl">
-          <div className="grid gap-2 md:grid-cols-3">
+          <div className="grid gap-2 grid-cols-3">
             {sectionTabs.map((tab) => (
               <TabButton
                 key={tab.id}
@@ -610,7 +674,7 @@ export default function Settings() {
                 onClick={() => setActiveTab(tab.id)}
               >
                 <span
-                  className={`grid h-9 w-9 place-items-center rounded-xl transition ${
+                  className={`hidden sm:grid h-9 w-9 place-items-center rounded-xl transition ${
                     activeTab === tab.id
                       ? tab.accent === "cyan"
                         ? "bg-cyan-100 text-cyan-700"
@@ -625,7 +689,7 @@ export default function Settings() {
                 <span className="flex flex-col items-start">
                   <span>{tab.label}</span>
                   <span
-                    className={`text-[11px] font-medium transition ${
+                    className={`hidden sm:block text-[11px] font-medium transition ${
                       activeTab === tab.id
                         ? tab.accent === "cyan"
                           ? "text-cyan-700"
@@ -656,7 +720,7 @@ export default function Settings() {
                     type="button"
                     onClick={saveAccount}
                     disabled={!hasAccountChanges || savingAccount}
-                    className="rounded-xl bg-stone-900 px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-60"
+                    className="w-full rounded-xl bg-stone-900 py-3 text-sm font-semibold text-white disabled:opacity-60 transition hover:bg-stone-800"
                   >
                     {savingAccount ? "Saving..." : "Save account"}
                   </button>
@@ -712,7 +776,7 @@ export default function Settings() {
                     type="button"
                     onClick={savePreferences}
                     disabled={!hasPreferenceChanges || savingPreferences}
-                    className="rounded-xl bg-stone-900 px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-60"
+                    className="w-full rounded-xl bg-stone-900 py-3 text-sm font-semibold text-white disabled:opacity-60 transition hover:bg-stone-800"
                   >
                     {savingPreferences ? "Saving..." : "Save preferences"}
                   </button>
@@ -760,53 +824,40 @@ export default function Settings() {
               >
                 <div className="grid gap-4 md:grid-cols-2">
                   <Field label="Language">
-                    <select
+                    <CustomSelect
                       value={preferences.language}
-                      onChange={(e) => setPreferences((prev) => ({ ...prev, language: e.target.value }))}
-                      className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 outline-none focus:border-stone-400"
-                    >
-                      <option>English</option>
-                      <option>Hindi</option>
-                      <option>Spanish</option>
-                    </select>
+                      onChange={(val) => setPreferences((prev) => ({ ...prev, language: val }))}
+                      options={["English", "Hindi", "Spanish"]}
+                      accent="cyan"
+                    />
                   </Field>
                   <Field label="Appearance">
-                    <select
+                    <CustomSelect
                       value={preferences.appearance}
-                      onChange={(e) => setPreferences((prev) => ({ ...prev, appearance: e.target.value }))}
-                      className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 outline-none focus:border-stone-400"
-                    >
-                      <option>System</option>
-                      <option>Light</option>
-                      <option>Dark</option>
-                    </select>
+                      onChange={(val) => setPreferences((prev) => ({ ...prev, appearance: val }))}
+                      options={["System", "Light", "Dark"]}
+                      accent="cyan"
+                    />
                   </Field>
                   <Field label="Default playback speed">
-                    <select
+                    <CustomSelect
                       value={preferences.defaultPlaybackSpeed}
-                      onChange={(e) =>
-                        setPreferences((prev) => ({ ...prev, defaultPlaybackSpeed: e.target.value }))
-                      }
-                      className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 outline-none focus:border-stone-400"
-                    >
-                      <option>1x</option>
-                      <option>1.25x</option>
-                      <option>1.5x</option>
-                      <option>2x</option>
-                    </select>
+                      onChange={(val) => setPreferences((prev) => ({ ...prev, defaultPlaybackSpeed: val }))}
+                      options={["1x", "1.25x", "1.5x", "2x"]}
+                      accent="cyan"
+                    />
                   </Field>
                   <Field label="Profile visibility">
-                    <select
+                    <CustomSelect
                       value={preferences.profileVisibility}
-                      onChange={(e) =>
-                        setPreferences((prev) => ({ ...prev, profileVisibility: e.target.value }))
-                      }
-                      className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 outline-none focus:border-stone-400"
-                    >
-                      <option value="public">Public</option>
-                      <option value="enrolled">Enrolled learners only</option>
-                      <option value="private">Private</option>
-                    </select>
+                      onChange={(val) => setPreferences((prev) => ({ ...prev, profileVisibility: val }))}
+                      options={[
+                        { value: "public", label: "Public" },
+                        { value: "enrolled", label: "Enrolled learners only" },
+                        { value: "private", label: "Private" },
+                      ]}
+                      accent="cyan"
+                    />
                   </Field>
                 </div>
 
@@ -852,7 +903,7 @@ export default function Settings() {
                     type="button"
                     onClick={changePassword}
                     disabled={changingPassword}
-                    className="rounded-xl bg-stone-900 px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-60"
+                    className="w-full rounded-xl bg-stone-900 py-3 text-sm font-semibold text-white disabled:opacity-60 transition hover:bg-stone-800"
                   >
                     {changingPassword ? "Updating..." : "Change password"}
                   </button>
@@ -901,7 +952,7 @@ export default function Settings() {
                     type="button"
                     onClick={handleLogoutOtherSessions}
                     disabled={revokingOtherSessions}
-                    className="rounded-xl bg-stone-900 px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-60"
+                    className="w-full rounded-xl bg-stone-900 py-3 text-sm font-semibold text-white disabled:opacity-60 transition hover:bg-stone-800"
                   >
                     {revokingOtherSessions ? "Logging out..." : "Logout other sessions"}
                   </button>

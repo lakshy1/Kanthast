@@ -187,35 +187,50 @@ function App() {
 
         {!isAdminRoute && <Navbar />}
 
-        <Suspense fallback={<ChunkFallback />}>
-          <AnimatePresence mode="wait">
-            {loading && <EdtechLoader />}
-          </AnimatePresence>
+        {/* Content shifts with the navbar — padding-top tracks --navbar-h CSS var */}
+        {/* padding-bottom on mobile clears the fixed bottom dock for logged-in users */}
+        <div
+          style={{
+            paddingTop: isAdminRoute ? 0 : "var(--navbar-h, 4rem)",
+            transition: "padding-top 0.3s cubic-bezier(0.4,0,0.2,1)",
+          }}
+          className={!isAdminRoute && hasAuth() ? "pb-16 md:pb-0" : ""}
+        >
+          <Suspense fallback={<ChunkFallback />}>
+            <AnimatePresence mode="wait">
+              {loading && <EdtechLoader />}
+            </AnimatePresence>
 
-          <ErrorBoundary>
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/courses" element={<Courses />} />
-              <Route path="/login" element={<GuestOnly><Login /></GuestOnly>} />
-              <Route path="/signup" element={<GuestOnly><Signup /></GuestOnly>} />
-              <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
-              <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
-              <Route path="/settings" element={<RequireAuth><Settings /></RequireAuth>} />
-              <Route path="/lists" element={<Lists />} />
-              <Route path="/summary" element={<RequireAuth><SummaryPage /></RequireAuth>} />
-              <Route path="/video" element={<RequireAuth><VideoPage /></RequireAuth>} />
-              <Route path="/images" element={<RequireAuth><ImagesPage /></RequireAuth>} />
-              <Route path="/chatbot" element={<RequireAuth><Chatbot /></RequireAuth>} />
-              <Route path="/subscription" element={<RequireAuth><SubscriptionPage /></RequireAuth>} />
-              <Route path="/adminlogin" element={<AdminGuestOnly><AdminLogin /></AdminGuestOnly>} />
-              <Route path="/admin" element={<RequireAdmin><AdminPanel /></RequireAdmin>} />
-            </Routes>
-          </ErrorBoundary>
-        </Suspense>
+            <ErrorBoundary>
+              <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/courses" element={<Courses />} />
+                <Route path="/login" element={<GuestOnly><Login /></GuestOnly>} />
+                <Route path="/signup" element={<GuestOnly><Signup /></GuestOnly>} />
+                <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
+                <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
+                <Route path="/settings" element={<RequireAuth><Settings /></RequireAuth>} />
+                <Route path="/lists" element={<Lists />} />
+                <Route path="/summary" element={<RequireAuth><SummaryPage /></RequireAuth>} />
+                <Route path="/video" element={<RequireAuth><VideoPage /></RequireAuth>} />
+                <Route path="/images" element={<RequireAuth><ImagesPage /></RequireAuth>} />
+                <Route path="/chatbot" element={<RequireAuth><Chatbot /></RequireAuth>} />
+                <Route path="/subscription" element={<RequireAuth><SubscriptionPage /></RequireAuth>} />
+                <Route path="/adminlogin" element={<AdminGuestOnly><AdminLogin /></AdminGuestOnly>} />
+                <Route path="/admin" element={<RequireAdmin><AdminPanel /></RequireAdmin>} />
+              </Routes>
+            </ErrorBoundary>
+          </Suspense>
 
-        {!isAdminRoute && <Footer />}
+          {/* Footer: hidden on mobile when logged in (bottom dock handles nav) */}
+          {!isAdminRoute && (
+            <div className={hasAuth() ? "hidden md:block" : ""}>
+              <Footer />
+            </div>
+          )}
+        </div>
       </div>
     </MotionConfig>
   );

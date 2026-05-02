@@ -69,7 +69,7 @@ export default function Login() {
       const data = await login({ ...form, deviceSession: deviceInfo });
       localStorage.setItem("kanthastToken", data.token);
       localStorage.setItem("kanthastUser", JSON.stringify(data.user));
-      trackAnalyticsEvent("login_success", { userId: data.user?._id, accountType: data.user?.accountType });
+      trackAnalyticsEvent("login_success", { userId: data.user?._id });
 
       requestBrowserLocation().then((location) => {
         if (!location) return;

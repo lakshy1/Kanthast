@@ -205,6 +205,13 @@ export default function Chatbot() {
 
   const { thumbRef, visible: scrollbarVisible } = useCustomScrollbar(listRef);
 
+  // Prevent the page from scrolling behind the chatbot (fixes keyboard-scroll on mobile)
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = prev; };
+  }, []);
+
   // Auto-grow textarea
   useEffect(() => {
     const el = textareaRef.current;
@@ -360,8 +367,8 @@ export default function Chatbot() {
 
   return (
     <div
-      className="flex bg-slate-50 overflow-hidden"
-      style={{ height: "calc(100dvh - 4rem)" }}
+      className="flex bg-slate-50 overflow-hidden md:h-[calc(100dvh-4rem)]"
+      style={{ height: "calc(100dvh - var(--navbar-h, 4rem) - 4rem)" }}
     >
       {/* ── Desktop sidebar ── */}
       <div className="hidden lg:flex w-64 xl:w-72 flex-col bg-slate-950 border-r border-slate-800 flex-shrink-0">
