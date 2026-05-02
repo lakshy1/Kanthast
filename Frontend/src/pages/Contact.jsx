@@ -25,6 +25,8 @@ const stagger = {
 
 const sectionViewport = { once: true, amount: 0.22 };
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api/v1";
+
 export default function Contact() {
   const [status, setStatus] = useState("idle");
 
@@ -33,17 +35,22 @@ export default function Contact() {
     setStatus("loading");
 
     const form = e.target;
-    const formData = new FormData(form);
+    const { name, email, subject, message } = Object.fromEntries(new FormData(form));
 
     try {
-      const res = await fetch("/", { method: "POST", body: formData });
-      if (!res.ok) throw new Error("Server error");
+      const res = await fetch(`${API_BASE_URL}/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.message || "Server error");
       setStatus("success");
       form.reset();
-      setTimeout(() => setStatus("idle"), 3000);
+      setTimeout(() => setStatus("idle"), 4000);
     } catch {
       setStatus("error");
-      setTimeout(() => setStatus("idle"), 3000);
+      setTimeout(() => setStatus("idle"), 4000);
     }
   };
 
@@ -137,13 +144,9 @@ export default function Contact() {
             <h2 className="relative text-center text-3xl md:text-4xl font-black text-slate-900">Send Us a Message</h2>
 
             <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
               onSubmit={handleSubmit}
               className="relative mt-8 space-y-5"
             >
-              <input type="hidden" name="form-name" value="contact" />
 
               <div className="grid gap-5 md:grid-cols-2">
                 <motion.input
