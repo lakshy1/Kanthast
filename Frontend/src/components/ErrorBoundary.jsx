@@ -1,16 +1,30 @@
 import { Component } from "react";
 
+function isChunkError(error) {
+  return (
+    error?.name === "ChunkLoadError" ||
+    error?.message?.includes("Failed to fetch dynamically imported module") ||
+    error?.message?.includes("Importing a module script failed") ||
+    error?.message?.includes("Loading chunk")
+  );
+}
+
 export default class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false, error: null };
+    this.state = { hasError: false, error: null, chunkError: false };
   }
 
   static getDerivedStateFromError(error) {
-    return { hasError: true, error };
+    return { hasError: true, error, chunkError: isChunkError(error) };
   }
 
   componentDidCatch(error, info) {
+    if (isChunkError(error)) {
+      // New deployment invalidated old chunk hashes — hard reload fetches fresh assets
+      window.location.reload();
+      return;
+    }
     console.error("[ErrorBoundary]", error, info.componentStack);
   }
 
@@ -20,6 +34,15 @@ export default class ErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
+      // Chunk error auto-reloads — show a neutral refreshing screen while it happens
+      if (this.state.chunkError) {
+        return (
+          <div className="min-h-screen flex items-center justify-center bg-slate-50">
+            <p className="text-slate-500 text-sm animate-pulse">Refreshing…</p>
+          </div>
+        );
+      }
+
       return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 px-4">
           <div className="rounded-3xl border border-slate-200 bg-white p-8 max-w-md w-full text-center shadow-[0_24px_60px_rgba(15,23,42,0.09)]">

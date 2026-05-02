@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import Image1 from "../assets/images/Image-3.png";
 import Image2 from "../assets/images/Image-4.png";
 import Image3 from "../assets/images/Image-5.png";
@@ -26,6 +27,7 @@ const stagger = {
 const sectionViewport = { once: true, amount: 0.22 };
 
 export default function Courses() {
+  const navigate = useNavigate();
   return (
     <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
       <Helmet>
@@ -131,6 +133,7 @@ export default function Courses() {
               <motion.button
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                onClick={() => navigate("/lists")}
                 className="mt-7 rounded-xl bg-slate-900 px-7 py-3.5 font-semibold text-white transition hover:bg-slate-800"
               >
                 Explore Medicine
@@ -190,11 +193,12 @@ export default function Courses() {
                 long-term memory.
               </p>
               <motion.button
-                whileHover={{ y: -2 }}
-                disabled
-                className="mt-7 rounded-xl border border-slate-400 bg-slate-200 px-7 py-3.5 font-semibold text-slate-600 cursor-not-allowed"
+                whileHover={{ y: -3, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => navigate("/lists")}
+                className="mt-7 rounded-xl bg-slate-900 px-7 py-3.5 font-semibold text-white transition hover:bg-slate-800"
               >
-                Coming Soon
+                Explore NEET PG
               </motion.button>
             </motion.div>
           </div>
@@ -219,11 +223,12 @@ export default function Courses() {
                 facts.
               </p>
               <motion.button
-                whileHover={{ y: -2 }}
-                disabled
-                className="mt-7 rounded-xl border border-slate-400 bg-slate-200 px-7 py-3.5 font-semibold text-slate-600 cursor-not-allowed"
+                whileHover={{ y: -3, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => navigate("/lists")}
+                className="mt-7 rounded-xl bg-slate-900 px-7 py-3.5 font-semibold text-white transition hover:bg-slate-800"
               >
-                Coming Soon
+                Explore INI CET
               </motion.button>
             </motion.div>
 
