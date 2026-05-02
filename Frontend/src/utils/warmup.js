@@ -5,7 +5,7 @@ import image4 from "../assets/images/Image-4.png";
 import image5 from "../assets/images/Image-5.png";
 import { getMedicineUsmleContent } from "./authApi";
 
-const BACKEND_ROOT = (import.meta.env.VITE_API_BASE_URL || "").replace("/api/v1", "");
+const BACKEND_ROOT = import.meta.env.VITE_API_BASE_URL || "";
 
 // Ping Render backend immediately so it starts waking up from sleep.
 // Returns the promise so callers can chain work after the backend is awake.
