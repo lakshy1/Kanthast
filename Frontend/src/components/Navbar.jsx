@@ -5,16 +5,26 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   FaChevronDown, FaRobot, FaUserCircle, FaCog,
   FaTachometerAlt, FaList, FaSignOutAlt, FaCrown, FaHome,
+  FaBookOpen, FaStar, FaInfoCircle, FaEnvelope,
 } from "react-icons/fa";
 
 const Logo = "/Logo-Extended.png";
 
-// ── Bottom dock items ────────────────────────────────────────────────────────
+// ── Bottom dock items (logged in) ────────────────────────────────────────────
 const dockItems = [
-  { to: "/",         label: "Home",      icon: FaHome,         exact: true },
-  { to: "/dashboard",label: "Dashboard", icon: FaTachometerAlt,exact: false },
-  { to: "/lists",    label: "Lists",     icon: FaList,         exact: false },
-  { to: "/chatbot",  label: "Chatbot",   icon: FaRobot,        exact: false },
+  { to: "/",          label: "Home",      icon: FaHome,         exact: true },
+  { to: "/dashboard", label: "Dashboard", icon: FaTachometerAlt, exact: false },
+  { to: "/lists",     label: "Lists",     icon: FaList,         exact: false },
+  { to: "/chatbot",   label: "Chatbot",   icon: FaRobot,        exact: false },
+];
+
+// ── Bottom dock items (logged out / public) ───────────────────────────────────
+const publicDockItems = [
+  { to: "/",            label: "Home",     icon: FaHome,        exact: true },
+  { to: "/courses",     label: "Courses",  icon: FaBookOpen,    exact: false },
+  { to: "/subscription",label: "Plans",    icon: FaStar,        exact: false },
+  { to: "/about",       label: "About",    icon: FaInfoCircle,  exact: false },
+  { to: "/contact",     label: "Contact",  icon: FaEnvelope,    exact: false },
 ];
 
 const NAVBAR_H = "4rem"; // must match h-16
@@ -293,43 +303,42 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* ── Mobile bottom dock (logged in only) ── */}
-      {isLoggedIn && (
-        <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-[#07101e]/95 backdrop-blur-xl border-t border-white/10"
-          style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
-        >
-          <div className="grid grid-cols-4 h-16">
-            {dockItems.map(({ to, label, icon: Icon, exact }) => {
-              const isActive = exact ? location.pathname === to : location.pathname.startsWith(to);
-              return (
-                <Link
-                  key={to}
-                  to={to}
-                  className={`flex flex-col items-center justify-center gap-1 transition-colors ${
-                    isActive ? "text-cyan-400" : "text-white/40 hover:text-white/70"
-                  }`}
+      {/* ── Mobile bottom dock (always visible on mobile) ── */}
+      <div
+        className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-[#07101e]/95 backdrop-blur-xl border-t border-white/10"
+        style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+      >
+        <div className={`grid h-16 ${isLoggedIn ? "grid-cols-4" : "grid-cols-5"}`}>
+          {(isLoggedIn ? dockItems : publicDockItems).map(({ to, label, icon: Icon, exact }) => {
+            const isActive = exact ? location.pathname === to : location.pathname.startsWith(to);
+            return (
+              <Link
+                key={to}
+                to={to}
+                className={`relative flex flex-col items-center justify-center gap-1 transition-colors ${
+                  isActive ? "text-cyan-400" : "text-white/40 hover:text-white/70"
+                }`}
+              >
+                <motion.div
+                  animate={{ scale: isActive ? 1.15 : 1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
                 >
+                  <Icon className={`text-lg ${isActive ? "drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" : ""}`} />
+                </motion.div>
+                <span className={`text-[10px] font-medium tracking-wide ${isActive ? "text-cyan-400" : "text-white/35"}`}>
+                  {label}
+                </span>
+                {isActive && (
                   <motion.div
-                    animate={{ scale: isActive ? 1.15 : 1 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                  >
-                    <Icon className={`text-lg ${isActive ? "drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" : ""}`} />
-                  </motion.div>
-                  <span className={`text-[10px] font-medium tracking-wide ${isActive ? "text-cyan-400" : "text-white/35"}`}>
-                    {label}
-                  </span>
-                  {isActive && (
-                    <motion.div
-                      layoutId="dockIndicator"
-                      className="absolute top-0 w-8 h-0.5 rounded-full bg-cyan-400"
-                    />
-                  )}
-                </Link>
-              );
-            })}
-          </div>
+                    layoutId="dockIndicator"
+                    className="absolute top-0 w-8 h-0.5 rounded-full bg-cyan-400"
+                  />
+                )}
+              </Link>
+            );
+          })}
         </div>
-      )}
+      </div>
     </>
   );
 };

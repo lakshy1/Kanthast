@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Kanthast",
+    "slug": "kanthast",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B1120"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.kanthast.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B1120"
+      },
+      "package": "com.kanthast.app",
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.ACCESS_WIFI_STATE"
+      ]
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0B1120",
+          "image": "./assets/splash.png",
+          "imageWidth": 200
+        }
+      ]
+    ],
+    "extra": {
+      "apiBaseUrl": "https://kanthast-backend.onrender.com/api/v1",
+      "eas": {
+        "projectId": "51d93098-5bad-4482-bab2-e7ee8c996082"
+      }
+    }
+  }
+}

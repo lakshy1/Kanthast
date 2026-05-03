@@ -2,7 +2,21 @@
   "permissions": {
     "allow": [
       "Bash(grep -E \"\\\\.jsx$\")",
-      "Read(//c/c/Users/laksh/OneDrive/Desktop/Projects/05-Kanthast/Frontend/**)"
+      "Read(//c/c/Users/laksh/OneDrive/Desktop/Projects/05-Kanthast/Frontend/**)",
+      "Bash(node -e ' *)",
+      "Bash(Copy-Item \"c:\\\\Users\\\\laksh\\\\OneDrive\\\\Desktop\\\\Projects\\\\05-Kanthast\\\\Frontend\\\\public\\\\logo.png\" \"c:\\\\Users\\\\laksh\\\\OneDrive\\\\Desktop\\\\Projects\\\\05-Kanthast\\\\MobileApp\\\\assets\\\\icon.png\")",
+      "Bash(Copy-Item \"c:\\\\Users\\\\laksh\\\\OneDrive\\\\Desktop\\\\Projects\\\\05-Kanthast\\\\Frontend\\\\public\\\\logo.png\" \"c:\\\\Users\\\\laksh\\\\OneDrive\\\\Desktop\\\\Projects\\\\05-Kanthast\\\\MobileApp\\\\assets\\\\splash.png\")",
+      "Bash(Copy-Item \"c:\\\\Users\\\\laksh\\\\OneDrive\\\\Desktop\\\\Projects\\\\05-Kanthast\\\\Frontend\\\\public\\\\logo.png\" \"c:\\\\Users\\\\laksh\\\\OneDrive\\\\Desktop\\\\Projects\\\\05-Kanthast\\\\MobileApp\\\\assets\\\\adaptive-icon.png\")",
+      "Bash(Write-Host \"Assets copied.\")",
+      "Bash(cp \"c:/Users/laksh/OneDrive/Desktop/Projects/05-Kanthast/Frontend/public/logo.png\" \"c:/Users/laksh/OneDrive/Desktop/Projects/05-Kanthast/MobileApp/assets/icon.png\")",
+      "Bash(cp \"c:/Users/laksh/OneDrive/Desktop/Projects/05-Kanthast/Frontend/public/logo.png\" \"c:/Users/laksh/OneDrive/Desktop/Projects/05-Kanthast/MobileApp/assets/splash.png\")",
+      "Bash(cp \"c:/Users/laksh/OneDrive/Desktop/Projects/05-Kanthast/Frontend/public/logo.png\" \"c:/Users/laksh/OneDrive/Desktop/Projects/05-Kanthast/MobileApp/assets/adaptive-icon.png\")",
+      "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\('name:', p.name\\); console.log\\('main:', p.main\\); console.log\\('deps:', Object.keys\\(p.dependencies\\).length, 'packages'\\);\")",
+      "Bash(eas --version)",
+      "Bash(xargs basename *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\laksh\\.claude\\projects\\c--Users-laksh-OneDrive-Desktop-Projects-05-Kanthast\\memory"
     ]
   }
 }

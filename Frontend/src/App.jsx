@@ -188,13 +188,13 @@ function App() {
         {!isAdminRoute && <Navbar />}
 
         {/* Content shifts with the navbar — padding-top tracks --navbar-h CSS var */}
-        {/* padding-bottom on mobile clears the fixed bottom dock for logged-in users */}
+        {/* padding-bottom on mobile clears the fixed bottom dock (always visible on mobile) */}
         <div
           style={{
             paddingTop: isAdminRoute ? 0 : "var(--navbar-h, 4rem)",
             transition: "padding-top 0.3s cubic-bezier(0.4,0,0.2,1)",
           }}
-          className={!isAdminRoute && hasAuth() ? "pb-16 md:pb-0" : ""}
+          className={!isAdminRoute ? "pb-16 md:pb-0" : ""}
         >
           <Suspense fallback={<ChunkFallback />}>
             <AnimatePresence mode="wait">
