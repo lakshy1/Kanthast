@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { Animated, StyleSheet, Text, View, Dimensions } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { useAuth } from "../context/AuthContext";
 import { COLORS } from "../constants/colors";
 
 const { width } = Dimensions.get("window");
 
-export default function SplashScreen({ navigation }) {
-  const { loading } = useAuth();
+// SplashScreen has no navigation logic — AppNavigator handles transitions
+// automatically once auth loading + min display time are both done.
+export default function SplashScreen() {
   const logoOpacity = useRef(new Animated.Value(0)).current;
   const logoScale = useRef(new Animated.Value(0.7)).current;
   const taglineOpacity = useRef(new Animated.Value(0)).current;
@@ -42,21 +42,11 @@ export default function SplashScreen({ navigation }) {
     ]).start();
   }, []);
 
-  // SplashScreen only renders when there is no token (auth stack).
-  // After the animation settles, send the user to Login.
-  useEffect(() => {
-    if (!loading) {
-      const timer = setTimeout(() => navigation.replace("PublicTabs"), 2000);
-      return () => clearTimeout(timer);
-    }
-  }, [loading]);
-
   return (
     <LinearGradient
       colors={[COLORS.bgDeep, COLORS.bgPrimary, COLORS.bgSurface]}
       style={styles.container}
     >
-      {/* Glow blob */}
       <Animated.View style={[styles.glow, { opacity: glowOpacity }]} />
 
       <Animated.View
@@ -65,11 +55,9 @@ export default function SplashScreen({ navigation }) {
           { opacity: logoOpacity, transform: [{ scale: logoScale }] },
         ]}
       >
-        {/* Logo mark */}
         <View style={styles.logoMark}>
           <Text style={styles.logoLetter}>K</Text>
         </View>
-
         <Text style={styles.logoText}>Kanthast</Text>
       </Animated.View>
 
@@ -84,14 +72,14 @@ export default function SplashScreen({ navigation }) {
   );
 }
 
+// Fixed: each dot uses its own ref declared at the top level of the component.
 function LoadingDots() {
-  const dots = [
-    useRef(new Animated.Value(0.3)).current,
-    useRef(new Animated.Value(0.3)).current,
-    useRef(new Animated.Value(0.3)).current,
-  ];
+  const dot0 = useRef(new Animated.Value(0.3)).current;
+  const dot1 = useRef(new Animated.Value(0.3)).current;
+  const dot2 = useRef(new Animated.Value(0.3)).current;
 
   useEffect(() => {
+    const dots = [dot0, dot1, dot2];
     const animations = dots.map((dot, i) =>
       Animated.loop(
         Animated.sequence([
@@ -107,7 +95,7 @@ function LoadingDots() {
 
   return (
     <View style={styles.dots}>
-      {dots.map((dot, i) => (
+      {[dot0, dot1, dot2].map((dot, i) => (
         <Animated.View key={i} style={[styles.dot, { opacity: dot }]} />
       ))}
     </View>

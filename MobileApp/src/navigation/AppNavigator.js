@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -26,7 +26,7 @@ import SettingsScreen from "../screens/SettingsScreen";
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-// ─── Tab icon component ────────────────────────────────────────────────────
+// ─── Tab icon ──────────────────────────────────────────────────────────────
 function TabIcon({ emoji, focused }) {
   return (
     <View style={[styles.tabIcon, focused && styles.tabIconActive]}>
@@ -35,7 +35,7 @@ function TabIcon({ emoji, focused }) {
   );
 }
 
-// ─── PUBLIC bottom tabs (not logged in) ───────────────────────────────────
+// ─── Public tabs (logged out) ──────────────────────────────────────────────
 function PublicTabs() {
   const insets = useSafeAreaInsets();
   return (
@@ -58,51 +58,21 @@ function PublicTabs() {
         tabBarLabelStyle: { fontSize: 10, fontWeight: "600", marginTop: -2 },
       }}
     >
-      <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarLabel: "Home",
-          tabBarIcon: ({ focused }) => <TabIcon emoji="⌂" focused={focused} />,
-        }}
-      />
-      <Tab.Screen
-        name="PublicCourses"
-        component={CoursesScreen}
-        options={{
-          tabBarLabel: "Courses",
-          tabBarIcon: ({ focused }) => <TabIcon emoji="🎓" focused={focused} />,
-        }}
-      />
-      <Tab.Screen
-        name="PublicSubscription"
-        component={SubscriptionScreen}
-        options={{
-          tabBarLabel: "Plans",
-          tabBarIcon: ({ focused }) => <TabIcon emoji="⭐" focused={focused} />,
-        }}
-      />
-      <Tab.Screen
-        name="About"
-        component={AboutScreen}
-        options={{
-          tabBarLabel: "About",
-          tabBarIcon: ({ focused }) => <TabIcon emoji="ℹ" focused={focused} />,
-        }}
-      />
-      <Tab.Screen
-        name="Contact"
-        component={ContactScreen}
-        options={{
-          tabBarLabel: "Contact",
-          tabBarIcon: ({ focused }) => <TabIcon emoji="✉" focused={focused} />,
-        }}
-      />
+      <Tab.Screen name="Home" component={HomeScreen}
+        options={{ tabBarLabel: "Home", tabBarIcon: ({ focused }) => <TabIcon emoji="⌂" focused={focused} /> }} />
+      <Tab.Screen name="PublicCourses" component={CoursesScreen}
+        options={{ tabBarLabel: "Courses", tabBarIcon: ({ focused }) => <TabIcon emoji="🎓" focused={focused} /> }} />
+      <Tab.Screen name="PublicSubscription" component={SubscriptionScreen}
+        options={{ tabBarLabel: "Plans", tabBarIcon: ({ focused }) => <TabIcon emoji="⭐" focused={focused} /> }} />
+      <Tab.Screen name="About" component={AboutScreen}
+        options={{ tabBarLabel: "About", tabBarIcon: ({ focused }) => <TabIcon emoji="ℹ" focused={focused} /> }} />
+      <Tab.Screen name="Contact" component={ContactScreen}
+        options={{ tabBarLabel: "Contact", tabBarIcon: ({ focused }) => <TabIcon emoji="✉" focused={focused} /> }} />
     </Tab.Navigator>
   );
 }
 
-// ─── MAIN bottom tabs (logged in) ─────────────────────────────────────────
+// ─── Main tabs (logged in) ─────────────────────────────────────────────────
 function MainTabs() {
   const insets = useSafeAreaInsets();
   return (
@@ -125,55 +95,35 @@ function MainTabs() {
         tabBarLabelStyle: { fontSize: 10, fontWeight: "600", marginTop: -2 },
       }}
     >
-      <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarLabel: "Home",
-          tabBarIcon: ({ focused }) => <TabIcon emoji="⌂" focused={focused} />,
-        }}
-      />
-      <Tab.Screen
-        name="Dashboard"
-        component={DashboardScreen}
-        options={{
-          tabBarLabel: "Dashboard",
-          tabBarIcon: ({ focused }) => <TabIcon emoji="◈" focused={focused} />,
-        }}
-      />
-      <Tab.Screen
-        name="Lists"
-        component={ListsScreen}
-        options={{
-          tabBarLabel: "Lists",
-          tabBarIcon: ({ focused }) => <TabIcon emoji="≡" focused={focused} />,
-        }}
-      />
-      <Tab.Screen
-        name="Chatbot"
-        component={ChatbotScreen}
-        options={{
-          tabBarLabel: "AI Chat",
-          tabBarIcon: ({ focused }) => <TabIcon emoji="🤖" focused={focused} />,
-        }}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
-        options={{
-          tabBarLabel: "Profile",
-          tabBarIcon: ({ focused }) => <TabIcon emoji="👤" focused={focused} />,
-        }}
-      />
+      <Tab.Screen name="Home" component={HomeScreen}
+        options={{ tabBarLabel: "Home", tabBarIcon: ({ focused }) => <TabIcon emoji="⌂" focused={focused} /> }} />
+      <Tab.Screen name="Dashboard" component={DashboardScreen}
+        options={{ tabBarLabel: "Dashboard", tabBarIcon: ({ focused }) => <TabIcon emoji="◈" focused={focused} /> }} />
+      <Tab.Screen name="Lists" component={ListsScreen}
+        options={{ tabBarLabel: "Lists", tabBarIcon: ({ focused }) => <TabIcon emoji="≡" focused={focused} /> }} />
+      <Tab.Screen name="Chatbot" component={ChatbotScreen}
+        options={{ tabBarLabel: "AI Chat", tabBarIcon: ({ focused }) => <TabIcon emoji="🤖" focused={focused} /> }} />
+      <Tab.Screen name="Profile" component={ProfileScreen}
+        options={{ tabBarLabel: "Profile", tabBarIcon: ({ focused }) => <TabIcon emoji="👤" focused={focused} /> }} />
     </Tab.Navigator>
   );
 }
 
 // ─── Root navigator ────────────────────────────────────────────────────────
+// Keep splash visible for at least MIN_SPLASH_MS so the animation can play.
+const MIN_SPLASH_MS = 2000;
+
 export default function AppNavigator() {
   const { token, loading } = useAuth();
+  const [minTimeElapsed, setMinTimeElapsed] = useState(false);
 
-  if (loading) return null;
+  useEffect(() => {
+    const t = setTimeout(() => setMinTimeElapsed(true), MIN_SPLASH_MS);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Show Splash while auth check is running OR minimum time hasn't elapsed.
+  const showSplash = loading || !minTimeElapsed;
 
   return (
     <NavigationContainer>
@@ -184,16 +134,18 @@ export default function AppNavigator() {
           animation: "fade",
         }}
       >
-        {!token ? (
-          // ── Unauthenticated ──
+        {showSplash ? (
+          // Splash — shown during auth check and for at least MIN_SPLASH_MS
+          <Stack.Screen name="Splash" component={SplashScreen} />
+        ) : !token ? (
+          // Not logged in
           <>
-            <Stack.Screen name="Splash" component={SplashScreen} />
-            <Stack.Screen name="PublicTabs" component={PublicTabs} options={{ animation: "fade" }} />
+            <Stack.Screen name="PublicTabs" component={PublicTabs} />
             <Stack.Screen name="Login" component={LoginScreen} options={{ animation: "slide_from_right" }} />
             <Stack.Screen name="Signup" component={SignupScreen} options={{ animation: "slide_from_right" }} />
           </>
         ) : (
-          // ── Authenticated ──
+          // Logged in
           <>
             <Stack.Screen name="MainTabs" component={MainTabs} />
             <Stack.Screen name="Video" component={VideoScreen} options={{ animation: "slide_from_bottom" }} />
@@ -215,8 +167,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  tabIconActive: {
-    backgroundColor: "rgba(14,165,233,0.15)",
-  },
+  tabIconActive: { backgroundColor: "rgba(14,165,233,0.15)" },
   tabEmoji: { fontSize: 16 },
 });
