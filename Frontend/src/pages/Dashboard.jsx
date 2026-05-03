@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Image1 from "../assets/images/Image-1.png";
 import Image2 from "../assets/images/Image-2.png";
 import Image3 from "../assets/images/Image-3.png";
@@ -169,13 +170,16 @@ function CircleProgress({ percent, size = 54, showLabel = true }) {
 
 // ─── Chapter card ──────────────────────────────────────────────────────────
 
-function ChapterCard({ chapter, watched, index, compact, showProgressPercent }) {
+function ChapterCard({ chapter, watched, index, compact, showProgressPercent, onClick }) {
   const chTotal = chapter.videoIds.length;
   const chWatched = chapter.videoIds.filter((id) => watched[id]).length;
   const chProgress = chTotal > 0 ? Math.round((chWatched / chTotal) * 100) : 0;
 
   return (
-    <article className={`relative flex-shrink-0 ${compact ? "w-60 h-48" : "w-64 h-52"} rounded-2xl overflow-hidden border border-slate-200 shadow-[0_14px_35px_rgba(15,23,42,0.14)] group cursor-default`}>
+    <article
+      onClick={onClick}
+      className={`relative flex-shrink-0 ${compact ? "w-60 h-48" : "w-64 h-52"} rounded-2xl overflow-hidden border border-slate-200 shadow-[0_14px_35px_rgba(15,23,42,0.14)] group cursor-pointer hover:border-cyan-300 hover:shadow-[0_14px_40px_rgba(14,116,144,0.18)] transition-all duration-200`}
+    >
       <img
         src={IMAGES[index % IMAGES.length]}
         alt={chapter.name}
@@ -203,7 +207,7 @@ function ChapterCard({ chapter, watched, index, compact, showProgressPercent }) 
 
 // ─── Carousel ──────────────────────────────────────────────────────────────
 
-function ChapterCarousel({ chapters, watched, compact, showProgressPercent }) {
+function ChapterCarousel({ chapters, watched, compact, showProgressPercent, onChapterClick }) {
   const scrollRef = useRef(null);
   const [canLeft, setCanLeft] = useState(false);
   const [canRight, setCanRight] = useState(false);
@@ -249,6 +253,7 @@ function ChapterCarousel({ chapters, watched, compact, showProgressPercent }) {
             index={i}
             compact={compact}
             showProgressPercent={showProgressPercent}
+            onClick={onChapterClick ? () => onChapterClick(chapter) : undefined}
           />
         ))}
       </div>
@@ -268,6 +273,7 @@ function ChapterCarousel({ chapters, watched, compact, showProgressPercent }) {
 // ─── Page ──────────────────────────────────────────────────────────────────
 
 export default function Dashboard() {
+  const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("kanthastUser") || "null");
   const settings = useAppSettings();
   const [subjects, setSubjects] = useState([]);
@@ -405,27 +411,52 @@ export default function Dashboard() {
                 <section key={subject.subjectId || subject.name}>
                   {/* Subject header */}
                   <div className="mb-5">
-                    <div className="flex items-center gap-4 flex-wrap">
-                      <h2 className="text-3xl md:text-4xl font-black text-slate-900">{subject.name}</h2>
-                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">
-                        {subjectWatched}/{subjectTotal} watched
+
+                    {/* Row 1: name + badge on left, percentage on right */}
+                    <div className="flex items-center justify-between gap-4 mb-3">
+                      <div className="flex items-center gap-3 flex-wrap min-w-0">
+                        <button
+                          onClick={() => navigate(`/lists?subject=${encodeURIComponent(subject.name)}`)}
+                          className="text-3xl md:text-4xl font-black text-slate-900 hover:text-cyan-600 transition-colors duration-150 text-left"
+                        >
+                          {subject.name}
+                        </button>
+                        <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200 shrink-0">
+                          {subjectWatched}/{subjectTotal} watched
+                        </span>
+                      </div>
+                      <span className="text-2xl md:text-3xl font-black tabular-nums text-slate-800 shrink-0">
+                        {subjectProgress}%
                       </span>
                     </div>
 
-                    {/* Progress bar row */}
-                    <div className="mt-3 flex items-center gap-3 max-w-sm">
-                      <div className="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
-                        <div
-                          className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-700"
-                          style={{ width: `${subjectProgress}%` }}
-                        />
-                      </div>
-                      <span className="text-sm font-bold text-slate-700 tabular-nums w-10 text-right">{subjectProgress}%</span>
+                    {/* Row 2: full-width progress bar */}
+                    <div className="relative h-3 md:h-3.5 w-full bg-slate-100 rounded-full overflow-hidden shadow-inner">
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 transition-all duration-700"
+                        style={{
+                          width: `${subjectProgress}%`,
+                          boxShadow: subjectProgress > 0 ? "0 2px 12px rgba(14,165,233,0.45)" : "none",
+                        }}
+                      />
                     </div>
+
+                    {/* Row 3: watched / total label */}
+                    <p className="mt-2 text-xs text-slate-400 tabular-nums">
+                      {subjectWatched} of {subjectTotal} lectures completed
+                    </p>
                   </div>
 
-                  {/* Carousel */}
-              <ChapterCarousel chapters={subject.chapters} watched={watched} compact={compact} showProgressPercent={showProgressPercent} />
+                  {/* Carousel — clicking a card opens that chapter in Lists */}
+                  <ChapterCarousel
+                    chapters={subject.chapters}
+                    watched={watched}
+                    compact={compact}
+                    showProgressPercent={showProgressPercent}
+                    onChapterClick={(chapter) =>
+                      navigate(`/lists?subject=${encodeURIComponent(subject.name)}&chapter=${chapter.chapterId}`)
+                    }
+                  />
                 </section>
               );
             })

@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useFocusEffect } from "@react-navigation/native";
 import { getMedicineUsmleContent } from "../utils/api";
 import { COLORS } from "../constants/colors";
 import { ListItemSkeleton } from "../components/SkeletonLoader";
@@ -45,16 +46,45 @@ export default function ListsScreen({ navigation, route }) {
     loadContent();
   }, []);
 
-  // Handle deep-link from dashboard
-  useEffect(() => {
-    if (route?.params?.subjectId && subjects.length > 0) {
-      const found = subjects.find((s) => s._id === route.params.subjectId);
-      if (found) {
-        setSelectedSubject(found);
+  // Apply deep-link params every time the screen gains focus.
+  // useFocusEffect fires on focus regardless of whether params changed,
+  // so tapping the same subject twice or going back and re-tapping works.
+  useFocusEffect(
+    useCallback(() => {
+      const subjectId = route?.params?.subjectId;
+      const chapterId = route?.params?.chapterId;
+      if (!subjectId || subjects.length === 0) return;
+      const found = subjects.find((s) => s._id === subjectId);
+      if (!found) return;
+      setSelectedSubject(found);
+      if (chapterId) {
+        const chapterFound = (found.chapters || []).find((c) => c._id === chapterId);
+        setSelectedChapter(chapterFound || null);
+        setLevel(chapterFound ? LEVEL.VIDEOS : LEVEL.CHAPTERS);
+      } else {
+        setSelectedChapter(null);
         setLevel(LEVEL.CHAPTERS);
       }
+    }, [subjects, route?.params?.subjectId, route?.params?.chapterId, route?.params?._t])
+  );
+
+  // Fallback: if subjects load after the screen was already focused with params.
+  useEffect(() => {
+    const subjectId = route?.params?.subjectId;
+    const chapterId = route?.params?.chapterId;
+    if (!subjectId || subjects.length === 0) return;
+    const found = subjects.find((s) => s._id === subjectId);
+    if (!found) return;
+    setSelectedSubject(found);
+    if (chapterId) {
+      const chapterFound = (found.chapters || []).find((c) => c._id === chapterId);
+      setSelectedChapter(chapterFound || null);
+      setLevel(chapterFound ? LEVEL.VIDEOS : LEVEL.CHAPTERS);
+    } else {
+      setSelectedChapter(null);
+      setLevel(LEVEL.CHAPTERS);
     }
-  }, [subjects, route?.params?.subjectId]);
+  }, [subjects]);
 
   const onRefresh = () => {
     setRefreshing(true);

@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
 import { useAuth } from "../context/AuthContext";
 import { getMedicineUsmleContent } from "../utils/api";
 import { getDailyQuote } from "../constants/quotes";
@@ -29,9 +30,84 @@ function getAvatarColor(name = "") {
   return AVATAR_COLORS[Math.abs(hash) % AVATAR_COLORS.length];
 }
 
-export default function DashboardScreen({ navigation }) {
+// Each chapter card — uses useNavigation() so it always has the correct nav context
+function ChapterCard({ chapter, subjectId }) {
+  const navigation = useNavigation();
+  const videoCount = (chapter.videos || []).length;
+  return (
+    <TouchableOpacity
+      style={styles.chapterCard}
+      activeOpacity={0.75}
+      onPress={() =>
+        navigation.navigate("Lists", {
+          subjectId,
+          chapterId: chapter._id,
+          _t: Date.now(),
+        })
+      }
+    >
+      <View style={styles.chapterIconWrap}>
+        <Text style={styles.chapterIconText}>Ch</Text>
+      </View>
+      <Text style={styles.chapterTitle} numberOfLines={2}>{chapter.title}</Text>
+      <Text style={styles.chapterMeta}>{videoCount} lecture{videoCount !== 1 ? "s" : ""}</Text>
+    </TouchableOpacity>
+  );
+}
+
+// Each subject section — uses useNavigation() directly
+function SubjectSection({ subject }) {
+  const navigation = useNavigation();
+  const chapters = subject.chapters || [];
+  const totalVideos = chapters.reduce((acc, c) => acc + (c.videos || []).length, 0);
+
+  return (
+    <View style={styles.subjectSection}>
+      {/* Subject name row — tap → chapters level */}
+      <TouchableOpacity
+        style={styles.subjectHeader}
+        activeOpacity={0.8}
+        onPress={() =>
+          navigation.navigate("Lists", { subjectId: subject._id, _t: Date.now() })
+        }
+      >
+        <View style={styles.subjectIconWrap}>
+          <Text style={styles.subjectIconText}>{subject.title?.[0]?.toUpperCase() || "S"}</Text>
+        </View>
+        <View style={{ flex: 1 }}>
+          <Text style={styles.subjectName}>{subject.title}</Text>
+          <Text style={styles.subjectMeta}>
+            {chapters.length} chapter{chapters.length !== 1 ? "s" : ""} · {totalVideos} lecture{totalVideos !== 1 ? "s" : ""}
+          </Text>
+        </View>
+        <Text style={styles.chevron}>›</Text>
+      </TouchableOpacity>
+
+      {/* Horizontal chapter cards — tap → videos level */}
+      {chapters.length > 0 && (
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          nestedScrollEnabled={true}
+          contentContainerStyle={styles.chaptersRow}
+        >
+          {chapters.map((chapter) => (
+            <ChapterCard
+              key={chapter._id || chapter.title}
+              chapter={chapter}
+              subjectId={subject._id}
+            />
+          ))}
+        </ScrollView>
+      )}
+    </View>
+  );
+}
+
+export default function DashboardScreen() {
+  const navigation = useNavigation();
   const insets = useSafeAreaInsets();
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   const [content, setContent] = useState(null);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -71,10 +147,7 @@ export default function DashboardScreen({ navigation }) {
   return (
     <LinearGradient colors={[COLORS.bgDeep, COLORS.bgPrimary, COLORS.bgSurface]} style={styles.gradient}>
       <ScrollView
-        contentContainerStyle={[
-          styles.scroll,
-          { paddingTop: insets.top + 16, paddingBottom: 24 },
-        ]}
+        contentContainerStyle={[styles.scroll, { paddingTop: insets.top + 16, paddingBottom: 24 }]}
         showsVerticalScrollIndicator={false}
         refreshControl={
           <RefreshControl
@@ -126,48 +199,11 @@ export default function DashboardScreen({ navigation }) {
           </View>
         </View>
 
-        {/* Quick actions */}
-        <Text style={styles.sectionTitle}>Quick Access</Text>
-        <View style={styles.actionsGrid}>
-          <TouchableOpacity
-            style={styles.actionCard}
-            onPress={() => navigation.navigate("Lists")}
-          >
-            <Text style={styles.actionIcon}>📚</Text>
-            <Text style={styles.actionTitle}>Browse Content</Text>
-            <Text style={styles.actionSubtitle}>All subjects & chapters</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.actionCard}
-            onPress={() => navigation.navigate("Chatbot")}
-          >
-            <Text style={styles.actionIcon}>🤖</Text>
-            <Text style={styles.actionTitle}>AI Assistant</Text>
-            <Text style={styles.actionSubtitle}>Get learning help</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.actionCard}
-            onPress={() => navigation.navigate("Courses")}
-          >
-            <Text style={styles.actionIcon}>🎓</Text>
-            <Text style={styles.actionTitle}>Programs</Text>
-            <Text style={styles.actionSubtitle}>USMLE, NEET, INI CET</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.actionCard}
-            onPress={() => navigation.navigate("Subscription")}
-          >
-            <Text style={styles.actionIcon}>⭐</Text>
-            <Text style={styles.actionTitle}>Upgrade</Text>
-            <Text style={styles.actionSubtitle}>Unlock all content</Text>
-          </TouchableOpacity>
-        </View>
-
-        {/* Subjects list */}
+        {/* Subject sections */}
         <View style={styles.sectionHeader}>
           <Text style={styles.sectionTitle}>Medicine / USMLE</Text>
           <TouchableOpacity onPress={() => navigation.navigate("Lists")}>
-            <Text style={styles.seeAll}>See all →</Text>
+            <Text style={styles.seeAll}>Browse all →</Text>
           </TouchableOpacity>
         </View>
 
@@ -179,26 +215,8 @@ export default function DashboardScreen({ navigation }) {
             <Text style={styles.emptyText}>No content yet. Pull to refresh.</Text>
           </View>
         ) : (
-          subjects.slice(0, 5).map((subject) => (
-            <TouchableOpacity
-              key={subject._id}
-              style={styles.subjectCard}
-              onPress={() => navigation.navigate("Lists", { subjectId: subject._id })}
-              activeOpacity={0.8}
-            >
-              <View style={styles.subjectIcon}>
-                <Text style={styles.subjectIconText}>
-                  {subject.title?.[0]?.toUpperCase() || "S"}
-                </Text>
-              </View>
-              <View style={{ flex: 1 }}>
-                <Text style={styles.subjectTitle}>{subject.title}</Text>
-                <Text style={styles.subjectMeta}>
-                  {(subject.chapters || []).length} chapters
-                </Text>
-              </View>
-              <Text style={styles.chevron}>›</Text>
-            </TouchableOpacity>
+          subjects.map((subject) => (
+            <SubjectSection key={subject._id || subject.title} subject={subject} />
           ))
         )}
       </ScrollView>
@@ -209,6 +227,7 @@ export default function DashboardScreen({ navigation }) {
 const styles = StyleSheet.create({
   gradient: { flex: 1 },
   scroll: { paddingHorizontal: 20 },
+
   header: {
     flexDirection: "row",
     alignItems: "center",
@@ -251,52 +270,65 @@ const styles = StyleSheet.create({
   statValue: { fontSize: 20, fontWeight: "900", color: COLORS.textPrimary },
   statLabel: { fontSize: 11, color: COLORS.textMuted },
 
-  sectionTitle: { fontSize: 16, fontWeight: "800", color: COLORS.textPrimary, marginBottom: 12 },
   sectionHeader: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: 12,
+    marginBottom: 16,
   },
+  sectionTitle: { fontSize: 16, fontWeight: "800", color: COLORS.textPrimary },
   seeAll: { fontSize: 13, color: COLORS.cyan, fontWeight: "600" },
 
-  actionsGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10, marginBottom: 28 },
-  actionCard: {
-    width: "47%",
+  subjectSection: { marginBottom: 24 },
+  subjectHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
     backgroundColor: COLORS.bgSurface,
     borderRadius: 14,
     borderWidth: 1,
     borderColor: COLORS.border,
     padding: 14,
-    gap: 3,
+    marginBottom: 10,
   },
-  actionIcon: { fontSize: 22, marginBottom: 4 },
-  actionTitle: { fontSize: 13, fontWeight: "700", color: COLORS.textPrimary },
-  actionSubtitle: { fontSize: 11, color: COLORS.textMuted },
-
-  subjectCard: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 12,
-    backgroundColor: COLORS.bgSurface,
+  subjectIconWrap: {
+    width: 44,
+    height: 44,
     borderRadius: 12,
-    borderWidth: 1,
-    borderColor: COLORS.border,
-    padding: 14,
-    marginBottom: 8,
-  },
-  subjectIcon: {
-    width: 40,
-    height: 40,
-    borderRadius: 10,
     backgroundColor: "rgba(14,165,233,0.15)",
     alignItems: "center",
     justifyContent: "center",
   },
-  subjectIconText: { fontSize: 17, fontWeight: "800", color: COLORS.cyan },
-  subjectTitle: { fontSize: 14, fontWeight: "700", color: COLORS.textPrimary },
+  subjectIconText: { fontSize: 18, fontWeight: "900", color: COLORS.cyan },
+  subjectName: { fontSize: 15, fontWeight: "800", color: COLORS.textPrimary },
   subjectMeta: { fontSize: 11, color: COLORS.textMuted, marginTop: 2 },
-  chevron: { fontSize: 20, color: COLORS.textMuted },
+  chevron: { fontSize: 22, color: COLORS.textMuted },
+
+  chaptersRow: {
+    paddingHorizontal: 4,
+    gap: 10,
+  },
+  chapterCard: {
+    width: 140,
+    backgroundColor: COLORS.bgSurface,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    padding: 12,
+    gap: 6,
+  },
+  chapterIconWrap: {
+    width: 32,
+    height: 32,
+    borderRadius: 8,
+    backgroundColor: "rgba(20,184,166,0.15)",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 2,
+  },
+  chapterIconText: { fontSize: 11, fontWeight: "800", color: "#14b8a6" },
+  chapterTitle: { fontSize: 12, fontWeight: "700", color: COLORS.textPrimary, lineHeight: 17 },
+  chapterMeta: { fontSize: 10, color: COLORS.textMuted },
 
   emptyState: { alignItems: "center", paddingVertical: 32, gap: 8 },
   emptyIcon: { fontSize: 36 },

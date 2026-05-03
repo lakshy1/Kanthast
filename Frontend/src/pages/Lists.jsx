@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaRegFileAlt, FaPlay, FaRegImage, FaChevronRight, FaLock, FaThList, FaTimes, FaChevronDown } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { getMedicineUsmleContent } from "../utils/authApi";
 import { ListsPageSkeleton } from "../components/DataLoaderSkeletons";
 import { useAppSettings } from "../utils/settings";
@@ -54,6 +54,10 @@ export default function Lists() {
   const leftColRef = useRef(null);
   const rightCardRef = useRef(null);
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  // Capture deep-link params once at mount — cleared after use so re-renders don't re-apply
+  const deepSubject = useRef(searchParams.get("subject"));
+  const deepChapter = useRef(searchParams.get("chapter"));
   const compact = settings.compactLayout;
   const MotionDiv = motion.div;
   const MotionButton = motion.button;
@@ -113,8 +117,15 @@ export default function Lists() {
 
   useEffect(() => {
     if (!tabs.length) return;
-    if (!tabs.includes(activeTab)) setActiveTab(tabs[0]);
-  }, [tabs, activeTab]);
+    // If a deep-link subject was passed, jump to it; otherwise fall back to first tab
+    if (deepSubject.current && tabs.includes(deepSubject.current)) {
+      setActiveTab(deepSubject.current);
+      deepSubject.current = null; // apply only once
+      setSearchParams({}, { replace: true }); // clean URL
+    } else if (!tabs.includes(activeTab)) {
+      setActiveTab(tabs[0]);
+    }
+  }, [tabs]);
 
   // Measure the right card's natural height; left column matches it (min 80vh)
   useEffect(() => {
@@ -141,6 +152,20 @@ export default function Lists() {
     if (leftColRef.current) leftColRef.current.scrollTop = 0;
     setActiveSection(activeModule.sections[0]?.id ?? null);
   }, [activeTab, activeModule]);
+
+  // After tab + sections settle, scroll to the deep-link chapter if one was passed
+  useEffect(() => {
+    const chId = deepChapter.current;
+    if (!chId || !activeModule.sections.length) return;
+    const sec = activeModule.sections.find((s) => s.id === chId);
+    if (!sec) return;
+    deepChapter.current = null; // apply only once
+    const t = setTimeout(() => {
+      setActiveSection(sec.id);
+      jumpTo(sec.id);
+    }, 350); // wait for DOM + scroll reset from above effect
+    return () => clearTimeout(t);
+  }, [activeModule.sections]);
 
   // Intersection Observer — uses the left column as scroll root
   useEffect(() => {
