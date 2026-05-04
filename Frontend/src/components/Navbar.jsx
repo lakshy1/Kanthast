@@ -129,47 +129,49 @@ const Navbar = () => {
             <NavLink to="/" end className={({ isActive }) => isActive ? activeClass : normalClass}>Home</NavLink>
 
             {/* Courses dropdown */}
-            <div className="relative" onMouseEnter={() => setIsCoursesOpen(true)} onMouseLeave={() => setIsCoursesOpen(false)}>
-              <div className="flex items-center gap-1">
-                <NavLink to="/courses" className={location.pathname === "/courses" ? activeClass : normalClass}>
-                  Courses
-                </NavLink>
-                <motion.span
-                  animate={{ rotate: isCoursesOpen ? 180 : 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="text-white/40 text-[9px] cursor-pointer"
-                >
-                  <FaChevronDown />
-                </motion.span>
-              </div>
-              <AnimatePresence>
-                {isCoursesOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 8 }}
-                    transition={{ duration: 0.15 }}
-                    className="absolute left-0 mt-3 w-52 bg-white rounded-2xl shadow-2xl shadow-black/20 p-1.5 border border-slate-100"
+            {!isLoggedIn && (
+              <div className="relative" onMouseEnter={() => setIsCoursesOpen(true)} onMouseLeave={() => setIsCoursesOpen(false)}>
+                <div className="flex items-center gap-1">
+                  <NavLink to="/courses" className={location.pathname === "/courses" ? activeClass : normalClass}>
+                    Courses
+                  </NavLink>
+                  <motion.span
+                    animate={{ rotate: isCoursesOpen ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-white/40 text-[9px] cursor-pointer"
                   >
-                    {[
-                      { to: "/courses#medicine", label: "Medicine / USMLE" },
-                      { to: "/courses#neet-pg",  label: "NEET PG" },
-                      { to: "/courses#ini-cet",  label: "INI CET" },
-                    ].map(({ to, label }) => (
-                      <HashLink key={to} to={to} className="block px-4 py-2.5 rounded-xl text-sm text-slate-700 hover:bg-slate-50 transition">
-                        {label}
-                      </HashLink>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+                    <FaChevronDown />
+                  </motion.span>
+                </div>
+                <AnimatePresence>
+                  {isCoursesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute left-0 mt-3 w-52 bg-white rounded-2xl shadow-2xl shadow-black/20 p-1.5 border border-slate-100"
+                    >
+                      {[
+                        { to: "/courses#medicine", label: "Medicine / USMLE" },
+                        { to: "/courses#neet-pg",  label: "NEET PG" },
+                        { to: "/courses#ini-cet",  label: "INI CET" },
+                      ].map(({ to, label }) => (
+                        <HashLink key={to} to={to} className="block px-4 py-2.5 rounded-xl text-sm text-slate-700 hover:bg-slate-50 transition">
+                          {label}
+                        </HashLink>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            )}
 
             <NavLink to="/lists" className={({ isActive }) => isActive ? activeClass : normalClass}>Lists</NavLink>
             {isLoggedIn && <NavLink to="/dashboard" className={({ isActive }) => isActive ? activeClass : normalClass}>Dashboard</NavLink>}
             {(!isLoggedIn || !hasSubscription) && <NavLink to="/subscription" className={({ isActive }) => isActive ? activeClass : normalClass}>Subscription</NavLink>}
-            <NavLink to="/about" className={({ isActive }) => isActive ? activeClass : normalClass}>About</NavLink>
-            <NavLink to="/contact" className={({ isActive }) => isActive ? activeClass : normalClass}>Contact</NavLink>
+            {!isLoggedIn && <NavLink to="/about" className={({ isActive }) => isActive ? activeClass : normalClass}>About</NavLink>}
+            {!isLoggedIn && <NavLink to="/contact" className={({ isActive }) => isActive ? activeClass : normalClass}>Contact</NavLink>}
           </div>
 
           {/* ── Desktop right actions ── */}
@@ -210,11 +212,26 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 8 }}
                         transition={{ duration: 0.15 }}
-                        className="absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-2xl shadow-black/15 p-1.5 border border-slate-100"
+                        className="absolute right-0 mt-2 w-60 bg-white rounded-2xl shadow-2xl shadow-black/15 p-1.5 border border-slate-100"
                       >
                         <div className="px-3 py-2.5 border-b border-slate-100 mb-1">
                           <p className="text-sm font-semibold text-slate-800 truncate">{user?.firstName} {user?.lastName}</p>
                           <p className="text-xs text-slate-400 truncate">{user?.email}</p>
+                          {hasSubscription ? (
+                            <div className="flex items-center gap-1.5 mt-1.5">
+                              <FaCrown className="text-amber-400 text-[9px] shrink-0" />
+                              <span className="text-[10px] font-semibold text-emerald-600">Pro Active</span>
+                              <span className="text-[10px] text-slate-400">·</span>
+                              <span className="text-[10px] text-slate-400">
+                                Till {new Date(user?.subscriptionValidTill).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" })}
+                              </span>
+                            </div>
+                          ) : (
+                            <div className="flex items-center gap-1.5 mt-1.5">
+                              <span className="w-1.5 h-1.5 rounded-full bg-slate-300 shrink-0" />
+                              <span className="text-[10px] text-slate-400">No active plan</span>
+                            </div>
+                          )}
                         </div>
                         <Link to="/profile" className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-slate-700 hover:bg-slate-50 transition">
                           <FaUserCircle className="text-slate-400 text-xs" /> My Profile
@@ -264,13 +281,28 @@ const Navbar = () => {
                       className="absolute right-0 mt-2 w-52 bg-white rounded-2xl shadow-2xl shadow-black/20 p-1.5 border border-slate-100 z-50"
                     >
                       {/* User info */}
-                      <div className="flex items-center gap-3 px-3 py-3 mb-1 border-b border-slate-100">
+                      <div className="flex items-start gap-3 px-3 py-3 mb-1 border-b border-slate-100">
                         <div className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white shrink-0" style={{ backgroundColor: avatarBg }}>
                           {initials}
                         </div>
                         <div className="min-w-0">
                           <p className="text-sm font-semibold text-slate-800 truncate">{user?.firstName} {user?.lastName}</p>
                           <p className="text-xs text-slate-400 truncate">{user?.email}</p>
+                          {hasSubscription ? (
+                            <div className="flex items-center gap-1.5 mt-1.5">
+                              <FaCrown className="text-amber-400 text-[9px] shrink-0" />
+                              <span className="text-[10px] font-semibold text-emerald-600">Pro Active</span>
+                              <span className="text-[10px] text-slate-400">·</span>
+                              <span className="text-[10px] text-slate-400">
+                                Till {new Date(user?.subscriptionValidTill).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" })}
+                              </span>
+                            </div>
+                          ) : (
+                            <div className="flex items-center gap-1.5 mt-1.5">
+                              <span className="w-1.5 h-1.5 rounded-full bg-slate-300 shrink-0" />
+                              <span className="text-[10px] text-slate-400">No active plan</span>
+                            </div>
+                          )}
                         </div>
                       </div>
 
