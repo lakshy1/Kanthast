@@ -13,7 +13,11 @@
       "Bash(cp \"c:/Users/laksh/OneDrive/Desktop/Projects/05-Kanthast/Frontend/public/logo.png\" \"c:/Users/laksh/OneDrive/Desktop/Projects/05-Kanthast/MobileApp/assets/adaptive-icon.png\")",
       "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\('name:', p.name\\); console.log\\('main:', p.main\\); console.log\\('deps:', Object.keys\\(p.dependencies\\).length, 'packages'\\);\")",
       "Bash(eas --version)",
-      "Bash(xargs basename *)"
+      "Bash(xargs basename *)",
+      "PowerShell(cd \"c:\\\\Users\\\\laksh\\\\OneDrive\\\\Desktop\\\\Projects\\\\05-Kanthast\"; $total = git ls-files | ForEach-Object { \\(Get-Content $_ -ErrorAction SilentlyContinue | Measure-Object -Line\\).Lines }; $sum = \\($total | Measure-Object -Sum\\).Sum; \"Total lines: $sum\"; \"Total files: $\\(\\($total | Measure-Object\\).Count\\)\")",
+      "PowerShell(cd \"c:\\\\Users\\\\laksh\\\\OneDrive\\\\Desktop\\\\Projects\\\\05-Kanthast\"; git ls-files | Group-Object { $_.Split\\('.'\\)[-1] } | Sort-Object Count -Descending | Select-Object Name, Count | Format-Table -AutoSize)",
+      "PowerShell(cd \"c:\\\\Users\\\\laksh\\\\OneDrive\\\\Desktop\\\\Projects\\\\05-Kanthast\"; git ls-files | Where-Object { $_ -match '\\\\.\\(js|jsx|ts|tsx|css|html|json|md\\)$' } | ForEach-Object { [PSCustomObject]@{ File=$_; Lines=\\(Get-Content $_ -ErrorAction SilentlyContinue | Measure-Object -Line\\).Lines } } | Sort-Object Lines -Descending | Select-Object -First 15 | Format-Table -AutoSize)",
+      "PowerShell(cd \"c:\\\\Users\\\\laksh\\\\OneDrive\\\\Desktop\\\\Projects\\\\05-Kanthast\"; $exts = @\\('js','jsx','ts','tsx','css','html'\\); $rows = git ls-files | Where-Object { $ext = $_.Split\\('.'\\)[-1]; $exts -contains $ext -and $_ -notmatch 'package-lock' } | ForEach-Object { [PSCustomObject]@{ File=$_; Lines=\\(Get-Content $_ -ErrorAction SilentlyContinue | Measure-Object -Line\\).Lines } }; $rows | Measure-Object Lines -Sum | Select-Object @{N='Source files';E={$_.Count}}, @{N='Total lines';E={$_.Sum}})"
     ],
     "additionalDirectories": [
       "c:\\Users\\laksh\\.claude\\projects\\c--Users-laksh-OneDrive-Desktop-Projects-05-Kanthast\\memory"

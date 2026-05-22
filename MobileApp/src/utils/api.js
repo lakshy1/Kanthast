@@ -1,4 +1,4 @@
-import { API_BASE_URL, CACHE_KEYS, CACHE_TTL_MS, PROFILE_CACHE_TTL_MS } from "../constants/api";
+import { apiFetch, CACHE_KEYS, CACHE_TTL_MS, PROFILE_CACHE_TTL_MS } from "../constants/api";
 import { readCache, writeCache, invalidateCache, getToken } from "./storage";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────
@@ -20,7 +20,7 @@ async function request(path, options = {}, token = null) {
     ...options.headers,
   };
 
-  const res = await fetch(`${API_BASE_URL}${path}`, {
+  const res = await apiFetch(path, {
     ...options,
     headers,
   });
@@ -172,7 +172,7 @@ export async function logoutOtherSessions() {
 // ─── Warmup ────────────────────────────────────────────────────────────────
 export async function warmupBackend() {
   try {
-    await fetch(`${API_BASE_URL}/health`, { method: "GET" });
+    await apiFetch("/health", { method: "GET" });
   } catch {
     // silently ignore – warmup is best-effort
   }

@@ -27,7 +27,7 @@ const publicDockItems = [
   { to: "/contact",     label: "Contact",  icon: FaEnvelope,    exact: false },
 ];
 
-const NAVBAR_H = "4rem"; // must match h-16
+const NAVBAR_H = "calc(4rem + env(safe-area-inset-top, 0px))";
 
 const Navbar = () => {
   const [isCoursesOpen, setIsCoursesOpen]             = useState(false);
@@ -113,6 +113,7 @@ const Navbar = () => {
       <nav
         className="w-full fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#060c16] via-[#0a1530] to-[#07101e] border-b border-white/8 will-change-transform"
         style={{
+          paddingTop: "env(safe-area-inset-top, 0px)",
           transform: navVisible ? "translateY(0)" : "translateY(-100%)",
           transition: "transform 0.3s cubic-bezier(0.4,0,0.2,1)",
         }}

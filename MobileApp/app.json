@@ -40,7 +40,7 @@
       ]
     ],
     "extra": {
-      "apiBaseUrl": "https://kanthast-backend.onrender.com/api/v1",
+      "apiBaseUrl": "https://kanthast-backend-eutn.onrender.com/api/v1",
       "eas": {
         "projectId": "51d93098-5bad-4482-bab2-e7ee8c996082"
       }

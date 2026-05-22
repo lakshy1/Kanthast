@@ -1,8 +1,10 @@
 import { Helmet } from "react-helmet-async";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { FaCircleNotch } from "react-icons/fa";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { apiFetch } from "../utils/apiBase";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 34 },
@@ -25,8 +27,6 @@ const stagger = {
 
 const sectionViewport = { once: true, amount: 0.22 };
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api/v1";
-
 export default function Contact() {
   const [status, setStatus] = useState("idle");
 
@@ -38,7 +38,7 @@ export default function Contact() {
     const { name, email, subject, message } = Object.fromEntries(new FormData(form));
 
     try {
-      const res = await fetch(`${API_BASE_URL}/contact`, {
+      const res = await apiFetch("/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, subject, message }),

@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { API_BASE_URL } from "../constants/api";
+import { apiFetch } from "../constants/api";
 import { COLORS } from "../constants/colors";
 
 const TOPICS = ["General Inquiry", "Technical Support", "Billing", "Content Feedback", "Partnership"];
@@ -34,7 +34,7 @@ export default function ContactScreen() {
     }
     setLoading(true);
     try {
-      const res = await fetch(`${API_BASE_URL}/contact`, {
+      const res = await apiFetch("/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: name.trim(), email: email.trim(), topic, message: message.trim() }),

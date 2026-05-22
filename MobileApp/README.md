@@ -44,4 +44,4 @@ eas build --platform android --profile preview
 - All screens: Splash, Login, Signup (OTP), Dashboard, Courses, Lists, Video, Chatbot, Profile, Settings, Subscription
 
 ## Backend
-Points to `https://kanthast-backend.onrender.com/api/v1`
+Points to `https://kanthast-backend-eutn.onrender.com/api/v1` with fallback support for the older Render host.

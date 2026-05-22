@@ -1,12 +1,14 @@
 import "./App.css";
 import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence, MotionConfig } from "framer-motion";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import OfflineBanner from "./components/OfflineBanner";
 import { warmupBackend, prefetchImages, prefetchContent } from "./utils/warmup";
 import { useAppSettings } from "./utils/settings";
+import { initCapacitorPlugins, setupBackButton } from "./utils/capacitor";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const About = lazy(() => import("./pages/About"));
@@ -113,11 +115,18 @@ function GlobalScrollbar() {
 
 function App() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const isFirstRender = useRef(true);
   const isFirstEverVisit = useRef(!localStorage.getItem("kanthastVisited"));
   const isAdminRoute = location.pathname.startsWith("/admin");
   const settings = useAppSettings();
+
+  // Init Capacitor native plugins (status bar, splash hide) and Android back button.
+  useEffect(() => {
+    initCapacitorPlugins();
+    setupBackButton(navigate);
+  }, []);
 
   // Parallel to the loading animation: wake up the Render backend and
   // prefetch all page images into the browser cache using idle bandwidth.
@@ -184,6 +193,7 @@ function App() {
     <MotionConfig reducedMotion={settings.reduceMotion ? "always" : "never"}>
       <div className="min-h-screen w-screen">
         <GlobalScrollbar />
+        <OfflineBanner />
 
         {!isAdminRoute && <Navbar />}
 

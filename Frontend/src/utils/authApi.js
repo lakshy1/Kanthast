@@ -1,5 +1,4 @@
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api/v1";
+import { apiFetch } from "./apiBase";
 
 // ─── Content cache (localStorage, 30-min TTL) ─────────────────────────────
 const CONTENT_CACHE_KEY = "kanthastContentCache";
@@ -63,7 +62,7 @@ async function readResponseBody(response) {
 }
 
 async function post(path, payload) {
-  const response = await fetch(`${API_BASE_URL}${path}`, {
+  const response = await apiFetch(path, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -103,7 +102,7 @@ export function adminLogin(payload) {
 }
 
 export async function getProfile(token) {
-  const response = await fetch(`${API_BASE_URL}/profile`, {
+  const response = await apiFetch("/profile", {
     method: "GET",
     headers: {
       ...getAuthHeaders(token),
@@ -126,7 +125,7 @@ export async function getProfile(token) {
 }
 
 export async function updateProfile(token, payload) {
-  const response = await fetch(`${API_BASE_URL}/profile`, {
+  const response = await apiFetch("/profile", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -151,7 +150,7 @@ export async function updateProfile(token, payload) {
 }
 
 export async function getSettings(token) {
-  const response = await fetch(`${API_BASE_URL}/profile/settings`, {
+  const response = await apiFetch("/profile/settings", {
     method: "GET",
     headers: {
       ...getAuthHeaders(token),
@@ -174,7 +173,7 @@ export async function getSettings(token) {
 }
 
 export async function changePassword(token, payload) {
-  const response = await fetch(`${API_BASE_URL}/auth/change-password`, {
+  const response = await apiFetch("/auth/change-password", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -199,7 +198,7 @@ export async function changePassword(token, payload) {
 }
 
 export async function updateSettings(token, payload) {
-  const response = await fetch(`${API_BASE_URL}/profile/settings`, {
+  const response = await apiFetch("/profile/settings", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -224,7 +223,7 @@ export async function updateSettings(token, payload) {
 }
 
 export async function purchaseSubscriptionPlan(token, payload) {
-  const response = await fetch(`${API_BASE_URL}/profile/subscription`, {
+  const response = await apiFetch("/profile/subscription", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -249,7 +248,7 @@ export async function purchaseSubscriptionPlan(token, payload) {
 }
 
 export async function deleteAccount(token) {
-  const response = await fetch(`${API_BASE_URL}/profile/account`, {
+  const response = await apiFetch("/profile/account", {
     method: "DELETE",
     headers: {
       ...getAuthHeaders(token),
@@ -271,7 +270,7 @@ export async function deleteAccount(token) {
 }
 
 export async function getActiveSessions(token) {
-  const response = await fetch(`${API_BASE_URL}/profile/sessions`, {
+  const response = await apiFetch("/profile/sessions", {
     method: "GET",
     headers: {
       ...getAuthHeaders(token),
@@ -293,7 +292,7 @@ export async function getActiveSessions(token) {
 }
 
 export async function logoutOtherSessions(token) {
-  const response = await fetch(`${API_BASE_URL}/profile/sessions/other/logout`, {
+  const response = await apiFetch("/profile/sessions/other/logout", {
     method: "PUT",
     headers: {
       ...getAuthHeaders(token),
@@ -315,7 +314,7 @@ export async function logoutOtherSessions(token) {
 }
 
 export async function logoutSession(token, sessionId) {
-  const response = await fetch(`${API_BASE_URL}/profile/sessions/${encodeURIComponent(sessionId)}`, {
+  const response = await apiFetch(`/profile/sessions/${encodeURIComponent(sessionId)}`, {
     method: "DELETE",
     headers: {
       ...getAuthHeaders(token),
@@ -337,7 +336,7 @@ export async function logoutSession(token, sessionId) {
 }
 
 export async function updateCurrentSessionLocation(token, payload) {
-  const response = await fetch(`${API_BASE_URL}/profile/sessions/location`, {
+  const response = await apiFetch("/profile/sessions/location", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -362,7 +361,7 @@ export async function updateCurrentSessionLocation(token, payload) {
 
 export async function getChatHistory(token, sessionId = "") {
   const query = sessionId ? `?sessionId=${encodeURIComponent(sessionId)}` : "";
-  const response = await fetch(`${API_BASE_URL}/chat/history${query}`, {
+  const response = await apiFetch(`/chat/history${query}`, {
     method: "GET",
     headers: {
       ...getAuthHeaders(token),
@@ -383,7 +382,7 @@ export async function getChatHistory(token, sessionId = "") {
 }
 
 export async function createChatSession(token) {
-  const response = await fetch(`${API_BASE_URL}/chat/session/new`, {
+  const response = await apiFetch("/chat/session/new", {
     method: "POST",
     headers: {
       ...getAuthHeaders(token),
@@ -407,8 +406,8 @@ export async function deleteChatSession(token, sessionId, activeSessionId = "") 
   const query = activeSessionId
     ? `?activeSessionId=${encodeURIComponent(activeSessionId)}`
     : "";
-  const response = await fetch(
-    `${API_BASE_URL}/chat/session/${encodeURIComponent(sessionId)}${query}`,
+  const response = await apiFetch(
+    `/chat/session/${encodeURIComponent(sessionId)}${query}`,
     {
       method: "DELETE",
       headers: {
@@ -431,7 +430,7 @@ export async function deleteChatSession(token, sessionId, activeSessionId = "") 
 }
 
 export async function sendChatMessage(token, payload) {
-  const response = await fetch(`${API_BASE_URL}/chat/send`, {
+  const response = await apiFetch("/chat/send", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -457,7 +456,7 @@ export async function uploadChatFile(token, file) {
   const formData = new FormData();
   formData.append("file", file);
 
-  const response = await fetch(`${API_BASE_URL}/chat/upload`, {
+  const response = await apiFetch("/chat/upload", {
     method: "POST",
     headers: {
       ...getAuthHeaders(token),
@@ -479,7 +478,7 @@ export async function uploadChatFile(token, file) {
 }
 
 export async function getAdminUsers(token) {
-  const response = await fetch(`${API_BASE_URL}/auth/admin/users`, {
+  const response = await apiFetch("/auth/admin/users", {
     method: "GET",
     headers: {
       ...getAuthHeaders(token),
@@ -500,7 +499,7 @@ export async function getAdminUsers(token) {
 }
 
 export async function updateAdminUser(token, userId, payload) {
-  const response = await fetch(`${API_BASE_URL}/auth/admin/users/${encodeURIComponent(userId)}`, {
+  const response = await apiFetch(`/auth/admin/users/${encodeURIComponent(userId)}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -523,7 +522,7 @@ export async function updateAdminUser(token, userId, payload) {
 }
 
 export async function deleteAdminUser(token, userId) {
-  const response = await fetch(`${API_BASE_URL}/auth/admin/users/${encodeURIComponent(userId)}`, {
+  const response = await apiFetch(`/auth/admin/users/${encodeURIComponent(userId)}`, {
     method: "DELETE",
     headers: {
       ...getAuthHeaders(token),
@@ -547,7 +546,7 @@ export async function getMedicineUsmleContent() {
   const cached = readContentCache();
   if (cached) return cached;
 
-  const response = await fetch(`${API_BASE_URL}/medicine-usmle`, {
+  const response = await apiFetch("/medicine-usmle", {
     method: "GET",
     credentials: "include",
   });
@@ -567,7 +566,7 @@ export async function getMedicineUsmleVideoDetails({ subjectId, chapterId, video
     videoId,
   });
 
-  const response = await fetch(`${API_BASE_URL}/medicine-usmle/video?${query.toString()}`, {
+  const response = await apiFetch(`/medicine-usmle/video?${query.toString()}`, {
     method: "GET",
     credentials: "include",
   });
@@ -580,7 +579,7 @@ export async function getMedicineUsmleVideoDetails({ subjectId, chapterId, video
 }
 
 export async function updateMedicineUsmleContent(token, payload) {
-  const response = await fetch(`${API_BASE_URL}/medicine-usmle/admin`, {
+  const response = await apiFetch("/medicine-usmle/admin", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -604,7 +603,7 @@ export async function updateMedicineUsmleContent(token, payload) {
 }
 
 async function authedJsonRequest(path, method, token, payload) {
-  const response = await fetch(`${API_BASE_URL}${path}`, {
+  const response = await apiFetch(path, {
     method,
     headers: {
       "Content-Type": "application/json",
