@@ -11,6 +11,7 @@ import { useAppSettings } from "./utils/settings";
 import { initCapacitorPlugins, setupBackButton } from "./utils/capacitor";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
+const SchoolHomepage = lazy(() => import("./pages/SchoolHomepage"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Courses = lazy(() => import("./pages/Courses"));
@@ -214,6 +215,7 @@ function App() {
             <ErrorBoundary>
               <Routes>
                 <Route path="/" element={<Homepage />} />
+                <Route path="/school" element={<SchoolHomepage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/courses" element={<Courses />} />

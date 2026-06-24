@@ -11,6 +11,13 @@ import {
   FaChevronLeft, FaChevronRight,
 } from "react-icons/fa";
 import { useAppSettings } from "../utils/settings";
+import {
+  buildSchoolModules,
+  getSchoolClassLabel,
+  getSelectedSchoolClass,
+  hasPaidForSchoolClass,
+  isSchoolTrack,
+} from "../utils/schoolTrack";
 
 const IMAGES = [Image1, Image2, Image3, Image4, Image5];
 
@@ -131,6 +138,18 @@ function buildSubjects(content) {
       name: chapter.name || "Unnamed Chapter",
       chapterId: chapter._id,
       videoIds: (chapter.videos || []).map((v) => v._id).filter(Boolean),
+    })),
+  }));
+}
+
+function buildSchoolSubjectsFromModules(modules) {
+  return Object.entries(modules).map(([subjectName, subject]) => ({
+    name: subjectName,
+    subjectId: subjectName.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+    chapters: subject.sections.map((section) => ({
+      name: section.title,
+      chapterId: section.id,
+      videoIds: section.lectures.map((lecture) => lecture.videoId).filter(Boolean),
     })),
   }));
 }
@@ -276,6 +295,9 @@ export default function Dashboard() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("kanthastUser") || "null");
   const settings = useAppSettings();
+  const schoolMode = isSchoolTrack();
+  const selectedSchoolClass = getSelectedSchoolClass();
+  const selectedSchoolClassLabel = getSchoolClassLabel(selectedSchoolClass);
   const [subjects, setSubjects] = useState([]);
   const [contentLoading, setContentLoading] = useState(true);
 
@@ -284,12 +306,19 @@ export default function Dashboard() {
     catch { return {}; }
   }, []);
 
-  const dailyQuote = QUOTES[useMemo(getDailyIndex, [])];
+  const dailyQuoteIndex = useMemo(getDailyIndex, []);
+  const dailyQuote = schoolMode
+    ? "Small visual wins every day turn hard chapters into confident answers."
+    : QUOTES[dailyQuoteIndex];
 
   useEffect(() => {
     let mounted = true;
     (async () => {
       try {
+        if (schoolMode) {
+          setSubjects(hasPaidForSchoolClass() ? buildSchoolSubjectsFromModules(buildSchoolModules(selectedSchoolClass)) : []);
+          return;
+        }
         const data = await getMedicineUsmleContent();
         if (!mounted) return;
         setSubjects(buildSubjects(data.content));
@@ -301,7 +330,7 @@ export default function Dashboard() {
       }
     })();
     return () => { mounted = false; };
-  }, []);
+  }, [schoolMode, selectedSchoolClass]);
 
   const { totalVideos, watchedVideos } = useMemo(() => {
     const allIds = subjects.flatMap((s) => s.chapters.flatMap((ch) => ch.videoIds));
@@ -326,7 +355,13 @@ export default function Dashboard() {
               <h1 className="text-3xl md:text-4xl font-black text-slate-900">
                 Welcome back{user?.firstName ? `, ${user.firstName}` : ""}
               </h1>
-              <p className="text-slate-500 mt-1.5 text-sm">Build discipline daily. Your consistency compounds every session.</p>
+              <p className="text-slate-500 mt-1.5 text-sm">
+                {schoolMode
+                  ? hasPaidForSchoolClass()
+                    ? `${selectedSchoolClassLabel} learning dashboard. Keep the next chapter moving.`
+                    : "Choose and activate a class plan to start your School dashboard."
+                  : "Build discipline daily. Your consistency compounds every session."}
+              </p>
             </div>
 
             {/* Stat cards */}
@@ -336,7 +371,7 @@ export default function Dashboard() {
               ) : (
                 <>
                   <StatCard
-                    title="Total Videos"
+                    title={schoolMode ? "Total Lessons" : "Total Videos"}
                     value={totalVideos}
                     icon={<FaPlay size={11} />}
                     iconBg="bg-blue-100 text-blue-600"
@@ -397,7 +432,24 @@ export default function Dashboard() {
             ))
           ) : subjects.length === 0 ? (
             <div className="rounded-2xl bg-white border border-slate-200 p-8 text-center text-slate-500">
-              No content available yet. Your subjects will appear here once added.
+              {schoolMode ? (
+                <div>
+                  <h2 className="text-2xl font-black text-slate-900">Activate a class to see your dashboard</h2>
+                  <p className="mx-auto mt-2 max-w-xl">
+                    The School dashboard shows only the class the student has paid for. Choose a class plan to unlock
+                    subjects, chapters, and progress tracking.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => navigate("/subscription")}
+                    className="mt-5 rounded-xl bg-slate-950 px-5 py-3 font-bold text-white transition hover:bg-slate-800"
+                  >
+                    Choose Class and Subscribe
+                  </button>
+                </div>
+              ) : (
+                "No content available yet. Your subjects will appear here once added."
+              )}
             </div>
           ) : (
             subjects.map((subject) => {

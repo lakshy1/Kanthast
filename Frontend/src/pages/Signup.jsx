@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaCheckCircle } from "react-icons/fa";
 import { sendOtp, signUp } from "../utils/authApi";
 import { trackAnalyticsEvent } from "../utils/settings";
+import { getSelectedSchoolClass, isSchoolTrack, schoolClassOptions, setSelectedSchoolClass } from "../utils/schoolTrack";
 
 const panelVariants = {
   hidden: { opacity: 0, y: 30, scale: 0.98 },
@@ -23,6 +24,7 @@ const itemVariants = {
 
 export default function Signup() {
   const navigate = useNavigate();
+  const schoolMode = isSchoolTrack();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -30,6 +32,7 @@ export default function Signup() {
     otp: "",
     phone: "",
     password: "",
+    schoolClass: getSelectedSchoolClass(),
   });
   const [otpSent, setOtpSent] = useState(false);
   const [otpStatus, setOtpStatus] = useState("idle");
@@ -83,7 +86,10 @@ export default function Signup() {
         password: form.password,
         accountType: "Student",
         otp: form.otp,
+        track: schoolMode ? "school" : "medical",
+        schoolClass: schoolMode ? form.schoolClass : undefined,
       });
+      if (schoolMode) setSelectedSchoolClass(form.schoolClass);
       trackAnalyticsEvent("signup_success", { email: form.email });
 
       setSignupStatus("success");
@@ -101,8 +107,8 @@ export default function Signup() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)] px-4 py-12 flex items-center justify-center">
       <Helmet>
-        <title>Sign Up | New Users — Kanthast</title>
-        <meta name="description" content="Create your free Kanthast account and start mastering USMLE, NEET PG, and INI CET through immersive 3D animations." />
+        <title>{schoolMode ? "School Sign Up | Kanthast" : "Sign Up | Kanthast"}</title>
+        <meta name="description" content={schoolMode ? "Create a Kanthast School account and choose a class from I-X." : "Create your free Kanthast account and start mastering USMLE, NEET PG, and INI CET through immersive 3D animations."} />
         <link rel="canonical" href="https://kanthast.in/signup" />
       </Helmet>
       <motion.div
@@ -125,8 +131,9 @@ export default function Signup() {
         <motion.div variants={itemVariants} className="mb-7">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">Start Learning</p>
           <h2 className="mt-2 text-3xl md:text-4xl font-black text-slate-900">Create Your Account</h2>
-          <p className="mt-2 text-sm md:text-base text-slate-600">Secure signup with OTP verification.</p>
-          <div className="mt-5 h-px w-full bg-gradient-to-r from-cyan-300/0 via-cyan-400/45 to-cyan-300/0" />
+          <p className="mt-2 text-sm md:text-base text-slate-600">
+            {schoolMode ? "Create a student account and choose the class to start with." : "Secure signup with OTP verification."}
+          </p>
         </motion.div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -199,6 +206,27 @@ export default function Signup() {
             </label>
             <GlassInput id="signup-phone" name="phone" placeholder="Phone Number" value={form.phone} onChange={handleChange} />
           </motion.div>
+
+          {schoolMode && (
+            <motion.div variants={itemVariants}>
+              <label htmlFor="signup-schoolClass" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
+                Student Class
+              </label>
+              <select
+                id="signup-schoolClass"
+                name="schoolClass"
+                value={form.schoolClass}
+                onChange={handleChange}
+                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200"
+              >
+                {schoolClassOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </motion.div>
+          )}
 
           <motion.div variants={itemVariants} className="relative">
             <label htmlFor="signup-password" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">

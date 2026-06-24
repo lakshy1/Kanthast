@@ -57,11 +57,11 @@ export default function Contact() {
   return (
     <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
       <Helmet>
-        <title>Contact Kanthast | Medical Education Support</title>
-        <meta name="description" content="Get in touch with the Kanthast team for support, partnership inquiries, or questions about our medical education courses and platform." />
+        <title>Contact Kanthast | Learning Support</title>
+        <meta name="description" content="Get in touch with the Kanthast team for support, partnerships, or questions about our learning platforms for both medical and school education." />
         <link rel="canonical" href="https://kanthast.in/contact" />
-        <meta property="og:title" content="Contact Kanthast | Medical Education Support" />
-        <meta property="og:description" content="Get in touch with the Kanthast team for support, partnership inquiries, or questions about our medical education courses and platform." />
+        <meta property="og:title" content="Contact Kanthast | Learning Support" />
+        <meta property="og:description" content="Get in touch with the Kanthast team for support, partnerships, or questions about our learning platforms for both medical and school education." />
         <meta property="og:url" content="https://kanthast.in/contact" />
       </Helmet>
       <section className="relative overflow-hidden bg-gradient-to-br from-[#081124] via-[#0f1d42] to-[#0d182f] py-24 text-white">
@@ -87,7 +87,7 @@ export default function Contact() {
               Let&apos;s Connect
             </motion.h1>
             <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-cyan-100/90">
-              Have questions about Kanthast? Share your requirements and our team will respond quickly.
+              Have questions about Kanthast Medical or Kanthast School? Share your requirements and our team will respond quickly.
             </motion.p>
           </motion.div>
         </div>

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   FaCheckCircle,
@@ -12,6 +13,13 @@ import {
 import { Link } from "react-router-dom";
 import { purchaseSubscriptionPlan } from "../utils/authApi";
 import { trackAnalyticsEvent } from "../utils/settings";
+import {
+  getSchoolClassLabel,
+  getSelectedSchoolClass,
+  isSchoolTrack,
+  schoolClassOptions,
+  setSelectedSchoolClass,
+} from "../utils/schoolTrack";
 
 const plans = [
   {
@@ -62,6 +70,7 @@ const formatExpiry = (value = "") => {
 
 export default function SubscriptionPage() {
   const token = localStorage.getItem("kanthastToken");
+  const schoolMode = isSchoolTrack();
 
   const [user, setUser] = useState(() => {
     try {
@@ -179,6 +188,7 @@ export default function SubscriptionPage() {
 
       const generatedPaymentId = `DUMTXN_${Date.now()}`;
       const data = await purchaseSubscriptionPlan(token, {
+        track: "medical",
         planDurationYears: checkoutPlan.durationYears,
         dummyPaymentStatus: "success",
         dummyPaymentId: generatedPaymentId,
@@ -221,6 +231,10 @@ export default function SubscriptionPage() {
       user?.subscriptionValidTill
     )}`;
   }, [hasSubscription, user]);
+
+  if (schoolMode) {
+    return <SchoolSubscriptionPage token={token} user={user} setUser={setUser} />;
+  }
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_8%_5%,_#cffafe,_#eff6ff_35%,_#f8fafc_90%)] px-4 md:px-8 py-10">
@@ -496,6 +510,168 @@ export default function SubscriptionPage() {
           </motion.div>
         )}
       </AnimatePresence>
+    </div>
+  );
+}
+
+function SchoolSubscriptionPage({ token, user, setUser }) {
+  const [selectedClass, setSelectedClass] = useState(getSelectedSchoolClass());
+  const [status, setStatus] = useState("idle");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  const [receipt, setReceipt] = useState(null);
+  const classLabel = getSchoolClassLabel(selectedClass);
+  const activeClass = user?.track === "school" ? user?.schoolClass : "";
+  const hasClassSubscription = Boolean(
+    user?.subscriptionPurchased &&
+      (user?.track === "school" || user?.subscriptionPlan === "school-class-1y") &&
+      activeClass
+  );
+
+  const selectClass = (value) => {
+    setSelectedClass(value);
+    setSelectedSchoolClass(value);
+    setMessage("");
+    setError("");
+  };
+
+  const purchaseSchoolPlan = async () => {
+    if (!token) {
+      setError("Please log in before purchasing a class plan.");
+      return;
+    }
+
+    setStatus("loading");
+    setError("");
+    setMessage("");
+
+    try {
+      const generatedPaymentId = `SCHOOL_${selectedClass}_${Date.now()}`;
+      const data = await purchaseSubscriptionPlan(token, {
+        track: "school",
+        schoolClass: selectedClass,
+        planDurationYears: 1,
+        dummyPaymentStatus: "success",
+        dummyPaymentId: generatedPaymentId,
+      });
+
+      setSelectedSchoolClass(selectedClass);
+      const mergedUser = {
+        ...(user || {}),
+        ...(data.user || {}),
+        subscriptionPurchased: true,
+      };
+      localStorage.setItem("kanthastUser", JSON.stringify(mergedUser));
+      setUser(mergedUser);
+      trackAnalyticsEvent("school_subscription_purchased", {
+        classLevel: selectedClass,
+        amountInr: 5000,
+        paymentId: generatedPaymentId,
+      });
+      setReceipt({
+        paymentId: generatedPaymentId,
+        classLabel,
+        amount: "Rs 5,000",
+        time: new Date().toLocaleString("en-IN"),
+      });
+      setMessage(`${classLabel} course activated successfully.`);
+    } catch (err) {
+      setError(err.message || "Unable to activate school subscription.");
+    } finally {
+      setStatus("idle");
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-[#f7fbff] px-4 py-10 md:px-8">
+      <Helmet>
+        <title>Kanthast School Subscription | Classes I-X</title>
+        <meta
+          name="description"
+          content="Choose a class from I-X and activate Kanthast School annual access for Rs 5,000."
+        />
+      </Helmet>
+
+      <div className="mx-auto max-w-6xl">
+        <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_24px_60px_rgba(15,23,42,0.08)] md:p-8">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-700">Kanthast School plan</p>
+              <h1 className="mt-2 text-3xl font-black text-slate-950 md:text-5xl">
+                Choose class. Pay once. Learn all year.
+              </h1>
+              <p className="mt-3 max-w-2xl text-slate-600">
+                Annual access unlocks the selected class content inside Lists and Dashboard. Each student gets one
+                focused class plan for clean progress tracking.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-cyan-200 bg-cyan-50 px-5 py-4">
+              <p className="text-sm font-semibold text-cyan-800">Current status</p>
+              <p className="mt-1 font-bold text-slate-950">
+                {hasClassSubscription ? `${getSchoolClassLabel(activeClass)} active` : "No School class active"}
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_360px]">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.16em] text-slate-500">Select class</p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+                {schoolClassOptions.map((option) => {
+                  const active = selectedClass === option.value;
+                  return (
+                    <button
+                      key={option.value}
+                      type="button"
+                      onClick={() => selectClass(option.value)}
+                      className={`rounded-xl border px-4 py-3 text-left transition ${
+                        active
+                          ? "border-cyan-400 bg-cyan-50 text-cyan-900 shadow-[0_10px_25px_rgba(8,145,178,0.12)]"
+                          : "border-slate-200 bg-white text-slate-700 hover:border-cyan-200"
+                      }`}
+                    >
+                      <span className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">Class</span>
+                      <p className="mt-1 text-lg font-black">{option.label}</p>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <aside className="rounded-2xl border border-slate-200 bg-slate-950 p-6 text-white">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-300">Annual access</p>
+              <h2 className="mt-3 text-2xl font-black">{classLabel}</h2>
+              <p className="mt-4 text-5xl font-black">Rs 5,000</p>
+              <p className="mt-3 text-sm leading-6 text-slate-300">
+                Unlocks all subjects and class-specific chapters for one academic year.
+              </p>
+              <button
+                type="button"
+                onClick={purchaseSchoolPlan}
+                disabled={status === "loading"}
+                className="mt-6 w-full rounded-xl bg-cyan-500 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-400 disabled:opacity-60"
+              >
+                {status === "loading" ? "Activating..." : "Pay Rs 5,000 and Activate"}
+              </button>
+              <Link to="/courses" className="mt-3 block text-center text-sm font-semibold text-cyan-200 hover:text-white">
+                Review all classes
+              </Link>
+            </aside>
+          </div>
+
+          {message && <p className="mt-5 font-semibold text-emerald-700">{message}</p>}
+          {error && <p className="mt-5 font-semibold text-red-600">{error}</p>}
+          {receipt && (
+            <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-slate-700">
+              <p className="font-bold text-emerald-800">Payment receipt</p>
+              <p className="mt-2">Class: {receipt.classLabel}</p>
+              <p>Amount: {receipt.amount}</p>
+              <p>Transaction: {receipt.paymentId}</p>
+              <p>Time: {receipt.time}</p>
+            </div>
+          )}
+        </section>
+      </div>
     </div>
   );
 }

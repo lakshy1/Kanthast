@@ -5,6 +5,13 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { getMedicineUsmleContent } from "../utils/authApi";
 import { ListsPageSkeleton } from "../components/DataLoaderSkeletons";
 import { useAppSettings } from "../utils/settings";
+import {
+  buildSchoolModules,
+  getSchoolClassLabel,
+  getSelectedSchoolClass,
+  hasPaidForSchoolClass,
+  isSchoolTrack,
+} from "../utils/schoolTrack";
 
 function buildModulesFromApi(content) {
   const moduleMap = {};
@@ -38,7 +45,10 @@ function buildModulesFromApi(content) {
 
 export default function Lists() {
   const settings = useAppSettings();
-  const [activeTab, setActiveTab] = useState("Biochemistry");
+  const schoolMode = isSchoolTrack();
+  const selectedSchoolClass = getSelectedSchoolClass();
+  const selectedSchoolClassLabel = getSchoolClassLabel(selectedSchoolClass);
+  const [activeTab, setActiveTab] = useState(schoolMode ? "Science" : "Biochemistry");
   const [dbModules, setDbModules] = useState({});
   const [catalogLoading, setCatalogLoading] = useState(true);
   const [activeSection, setActiveSection] = useState(null);
@@ -64,11 +74,12 @@ export default function Lists() {
   const MotionSection = motion.section;
 
   const hasSubscription = useMemo(() => {
+    if (schoolMode) return hasPaidForSchoolClass();
     try {
       const user = JSON.parse(localStorage.getItem("kanthastUser") || "null");
       return Boolean(user?.subscriptionPurchased);
     } catch { return false; }
-  }, []);
+  }, [schoolMode]);
 
   useEffect(() => {
     function syncWatched() {
@@ -86,6 +97,10 @@ export default function Lists() {
     (async () => {
       try {
         setCatalogLoading(true);
+        if (schoolMode) {
+          setDbModules(hasPaidForSchoolClass() ? buildSchoolModules(selectedSchoolClass) : {});
+          return;
+        }
         const data = await getMedicineUsmleContent();
         if (!mounted) return;
         setDbModules(buildModulesFromApi(data.content));
@@ -97,7 +112,7 @@ export default function Lists() {
       }
     })();
     return () => { mounted = false; };
-  }, []);
+  }, [schoolMode, selectedSchoolClass]);
 
   const tabs = useMemo(() => Object.keys(dbModules), [dbModules]);
   const activeModule = useMemo(
@@ -252,9 +267,29 @@ export default function Lists() {
           </div>
         ) : !tabs.length ? (
           <div className="rounded-3xl bg-white/80 border border-slate-200 p-8">
-            <p className="text-slate-700 text-lg font-semibold">
-              No courses available yet. Please check back soon or contact support.
-            </p>
+            {schoolMode ? (
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
+                  Kanthast School
+                </p>
+                <h1 className="mt-2 text-3xl font-black text-slate-900">Activate a class to view Lists</h1>
+                <p className="mt-3 max-w-2xl text-slate-600">
+                  Lists show only the content for the class the student has paid for. Choose a class from I-X and
+                  activate the annual plan to unlock subject-wise chapters here.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => navigate("/subscription")}
+                  className="mt-6 rounded-xl bg-slate-950 px-5 py-3 font-bold text-white transition hover:bg-slate-800"
+                >
+                  Choose Class and Subscribe
+                </button>
+              </div>
+            ) : (
+              <p className="text-slate-700 text-lg font-semibold">
+                No courses available yet. Please check back soon or contact support.
+              </p>
+            )}
           </div>
         ) : (
           <div className="lg:flex lg:gap-8 items-start">
@@ -274,7 +309,9 @@ export default function Lists() {
                     onClick={() => setIsSubjectsOpen(true)}
                     className="lg:hidden w-full flex items-center justify-between text-left group"
                   >
-                    <span className="text-2xl font-black text-slate-900 truncate">{activeTab}</span>
+                    <span className="text-2xl font-black text-slate-900 truncate">
+                      {schoolMode ? `${selectedSchoolClassLabel} - ${activeTab}` : activeTab}
+                    </span>
                     <div className="flex items-center gap-1.5 shrink-0 ml-3">
                       <span className="text-lg text-slate-500 font-medium">({activeModule.totalDuration})</span>
                       <FaChevronDown className="text-slate-400 text-xs transition group-hover:text-slate-600" />
@@ -283,7 +320,7 @@ export default function Lists() {
 
                   {/* Desktop: plain title */}
                   <h1 className="hidden lg:block text-4xl md:text-5xl font-black text-slate-900">
-                    {activeTab}{" "}
+                    {schoolMode ? `${selectedSchoolClassLabel} - ${activeTab}` : activeTab}{" "}
                     <span className="text-2xl md:text-4xl text-slate-500 font-medium">({activeModule.totalDuration})</span>
                   </h1>
                 </div>

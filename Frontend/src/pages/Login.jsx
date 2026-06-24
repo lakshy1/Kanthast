@@ -8,6 +8,7 @@ import { trackAnalyticsEvent } from "../utils/settings";
 import { getClientDeviceInfo, requestBrowserLocation } from "../utils/device";
 import { updateCurrentSessionLocation } from "../utils/authApi";
 import EdtechLoader from "./EdtechLoader";
+import { isSchoolTrack, setSelectedSchoolClass } from "../utils/schoolTrack";
 
 const panelVariants = {
   hidden: { opacity: 0, y: 28, scale: 0.98 },
@@ -26,6 +27,7 @@ const itemVariants = {
 
 export default function Login() {
   const navigate = useNavigate();
+  const schoolMode = isSchoolTrack();
   const [form, setForm] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle");
@@ -69,6 +71,7 @@ export default function Login() {
       const data = await login({ ...form, deviceSession: deviceInfo });
       localStorage.setItem("kanthastToken", data.token);
       localStorage.setItem("kanthastUser", JSON.stringify(data.user));
+      if (schoolMode && data.user?.schoolClass) setSelectedSchoolClass(data.user.schoolClass);
       trackAnalyticsEvent("login_success", { userId: data.user?._id });
 
       requestBrowserLocation().then((location) => {
@@ -109,8 +112,8 @@ export default function Login() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)] px-4 py-12 flex items-center justify-center">
       <Helmet>
-        <title>Log In | Existing Users — Kanthast</title>
-        <meta name="description" content="Log in to your Kanthast account to access your USMLE, NEET PG, and INI CET study materials." />
+        <title>{schoolMode ? "School Login | Kanthast" : "Log In | Kanthast"}</title>
+        <meta name="description" content={schoolMode ? "Log in to Kanthast School to continue class-wise visual learning." : "Log in to your Kanthast account to access your USMLE, NEET PG, and INI CET study materials."} />
         <link rel="canonical" href="https://kanthast.in/login" />
       </Helmet>
       <Motion.div
@@ -132,8 +135,9 @@ export default function Login() {
         <Motion.div variants={itemVariants}>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">Welcome Back</p>
           <h2 className="mt-2 text-3xl md:text-4xl font-black text-slate-900">Sign In</h2>
-          <p className="mt-2 text-sm md:text-base text-slate-600">Continue your medical learning journey.</p>
-          <div className="mt-5 h-px w-full bg-gradient-to-r from-cyan-300/0 via-cyan-400/45 to-cyan-300/0" />
+          <p className="mt-2 text-sm md:text-base text-slate-600">
+            {schoolMode ? "Continue your class-wise visual learning journey." : "Continue your medical learning journey."}
+          </p>
         </Motion.div>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">

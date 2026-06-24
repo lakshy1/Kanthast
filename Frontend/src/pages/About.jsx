@@ -28,10 +28,10 @@ export default function About() {
   return (
     <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
       <Helmet>
-        <title>About Kanthast | Rethinking How Medicine Is Learned</title>
+        <title>About Kanthast | Visual Learning That Sticks</title>
         <meta name="description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, NEET PG, and INI CET students." />
         <link rel="canonical" href="https://kanthast.in/about" />
-        <meta property="og:title" content="About Kanthast | Rethinking How Medicine Is Learned" />
+        <meta property="og:title" content="About Kanthast | Visual Learning That Sticks" />
         <meta property="og:description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, NEET PG, and INI CET students." />
         <meta property="og:url" content="https://kanthast.in/about" />
       </Helmet>
@@ -55,11 +55,11 @@ export default function About() {
             className="rounded-3xl border border-white/20 bg-white/10 px-6 py-10 text-center backdrop-blur-2xl shadow-[0_30px_110px_rgba(2,8,23,0.45)] md:px-12"
           >
             <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-black leading-tight">
-              Rethinking How Medicine Is Learned
+              Rethinking How Complex Learning Is Understood
             </motion.h1>
             <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-cyan-100/90">
-              Kanthast transforms complex medical topics into visual reasoning pathways that improve retention,
-              confidence, and exam outcomes.
+              Kanthast turns difficult subjects into visual learning journeys that improve retention,
+              confidence, and real understanding across both medical and school education.
             </motion.p>
           </motion.div>
         </div>
@@ -77,12 +77,12 @@ export default function About() {
             <motion.div variants={fadeUp}>
               <h2 className="text-3xl md:text-5xl font-black text-slate-900">Why We Started Kanthast</h2>
               <p className="mt-4 text-slate-600 text-lg leading-relaxed">
-                Traditional medical learning is overloaded with disconnected facts. We built Kanthast to make learning
-                systems-driven and intuitive, not memorization-heavy.
+                Too much learning still feels fragmented, overwhelming, and memorization-heavy. We built Kanthast to make
+                difficult topics feel structured, visual, and intuitive instead.
               </p>
               <p className="mt-4 text-slate-600 text-lg leading-relaxed">
-                Our animation-first framework helps learners think like clinicians while staying practical and accessible
-                for every serious student.
+                Our animation-first approach helps learners connect ideas faster, whether they are preparing for competitive
+                medical exams or building strong school fundamentals.
               </p>
             </motion.div>
 
@@ -118,8 +118,8 @@ export default function About() {
               Our Learning Philosophy
             </motion.h2>
             <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-center text-lg text-cyan-100/90">
-              Build mental models first. Facts stick better when learners understand mechanisms, patterns, and clinical
-              context.
+              Build mental models first. Facts stick better when learners understand patterns, mechanisms, and context
+              before they try to memorise details.
             </motion.p>
 
             <motion.div variants={stagger} className="mt-10 grid gap-6 md:grid-cols-3">
@@ -129,12 +129,12 @@ export default function About() {
                   desc: "Every lesson is animation-driven to create strong memory anchors.",
                 },
                 {
-                  title: "Exam Focused",
-                  desc: "USMLE, NEET PG, and INI CET priorities are mapped into every module.",
+                  title: "Outcome Focused",
+                  desc: "Every learning experience is designed to improve clarity, confidence, and performance.",
                 },
                 {
-                  title: "Clinical Thinking",
-                  desc: "Learners practice real decision pathways, not passive recall.",
+                  title: "Understanding Over Rote",
+                  desc: "Learners engage with ideas actively instead of relying on passive recall alone.",
                 },
               ].map((item) => (
                 <motion.div
@@ -163,9 +163,9 @@ export default function About() {
         >
           <div className="grid gap-6 rounded-3xl border border-white/60 bg-white/62 p-8 text-center backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:grid-cols-3">
             {[
-              { number: "50K+", label: "Active Students" },
-              { number: "95%", label: "Exam Success Rate" },
-              { number: "1000+", label: "Animated Concepts" },
+              { number: "50K+", label: "Learners Reached" },
+              { number: "95%", label: "Reported Confidence Boost" },
+              { number: "1000+", label: "Visual Learning Moments" },
             ].map((stat) => (
               <motion.div key={stat.label} variants={fadeUp} whileHover={{ y: -6, scale: 1.02 }}>
                 <h3 className="text-4xl font-black text-slate-900">{stat.number}</h3>
@@ -185,7 +185,7 @@ export default function About() {
           className="mx-auto max-w-5xl px-6 md:px-16"
         >
           <div className="rounded-3xl border border-white/60 bg-white/62 p-10 text-center backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)]">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900">Ready to Think Like a Specialist?</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900">Ready to Learn with More Clarity?</h2>
 
             <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-flex">
               <Link

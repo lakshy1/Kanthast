@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Image1 from "../assets/images/Image-3.png";
 import Image2 from "../assets/images/Image-4.png";
 import Image3 from "../assets/images/Image-5.png";
+import { isSchoolTrack, schoolClassOptions, setSelectedSchoolClass } from "../utils/schoolTrack";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 34 },
@@ -28,6 +29,8 @@ const sectionViewport = { once: true, amount: 0.22 };
 
 export default function Courses() {
   const navigate = useNavigate();
+  if (isSchoolTrack()) return <SchoolCourses navigate={navigate} />;
+
   return (
     <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
       <Helmet>
@@ -249,6 +252,113 @@ export default function Courses() {
             </motion.div>
           </div>
         </motion.div>
+      </section>
+    </div>
+  );
+}
+
+function SchoolCourses({ navigate }) {
+  const features = [
+    "Class-wise curriculum for I-X",
+    "Science, Maths, Social Studies and English",
+    "3D visual lessons with checkpoints",
+    "Progress dashboard for every learner",
+  ];
+
+  const handleClassSelect = (classValue) => {
+    setSelectedSchoolClass(classValue);
+    navigate("/subscription");
+  };
+
+  return (
+    <div className="min-h-screen overflow-x-hidden bg-[#f7fbff] text-slate-950">
+      <Helmet>
+        <title>Kanthast School Courses | Classes I-X</title>
+        <meta
+          name="description"
+          content="Explore Kanthast School class-wise learning plans for Classes I-X with visual lessons, quizzes, and progress tracking."
+        />
+        <link rel="canonical" href="https://kanthast.in/courses" />
+      </Helmet>
+
+      <section className="border-b border-slate-200 bg-white">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:px-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-20">
+          <motion.div variants={stagger} initial="hidden" animate="show">
+            <motion.p variants={fadeUp} className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-700">
+              Kanthast School
+            </motion.p>
+            <motion.h1 variants={fadeUp} className="mt-4 text-4xl font-black leading-tight text-slate-950 md:text-6xl">
+              One visual learning plan for every class from I to X.
+            </motion.h1>
+            <motion.p variants={fadeUp} className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+              Choose the student's class, unlock the annual course, and let them learn with visual chapters,
+              checkpoints, and a dashboard that keeps progress visible.
+            </motion.p>
+            <motion.div variants={fadeUp} className="mt-7 flex flex-wrap gap-3">
+              {features.map((item) => (
+                <span key={item} className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700">
+                  {item}
+                </span>
+              ))}
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            className="rounded-2xl border border-slate-200 bg-slate-950 p-6 text-white shadow-[0_24px_70px_rgba(15,23,42,0.18)]"
+          >
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Annual access</p>
+            <div className="mt-4 flex items-end gap-3">
+              <span className="text-5xl font-black">Rs 5,000</span>
+              <span className="pb-2 text-slate-300">per class</span>
+            </div>
+            <p className="mt-4 text-slate-300">
+              Select one class from I-X. The subscription unlocks that class content inside Lists and Dashboard.
+            </p>
+            <button
+              type="button"
+              onClick={() => handleClassSelect("8")}
+              className="mt-6 w-full rounded-xl bg-cyan-500 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-400"
+            >
+              Choose Class and Subscribe
+            </button>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-14 md:px-12">
+        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-700">Class catalogue</p>
+            <h2 className="mt-2 text-3xl font-black text-slate-950 md:text-4xl">Choose the student's class</h2>
+          </div>
+          <p className="max-w-xl text-sm leading-6 text-slate-600">
+            Every class follows the same polished learning system: visual lessons, chapter checks, practice,
+            and progress tracking.
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {schoolClassOptions.map((classOption) => (
+            <motion.button
+              key={classOption.value}
+              type="button"
+              whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => handleClassSelect(classOption.value)}
+              className="rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-[0_14px_35px_rgba(15,23,42,0.06)] transition hover:border-cyan-300"
+            >
+              <span className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Annual plan</span>
+              <h3 className="mt-3 text-2xl font-black text-slate-950">{classOption.label}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">All subjects, all chapters, one class access.</p>
+              <span className="mt-5 inline-flex rounded-xl bg-slate-950 px-4 py-2 text-sm font-bold text-white">
+                Select class
+              </span>
+            </motion.button>
+          ))}
+        </div>
       </section>
     </div>
   );
