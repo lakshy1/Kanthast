@@ -5,7 +5,7 @@ import Image2 from "../assets/images/Image-2.png";
 import Image3 from "../assets/images/Image-3.png";
 import Image4 from "../assets/images/Image-4.png";
 import Image5 from "../assets/images/Image-5.png";
-import { getMedicineUsmleContent } from "../utils/authApi";
+import { getMedicineUsmleContent, getProfile } from "../utils/authApi";
 import {
   FaPlay, FaCheck, FaChartBar, FaBolt,
   FaChevronLeft, FaChevronRight,
@@ -300,6 +300,7 @@ export default function Dashboard() {
   const selectedSchoolClassLabel = getSchoolClassLabel(selectedSchoolClass);
   const [subjects, setSubjects] = useState([]);
   const [contentLoading, setContentLoading] = useState(true);
+  const [profileVersion, setProfileVersion] = useState(0);
 
   const watched = useMemo(() => {
     try { return JSON.parse(localStorage.getItem("kanthastWatched") || "{}"); }
@@ -310,6 +311,24 @@ export default function Dashboard() {
   const dailyQuote = schoolMode
     ? "Small visual wins every day turn hard chapters into confident answers."
     : QUOTES[dailyQuoteIndex];
+
+  useEffect(() => {
+    const token = localStorage.getItem("kanthastToken");
+    if (!token) return;
+
+    let mounted = true;
+    getProfile(token)
+      .then((data) => {
+        if (!mounted || !data.user) return;
+        localStorage.setItem("kanthastUser", JSON.stringify(data.user));
+        setProfileVersion((version) => version + 1);
+      })
+      .catch(() => {});
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
   useEffect(() => {
     let mounted = true;
@@ -330,7 +349,7 @@ export default function Dashboard() {
       }
     })();
     return () => { mounted = false; };
-  }, [schoolMode, selectedSchoolClass]);
+  }, [schoolMode, selectedSchoolClass, profileVersion]);
 
   const { totalVideos, watchedVideos } = useMemo(() => {
     const allIds = subjects.flatMap((s) => s.chapters.flatMap((ch) => ch.videoIds));

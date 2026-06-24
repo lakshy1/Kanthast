@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaRegFileAlt, FaPlay, FaRegImage, FaChevronRight, FaLock, FaThList, FaTimes, FaChevronDown } from "react-icons/fa";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { getMedicineUsmleContent } from "../utils/authApi";
+import { getMedicineUsmleContent, getProfile } from "../utils/authApi";
 import { ListsPageSkeleton } from "../components/DataLoaderSkeletons";
 import { useAppSettings } from "../utils/settings";
 import {
@@ -55,6 +55,7 @@ export default function Lists() {
   const [colHeight, setColHeight] = useState(null);
   const [isSectionsOpen, setIsSectionsOpen] = useState(false);
   const [isSubjectsOpen, setIsSubjectsOpen] = useState(false);
+  const [profileVersion, setProfileVersion] = useState(0);
   const [watched, setWatched] = useState(() => {
     try { return JSON.parse(localStorage.getItem("kanthastWatched") || "{}"); }
     catch { return {}; }
@@ -79,7 +80,25 @@ export default function Lists() {
       const user = JSON.parse(localStorage.getItem("kanthastUser") || "null");
       return Boolean(user?.subscriptionPurchased);
     } catch { return false; }
-  }, [schoolMode]);
+  }, [schoolMode, profileVersion]);
+
+  useEffect(() => {
+    const token = localStorage.getItem("kanthastToken");
+    if (!token) return;
+
+    let mounted = true;
+    getProfile(token)
+      .then((data) => {
+        if (!mounted || !data.user) return;
+        localStorage.setItem("kanthastUser", JSON.stringify(data.user));
+        setProfileVersion((version) => version + 1);
+      })
+      .catch(() => {});
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
   useEffect(() => {
     function syncWatched() {
@@ -112,7 +131,7 @@ export default function Lists() {
       }
     })();
     return () => { mounted = false; };
-  }, [schoolMode, selectedSchoolClass]);
+  }, [schoolMode, selectedSchoolClass, profileVersion]);
 
   const tabs = useMemo(() => Object.keys(dbModules), [dbModules]);
   const activeModule = useMemo(
