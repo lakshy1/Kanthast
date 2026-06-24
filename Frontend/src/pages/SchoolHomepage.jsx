@@ -393,7 +393,7 @@ export default function SchoolHomepage() {
   useEffect(() => {
     const timer = window.setInterval(() => {
       setActivePainIndex((current) => (current + 1) % painSolutions.length);
-    }, 4500);
+    }, 4000);
 
     return () => window.clearInterval(timer);
   }, []);
