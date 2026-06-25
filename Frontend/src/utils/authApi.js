@@ -452,6 +452,50 @@ export async function sendChatMessage(token, payload) {
   return data;
 }
 
+export async function createAiVideoLecture(token, payload) {
+  const response = await apiFetch("/chat/video/generate", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+    body: JSON.stringify(payload),
+  });
+
+  if (response.status === 401) {
+    handleUnauthorized("/chat");
+    throw new Error("Session expired. Please log in again.");
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to start AI video creation");
+  }
+  return data;
+}
+
+export async function getAiVideoLectureStatus(token, jobId) {
+  const response = await apiFetch(`/chat/video/status/${encodeURIComponent(jobId)}`, {
+    method: "GET",
+    headers: {
+      ...getAuthHeaders(token),
+    },
+    credentials: "include",
+  });
+
+  if (response.status === 401) {
+    handleUnauthorized("/chat");
+    throw new Error("Session expired. Please log in again.");
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || "Failed to fetch video generation status");
+  }
+  return data;
+}
+
 export async function uploadChatFile(token, file) {
   const formData = new FormData();
   formData.append("file", file);

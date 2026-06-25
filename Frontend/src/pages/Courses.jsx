@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Image1 from "../assets/images/Image-3.png";
 import Image2 from "../assets/images/Image-4.png";
 import Image3 from "../assets/images/Image-5.png";
-import { isSchoolTrack, schoolClassOptions, setSelectedSchoolClass } from "../utils/schoolTrack";
+import { isSchoolTrack } from "../utils/schoolTrack";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 34 },
@@ -259,16 +259,11 @@ export default function Courses() {
 
 function SchoolCourses({ navigate }) {
   const features = [
-    "Class-wise curriculum for I-X",
-    "Science, Maths, Social Studies and English",
-    "3D visual lessons with checkpoints",
+    "Class-wise curriculum from I-X",
+    "Subject filters with chapter-wise topics",
+    "Notes and video actions for every topic",
     "Progress dashboard for every learner",
   ];
-
-  const handleClassSelect = (classValue) => {
-    setSelectedSchoolClass(classValue);
-    navigate("/subscription");
-  };
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f7fbff] text-slate-950">
@@ -315,49 +310,16 @@ function SchoolCourses({ navigate }) {
               <span className="pb-2 text-slate-300">per class</span>
             </div>
             <p className="mt-4 text-slate-300">
-              Select one class from I-X. The subscription unlocks that class content inside Lists and Dashboard.
+              Use the class selector inside Lists to switch the school catalogue. Subscription unlocks the chosen class content in Lists and Dashboard.
             </p>
             <button
               type="button"
-              onClick={() => handleClassSelect("8")}
+              onClick={() => navigate("/lists")}
               className="mt-6 w-full rounded-xl bg-cyan-500 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-400"
             >
-              Choose Class and Subscribe
+              Open School Lists
             </button>
           </motion.div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-14 md:px-12">
-        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-700">Class catalogue</p>
-            <h2 className="mt-2 text-3xl font-black text-slate-950 md:text-4xl">Choose the student's class</h2>
-          </div>
-          <p className="max-w-xl text-sm leading-6 text-slate-600">
-            Every class follows the same polished learning system: visual lessons, chapter checks, practice,
-            and progress tracking.
-          </p>
-        </div>
-
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {schoolClassOptions.map((classOption) => (
-            <motion.button
-              key={classOption.value}
-              type="button"
-              whileHover={{ y: -4 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => handleClassSelect(classOption.value)}
-              className="rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-[0_14px_35px_rgba(15,23,42,0.06)] transition hover:border-cyan-300"
-            >
-              <span className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Annual plan</span>
-              <h3 className="mt-3 text-2xl font-black text-slate-950">{classOption.label}</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">All subjects, all chapters, one class access.</p>
-              <span className="mt-5 inline-flex rounded-xl bg-slate-950 px-4 py-2 text-sm font-bold text-white">
-                Select class
-              </span>
-            </motion.button>
-          ))}
         </div>
       </section>
     </div>

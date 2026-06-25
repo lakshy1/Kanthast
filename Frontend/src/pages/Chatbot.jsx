@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 import {
   FaBars,
+  FaPlay,
   FaPaperPlane,
   FaPaperclip,
   FaPlus,
@@ -44,6 +46,44 @@ function renderContent(text = "") {
     .replace(/\n{3,}/g, "\n\n")
     .trim();
   return cleaned;
+}
+
+function isVideoMessage(msg = {}) {
+  return Boolean(msg.mediaUrl && String(msg.mediaType || "").startsWith("video"));
+}
+
+function VideoMessageCard({ msg }) {
+  return (
+    <div className="mb-3 overflow-hidden rounded-2xl border border-cyan-200 bg-gradient-to-br from-cyan-50 via-white to-blue-50 shadow-sm">
+      <div className="flex items-center justify-between gap-3 border-b border-cyan-100 px-4 py-3">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan-700">
+            AI Video Lecture
+          </p>
+          <h3 className="mt-1 text-sm font-bold text-slate-900">
+            {msg.topic || "Your lesson"}
+          </h3>
+        </div>
+        <div className="flex items-center gap-1 rounded-full bg-cyan-100 px-2.5 py-1 text-[11px] font-semibold text-cyan-700">
+          <FaPlay size={9} />
+          Playable
+        </div>
+      </div>
+      <div className="p-3">
+        <video
+          className="w-full rounded-xl border border-slate-200 bg-black aspect-video"
+          controls
+          playsInline
+          preload="metadata"
+          poster={msg.thumbnailUrl || ""}
+          src={msg.mediaUrl || ""}
+        >
+          Your browser does not support video playback.
+        </video>
+        {msg.caption && <p className="mt-3 text-sm text-slate-700">{msg.caption}</p>}
+      </div>
+    </div>
+  );
 }
 
 // ─── Typing dots indicator ─────────────────────────────────────────────────
@@ -187,6 +227,7 @@ function useCustomScrollbar(elRef) {
 // ─── Main page ─────────────────────────────────────────────────────────────
 export default function Chatbot() {
   const token = localStorage.getItem("kanthastToken");
+  const location = useLocation();
   const [sessions, setSessions] = useState([]);
   const [activeSessionId, setActiveSessionId] = useState("");
   const [messages, setMessages] = useState([]);
@@ -224,9 +265,10 @@ export default function Chatbot() {
   useEffect(() => {
     let mounted = true;
     if (!token) { setStatus("error"); setError("Login required."); return; }
+    const querySessionId = new URLSearchParams(location.search).get("sessionId") || "";
     (async () => {
       try {
-        const data = await getChatHistory(token);
+        const data = await getChatHistory(token, querySessionId);
         if (!mounted) return;
         setSessions(data.sessions || []);
         setMessages(data.messages || []);
@@ -239,7 +281,7 @@ export default function Chatbot() {
       }
     })();
     return () => { mounted = false; };
-  }, [token]);
+  }, [token, location.search]);
 
   // Scroll to bottom on new message
   useEffect(() => {
@@ -475,7 +517,7 @@ export default function Chatbot() {
                       ? "bg-slate-900 text-white rounded-tr-sm shadow-lg shadow-slate-900/20"
                       : "bg-slate-50 text-slate-800 border border-slate-200 rounded-tl-sm"
                   }`}>
-                    {content}
+                    {!isUser && isVideoMessage(msg) ? <VideoMessageCard msg={msg} /> : content}
                     {msg.fileUrl && (
                       <a
                         href={msg.fileUrl} target="_blank" rel="noreferrer"

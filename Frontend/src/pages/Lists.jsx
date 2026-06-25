@@ -11,6 +11,9 @@ import {
   getSelectedSchoolClass,
   hasPaidForSchoolClass,
   isSchoolTrack,
+  mergeSchoolClassIntoUser,
+  setSelectedSchoolClass,
+  schoolClassOptions,
 } from "../utils/schoolTrack";
 
 function buildModulesFromApi(content) {
@@ -46,7 +49,7 @@ function buildModulesFromApi(content) {
 export default function Lists() {
   const settings = useAppSettings();
   const schoolMode = isSchoolTrack();
-  const selectedSchoolClass = getSelectedSchoolClass();
+  const [selectedSchoolClass, setSelectedSchoolClassState] = useState(() => getSelectedSchoolClass());
   const selectedSchoolClassLabel = getSchoolClassLabel(selectedSchoolClass);
   const [activeTab, setActiveTab] = useState(schoolMode ? "Science" : "Biochemistry");
   const [dbModules, setDbModules] = useState({});
@@ -73,6 +76,8 @@ export default function Lists() {
   const MotionDiv = motion.div;
   const MotionButton = motion.button;
   const MotionSection = motion.section;
+  const isLoggedIn = Boolean(localStorage.getItem("kanthastToken"));
+  const schoolFreeAccessLimit = 10;
 
   const hasSubscription = useMemo(() => {
     if (schoolMode) return hasPaidForSchoolClass();
@@ -117,7 +122,7 @@ export default function Lists() {
       try {
         setCatalogLoading(true);
         if (schoolMode) {
-          setDbModules(hasPaidForSchoolClass() ? buildSchoolModules(selectedSchoolClass) : {});
+          setDbModules(buildSchoolModules(selectedSchoolClass));
           return;
         }
         const data = await getMedicineUsmleContent();
@@ -132,6 +137,11 @@ export default function Lists() {
     })();
     return () => { mounted = false; };
   }, [schoolMode, selectedSchoolClass, profileVersion]);
+
+  useEffect(() => {
+    if (!schoolMode) return;
+    setSelectedSchoolClassState(getSelectedSchoolClass());
+  }, [schoolMode, profileVersion]);
 
   const tabs = useMemo(() => Object.keys(dbModules), [dbModules]);
   const activeModule = useMemo(
@@ -148,6 +158,33 @@ export default function Lists() {
     const sec = activeModule.sections.find((s) => s.id === activeSection);
     return sec?.total ?? "--:--";
   }, [activeModule.sections, activeSection]);
+
+  const schoolFreeAccessKeys = useMemo(() => {
+    if (!schoolMode) return new Set();
+
+    const subjectNames = Object.keys(dbModules);
+    if (!subjectNames.length) return new Set();
+
+    const perSubjectLimit = Math.floor(schoolFreeAccessLimit / subjectNames.length);
+    const remainder = schoolFreeAccessLimit % subjectNames.length;
+    const unlockedKeys = new Set();
+
+    subjectNames.forEach((subjectName, subjectIndex) => {
+      const subject = dbModules[subjectName];
+      const subjectKeys = [];
+
+      for (const section of subject?.sections || []) {
+        for (const lecture of section.lectures || []) {
+          subjectKeys.push(`${section.id}:${lecture.videoId || lecture.title}`);
+        }
+      }
+
+      const subjectLimit = perSubjectLimit + (subjectIndex < remainder ? 1 : 0);
+      subjectKeys.slice(0, subjectLimit).forEach((key) => unlockedKeys.add(key));
+    });
+
+    return unlockedKeys;
+  }, [dbModules, schoolMode]);
 
   useEffect(() => {
     if (!tabs.length) return;
@@ -249,9 +286,84 @@ export default function Lists() {
     navigate(`/${resourceType}?${params.toString()}`);
   };
 
+  const handleSchoolClassChange = (event) => {
+    const nextClass = event.target.value;
+    setSelectedSchoolClass(nextClass);
+    mergeSchoolClassIntoUser(nextClass);
+    setSelectedSchoolClassState(nextClass);
+  };
+
+  const getLectureAccess = (sectionId, lecture, lectureIndex) => {
+    if (!schoolMode) {
+      return {
+        notesLocked: false,
+        videoLocked: !hasSubscription && lectureIndex >= 2,
+        lockedTarget: hasSubscription ? "/subscription" : "/subscription",
+        lockedMessage: "Subscribe to access all the content",
+      };
+    }
+
+    if (hasSubscription) {
+      return {
+        notesLocked: false,
+        videoLocked: false,
+        lockedTarget: "/subscription",
+        lockedMessage: "Subscribe to access all the content",
+      };
+    }
+
+    const accessKey = `${sectionId}:${lecture.videoId || lecture.title}`;
+    const isWithinFreeLimit = schoolFreeAccessKeys.has(accessKey);
+    const lockedTarget = isLoggedIn ? "/subscription" : "/login";
+    const lockedMessage = isLoggedIn
+      ? "Free users can open only the first 10 topics. Subscribe to unlock the rest."
+      : "Log in to open the first 10 free topics.";
+
+    return {
+      notesLocked: !isLoggedIn || !isWithinFreeLimit,
+      videoLocked: !isLoggedIn || !isWithinFreeLimit,
+      lockedTarget,
+      lockedMessage,
+    };
+  };
+
   return (
     <div className={`min-h-screen bg-[radial-gradient(circle_at_10%_20%,_#f5f7ff,_#edf2ff_35%,_#eef4ff_70%)] ${compact ? "px-3 md:px-6 py-6" : "px-4 md:px-8 py-8"}`}>
       <div className="max-w-[1400px] mx-auto">
+        {schoolMode && (
+          <MotionDiv
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className={`rounded-3xl border border-slate-200 bg-white/80 shadow-[0_18px_40px_rgba(15,23,42,0.06)] backdrop-blur ${compact ? "mb-5 p-4" : "mb-6 p-5"}`}
+          >
+            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-700">Kanthast School</p>
+                <h1 className="mt-2 text-2xl font-black text-slate-900 md:text-3xl">Select class and explore subject-wise topics</h1>
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+                  Each subject opens chapter-wise topics with direct Notes and Video actions, matching the Medical lists flow.
+                  Logged-in free users can open the first 10 topics. Full access unlocks after subscription.
+                </p>
+              </div>
+              <label className="block md:min-w-[220px]">
+                <span className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Select class</span>
+                <select
+                  value={selectedSchoolClass}
+                  onChange={handleSchoolClassChange}
+                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base font-semibold text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white"
+                >
+                  {schoolClassOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+          </MotionDiv>
+        )}
+
 
         {/* ── Subject tabs (desktop only — mobile uses bottom sheet pill) ── */}
         <MotionDiv
@@ -286,25 +398,7 @@ export default function Lists() {
           </div>
         ) : !tabs.length ? (
           <div className="rounded-3xl bg-white/80 border border-slate-200 p-8">
-            {schoolMode ? (
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-                  Kanthast School
-                </p>
-                <h1 className="mt-2 text-3xl font-black text-slate-900">Activate a class to view Lists</h1>
-                <p className="mt-3 max-w-2xl text-slate-600">
-                  Lists show only the content for the class the student has paid for. Choose a class from I-X and
-                  activate the annual plan to unlock subject-wise chapters here.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => navigate("/subscription")}
-                  className="mt-6 rounded-xl bg-slate-950 px-5 py-3 font-bold text-white transition hover:bg-slate-800"
-                >
-                  Choose Class and Subscribe
-                </button>
-              </div>
-            ) : (
+            {schoolMode ? null : (
               <p className="text-slate-700 text-lg font-semibold">
                 No courses available yet. Please check back soon or contact support.
               </p>
@@ -364,34 +458,45 @@ export default function Lists() {
                             key={`${sec.id}-${lecture.title}-${lectureIndex}`}
                             className="rounded-2xl px-4 py-3 hover:bg-slate-50 transition-colors duration-300"
                           >
-                            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-                              <div className="min-w-0 pr-2">
-                                <p className="text-sm sm:text-base md:text-[1.35rem] leading-tight font-medium text-slate-800 line-clamp-2">{lecture.title}</p>
-                                <p className="text-sm text-slate-500 mt-1">({lecture.duration})</p>
-                              </div>
-                              <div className="flex items-center gap-1.5 md:gap-2 shrink-0">
-                                <ActionButton
-                                  label="Summary"
-                                  icon={<FaRegFileAlt />}
-                                  onClick={() => openLectureResource("summary", sec.title, lecture)}
-                                />
-                                <ActionButton
-                                  label="Video"
-                                  icon={<FaPlay />}
-                                  locked={!hasSubscription && lectureIndex >= 2}
-                                  watched={Boolean(lecture.videoId && watched[lecture.videoId])}
-                                  onClick={() => openLectureResource("video", sec.title, lecture)}
-                                  onLockedClick={() => navigate("/subscription")}
-                                />
-                                <ActionButton
-                                  label="Photo"
-                                  icon={<FaRegImage />}
-                                  locked={!hasSubscription && lectureIndex >= 2}
-                                  onClick={() => openLectureResource("images", sec.title, lecture)}
-                                  onLockedClick={() => navigate("/subscription")}
-                                />
-                              </div>
-                            </div>
+                            {(() => {
+                              const access = getLectureAccess(sec.id, lecture, lectureIndex);
+                              return (
+                                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                                  <div className="min-w-0 pr-2">
+                                    <p className="text-sm sm:text-base md:text-[1.35rem] leading-tight font-medium text-slate-800 line-clamp-2">{lecture.title}</p>
+                                    <p className="text-sm text-slate-500 mt-1">({lecture.duration})</p>
+                                  </div>
+                                  <div className="flex items-center gap-1.5 md:gap-2 shrink-0">
+                                    <ActionButton
+                                      label={schoolMode ? "Notes" : "Summary"}
+                                      icon={<FaRegFileAlt />}
+                                      locked={access.notesLocked}
+                                      lockedMessage={access.lockedMessage}
+                                      onClick={() => openLectureResource("summary", sec.title, lecture)}
+                                      onLockedClick={() => navigate(access.lockedTarget)}
+                                    />
+                                    <ActionButton
+                                      label="Video"
+                                      icon={<FaPlay />}
+                                      locked={access.videoLocked}
+                                      lockedMessage={access.lockedMessage}
+                                      watched={Boolean(lecture.videoId && watched[lecture.videoId])}
+                                      onClick={() => openLectureResource("video", sec.title, lecture)}
+                                      onLockedClick={() => navigate(access.lockedTarget)}
+                                    />
+                                    {!schoolMode && (
+                                      <ActionButton
+                                        label="Photo"
+                                        icon={<FaRegImage />}
+                                        locked={!hasSubscription && lectureIndex >= 2}
+                                        onClick={() => openLectureResource("images", sec.title, lecture)}
+                                        onLockedClick={() => navigate("/subscription")}
+                                      />
+                                    )}
+                                  </div>
+                                </div>
+                              );
+                            })()}
                           </div>
                         ))}
                       </div>
@@ -607,8 +712,7 @@ export default function Lists() {
   );
 }
 
-function ActionButton({ icon, label, onClick, locked = false, onLockedClick, watched = false }) {
-  const lockedMessage = "Subscribe to access all the content (open subscription page)";
+function ActionButton({ icon, label, onClick, locked = false, onLockedClick, watched = false, lockedMessage = "Subscribe to access all the content" }) {
   return (
     <div className="relative group/lock">
       <motion.button
