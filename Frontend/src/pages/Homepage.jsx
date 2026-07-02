@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaCirclePlay } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import DemoVideoModal from "../components/DemoVideoModal";
 import video1 from "../assets/videos/Video-1.mp4";
 import video2 from "../assets/videos/Video-2.mp4";
 import video3 from "../assets/videos/Kanthast.mp4";
+import demoVideo from "../../resources/Kanthast-demo.mp4";
 import heroImage from "../assets/images/Image-1.png";
 
 // Plays the video once it enters the viewport. src is already set at render
@@ -61,6 +63,7 @@ const Homepage = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const [showDemoVideo, setShowDemoVideo] = useState(false);
 
   const video3Ref = useRef(null);
   const video1Ref = useRef(null);
@@ -140,12 +143,14 @@ const Homepage = () => {
               >
                 Get Started
               </Link>
-              <Link
-                to="/lists"
-                className="border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10 transition"
+              <button
+                type="button"
+                onClick={() => setShowDemoVideo(true)}
+                className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10 transition"
               >
+                <FaCirclePlay />
                 Watch Demo
-              </Link>
+              </button>
             </div>
           </motion.div>
 
@@ -161,7 +166,7 @@ const Homepage = () => {
               muted
               playsInline
               preload="auto"
-              className="w-full h-full object-cover scale-[1.15]"
+              className="w-full h-full object-cover"
               onMouseEnter={() => replayVideo(video3Ref)}
             />
           </motion.div>
@@ -428,6 +433,13 @@ const Homepage = () => {
 
         </div>
       </section>
+
+      <DemoVideoModal
+        open={showDemoVideo}
+        onClose={() => setShowDemoVideo(false)}
+        src={demoVideo}
+        ariaLabel="Kanthast Medical demo video"
+      />
     </div>
   );
 };

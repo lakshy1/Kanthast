@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import DemoVideoModal from "../components/DemoVideoModal";
 import schoolHeroImage from "../assets/images/School-Hero-I.png";
+import demoVideo from "../../resources/Kanthast-demo.mp4";
 import {
   FaArrowRight,
   FaBarsProgress,
@@ -305,15 +307,22 @@ function SectionLabel({ children }) {
 
 function PrimaryButton({ children }) {
   return (
-    <button className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-extrabold text-slate-950 shadow-[0_10px_30px_rgba(245,158,11,0.28)] transition hover:-translate-y-0.5 hover:bg-orange-500">
+    <button
+      type="button"
+      className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-extrabold text-slate-950 shadow-[0_10px_30px_rgba(245,158,11,0.28)] transition hover:-translate-y-0.5 hover:bg-orange-500"
+    >
       {children}
     </button>
   );
 }
 
-function GhostButton({ children }) {
+function GhostButton({ children, ...props }) {
   return (
-    <button className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-slate-50 transition hover:border-amber-300 hover:text-amber-300">
+    <button
+      type="button"
+      className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-slate-50 transition hover:border-amber-300 hover:text-amber-300"
+      {...props}
+    >
       {children}
     </button>
   );
@@ -383,6 +392,7 @@ export default function SchoolHomepage() {
   const [activeTab, setActiveTab] = useState("Science");
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
   const [activePainIndex, setActivePainIndex] = useState(0);
+  const [showDemoVideo, setShowDemoVideo] = useState(false);
   const activeTabContent = tabData[activeTab];
 
   const marqueeTestimonials = useMemo(
@@ -504,8 +514,8 @@ export default function SchoolHomepage() {
                 <PrimaryButton>
                   Start Learning Free <FaArrowRight />
                 </PrimaryButton>
-                <GhostButton>
-                  Watch a Free Lesson <FaCirclePlay />
+                <GhostButton onClick={() => setShowDemoVideo(true)}>
+                  Watch Demo <FaCirclePlay />
                 </GhostButton>
               </div>
 
@@ -650,8 +660,12 @@ export default function SchoolHomepage() {
                           {chapter.classLevel}
                         </span>
                       </div>
-                      <button className="inline-flex items-center gap-2 text-sm font-semibold text-amber-300 transition hover:text-amber-200">
-                        Watch free lesson <FaArrowRight className="text-xs" />
+                      <button
+                        type="button"
+                        onClick={() => setShowDemoVideo(true)}
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-amber-300 transition hover:text-amber-200"
+                      >
+                        Watch Demo <FaArrowRight className="text-xs" />
                       </button>
                     </div>
                   </motion.article>
@@ -1021,6 +1035,13 @@ export default function SchoolHomepage() {
             </motion.div>
           </div>
         </section>
+
+        <DemoVideoModal
+          open={showDemoVideo}
+          onClose={() => setShowDemoVideo(false)}
+          src={demoVideo}
+          ariaLabel="Kanthast School demo video"
+        />
       </div>
     </div>
   );
