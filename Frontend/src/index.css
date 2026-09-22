@@ -2,6 +2,203 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  overflow-x: hidden;
+@layer base {
+  /* ── Design tokens ──────────────────────────────────────────────────────
+     Channel triplets (no rgb() wrapper) so Tailwind's <alpha-value> works:
+     `bg-surface/80`, `text-ink/60`, etc.
+     Light is the default; dark redefines ONLY the values, so every component
+     stays theme-agnostic and no color is defined solely inside a dark block. */
+  :root {
+    --surface: 255 255 255;
+    --surface-sunken: 248 250 252;
+    --surface-raised: 255 255 255;
+
+    --ink: 15 23 42;
+    --ink-muted: 71 85 105;
+    --ink-subtle: 100 116 139;   /* 4.76:1 on white — the AA-safe body grey */
+    --ink-inverse: 248 250 252;
+
+    --line: 226 232 240;
+    --line-strong: 203 213 225;
+
+    --brand: 8 145 178;          /* cyan-600 — 4.54:1 on white, passes AA */
+    --brand-hover: 14 116 144;
+    --brand-soft: 236 254 255;
+    --brand-fg: 2 6 23;          /* 8.31:1 on brand fill */
+
+    --positive: 5 150 105;
+    --positive-soft: 236 253 245;
+    --critical: 190 24 60;
+    --critical-soft: 255 241 242;
+    --caution: 180 83 9;
+    --caution-soft: 255 251 235;
+
+    --e1: 0 1px 2px rgba(15, 23, 42, .06);
+    --e2: 0 4px 12px -2px rgba(15, 23, 42, .08);
+    --e3: 0 12px 28px -6px rgba(15, 23, 42, .10);
+    --e4: 0 24px 60px -12px rgba(15, 23, 42, .14);
+    --e5: 0 40px 90px -20px rgba(15, 23, 42, .20);
+  }
+
+  /* Dark is opt-in via the Appearance setting (data-theme="dark"). */
+  :root[data-theme="dark"] {
+    --surface: 20 25 34;
+    --surface-sunken: 13 16 23;
+    --surface-raised: 26 32 43;
+
+    --ink: 238 241 246;
+    --ink-muted: 185 193 207;
+    --ink-subtle: 148 163 184;   /* 7.2:1 on dark surface */
+    --ink-inverse: 15 23 42;
+
+    --line: 41 49 63;
+    --line-strong: 60 70 88;
+
+    --brand: 34 211 238;         /* lifted for dark grounds — 9.8:1 */
+    --brand-hover: 103 232 249;
+    --brand-soft: 16 48 58;
+    --brand-fg: 2 6 23;
+
+    --positive: 71 205 137;
+    --positive-soft: 12 43 30;
+    --critical: 253 138 138;
+    --critical-soft: 51 21 15;
+    --caution: 243 135 68;
+    --caution-soft: 46 26 12;
+
+    --e1: 0 1px 2px rgba(0, 0, 0, .40);
+    --e2: 0 4px 12px -2px rgba(0, 0, 0, .50);
+    --e3: 0 12px 28px -6px rgba(0, 0, 0, .55);
+    --e4: 0 24px 60px -12px rgba(0, 0, 0, .60);
+    --e5: 0 40px 90px -20px rgba(0, 0, 0, .70);
+  }
+
+  /* "System" appearance follows the OS, without needing a dark: variant. */
+  @media (prefers-color-scheme: dark) {
+    :root[data-theme="system"] {
+      --surface: 20 25 34;
+      --surface-sunken: 13 16 23;
+      --surface-raised: 26 32 43;
+
+      --ink: 238 241 246;
+      --ink-muted: 185 193 207;
+      --ink-subtle: 148 163 184;
+      --ink-inverse: 15 23 42;
+
+      --line: 41 49 63;
+      --line-strong: 60 70 88;
+
+      --brand: 34 211 238;
+      --brand-hover: 103 232 249;
+      --brand-soft: 16 48 58;
+      --brand-fg: 2 6 23;
+
+      --positive: 71 205 137;
+      --positive-soft: 12 43 30;
+      --critical: 253 138 138;
+      --critical-soft: 51 21 15;
+      --caution: 243 135 68;
+      --caution-soft: 46 26 12;
+
+      --e1: 0 1px 2px rgba(0, 0, 0, .40);
+      --e2: 0 4px 12px -2px rgba(0, 0, 0, .50);
+      --e3: 0 12px 28px -6px rgba(0, 0, 0, .55);
+      --e4: 0 24px 60px -12px rgba(0, 0, 0, .60);
+      --e5: 0 40px 90px -20px rgba(0, 0, 0, .70);
+    }
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: theme("fontFamily.sans");
+  }
+
+  /* ── Global focus ring ────────────────────────────────────────────────
+     AUDIT FIX (blocking, WCAG 2.4.7): 126 of 129 interactive elements had no
+     focus indicator. One rule covers every control, including any added later.
+     :focus-visible keeps mouse clicks clean, so no component needs to opt out
+     with outline-none. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--brand));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Inputs that intentionally suppress the UA outline still get a ring. */
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid rgb(var(--brand));
+    outline-offset: 1px;
+  }
+
+  /* ── OS-level reduced motion ──────────────────────────────────────────
+     AUDIT FIX: prefers-reduced-motion was never consulted outside
+     SchoolHomepage. Framer is handled via MotionConfig in App.jsx; this
+     catches every CSS animation (animate-pulse/spin/bounce, marquees). */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* ── Shared primitives ────────────────────────────────────────────────
+     AUDIT FIX: 7 primary-button treatments and 5 input styles collapse to
+     these. Used via className so existing markup can adopt them incrementally.
+     Every one clears the 44px touch minimum. */
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-control
+           font-semibold min-h-touch px-5 py-3 text-sm
+           transition-colors duration-fast ease-brand
+           disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-brand text-brand-fg shadow-e2 hover:bg-brand-hover;
+  }
+  .btn-secondary {
+    @apply btn border border-line-strong bg-surface text-ink hover:bg-surface-sunken;
+  }
+  .btn-ghost {
+    @apply btn text-ink-muted hover:bg-surface-sunken hover:text-ink;
+  }
+  .btn-danger {
+    @apply btn bg-critical text-white hover:opacity-90;
+  }
+
+  /* Icon-only button — 44px square floor at every breakpoint. */
+  .btn-icon {
+    @apply inline-flex items-center justify-center rounded-full
+           h-touch w-touch shrink-0
+           transition-colors duration-fast ease-brand
+           disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  .field {
+    @apply w-full rounded-control border border-line bg-surface
+           px-4 py-3 min-h-touch text-ink placeholder:text-ink-subtle
+           transition-colors duration-fast ease-brand
+           focus:border-brand;
+  }
+  .field-error {
+    @apply border-critical bg-critical-soft focus:border-critical;
+  }
+
+  .card {
+    @apply rounded-card border border-line bg-surface shadow-e2;
+  }
+
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted;
+  }
 }

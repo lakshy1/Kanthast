@@ -1,8 +1,7 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   FaBell,
   FaBookOpen,
-  FaChevronDown,
   FaClock,
   FaDatabase,
   FaLock,
@@ -29,6 +28,7 @@ import {
   updateSettings as updateSettingsApi,
 } from "../utils/authApi";
 import { defaultSettings, readStoredSettings, trackAnalyticsEvent, writeStoredSettings } from "../utils/settings";
+import { Button, Field, LiveRegion, Modal, Select, Toggle } from "../components/ui";
 
 const emptyAccountForm = {
   firstName: "",
@@ -69,42 +69,24 @@ function formatDateTime(value) {
 
 function StatChip({ icon, label, value }) {
   return (
-    <div className="flex items-center gap-2.5 rounded-2xl border border-stone-200 bg-white px-3 py-2.5 shadow-sm min-w-0">
-      <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-stone-100 text-stone-700 text-sm">
+    <div className="flex items-center gap-2.5 rounded-2xl border border-line bg-surface px-3 py-2.5 shadow-e1 min-w-0">
+      <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-surface-sunken text-ink-muted text-sm">
         {icon}
       </span>
       <div className="min-w-0">
-        <p className="text-[10px] uppercase tracking-[0.15em] text-stone-500 truncate">{label}</p>
-        <p className="font-semibold text-stone-900 text-sm truncate">{value}</p>
+        <p className="text-[10px] uppercase tracking-[0.15em] text-ink-subtle truncate">{label}</p>
+        <p className="font-semibold text-ink text-sm truncate">{value}</p>
       </div>
     </div>
   );
 }
 
+/** The 10 preference switches, in the bordered shell the page has always used. */
 function SettingToggle({ label, description, checked, onChange }) {
   return (
-    <button
-      type="button"
-      onClick={() => onChange(!checked)}
-      className="flex w-full items-start justify-between gap-4 rounded-2xl border border-stone-200 bg-white px-4 py-4 text-left transition hover:border-stone-300 hover:bg-stone-50"
-    >
-      <div>
-        <p className="font-semibold text-stone-900">{label}</p>
-        <p className="mt-1 text-sm text-stone-500">{description}</p>
-      </div>
-      <span
-        className={`mt-1 flex h-6 w-11 items-center rounded-full p-0.5 transition ${
-          checked ? "bg-stone-900" : "bg-stone-300"
-        }`}
-        aria-hidden="true"
-      >
-        <span
-          className={`h-5 w-5 rounded-full bg-white shadow transition ${
-            checked ? "translate-x-5" : "translate-x-0"
-          }`}
-        />
-      </span>
-    </button>
+    <div className="rounded-2xl border border-line bg-surface px-4 py-3 transition-colors duration-fast ease-brand hover:bg-surface-sunken">
+      <Toggle label={label} description={description} checked={checked} onChange={onChange} />
+    </div>
   );
 }
 
@@ -112,14 +94,14 @@ function getAccentClasses(accent) {
   switch (accent) {
     case "blue":
       return {
-        shell: "border-blue-100 bg-gradient-to-br from-white via-stone-50 to-blue-50/40",
+        shell: "border-blue-100 bg-gradient-to-br from-surface via-surface-sunken to-blue-50/40",
         icon: "border-blue-100 bg-blue-50 text-blue-700",
         title: "text-blue-950",
         eyebrow: "text-blue-700",
       };
     case "emerald":
       return {
-        shell: "border-emerald-100 bg-gradient-to-br from-white via-stone-50 to-emerald-50/40",
+        shell: "border-emerald-100 bg-gradient-to-br from-surface via-surface-sunken to-emerald-50/40",
         icon: "border-emerald-100 bg-emerald-50 text-emerald-700",
         title: "text-emerald-950",
         eyebrow: "text-emerald-700",
@@ -127,7 +109,7 @@ function getAccentClasses(accent) {
     case "cyan":
     default:
       return {
-        shell: "border-cyan-100 bg-gradient-to-br from-white via-stone-50 to-cyan-50/40",
+        shell: "border-cyan-100 bg-gradient-to-br from-surface via-surface-sunken to-cyan-50/40",
         icon: "border-cyan-100 bg-cyan-50 text-cyan-700",
         title: "text-cyan-950",
         eyebrow: "text-cyan-700",
@@ -139,7 +121,7 @@ function SectionCard({ accent = "cyan", icon, title, description, children, acti
   const accentClasses = getAccentClasses(accent);
   return (
     <section
-      className={`rounded-3xl border p-5 sm:p-6 shadow-[0_18px_50px_rgba(15,23,42,0.06)] ${accentClasses.shell}`}
+      className={`rounded-3xl border p-5 sm:p-6 shadow-e3 ${accentClasses.shell}`}
     >
       <div className="flex items-start gap-3">
         <div className={`grid h-10 w-10 shrink-0 place-items-center rounded-2xl border ${accentClasses.icon}`}>
@@ -150,7 +132,7 @@ function SectionCard({ accent = "cyan", icon, title, description, children, acti
             {accent === "cyan" ? "General" : accent === "blue" ? "Security" : "Privacy"}
           </p>
           <h2 className={`mt-0.5 text-xl sm:text-2xl font-black ${accentClasses.title}`}>{title}</h2>
-          <p className="mt-0.5 text-sm text-stone-500">{description}</p>
+          <p className="mt-0.5 text-sm text-ink-subtle">{description}</p>
         </div>
       </div>
       <div className="mt-4">{children}</div>
@@ -164,19 +146,19 @@ function SectionCard({ accent = "cyan", icon, title, description, children, acti
 function TabButton({ active, accent = "cyan", children, onClick }) {
   const activeClasses =
     accent === "blue"
-      ? "border-blue-200 bg-blue-50 text-blue-950 shadow-sm ring-1 ring-blue-100"
+      ? "border-blue-200 bg-blue-50 text-blue-950 shadow-e1 ring-1 ring-blue-100"
       : accent === "emerald"
-        ? "border-emerald-200 bg-emerald-50 text-emerald-950 shadow-sm ring-1 ring-emerald-100"
-        : "border-cyan-200 bg-cyan-50 text-cyan-950 shadow-sm ring-1 ring-cyan-100";
+        ? "border-emerald-200 bg-emerald-50 text-emerald-950 shadow-e1 ring-1 ring-emerald-100"
+        : "border-cyan-200 bg-cyan-50 text-cyan-950 shadow-e1 ring-1 ring-cyan-100";
 
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`flex items-center justify-center gap-1.5 rounded-2xl px-2 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-semibold transition ${
+      className={`flex min-h-touch items-center justify-center gap-1.5 rounded-2xl px-2 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-semibold transition-colors duration-fast ease-brand ${
         active
           ? activeClasses
-          : "border border-transparent bg-transparent text-stone-500 hover:border-stone-200 hover:bg-white hover:text-stone-900"
+          : "border border-transparent bg-transparent text-ink-subtle hover:border-line hover:bg-surface hover:text-ink"
       }`}
     >
       {children}
@@ -208,131 +190,53 @@ const sectionTabs = [
   },
 ];
 
-function Field({ label, children }) {
-  return (
-    <label className="block">
-      <span className="mb-2 block text-sm font-semibold text-stone-700">{label}</span>
-      {children}
-    </label>
-  );
-}
-
-function CustomSelect({ value, onChange, options, accent = "cyan" }) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef(null);
-
-  useEffect(() => {
-    if (!open) return;
-    const handler = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, [open]);
-
-  const selectedLabel = (() => {
-    const match = options.find((o) => (typeof o === "string" ? o : o.value) === value);
-    return match ? (typeof match === "string" ? match : match.label) : String(value);
-  })();
-
-  const focusRing =
-    accent === "blue" ? "border-blue-400 ring-2 ring-blue-100" :
-    accent === "emerald" ? "border-emerald-400 ring-2 ring-emerald-100" :
-    "border-cyan-400 ring-2 ring-cyan-100";
-
-  const activeOption =
-    accent === "blue" ? "bg-blue-50 text-blue-700 font-semibold" :
-    accent === "emerald" ? "bg-emerald-50 text-emerald-700 font-semibold" :
-    "bg-cyan-50 text-cyan-700 font-semibold";
-
-  const checkColor =
-    accent === "blue" ? "text-blue-500" :
-    accent === "emerald" ? "text-emerald-500" :
-    "text-cyan-500";
-
-  return (
-    <div ref={ref} className="relative">
-      <button
-        type="button"
-        onClick={() => setOpen((p) => !p)}
-        className={`w-full flex items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left text-sm font-medium text-stone-900 transition-all duration-150 ${
-          open ? `bg-white ${focusRing}` : "border-stone-200 bg-stone-50 hover:border-stone-300 hover:bg-white"
-        }`}
-      >
-        <span>{selectedLabel}</span>
-        <FaChevronDown className={`shrink-0 text-stone-400 text-[10px] transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
-      </button>
-
-      {open && (
-        <div className="absolute z-50 top-full mt-1.5 w-full rounded-xl border border-stone-200 bg-white shadow-[0_10px_40px_rgba(15,23,42,0.13)] overflow-hidden">
-          {options.map((opt) => {
-            const optValue = typeof opt === "string" ? opt : opt.value;
-            const optLabel = typeof opt === "string" ? opt : opt.label;
-            const isActive = optValue === value;
-            return (
-              <button
-                key={optValue ?? optLabel}
-                type="button"
-                onClick={() => { onChange(optValue); setOpen(false); }}
-                className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors ${
-                  isActive ? activeOption : "text-stone-700 hover:bg-stone-50 hover:text-stone-900"
-                }`}
-              >
-                <span>{optLabel}</span>
-                {isActive && <span className={`text-xs ${checkColor}`}>✓</span>}
-              </button>
-            );
-          })}
-        </div>
-      )}
-    </div>
-  );
-}
-
 function SessionCard({ session, onLogout, revokingSessionId }) {
   const isThisDevice = Boolean(session.isCurrent);
   const isActive = Boolean(session.isActive);
 
   return (
-    <div className="rounded-2xl border border-stone-200 bg-white px-4 py-4">
+    <div className="rounded-2xl border border-line bg-surface px-4 py-4">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="space-y-1">
           <div className="flex flex-wrap items-center gap-2">
-            <p className="font-semibold text-stone-900">{session.deviceName}</p>
+            <p className="font-semibold text-ink">{session.deviceName}</p>
             {isThisDevice && (
               <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-emerald-700">
                 This device
               </span>
             )}
             {!isActive && (
-              <span className="rounded-full bg-stone-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-stone-500">
+              <span className="rounded-full bg-surface-sunken px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-subtle">
                 Signed out
               </span>
             )}
           </div>
-          <p className="text-sm text-stone-500">
+          <p className="text-sm text-ink-subtle">
             {session.browserName} on {session.osName}
           </p>
-          <p className="text-sm text-stone-500">
+          <p className="text-sm text-ink-subtle">
             IP: {session.ipAddress || "-"} | Location: {session.locationLabel || "Unknown"}
           </p>
-          <p className="text-sm text-stone-500">
+          <p className="text-sm text-ink-subtle">
             Logged in: {formatDateTime(session.startedAt)} | Last seen: {formatDateTime(session.lastSeenAt)}
           </p>
         </div>
 
         <div className="flex flex-col items-end gap-2">
           <div className="text-right">
-            <p className="text-xs uppercase tracking-[0.16em] text-stone-400">Session ID</p>
-            <p className="text-sm font-mono text-stone-700">{session.sessionId}</p>
+            <p className="text-xs uppercase tracking-[0.16em] text-ink-subtle">Session ID</p>
+            <p className="text-sm font-mono text-ink-muted">{session.sessionId}</p>
           </div>
           {!isThisDevice && isActive && (
-            <button
-              type="button"
+            <Button
+              variant="secondary"
               onClick={() => onLogout(session.sessionId)}
               disabled={revokingSessionId === session.sessionId}
-              className="rounded-lg border border-stone-200 bg-stone-50 px-3 py-2 text-sm font-semibold text-stone-700 hover:bg-stone-100 disabled:opacity-60"
+              loading={revokingSessionId === session.sessionId}
+              loadingText="Logging out..."
             >
-              {revokingSessionId === session.sessionId ? "Logging out..." : "Logout"}
-            </button>
+              Logout
+            </Button>
           )}
         </div>
       </div>
@@ -370,6 +274,11 @@ export default function Settings() {
   const [preferences, setPreferences] = useState(readStoredSettings());
   const [savedPreferences, setSavedPreferences] = useState(readStoredSettings());
   const [deleteConfirm, setDeleteConfirm] = useState("");
+  // Inline field errors, so validation is not toast-only (announced + painted).
+  const [passwordErrors, setPasswordErrors] = useState({});
+  const [deleteError, setDeleteError] = useState("");
+  const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   useEffect(() => {
     let mounted = true;
@@ -540,39 +449,56 @@ export default function Settings() {
     if (!token) return;
 
     if (!passwordForm.currentPassword || !passwordForm.newPassword || !passwordForm.confirmNewPassword) {
+      setPasswordErrors({
+        currentPassword: passwordForm.currentPassword ? "" : "Required",
+        newPassword: passwordForm.newPassword ? "" : "Required",
+        confirmNewPassword: passwordForm.confirmNewPassword ? "" : "Required",
+      });
+      setStatusMessage("Fill in all password fields");
       toast.error("Fill in all password fields");
       return;
     }
 
     if (passwordForm.newPassword !== passwordForm.confirmNewPassword) {
+      setPasswordErrors({ confirmNewPassword: "New passwords do not match" });
+      setStatusMessage("New passwords do not match");
       toast.error("New passwords do not match");
       return;
     }
 
+    setPasswordErrors({});
     setChangingPassword(true);
     try {
       await changePasswordApi(token, passwordForm);
       setPasswordForm(emptyPasswordForm);
+      setStatusMessage("Password changed successfully");
       toast.success("Password changed successfully");
     } catch (error) {
+      setPasswordErrors({ currentPassword: error.message || "Failed to change password" });
+      setStatusMessage(error.message || "Failed to change password");
       toast.error(error.message || "Failed to change password");
     } finally {
       setChangingPassword(false);
     }
   };
 
-  const handleDeleteAccount = async () => {
+  // Opens the confirmation dialog; the destructive work happens on confirm.
+  const handleDeleteAccount = () => {
     if (!token) return;
     if (deleteDisabled) {
+      setDeleteError("Type your email to confirm deletion");
+      setStatusMessage("Type your email to confirm deletion");
       toast.error("Type your email to confirm deletion");
       return;
     }
+    setDeleteError("");
+    setDeleteModalOpen(true);
+  };
 
-    const confirmed = window.confirm(
-      "This will permanently delete your account, profile, and login access. This action cannot be undone."
-    );
-    if (!confirmed) return;
+  const confirmDeleteAccount = async () => {
+    if (!token || deleteDisabled) return;
 
+    setDeleteModalOpen(false);
     setDeletingAccount(true);
     try {
       await deleteAccountApi(token);
@@ -597,12 +523,12 @@ export default function Settings() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-stone-50 px-4 py-10">
+      <div className="min-h-screen bg-surface-sunken px-4 py-10">
         <div className="mx-auto max-w-6xl space-y-4">
-          <div className="h-40 rounded-3xl border border-stone-200 bg-white animate-pulse" />
+          <div className="h-40 rounded-3xl border border-line bg-surface animate-pulse" />
           <div className="grid gap-4 lg:grid-cols-2">
-            <div className="h-64 rounded-3xl border border-stone-200 bg-white animate-pulse" />
-            <div className="h-64 rounded-3xl border border-stone-200 bg-white animate-pulse" />
+            <div className="h-64 rounded-3xl border border-line bg-surface animate-pulse" />
+            <div className="h-64 rounded-3xl border border-line bg-surface animate-pulse" />
           </div>
         </div>
       </div>
@@ -610,20 +536,21 @@ export default function Settings() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 px-4 py-8 md:px-8">
+    <div className="min-h-screen bg-surface-sunken px-4 py-8 md:px-8">
+      <LiveRegion message={statusMessage} />
       <div className="mx-auto max-w-7xl">
-        <section className="overflow-hidden rounded-3xl border border-cyan-100 bg-gradient-to-br from-white via-stone-50 to-cyan-50/40 p-6 shadow-[0_22px_60px_rgba(15,23,42,0.06)] md:p-8">
+        <section className="overflow-hidden rounded-3xl border border-cyan-100 bg-gradient-to-br from-surface via-surface-sunken to-cyan-50/40 p-6 shadow-e3 md:p-8">
           <div className="flex flex-wrap items-center justify-between gap-5">
             <div className="flex items-center gap-4">
-              <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-cyan-600 to-blue-700 text-lg font-black text-white shadow-lg shadow-cyan-200/60">
+              <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-cyan-600 to-blue-700 text-lg font-black text-white shadow-e3">
                 {initials}
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700">Account settings</p>
-                <h1 className="mt-1 text-2xl font-black text-stone-900 md:text-4xl">
+                <h1 className="mt-1 text-2xl font-black text-ink md:text-4xl">
                   {user?.firstName || "Your"} settings
                 </h1>
-                <p className="mt-1 text-sm text-stone-500 hidden sm:block">
+                <p className="mt-1 text-sm text-ink-subtle hidden sm:block">
                   Manage account details, password, sessions, privacy, and learning preferences.
                 </p>
               </div>
@@ -632,21 +559,21 @@ export default function Settings() {
             <div className="hidden sm:flex flex-wrap gap-3">
               <Link
                 to="/profile"
-                className="inline-flex items-center gap-2 rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-700 hover:bg-stone-100"
+                className="inline-flex min-h-touch items-center gap-2 rounded-xl border border-line bg-surface-sunken px-4 py-2.5 text-sm text-ink-muted transition-colors duration-fast ease-brand hover:bg-surface"
               >
                 <FaUserCircle />
                 Profile
               </Link>
               <Link
                 to="/subscription"
-                className="inline-flex items-center gap-2 rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-700 hover:bg-stone-100"
+                className="inline-flex min-h-touch items-center gap-2 rounded-xl border border-line bg-surface-sunken px-4 py-2.5 text-sm text-ink-muted transition-colors duration-fast ease-brand hover:bg-surface"
               >
                 <FaBookOpen />
                 Subscription
               </Link>
               <Link
                 to="/chatbot"
-                className="inline-flex items-center gap-2 rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-700 hover:bg-stone-100"
+                className="inline-flex min-h-touch items-center gap-2 rounded-xl border border-line bg-surface-sunken px-4 py-2.5 text-sm text-ink-muted transition-colors duration-fast ease-brand hover:bg-surface"
               >
                 <FaRobot />
                 Chatbot
@@ -664,7 +591,7 @@ export default function Settings() {
           </div>
         </section>
 
-        <div className="sticky top-4 z-20 mt-4 overflow-hidden rounded-3xl border border-stone-200 bg-white/90 p-2 shadow-lg backdrop-blur-xl">
+        <div className="sticky top-4 z-20 mt-4 overflow-hidden rounded-3xl border border-line bg-surface/90 p-2 shadow-e3 backdrop-blur-xl">
           <div className="grid gap-2 grid-cols-3">
             {sectionTabs.map((tab) => (
               <TabButton
@@ -681,7 +608,7 @@ export default function Settings() {
                         : tab.accent === "blue"
                           ? "bg-blue-100 text-blue-700"
                           : "bg-emerald-100 text-emerald-700"
-                      : "bg-stone-100 text-stone-700"
+                      : "bg-surface-sunken text-ink-muted"
                   }`}
                 >
                   {tab.icon}
@@ -696,7 +623,7 @@ export default function Settings() {
                           : tab.accent === "blue"
                             ? "text-blue-700"
                             : "text-emerald-700"
-                        : "text-stone-500"
+                        : "text-ink-subtle"
                     }`}
                   >
                     {tab.subtitle}
@@ -716,52 +643,51 @@ export default function Settings() {
                 title="Account basics"
                 description="Update the login and identity details used across the platform."
                 actions={
-                  <button
-                    type="button"
+                  <Button
+                    fullWidth
                     onClick={saveAccount}
                     disabled={!hasAccountChanges || savingAccount}
-                    className="w-full rounded-xl bg-stone-900 py-3 text-sm font-semibold text-white disabled:opacity-60 transition hover:bg-stone-800"
+                    loading={savingAccount}
+                    loadingText="Saving..."
                   >
-                    {savingAccount ? "Saving..." : "Save account"}
-                  </button>
+                    Save account
+                  </Button>
                 }
               >
                 <form onSubmit={saveAccount} className="grid gap-4 md:grid-cols-2">
-                  <Field label="First name">
-                    <input
-                      value={accountForm.firstName}
-                      onChange={(e) => setAccountForm((prev) => ({ ...prev, firstName: e.target.value }))}
-                      className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 outline-none focus:border-stone-400"
-                      placeholder="First name"
-                    />
-                  </Field>
-                  <Field label="Last name">
-                    <input
-                      value={accountForm.lastName}
-                      onChange={(e) => setAccountForm((prev) => ({ ...prev, lastName: e.target.value }))}
-                      className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 outline-none focus:border-stone-400"
-                      placeholder="Last name"
-                    />
-                  </Field>
-                  <Field label="Email address">
-                    <input
-                      type="email"
-                      value={accountForm.email}
-                      onChange={(e) => setAccountForm((prev) => ({ ...prev, email: e.target.value }))}
-                      className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 outline-none focus:border-stone-400"
-                      placeholder="Email address"
-                    />
-                  </Field>
-                  <Field label="Contact number">
-                    <input
-                      value={accountForm.contactNumber}
-                      onChange={(e) => setAccountForm((prev) => ({ ...prev, contactNumber: e.target.value }))}
-                      className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 outline-none focus:border-stone-400"
-                      placeholder="Contact number"
-                    />
-                  </Field>
+                  <Field
+                    label="First name"
+                    value={accountForm.firstName}
+                    onChange={(e) => setAccountForm((prev) => ({ ...prev, firstName: e.target.value }))}
+                    placeholder="First name"
+                    autoComplete="given-name"
+                  />
+                  <Field
+                    label="Last name"
+                    value={accountForm.lastName}
+                    onChange={(e) => setAccountForm((prev) => ({ ...prev, lastName: e.target.value }))}
+                    placeholder="Last name"
+                    autoComplete="family-name"
+                  />
+                  <Field
+                    label="Email address"
+                    type="email"
+                    value={accountForm.email}
+                    onChange={(e) => setAccountForm((prev) => ({ ...prev, email: e.target.value }))}
+                    placeholder="Email address"
+                    autoComplete="email"
+                  />
+                  <Field
+                    label="Contact number"
+                    type="tel"
+                    inputMode="tel"
+                    value={accountForm.contactNumber}
+                    onChange={(e) => setAccountForm((prev) => ({ ...prev, contactNumber: e.target.value }))}
+                    placeholder="Contact number"
+                    autoComplete="tel"
+                  />
                 </form>
-                <p className="mt-4 text-sm text-stone-500">
+                <p className="mt-4 text-sm text-ink-subtle">
                   Bio, gender, and date of birth are still available on your profile page.
                 </p>
               </SectionCard>
@@ -772,14 +698,15 @@ export default function Settings() {
                 title="Notifications"
                 description="Choose how Kanthast reaches you about learning and account activity."
                 actions={
-                  <button
-                    type="button"
+                  <Button
+                    fullWidth
                     onClick={savePreferences}
                     disabled={!hasPreferenceChanges || savingPreferences}
-                    className="w-full rounded-xl bg-stone-900 py-3 text-sm font-semibold text-white disabled:opacity-60 transition hover:bg-stone-800"
+                    loading={savingPreferences}
+                    loadingText="Saving..."
                   >
-                    {savingPreferences ? "Saving..." : "Save preferences"}
-                  </button>
+                    Save preferences
+                  </Button>
                 }
               >
                 <div className="grid gap-4 md:grid-cols-2">
@@ -823,42 +750,34 @@ export default function Settings() {
                 description="Tune the experience to match how you like to study."
               >
                 <div className="grid gap-4 md:grid-cols-2">
-                  <Field label="Language">
-                    <CustomSelect
-                      value={preferences.language}
-                      onChange={(val) => setPreferences((prev) => ({ ...prev, language: val }))}
-                      options={["English", "Hindi", "Spanish"]}
-                      accent="cyan"
-                    />
-                  </Field>
-                  <Field label="Appearance">
-                    <CustomSelect
-                      value={preferences.appearance}
-                      onChange={(val) => setPreferences((prev) => ({ ...prev, appearance: val }))}
-                      options={["System", "Light", "Dark"]}
-                      accent="cyan"
-                    />
-                  </Field>
-                  <Field label="Default playback speed">
-                    <CustomSelect
-                      value={preferences.defaultPlaybackSpeed}
-                      onChange={(val) => setPreferences((prev) => ({ ...prev, defaultPlaybackSpeed: val }))}
-                      options={["1x", "1.25x", "1.5x", "2x"]}
-                      accent="cyan"
-                    />
-                  </Field>
-                  <Field label="Profile visibility">
-                    <CustomSelect
-                      value={preferences.profileVisibility}
-                      onChange={(val) => setPreferences((prev) => ({ ...prev, profileVisibility: val }))}
-                      options={[
-                        { value: "public", label: "Public" },
-                        { value: "enrolled", label: "Enrolled learners only" },
-                        { value: "private", label: "Private" },
-                      ]}
-                      accent="cyan"
-                    />
-                  </Field>
+                  <Select
+                    label="Language"
+                    value={preferences.language}
+                    onChange={(val) => setPreferences((prev) => ({ ...prev, language: val }))}
+                    options={["English", "Hindi", "Spanish"]}
+                  />
+                  <Select
+                    label="Appearance"
+                    value={preferences.appearance}
+                    onChange={(val) => setPreferences((prev) => ({ ...prev, appearance: val }))}
+                    options={["System", "Light", "Dark"]}
+                  />
+                  <Select
+                    label="Default playback speed"
+                    value={preferences.defaultPlaybackSpeed}
+                    onChange={(val) => setPreferences((prev) => ({ ...prev, defaultPlaybackSpeed: val }))}
+                    options={["1x", "1.25x", "1.5x", "2x"]}
+                  />
+                  <Select
+                    label="Profile visibility"
+                    value={preferences.profileVisibility}
+                    onChange={(val) => setPreferences((prev) => ({ ...prev, profileVisibility: val }))}
+                    options={[
+                      { value: "public", label: "Public" },
+                      { value: "enrolled", label: "Enrolled learners only" },
+                      { value: "private", label: "Private" },
+                    ]}
+                  />
                 </div>
 
                 <div className="mt-4 grid gap-4 md:grid-cols-2">
@@ -899,46 +818,47 @@ export default function Settings() {
                 title="Password and security"
                 description="Change your password and keep your login secure."
                 actions={
-                  <button
-                    type="button"
+                  <Button
+                    fullWidth
                     onClick={changePassword}
                     disabled={changingPassword}
-                    className="w-full rounded-xl bg-stone-900 py-3 text-sm font-semibold text-white disabled:opacity-60 transition hover:bg-stone-800"
+                    loading={changingPassword}
+                    loadingText="Updating..."
                   >
-                    {changingPassword ? "Updating..." : "Change password"}
-                  </button>
+                    Change password
+                  </Button>
                 }
               >
                 <form onSubmit={changePassword} className="grid gap-4 md:grid-cols-3">
-                  <Field label="Current password">
-                    <input
-                      type="password"
-                      value={passwordForm.currentPassword}
-                      onChange={(e) => setPasswordForm((prev) => ({ ...prev, currentPassword: e.target.value }))}
-                      className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 outline-none focus:border-stone-400"
-                      placeholder="Current password"
-                    />
-                  </Field>
-                  <Field label="New password">
-                    <input
-                      type="password"
-                      value={passwordForm.newPassword}
-                      onChange={(e) => setPasswordForm((prev) => ({ ...prev, newPassword: e.target.value }))}
-                      className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 outline-none focus:border-stone-400"
-                      placeholder="New password"
-                    />
-                  </Field>
-                  <Field label="Confirm new password">
-                    <input
-                      type="password"
-                      value={passwordForm.confirmNewPassword}
-                      onChange={(e) =>
-                        setPasswordForm((prev) => ({ ...prev, confirmNewPassword: e.target.value }))
-                      }
-                      className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 outline-none focus:border-stone-400"
-                      placeholder="Confirm new password"
-                    />
-                  </Field>
+                  <Field
+                    label="Current password"
+                    type="password"
+                    value={passwordForm.currentPassword}
+                    onChange={(e) => setPasswordForm((prev) => ({ ...prev, currentPassword: e.target.value }))}
+                    placeholder="Current password"
+                    autoComplete="current-password"
+                    error={passwordErrors.currentPassword}
+                  />
+                  <Field
+                    label="New password"
+                    type="password"
+                    value={passwordForm.newPassword}
+                    onChange={(e) => setPasswordForm((prev) => ({ ...prev, newPassword: e.target.value }))}
+                    placeholder="New password"
+                    autoComplete="new-password"
+                    error={passwordErrors.newPassword}
+                  />
+                  <Field
+                    label="Confirm new password"
+                    type="password"
+                    value={passwordForm.confirmNewPassword}
+                    onChange={(e) =>
+                      setPasswordForm((prev) => ({ ...prev, confirmNewPassword: e.target.value }))
+                    }
+                    placeholder="Confirm new password"
+                    autoComplete="new-password"
+                    error={passwordErrors.confirmNewPassword}
+                  />
                 </form>
               </SectionCard>
 
@@ -948,35 +868,38 @@ export default function Settings() {
                 title="Active sessions"
                 description="See where your account is logged in and revoke other devices."
                 actions={
-                  <button
-                    type="button"
+                  <Button
+                    fullWidth
                     onClick={handleLogoutOtherSessions}
                     disabled={revokingOtherSessions}
-                    className="w-full rounded-xl bg-stone-900 py-3 text-sm font-semibold text-white disabled:opacity-60 transition hover:bg-stone-800"
+                    loading={revokingOtherSessions}
+                    loadingText="Logging out..."
                   >
-                    {revokingOtherSessions ? "Logging out..." : "Logout other sessions"}
-                  </button>
+                    Logout other sessions
+                  </Button>
                 }
               >
                 <div className="grid gap-3">
-                  <div className="flex items-center justify-between gap-3 rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 text-sm text-stone-600">
+                  <div className="flex items-center justify-between gap-3 rounded-2xl border border-line bg-surface-sunken px-4 py-3 text-sm text-ink-muted">
                     <div className="flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-stone-700" />
+                      <FaMapMarkerAlt className="text-ink-muted" aria-hidden="true" />
                       <span>
                         Location accuracy is based on GPS when allowed, otherwise IP-based location is shown.
                       </span>
                     </div>
-                    <button
-                      type="button"
+                    <Button
+                      variant="secondary"
                       onClick={refreshSessions}
-                      className="rounded-lg border border-stone-200 bg-white px-3 py-2 font-semibold text-stone-700 hover:bg-stone-100"
+                      disabled={loadingSessions}
+                      loading={loadingSessions}
+                      loadingText="Refreshing..."
                     >
                       Refresh
-                    </button>
+                    </Button>
                   </div>
 
                   {loadingSessions ? (
-                    <div className="rounded-2xl border border-stone-200 bg-white px-4 py-4 text-sm text-stone-500">
+                    <div className="rounded-2xl border border-line bg-surface px-4 py-4 text-sm text-ink-subtle">
                       Loading sessions...
                     </div>
                   ) : sessions.length ? (
@@ -989,7 +912,7 @@ export default function Settings() {
                       />
                     ))
                   ) : (
-                    <div className="rounded-2xl border border-stone-200 bg-white px-4 py-4 text-sm text-stone-500">
+                    <div className="rounded-2xl border border-line bg-surface px-4 py-4 text-sm text-ink-subtle">
                       No session data available yet.
                     </div>
                   )}
@@ -1013,9 +936,9 @@ export default function Settings() {
                     checked={preferences.analyticsSharing}
                     onChange={(value) => setPreferences((prev) => ({ ...prev, analyticsSharing: value }))}
                   />
-                  <div className="rounded-2xl border border-stone-200 bg-stone-50 px-4 py-4">
-                    <p className="font-semibold text-stone-900">Subscription state</p>
-                    <p className="mt-1 text-sm text-stone-500">
+                  <div className="rounded-2xl border border-line bg-surface-sunken px-4 py-4">
+                    <p className="font-semibold text-ink">Subscription state</p>
+                    <p className="mt-1 text-sm text-ink-subtle">
                       {subscriptionPurchased
                         ? `Active until ${formatDate(user?.subscriptionValidTill)}`
                         : "No active subscription"}
@@ -1030,17 +953,17 @@ export default function Settings() {
                 title="Privacy mode"
                 description="Control how much of your account is visible on your profile."
               >
-                <div className="rounded-3xl border border-stone-200 bg-stone-50 p-5">
+                <div className="rounded-3xl border border-line bg-surface-sunken p-5">
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <div>
                       <div className="flex items-center gap-2">
-                        <FaMapMarkerAlt className="text-stone-700" />
-                        <h3 className="text-lg font-bold text-stone-900">Current visibility</h3>
+                        <FaMapMarkerAlt className="text-ink-muted" aria-hidden="true" />
+                        <h3 className="text-lg font-bold text-ink">Current visibility</h3>
                       </div>
-                      <p className="mt-1 text-sm text-stone-500">{visibilityLabel}</p>
+                      <p className="mt-1 text-sm text-ink-subtle">{visibilityLabel}</p>
                     </div>
                   </div>
-                  <p className="mt-4 text-sm text-stone-500">
+                  <p className="mt-4 text-sm text-ink-subtle">
                     Email, phone, and profile details are masked where privacy mode is restrictive.
                   </p>
                 </div>
@@ -1052,32 +975,42 @@ export default function Settings() {
                 title="Delete account"
                 description="Permanently remove your account, login, profile, and access to the platform."
               >
-                <div className="rounded-3xl border border-stone-200 bg-stone-50 p-5">
+                <div className="rounded-3xl border border-line bg-surface-sunken p-5">
                   <div className="flex items-start gap-4">
-                    <div className="grid h-11 w-11 place-items-center rounded-2xl border border-stone-200 bg-white text-stone-700">
-                      <FaTrash />
+                    <div className="grid h-11 w-11 place-items-center rounded-2xl border border-line bg-surface text-ink-muted">
+                      <FaTrash aria-hidden="true" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-stone-900">Delete account</h3>
-                      <p className="mt-1 text-sm text-stone-500">
+                      <h3 className="text-lg font-bold text-ink">Delete account</h3>
+                      <p className="mt-1 text-sm text-ink-subtle">
                         Permanently remove your account, login, profile, and access to the platform.
                       </p>
-                      <div className="mt-4 grid gap-3 md:grid-cols-[1fr_auto]">
-                        <input
+                      <div className="mt-4 grid gap-3 md:grid-cols-[1fr_auto] md:items-end">
+                        <Field
+                          label="Confirm with your email address"
+                          type="email"
                           value={deleteConfirm}
-                          onChange={(e) => setDeleteConfirm(e.target.value)}
+                          onChange={(e) => {
+                            setDeleteConfirm(e.target.value);
+                            if (deleteError) setDeleteError("");
+                          }}
                           placeholder="Type your email to confirm"
-                          className="w-full rounded-xl border border-stone-200 bg-white px-4 py-3 outline-none focus:border-stone-400"
+                          autoComplete="email"
+                          hint="This permanently deletes your account. It cannot be undone."
+                          error={deleteError}
                         />
-                        <button
-                          type="button"
+                        <Button
+                          variant="danger"
                           onClick={handleDeleteAccount}
                           disabled={deletingAccount || deleteDisabled}
-                          className="inline-flex items-center justify-center gap-2 rounded-xl bg-stone-900 px-5 py-3 font-semibold text-white disabled:opacity-60"
+                          loading={deletingAccount}
+                          loadingText="Deleting..."
                         >
-                          <FaSignOutAlt />
-                          {deletingAccount ? "Deleting..." : "Delete account"}
-                        </button>
+                          <span className="inline-flex items-center gap-2">
+                            <FaSignOutAlt aria-hidden="true" />
+                            Delete account
+                          </span>
+                        </Button>
                       </div>
                     </div>
                   </div>
@@ -1087,6 +1020,29 @@ export default function Settings() {
           )}
         </div>
       </div>
+
+      <Modal
+        open={deleteModalOpen}
+        onClose={() => setDeleteModalOpen(false)}
+        title="Delete your account?"
+        description="This will permanently delete your account, profile, and login access. This action cannot be undone."
+        size="sm"
+        footer={
+          <div className="flex flex-wrap justify-end gap-3">
+            <Button variant="secondary" onClick={() => setDeleteModalOpen(false)}>
+              Cancel
+            </Button>
+            <Button variant="danger" onClick={confirmDeleteAccount} disabled={deletingAccount}>
+              Delete account
+            </Button>
+          </div>
+        }
+      >
+        <p className="text-sm text-ink-muted">
+          Everything tied to {user?.email || "this account"} will be removed, including your profile,
+          saved progress, and subscription access.
+        </p>
+      </Modal>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import Markdown from "../components/Markdown";
 import {
   FaBars,
   FaPlay,
@@ -512,12 +513,22 @@ export default function Chatbot() {
 
                 {/* Bubble */}
                 <div className={`max-w-[78%] md:max-w-[70%] ${isUser ? "items-end" : "items-start"} flex flex-col gap-1`}>
-                  <div className={`px-4 py-3 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap ${
+                  {/* Hierarchy: the assistant's ANSWER carries the visual
+                      weight (raised surface + shadow). It was previously
+                      bg-slate-50 on an off-white page — near-invisible —
+                      while the user's own message was the heaviest element. */}
+                  <div className={`px-4 py-3 rounded-card text-sm leading-relaxed ${
                     isUser
-                      ? "bg-slate-900 text-white rounded-tr-sm shadow-lg shadow-slate-900/20"
-                      : "bg-slate-50 text-slate-800 border border-slate-200 rounded-tl-sm"
+                      ? "bg-surface-sunken text-ink border border-line rounded-tr-sm"
+                      : "bg-surface text-ink border border-line shadow-e2 rounded-tl-sm"
                   }`}>
-                    {!isUser && isVideoMessage(msg) ? <VideoMessageCard msg={msg} /> : content}
+                    {!isUser && isVideoMessage(msg) ? (
+                      <VideoMessageCard msg={msg} />
+                    ) : isUser ? (
+                      <span className="whitespace-pre-wrap">{content}</span>
+                    ) : (
+                      <Markdown>{content}</Markdown>
+                    )}
                     {msg.fileUrl && (
                       <a
                         href={msg.fileUrl} target="_blank" rel="noreferrer"

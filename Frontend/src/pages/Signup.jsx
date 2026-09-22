@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-import { FaEye, FaEyeSlash, FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
+import { Button, Field, LiveRegion } from "../components/ui";
 import { sendOtp, signUp } from "../utils/authApi";
 import { trackAnalyticsEvent } from "../utils/settings";
 import { getSelectedSchoolClass, isSchoolTrack, schoolClassOptions, setSelectedSchoolClass } from "../utils/schoolTrack";
@@ -37,12 +38,26 @@ export default function Signup() {
   const [otpSent, setOtpSent] = useState(false);
   const [otpStatus, setOtpStatus] = useState("idle");
   const [signupStatus, setSignupStatus] = useState("idle");
-  const [showPassword, setShowPassword] = useState(false);
   const [toast, setToast] = useState(null);
   const [apiError, setApiError] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    const next = {};
+    if (!form.firstName) next.firstName = "First name is required";
+    if (!form.lastName) next.lastName = "Last name is required";
+    if (!form.email) next.email = "Email is required";
+    else if (!/\S+@\S+\.\S+/.test(form.email)) next.email = "Enter a valid email";
+    if (otpSent && !form.otp) next.otp = "OTP is required";
+    if (!form.password) next.password = "Password is required";
+    else if (form.password.length < 6) next.password = "Minimum 6 characters required";
+    setErrors(next);
+    return Object.keys(next).length === 0;
+  };
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
     setApiError("");
   };
 
@@ -75,6 +90,8 @@ export default function Signup() {
       setApiError("Please send OTP first");
       return;
     }
+
+    if (!validate()) return;
 
     setSignupStatus("loading");
     try {
@@ -126,61 +143,67 @@ export default function Signup() {
         variants={panelVariants}
         initial="hidden"
         animate="show"
-        className="relative z-10 w-full max-w-2xl rounded-3xl border border-white/60 bg-white/70 p-7 md:p-9 backdrop-blur-2xl shadow-[0_30px_90px_rgba(15,23,42,0.15)]"
+        className="relative z-10 w-full max-w-2xl rounded-3xl border border-white/60 bg-surface/70 p-7 md:p-9 backdrop-blur-2xl shadow-e5"
       >
         <motion.div variants={itemVariants} className="mb-7">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">Start Learning</p>
-          <h2 className="mt-2 text-3xl md:text-4xl font-black text-slate-900">Create Your Account</h2>
-          <p className="mt-2 text-sm md:text-base text-slate-600">
+          <h1 className="mt-2 text-3xl md:text-4xl font-black text-ink">Create Your Account</h1>
+          <p className="mt-2 text-sm md:text-base text-ink-muted">
             {schoolMode ? "Create a student account and choose the class to start with." : "Secure signup with OTP verification."}
           </p>
         </motion.div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <motion.div variants={itemVariants} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div>
-              <label htmlFor="signup-firstName" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
-                First Name
-              </label>
-              <GlassInput id="signup-firstName" name="firstName" placeholder="First Name" value={form.firstName} onChange={handleChange} required />
-            </div>
-            <div>
-              <label htmlFor="signup-lastName" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
-                Last Name
-              </label>
-              <GlassInput id="signup-lastName" name="lastName" placeholder="Last Name" value={form.lastName} onChange={handleChange} required />
-            </div>
+            <Field
+              label="First Name"
+              id="signup-firstName"
+              name="firstName"
+              autoComplete="given-name"
+              placeholder="First Name"
+              value={form.firstName}
+              onChange={handleChange}
+              error={errors.firstName}
+              required
+            />
+            <Field
+              label="Last Name"
+              id="signup-lastName"
+              name="lastName"
+              autoComplete="family-name"
+              placeholder="Last Name"
+              value={form.lastName}
+              onChange={handleChange}
+              error={errors.lastName}
+              required
+            />
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <label htmlFor="signup-email" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
-              Email
-            </label>
-            <div className="flex gap-3">
-              <GlassInput
+            <div className="flex items-start gap-3">
+              <Field
+                label="Email"
                 id="signup-email"
                 name="email"
                 type="email"
+                autoComplete="email"
                 placeholder="Email address"
                 value={form.email}
                 onChange={handleChange}
-                className="flex-1"
+                error={errors.email}
+                containerClassName="flex-1"
                 required
               />
-              <motion.button
+              <Button
                 type="button"
-                whileTap={{ scale: 0.96 }}
-                whileHover={{ y: -1 }}
+                variant={otpStatus === "sent" ? "secondary" : "primary"}
                 onClick={sendOtpHandler}
-                disabled={otpStatus === "loading"}
-                className={`shrink-0 min-w-[7.5rem] rounded-xl border px-4 py-3 font-bold text-white shadow-[0_10px_24px_rgba(8,145,178,0.24)] transition disabled:opacity-70 disabled:shadow-none ${
-                  otpStatus === "sent"
-                    ? "border-emerald-700 bg-emerald-600 hover:bg-emerald-700"
-                    : "border-cyan-700 bg-cyan-600 hover:bg-cyan-700"
-                }`}
+                loading={otpStatus === "loading"}
+                loadingText="Sending..."
+                className="mt-[1.6rem] shrink-0 min-w-[7.5rem]"
               >
-                {otpStatus === "loading" ? "Sending..." : otpStatus === "sent" ? "Sent" : "Send OTP"}
-              </motion.button>
+                {otpStatus === "sent" ? "Sent" : "Send OTP"}
+              </Button>
             </div>
           </motion.div>
 
@@ -192,24 +215,40 @@ export default function Signup() {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.3 }}
               >
-                <label htmlFor="signup-otp" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
-                  OTP
-                </label>
-                <GlassInput id="signup-otp" name="otp" placeholder="Enter OTP" value={form.otp} onChange={handleChange} required />
+                <Field
+                  label="OTP"
+                  id="signup-otp"
+                  name="otp"
+                  inputMode="numeric"
+                  autoComplete="one-time-code"
+                  placeholder="Enter OTP"
+                  value={form.otp}
+                  onChange={handleChange}
+                  error={errors.otp}
+                  required
+                />
               </motion.div>
             )}
           </AnimatePresence>
 
           <motion.div variants={itemVariants}>
-            <label htmlFor="signup-phone" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
-              Phone Number
-            </label>
-            <GlassInput id="signup-phone" name="phone" placeholder="Phone Number" value={form.phone} onChange={handleChange} />
+            <Field
+              label="Phone Number"
+              id="signup-phone"
+              name="phone"
+              type="tel"
+              inputMode="tel"
+              autoComplete="tel"
+              placeholder="Phone Number"
+              value={form.phone}
+              onChange={handleChange}
+              error={errors.phone}
+            />
           </motion.div>
 
           {schoolMode && (
             <motion.div variants={itemVariants}>
-              <label htmlFor="signup-schoolClass" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
+              <label htmlFor="signup-schoolClass" className="label">
                 Student Class
               </label>
               <select
@@ -217,7 +256,7 @@ export default function Signup() {
                 name="schoolClass"
                 value={form.schoolClass}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200"
+                className="field"
               >
                 {schoolClassOptions.map((option) => (
                   <option key={option.value} value={option.value}>
@@ -228,48 +267,34 @@ export default function Signup() {
             </motion.div>
           )}
 
-          <motion.div variants={itemVariants} className="relative">
-            <label htmlFor="signup-password" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
-              Password
-            </label>
-            <GlassInput
+          <motion.div variants={itemVariants}>
+            <Field
+              label="Password"
               id="signup-password"
               name="password"
-              type={showPassword ? "text" : "password"}
+              type="password"
+              autoComplete="new-password"
               placeholder="Password"
               value={form.password}
               onChange={handleChange}
+              error={errors.password}
               required
             />
-            <button
-              type="button"
-              onClick={() => setShowPassword((s) => !s)}
-              className="absolute right-4 top-[2.45rem] text-slate-500 hover:text-slate-700 transition"
-            >
-              {showPassword ? <FaEyeSlash /> : <FaEye />}
-            </button>
           </motion.div>
 
-          <motion.button
-            variants={itemVariants}
-            whileTap={{ scale: 0.985 }}
-            whileHover={{ y: -2 }}
-            type="submit"
-            disabled={signupStatus === "loading"}
-            className="w-full rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 py-3.5 font-bold text-white shadow-[0_14px_30px_rgba(8,145,178,0.28)] hover:from-cyan-600 hover:to-blue-700 disabled:opacity-60 disabled:shadow-none flex items-center justify-center gap-2 transition"
-          >
-            {signupStatus === "loading" && (
-              <motion.span
-                animate={{ rotate: 360 }}
-                transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-                className="h-4 w-4 rounded-full border-2 border-white border-t-transparent"
-              />
-            )}
-            {signupStatus === "success" && <FaCheckCircle />}
-            {signupStatus === "loading" ? "Creating..." : signupStatus === "success" ? "Success" : "Sign Up"}
-          </motion.button>
+          <motion.div variants={itemVariants}>
+            <Button
+              type="submit"
+              fullWidth
+              loading={signupStatus === "loading"}
+              loadingText="Creating..."
+            >
+              {signupStatus === "success" && <FaCheckCircle aria-hidden="true" />}
+              {signupStatus === "success" ? "Success" : "Sign Up"}
+            </Button>
+          </motion.div>
 
-          <motion.p variants={itemVariants} className="text-center text-sm text-slate-600">
+          <motion.p variants={itemVariants} className="text-center text-sm text-ink-muted">
             Already have an account?{" "}
             <Link to="/login" className="font-semibold text-cyan-700 hover:text-cyan-800">
               Sign In
@@ -282,7 +307,8 @@ export default function Signup() {
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 8 }}
-                className="text-sm text-center text-rose-500"
+                role="alert"
+                className="text-sm text-center text-critical"
               >
                 {apiError}
               </motion.p>
@@ -291,31 +317,21 @@ export default function Signup() {
         </form>
       </motion.div>
 
+      <LiveRegion message={toast || ""} />
+
       <AnimatePresence>
         {toast && (
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 28 }}
-            className="fixed bottom-6 right-6 rounded-xl border border-emerald-200 bg-emerald-500 px-5 py-3 text-white shadow-[0_14px_30px_rgba(16,185,129,0.32)]"
+            aria-hidden="true"
+            className="fixed bottom-6 right-6 rounded-xl border border-emerald-200 bg-emerald-600 px-5 py-3 text-white shadow-e3"
           >
             {toast}
           </motion.div>
         )}
       </AnimatePresence>
     </div>
-  );
-}
-
-function GlassInput({ className = "", hasError, ...props }) {
-  return (
-    <input
-      {...props}
-      className={`w-full rounded-xl border px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none transition ${
-        hasError
-          ? "border-rose-400 bg-rose-50/60 focus:border-rose-400 focus:ring-2 focus:ring-rose-200"
-          : "border-slate-200 bg-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200"
-      } ${className}`}
-    />
   );
 }

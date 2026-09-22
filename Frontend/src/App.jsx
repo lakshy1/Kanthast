@@ -6,9 +6,15 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import OfflineBanner from "./components/OfflineBanner";
+import ComingSoon from "./pages/ComingSoon";
 import { warmupBackend, prefetchImages, prefetchContent } from "./utils/warmup";
 import { useAppSettings } from "./utils/settings";
 import { initCapacitorPlugins, setupBackButton } from "./utils/capacitor";
+
+// The public product is temporarily replaced site-wide with a coming-soon
+// page while Kanthast is rebuilt. Admin routes stay reachable. Restore by
+// setting this back to false.
+const SHOW_COMING_SOON = true;
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const SchoolHomepage = lazy(() => import("./pages/SchoolHomepage"));
@@ -56,7 +62,7 @@ function AdminGuestOnly({ children }) {
 // Minimal inline fallback — avoids a flash of the full EdtechLoader on first
 // lazy chunk fetch. EdtechLoader itself is used for page-transition animation.
 function ChunkFallback() {
-  return <div className="min-h-screen bg-white" />;
+  return <div className="min-h-screen bg-surface" />;
 }
 
 // Fixed overlay scrollbar — replaces the native browser scrollbar globally.
@@ -107,7 +113,7 @@ function GlobalScrollbar() {
     >
       <div
         ref={thumbRef}
-        className="absolute w-full bg-[#0a1530]"
+        className="absolute w-full bg-ink/40"
         style={{ top: 0 }}
       />
     </div>
@@ -121,6 +127,7 @@ function App() {
   const isFirstRender = useRef(true);
   const isFirstEverVisit = useRef(!localStorage.getItem("kanthastVisited"));
   const isAdminRoute = location.pathname.startsWith("/admin");
+  const isGatedRoute = SHOW_COMING_SOON && !isAdminRoute && location.pathname !== "/adminlogin";
   const settings = useAppSettings();
 
   // Init Capacitor native plugins (status bar, splash hide) and Android back button.
@@ -142,6 +149,18 @@ function App() {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [location.pathname, location.search, location.hash]);
 
+  // Move focus to the main landmark on navigation so screen readers announce
+  // the new page and keyboard tabbing restarts from the content, not the URL
+  // bar. Skipped on first paint so initial load isn't stolen from the browser.
+  const didMountRef = useRef(false);
+  useEffect(() => {
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return;
+    }
+    document.getElementById("main-content")?.focus({ preventScroll: true });
+  }, [location.pathname]);
+
   useLayoutEffect(() => {
     const authRoutes = ["/login", "/signup"];
     if (authRoutes.includes(location.pathname)) {
@@ -161,9 +180,11 @@ function App() {
       return () => clearTimeout(timer);
     }
 
-    let duration = 520;
+    // Transition durations are kept short: the loader should mask real latency,
+    // not manufacture it. (Was 2500ms on first visit / 1100ms thereafter.)
+    let duration = 320;
     if (isFirstRender.current) {
-      duration = isFirstEverVisit.current ? 2500 : 1100;
+      duration = isFirstEverVisit.current ? 900 : 600;
       if (isFirstEverVisit.current) {
         localStorage.setItem("kanthastVisited", "true");
         isFirstEverVisit.current = false;
@@ -183,29 +204,47 @@ function App() {
 
   useEffect(() => {
     const root = document.documentElement;
-    const theme = settings.appearance.toLowerCase();
+    const theme = settings.appearance.toLowerCase(); // "system" | "light" | "dark"
     root.dataset.theme = theme;
     root.dataset.compact = settings.compactLayout ? "true" : "false";
     root.dataset.reduceMotion = settings.reduceMotion ? "true" : "false";
-    root.style.colorScheme = settings.appearance === "Dark" ? "dark" : "light";
+    // "system" defers to the OS so the browser paints native UI to match.
+    root.style.colorScheme =
+      theme === "system" ? "light dark" : theme;
   }, [settings.appearance, settings.compactLayout, settings.reduceMotion]);
 
   return (
-    <MotionConfig reducedMotion={settings.reduceMotion ? "always" : "never"}>
-      <div className="min-h-screen w-screen">
+    // "user" defers to the OS prefers-reduced-motion setting; the in-app
+    // toggle can still force it on. Passing "never" (the old default) actively
+    // overrode a user's OS-level accessibility preference.
+    <MotionConfig reducedMotion={settings.reduceMotion ? "always" : "user"}>
+      <div className="min-h-screen w-screen bg-surface-sunken text-ink">
+        {/* Keyboard users reach content without tabbing the whole navbar. */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[10001]
+                     focus:rounded-control focus:bg-brand focus:px-5 focus:py-3
+                     focus:font-semibold focus:text-brand-fg focus:shadow-e3"
+        >
+          Skip to main content
+        </a>
         <GlobalScrollbar />
         <OfflineBanner />
 
-        {!isAdminRoute && <Navbar />}
+        {!isAdminRoute && !isGatedRoute && <Navbar />}
 
         {/* Content shifts with the navbar — padding-top tracks --navbar-h CSS var */}
         {/* padding-bottom on mobile clears the fixed bottom dock (always visible on mobile) */}
-        <div
+        <main
+          id="main-content"
+          tabIndex={-1}
           style={{
-            paddingTop: isAdminRoute ? 0 : "var(--navbar-h, 4rem)",
-            transition: "padding-top 0.3s cubic-bezier(0.4,0,0.2,1)",
+            paddingTop: isAdminRoute || isGatedRoute ? 0 : "var(--navbar-h, 4rem)",
+            transition: "padding-top 250ms cubic-bezier(0.22,1,0.36,1)",
           }}
-          className={!isAdminRoute ? "pb-16 md:pb-0" : ""}
+          className={`focus:outline-none ${
+            !isAdminRoute && !isGatedRoute ? "pb-16 md:pb-0" : ""
+          }`}
         >
           <Suspense fallback={<ChunkFallback />}>
             <AnimatePresence mode="wait">
@@ -213,36 +252,40 @@ function App() {
             </AnimatePresence>
 
             <ErrorBoundary>
-              <Routes>
-                <Route path="/" element={<Homepage />} />
-                <Route path="/school" element={<SchoolHomepage />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/courses" element={<Courses />} />
-                <Route path="/login" element={<GuestOnly><Login /></GuestOnly>} />
-                <Route path="/signup" element={<GuestOnly><Signup /></GuestOnly>} />
-                <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
-                <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
-                <Route path="/settings" element={<RequireAuth><Settings /></RequireAuth>} />
-                <Route path="/lists" element={<Lists />} />
-                <Route path="/summary" element={<RequireAuth><SummaryPage /></RequireAuth>} />
-                <Route path="/video" element={<RequireAuth><VideoPage /></RequireAuth>} />
-                <Route path="/images" element={<RequireAuth><ImagesPage /></RequireAuth>} />
-                <Route path="/chatbot" element={<RequireAuth><Chatbot /></RequireAuth>} />
-                <Route path="/subscription" element={<RequireAuth><SubscriptionPage /></RequireAuth>} />
-                <Route path="/adminlogin" element={<AdminGuestOnly><AdminLogin /></AdminGuestOnly>} />
-                <Route path="/admin" element={<RequireAdmin><AdminPanel /></RequireAdmin>} />
-              </Routes>
+              {isGatedRoute ? (
+                <ComingSoon />
+              ) : (
+                <Routes>
+                  <Route path="/" element={<Homepage />} />
+                  <Route path="/school" element={<SchoolHomepage />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/courses" element={<Courses />} />
+                  <Route path="/login" element={<GuestOnly><Login /></GuestOnly>} />
+                  <Route path="/signup" element={<GuestOnly><Signup /></GuestOnly>} />
+                  <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
+                  <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
+                  <Route path="/settings" element={<RequireAuth><Settings /></RequireAuth>} />
+                  <Route path="/lists" element={<Lists />} />
+                  <Route path="/summary" element={<RequireAuth><SummaryPage /></RequireAuth>} />
+                  <Route path="/video" element={<RequireAuth><VideoPage /></RequireAuth>} />
+                  <Route path="/images" element={<RequireAuth><ImagesPage /></RequireAuth>} />
+                  <Route path="/chatbot" element={<RequireAuth><Chatbot /></RequireAuth>} />
+                  <Route path="/subscription" element={<RequireAuth><SubscriptionPage /></RequireAuth>} />
+                  <Route path="/adminlogin" element={<AdminGuestOnly><AdminLogin /></AdminGuestOnly>} />
+                  <Route path="/admin" element={<RequireAdmin><AdminPanel /></RequireAdmin>} />
+                </Routes>
+              )}
             </ErrorBoundary>
           </Suspense>
 
           {/* Footer: hidden on mobile when logged in (bottom dock handles nav) */}
-          {!isAdminRoute && (
+          {!isAdminRoute && !isGatedRoute && (
             <div className={hasAuth() ? "hidden md:block" : ""}>
               <Footer />
             </div>
           )}
-        </div>
+        </main>
       </div>
     </MotionConfig>
   );

@@ -20,6 +20,12 @@ import {
 import { VideoMetaSkeleton, VideoPageSkeleton } from "../components/DataLoaderSkeletons";
 import { getPlaybackRate, trackAnalyticsEvent, useAppSettings } from "../utils/settings";
 import { getStoredUser, isSchoolTrack } from "../utils/schoolTrack";
+import {
+  getResumeSeconds,
+  saveProgress,
+  shouldPersist,
+  formatRemaining,
+} from "../utils/progress";
 
 // ─── watch tracking ────────────────────────────────────────────────────────
 
@@ -490,6 +496,10 @@ export default function VideoPage() {
   const [dbTitle, setDbTitle] = useState("");
   const [courseContent, setCourseContent] = useState(null);
   const [loading, setLoading] = useState(Boolean(data.subjectId && data.chapterId && data.videoId));
+  // Player feedback state: buffering spinner, load failure, resume notice.
+  const [buffering, setBuffering] = useState(false);
+  const [mediaError, setMediaError] = useState("");
+  const [resumedFrom, setResumedFrom] = useState(0);
   const [isWatched, setIsWatched] = useState(() => {
     try {
       const w = JSON.parse(localStorage.getItem("kanthastWatched") || "{}");
@@ -743,7 +753,7 @@ export default function VideoPage() {
           ) : (
           <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
               {parsed.type === "file" ? (
-                <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
+                <div className="relative rounded-card overflow-hidden border border-line bg-black">
                   <video
                     controls
                     playsInline
@@ -752,14 +762,78 @@ export default function VideoPage() {
                     src={parsed.url}
                     ref={videoRef}
                     onLoadedMetadata={() => {
-                      if (videoRef.current) {
-                        videoRef.current.playbackRate = playbackRate;
+                      const el = videoRef.current;
+                      if (!el) return;
+                      el.playbackRate = playbackRate;
+                      // Resume where the student left off.
+                      const resumeAt = getResumeSeconds(data.videoId);
+                      if (resumeAt > 0 && resumeAt < el.duration) {
+                        el.currentTime = resumeAt;
+                        setResumedFrom(resumeAt);
+                      }
+                      setMediaError("");
+                    }}
+                    onTimeUpdate={() => {
+                      const el = videoRef.current;
+                      if (!el || !el.duration) return;
+                      if (shouldPersist(el.currentTime)) {
+                        saveProgress(data.videoId, el.currentTime, el.duration, {
+                          title: displayTitle,
+                          module: data.module,
+                          section: data.section,
+                          subjectId: data.subjectId,
+                          chapterId: data.chapterId,
+                          duration: data.duration,
+                        });
                       }
                     }}
+                    onWaiting={() => setBuffering(true)}
+                    onPlaying={() => setBuffering(false)}
+                    onCanPlay={() => setBuffering(false)}
+                    onError={() =>
+                      setMediaError(
+                        "This lecture could not be loaded. Check your connection and try again."
+                      )
+                    }
                     onEnded={handleEnded}
                   >
                     Your browser does not support video playback.
                   </video>
+
+                  {buffering && !mediaError && (
+                    <div
+                      className="pointer-events-none absolute inset-0 grid place-items-center bg-black/30"
+                      role="status"
+                      aria-live="polite"
+                    >
+                      <span className="sr-only">Buffering</span>
+                      <span
+                        aria-hidden="true"
+                        className="h-10 w-10 animate-spin rounded-full border-[3px] border-white/40 border-t-white"
+                      />
+                    </div>
+                  )}
+
+                  {mediaError && (
+                    <div
+                      className="absolute inset-0 grid place-items-center bg-black/80 px-6 text-center"
+                      role="alert"
+                    >
+                      <div>
+                        <p className="text-sm font-semibold text-white">{mediaError}</p>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setMediaError("");
+                            videoRef.current?.load();
+                          }}
+                          className="btn-secondary mt-4"
+                        >
+                          Try again
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               ) : parsed.type === "youtube" ? (
                 <YouTubePlayer ytId={parsed.ytId} onEnded={handleEnded} title={displayTitle} playbackRate={playbackRate} />
@@ -773,20 +847,66 @@ export default function VideoPage() {
                   </a>
                 </div>
               ) : (
-                <div className="rounded-2xl overflow-hidden border border-slate-200 bg-gradient-to-br from-[#0b1324] via-[#10214b] to-[#12395f] aspect-video relative">
+                // No video link resolved. Previously this showed a decorative
+                // play button that hover-scaled but had no onClick, so it read
+                // as live. It is now an honest, explanatory state.
+                <div className="rounded-card overflow-hidden border border-line bg-gradient-to-br from-[#0b1324] via-[#10214b] to-[#12395f] aspect-video relative">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(125,211,252,0.18),transparent_40%)]" />
-                  <div className="absolute inset-0 grid place-items-center">
-                    <button type="button" className="w-20 h-20 rounded-full bg-white/20 backdrop-blur border border-white/40 text-white text-2xl grid place-items-center hover:scale-105 transition">
-                      <FaPlay className="ml-1" />
-                    </button>
-                  </div>
-                  <div className="absolute left-4 right-4 bottom-4 text-white">
-                    <p className="text-sm text-cyan-100">{data.module} — {data.section}</p>
-                    <h1 className="text-xl md:text-3xl font-bold mt-1">{displayTitle}</h1>
+                  <div className="absolute inset-0 flex flex-col justify-between p-4 md:p-6">
+                    <div className="text-white">
+                      <p className="text-sm text-cyan-100">{data.module} — {data.section}</p>
+                      <h1 className="mt-1 text-xl md:text-3xl font-bold">{displayTitle}</h1>
+                    </div>
+
+                    <div className="text-center">
+                      <span
+                        aria-hidden="true"
+                        className="mx-auto grid h-14 w-14 place-items-center rounded-full border border-white/25 bg-white/10 text-lg text-white/70"
+                      >
+                        <FaClock />
+                      </span>
+                      <p className="mt-3 text-base font-semibold text-white">
+                        This lecture isn&apos;t available yet
+                      </p>
+                      <p className="mx-auto mt-1 max-w-sm text-sm text-white/70">
+                        The video is still being prepared. Other lectures in this
+                        chapter are ready to watch.
+                      </p>
+                    </div>
+
+                    <div className="flex justify-center">
+                      <Link to="/lists" className="btn-secondary">
+                        Back to lectures
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )}
-              <div className="mt-3 text-sm text-slate-500">Duration: {data.duration}</div>
+              {resumedFrom > 0 && (
+                <div
+                  className="mt-3 flex flex-wrap items-center gap-3 rounded-control bg-brand-soft px-4 py-2.5 text-sm text-ink"
+                  role="status"
+                >
+                  <span>
+                    Resumed from{" "}
+                    <strong className="font-semibold">
+                      {Math.floor(resumedFrom / 60)}:
+                      {String(Math.floor(resumedFrom % 60)).padStart(2, "0")}
+                    </strong>
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (videoRef.current) videoRef.current.currentTime = 0;
+                      setResumedFrom(0);
+                    }}
+                    className="font-semibold text-brand underline underline-offset-2"
+                  >
+                    Start from beginning
+                  </button>
+                </div>
+              )}
+              <div className="mt-3 text-sm text-ink-subtle">Duration: {data.duration}</div>
             </section>
           )}
 

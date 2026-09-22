@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaEnvelope,
@@ -9,11 +9,11 @@ import {
   FaPencilAlt,
   FaSave,
   FaCheckCircle,
-  FaChevronDown,
 } from "react-icons/fa";
 import { getProfile, updateProfile } from "../utils/authApi";
 import { ProfileSkeleton } from "../components/DataLoaderSkeletons";
 import { trackAnalyticsEvent, useAppSettings } from "../utils/settings";
+import { Button, LiveRegion, Select } from "../components/ui";
 
 function formatDate(value) {
   if (!value) return "-";
@@ -262,7 +262,8 @@ export default function Profile() {
 
                 <EditableField label="Gender" icon={<FaIdBadge />} iconBg="bg-pink-100" iconColor="text-pink-600">
                   {isEditing ? (
-                    <CustomSelect
+                    <Select
+                      label="Gender"
                       value={form.gender}
                       onChange={(val) => setForm((prev) => ({ ...prev, gender: val }))}
                       options={[
@@ -392,61 +393,6 @@ function FieldCard({ icon, iconBg = "bg-slate-100", iconColor = "text-slate-500"
         <p className="text-xs uppercase tracking-[0.14em] text-slate-500">{label}</p>
       </div>
       <p className={`font-semibold ${valueColor}`}>{value}</p>
-    </div>
-  );
-}
-
-function CustomSelect({ value, onChange, options }) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef(null);
-
-  useEffect(() => {
-    if (!open) return;
-    const handler = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, [open]);
-
-  const selectedLabel = (() => {
-    const match = options.find((o) => (typeof o === "string" ? o : o.value) === value);
-    return match ? (typeof match === "string" ? match : match.label) : (value || "Select");
-  })();
-
-  return (
-    <div ref={ref} className="relative mt-2">
-      <button
-        type="button"
-        onClick={() => setOpen((p) => !p)}
-        className={`w-full flex items-center justify-between gap-3 rounded-lg border px-3 py-2 text-left text-sm font-medium text-slate-900 transition-all duration-150 ${
-          open ? "border-cyan-400 ring-2 ring-cyan-100 bg-white" : "border-slate-300 bg-white hover:border-slate-400"
-        }`}
-      >
-        <span className={value ? "text-slate-900" : "text-slate-400"}>{selectedLabel}</span>
-        <FaChevronDown className={`shrink-0 text-slate-400 text-[10px] transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
-      </button>
-
-      {open && (
-        <div className="absolute z-50 top-full mt-1.5 w-full rounded-xl border border-slate-200 bg-white shadow-[0_10px_40px_rgba(15,23,42,0.13)] overflow-hidden">
-          {options.map((opt) => {
-            const optValue = typeof opt === "string" ? opt : opt.value;
-            const optLabel = typeof opt === "string" ? opt : opt.label;
-            const isActive = optValue === value;
-            return (
-              <button
-                key={optValue ?? optLabel}
-                type="button"
-                onClick={() => { onChange(optValue); setOpen(false); }}
-                className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors ${
-                  isActive ? "bg-cyan-50 text-cyan-700 font-semibold" : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
-                }`}
-              >
-                <span>{optLabel}</span>
-                {isActive && <span className="text-xs text-cyan-500">✓</span>}
-              </button>
-            );
-          })}
-        </div>
-      )}
     </div>
   );
 }

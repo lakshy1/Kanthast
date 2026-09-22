@@ -11,6 +11,7 @@ import {
   FaChevronLeft, FaChevronRight,
 } from "react-icons/fa";
 import { useAppSettings } from "../utils/settings";
+import { getLastWatched, formatRemaining } from "../utils/progress";
 import {
   buildSchoolModules,
   getSchoolClassLabel,
@@ -187,6 +188,19 @@ function CircleProgress({ percent, size = 54, showLabel = true }) {
   );
 }
 
+// Rebuild the /video query string the resume pointer was saved from.
+function buildResumeHref(target) {
+  const params = new URLSearchParams();
+  if (target.module) params.set("module", target.module);
+  if (target.section) params.set("section", target.section);
+  if (target.title) params.set("title", target.title);
+  if (target.duration) params.set("duration", target.duration);
+  if (target.subjectId) params.set("subjectId", target.subjectId);
+  if (target.chapterId) params.set("chapterId", target.chapterId);
+  if (target.videoId) params.set("videoId", target.videoId);
+  return `/video?${params.toString()}`;
+}
+
 // ─── Chapter card ──────────────────────────────────────────────────────────
 
 function ChapterCard({ chapter, watched, index, compact, showProgressPercent, onClick }) {
@@ -195,15 +209,22 @@ function ChapterCard({ chapter, watched, index, compact, showProgressPercent, on
   const chProgress = chTotal > 0 ? Math.round((chWatched / chTotal) * 100) : 0;
 
   return (
-    <article
+    // A real <button>: this is the dashboard's primary navigation and was
+    // previously an <article onClick>, unreachable by keyboard entirely.
+    <button
+      type="button"
       onClick={onClick}
-      className={`relative flex-shrink-0 ${compact ? "w-60 h-48" : "w-64 h-52"} rounded-2xl overflow-hidden border border-slate-200 shadow-[0_14px_35px_rgba(15,23,42,0.14)] group cursor-pointer hover:border-cyan-300 hover:shadow-[0_14px_40px_rgba(14,116,144,0.18)] transition-all duration-200`}
+      aria-label={`${chapter.name} — ${
+        chTotal > 0 ? `${chWatched} of ${chTotal} videos watched` : "no videos yet"
+      }`}
+      className={`relative flex-shrink-0 text-left ${compact ? "w-60 h-48" : "w-64 h-52"} rounded-card overflow-hidden border border-line shadow-e3 group cursor-pointer hover:border-brand hover:shadow-e4 transition-all duration-base ease-brand`}
     >
       <img
         src={IMAGES[index % IMAGES.length]}
-        alt={chapter.name}
+        alt=""
+        aria-hidden="true"
         loading="lazy"
-        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500"
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-slow ease-brand"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/30 to-transparent" />
 
@@ -220,7 +241,7 @@ function ChapterCard({ chapter, watched, index, compact, showProgressPercent, on
           </div>
         )}
       </div>
-    </article>
+    </button>
   );
 }
 
@@ -301,6 +322,8 @@ export default function Dashboard() {
   const [subjects, setSubjects] = useState([]);
   const [contentLoading, setContentLoading] = useState(true);
   const [profileVersion, setProfileVersion] = useState(0);
+  // Lecture to offer as "Continue watching" (null once it is completed).
+  const [resumeTarget] = useState(() => getLastWatched());
 
   const watched = useMemo(() => {
     try { return JSON.parse(localStorage.getItem("kanthastWatched") || "{}"); }
@@ -393,46 +416,83 @@ export default function Dashboard() {
                     title={schoolMode ? "Total Lessons" : "Total Videos"}
                     value={totalVideos}
                     icon={<FaPlay size={11} />}
-                    iconBg="bg-blue-100 text-blue-600"
-                    accent="border-l-blue-400"
                   />
                   <StatCard
                     title="Watched"
                     value={watchedVideos}
                     icon={<FaCheck size={11} />}
-                    iconBg="bg-emerald-100 text-emerald-600"
-                    accent="border-l-emerald-400"
                   />
                   <StatCard
                     title="Progress"
                     value={`${overallProgress}%`}
                     icon={<FaChartBar size={11} />}
-                    iconBg="bg-violet-100 text-violet-600"
-                    accent="border-l-violet-400"
+                    primary
                   />
                   <StatCard
                     title="Streak"
                     value={`${streak}d`}
                     icon={<FaBolt size={11} />}
-                    iconBg="bg-amber-100 text-amber-600"
-                    accent="border-l-amber-400"
                   />
                 </>
               )}
             </div>
           </div>
 
-          {/* Quote section */}
-          <div className="mt-8 relative rounded-2xl border border-cyan-100 bg-gradient-to-br from-cyan-50 via-sky-50 to-blue-50 p-6 md:p-10 overflow-hidden shadow-[0_20px_55px_rgba(14,116,144,0.08)]">
-            <div className="absolute -top-4 -left-1 text-[9rem] leading-none text-cyan-100 font-serif select-none pointer-events-none">&ldquo;</div>
-            <div className="relative z-10">
-              <span className="text-xs uppercase tracking-[0.2em] text-cyan-700 font-semibold">Daily Mindset</span>
-              <p className="mt-4 text-xl md:text-2xl lg:text-3xl font-bold leading-relaxed text-slate-900">
-                &ldquo;{dailyQuote}&rdquo;
-              </p>
-              <p className="mt-5 text-sm text-slate-500 italic">Consistency + Discipline = Long-term Results</p>
+          {/* ── Continue watching ──
+              The highest-value action in a course product, and previously
+              absent: students had to navigate to Lists and remember where they
+              stopped. It now outranks the daily quote, which the audit found
+              was the largest element above the fold despite being static. */}
+          {resumeTarget ? (
+            <div className="mt-8 rounded-card border border-line bg-surface-sunken p-5 md:p-6 shadow-e2">
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <div className="min-w-0">
+                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
+                    Continue watching
+                  </span>
+                  <h2 className="mt-2 truncate text-xl font-bold text-ink md:text-2xl">
+                    {resumeTarget.title || "Your last lecture"}
+                  </h2>
+                  <p className="mt-1 text-sm text-ink-subtle">
+                    {[resumeTarget.module, resumeTarget.section]
+                      .filter(Boolean)
+                      .join(" — ")}
+                    {resumeTarget.remainingSeconds
+                      ? ` · ${formatRemaining(resumeTarget.remainingSeconds)}`
+                      : ""}
+                  </p>
+
+                  <div
+                    className="mt-3 h-1.5 w-full max-w-md overflow-hidden rounded-full bg-line"
+                    role="progressbar"
+                    aria-valuenow={resumeTarget.percent}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-label="Lecture progress"
+                  >
+                    <div
+                      className="h-full rounded-full bg-brand transition-[width] duration-slow ease-brand"
+                      style={{ width: `${resumeTarget.percent}%` }}
+                    />
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => navigate(buildResumeHref(resumeTarget))}
+                  className="btn-primary shrink-0"
+                >
+                  <FaPlay size={12} aria-hidden="true" />
+                  Resume
+                </button>
+              </div>
             </div>
-          </div>
+          ) : null}
+
+          {/* Daily quote — demoted to a quiet footer line. */}
+          <p className="mt-6 border-t border-line pt-5 text-sm italic text-ink-subtle">
+            &ldquo;{dailyQuote}&rdquo;
+          </p>
         </div>
 
         {/* ── Subject sections ── */}
@@ -450,7 +510,7 @@ export default function Dashboard() {
               </div>
             ))
           ) : subjects.length === 0 ? (
-            <div className="rounded-2xl bg-white border border-slate-200 p-8 text-center text-slate-500">
+            <div className="card p-8 text-center text-ink-muted">
               {schoolMode ? (
                 <div>
                   <h2 className="text-2xl font-black text-slate-900">Activate a class to see your dashboard</h2>
@@ -461,13 +521,35 @@ export default function Dashboard() {
                   <button
                     type="button"
                     onClick={() => navigate("/subscription")}
-                    className="mt-5 rounded-xl bg-slate-950 px-5 py-3 font-bold text-white transition hover:bg-slate-800"
+                    className="btn-primary mt-5"
                   >
                     Choose Class and Subscribe
                   </button>
                 </div>
               ) : (
-                "No content available yet. Your subjects will appear here once added."
+                // Was a bare string in a grey box — no icon, no next step.
+                <div>
+                  <span
+                    aria-hidden="true"
+                    className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-brand-soft text-xl text-brand"
+                  >
+                    <FaPlay size={16} />
+                  </span>
+                  <h2 className="mt-4 text-xl font-bold text-ink">
+                    Your subjects are on the way
+                  </h2>
+                  <p className="mx-auto mt-2 max-w-md text-sm text-ink-muted">
+                    Course content hasn&apos;t been published to your account yet.
+                    Browse the catalog to see what&apos;s coming, or check back shortly.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => navigate("/courses")}
+                    className="btn-secondary mt-5"
+                  >
+                    Browse courses
+                  </button>
+                </div>
               )}
             </div>
           ) : (
@@ -540,15 +622,28 @@ export default function Dashboard() {
 
 // ─── Stat card ─────────────────────────────────────────────────────────────
 
-function StatCard({ title, value, icon, iconBg, accent }) {
+// `primary` marks the one stat that should read first. The audit found four
+// different accent hues across four cards, so none of them carried emphasis.
+function StatCard({ title, value, icon, primary = false }) {
   return (
-    <div className={`rounded-xl border border-slate-200 border-l-2 ${accent} bg-white px-3 py-2.5 flex items-center gap-2.5 shadow-sm`}>
-      <div className={`w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 ${iconBg}`}>
+    <div
+      className={`rounded-control border px-3 py-2.5 flex items-center gap-2.5 shadow-e1 ${
+        primary
+          ? "border-brand/30 bg-brand-soft"
+          : "border-line bg-surface"
+      }`}
+    >
+      <div
+        aria-hidden="true"
+        className={`w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 ${
+          primary ? "bg-brand text-brand-fg" : "bg-surface-sunken text-ink-subtle"
+        }`}
+      >
         {icon}
       </div>
       <div className="min-w-0">
-        <p className="text-base font-black text-slate-900 tabular-nums leading-none">{value}</p>
-        <p className="text-[11px] text-slate-500 mt-0.5 truncate">{title}</p>
+        <p className="text-base font-black text-ink tabular-nums leading-none">{value}</p>
+        <p className="text-xs text-ink-subtle mt-0.5 truncate">{title}</p>
       </div>
     </div>
   );

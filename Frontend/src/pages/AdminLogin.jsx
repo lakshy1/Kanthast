@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Button, Field } from "../components/ui";
 import { adminLogin } from "../utils/authApi";
 
 export default function AdminLogin() {
@@ -31,40 +32,44 @@ export default function AdminLogin() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         onSubmit={onSubmit}
-        className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-7 shadow-[0_20px_60px_rgba(15,23,42,0.12)]"
+        className="w-full max-w-md rounded-3xl border border-line bg-surface p-7 shadow-e4"
       >
         <p className="text-xs font-semibold tracking-[0.18em] text-cyan-700 uppercase">Admin Access</p>
-        <h1 className="mt-2 text-3xl font-black text-slate-900">Admin Login</h1>
-        <p className="text-sm text-slate-600 mt-1">Secure access to Kanthast control panel.</p>
+        <h1 className="mt-2 text-3xl font-black text-ink">Admin Login</h1>
+        <p className="text-sm text-ink-muted mt-1">Secure access to Kanthast control panel.</p>
 
-        <label className="block mt-5">
-          <span className="text-sm font-medium text-slate-700">Admin ID</span>
-          <input
-            value={form.adminId}
-            onChange={(e) => setForm((prev) => ({ ...prev, adminId: e.target.value }))}
-            className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:ring-2 focus:ring-cyan-400 outline-none"
-            placeholder="Enter admin ID"
-          />
-        </label>
+        <Field
+          label="Admin ID"
+          id="admin-id"
+          name="adminId"
+          autoComplete="username"
+          containerClassName="mt-5"
+          value={form.adminId}
+          onChange={(e) => setForm((prev) => ({ ...prev, adminId: e.target.value }))}
+          placeholder="Enter admin ID"
+        />
 
-        <label className="block mt-3">
-          <span className="text-sm font-medium text-slate-700">Password</span>
-          <input
-            type="password"
-            value={form.password}
-            onChange={(e) => setForm((prev) => ({ ...prev, password: e.target.value }))}
-            className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:ring-2 focus:ring-cyan-400 outline-none"
-            placeholder="Enter password"
-          />
-        </label>
+        <Field
+          label="Password"
+          id="admin-password"
+          name="password"
+          type="password"
+          autoComplete="current-password"
+          containerClassName="mt-3"
+          value={form.password}
+          onChange={(e) => setForm((prev) => ({ ...prev, password: e.target.value }))}
+          placeholder="Enter password"
+        />
 
-        <button
+        <Button
           type="submit"
-          disabled={loading}
-          className="mt-6 w-full rounded-xl bg-slate-900 text-white py-3 font-semibold hover:bg-slate-800 disabled:opacity-60"
+          fullWidth
+          loading={loading}
+          loadingText="Signing in..."
+          className="mt-6"
         >
-          {loading ? "Signing in..." : "Login to Admin Panel"}
-        </button>
+          Login to Admin Panel
+        </Button>
       </motion.form>
     </div>
   );

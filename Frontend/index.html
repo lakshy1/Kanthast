@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-visual" />
+    <!-- Pinch-zoom intentionally NOT disabled: students read dense medical text
+         for long sessions and must be able to magnify it (WCAG 1.4.4). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-visual" />
     <!-- PWA / Capacitor mobile app meta -->
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -17,6 +19,15 @@
     <!-- SEO -->
     <meta name="google-site-verification" 
     content="pt2_giWqmJ_J086kdvsFNyI9VaNS4pJODhsz7rvf9fk" />
+
+    <!-- Brand typefaces. Loaded app-wide so the product renders identically on
+         Windows, macOS, iOS and Android instead of falling back to the OS face. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Nunito:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />

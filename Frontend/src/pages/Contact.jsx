@@ -2,8 +2,8 @@ import { Helmet } from "react-helmet-async";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { FaCircleNotch } from "react-icons/fa";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { Button, Field, LiveRegion } from "../components/ui";
 import { apiFetch } from "../utils/apiBase";
 
 const fadeUp = {
@@ -81,7 +81,7 @@ export default function Contact() {
             variants={stagger}
             initial="hidden"
             animate="show"
-            className="rounded-3xl border border-white/20 bg-white/10 px-6 py-10 text-center backdrop-blur-2xl shadow-[0_30px_110px_rgba(2,8,23,0.45)] md:px-12"
+            className="rounded-3xl border border-white/20 bg-white/10 px-6 py-10 text-center backdrop-blur-2xl shadow-e5 md:px-12"
           >
             <motion.h1 variants={fadeUp} className="text-3xl sm:text-4xl md:text-6xl font-black">
               Let&apos;s Connect
@@ -111,13 +111,13 @@ export default function Contact() {
               variants={fadeUp}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ duration: 0.28, ease: "easeOut" }}
-              className="rounded-2xl border border-white/60 bg-white/55 p-7 backdrop-blur-2xl shadow-[0_18px_55px_rgba(15,23,42,0.11)]"
+              className="rounded-2xl border border-white/60 bg-surface/55 p-7 backdrop-blur-2xl shadow-e3"
             >
               <motion.div whileHover={{ rotate: -6, scale: 1.12 }} className="text-2xl text-cyan-600">
                 {item.icon}
               </motion.div>
-              <h3 className="mt-4 text-xl font-bold text-slate-900">{item.title}</h3>
-              <p className="mt-2 text-slate-600">{item.desc}</p>
+              <h3 className="mt-4 text-xl font-bold text-ink">{item.title}</h3>
+              <p className="mt-2 text-ink-muted">{item.desc}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -133,7 +133,7 @@ export default function Contact() {
         >
           <motion.div
             whileHover={{ y: -4 }}
-            className="relative overflow-hidden rounded-3xl border border-white/60 bg-white/62 p-8 backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:p-10"
+            className="relative overflow-hidden rounded-3xl border border-white/60 bg-surface/62 p-8 backdrop-blur-2xl shadow-e4 md:p-10"
           >
             <motion.div
               animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
@@ -141,7 +141,7 @@ export default function Contact() {
               className="pointer-events-none absolute -top-16 -right-10 h-56 w-56 rounded-full bg-cyan-200/30 blur-3xl"
             />
 
-            <h2 className="relative text-center text-3xl md:text-4xl font-black text-slate-900">Send Us a Message</h2>
+            <h2 className="relative text-center text-3xl md:text-4xl font-black text-ink">Send Us a Message</h2>
 
             <form
               onSubmit={handleSubmit}
@@ -149,62 +149,71 @@ export default function Contact() {
             >
 
               <div className="grid gap-5 md:grid-cols-2">
-                <motion.input
-                  whileFocus={{ scale: 1.01 }}
+                <Field
+                  label="Your Name"
+                  id="contact-name"
                   type="text"
                   name="name"
+                  autoComplete="name"
                   placeholder="Your Name"
                   required
-                  className="w-full rounded-xl border border-slate-300/70 bg-white/80 px-4 py-3 text-slate-900 outline-none transition focus:ring-2 focus:ring-cyan-400"
                 />
-                <motion.input
-                  whileFocus={{ scale: 1.01 }}
+                <Field
+                  label="Your Email"
+                  id="contact-email"
                   type="email"
                   name="email"
+                  autoComplete="email"
                   placeholder="Your Email"
                   required
-                  className="w-full rounded-xl border border-slate-300/70 bg-white/80 px-4 py-3 text-slate-900 outline-none transition focus:ring-2 focus:ring-cyan-400"
                 />
               </div>
 
-              <motion.input
-                whileFocus={{ scale: 1.01 }}
+              <Field
+                label="Subject"
+                id="contact-subject"
                 type="text"
                 name="subject"
                 placeholder="Subject"
-                className="w-full rounded-xl border border-slate-300/70 bg-white/80 px-4 py-3 text-slate-900 outline-none transition focus:ring-2 focus:ring-cyan-400"
               />
 
-              <motion.textarea
-                whileFocus={{ scale: 1.01 }}
-                name="message"
-                rows="5"
-                placeholder="Your Message"
-                required
-                className="w-full rounded-xl border border-slate-300/70 bg-white/80 px-4 py-3 text-slate-900 outline-none transition focus:ring-2 focus:ring-cyan-400"
-              />
+              <div>
+                <label htmlFor="contact-message" className="label">
+                  Your Message
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                  className="field"
+                />
+              </div>
 
-              <motion.button
-                whileTap={{ scale: 0.98 }}
-                whileHover={status !== "loading" ? { y: -2, scale: 1.01 } : undefined}
+              <Button
                 type="submit"
-                disabled={status === "loading"}
-                className="w-full rounded-xl py-3.5 font-semibold bg-slate-900 text-white hover:bg-slate-800 disabled:opacity-70 disabled:cursor-not-allowed transition flex items-center justify-center gap-2"
+                fullWidth
+                loading={status === "loading"}
+                loadingText="Sending..."
               >
-                {status === "loading" && (
-                  <motion.span
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 0.9, repeat: Infinity, ease: "linear" }}
-                  >
-                    <FaCircleNotch />
-                  </motion.span>
-                )}
-                {status === "loading" ? "Sending..." : "Send Message"}
-              </motion.button>
+                Send Message
+              </Button>
             </form>
           </motion.div>
         </motion.div>
       </section>
+
+      <LiveRegion
+        message={
+          status === "success"
+            ? "Message sent successfully."
+            : status === "error"
+            ? "Something went wrong. Please try again."
+            : ""
+        }
+        politeness={status === "error" ? "assertive" : "polite"}
+      />
 
       <AnimatePresence>
         {status === "success" && (
@@ -212,7 +221,8 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30, scale: 0.92 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.92 }}
-            className="fixed bottom-6 right-6 z-50 rounded-xl bg-emerald-500 px-5 py-3 text-white shadow-2xl"
+            aria-hidden="true"
+            className="fixed bottom-6 right-6 z-50 rounded-xl bg-emerald-600 px-5 py-3 text-white shadow-e4"
           >
             Message sent successfully.
           </motion.div>
@@ -222,7 +232,8 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30, scale: 0.92 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.92 }}
-            className="fixed bottom-6 right-6 z-50 rounded-xl bg-red-500 px-5 py-3 text-white shadow-2xl"
+            aria-hidden="true"
+            className="fixed bottom-6 right-6 z-50 rounded-xl bg-critical px-5 py-3 text-white shadow-e4"
           >
             Something went wrong. Please try again.
           </motion.div>

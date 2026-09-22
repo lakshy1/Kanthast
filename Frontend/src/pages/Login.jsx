@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Button, Field, LiveRegion } from "../components/ui";
 import { login } from "../utils/authApi";
 import { trackAnalyticsEvent } from "../utils/settings";
 import { getClientDeviceInfo, requestBrowserLocation } from "../utils/device";
@@ -31,7 +31,6 @@ export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle");
-  const [showPassword, setShowPassword] = useState(false);
   const [toast, setToast] = useState(null);
   const [apiError, setApiError] = useState("");
   const [showEdtechLoader, setShowEdtechLoader] = useState(false);
@@ -130,75 +129,57 @@ export default function Login() {
         variants={panelVariants}
         initial="hidden"
         animate="show"
-        className="relative z-10 w-full max-w-md rounded-3xl border border-white/60 bg-white/70 p-7 md:p-9 backdrop-blur-2xl shadow-[0_30px_90px_rgba(15,23,42,0.15)]"
+        className="relative z-10 w-full max-w-md rounded-3xl border border-white/60 bg-surface/70 p-7 md:p-9 backdrop-blur-2xl shadow-e5"
       >
         <Motion.div variants={itemVariants}>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">Welcome Back</p>
-          <h2 className="mt-2 text-3xl md:text-4xl font-black text-slate-900">Sign In</h2>
-          <p className="mt-2 text-sm md:text-base text-slate-600">
+          <h1 className="mt-2 text-3xl md:text-4xl font-black text-ink">Sign In</h1>
+          <p className="mt-2 text-sm md:text-base text-ink-muted">
             {schoolMode ? "Continue your class-wise visual learning journey." : "Continue your medical learning journey."}
           </p>
         </Motion.div>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <Motion.div variants={itemVariants}>
-            <label htmlFor="login-email" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
-              Email
-            </label>
-            <GlassInput
+            <Field
+              label="Email"
               id="login-email"
               name="email"
               type="email"
+              autoComplete="email"
               placeholder="Email address"
               value={form.email}
               onChange={handleChange}
-              hasError={!!errors.email}
+              error={errors.email}
             />
-            {errors.email && <p className="mt-1 text-sm text-rose-500">{errors.email}</p>}
           </Motion.div>
 
-          <Motion.div variants={itemVariants} className="relative">
-            <label htmlFor="login-password" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
-              Password
-            </label>
-            <GlassInput
+          <Motion.div variants={itemVariants}>
+            <Field
+              label="Password"
               id="login-password"
               name="password"
-              type={showPassword ? "text" : "password"}
+              type="password"
+              autoComplete="current-password"
               placeholder="Password"
               value={form.password}
               onChange={handleChange}
-              hasError={!!errors.password}
+              error={errors.password}
             />
-            <button
-              type="button"
-              onClick={() => setShowPassword((s) => !s)}
-              className="absolute right-4 top-[2.45rem] text-slate-500 hover:text-slate-700 transition"
-            >
-              {showPassword ? <FaEyeSlash /> : <FaEye />}
-            </button>
-            {errors.password && <p className="mt-1 text-sm text-rose-500">{errors.password}</p>}
           </Motion.div>
 
-          <Motion.button
-            variants={itemVariants}
-            whileTap={{ scale: 0.985 }}
-            whileHover={{ y: -2 }}
-            type="submit"
-            disabled={status === "loading"}
-            className="w-full py-3.5 rounded-xl font-bold bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-[0_14px_30px_rgba(8,145,178,0.28)] hover:from-cyan-600 hover:to-blue-700 disabled:opacity-60 disabled:shadow-none flex items-center justify-center gap-2 transition"
-          >
-            {status === "loading" && (
-              <Motion.span
-                animate={{ rotate: 360 }}
-                transition={{ duration: 0.9, repeat: Infinity, ease: "linear" }}
-                className="h-4 w-4 rounded-full border-2 border-white border-t-transparent"
-              />
-            )}
-            {status === "loading" ? "Logging In..." : "Sign In"}
-          </Motion.button>
+          <Motion.div variants={itemVariants}>
+            <Button
+              type="submit"
+              fullWidth
+              loading={status === "loading"}
+              loadingText="Logging In..."
+            >
+              Sign In
+            </Button>
+          </Motion.div>
 
-          <Motion.p variants={itemVariants} className="text-center text-sm text-slate-600">
+          <Motion.p variants={itemVariants} className="text-center text-sm text-ink-muted">
             Don't have an account?{" "}
             <Link to="/signup" className="font-semibold text-cyan-700 hover:text-cyan-800">
               Sign Up
@@ -211,7 +192,8 @@ export default function Login() {
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 8 }}
-                className="text-sm text-center text-rose-500"
+                role="alert"
+                className="text-sm text-center text-critical"
               >
                 {apiError}
               </Motion.p>
@@ -220,13 +202,16 @@ export default function Login() {
         </form>
       </Motion.div>
 
+      <LiveRegion message={toast || ""} />
+
       <AnimatePresence>
         {toast && (
           <Motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 28 }}
-            className="fixed bottom-6 right-6 rounded-xl border border-emerald-200 bg-emerald-500 px-5 py-3 text-white shadow-[0_14px_30px_rgba(16,185,129,0.32)]"
+            aria-hidden="true"
+            className="fixed bottom-6 right-6 rounded-xl border border-emerald-200 bg-emerald-600 px-5 py-3 text-white shadow-e3"
           >
             {toast}
           </Motion.div>
@@ -235,18 +220,5 @@ export default function Login() {
 
       <AnimatePresence>{showEdtechLoader && <EdtechLoader />}</AnimatePresence>
     </div>
-  );
-}
-
-function GlassInput({ hasError, ...props }) {
-  return (
-    <input
-      {...props}
-      className={`w-full rounded-xl border px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none transition ${
-        hasError
-          ? "border-rose-400 bg-rose-50/60 focus:border-rose-400 focus:ring-2 focus:ring-rose-200"
-          : "border-slate-200 bg-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200"
-      }`}
-    />
   );
 }
