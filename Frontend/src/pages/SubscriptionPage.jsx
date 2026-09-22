@@ -243,7 +243,7 @@ export default function SubscriptionPage() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
-          className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-[0_24px_60px_rgba(15,23,42,0.09)]"
+          className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-e4"
         >
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
@@ -330,7 +330,7 @@ export default function SubscriptionPage() {
               initial={{ opacity: 0, y: 14, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 14, scale: 0.98 }}
-              className="w-full max-w-xl rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_32px_90px_rgba(15,23,42,0.35)]"
+              className="w-full max-w-xl rounded-3xl border border-slate-200 bg-white p-6 shadow-e5"
             >
               <div className="flex items-start justify-between gap-3">
                 <div>
@@ -361,7 +361,7 @@ export default function SubscriptionPage() {
                       <div key={label} className="flex items-center gap-1 flex-1">
                         <div className="flex flex-col items-center gap-1 flex-1">
                           <div className={`h-1.5 w-full rounded-full transition-all duration-500 ${i <= stepIndex ? "bg-cyan-500" : "bg-slate-200"}`} />
-                          <span className={`text-[10px] font-medium ${i <= stepIndex ? "text-cyan-700" : "text-ink-subtle"}`}>{label}</span>
+                          <span className={`text-micro font-medium ${i <= stepIndex ? "text-cyan-700" : "text-ink-subtle"}`}>{label}</span>
                         </div>
                       </div>
                     ))}
@@ -593,7 +593,7 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
       </Helmet>
 
       <div className="mx-auto max-w-6xl">
-        <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_24px_60px_rgba(15,23,42,0.08)] md:p-8">
+        <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-e4 md:p-8">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-700">Kanthast School plan</p>
@@ -626,7 +626,7 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
                       onClick={() => selectClass(option.value)}
                       className={`rounded-xl border px-4 py-3 text-left transition ${
                         active
-                          ? "border-cyan-400 bg-cyan-50 text-cyan-900 shadow-[0_10px_25px_rgba(8,145,178,0.12)]"
+                          ? "border-cyan-400 bg-cyan-50 text-cyan-900 shadow-glow-brand"
                           : "border-slate-200 bg-white text-slate-700 hover:border-cyan-200"
                       }`}
                     >

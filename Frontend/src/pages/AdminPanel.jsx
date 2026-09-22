@@ -474,7 +474,7 @@ export default function AdminPanel() {
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,_#dbeafe,_#eef2ff_42%,_#f8fafc)] px-3 md:px-6 py-5">
       <div className="max-w-[1500px] mx-auto">
-        <div className="rounded-3xl border border-slate-200 bg-white/95 shadow-[0_24px_70px_rgba(15,23,42,0.10)] overflow-hidden">
+        <div className="rounded-3xl border border-slate-200 bg-white/95 shadow-e4 overflow-hidden">
           <header className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white px-5 py-4 flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-xs uppercase tracking-[0.18em] text-cyan-300">Kanthast</p>
@@ -550,7 +550,7 @@ export default function AdminPanel() {
                           return (
                             <article
                               key={user._id}
-                              className="rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_10px_25px_rgba(15,23,42,0.06)]"
+                              className="rounded-2xl border border-slate-200 bg-white p-4 shadow-e3"
                             >
                               {editing ? (
                                 <div className="space-y-2">
@@ -855,7 +855,7 @@ export default function AdminPanel() {
 
 function StatCard({ label, value }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-e3">
       <p className="text-sm text-slate-500">{label}</p>
       <p className="text-3xl font-black text-slate-900 mt-1">{value}</p>
     </div>

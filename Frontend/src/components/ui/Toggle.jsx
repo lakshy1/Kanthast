@@ -54,7 +54,7 @@ export default function Toggle({
       >
         <span
           className={`flex h-5 w-5 items-center justify-center rounded-full bg-white
-                      text-[9px] font-bold text-ink shadow-e1
+                      text-micro font-bold text-ink shadow-e1
                       transition-transform duration-fast ease-brand
                       ${checked ? "translate-x-6" : "translate-x-1"}`}
           aria-hidden="true"

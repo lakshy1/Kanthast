@@ -12,14 +12,14 @@ export default function PageLoader() {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative h-60 w-60 rounded-full border border-white/20 bg-white/10 shadow-[0_30px_120px_rgba(2,12,27,0.55)] backdrop-blur-2xl"
+        className="relative h-60 w-60 rounded-full border border-white/20 bg-white/10 shadow-e5 backdrop-blur-2xl"
       >
         <motion.div
           className="absolute inset-3 rounded-full border border-cyan-200/35"
           animate={{ rotate: 360 }}
           transition={{ duration: 8, ease: "linear", repeat: Infinity }}
         >
-          <span className="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.9)]" />
+          <span className="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-cyan-300 shadow-glow-brand" />
         </motion.div>
 
         <motion.div
@@ -27,7 +27,7 @@ export default function PageLoader() {
           animate={{ rotate: -360 }}
           transition={{ duration: 10, ease: "linear", repeat: Infinity }}
         >
-          <span className="absolute -right-1 top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full bg-blue-300 shadow-[0_0_16px_rgba(147,197,253,0.85)]" />
+          <span className="absolute -right-1 top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full bg-blue-300 shadow-glow-brand" />
         </motion.div>
 
         <motion.div

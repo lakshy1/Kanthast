@@ -309,7 +309,7 @@ function PrimaryButton({ children }) {
   return (
     <button
       type="button"
-      className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-extrabold text-slate-950 shadow-[0_10px_30px_rgba(245,158,11,0.28)] transition hover:-translate-y-0.5 hover:bg-orange-500"
+      className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-extrabold text-slate-950 shadow-glow-caution transition hover:-translate-y-0.5 hover:bg-orange-500"
     >
       {children}
     </button>
@@ -333,7 +333,7 @@ function LessonPreviewCard({ label, title, subtext, statsList, gradient, compact
     <motion.div
       whileHover={{ y: -8 }}
       transition={{ duration: 0.25 }}
-      className={`relative overflow-hidden rounded-[28px] border border-amber-300/20 bg-[linear-gradient(180deg,rgba(26,36,56,0.98),rgba(17,24,39,0.98))] p-5 shadow-[0_30px_70px_rgba(2,6,23,0.45)] ${compact ? "max-w-md" : ""}`}
+      className={`relative overflow-hidden rounded-[28px] border border-amber-300/20 bg-[linear-gradient(180deg,rgba(26,36,56,0.98),rgba(17,24,39,0.98))] p-5 shadow-e4 ${compact ? "max-w-md" : ""}`}
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.15),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.16),transparent_32%)]" />
       <div className="relative z-10">
@@ -352,7 +352,7 @@ function LessonPreviewCard({ label, title, subtext, statsList, gradient, compact
           <div className="absolute right-8 top-32 h-3 w-24 rounded-full bg-white/20" />
           <div className="absolute right-8 top-40 h-3 w-20 rounded-full bg-white/15" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/14 shadow-[0_0_60px_rgba(245,158,11,0.35)] backdrop-blur-md">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/14 shadow-glow-caution backdrop-blur-md">
               <FaCirclePlay className="text-3xl text-white" />
             </div>
           </div>
@@ -369,7 +369,7 @@ function LessonPreviewCard({ label, title, subtext, statsList, gradient, compact
             <span className="text-amber-300">62%</span>
           </div>
           <div className="h-2.5 rounded-full bg-slate-800">
-            <div className="h-full w-[62%] rounded-full bg-gradient-to-r from-amber-400 to-orange-500 shadow-[0_0_18px_rgba(245,158,11,0.45)]" />
+            <div className="h-full w-[62%] rounded-full bg-gradient-to-r from-amber-400 to-orange-500 shadow-glow-caution" />
           </div>
         </div>
 
@@ -540,7 +540,7 @@ export default function SchoolHomepage() {
               className="relative z-10 mx-auto w-full max-w-[34rem] lg:max-w-[36rem]"
             >
               <div className="absolute -inset-6 rounded-[40px] bg-[radial-gradient(circle,rgba(245,158,11,0.18),transparent_55%)] blur-3xl" />
-              <div className="relative overflow-hidden rounded-[32px] border border-amber-300/20 shadow-[0_30px_70px_rgba(2,6,23,0.45)]">
+              <div className="relative overflow-hidden rounded-[32px] border border-amber-300/20 shadow-e4">
                 <img
                   src={schoolHeroImage}
                   alt="Kanthast School lesson preview"
@@ -592,7 +592,7 @@ export default function SchoolHomepage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.45, delay: index * 0.08 }}
-                  className="relative rounded-[24px] border border-[#1E2D45] bg-[#111827] p-6 shadow-[0_20px_60px_rgba(2,6,23,0.25)]"
+                  className="relative rounded-[24px] border border-[#1E2D45] bg-[#111827] p-6 shadow-e4"
                 >
                   <span className="school-display text-5xl font-black text-amber-400/30">
                     {step.number}
@@ -697,7 +697,7 @@ export default function SchoolHomepage() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35 }}
-              className={`grid gap-6 rounded-[30px] border border-[#1E2D45] bg-[#111827] p-6 shadow-[0_24px_70px_rgba(2,6,23,0.28)] lg:grid-cols-2 lg:p-8 ${
+              className={`grid gap-6 rounded-[30px] border border-[#1E2D45] bg-[#111827] p-6 shadow-e4 lg:grid-cols-2 lg:p-8 ${
                 activePainIndex % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
               }`}
             >
@@ -864,7 +864,7 @@ export default function SchoolHomepage() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-[28px] border border-amber-300/30 bg-[#1A2438] p-7 shadow-[0_0_0_1px_rgba(245,158,11,0.15),0_20px_60px_rgba(245,158,11,0.08)]">
+              <div className="relative overflow-hidden rounded-[28px] border border-amber-300/30 bg-[#1A2438] p-7 shadow-glow-caution">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.14),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.12),transparent_30%)]" />
                 <div className="relative z-10">
                   <span className="rounded-full bg-amber-400 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950">

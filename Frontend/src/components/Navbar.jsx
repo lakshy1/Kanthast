@@ -40,8 +40,12 @@ const publicDockItems = [
 ];
 
 const NAVBAR_H = "calc(4rem + env(safe-area-inset-top, 0px))";
+// Caveat is loaded from Google Fonts in index.html. The previous stack led
+// with "Brush Script MT" — a Windows-only system face — so the brand accent
+// silently fell back to a generic cursive on macOS, iOS and Android, i.e. on
+// most of the install base.
 const brandAccentStyle = {
-  fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive',
+  fontFamily: '"Caveat", "Segoe Script", cursive',
 };
 
 const Navbar = () => {
@@ -214,7 +218,7 @@ const Navbar = () => {
               </Link>
               <div ref={trackMenuRef} className="absolute -bottom-4 -right-5 flex items-center gap-1.5">
                 <span
-                  className="text-[0.8rem] text-cyan-300 md:text-[0.9rem]"
+                  className="text-mini text-cyan-300 md:text-sm"
                   style={brandAccentStyle}
                 >
                   {displayTrack}
@@ -228,7 +232,7 @@ const Navbar = () => {
                 >
                   <span className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(34,211,238,0.35),transparent_60%),radial-gradient(circle_at_75%_70%,rgba(244,114,182,0.22),transparent_55%)] opacity-80 blur-[2px]" />
                   <FaChevronDown
-                    className={`relative z-10 text-[9px] text-white/75 transition-transform duration-200 ${
+                    className={`relative z-10 text-micro text-white/75 transition-transform duration-200 ${
                       isTrackMenuOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -241,12 +245,12 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.96 }}
                       transition={{ duration: 0.16 }}
-                      className="absolute right-0 top-7 z-50 w-48 overflow-hidden rounded-2xl border border-cyan-200/40 bg-slate-950/92 p-1.5 shadow-[0_18px_45px_rgba(2,8,23,0.48)] backdrop-blur-xl"
+                      className="absolute right-0 top-7 z-50 w-48 overflow-hidden rounded-2xl border border-cyan-200/40 bg-slate-950/92 p-1.5 shadow-e4 backdrop-blur-xl"
                     >
                       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.18),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(244,114,182,0.16),transparent_34%)]" />
                       <div className="relative z-10">
                         <div className="px-3 pb-2 pt-1">
-                          <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-200/70">
+                          <p className="text-micro font-semibold uppercase tracking-[0.24em] text-cyan-200/70">
                             Explore
                           </p>
                         </div>
@@ -266,7 +270,7 @@ const Navbar = () => {
                               <span className="font-semibold tracking-[0.01em]">{option.label}</span>
                               <span
                                 className={`h-2 w-2 rounded-full ${
-                                  active ? "bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.9)]" : "bg-white/35"
+                                  active ? "bg-cyan-300 shadow-glow-brand" : "bg-white/35"
                                 }`}
                               />
                             </button>
@@ -307,7 +311,7 @@ const Navbar = () => {
                   <motion.span
                     animate={{ rotate: isCoursesOpen ? 180 : 0 }}
                     transition={{ duration: 0.2 }}
-                    className="cursor-pointer text-[9px] text-white/40"
+                    className="cursor-pointer text-micro text-white/40"
                   >
                     <FaChevronDown />
                   </motion.span>
@@ -410,7 +414,7 @@ const Navbar = () => {
                       {initials}
                     </div>
                     <FaChevronDown
-                      className={`text-[9px] text-white/40 transition-transform duration-200 ${
+                      className={`text-micro text-white/40 transition-transform duration-200 ${
                         isDesktopUserOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -432,12 +436,12 @@ const Navbar = () => {
                           <p className="truncate text-xs text-slate-400">{user?.email}</p>
                           {hasSubscription ? (
                             <div className="mt-1.5 flex items-center gap-1.5">
-                              <FaCrown className="shrink-0 text-[9px] text-amber-400" />
-                              <span className="text-[10px] font-semibold text-emerald-600">
+                              <FaCrown className="shrink-0 text-micro text-amber-400" />
+                              <span className="text-micro font-semibold text-emerald-600">
                                 Pro Active
                               </span>
-                              <span className="text-[10px] text-slate-400">·</span>
-                              <span className="text-[10px] text-slate-400">
+                              <span className="text-micro text-slate-400">·</span>
+                              <span className="text-micro text-slate-400">
                                 Till{" "}
                                 {new Date(user?.subscriptionValidTill).toLocaleDateString("en-IN", {
                                   day: "2-digit",
@@ -449,7 +453,7 @@ const Navbar = () => {
                           ) : (
                             <div className="mt-1.5 flex items-center gap-1.5">
                               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300" />
-                              <span className="text-[10px] text-slate-400">No active plan</span>
+                              <span className="text-micro text-slate-400">No active plan</span>
                             </div>
                           )}
                         </div>
@@ -504,7 +508,7 @@ const Navbar = () => {
                       {initials}
                     </div>
                     <FaChevronDown
-                      className={`text-[9px] text-white/40 transition-transform duration-200 ${
+                      className={`text-micro text-white/40 transition-transform duration-200 ${
                         isMobileProfileOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -533,12 +537,12 @@ const Navbar = () => {
                             <p className="truncate text-xs text-slate-400">{user?.email}</p>
                             {hasSubscription ? (
                               <div className="mt-1.5 flex items-center gap-1.5">
-                                <FaCrown className="shrink-0 text-[9px] text-amber-400" />
-                                <span className="text-[10px] font-semibold text-emerald-600">
+                                <FaCrown className="shrink-0 text-micro text-amber-400" />
+                                <span className="text-micro font-semibold text-emerald-600">
                                   Pro Active
                                 </span>
-                                <span className="text-[10px] text-slate-400">·</span>
-                                <span className="text-[10px] text-slate-400">
+                                <span className="text-micro text-slate-400">·</span>
+                                <span className="text-micro text-slate-400">
                                   Till{" "}
                                   {new Date(user?.subscriptionValidTill).toLocaleDateString("en-IN", {
                                     day: "2-digit",
@@ -550,7 +554,7 @@ const Navbar = () => {
                             ) : (
                               <div className="mt-1.5 flex items-center gap-1.5">
                                 <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300" />
-                                <span className="text-[10px] text-slate-400">No active plan</span>
+                                <span className="text-micro text-slate-400">No active plan</span>
                               </div>
                             )}
                           </div>
@@ -632,12 +636,12 @@ const Navbar = () => {
                 >
                   <Icon
                     className={`text-lg ${
-                      isActive ? "drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" : ""
+                      isActive ? "drop-shadow-glow-brand" : ""
                     }`}
                   />
                 </motion.div>
                 <span
-                  className={`text-[10px] font-medium tracking-wide ${
+                  className={`text-micro font-medium tracking-wide ${
                     isActive ? "text-cyan-400" : "text-white/35"
                   }`}
                 >

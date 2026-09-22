@@ -39,7 +39,7 @@ export default function DemoVideoModal({ open, onClose, src, ariaLabel = "Demo v
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-7xl overflow-hidden rounded-2xl border border-white/10 bg-black shadow-[0_30px_100px_rgba(0,0,0,0.6)]"
+        className="relative w-full max-w-7xl overflow-hidden rounded-2xl border border-white/10 bg-black shadow-e5"
         onClick={(event) => event.stopPropagation()}
       >
         <button

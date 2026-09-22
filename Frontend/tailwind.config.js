@@ -64,6 +64,22 @@ export default {
         e3: "var(--e3)",
         e4: "var(--e4)",
         e5: "var(--e5)",
+        // Colored glows are accents, not elevation — they read as "this thing
+        // is active/branded", so they get their own scale rather than being
+        // folded into e1–e5.
+        "glow-brand": "var(--glow-brand)",
+        "glow-positive": "var(--glow-positive)",
+        "glow-caution": "var(--glow-caution)",
+      },
+
+      // ── Micro type scale ────────────────────────────────────────────────
+      // The product shipped text at 9px and 10px, below any reasonable
+      // legibility floor for a study app read for hours. `micro` (11px) is the
+      // smallest size allowed; it carries a little tracking so caps and
+      // tabular figures stay readable at that size.
+      fontSize: {
+        micro: ["0.6875rem", { lineHeight: "1rem", letterSpacing: "0.01em" }], // 11px
+        mini: ["0.75rem", { lineHeight: "1.125rem" }],                          // 12px
       },
 
       // ── Radii: 3 roles, replacing 14 mixed values ───────────────────────

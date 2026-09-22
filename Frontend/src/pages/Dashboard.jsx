@@ -389,7 +389,7 @@ export default function Dashboard() {
       <div className="max-w-7xl mx-auto">
 
         {/* ── Top card ── */}
-        <div className={`rounded-3xl bg-white border border-slate-200 ${compact ? "p-5 md:p-6" : "p-6 md:p-8"} shadow-[0_20px_60px_rgba(2,6,23,0.06)]`}>
+        <div className={`rounded-3xl bg-white border border-slate-200 ${compact ? "p-5 md:p-6" : "p-6 md:p-8"} shadow-e4`}>
 
           {/* Welcome row */}
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">

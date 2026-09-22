@@ -45,7 +45,7 @@ export default class ErrorBoundary extends Component {
 
       return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 px-4">
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 max-w-md w-full text-center shadow-[0_24px_60px_rgba(15,23,42,0.09)]">
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 max-w-md w-full text-center shadow-e4">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-red-500">
               Unexpected Error
             </p>

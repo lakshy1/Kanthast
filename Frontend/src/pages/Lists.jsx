@@ -335,7 +335,7 @@ export default function Lists() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className={`rounded-3xl border border-slate-200 bg-white/80 shadow-[0_18px_40px_rgba(15,23,42,0.06)] backdrop-blur ${compact ? "mb-5 p-4" : "mb-6 p-5"}`}
+            className={`rounded-3xl border border-slate-200 bg-white/80 shadow-e4 backdrop-blur ${compact ? "mb-5 p-4" : "mb-6 p-5"}`}
           >
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
@@ -431,11 +431,13 @@ export default function Lists() {
                     </div>
                   </button>
 
-                  {/* Desktop: plain title */}
-                  <h1 className="hidden lg:block text-4xl md:text-5xl font-black text-slate-900">
+                  {/* Desktop: plain title. h2, not h1 — in school mode the
+                      banner above is the page's h1, and two h1s on one page
+                      break the document outline for screen readers. */}
+                  <h2 className="hidden lg:block text-4xl md:text-5xl font-black text-slate-900">
                     {schoolMode ? `${selectedSchoolClassLabel} - ${activeTab}` : activeTab}{" "}
                     <span className="text-2xl md:text-4xl text-slate-500 font-medium">({activeModule.totalDuration})</span>
-                  </h1>
+                  </h2>
                 </div>
 
                 {activeModule.sections.map((sec, sectionIndex) => (
@@ -447,7 +449,7 @@ export default function Lists() {
                     viewport={{ once: true, margin: "-60px", root: leftColRef }}
                     transition={{ delay: sectionIndex * 0.015, duration: 0.45, ease: "easeOut" }}
                   >
-                    <div className={`rounded-3xl bg-white/80 border border-slate-200 ${compact ? "p-5 md:p-6" : "p-6 md:p-7"} shadow-[0_18px_40px_rgba(15,23,42,0.06)] backdrop-blur`}>
+                    <div className={`rounded-3xl bg-white/80 border border-slate-200 ${compact ? "p-5 md:p-6" : "p-6 md:p-7"} shadow-e4 backdrop-blur`}>
                       <h2 className={`font-black text-slate-900 ${compact ? "text-xl sm:text-2xl md:text-4xl" : "text-xl sm:text-3xl md:text-5xl"}`}>
                         {sec.title} <span className={`${compact ? "text-base sm:text-xl" : "text-base sm:text-2xl"} text-slate-500 font-medium`}>({sec.total})</span>
                       </h2>
@@ -512,7 +514,7 @@ export default function Lists() {
             <div className="hidden lg:block w-[360px] shrink-0">
               <div
                 ref={rightCardRef}
-                className="rounded-3xl bg-slate-50 border border-slate-200 shadow-[0_15px_35px_rgba(15,23,42,0.07)]"
+                className="rounded-3xl bg-slate-50 border border-slate-200 shadow-e3"
               >
                 <p className="text-xl font-semibold text-slate-900 px-6 pt-4 pb-3 border-b border-slate-100">
                   Jump to:
@@ -530,7 +532,7 @@ export default function Lists() {
                             : "text-slate-700 hover:bg-white hover:text-slate-900"
                         }`}
                       >
-                        <span className="text-[0.95rem] leading-snug">{sec.title}</span>
+                        <span className="text-base leading-snug">{sec.title}</span>
                         <FaChevronRight
                           className={`text-xs shrink-0 ml-2 transition-colors ${
                             isActive ? "text-cyan-400" : "text-slate-400"
@@ -590,7 +592,7 @@ export default function Lists() {
                   animate={{ y: 0 }}
                   exit={{ y: "100%" }}
                   transition={{ type: "spring", stiffness: 320, damping: 32 }}
-                  className="fixed bottom-0 left-0 right-0 z-50 lg:hidden rounded-t-3xl bg-white shadow-[0_-8px_30px_rgba(15,23,42,0.12)] max-h-[70vh] flex flex-col"
+                  className="fixed bottom-0 left-0 right-0 z-50 lg:hidden rounded-t-3xl bg-white shadow-e3 max-h-[70vh] flex flex-col"
                 >
                   <div className="flex justify-center pt-3 pb-1 shrink-0">
                     <div className="w-10 h-1 rounded-full bg-slate-200" />
@@ -620,7 +622,7 @@ export default function Lists() {
                               : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
                           }`}
                         >
-                          <span className="text-[0.95rem] leading-snug pr-2">{tab}</span>
+                          <span className="text-base leading-snug pr-2">{tab}</span>
                           <FaChevronRight
                             className={`text-xs shrink-0 transition-colors ${
                               isActive ? "text-blue-400" : "text-slate-400"
@@ -657,7 +659,7 @@ export default function Lists() {
                   animate={{ y: 0 }}
                   exit={{ y: "100%" }}
                   transition={{ type: "spring", stiffness: 320, damping: 32 }}
-                  className="fixed bottom-0 left-0 right-0 z-50 lg:hidden rounded-t-3xl bg-white shadow-[0_-8px_30px_rgba(15,23,42,0.12)] max-h-[70vh] flex flex-col"
+                  className="fixed bottom-0 left-0 right-0 z-50 lg:hidden rounded-t-3xl bg-white shadow-e3 max-h-[70vh] flex flex-col"
                 >
                   {/* Drag handle */}
                   <div className="flex justify-center pt-3 pb-1 shrink-0">
@@ -692,7 +694,7 @@ export default function Lists() {
                               : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
                           }`}
                         >
-                          <span className="text-[0.95rem] leading-snug pr-2">{sec.title}</span>
+                          <span className="text-base leading-snug pr-2">{sec.title}</span>
                           <FaChevronRight
                             className={`text-xs shrink-0 transition-colors ${
                               isActive ? "text-cyan-400" : "text-slate-400"
@@ -721,7 +723,7 @@ function ActionButton({ icon, label, onClick, locked = false, onLockedClick, wat
         onClick={locked ? onLockedClick : onClick}
         className={`relative h-touch w-touch rounded-full border transition flex items-center justify-center ${
           locked
-            ? "border-slate-200 bg-slate-100 text-slate-300 opacity-60 cursor-not-allowed"
+            ? "border-line bg-surface-sunken text-ink-subtle cursor-not-allowed"
             : watched
             ? "border-green-200 bg-green-50 text-green-600 hover:bg-green-100 hover:border-green-300"
             : "border-slate-300 bg-white/90 text-slate-600 hover:text-slate-900 hover:border-slate-500"
@@ -732,13 +734,13 @@ function ActionButton({ icon, label, onClick, locked = false, onLockedClick, wat
       >
         {icon}
         {locked && (
-          <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-amber-500 text-white text-[9px] grid place-items-center">
+          <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-amber-500 text-white text-micro grid place-items-center">
             <FaLock />
           </span>
         )}
       </motion.button>
       {locked && (
-        <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-slate-900 px-2 py-1 text-[11px] text-white opacity-0 group-hover/lock:opacity-100 transition">
+        <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-slate-900 px-2 py-1 text-micro text-white opacity-0 group-hover/lock:opacity-100 transition">
           {lockedMessage}
         </span>
       )}

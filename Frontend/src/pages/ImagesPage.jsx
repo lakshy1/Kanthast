@@ -88,7 +88,7 @@ export default function ImagesPage() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
-          className="mt-4 rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-[0_22px_55px_rgba(15,23,42,0.08)]"
+          className="mt-4 rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-e4"
         >
           <p className="text-sm uppercase tracking-[0.22em] text-cyan-700 font-semibold">Image Library</p>
           <h1 className="mt-2 text-3xl md:text-4xl font-black text-slate-900">{data.title}</h1>
@@ -112,7 +112,7 @@ export default function ImagesPage() {
               <motion.article
                 key={`${item.imageLink}-${idx}`}
                 whileHover={{ y: -4 }}
-                className="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.08)]"
+                className="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-e3"
               >
                 <div className="relative">
                   <img src={item.imageLink} alt={`${data.title} visual ${idx + 1}`} className="w-full h-52 object-cover" />

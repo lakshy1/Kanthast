@@ -86,7 +86,7 @@ export default function SummaryPage() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
-          className="mt-4 rounded-3xl border border-slate-200 bg-white/90 backdrop-blur p-6 md:p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)]"
+          className="mt-4 rounded-3xl border border-slate-200 bg-white/90 backdrop-blur p-6 md:p-8 shadow-e4"
         >
           <p className="text-sm uppercase tracking-[0.22em] text-cyan-700 font-semibold">Lecture Summary</p>
           <h1 className="mt-3 text-3xl md:text-5xl font-black text-slate-900 leading-tight">{data.title}</h1>
@@ -106,7 +106,7 @@ export default function SummaryPage() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08, duration: 0.45, ease: "easeOut" }}
-              className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.06)]"
+              className="rounded-3xl border border-slate-200 bg-white p-6 shadow-e4"
             >
               <h2 className="text-2xl font-bold text-slate-900">Concise Notes</h2>
               <p className="mt-3 text-slate-600 leading-relaxed">
@@ -132,7 +132,7 @@ export default function SummaryPage() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.16, duration: 0.45, ease: "easeOut" }}
-              className="rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6 shadow-[0_18px_40px_rgba(14,116,144,0.12)]"
+              className="rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6 shadow-glow-brand"
             >
               <h3 className="text-xl font-bold text-slate-900">Quick Revision Sprint</h3>
               <p className="mt-3 text-slate-700">

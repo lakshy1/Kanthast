@@ -212,7 +212,7 @@ function sleep(ms) {
 function AiLectureLoader({ progress = 0, topic = "" }) {
   const storyStep = progress >= 75 ? 3 : progress >= 35 ? 2 : 1;
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-cyan-100 bg-[radial-gradient(circle_at_top_left,_#eff6ff,_#ffffff_46%,_#f0f9ff_100%)] p-6 text-slate-900 shadow-[0_24px_80px_rgba(2,6,23,0.14)]">
+    <div className="relative overflow-hidden rounded-3xl border border-cyan-100 bg-[radial-gradient(circle_at_top_left,_#eff6ff,_#ffffff_46%,_#f0f9ff_100%)] p-6 text-slate-900 shadow-e5">
       <FloatingSparkles />
       <div className="flex items-center gap-3">
         <CartoonAssistantAvatar />
@@ -274,10 +274,10 @@ function CartoonAssistantAvatar() {
         <div className="absolute left-3 top-4 h-1.5 w-1.5 rounded-full bg-slate-900" />
         <div className="absolute right-3 top-4 h-1.5 w-1.5 rounded-full bg-slate-900" />
         <div className="absolute top-6 h-2.5 w-5 rounded-b-full border-b-2 border-slate-900" />
-        <div className="absolute -top-2 h-4 w-6 rounded-full bg-cyan-500 shadow-[0_8px_16px_rgba(34,211,238,0.35)]" />
+        <div className="absolute -top-2 h-4 w-6 rounded-full bg-cyan-500 shadow-glow-brand" />
       </div>
       <motion.span
-        className="absolute -right-1 -bottom-1 flex h-5 w-5 items-center justify-center rounded-full bg-amber-300 text-[10px] font-black text-slate-900 shadow-md"
+        className="absolute -right-1 -bottom-1 flex h-5 w-5 items-center justify-center rounded-full bg-amber-300 text-micro font-black text-slate-900 shadow-md"
         animate={{ y: [0, -4, 0], rotate: [0, 8, 0] }}
         transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
       >
@@ -722,13 +722,13 @@ export default function VideoPage() {
           onClick={openLectureCreator}
           whileHover={{ y: -3, scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="fixed bottom-6 right-4 z-40 flex items-center gap-3 rounded-full border border-cyan-300/60 bg-slate-950 px-4 py-3 text-white shadow-[0_18px_50px_rgba(2,132,199,0.35)] md:bottom-8 md:right-8"
+          className="fixed bottom-6 right-4 z-40 flex items-center gap-3 rounded-full border border-cyan-300/60 bg-slate-950 px-4 py-3 text-white shadow-glow-brand md:bottom-8 md:right-8"
         >
           <span className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-400 text-slate-950">
             <FaRobot />
           </span>
           <span className="text-left">
-            <span className="block text-[11px] uppercase tracking-[0.2em] text-cyan-200">AI Video Creator</span>
+            <span className="block text-micro uppercase tracking-[0.2em] text-cyan-200">AI Video Creator</span>
             <span className="block text-sm font-semibold">{studentName ? `Hey ${studentName}` : "Create a lecture"}</span>
           </span>
         </motion.button>
@@ -751,7 +751,7 @@ export default function VideoPage() {
           {loading ? (
             <VideoPageSkeleton />
           ) : (
-          <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+          <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-e4">
               {parsed.type === "file" ? (
                 <div className="relative rounded-card overflow-hidden border border-line bg-black">
                   <video
@@ -913,7 +913,7 @@ export default function VideoPage() {
           {loading ? (
             <VideoMetaSkeleton />
           ) : (
-            <aside className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
+            <aside className="rounded-3xl border border-slate-200 bg-white p-5 shadow-e4">
               <h2 className="text-xl font-bold text-slate-900">Lecture Context</h2>
               <div className="mt-4 space-y-3">
                 <MetaCard icon={<FaLayerGroup />} label="Module" value={data.module} />
@@ -961,7 +961,7 @@ export default function VideoPage() {
               animate={{ y: 0, opacity: 1, scale: 1 }}
               exit={{ y: 24, opacity: 0, scale: 0.98 }}
               transition={{ type: "spring", stiffness: 260, damping: 24 }}
-              className="w-full max-w-3xl overflow-hidden rounded-[2rem] border border-white/15 bg-white shadow-[0_30px_120px_rgba(2,6,23,0.45)]"
+              className="w-full max-w-3xl overflow-hidden rounded-[2rem] border border-white/15 bg-white shadow-e5"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="grid gap-0 md:grid-cols-[1.1fr_0.9fr]">

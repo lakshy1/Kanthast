@@ -74,7 +74,7 @@ function StatChip({ icon, label, value }) {
         {icon}
       </span>
       <div className="min-w-0">
-        <p className="text-[10px] uppercase tracking-[0.15em] text-ink-subtle truncate">{label}</p>
+        <p className="text-micro uppercase tracking-[0.15em] text-ink-subtle truncate">{label}</p>
         <p className="font-semibold text-ink text-sm truncate">{value}</p>
       </div>
     </div>
@@ -201,12 +201,12 @@ function SessionCard({ session, onLogout, revokingSessionId }) {
           <div className="flex flex-wrap items-center gap-2">
             <p className="font-semibold text-ink">{session.deviceName}</p>
             {isThisDevice && (
-              <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-emerald-700">
+              <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-micro font-semibold uppercase tracking-[0.12em] text-emerald-700">
                 This device
               </span>
             )}
             {!isActive && (
-              <span className="rounded-full bg-surface-sunken px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-subtle">
+              <span className="rounded-full bg-surface-sunken px-2.5 py-1 text-micro font-semibold uppercase tracking-[0.12em] text-ink-subtle">
                 Signed out
               </span>
             )}
@@ -616,7 +616,7 @@ export default function Settings() {
                 <span className="flex flex-col items-start">
                   <span>{tab.label}</span>
                   <span
-                    className={`hidden sm:block text-[11px] font-medium transition ${
+                    className={`hidden sm:block text-micro font-medium transition ${
                       activeTab === tab.id
                         ? tab.accent === "cyan"
                           ? "text-cyan-700"

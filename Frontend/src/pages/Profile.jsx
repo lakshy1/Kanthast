@@ -155,7 +155,7 @@ export default function Profile() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
-          className="rounded-3xl border border-slate-200 bg-white/90 backdrop-blur overflow-hidden shadow-[0_28px_60px_rgba(15,23,42,0.09)]"
+          className="rounded-3xl border border-slate-200 bg-white/90 backdrop-blur overflow-hidden shadow-e4"
         >
           {/* Banner with avatar + name + pills all inline */}
           <div className="bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 relative px-4 sm:px-6 md:px-8 py-6">
@@ -169,7 +169,7 @@ export default function Profile() {
                   {initials}
                 </div>
                 <div className="min-w-0">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/65">Profile</p>
+                  <p className="text-micro font-semibold uppercase tracking-[0.2em] text-white/65">Profile</p>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mt-0.5 truncate">
                     {user?.firstName || "User"} {user?.lastName || ""}
                   </h1>
@@ -216,7 +216,7 @@ export default function Profile() {
             className="mt-6 grid lg:grid-cols-[1.2fr_0.8fr] gap-6 lg:items-stretch"
           >
             {/* ── PERSONAL INFORMATION ── */}
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_16px_38px_rgba(15,23,42,0.06)]">
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-e4">
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-2xl font-bold text-slate-900">Personal Information</h2>
                 <button
@@ -294,7 +294,7 @@ export default function Profile() {
             </section>
 
             {/* ── ABOUT ── */}
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_16px_38px_rgba(15,23,42,0.06)] flex flex-col">
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-e4 flex flex-col">
               <h2 className="text-2xl font-bold text-slate-900">About</h2>
 
               {isEditing ? (
@@ -348,7 +348,7 @@ export default function Profile() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 28 }}
-            className="fixed bottom-6 right-6 z-50 rounded-xl border border-emerald-200 bg-emerald-500 px-5 py-3 text-white shadow-[0_14px_30px_rgba(16,185,129,0.32)]"
+            className="fixed bottom-6 right-6 z-50 rounded-xl border border-emerald-200 bg-emerald-500 px-5 py-3 text-white shadow-glow-positive"
           >
             {toast}
           </motion.div>
@@ -365,7 +365,7 @@ function MetaPill({ icon, label, value }) {
         {icon}
       </span>
       <div className="min-w-0">
-        <p className="text-[10px] uppercase tracking-[0.12em] text-white/65 font-medium">{label}</p>
+        <p className="text-micro uppercase tracking-[0.12em] text-white/65 font-medium">{label}</p>
         <p className="text-xs sm:text-sm font-bold text-white truncate">{value}</p>
       </div>
     </div>
@@ -387,7 +387,7 @@ function FieldCard({ icon, iconBg = "bg-slate-100", iconColor = "text-slate-500"
   return (
     <div className={`rounded-xl border px-4 py-3 hover:shadow-md hover:border-slate-300 transition-all duration-200 ${cardStyle}`}>
       <div className="flex items-center gap-2 mb-1">
-        <span className={`w-6 h-6 rounded-full grid place-items-center text-[11px] shrink-0 ${iconBg} ${iconColor}`}>
+        <span className={`w-6 h-6 rounded-full grid place-items-center text-micro shrink-0 ${iconBg} ${iconColor}`}>
           {icon}
         </span>
         <p className="text-xs uppercase tracking-[0.14em] text-slate-500">{label}</p>
@@ -401,7 +401,7 @@ function EditableField({ icon, iconBg = "bg-slate-100", iconColor = "text-slate-
   return (
     <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 hover:shadow-md hover:border-slate-300 transition-all duration-200">
       <div className="flex items-center gap-2 mb-1">
-        <span className={`w-6 h-6 rounded-full grid place-items-center text-[11px] shrink-0 ${iconBg} ${iconColor}`}>
+        <span className={`w-6 h-6 rounded-full grid place-items-center text-micro shrink-0 ${iconBg} ${iconColor}`}>
           {icon}
         </span>
         <p className="text-xs uppercase tracking-[0.14em] text-slate-500">{label}</p>

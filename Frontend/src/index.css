@@ -38,6 +38,10 @@
     --e3: 0 12px 28px -6px rgba(15, 23, 42, .10);
     --e4: 0 24px 60px -12px rgba(15, 23, 42, .14);
     --e5: 0 40px 90px -20px rgba(15, 23, 42, .20);
+
+    --glow-brand: 0 14px 34px -10px rgba(8, 145, 178, .45);
+    --glow-positive: 0 14px 34px -10px rgba(5, 150, 105, .40);
+    --glow-caution: 0 14px 34px -10px rgba(180, 83, 9, .38);
   }
 
   /* Dark is opt-in via the Appearance setting (data-theme="dark"). */
@@ -71,6 +75,10 @@
     --e3: 0 12px 28px -6px rgba(0, 0, 0, .55);
     --e4: 0 24px 60px -12px rgba(0, 0, 0, .60);
     --e5: 0 40px 90px -20px rgba(0, 0, 0, .70);
+
+    --glow-brand: 0 14px 34px -10px rgba(34, 211, 238, .40);
+    --glow-positive: 0 14px 34px -10px rgba(71, 205, 137, .35);
+    --glow-caution: 0 14px 34px -10px rgba(243, 135, 68, .35);
   }
 
   /* "System" appearance follows the OS, without needing a dark: variant. */
@@ -105,6 +113,10 @@
       --e3: 0 12px 28px -6px rgba(0, 0, 0, .55);
       --e4: 0 24px 60px -12px rgba(0, 0, 0, .60);
       --e5: 0 40px 90px -20px rgba(0, 0, 0, .70);
+
+      --glow-brand: 0 14px 34px -10px rgba(34, 211, 238, .40);
+      --glow-positive: 0 14px 34px -10px rgba(71, 205, 137, .35);
+      --glow-caution: 0 14px 34px -10px rgba(243, 135, 68, .35);
     }
   }
 

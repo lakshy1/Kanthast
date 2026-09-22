@@ -15,7 +15,7 @@ export default function EdtechLoader() {
         initial={{ y: 16, scale: 0.96, opacity: 0 }}
         animate={{ y: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 0.45, ease: "easeOut" }}
-        className="relative w-[min(90vw,760px)] rounded-3xl border border-white/20 bg-white/10 px-6 py-10 md:px-10 md:py-12 backdrop-blur-2xl shadow-[0_32px_120px_rgba(2,12,27,0.55)]"
+        className="relative w-[min(90vw,760px)] rounded-3xl border border-white/20 bg-white/10 px-6 py-10 md:px-10 md:py-12 backdrop-blur-2xl shadow-e5"
       >
         <div className="pointer-events-none absolute inset-x-8 top-1/2 h-14 -translate-y-1/2 overflow-hidden opacity-90">
           <svg
@@ -36,7 +36,7 @@ export default function EdtechLoader() {
           </svg>
 
           <motion.div
-            className="absolute top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-cyan-200 shadow-[0_0_20px_rgba(103,232,249,0.95)]"
+            className="absolute top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-cyan-200 shadow-glow-brand"
             animate={{ left: ["-2%", "102%"] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
           />

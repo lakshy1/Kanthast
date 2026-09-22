@@ -70,7 +70,7 @@ export default function Courses() {
             variants={stagger}
             initial="hidden"
             animate="show"
-            className="rounded-3xl border border-white/60 bg-white/70 px-6 py-10 text-center backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:px-12"
+            className="rounded-3xl border border-white/60 bg-white/70 px-6 py-10 text-center backdrop-blur-2xl shadow-e4 md:px-12"
           >
             <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-black leading-tight text-slate-900">
               Programs Built for Every Medical Stage
@@ -109,7 +109,7 @@ export default function Courses() {
               variants={fadeUp}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ duration: 0.28, ease: "easeOut" }}
-              className="rounded-2xl border border-white/60 bg-white/55 p-7 backdrop-blur-2xl shadow-[0_18px_55px_rgba(15,23,42,0.11)]"
+              className="rounded-2xl border border-white/60 bg-white/55 p-7 backdrop-blur-2xl shadow-e4"
             >
               <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
               <p className="mt-3 text-slate-600 leading-relaxed">{item.desc}</p>
@@ -126,7 +126,7 @@ export default function Courses() {
           viewport={sectionViewport}
           className="mx-auto max-w-7xl px-6 md:px-16"
         >
-          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:grid-cols-2 md:p-8">
+          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
             <motion.div variants={fadeUp}>
               <h2 className="text-3xl md:text-5xl font-black text-slate-900">Medicine / USMLE</h2>
               <p className="mt-4 text-slate-600 text-lg leading-relaxed">
@@ -170,7 +170,7 @@ export default function Courses() {
           viewport={sectionViewport}
           className="mx-auto max-w-7xl px-6 md:px-16"
         >
-          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:grid-cols-2 md:p-8">
+          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
             <motion.div
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.01 }}
@@ -216,7 +216,7 @@ export default function Courses() {
           viewport={sectionViewport}
           className="mx-auto max-w-7xl px-6 md:px-16"
         >
-          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-[0_25px_70px_rgba(15,23,42,0.13)] md:grid-cols-2 md:p-8">
+          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
             <motion.div variants={fadeUp}>
               <h2 className="text-3xl md:text-5xl font-black text-slate-900">INI CET</h2>
               <p className="mt-4 text-slate-600 text-lg leading-relaxed">
@@ -302,7 +302,7 @@ function SchoolCourses({ navigate }) {
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="rounded-2xl border border-slate-200 bg-slate-950 p-6 text-white shadow-[0_24px_70px_rgba(15,23,42,0.18)]"
+            className="rounded-2xl border border-slate-200 bg-slate-950 p-6 text-white shadow-e4"
           >
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Annual access</p>
             <div className="mt-4 flex items-end gap-3">

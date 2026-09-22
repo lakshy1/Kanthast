@@ -5,7 +5,7 @@ function SkeletonBlock({ className = "" }) {
 export function ProfileSkeleton() {
   return (
     <div className="mt-6 grid lg:grid-cols-[1.2fr_0.8fr] gap-6">
-      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_16px_38px_rgba(15,23,42,0.06)]">
+      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-e2">
         <div className="flex items-center justify-between mb-5">
           <SkeletonBlock className="h-8 w-52" />
           <SkeletonBlock className="h-9 w-28 rounded-lg" />
@@ -19,7 +19,7 @@ export function ProfileSkeleton() {
           ))}
         </div>
       </div>
-      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_16px_38px_rgba(15,23,42,0.06)]">
+      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-e2">
         <SkeletonBlock className="h-8 w-24 mb-4" />
         <SkeletonBlock className="h-52 w-full rounded-xl" />
       </div>
@@ -44,7 +44,7 @@ export function ListsPageSkeleton() {
         {[1, 2].map((sectionKey) => (
           <div
             key={sectionKey}
-            className="rounded-3xl bg-white/80 border border-slate-200 p-6 md:p-7 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"
+            className="rounded-3xl bg-white/80 border border-slate-200 p-6 md:p-7 shadow-e2"
           >
             <SkeletonBlock className="h-11 w-96 max-w-full" />
             <div className="mt-6 space-y-3">
@@ -69,7 +69,7 @@ export function ListsPageSkeleton() {
       </div>
 
       <aside className="self-start lg:sticky lg:top-24 overflow-visible h-fit">
-        <div className="rounded-3xl bg-slate-50 border border-slate-200 p-6 shadow-[0_15px_35px_rgba(15,23,42,0.07)]">
+        <div className="rounded-3xl bg-slate-50 border border-slate-200 p-6 shadow-e2">
           <SkeletonBlock className="h-7 w-28 mb-4" />
           <div className="space-y-3">
             {[1, 2, 3, 4, 5].map((key) => (
@@ -85,7 +85,7 @@ export function ListsPageSkeleton() {
 export function SummaryPageSkeleton() {
   return (
     <div className="mt-6 grid lg:grid-cols-[1.4fr_1fr] gap-6">
-      <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
+      <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-e2">
         <SkeletonBlock className="h-8 w-56" />
         <SkeletonBlock className="mt-4 h-4 w-full" />
         <SkeletonBlock className="mt-2 h-4 w-11/12" />
@@ -98,7 +98,7 @@ export function SummaryPageSkeleton() {
         </div>
       </article>
 
-      <aside className="rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6 shadow-[0_18px_40px_rgba(14,116,144,0.12)]">
+      <aside className="rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6 shadow-e2">
         <SkeletonBlock className="h-7 w-52" />
         <SkeletonBlock className="mt-4 h-4 w-full" />
         <div className="mt-5 space-y-3">
@@ -113,7 +113,7 @@ export function SummaryPageSkeleton() {
 
 export function VideoPageSkeleton() {
   return (
-    <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+    <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-e2">
       <SkeletonBlock className="w-full aspect-video rounded-2xl" />
       <SkeletonBlock className="mt-3 h-4 w-32" />
     </section>
@@ -122,7 +122,7 @@ export function VideoPageSkeleton() {
 
 export function VideoMetaSkeleton() {
   return (
-    <aside className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
+    <aside className="rounded-3xl border border-slate-200 bg-white p-5 shadow-e2">
       <SkeletonBlock className="h-7 w-44" />
       <div className="mt-4 space-y-3">
         {[1, 2, 3].map((key) => (
@@ -140,7 +140,7 @@ export function ImagesPageSkeleton() {
       {Array.from({ length: 6 }).map((_, idx) => (
         <article
           key={idx}
-          className="rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.08)]"
+          className="rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-e2"
         >
           <SkeletonBlock className="h-52 w-full rounded-none" />
           <div className="p-4 space-y-2">

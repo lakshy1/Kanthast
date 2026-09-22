@@ -58,14 +58,14 @@ function VideoMessageCard({ msg }) {
     <div className="mb-3 overflow-hidden rounded-2xl border border-cyan-200 bg-gradient-to-br from-cyan-50 via-white to-blue-50 shadow-sm">
       <div className="flex items-center justify-between gap-3 border-b border-cyan-100 px-4 py-3">
         <div>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan-700">
+          <p className="text-micro font-semibold uppercase tracking-[0.18em] text-cyan-700">
             AI Video Lecture
           </p>
           <h3 className="mt-1 text-sm font-bold text-slate-900">
             {msg.topic || "Your lesson"}
           </h3>
         </div>
-        <div className="flex items-center gap-1 rounded-full bg-cyan-100 px-2.5 py-1 text-[11px] font-semibold text-cyan-700">
+        <div className="flex items-center gap-1 rounded-full bg-cyan-100 px-2.5 py-1 text-micro font-semibold text-cyan-700">
           <FaPlay size={9} />
           Playable
         </div>
@@ -139,7 +139,7 @@ function SidebarContent({ sessions, activeSessionId, onLoad, onNew, onDelete, on
       </div>
 
       <div className="px-4 pb-2 flex-shrink-0">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">Recent</p>
+        <p className="text-micro font-semibold uppercase tracking-[0.12em] text-slate-500">Recent</p>
       </div>
 
       {/* Session list */}
@@ -163,7 +163,7 @@ function SidebarContent({ sessions, activeSessionId, onLoad, onNew, onDelete, on
                 <p className={`text-sm truncate font-medium leading-snug ${active ? "text-white" : "text-slate-300"}`}>
                   {session.title || "New Chat"}
                 </p>
-                <p className="text-[11px] text-slate-500 mt-0.5 truncate">
+                <p className="text-micro text-slate-500 mt-0.5 truncate">
                   {session.preview || formatTime(session.lastMessageAt) || "No messages yet"}
                 </p>
               </button>
@@ -445,7 +445,7 @@ export default function Chatbot() {
             </div>
             <div className="min-w-0">
               <h1 className="font-bold text-slate-900 text-sm md:text-base leading-tight truncate">Kanthast AI Support</h1>
-              <p className="text-[11px] text-slate-500 leading-tight hidden sm:block">Medical platform assistant</p>
+              <p className="text-micro text-slate-500 leading-tight hidden sm:block">Medical platform assistant</p>
             </div>
           </div>
 
@@ -540,7 +540,7 @@ export default function Chatbot() {
                       </a>
                     )}
                   </div>
-                  <p className="text-[11px] text-ink-subtle px-1">
+                  <p className="text-micro text-ink-subtle px-1">
                     {isUser ? "You" : "AI"} · {formatTime(msg.createdAt)}
                   </p>
                 </div>

@@ -260,7 +260,7 @@ const Homepage = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.15)] border border-slate-200 bg-white aspect-video">
+            <div className="rounded-3xl overflow-hidden shadow-e5 border border-slate-200 bg-white aspect-video">
               <video
                 ref={video2Ref}
                 src={video2}
@@ -392,7 +392,7 @@ const Homepage = () => {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="mt-20 rounded-3xl overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.15)] border border-slate-200 aspect-video"
+            className="mt-20 rounded-3xl overflow-hidden shadow-e5 border border-slate-200 aspect-video"
           >
             <img
               src={heroImage}
