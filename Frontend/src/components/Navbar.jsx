@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { NavLink, Link, useLocation, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import {
   FaChevronDown,
   FaRobot,
@@ -80,7 +80,18 @@ const Navbar = () => {
 
   const isLoggedIn = Boolean(token && user);
   const hasSubscription = Boolean(user?.subscriptionPurchased);
-  const isSchoolTrack = selectedTrack === "school";
+
+  // The route is the source of truth for the track, so derive it rather than
+  // mirroring it into state. The old effect read AND wrote `selectedTrack`
+  // with it in the deps, so it re-ran and rewrote localStorage on every pass.
+  const routeTrack = location.pathname.startsWith("/school")
+    ? "school"
+    : location.pathname === "/"
+      ? "medical"
+      : null;
+  const effectiveTrack = routeTrack || selectedTrack;
+
+  const isSchoolTrack = effectiveTrack === "school";
   const homePath = isSchoolTrack ? "/school" : "/";
   const displayTrack = isSchoolTrack ? "School" : "Medical";
 
@@ -153,26 +164,20 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handler);
   }, [isTrackMenuOpen]);
 
+  // Persist the derived track so it survives a reload onto a neutral route
+  // like /courses. No setState here: `effectiveTrack` already derives the
+  // display value from the route, so writing it back to state would only
+  // trigger a second render for a value the first render already had.
   useEffect(() => {
-    if (location.pathname.startsWith("/school")) {
-      setSelectedTrack("school");
-      try {
-        localStorage.setItem(TRACK_STORAGE_KEY, "school");
-      } catch {
-        // ignore storage write failures
+    if (!routeTrack) return;
+    try {
+      if (localStorage.getItem(TRACK_STORAGE_KEY) !== routeTrack) {
+        localStorage.setItem(TRACK_STORAGE_KEY, routeTrack);
       }
-      return;
+    } catch {
+      // ignore storage write failures
     }
-
-    if (location.pathname === "/" && selectedTrack === "school") {
-      setSelectedTrack("medical");
-      try {
-        localStorage.setItem(TRACK_STORAGE_KEY, "medical");
-      } catch {
-        // ignore storage write failures
-      }
-    }
-  }, [location.pathname, selectedTrack]);
+  }, [routeTrack]);
 
   const handleLogout = () => {
     localStorage.removeItem("kanthastToken");
@@ -248,7 +253,7 @@ const Navbar = () => {
 
                 <AnimatePresence>
                   {isTrackMenuOpen && (
-                    <motion.div
+                    <Motion.div
                       initial={{ opacity: 0, y: 8, scale: 0.96 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.96 }}
@@ -285,7 +290,7 @@ const Navbar = () => {
                           );
                         })}
                       </div>
-                    </motion.div>
+                    </Motion.div>
                   )}
                 </AnimatePresence>
               </div>
@@ -327,7 +332,7 @@ const Navbar = () => {
                   {/* Was a <span>: it looked clickable (cursor-pointer) but was
                       not focusable and had no handler, so the whole submenu
                       was hover-only — unreachable by keyboard and on touch. */}
-                  <motion.button
+                  <Motion.button
                     type="button"
                     onClick={() => setIsCoursesOpen((prev) => !prev)}
                     aria-haspopup="menu"
@@ -338,11 +343,11 @@ const Navbar = () => {
                     className="grid h-8 w-8 place-items-center text-micro text-white/60 hover:text-white"
                   >
                     <FaChevronDown aria-hidden="true" />
-                  </motion.button>
+                  </Motion.button>
                 </div>
                 <AnimatePresence>
                   {isCoursesOpen && (
-                    <motion.div
+                    <Motion.div
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
@@ -362,7 +367,7 @@ const Navbar = () => {
                           {label}
                         </HashLink>
                       ))}
-                    </motion.div>
+                    </Motion.div>
                   )}
                 </AnimatePresence>
               </div>
@@ -466,7 +471,7 @@ const Navbar = () => {
 
                   <AnimatePresence>
                     {isDesktopUserOpen && (
-                      <motion.div
+                      <Motion.div
                         initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 8 }}
@@ -528,7 +533,7 @@ const Navbar = () => {
                         >
                           <FaSignOutAlt className="text-xs" /> Logout
                         </button>
-                      </motion.div>
+                      </Motion.div>
                     )}
                   </AnimatePresence>
                 </div>
@@ -560,7 +565,7 @@ const Navbar = () => {
 
                   <AnimatePresence>
                     {isMobileProfileOpen && (
-                      <motion.div
+                      <Motion.div
                         initial={{ opacity: 0, y: 8, scale: 0.97 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 8, scale: 0.97 }}
@@ -634,7 +639,7 @@ const Navbar = () => {
                         >
                           <FaSignOutAlt className="text-xs" /> Logout
                         </button>
-                      </motion.div>
+                      </Motion.div>
                     )}
                   </AnimatePresence>
                 </div>
@@ -674,7 +679,7 @@ const Navbar = () => {
                   isActive ? "text-cyan-400" : "text-white/60 hover:text-white"
                 }`}
               >
-                <motion.div
+                <Motion.div
                   animate={{ scale: isActive ? 1.15 : 1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 20 }}
                 >
@@ -683,7 +688,7 @@ const Navbar = () => {
                       isActive ? "drop-shadow-glow-brand" : ""
                     }`}
                   />
-                </motion.div>
+                </Motion.div>
                 <span
                   className={`text-micro font-medium tracking-wide ${
                     isActive ? "text-cyan-400" : "text-white/60"
@@ -692,7 +697,7 @@ const Navbar = () => {
                   {label}
                 </span>
                 {isActive && (
-                  <motion.div
+                  <Motion.div
                     layoutId="dockIndicator"
                     className="absolute top-0 h-0.5 w-8 rounded-full bg-cyan-400"
                   />

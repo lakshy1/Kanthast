@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { FaArrowRight, FaCirclePlay } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import DemoVideoModal from "../components/DemoVideoModal";
@@ -38,6 +38,14 @@ function replayVideo(ref) {
   el.play().catch(() => {});
 }
 
+// Module scope: these are constants, so keeping them in the component body
+// recreated the arrays on every render and made them unstable effect deps.
+const ROLES = [
+  "Cardiothoracic Surgeon",
+  "Plastic Surgeon",
+  "General Physician",
+];
+
 const Homepage = () => {
   const courses = [
     {
@@ -54,12 +62,11 @@ const Homepage = () => {
     },
   ];
 
-  const roles = [
-    "Cardiothoracic Surgeon",
-    "Plastic Surgeon",
-    "General Physician",
-  ];
-
+  const [prefersReducedMotion] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -74,8 +81,18 @@ const Homepage = () => {
   usePlayOnVisible(video2Ref);
 
   useEffect(() => {
-    const role = roles[currentRole];
-    const speed = isDeleting ? 40 : 70;
+    // Respect the OS preference: a permanently animating headline is exactly
+    // what reduced-motion users are asking to avoid. `prefersReducedMotion`
+    // is read once at mount and the full role is rendered statically below.
+    if (prefersReducedMotion) return undefined;
+
+    const role = ROLES[currentRole];
+
+    // The pause-before-delete timer used to be a bare setTimeout inside the
+    // tick, so it was never cleared: it re-armed on every render during the
+    // 1.2s hold (queuing overlapping timers) and could fire setIsDeleting on
+    // an unmounted component. Both timers are now tracked and cleaned up.
+    let holdTimer;
 
     const timer = setTimeout(() => {
       if (!isDeleting) {
@@ -85,17 +102,20 @@ const Homepage = () => {
       }
 
       if (!isDeleting && displayText === role) {
-        setTimeout(() => setIsDeleting(true), 1200);
+        holdTimer = setTimeout(() => setIsDeleting(true), 1200);
       }
 
       if (isDeleting && displayText === "") {
         setIsDeleting(false);
-        setCurrentRole((prev) => (prev + 1) % roles.length);
+        setCurrentRole((prev) => (prev + 1) % ROLES.length);
       }
-    }, speed);
+    }, isDeleting ? 40 : 70);
 
-    return () => clearTimeout(timer);
-  }, [currentRole, displayText, isDeleting, roles]);
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(holdTimer);
+    };
+  }, [currentRole, displayText, isDeleting, prefersReducedMotion]);
 
   return (
     <div className="bg-gradient-to-br from-[#0B1120] via-blue-950 to-[#0d1829] text-white overflow-x-hidden">
@@ -118,7 +138,7 @@ const Homepage = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-blue-950 to-[#0d1829]"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-16 items-center">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -152,9 +172,9 @@ const Homepage = () => {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </Motion.div>
 
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
@@ -169,13 +189,13 @@ const Homepage = () => {
               className="w-full h-full object-cover"
               onMouseEnter={() => replayVideo(video3Ref)}
             />
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
 
       <section className="py-16 bg-gradient-to-br from-[#0B1120] via-blue-950 to-[#0d1829]">
         <div className="max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-16 items-center">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -191,9 +211,9 @@ const Homepage = () => {
               className="w-full h-full object-cover scale-[1.15]"
               onMouseEnter={() => replayVideo(video1Ref)}
             />
-          </motion.div>
+          </Motion.div>
 
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -212,7 +232,7 @@ const Homepage = () => {
             <Link to="/signup" className="text-cyan-400 font-semibold flex items-center gap-2">
               Try It Free <FaArrowRight />
             </Link>
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
 
@@ -226,7 +246,7 @@ const Homepage = () => {
 
         <div className="max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-3 gap-10">
           {courses.map((course, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               whileHover={{ y: -8 }}
               className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md hover:shadow-2xl transition"
@@ -236,7 +256,7 @@ const Homepage = () => {
               <Link to="/courses" className="text-cyan-600 font-semibold hover:text-cyan-700 transition">
                 Learn More
               </Link>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </section>
@@ -253,7 +273,7 @@ const Homepage = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[37.5rem] h-[37.5rem] bg-cyan-100 blur-3xl rounded-full opacity-40 pointer-events-none"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-20 items-center">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -271,16 +291,16 @@ const Homepage = () => {
                 onMouseEnter={() => replayVideo(video2Ref)}
               />
             </div>
-          </motion.div>
+          </Motion.div>
 
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
             className="flex flex-col gap-10"
           >
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -299,9 +319,9 @@ const Homepage = () => {
                   so you understand the core mechanism instantly.
                 </p>
               </div>
-            </motion.div>
+            </Motion.div>
 
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -320,9 +340,9 @@ const Homepage = () => {
                   You see the concept instead of memorizing isolated facts.
                 </p>
               </div>
-            </motion.div>
+            </Motion.div>
 
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -341,8 +361,8 @@ const Homepage = () => {
                   instantly during the exam, making recall effortless.
                 </p>
               </div>
-            </motion.div>
-          </motion.div>
+            </Motion.div>
+          </Motion.div>
         </div>
       </section>
 
@@ -350,7 +370,7 @@ const Homepage = () => {
         <div className="absolute top-40 left-1/2 -translate-x-1/2 w-[43.75rem] min-h-screen bg-cyan-200/30 blur-3xl rounded-full pointer-events-none"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 text-center">
-          <motion.h2
+          <Motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -360,10 +380,10 @@ const Homepage = () => {
             Think like a{" "}
             <span className="relative inline-block">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-600">
-                {displayText}
+                {prefersReducedMotion ? ROLES[currentRole] : displayText}
               </span>
 
-              <motion.span
+              <Motion.span
                 layout
                 className="absolute left-0 -bottom-2 h-1 w-full bg-red-400 rounded-full"
                 initial={{ scaleX: 0 }}
@@ -373,9 +393,9 @@ const Homepage = () => {
 
               <span className="animate-pulse text-red-500">|</span>
             </span>
-          </motion.h2>
+          </Motion.h2>
 
-          <motion.p
+          <Motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -385,9 +405,9 @@ const Homepage = () => {
             Train your brain to approach medicine with specialist-level
             reasoning. See the physiology, anticipate the complications, and
             think beyond memorization.
-          </motion.p>
+          </Motion.p>
 
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, scale: 0.96, y: 60 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -400,7 +420,7 @@ const Homepage = () => {
               loading="lazy"
               className="w-full h-full object-cover scale-[1.15]"
             />
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
 
@@ -408,7 +428,7 @@ const Homepage = () => {
       <section className="w-full bg-slate-50 py-16 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
 
-          <motion.h2
+          <Motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
@@ -416,9 +436,9 @@ const Homepage = () => {
             className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight max-w-2xl"
           >
             Join thousands of students learning with Kanthast
-          </motion.h2>
+          </Motion.h2>
 
-          <motion.div
+          <Motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             className="inline-block"
@@ -429,7 +449,7 @@ const Homepage = () => {
             >
               Try it Free
             </Link>
-          </motion.div>
+          </Motion.div>
 
         </div>
       </section>

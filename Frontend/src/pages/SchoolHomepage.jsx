@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import DemoVideoModal from "../components/DemoVideoModal";
 import schoolHeroImage from "../assets/images/School-Hero-I.png";
@@ -323,7 +323,7 @@ function GhostButton({ children, ...props }) {
 
 function LessonPreviewCard({ label, title, subtext, statsList, gradient, compact = false }) {
   return (
-    <motion.div
+    <Motion.div
       whileHover={{ y: -8 }}
       transition={{ duration: 0.25 }}
       className={`relative overflow-hidden rounded-[28px] border border-amber-300/20 bg-[linear-gradient(180deg,rgba(26,36,56,0.98),rgba(17,24,39,0.98))] p-5 shadow-e4 ${compact ? "max-w-md" : ""}`}
@@ -377,7 +377,7 @@ function LessonPreviewCard({ label, title, subtext, statsList, gradient, compact
           ))}
         </div>
       </div>
-    </motion.div>
+    </Motion.div>
   );
 }
 
@@ -486,7 +486,7 @@ export default function SchoolHomepage() {
         <section className="hero-dot-grid relative overflow-hidden border-b border-slate-800/70 pt-6 md:pt-8">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_50%,rgba(245,158,11,0.08)_0%,transparent_60%)]" />
           <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-16 pt-10 md:px-10 md:pb-20 md:pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-16 lg:pb-24 lg:pt-14">
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
@@ -495,7 +495,7 @@ export default function SchoolHomepage() {
               <span className="inline-flex items-center gap-2 rounded-full border border-amber-300/20 bg-amber-400/12 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-200">
                 * Class I - X - CBSE & State Boards
               </span>
-              <h1 className="school-display mt-6 text-5xl font-black leading-[0.95] text-slate-50 md:text-6xl lg:text-7xl">
+              <h1 className="school-display mt-6 text-4xl font-black leading-[1.02] text-slate-50 sm:text-5xl sm:leading-[0.95] md:text-6xl lg:text-7xl">
                 Learning that
                 <span className="block">actually sticks.</span>
               </h1>
@@ -528,9 +528,9 @@ export default function SchoolHomepage() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </Motion.div>
 
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 26, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.75, delay: 0.08 }}
@@ -544,13 +544,13 @@ export default function SchoolHomepage() {
                   className="block w-full object-cover"
                 />
               </div>
-            </motion.div>
+            </Motion.div>
           </div>
         </section>
 
         <section id="subjects" className="border-b border-slate-800/70 py-8">
           <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-400">
               Subjects covered
             </p>
             <div className="relative overflow-hidden">
@@ -583,7 +583,7 @@ export default function SchoolHomepage() {
             {howItWorks.map((step, index) => {
               const Icon = step.icon;
               return (
-                <motion.article
+                <Motion.article
                   key={step.number}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -606,7 +606,7 @@ export default function SchoolHomepage() {
                       <FaArrowRight className="text-xl text-amber-400/40" />
                     </div>
                   )}
-                </motion.article>
+                </Motion.article>
               );
             })}
           </div>
@@ -641,7 +641,7 @@ export default function SchoolHomepage() {
             <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.08fr]">
               <div className="space-y-4">
                 {activeTabContent.chapters.map((chapter, index) => (
-                  <motion.article
+                  <Motion.article
                     key={chapter.title}
                     initial={{ opacity: 0, x: -16 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -665,7 +665,7 @@ export default function SchoolHomepage() {
                         Watch Demo <FaArrowRight className="text-xs" />
                       </button>
                     </div>
-                  </motion.article>
+                  </Motion.article>
                 ))}
               </div>
 
@@ -698,7 +698,7 @@ export default function SchoolHomepage() {
             onFocusCapture={() => setCarouselPaused(true)}
             onBlurCapture={() => setCarouselPaused(false)}
           >
-            <motion.div
+            <Motion.div
               key={activePainIndex}
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -744,7 +744,7 @@ export default function SchoolHomepage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
 
             <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-3">
@@ -826,9 +826,16 @@ export default function SchoolHomepage() {
                     key={`${testimonial.author}-${index}`}
                     className="w-[320px] shrink-0 rounded-[24px] border border-[#1E2D45] border-l-4 border-l-amber-400 bg-[#1A2438] p-5"
                   >
-                    <div className="mb-4 flex gap-1 text-amber-300">
+                    {/* The rating is information, not decoration — without a
+                        name it reached the AT tree as five unlabelled SVGs
+                        (×16 cards in the marquee). */}
+                    <div
+                      className="mb-4 flex gap-1 text-amber-300"
+                      role="img"
+                      aria-label="Rated 5 out of 5"
+                    >
                       {Array.from({ length: 5 }).map((_, starIndex) => (
-                        <FaStar key={starIndex} />
+                        <FaStar key={starIndex} aria-hidden="true" />
                       ))}
                     </div>
                     <p className="text-sm leading-7 text-slate-100">{testimonial.quote}</p>
@@ -855,7 +862,7 @@ export default function SchoolHomepage() {
                   Start Here
                 </span>
                 <div className="mt-6 flex items-end gap-3">
-                  <span className="school-display text-5xl font-black text-slate-50">Rs 0</span>
+                  <span className="school-display text-4xl font-black text-slate-50 sm:text-5xl">Rs 0</span>
                   <span className="pb-2 text-slate-400">for 7 days</span>
                 </div>
                 <div className="mt-6 space-y-3">
@@ -880,10 +887,10 @@ export default function SchoolHomepage() {
                     Most Popular
                   </span>
                   <div className="mt-6 flex items-end gap-3">
-                    <span className="school-display text-5xl font-black text-slate-50">Rs 5,000/year</span>
+                    <span className="school-display text-3xl font-black text-slate-50 sm:text-4xl md:text-5xl">Rs 5,000/year</span>
                   </div>
                   <div className="mt-2 flex items-center gap-3 text-sm">
-                    <span className="text-slate-500 line-through">Rs 5,999</span>
+                    <span className="text-slate-400 line-through">Rs 5,999</span>
                     <span className="font-semibold text-amber-200">Just Rs 8/day</span>
                   </div>
                   <div className="mt-6 space-y-3">
@@ -935,7 +942,7 @@ export default function SchoolHomepage() {
             {parentFeatures.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <motion.article
+                <Motion.article
                   key={feature.title}
                   initial={{ opacity: 0, y: 22 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -950,7 +957,7 @@ export default function SchoolHomepage() {
                     {feature.title}
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-slate-400">{feature.description}</p>
-                </motion.article>
+                </Motion.article>
               );
             })}
           </div>
@@ -989,7 +996,7 @@ export default function SchoolHomepage() {
                         }`}
                       />
                     </button>
-                    <motion.div
+                    <Motion.div
                       initial={false}
                       animate={{
                         height: isOpen ? "auto" : 0,
@@ -1001,7 +1008,7 @@ export default function SchoolHomepage() {
                       <div className="border-t border-[#1E2D45] px-5 py-5 text-sm leading-7 text-slate-400">
                         {faq.answer}
                       </div>
-                    </motion.div>
+                    </Motion.div>
                   </div>
                 );
               })}
@@ -1012,7 +1019,7 @@ export default function SchoolHomepage() {
         <section className="relative overflow-hidden py-20">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.16),transparent_34%)]" />
           <div className="mx-auto max-w-5xl px-6 text-center md:px-10">
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -1041,7 +1048,7 @@ export default function SchoolHomepage() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </Motion.div>
           </div>
         </section>
 

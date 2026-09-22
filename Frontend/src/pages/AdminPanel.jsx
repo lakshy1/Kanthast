@@ -28,6 +28,7 @@ import {
   updateMedicineUsmleContent,
 } from "../utils/authApi";
 import { modules as legacyModules } from "../data/modulesSeedData";
+import { Button, EmptyState, Field, LiveRegion, Modal, Select, Toggle } from "../components/ui";
 
 const tabs = [
   { id: "overview", label: "Overview", icon: <FaChartLine /> },
@@ -76,6 +77,12 @@ export default function AdminPanel() {
   const [activeTab, setActiveTab] = useState("overview");
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [usersError, setUsersError] = useState("");
+  const [contentError, setContentError] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
+  // What a destructive action is waiting on confirmation for. Shape:
+  // { title, description, body, confirmLabel, run }
+  const [pendingAction, setPendingAction] = useState(null);
   const [search, setSearch] = useState("");
   const [editUserId, setEditUserId] = useState("");
   const [editForm, setEditForm] = useState({});
@@ -127,11 +134,15 @@ export default function AdminPanel() {
   const loadUsers = async () => {
     if (!token) return;
     setLoading(true);
+    setUsersError("");
     try {
       const data = await getAdminUsers(token);
       setUsers(data.users || []);
     } catch (error) {
-      toast.error(error.message || "Failed to load users");
+      const message = error.message || "Failed to load users";
+      setUsersError(message);
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setLoading(false);
     }
@@ -139,12 +150,16 @@ export default function AdminPanel() {
 
   const loadCourseContent = async () => {
     setContentLoading(true);
+    setContentError("");
     try {
       const data = await getMedicineUsmleContent();
       const content = data.content || null;
       syncCourseState(content);
     } catch (error) {
-      toast.error(error.message || "Failed to load course content");
+      const message = error.message || "Failed to load course content";
+      setContentError(message);
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setContentLoading(false);
     }
@@ -157,33 +172,53 @@ export default function AdminPanel() {
       const payload = JSON.parse(contentDraft || "{}");
       const data = await updateMedicineUsmleContent(token, payload);
       syncCourseState(data.content || null);
+      setStatusMessage("Medicine/USMLE content updated");
       toast.success("Medicine/USMLE content updated");
     } catch (error) {
       const message = error instanceof SyntaxError ? "Invalid JSON format" : error.message;
+      setStatusMessage(message || "Failed to update content");
       toast.error(message || "Failed to update content");
     } finally {
       setContentSaving(false);
     }
   };
 
-  const seedCourseContentFromLegacy = async () => {
+  const runSeedCourseContentFromLegacy = async () => {
     if (!token) return;
-    const confirmed = window.confirm(
-      "Seed full Medicine/USMLE catalog from existing legacy Lists data? This will overwrite current DB content."
-    );
-    if (!confirmed) return;
-
     setContentSaving(true);
     try {
       const payload = buildSeedPayloadFromLegacyModules();
       const data = await updateMedicineUsmleContent(token, payload);
       syncCourseState(data.content || null);
+      setStatusMessage("Medicine/USMLE data seeded to database");
       toast.success("Medicine/USMLE data seeded to database");
     } catch (error) {
-      toast.error(error.message || "Failed to seed course content");
+      const message = error.message || "Failed to seed course content";
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setContentSaving(false);
     }
+  };
+
+  const seedCourseContentFromLegacy = () => {
+    if (!token) return;
+    const seedPreview = buildSeedPayloadFromLegacyModules();
+    const seedSubjectCount = seedPreview.subjects.length;
+    setPendingAction({
+      title: "Replace the entire Medicine/USMLE catalog?",
+      description:
+        "This overwrites the whole course in the database with the legacy Lists seed data. It cannot be undone.",
+      body: `Every subject, chapter and video currently stored for Medicine/USMLE (${subjects.length} subject${
+        subjects.length === 1 ? "" : "s"
+      }, ${stats.totalVideos} video${
+        stats.totalVideos === 1 ? "" : "s"
+      }) will be deleted and replaced by the ${seedSubjectCount} subject${
+        seedSubjectCount === 1 ? "" : "s"
+      } from the legacy Lists seed file. Any edits made in this panel since the last seed will be lost.`,
+      confirmLabel: "Overwrite catalog with seed data",
+      run: runSeedCourseContentFromLegacy,
+    });
   };
 
   const filteredUsers = useMemo(() => {
@@ -213,25 +248,41 @@ export default function AdminPanel() {
       const data = await updateAdminUser(token, userId, editForm);
       setUsers((prev) => prev.map((u) => (u._id === userId ? { ...u, ...(data.user || {}) } : u)));
       setEditUserId("");
+      setStatusMessage("User updated");
       toast.success("User updated");
     } catch (error) {
-      toast.error(error.message || "Failed to update user");
+      const message = error.message || "Failed to update user";
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setSaving(false);
     }
   };
 
-  const onDelete = async (userId) => {
+  const runDeleteUser = async (userId) => {
     if (!token) return;
-    const confirmed = window.confirm("Delete this user permanently?");
-    if (!confirmed) return;
     try {
       await deleteAdminUser(token, userId);
       setUsers((prev) => prev.filter((u) => u._id !== userId));
+      setStatusMessage("User deleted");
       toast.success("User deleted");
     } catch (error) {
-      toast.error(error.message || "Delete failed");
+      const message = error.message || "Delete failed";
+      setStatusMessage(message);
+      toast.error(message);
     }
+  };
+
+  const onDelete = (user) => {
+    if (!token) return;
+    const fullName = `${user.firstName || ""} ${user.lastName || ""}`.trim() || user.email || "this user";
+    setPendingAction({
+      title: `Delete ${fullName}?`,
+      description: "This permanently removes the account and cannot be undone.",
+      body: `${fullName}${user.email ? ` (${user.email})` : ""} will be deleted permanently, along with their subscription record and access to the platform.`,
+      confirmLabel: "Delete user",
+      run: () => runDeleteUser(user._id),
+    });
   };
 
   const onLogout = () => {
@@ -249,9 +300,12 @@ export default function AdminPanel() {
       const data = await createMedicineSubject(token, subjectForm);
       syncCourseState(data.content || null);
       setSelectedSubjectId(data.content?.subjects?.at(-1)?._id || "");
+      setStatusMessage("Subject created");
       toast.success("Subject created");
     } catch (error) {
-      toast.error(error.message || "Failed to create subject");
+      const message = error.message || "Failed to create subject";
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setContentSaving(false);
     }
@@ -263,27 +317,48 @@ export default function AdminPanel() {
     try {
       const data = await updateMedicineSubject(token, selectedSubject.id, subjectForm);
       syncCourseState(data.content || null);
+      setStatusMessage("Subject updated");
       toast.success("Subject updated");
     } catch (error) {
-      toast.error(error.message || "Failed to update subject");
+      const message = error.message || "Failed to update subject";
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setContentSaving(false);
     }
   };
 
-  const handleDeleteSubject = async () => {
-    if (!token || !selectedSubject?.id) return;
-    if (!window.confirm(`Delete subject "${selectedSubject.name}" and all nested data?`)) return;
+  const runDeleteSubject = async (subject) => {
+    if (!token || !subject?.id) return;
     setContentSaving(true);
     try {
-      const data = await deleteMedicineSubject(token, selectedSubject.id);
+      const data = await deleteMedicineSubject(token, subject.id);
       syncCourseState(data.content || null);
+      setStatusMessage("Subject deleted");
       toast.success("Subject deleted");
     } catch (error) {
-      toast.error(error.message || "Failed to delete subject");
+      const message = error.message || "Failed to delete subject";
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setContentSaving(false);
     }
+  };
+
+  const handleDeleteSubject = () => {
+    if (!token || !selectedSubject?.id) return;
+    const subject = selectedSubject;
+    setPendingAction({
+      title: `Delete the subject "${subject.name}"?`,
+      description: "Every chapter and video inside it is deleted too. This cannot be undone.",
+      body: `"${subject.name}" currently holds ${subject.chapters.length} chapter${
+        subject.chapters.length === 1 ? "" : "s"
+      } and ${subject.totalVideos} video${
+        subject.totalVideos === 1 ? "" : "s"
+      }. All of them will be removed from the Medicine/USMLE catalog.`,
+      confirmLabel: "Delete subject",
+      run: () => runDeleteSubject(subject),
+    });
   };
 
   const handleCreateChapter = async () => {
@@ -296,9 +371,12 @@ export default function AdminPanel() {
       const refreshedSubject =
         (data.content?.subjects || []).find((s) => s._id === selectedSubject.id) || null;
       setSelectedChapterId(refreshedSubject?.chapters?.at(-1)?._id || "");
+      setStatusMessage("Chapter created");
       toast.success("Chapter created");
     } catch (error) {
-      toast.error(error.message || "Failed to create chapter");
+      const message = error.message || "Failed to create chapter";
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setContentSaving(false);
     }
@@ -310,27 +388,48 @@ export default function AdminPanel() {
     try {
       const data = await updateMedicineChapter(token, selectedSubject.id, selectedChapter._id, chapterForm);
       syncCourseState(data.content || null);
+      setStatusMessage("Chapter updated");
       toast.success("Chapter updated");
     } catch (error) {
-      toast.error(error.message || "Failed to update chapter");
+      const message = error.message || "Failed to update chapter";
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setContentSaving(false);
     }
   };
 
-  const handleDeleteChapter = async () => {
-    if (!token || !selectedSubject?.id || !selectedChapter?._id) return;
-    if (!window.confirm(`Delete chapter "${selectedChapter.name}" and all videos?`)) return;
+  const runDeleteChapter = async (subject, chapter) => {
+    if (!token || !subject?.id || !chapter?._id) return;
     setContentSaving(true);
     try {
-      const data = await deleteMedicineChapter(token, selectedSubject.id, selectedChapter._id);
+      const data = await deleteMedicineChapter(token, subject.id, chapter._id);
       syncCourseState(data.content || null);
+      setStatusMessage("Chapter deleted");
       toast.success("Chapter deleted");
     } catch (error) {
-      toast.error(error.message || "Failed to delete chapter");
+      const message = error.message || "Failed to delete chapter";
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setContentSaving(false);
     }
+  };
+
+  const handleDeleteChapter = () => {
+    if (!token || !selectedSubject?.id || !selectedChapter?._id) return;
+    const subject = selectedSubject;
+    const chapter = selectedChapter;
+    const videoCount = chapter.videos?.length || 0;
+    setPendingAction({
+      title: `Delete the chapter "${chapter.name}"?`,
+      description: "Every video inside it is deleted too. This cannot be undone.",
+      body: `"${chapter.name}" and its ${videoCount} video${
+        videoCount === 1 ? "" : "s"
+      } will be removed from "${subject.name}".`,
+      confirmLabel: "Delete chapter",
+      run: () => runDeleteChapter(subject, chapter),
+    });
   };
 
   const parsePhotos = () => {
@@ -358,9 +457,12 @@ export default function AdminPanel() {
       const refreshedChapter =
         (refreshedSubject?.chapters || []).find((c) => c._id === selectedChapter._id) || null;
       setSelectedVideoId(refreshedChapter?.videos?.at(-1)?._id || "");
+      setStatusMessage("Video created");
       toast.success("Video created");
     } catch (error) {
-      toast.error(error.message || "Failed to create video");
+      const message = error.message || "Failed to create video";
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setContentSaving(false);
     }
@@ -379,32 +481,46 @@ export default function AdminPanel() {
         payload
       );
       syncCourseState(data.content || null);
+      setStatusMessage("Video updated");
       toast.success("Video updated");
     } catch (error) {
-      toast.error(error.message || "Failed to update video");
+      const message = error.message || "Failed to update video";
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setContentSaving(false);
     }
   };
 
-  const handleDeleteVideo = async () => {
-    if (!token || !selectedSubject?.id || !selectedChapter?._id || !selectedVideo?._id) return;
-    if (!window.confirm(`Delete video "${selectedVideo.name}"?`)) return;
+  const runDeleteVideo = async (subject, chapter, video) => {
+    if (!token || !subject?.id || !chapter?._id || !video?._id) return;
     setContentSaving(true);
     try {
-      const data = await deleteMedicineVideo(
-        token,
-        selectedSubject.id,
-        selectedChapter._id,
-        selectedVideo._id
-      );
+      const data = await deleteMedicineVideo(token, subject.id, chapter._id, video._id);
       syncCourseState(data.content || null);
+      setStatusMessage("Video deleted");
       toast.success("Video deleted");
     } catch (error) {
-      toast.error(error.message || "Failed to delete video");
+      const message = error.message || "Failed to delete video";
+      setStatusMessage(message);
+      toast.error(message);
     } finally {
       setContentSaving(false);
     }
+  };
+
+  const handleDeleteVideo = () => {
+    if (!token || !selectedSubject?.id || !selectedChapter?._id || !selectedVideo?._id) return;
+    const subject = selectedSubject;
+    const chapter = selectedChapter;
+    const video = selectedVideo;
+    setPendingAction({
+      title: `Delete the video "${video.name}"?`,
+      description: "This removes the lecture from the catalog and cannot be undone.",
+      body: `"${video.name}" will be removed from "${chapter.name}" in "${subject.name}", along with its summary and photo list.`,
+      confirmLabel: "Delete video",
+      run: () => runDeleteVideo(subject, chapter, video),
+    });
   };
 
   const subjects = (courseContent?.subjects || []).map((subject) => {
@@ -472,9 +588,9 @@ export default function AdminPanel() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_#dbeafe,_#eef2ff_42%,_#f8fafc)] px-3 md:px-6 py-5">
+    <div className="min-h-screen bg-surface-sunken px-3 md:px-6 py-5">
       <div className="max-w-[1500px] mx-auto">
-        <div className="rounded-3xl border border-slate-200 bg-white/95 shadow-e4 overflow-hidden">
+        <div className="rounded-3xl border border-line bg-surface shadow-e4 overflow-hidden">
           <header className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white px-5 py-4 flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-xs uppercase tracking-[0.18em] text-cyan-300">Kanthast</p>
@@ -484,26 +600,24 @@ export default function AdminPanel() {
               <span className="text-sm bg-white/10 border border-white/20 px-3 py-1.5 rounded-full">
                 {adminUser?.firstName || "Admin"}
               </span>
-              <button
-                type="button"
-                onClick={onLogout}
-                className="inline-flex items-center gap-2 rounded-xl bg-red-500 px-3.5 py-2 text-sm font-semibold hover:bg-red-600"
-              >
-                <FaSignOutAlt />
+              <Button type="button" variant="danger" onClick={onLogout}>
+                <FaSignOutAlt aria-hidden="true" />
                 Logout
-              </button>
+              </Button>
             </div>
           </header>
 
-          <nav className="px-4 py-3 border-b border-slate-200 bg-white flex flex-wrap gap-2">
+          <nav className="px-4 py-3 border-b border-line bg-surface flex flex-wrap gap-2">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
+                type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 rounded-xl text-sm font-semibold inline-flex items-center gap-2 transition ${
+                aria-current={activeTab === tab.id ? "page" : undefined}
+                className={`px-4 py-2 min-h-touch rounded-xl text-sm font-semibold inline-flex items-center gap-2 transition ${
                   activeTab === tab.id
                     ? "bg-slate-900 text-white"
-                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                    : "bg-surface-sunken text-ink-muted hover:bg-line"
                 }`}
               >
                 {tab.icon}
@@ -533,16 +647,41 @@ export default function AdminPanel() {
                 {activeTab === "users" && (
                   <div>
                     <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                      <h2 className="text-2xl font-black text-slate-900">Users Management</h2>
-                      <input
+                      <h2 className="text-2xl font-black text-ink">Users Management</h2>
+                      <Field
+                        label="Search users"
+                        type="search"
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         placeholder="Search by name, email, role..."
-                        className="w-full md:w-96 rounded-xl border border-slate-300 px-4 py-2.5 outline-none focus:ring-2 focus:ring-cyan-400"
+                        containerClassName="w-full md:w-96"
                       />
                     </div>
                     {loading ? (
-                      <p className="text-slate-600">Loading users...</p>
+                      <p role="status" className="text-ink-muted">
+                        Loading users...
+                      </p>
+                    ) : usersError ? (
+                      <EmptyState
+                        variant="error"
+                        icon={FaUsers}
+                        title="Could not load users"
+                        description={usersError}
+                        action="Try again"
+                        onAction={loadUsers}
+                      />
+                    ) : filteredUsers.length === 0 ? (
+                      <EmptyState
+                        icon={FaUsers}
+                        title={search.trim() ? "No users match that search" : "No users yet"}
+                        description={
+                          search.trim()
+                            ? `Nothing matched "${search.trim()}". Try a different name, email or role.`
+                            : "Registered students, instructors and admins will appear here once they sign up."
+                        }
+                        action={search.trim() ? "Clear search" : undefined}
+                        onAction={search.trim() ? () => setSearch("") : undefined}
+                      />
                     ) : (
                       <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
                         {filteredUsers.map((user) => {
@@ -550,98 +689,104 @@ export default function AdminPanel() {
                           return (
                             <article
                               key={user._id}
-                              className="rounded-2xl border border-slate-200 bg-white p-4 shadow-e3"
+                              className="card p-4 shadow-e3"
                             >
                               {editing ? (
                                 <div className="space-y-2">
-                                  <input
+                                  <Field
+                                    label="First name"
                                     value={editForm.firstName}
                                     onChange={(e) => setEditForm((p) => ({ ...p, firstName: e.target.value }))}
-                                    className="w-full rounded-lg border border-slate-300 px-2.5 py-2"
                                     placeholder="First Name"
                                   />
-                                  <input
+                                  <Field
+                                    label="Last name"
                                     value={editForm.lastName}
                                     onChange={(e) => setEditForm((p) => ({ ...p, lastName: e.target.value }))}
-                                    className="w-full rounded-lg border border-slate-300 px-2.5 py-2"
                                     placeholder="Last Name"
                                   />
-                                  <input
+                                  <Field
+                                    label="Email"
+                                    type="email"
                                     value={editForm.email}
                                     onChange={(e) => setEditForm((p) => ({ ...p, email: e.target.value }))}
-                                    className="w-full rounded-lg border border-slate-300 px-2.5 py-2"
                                     placeholder="Email"
                                   />
-                                  <input
+                                  <Field
+                                    label="Phone"
+                                    type="tel"
+                                    inputMode="tel"
                                     value={editForm.contactNumber}
                                     onChange={(e) => setEditForm((p) => ({ ...p, contactNumber: e.target.value }))}
-                                    className="w-full rounded-lg border border-slate-300 px-2.5 py-2"
                                     placeholder="Phone"
                                   />
-                                  <select
+                                  <Select
+                                    label="Account type"
                                     value={editForm.accountType}
-                                    onChange={(e) => setEditForm((p) => ({ ...p, accountType: e.target.value }))}
-                                    className="w-full rounded-lg border border-slate-300 px-2.5 py-2"
-                                  >
-                                    <option value="Student">Student</option>
-                                    <option value="Instructor">Instructor</option>
-                                    <option value="Admin">Admin</option>
-                                  </select>
-                                  <label className="text-sm flex items-center gap-2">
-                                    <input
-                                      type="checkbox"
-                                      checked={Boolean(editForm.subscriptionPurchased)}
-                                      onChange={(e) =>
-                                        setEditForm((p) => ({
-                                          ...p,
-                                          subscriptionPurchased: e.target.checked,
-                                        }))
-                                      }
-                                    />
-                                    Subscription Purchased
-                                  </label>
+                                    onChange={(value) => setEditForm((p) => ({ ...p, accountType: value }))}
+                                    options={["Student", "Instructor", "Admin"]}
+                                  />
+                                  <Toggle
+                                    label="Subscription Purchased"
+                                    checked={Boolean(editForm.subscriptionPurchased)}
+                                    onChange={(checked) =>
+                                      setEditForm((p) => ({
+                                        ...p,
+                                        subscriptionPurchased: checked,
+                                      }))
+                                    }
+                                  />
                                   <div className="flex gap-2 pt-1">
-                                    <button
+                                    <Button
+                                      type="button"
                                       onClick={() => onSave(user._id)}
-                                      disabled={saving}
-                                      className="flex-1 rounded-lg bg-slate-900 text-white py-2 text-sm font-semibold"
+                                      loading={saving}
+                                      loadingText="Saving..."
+                                      className="flex-1"
                                     >
-                                      {saving ? "Saving..." : "Save"}
-                                    </button>
-                                    <button
+                                      Save
+                                    </Button>
+                                    <Button
+                                      type="button"
+                                      variant="secondary"
                                       onClick={() => setEditUserId("")}
-                                      className="flex-1 rounded-lg border border-slate-300 py-2 text-sm font-semibold"
+                                      disabled={saving}
+                                      className="flex-1"
                                     >
                                       Cancel
-                                    </button>
+                                    </Button>
                                   </div>
                                 </div>
                               ) : (
                                 <div>
-                                  <h3 className="text-lg font-bold text-slate-900">
+                                  <h3 className="text-lg font-bold text-ink">
                                     {user.firstName} {user.lastName}
                                   </h3>
-                                  <p className="text-sm text-slate-600">{user.email}</p>
-                                  <p className="text-sm text-slate-600 mt-1">Role: {user.accountType}</p>
-                                  <p className="text-sm text-slate-600">Phone: {user.contactNumber || "-"}</p>
-                                  <p className="text-sm text-slate-600 mt-1">
+                                  <p className="text-sm text-ink-muted">{user.email}</p>
+                                  <p className="text-sm text-ink-muted mt-1">Role: {user.accountType}</p>
+                                  <p className="text-sm text-ink-muted">Phone: {user.contactNumber || "-"}</p>
+                                  <p className="text-sm text-ink-muted mt-1">
                                     Subscription: {user.subscriptionPurchased ? "Active" : "Inactive"}
                                   </p>
                                   <div className="flex gap-2 mt-4">
-                                    <button
+                                    <Button
+                                      type="button"
+                                      variant="secondary"
                                       onClick={() => onEdit(user)}
-                                      className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 py-2 text-sm font-semibold hover:bg-slate-50"
+                                      className="flex-1"
                                     >
-                                      <FaEdit />
+                                      <FaEdit aria-hidden="true" />
                                       Edit
-                                    </button>
-                                    <button
-                                      onClick={() => onDelete(user._id)}
-                                      className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-red-500 text-white py-2 text-sm font-semibold hover:bg-red-600"
+                                    </Button>
+                                    <Button
+                                      type="button"
+                                      variant="danger"
+                                      onClick={() => onDelete(user)}
+                                      className="flex-1"
                                     >
-                                      <FaTrash />
+                                      <FaTrash aria-hidden="true" />
                                       Delete
-                                    </button>
+                                    </Button>
                                   </div>
                                 </div>
                               )}
@@ -656,115 +801,165 @@ export default function AdminPanel() {
                 {activeTab === "videos" && (
                   <div className="space-y-4">
                     <div className="flex items-center justify-between gap-3 flex-wrap">
-                      <h2 className="text-2xl font-black text-slate-900">Medicine/USMLE Content Manager</h2>
+                      <h2 className="text-2xl font-black text-ink">Medicine/USMLE Content Manager</h2>
                       <div className="flex items-center gap-2">
-                        <button
+                        <Button
                           type="button"
+                          variant="secondary"
                           onClick={seedCourseContentFromLegacy}
-                          disabled={contentSaving}
-                          className="rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50 disabled:opacity-70"
+                          loading={contentSaving}
+                          loadingText="Working..."
                         >
-                          {contentSaving ? "Working..." : "Seed Legacy Data to DB"}
-                        </button>
-                        <button
+                          Seed Legacy Data to DB
+                        </Button>
+                        <Button
                           type="button"
                           onClick={saveCourseContent}
-                          disabled={contentSaving}
-                          className="rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 disabled:opacity-70"
+                          loading={contentSaving}
+                          loadingText="Saving..."
                         >
-                          {contentSaving ? "Saving..." : "Save Course Content"}
-                        </button>
+                          Save Course Content
+                        </Button>
                       </div>
                     </div>
 
                     {contentLoading ? (
-                      <p className="text-slate-600">Loading course content...</p>
+                      <p role="status" className="text-ink-muted">
+                        Loading course content...
+                      </p>
+                    ) : contentError ? (
+                      <EmptyState
+                        variant="error"
+                        icon={FaBookMedical}
+                        title="Could not load course content"
+                        description={contentError}
+                        action="Try again"
+                        onAction={loadCourseContent}
+                      />
                     ) : (
                       <>
-                        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
-                          {subjects.map((subject) => (
-                            <article key={subject.id || subject.name} className="rounded-2xl border border-slate-200 bg-white p-4">
-                              <h3 className="text-xl font-bold text-slate-900">
-                                {subject.name} ({subject.totalDuration})
-                              </h3>
-                              <p className="text-sm text-slate-600 mt-1">
-                                Chapters: {subject.chapters.length} | Videos: {subject.totalVideos}
-                              </p>
-                            </article>
-                          ))}
-                        </div>
+                        {subjects.length === 0 ? (
+                          <EmptyState
+                            icon={FaBookMedical}
+                            title="No subjects in the catalog yet"
+                            description="Create a subject below, or seed the whole Medicine/USMLE catalog from the legacy Lists data."
+                          />
+                        ) : (
+                          <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                            {subjects.map((subject) => (
+                              <article key={subject.id || subject.name} className="card p-4">
+                                <h3 className="text-xl font-bold text-ink">
+                                  {subject.name} ({subject.totalDuration})
+                                </h3>
+                                <p className="text-sm text-ink-muted mt-1">
+                                  Chapters: {subject.chapters.length} | Videos: {subject.totalVideos}
+                                </p>
+                              </article>
+                            ))}
+                          </div>
+                        )}
 
                         <div className="grid xl:grid-cols-3 gap-4">
-                          <div className="rounded-2xl border border-slate-200 bg-white p-4 space-y-3">
-                            <p className="text-sm font-bold text-slate-900">Subject CRUD</p>
-                            <select
+                          <div className="card p-4 space-y-3">
+                            <h3 className="text-sm font-bold text-ink">Subject CRUD</h3>
+                            <Select
+                              label="Selected subject"
                               value={selectedSubject?.id || ""}
-                              onChange={(e) => setSelectedSubjectId(e.target.value)}
-                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
-                            >
-                              {(subjects || []).map((item) => (
-                                <option key={item.id} value={item.id}>
-                                  {item.name}
-                                </option>
-                              ))}
-                            </select>
-                            <input
+                              onChange={(value) => setSelectedSubjectId(value)}
+                              options={(subjects || []).map((item) => ({
+                                value: item.id,
+                                label: item.name,
+                              }))}
+                              placeholder="No subjects yet"
+                            />
+                            <Field
+                              label="Subject name"
                               value={subjectForm.name}
                               onChange={(e) => setSubjectForm((p) => ({ ...p, name: e.target.value }))}
                               placeholder="Subject name"
-                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
                             />
-                            <input
+                            <Field
+                              label="Total duration"
                               value={subjectForm.totalDuration}
                               onChange={(e) => setSubjectForm((p) => ({ ...p, totalDuration: e.target.value }))}
                               placeholder="Total duration (e.g. 26:25:15)"
-                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
                             />
                             <div className="grid grid-cols-3 gap-2">
-                              <button onClick={handleCreateSubject} className="rounded-lg bg-slate-900 text-white py-2 text-sm">Create</button>
-                              <button onClick={handleUpdateSubject} className="rounded-lg border border-slate-300 py-2 text-sm">Update</button>
-                              <button onClick={handleDeleteSubject} className="rounded-lg bg-red-500 text-white py-2 text-sm">Delete</button>
+                              <Button type="button" onClick={handleCreateSubject} disabled={contentSaving}>
+                                Create
+                              </Button>
+                              <Button
+                                type="button"
+                                variant="secondary"
+                                onClick={handleUpdateSubject}
+                                disabled={contentSaving}
+                              >
+                                Update
+                              </Button>
+                              <Button
+                                type="button"
+                                variant="danger"
+                                onClick={handleDeleteSubject}
+                                disabled={contentSaving}
+                              >
+                                Delete
+                              </Button>
                             </div>
                           </div>
 
-                          <div className="rounded-2xl border border-slate-200 bg-white p-4 space-y-3">
-                            <p className="text-sm font-bold text-slate-900">Chapter CRUD</p>
-                            <select
+                          <div className="card p-4 space-y-3">
+                            <h3 className="text-sm font-bold text-ink">Chapter CRUD</h3>
+                            <Select
+                              label="Selected chapter"
                               value={selectedChapter?._id || ""}
-                              onChange={(e) => setSelectedChapterId(e.target.value)}
-                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
-                            >
-                              {(chapters || []).map((item) => (
-                                <option key={item._id} value={item._id}>
-                                  {item.name}
-                                </option>
-                              ))}
-                            </select>
-                            <input
+                              onChange={(value) => setSelectedChapterId(value)}
+                              options={(chapters || []).map((item) => ({
+                                value: item._id,
+                                label: item.name,
+                              }))}
+                              placeholder="No chapters yet"
+                            />
+                            <Field
+                              label="Chapter name"
                               value={chapterForm.name}
                               onChange={(e) => setChapterForm((p) => ({ ...p, name: e.target.value }))}
                               placeholder="Chapter name"
-                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
                             />
-                            <input
+                            <Field
+                              label="Total duration"
                               value={chapterForm.totalDuration}
                               onChange={(e) => setChapterForm((p) => ({ ...p, totalDuration: e.target.value }))}
                               placeholder="Total duration"
-                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
                             />
                             <div className="grid grid-cols-3 gap-2">
-                              <button onClick={handleCreateChapter} className="rounded-lg bg-slate-900 text-white py-2 text-sm">Create</button>
-                              <button onClick={handleUpdateChapter} className="rounded-lg border border-slate-300 py-2 text-sm">Update</button>
-                              <button onClick={handleDeleteChapter} className="rounded-lg bg-red-500 text-white py-2 text-sm">Delete</button>
+                              <Button type="button" onClick={handleCreateChapter} disabled={contentSaving}>
+                                Create
+                              </Button>
+                              <Button
+                                type="button"
+                                variant="secondary"
+                                onClick={handleUpdateChapter}
+                                disabled={contentSaving}
+                              >
+                                Update
+                              </Button>
+                              <Button
+                                type="button"
+                                variant="danger"
+                                onClick={handleDeleteChapter}
+                                disabled={contentSaving}
+                              >
+                                Delete
+                              </Button>
                             </div>
                           </div>
 
-                          <div className="rounded-2xl border border-slate-200 bg-white p-4 space-y-3">
-                            <p className="text-sm font-bold text-slate-900">Video CRUD</p>
+                          <div className="card p-4 space-y-3">
+                            <p className="text-sm font-bold text-ink">Video CRUD</p>
                             <select
                               value={selectedVideo?._id || ""}
                               onChange={(e) => setSelectedVideoId(e.target.value)}
-                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                              className="w-full rounded-lg border border-line px-3 py-2"
                             >
                               {(videos || []).map((item) => (
                                 <option key={item._id} value={item._id}>
@@ -776,47 +971,47 @@ export default function AdminPanel() {
                               value={videoForm.name}
                               onChange={(e) => setVideoForm((p) => ({ ...p, name: e.target.value }))}
                               placeholder="Video name"
-                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                              className="w-full rounded-lg border border-line px-3 py-2"
                             />
                             <input
                               value={videoForm.duration}
                               onChange={(e) => setVideoForm((p) => ({ ...p, duration: e.target.value }))}
                               placeholder="Duration (e.g. 07:19)"
-                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                              className="w-full rounded-lg border border-line px-3 py-2"
                             />
                             <input
                               value={videoForm.videoLink}
                               onChange={(e) => setVideoForm((p) => ({ ...p, videoLink: e.target.value }))}
                               placeholder="Video link"
-                              className="w-full rounded-lg border border-slate-300 px-3 py-2"
+                              className="w-full rounded-lg border border-line px-3 py-2"
                             />
                             <textarea
                               value={videoForm.summary}
                               onChange={(e) => setVideoForm((p) => ({ ...p, summary: e.target.value }))}
                               placeholder="Summary"
-                              className="w-full min-h-[90px] rounded-lg border border-slate-300 px-3 py-2"
+                              className="w-full min-h-[90px] rounded-lg border border-line px-3 py-2"
                             />
                             <textarea
                               value={videoForm.photosText}
                               onChange={(e) => setVideoForm((p) => ({ ...p, photosText: e.target.value }))}
                               placeholder='Photos JSON array: [{"imageLink":"...","imageText":"..."}]'
-                              className="w-full min-h-[90px] rounded-lg border border-slate-300 px-3 py-2 font-mono text-xs"
+                              className="w-full min-h-[90px] rounded-lg border border-line px-3 py-2 font-mono text-xs"
                             />
                             <div className="grid grid-cols-3 gap-2">
                               <button onClick={handleCreateVideo} className="rounded-lg bg-slate-900 text-white py-2 text-sm">Create</button>
-                              <button onClick={handleUpdateVideo} className="rounded-lg border border-slate-300 py-2 text-sm">Update</button>
+                              <button onClick={handleUpdateVideo} className="rounded-lg border border-line py-2 text-sm">Update</button>
                               <button onClick={handleDeleteVideo} className="rounded-lg bg-red-500 text-white py-2 text-sm">Delete</button>
                             </div>
                           </div>
                         </div>
 
-                        <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                          <p className="text-sm text-slate-600 mb-2">Raw JSON editor (advanced full-replace mode)</p>
+                        <div className="card p-4">
+                          <p className="text-sm text-ink-muted mb-2">Raw JSON editor (advanced full-replace mode)</p>
                           <textarea
                             value={contentDraft}
                             onChange={(e) => setContentDraft(e.target.value)}
                             spellCheck={false}
-                            className="w-full min-h-[260px] rounded-xl border border-slate-300 p-3 font-mono text-xs outline-none focus:ring-2 focus:ring-cyan-400"
+                            className="w-full min-h-[260px] rounded-xl border border-line p-3 font-mono text-xs outline-none focus:ring-2 focus:ring-cyan-400"
                           />
                         </div>
                       </>
@@ -826,17 +1021,17 @@ export default function AdminPanel() {
 
                 {activeTab === "subscriptions" && (
                   <div className="space-y-4">
-                    <h2 className="text-2xl font-black text-slate-900">Subscription Monitor</h2>
+                    <h2 className="text-2xl font-black text-ink">Subscription Monitor</h2>
                     <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
                       {users
                         .filter((u) => u.subscriptionPurchased)
                         .map((u) => (
-                          <div key={u._id} className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-                            <p className="font-bold text-slate-900">
+                          <div key={u._id} className="rounded-2xl border border-positive/30 bg-positive-soft p-4">
+                            <p className="font-bold text-ink">
                               {u.firstName} {u.lastName}
                             </p>
-                            <p className="text-sm text-slate-700">{u.email}</p>
-                            <p className="text-xs mt-1 text-slate-600">
+                            <p className="text-sm text-ink-muted">{u.email}</p>
+                            <p className="text-xs mt-1 text-ink-muted">
                               Valid till: {u.subscriptionValidTill ? new Date(u.subscriptionValidTill).toLocaleDateString("en-IN") : "-"}
                             </p>
                           </div>
@@ -849,15 +1044,44 @@ export default function AdminPanel() {
           </main>
         </div>
       </div>
+
+      <LiveRegion message={statusMessage} />
+
+      <Modal
+        open={Boolean(pendingAction)}
+        onClose={() => setPendingAction(null)}
+        title={pendingAction?.title}
+        description={pendingAction?.description}
+        size="sm"
+        footer={
+          <div className="flex flex-wrap justify-end gap-3">
+            <Button variant="secondary" onClick={() => setPendingAction(null)}>
+              Cancel
+            </Button>
+            <Button
+              variant="danger"
+              onClick={() => {
+                const action = pendingAction;
+                setPendingAction(null);
+                action?.run?.();
+              }}
+            >
+              {pendingAction?.confirmLabel || "Confirm"}
+            </Button>
+          </div>
+        }
+      >
+        <p className="text-sm text-ink-muted">{pendingAction?.body}</p>
+      </Modal>
     </div>
   );
 }
 
 function StatCard({ label, value }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-e3">
-      <p className="text-sm text-slate-500">{label}</p>
-      <p className="text-3xl font-black text-slate-900 mt-1">{value}</p>
+    <div className="card p-4 shadow-e3">
+      <p className="text-sm text-ink-subtle">{label}</p>
+      <p className="text-3xl font-black text-ink mt-1">{value}</p>
     </div>
   );
 }

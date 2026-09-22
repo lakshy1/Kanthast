@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion as Motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import Markdown from "../components/Markdown";
 import { Modal, Button } from "../components/ui";
@@ -506,7 +506,7 @@ export default function Chatbot() {
 
           {/* Empty state */}
           {messages.length === 0 && isIdle && (
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
@@ -525,7 +525,7 @@ export default function Chatbot() {
                 Ask about subscriptions, platform features, or anything related to your medical study journey.
               </p>
 
-            </motion.div>
+            </Motion.div>
           )}
 
           {/* Message list */}
@@ -536,7 +536,7 @@ export default function Chatbot() {
             // syntax the renderer needs, so headings/bold/code never rendered.
             const content = msg.content;
             return (
-              <motion.div
+              <Motion.div
                 key={`${msg.createdAt || idx}-${idx}`}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -583,7 +583,7 @@ export default function Chatbot() {
                     {isUser ? "You" : "AI"} · {formatTime(msg.createdAt)}
                   </p>
                 </div>
-              </motion.div>
+              </Motion.div>
             );
           })}
 
@@ -628,7 +628,7 @@ export default function Chatbot() {
           {messages.length === 0 && isIdle && (
             <div className="flex gap-2 mb-3 w-full overflow-x-auto no-scrollbar">
               {SUGGESTIONS.map((s) => (
-                <motion.button
+                <Motion.button
                   key={s.text}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.97 }}
@@ -637,7 +637,7 @@ export default function Chatbot() {
                 >
                   <span>{s.emoji}</span>
                   <span className="font-medium whitespace-nowrap">{s.label}</span>
-                </motion.button>
+                </Motion.button>
               ))}
             </div>
           )}
@@ -709,7 +709,7 @@ export default function Chatbot() {
       {/* ── Mobile sidebar drawer ── */}
       <AnimatePresence>
         {sidebarOpen && (
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -718,7 +718,7 @@ export default function Chatbot() {
             onClick={() => setSidebarOpen(false)}
           >
             <div className="absolute inset-0 bg-slate-950/70 backdrop-blur-sm" />
-            <motion.div
+            <Motion.div
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
@@ -734,15 +734,15 @@ export default function Chatbot() {
                 onDelete={(id) => setPendingDelete(id)}
                 onClose={() => setSidebarOpen(false)}
               />
-            </motion.div>
-          </motion.div>
+            </Motion.div>
+          </Motion.div>
         )}
       </AnimatePresence>
 
       {/* ── Upload toast ── */}
       <AnimatePresence>
         {uploadNotice && (
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 16, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.96 }}
@@ -758,7 +758,7 @@ export default function Chatbot() {
               <span className="w-4 h-4 rounded-full border-2 border-slate-400 border-t-transparent animate-spin" />
             )}
             {uploadNotice.message}
-          </motion.div>
+          </Motion.div>
         )}
       </AnimatePresence>
 
