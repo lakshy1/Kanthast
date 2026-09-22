@@ -931,7 +931,7 @@ export default function VideoPage() {
                       : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
                   }`}
                 >
-                  <FaCheckCircle className={isWatched ? "text-green-500" : "text-slate-400"} />
+                  <FaCheckCircle className={isWatched ? "text-green-500" : "text-ink-subtle"} />
                   {isWatched ? "Marked as Watched" : "Mark as Watched"}
                 </button>
               )}

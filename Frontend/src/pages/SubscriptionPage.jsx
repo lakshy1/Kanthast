@@ -361,7 +361,7 @@ export default function SubscriptionPage() {
                       <div key={label} className="flex items-center gap-1 flex-1">
                         <div className="flex flex-col items-center gap-1 flex-1">
                           <div className={`h-1.5 w-full rounded-full transition-all duration-500 ${i <= stepIndex ? "bg-cyan-500" : "bg-slate-200"}`} />
-                          <span className={`text-[10px] font-medium ${i <= stepIndex ? "text-cyan-700" : "text-slate-400"}`}>{label}</span>
+                          <span className={`text-[10px] font-medium ${i <= stepIndex ? "text-cyan-700" : "text-ink-subtle"}`}>{label}</span>
                         </div>
                       </div>
                     ))}

@@ -119,7 +119,8 @@ function SidebarContent({ sessions, activeSessionId, onLoad, onNew, onDelete, on
         {onClose && (
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 flex items-center justify-center transition"
+            className="h-touch w-touch rounded-lg text-slate-400 hover:text-white hover:bg-white/10 flex items-center justify-center transition"
+            aria-label="Close sidebar"
           >
             <FaTimes size={14} />
           </button>
@@ -168,8 +169,9 @@ function SidebarContent({ sessions, activeSessionId, onLoad, onNew, onDelete, on
               </button>
               <button
                 onClick={(e) => { e.stopPropagation(); onDelete(session.sessionId); }}
-                className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-lg text-slate-500 hover:text-red-400 hover:bg-red-400/10 hidden group-hover:flex items-center justify-center transition"
-                title="Delete"
+                className="absolute right-1 top-1/2 -translate-y-1/2 h-touch w-touch rounded-lg text-slate-400 hover:text-red-400 hover:bg-red-400/10 flex items-center justify-center transition"
+                title="Delete conversation"
+                aria-label="Delete conversation"
               >
                 <FaTrash size={10} />
               </button>
@@ -483,7 +485,7 @@ export default function Chatbot() {
               </div>
 
               <h2 className="text-3xl font-black text-slate-900 mb-2 tracking-tight">How can I help?</h2>
-              <p className="text-slate-400 text-sm max-w-sm leading-relaxed mb-8">
+              <p className="text-ink-subtle text-sm max-w-sm leading-relaxed mb-8">
                 Ask about subscriptions, platform features, or anything related to your medical study journey.
               </p>
 
@@ -538,7 +540,7 @@ export default function Chatbot() {
                       </a>
                     )}
                   </div>
-                  <p className="text-[11px] text-slate-400 px-1">
+                  <p className="text-[11px] text-ink-subtle px-1">
                     {isUser ? "You" : "AI"} · {formatTime(msg.createdAt)}
                   </p>
                 </div>
@@ -631,7 +633,7 @@ export default function Chatbot() {
             <button
               onClick={() => sendMessage()}
               disabled={!canSend}
-              className="flex-shrink-0 w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center disabled:opacity-30 hover:bg-slate-700 transition self-end m-1.5"
+              className="flex-shrink-0 h-touch w-touch rounded-xl bg-brand text-brand-fg flex items-center justify-center disabled:opacity-30 hover:bg-slate-700 transition self-end m-1.5"
               title="Send"
             >
               <FaPaperPlane size={12} />

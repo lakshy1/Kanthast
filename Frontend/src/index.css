@@ -120,18 +120,25 @@
      AUDIT FIX (blocking, WCAG 2.4.7): 126 of 129 interactive elements had no
      focus indicator. One rule covers every control, including any added later.
      :focus-visible keeps mouse clicks clean, so no component needs to opt out
-     with outline-none. */
-  :focus-visible {
-    outline: 2px solid rgb(var(--brand));
+     with outline-none.
+
+     NOTE ON SPECIFICITY: Tailwind's `.outline-none` utility sets
+     `outline: 2px solid transparent` and is emitted in the utilities layer,
+     AFTER this base layer. At equal specificity the later rule wins, so a
+     plain `:focus-visible` selector is silently defeated on every element
+     that still carries `outline-none`. Doubling the pseudo-class raises
+     specificity above a single utility class, so this rule stays
+     authoritative no matter what a call site does. */
+  :focus-visible:focus-visible {
+    outline: 2px solid rgb(var(--brand)) !important;
     outline-offset: 2px;
     border-radius: 4px;
   }
 
-  /* Inputs that intentionally suppress the UA outline still get a ring. */
+  /* Inputs sit tighter to their border. */
   input:focus-visible,
   textarea:focus-visible,
   select:focus-visible {
-    outline: 2px solid rgb(var(--brand));
     outline-offset: 1px;
   }
 

@@ -595,7 +595,7 @@ export default function Dashboard() {
                     </div>
 
                     {/* Row 3: watched / total label */}
-                    <p className="mt-2 text-xs text-slate-400 tabular-nums">
+                    <p className="mt-2 text-xs text-ink-subtle tabular-nums">
                       {subjectWatched} of {subjectTotal} lectures completed
                     </p>
                   </div>

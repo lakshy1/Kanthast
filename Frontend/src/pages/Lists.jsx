@@ -427,7 +427,7 @@ export default function Lists() {
                     </span>
                     <div className="flex items-center gap-1.5 shrink-0 ml-3">
                       <span className="text-lg text-slate-500 font-medium">({activeModule.totalDuration})</span>
-                      <FaChevronDown className="text-slate-400 text-xs transition group-hover:text-slate-600" />
+                      <FaChevronDown className="text-ink-subtle text-xs transition group-hover:text-slate-600" />
                     </div>
                   </button>
 
@@ -599,7 +599,7 @@ export default function Lists() {
                     <p className="text-base font-bold text-slate-900">Select subject</p>
                     <button
                       onClick={() => setIsSubjectsOpen(false)}
-                      className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 transition"
+                      className="h-touch w-touch rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 transition"
                     >
                       <FaTimes className="text-sm" />
                     </button>
@@ -669,7 +669,7 @@ export default function Lists() {
                     <p className="text-base font-bold text-slate-900">Jump to chapter</p>
                     <button
                       onClick={() => setIsSectionsOpen(false)}
-                      className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 transition"
+                      className="h-touch w-touch rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 transition"
                     >
                       <FaTimes className="text-sm" />
                     </button>
@@ -719,7 +719,7 @@ function ActionButton({ icon, label, onClick, locked = false, onLockedClick, wat
         whileHover={locked ? undefined : { scale: 1.06, y: -1 }}
         whileTap={locked ? undefined : { scale: 0.95 }}
         onClick={locked ? onLockedClick : onClick}
-        className={`relative w-9 h-9 md:w-11 md:h-11 rounded-full border transition flex items-center justify-center ${
+        className={`relative h-touch w-touch rounded-full border transition flex items-center justify-center ${
           locked
             ? "border-slate-200 bg-slate-100 text-slate-300 opacity-60 cursor-not-allowed"
             : watched

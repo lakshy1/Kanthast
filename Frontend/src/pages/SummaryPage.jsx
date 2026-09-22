@@ -116,13 +116,13 @@ export default function SummaryPage() {
               </p>
 
               {isFallback && (
-                <p className="mt-4 text-xs text-slate-400 italic">Summary not yet added for this lecture. Showing example structure.</p>
+                <p className="mt-4 text-xs text-ink-subtle italic">Summary not yet added for this lecture. Showing example structure.</p>
               )}
               <div className="mt-4 space-y-3">
                 {bullets.map((item, idx) => (
                   <div key={idx} className={`flex items-start gap-3 rounded-xl border p-4 ${isFallback ? "bg-slate-50/50 border-slate-100" : "bg-slate-50 border-slate-200"}`}>
                     <FaRegCheckCircle className={`mt-1 shrink-0 ${isFallback ? "text-slate-300" : "text-cyan-600"}`} />
-                    <p className={isFallback ? "text-slate-400 italic" : "text-slate-700"}>{item}</p>
+                    <p className={isFallback ? "text-ink-subtle italic" : "text-slate-700"}>{item}</p>
                   </div>
                 ))}
               </div>

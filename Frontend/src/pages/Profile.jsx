@@ -306,7 +306,7 @@ export default function Profile() {
                     placeholder="Tell us about your goals, strengths, and learning style..."
                     className="w-full flex-1 rounded-xl border border-slate-300 bg-slate-50 px-4 py-3 outline-none focus:ring-2 focus:ring-cyan-400 resize-none"
                   />
-                  <p className={`text-xs text-right mt-1 ${form.about.length >= MAX_ABOUT ? "text-red-500" : "text-slate-400"}`}>
+                  <p className={`text-xs text-right mt-1 ${form.about.length >= MAX_ABOUT ? "text-red-500" : "text-ink-subtle"}`}>
                     {form.about.length}/{MAX_ABOUT}
                   </p>
                 </div>
@@ -316,7 +316,7 @@ export default function Profile() {
                 <div className="mt-4 flex-1 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-200 py-10 px-4 text-center">
                   <FaPencilAlt className="text-slate-300 text-2xl mb-3" />
                   <p className="text-slate-500 font-medium">No bio yet</p>
-                  <p className="text-slate-400 text-sm mt-1">Click Edit Profile to add your goals and learning style.</p>
+                  <p className="text-ink-subtle text-sm mt-1">Click Edit Profile to add your goals and learning style.</p>
                 </div>
               )}
 
