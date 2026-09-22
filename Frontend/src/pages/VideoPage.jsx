@@ -497,6 +497,10 @@ export default function VideoPage() {
   const [courseContent, setCourseContent] = useState(null);
   const [loading, setLoading] = useState(Boolean(data.subjectId && data.chapterId && data.videoId));
   // Player feedback state: buffering spinner, load failure, resume notice.
+  // Seeded from the Settings default, then overridable per-lecture in-player.
+  const [activeRate, setActiveRate] = useState(() =>
+    getPlaybackRate(settings.defaultPlaybackSpeed)
+  );
   const [buffering, setBuffering] = useState(false);
   const [mediaError, setMediaError] = useState("");
   const [resumedFrom, setResumedFrom] = useState(0);
@@ -764,7 +768,7 @@ export default function VideoPage() {
                     onLoadedMetadata={() => {
                       const el = videoRef.current;
                       if (!el) return;
-                      el.playbackRate = playbackRate;
+                      el.playbackRate = activeRate;
                       // Resume where the student left off.
                       const resumeAt = getResumeSeconds(data.videoId);
                       if (resumeAt > 0 && resumeAt < el.duration) {
@@ -906,7 +910,49 @@ export default function VideoPage() {
                   </button>
                 </div>
               )}
-              <div className="mt-3 text-sm text-ink-subtle">Duration: {data.duration}</div>
+              {/* In-player speed control. Playback speed used to live only in
+                  /settings, so changing it meant leaving the lecture — while
+                  the tip card below advised "Watch in 1.25x" with no way to
+                  do it. Only shown for the native player, which is the branch
+                  we control; YouTube and Vimeo expose their own. */}
+              <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+                <div className="text-sm text-ink-subtle">Duration: {data.duration}</div>
+
+                {parsed.type === "file" && (
+                  <div className="flex items-center gap-2">
+                    <span id="speed-label" className="text-sm text-ink-subtle">
+                      Speed
+                    </span>
+                    <div
+                      role="group"
+                      aria-labelledby="speed-label"
+                      className="inline-flex overflow-hidden rounded-control border border-line"
+                    >
+                      {[1, 1.25, 1.5, 2].map((rate) => {
+                        const isActive = activeRate === rate;
+                        return (
+                          <button
+                            key={rate}
+                            type="button"
+                            aria-pressed={isActive}
+                            onClick={() => {
+                              setActiveRate(rate);
+                              if (videoRef.current) videoRef.current.playbackRate = rate;
+                            }}
+                            className={`min-h-touch px-3 text-sm font-semibold transition-colors duration-fast ease-brand ${
+                              isActive
+                                ? "bg-brand text-brand-fg"
+                                : "bg-surface text-ink-muted hover:bg-surface-sunken"
+                            }`}
+                          >
+                            {rate}&times;
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </div>
             </section>
           )}
 
@@ -936,10 +982,11 @@ export default function VideoPage() {
                 </button>
               )}
 
-              <div className="mt-5 rounded-2xl bg-cyan-50/60 border border-cyan-100 border-l-4 border-l-cyan-500 p-4">
-                <h3 className="text-slate-900 font-semibold">Focus Mode Tip</h3>
-                <p className="text-slate-700 text-sm mt-2">
-                  Watch in 1.25x, pause at transitions, and summarize each segment in one line.
+              <div className="mt-5 rounded-card border border-line border-l-4 border-l-brand bg-brand-soft p-4">
+                <h3 className="font-semibold text-ink">Focus Mode Tip</h3>
+                <p className="mt-2 text-sm text-ink-muted">
+                  Try 1.25&times; using the speed control under the player, pause at
+                  transitions, and summarize each segment in one line.
                 </p>
               </div>
             </aside>

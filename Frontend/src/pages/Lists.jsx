@@ -450,8 +450,8 @@ export default function Lists() {
                     transition={{ delay: sectionIndex * 0.015, duration: 0.45, ease: "easeOut" }}
                   >
                     <div className={`rounded-3xl bg-white/80 border border-slate-200 ${compact ? "p-5 md:p-6" : "p-6 md:p-7"} shadow-e4 backdrop-blur`}>
-                      <h2 className={`font-black text-slate-900 ${compact ? "text-xl sm:text-2xl md:text-4xl" : "text-xl sm:text-3xl md:text-5xl"}`}>
-                        {sec.title} <span className={`${compact ? "text-base sm:text-xl" : "text-base sm:text-2xl"} text-slate-500 font-medium`}>({sec.total})</span>
+                      <h2 className={`font-black text-slate-900 ${compact ? "text-lg sm:text-xl md:text-2xl" : "text-xl sm:text-2xl md:text-3xl"}`}>
+                        {sec.title} <span className={`${compact ? "text-sm" : "text-base"} text-ink-subtle font-medium`}>({sec.total})</span>
                       </h2>
 
                       <div className="mt-6 space-y-2">
@@ -465,8 +465,8 @@ export default function Lists() {
                               return (
                                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
                                   <div className="min-w-0 pr-2">
-                                    <p className="text-sm sm:text-base md:text-[1.35rem] leading-tight font-medium text-slate-800 line-clamp-2">{lecture.title}</p>
-                                    <p className="text-sm text-slate-500 mt-1">({lecture.duration})</p>
+                                    <p className="text-base md:text-lg leading-snug font-semibold text-ink line-clamp-2">{lecture.title}</p>
+                                    <p className="mt-1 text-sm text-ink-subtle">{lecture.duration}</p>
                                   </div>
                                   <div className="flex items-center gap-1.5 md:gap-2 shrink-0">
                                     <ActionButton
