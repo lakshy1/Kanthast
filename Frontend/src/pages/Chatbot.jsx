@@ -237,6 +237,8 @@ export default function Chatbot() {
   const [input, setInput] = useState("");
   const [error, setError] = useState("");
   const [status, setStatus] = useState("loading");
+  // True when a reply arrived while the user was scrolled up reading history.
+  const [hasUnreadBelow, setHasUnreadBelow] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [attachment, setAttachment] = useState(null);
   const [uploadNotice, setUploadNotice] = useState(null);
@@ -248,6 +250,20 @@ export default function Chatbot() {
   const noticeTimer = useRef(null);
 
   const { thumbRef, visible: scrollbarVisible } = useCustomScrollbar(listRef);
+
+  // Clear the "new message" pill once the user scrolls back down themselves.
+  useEffect(() => {
+    const el = listRef.current;
+    if (!el) return undefined;
+
+    const onScroll = () => {
+      const distanceFromBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
+      if (distanceFromBottom < 120) setHasUnreadBelow(false);
+    };
+
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => el.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Prevent the page from scrolling behind the chatbot (fixes keyboard-scroll on mobile)
   useEffect(() => {
@@ -286,10 +302,20 @@ export default function Chatbot() {
     return () => { mounted = false; };
   }, [token, location.search]);
 
-  // Scroll to bottom on new message
+  // Scroll to bottom on new message — but only if the user is already near the
+  // bottom. Previously this fired unconditionally, so scrolling up to re-read
+  // an earlier answer yanked you back down on every status change.
   useEffect(() => {
-    if (listRef.current) {
-      listRef.current.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
+    const el = listRef.current;
+    if (!el) return;
+
+    const distanceFromBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
+    const isNearBottom = distanceFromBottom < 120;
+
+    if (isNearBottom) {
+      el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
+    } else {
+      setHasUnreadBelow(true);
     }
   }, [messages, status]);
 
@@ -551,6 +577,27 @@ export default function Chatbot() {
           {/* Typing indicator */}
           {status === "sending" && <TypingDots />}
         </div>
+
+        {/* Jump to latest — shown only when a reply landed off-screen, so the
+            user is never stranded above a new answer. */}
+        {hasUnreadBelow && (
+          <button
+            type="button"
+            onClick={() => {
+              listRef.current?.scrollTo({
+                top: listRef.current.scrollHeight,
+                behavior: "smooth",
+              });
+              setHasUnreadBelow(false);
+            }}
+            className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 inline-flex items-center gap-2
+                       rounded-full bg-brand px-4 py-2.5 text-sm font-semibold text-brand-fg shadow-glow-brand
+                       transition-colors duration-fast ease-brand hover:bg-brand-hover"
+          >
+            New message
+            <span aria-hidden="true">↓</span>
+          </button>
+        )}
 
         {/* Custom scrollbar overlay */}
         <div
