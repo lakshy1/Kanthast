@@ -1034,14 +1034,15 @@ export default function VideoPage() {
                   </div>
 
                   <div className="mt-6 rounded-3xl border border-slate-200 bg-white/90 p-4 shadow-sm">
-                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700">
+                    <label htmlFor="ai-lecture-topic" className="block text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700">
                       Topic
                     </label>
                     <input
+                      id="ai-lecture-topic"
                       value={lectureTopic}
                       onChange={(e) => setLectureTopic(e.target.value)}
                       placeholder="Type a topic like photosynthesis"
-                      className="mt-3 w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-100"
+                      className="field mt-3"
                     />
 
                     <div className="mt-4 flex flex-wrap gap-2">

@@ -282,9 +282,13 @@ export default function Profile() {
                   {isEditing ? (
                     <input
                       type="date"
+                      // EditableField renders its label as a <p>, which names
+                      // nothing, so the control needs its own accessible name.
+                      aria-label="Date of birth"
+                      autoComplete="bday"
                       value={form.dateOfBirth}
                       onChange={(e) => setForm((prev) => ({ ...prev, dateOfBirth: e.target.value }))}
-                      className="mt-2 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-cyan-400"
+                      className="field mt-2"
                     />
                   ) : (
                     <p className="mt-1 text-slate-900 font-semibold">{formatDate(profile?.dateOfBirth)}</p>
