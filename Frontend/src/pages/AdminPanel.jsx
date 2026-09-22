@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion as Motion } from "framer-motion";
 import {
   FaBookMedical,
   FaChartLine,
@@ -580,9 +580,11 @@ export default function AdminPanel() {
     });
   }, [selectedVideo?._id]);
 
+  const subscribedUsers = users.filter((u) => u.subscriptionPurchased);
+
   const stats = {
     totalUsers: users.length,
-    activeSubscriptions: users.filter((u) => u.subscriptionPurchased).length,
+    activeSubscriptions: subscribedUsers.length,
     totalSubjects: subjects.length,
     totalVideos: subjects.reduce((acc, s) => acc + s.totalVideos, 0),
   };
@@ -628,7 +630,7 @@ export default function AdminPanel() {
 
           <main className="p-4 md:p-6 min-h-[70vh]">
             <AnimatePresence mode="wait">
-              <motion.div
+              <Motion.div
                 key={activeTab}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -955,63 +957,94 @@ export default function AdminPanel() {
                           </div>
 
                           <div className="card p-4 space-y-3">
-                            <p className="text-sm font-bold text-ink">Video CRUD</p>
-                            <select
+                            <h3 className="text-sm font-bold text-ink">Video CRUD</h3>
+                            <Select
+                              label="Selected video"
                               value={selectedVideo?._id || ""}
-                              onChange={(e) => setSelectedVideoId(e.target.value)}
-                              className="w-full rounded-lg border border-line px-3 py-2"
-                            >
-                              {(videos || []).map((item) => (
-                                <option key={item._id} value={item._id}>
-                                  {item.name}
-                                </option>
-                              ))}
-                            </select>
-                            <input
+                              onChange={(value) => setSelectedVideoId(value)}
+                              options={(videos || []).map((item) => ({
+                                value: item._id,
+                                label: item.name,
+                              }))}
+                              placeholder="No videos yet"
+                            />
+                            <Field
+                              label="Video name"
                               value={videoForm.name}
                               onChange={(e) => setVideoForm((p) => ({ ...p, name: e.target.value }))}
                               placeholder="Video name"
-                              className="w-full rounded-lg border border-line px-3 py-2"
                             />
-                            <input
+                            <Field
+                              label="Duration"
                               value={videoForm.duration}
                               onChange={(e) => setVideoForm((p) => ({ ...p, duration: e.target.value }))}
                               placeholder="Duration (e.g. 07:19)"
-                              className="w-full rounded-lg border border-line px-3 py-2"
                             />
-                            <input
+                            <Field
+                              label="Video link"
+                              type="url"
                               value={videoForm.videoLink}
                               onChange={(e) => setVideoForm((p) => ({ ...p, videoLink: e.target.value }))}
                               placeholder="Video link"
-                              className="w-full rounded-lg border border-line px-3 py-2"
                             />
-                            <textarea
-                              value={videoForm.summary}
-                              onChange={(e) => setVideoForm((p) => ({ ...p, summary: e.target.value }))}
-                              placeholder="Summary"
-                              className="w-full min-h-[90px] rounded-lg border border-line px-3 py-2"
-                            />
-                            <textarea
-                              value={videoForm.photosText}
-                              onChange={(e) => setVideoForm((p) => ({ ...p, photosText: e.target.value }))}
-                              placeholder='Photos JSON array: [{"imageLink":"...","imageText":"..."}]'
-                              className="w-full min-h-[90px] rounded-lg border border-line px-3 py-2 font-mono text-xs"
-                            />
+                            <div>
+                              <label htmlFor="video-summary" className="label">
+                                Summary
+                              </label>
+                              <textarea
+                                id="video-summary"
+                                value={videoForm.summary}
+                                onChange={(e) => setVideoForm((p) => ({ ...p, summary: e.target.value }))}
+                                placeholder="Summary"
+                                className="field min-h-[90px]"
+                              />
+                            </div>
+                            <div>
+                              <label htmlFor="video-photos" className="label">
+                                Photos JSON
+                              </label>
+                              <textarea
+                                id="video-photos"
+                                value={videoForm.photosText}
+                                onChange={(e) => setVideoForm((p) => ({ ...p, photosText: e.target.value }))}
+                                placeholder='Photos JSON array: [{"imageLink":"...","imageText":"..."}]'
+                                className="field min-h-[90px] font-mono text-xs"
+                              />
+                            </div>
                             <div className="grid grid-cols-3 gap-2">
-                              <button onClick={handleCreateVideo} className="rounded-lg bg-slate-900 text-white py-2 text-sm">Create</button>
-                              <button onClick={handleUpdateVideo} className="rounded-lg border border-line py-2 text-sm">Update</button>
-                              <button onClick={handleDeleteVideo} className="rounded-lg bg-red-500 text-white py-2 text-sm">Delete</button>
+                              <Button type="button" onClick={handleCreateVideo} disabled={contentSaving}>
+                                Create
+                              </Button>
+                              <Button
+                                type="button"
+                                variant="secondary"
+                                onClick={handleUpdateVideo}
+                                disabled={contentSaving}
+                              >
+                                Update
+                              </Button>
+                              <Button
+                                type="button"
+                                variant="danger"
+                                onClick={handleDeleteVideo}
+                                disabled={contentSaving}
+                              >
+                                Delete
+                              </Button>
                             </div>
                           </div>
                         </div>
 
                         <div className="card p-4">
-                          <p className="text-sm text-ink-muted mb-2">Raw JSON editor (advanced full-replace mode)</p>
+                          <label htmlFor="raw-json-editor" className="label">
+                            Raw JSON editor (advanced full-replace mode)
+                          </label>
                           <textarea
+                            id="raw-json-editor"
                             value={contentDraft}
                             onChange={(e) => setContentDraft(e.target.value)}
                             spellCheck={false}
-                            className="w-full min-h-[260px] rounded-xl border border-line p-3 font-mono text-xs outline-none focus:ring-2 focus:ring-cyan-400"
+                            className="field min-h-[260px] font-mono text-xs"
                           />
                         </div>
                       </>
@@ -1022,10 +1055,28 @@ export default function AdminPanel() {
                 {activeTab === "subscriptions" && (
                   <div className="space-y-4">
                     <h2 className="text-2xl font-black text-ink">Subscription Monitor</h2>
-                    <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
-                      {users
-                        .filter((u) => u.subscriptionPurchased)
-                        .map((u) => (
+                    {loading ? (
+                      <p role="status" className="text-ink-muted">
+                        Loading users...
+                      </p>
+                    ) : usersError ? (
+                      <EmptyState
+                        variant="error"
+                        icon={FaCrown}
+                        title="Could not load subscriptions"
+                        description={usersError}
+                        action="Try again"
+                        onAction={loadUsers}
+                      />
+                    ) : subscribedUsers.length === 0 ? (
+                      <EmptyState
+                        icon={FaCrown}
+                        title="No active subscriptions"
+                        description="Once a user purchases a subscription, their plan and expiry date will be listed here."
+                      />
+                    ) : (
+                      <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                        {subscribedUsers.map((u) => (
                           <div key={u._id} className="rounded-2xl border border-positive/30 bg-positive-soft p-4">
                             <p className="font-bold text-ink">
                               {u.firstName} {u.lastName}
@@ -1036,10 +1087,11 @@ export default function AdminPanel() {
                             </p>
                           </div>
                         ))}
-                    </div>
+                      </div>
+                    )}
                   </div>
                 )}
-              </motion.div>
+              </Motion.div>
             </AnimatePresence>
           </main>
         </div>
