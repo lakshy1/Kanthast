@@ -46,12 +46,13 @@ const Footer = () => {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70 mb-1">Company</p>
               <Link to="/subscription" className="text-sm text-white/70 hover:text-white transition">Pricing</Link>
               <Link to="/about" className="text-sm text-white/70 hover:text-white transition">About</Link>
-              <a href="#" className="text-sm text-white/70 hover:text-white transition">Careers</a>
+              {/* "Careers" and "Terms & Privacy" were href="#" — they looked
+                  clickable and went nowhere. Restore them as real <Link>s once
+                  the pages exist; a missing link beats a broken one. */}
             </div>
 
             <div className="flex flex-col gap-3">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70 mb-1">Legal</p>
-              <a href="#" className="text-sm text-white/70 hover:text-white transition">Terms &amp; Privacy</a>
               <Link to="/contact" className="text-sm text-white/70 hover:text-white transition">Contact Us</Link>
             </div>
           </div>

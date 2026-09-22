@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import Markdown from "../components/Markdown";
+import { Modal, Button } from "../components/ui";
+import { useNetwork } from "../hooks/useNetwork";
 import {
   FaBars,
   FaPlay,
@@ -35,19 +37,6 @@ const formatTime = (value) => {
   if (Number.isNaN(date.getTime())) return "";
   return date.toLocaleString([], { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" });
 };
-
-function renderContent(text = "") {
-  // Convert markdown-lite to readable text with basic structure
-  const cleaned = String(text)
-    .replace(/```[\s\S]*?```/g, (m) => m.replace(/`/g, ""))
-    .replace(/`([^`]+)`/g, "$1")
-    .replace(/\*\*([^*]+)\*\*/g, "$1")
-    .replace(/\*([^*]+)\*/g, "$1")
-    .replace(/^#+\s+/gm, "")
-    .replace(/\n{3,}/g, "\n\n")
-    .trim();
-  return cleaned;
-}
 
 function isVideoMessage(msg = {}) {
   return Boolean(msg.mediaUrl && String(msg.mediaType || "").startsWith("video"));
@@ -239,6 +228,9 @@ export default function Chatbot() {
   const [status, setStatus] = useState("loading");
   // True when a reply arrived while the user was scrolled up reading history.
   const [hasUnreadBelow, setHasUnreadBelow] = useState(false);
+  // Session id staged for deletion; drives the confirmation Modal.
+  const [pendingDelete, setPendingDelete] = useState(null);
+  const { offline } = useNetwork();
   const [uploading, setUploading] = useState(false);
   const [attachment, setAttachment] = useState(null);
   const [uploadNotice, setUploadNotice] = useState(null);
@@ -370,9 +362,12 @@ export default function Chatbot() {
     }
   };
 
+  // Two-step: the row's delete button sets pendingDelete, which opens the
+  // shared Modal. window.confirm was inconsistent with every other surface and
+  // is unstyleable.
   const handleDeleteSession = async (sessionId) => {
     if (!token || !sessionId) return;
-    if (!window.confirm("Delete this conversation permanently?")) return;
+    setPendingDelete(null);
     setError("");
     try {
       const data = await deleteChatSession(token, sessionId, activeSessionId);
@@ -448,7 +443,7 @@ export default function Chatbot() {
           activeSessionId={activeSessionId}
           onLoad={loadSession}
           onNew={handleNewChat}
-          onDelete={handleDeleteSession}
+          onDelete={(id) => setPendingDelete(id)}
         />
       </div>
 
@@ -475,9 +470,24 @@ export default function Chatbot() {
             </div>
           </div>
 
-          <div className="flex items-center gap-1.5 text-xs text-emerald-600 bg-emerald-50 border border-emerald-200 px-2.5 py-1.5 rounded-full font-medium flex-shrink-0">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="hidden sm:inline">Online</span>
+          {/* Reflects real connectivity. This was hardcoded to "Online", so it
+              cheerfully claimed the assistant was reachable while offline. */}
+          <div
+            role="status"
+            aria-live="polite"
+            className={`flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-full font-medium flex-shrink-0 border ${
+              offline
+                ? "text-critical bg-critical-soft border-critical/30"
+                : "text-positive bg-positive-soft border-positive/30"
+            }`}
+          >
+            <span
+              aria-hidden="true"
+              className={`w-1.5 h-1.5 rounded-full ${
+                offline ? "bg-critical" : "bg-positive animate-pulse"
+              }`}
+            />
+            <span className="hidden sm:inline">{offline ? "Offline" : "Online"}</span>
           </div>
         </div>
 
@@ -521,7 +531,10 @@ export default function Chatbot() {
           {/* Message list */}
           {messages.map((msg, idx) => {
             const isUser = msg.role === "user";
-            const content = isUser ? msg.content : renderContent(msg.content);
+            // Pass the assistant's RAW text through — <Markdown> parses it.
+            // This used to run renderContent() first, which stripped the very
+            // syntax the renderer needs, so headings/bold/code never rendered.
+            const content = msg.content;
             return (
               <motion.div
                 key={`${msg.createdAt || idx}-${idx}`}
@@ -718,7 +731,7 @@ export default function Chatbot() {
                 activeSessionId={activeSessionId}
                 onLoad={loadSession}
                 onNew={handleNewChat}
-                onDelete={handleDeleteSession}
+                onDelete={(id) => setPendingDelete(id)}
                 onClose={() => setSidebarOpen(false)}
               />
             </motion.div>
@@ -748,6 +761,29 @@ export default function Chatbot() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <Modal
+        open={Boolean(pendingDelete)}
+        onClose={() => setPendingDelete(null)}
+        title="Delete this conversation?"
+        description="This removes the conversation and its messages permanently. It can't be undone."
+        size="sm"
+        footer={
+          <div className="flex justify-end gap-3">
+            <Button variant="secondary" onClick={() => setPendingDelete(null)}>
+              Keep it
+            </Button>
+            <Button variant="danger" onClick={() => handleDeleteSession(pendingDelete)}>
+              Delete conversation
+            </Button>
+          </div>
+        }
+      >
+        <p className="text-sm text-ink-muted">
+          You&apos;ll lose the full history of this chat, including any files you
+          shared in it.
+        </p>
+      </Modal>
     </div>
   );
 }
