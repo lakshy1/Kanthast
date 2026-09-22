@@ -424,7 +424,7 @@ const Navbar = () => {
               <>
                 <button
                   onClick={() => navigate("/chatbot")}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-cyan-500/30 bg-cyan-500/15 text-cyan-400 transition hover:bg-cyan-500/25"
+                  className="flex h-touch w-touch items-center justify-center rounded-full border border-cyan-500/30 bg-cyan-500/15 text-cyan-400 transition hover:bg-cyan-500/25"
                   aria-label="Chatbot"
                 >
                   <FaRobot className="text-sm" />
@@ -547,7 +547,7 @@ const Navbar = () => {
                 <div ref={mobileProfileRef} className="relative">
                   <button
                     onClick={() => setIsMobileProfileOpen((prev) => !prev)}
-                    className="flex items-center gap-1.5 rounded-full border border-white/15 bg-white/8 px-2 py-1"
+                    className="flex min-h-touch items-center gap-1.5 rounded-full border border-white/15 bg-white/8 px-2 py-1"
                     aria-label="Profile menu"
                   >
                     <div
@@ -648,13 +648,13 @@ const Navbar = () => {
               <div className="flex items-center gap-2">
                 <Link
                   to="/login"
-                  className="rounded-xl border border-white/10 bg-white/8 px-3 py-1.5 text-sm text-white/70 transition hover:bg-white/14"
+                  className="inline-flex min-h-touch items-center rounded-xl border border-white/10 bg-white/8 px-4 text-sm text-white/70 transition hover:bg-white/14"
                 >
                   Log In
                 </Link>
                 <Link
                   to="/signup"
-                  className="rounded-xl bg-cyan-500 px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-cyan-400"
+                  className="inline-flex min-h-touch items-center rounded-xl bg-brand px-4 text-sm font-semibold text-brand-fg transition hover:bg-brand-hover"
                 >
                   Sign Up
                 </Link>
