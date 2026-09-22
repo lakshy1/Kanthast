@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import DemoVideoModal from "../components/DemoVideoModal";
 import schoolHeroImage from "../assets/images/School-Hero-I.png";
 import demoVideo from "../../resources/Kanthast-demo.mp4";
@@ -20,19 +21,7 @@ import {
   FaStar,
 } from "react-icons/fa6";
 
-const schoolTokens = {
-  bgPrimary: "#0B1120",
-  bgSurface: "#111827",
-  bgElevated: "#1A2438",
-  bgBorder: "#1E2D45",
-  accentAmber: "#F59E0B",
-  accentOrange: "#F97316",
-  accentGreen: "#10B981",
-  accentYellow: "#FCD34D",
-  textPrimary: "#F8FAFC",
-  textSecondary: "#94A3B8",
-  textMuted: "#4B5563",
-};
+
 
 const subjectStrip = [
   { emoji: "SCI", name: "Science" },
@@ -305,11 +294,15 @@ function SectionLabel({ children }) {
   );
 }
 
-function PrimaryButton({ children }) {
+// Spreads props. Without this the component could never receive an onClick,
+// so every "Start Learning Free" / "Get Full Access" CTA on the page was an
+// inert button — the whole conversion path did nothing.
+function PrimaryButton({ children, ...props }) {
   return (
     <button
       type="button"
-      className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-extrabold text-slate-950 shadow-glow-caution transition hover:-translate-y-0.5 hover:bg-orange-500"
+      className="inline-flex min-h-touch items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-extrabold text-slate-950 shadow-glow-caution transition hover:-translate-y-0.5 hover:bg-orange-500"
+      {...props}
     >
       {children}
     </button>
@@ -320,7 +313,7 @@ function GhostButton({ children, ...props }) {
   return (
     <button
       type="button"
-      className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-slate-50 transition hover:border-amber-300 hover:text-amber-300"
+      className="inline-flex min-h-touch items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-slate-50 transition hover:border-amber-300 hover:text-amber-300"
       {...props}
     >
       {children}
@@ -389,9 +382,12 @@ function LessonPreviewCard({ label, title, subtext, statsList, gradient, compact
 }
 
 export default function SchoolHomepage() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("Science");
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
   const [activePainIndex, setActivePainIndex] = useState(0);
+  const [carouselPaused, setCarouselPaused] = useState(false);
+  const [carouselNonce, setCarouselNonce] = useState(0);
   const [showDemoVideo, setShowDemoVideo] = useState(false);
   const activeTabContent = tabData[activeTab];
 
@@ -400,16 +396,28 @@ export default function SchoolHomepage() {
     []
   );
 
+  // Auto-advance, but stoppable (WCAG 2.2.2: content that moves for more than
+  // 5s must be pausable). Halts while the user hovers or keyboard-focuses the
+  // carousel, when they take manual control, and whenever the OS asks for
+  // reduced motion. `carouselNonce` restarts the timer after a manual pick, so
+  // a click can't be overwritten 200ms later by an already-running tick.
   useEffect(() => {
+    if (carouselPaused) return undefined;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return undefined;
+    }
+
     const timer = window.setInterval(() => {
       setActivePainIndex((current) => (current + 1) % painSolutions.length);
     }, 4000);
 
     return () => window.clearInterval(timer);
-  }, []);
+  }, [carouselPaused, carouselNonce]);
 
   const goToPainSlide = (index) => {
     setActivePainIndex(index);
+    // Restart the dwell time so the slide the user chose gets its full 4s.
+    setCarouselNonce((n) => n + 1);
   };
 
   const showPreviousPainSlide = () => {
@@ -428,27 +436,16 @@ export default function SchoolHomepage() {
           name="description"
           content="Kanthast School brings Maths, Science, Social Studies and more alive through immersive 3D animations for Class I to Class X students."
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap"
-          rel="stylesheet"
-        />
       </Helmet>
 
+      {/* Inter and Nunito are loaded globally from index.html, so the
+          duplicate font link here was removed. The eleven custom properties
+          that used to sit in this rule went too: "var(--" appeared zero times
+          in the file, so they were declared and never consumed, duplicating
+          the palette a third time alongside the global tokens and the inline
+          hex values below. */}
       <style>{`
         .school-page {
-          --bg-primary: #0B1120;
-          --bg-surface: #111827;
-          --bg-elevated: #1A2438;
-          --bg-border: #1E2D45;
-          --accent-amber: #F59E0B;
-          --accent-orange: #F97316;
-          --accent-green: #10B981;
-          --accent-yellow: #FCD34D;
-          --text-primary: #F8FAFC;
-          --text-secondary: #94A3B8;
-          --text-muted: #4B5563;
           font-family: 'Inter', sans-serif;
           background:
             radial-gradient(circle at 78% 18%, rgba(245,158,11,0.11), transparent 24%),
@@ -511,8 +508,8 @@ export default function SchoolHomepage() {
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <PrimaryButton>
-                  Start Learning Free <FaArrowRight />
+                <PrimaryButton onClick={() => navigate("/signup")}>
+                  Start Learning Free <FaArrowRight aria-hidden="true" />
                 </PrimaryButton>
                 <GhostButton onClick={() => setShowDemoVideo(true)}>
                   Watch Demo <FaCirclePlay />
@@ -691,7 +688,16 @@ export default function SchoolHomepage() {
             </h2>
           </div>
 
-          <div className="mt-12">
+          <div
+            className="mt-12"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Common parent concerns, solved"
+            onMouseEnter={() => setCarouselPaused(true)}
+            onMouseLeave={() => setCarouselPaused(false)}
+            onFocusCapture={() => setCarouselPaused(true)}
+            onBlurCapture={() => setCarouselPaused(false)}
+          >
             <motion.div
               key={activePainIndex}
               initial={{ opacity: 0, y: 24 }}
@@ -766,11 +772,14 @@ export default function SchoolHomepage() {
                     key={item.pain}
                     type="button"
                     onClick={() => goToPainSlide(index)}
-                    className="group inline-flex items-center gap-2"
-                    aria-label={`Go to pain point slide ${index + 1}`}
+                    // Padding gives the 10px dot a 44px hit area without
+                    // changing how it looks.
+                    className="group inline-flex min-h-touch items-center gap-2 px-1 py-4"
+                    aria-label={`Go to slide ${index + 1} of ${painSolutions.length}`}
                     aria-pressed={activePainIndex === index}
                   >
                     <span
+                      aria-hidden="true"
                       className={`h-2.5 rounded-full transition-all ${
                         activePainIndex === index
                           ? "w-10 bg-amber-400"
@@ -858,8 +867,8 @@ export default function SchoolHomepage() {
                   ))}
                 </div>
                 <div className="mt-8">
-                  <GhostButton>
-                    Start Free Trial <FaArrowRight />
+                  <GhostButton onClick={() => navigate("/signup")}>
+                    Start Free Trial <FaArrowRight aria-hidden="true" />
                   </GhostButton>
                 </div>
               </div>
@@ -886,7 +895,7 @@ export default function SchoolHomepage() {
                     ))}
                   </div>
                   <div className="mt-8">
-                    <PrimaryButton>
+                    <PrimaryButton onClick={() => navigate("/subscription")}>
                       Get Full Access <FaArrowRight />
                     </PrimaryButton>
                   </div>
@@ -1018,10 +1027,10 @@ export default function SchoolHomepage() {
               </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <PrimaryButton>
-                  Start Free for 7 Days <FaArrowRight />
+                <PrimaryButton onClick={() => navigate("/signup")}>
+                  Start Free for 7 Days <FaArrowRight aria-hidden="true" />
                 </PrimaryButton>
-                <GhostButton>Talk to Us</GhostButton>
+                <GhostButton onClick={() => navigate("/contact")}>Talk to Us</GhostButton>
               </div>
 
               <div className="mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-sm text-slate-300">

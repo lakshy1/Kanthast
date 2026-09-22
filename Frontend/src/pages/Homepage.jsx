@@ -115,7 +115,7 @@ const Homepage = () => {
         })}</script>
       </Helmet>
       <section className="relative py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-blue-950"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-blue-950 to-[#0d1829]"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -136,10 +136,10 @@ const Homepage = () => {
               experiences designed for deep understanding and retention.
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 to="/signup"
-                className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-3 rounded-lg font-semibold transition"
+                className="btn-primary"
               >
                 Get Started
               </Link>
@@ -245,10 +245,10 @@ const Homepage = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight text-center pb-12">
           How Kanthast Works?
         </h2>
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight text-center pb-12">
+        <p className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight text-center pb-12">
           AFTERLOAD <span className="text-slate-400">-&gt;</span>{" "}
           <span className="text-cyan-600">HYPERTENSION</span>
-        </h2>
+        </p>
 
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[37.5rem] h-[37.5rem] bg-cyan-100 blur-3xl rounded-full opacity-40 pointer-events-none"></div>
 

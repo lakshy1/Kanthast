@@ -228,14 +228,22 @@ const Navbar = () => {
                   onClick={() => setIsTrackMenuOpen((prev) => !prev)}
                   aria-label="Open learning track menu"
                   aria-expanded={isTrackMenuOpen}
-                  className="group relative flex h-5 w-5 items-center justify-center rounded-full border border-white/10 bg-white/6 backdrop-blur-md transition hover:border-cyan-300/45 hover:bg-cyan-400/10 focus-visible:outline-none"
+                  // 44px hit area, 20px visual. The dot itself is the inner
+                  // span; the button just carries the target size.
+                  className="group relative grid h-touch w-touch place-items-center"
                 >
-                  <span className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(34,211,238,0.35),transparent_60%),radial-gradient(circle_at_75%_70%,rgba(244,114,182,0.22),transparent_55%)] opacity-80 blur-[2px]" />
-                  <FaChevronDown
-                    className={`relative z-10 text-micro text-white/75 transition-transform duration-200 ${
-                      isTrackMenuOpen ? "rotate-180" : ""
-                    }`}
-                  />
+                  <span className="relative grid h-5 w-5 place-items-center rounded-full border border-white/10 bg-white/6 backdrop-blur-md transition group-hover:border-cyan-300/45 group-hover:bg-cyan-400/10">
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(34,211,238,0.35),transparent_60%),radial-gradient(circle_at_75%_70%,rgba(244,114,182,0.22),transparent_55%)] opacity-80 blur-[2px]"
+                    />
+                    <FaChevronDown
+                      aria-hidden="true"
+                      className={`relative z-10 text-micro text-white/75 transition-transform duration-200 ${
+                        isTrackMenuOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </span>
                 </button>
 
                 <AnimatePresence>
@@ -300,6 +308,14 @@ const Navbar = () => {
                 className="relative"
                 onMouseEnter={() => setIsCoursesOpen(true)}
                 onMouseLeave={() => setIsCoursesOpen(false)}
+                onKeyDown={(e) => {
+                  if (e.key === "Escape") setIsCoursesOpen(false);
+                }}
+                onBlur={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget)) {
+                    setIsCoursesOpen(false);
+                  }
+                }}
               >
                 <div className="flex items-center gap-1">
                   <NavLink
@@ -308,13 +324,21 @@ const Navbar = () => {
                   >
                     Courses
                   </NavLink>
-                  <motion.span
+                  {/* Was a <span>: it looked clickable (cursor-pointer) but was
+                      not focusable and had no handler, so the whole submenu
+                      was hover-only — unreachable by keyboard and on touch. */}
+                  <motion.button
+                    type="button"
+                    onClick={() => setIsCoursesOpen((prev) => !prev)}
+                    aria-haspopup="menu"
+                    aria-expanded={isCoursesOpen}
+                    aria-label="Show course tracks"
                     animate={{ rotate: isCoursesOpen ? 180 : 0 }}
                     transition={{ duration: 0.2 }}
-                    className="cursor-pointer text-micro text-white/40"
+                    className="grid h-8 w-8 place-items-center text-micro text-white/60 hover:text-white"
                   >
-                    <FaChevronDown />
-                  </motion.span>
+                    <FaChevronDown aria-hidden="true" />
+                  </motion.button>
                 </div>
                 <AnimatePresence>
                   {isCoursesOpen && (
@@ -405,16 +429,36 @@ const Navbar = () => {
                   className="relative"
                   onMouseEnter={() => setIsDesktopUserOpen(true)}
                   onMouseLeave={() => setIsDesktopUserOpen(false)}
+                  // Close on Escape and when focus leaves the whole widget —
+                  // hover alone left this menu unreachable by keyboard, and
+                  // Logout/Profile/Settings live inside it.
+                  onKeyDown={(e) => {
+                    if (e.key === "Escape") setIsDesktopUserOpen(false);
+                  }}
+                  onBlur={(e) => {
+                    if (!e.currentTarget.contains(e.relatedTarget)) {
+                      setIsDesktopUserOpen(false);
+                    }
+                  }}
                 >
-                  <button className="flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-2 py-1 focus-visible:outline-none">
+                  <button
+                    type="button"
+                    onClick={() => setIsDesktopUserOpen((prev) => !prev)}
+                    aria-haspopup="menu"
+                    aria-expanded={isDesktopUserOpen}
+                    aria-label="Account menu"
+                    className="flex min-h-touch items-center gap-2 rounded-full border border-white/15 bg-white/8 px-2 py-1"
+                  >
                     <div
                       className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
                       style={{ backgroundColor: avatarBg }}
+                      aria-hidden="true"
                     >
                       {initials}
                     </div>
                     <FaChevronDown
-                      className={`text-micro text-white/40 transition-transform duration-200 ${
+                      aria-hidden="true"
+                      className={`text-micro text-white/60 transition-transform duration-200 ${
                         isDesktopUserOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -433,15 +477,15 @@ const Navbar = () => {
                           <p className="truncate text-sm font-semibold text-slate-800">
                             {user?.firstName} {user?.lastName}
                           </p>
-                          <p className="truncate text-xs text-slate-400">{user?.email}</p>
+                          <p className="truncate text-xs text-ink-subtle">{user?.email}</p>
                           {hasSubscription ? (
                             <div className="mt-1.5 flex items-center gap-1.5">
                               <FaCrown className="shrink-0 text-micro text-amber-400" />
                               <span className="text-micro font-semibold text-emerald-600">
                                 Pro Active
                               </span>
-                              <span className="text-micro text-slate-400">·</span>
-                              <span className="text-micro text-slate-400">
+                              <span className="text-micro text-ink-subtle">·</span>
+                              <span className="text-micro text-ink-subtle">
                                 Till{" "}
                                 {new Date(user?.subscriptionValidTill).toLocaleDateString("en-IN", {
                                   day: "2-digit",
@@ -453,7 +497,7 @@ const Navbar = () => {
                           ) : (
                             <div className="mt-1.5 flex items-center gap-1.5">
                               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300" />
-                              <span className="text-micro text-slate-400">No active plan</span>
+                              <span className="text-micro text-ink-subtle">No active plan</span>
                             </div>
                           )}
                         </div>
@@ -461,13 +505,13 @@ const Navbar = () => {
                           to="/profile"
                           className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-slate-700 transition hover:bg-slate-50"
                         >
-                          <FaUserCircle className="text-xs text-slate-400" /> My Profile
+                          <FaUserCircle className="text-xs text-ink-subtle" /> My Profile
                         </Link>
                         <Link
                           to="/settings"
                           className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-slate-700 transition hover:bg-slate-50"
                         >
-                          <FaCog className="text-xs text-slate-400" /> Settings
+                          <FaCog className="text-xs text-ink-subtle" /> Settings
                         </Link>
                         {!hasSubscription && (
                           <Link
@@ -534,15 +578,15 @@ const Navbar = () => {
                             <p className="truncate text-sm font-semibold text-slate-800">
                               {user?.firstName} {user?.lastName}
                             </p>
-                            <p className="truncate text-xs text-slate-400">{user?.email}</p>
+                            <p className="truncate text-xs text-ink-subtle">{user?.email}</p>
                             {hasSubscription ? (
                               <div className="mt-1.5 flex items-center gap-1.5">
                                 <FaCrown className="shrink-0 text-micro text-amber-400" />
                                 <span className="text-micro font-semibold text-emerald-600">
                                   Pro Active
                                 </span>
-                                <span className="text-micro text-slate-400">·</span>
-                                <span className="text-micro text-slate-400">
+                                <span className="text-micro text-ink-subtle">·</span>
+                                <span className="text-micro text-ink-subtle">
                                   Till{" "}
                                   {new Date(user?.subscriptionValidTill).toLocaleDateString("en-IN", {
                                     day: "2-digit",
@@ -554,7 +598,7 @@ const Navbar = () => {
                             ) : (
                               <div className="mt-1.5 flex items-center gap-1.5">
                                 <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300" />
-                                <span className="text-micro text-slate-400">No active plan</span>
+                                <span className="text-micro text-ink-subtle">No active plan</span>
                               </div>
                             )}
                           </div>
@@ -565,14 +609,14 @@ const Navbar = () => {
                           onClick={() => setIsMobileProfileOpen(false)}
                           className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-slate-700 transition hover:bg-slate-50"
                         >
-                          <FaUserCircle className="text-xs text-slate-400" /> My Profile
+                          <FaUserCircle className="text-xs text-ink-subtle" /> My Profile
                         </Link>
                         <Link
                           to="/settings"
                           onClick={() => setIsMobileProfileOpen(false)}
                           className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-slate-700 transition hover:bg-slate-50"
                         >
-                          <FaCog className="text-xs text-slate-400" /> Settings
+                          <FaCog className="text-xs text-ink-subtle" /> Settings
                         </Link>
                         {!hasSubscription && (
                           <Link
@@ -627,7 +671,7 @@ const Navbar = () => {
                 key={to}
                 to={to}
                 className={`relative flex flex-col items-center justify-center gap-1 transition-colors ${
-                  isActive ? "text-cyan-400" : "text-white/40 hover:text-white/70"
+                  isActive ? "text-cyan-400" : "text-white/60 hover:text-white"
                 }`}
               >
                 <motion.div
@@ -642,7 +686,7 @@ const Navbar = () => {
                 </motion.div>
                 <span
                   className={`text-micro font-medium tracking-wide ${
-                    isActive ? "text-cyan-400" : "text-white/35"
+                    isActive ? "text-cyan-400" : "text-white/60"
                   }`}
                 >
                   {label}

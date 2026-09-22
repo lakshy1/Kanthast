@@ -99,6 +99,36 @@ export default {
         slow: "400ms",
       },
 
+      // ── Opacity scale ───────────────────────────────────────────────────
+      // Tailwind's default opacity scale is 0/5/10/20/25/…/100. A modifier
+      // off that scale (bg-white/8, text-white/35, bg-slate-950/92) is NOT
+      // treated as an arbitrary value — it silently matches no rule and emits
+      // nothing, so the element renders with no background/border/color at
+      // all. 58 such classes existed across Navbar, SchoolHomepage and others,
+      // including the track-switcher dropdown panel, which had no background.
+      // Registering the in-use steps makes them real.
+      opacity: {
+        6: "0.06",
+        8: "0.08",
+        12: "0.12",
+        14: "0.14",
+        15: "0.15",
+        18: "0.18",
+        35: "0.35",
+        45: "0.45",
+        55: "0.55",
+        62: "0.62",
+        65: "0.65",
+        85: "0.85",
+        92: "0.92",
+      },
+
+      // Colored glow as a drop-shadow (for SVG/icon glows, where box-shadow
+      // does not apply). boxShadow keys do not generate drop-shadow-*.
+      dropShadow: {
+        "glow-brand": "0 0 8px rgba(34, 211, 238, 0.6)",
+      },
+
       // Minimum comfortable touch target (WCAG 2.5.5 / Apple HIG).
       spacing: {
         touch: "44px",

@@ -90,29 +90,33 @@ function SettingToggle({ label, description, checked, onChange }) {
   );
 }
 
+// Accent identity per section. Titles use text-ink rather than a
+// near-black palette value (text-blue-950 etc.), which became invisible
+// against dark surfaces once dark mode went live — the accent now lives in
+// the icon chip, eyebrow and border, all of which read in both themes.
 function getAccentClasses(accent) {
   switch (accent) {
     case "blue":
       return {
-        shell: "border-blue-100 bg-gradient-to-br from-surface via-surface-sunken to-blue-50/40",
-        icon: "border-blue-100 bg-blue-50 text-blue-700",
-        title: "text-blue-950",
-        eyebrow: "text-blue-700",
+        shell: "border-line bg-gradient-to-br from-surface via-surface-sunken to-surface",
+        icon: "border-line bg-brand-soft text-brand",
+        title: "text-ink",
+        eyebrow: "text-brand",
       };
     case "emerald":
       return {
-        shell: "border-emerald-100 bg-gradient-to-br from-surface via-surface-sunken to-emerald-50/40",
-        icon: "border-emerald-100 bg-emerald-50 text-emerald-700",
-        title: "text-emerald-950",
-        eyebrow: "text-emerald-700",
+        shell: "border-line bg-gradient-to-br from-surface via-surface-sunken to-surface",
+        icon: "border-line bg-positive-soft text-positive",
+        title: "text-ink",
+        eyebrow: "text-positive",
       };
     case "cyan":
     default:
       return {
-        shell: "border-cyan-100 bg-gradient-to-br from-surface via-surface-sunken to-cyan-50/40",
-        icon: "border-cyan-100 bg-cyan-50 text-cyan-700",
-        title: "text-cyan-950",
-        eyebrow: "text-cyan-700",
+        shell: "border-line bg-gradient-to-br from-surface via-surface-sunken to-surface",
+        icon: "border-line bg-brand-soft text-brand",
+        title: "text-ink",
+        eyebrow: "text-brand",
       };
   }
 }
@@ -143,21 +147,22 @@ function SectionCard({ accent = "cyan", icon, title, description, children, acti
   );
 }
 
-function TabButton({ active, accent = "cyan", children, onClick }) {
-  const activeClasses =
-    accent === "blue"
-      ? "border-blue-200 bg-blue-50 text-blue-950 shadow-e1 ring-1 ring-blue-100"
-      : accent === "emerald"
-        ? "border-emerald-200 bg-emerald-50 text-emerald-950 shadow-e1 ring-1 ring-emerald-100"
-        : "border-cyan-200 bg-cyan-50 text-cyan-950 shadow-e1 ring-1 ring-cyan-100";
-
+function TabButton({ active, children, onClick, controls, id }) {
   return (
     <button
       type="button"
+      // Real tab semantics: the tablist below drives a labelled tabpanel, so
+      // the active tab must be announced as selected rather than signalled by
+      // background colour alone.
+      role="tab"
+      id={id}
+      aria-selected={active}
+      aria-controls={controls}
+      tabIndex={active ? 0 : -1}
       onClick={onClick}
       className={`flex min-h-touch items-center justify-center gap-1.5 rounded-2xl px-2 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-semibold transition-colors duration-fast ease-brand ${
         active
-          ? activeClasses
+          ? "border border-line bg-brand-soft text-ink shadow-e1"
           : "border border-transparent bg-transparent text-ink-subtle hover:border-line hover:bg-surface hover:text-ink"
       }`}
     >
@@ -201,7 +206,7 @@ function SessionCard({ session, onLogout, revokingSessionId }) {
           <div className="flex flex-wrap items-center gap-2">
             <p className="font-semibold text-ink">{session.deviceName}</p>
             {isThisDevice && (
-              <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-micro font-semibold uppercase tracking-[0.12em] text-emerald-700">
+              <span className="rounded-full bg-positive-soft px-2.5 py-1 text-micro font-semibold uppercase tracking-[0.12em] text-positive">
                 This device
               </span>
             )}
@@ -249,13 +254,19 @@ export default function Settings() {
   const token = localStorage.getItem("kanthastToken");
   const rawUser = localStorage.getItem("kanthastUser");
 
+  // Seed value only. This must NOT be a dependency of the load effect:
+  // saveAccount writes kanthastUser back to localStorage, which changes
+  // `rawUser`, which would re-create this object and re-fire the load —
+  // re-fetching everything and overwriting any field the user had edited but
+  // not yet saved. Captured once on mount via useRef instead.
   const localUser = useMemo(() => {
     try {
       return rawUser ? JSON.parse(rawUser) : null;
     } catch {
       return null;
     }
-  }, [rawUser]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const [loading, setLoading] = useState(true);
   const [savingAccount, setSavingAccount] = useState(false);
@@ -348,7 +359,12 @@ export default function Settings() {
 
   const initials = `${user?.firstName?.[0] || ""}${user?.lastName?.[0] || ""}`.toUpperCase() || "U";
   const subscriptionPurchased = Boolean(user?.subscriptionPurchased);
-  const deleteDisabled = deleteConfirm.trim().toLowerCase() !== (user?.email || "").toLowerCase();
+  // Guard both sides: if the profile failed to load, `user?.email` is "" and a
+  // blank confirm field would compare equal to it, ENABLING the destructive
+  // button with nothing typed. Require a known email AND an exact match.
+  const accountEmail = (user?.email || "").trim().toLowerCase();
+  const deleteDisabled =
+    !accountEmail || deleteConfirm.trim().toLowerCase() !== accountEmail;
   const visibilityLabel =
     preferences.profileVisibility === "public"
       ? "Public"
@@ -592,22 +608,20 @@ export default function Settings() {
         </section>
 
         <div className="sticky top-4 z-20 mt-4 overflow-hidden rounded-3xl border border-line bg-surface/90 p-2 shadow-e3 backdrop-blur-xl">
-          <div className="grid gap-2 grid-cols-3">
+          <div role="tablist" aria-label="Settings sections" className="grid gap-2 grid-cols-3">
             {sectionTabs.map((tab) => (
               <TabButton
                 key={tab.id}
+                id={`settings-tab-${tab.id}`}
+                controls={`settings-panel-${tab.id}`}
                 active={activeTab === tab.id}
-                accent={tab.accent}
                 onClick={() => setActiveTab(tab.id)}
               >
                 <span
+                  aria-hidden="true"
                   className={`hidden sm:grid h-9 w-9 place-items-center rounded-xl transition ${
                     activeTab === tab.id
-                      ? tab.accent === "cyan"
-                        ? "bg-cyan-100 text-cyan-700"
-                        : tab.accent === "blue"
-                          ? "bg-blue-100 text-blue-700"
-                          : "bg-emerald-100 text-emerald-700"
+                      ? "bg-brand text-brand-fg"
                       : "bg-surface-sunken text-ink-muted"
                   }`}
                 >
@@ -617,13 +631,7 @@ export default function Settings() {
                   <span>{tab.label}</span>
                   <span
                     className={`hidden sm:block text-micro font-medium transition ${
-                      activeTab === tab.id
-                        ? tab.accent === "cyan"
-                          ? "text-cyan-700"
-                          : tab.accent === "blue"
-                            ? "text-blue-700"
-                            : "text-emerald-700"
-                        : "text-ink-subtle"
+                      activeTab === tab.id ? "text-ink-muted" : "text-ink-subtle"
                     }`}
                   >
                     {tab.subtitle}
@@ -634,7 +642,13 @@ export default function Settings() {
           </div>
         </div>
 
-        <div className="mt-6 grid gap-6">
+        <div
+          role="tabpanel"
+          id={`settings-panel-${activeTab}`}
+          aria-labelledby={`settings-tab-${activeTab}`}
+          tabIndex={0}
+          className="mt-6 grid gap-6 focus:outline-none"
+        >
           {activeTab === "general" && (
             <>
               <SectionCard
