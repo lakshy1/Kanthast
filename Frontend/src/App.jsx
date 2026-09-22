@@ -11,10 +11,9 @@ import { warmupBackend, prefetchImages, prefetchContent } from "./utils/warmup";
 import { useAppSettings } from "./utils/settings";
 import { initCapacitorPlugins, setupBackButton } from "./utils/capacitor";
 
-// The public product is temporarily replaced site-wide with a coming-soon
-// page while Kanthast is rebuilt. Admin routes stay reachable. Restore by
-// setting this back to false.
-const SHOW_COMING_SOON = true;
+// Set to true to replace the public product site-wide with the coming-soon
+// page while Kanthast is rebuilt. Admin routes stay reachable either way.
+const SHOW_COMING_SOON = false;
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const SchoolHomepage = lazy(() => import("./pages/SchoolHomepage"));
