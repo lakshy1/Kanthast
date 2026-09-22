@@ -70,12 +70,12 @@ export default function Courses() {
             variants={stagger}
             initial="hidden"
             animate="show"
-            className="rounded-3xl border border-white/60 bg-white/70 px-6 py-10 text-center backdrop-blur-2xl shadow-e4 md:px-12"
+            className="rounded-card border border-line bg-surface/70 px-6 py-10 text-center backdrop-blur-2xl shadow-e4 md:px-12"
           >
-            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-black leading-tight text-slate-900">
+            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-black leading-tight text-ink">
               Programs Built for Every Medical Stage
             </motion.h1>
-            <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-slate-600">
+            <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-ink-muted">
               Animation-first learning tracks with exam-focused pathways for USMLE, NEET PG, and INI CET.
             </motion.p>
           </motion.div>
@@ -109,10 +109,10 @@ export default function Courses() {
               variants={fadeUp}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ duration: 0.28, ease: "easeOut" }}
-              className="rounded-2xl border border-white/60 bg-white/55 p-7 backdrop-blur-2xl shadow-e4"
+              className="rounded-card border border-line bg-surface/55 p-7 backdrop-blur-2xl shadow-e4"
             >
-              <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
-              <p className="mt-3 text-slate-600 leading-relaxed">{item.desc}</p>
+              <h3 className="text-xl font-bold text-ink">{item.title}</h3>
+              <p className="mt-3 text-ink-muted leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -126,10 +126,10 @@ export default function Courses() {
           viewport={sectionViewport}
           className="mx-auto max-w-7xl px-6 md:px-16"
         >
-          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
+          <div className="grid items-center gap-10 rounded-card border border-line bg-surface/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
             <motion.div variants={fadeUp}>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900">Medicine / USMLE</h2>
-              <p className="mt-4 text-slate-600 text-lg leading-relaxed">
+              <h2 className="text-3xl md:text-5xl font-black text-ink">Medicine / USMLE</h2>
+              <p className="mt-4 text-ink-muted text-lg leading-relaxed">
                 Master complex physiology, pathology, and clinical reasoning through immersive visual lessons designed
                 for USMLE performance.
               </p>
@@ -137,7 +137,7 @@ export default function Courses() {
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => navigate("/lists")}
-                className="mt-7 rounded-xl bg-slate-900 px-7 py-3.5 font-semibold text-white transition hover:bg-slate-800"
+                className="btn-primary mt-7"
               >
                 Explore Medicine
               </motion.button>
@@ -147,7 +147,7 @@ export default function Courses() {
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.01 }}
               transition={{ duration: 0.35 }}
-              className="overflow-hidden rounded-2xl border border-slate-200 shadow-xl"
+              className="overflow-hidden rounded-card border border-line shadow-xl"
             >
               <motion.img
                 src={Image1}
@@ -170,12 +170,12 @@ export default function Courses() {
           viewport={sectionViewport}
           className="mx-auto max-w-7xl px-6 md:px-16"
         >
-          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
+          <div className="grid items-center gap-10 rounded-card border border-line bg-surface/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
             <motion.div
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.01 }}
               transition={{ duration: 0.35 }}
-              className="overflow-hidden rounded-2xl border border-slate-200 shadow-xl"
+              className="overflow-hidden rounded-card border border-line shadow-xl"
             >
               <motion.img
                 src={Image2}
@@ -188,8 +188,8 @@ export default function Courses() {
             </motion.div>
 
             <motion.div variants={fadeUp}>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900">NEET PG</h2>
-              <p className="mt-4 text-slate-600 text-lg leading-relaxed">
+              <h2 className="text-3xl md:text-5xl font-black text-ink">NEET PG</h2>
+              <p className="mt-4 text-ink-muted text-lg leading-relaxed">
                 India's most competitive PG medical entrance exam demands more than rote learning. Kanthast's
                 animation-driven modules cover all 19 MBBS subjects — Pathology, Pharmacology, Medicine, Surgery,
                 OBG, Paediatrics, and more — building the conceptual clarity that turns high-yield facts into
@@ -199,7 +199,7 @@ export default function Courses() {
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => navigate("/lists")}
-                className="mt-7 rounded-xl bg-slate-900 px-7 py-3.5 font-semibold text-white transition hover:bg-slate-800"
+                className="btn-primary mt-7"
               >
                 Explore NEET PG
               </motion.button>
@@ -216,10 +216,10 @@ export default function Courses() {
           viewport={sectionViewport}
           className="mx-auto max-w-7xl px-6 md:px-16"
         >
-          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
+          <div className="grid items-center gap-10 rounded-card border border-line bg-surface/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
             <motion.div variants={fadeUp}>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900">INI CET</h2>
-              <p className="mt-4 text-slate-600 text-lg leading-relaxed">
+              <h2 className="text-3xl md:text-5xl font-black text-ink">INI CET</h2>
+              <p className="mt-4 text-ink-muted text-lg leading-relaxed">
                 The gateway to AIIMS, JIPMER, PGIMER, and NIMHANS — India's most prestigious postgraduate
                 institutions. INI CET demands deep clinical reasoning alongside subject mastery. Our visual
                 lessons make complex mechanisms intuitive, so you walk into the exam with clarity, not just
@@ -229,7 +229,7 @@ export default function Courses() {
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => navigate("/lists")}
-                className="mt-7 rounded-xl bg-slate-900 px-7 py-3.5 font-semibold text-white transition hover:bg-slate-800"
+                className="btn-primary mt-7"
               >
                 Explore INI CET
               </motion.button>
@@ -239,7 +239,7 @@ export default function Courses() {
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.01 }}
               transition={{ duration: 0.35 }}
-              className="overflow-hidden rounded-2xl border border-slate-200 shadow-xl"
+              className="overflow-hidden rounded-card border border-line shadow-xl"
             >
               <motion.img
                 src={Image3}
@@ -266,7 +266,7 @@ function SchoolCourses({ navigate }) {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#f7fbff] text-slate-950">
+    <div className="min-h-screen overflow-x-hidden bg-[#f7fbff] text-ink">
       <Helmet>
         <title>Kanthast School Courses | Classes I-X</title>
         <meta
@@ -276,22 +276,22 @@ function SchoolCourses({ navigate }) {
         <link rel="canonical" href="https://kanthast.in/courses" />
       </Helmet>
 
-      <section className="border-b border-slate-200 bg-white">
+      <section className="border-b border-line bg-surface">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:px-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-20">
           <motion.div variants={stagger} initial="hidden" animate="show">
             <motion.p variants={fadeUp} className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-700">
               Kanthast School
             </motion.p>
-            <motion.h1 variants={fadeUp} className="mt-4 text-4xl font-black leading-tight text-slate-950 md:text-6xl">
+            <motion.h1 variants={fadeUp} className="mt-4 text-4xl font-black leading-tight text-ink md:text-6xl">
               One visual learning plan for every class from I to X.
             </motion.h1>
-            <motion.p variants={fadeUp} className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+            <motion.p variants={fadeUp} className="mt-5 max-w-2xl text-lg leading-8 text-ink-muted">
               Choose the student's class, unlock the annual course, and let them learn with visual chapters,
               checkpoints, and a dashboard that keeps progress visible.
             </motion.p>
             <motion.div variants={fadeUp} className="mt-7 flex flex-wrap gap-3">
               {features.map((item) => (
-                <span key={item} className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700">
+                <span key={item} className="rounded-full border border-line bg-surface-sunken px-4 py-2 text-sm font-semibold text-ink-muted">
                   {item}
                 </span>
               ))}
@@ -302,7 +302,7 @@ function SchoolCourses({ navigate }) {
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="rounded-2xl border border-slate-200 bg-slate-950 p-6 text-white shadow-e4"
+            className="rounded-card border border-line bg-slate-950 p-6 text-white shadow-e4"
           >
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Annual access</p>
             <div className="mt-4 flex items-end gap-3">
@@ -315,7 +315,7 @@ function SchoolCourses({ navigate }) {
             <button
               type="button"
               onClick={() => navigate("/lists")}
-              className="mt-6 w-full rounded-xl bg-cyan-500 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-400"
+              className="mt-6 w-full rounded-control bg-cyan-500 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-400"
             >
               Open School Lists
             </button>

@@ -1,25 +1,25 @@
 function SkeletonBlock({ className = "" }) {
-  return <div className={`animate-pulse rounded-xl bg-slate-200/80 ${className}`} />;
+  return <div className={`animate-pulse rounded-xl bg-line ${className}`} />;
 }
 
 export function ProfileSkeleton() {
   return (
     <div className="mt-6 grid lg:grid-cols-[1.2fr_0.8fr] gap-6">
-      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-e2">
+      <div className="rounded-card border border-line bg-surface p-6 shadow-e2">
         <div className="flex items-center justify-between mb-5">
           <SkeletonBlock className="h-8 w-52" />
           <SkeletonBlock className="h-9 w-28 rounded-lg" />
         </div>
         <div className="grid md:grid-cols-2 gap-4">
           {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+            <div key={i} className="rounded-control border border-line bg-surface-sunken px-4 py-3">
               <SkeletonBlock className="h-3 w-20 mb-2" />
               <SkeletonBlock className="h-5 w-32" />
             </div>
           ))}
         </div>
       </div>
-      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-e2">
+      <div className="rounded-card border border-line bg-surface p-6 shadow-e2">
         <SkeletonBlock className="h-8 w-24 mb-4" />
         <SkeletonBlock className="h-52 w-full rounded-xl" />
       </div>
@@ -44,12 +44,12 @@ export function ListsPageSkeleton() {
         {[1, 2].map((sectionKey) => (
           <div
             key={sectionKey}
-            className="rounded-3xl bg-white/80 border border-slate-200 p-6 md:p-7 shadow-e2"
+            className="rounded-card bg-surface/80 border border-line p-6 md:p-7 shadow-e2"
           >
             <SkeletonBlock className="h-11 w-96 max-w-full" />
             <div className="mt-6 space-y-3">
               {[1, 2, 3].map((rowKey) => (
-                <div key={rowKey} className="rounded-2xl border border-slate-200/80 px-4 py-4 bg-slate-50/60">
+                <div key={rowKey} className="rounded-card border border-line/80 px-4 py-4 bg-surface-sunken/60">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
                     <div className="space-y-2 w-full">
                       <SkeletonBlock className="h-8 w-4/5" />
@@ -69,7 +69,7 @@ export function ListsPageSkeleton() {
       </div>
 
       <aside className="self-start lg:sticky lg:top-24 overflow-visible h-fit">
-        <div className="rounded-3xl bg-slate-50 border border-slate-200 p-6 shadow-e2">
+        <div className="rounded-card bg-surface-sunken border border-line p-6 shadow-e2">
           <SkeletonBlock className="h-7 w-28 mb-4" />
           <div className="space-y-3">
             {[1, 2, 3, 4, 5].map((key) => (
@@ -85,20 +85,20 @@ export function ListsPageSkeleton() {
 export function SummaryPageSkeleton() {
   return (
     <div className="mt-6 grid lg:grid-cols-[1.4fr_1fr] gap-6">
-      <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-e2">
+      <article className="rounded-card border border-line bg-surface p-6 shadow-e2">
         <SkeletonBlock className="h-8 w-56" />
         <SkeletonBlock className="mt-4 h-4 w-full" />
         <SkeletonBlock className="mt-2 h-4 w-11/12" />
         <div className="mt-6 space-y-3">
           {[1, 2, 3, 4].map((key) => (
-            <div key={key} className="rounded-xl bg-slate-50 border border-slate-200 p-4">
+            <div key={key} className="rounded-control bg-surface-sunken border border-line p-4">
               <SkeletonBlock className="h-5 w-full" />
             </div>
           ))}
         </div>
       </article>
 
-      <aside className="rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6 shadow-e2">
+      <aside className="rounded-card border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6 shadow-e2">
         <SkeletonBlock className="h-7 w-52" />
         <SkeletonBlock className="mt-4 h-4 w-full" />
         <div className="mt-5 space-y-3">
@@ -113,7 +113,7 @@ export function SummaryPageSkeleton() {
 
 export function VideoPageSkeleton() {
   return (
-    <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-e2">
+    <section className="rounded-card border border-line bg-surface p-4 md:p-6 shadow-e2">
       <SkeletonBlock className="w-full aspect-video rounded-2xl" />
       <SkeletonBlock className="mt-3 h-4 w-32" />
     </section>
@@ -122,7 +122,7 @@ export function VideoPageSkeleton() {
 
 export function VideoMetaSkeleton() {
   return (
-    <aside className="rounded-3xl border border-slate-200 bg-white p-5 shadow-e2">
+    <aside className="rounded-card border border-line bg-surface p-5 shadow-e2">
       <SkeletonBlock className="h-7 w-44" />
       <div className="mt-4 space-y-3">
         {[1, 2, 3].map((key) => (
@@ -140,7 +140,7 @@ export function ImagesPageSkeleton() {
       {Array.from({ length: 6 }).map((_, idx) => (
         <article
           key={idx}
-          className="rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-e2"
+          className="rounded-card overflow-hidden border border-line bg-surface shadow-e2"
         >
           <SkeletonBlock className="h-52 w-full rounded-none" />
           <div className="p-4 space-y-2">

@@ -243,15 +243,15 @@ export default function SubscriptionPage() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
-          className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-e4"
+          className="rounded-card border border-line bg-surface p-6 md:p-8 shadow-e4"
         >
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">Subscription</p>
-              <h1 className="text-3xl md:text-4xl font-black text-slate-900 mt-2">
+              <h1 className="text-3xl md:text-4xl font-black text-ink mt-2">
                 Unlock USMLE / Medicine Content
               </h1>
-              <p className="text-slate-600 mt-2">Secure checkout simulation for subscription purchase flow.</p>
+              <p className="text-ink-muted mt-2">Secure checkout simulation for subscription purchase flow.</p>
             </div>
             <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-cyan-800 font-semibold">
               <FaStethoscope />
@@ -259,7 +259,7 @@ export default function SubscriptionPage() {
             </div>
           </div>
 
-          <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 font-medium flex items-center gap-2">
+          <div className="mt-6 rounded-control border border-line bg-surface-sunken px-4 py-3 text-ink-muted font-medium flex items-center gap-2">
             <FaRegCalendarAlt />
             {subscriptionSummary}
           </div>
@@ -270,10 +270,10 @@ export default function SubscriptionPage() {
                 key={plan.id}
                 whileHover={{ y: -4, scale: 1.01 }}
                 transition={{ duration: 0.22, ease: "easeOut" }}
-                className={`relative rounded-2xl border p-6 pt-8 ${
+                className={`relative rounded-card border p-6 pt-8 ${
                   plan.highlight
                     ? "border-cyan-300 bg-gradient-to-br from-cyan-50 to-blue-50"
-                    : "border-slate-200 bg-white"
+                    : "border-line bg-surface"
                 }`}
               >
                 {plan.highlight && (
@@ -281,19 +281,19 @@ export default function SubscriptionPage() {
                     Recommended
                   </span>
                 )}
-                <p className="text-sm uppercase tracking-[0.14em] text-slate-500">{plan.title}</p>
-                <h2 className="mt-2 text-2xl font-black text-slate-900">{plan.durationLabel}</h2>
-                <p className="mt-4 text-4xl font-black text-slate-900">{plan.priceLabel}</p>
-                <p className="mt-3 text-sm text-slate-600">{plan.desc}</p>
+                <p className="text-sm uppercase tracking-[0.14em] text-ink-subtle">{plan.title}</p>
+                <h2 className="mt-2 text-2xl font-black text-ink">{plan.durationLabel}</h2>
+                <p className="mt-4 text-4xl font-black text-ink">{plan.priceLabel}</p>
+                <p className="mt-3 text-sm text-ink-muted">{plan.desc}</p>
 
                 <button
                   type="button"
                   onClick={() => openCheckout(plan)}
                   disabled={hasSubscription}
-                  className={`mt-6 w-full rounded-xl py-3 font-semibold transition disabled:opacity-60 disabled:cursor-not-allowed ${
+                  className={`btn-primary mt-6 w-full ${
                     plan.highlight
                       ? "bg-cyan-600 text-white hover:bg-cyan-700"
-                      : "bg-slate-900 text-white hover:bg-slate-800"
+                      : ""
                   }`}
                 >
                   {hasSubscription ? "Already Active" : "Proceed to Secure Checkout"}
@@ -302,12 +302,12 @@ export default function SubscriptionPage() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4">
-            <p className="text-slate-800 font-medium flex items-center gap-2">
+          <div className="mt-8 rounded-card border border-line bg-surface-sunken px-4 py-4">
+            <p className="text-ink font-medium flex items-center gap-2">
               <FaLockOpen />
               Purchase unlocks all locked videos and images.
             </p>
-            <p className="text-slate-600 text-sm mt-1">Need help before purchasing? Ask the chatbot.</p>
+            <p className="text-ink-muted text-sm mt-1">Need help before purchasing? Ask the chatbot.</p>
             <Link to="/chatbot" className="inline-block mt-3 text-cyan-700 font-semibold hover:text-cyan-800">
               Open Chatbot Support
             </Link>
@@ -330,15 +330,15 @@ export default function SubscriptionPage() {
               initial={{ opacity: 0, y: 14, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 14, scale: 0.98 }}
-              className="w-full max-w-xl rounded-3xl border border-slate-200 bg-white p-6 shadow-e5"
+              className="w-full max-w-xl rounded-card border border-line bg-surface p-6 shadow-e5"
             >
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <p className="text-sm uppercase tracking-[0.14em] text-cyan-700 font-semibold">
                     Secure Checkout
                   </p>
-                  <h2 className="text-2xl font-black text-slate-900 mt-1">{checkoutPlan.durationLabel}</h2>
-                  <p className="text-slate-600 mt-1">
+                  <h2 className="text-2xl font-black text-ink mt-1">{checkoutPlan.durationLabel}</h2>
+                  <p className="text-ink-muted mt-1">
                     {checkoutPlan.title} | {checkoutPlan.priceLabel}
                   </p>
                 </div>
@@ -346,7 +346,7 @@ export default function SubscriptionPage() {
                   type="button"
                   onClick={resetCheckout}
                   disabled={submitting}
-                  className="rounded-lg border border-slate-200 px-3 py-1.5 text-slate-600 hover:bg-slate-50 disabled:opacity-60"
+                  className="rounded-lg border border-line px-3 py-1.5 text-ink-muted hover:bg-surface-sunken disabled:opacity-60"
                 >
                   Close
                 </button>
@@ -360,7 +360,7 @@ export default function SubscriptionPage() {
                     {stepLabels.map((label, i) => (
                       <div key={label} className="flex items-center gap-1 flex-1">
                         <div className="flex flex-col items-center gap-1 flex-1">
-                          <div className={`h-1.5 w-full rounded-full transition-all duration-500 ${i <= stepIndex ? "bg-cyan-500" : "bg-slate-200"}`} />
+                          <div className={`h-1.5 w-full rounded-full transition-all duration-500 ${i <= stepIndex ? "bg-cyan-500" : "bg-line"}`} />
                           <span className={`text-micro font-medium ${i <= stepIndex ? "text-cyan-700" : "text-ink-subtle"}`}>{label}</span>
                         </div>
                       </div>
@@ -369,11 +369,11 @@ export default function SubscriptionPage() {
                 );
               })()}
 
-              <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 flex items-center justify-between text-sm">
-                <span className="text-slate-600 flex items-center gap-2">
+              <div className="mt-3 rounded-control border border-line bg-surface-sunken px-4 py-3 flex items-center justify-between text-sm">
+                <span className="text-ink-muted flex items-center gap-2">
                   <FaShieldAlt className="text-cyan-700" /> TLS encrypted payment form
                 </span>
-                <span className="font-semibold text-slate-900">USD {checkoutPlan.amountUsd}.00</span>
+                <span className="font-semibold text-ink">USD {checkoutPlan.amountUsd}.00</span>
               </div>
 
               {checkoutStep === "details" && (
@@ -426,7 +426,7 @@ export default function SubscriptionPage() {
                     type="button"
                     onClick={onContinueToOtp}
                     disabled={submitting}
-                    className="w-full mt-1 rounded-xl bg-slate-900 text-white py-3 font-semibold hover:bg-slate-800 disabled:opacity-60"
+                    className="btn-primary w-full mt-1"
                   >
                     {submitting ? "Please wait..." : "Pay Securely"}
                   </button>
@@ -446,14 +446,14 @@ export default function SubscriptionPage() {
                     error={formErrors.otp}
                     autoFocus
                   />
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-ink-subtle">
                     Card ending {maskCard(paymentForm.cardNumber)} | Merchant: Kanthast Edtech
                   </p>
                   <button
                     type="button"
                     onClick={onAuthorizePayment}
                     disabled={submitting}
-                    className="w-full rounded-xl bg-emerald-600 text-white py-3 font-semibold hover:bg-emerald-700 disabled:opacity-60 flex items-center justify-center gap-2"
+                    className="btn w-full bg-emerald-600 text-white hover:bg-emerald-700"
                   >
                     <FaLock />
                     {submitting ? "Authorizing..." : "Authorize Payment"}
@@ -483,26 +483,26 @@ export default function SubscriptionPage() {
                     <p className="text-emerald-700 font-semibold flex items-center gap-2">
                       <FaCheckCircle /> Payment Successful
                     </p>
-                    <p className="text-sm text-slate-700 mt-2">Transaction ID: {paymentId}</p>
-                    <p className="text-sm text-slate-700">Timestamp: {receiptTime}</p>
-                    <p className="text-sm text-slate-700">
+                    <p className="text-sm text-ink-muted mt-2">Transaction ID: {paymentId}</p>
+                    <p className="text-sm text-ink-muted">Timestamp: {receiptTime}</p>
+                    <p className="text-sm text-ink-muted">
                       Amount: USD {checkoutPlan.amountUsd}.00 | Plan: {checkoutPlan.durationLabel}
                     </p>
-                    <p className="text-sm text-slate-700 mt-2">
+                    <p className="text-sm text-ink-muted mt-2">
                       Subscription valid till: {formatDate(user?.subscriptionValidTill)}
                     </p>
                   </div>
                   <button
                     type="button"
                     onClick={resetCheckout}
-                    className="w-full rounded-xl bg-slate-900 text-white py-3 font-semibold hover:bg-slate-800"
+                    className="btn-primary w-full"
                   >
                     Done
                   </button>
                 </div>
               )}
 
-              <div className="mt-4 text-xs text-slate-500 flex items-center gap-2">
+              <div className="mt-4 text-xs text-ink-subtle flex items-center gap-2">
                 <FaCreditCard />
                 Demo gateway simulation only. No real charge is made.
               </div>
@@ -593,21 +593,21 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
       </Helmet>
 
       <div className="mx-auto max-w-6xl">
-        <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-e4 md:p-8">
+        <section className="rounded-card border border-line bg-surface p-6 shadow-e4 md:p-8">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-700">Kanthast School plan</p>
-              <h1 className="mt-2 text-3xl font-black text-slate-950 md:text-5xl">
+              <h1 className="mt-2 text-3xl font-black text-ink md:text-5xl">
                 Choose class. Pay once. Learn all year.
               </h1>
-              <p className="mt-3 max-w-2xl text-slate-600">
+              <p className="mt-3 max-w-2xl text-ink-muted">
                 Annual access unlocks the selected class content inside Lists and Dashboard. Each student gets one
                 focused class plan for clean progress tracking.
               </p>
             </div>
-            <div className="rounded-2xl border border-cyan-200 bg-cyan-50 px-5 py-4">
+            <div className="rounded-card border border-cyan-200 bg-cyan-50 px-5 py-4">
               <p className="text-sm font-semibold text-cyan-800">Current status</p>
-              <p className="mt-1 font-bold text-slate-950">
+              <p className="mt-1 font-bold text-ink">
                 {hasClassSubscription ? `${getSchoolClassLabel(activeClass)} active` : "No School class active"}
               </p>
             </div>
@@ -615,7 +615,7 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
 
           <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_360px]">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.16em] text-slate-500">Select class</p>
+              <p className="text-sm font-bold uppercase tracking-[0.16em] text-ink-subtle">Select class</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
                 {schoolClassOptions.map((option) => {
                   const active = selectedClass === option.value;
@@ -624,13 +624,13 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
                       key={option.value}
                       type="button"
                       onClick={() => selectClass(option.value)}
-                      className={`rounded-xl border px-4 py-3 text-left transition ${
+                      className={`rounded-control border px-4 py-3 text-left transition ${
                         active
                           ? "border-cyan-400 bg-cyan-50 text-cyan-900 shadow-glow-brand"
-                          : "border-slate-200 bg-white text-slate-700 hover:border-cyan-200"
+                          : "border-line bg-surface text-ink-muted hover:border-cyan-200"
                       }`}
                     >
-                      <span className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">Class</span>
+                      <span className="text-xs font-bold uppercase tracking-[0.14em] text-ink-subtle">Class</span>
                       <p className="mt-1 text-lg font-black">{option.label}</p>
                     </button>
                   );
@@ -638,7 +638,7 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
               </div>
             </div>
 
-            <aside className="rounded-2xl border border-slate-200 bg-slate-950 p-6 text-white">
+            <aside className="rounded-card border border-line bg-slate-950 p-6 text-white">
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-300">Annual access</p>
               <h2 className="mt-3 text-2xl font-black">{classLabel}</h2>
               <p className="mt-4 text-5xl font-black">Rs 5,000</p>
@@ -649,7 +649,7 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
                 type="button"
                 onClick={purchaseSchoolPlan}
                 disabled={status === "loading"}
-                className="mt-6 w-full rounded-xl bg-cyan-500 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-400 disabled:opacity-60"
+                className="btn w-full mt-6 bg-cyan-500 font-bold text-slate-950 hover:bg-cyan-400"
               >
                 {status === "loading" ? "Activating..." : "Pay Rs 5,000 and Activate"}
               </button>
@@ -662,7 +662,7 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
           {message && <p className="mt-5 font-semibold text-emerald-700">{message}</p>}
           {error && <p className="mt-5 font-semibold text-red-600">{error}</p>}
           {receipt && (
-            <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-slate-700">
+            <div className="mt-6 rounded-card border border-emerald-200 bg-emerald-50 p-4 text-sm text-ink-muted">
               <p className="font-bold text-emerald-800">Payment receipt</p>
               <p className="mt-2">Class: {receipt.classLabel}</p>
               <p>Amount: {receipt.amount}</p>
@@ -679,13 +679,13 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
 function Input({ label, value, onChange, placeholder, error, autoFocus }) {
   return (
     <label className="block">
-      <span className="text-sm font-semibold text-slate-700">{label}</span>
+      <span className="text-sm font-semibold text-ink-muted">{label}</span>
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         autoFocus={autoFocus}
-        className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-slate-900 outline-none focus:ring-2 focus:ring-cyan-400"
+        className="field mt-1"
       />
       {error && <span className="text-xs text-red-600 mt-1 block">{error}</span>}
     </label>

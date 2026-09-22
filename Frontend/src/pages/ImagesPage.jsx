@@ -79,7 +79,7 @@ export default function ImagesPage() {
       <div className="max-w-7xl mx-auto">
         <Link
           to="/lists"
-          className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 font-medium"
+          className="inline-flex items-center gap-2 text-ink-muted hover:text-ink font-medium"
         >
           <FaArrowLeft /> Back to Lists
         </Link>
@@ -88,10 +88,10 @@ export default function ImagesPage() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
-          className="mt-4 rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-e4"
+          className="mt-4 rounded-card border border-line bg-surface/90 p-6 shadow-e4"
         >
           <p className="text-sm uppercase tracking-[0.22em] text-cyan-700 font-semibold">Image Library</p>
-          <h1 className="mt-2 text-3xl md:text-4xl font-black text-slate-900">{data.title}</h1>
+          <h1 className="mt-2 text-3xl md:text-4xl font-black text-ink">{data.title}</h1>
           <div className="mt-4 flex flex-wrap gap-3">
             <Chip icon={<FaLayerGroup />} label={data.module} />
             <Chip icon={<FaBookOpen />} label={data.section} />
@@ -112,18 +112,18 @@ export default function ImagesPage() {
               <motion.article
                 key={`${item.imageLink}-${idx}`}
                 whileHover={{ y: -4 }}
-                className="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-e3"
+                className="group rounded-card overflow-hidden border border-line bg-surface shadow-e3"
               >
                 <div className="relative">
                   <img src={item.imageLink} alt={`${data.title} visual ${idx + 1}`} className="w-full h-52 object-cover" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition" />
-                  <button className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 text-slate-700 grid place-items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition">
+                  <button className="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface/90 text-ink-muted grid place-items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition">
                     <FaExpand />
                   </button>
                 </div>
                 <div className="p-4">
-                  <p className="font-semibold text-slate-900">Slide {idx + 1}</p>
-                  <p className="text-sm text-slate-600 mt-1">{item.imageText || "Key visual aid for rapid recall."}</p>
+                  <p className="font-semibold text-ink">Slide {idx + 1}</p>
+                  <p className="text-sm text-ink-muted mt-1">{item.imageText || "Key visual aid for rapid recall."}</p>
                 </div>
               </motion.article>
             ))}
@@ -136,7 +136,7 @@ export default function ImagesPage() {
 
 function Chip({ icon, label }) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-slate-700 font-medium">
+    <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface-sunken px-4 py-2 text-ink-muted font-medium">
       {icon}
       {label}
     </span>

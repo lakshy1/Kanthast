@@ -73,14 +73,14 @@ export default function About() {
           viewport={sectionViewport}
           className="mx-auto max-w-7xl px-6 md:px-16"
         >
-          <div className="grid items-center gap-10 rounded-3xl border border-white/60 bg-white/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
+          <div className="grid items-center gap-10 rounded-card border border-line bg-surface/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
             <motion.div variants={fadeUp}>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900">Why We Started Kanthast</h2>
-              <p className="mt-4 text-slate-600 text-lg leading-relaxed">
+              <h2 className="text-3xl md:text-5xl font-black text-ink">Why We Started Kanthast</h2>
+              <p className="mt-4 text-ink-muted text-lg leading-relaxed">
                 Too much learning still feels fragmented, overwhelming, and memorization-heavy. We built Kanthast to make
                 difficult topics feel structured, visual, and intuitive instead.
               </p>
-              <p className="mt-4 text-slate-600 text-lg leading-relaxed">
+              <p className="mt-4 text-ink-muted text-lg leading-relaxed">
                 Our animation-first approach helps learners connect ideas faster, whether they are preparing for competitive
                 medical exams or building strong school fundamentals.
               </p>
@@ -90,7 +90,7 @@ export default function About() {
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.01 }}
               transition={{ duration: 0.35 }}
-              className="overflow-hidden rounded-2xl border border-slate-200 shadow-xl"
+              className="overflow-hidden rounded-card border border-line shadow-xl"
             >
               <motion.img
                 src={Image}
@@ -161,15 +161,15 @@ export default function About() {
           viewport={sectionViewport}
           className="mx-auto max-w-7xl px-6 md:px-16"
         >
-          <div className="grid gap-6 rounded-3xl border border-white/60 bg-white/62 p-8 text-center backdrop-blur-2xl shadow-e4 md:grid-cols-3">
+          <div className="grid gap-6 rounded-card border border-line bg-surface/62 p-8 text-center backdrop-blur-2xl shadow-e4 md:grid-cols-3">
             {[
               { number: "50K+", label: "Learners Reached" },
               { number: "95%", label: "Reported Confidence Boost" },
               { number: "1000+", label: "Visual Learning Moments" },
             ].map((stat) => (
               <motion.div key={stat.label} variants={fadeUp} whileHover={{ y: -6, scale: 1.02 }}>
-                <h3 className="text-4xl font-black text-slate-900">{stat.number}</h3>
-                <p className="mt-2 text-slate-600">{stat.label}</p>
+                <h3 className="text-4xl font-black text-ink">{stat.number}</h3>
+                <p className="mt-2 text-ink-muted">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -184,13 +184,13 @@ export default function About() {
           viewport={sectionViewport}
           className="mx-auto max-w-5xl px-6 md:px-16"
         >
-          <div className="rounded-3xl border border-white/60 bg-white/62 p-10 text-center backdrop-blur-2xl shadow-e4">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900">Ready to Learn with More Clarity?</h2>
+          <div className="rounded-card border border-line bg-surface/62 p-10 text-center backdrop-blur-2xl shadow-e4">
+            <h2 className="text-3xl md:text-4xl font-black text-ink">Ready to Learn with More Clarity?</h2>
 
             <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-flex">
               <Link
                 to="/signup"
-                className="mt-7 inline-flex rounded-xl bg-slate-900 px-8 py-3.5 font-semibold text-white transition hover:bg-slate-800"
+                className="btn-primary mt-7"
               >
                 Start Learning
               </Link>
