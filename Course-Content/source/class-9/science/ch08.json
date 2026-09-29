@@ -1,0 +1,375 @@
+[
+  {
+    "chapter_no": 8,
+    "chapter": "Force and Laws of Motion",
+    "topic_no": 1,
+    "name": "Balanced and Unbalanced Forces",
+    "scenes": [
+      {
+        "animation": "Tug-of-war in the school ground: Zippy's team and the Robot Club pull a rope with a red ribbon in the middle. The ribbon doesn't budge; everyone strains, faces going red, sweat drops flying.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "We're pulling with everything we've got, and the rope isn't moving. Are we doing zero work here?" },
+          { "speaker": "NEO", "text": "You're pulling hard. So are they. The forces are balanced, so the rope stays put." }
+        ]
+      },
+      {
+        "animation": "Cut-away showing a force as a push or pull arrow. Three mini-scenes: a football starting to roll when kicked, a rolling ball turning when hit sideways, and a ball of dough flattening when pressed. Labels: 'change speed', 'change direction', 'change shape'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A force is a push, pull or hit. We can't see a force, but we can see what it does." },
+          { "speaker": "NEO", "text": "A force can change the speed of an object, change its direction of motion, or change its shape and size." }
+        ]
+      },
+      {
+        "animation": "A wooden block on a table with two strings, X to the left and Y to the right. Equal arrows pull both ways and the block stays still, labelled 'Balanced'. Then the right arrow grows larger and the block slides right, labelled 'Unbalanced: moves towards the greater force'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Tie strings to both sides of a block. Pull equally on both, and the block doesn't move. The forces are balanced, so the net force is zero." },
+          { "speaker": "NEO", "text": "Pull harder on one side, and the block moves in the direction of the greater force. Now the forces are unbalanced." },
+          { "speaker": "NEO", "text": "Balanced forces don't change the state of rest or motion. An unbalanced force does." }
+        ]
+      },
+      {
+        "animation": "A child pushes a heavy trunk on a rough floor; a small arrow labelled 'Friction' pushes back at the bottom. The trunk doesn't move until the push arrow grows bigger than friction. Next, a cyclist stops pedalling and slowly rolls to a stop, a friction arrow shown at the tyres.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Then why does my cycle slow down when I stop pedalling? Nobody is pulling it back." },
+          { "speaker": "NEO", "text": "Friction is. Friction between surfaces acts opposite to the motion. When you stop pedalling, friction is the unbalanced force, so you slow down." },
+          { "speaker": "NEO", "text": "Similarly, a heavy box won't move until your push becomes greater than the friction." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Uniform velocity ≠ no force. Uniform velocity = balanced forces (net force = 0)'. A cyclist pedalling at constant speed shows equal arrows: 'push forward' and 'friction backward'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: an object moving with uniform velocity also has balanced forces on it. Your push forward just equals friction backward. Net force zero doesn't always mean rest." }
+        ]
+      },
+      {
+        "animation": "Recap board with the tug-of-war ribbon. Points: '1. Force can change speed, direction or shape', '2. Balanced forces: net force zero, no change in state', '3. Unbalanced force: causes acceleration; friction opposes motion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a force can change the speed, direction, or shape of an object." },
+          { "speaker": "NEO", "text": "Two: balanced forces have zero net force, so they don't change an object's state of rest or motion." },
+          { "speaker": "NEO", "text": "Three: an unbalanced force changes the velocity, and friction always opposes motion." },
+          { "speaker": "ZIPPY", "text": "Next tug-of-war, I'm bringing the unbalanced force." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Force and Laws of Motion",
+    "topic_no": 2,
+    "name": "Newton's First Law of Motion",
+    "scenes": [
+      {
+        "animation": "A packed city bus brakes suddenly at a red light. Zippy, standing without holding the rod, slides forward and bumps into a very unimpressed uncle holding a newspaper.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Sorry, uncle! The bus pushed me forward!" },
+          { "speaker": "NEO", "text": "The bus didn't push you. Your body just wanted to keep moving. Galileo and Newton can explain." }
+        ]
+      },
+      {
+        "animation": "Galileo, a cartoon walk-on with a beard and a notebook, releases a marble down one inclined plane; it climbs a second plane to almost the same height. The second plane is lowered step by step, and the marble rolls further each time. Finally the plane is flat, and the marble rolls on and on off-screen.",
+        "lines": [
+          { "speaker": "GALILEO", "text": "Roll a marble down one slope and it climbs the other to nearly the same height." },
+          { "speaker": "GALILEO", "text": "Make the second slope gentler, and it travels further. Make it flat, and with no friction, it would never stop." },
+          { "speaker": "NEO", "text": "So an unbalanced force is needed to change motion, but no net force is needed to keep uniform motion going." }
+        ]
+      },
+      {
+        "animation": "A scroll unrolls with the statement: 'An object remains in a state of rest or of uniform motion in a straight line unless compelled to change that state by an applied force.' The word 'inertia' glows beneath it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Newton put this into his first law: an object remains in a state of rest or of uniform motion in a straight line unless compelled to change that state by an applied force." },
+          { "speaker": "NEO", "text": "This tendency of objects to stay at rest or keep moving with the same velocity is called inertia. That's why the first law is also called the law of inertia." }
+        ]
+      },
+      {
+        "animation": "Three quick replays: bus braking, passengers lurch forward; bus starting suddenly, passengers fall backward; car turning sharply left, passengers slide to the right. Each is labelled with an arrow 'body tends to continue its state'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When the bus brakes, the bus slows down, but your body tends to keep moving forward." },
+          { "speaker": "NEO", "text": "When a bus starts suddenly, your feet move with it, but your body tends to stay at rest, so you fall backwards." },
+          { "speaker": "NEO", "text": "And when a car takes a sharp turn, you slide sideways, because your body tends to continue in a straight line." }
+        ]
+      },
+      {
+        "animation": "A car dashboard: a seat belt clicks across a cartoon passenger, and a crash-test dummy stays safe when the car stops suddenly. An 'EXAM TIP' card lists 'Seat belts, bus braking, dusting a carpet'.",
+        "lines": [
+          { "speaker": "NEO", "text": "This is why seat belts are worn. They slow our forward motion safely when a car stops suddenly." },
+          { "speaker": "NEO", "text": "Exam tip: for inertia questions, always state what was moving or at rest, what suddenly changed, and why the body continued in its original state." }
+        ]
+      },
+      {
+        "animation": "Recap board with Galileo's flat plane. Points: '1. Galileo: no friction, a moving object keeps moving', '2. First law: rest or uniform motion continues unless an unbalanced force acts', '3. Inertia: tendency to resist change in state'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Galileo showed that without friction, a moving object would keep moving." },
+          { "speaker": "NEO", "text": "Two: the first law says an object stays at rest or in uniform motion unless an unbalanced force acts on it." },
+          { "speaker": "NEO", "text": "Three: this tendency is called inertia, so the first law is the law of inertia." },
+          { "speaker": "ZIPPY", "text": "From now on, I hold the rod. Sorry again, uncle." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Force and Laws of Motion",
+    "topic_no": 3,
+    "name": "Inertia and Mass",
+    "scenes": [
+      {
+        "animation": "Zippy lines up two identical-looking balls on a football field. He kicks the first, a football, and it sails away. He kicks the second, a painted stone of the same size, and hops around clutching his foot, stars circling his head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Owww! They looked exactly the same!" },
+          { "speaker": "NEO", "text": "Same size, different mass. The stone has much more inertia, so it resisted your kick." }
+        ]
+      },
+      {
+        "animation": "A stack of carrom coins sits on a board. A striker flicks the bottom coin out cleanly, and the rest of the stack drops straight down in place. Label: 'Upper coins stay at rest: inertia'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try this. Stack carrom coins and hit the bottom one sharply with a striker. Only the bottom coin flies out." },
+          { "speaker": "NEO", "text": "The coins above tend to remain at rest because of their inertia, so they simply fall down in place." }
+        ]
+      },
+      {
+        "animation": "A playing card sits on a glass tumbler with a five-rupee coin on top. A finger flicks the card away horizontally; the coin drops neatly into the glass with a 'plink'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Another one. Place a card on a glass and a coin on the card. Flick the card away quickly." },
+          { "speaker": "NEO", "text": "The card moves, but the coin stays at rest due to inertia, and then falls into the glass." },
+          { "speaker": "ZIPPY", "text": "Party trick unlocked!" }
+        ]
+      },
+      {
+        "animation": "A see-saw scale compares: an empty cardboard box pushed easily vs the same box full of books needing two pushers; a toy cart vs a train. The label 'More mass → more inertia' grows bigger on the heavier side. The line 'Mass is a measure of inertia' appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Inertia is the natural tendency of an object to resist a change in its state of motion or of rest." },
+          { "speaker": "NEO", "text": "An empty box is easy to push; a box full of books is much harder. A train is harder to get moving than a hand cart." },
+          { "speaker": "NEO", "text": "Heavier objects have more inertia. Quantitatively, the inertia of an object is measured by its mass." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Q: Which has more inertia: a rubber ball or a stone of the same size? A: The stone, because it has greater mass.' A check mark stamps down.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: questions often ask which object has more inertia, like a rubber ball or a stone of the same size, or a bicycle or a train. Always answer with the one having greater mass, and say that mass is the measure of inertia." }
+        ]
+      },
+      {
+        "animation": "Recap board with the carrom stack. Points: '1. Inertia: tendency to resist change in state of rest or motion', '2. Coin-card and carrom coin activities show inertia of rest', '3. Mass is the measure of inertia: more mass, more inertia'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: inertia is the tendency of an object to resist a change in its state of rest or motion." },
+          { "speaker": "NEO", "text": "Two: the carrom coins and the coin on the card show inertia of rest." },
+          { "speaker": "NEO", "text": "Three: mass is the measure of inertia, so more mass means more inertia." },
+          { "speaker": "ZIPPY", "text": "And more mass means more pain if you kick it." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Force and Laws of Motion",
+    "topic_no": 4,
+    "name": "Momentum",
+    "scenes": [
+      {
+        "animation": "In a school corridor, a table-tennis ball bounces off Zippy's head with a tiny 'tik'. Then a cricket ball rolls towards him fast, and he leaps out of the way with a squeak.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why am I fine with a ping-pong ball but terrified of a cricket ball?" },
+          { "speaker": "NEO", "text": "Because the cricket ball has more mass, so it carries much more momentum." }
+        ]
+      },
+      {
+        "animation": "Two examples play side by side: a tiny bullet fired from a gun punches through a wooden plank; a slow-moving loaded truck gently rolls into a wall and cracks it. Labels 'small mass, huge velocity' and 'huge mass, small velocity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A bullet is tiny, but fired from a gun, its huge velocity makes it dangerous." },
+          { "speaker": "NEO", "text": "A truck moving slowly can still do damage, because its mass is so large." },
+          { "speaker": "NEO", "text": "So the impact of a moving object depends on both its mass and its velocity." }
+        ]
+      },
+      {
+        "animation": "The formula 'p = m × v' writes itself with 'p: momentum, m: mass, v: velocity'. An arrow on a moving ball shows 'direction of p = direction of v'. Then 'SI unit: kg m s⁻¹'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Momentum, p, of an object is the product of its mass and velocity. So p equals m into v." },
+          { "speaker": "NEO", "text": "Momentum has both magnitude and direction, and its direction is the same as the velocity. Its SI unit is kilogram metre per second." }
+        ]
+      },
+      {
+        "animation": "Worked example on a chalkboard: 'Ball: m = 0.16 kg, v = 25 m s⁻¹ → p = 0.16 × 25 = 4 kg m s⁻¹', 'Bullet: m = 0.01 kg, v = 400 m s⁻¹ → p = 0.01 × 400 = 4 kg m s⁻¹'. The two answers glow the same colour.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's compare. A cricket ball of mass zero point one six kilogram moves at twenty-five metres per second. Its momentum is zero point one six into twenty-five, which is four kilogram metre per second." },
+          { "speaker": "NEO", "text": "A ten-gram bullet is zero point zero one kilogram. At four hundred metres per second, its momentum is also four kilogram metre per second." },
+          { "speaker": "ZIPPY", "text": "Same momentum from a ball and a bullet? Wow!" }
+        ]
+      },
+      {
+        "animation": "A parked scooter gets a push; its momentum meter rises from zero. An 'EXAM TIP' card: 'Object at rest: v = 0 → p = 0. Always convert grams to kg!'",
+        "lines": [
+          { "speaker": "NEO", "text": "An object at rest has zero momentum, since its velocity is zero. To change momentum, a force must act." },
+          { "speaker": "NEO", "text": "Exam tip: convert grams into kilograms before calculating momentum. Ten grams is zero point zero one kilogram, not ten." }
+        ]
+      },
+      {
+        "animation": "Recap board with the ball and bullet icons. Points: '1. Momentum p = mv', '2. Direction of p = direction of v; SI unit kg m s⁻¹', '3. Force is needed to change momentum; at rest, p = 0'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: momentum is mass times velocity, p equals m v." },
+          { "speaker": "NEO", "text": "Two: it acts in the direction of velocity, and its SI unit is kilogram metre per second." },
+          { "speaker": "NEO", "text": "Three: an object at rest has zero momentum, and a force is needed to change momentum." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Force and Laws of Motion",
+    "topic_no": 5,
+    "name": "Second Law of Motion: F = ma",
+    "scenes": [
+      {
+        "animation": "Zippy pushes a toy car and it zips off; then he pushes a loaded vegetable thela with the same effort and it barely creeps forward. The thela-wala raises an eyebrow.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Same push, totally different result. Why?" },
+          { "speaker": "NEO", "text": "Newton's second law connects force, mass and the change in motion. Let's build it." }
+        ]
+      },
+      {
+        "animation": "A scroll unrolls: 'The rate of change of momentum of an object is proportional to the applied unbalanced force in the direction of force.' An arrow shows the force and the change in momentum pointing the same way.",
+        "lines": [
+          { "speaker": "NEO", "text": "The second law states that the rate of change of momentum of an object is proportional to the applied unbalanced force, in the direction of the force." }
+        ]
+      },
+      {
+        "animation": "A derivation builds step by step on the board: 'Initial momentum = mu, final = mv', 'Change = m(v − u)', 'F ∝ m(v − u)/t', 'Since (v − u)/t = a → F ∝ ma', 'F = kma, with k = 1 → F = ma'.",
+        "lines": [
+          { "speaker": "NEO", "text": "An object of mass m moves with velocity u. A force acts for time t and its velocity becomes v." },
+          { "speaker": "NEO", "text": "Its momentum changes from m u to m v, so the change is m into v minus u." },
+          { "speaker": "NEO", "text": "The rate of change is m into v minus u, by t. But v minus u by t is the acceleration, so force is proportional to m a." },
+          { "speaker": "NEO", "text": "We choose units so the constant is one, giving F equals m a." }
+        ]
+      },
+      {
+        "animation": "A 1 kg block is pushed and its speedometer rises by 1 m s⁻¹ every second. The definition '1 newton = 1 kg × 1 m s⁻²' stamps down, with a cartoon apple bouncing on a mini Newton's head.",
+        "lines": [
+          { "speaker": "NEO", "text": "The SI unit of force is the newton. One newton is the force that produces an acceleration of one metre per second squared in a mass of one kilogram." },
+          { "speaker": "ZIPPY", "text": "So bigger mass needs bigger force for the same acceleration. That's the thela!" },
+          { "speaker": "NEO", "text": "Exactly. And for the same force, a bigger mass gets a smaller acceleration." }
+        ]
+      },
+      {
+        "animation": "Worked comparison: 'A: 2 kg at 5 m s⁻² → F = 2 × 5 = 10 N', 'B: 4 kg at 2 m s⁻² → F = 4 × 2 = 8 N'. A trophy lands on 'A needs more force'. An 'EXAM TIP' card: 'First law is contained in the second: F = 0 → a = 0'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Which needs more force: accelerating a two-kilogram mass at five metres per second squared, or a four-kilogram mass at two metres per second squared?" },
+          { "speaker": "NEO", "text": "Two into five is ten newtons. Four into two is eight newtons. So the first needs more force." },
+          { "speaker": "NEO", "text": "Exam tip: if F is zero, then a is zero, so velocity doesn't change. That's the first law, hidden inside the second." }
+        ]
+      },
+      {
+        "animation": "Recap board with the toy car and the thela. Points: '1. Rate of change of momentum ∝ unbalanced force', '2. F = ma', '3. 1 N = 1 kg m s⁻²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the rate of change of momentum is proportional to the unbalanced force." },
+          { "speaker": "NEO", "text": "Two: this gives F equals m a." },
+          { "speaker": "NEO", "text": "Three: one newton is one kilogram metre per second squared." },
+          { "speaker": "ZIPPY", "text": "Thela-wala, I apologise. Physics was against me." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Force and Laws of Motion",
+    "topic_no": 6,
+    "name": "Second Law in Action: Numericals and Everyday Life",
+    "scenes": [
+      {
+        "animation": "A cricket match: a fielder catches a fast ball and smoothly pulls his hands back. Zippy, as a fielder, catches the next ball with stiff arms, and it stings; his spark flickers.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Ouch! Why does the fielder pull his hands back? Is it just style?" },
+          { "speaker": "NEO", "text": "No, it's physics. Pulling back increases the time to stop the ball, which reduces the force on the hands." }
+        ]
+      },
+      {
+        "animation": "The formula 'F = m(v − u)/t' is shown. A slider stretches 't' longer and the 'F' arrow shrinks. Side panels show a high jumper landing on a cushioned bed and a long jumper landing in a sand pit.",
+        "lines": [
+          { "speaker": "NEO", "text": "Force equals change in momentum divided by time. The ball's momentum must drop to zero either way." },
+          { "speaker": "NEO", "text": "If the time taken is longer, the force is smaller. That's why high jumpers land on a cushioned bed, and long jumpers land in sand." }
+        ]
+      },
+      {
+        "animation": "Example 1 builds line by line: 'm = 5 kg, u = 3 m s⁻¹, v = 7 m s⁻¹, t = 2 s', 'F = m(v − u)/t = 5 × (7 − 3)/2 = 5 × 4/2 = 10 N', 'For t = 5 s: v = u + Ft/m = 3 + (10 × 5)/5 = 3 + 10 = 13 m s⁻¹'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A constant force acts on a five-kilogram object for two seconds, raising its velocity from three to seven metres per second. Find the force." },
+          { "speaker": "NEO", "text": "F equals five into seven minus three, by two. That's five into four by two, which is ten newtons." },
+          { "speaker": "NEO", "text": "If the same force acted for five seconds, v equals u plus F t by m. That's three plus ten into five by five, which is thirteen metres per second." }
+        ]
+      },
+      {
+        "animation": "Example 2: a car at 108 km/h brakes to a stop. Working: 'm = 1000 kg, u = 108 × 5/18 = 30 m s⁻¹, v = 0, t = 4 s', 'a = (0 − 30)/4 = −7.5 m s⁻²', 'F = ma = 1000 × (−7.5) = −7500 N'. The minus sign is circled with a note 'opposite to motion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A car of mass one thousand kilograms, with passengers, moves at one hundred and eight kilometres per hour, and stops four seconds after the brakes are applied. Find the braking force." },
+          { "speaker": "NEO", "text": "One hundred and eight into five by eighteen is thirty metres per second. So a equals zero minus thirty, by four, which is minus seven point five metres per second squared." },
+          { "speaker": "NEO", "text": "F equals one thousand into minus seven point five, which is minus seven thousand five hundred newtons. The minus sign means the force opposes the motion." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Reason-based questions: catching a ball, landing on sand, karate chop → link to F = change in momentum / time'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: for reasoning questions, always mention that the change in momentum is fixed, so increasing the time decreases the force." }
+        ]
+      },
+      {
+        "animation": "Recap board with the fielder's cupped hands. Points: '1. F = m(v − u)/t', '2. More time to stop → less force (catching, sand pits, cushions)', '3. Convert to SI; negative force means it opposes motion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: force equals mass into change in velocity, divided by time." },
+          { "speaker": "NEO", "text": "Two: taking more time to stop reduces the force, as in catching a ball or landing in sand." },
+          { "speaker": "NEO", "text": "Three: convert to SI units, and a negative force means it acts against the motion." },
+          { "speaker": "ZIPPY", "text": "Soft hands, long time, small force. I'm ready for the next match." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Force and Laws of Motion",
+    "topic_no": 7,
+    "name": "Newton's Third Law of Motion",
+    "scenes": [
+      {
+        "animation": "Zippy stands on a tiny boat at a ghat and jumps towards the steps. The boat shoots backwards, and Zippy lands in the river with a splash. A duck laughs.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I jumped forward. Why did the boat run away backwards?" },
+          { "speaker": "NEO", "text": "Because when you pushed the boat back, the boat pushed you forward. That's the third law." }
+        ]
+      },
+      {
+        "animation": "Two paired arrows appear between Zippy's feet and the boat: 'Action: Zippy pushes boat backward' and 'Reaction: boat pushes Zippy forward'. The statement writes out: 'To every action, there is an equal and opposite reaction.'",
+        "lines": [
+          { "speaker": "NEO", "text": "The third law says: to every action, there is an equal and opposite reaction." },
+          { "speaker": "NEO", "text": "When one object exerts a force on another, the second object instantaneously exerts a force back on the first. The two forces are equal in magnitude and opposite in direction." }
+        ]
+      },
+      {
+        "animation": "A foot pushes the road backwards with an arrow; the road pushes the foot forward with an equal arrow, and the walker moves ahead. Then a gun fires: the bullet flies forward and the gun kicks back into the shoulder, labelled 'Recoil'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When you walk, you push the road backwards, and the road pushes you forward." },
+          { "speaker": "NEO", "text": "When a gun fires, it pushes the bullet forward, and the bullet pushes the gun backward. This backward jerk is called recoil." }
+        ]
+      },
+      {
+        "animation": "Freeze-frame: the equal arrows on the bullet and gun are highlighted, then the gun's acceleration arrow is drawn short and the bullet's very long. A mass label shows 'gun: large mass', 'bullet: small mass'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If the forces are equal, why doesn't the gun fly as fast as the bullet?" },
+          { "speaker": "NEO", "text": "Because the gun has a much larger mass. Equal forces produce a small acceleration in the heavy gun and a huge acceleration in the light bullet." }
+        ]
+      },
+      {
+        "animation": "Two children on two separate carts face each other; one throws a sandbag to the other, and both carts roll apart slightly. An 'EXAM TIP' card: 'Action and reaction act on DIFFERENT objects, so they never cancel.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Two children standing on separate carts show the same thing. When one throws a bag of sand, the carts move." },
+          { "speaker": "NEO", "text": "Exam tip: action and reaction always act on two different objects. That's why they don't cancel each other, even though they are equal and opposite." }
+        ]
+      },
+      {
+        "animation": "Recap board with a dripping Zippy. Points: '1. Every action has an equal and opposite reaction', '2. They act on different objects, at the same instant', '3. Examples: walking, gun recoil, jumping from a boat'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: to every action, there is an equal and opposite reaction." },
+          { "speaker": "NEO", "text": "Two: action and reaction act on two different objects at the same instant, so they never cancel." },
+          { "speaker": "NEO", "text": "Three: walking, the recoil of a gun and a boat moving back when you jump are all examples." },
+          { "speaker": "ZIPPY", "text": "Next time, I'm tying the boat first." }
+        ]
+      }
+    ]
+  }
+]

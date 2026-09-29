@@ -1,0 +1,279 @@
+[
+  {
+    "chapter_no": 13,
+    "chapter": "Our Environment",
+    "topic_no": 1,
+    "name": "What Is an Ecosystem?",
+    "scenes": [
+      {
+        "animation": "Zippy proudly shows off a brand-new aquarium: fish, plants, pebbles and a pump. A week later the water is murky green, and a grumpy walk-on fish holds up a sign reading 'CLEAN ME'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, nobody cleans the village pond, but my aquarium turned into soup in one week. Unfair!" },
+          { "speaker": "NEO", "text": "The pond is a natural ecosystem, Zippy. Your aquarium is a man-made one, and it is missing some workers." }
+        ]
+      },
+      {
+        "animation": "A garden scene builds layer by layer: first sunlight, soil, water and temperature icons tagged 'Abiotic'; then grass, trees, roses, frogs, insects and birds tagged 'Biotic'. Arrows connect them into a web of interactions, and the word 'Ecosystem' draws a circle around everything.",
+        "lines": [
+          { "speaker": "NEO", "text": "All the interacting organisms in an area, together with the non-living parts of their environment, form an ecosystem." },
+          { "speaker": "NEO", "text": "The living things are the biotic components. Physical factors like temperature, rainfall, wind, soil and minerals are the abiotic components." }
+        ]
+      },
+      {
+        "animation": "Split screen: on the left, a forest, pond and lake labelled 'Natural ecosystems'; on the right, a garden, crop field and aquarium labelled 'Artificial (man-made) ecosystems'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Forests, ponds and lakes are natural ecosystems." },
+          { "speaker": "NEO", "text": "Gardens, crop fields and aquariums are artificial, or human-made, ecosystems." },
+          { "speaker": "ZIPPY", "text": "So our school garden is man-made, even though the plants grow by themselves?" },
+          { "speaker": "NEO", "text": "Yes, because people planned it and look after it." }
+        ]
+      },
+      {
+        "animation": "Three job badges are handed out. A leafy plant gets 'Producer' and soaks up sunlight; a goat, a tiger and a crow get 'Consumer' badges labelled herbivore, carnivore and omnivore; tiny cartoon bacteria and mushrooms get 'Decomposer' badges and start breaking down a fallen leaf into nutrients that sink into the soil.",
+        "lines": [
+          { "speaker": "NEO", "text": "Producers are green plants and certain blue-green algae. They make food by photosynthesis." },
+          { "speaker": "NEO", "text": "Consumers depend on producers, directly or indirectly. They include herbivores, carnivores, omnivores and parasites." },
+          { "speaker": "NEO", "text": "Decomposers, like bacteria and fungi, break down dead remains and wastes into simple inorganic substances. These go into the soil and are used again by plants." }
+        ]
+      },
+      {
+        "animation": "Back to the aquarium: a checklist shows 'Producers ✓, Consumers ✓, Decomposers ✗' next to it and all three ticked next to the pond. A 'Board Tip' card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So my aquarium doesn't have enough decomposers to clean up?" },
+          { "speaker": "NEO", "text": "Right. A pond has plenty of decomposers and is self-sustaining. An aquarium needs us to clean it." },
+          { "speaker": "NEO", "text": "Board tip: 'Why is an aquarium called an artificial ecosystem?' and 'What would happen if decomposers were absent?' are common questions. Mention the recycling of nutrients in your answer." }
+        ]
+      },
+      {
+        "animation": "Recap board with a small pond icon. Points: '1. Ecosystem = biotic + abiotic components', '2. Natural (forest, pond) vs artificial (garden, aquarium)', '3. Producers, consumers, decomposers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: an ecosystem is made of biotic and abiotic components interacting together." },
+          { "speaker": "NEO", "text": "Two: forests and ponds are natural ecosystems; gardens, crop fields and aquariums are artificial." },
+          { "speaker": "NEO", "text": "Three: producers make food, consumers eat it, and decomposers recycle nutrients back to the soil." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Our Environment",
+    "topic_no": 2,
+    "name": "Food Chains and Food Webs",
+    "scenes": [
+      {
+        "animation": "A grassland. A grasshopper nibbles grass, a frog eats the grasshopper, a snake eyes the frog, and an eagle swoops on the snake. Zippy runs alongside with a camera, commentating like a cricket match.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "And the grasshopper is out, caught by the frog! Oh no, the snake takes the frog! And the eagle wins the match!" },
+          { "speaker": "NEO", "text": "What you just commentated, Zippy, is a food chain." }
+        ]
+      },
+      {
+        "animation": "The chain lines up as a staircase: grass, grasshopper, frog, snake, eagle, with arrows pointing from the eaten to the eater. Steps are labelled 'T1 Producers', 'T2 Herbivores / primary consumers', 'T3 Small carnivores / secondary consumers', 'T4 Larger carnivores / tertiary consumers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A food chain is a series of organisms feeding on one another. Each step is a trophic level." },
+          { "speaker": "NEO", "text": "Producers form the first trophic level. Herbivores, or primary consumers, form the second." },
+          { "speaker": "NEO", "text": "Small carnivores, or secondary consumers, form the third, and larger carnivores, or tertiary consumers, form the fourth." }
+        ]
+      },
+      {
+        "animation": "An energy bar starts at the grass: only about 1% of the sunlight falling on leaves is captured. At each step up the staircase, the bar shrinks to a tenth, 10,000 J, 1,000 J, 100 J, 10 J, while the rest escapes as wavy heat lines. Label '10 percent law'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In terrestrial ecosystems, green plants capture only about 1 percent of the sunlight falling on their leaves." },
+          { "speaker": "NEO", "text": "At each step, much energy is lost as heat or used for digestion, work, growth and reproduction. On average, only about 10 percent reaches the next level." },
+          { "speaker": "NEO", "text": "So if producers have 10,000 joules, primary consumers get 1,000, secondary consumers 100, and tertiary consumers only 10." }
+        ]
+      },
+      {
+        "animation": "Zippy tries to add a fifth and sixth level to the staircase, but the energy bar is almost empty and the new animals collapse, exhausted. Then a one-way arrow sign 'Energy flow: unidirectional' appears, with a 'No U-turn' symbol.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can I add a super-eagle that eats eagles?" },
+          { "speaker": "NEO", "text": "There would be too little energy left. That is why food chains usually have only three or four steps, and why the number of organisms is greatest at the producer level." },
+          { "speaker": "NEO", "text": "Energy flow is unidirectional. Energy that passes to herbivores never comes back to plants." }
+        ]
+      },
+      {
+        "animation": "Several food chains overlap as a frog is shown eaten by both a snake and a bird, and grass is eaten by both a deer and a grasshopper. Branching lines connect them into a mesh labelled 'Food web'. A 'Board Tip' card flips in with arrows highlighted.",
+        "lines": [
+          { "speaker": "NEO", "text": "In nature, one organism is often eaten by two or more kinds of organisms. So food chains branch and interconnect into a food web." },
+          { "speaker": "NEO", "text": "Board tip: arrows in a food chain always point from the organism eaten to the one that eats it, showing the direction of energy flow. And practise ten percent law calculations." }
+        ]
+      },
+      {
+        "animation": "Recap board with a staircase icon. Points: '1. Food chain: each step is a trophic level', '2. 10% law: only ~10% energy passes up; chains have 3–4 steps', '3. Energy flow is one-way; chains interlink into food webs'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: each step in a food chain is a trophic level, starting with producers." },
+          { "speaker": "NEO", "text": "Two: only about 10 percent of energy passes to the next level, so food chains are short." },
+          { "speaker": "NEO", "text": "Three: energy flows in one direction, and interconnected food chains form a food web." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Our Environment",
+    "topic_no": 3,
+    "name": "Biological Magnification",
+    "scenes": [
+      {
+        "animation": "A farmer sprays pesticide on a wheat field. Zippy, with a detective's magnifying glass, follows a few glowing green chemical dots as they wash off the field with rainwater into a nearby pond.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The spray protects the crops, and then it just washes away. Case closed?" },
+          { "speaker": "NEO", "text": "Not closed, Zippy. Those chemicals are about to go on a long journey, and they end up with us." }
+        ]
+      },
+      {
+        "animation": "The green dots soak into the soil and pond water, get absorbed by plant roots along with water and minerals, and are taken up by aquatic plants and animals. Each organism is drawn with a glass-like body so the dots are visible inside.",
+        "lines": [
+          { "speaker": "NEO", "text": "Pesticides and other chemicals used to protect crops get washed into the soil or into water bodies." },
+          { "speaker": "NEO", "text": "Plants absorb them from the soil along with water and minerals. In water bodies, aquatic plants and animals take them up." },
+          { "speaker": "NEO", "text": "This is how they enter the food chain." },
+          { "speaker": "ZIPPY", "text": "So the chemical sneaks in with the water, like a ticketless passenger on a train?" },
+          { "speaker": "NEO", "text": "Yes, and once it is inside an organism, it is not broken down or thrown out easily." }
+        ]
+      },
+      {
+        "animation": "A food chain climbs up: water plants with a few dots, small fish with more, bigger fish with many, a fish-eating bird with lots, and finally a human at the top glowing with the most dots. A counter beside each level rises sharply. Label 'Biological magnification'.",
+        "lines": [
+          { "speaker": "NEO", "text": "These chemicals are not degradable, so they accumulate progressively at each trophic level." },
+          { "speaker": "NEO", "text": "This increase in concentration of harmful chemicals at higher trophic levels is called biological magnification." },
+          { "speaker": "ZIPPY", "text": "And humans are at the top of most food chains, so we collect the most!" },
+          { "speaker": "NEO", "text": "Exactly. The maximum concentration builds up in our bodies." }
+        ]
+      },
+      {
+        "animation": "A kitchen counter with wheat, rice, vegetables, fruits and meat; a scanner beam shows faint green dots in each. Zippy washes an apple under a tap, but some dots stay put.",
+        "lines": [
+          { "speaker": "NEO", "text": "That is why food grains like wheat and rice, vegetables, fruits and even meat contain varying amounts of pesticide residues." },
+          { "speaker": "NEO", "text": "These residues cannot always be removed by washing." }
+        ]
+      },
+      {
+        "animation": "A 'Board Tip' card shows two food chains side by side, one with three levels and one with five, and asks 'Which top organism has more pesticide?' The five-level chain's top organism glows brighter.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: a common question asks why the concentration of harmful chemicals is highest in humans. Use three key words: non-degradable, accumulate, and top trophic level." },
+          { "speaker": "ZIPPY", "text": "Non-degradable, accumulate, top level. Easy three marks!" }
+        ]
+      },
+      {
+        "animation": "Recap board with a magnifying glass icon. Points: '1. Pesticides enter food chains through soil and water', '2. Non-degradable chemicals accumulate at each trophic level', '3. Highest concentration at the top, often in humans'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: pesticides enter food chains through soil and water." },
+          { "speaker": "NEO", "text": "Two: being non-degradable, they accumulate progressively at each trophic level. This is biological magnification." },
+          { "speaker": "NEO", "text": "Three: organisms at the top, often humans, carry the highest concentration." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Our Environment",
+    "topic_no": 4,
+    "name": "Ozone Layer Depletion",
+    "scenes": [
+      {
+        "animation": "Zippy lies on a beach mat under a harsh sun, reading a newspaper with the headline 'Hole in the Ozone Layer!'. Zippy grabs a roll of sticky tape and a ladder, ready to climb into the sky.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "There's a hole in the sky? I'll just go up and tape it shut!" },
+          { "speaker": "NEO", "text": "Nice plan, Zippy, but the fix is back down here on Earth. First, let's see what ozone is." }
+        ]
+      },
+      {
+        "animation": "Molecule models float in: two red balls joined as 'O₂, oxygen' and three joined in a bent shape as 'O₃, ozone'. At ground level, the ozone model wears a skull warning badge; high in the atmosphere, it forms a glowing shield bouncing away purple UV arrows from the sun.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ozone is a molecule made of three atoms of oxygen, O3. Ordinary oxygen has two, O2." },
+          { "speaker": "NEO", "text": "At ground level, ozone is a deadly poison. But at the higher levels of the atmosphere, it shields the Earth's surface from ultraviolet radiation from the sun." },
+          { "speaker": "NEO", "text": "UV radiation is highly damaging to organisms. For example, it causes skin cancer in human beings." }
+        ]
+      },
+      {
+        "animation": "High in the atmosphere, a UV arrow strikes an O₂ molecule and splits it into two single O atoms. Each O atom then joins another O₂ to make O₃. The equations write themselves: 'O₂ —UV→ O + O' and 'O + O₂ → O₃ (ozone)', with atom counts checked by ticks.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ozone forms at higher levels when ultraviolet radiation acts on oxygen." },
+          { "speaker": "NEO", "text": "UV splits an oxygen molecule into two free oxygen atoms. O2 gives O plus O." },
+          { "speaker": "NEO", "text": "Each free oxygen atom then combines with another oxygen molecule to form ozone. O plus O2 gives O3." }
+        ]
+      },
+      {
+        "animation": "A timeline slides to the 1980s; the glowing shield thins. Cartoon refrigerators and fire extinguishers puff out little grey clouds labelled 'CFCs'. The timeline jumps to 1987: a UNEP podium where cartoon delegates shake hands over a document titled 'Freeze CFC production at 1986 levels'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The amount of ozone began to drop sharply in the 1980s." },
+          { "speaker": "NEO", "text": "This was linked to synthetic chemicals called chlorofluorocarbons, or CFCs, used as refrigerants and in fire extinguishers." },
+          { "speaker": "NEO", "text": "In 1987, the United Nations Environment Programme reached an agreement to freeze CFC production at 1986 levels. Now manufacturers everywhere must make CFC-free refrigerators." }
+        ]
+      },
+      {
+        "animation": "A 'Board Tip' card shows the two equations with the letters 'UV' circled above the first arrow, and the words 'deadly poison at ground level' highlighted.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the tape stays in my pocket, and the CFCs stay out of the sky." },
+          { "speaker": "NEO", "text": "Exactly. Board tip: when writing how ozone forms, show both equations and write UV above the first arrow. Many students skip that condition and lose marks." }
+        ]
+      },
+      {
+        "animation": "Recap board with a globe wearing a glowing shield. Points: '1. O₃ absorbs harmful UV radiation', '2. O₂ → O + O (UV); O + O₂ → O₃', '3. CFCs deplete ozone; 1987 UNEP agreement'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the ozone layer shields the Earth from harmful ultraviolet radiation." },
+          { "speaker": "NEO", "text": "Two: ozone forms when UV splits oxygen into atoms, and each atom joins an oxygen molecule to make O3." },
+          { "speaker": "NEO", "text": "Three: CFCs deplete ozone, and in 1987 UNEP agreed to freeze their production at 1986 levels." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Our Environment",
+    "topic_no": 5,
+    "name": "Managing the Garbage We Produce",
+    "scenes": [
+      {
+        "animation": "After a birthday party, Zippy stands on top of a mountain of garbage: plastic plates, wrappers, banana peels, paper cups and a broken toy. A tiny flag reading 'Mount Kachra' is planted at the summit.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "One party, and I've built a mountain! Where does all this go?" },
+          { "speaker": "NEO", "text": "That depends on what it's made of, Zippy. Some of it disappears in weeks. Some of it stays for a very long time." }
+        ]
+      },
+      {
+        "animation": "Split screen experiment: a banana peel, a paper bag, a plastic wrapper and a polythene bag are buried in soil. A calendar flips through several weeks; cartoon bacteria and fungi munch the peel and paper away, while the plastic items remain unchanged. Labels 'Biodegradable' and 'Non-biodegradable' appear.",
+        "lines": [
+          { "speaker": "NEO", "text": "Substances that are broken down by biological processes, like the action of bacteria and other saprophytes, are called biodegradable. Peels and paper are examples." },
+          { "speaker": "NEO", "text": "Substances that are not broken down this way are non-biodegradable, like plastics." },
+          { "speaker": "NEO", "text": "Non-biodegradable substances may simply persist in the environment for a long time, or they may harm members of the ecosystem." }
+        ]
+      },
+      {
+        "animation": "A shopping bag is unpacked: a small biscuit inside a tray, inside a wrapper, inside a box, inside a carry bag. A label reads 'Better lifestyle → more packaging → more waste'. A row of disposable items marches past.",
+        "lines": [
+          { "speaker": "NEO", "text": "As our lifestyles improve, we produce more waste. More packaging and more disposable items mean more non-biodegradable garbage." }
+        ]
+      },
+      {
+        "animation": "A train compartment through time: first, plastic tea cups; then clay kulhads, with a caption 'Large-scale kulhads → loss of fertile top-soil'; finally, disposable paper cups, with a green tick and the note 'Paper is biodegradable'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here is a real example. Tea on trains was once served in disposable plastic cups." },
+          { "speaker": "NEO", "text": "Clay kulhads were suggested instead. But making kulhads on a large scale would cause the loss of fertile top-soil." },
+          { "speaker": "NEO", "text": "Now disposable paper cups are used. Unlike plastic, paper is biodegradable." },
+          { "speaker": "ZIPPY", "text": "So even a good idea needs a second look!" }
+        ]
+      },
+      {
+        "animation": "Zippy sorts the garbage mountain into a green bin marked 'Biodegradable: compost' and a blue bin marked 'Non-biodegradable: recycle'. The green bin turns into rich compost for a school garden. A 'Board Tip' card pops up with the kulhad question.",
+        "lines": [
+          { "speaker": "NEO", "text": "We can manage garbage by segregating it at home. Biodegradable waste can be composted, and many non-biodegradable materials can be recycled." },
+          { "speaker": "NEO", "text": "Board tip: the kulhad versus paper cup question is an NCERT favourite. Mention fertile top-soil for kulhads and biodegradability for paper cups." }
+        ]
+      },
+      {
+        "animation": "Recap board framed by two bins. Points: '1. Biodegradable: broken down by microbes; non-biodegradable: persists', '2. More packaging and disposables = more waste', '3. Segregate, compost, recycle'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: biodegradable waste is broken down by biological processes; non-biodegradable waste persists and can harm the ecosystem." },
+          { "speaker": "NEO", "text": "Two: changing lifestyles, packaging and disposable items increase waste." },
+          { "speaker": "NEO", "text": "Three: segregating, composting and recycling help us manage the garbage we produce." }
+        ]
+      }
+    ]
+  }
+]

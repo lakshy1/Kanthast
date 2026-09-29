@@ -1,0 +1,221 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "History: The French Revolution",
+    "topic_no": 1,
+    "name": "French Society in the Late Eighteenth Century",
+    "scenes": [
+      {
+        "animation": "A tall pyramid of cartoon people wobbles on a French street. A priest and a noble sit comfortably on top sipping from teacups, while a peasant at the bottom sweats under the weight. Zippy bounces up the side and gets shooed off by a noble's walking stick.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why are the guys on top relaxing while the guy at the bottom carries everyone?" },
+          { "speaker": "NEO", "text": "Welcome to France before 1789. That pyramid is how its society was actually arranged." }
+        ]
+      },
+      {
+        "animation": "A sepia palace at Versailles with a young king and a crown. A treasury chest opens to reveal only cobwebs. Labels pop up: 'Louis XVI, king in 1774, aged 20', 'Wife: Marie Antoinette, Austrian princess', 'Debt: over 2 billion livres', 'Interest: 10 per cent'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1774, Louis XVI of the Bourbon family became king of France. He was just twenty, and married to the Austrian princess Marie Antoinette." },
+          { "speaker": "NEO", "text": "He found an empty treasury. Long years of war and an extravagant court at Versailles had drained it." },
+          { "speaker": "NEO", "text": "France had also helped the thirteen American colonies win independence from Britain. The debt rose to more than two billion livres, and lenders charged ten per cent interest." }
+        ]
+      },
+      {
+        "animation": "The pyramid is relabelled layer by layer: 'First Estate: Clergy', 'Second Estate: Nobility', 'Third Estate: big businessmen, merchants, lawyers; peasants and artisans; small peasants, landless labour, servants'. Tax bags labelled 'Tithes', 'Taille' and 'Taxes on salt, tobacco' all drop onto the bottom layer only.",
+        "lines": [
+          { "speaker": "NEO", "text": "Society was divided into three estates. The clergy formed the first estate, the nobility the second." },
+          { "speaker": "NEO", "text": "Everyone else, from rich merchants to landless labourers, was the third estate. About ninety per cent of the population were peasants." },
+          { "speaker": "NEO", "text": "The first two estates enjoyed privileges by birth, the most important being exemption from taxes to the state. The Church took tithes, and the state took a direct tax called taille, plus taxes on everyday items like salt and tobacco." },
+          { "speaker": "ZIPPY", "text": "So the poorest paid for everyone. That's like the backbencher paying for the whole class party!" }
+        ]
+      },
+      {
+        "animation": "A line graph draws itself: 'Population: 23 million (1715) → 28 million (1789)'. A bread loaf's price tag climbs faster than a worker's wage slip. A drought cloud rains on a wheat field and it shrivels; the words 'Subsistence crisis' stamp across the screen.",
+        "lines": [
+          { "speaker": "NEO", "text": "The population of France rose from about twenty-three million in 1715 to twenty-eight million in 1789. Food grains fell short and the price of bread rose rapidly." },
+          { "speaker": "NEO", "text": "Wages did not keep pace. When drought or hail reduced the harvest, the poor could not afford even bread. This was a subsistence crisis." }
+        ]
+      },
+      {
+        "animation": "Three philosophers appear in thought bubbles holding their books: 'John Locke: Two Treatises of Government', 'Rousseau: The Social Contract', 'Montesquieu: The Spirit of the Laws' with a triangle 'Legislature, Executive, Judiciary'. Pamphlets fly across coffee houses to a growing crowd of middle-class readers.",
+        "lines": [
+          { "speaker": "NEO", "text": "Meanwhile a new middle class of merchants, lawyers and officials was growing. They believed no group should have privileges by birth." },
+          { "speaker": "NEO", "text": "John Locke refuted the divine and absolute right of the monarch. Rousseau proposed a government based on a social contract. Montesquieu proposed dividing power between the legislature, the executive and the judiciary." },
+          { "speaker": "NEO", "text": "Exam tip: match each philosopher to his book and his idea. This is a favourite short-answer question." }
+        ]
+      },
+      {
+        "animation": "Recap board with a tricolour ribbon: '1. Empty treasury under Louis XVI', '2. Three estates: only the third paid taxes', '3. Subsistence crisis + ideas of Locke, Rousseau, Montesquieu'. Zippy wears a tiny paper crown that falls off.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Louis XVI inherited an empty treasury and a huge debt." },
+          { "speaker": "NEO", "text": "Two: society had three estates, and only the third estate paid taxes." },
+          { "speaker": "NEO", "text": "Three: a subsistence crisis and the ideas of Enlightenment philosophers made people question privilege." },
+          { "speaker": "ZIPPY", "text": "Sounds like that pyramid is about to topple." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "History: The French Revolution",
+    "topic_no": 2,
+    "name": "The Outbreak of the Revolution",
+    "scenes": [
+      {
+        "animation": "Paris, morning of 14 July 1789. Church bells ring and a crowd of about 7,000 men and women gathers outside the town hall. They rush to a grim fortress labelled 'BASTILLE', which cracks open; a tiny line of just seven prisoners walks out blinking.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "All that fuss to free just seven prisoners?" },
+          { "speaker": "NEO", "text": "The Bastille was hated because it stood for the despotic power of the king. Storming it was a message, not a jailbreak." }
+        ]
+      },
+      {
+        "animation": "A timeline slides in from the left and pins its first date: '5 May 1789: Estates General at Versailles'. Inside a hall, 300 clergy and 300 nobles sit in rows facing each other; 600 third-estate members stand at the back. A label reads 'Last met in 1614'.",
+        "lines": [
+          { "speaker": "NEO", "text": "To pass new taxes, Louis XVI called a meeting of the Estates General on 5 May 1789. This body had last met in 1614." },
+          { "speaker": "NEO", "text": "The first and second estates sent three hundred representatives each. Six hundred members of the third estate had to stand at the back." },
+          { "speaker": "NEO", "text": "Voting followed the old rule: each estate had one vote. The third estate demanded one vote for each member. The king refused, so they walked out in protest." }
+        ]
+      },
+      {
+        "animation": "Timeline pin: '20 June 1789: Tennis Court Oath'. The walked-out members crowd into an indoor tennis court, right hands raised. Labels float over two leaders: 'Mirabeau (noble family)' and 'Abbé Sieyès, who wrote the pamphlet What is the Third Estate?'. A banner unfurls: 'National Assembly'.",
+        "lines": [
+          { "speaker": "NEO", "text": "On 20 June they met in the hall of an indoor tennis court in the grounds of Versailles. They declared themselves a National Assembly." },
+          { "speaker": "NEO", "text": "They swore not to disperse until they had drafted a constitution that would limit the powers of the monarch. They were led by Mirabeau and Abbé Sieyès." },
+          { "speaker": "ZIPPY", "text": "Oath on a tennis court. Now that's a serve!" }
+        ]
+      },
+      {
+        "animation": "Timeline pins '14 July 1789: Bastille' and '4 August 1789'. In the countryside, rumours spread as ripples; peasants with hoes burn manor record books under the label 'The Great Fear'. A paper decree flutters down: 'Feudal system abolished; tithes abolished; Church lands confiscated'.",
+        "lines": [
+          { "speaker": "NEO", "text": "While Paris stormed the Bastille, rumours spread through the countryside. Frightened peasants attacked chateaux and burnt documents recording their manorial dues." },
+          { "speaker": "NEO", "text": "On the night of 4 August 1789, the Assembly passed a decree abolishing the feudal system of obligations and taxes. Tithes were abolished and lands owned by the Church were confiscated." }
+        ]
+      },
+      {
+        "animation": "Timeline pin '1791: Constitution'. A power triangle splits the king's crown into three parts. A sorting machine separates citizens into 'Active: men above 25 who paid taxes equal to at least 3 days of a labourer's wage' and 'Passive: all other men and all women'. An 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Constitution of 1791 made France a constitutional monarchy. Powers were separated and given to the legislature, executive and judiciary." },
+          { "speaker": "NEO", "text": "Only men above twenty-five who paid taxes equal to at least three days of a labourer's wage were active citizens with the vote. The rest, including all women, were passive citizens." },
+          { "speaker": "NEO", "text": "Exam tip: the Constitution began with the Declaration of the Rights of Man and Citizen, proclaiming rights like life, freedom of speech and equality before law." }
+        ]
+      },
+      {
+        "animation": "Recap board with the completed timeline glowing: '1. 5 May 1789 Estates General → 20 June Tennis Court Oath', '2. 14 July 1789 Bastille stormed; 4 August feudalism abolished', '3. 1791 Constitution: constitutional monarchy, active and passive citizens'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Estates General met on 5 May 1789, and the third estate formed the National Assembly on 20 June." },
+          { "speaker": "NEO", "text": "Two: the Bastille fell on 14 July, and feudal dues were abolished on 4 August." },
+          { "speaker": "NEO", "text": "Three: the 1791 Constitution made France a constitutional monarchy, but only active citizens could vote." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "History: The French Revolution",
+    "topic_no": 3,
+    "name": "France Becomes a Republic: The Terror and the Directory",
+    "scenes": [
+      {
+        "animation": "Marching volunteers stride along a dusty road from the south of France towards Paris, singing loudly; musical notes form the word 'Marseillaise'. Zippy hums along off-key and gets side-eyed by a drummer.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This song is catchy. Is it a Bollywood hit?" },
+          { "speaker": "NEO", "text": "Close, it's a national anthem. The Marseillaise was composed by the poet Roget de L'Isle and sung by volunteers from Marseilles marching to Paris." }
+        ]
+      },
+      {
+        "animation": "A map of Europe: arrows from France point at Prussia and Austria, labelled 'April 1792: war declared'. Inside Paris, a club room fills with men in striped trousers and red caps, labelled 'Jacobin Club: Maximilien Robespierre' and 'sans-culottes: those without knee breeches'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In April 1792, the National Assembly voted to declare war against Prussia and Austria. The war brought losses and economic hardship to the people." },
+          { "speaker": "NEO", "text": "Political clubs became rallying points. The most successful was the Jacobin club, led by Maximilien Robespierre. Many Jacobins wore long striped trousers and came to be known as the sans-culottes." }
+        ]
+      },
+      {
+        "animation": "Timeline builds: '10 August 1792: Palace of the Tuileries stormed', 'Vote for all men 21 and above', '21 September 1792: Monarchy abolished, France a republic', '21 January 1793: Louis XVI executed, Place de la Concorde'. A crown slides off a throne and rolls away.",
+        "lines": [
+          { "speaker": "NEO", "text": "On 10 August 1792, the Jacobins stormed the Palace of the Tuileries and held the king hostage. Elections followed in which all men aged twenty-one and above could vote." },
+          { "speaker": "NEO", "text": "On 21 September 1792, the new assembly, called the Convention, abolished the monarchy and declared France a republic." },
+          { "speaker": "NEO", "text": "Louis the Sixteenth was sentenced to death for treason and executed publicly on 21 January 1793 at the Place de la Concorde. The queen met the same fate soon after." }
+        ]
+      },
+      {
+        "animation": "A shadowy period labelled '1793 to 1794: Reign of Terror'. Robespierre points at a list; a guillotine silhouette looms. Price tags are frozen with a 'Maximum ceiling' sticker, bakers shape one uniform loaf labelled 'Bread of equality', and church doors close.",
+        "lines": [
+          { "speaker": "NEO", "text": "The period from 1793 to 1794 is called the Reign of Terror. Robespierre followed a policy of severe control and punishment." },
+          { "speaker": "NEO", "text": "Anyone he saw as an enemy of the republic was tried and, if found guilty, guillotined. He also fixed a maximum ceiling on wages and prices, and bakers had to make a single type of bread called the equality bread." },
+          { "speaker": "NEO", "text": "In July 1794, he was convicted by a court, arrested and sent to the guillotine the next day." }
+        ]
+      },
+      {
+        "animation": "A new government diagram assembles: 'Directory: an executive of 5 members' above 'Two elected legislative councils'. The five directors bicker; a young general in a bicorne hat steps in from the edge, labelled 'Napoleon Bonaparte'. A 'BOARD TIP' card flips over.",
+        "lines": [
+          { "speaker": "NEO", "text": "After the Jacobins fell, the wealthy middle class took power. A new constitution denied the vote to non-propertied people." },
+          { "speaker": "NEO", "text": "It set up two elected legislative councils, which appointed a Directory, an executive of five members. The directors often clashed with the councils, and this instability paved the way for Napoleon Bonaparte." },
+          { "speaker": "NEO", "text": "Board tip: do not confuse the Convention, which made France a republic, with the Directory, which came after the Terror." }
+        ]
+      },
+      {
+        "animation": "Recap board with three icons, a crown with a cross, a guillotine and a five-seat table: '1. 21 September 1792: France a republic', '2. 1793 to 1794: Reign of Terror under Robespierre', '3. Directory: five-member executive, rise of Napoleon'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Convention abolished the monarchy and declared France a republic on 21 September 1792." },
+          { "speaker": "NEO", "text": "Two: Robespierre's Reign of Terror lasted from 1793 to 1794." },
+          { "speaker": "NEO", "text": "Three: the five-member Directory followed, and its instability opened the door for Napoleon." },
+          { "speaker": "ZIPPY", "text": "And that song still plays at every French football match!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "History: The French Revolution",
+    "topic_no": 4,
+    "name": "Women, the Abolition of Slavery and Napoleon",
+    "scenes": [
+      {
+        "animation": "A Paris street in 1793: women in bonnets march holding placards 'Equal political rights!'. A town crier slams a notice on a wall: 'Women's clubs closed'. Zippy tears the notice down, then realises it's glued to his back.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hold on. The Revolution said liberty and equality. Didn't that include women?" },
+          { "speaker": "NEO", "text": "That was exactly the question women asked. Let's see how they fought for an answer." }
+        ]
+      },
+      {
+        "animation": "A meeting hall banner reads 'Society of Revolutionary and Republican Women'. Checklist items tick one by one: 'State schools; schooling compulsory for all girls', 'Marriage as a contract', 'Divorce made legal'. A portrait appears: 'Olympe de Gouges, executed 1793'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Women started their own political clubs and newspapers. The most famous was the Society of Revolutionary and Republican Women." },
+          { "speaker": "NEO", "text": "Early laws improved their lives. State schools were created and schooling was made compulsory for all girls. Marriage became a contract, and divorce was made legal." },
+          { "speaker": "NEO", "text": "But during the Reign of Terror, women's clubs were closed. Olympe de Gouges, a leading activist, was executed. Women in France finally won the right to vote in 1946." }
+        ]
+      },
+      {
+        "animation": "An animated triangle draws itself across an ocean map: 'European ports' → 'Africa' → 'Caribbean colonies: Martinique, Guadeloupe, San Domingo', and back. Ports 'Bordeaux' and 'Nantes' glow on the French coast. A timeline: '1794: slaves freed', '10 years later: Napoleon reintroduces slavery', '1848: slavery finally abolished'.",
+        "lines": [
+          { "speaker": "NEO", "text": "From the seventeenth century, French merchants sailed from Bordeaux or Nantes to Africa, bought slaves and shipped them to the Caribbean colonies of Martinique, Guadeloupe and San Domingo, to work on plantations." },
+          { "speaker": "NEO", "text": "In 1794, the Convention legislated to free all slaves in French overseas possessions. But ten years later, Napoleon reintroduced slavery." },
+          { "speaker": "NEO", "text": "Slavery was finally abolished in the French colonies in 1848." }
+        ]
+      },
+      {
+        "animation": "Map work: an outline political map of France appears and four dots are placed one at a time with labels, 'Paris', 'Bordeaux', 'Nantes', 'Marseilles'. A 'MAP WORK' stamp lands in the corner.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So many French cities. Which ones do I need for the map question?" },
+          { "speaker": "NEO", "text": "Locate Paris, Bordeaux, Nantes and Marseilles on the outline map of France. Bordeaux and Nantes were slave-trade ports, and Marseilles gave its name to the anthem." }
+        ]
+      },
+      {
+        "animation": "A short general places a crown on his own head: '1804: Napoleon crowns himself Emperor'. Icons stream out: 'Protection of private property', 'Uniform system of weights and measures: decimal system'. Then the scene fades to a battlefield labelled 'Waterloo, 1815: defeated'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1804, Napoleon Bonaparte crowned himself Emperor of France. He conquered neighbouring European countries." },
+          { "speaker": "NEO", "text": "He also introduced many laws that carried revolutionary ideas, such as the protection of private property and a uniform system of weights and measures based on the decimal system." },
+          { "speaker": "NEO", "text": "He was finally defeated at Waterloo in 1815. Ideas of liberty and democratic rights became the most important legacy of the Revolution." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Women: clubs, schooling, divorce; vote only in 1946', '2. Slavery: freed 1794, reintroduced by Napoleon, abolished 1848', '3. Napoleon: Emperor 1804, defeated at Waterloo 1815'. Zippy draws a tiny bicorne hat on himself.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: women won schooling and divorce rights, but the vote came only in 1946." },
+          { "speaker": "NEO", "text": "Two: slavery was abolished in 1794, reintroduced by Napoleon, and finally ended in 1848." },
+          { "speaker": "NEO", "text": "Three: Napoleon crowned himself Emperor in 1804 and was defeated at Waterloo in 1815." }
+        ]
+      }
+    ]
+  }
+]

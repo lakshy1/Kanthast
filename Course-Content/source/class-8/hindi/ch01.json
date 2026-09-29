@@ -1,0 +1,540 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "मल्हार: पाठ",
+    "topic_no": 1,
+    "name": "स्वदेश — गयाप्रसाद शुक्ल 'सनेही'",
+    "scenes": [
+      {
+        "animation": "A school assembly on Independence Day. Everyone sings, but Zippy yawns and scrolls a phone. A small tricolour on the flagpole droops sadly, then looks at Zippy.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "नियो, झंडा मुझे ऐसे क्यों घूर रहा है? मैंने तो कुछ किया ही नहीं!" },
+          { "speaker": "NEO", "text": "यही तो बात है, ज़िप्पी। आज की कविता कहती है कि जिस दिल में देश का प्यार नहीं, वह दिल नहीं, पत्थर है।" }
+        ]
+      },
+      {
+        "animation": "A title card builds: 'पाठ 1: स्वदेश (कविता)', 'कवि: गयाप्रसाद शुक्ल सनेही'. A stone heart and a glowing red heart appear side by side with a question mark between them.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह कविता गयाप्रसाद शुक्ल 'सनेही' ने लिखी है। इसका नाम है स्वदेश, यानी अपना देश।" },
+          { "speaker": "NEO", "text": "कविता की सबसे प्रसिद्ध पंक्ति है: वह हृदय नहीं है पत्थर है, जिसमें स्वदेश का प्यार नहीं।" },
+          { "speaker": "ZIPPY", "text": "मतलब दिल तो सबके पास है, पर असली दिल वही जिसमें देश के लिए प्यार हो?" },
+          { "speaker": "NEO", "text": "बिल्कुल सही। यही पंक्ति हर पद के अंत में बार-बार लौटती है। इसे टेक कहते हैं।" }
+        ]
+      },
+      {
+        "animation": "A montage: golden fields of wheat, a river, a mother serving rotis to children, a village home. Each image is labelled 'अन्न', 'जल', 'घर-परिवार'. Arrows point from the land to the people.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि याद दिलाते हैं कि इसी धरती से हमें अन्न मिलता है, पानी मिलता है, घर और परिवार मिलता है।" },
+          { "speaker": "NEO", "text": "जिस मिट्टी ने हमें पाला, उसका कर्ज़ हम पर है। उसे भूल जाना एहसान-फ़रामोशी है।" },
+          { "speaker": "ZIPPY", "text": "जैसे माँ के हाथ का खाना खाकर कोई कहे, मुझे तो खाना होटल ने दिया!" },
+          { "speaker": "NEO", "text": "हाँ, कुछ ऐसा ही। कवि कहते हैं कि ऐसा व्यक्ति जीते जी भी मरे हुए के समान है।" }
+        ]
+      },
+      {
+        "animation": "A group of cartoon citizens pull a big chariot labelled 'देश' up a hill together. One person sits aside eating chips; the chariot slows. When he joins in, it rolls faster and the word 'जोश' glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "कविता में जोश और हिम्मत की बात भी है। जिसमें उमंग नहीं, जो आगे बढ़ना नहीं जानता, उसका जीवन अधूरा है।" },
+          { "speaker": "NEO", "text": "देश तभी आगे बढ़ता है जब हर नागरिक अपना हिस्सा निभाए। अकेले की तरक्की, सबकी तरक्की से जुड़ी है।" },
+          { "speaker": "ZIPPY", "text": "तो देशप्रेम का मतलब सिर्फ़ गाना गाना नहीं, काम करना भी है!" },
+          { "speaker": "NEO", "text": "एकदम। कूड़ा न फैलाना, पढ़ाई ईमानदारी से करना, नियम मानना, ये सब भी देशप्रेम है।" }
+        ]
+      },
+      {
+        "animation": "A notebook page titled 'Exam Tip' fills in. The word 'टेक' is circled, and a matching table appears: 'जोश — उमंग', 'हृदय — दिल', 'स्वदेश — अपना देश'.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा में पूछा जा सकता है कि कवि ने देशप्रेम से खाली हृदय को पत्थर क्यों कहा। उत्तर में लिखो कि पत्थर में भावना नहीं होती।" },
+          { "speaker": "NEO", "text": "कवि का नाम सही लिखो: गयाप्रसाद शुक्ल 'सनेही'। उपनाम सनेही को उद्धरण चिह्नों में लिखना मत भूलना।" }
+        ]
+      },
+      {
+        "animation": "The flag on the pole now flutters happily. Three recap cards slide in: '1. देशप्रेम बिना हृदय = पत्थर', '2. धरती ने अन्न-जल-घर दिया', '3. देशप्रेम = काम और ज़िम्मेदारी'.",
+        "lines": [
+          { "speaker": "NEO", "text": "तो याद रखो। पहला, जिस हृदय में स्वदेश का प्यार नहीं, वह पत्थर है। दूसरा, यह धरती हमें अन्न, जल और घर देती है। तीसरा, सच्चा देशप्रेम काम और ज़िम्मेदारी से दिखता है।" },
+          { "speaker": "ZIPPY", "text": "देखो, झंडा अब मुझे देखकर मुस्कुरा रहा है!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "मल्हार: पाठ",
+    "topic_no": 2,
+    "name": "दो गौरैया — भीष्म साहनी",
+    "scenes": [
+      {
+        "animation": "A crowded old house: mice run across the floor, a cat naps, pigeons coo on the window, and two sparrows fly in with straw. An angry father in a dhoti waves his arms at all of them.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "यह घर है या चिड़ियाघर? चूहे, बिल्ली, कबूतर, और अब गौरैया भी!" },
+          { "speaker": "NEO", "text": "पिताजी भी यही कहते थे, ज़िप्पी। उनका कहना था कि यह घर सराय बना हुआ है।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठ 2: दो गौरैया (कहानी)', 'लेखक: भीष्म साहनी'. Then the camera zooms to the ceiling fan, where two sparrows have built a nest on top.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह कहानी भीष्म साहनी ने लिखी है। इसे एक बच्चा सुना रहा है, जो अपने घर की बात बता रहा है।" },
+          { "speaker": "NEO", "text": "एक दिन दो गौरैया घर में आईं और छत के पंखे के ऊपर घोंसला बनाने लगीं।" },
+          { "speaker": "ZIPPY", "text": "पंखे पर? वाह, उनका तो अपना एसी वाला फ़्लैट हो गया!" }
+        ]
+      },
+      {
+        "animation": "Comic sequence: the father claps and shouts 'शू!', shuts all doors, then jumps with a long lathi. Each time the two sparrows slip back in through a small gap above the door. The mother laughs in the background.",
+        "lines": [
+          { "speaker": "NEO", "text": "पिताजी ने उन्हें निकालने की ठान ली। उन्होंने तालियाँ बजाईं, शोर मचाया, दरवाज़े बंद किए और लाठी भी घुमाई।" },
+          { "speaker": "NEO", "text": "पर गौरैया हर बार किसी न किसी दरार से फिर अंदर आ जातीं।" },
+          { "speaker": "NEO", "text": "माँ यह सब देखकर हँसती रहीं और पिताजी पर मीठा व्यंग्य करती रहीं। वे गौरैयों के साथ थीं।" },
+          { "speaker": "ZIPPY", "text": "मम्मी तो टीम गौरैया में हैं!" }
+        ]
+      },
+      {
+        "animation": "The father climbs a ladder and pokes the nest with a stick. Straw falls. Suddenly two tiny beaks peep out and a thin 'चीं-चीं' sound fills the room. The father freezes, the stick slowly lowers.",
+        "lines": [
+          { "speaker": "NEO", "text": "आख़िर में पिताजी सीढ़ी पर चढ़कर घोंसला तोड़ने लगे। तभी घोंसले से चीं-चीं की पतली आवाज़ आई।" },
+          { "speaker": "NEO", "text": "घोंसले में दो नन्हे बच्चे थे, जो अपनी माँ-बाप को पुकार रहे थे।" },
+          { "speaker": "ZIPPY", "text": "अरे! अब तो पिताजी पिघल गए होंगे।" },
+          { "speaker": "NEO", "text": "हाँ। पिताजी चुपचाप नीचे उतरे और कुर्सी पर बैठ गए। फिर वे मुस्कुराते हुए गौरैयों को बच्चों को दाना खिलाते देखते रहे।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' sticky note appears beside a split screen: left, the angry father with a stick; right, the smiling father on a chair. A label 'हृदय-परिवर्तन' links them.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा में अक्सर पूछते हैं कि पिताजी का मन क्यों बदला। उत्तर में लिखो कि बच्चों की आवाज़ सुनकर उनके मन में करुणा जागी।" },
+          { "speaker": "NEO", "text": "यह भी लिखना कि माँ की बातों में हल्का व्यंग्य था। व्यंग्य यानी सीधे न कहकर मज़ाक में कड़वी बात कहना।" }
+        ]
+      },
+      {
+        "animation": "The sparrow family chirps on the fan while the family eats together below. Recap cards: '1. घर = सबका आसरा', '2. ज़िद हारी, करुणा जीती', '3. माँ का मीठा व्यंग्य'.",
+        "lines": [
+          { "speaker": "NEO", "text": "तीन बातें याद रखो। पहली, घर इंसानों के साथ छोटे जीवों का भी आसरा है। दूसरी, पिताजी की ज़िद पर करुणा की जीत हुई। तीसरी, माँ का व्यंग्य कहानी में हँसी भरता है।" },
+          { "speaker": "ZIPPY", "text": "मैं भी अपनी खिड़की पर दाना रखूँगा। शायद कोई गौरैया किराया दे दे!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "मल्हार: पाठ",
+    "topic_no": 3,
+    "name": "एक आशीर्वाद — दुष्यंत कुमार",
+    "scenes": [
+      {
+        "animation": "A baby in a cot dreams in bubbles: a rocket, a cricket bat, a book. The bubbles float up but stay tied to the cot with thin threads. Zippy tries to pop one.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "ये सपने इतने ऊपर उड़ रहे हैं, पर पालने से बंधे क्यों हैं?" },
+          { "speaker": "NEO", "text": "क्योंकि सपने तभी सच होते हैं जब वे ज़मीन पर उतरकर चलना सीखें। यही आज की कविता का आशीर्वाद है।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठ 3: एक आशीर्वाद (कविता)', 'कवि: दुष्यंत कुमार'. An elder's hand rests gently on a child's head; warm golden light spreads.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह कविता दुष्यंत कुमार ने लिखी है। इसमें एक बड़ा व्यक्ति किसी बच्चे को आशीर्वाद दे रहा है।" },
+          { "speaker": "NEO", "text": "कविता शुरू होती है: जा तेरे स्वप्न बड़े हों।" },
+          { "speaker": "ZIPPY", "text": "यानी छोटे-मोटे सपने नहीं, बड़े वाले सपने देखो!" }
+        ]
+      },
+      {
+        "animation": "A dream bubble shaped like a baby climbs down from a mother's lap labelled 'भावना की गोद' and takes wobbly first steps on the earth. Then it walks confidently towards a distant mountain labelled 'लक्ष्य'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि कहते हैं कि सपने भावना की गोद से उतरकर जल्दी पृथ्वी पर चलना सीखें।" },
+          { "speaker": "NEO", "text": "मतलब सिर्फ़ सोचते मत रहो। सपनों को मेहनत के कदमों से सच करो।" },
+          { "speaker": "ZIPPY", "text": "जैसे मैं रोज़ सोचता हूँ कि क्रिकेटर बनूँगा, पर बैट उठाता ही नहीं!" },
+          { "speaker": "NEO", "text": "हाँ, ऐसे सपने गोद में ही रह जाते हैं। उन्हें मैदान तक ले जाना पड़ता है।" }
+        ]
+      },
+      {
+        "animation": "The child laughs, smiles and sings, with small musical notes around. Then the child reaches for the moon, stumbles, gets up, and finally stands firmly on its own feet. Label: 'अपने पाँवों पर खड़े हों'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि चाहते हैं कि बच्चा हँसे, मुसकराए और गाए। यानी जीवन में खुशी बनी रहे।" },
+          { "speaker": "NEO", "text": "वह नई चीज़ों को पाने के लिए मचले, कभी गिरे भी, पर हार न माने।" },
+          { "speaker": "NEO", "text": "और आख़िर में आशीर्वाद है कि वह अपने पाँवों पर खड़ा हो, यानी आत्मनिर्भर बने।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' card flips over: 'भावना की गोद से उतरना = कल्पना से कर्म की ओर'. A small tick appears beside the phrase 'आत्मनिर्भर'.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा में पूछ सकते हैं कि सपनों का पृथ्वी पर चलना सीखने का क्या अर्थ है। उत्तर है, कल्पना को कर्म में बदलना।" },
+          { "speaker": "NEO", "text": "अपने पाँवों पर खड़े होने का अर्थ है दूसरों पर निर्भर न रहना। यह मुहावरा भी याद कर लो।" }
+        ]
+      },
+      {
+        "animation": "The dream bubbles now float free and the child walks towards them. Recap cards appear one by one: '1. बड़े सपने देखो', '2. सपनों को कर्म से सच करो', '3. हँसो, सीखो, आत्मनिर्भर बनो'.",
+        "lines": [
+          { "speaker": "NEO", "text": "सार याद रखो। पहला, बड़े सपने देखो। दूसरा, उन्हें भावना से उतारकर मेहनत से सच करो। तीसरा, खुश रहो और अपने पाँवों पर खड़े हो।" },
+          { "speaker": "ZIPPY", "text": "ठीक है, कल सुबह से बैट उठाऊँगा। पक्का वाला सपना!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "मल्हार: पाठ",
+    "topic_no": 4,
+    "name": "हरिद्वार — भारतेंदु हरिश्चंद्र",
+    "scenes": [
+      {
+        "animation": "Zippy holds a phone, typing a travel vlog caption with lots of emojis. Neo pulls out an old yellowed letter with a quill pen and an inkpot beside it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "मैं अपनी यात्रा का वीडियो डाल रहा हूँ। पुराने ज़माने में लोग यात्रा कैसे शेयर करते थे?" },
+          { "speaker": "NEO", "text": "चिट्ठी लिखकर! आज हम एक ऐसी ही चिट्ठी पढ़ेंगे, जिसमें हरिद्वार की यात्रा का सुंदर वर्णन है।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठ 4: हरिद्वार (पत्र / यात्रा-वर्णन)', 'लेखक: भारतेंदु हरिश्चंद्र'. The letter is addressed to 'कविवचनसुधा के संपादक'. A small badge reads 'आधुनिक हिंदी के जनक'.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह रचना भारतेंदु हरिश्चंद्र की है। उन्हें आधुनिक हिंदी साहित्य का जनक माना जाता है।" },
+          { "speaker": "NEO", "text": "उन्होंने यह पत्र कविवचनसुधा पत्रिका के संपादक को लिखा था। इसमें हरिद्वार की यात्रा का हाल है।" },
+          { "speaker": "ZIPPY", "text": "तो यह चिट्ठी भी है और यात्रा-वर्णन भी। टू-इन-वन!" }
+        ]
+      },
+      {
+        "animation": "A painted landscape builds: green hills on three sides, the Ganga flowing wide and clear, ghats with steps, temples with bells, and pilgrims bathing. Labels: 'हरी-भरी पहाड़ियाँ', 'गंगा', 'घाट'.",
+        "lines": [
+          { "speaker": "NEO", "text": "लेखक बताते हैं कि हरिद्वार के चारों ओर हरी-भरी पहाड़ियाँ हैं और बीच में गंगा बहती है।" },
+          { "speaker": "NEO", "text": "गंगा का जल बहुत साफ़ और ठंडा है। घाटों पर लोग स्नान करते हैं और मंदिरों में पूजा होती है।" },
+          { "speaker": "NEO", "text": "वे लिखते हैं कि वहाँ पहुँचते ही उनका मन इतना प्रसन्न और निर्मल हुआ कि उसका वर्णन नहीं हो सकता।" }
+        ]
+      },
+      {
+        "animation": "A close-up of the letter shows underlined phrases while tiny icons pop up: trees heavy with fruit, simple sadhus, a quiet evening ghat. A magnifying glass labelled 'वर्णन' moves across the page.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "पर पढ़ने वाले ने तो हरिद्वार देखा नहीं। उसे कैसे पता चलेगा कि वह कैसा है?" },
+          { "speaker": "NEO", "text": "इसीलिए भारतेंदु जी शब्दों से चित्र बनाते हैं। पेड़, पहाड़, नदी, लोग, सबका बारीक वर्णन करते हैं।" },
+          { "speaker": "NEO", "text": "पढ़ते-पढ़ते लगता है जैसे हम ख़ुद वहाँ घूम रहे हैं। यही अच्छे यात्रा-वर्णन की पहचान है।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' board shows the parts of a letter being stacked: 'संबोधन', 'मुख्य बात', 'समापन'. The word 'प्रकृति-चित्रण' glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा में पूछ सकते हैं कि यह पाठ किस विधा में है। उत्तर लिखो: पत्र के रूप में लिखा यात्रा-वर्णन।" },
+          { "speaker": "NEO", "text": "प्रकृति-चित्रण के दो-तीन उदाहरण, जैसे पहाड़ियाँ और गंगा का निर्मल जल, उत्तर में ज़रूर लिखो।" }
+        ]
+      },
+      {
+        "animation": "Zippy deletes his emojis and writes a proper descriptive caption. Recap cards: '1. लेखक: भारतेंदु हरिश्चंद्र', '2. विधा: पत्र + यात्रा-वर्णन', '3. प्रकृति और मन की शांति का वर्णन'.",
+        "lines": [
+          { "speaker": "NEO", "text": "संक्षेप में। पहला, यह भारतेंदु हरिश्चंद्र का पत्र है। दूसरा, इसमें हरिद्वार की यात्रा का वर्णन है। तीसरा, इसमें प्रकृति की सुंदरता और मन की शांति का सुंदर चित्रण है।" },
+          { "speaker": "ZIPPY", "text": "अब मेरे कैप्शन में भी शब्दों वाला चित्र होगा, सिर्फ़ इमोजी नहीं!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "मल्हार: पाठ",
+    "topic_no": 5,
+    "name": "कबीर के दोहे",
+    "scenes": [
+      {
+        "animation": "Zippy stands beside a very tall date palm tree in the hot sun, looking for shade, and finds none. The dates hang far out of reach at the top.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "इतना बड़ा पेड़, पर न छाया, न फल हाथ आए! ऐसा बड़ा होना किस काम का?" },
+          { "speaker": "NEO", "text": "यही बात कबीर ने छह सौ साल पहले कही थी। बड़ा हुआ तो क्या हुआ, जैसे पेड़ खजूर।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठ 5: कबीर के दोहे'. Kabir sits at a handloom weaving. A label explains 'दोहा = दो पंक्तियों का छंद'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कबीर संत कवि थे और जुलाहे का काम करते थे। उनके दोहे सीधी, सरल भाषा में जीवन की बड़ी सीख देते हैं।" },
+          { "speaker": "NEO", "text": "दोहा दो पंक्तियों का छोटा छंद होता है। छोटा है, पर असर बड़ा।" }
+        ]
+      },
+      {
+        "animation": "Three glowing scrolls unroll one by one. Scroll 1: 'साँच बराबर तप नहीं, झूठ बराबर पाप' with a shining heart. Scroll 2: the date palm with 'पंथी को छाया नहीं'. Scroll 3: a guru and Govind standing, a student bowing to the guru first.",
+        "lines": [
+          { "speaker": "NEO", "text": "पहला दोहा: साँच बराबर तप नहीं, झूठ बराबर पाप। सच बोलना सबसे बड़ा तप है और झूठ सबसे बड़ा पाप।" },
+          { "speaker": "NEO", "text": "खजूर वाला दोहा कहता है कि जो बड़ा होकर भी दूसरों के काम न आए, उसका बड़प्पन बेकार है।" },
+          { "speaker": "NEO", "text": "गुरु गोविंद दोऊ खड़े वाले दोहे में कबीर गुरु को पहले प्रणाम करते हैं, क्योंकि गुरु ने ही ईश्वर का रास्ता दिखाया।" }
+        ]
+      },
+      {
+        "animation": "A see-saw balances 'बोलना' and 'चुप', then 'बरसना' and 'धूप'. Next a person speaks sweet words and cool blue waves calm the listener. Last, a critic sits in a hut in someone's courtyard, scrubbing a dirty shirt clean without soap or water.",
+        "lines": [
+          { "speaker": "NEO", "text": "अति का भला न बोलना, अति की भली न चूप। न बहुत बोलना अच्छा, न बहुत चुप रहना। जैसे न बहुत बारिश अच्छी, न बहुत धूप।" },
+          { "speaker": "NEO", "text": "ऐसी बानी बोलिए, मन का आपा खोय। घमंड छोड़कर मीठा बोलो, इससे सुनने वाला भी ठंडा रहता है और हम भी।" },
+          { "speaker": "ZIPPY", "text": "और निंदक वाला? निंदा करने वाले को तो दूर भगाना चाहिए!" },
+          { "speaker": "NEO", "text": "नहीं, कबीर कहते हैं निंदक नियरे राखिए। वह बिना पानी और साबुन के हमारा स्वभाव साफ़ करता है, क्योंकि हमारी कमियाँ बताता है।" }
+        ]
+      },
+      {
+        "animation": "A woman winnows grain with a सूप: heavy grain stays, husk flies away. Labels 'सार' and 'थोथा'. An 'Exam Tip' stamp lands: 'दोहे का भाव + उदाहरण'.",
+        "lines": [
+          { "speaker": "NEO", "text": "साधु ऐसा चाहिए, जैसा सूप सुभाय। सज्जन सूप की तरह अच्छी बात रख लेता है और बेकार बात उड़ा देता है।" },
+          { "speaker": "NEO", "text": "परीक्षा टिप: दोहे का भाव लिखते समय आज के जीवन का एक उदाहरण जोड़ो। जैसे, निंदक यानी वह दोस्त जो हमारी गलती ईमानदारी से बताए।" }
+        ]
+      },
+      {
+        "animation": "Kabir smiles at the loom as threads form three recap cards: '1. सच सबसे बड़ा तप', '2. मीठी वाणी, संतुलन', '3. बड़प्पन = दूसरों के काम आना'.",
+        "lines": [
+          { "speaker": "NEO", "text": "याद रखो। पहला, सच सबसे बड़ा तप है। दूसरा, मीठा बोलो और हर काम में संतुलन रखो। तीसरा, असली बड़प्पन दूसरों के काम आने में है।" },
+          { "speaker": "ZIPPY", "text": "आज से मैं खजूर नहीं, नीम का पेड़ बनूँगा। छाया वाला!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "मल्हार: पाठ",
+    "topic_no": 6,
+    "name": "एक टोकरी भर मिट्टी — माधवराव सप्रे",
+    "scenes": [
+      {
+        "animation": "A rich landlord in a silk kurta strains and sweats, trying to lift a small basket of mud. His face turns red; the basket does not move an inch. Zippy watches, puzzled.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "इतना ताकतवर ज़मींदार एक टोकरी मिट्टी भी नहीं उठा पा रहा? क्या इसमें सोना भरा है?" },
+          { "speaker": "NEO", "text": "सोना नहीं, ज़िप्पी। इसमें एक बुढ़िया का दर्द भरा है। चलो कहानी शुरू से सुनते हैं।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठ 6: एक टोकरी भर मिट्टी (कहानी)', 'लेखक: माधवराव सप्रे'. A small badge: 'हिंदी की आरंभिक कहानियों में से एक'.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह कहानी माधवराव सप्रे ने लिखी है। इसे हिंदी की शुरुआती कहानियों में गिना जाता है।" }
+        ]
+      },
+      {
+        "animation": "A grand mansion stands next to a tiny mud hut. The landlord points at the hut and draws an extension of his palace over it on a blueprint. A lonely old widow sits in the hut doorway.",
+        "lines": [
+          { "speaker": "NEO", "text": "एक ज़मींदार अपने महल का आहाता बढ़ाना चाहता था। पास में एक अनाथ विधवा की झोंपड़ी थी।" },
+          { "speaker": "NEO", "text": "उसी झोंपड़ी में उसके पति और बेटे की यादें थीं। इसलिए वह उसे छोड़ना नहीं चाहती थी।" },
+          { "speaker": "NEO", "text": "ज़मींदार ने अदालत में अपनी पहुँच का इस्तेमाल किया और झोंपड़ी पर कब्ज़ा कर लिया।" },
+          { "speaker": "ZIPPY", "text": "यह तो सीधा अन्याय है!" }
+        ]
+      },
+      {
+        "animation": "The widow, holding a basket, asks the landlord for permission. A small granddaughter sits sadly, refusing food. The widow fills the basket with mud from the hut and asks the landlord to help lift it.",
+        "lines": [
+          { "speaker": "NEO", "text": "बुढ़िया की पोती ने उदास होकर खाना छोड़ दिया था। वह अपने पुराने घर को याद करती थी।" },
+          { "speaker": "NEO", "text": "बुढ़िया ने ज़मींदार से एक टोकरी मिट्टी माँगी, ताकि उससे चूल्हा बनाकर पोती को रोटी खिला सके।" },
+          { "speaker": "NEO", "text": "फिर उसने ज़मींदार से कहा, यह टोकरी उठाने में मेरी मदद कीजिए। ज़मींदार ने ज़ोर लगाया, पर टोकरी हिली भी नहीं।" }
+        ]
+      },
+      {
+        "animation": "The widow gestures toward the whole plot where the hut once stood; thousands of ghostly baskets stack up into a mountain. The landlord's eyes fill with tears and he bows his head.",
+        "lines": [
+          { "speaker": "NEO", "text": "तब बुढ़िया ने कहा, आप एक टोकरी मिट्टी नहीं उठा पाते, तो इस झोंपड़ी की हज़ारों टोकरी मिट्टी का बोझ जन्म भर कैसे उठाएँगे?" },
+          { "speaker": "NEO", "text": "ज़मींदार की आँखें खुल गईं। उसने बुढ़िया से माफ़ी माँगी और झोंपड़ी उसे लौटा दी।" },
+          { "speaker": "NEO", "text": "परीक्षा टिप: टोकरी की मिट्टी यहाँ अन्याय के बोझ का प्रतीक है। उत्तर में प्रतीक शब्द ज़रूर लिखो।" }
+        ]
+      },
+      {
+        "animation": "The widow and granddaughter sit by a new mud chulha, rotis puffing up. Recap cards: '1. ताकत से छीना घर', '2. एक टोकरी = अन्याय का बोझ', '3. अंतरात्मा जागी, न्याय हुआ'.",
+        "lines": [
+          { "speaker": "NEO", "text": "सार यह है। पहला, ज़मींदार ने ताकत के बल पर गरीब का घर छीना। दूसरा, एक टोकरी मिट्टी ने उसे अन्याय का बोझ दिखा दिया। तीसरा, उसकी अंतरात्मा जागी और न्याय हुआ।" },
+          { "speaker": "ZIPPY", "text": "सबसे भारी चीज़ मिट्टी नहीं, गलत काम होता है!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "मल्हार: पाठ",
+    "topic_no": 7,
+    "name": "मत बाँधो — महादेवी वर्मा",
+    "scenes": [
+      {
+        "animation": "A bright dream shaped like a bird tries to fly, but someone ties a string to its leg and holds scissors near its wings. Zippy gasps and shields it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "रुको! कोई सपने के पंख कैसे काट सकता है?" },
+          { "speaker": "NEO", "text": "यही सवाल महादेवी वर्मा अपनी कविता में पूछती हैं। वे कहती हैं: इन सपनों के पंख न काटो, इन सपनों की गति मत बाँधो।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठ 7: मत बाँधो (कविता)', 'कवयित्री: महादेवी वर्मा'. A small tag reads 'छायावाद की प्रमुख कवयित्री'.",
+        "lines": [
+          { "speaker": "NEO", "text": "महादेवी वर्मा हिंदी की प्रसिद्ध कवयित्री हैं। वे छायावाद के चार प्रमुख कवियों में गिनी जाती हैं।" },
+          { "speaker": "NEO", "text": "इस कविता में वे सपनों को आज़ाद छोड़ने की बात करती हैं।" }
+        ]
+      },
+      {
+        "animation": "The dream-bird rises into the sky, labelled 'आरोहण', gathering light from stars. Then it glides back down, labelled 'अवरोहण', and scatters seeds that turn into green fields and happy villages.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवयित्री कहती हैं, सपनों को आकाश तक जाने से मत रोको। उन्हें धरती से मत बाँधो।" },
+          { "speaker": "NEO", "text": "सपने पहले ऊपर उठते हैं, यह आरोहण है। फिर वे नई ऊर्जा लेकर धरती पर लौटते हैं, यह अवरोहण है।" },
+          { "speaker": "ZIPPY", "text": "मतलब सपने आसमान घूमकर वापस आते हैं और धरती को सुंदर बनाते हैं?" },
+          { "speaker": "NEO", "text": "हाँ। सपने कल्पना में जन्म लेते हैं और कर्म से धरती पर सच होते हैं।" }
+        ]
+      },
+      {
+        "animation": "Side-by-side comparison: a caged dream turns grey and small; a free dream grows colourful and big. A banner reads 'स्वतंत्रता = सपनों की साँस'.",
+        "lines": [
+          { "speaker": "NEO", "text": "जब सपनों पर रोक लगाई जाती है, तो वे मुरझा जाते हैं। आज़ादी मिले तो वे बढ़ते हैं और दूसरों के काम आते हैं।" },
+          { "speaker": "ZIPPY", "text": "तो अगर मेरा दोस्त कहे कि वह वैज्ञानिक बनेगा, तो मुझे हँसना नहीं चाहिए।" },
+          { "speaker": "NEO", "text": "बिल्कुल। किसी के सपने का मज़ाक उड़ाना भी उसके पंख काटने जैसा है।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' notecard: 'पंख काटना = सपनों को रोकना (प्रतीक)'. The words 'आरोहण' and 'अवरोहण' flip to show arrows up and down.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: पंख काटना और गति बाँधना, दोनों प्रतीक हैं। इनका अर्थ है सपनों पर रोक लगाना।" },
+          { "speaker": "NEO", "text": "कवयित्री का नाम महादेवी वर्मा लिखो, और उन्हें कवयित्री लिखना, कवि नहीं।" }
+        ]
+      },
+      {
+        "animation": "Many dream-birds fly freely over a village at sunrise. Recap cards: '1. सपनों के पंख न काटो', '2. आरोहण और अवरोहण', '3. आज़ाद सपने धरती को सुंदर बनाते हैं'.",
+        "lines": [
+          { "speaker": "NEO", "text": "याद रखो। पहला, सपनों के पंख न काटो। दूसरा, सपने ऊपर उठते हैं और फिर धरती पर लौटकर सच होते हैं। तीसरा, आज़ाद सपने ही धरती को सुंदर बनाते हैं।" },
+          { "speaker": "ZIPPY", "text": "मेरा सपना तो उड़ चुका है, अब पकड़ के दिखाओ!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "मल्हार: पाठ",
+    "topic_no": 8,
+    "name": "नए मेहमान — उदयशंकर भट्ट",
+    "scenes": [
+      {
+        "animation": "A tiny, hot city flat in summer. A family fans themselves with newspapers; the ceiling fan barely moves. Suddenly there is a loud knock, and two strangers with bags stand at the door, smiling.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "इतनी गर्मी, इतना छोटा घर, और ऊपर से बिन बुलाए मेहमान!" },
+          { "speaker": "NEO", "text": "यही तो इस एकांकी का मज़ा है, ज़िप्पी। आज हम पढ़ेंगे नए मेहमान।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठ 8: नए मेहमान (एकांकी)', 'लेखक: उदयशंकर भट्ट'. A stage curtain opens; a label explains 'एकांकी = एक अंक का नाटक'.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह एकांकी उदयशंकर भट्ट ने लिखा है। एकांकी यानी एक अंक का छोटा नाटक।" },
+          { "speaker": "NEO", "text": "घर है विश्वनाथ का। उनकी पत्नी रेवती के सिर में दर्द है और बच्चे प्रमोद और किरण गर्मी से परेशान हैं।" }
+        ]
+      },
+      {
+        "animation": "Two guests labelled 'नन्हेमल' and 'बाबूलाल' settle in, asking for water, a bath and food. Revati rolls her eyes, Vishwanath smiles politely while wiping sweat. A counter 'माँगें' keeps ticking up.",
+        "lines": [
+          { "speaker": "NEO", "text": "दो अनजान मेहमान आते हैं, नन्हेमल और बाबूलाल। वे आते ही पानी, नहाने और खाने की माँग करने लगते हैं।" },
+          { "speaker": "NEO", "text": "विश्वनाथ उन्हें पहचानते नहीं, फिर भी मना नहीं कर पाते। अतिथि का सम्मान करना हमारी परंपरा जो है।" },
+          { "speaker": "ZIPPY", "text": "मैं होता तो पूछ लेता, भाई साहब, आप हैं कौन?" },
+          { "speaker": "NEO", "text": "रेवती मन ही मन बहुत परेशान है। घर में पहले ही जगह कम है, गर्मी भी बहुत है, और अब मेहमानों के लिए खाना-पानी और सोने की जगह भी जुटानी पड़ रही है।" }
+        ]
+      },
+      {
+        "animation": "A lightbulb moment: the guests show an address slip; it points to a different house in the next lane. They grab their bags and leave awkwardly. The family bursts into relieved laughter.",
+        "lines": [
+          { "speaker": "NEO", "text": "आख़िर पता चलता है कि मेहमान गलत घर में आ गए थे। उन्हें पास की गली में किसी और के यहाँ जाना था।" },
+          { "speaker": "NEO", "text": "वे चले जाते हैं और घर वाले राहत की साँस लेते हैं।" }
+        ]
+      },
+      {
+        "animation": "Another knock. Revati opens the door and her face lights up: it is her brother. She forgets her headache and rushes to the kitchen. A split screen compares her tired face earlier with her happy face now.",
+        "lines": [
+          { "speaker": "NEO", "text": "तभी फिर दस्तक होती है। इस बार रेवती का भाई आता है।" },
+          { "speaker": "NEO", "text": "रेवती अपना सिरदर्द भूलकर खुशी से उसके लिए खाना बनाने लगती है।" },
+          { "speaker": "ZIPPY", "text": "वाह! अपने वाले मेहमान के लिए थकान ग़ायब!" },
+          { "speaker": "NEO", "text": "परीक्षा टिप: यही अंत नाटक का व्यंग्य है। दिखावे की मेहमाननवाज़ी और सच्चे अपनेपन का अंतर लिखना।" }
+        ]
+      },
+      {
+        "animation": "The curtain closes with the family eating together with the brother. Recap cards: '1. शहर की तंगी और गर्मी', '2. अतिथि परंपरा का बोझ', '3. अपनेपन से आई खुशी'.",
+        "lines": [
+          { "speaker": "NEO", "text": "सार याद रखो। पहला, नाटक शहर के छोटे घरों की तंगी और गर्मी दिखाता है। दूसरा, बिन बुलाए मेहमान परंपरा को बोझ बना देते हैं। तीसरा, अपनों के आने से थकान भी खुशी बन जाती है।" },
+          { "speaker": "ZIPPY", "text": "अगली बार घंटी बजे तो पहले पता पूछूँगा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "मल्हार: पाठ",
+    "topic_no": 9,
+    "name": "आदमी का अनुपात — गिरिजाकुमार माथुर",
+    "scenes": [
+      {
+        "animation": "Two cartoon men argue loudly in a small room over who is greater. The camera slowly zooms out: room, house, neighbourhood, city, country, Earth, solar system, galaxy. The two men become an invisible dot.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "अरे! वो दोनों झगड़ने वाले कहाँ गायब हो गए?" },
+          { "speaker": "NEO", "text": "कहीं नहीं गए। बस तुम्हें उनका असली अनुपात दिख गया। यही आज की कविता है, आदमी का अनुपात।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठ 9: आदमी का अनुपात (कविता)', 'कवि: गिरिजाकुमार माथुर'. A ruler labelled 'अनुपात' measures a tiny human against a huge universe.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह कविता गिरिजाकुमार माथुर ने लिखी है। अनुपात का मतलब है किसी चीज़ की तुलना में आकार।" },
+          { "speaker": "ZIPPY", "text": "जैसे गणित में दो और चार का अनुपात एक और दो होता है?" },
+          { "speaker": "NEO", "text": "हाँ, वही अनुपात। बस यहाँ कवि आदमी की तुलना पूरे ब्रह्मांड से कर रहे हैं।" }
+        ]
+      },
+      {
+        "animation": "Nested boxes build step by step on screen with labels: 'कमरा → घर → मुहल्ला → नगर → प्रदेश → देश → पृथ्वी → ब्रह्मांड'. Each new box is much larger than the previous.",
+        "lines": [
+          { "speaker": "NEO", "text": "कविता शुरू होती है दो व्यक्तियों से, जो एक कमरे में हैं।" },
+          { "speaker": "NEO", "text": "कमरा घर में है, घर मुहल्ले में, मुहल्ला नगर में, नगर प्रदेश में और प्रदेश देश में।" },
+          { "speaker": "NEO", "text": "देश पृथ्वी पर है, और पृथ्वी अनगिनत तारों और आकाशगंगाओं वाले ब्रह्मांड का छोटा-सा हिस्सा है।" },
+          { "speaker": "ZIPPY", "text": "तो इतने बड़े ब्रह्मांड में हम तो धूल के कण से भी छोटे हैं!" }
+        ]
+      },
+      {
+        "animation": "Zoom back into the tiny room. The two men now have labels floating around them: 'घमंड', 'ईर्ष्या', 'स्वार्थ', 'नफ़रत', 'अविश्वास'. A wall grows between them.",
+        "lines": [
+          { "speaker": "NEO", "text": "फिर भी यह छोटा-सा आदमी मन में घमंड, ईर्ष्या, स्वार्थ और नफ़रत पाल लेता है।" },
+          { "speaker": "NEO", "text": "एक ही कमरे में बैठे दो लोग भी एक-दूसरे पर विश्वास नहीं करते और दीवारें खड़ी कर लेते हैं।" },
+          { "speaker": "NEO", "text": "कवि हमें आईना दिखाते हैं। इतने छोटे होकर इतना बड़ा अहंकार क्यों?" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' card shows the nested boxes again, with a note: 'क्रम सही लिखो'. The word 'व्यंग्य' highlights in orange.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: कमरे से ब्रह्मांड तक का क्रम ठीक-ठीक याद रखो। यह प्रश्न अक्सर आता है।" },
+          { "speaker": "NEO", "text": "कविता का केंद्रीय भाव लिखते समय बताओ कि कवि मनुष्य के अहंकार पर व्यंग्य करते हैं।" }
+        ]
+      },
+      {
+        "animation": "The wall between the two men crumbles and they shake hands under a starry sky. Recap cards: '1. कमरे से ब्रह्मांड तक', '2. मनुष्य बहुत छोटा', '3. फिर भी अहंकार और ईर्ष्या — छोड़ो'.",
+        "lines": [
+          { "speaker": "NEO", "text": "तीन बातें याद रखो। पहला, कवि कमरे से ब्रह्मांड तक का विस्तार दिखाते हैं। दूसरा, इस विस्तार में मनुष्य बहुत छोटा है। तीसरा, इसलिए घमंड और ईर्ष्या छोड़कर मिलकर रहना चाहिए।" },
+          { "speaker": "ZIPPY", "text": "मैं तो वैसे भी छोटा हूँ, पर अब दिल बड़ा रखूँगा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "मल्हार: पाठ",
+    "topic_no": 10,
+    "name": "तरुण के स्वप्न — सुभाषचंद्र बोस",
+    "scenes": [
+      {
+        "animation": "A packed hall of young people in old-style clothes. On the stage stands Subhas Chandra Bose in a simple outfit, speaking with passion. Zippy sits in the front row with popcorn.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "ये कौन हैं, जिनकी बात सुनकर सारे नौजवान जोश में आ गए?" },
+          { "speaker": "NEO", "text": "ये हैं नेताजी सुभाषचंद्र बोस। आज का पाठ उनका एक भाषण है, जो उन्होंने युवाओं के सम्मेलन में दिया था।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठ 10: तरुण के स्वप्न (भाषण)', 'वक्ता: सुभाषचंद्र बोस'. A tag reads 'तरुण = युवा'.",
+        "lines": [
+          { "speaker": "NEO", "text": "तरुण का मतलब है युवा। इस भाषण में सुभाष बाबू अपने सपनों के भारत के बारे में बताते हैं।" },
+          { "speaker": "NEO", "text": "वे कहते हैं कि यह स्वप्न उनके सामने नित्य और अखंड सत्य है, और इसी के लिए वे जीते हैं।" }
+        ]
+      },
+      {
+        "animation": "A dream map of India fills with icons one by one: broken chains labelled 'स्वतंत्रता', people of all backgrounds holding hands labelled 'जाति-भेद नहीं', girls and boys side by side labelled 'स्त्री-पुरुष समान', a balanced scale labelled 'आर्थिक समानता'.",
+        "lines": [
+          { "speaker": "NEO", "text": "उनके सपने के समाज में हर व्यक्ति स्वतंत्र होगा। किसी पर कोई बंधन नहीं होगा।" },
+          { "speaker": "NEO", "text": "वहाँ जाति का भेद नहीं होगा। स्त्रियों को पुरुषों के बराबर अधिकार मिलेंगे और वे देश की सेवा में बराबर भाग लेंगी।" },
+          { "speaker": "NEO", "text": "अमीर-गरीब की खाई नहीं होगी, और सबको पढ़ने और आगे बढ़ने का मौका मिलेगा।" },
+          { "speaker": "ZIPPY", "text": "यह तो आज के भारत के लिए भी एकदम सही सपना है!" }
+        ]
+      },
+      {
+        "animation": "Workers, farmers and students work together; a sign 'श्रम का सम्मान' shines while a lazy snoring figure fades away. Then the whole map glows and rays spread to the world globe.",
+        "lines": [
+          { "speaker": "NEO", "text": "उस समाज में मेहनत का सम्मान होगा और आलस के लिए कोई जगह नहीं होगी।" },
+          { "speaker": "NEO", "text": "नेताजी चाहते थे कि ऐसा भारत पूरी दुनिया के लिए उदाहरण बने।" },
+          { "speaker": "NEO", "text": "भाषण के अंत में वे यह स्वप्न युवाओं को उपहार के रूप में सौंप देते हैं।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' clipboard lists: 'विधा: भाषण', 'श्रोता: युवा', 'मुख्य बिंदु: स्वतंत्रता, समानता, श्रम'. Each item gets a tick.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: पाठ की विधा भाषण है, कहानी नहीं। उत्तर में यही लिखो।" },
+          { "speaker": "NEO", "text": "सपनों के समाज की विशेषताएँ बिंदुओं में लिखो: स्वतंत्रता, समानता, शिक्षा और श्रम का सम्मान।" }
+        ]
+      },
+      {
+        "animation": "Zippy receives a glowing gift box labelled 'स्वप्न' from the stage. Recap cards: '1. स्वतंत्र और समान समाज', '2. स्त्रियों को बराबर अधिकार, श्रम का सम्मान', '3. स्वप्न युवाओं को उपहार'.",
+        "lines": [
+          { "speaker": "NEO", "text": "संक्षेप में। पहला, नेताजी का सपना स्वतंत्र और समान समाज का है। दूसरा, उसमें स्त्रियों को बराबर अधिकार और मेहनत को सम्मान मिलता है। तीसरा, यह सपना वे युवाओं को उपहार में देते हैं।" },
+          { "speaker": "ZIPPY", "text": "उपहार मिल गया! अब इसे पूरा करना हमारी ड्यूटी है।" }
+        ]
+      }
+    ]
+  }
+]

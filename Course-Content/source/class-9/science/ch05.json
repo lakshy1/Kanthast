@@ -1,0 +1,430 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "The Fundamental Unit of Life",
+    "topic_no": 1,
+    "name": "Discovery of the Cell and the Cell Theory",
+    "scenes": [
+      {
+        "animation": "A kitchen. Zippy peels a thin, transparent layer from an onion bulb and holds it up to the light. It looks like plain tissue paper. Neo slides it under a school microscope, and a grid of tiny brick-like boxes appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This onion peel looks plain. Why does it look like a brick wall under the microscope?" },
+          { "speaker": "NEO", "text": "Those bricks are cells. Every living thing is built from them." }
+        ]
+      },
+      {
+        "animation": "A sepia 1665 scene: Robert Hooke peers through his self-designed microscope at a thin slice of cork. Honeycomb-like compartments appear with the label 'cell = little room (Latin)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1665, Robert Hooke looked at a thin slice of cork through a self-designed microscope. He saw many little compartments, like a honeycomb." },
+          { "speaker": "NEO", "text": "He called them cells. Cell is a Latin word for a little room." }
+        ]
+      },
+      {
+        "animation": "A timeline builds from left to right with small portraits: '1674: Leeuwenhoek, free-living cells in pond water', '1831: Robert Brown, nucleus', '1839: Purkinje, protoplasm', '1838–39: Schleiden and Schwann, cell theory', '1855: Virchow, cells from pre-existing cells', '1940: electron microscope'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1674, Leeuwenhoek, with an improved microscope, discovered free-living cells in pond water for the first time." },
+          { "speaker": "NEO", "text": "Robert Brown discovered the nucleus in 1831. Purkinje coined the term protoplasm in 1839." },
+          { "speaker": "NEO", "text": "Schleiden in 1838 and Schwann in 1839 presented the cell theory: all plants and animals are composed of cells, and the cell is the basic unit of life. Virchow in 1855 added that all cells arise from pre-existing cells." }
+        ]
+      },
+      {
+        "animation": "Two columns: 'Unicellular: Amoeba, Chlamydomonas, Paramoecium, bacteria' each shown as a single wriggling cell; 'Multicellular: fungi, plants, animals' shown as a tree and a human built from many cells. Below, cartoon cells of different shapes: a long nerve cell, a round blood cell, a spindle muscle cell.",
+        "lines": [
+          { "speaker": "NEO", "text": "Organisms made of a single cell, like Amoeba, Chlamydomonas, Paramoecium and bacteria, are unicellular. Fungi, plants and animals, made of many cells, are multicellular." },
+          { "speaker": "ZIPPY", "text": "Do all cells look the same?" },
+          { "speaker": "NEO", "text": "No. A nerve cell is long, a blood cell is round. The shape of a cell is related to its function. Every multicellular organism comes from a single cell." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card with a factory: different departments labelled 'nucleus', 'mitochondria', 'plastids' each doing a job. Caption: 'Division of labour within a cell: cell organelles'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Each cell has specific components called cell organelles, each doing a special job. That's division of labour within a single cell." },
+          { "speaker": "NEO", "text": "Exam tip: match each discoverer to the right year. Hooke 1665, Leeuwenhoek 1674, Brown 1831 are asked most often." }
+        ]
+      },
+      {
+        "animation": "Recap board with an onion peel icon. Points appear: '1. Hooke (1665) saw cells in cork', '2. Cell theory: all living things are made of cells; cells arise from pre-existing cells', '3. Unicellular vs multicellular; cell shape suits function'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Robert Hooke first saw cells in cork in 1665." },
+          { "speaker": "NEO", "text": "Two: cell theory says all plants and animals are made of cells, and new cells arise from pre-existing cells." },
+          { "speaker": "NEO", "text": "Three: organisms can be unicellular or multicellular, and a cell's shape suits its function." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "The Fundamental Unit of Life",
+    "topic_no": 2,
+    "name": "Plasma Membrane: Diffusion and Osmosis",
+    "scenes": [
+      {
+        "animation": "A bowl of dry kishmish (raisins) on a table. Zippy drops some into water and leaves. Hours later the raisins are plump and round, grinning. Zippy's jaw drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The raisins got fat overnight! What did they eat?" },
+          { "speaker": "NEO", "text": "Only water. It moved into them through their cell membranes by osmosis." }
+        ]
+      },
+      {
+        "animation": "A cell's outer boundary is drawn as a flexible, wavy line made of 'lipids and proteins'. Some particles pass through gates, others bounce off. Label: 'Plasma membrane: selectively permeable'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The plasma membrane is the outermost covering of the cell. It separates the contents of the cell from its external environment." },
+          { "speaker": "NEO", "text": "It allows the entry and exit of some materials and prevents others. So it is called a selectively permeable membrane. It is made of lipids and proteins, and it is flexible." }
+        ]
+      },
+      {
+        "animation": "Carbon dioxide dots crowd inside a cell and spread outward to where there are fewer; oxygen dots move inward. Arrows labelled 'high concentration → low concentration'. Caption: 'Diffusion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Carbon dioxide is a cellular waste. When it builds up inside the cell, it moves out to where its concentration is lower. Oxygen moves in the same way into the cell." },
+          { "speaker": "NEO", "text": "This spontaneous movement from a region of high concentration to a region of low concentration is diffusion." }
+        ]
+      },
+      {
+        "animation": "Osmosis definition card: 'Movement of water molecules through a selectively permeable membrane from high water concentration to low water concentration'. Three cells in three beakers build side by side: 'Hypotonic (dilute): cell swells', 'Isotonic: no change', 'Hypertonic (concentrated): cell shrinks'. Water arrows point in, both ways, and out.",
+        "lines": [
+          { "speaker": "NEO", "text": "When water moves by diffusion through a selectively permeable membrane, it's called osmosis." },
+          { "speaker": "NEO", "text": "If the outside solution is more dilute, a hypotonic solution, the cell gains water and swells." },
+          { "speaker": "NEO", "text": "If it's the same concentration, isotonic, there's no net movement. If the outside is more concentrated, hypertonic, the cell loses water and shrinks." }
+        ]
+      },
+      {
+        "animation": "Activity built step by step: an egg's shell is dissolved in dilute hydrochloric acid, leaving a thin skin. The egg in pure water swells; another in concentrated salt solution shrinks. The swollen raisins are then placed in sugar solution and shrink back. A yellow 'EXAM TIP' sticker: 'Hypo = gain water, Hyper = lose water'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Remove an egg's shell with dilute hydrochloric acid. In pure water the egg swells. In concentrated salt solution it shrinks." },
+          { "speaker": "ZIPPY", "text": "And my fat raisins in sugar syrup?" },
+          { "speaker": "NEO", "text": "They shrink again. Exam tip: hypotonic means the cell gains water, and hypertonic means it loses water. Plant roots absorb water from the soil by osmosis too." }
+        ]
+      },
+      {
+        "animation": "Recap board with a raisin icon. Points appear: '1. Plasma membrane: selectively permeable, made of lipids and proteins', '2. Diffusion: high → low concentration', '3. Osmosis: water through a selectively permeable membrane; hypo swells, hyper shrinks'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the plasma membrane is selectively permeable and made of lipids and proteins." },
+          { "speaker": "NEO", "text": "Two: diffusion moves substances from high to low concentration." },
+          { "speaker": "NEO", "text": "Three: osmosis is water diffusing through a selectively permeable membrane; cells swell in hypotonic and shrink in hypertonic solutions." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "The Fundamental Unit of Life",
+    "topic_no": 3,
+    "name": "Endocytosis, Cell Wall and Plasmolysis",
+    "scenes": [
+      {
+        "animation": "A pond under a microscope. A cartoon Amoeba stretches out arm-like projections, wraps around a food particle and swallows it whole. Zippy gasps and hides behind Neo.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "That blob just hugged its lunch and swallowed it!" },
+          { "speaker": "NEO", "text": "That's Amoeba feeding by endocytosis. Its flexible plasma membrane makes it possible." }
+        ]
+      },
+      {
+        "animation": "Step by step: the Amoeba's membrane folds around the food, the edges meet, and a food vacuole pinches off inside. Label: 'Endocytosis: engulfing food and other material using a flexible plasma membrane'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The flexibility of the plasma membrane lets a cell engulf food and other material from its external environment. This process is called endocytosis." },
+          { "speaker": "NEO", "text": "Amoeba acquires its food this way. The engulfed food then sits inside a food vacuole, where it is digested." },
+          { "speaker": "ZIPPY", "text": "So a stiff membrane would leave Amoeba hungry?" },
+          { "speaker": "NEO", "text": "Exactly. Without a flexible membrane, it couldn't wrap around its food at all." }
+        ]
+      },
+      {
+        "animation": "A plant cell is drawn: first the plasma membrane, then an outer rigid layer is added around it labelled 'Cell wall: mainly cellulose'. A cartoon brick-wall texture appears on the wall with the tag 'structural strength'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Plant cells have an extra rigid outer covering outside the plasma membrane, called the cell wall." },
+          { "speaker": "NEO", "text": "The plant cell wall is mainly composed of cellulose, a complex substance that provides structural strength to plants." }
+        ]
+      },
+      {
+        "animation": "Activity: a Rhoeo leaf peel on a slide. Concentrated salt solution is added; under the microscope, the purple cell contents shrink and pull away from the cell wall, leaving gaps. Label: 'Plasmolysis'. A boiled leaf peel next to it shows no change, labelled 'Dead cells: no plasmolysis'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When a living plant cell loses water through osmosis, the contents of the cell shrink or contract away from the cell wall. This is plasmolysis." },
+          { "speaker": "ZIPPY", "text": "What if I try it on a boiled leaf?" },
+          { "speaker": "NEO", "text": "Nothing happens. Only living cells, not dead cells, can absorb or lose water by osmosis." }
+        ]
+      },
+      {
+        "animation": "A plant cell in a very dilute solution fills with water and presses against its wall, which holds firm like a strong balloon casing. An animal cell in the same solution swells and pops with a cartoon 'pop'. Caption: 'Cell wall lets plant, fungal and bacterial cells withstand dilute media'. A yellow 'EXAM TIP' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cell walls let the cells of plants, fungi and bacteria withstand very dilute external media without bursting. The cells take up water, swell and push against the wall, and the wall exerts an equal pressure back." },
+          { "speaker": "NEO", "text": "Exam tip: plasmolysis needs a living cell and a hypertonic solution. Mention both in your answer." }
+        ]
+      },
+      {
+        "animation": "Recap board with an Amoeba icon. Points appear: '1. Endocytosis: flexible membrane engulfs food (Amoeba)', '2. Plant cell wall: cellulose, gives strength', '3. Plasmolysis: living cell loses water, contents shrink from wall'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: endocytosis lets cells like Amoeba engulf food using a flexible membrane." },
+          { "speaker": "NEO", "text": "Two: the plant cell wall is made mainly of cellulose and gives strength." },
+          { "speaker": "NEO", "text": "Three: in plasmolysis, a living cell loses water, and its contents shrink away from the cell wall." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "The Fundamental Unit of Life",
+    "topic_no": 4,
+    "name": "Nucleus: Prokaryotic and Eukaryotic Cells",
+    "scenes": [
+      {
+        "animation": "A cartoon cell city. At its centre is a round control-room building labelled 'Nucleus', with blueprints and a big screen. Zippy tries to sneak in and is stopped at a double-layered gate with small pores.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is this building guarded with two walls?" },
+          { "speaker": "NEO", "text": "It's the nucleus, the control centre of the cell. Its double-layered membrane protects the cell's instructions." }
+        ]
+      },
+      {
+        "animation": "The nucleus is drawn step by step: 'Nuclear membrane: double layer' with 'Nuclear pores' letting material move to the cytoplasm; inside, a tangled thread labelled 'Chromatin material'. As the cell starts to divide, the threads coil into rod-shaped 'Chromosomes'. A zoom shows 'DNA', with a segment highlighted as 'Gene'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The nucleus has a double-layered covering called the nuclear membrane. Its pores allow material to transfer from inside the nucleus to the cytoplasm." },
+          { "speaker": "NEO", "text": "The nucleus contains chromosomes, visible as rod-shaped structures only when the cell is about to divide. They contain DNA, which carries information for inheritance." },
+          { "speaker": "NEO", "text": "Functional segments of DNA are called genes. In a cell that is not dividing, the DNA is present as chromatin material, an entangled mass of thread-like structures." }
+        ]
+      },
+      {
+        "animation": "A card: 'Nucleus: central role in cellular reproduction; with environment, determines development and form of the cell'. A cell splits into two, each getting a copy of the nucleus.",
+        "lines": [
+          { "speaker": "NEO", "text": "The nucleus plays a central role in cellular reproduction, the process by which a single cell divides to form two new cells." },
+          { "speaker": "NEO", "text": "Along with the environment, it also directs the chemical activities of the cell and determines the way the cell develops." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: a bacterial cell with no membrane around its DNA; the DNA area is labelled 'Nucleoid'. Right: an eukaryotic cell with a proper nucleus. A table builds: 'Size: small (1–10 μm) | large (5–100 μm)', 'Nuclear region: nucleoid, no membrane | well-defined, nuclear membrane', 'Chromosome: single | more than one', 'Membrane-bound organelles: absent | present'. A note: '1 μm = 10⁻⁶ m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In some organisms like bacteria, the nuclear region is poorly defined, with no nuclear membrane. This undefined region with only nucleic acids is called a nucleoid." },
+          { "speaker": "NEO", "text": "Such organisms are prokaryotes, meaning primitive nucleus. Organisms with a nuclear membrane are eukaryotes." },
+          { "speaker": "NEO", "text": "Prokaryotic cells are generally small, one to ten micrometres, have a single chromosome, and lack membrane-bound organelles. Eukaryotic cells are larger, five to one hundred micrometres, and have more than one chromosome." }
+        ]
+      },
+      {
+        "animation": "Zippy points at a bacterium. A yellow 'EXAM TIP' card appears: 'Prokaryote = no nuclear membrane (nucleoid), e.g. bacteria'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So bacteria have DNA, but no proper house for it?" },
+          { "speaker": "NEO", "text": "Exactly. Exam tip: the key difference asked in exams is the nuclear membrane, present in eukaryotes and absent in prokaryotes." }
+        ]
+      },
+      {
+        "animation": "Recap board with the control-room icon. Points appear: '1. Nucleus: double membrane with pores; chromosomes contain DNA; genes', '2. Controls cell activities and reproduction', '3. Prokaryotes: nucleoid, no nuclear membrane; eukaryotes: true nucleus'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the nucleus has a porous double membrane, and its chromosomes carry DNA with genes." },
+          { "speaker": "NEO", "text": "Two: the nucleus controls the cell's activities and its reproduction." },
+          { "speaker": "NEO", "text": "Three: prokaryotes have a nucleoid without a nuclear membrane, while eukaryotes have a well-defined nucleus." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "The Fundamental Unit of Life",
+    "topic_no": 5,
+    "name": "Cytoplasm, Endoplasmic Reticulum and Golgi Apparatus",
+    "scenes": [
+      {
+        "animation": "A cell drawn as a busy factory town. Conveyor belts, packing units and delivery trucks move through a jelly-like fluid. Zippy wears a hard hat and a visitor badge.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This cell looks like a factory. Where's the production line?" },
+          { "speaker": "NEO", "text": "In the cytoplasm. Let's visit the endoplasmic reticulum and the Golgi apparatus." }
+        ]
+      },
+      {
+        "animation": "The cytoplasm fills in as a pale fluid between the plasma membrane and the nucleus, with organelles floating in it. Label: 'Cytoplasm: fluid content inside plasma membrane; contains organelles'. A small virus icon appears with the note 'no membranes; lives only inside a living cell'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The cytoplasm is the fluid content inside the plasma membrane. It also contains many specialised cell organelles." },
+          { "speaker": "NEO", "text": "The organelles of eukaryotic cells are enclosed by membranes. Viruses lack membranes, and they show characteristics of life only when they enter a living cell." }
+        ]
+      },
+      {
+        "animation": "The ER is drawn step by step as a network of membrane-bound tubes and sheets from the nuclear membrane outward. One part is dotted with ribosomes, labelled 'RER: ribosomes make proteins'; the other is smooth, labelled 'SER: makes fats/lipids'. A liver icon beside SER reads 'Detoxifies poisons and drugs (vertebrate liver)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The endoplasmic reticulum, or ER, is a large network of membrane-bound tubes and sheets." },
+          { "speaker": "NEO", "text": "Rough ER has ribosomes on its surface, which are the sites of protein manufacture. Smooth ER helps in the manufacture of fat molecules, or lipids." },
+          { "speaker": "NEO", "text": "Some of these proteins and lipids help build the cell membrane. This is membrane biogenesis. In the liver cells of vertebrates, smooth ER also detoxifies many poisons and drugs." }
+        ]
+      },
+      {
+        "animation": "Conveyor tubes of the ER carry packages to a stack of flattened sacs labelled 'Golgi apparatus: cisterns', named after 'Camillo Golgi'. Packages are stamped 'stored', 'modified' and 'packaged', then loaded onto trucks heading inside and outside the cell. A small sac buds off, labelled 'Lysosome'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Golgi apparatus, first described by Camillo Golgi, is a system of membrane-bound vesicles arranged in stacks called cisterns." },
+          { "speaker": "NEO", "text": "Material made near the ER is packaged and dispatched by the Golgi to places inside and outside the cell. It stores, modifies and packages products." },
+          { "speaker": "ZIPPY", "text": "So the Golgi is the cell's courier service!" },
+          { "speaker": "NEO", "text": "Nicely put. It also helps make complex sugars from simple sugars and is involved in forming lysosomes." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card: 'Membrane biogenesis = ER; Detoxification = SER; Packaging = Golgi'. Each term glows over its organelle on the factory map.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: remember three one-word links. Membrane biogenesis goes with ER, detoxification with smooth ER, and packaging with Golgi." }
+        ]
+      },
+      {
+        "animation": "Recap board with the factory icon. Points appear: '1. Cytoplasm: fluid with organelles', '2. RER makes proteins, SER makes lipids; ER builds membranes', '3. Golgi stores, modifies, packages and dispatches'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the cytoplasm is the fluid inside the plasma membrane, holding the organelles." },
+          { "speaker": "NEO", "text": "Two: rough ER makes proteins, smooth ER makes lipids, and together they build cell membranes." },
+          { "speaker": "NEO", "text": "Three: the Golgi apparatus stores, modifies, packages and dispatches materials." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "The Fundamental Unit of Life",
+    "topic_no": 6,
+    "name": "Lysosomes, Mitochondria, Plastids and Vacuoles",
+    "scenes": [
+      {
+        "animation": "The cell factory town at night. A garbage truck labelled 'Lysosome' collects junk, a power station labelled 'Mitochondria' hums, green solar panels labelled 'Chloroplasts' rest, and a giant water tank labelled 'Vacuole' sits in the plant district. Zippy flies a drone over the town.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Garbage trucks, power plants, solar panels. This cell has everything!" },
+          { "speaker": "NEO", "text": "Let's meet four more organelles that keep the cell running." }
+        ]
+      },
+      {
+        "animation": "A lysosome is drawn as a membrane-bound sac full of scissor-shaped enzymes. It swallows a broken organelle and a bacterium and digests them. Then, in a damaged cell, it bursts and enzymes spill out; label 'Suicide bags of the cell'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Lysosomes are membrane-bound sacs filled with digestive enzymes, made by the rough ER. They are the cell's waste disposal system." },
+          { "speaker": "NEO", "text": "They digest foreign material like bacteria, and worn-out cell organelles. When a cell gets damaged, lysosomes may burst and digest their own cell. So they are called suicide bags." }
+        ]
+      },
+      {
+        "animation": "A mitochondrion is drawn step by step: a smooth porous outer membrane, then a deeply folded inner membrane. Energy tokens labelled 'ATP' pop out. A small loop of DNA and some ribosomes appear inside with the tag 'Own DNA and ribosomes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mitochondria are the powerhouses of the cell. The energy needed for life's activities is released by mitochondria as ATP, adenosine triphosphate." },
+          { "speaker": "NEO", "text": "ATP is the energy currency of the cell. Mitochondria have two membranes; the outer one is porous and the inner one is deeply folded." },
+          { "speaker": "NEO", "text": "They have their own DNA and ribosomes, so they can make some of their own proteins." }
+        ]
+      },
+      {
+        "animation": "Plastids appear only in the plant district: 'Chromoplasts: coloured', including green 'Chloroplasts: contain chlorophyll, photosynthesis', and 'Leucoplasts: white, store starch, oils and protein granules'. A chloroplast opens to show membrane layers in a 'Stroma'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Plastids are present only in plant cells. There are two types: chromoplasts, which are coloured, and leucoplasts, which are white or colourless." },
+          { "speaker": "NEO", "text": "Chloroplasts contain chlorophyll and are important for photosynthesis. Leucoplasts store starch, oils and protein granules. Plastids also have their own DNA and ribosomes." }
+        ]
+      },
+      {
+        "animation": "A plant cell with a huge central vacuole filling most of it, labelled '50–90% of cell volume'; an animal cell beside it has tiny vacuoles. Amoeba shows a 'food vacuole', and a unicellular organism pumps out water through a 'contractile vacuole'. A yellow 'EXAM TIP' sticker: 'Powerhouse = mitochondria; suicide bags = lysosomes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Vacuoles are storage sacs. They are small in animal cells, but in plant cells the central vacuole can occupy fifty to ninety percent of the cell volume. It gives turgidity and rigidity to the cell." },
+          { "speaker": "ZIPPY", "text": "And Amoeba keeps its lunch in one!" },
+          { "speaker": "NEO", "text": "Right, a food vacuole. Exam tip: organelles with their own DNA and ribosomes are mitochondria and plastids. This is a common one-mark question." }
+        ]
+      },
+      {
+        "animation": "Recap board with the cell-town icon. Points appear: '1. Lysosomes: waste disposal, suicide bags', '2. Mitochondria: powerhouse, make ATP; have own DNA', '3. Plastids in plants; large vacuoles give plant cells rigidity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: lysosomes are the waste disposal system and are called suicide bags." },
+          { "speaker": "NEO", "text": "Two: mitochondria release energy as ATP and have their own DNA and ribosomes." },
+          { "speaker": "NEO", "text": "Three: plastids are found in plant cells, and the large plant vacuole gives turgidity and rigidity." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "The Fundamental Unit of Life",
+    "topic_no": 7,
+    "name": "Plant Cell vs Animal Cell",
+    "scenes": [
+      {
+        "animation": "A science exhibition. Two giant cell models stand side by side: one boxy and green, the other round and pink. Zippy is the judge holding a clipboard, trying to spot the differences.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Both cells have a nucleus and mitochondria. How do I tell the plant cell from the animal cell?" },
+          { "speaker": "NEO", "text": "Look for three giveaways: the cell wall, plastids and the vacuole." }
+        ]
+      },
+      {
+        "animation": "An animal cell diagram draws itself step by step with labels flying in: 'Plasma membrane', 'Cytoplasm', 'Nucleus', 'Nuclear membrane', 'Nucleolus', 'Mitochondria', 'Rough ER', 'Smooth ER', 'Ribosomes', 'Golgi apparatus', 'Lysosome', 'Small vacuole', 'Centrosome'.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, the animal cell. It's bounded by the plasma membrane. Inside, the cytoplasm holds the nucleus, mitochondria, ER with ribosomes, Golgi apparatus and lysosomes." },
+          { "speaker": "NEO", "text": "Its vacuoles are small, and it has a centrosome near the nucleus." }
+        ]
+      },
+      {
+        "animation": "A plant cell diagram draws itself: a rigid 'Cell wall' first, then 'Plasma membrane' inside it, then a huge 'Central vacuole' pushing the 'Nucleus' and 'Cytoplasm' to the side, followed by green 'Chloroplasts', 'Mitochondria', 'ER', 'Golgi apparatus' and 'Ribosomes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now the plant cell. It has a rigid cell wall outside the plasma membrane." },
+          { "speaker": "NEO", "text": "It contains plastids, like chloroplasts. And it has a large central vacuole that pushes the nucleus and cytoplasm towards the edge." },
+          { "speaker": "ZIPPY", "text": "So the plant cell is like a house with a boundary wall, solar panels and a big water tank!" }
+        ]
+      },
+      {
+        "animation": "A difference table builds row by row: 'Cell wall: present | absent', 'Plastids: present | absent', 'Vacuole: large, central | small, many', 'Shape: usually regular | usually irregular or round'. Each row gets a checkmark animation.",
+        "lines": [
+          { "speaker": "NEO", "text": "So, plant cells have a cell wall, animal cells don't. Plant cells have plastids, animal cells don't." },
+          { "speaker": "NEO", "text": "Plant cells have one large vacuole, while animal cells have small vacuoles." },
+          { "speaker": "NEO", "text": "Both have a plasma membrane, cytoplasm, nucleus, mitochondria, ER, Golgi apparatus and ribosomes." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card: 'Draw neat labelled diagrams; label at least 6 parts; use a pencil; keep label lines parallel'. The plant cell diagram is shown with neat horizontal label lines.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can I just draw a circle with a dot and call it a cell?" },
+          { "speaker": "NEO", "text": "Not if you want the marks. Exam tip: the labelled plant or animal cell diagram is a very common question. Label at least six parts neatly, with straight, non-crossing lines." },
+          { "speaker": "NEO", "text": "And for a plant cell, always show the cell wall outside the plasma membrane, as two separate lines." }
+        ]
+      },
+      {
+        "animation": "Recap board with both cell icons. Points appear: '1. Common: plasma membrane, cytoplasm, nucleus, mitochondria, ER, Golgi, ribosomes', '2. Plant only: cell wall and plastids', '3. Vacuole: large in plant cells, small in animal cells'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: both cells have a plasma membrane, cytoplasm, nucleus, mitochondria, ER, Golgi apparatus and ribosomes." },
+          { "speaker": "NEO", "text": "Two: only plant cells have a cell wall and plastids." },
+          { "speaker": "NEO", "text": "Three: plant cells have a large central vacuole, while animal cells have small ones." },
+          { "speaker": "ZIPPY", "text": "Judge's verdict: both cells win!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "The Fundamental Unit of Life",
+    "topic_no": 8,
+    "name": "Cell Division: Mitosis and Meiosis",
+    "scenes": [
+      {
+        "animation": "Zippy scrapes its knee in a cricket match. Days pass in fast-forward: the wound shrinks as cartoon skin cells split in two again and again to fill the gap.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My scraped knee healed all by itself! Where did the new skin come from?" },
+          { "speaker": "NEO", "text": "From cell division. Old cells divided to form new ones." }
+        ]
+      },
+      {
+        "animation": "A card: 'New cells are formed to grow, to replace old, dead and injured cells, and to form gametes for reproduction'. Icons: a growing child, a healing wound, and male and female reproductive cells.",
+        "lines": [
+          { "speaker": "NEO", "text": "Organisms need new cells to grow, to replace old, dead and injured cells, and to form gametes for reproduction." },
+          { "speaker": "NEO", "text": "The process by which new cells are made is called cell division. There are two main types: mitosis and meiosis." }
+        ]
+      },
+      {
+        "animation": "Mitosis built step by step: a mother cell with 4 chromosomes copies them, lines them up, and splits into two daughter cells, each with 4 chromosomes. Label: 'Mitosis: 1 mother cell → 2 identical daughter cells; same number of chromosomes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Most cells divide by mitosis for growth. Each mother cell divides to form two identical daughter cells." },
+          { "speaker": "NEO", "text": "The daughter cells have the same number of chromosomes as the mother cell. Mitosis helps in growth and in the repair of tissues, like your knee." }
+        ]
+      },
+      {
+        "animation": "Meiosis built step by step inside a flower and a testis/ovary icon: a cell with 4 chromosomes undergoes 'Division 1' into two cells, then 'Division 2' into four cells, each with 2 chromosomes. Label: 'Meiosis: 2 consecutive divisions → 4 cells with half the chromosomes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Specific cells of reproductive organs or tissues in animals and plants divide by meiosis to form gametes." },
+          { "speaker": "NEO", "text": "Meiosis involves two consecutive divisions. So one cell forms four new cells, and each has only half the number of chromosomes of the mother cell." },
+          { "speaker": "ZIPPY", "text": "Why half? Isn't that losing stuff?" },
+          { "speaker": "NEO", "text": "When two gametes fuse during fertilisation, the full number is restored in the offspring." }
+        ]
+      },
+      {
+        "animation": "A comparison table builds: 'Mitosis | Meiosis': 'Cells formed: 2 | 4', 'Chromosome number: same as mother | half of mother', 'Divisions: 1 | 2 consecutive', 'Purpose: growth and repair | gametes for reproduction'. A yellow 'EXAM TIP' sticker points at 'half'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's put them side by side. Mitosis gives two cells, meiosis gives four." },
+          { "speaker": "NEO", "text": "Mitosis keeps the chromosome number the same. Meiosis halves it." },
+          { "speaker": "NEO", "text": "Exam tip: in a mitosis versus meiosis question, compare the number of daughter cells, the chromosome number, and where each division happens." }
+        ]
+      },
+      {
+        "animation": "Recap board with a healed knee icon. Points appear: '1. Cell division: growth, repair, gametes', '2. Mitosis: 2 identical cells, same chromosome number', '3. Meiosis: 2 divisions, 4 cells with half the chromosomes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: cell division makes new cells for growth, repair and reproduction." },
+          { "speaker": "NEO", "text": "Two: mitosis gives two identical daughter cells with the same chromosome number." },
+          { "speaker": "NEO", "text": "Three: meiosis has two divisions and gives four cells with half the chromosomes." }
+        ]
+      }
+    ]
+  }
+]

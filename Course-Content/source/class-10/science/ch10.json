@@ -1,0 +1,347 @@
+[
+  {
+    "chapter_no": 10,
+    "chapter": "The Human Eye and the Colourful World",
+    "topic_no": 1,
+    "name": "The Human Eye and Power of Accommodation",
+    "scenes": [
+      {
+        "animation": "A school corridor. Zippy squints at a phone held close to its face, then snaps round to look at a kite high above the playground; a cartoon focus ring spins inside its eye with a whirr.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, I just read a text and then spotted a kite a hundred metres away. Do my eyes have autofocus?" },
+          { "speaker": "NEO", "text": "They do, Zippy. It is called the power of accommodation, and it runs on muscles, not batteries." },
+          { "speaker": "ZIPPY", "text": "Muscles? Inside my eyeball? Show me!" }
+        ]
+      },
+      {
+        "animation": "A large cross-section of the eye is built step by step: cornea, iris, pupil, crystalline lens, ciliary muscles, retina and optic nerve, each label sliding in with a soft pop. A yellow light ray enters and bends most sharply at the cornea, then forms a small upside-down image on the retina.",
+        "lines": [
+          { "speaker": "NEO", "text": "Light enters through the cornea, a thin transparent membrane that bulges out at the front of the eyeball." },
+          { "speaker": "NEO", "text": "Most of the refraction happens at the outer surface of the cornea." },
+          { "speaker": "NEO", "text": "The crystalline lens then fine-tunes the focus and forms a real, inverted image on the retina." },
+          { "speaker": "NEO", "text": "Light-sensitive cells in the retina send electrical signals through the optic nerve to the brain, and the brain lets us see objects as they are." },
+          { "speaker": "ZIPPY", "text": "So my brain flips the upside-down picture for free. Nice." }
+        ]
+      },
+      {
+        "animation": "Split screen: on a sunny cricket ground the pupil shrinks to a tiny dot; in a dark cinema hall it widens like a camera shutter opening. A label 'Iris controls pupil size' glows between the two halves.",
+        "lines": [
+          { "speaker": "NEO", "text": "The iris is a dark muscular diaphragm behind the cornea. It controls the size of the pupil." },
+          { "speaker": "NEO", "text": "The pupil regulates how much light enters the eye. In bright light it becomes small; in dim light it opens wide." },
+          { "speaker": "ZIPPY", "text": "That is why I bump into seats for the first minute in a dark cinema!" }
+        ]
+      },
+      {
+        "animation": "Close-up of the eye lens held by ciliary muscles drawn as tiny springs. For the distant kite the muscles relax and the lens thins, label 'Focal length ↑'; for the phone the muscles contract and the lens bulges, label 'Focal length ↓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now the autofocus trick. The eye lens is made of a fibrous, jelly-like material, so its shape can change." },
+          { "speaker": "NEO", "text": "When the ciliary muscles relax, the lens becomes thin and its focal length increases, so distant objects look clear." },
+          { "speaker": "NEO", "text": "When the ciliary muscles contract, the lens becomes thicker and its focal length decreases, so nearby objects come into focus." },
+          { "speaker": "NEO", "text": "This ability of the eye lens to adjust its focal length is the power of accommodation." }
+        ]
+      },
+      {
+        "animation": "A measuring tape shoots out from the eye: a flag at '25 cm' reads 'Near point' and a flag on the far horizon reads 'Far point = infinity'. A yellow 'Board Tip' sticky note slaps onto the corner, then a cloudy grey lens labelled 'Cataract' briefly fades in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So I can hold my phone as close as I like?" },
+          { "speaker": "NEO", "text": "No. The focal length cannot drop below a certain minimum. For a young adult with normal vision, the nearest clear point is about 25 centimetres away." },
+          { "speaker": "NEO", "text": "That is the near point, or least distance of distinct vision. The far point of a normal eye is at infinity." },
+          { "speaker": "NEO", "text": "Board tip: the range of vision of a normal eye is 25 centimetres to infinity. It is a favourite one-mark question." },
+          { "speaker": "NEO", "text": "Also remember: in old age the crystalline lens can turn milky and cloudy. This is cataract, and surgery can restore vision." }
+        ]
+      },
+      {
+        "animation": "Neo stands beside a green chalkboard titled 'Recap'. Three points tick in one by one with chalk-dust puffs: '1. Cornea refracts most; lens forms real, inverted image on retina', '2. Ciliary muscles change focal length = accommodation', '3. Near point 25 cm, far point infinity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Quick recap." },
+          { "speaker": "NEO", "text": "One: most refraction happens at the cornea, and the lens forms a real, inverted image on the retina." },
+          { "speaker": "NEO", "text": "Two: the ciliary muscles change the focal length of the eye lens. That is the power of accommodation." },
+          { "speaker": "NEO", "text": "Three: a normal eye sees clearly from its near point at 25 centimetres to its far point at infinity." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "The Human Eye and the Colourful World",
+    "topic_no": 2,
+    "name": "Defects of Vision and Their Correction",
+    "scenes": [
+      {
+        "animation": "A classroom. Zippy sits on the last bench squinting at a blurry blackboard where the word 'PHOTOSYNTHESIS' wobbles like jelly, while the textbook on its desk is perfectly sharp.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, the blackboard is a blur, but my textbook is crystal clear. Is my eye broken?" },
+          { "speaker": "NEO", "text": "Not broken. It is just focusing a little too early. That sounds like myopia." }
+        ]
+      },
+      {
+        "animation": "Ray diagram built step by step: parallel rays from a distant tree meet at a red dot in front of the retina, labelled 'Image in front of retina'. A concave lens slides in front of the eye, the rays spread slightly, and the dot turns green as it lands on the retina.",
+        "lines": [
+          { "speaker": "NEO", "text": "Myopia is near-sightedness. Nearby objects are clear, but distant objects look blurred." },
+          { "speaker": "NEO", "text": "The far point comes nearer than infinity, so the image of a distant object forms in front of the retina." },
+          { "speaker": "NEO", "text": "It is caused by excessive curvature of the eye lens, or elongation of the eyeball." },
+          { "speaker": "NEO", "text": "The correction is a concave lens of suitable power. It diverges the rays slightly and brings the image back onto the retina." },
+          { "speaker": "ZIPPY", "text": "Concave for can't-see-far. Got it." }
+        ]
+      },
+      {
+        "animation": "A second eye appears. Rays from a book held close meet at a red dot behind the retina, label 'Image behind retina', and a flag marks the near point moving beyond 25 cm. A convex lens slides in and the dot jumps forward onto the retina, turning green.",
+        "lines": [
+          { "speaker": "NEO", "text": "Hypermetropia is the opposite, far-sightedness. Distant objects are clear, but nearby objects are blurred." },
+          { "speaker": "NEO", "text": "The near point moves farther than 25 centimetres, and light from a close object focuses behind the retina." },
+          { "speaker": "NEO", "text": "The causes are a focal length of the eye lens that is too long, or an eyeball that has become too small." },
+          { "speaker": "NEO", "text": "A convex lens of suitable power provides the extra converging power the eye needs." }
+        ]
+      },
+      {
+        "animation": "Walk-on: Dadaji, an old owl in a shawl, holds a newspaper at arm's length. Neo hands him spectacles; the lens splits into two zones labelled 'Upper: concave, distant vision' and 'Lower: convex, near vision'.",
+        "lines": [
+          { "speaker": "DADAJI", "text": "At my age I hold the newspaper at arm's length. Is that hypermetropia too?" },
+          { "speaker": "NEO", "text": "Close, Dadaji. That is presbyopia. With age, the ciliary muscles weaken and the eye lens loses flexibility, so the power of accommodation decreases and the near point recedes." },
+          { "speaker": "NEO", "text": "Some people have both myopia and hypermetropia. They need bifocal lenses: the upper part is concave for distant vision, and the lower part is convex for reading." },
+          { "speaker": "NEO", "text": "Today, contact lenses or surgery can also correct these defects." }
+        ]
+      },
+      {
+        "animation": "A two-column table animates in: 'Myopia: image in front → concave lens' and 'Hypermetropia: image behind → convex lens'. A yellow 'Board Tip' card flips over showing three small diagrams labelled (a), (b), (c).",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How do I stop mixing up which lens goes where?" },
+          { "speaker": "NEO", "text": "Myopia puts the image in front, so a concave lens pushes it back. Hypermetropia puts it behind, so a convex lens pulls it forward." },
+          { "speaker": "NEO", "text": "Board tip: draw all three diagrams, the defective eye, its far or near point, and the corrected eye with the lens. Missing labels cost marks." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard titled 'Recap'. Three points appear with a chalk squeak: '1. Myopia: image in front of retina, concave lens', '2. Hypermetropia: image behind retina, convex lens', '3. Presbyopia: weak accommodation with age, bifocals'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's recap." },
+          { "speaker": "NEO", "text": "One: in myopia the image forms in front of the retina, and a concave lens corrects it." },
+          { "speaker": "NEO", "text": "Two: in hypermetropia the image forms behind the retina, and a convex lens corrects it." },
+          { "speaker": "NEO", "text": "Three: presbyopia is the loss of accommodation with age, often corrected with bifocal lenses." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "The Human Eye and the Colourful World",
+    "topic_no": 3,
+    "name": "Refraction of Light Through a Prism",
+    "scenes": [
+      {
+        "animation": "The school lab. Zippy shines a laser pointer through a triangular glass prism aiming at a target on the wall, but the beam bends and hits Neo's goggles with a comic 'ping'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I aimed straight at the target! Why did the light swerve into your goggles?" },
+          { "speaker": "NEO", "text": "Because a prism is not a glass slab, Zippy. Its faces are tilted, and that changes everything." }
+        ]
+      },
+      {
+        "animation": "A 3D prism rotates slowly. Its two triangular bases glow blue and its three rectangular side faces glow orange. An arc between two side faces is labelled 'A = angle of prism'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A triangular glass prism has two triangular bases and three rectangular lateral surfaces." },
+          { "speaker": "NEO", "text": "The lateral surfaces are inclined to each other. The angle between two lateral faces is called the angle of the prism." }
+        ]
+      },
+      {
+        "animation": "The prism turns flat into a 2D outline PQR-style diagram. The ray is drawn in stages: incident ray PE, dashed normal at E, refracted ray EF bending towards the normal, dashed normal at F, emergent ray FS bending away. Angles 'i', 'r' and 'e' pop up at the right places.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's trace it. The incident ray PE hits the first face at E." },
+          { "speaker": "NEO", "text": "Going from air into glass, it slows down and bends towards the normal. That is the refracted ray EF." },
+          { "speaker": "NEO", "text": "At the second face, it goes from glass back into air and bends away from the normal. That is the emergent ray FS." },
+          { "speaker": "NEO", "text": "We mark the angle of incidence i, the angle of refraction r, and the angle of emergence e." }
+        ]
+      },
+      {
+        "animation": "The incident ray is extended forward as a dotted line; an arc between it and the emergent ray glows red, labelled 'D = angle of deviation'. Side panel: a glass slab where the emergent ray stays parallel, with a tick, versus the prism where it turns towards the base.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "In a glass slab the light came out parallel to how it went in. Why not here?" },
+          { "speaker": "NEO", "text": "In a slab, the two faces are parallel, so the bends cancel. In a prism, the faces are inclined, so they do not." },
+          { "speaker": "NEO", "text": "The emergent ray bends towards the base. The angle between the extended incident ray and the emergent ray is the angle of deviation." }
+        ]
+      },
+      {
+        "animation": "A 'Board Tip' clipboard slides in with a student's diagram. A red cross appears over a missing normal and a missing dotted extension; Neo corrects them with a glowing pen.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: this diagram is asked often. Draw normals at both faces, extend the incident ray as a dotted line, and mark angle D between that line and the emergent ray." },
+          { "speaker": "ZIPPY", "text": "And make the ray bend towards the base, not the tip!" },
+          { "speaker": "NEO", "text": "Exactly. A ray bending towards the apex is a classic mistake." }
+        ]
+      },
+      {
+        "animation": "Recap board with a small prism icon. Three points drop in: '1. Angle of prism = angle between two lateral faces', '2. Towards normal entering glass, away from normal leaving', '3. Angle of deviation: emergent ray bends towards base'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap time." },
+          { "speaker": "NEO", "text": "One: the angle of the prism is the angle between its two lateral faces." },
+          { "speaker": "NEO", "text": "Two: light bends towards the normal entering glass and away from the normal leaving it." },
+          { "speaker": "NEO", "text": "Three: because the faces are inclined, the emergent ray deviates towards the base, and that angle is the angle of deviation." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "The Human Eye and the Colourful World",
+    "topic_no": 4,
+    "name": "Dispersion of White Light and the Rainbow",
+    "scenes": [
+      {
+        "animation": "Morning sunlight hits a glass prism on a classroom windowsill and throws a band of seven colours onto the wall. Zippy, holding a paintbrush, tries to paint over the band, but it keeps appearing on top of the paint.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Someone painted a rainbow on our wall, and it won't come off!" },
+          { "speaker": "NEO", "text": "Nobody painted it, Zippy. Those colours were hiding inside the sunlight all along." }
+        ]
+      },
+      {
+        "animation": "A single white beam enters a prism and fans out into seven coloured rays on a screen. The letters V-I-B-G-Y-O-R stack up beside the colours from bottom to top, violet at the bottom, and the word 'Spectrum' arcs above.",
+        "lines": [
+          { "speaker": "NEO", "text": "A prism splits white light into a band of colours called a spectrum." },
+          { "speaker": "NEO", "text": "The colours are violet, indigo, blue, green, yellow, orange and red. Remember them as VIBGYOR." },
+          { "speaker": "NEO", "text": "The splitting of light into its component colours is called dispersion." }
+        ]
+      },
+      {
+        "animation": "Slow motion inside the prism: seven tiny runners in colour-coded vests race through glass. Red leans only slightly off course; violet swerves the most. Labels 'Red: least bending' and 'Violet: most bending' flash.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But why do they separate? They all entered together." },
+          { "speaker": "NEO", "text": "Different colours bend through different angles with respect to the incident ray." },
+          { "speaker": "NEO", "text": "Red light bends the least, and violet bends the most. So each colour comes out along a different path." }
+        ]
+      },
+      {
+        "animation": "Walk-on: a cartoon Isaac Newton with a curly wig sets up a second identical prism upside down after the first. The spectrum enters it and a clean white beam comes out; a caption reads 'Recombination → white light'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Isaac Newton placed a second identical prism in an inverted position after the first." },
+          { "speaker": "NEO", "text": "All seven colours recombined and a beam of white light came out. This showed that sunlight is made of seven colours." },
+          { "speaker": "NEO", "text": "Any light that gives a spectrum similar to sunlight is called white light." }
+        ]
+      },
+      {
+        "animation": "A monsoon evening: the sun is low behind Zippy and a rainbow arcs over wet rooftops. Camera zooms into one raindrop; a ray is drawn in steps with labels 'Refraction + dispersion', 'Internal reflection', 'Refraction'. A 'Board Tip' tag pins to the corner.",
+        "lines": [
+          { "speaker": "NEO", "text": "A rainbow is a natural spectrum that appears after a rain shower. Tiny water droplets act like small prisms." },
+          { "speaker": "NEO", "text": "Each droplet refracts and disperses sunlight, reflects it internally, and refracts it again as it comes out." },
+          { "speaker": "NEO", "text": "A rainbow always forms in the direction opposite to the sun. You can also see one near a waterfall or fountain with the sun behind you." },
+          { "speaker": "NEO", "text": "Board tip: when asked how a rainbow forms, write all three steps in order and draw the raindrop diagram." }
+        ]
+      },
+      {
+        "animation": "Recap board framed with a small rainbow. Points appear: '1. Dispersion: white light → VIBGYOR', '2. Red bends least, violet most; inverted prism recombines', '3. Rainbow: refraction, internal reflection, refraction; opposite the sun'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's recap." },
+          { "speaker": "NEO", "text": "One: dispersion splits white light into the seven colours of VIBGYOR." },
+          { "speaker": "NEO", "text": "Two: red bends the least and violet the most, and an inverted prism can recombine them into white light." },
+          { "speaker": "NEO", "text": "Three: raindrops make a rainbow by refraction and dispersion, internal reflection, and refraction again, always opposite the sun." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "The Human Eye and the Colourful World",
+    "topic_no": 5,
+    "name": "Atmospheric Refraction",
+    "scenes": [
+      {
+        "animation": "Night on a terrace. Zippy stares at a flickering star and shouts at it; nearby a bright steady planet sits calmly. Earlier in the scene, the air above a chai stall's stove shimmers and the stall's signboard wobbles.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "First the chai-stall sign wobbled over the stove, and now that star keeps winking at me. Is the sky trolling me?" },
+          { "speaker": "NEO", "text": "Not trolling, Zippy. Refracting. Both are caused by atmospheric refraction." }
+        ]
+      },
+      {
+        "animation": "Close-up of the shimmering air above the stove. Warm air layers are shaded orange with the label 'Hot air: less dense, lower refractive index', cooler air above is blue. Light rays from the sign wiggle as the layers swirl.",
+        "lines": [
+          { "speaker": "NEO", "text": "Air just above the stove is hotter and lighter, so it has a lower refractive index than the cooler air above it." },
+          { "speaker": "NEO", "text": "These layers keep moving, so the apparent position of the sign seen through them keeps fluctuating." }
+        ]
+      },
+      {
+        "animation": "A diagram of the Earth with atmospheric layers shaded darker towards the ground. A starlight ray curves gradually towards the normal as it descends; a dotted line traces back to a ghost star drawn higher than the real star, labels 'Apparent position' and 'Actual position'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Starlight also refracts continuously as it enters the atmosphere, bending towards the normal because the air becomes optically denser near the Earth." },
+          { "speaker": "NEO", "text": "So a star appears slightly higher than its actual position, especially near the horizon." }
+        ]
+      },
+      {
+        "animation": "Split screen: a star shown as a single tiny dot whose brightness flickers as the air swirls; a planet shown as a small disc made of many dots, each flickering, but the disc stays steady. Labels 'Point source' and 'Extended source'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Fine, but why does it twinkle?" },
+          { "speaker": "NEO", "text": "Stars are so far away that they act like point sources of light. The atmosphere keeps changing, so the path of starlight keeps shifting slightly." },
+          { "speaker": "NEO", "text": "The amount of light entering your eye flickers. The star looks brighter, then fainter. That is twinkling." },
+          { "speaker": "NEO", "text": "Planets are much closer, so they act like extended sources, a collection of many point sources. Their variations average out to zero, so planets do not twinkle." }
+        ]
+      },
+      {
+        "animation": "A sunrise timeline: a clock shows the sun visible above the horizon while its actual position is still below, tag '≈ 2 min early'; at sunset the same with '≈ 2 min late'. A slightly flattened sun disc sits on the horizon. A 'Board Tip' card flips in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Atmospheric refraction also gives us advance sunrise and delayed sunset." },
+          { "speaker": "NEO", "text": "The sun is visible about 2 minutes before actual sunrise and about 2 minutes after actual sunset. The apparent flattening of the sun's disc at these times is also due to this." },
+          { "speaker": "NEO", "text": "Board tip: 'Why do stars twinkle but planets don't?' is a frequent three-mark question. Use the key words point source and extended source." }
+        ]
+      },
+      {
+        "animation": "Recap board under a starry sky. Points light up like stars: '1. Changing air layers shift apparent positions', '2. Stars twinkle (point source); planets don't (extended source)', '3. Sun seen ~2 min before sunrise and after sunset'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the refractive index of air changes with temperature and density, so apparent positions of objects shift." },
+          { "speaker": "NEO", "text": "Two: stars twinkle because they are point sources; planets do not because they are extended sources." },
+          { "speaker": "NEO", "text": "Three: we see the sun about 2 minutes before actual sunrise and about 2 minutes after actual sunset." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "The Human Eye and the Colourful World",
+    "topic_no": 6,
+    "name": "Scattering of Light",
+    "scenes": [
+      {
+        "animation": "A dusty classroom after sweeping. A sharp beam of sunlight streams through a gap in the window shutter, and Zippy leaps to grab the beam like a rope, falling straight through it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I can see the light beam! Why can't I hold it?" },
+          { "speaker": "NEO", "text": "You are not seeing the beam itself, Zippy. You are seeing dust particles scattering light towards your eyes." }
+        ]
+      },
+      {
+        "animation": "Zoom into the beam: tiny dust specks and smoke particles bounce light rays out sideways in all directions. Inset scenes: sunlight through a dense forest canopy and a beam through a small hole into a smoke-filled room. Label 'Tyndall effect' stamps across.",
+        "lines": [
+          { "speaker": "NEO", "text": "Our atmosphere is a heterogeneous mixture of smoke, tiny water droplets, dust particles and air molecules." },
+          { "speaker": "NEO", "text": "When a beam of light strikes such fine particles, its path becomes visible because the light is diffusely reflected towards us." },
+          { "speaker": "NEO", "text": "Scattering of light by colloidal particles is called the Tyndall effect. You see it when sunlight passes through the canopy of a dense forest." }
+        ]
+      },
+      {
+        "animation": "Three particle sizes line up: very fine particles glow blue, larger particles glow orange-red, and very large particles glow white. Caption: 'Colour scattered depends on particle size'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The colour of scattered light depends on the size of the scattering particles." },
+          { "speaker": "NEO", "text": "Very fine particles scatter mainly blue light. Larger particles scatter longer wavelengths. If the particles are large enough, the scattered light may even appear white." }
+        ]
+      },
+      {
+        "animation": "Sunlight enters the atmosphere; tiny air molecules bat blue light across the sky like cricket fielders while red light passes mostly straight through. A wavelength ruler shows red about 1.8 times longer than blue. The camera rises to a high-altitude aircraft window where the sky turns dark.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So is that why the sky is blue?" },
+          { "speaker": "NEO", "text": "Yes. Air molecules are smaller than the wavelength of visible light, so they scatter shorter wavelengths at the blue end much more than red." },
+          { "speaker": "NEO", "text": "The wavelength of red light is about 1.8 times that of blue. So scattered blue light fills the sky and enters our eyes." },
+          { "speaker": "NEO", "text": "If the Earth had no atmosphere, there would be no scattering and the sky would look dark. Passengers flying at very high altitudes find the sky dark for this reason." }
+        ]
+      },
+      {
+        "animation": "A foggy highway at dawn: a red danger light glows clearly through the mist while a blue light fades out. A 'Board Tip' sticky note pops up beside the red light.",
+        "lines": [
+          { "speaker": "NEO", "text": "Danger signal lights are red because red light is scattered the least by fog or smoke, so it can be seen in the same colour from a distance." },
+          { "speaker": "NEO", "text": "Board tip: in any 'why is the sky blue' answer, say that the particles are smaller than the wavelength of visible light. That phrase carries the mark." }
+        ]
+      },
+      {
+        "animation": "Recap board with a blue sky gradient. Points slide in: '1. Tyndall effect: fine particles make a light path visible', '2. Fine particles scatter blue; sky looks blue', '3. Red is least scattered: danger signals'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the Tyndall effect is scattering of light by colloidal particles, which makes the path of light visible." },
+          { "speaker": "NEO", "text": "Two: very fine particles scatter blue light the most, which is why the clear sky looks blue." },
+          { "speaker": "NEO", "text": "Three: red light is scattered the least, so danger signals are red." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "chapter_no": 8,
+    "chapter": "Geography: Drainage",
+    "topic_no": 1,
+    "name": "Drainage Basins and India's Two River Systems",
+    "scenes": [
+      {
+        "animation": "Monsoon rain falls on a school roof. Water runs down two slopes of the roof into two different gutters, one flowing left, one right. Zippy stands exactly on the roof's ridge, getting splashed from both sides.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does the rain on this side go left, and on that side go right?" },
+          { "speaker": "NEO", "text": "Because you're standing on a water divide. Rivers work exactly the same way." }
+        ]
+      },
+      {
+        "animation": "The roof morphs into a landscape. A main river with branching tributaries draws itself; the whole area it drains is shaded and labelled 'Drainage basin'. A ridge separating two basins glows and is labelled 'Water divide'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The term drainage describes the river system of an area." },
+          { "speaker": "NEO", "text": "The area drained by a single river system is called a drainage basin." },
+          { "speaker": "NEO", "text": "Any elevated area, such as a mountain or an upland, that separates two neighbouring drainage basins is known as a water divide." }
+        ]
+      },
+      {
+        "animation": "An outline map of India splits into two coloured zones: 'Himalayan rivers' in the north (blue) and 'Peninsular rivers' in the south (orange). A snowflake and a raincloud icon sit over the Himalayan rivers; only a raincloud over the Peninsular rivers.",
+        "lines": [
+          { "speaker": "NEO", "text": "Indian rivers are divided into two major groups: the Himalayan rivers and the Peninsular rivers." },
+          { "speaker": "NEO", "text": "Most Himalayan rivers are perennial. They have water throughout the year, because they get water from rain as well as from melted snow from the lofty mountains." },
+          { "speaker": "NEO", "text": "A large number of Peninsular rivers are seasonal, as their flow depends on rainfall. Even the larger ones have reduced flow during the dry season." }
+        ]
+      },
+      {
+        "animation": "A long Himalayan river carves a deep gorge in the mountains, then snakes across the plain forming loops; one loop is cut off as a crescent lake labelled 'Oxbow lake'; at the sea it fans out into a 'Delta'. A short Peninsular river is shown beside it, running a shorter, shallower course.",
+        "lines": [
+          { "speaker": "NEO", "text": "The two major Himalayan rivers, the Indus and the Brahmaputra, originate from the north of the mountain ranges. They have cut through the mountains, making gorges." },
+          { "speaker": "NEO", "text": "Himalayan rivers have long courses. In the plains, they form meanders, oxbow lakes and many other depositional features, and well-developed deltas near the mouth." },
+          { "speaker": "NEO", "text": "Peninsular rivers have shorter and shallower courses compared to their Himalayan counterparts." }
+        ]
+      },
+      {
+        "animation": "Zippy holds a sign 'All Indian rivers dry up in summer!' A 'BOARD TIP' card slides in: 'Perennial = Himalayan (rain + snowmelt). Seasonal = mostly Peninsular (rain only)'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So in summer, all rivers dry up?" },
+          { "speaker": "NEO", "text": "Not the Himalayan ones. Snowmelt keeps them flowing. Board tip: the difference between Himalayan and Peninsular rivers is a classic three-mark question." }
+        ]
+      },
+      {
+        "animation": "Recap board with a river-basin icon. Points appear: '1. Drainage basin = area drained by one river system; water divide separates basins', '2. Himalayan rivers: perennial, rain + snowmelt, long courses, gorges, deltas', '3. Peninsular rivers: mostly seasonal, shorter, shallower'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a drainage basin is the area drained by a single river system, and a water divide separates two basins." },
+          { "speaker": "NEO", "text": "Two: Himalayan rivers are perennial, fed by rain and melted snow, with long courses, gorges and deltas." },
+          { "speaker": "NEO", "text": "Three: Peninsular rivers are mostly seasonal, with shorter and shallower courses." },
+          { "speaker": "ZIPPY", "text": "And I am officially a water divide. A wet one." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Geography: Drainage",
+    "topic_no": 2,
+    "name": "The Indus River System",
+    "scenes": [
+      {
+        "animation": "Zippy reads an old signboard at a museum: 'India got its name from this river'. He looks around for the river, confused, and finds only a pencil marked 'Indus'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Our country's name comes from a river? Which one?" },
+          { "speaker": "NEO", "text": "The Indus. Let's follow its journey from Tibet to the Arabian Sea." }
+        ]
+      },
+      {
+        "animation": "An outline map: a blue line starts in Tibet near a lake labelled 'Lake Mansarowar', flows west, and enters India in 'Ladakh'. Tributaries join one by one with name tags: 'Zaskar', 'Nubra', 'Shyok', 'Hunza'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The river Indus rises in Tibet, near Lake Mansarowar. Flowing west, it enters India in Ladakh." },
+          { "speaker": "NEO", "text": "It forms a picturesque gorge in this part. Several tributaries, the Zaskar, the Nubra, the Shyok and the Hunza, join it in the Kashmir region." }
+        ]
+      },
+      {
+        "animation": "The Indus flows through Baltistan and Gilgit and emerges from the mountains at Attock. Five rivers come in from the east in sequence: 'Satluj', 'Beas', 'Ravi', 'Chenab', 'Jhelum', joining together near 'Mithankot, Pakistan'. The Indus then flows south to the Arabian Sea, east of Karachi. A length counter reads '2,900 km'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Indus flows through Baltistan and Gilgit and emerges from the mountains at Attock." },
+          { "speaker": "NEO", "text": "The Satluj, the Beas, the Ravi, the Chenab and the Jhelum join together to enter the Indus near Mithankot in Pakistan." },
+          { "speaker": "NEO", "text": "Beyond this, the Indus flows southwards and reaches the Arabian Sea, east of Karachi. With a total length of 2,900 kilometres, it is one of the longest rivers of the world." }
+        ]
+      },
+      {
+        "animation": "A gentle slope graphic shows the Indus plain. Then a treaty document unrolls with a seal reading 'Indus Water Treaty, 1960'. A water tank splits: '20% India'. Canals from Punjab, Haryana and southern and western Rajasthan branch out.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Indus plain has a very gentle slope. A little over a third of the Indus basin is located in India, in Jammu and Kashmir, Ladakh, Himachal Pradesh and Punjab, and the rest is in Pakistan." },
+          { "speaker": "NEO", "text": "According to the Indus Water Treaty of 1960, India can use only 20 per cent of the total water carried by the Indus river system." },
+          { "speaker": "NEO", "text": "This water is used for irrigation in Punjab, Haryana and the southern and western parts of Rajasthan." }
+        ]
+      },
+      {
+        "animation": "Zippy tries to remember the five eastern tributaries by juggling five balls. A 'BOARD TIP' card: 'Satluj, Beas, Ravi, Chenab, Jhelum → join Indus near Mithankot'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Satluj, Beas, Ravi, Chenab, Jhelum. Five rivers! Is that why the region is called Punjab?" },
+          { "speaker": "NEO", "text": "Exactly. 'Panj' means five and 'ab' means water. Board tip: remember the Indus Water Treaty year, 1960, and India's share, 20 per cent." }
+        ]
+      },
+      {
+        "animation": "Recap board with the Indus map. Points appear: '1. Rises in Tibet near Lake Mansarowar; enters India in Ladakh', '2. Satluj, Beas, Ravi, Chenab, Jhelum join near Mithankot; length 2,900 km', '3. Indus Water Treaty 1960: India uses 20%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Indus rises in Tibet near Lake Mansarowar and enters India in Ladakh." },
+          { "speaker": "NEO", "text": "Two: the Satluj, Beas, Ravi, Chenab and Jhelum join it near Mithankot, and its total length is 2,900 kilometres." },
+          { "speaker": "NEO", "text": "Three: under the Indus Water Treaty of 1960, India can use only 20 per cent of its water." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Geography: Drainage",
+    "topic_no": 3,
+    "name": "The Ganga and the Brahmaputra",
+    "scenes": [
+      {
+        "animation": "At Devaprayag, two rivers of different colours meet and merge into one. Zippy stands on a bridge, pointing excitedly at the meeting point.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Two rivers just became one! What's the new one called?" },
+          { "speaker": "NEO", "text": "That's where the Ganga officially begins. Let's follow it all the way to the sea." }
+        ]
+      },
+      {
+        "animation": "An outline map: the 'Bhagirathi' flows down from the 'Gangotri glacier' and meets the 'Alaknanda' at 'Devaprayag, Uttarakhand'. The river emerges at 'Haridwar'. Tributaries join with tags: 'Yamuna (from Yamunotri, joins at Prayagraj)', 'Ghaghara', 'Gandak', 'Kosi' from Nepal; 'Chambal', 'Betwa', 'Son' from the south.",
+        "lines": [
+          { "speaker": "NEO", "text": "The headwaters of the Ganga, called the Bhagirathi, are fed by the Gangotri glacier. It is joined by the Alaknanda at Devaprayag in Uttarakhand. At Haridwar, the Ganga emerges from the mountains onto the plains." },
+          { "speaker": "NEO", "text": "The Yamuna rises from the Yamunotri glacier and joins the Ganga at Prayagraj. The Ghaghara, the Gandak and the Kosi rise in the Nepal Himalaya." },
+          { "speaker": "NEO", "text": "The main tributaries which come from the peninsular uplands are the Chambal, the Betwa and the Son." }
+        ]
+      },
+      {
+        "animation": "The Ganga flows east to 'Farakka, West Bengal', where it splits. One branch, 'Bhagirathi-Hooghly', flows south to the Bay of Bengal. The main stream enters Bangladesh, meets the Brahmaputra, becomes the 'Meghna' and forms the 'Sunderban Delta', where a Royal Bengal tiger peeks out of mangroves. A counter shows 'over 2,500 km'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Ganga flows eastwards till Farakka in West Bengal, the northernmost point of the Ganga delta. Here the river bifurcates. The Bhagirathi-Hooghly flows southwards to the Bay of Bengal." },
+          { "speaker": "NEO", "text": "The mainstream flows into Bangladesh and is joined by the Brahmaputra. Further down, it is known as the Meghna." },
+          { "speaker": "NEO", "text": "The delta formed by these rivers is known as the Sunderban delta, named after the Sundari tree. It is the world's largest and fastest growing delta, and home of the Royal Bengal tiger. The length of the Ganga is over 2,500 kilometres." }
+        ]
+      },
+      {
+        "animation": "A second river starts in Tibet east of Mansarowar and flows east parallel to the Himalayas. At a peak labelled 'Namcha Barwa' it makes a sharp U-turn into Arunachal Pradesh through a gorge labelled 'Dihang'. 'Dibang' and 'Lohit' join to form the 'Brahmaputra' in Assam, where it spreads into many braided channels and islands.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Brahmaputra rises in Tibet, east of Mansarowar lake, very close to the sources of the Indus and the Satluj. Most of its course lies outside India." },
+          { "speaker": "NEO", "text": "It flows eastwards parallel to the Himalayas. On reaching Namcha Barwa, it takes a U-turn and enters India in Arunachal Pradesh through a gorge. Here it is called the Dihang, and it is joined by the Dibang, the Lohit and many other tributaries to form the Brahmaputra in Assam." },
+          { "speaker": "NEO", "text": "In India, it passes through a region of high rainfall and carries a large volume of water and silt. It has a braided channel for most of its length in Assam, and causes floods in Assam and Bangladesh." }
+        ]
+      },
+      {
+        "animation": "A 'MAP WORK' outline map: the Ganga, Yamuna and Brahmaputra draw themselves with arrows showing direction of flow. A small dot on a ridge between the Indus and Ganga systems is labelled 'Ambala — on the water divide'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: the town of Ambala is located on the water divide between the Indus and the Ganga river systems. That fact is often asked." }
+        ]
+      },
+      {
+        "animation": "Recap board with two river icons. Points appear: '1. Bhagirathi + Alaknanda at Devaprayag = Ganga; tributaries Yamuna, Ghaghara, Gandak, Kosi, Chambal, Betwa, Son', '2. Splits at Farakka; Sunderban: world's largest, fastest growing delta', '3. Brahmaputra: U-turn at Namcha Barwa, Dihang gorge, braided in Assam'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Bhagirathi and Alaknanda meet at Devaprayag to form the Ganga, which is joined by many Himalayan and peninsular tributaries." },
+          { "speaker": "NEO", "text": "Two: it splits at Farakka, and with the Brahmaputra forms the Sunderban delta, the world's largest and fastest growing delta." },
+          { "speaker": "NEO", "text": "Three: the Brahmaputra takes a U-turn at Namcha Barwa, enters India as the Dihang, and forms braided channels in Assam." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Geography: Drainage",
+    "topic_no": 4,
+    "name": "The Peninsular Rivers",
+    "scenes": [
+      {
+        "animation": "A race track on the Deccan plateau: most river-runners dash east toward the Bay of Bengal. Two runners, labelled 'Narmada' and 'Tapi', run west. Zippy, the referee, blows his whistle frantically.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hey, you two! Wrong way! Everyone else is running east!" },
+          { "speaker": "NEO", "text": "They're not lost, Zippy. The Narmada and Tapi flow west through rift valleys." }
+        ]
+      },
+      {
+        "animation": "A tilted Deccan plateau: the Western Ghats glow as the main water divide, labelled 'Main water divide'. Arrows show most rivers flowing east into deltas; two arrows flow west into narrow river mouths labelled 'Estuaries'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The main water divide in Peninsular India is formed by the Western Ghats, which run close to the western coast." },
+          { "speaker": "NEO", "text": "Most major rivers of the Peninsula, like the Mahanadi, Godavari, Krishna and Kaveri, flow eastwards and drain into the Bay of Bengal. They make deltas at their mouths." },
+          { "speaker": "NEO", "text": "The Narmada and the Tapi are the only long rivers which flow west and make estuaries." }
+        ]
+      },
+      {
+        "animation": "The 'Narmada' rises at 'Amarkantak hills, Madhya Pradesh' and flows west through a crack in the ground labelled 'Rift valley'. Near 'Jabalpur', white marble cliffs and a waterfall labelled 'Dhuadhar falls' appear. The 'Tapi' rises in the 'Satpura ranges, Betul district' and flows parallel.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Narmada rises in the Amarkantak hills in Madhya Pradesh. It flows towards the west in a rift valley formed due to faulting." },
+          { "speaker": "NEO", "text": "On its way it creates many picturesque locations, like the Marble rocks near Jabalpur, and the Dhuadhar falls. Its basin covers parts of Madhya Pradesh and Gujarat." },
+          { "speaker": "NEO", "text": "The Tapi rises in the Satpura ranges, in the Betul district of Madhya Pradesh. It also flows in a rift valley parallel to the Narmada, but it is much shorter." }
+        ]
+      },
+      {
+        "animation": "East-flowing rivers draw themselves one by one with info cards: 'Godavari — Nasik, Maharashtra; about 1,500 km; largest Peninsular river; Dakshin Ganga', 'Mahanadi — Chhattisgarh; about 860 km', 'Krishna — near Mahabaleshwar; about 1,400 km; Tungabhadra, Koyana, Ghatprabha, Musi, Bhima', 'Kaveri — Brahmagiri range; 760 km; reaches sea south of Cuddalore'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Godavari is the largest Peninsular river. It rises from the slopes of the Western Ghats in the Nasik district of Maharashtra, and is about 1,500 kilometres long. Because of its length and the area it covers, it is also known as the Dakshin Ganga." },
+          { "speaker": "NEO", "text": "The Mahanadi rises in the highlands of Chhattisgarh and flows through Odisha to the Bay of Bengal. Its length is about 860 kilometres." },
+          { "speaker": "NEO", "text": "The Krishna rises from a spring near Mahabaleshwar and flows for about 1,400 kilometres. The Tungabhadra, Koyana, Ghatprabha, Musi and Bhima are its tributaries." },
+          { "speaker": "NEO", "text": "The Kaveri rises in the Brahmagiri range of the Western Ghats and reaches the Bay of Bengal south of Cuddalore in Tamil Nadu. Its total length is about 760 kilometres." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card with two columns: 'West-flowing: Narmada, Tapi → estuaries' and 'East-flowing: Mahanadi, Godavari, Krishna, Kaveri → deltas'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: west-flowing rivers make estuaries, east-flowing rivers make deltas. Name one reason: the western rivers flow through rift valleys." }
+        ]
+      },
+      {
+        "animation": "Recap board with a peninsula map. Points appear: '1. Western Ghats = main water divide', '2. Narmada and Tapi flow west in rift valleys → estuaries', '3. Godavari (largest, Dakshin Ganga), Mahanadi, Krishna, Kaveri flow east → deltas'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Western Ghats form the main water divide of the Peninsula." },
+          { "speaker": "NEO", "text": "Two: the Narmada and Tapi flow west through rift valleys and form estuaries." },
+          { "speaker": "NEO", "text": "Three: the Godavari, the largest, along with the Mahanadi, Krishna and Kaveri, flows east and forms deltas." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Geography: Drainage",
+    "topic_no": 5,
+    "name": "Lakes and the Role of Rivers",
+    "scenes": [
+      {
+        "animation": "Zippy paddles a shikara on Dal Lake, then accidentally drops a chips packet into the water. The lake frowns and a floating plastic bag glares at him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Oops. Wait, did the lake just frown at me?" },
+          { "speaker": "NEO", "text": "Lakes and rivers give us a lot. Let's see why they deserve better." }
+        ]
+      },
+      {
+        "animation": "An outline map with lake icons popping up: 'Wular (J&K) — largest freshwater lake', 'Dal', 'Bhimtal', 'Nainital', 'Loktak', 'Barapani'. Then saltwater icons: 'Sambhar (Rajasthan) — salt', 'Chilika', 'Pulicat', 'Kolleru' as lagoons. A man-made lake: 'Guru Gobind Singh Sagar'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has many lakes. Most of them are permanent, while some contain water only during the rainy season." },
+          { "speaker": "NEO", "text": "The Wular lake in Jammu and Kashmir is the largest freshwater lake in India. It is the result of tectonic activity. The Dal lake, Bhimtal, Nainital, Loktak and Barapani are other important freshwater lakes." },
+          { "speaker": "NEO", "text": "Lagoons like the Chilika, the Pulicat and the Kolleru are found in coastal areas. The Sambhar lake in Rajasthan is a salt water lake, and its water is used for producing salt." }
+        ]
+      },
+      {
+        "animation": "Animated panels: a lake smoothing out a flood wave, a hydroelectric turbine spinning, boats carrying tourists, fish jumping. Labels pop: 'regulate flow', 'hydel power', 'moderate climate', 'tourism'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Lakes help regulate the flow of a river. During heavy rainfall they prevent flooding, and during the dry season they help maintain an even flow." },
+          { "speaker": "NEO", "text": "They can be used for developing hydel power, they moderate the climate of the surroundings, and they enhance natural beauty and tourism." }
+        ]
+      },
+      {
+        "animation": "A timeline montage: ancient settlements rising along riverbanks, then farms with irrigation canals, boats, and a power dam. Label: 'Rivers: water, irrigation, navigation, hydro-power'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why did old cities always get built next to rivers?" },
+          { "speaker": "NEO", "text": "Because water is a basic natural resource. Throughout history, settlements have grown along riverbanks." },
+          { "speaker": "NEO", "text": "Rivers are used for irrigation, navigation and hydro-power generation. This matters a lot in a country like India, where agriculture is the major source of livelihood." }
+        ]
+      },
+      {
+        "animation": "A clean blue river turns grey as factory pipes and sewage drains pour into it; fish wear tiny gas masks. Then clean-up volunteers remove waste and the river turns blue again. A 'BOARD TIP' card: 'Pollution affects quality AND self-cleansing capacity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Growing domestic, municipal, industrial and agricultural demand for water affects its quality. More and more water is drained out of rivers, reducing their volume." },
+          { "speaker": "NEO", "text": "At the same time, untreated sewage and industrial effluents are emptied into rivers. This affects not only the quality of the water but also the self-cleansing capacity of the river." },
+          { "speaker": "NEO", "text": "Exam tip: learn a few uses of lakes and rivers, and the causes of river pollution, as point-wise answers." }
+        ]
+      },
+      {
+        "animation": "Recap board with a lake and a river icon. Points appear: '1. Wular: largest freshwater lake; Sambhar: salt lake; Chilika, Pulicat, Kolleru: lagoons', '2. Lakes regulate flow, give hydel power, moderate climate, boost tourism', '3. Rivers support irrigation, navigation, power — but face pollution'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Wular is India's largest freshwater lake, Sambhar is a salt lake, and Chilika, Pulicat and Kolleru are lagoons." },
+          { "speaker": "NEO", "text": "Two: lakes regulate river flow, can give hydel power, moderate climate and support tourism." },
+          { "speaker": "NEO", "text": "Three: rivers support irrigation, navigation and power, but sewage and effluents pollute them." },
+          { "speaker": "ZIPPY", "text": "Chips packet retrieved. Sorry, Dal Lake!" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,269 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "History: Print Culture and the Modern World",
+    "topic_no": 1,
+    "name": "The First Printed Books: China, Japan and Print Comes to Europe",
+    "scenes": [
+      {
+        "animation": "Zippy is trapped under a mountain of textbooks in the school library, only his glowing eyes visible. Neo lifts one book and a question floats up in chalk letters: 'Who printed the FIRST book?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, who invented books? I want to file a complaint." },
+          { "speaker": "NEO", "text": "You would have to travel to East Asia. The earliest kind of print technology was developed in China, Japan and Korea." }
+        ]
+      },
+      {
+        "animation": "A Chinese workshop, around AD 594. A craftsman inks a carved woodblock and rubs paper against it. Because the thin porous paper cannot be printed on both sides, the sheets fold into a long 'accordion book', stitched at the side. Label: 'Hand printing from AD 594'.",
+        "lines": [
+          { "speaker": "NEO", "text": "From AD 594, books in China were printed by rubbing paper against the inked surface of woodblocks." },
+          { "speaker": "NEO", "text": "Both sides of the thin, porous sheet could not be printed, so the traditional Chinese accordion book was folded and stitched at the side." },
+          { "speaker": "NEO", "text": "For a long time, the imperial state was the major producer of printed material. Textbooks for the civil service examination were printed in vast numbers." }
+        ]
+      },
+      {
+        "animation": "A timeline strip unrolls: 'By the 17th century: merchants, fiction, poetry, women readers' then 'Late 19th century: Western presses; Shanghai becomes the hub of print culture'. A steam-powered Western press chugs into a Shanghai street.",
+        "lines": [
+          { "speaker": "NEO", "text": "By the seventeenth century, as urban culture bloomed in China, print was used for much more. Merchants read trade information, and fiction, poetry and autobiographies grew popular. Even wives of rich people began writing and publishing." },
+          { "speaker": "NEO", "text": "In the late nineteenth century, Western printing techniques and mechanical presses arrived, and Shanghai became the hub of the new print culture." }
+        ]
+      },
+      {
+        "animation": "A ship sails from China to Japan with Buddhist monks carrying woodblocks, stamped 'c. AD 768-770'. A scroll opens: 'Diamond Sutra, AD 868: six sheets of text with woodcut illustrations'. Then a bustling Edo street, with Kitagawa Utamaro painting ukiyo scenes, 'pictures of the floating world'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Buddhist missionaries from China introduced hand-printing into Japan around AD 768 to 770." },
+          { "speaker": "NEO", "text": "The oldest Japanese book, printed in AD 868, is the Buddhist Diamond Sutra. Later, in Edo, the artist Kitagawa Utamaro, born in 1753, became famous for his ukiyo, or pictures of the floating world." },
+          { "speaker": "ZIPPY", "text": "Edo sounds like a snack." },
+          { "speaker": "NEO", "text": "It is the old name of Tokyo." }
+        ]
+      },
+      {
+        "animation": "An animated map traces the silk route from China to Europe, with paper arriving in the 11th century. Marco Polo's ship docks in Italy with a banner '1295'. Aristocrats hold luxury books on vellum while a crowded bookseller's shop shows scribes copying by hand.",
+        "lines": [
+          { "speaker": "NEO", "text": "Paper reached Europe in the eleventh century via the silk route. In 1295, Marco Polo returned to Italy after many years in China and brought back the knowledge of woodblock printing." },
+          { "speaker": "NEO", "text": "Luxury editions were still handwritten on expensive vellum for aristocrats. But handwritten manuscripts could not meet the ever-increasing demand for books. Copying was expensive, laborious and time-consuming." },
+          { "speaker": "NEO", "text": "Board tip: this growing demand is exactly why a new technology was needed. Keep that link ready for a three-mark answer." }
+        ]
+      },
+      {
+        "animation": "Recap scroll unrolls with three stamps: '1. China: woodblock hand printing from AD 594, accordion books', '2. Japan: Diamond Sutra AD 868; Edo and ukiyo', '3. Europe: paper via silk route; Marco Polo 1295; demand beats scribes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: China printed books by hand from woodblocks from AD 594." },
+          { "speaker": "NEO", "text": "Two: the oldest Japanese book is the Diamond Sutra of AD 868." },
+          { "speaker": "NEO", "text": "Three: Marco Polo carried woodblock printing to Italy in 1295, and demand for books soon outran the scribes." },
+          { "speaker": "ZIPPY", "text": "So my complaint goes to AD 594. Noted." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "History: Print Culture and the Modern World",
+    "topic_no": 2,
+    "name": "Gutenberg and the Printing Press; Religious Debates and the Fear of Print",
+    "scenes": [
+      {
+        "animation": "Zippy squeezes grapes in a giant wooden wine press. Neo slides a tray of metal letters under the press instead, and a printed page pops out. Caption: 'Same press, new idea!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I'm making grape juice the old-fashioned way!" },
+          { "speaker": "NEO", "text": "A German named Johann Gutenberg looked at presses like this and changed the world." }
+        ]
+      },
+      {
+        "animation": "Flashback in Strasbourg: young Gutenberg on an agricultural estate watching wine and olive presses, then polishing stones and casting lead moulds as a master goldsmith. The olive press morphs into a printing press; metal letters drop into a frame. A calendar flips to '1448'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Gutenberg was the son of a merchant and grew up on a large agricultural estate, where he saw wine and olive presses. He learnt the art of polishing stones, became a master goldsmith, and made lead moulds for trinkets." },
+          { "speaker": "NEO", "text": "Using this knowledge, he adapted existing technology. The olive press became the model for the printing press, and moulds were used to cast metal types for the letters of the alphabet. By 1448, he had perfected the system." }
+        ]
+      },
+      {
+        "animation": "The first printed Bible rises from the press. A counter ticks: '180 copies in 3 years'. Then a bar chart grows: '1450-1550: presses across most of Europe', 'Second half of 15th century: 20 million copies', '16th century: 200 million copies'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The first book he printed was the Bible. About 180 copies were printed, and it took three years to produce them. By the standards of the time, this was fast." },
+          { "speaker": "NEO", "text": "Between 1450 and 1550, printing presses were set up in most countries of Europe. In the second half of the fifteenth century, 20 million copies of printed books flooded the markets. In the sixteenth century, the number rose to about 200 million." },
+          { "speaker": "NEO", "text": "This shift from hand printing to mechanical printing led to the print revolution." }
+        ]
+      },
+      {
+        "animation": "A church door in 1517. Martin Luther nails up a paper titled 'Ninety Five Theses'. Printed copies multiply and fly across Europe like birds. A speech bubble: 'Printing is the ultimate gift of God and the greatest one.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Print created a new reading public, and ideas now spread widely. In 1517, the religious reformer Martin Luther wrote Ninety Five Theses criticising many practices and rituals of the Roman Catholic Church." },
+          { "speaker": "NEO", "text": "His writings were printed in vast numbers and read widely. This led to the Protestant Reformation. Luther said, printing is the ultimate gift of God and the greatest one." }
+        ]
+      },
+      {
+        "animation": "A worried priest looks at a small Italian village where a miller, Menocchio, reads a book and reinterprets its message. A heavy red book slams shut on a lectern, labelled 'Index of Prohibited Books, from 1558'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So everyone loved print?" },
+          { "speaker": "NEO", "text": "Not at all. Many feared that if there was no control over what was printed, rebellious and irreligious thoughts might spread." },
+          { "speaker": "NEO", "text": "In sixteenth-century Italy, a miller named Menocchio read books and reinterpreted the message of the Bible. The Roman Catholic Church put him on trial and he was eventually executed. From 1558, the Church maintained an Index of Prohibited Books." },
+          { "speaker": "NEO", "text": "Board tip: questions often ask why some people feared print. Menocchio and the Index are your best examples." }
+        ]
+      },
+      {
+        "animation": "Recap board with three printed cards: '1. Gutenberg perfected the press by 1448; first book: the Bible', '2. Print revolution: 20 million, then 200 million copies', '3. Luther 1517 and the Reformation; the Church's Index from 1558'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Gutenberg adapted the olive press and perfected his system by 1448. His first book was the Bible." },
+          { "speaker": "NEO", "text": "Two: mechanical printing caused a print revolution across Europe." },
+          { "speaker": "NEO", "text": "Three: print spread Luther's ideas, and it also frightened the Church into making an Index of Prohibited Books." },
+          { "speaker": "ZIPPY", "text": "I'll print my grape juice recipe. Two hundred million copies." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "History: Print Culture and the Modern World",
+    "topic_no": 3,
+    "name": "The Reading Mania, Print and the French Revolution, and the Nineteenth Century",
+    "scenes": [
+      {
+        "animation": "Zippy sits in a crowded 18th-century European square, reading a pocket-sized book while a pedlar walks by selling tiny booklets from a tray. A signboard reads 'Chapbooks: one penny'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Penny books! This is like a kirana shop for stories." },
+          { "speaker": "NEO", "text": "Welcome to the reading mania of the eighteenth century." }
+        ]
+      },
+      {
+        "animation": "A literacy meter rises, reaching '60-80% in some parts of Europe, end of 18th century'. Pedlars carry chapbooks in England; a small blue book in France is labelled 'Bibliotheque Bleue'. Almanacs, ballads and folk tales swirl around.",
+        "lines": [
+          { "speaker": "NEO", "text": "Through the seventeenth and eighteenth centuries, literacy rates went up in most parts of Europe. By the end of the eighteenth century, in some parts of Europe, literacy rates were as high as 60 to 80 per cent." },
+          { "speaker": "NEO", "text": "In England, pedlars called chapmen sold penny chapbooks. In France, there was the Bibliotheque Bleue, low-priced small books printed on poor quality paper and bound in cheap blue covers." }
+        ]
+      },
+      {
+        "animation": "The writer Louise-Sebastien Mercier stands on a stage; a banner behind him: 'Tremble, therefore, tyrants of the world! Tremble before the virtual writer!' A crown on a throne wobbles nervously.",
+        "lines": [
+          { "speaker": "NEO", "text": "Many believed books could change the world. The novelist Louise-Sebastien Mercier declared that the printing press is the most powerful engine of progress, and public opinion is the force that will sweep despotism away." }
+        ]
+      },
+      {
+        "animation": "Three pillars rise under the heading 'Print and the French Revolution': '1. Popularised Enlightenment ideas: Voltaire, Rousseau', '2. New culture of dialogue and debate', '3. Literature mocking the royalty by the 1780s'. A fourth dotted pillar appears labelled 'But: print did not directly shape minds'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Historians give three arguments for how print helped bring about the French Revolution." },
+          { "speaker": "NEO", "text": "First, print popularised the ideas of Enlightenment thinkers like Voltaire and Rousseau. Second, print created a new culture of dialogue and debate. Third, by the 1780s there was an outpouring of literature that mocked the royalty and criticised their morality." },
+          { "speaker": "NEO", "text": "But remember, print did not directly shape people's minds. People accepted some ideas and rejected others." }
+        ]
+      },
+      {
+        "animation": "Nineteenth-century montage: a French children's press sign '1857'; the Grimm Brothers collecting folk tales, a book stamped '1812'; women reading novels by Jane Austen, the Bronte sisters and George Eliot; workers in a lending library. Then Richard M. Hoe's power-driven cylindrical press spins out pages with a counter '8,000 sheets per hour'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the nineteenth century, children, women and workers became important readers. A children's press devoted to literature for children was set up in France in 1857. The Grimm Brothers in Germany compiled traditional folk tales, published in 1812." },
+          { "speaker": "NEO", "text": "Women became important as readers and writers, and lending libraries helped educate white-collar workers and artisans." },
+          { "speaker": "NEO", "text": "By the mid-nineteenth century, Richard M. Hoe of New York had perfected the power-driven cylindrical press, capable of printing 8,000 sheets per hour. Later, the offset press could print up to six colours at a time." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Reading mania: literacy up to 60-80%, chapbooks, Bibliotheque Bleue', '2. Three arguments linking print and the French Revolution', '3. 19th century: children, women, workers; Hoe's cylindrical press'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the eighteenth century saw a reading mania across Europe." },
+          { "speaker": "NEO", "text": "Two: print spread Enlightenment ideas, created debate and mocked the monarchy before the French Revolution." },
+          { "speaker": "NEO", "text": "Three: new readers and faster presses shaped the nineteenth century." },
+          { "speaker": "ZIPPY", "text": "Eight thousand sheets an hour. My homework can't compete." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "History: Print Culture and the Modern World",
+    "topic_no": 4,
+    "name": "India and the World of Print: Manuscripts, the First Presses and Religious Debates",
+    "scenes": [
+      {
+        "animation": "Zippy tries to read a palm-leaf manuscript; it crumbles in his hands. Neo sighs as dust floats up, and the words 'Sanskrit, Arabic, Persian, vernacular languages' drift out of the dust.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Oops. Did I just destroy ancient literature?" },
+          { "speaker": "NEO", "text": "Almost. That is why manuscripts were a problem. They were copied by hand on palm leaves or handmade paper, were expensive and fragile, and had to be handled carefully." },
+          { "speaker": "NEO", "text": "India had a very old and rich tradition of handwritten manuscripts in Sanskrit, Arabic, Persian and various vernacular languages." }
+        ]
+      },
+      {
+        "animation": "A map of India draws itself. A Portuguese ship docks at Goa with a printing press labelled 'mid-16th century'. Pins pop up: Goa 'By 1674: about 50 books in Konkani and Kanara', Cochin '1579: first Tamil book', and '1713: first Malayalam book'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The printing press first came to Goa with Portuguese missionaries in the mid-sixteenth century. Jesuit priests learnt Konkani, and by 1674, about 50 books had been printed in the Konkani and Kanara languages." },
+          { "speaker": "NEO", "text": "Catholic priests printed the first Tamil book in 1579 at Cochin, and in 1713 the first Malayalam book was printed by them. By 1710, Dutch Protestant missionaries had printed 32 Tamil texts." }
+        ]
+      },
+      {
+        "animation": "Calcutta, 1780. James Augustus Hickey hands out a weekly paper titled 'Bengal Gazette'. A tagline floats: 'a commercial paper open to all, but influenced by none'. Warren Hastings frowns in the background. Then Gangadhar Bhattacharya holds up the first Indian newspaper, also named Bengal Gazette.",
+        "lines": [
+          { "speaker": "NEO", "text": "From 1780, James Augustus Hickey began to edit the Bengal Gazette, a weekly magazine. He published advertisements and gossip about the Company's senior officials in India." },
+          { "speaker": "NEO", "text": "Governor-General Warren Hastings persecuted Hickey. The first Indian to publish a newspaper was Gangadhar Bhattacharya, who brought out the weekly Bengal Gazette." }
+        ]
+      },
+      {
+        "animation": "A debate stage splits into two sides. Left: Rammohun Roy holding 'Sambad Kaumudi, 1821'. Right: Hindu orthodox writers holding 'Samachar Chandrika'. Newspapers with dates fly in: 'Jam-i-Jahan Nama and Shamsul Akhbar (Persian), 1822', 'Bombay Samachar (Gujarati), 1822', and 'Deoband Seminary, 1867' issuing fatwas.",
+        "lines": [
+          { "speaker": "NEO", "text": "From the early nineteenth century, there were intense debates around religious issues. Rammohun Roy published the Sambad Kaumudi from 1821, while the Hindu orthodoxy commissioned the Samachar Chandrika to oppose his opinions." },
+          { "speaker": "NEO", "text": "In 1822, two Persian newspapers were published, Jam-i-Jahan Nama and Shamsul Akhbar. In the same year, a Gujarati newspaper, the Bombay Samachar, made its appearance." },
+          { "speaker": "NEO", "text": "The Deoband Seminary, founded in 1867, published thousands upon thousands of fatwas telling Muslim readers how to conduct themselves in their everyday lives." }
+        ]
+      },
+      {
+        "animation": "A printed copy of the 'Ramcharitmanas, Calcutta 1810' opens; cheap lithographic editions stamped 'Naval Kishore Press, Lucknow' and 'Shri Venkateshwar Press, Bombay' multiply and travel by train to villages, where people gather to hear them read aloud.",
+        "lines": [
+          { "speaker": "NEO", "text": "Print also spread religious texts. The first printed edition of the Ramcharitmanas of Tulsidas came out from Calcutta in 1810. By the mid-nineteenth century, cheap lithographic editions flooded north Indian markets." },
+          { "speaker": "NEO", "text": "Board tip: in a timeline question, do not mix up 1821 for Sambad Kaumudi with 1822 for the Persian and Gujarati newspapers." }
+        ]
+      },
+      {
+        "animation": "Recap board with an Indian newspaper masthead: '1. Press reached Goa with the Portuguese, mid-16th century', '2. Hickey's Bengal Gazette 1780; Gangadhar Bhattacharya', '3. Print fuelled religious debates: Sambad Kaumudi, Deoband fatwas'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the printing press first came to Goa with Portuguese missionaries." },
+          { "speaker": "NEO", "text": "Two: Hickey began the Bengal Gazette in 1780, and Gangadhar Bhattacharya published the first Indian newspaper." },
+          { "speaker": "NEO", "text": "Three: print carried religious debates to a wide public." },
+          { "speaker": "ZIPPY", "text": "And I learnt to never hug a palm leaf." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "History: Print Culture and the Modern World",
+    "topic_no": 5,
+    "name": "Print, Women, the Poor, Caste and Censorship in India",
+    "scenes": [
+      {
+        "animation": "A 19th-century Bengali kitchen. A young woman secretly reads by the light of a kitchen fire, hiding the book under a pot when footsteps approach. Title card: 'Amar Jiban, 1876'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is she hiding a book? Is it a comic?" },
+          { "speaker": "NEO", "text": "She is Rashsundari Debi. Her family did not want her to read, so she learnt in secret in the kitchen. In 1876 she wrote Amar Jiban, the first full-length autobiography published in the Bengali language." }
+        ]
+      },
+      {
+        "animation": "Portraits slide in with name cards: 'Kailashbashini Debi', 'Tarabai Shinde', 'Pandita Ramabai'. Each writes with glowing ink about the experiences of women: widowhood, child marriage, forced work at home.",
+        "lines": [
+          { "speaker": "NEO", "text": "Print gave women a new voice. From the 1860s, a few Bengali women like Kailashbashini Debi wrote books highlighting the experiences of women." },
+          { "speaker": "NEO", "text": "In the 1880s, in present-day Maharashtra, Tarabai Shinde and Pandita Ramabai wrote with passion and anger about the miserable lives of upper-caste Hindu women, especially widows." }
+        ]
+      },
+      {
+        "animation": "A cheap bazaar lane in central Calcutta labelled 'Battala'. Then Jyotiba Phule holds up 'Gulamgiri, 1871'; B.R. Ambedkar and E.V. Ramaswamy Naicker (Periyar) appear with pens; Kashibaba, a Kanpur mill worker, holds 'Chhote Aur Bade Ka Sawal, 1938'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Very cheap small books were brought to markets in nineteenth-century Madras towns and sold at crossroads, so poor people could also buy them. Public libraries were set up too." },
+          { "speaker": "NEO", "text": "Jyotiba Phule, the Maratha pioneer of low caste protest movements, wrote about the injustices of the caste system in his Gulamgiri in 1871. In the twentieth century, B.R. Ambedkar and E.V. Ramaswamy Naicker, better known as Periyar, wrote powerfully on caste." },
+          { "speaker": "NEO", "text": "Kashibaba, a Kanpur mill worker, wrote Chhote Aur Bade Ka Sawal in 1938 to show the links between caste and class exploitation." }
+        ]
+      },
+      {
+        "animation": "A timeline builds along a printing press roller: '1835: Bentinck revises press laws', '1857: Revolt, attitude to press freedom changes', '1878: Vernacular Press Act', '1907-1908: Tilak writes in Kesari, deported'. A grumpy colonial ledger stamps 'SEIZED' on a newspaper.",
+        "lines": [
+          { "speaker": "NEO", "text": "Before 1798, the colonial state was not too concerned with censorship. In 1835, Governor-General Bentinck agreed to revise press laws after urgent petitions by editors of English and vernacular newspapers." },
+          { "speaker": "NEO", "text": "After the revolt of 1857, the attitude to freedom of the press changed. In 1878, the Vernacular Press Act was passed, modelled on the Irish Press Laws." },
+          { "speaker": "COLONIAL LEDGER", "text": "Report a seditious article, and I can confiscate the press." },
+          { "speaker": "NEO", "text": "When Punjab revolutionaries were deported in 1907, Balgangadhar Tilak wrote with great sympathy about them in his Kesari. This led to his imprisonment in 1908, provoking widespread protests all over India." },
+          { "speaker": "NEO", "text": "Board tip: the Vernacular Press Act of 1878 is a frequently asked question. Remember it gave the government extensive rights to censor reports and editorials in the vernacular press." }
+        ]
+      },
+      {
+        "animation": "Recap board with a quill turning into a printed page: '1. Women wrote: Rashsundari Debi, Tarabai Shinde, Pandita Ramabai', '2. Print against caste: Phule's Gulamgiri 1871, Ambedkar, Periyar', '3. Censorship: Vernacular Press Act 1878; Tilak and Kesari'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: print gave Indian women a voice, from Amar Jiban to the writings of Tarabai Shinde and Pandita Ramabai." },
+          { "speaker": "NEO", "text": "Two: reformers like Phule, Ambedkar and Periyar used print against caste." },
+          { "speaker": "NEO", "text": "Three: nervous colonial rulers tried to control print through the Vernacular Press Act of 1878." },
+          { "speaker": "ZIPPY", "text": "Books really are dangerous. To tyrants." }
+        ]
+      }
+    ]
+  }
+]

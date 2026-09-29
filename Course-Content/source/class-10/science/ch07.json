@@ -1,0 +1,397 @@
+[
+  {
+    "chapter_no": 7,
+    "chapter": "How do Organisms Reproduce",
+    "topic_no": 1,
+    "name": "Do Organisms Create Exact Copies?",
+    "scenes": [
+      {
+        "animation": "A busy photocopy shop in a market lane. Zippy feeds a photocopy of a photocopy of a cricket scorecard into the machine; each new copy slides out a little smudgier until '33' reads as '83'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, I copied my scorecard ten times, and now the last copy says I scored 83, not 33!" },
+          { "speaker": "NEO", "text": "Every copying process makes small errors. Living cells face the same problem when they reproduce." }
+        ]
+      },
+      {
+        "animation": "Zoom into a cartoon cell; the nucleus opens like a cupboard to reveal a glowing DNA double helix labelled 'DNA = information for making proteins'. Arrows lead from DNA to protein blocks, then to a small body outline.",
+        "lines": [
+          { "speaker": "NEO", "text": "Offspring look similar to their parents because they share a similar body design. The blueprint for that design is the DNA in the cell nucleus." },
+          { "speaker": "NEO", "text": "DNA is the information source for making proteins. If the information changes, different proteins are made, and the body design can change." },
+          { "speaker": "ZIPPY", "text": "So reproduction is basically photocopying DNA?" },
+          { "speaker": "NEO", "text": "Yes. The basic event in reproduction is the creation of a DNA copy, using chemical reactions inside the cell." }
+        ]
+      },
+      {
+        "animation": "The helix unzips and two copies appear. Extra organelles pop in like furniture being delivered; each DNA copy moves to one side with its own set, and the cell pinches into two. Label: 'DNA copy + extra cellular apparatus'.",
+        "lines": [
+          { "speaker": "NEO", "text": "But a DNA copy alone is not enough. The cell also makes additional cellular apparatus." },
+          { "speaker": "NEO", "text": "Then the two DNA copies separate, each with its own cellular apparatus, and one cell becomes two." }
+        ]
+      },
+      {
+        "animation": "Side-by-side comparison of the two daughter DNA strands; one base pair glows orange with the label 'variation'. A second example shows a badly scrambled strand; its cell greys out with a label 'cannot work, cell dies'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Then the two cells are perfect twins, right?" },
+          { "speaker": "NEO", "text": "Not quite. No biochemical reaction is absolutely reliable. The DNA copies are similar, but may not be identical to the original. These small differences are variations." },
+          { "speaker": "ZIPPY", "text": "What if the mistake is huge?" },
+          { "speaker": "NEO", "text": "Then the new DNA may not work with the cellular apparatus it inherited, and the new cell simply dies." },
+          { "speaker": "NEO", "text": "So consistency in DNA copying matters. It keeps the body design that lets an organism live in its particular niche." }
+        ]
+      },
+      {
+        "animation": "A pond full of cartoon bacteria; a thermometer labelled 'global warming' rises and the water turns red. Most bacteria faint and vanish, but a few with tiny sun-hats survive and multiply. On-screen tip card: 'Variation → survival of the SPECIES'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Imagine bacteria living in a pond. If the water gets much hotter, most of them die. But a few variants that can resist heat survive and grow." },
+          { "speaker": "ZIPPY", "text": "So those tiny copying errors are actually a backup plan!" },
+          { "speaker": "NEO", "text": "Exactly. Variation is useful for the survival of species over time." },
+          { "speaker": "NEO", "text": "Board tip: when asked why variation is important, write survival of the species over time, not survival of one individual." }
+        ]
+      },
+      {
+        "animation": "Neo stands beside a chalkboard as three recap points write themselves with ticks: '1. Reproduction = DNA copy + cellular apparatus', '2. Copying is not perfect → variation', '3. Variation helps species survive changes in niche'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the basic event in reproduction is copying DNA, along with making extra cellular apparatus." },
+          { "speaker": "NEO", "text": "Two: DNA copying is not perfectly accurate, so it creates variations." },
+          { "speaker": "NEO", "text": "Three: variations help a species survive when its niche changes drastically." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "How do Organisms Reproduce",
+    "topic_no": 2,
+    "name": "Asexual Reproduction: Fission, Fragmentation and Regeneration",
+    "scenes": [
+      {
+        "animation": "A roadside chai stall with a queue. A blobby cartoon Amoeba reaches the counter, wobbles, pinches in the middle and becomes two Amoebae, each grabbing a cup. The chaiwala stares at his cash box.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hey! That Amoeba just became two and took two cups of chai!" },
+          { "speaker": "NEO", "text": "That's fission. For single-celled organisms, cell division itself is a way of making new individuals." }
+        ]
+      },
+      {
+        "animation": "Step-by-step diagram builds: Amoeba nucleus divides, then the cytoplasm pinches, giving two daughter cells; label 'Binary fission in Amoeba'. Next to it, a Leishmania cell with a whip-like flagellum splits lengthwise; label 'definite orientation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Many bacteria and protozoa simply split into two equal halves during cell division. This is binary fission." },
+          { "speaker": "NEO", "text": "In Amoeba, the splitting can take place in any plane." },
+          { "speaker": "NEO", "text": "Leishmania, which causes kala-azar, has a whip-like structure at one end. So its binary fission happens in a definite orientation to that structure." }
+        ]
+      },
+      {
+        "animation": "A single Plasmodium cell swells, its nucleus divides into many small nuclei, and it bursts into many daughter cells like a pomegranate opening. Label: 'Multiple fission in Plasmodium (malarial parasite)'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can a cell split into more than two at once?" },
+          { "speaker": "NEO", "text": "Yes. The malarial parasite, Plasmodium, divides into many daughter cells at the same time. This is multiple fission." }
+        ]
+      },
+      {
+        "animation": "A green Spirogyra filament floats in a pond; it snaps into three pieces with a soft 'click', and each piece lengthens into a full filament. Label: 'Fragmentation in Spirogyra'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now, simple multicellular organisms. Spirogyra, a green filament found in ponds, simply breaks up into smaller pieces when it matures." },
+          { "speaker": "NEO", "text": "Each fragment grows into a new individual. This is fragmentation." }
+        ]
+      },
+      {
+        "animation": "A cartoon Planaria is cut into three pieces by a dotted line; each piece grows a full head and tail in fast-forward. Inset: a mass of glowing 'specialised cells' multiplying and turning into different tissues, labelled 'development'. Tip card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I heard some worms regrow from pieces. Is that fragmentation too?" },
+          { "speaker": "NEO", "text": "That's regeneration. If Planaria or Hydra is cut into pieces, many pieces can grow into complete organisms." },
+          { "speaker": "NEO", "text": "Specialised cells multiply to make a mass of cells. These cells then change into different cell types and tissues in an organised sequence called development." },
+          { "speaker": "NEO", "text": "Board tip: regeneration is not the same as reproduction. Most organisms do not depend on being cut up to reproduce." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard with three icons, an Amoeba, a Spirogyra filament and a Planaria, as the recap points appear: '1. Fission: binary (Amoeba, Leishmania), multiple (Plasmodium)', '2. Fragmentation: Spirogyra', '3. Regeneration: Planaria, Hydra'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in binary fission a cell splits into two, as in Amoeba and Leishmania. In multiple fission it splits into many, as in Plasmodium." },
+          { "speaker": "NEO", "text": "Two: Spirogyra reproduces by fragmentation, breaking into pieces that each grow." },
+          { "speaker": "NEO", "text": "Three: Planaria and Hydra can regenerate whole bodies from pieces, using specialised cells." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "How do Organisms Reproduce",
+    "topic_no": 3,
+    "name": "Budding, Vegetative Propagation and Spore Formation",
+    "scenes": [
+      {
+        "animation": "Monsoon rain outside a kitchen window. Zippy opens a bread tin to find a slice covered in fuzzy grey-black cotton-like growth; it wiggles at him. Zippy leaps back.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Eww! My bread grew a hairstyle overnight!" },
+          { "speaker": "NEO", "text": "That's bread mould. It spreads by spores. We'll come back to it after meeting a budding expert." }
+        ]
+      },
+      {
+        "animation": "A cartoon Hydra sways in water. A small bump appears on its side, grows into a mini Hydra with tentacles, then detaches and waves goodbye. Labels build: 'bud', 'repeated cell division at one site', 'detaches when mature'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Hydra uses its regenerative cells to reproduce by budding. Repeated cell division at one specific site makes an outgrowth called a bud." },
+          { "speaker": "NEO", "text": "The bud develops into a tiny individual. When fully mature, it detaches from the parent and lives on its own." },
+          { "speaker": "ZIPPY", "text": "Like moving out of home once you're grown up!" },
+          { "speaker": "NEO", "text": "Nicely put. Yeast cells also reproduce by budding." }
+        ]
+      },
+      {
+        "animation": "A farm scene: a sugarcane stem piece sprouts in soil, a rose branch is bent into the ground (label 'layering'), and a grape stem is joined onto another plant (label 'grafting'). Close-up of a Bryophyllum leaf with tiny plantlets growing from notches on its margin.",
+        "lines": [
+          { "speaker": "NEO", "text": "In many plants, parts like the root, stem or leaf can grow into new plants. This is vegetative propagation." },
+          { "speaker": "NEO", "text": "Sugarcane, roses and grapes are grown this way, using methods like layering or grafting." },
+          { "speaker": "NEO", "text": "Bryophyllum has buds in the notches along its leaf margin. When a leaf falls on soil, these buds grow into new plants." }
+        ]
+      },
+      {
+        "animation": "Zippy holds a seed packet with a question mark. Three benefit cards flip over: a banana and jasmine with a crossed-out seed icon, a calendar with an early fruit, and a row of identical rose plants labelled 'genetically similar to parent'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why not just sow seeds?" },
+          { "speaker": "NEO", "text": "Three reasons. Banana, orange, rose and jasmine have lost the capacity to produce seeds, so this is how we grow them." },
+          { "speaker": "NEO", "text": "These plants also bear flowers and fruits earlier than plants grown from seeds." },
+          { "speaker": "NEO", "text": "And all the new plants are genetically similar to the parent plant, so its useful traits are kept." }
+        ]
+      },
+      {
+        "animation": "Microscope view of the bread mould: thread-like structures with round blobs on stalks. The diagram builds with labels 'sporangium' and 'spores'; a blob bursts, spores float onto a damp surface and sprout new threads. Tip card appears at the bottom.",
+        "lines": [
+          { "speaker": "NEO", "text": "Back to your bread. This mould is Rhizopus. It has thread-like structures, and the blobs on top are sporangia." },
+          { "speaker": "NEO", "text": "Each sporangium contains spores. Spores have thick walls that protect them until they touch a moist surface, where they grow into new Rhizopus." },
+          { "speaker": "ZIPPY", "text": "That's why damp bread in the monsoon gets mouldy so fast!" },
+          { "speaker": "NEO", "text": "Board tip: in the Rhizopus diagram, clearly label the sporangium and the spores. Diagram marks are easy to lose." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard beside three icons, a Hydra, a Bryophyllum leaf and a Rhizopus sporangium, as recap points appear: '1. Budding: Hydra, yeast', '2. Vegetative propagation: early fruit, same traits', '3. Spores: Rhizopus, thick walls'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Hydra and yeast reproduce by budding, where an outgrowth becomes a new individual." },
+          { "speaker": "NEO", "text": "Two: vegetative propagation grows plants from roots, stems or leaves. It gives early flowers and fruits and keeps the parent's traits." },
+          { "speaker": "NEO", "text": "Three: Rhizopus forms spores in sporangia, protected by thick walls until they reach a moist surface." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "How do Organisms Reproduce",
+    "topic_no": 4,
+    "name": "Sexual Reproduction in Flowering Plants",
+    "scenes": [
+      {
+        "animation": "A flower stall at a temple gate. Zippy holds up a red hibiscus as a fuzzy bee lands, dusts itself in yellow powder, and flies off to another flower. Zippy points at the bee angrily.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, that bee is stealing yellow powder from my hibiscus!" },
+          { "speaker": "NEO", "text": "It's not stealing, it's delivering. That powder is pollen, and it's how flowering plants reproduce sexually." }
+        ]
+      },
+      {
+        "animation": "Two cartoon cells, each carrying a DNA bundle, fuse into one; a counter above shows the chromosome number halving in each germ cell and returning to normal after fusion. Labels: 'germ cell: half', 'after fusion: normal'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sexual reproduction combines DNA from two individuals, which creates more variation." },
+          { "speaker": "ZIPPY", "text": "Wouldn't the DNA double every generation, then?" },
+          { "speaker": "NEO", "text": "Good catch. That's why germ cells have only half the number of chromosomes and half the DNA of body cells. When two germ cells fuse, the normal amount is restored." }
+        ]
+      },
+      {
+        "animation": "A longitudinal section of a flower builds step by step: sepals, petals, then stamens (label 'anther, filament, pollen'), then the central pistil (labels 'stigma', 'style', 'ovary', 'ovule', 'egg cell'). Side cards show papaya and watermelon as 'unisexual', hibiscus and mustard as 'bisexual'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The reproductive parts are in the flower. Stamens are the male part, and they produce yellowish pollen grains." },
+          { "speaker": "NEO", "text": "The pistil, in the centre, is the female part. It has a sticky stigma, a middle style and a swollen ovary at the base. The ovary contains ovules, and each ovule has an egg cell." },
+          { "speaker": "NEO", "text": "Flowers with either stamens or pistil are unisexual, like papaya and watermelon. Flowers with both are bisexual, like hibiscus and mustard." }
+        ]
+      },
+      {
+        "animation": "Pollen grains travel along dotted arrows: one path from anther to stigma of the same flower (label 'self-pollination'), another carried by the bee and a gust of wind to a second flower (label 'cross-pollination').",
+        "lines": [
+          { "speaker": "NEO", "text": "Pollen must be carried from the stamen to the stigma. This transfer is called pollination." },
+          { "speaker": "NEO", "text": "If pollen lands on the stigma of the same flower, it's self-pollination. If it reaches another flower, it's cross-pollination. Wind, water or animals do the carrying." }
+        ]
+      },
+      {
+        "animation": "Close-up of the pistil: a pollen grain on the stigma sprouts a tube that grows down the style into an ovule; the male germ cell fuses with the egg and a 'zygote' label flashes. Time-lapse: ovule hardens into a seed, ovary swells into a mango, petals wither and drop.",
+        "lines": [
+          { "speaker": "NEO", "text": "On the stigma, a pollen tube grows out of the pollen grain, travels through the style and reaches the ovule." },
+          { "speaker": "NEO", "text": "The male germ cell fuses with the female germ cell, the egg. This is fertilisation, and it forms a zygote." },
+          { "speaker": "NEO", "text": "The zygote divides many times to form an embryo within the ovule. The ovule develops a tough coat and becomes a seed. The ovary grows rapidly and ripens into a fruit, while petals, sepals, stamens, style and stigma may shrivel and fall off." },
+          { "speaker": "ZIPPY", "text": "So a mango is a grown-up ovary!" },
+          { "speaker": "NEO", "text": "Exactly. Board tip: the pollen tube diagram is a favourite. Label stigma, style, pollen tube, ovary, ovule and female germ cell." }
+        ]
+      },
+      {
+        "animation": "A seed in soil splits; a root and shoot emerge in fast-forward (labels 'plumule', 'radicle', 'cotyledon'). Neo then stands at the chalkboard as recap points appear: '1. Germ cells carry half DNA', '2. Stamen male, pistil female', '3. Pollination → fertilisation → seed and fruit'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The seed holds the future plant, the embryo, which grows into a seedling under the right conditions. This is germination." },
+          { "speaker": "NEO", "text": "Recap. One: germ cells carry half the DNA, so fusion restores the normal amount." },
+          { "speaker": "NEO", "text": "Two: stamens are the male part and the pistil is the female part of a flower." },
+          { "speaker": "NEO", "text": "Three: pollination leads to fertilisation; the ovule becomes a seed and the ovary becomes a fruit." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "How do Organisms Reproduce",
+    "topic_no": 5,
+    "name": "Changes at Puberty",
+    "scenes": [
+      {
+        "animation": "A school corridor with two framed class photos: 'Class 6' and 'Class 10'. Zippy hovers at the same height in both photos, while the students in the second photo are clearly taller. Zippy looks from one photo to the other, puzzled.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, in the Class 6 photo, everyone was my height. In Class 10, I need a ladder to talk to them!" },
+          { "speaker": "NEO", "text": "That's the teenage years at work. The human body goes through a set of changes that prepare it for reproduction." }
+        ]
+      },
+      {
+        "animation": "A simple growth timeline from childhood to adulthood. Early years show a 'body growth' bar rising fast; in the teenage section a second bar labelled 'reproductive tissues mature' rises while the first slows. The teenage section is highlighted and labelled 'puberty'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In early years, the body mainly grows in size. Then, during adolescence, the rate of general body growth begins to slow down, and reproductive tissues begin to mature." },
+          { "speaker": "NEO", "text": "This period during adolescence is called puberty." }
+        ]
+      },
+      {
+        "animation": "A neutral, textbook-style chart with simple outline icons under the heading 'Changes in both boys and girls': new hair in armpits and genital area, thinner hair on arms, legs and face, and oily skin with pimples. Each item ticks in calmly.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some changes happen in both boys and girls. Thick hair grows in new parts of the body, such as the armpits and the genital area between the thighs." },
+          { "speaker": "NEO", "text": "Thinner hair can also appear on the legs, arms and face. The skin frequently becomes oily, and pimples may appear." }
+        ]
+      },
+      {
+        "animation": "The chart splits into two neutral columns with outline icons: 'Girls' (breast size increases, skin of nipples darkens, menstruation begins) and 'Boys' (new facial hair, voice begins to crack). A small label below reads 'guided by hormones'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some changes are specific. In girls, breast size begins to increase, the skin of the nipples darkens, and menstruation begins." },
+          { "speaker": "NEO", "text": "In boys, new hair appears on the face, and the voice begins to crack." },
+          { "speaker": "NEO", "text": "In boys, the testes produce the hormone testosterone, which brings about these changes. In girls, the ovaries also produce hormones." }
+        ]
+      },
+      {
+        "animation": "A row of diverse cartoon teenagers, each walking along their own timeline track at a different pace, all reaching the same destination flag. On-screen text: 'Different timelines are normal'. A tip card slides in at the bottom.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Do all these changes happen on one birthday?" },
+          { "speaker": "NEO", "text": "No. They happen slowly, over months and years. They don't happen all at the same time, or at the same age in different people." },
+          { "speaker": "NEO", "text": "Every person has their own timeline, and that is completely normal." },
+          { "speaker": "ZIPPY", "text": "So nobody should be teased for being early or late." },
+          { "speaker": "NEO", "text": "Right. Board tip: when asked about changes at puberty, list the changes common to both first, then those specific to boys and girls." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard as three recap points appear with ticks: '1. Puberty: reproductive tissues mature', '2. Common and specific changes', '3. Slow, gradual, different timing for each person'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: puberty is the period in adolescence when general growth slows and reproductive tissues mature." },
+          { "speaker": "NEO", "text": "Two: some changes, like new hair and oily skin, happen in both, while others are specific to boys or girls." },
+          { "speaker": "NEO", "text": "Three: these changes are gradual and happen at different ages in different people." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "How do Organisms Reproduce",
+    "topic_no": 6,
+    "name": "The Human Reproductive System",
+    "scenes": [
+      {
+        "animation": "Zippy holds a giant clinical thermometer reading '37 °C' and waves it proudly. Neo gently taps a small callout that reads 'sperm formation needs a lower temperature'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, body temperature is 37 degrees. So every organ works best at 37, right?" },
+          { "speaker": "NEO", "text": "Not always. Sperm formation needs a temperature lower than normal body temperature. That's why the testes are located outside the abdominal cavity, in the scrotum." }
+        ]
+      },
+      {
+        "animation": "A clean, textbook-style labelled diagram of the male reproductive system builds step by step: testis, scrotum, vas deferens, urinary bladder, urethra, seminal vesicle, prostate gland. A dotted arrow traces the path of sperms. Inset: a sperm cell with 'genetic material' and 'tail' labels.",
+        "lines": [
+          { "speaker": "NEO", "text": "The testes produce sperms, the male germ cells. They also produce testosterone, which brings about changes in boys at puberty." },
+          { "speaker": "NEO", "text": "Sperms travel through the vas deferens, which unites with a tube coming from the urinary bladder. The urethra is a common passage for both sperms and urine." },
+          { "speaker": "NEO", "text": "The seminal vesicles and the prostate gland add their secretions. This fluid makes transport easier and also provides nutrition." },
+          { "speaker": "NEO", "text": "A sperm is tiny. It is mostly genetic material, with a long tail that helps it move towards the female germ cell." }
+        ]
+      },
+      {
+        "animation": "A textbook-style labelled diagram of the female reproductive system builds step by step: ovary, oviduct or fallopian tube, uterus, cervix, vagina. A small egg glows as it is released from one ovary and moves into the oviduct.",
+        "lines": [
+          { "speaker": "NEO", "text": "The female system has two ovaries, which produce eggs and some hormones. At birth, a girl already has thousands of immature eggs." },
+          { "speaker": "NEO", "text": "From puberty, some eggs start maturing, and one egg is produced every month by one of the ovaries." },
+          { "speaker": "NEO", "text": "The egg moves through a thin oviduct, or fallopian tube. The two oviducts unite into an elastic, bag-like organ called the uterus, which opens into the vagina through the cervix." }
+        ]
+      },
+      {
+        "animation": "Simple schematic: a zygote forms in the oviduct, moves down and attaches to the thick uterine lining. A disc labelled 'placenta' appears with finger-like 'villi' on the embryo's side; arrows show 'glucose, oxygen' going in and 'wastes' going out.",
+        "lines": [
+          { "speaker": "NEO", "text": "Fertilisation happens in the oviduct. The fertilised egg, the zygote, gets implanted in the lining of the uterus and starts dividing." },
+          { "speaker": "NEO", "text": "The embryo gets nutrition from the mother's blood through the placenta, a disc embedded in the uterine wall. Villi on the embryo's side give a large surface for glucose and oxygen to pass in, and for wastes to pass out." },
+          { "speaker": "NEO", "text": "The child develops in about nine months, and birth happens through rhythmic contractions of the muscles of the uterus." }
+        ]
+      },
+      {
+        "animation": "A calm circular monthly diagram: the uterine lining thickens, then, marked 'no fertilisation', it breaks down and exits; a label reads 'menstruation: about 2 to 8 days, roughly every month'. A tip card appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if the egg isn't fertilised?" },
+          { "speaker": "NEO", "text": "The egg lives for about one day. Every month the uterus prepares a thick, spongy lining. Without fertilisation, this lining slowly breaks and comes out through the vagina as blood and mucus." },
+          { "speaker": "NEO", "text": "This is menstruation. The cycle takes place roughly every month, and usually lasts about two to eight days." },
+          { "speaker": "NEO", "text": "Board tip: the labelled diagrams of both systems carry easy marks. Practise them neatly, with clear label lines." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard beside small thumbnail diagrams as recap points appear: '1. Testes: sperms + testosterone', '2. Ovaries → oviduct → uterus', '3. Placenta nourishes; no fertilisation → menstruation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: testes make sperms and testosterone, and sit in the scrotum for a lower temperature." },
+          { "speaker": "NEO", "text": "Two: an egg released by an ovary is fertilised in the oviduct, and the embryo develops in the uterus." },
+          { "speaker": "NEO", "text": "Three: the placenta nourishes the embryo, and if there is no fertilisation, the uterine lining is shed as menstruation." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "How do Organisms Reproduce",
+    "topic_no": 7,
+    "name": "Reproductive Health",
+    "scenes": [
+      {
+        "animation": "Zippy scrolls a phone flooded with forwarded messages with clashing headlines. Neo stamps a big green 'CHECK THE SCIENCE' seal over the screen, and the rumours dissolve.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, my phone is full of health advice, and half of it contradicts the other half!" },
+          { "speaker": "NEO", "text": "That's why reproductive health needs correct science, not forwards. Let's get the facts straight." }
+        ]
+      },
+      {
+        "animation": "Two gauges side by side, labelled 'body ready' and 'mind ready'; the first fills faster than the second. Thought bubbles around a cartoon teen show 'friends', 'family', 'society', then fade as a shield labelled 'correct information' appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puberty means the body is becoming ready for reproduction. But a body that is ready does not mean the mind is ready for sexual activity or for bringing up a child." },
+          { "speaker": "NEO", "text": "Young people often face pressure from friends, family or society. Making responsible choices needs correct information." }
+        ]
+      },
+      {
+        "animation": "A clean classification chart builds: 'Sexually transmitted diseases' splits into 'Bacterial: gonorrhoea, syphilis' and 'Viral: warts, HIV-AIDS'. A shield icon labelled 'condom' appears beneath.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sexual contact can pass infections from one person to another. These are sexually transmitted diseases." },
+          { "speaker": "NEO", "text": "Bacterial examples are gonorrhoea and syphilis. Viral examples are warts and HIV-AIDS." },
+          { "speaker": "ZIPPY", "text": "Can they be prevented?" },
+          { "speaker": "NEO", "text": "Using a covering called a condom during sex helps prevent the transmission of many of these infections." }
+        ]
+      },
+      {
+        "animation": "Four neutral icon cards flip over one by one: 'Barrier: condoms', 'Hormonal: oral pills', 'Device in uterus: loop or copper-T', 'Surgical: vas deferens or fallopian tube blocked'. Each card shows a small 'how it works' line.",
+        "lines": [
+          { "speaker": "NEO", "text": "Methods of preventing pregnancy are called contraceptive methods." },
+          { "speaker": "NEO", "text": "First, mechanical barriers like condoms stop sperm from reaching the egg. Second, oral pills change the hormonal balance so that eggs are not released, but they may have side effects." },
+          { "speaker": "NEO", "text": "Third, devices like the loop or copper-T are placed in the uterus. They may cause side effects due to irritation of the uterus." },
+          { "speaker": "NEO", "text": "Fourth, surgery. Blocking the vas deferens in males prevents sperm transfer. Blocking the fallopian tube in females prevents the egg from reaching the uterus." }
+        ]
+      },
+      {
+        "animation": "A balance scale labelled 'female : male ratio' tilts to one side, then a gavel icon with the label 'Prenatal sex determination: prohibited by law' brings it back level. A tip card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Surgery can also remove unwanted pregnancies. Sadly, it is sometimes misused to remove female foetuses." },
+          { "speaker": "NEO", "text": "That's why prenatal sex determination is prohibited by law in India. A healthy society needs a balanced female-male sex ratio." },
+          { "speaker": "NEO", "text": "Board tip: classify contraceptive methods by how they work, and give one example of each." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard as three recap points appear: '1. Body ready ≠ mind ready', '2. STDs: bacterial and viral; condoms help prevent', '3. Contraception: barrier, hormonal, device in uterus, surgical'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a body that is ready for reproduction does not mean the mind is ready." },
+          { "speaker": "NEO", "text": "Two: gonorrhoea and syphilis are bacterial, warts and HIV-AIDS are viral, and condoms help prevent their spread." },
+          { "speaker": "NEO", "text": "Three: contraception works by barriers, hormones, devices in the uterus or surgery, and prenatal sex determination is banned by law." }
+        ]
+      }
+    ]
+  }
+]

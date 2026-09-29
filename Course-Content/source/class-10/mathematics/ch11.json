@@ -1,0 +1,117 @@
+[
+  {
+    "chapter_no": 11,
+    "chapter": "Areas Related to Circles",
+    "topic_no": 1,
+    "name": "Area of a Sector and Arc Length",
+    "scenes": [
+      {
+        "animation": "Diwali party: a round cake is cut into six equal slices. Zippy grabs one slice and Neo's eyebrows shoot up; the slice glows with the label '60°'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I took only one slice. That's a small piece, right?" },
+          { "speaker": "NEO", "text": "Let's measure it properly. Your slice is a sector of a circle." }
+        ]
+      },
+      {
+        "animation": "A circle with centre O, radii OA and OB. The smaller region AOB shades green, labelled 'minor sector', and the rest shades purple, labelled 'major sector'. Angle θ at O glows; the arc AB is traced in orange, labelled 'arc length'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The region enclosed by two radii and an arc is called a sector. The angle between the radii is the angle of the sector, theta." },
+          { "speaker": "NEO", "text": "The smaller region is the minor sector. The rest of the circle is the major sector, with angle 360 minus theta." }
+        ]
+      },
+      {
+        "animation": "The full circle is split into 360 thin one-degree slices. One slice lights up: 'Area of 1° sector = πr²/360'. Then θ slices gather: 'Area of sector = (θ/360) × πr²'. Below: 'Length of arc = (θ/360) × 2πr'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The whole circle, 360 degrees, has area pi r squared. So a sector of one degree has area pi r squared by 360." },
+          { "speaker": "NEO", "text": "A sector of angle theta has area theta by 360, into pi r squared." },
+          { "speaker": "NEO", "text": "In the same way, the arc length is theta by 360, into 2 pi r." },
+          { "speaker": "ZIPPY", "text": "So it's just the fraction of the full circle!" }
+        ]
+      },
+      {
+        "animation": "Worked example written line by line: 'r = 21 cm, θ = 60°, π = 22/7'. 'Arc = (60/360) × 2 × (22/7) × 21 = (1/6) × 132 = 22 cm'. 'Sector = (60/360) × (22/7) × 21 × 21 = (1/6) × 1386 = 231 cm²'. The numbers 22/7 × 21 = 66 and 66 × 21 = 1386 are shown in a side bubble.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: in a circle of radius 21 centimetres, an arc subtends 60 degrees at the centre. Take pi as 22 by 7." },
+          { "speaker": "NEO", "text": "Sixty by 360 is one sixth. Two into 22 by 7 into 21 is 132. One sixth of 132 is 22. So the arc is 22 centimetres." },
+          { "speaker": "NEO", "text": "For the area, 22 by 7 into 21 into 21 is 1386. One sixth of 1386 is 231. So the sector is 231 square centimetres." },
+          { "speaker": "NEO", "text": "The major sector would be the full area, 1386, minus 231, which is 1155 square centimetres." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Cancel 360 with θ first, and 7 with r. Write units: cm for arc, cm² for area.' A minute hand sweeps 30° in 5 minutes as a bonus visual: '5 min = 30°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: simplify theta by 360 first, and cancel the 7 before multiplying. And keep units straight: centimetres for arc, square centimetres for area." },
+          { "speaker": "NEO", "text": "For clock questions, remember the minute hand turns 6 degrees every minute, so 30 degrees in 5 minutes." }
+        ]
+      },
+      {
+        "animation": "Recap board with the cake slice: '1. Sector: region between two radii and an arc', '2. Area = (θ/360) × πr²', '3. Arc length = (θ/360) × 2πr'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a sector is the region between two radii and their arc." },
+          { "speaker": "NEO", "text": "Two: the area of a sector is theta by 360, into pi r squared." },
+          { "speaker": "NEO", "text": "Three: the arc length is theta by 360, into 2 pi r." },
+          { "speaker": "ZIPPY", "text": "231 square centimetres of cake. Not small at all. Worth it." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Areas Related to Circles",
+    "topic_no": 2,
+    "name": "Area of a Segment and Combined Figures",
+    "scenes": [
+      {
+        "animation": "A round papad is snapped along a straight line. Zippy holds the smaller curved piece, while the bigger piece sits on the plate. Labels: 'minor segment', 'major segment'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My papad broke in a straight line. Is this piece a sector?" },
+          { "speaker": "NEO", "text": "No. A piece cut off by a chord is a segment. And its area is easy once you know sectors." }
+        ]
+      },
+      {
+        "animation": "Circle with centre O, chord AB. Sector OAPB shades green; triangle OAB shades grey and slides out, leaving only the curved region. Formula builds: 'Area of minor segment = Area of sector OAPB − Area of ΔOAB'. Then 'Major segment = πr² − minor segment'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The region between a chord and its arc is a segment. The smaller one is the minor segment." },
+          { "speaker": "NEO", "text": "Its area is the area of the sector minus the area of the triangle formed by the two radii and the chord." },
+          { "speaker": "NEO", "text": "The major segment is the whole circle minus the minor segment." }
+        ]
+      },
+      {
+        "animation": "Worked example line by line: 'r = 10 cm, ∠AOB = 90°, π = 3.14'. 'Sector = (90/360) × 3.14 × 100 = 78.5 cm²'. 'ΔAOB = ½ × 10 × 10 = 50 cm²'. 'Minor segment = 78.5 − 50 = 28.5 cm²'. 'Major segment = 314 − 28.5 = 285.5 cm²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a chord of a circle of radius 10 centimetres subtends a right angle at the centre. Use pi as 3.14." },
+          { "speaker": "NEO", "text": "The sector is one quarter of 3.14 into 100, that is 78.5 square centimetres." },
+          { "speaker": "NEO", "text": "The triangle is right-angled at O, so its area is half into 10 into 10, which is 50." },
+          { "speaker": "NEO", "text": "So the minor segment is 78.5 minus 50, that is 28.5 square centimetres. The major segment is 314 minus 28.5, which is 285.5 square centimetres." },
+          { "speaker": "ZIPPY", "text": "And if the angle is 60 degrees?" },
+          { "speaker": "NEO", "text": "Then the triangle is equilateral, with area root three by four, into r squared." }
+        ]
+      },
+      {
+        "animation": "Combined figure built step by step: a square tile ABCD of side 14 cm; at each corner a quadrant of radius 7 cm is drawn in orange. The leftover central region glows blue. Working: 'Square = 14 × 14 = 196 cm²', '4 quadrants = 1 full circle = (22/7) × 7 × 7 = 154 cm²', 'Shaded = 196 − 154 = 42 cm²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now a combined figure. A square tile has side 14 centimetres. At each corner, a quadrant of radius 7 centimetres is drawn. Find the area left over." },
+          { "speaker": "NEO", "text": "The square is 14 into 14, which is 196." },
+          { "speaker": "NEO", "text": "Four quadrants make one full circle: 22 by 7 into 7 into 7, which is 154." },
+          { "speaker": "NEO", "text": "So the remaining area is 196 minus 154, that is 42 square centimetres." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Combined figure = (big shape) ± (pieces). Spot equal quadrants or semicircles that join into a full circle.' A note: 'Segment questions use central angles of 60° or 90°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: in combined figures, see which shapes to add and which to subtract. Look for pieces that join into a full circle." },
+          { "speaker": "NEO", "text": "And segment questions in the syllabus use central angles of 60 or 90 degrees only." }
+        ]
+      },
+      {
+        "animation": "Recap board with the papad pieces: '1. Minor segment = sector − triangle', '2. 90°: triangle = ½r²; 60°: triangle = (√3/4)r²', '3. Combined figures: add or subtract known areas'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the minor segment is the sector minus the triangle." },
+          { "speaker": "NEO", "text": "Two: for 90 degrees, the triangle is half r squared; for 60 degrees, it is root three by four, into r squared." },
+          { "speaker": "NEO", "text": "Three: for combined figures, add or subtract areas you already know." },
+          { "speaker": "ZIPPY", "text": "Segment eaten. Sector next!" }
+        ]
+      }
+    ]
+  }
+]

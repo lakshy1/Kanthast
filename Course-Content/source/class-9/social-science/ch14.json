@@ -1,0 +1,251 @@
+[
+  {
+    "chapter_no": 14,
+    "chapter": "Political Science: Electoral Politics",
+    "topic_no": 1,
+    "name": "Why Do We Need Elections?",
+    "scenes": [
+      {
+        "animation": "Haryana, 1987. A jeep with loudspeakers drives through villages; banners read 'Nyaya Yudh' and 'Lok Dal'. A leader labelled 'Chaudhary Devi Lal' addresses a huge crowd of farmers under a peepal tree.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A war? Nyaya Yudh sounds scary!" },
+          { "speaker": "NEO", "text": "It means struggle for justice. It was an election campaign that changed Haryana's government." }
+        ]
+      },
+      {
+        "animation": "A promise card flips open: 'Waive loans of farmers and small businessmen'. On result day, a seat chart of 90 seats fills: 'Lok Dal and partners: 76', with 'Lok Dal alone: 60' and 'Congress: 5'. Devi Lal takes oath as 'Chief Minister'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1987, Chaudhary Devi Lal, an opposition leader, led a movement called Nyaya Yudh and formed a new party, the Lok Dal. He promised that if his party won, his government would waive the loans of farmers and small businessmen." },
+          { "speaker": "NEO", "text": "People were unhappy with the existing government. The Lok Dal and its partners won 76 out of 90 seats in the State Assembly. Lok Dal alone won 60 seats. The Congress could win only 5 seats." },
+          { "speaker": "NEO", "text": "Devi Lal became the Chief Minister, and his government issued an order waiving the outstanding loans." }
+        ]
+      },
+      {
+        "animation": "A thought experiment: a giant hall where all 140 crore Indians try to sit together and make a decision; the hall bursts. Then a smaller hall with representatives, and a ballot box as the connection between people and representatives.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why can't all of us just decide everything ourselves?" },
+          { "speaker": "NEO", "text": "In a large country, it isn't possible for all people to sit together every day and take decisions. So people rule through their representatives." },
+          { "speaker": "NEO", "text": "An election is a mechanism by which people can choose their representatives at regular intervals, and change them if they wish to do so." }
+        ]
+      },
+      {
+        "animation": "A checklist on a clipboard ticks itself, item by item: 'Who will make laws?', 'Who will form the government?', 'Which party's policies will guide the government?'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In an election, voters make many choices. They choose who will make laws for them, who will form the government and take major decisions, and which party's policies will guide the government and law making." }
+        ]
+      },
+      {
+        "animation": "A checklist titled 'What makes an election democratic?' builds itself: '1. Everyone has one vote of equal value', '2. Real choice: parties and candidates free to contest', '3. Held regularly, after every few years', '4. Candidate preferred by people gets elected', '5. Free and fair manner'. A 'BOARD TIP' star appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "For an election to be democratic, everyone should be able to choose, with one vote each, and every vote of equal value." },
+          { "speaker": "NEO", "text": "There should be something to choose from. Elections must be held regularly. The candidate preferred by the people should get elected. And elections should be conducted in a free and fair manner." },
+          { "speaker": "NEO", "text": "Board tip: these five conditions of a democratic election are a very common question." }
+        ]
+      },
+      {
+        "animation": "Recap board with a ballot box. Points appear: '1. Haryana 1987: Lok Dal won 76 of 90 seats; people changed their government', '2. Elections let people choose and change representatives', '3. Five conditions of a democratic election'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in Haryana in 1987, voters used an election to replace their government." },
+          { "speaker": "NEO", "text": "Two: elections let people choose their representatives and change them at regular intervals." },
+          { "speaker": "NEO", "text": "Three: a democratic election needs equal votes, real choice, regular timing, the people's preferred winner, and fairness." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "Political Science: Electoral Politics",
+    "topic_no": 2,
+    "name": "Political Competition and Electoral Constituencies",
+    "scenes": [
+      {
+        "animation": "Two rival chaiwalas on the same street compete for customers: one adds free biscuits, the other makes the chai stronger. Customers happily sip. Zippy shouts 'Fight! Fight!' from the sidelines.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "They're fighting over customers! Isn't competition a bad thing?" },
+          { "speaker": "NEO", "text": "Look who's winning. The customers. Elections work the same way." }
+        ]
+      },
+      {
+        "animation": "Two columns appear. Left, 'Demerits of competition': quarrel icons, 'sense of disunity', 'dirty tricks'. Right, 'Merits': a leader looking up at voters with a checklist, labelled 'Parties must serve people to win'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Electoral competition has many demerits. It creates a sense of disunity and factionalism, and parties sometimes use dirty tricks to win." },
+          { "speaker": "NEO", "text": "But our system still allows competition, because regular electoral competition provides incentives to political parties and leaders. They know that if they raise issues people care about, their chances of winning go up." },
+          { "speaker": "NEO", "text": "If they fail to satisfy the voters, they will not be able to win again." }
+        ]
+      },
+      {
+        "animation": "An outline map of India cracks into many small areas; a counter shows '543 constituencies'. One constituency is highlighted with a person labelled 'MP'. A state map then splits into smaller assembly constituencies with a person labelled 'MLA'. A calendar shows '5 years' with 'General election' and a small insert 'By-election'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Lok Sabha and Vidhan Sabha elections are held regularly after every five years. An election held for all constituencies at the same time is called a general election. An election for only one constituency, to fill a vacancy, is called a by-election." },
+          { "speaker": "NEO", "text": "The country is divided into different areas for the purpose of elections. These are called electoral constituencies." },
+          { "speaker": "NEO", "text": "For Lok Sabha elections, the country is divided into 543 constituencies. The representative elected from each is called a Member of Parliament, or MP. Each state is divided into Assembly constituencies, whose representative is called a Member of Legislative Assembly, or MLA." }
+        ]
+      },
+      {
+        "animation": "A running race where some runners start far behind the line because of heavy weights labelled 'poverty' and 'discrimination'. Special lanes open, labelled 'Reserved constituencies: SC and ST'. Counters show 'Lok Sabha: 84 SC, 47 ST (as on 1 June 2009)', and a sign 'One-third seats for women in rural and urban local bodies'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some constituencies are reserved for people who belong to the Scheduled Castes and Scheduled Tribes. In an SC reserved constituency, only someone from the Scheduled Castes can stand for election." },
+          { "speaker": "NEO", "text": "In the Lok Sabha, 84 seats are reserved for the Scheduled Castes and 47 for the Scheduled Tribes, as on 1 June 2009. One-third of the seats in rural and urban local bodies are reserved for women candidates." },
+          { "speaker": "ZIPPY", "text": "Why reserve seats at all?" },
+          { "speaker": "NEO", "text": "Because weaker sections may not otherwise get a fair chance to be elected. Board tip: learn the reason for reservation, not just the numbers." }
+        ]
+      },
+      {
+        "animation": "Recap board with a map split into constituencies. Points appear: '1. Competition gives parties an incentive to serve people', '2. 543 Lok Sabha constituencies; MP and MLA', '3. Reserved constituencies for SC and ST; one-third for women in local bodies'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: electoral competition has demerits, but it pushes leaders to serve the people." },
+          { "speaker": "NEO", "text": "Two: India has 543 Lok Sabha constituencies, electing MPs, and states have Assembly constituencies electing MLAs." },
+          { "speaker": "NEO", "text": "Three: some constituencies are reserved for SCs and STs, and one-third of local body seats for women." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "Political Science: Electoral Politics",
+    "topic_no": 3,
+    "name": "Voters' List, Nomination and Election Campaign",
+    "scenes": [
+      {
+        "animation": "Zippy's older sister celebrates her 18th birthday with a cake shaped like a ballot box. She waves a new card labelled 'EPIC — Voter ID'. Zippy tries to grab it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can I have a voter card too? I'm very mature!" },
+          { "speaker": "NEO", "text": "Nice try. You must be 18 years or older, and your name must be on the voters' list." }
+        ]
+      },
+      {
+        "animation": "A long register opens, labelled 'Voters' List / Electoral Roll'. Names get added and removed as people turn 18, move or pass away. A card slides out: 'Electors Photo Identity Card (EPIC)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In a democratic election, the list of those who are eligible to vote is prepared much before the election. This list is officially called the Electoral Roll, and is commonly known as the Voters' List." },
+          { "speaker": "NEO", "text": "In our country, all citizens aged 18 years and above can vote in an election, regardless of caste, religion or gender." },
+          { "speaker": "NEO", "text": "The government has introduced the Election Photo Identity Card, or EPIC. Voters are required to carry it, or another proof of identity, when they go out to vote." }
+        ]
+      },
+      {
+        "animation": "A candidate fills a form labelled 'Nomination form' and hands over a 'security deposit'. A second sheet slides in: 'Legal declaration — serious criminal cases, assets and liabilities, educational qualifications'. A 'Party ticket' pops out like a train ticket.",
+        "lines": [
+          { "speaker": "NEO", "text": "Anyone who can be a voter can also become a candidate. The only difference is that the candidate must be at least 25 years old." },
+          { "speaker": "NEO", "text": "Political parties nominate their candidates, who get the party symbol and support. This is called a party ticket. Every candidate fills a nomination form and gives a security deposit." },
+          { "speaker": "NEO", "text": "Every candidate also has to make a legal declaration, giving details of serious criminal cases pending against them, their assets and liabilities, and their educational qualifications." }
+        ]
+      },
+      {
+        "animation": "A campaign montage: rallies, posters and slogans flash on screen with party names and years: 'Garibi Hatao — Congress, 1971', 'Save Democracy — Janata Party, 1977', 'Land to the Tiller — Left Front, West Bengal, 1977', 'Protect the Self-Respect of the Telugus — TDP, 1983'. A banner reads 'Model Code of Conduct'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In our country, election campaigns take place for a two-week period between the announcement of the final list of candidates and the date of polling." },
+          { "speaker": "NEO", "text": "Some famous slogans: the Congress party led by Indira Gandhi gave the slogan Garibi Hatao in 1971. The Janata Party promised to Save Democracy in 1977. The Left Front used Land to the Tiller in West Bengal in 1977, and N.T. Rama Rao's Telugu Desam Party called to Protect the Self-Respect of the Telugus in 1983." },
+          { "speaker": "NEO", "text": "Under the law and the Model Code of Conduct, no party or candidate can bribe or threaten voters, appeal to them in the name of caste or religion, or use government resources or places of worship for campaigning." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Voter: 18+ | Candidate: 25+ | Legal declaration: criminal cases, assets and liabilities, education'. Zippy salutes.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So a candidate needs a degree, right?" },
+          { "speaker": "NEO", "text": "No educational qualification is required. They only have to declare it. Board tip: slogans and their parties are often asked as matching questions." }
+        ]
+      },
+      {
+        "animation": "Recap board with a voter card and a megaphone. Points appear: '1. Voters' list; all citizens 18+ can vote; EPIC', '2. Candidates 25+, nomination, security deposit, legal declaration', '3. Two-week campaign; famous slogans; Model Code of Conduct'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: every citizen aged 18 and above can vote, if listed on the voters' list." },
+          { "speaker": "NEO", "text": "Two: candidates must be at least 25, file a nomination, pay a deposit, and make a legal declaration." },
+          { "speaker": "NEO", "text": "Three: campaigns last about two weeks and must follow the law and the Model Code of Conduct." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "Political Science: Electoral Politics",
+    "topic_no": 4,
+    "name": "Polling, Counting and the Election Commission",
+    "scenes": [
+      {
+        "animation": "Polling day at a village school. Voters queue; an officer marks a voter's finger with ink. Zippy tries to get his spark 'finger' inked too, and the officer politely waves him away.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does everyone get a purple mark on their finger?" },
+          { "speaker": "NEO", "text": "So no one can vote twice. Let's follow a vote from the queue to the result." }
+        ]
+      },
+      {
+        "animation": "Step-by-step flowchart: 'Name checked on voters' list' → 'Ink mark on finger' → 'Vote cast on EVM by pressing button next to candidate's name and symbol' → 'EVMs sealed and taken to a secure place' → 'Counting: candidate with highest votes declared elected'.",
+        "lines": [
+          { "speaker": "NEO", "text": "On election day, every person whose name is on the voters' list goes to a nearby polling booth. An election official identifies the voter, puts a mark on the finger, and allows the vote." },
+          { "speaker": "NEO", "text": "Nowadays, electronic voting machines, or EVMs, are used to record votes. The machine shows the names of the candidates and their party symbols. The voter presses the button against the chosen candidate." },
+          { "speaker": "NEO", "text": "After polling, the EVMs are sealed and taken to a secure place. On a fixed date, all the EVMs from a constituency are opened and votes are counted. The candidate who secures the highest number of votes is declared elected." }
+        ]
+      },
+      {
+        "animation": "A referee figure in a crisp uniform labelled 'Election Commission' blows a whistle at a minister trying to use a government car for campaigning. Label cards: 'Appointed by the President', 'Takes decisions on every aspect of conduct of elections', 'Implements Code of Conduct', 'Government officers on election duty work under EC'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In our country, elections are conducted by an independent and very powerful Election Commission. The Chief Election Commissioner is appointed by the President of India, but once appointed, is not answerable to the President or the government." },
+          { "speaker": "NEO", "text": "The Commission takes decisions on every aspect of the conduct and control of elections, from announcing them to declaring the results. It implements the Code of Conduct and punishes any candidate or party that violates it." },
+          { "speaker": "NEO", "text": "During the election period, it can order the government to follow some guidelines. Government officers on election duty work under the control of the EC, not the government." }
+        ]
+      },
+      {
+        "animation": "Zippy imagines the Prime Minister ordering the Election Commission around; the EC referee shakes his head and holds up a rulebook. A 'BOARD TIP' card: 'EC is independent — not answerable to the government'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Surely the ruling party can tell the Election Commission what to do?" },
+          { "speaker": "NEO", "text": "No. It often reprimands the government and administration for lapses. Board tip: list the powers of the Election Commission to show why it is independent." }
+        ]
+      },
+      {
+        "animation": "Recap board with an EVM and a whistle. Points appear: '1. Voter identified, finger marked, vote on EVM', '2. EVMs sealed and counted; highest votes wins', '3. Independent Election Commission controls the whole process'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: at the booth, the voter is identified, the finger is marked, and the vote is cast on an EVM." },
+          { "speaker": "NEO", "text": "Two: the EVMs are sealed and counted, and the candidate with the highest votes wins." },
+          { "speaker": "NEO", "text": "Three: an independent and powerful Election Commission controls every step of the election." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "Political Science: Electoral Politics",
+    "topic_no": 5,
+    "name": "What Makes Elections in India Democratic?",
+    "scenes": [
+      {
+        "animation": "A news studio on result day. The anchor announces that the ruling party has lost. The outgoing Chief Minister smiles, shakes hands and walks out; the winner walks in. Zippy expected a fight and holds boxing gloves, disappointed.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "They lost, and they just walked out? No fight?" },
+          { "speaker": "NEO", "text": "That's one sign of a healthy democracy. Let's look at the others." }
+        ]
+      },
+      {
+        "animation": "Three pillars rise, one by one: 'Independent Election Commission', 'Popular participation', 'Acceptance of election outcome'. The first pillar shows the EC referee from earlier.",
+        "lines": [
+          { "speaker": "NEO", "text": "The first sign is an independent Election Commission, which enjoys the same kind of independence that the judiciary enjoys." },
+          { "speaker": "NEO", "text": "The second is popular participation. The quality of an election depends on how many people take part. If elections were not free or fair, people would not keep taking part in them." }
+        ]
+      },
+      {
+        "animation": "An animated graph compares voter turnout: in India, bars for 'poor', 'illiterate' and 'underprivileged' groups are as high as or higher than bars for 'rich and privileged'. A small inset shows the opposite pattern in western democracies.",
+        "lines": [
+          { "speaker": "NEO", "text": "Voter turnout in India has either remained stable or gone up over the last fifty years." },
+          { "speaker": "NEO", "text": "In India, the poor, illiterate and underprivileged people vote in larger proportion as compared to the rich and privileged sections. This is in contrast to western democracies." },
+          { "speaker": "NEO", "text": "Common people in India attach a lot of importance to elections. They feel that through elections, they can bring pressure on political parties to adopt policies that favour them." }
+        ]
+      },
+      {
+        "animation": "A scoreboard shows ruling parties losing again and again at national and state levels. Then a 'Challenges' box opens: 'money power', 'candidates with criminal connections', 'family control of parties', 'little choice for ordinary citizens', 'small parties at a disadvantage'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The third sign is the acceptance of election outcome. Ruling parties routinely lose elections in India, both at the national and state level. The losing parties accept the people's verdict." },
+          { "speaker": "ZIPPY", "text": "So Indian elections are perfect?" },
+          { "speaker": "NEO", "text": "Not perfect. There are challenges. Candidates with a lot of money may have an unfair advantage. Some candidates have criminal connections. A few families dominate some parties, and elections often offer little choice to ordinary citizens." },
+          { "speaker": "NEO", "text": "Board tip: a balanced answer mentions both the strengths and the challenges of our elections." }
+        ]
+      },
+      {
+        "animation": "Recap board with three pillars. Points appear: '1. Independent Election Commission', '2. High popular participation, especially of the poor', '3. Losing parties accept the verdict; challenges remain'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: India's elections are run by an independent Election Commission." },
+          { "speaker": "NEO", "text": "Two: popular participation is high, and the poor and underprivileged vote in larger proportion." },
+          { "speaker": "NEO", "text": "Three: ruling parties lose and accept the verdict, though challenges like money power remain." },
+          { "speaker": "ZIPPY", "text": "Boxing gloves returned. Democracy doesn't need them." }
+        ]
+      }
+    ]
+  }
+]

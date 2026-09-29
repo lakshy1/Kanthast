@@ -1,0 +1,337 @@
+[
+  {
+    "chapter_no": 13,
+    "chapter": "Our Home: Earth, a Unique Life Sustaining Planet",
+    "topic_no": 1,
+    "name": "Why Is Earth Unique? Earth Among the Planets",
+    "scenes": [
+      {
+        "animation": "Zippy rides a toy rocket past the planets holding a 'House Hunting' sign. Mercury is scorched, Venus is a pressure cooker of clouds, Mars is dusty. He zooms back to a glowing blue Earth and plants a 'HOME' flag.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I checked every planet for a new home. Nothing beats this one!" },
+          { "speaker": "NEO", "text": "There may be billions of planets in the universe, but Earth is the only one where life, as we know it, exists and thrives." }
+        ]
+      },
+      {
+        "animation": "An ISRO satellite snaps nearly 3000 small pictures that click together like a mosaic into a false-colour Earth. Then the Earth shrinks into an apple, and a knife reveals layers: the thin skin labelled 'Crust: where all life exists', then mantle and core.",
+        "lines": [
+          { "speaker": "NEO", "text": "This Earth image from an ISRO satellite was made by combining nearly 3000 smaller images. It is a false colour image, where colours show different information." },
+          { "speaker": "NEO", "text": "All life, from the tallest mountain to the deepest ocean trench, exists in a very thin layer, the crust." },
+          { "speaker": "NEO", "text": "If Earth were the size of an apple, the crust would be as thin as the apple's skin." }
+        ]
+      },
+      {
+        "animation": "A notebook table titled 'Interesting features of the Earth' fills in: '1. Air doesn't fly off into space', '2. Gravity holds us, yet the heart pumps blood up to the head'. Zippy adds '3. Chai exists' and Neo gently crosses it out, writing 'Water we drink, soil for crops'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity: list features of Earth we take for granted. For example, the air we breathe doesn't fly off into space." },
+          { "speaker": "NEO", "text": "And gravity holds us to the ground, yet our heart can pump blood up to our head." },
+          { "speaker": "ZIPPY", "text": "Earth gives us air, drinking water, soil for crops, and rock and timber for our homes!" }
+        ]
+      },
+      {
+        "animation": "The eight planets line up in order from the Sun: Mercury, Venus, Earth, Mars (small, rocky) and Jupiter, Saturn, Uranus, Neptune (large, mostly gas). A data table fills in beside them: 'Venus: 450 °C, radius 0.95, atmosphere Yes', 'Earth: 15 °C, radius 1, atmosphere Yes'. A thermometer on Venus bursts its top.",
+        "lines": [
+          { "speaker": "NEO", "text": "Our solar system has eight planets. Mercury, Venus, Earth and Mars are small and rocky. Jupiter, Saturn, Uranus and Neptune are large and mostly made of gases." },
+          { "speaker": "NEO", "text": "Activity: collect each planet's temperature, size, and whether it has an atmosphere, from library books, trusted websites or your teachers." },
+          { "speaker": "ZIPPY", "text": "Wait. Venus is hotter than Mercury, even though Mercury is closer to the Sun?" }
+        ]
+      },
+      {
+        "animation": "Sunlight enters Venus's thick carbon dioxide atmosphere; heat waves bounce inside, unable to escape. Split screen: Earth with a thin blanket keeping it cosy. A small inset shows a glass plant greenhouse with a 'Works differently!' tag. An 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Venus's air is almost entirely carbon dioxide, which traps heat. This is the greenhouse effect, and it makes Venus the hottest planet." },
+          { "speaker": "NEO", "text": "On Earth, gases like carbon dioxide also trap some heat, keeping our temperature just right." },
+          { "speaker": "NEO", "text": "Exam tip: Venus is hottest not because it is closest to the Sun, but because its thick atmosphere traps heat." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Earth: only known planet with life; life lives in the thin crust', '2. 4 rocky + 4 large gaseous planets', '3. Venus is hottest due to greenhouse effect'. Zippy hammers his 'HOME' flag deeper.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Earth is the only known planet with life, and all life exists in its thin crust." },
+          { "speaker": "NEO", "text": "Two: four planets are small and rocky; four are large and mostly gaseous." },
+          { "speaker": "NEO", "text": "Three: Venus is the hottest planet because of the greenhouse effect of its carbon dioxide atmosphere." },
+          { "speaker": "ZIPPY", "text": "House hunting over. I'm staying put." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Our Home: Earth, a Unique Life Sustaining Planet",
+    "topic_no": 2,
+    "name": "What Makes Earth Suitable for Life?",
+    "scenes": [
+      {
+        "animation": "Three bowls of porridge on a table labelled 'Too hot', 'Just right' and 'Too cold'. Zippy tastes each, and the bowls morph into three orbits around the Sun, with Earth sitting in the middle 'Just right' band.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Too hot, too cold... this one's just right! Why is Earth in the just-right bowl?" },
+          { "speaker": "NEO", "text": "Because of its position. Earth is at just the right distance from the Sun." }
+        ]
+      },
+      {
+        "animation": "A Sun with a green ring around it labelled 'Habitable zone / Goldilocks zone'. When Earth slides closer, its oceans boil away; when it slides farther, they freeze solid. Back in the green ring, blue oceans return and the label 'Blue Planet' appears. Mars sits at the ring's outer edge with a question mark.",
+        "lines": [
+          { "speaker": "NEO", "text": "At Earth's distance, water can exist as a liquid. Closer to the Sun, all the water would evaporate. Farther away, it would all freeze." },
+          { "speaker": "NEO", "text": "The range of distances from a star where water stays liquid is called the habitable zone, or Goldilocks zone." },
+          { "speaker": "NEO", "text": "Most of Earth's surface is covered with water, so from space it looks blue. That's why it's called the Blue Planet." },
+          { "speaker": "NEO", "text": "Earth's orbit is also almost circular, which keeps sunlight and heat nearly steady through the year." }
+        ]
+      },
+      {
+        "animation": "A shrink-and-grow machine: a tiny Earth loses its air, which drifts off into space like escaping balloons; a giant Earth squashes a cartoon person flat. The normal Earth holds a snug atmosphere. Side tags: 'Mars: atmosphere 100 times thinner', 'Mercury: no atmosphere'. A Mangalyaan probe orbits Mars.",
+        "lines": [
+          { "speaker": "NEO", "text": "Earth is also the right size. If it were much smaller, its gravity would be too weak to hold our atmosphere, and the gases would escape into space." },
+          { "speaker": "NEO", "text": "On Mars, the atmosphere is 100 times thinner than on Earth, and Mercury has no atmosphere at all." },
+          { "speaker": "ZIPPY", "text": "And if Earth were much bigger?" },
+          { "speaker": "NEO", "text": "Gravity would be so strong that our bones could get crushed!" }
+        ]
+      },
+      {
+        "animation": "Oxygen molecules float up; some join into three-atom molecules, labelled 'Ozone (O3)', forming a shimmering shield. Purple UV arrows from the Sun hit it and bounce off.",
+        "lines": [
+          { "speaker": "NEO", "text": "Oxygen in our atmosphere lets us breathe. Some of it becomes ozone, a three-atom oxygen molecule." },
+          { "speaker": "NEO", "text": "The ozone layer acts like a shield, blocking harmful ultraviolet rays from the Sun that can damage living cells." }
+        ]
+      },
+      {
+        "animation": "Earth's molten iron core swirls, creating magnetic field lines looping around the planet. Streams of particles labelled 'Cosmic rays' and 'Solar wind' rush in and are deflected by the field. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Earth behaves like a giant magnet. Its magnetic field may come from the movement of molten iron in its core." },
+          { "speaker": "NEO", "text": "Earth is hit by high-energy particles: cosmic rays from far across the universe, and the solar wind from the Sun. These can damage the atmosphere and the ozone layer." },
+          { "speaker": "NEO", "text": "The magnetic field pushes many of them away, keeping our atmosphere and life safe." },
+          { "speaker": "NEO", "text": "Exam tip: list all four reasons Earth is habitable: right distance from the Sun, right size, the atmosphere with ozone, and the magnetic field." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Habitable (Goldilocks) zone: liquid water', '2. Right size: gravity holds the atmosphere; ozone blocks UV', '3. Magnetic field shields from cosmic rays and solar wind'. Zippy eats the just-right porridge.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Earth lies in the habitable, or Goldilocks, zone, where water stays liquid." },
+          { "speaker": "NEO", "text": "Two: its right size lets gravity hold the atmosphere, and the ozone layer blocks harmful UV rays." },
+          { "speaker": "NEO", "text": "Three: the magnetic field shields Earth from cosmic rays and the solar wind." },
+          { "speaker": "ZIPPY", "text": "Just right. Like this porridge." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Our Home: Earth, a Unique Life Sustaining Planet",
+    "topic_no": 3,
+    "name": "How Earth Sustains Life: Air, Water, Land and Life in Balance",
+    "scenes": [
+      {
+        "animation": "Four cartoon characters form a band on stage: a cloud (Atmosphere), a water drop (Hydrosphere), a rock (Geosphere) and a leaf (Biosphere). When one stops playing, the music goes out of tune.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does the music fall apart when the rock stops drumming?" },
+          { "speaker": "NEO", "text": "Because life on Earth is a band. Every part plays together." }
+        ]
+      },
+      {
+        "animation": "A leaf in sunlight takes in carbon dioxide from the air and water from the soil, releasing oxygen bubbles that a child breathes in. Then sunlight warms the Earth, and a thin atmosphere blanket keeps some heat in.",
+        "lines": [
+          { "speaker": "NEO", "text": "In sunlight, plants take carbon dioxide from the air and water from the soil to make food by photosynthesis. They release oxygen, needed for respiration." },
+          { "speaker": "NEO", "text": "The atmosphere traps some of the Sun's heat. This mild greenhouse effect keeps Earth warm enough for water to stay liquid. Without an atmosphere, Earth would become too cold." }
+        ]
+      },
+      {
+        "animation": "Water fills 70 percent of a pie chart on Earth: ponds, lakes, rivers, springs, seas, oceans and groundwater, labelled 'Hydrosphere'. A deep-sea camera finds plankton and a giant whale. Clouds rain onto rivers and wells.",
+        "lines": [
+          { "speaker": "NEO", "text": "Water covers about 70 per cent of Earth's surface. All of it, including groundwater, forms the hydrosphere." },
+          { "speaker": "NEO", "text": "In plants, water carries nutrients from soil to leaves. In animals, it regulates body temperature and aids digestion." },
+          { "speaker": "NEO", "text": "The hydrosphere is home to millions of life forms, from tiny plankton to giant whales. Water vapour forms clouds that bring rain and refill rivers, lakes and groundwater." }
+        ]
+      },
+      {
+        "animation": "The ground peels open to show rocks, soil and minerals, labelled 'Geosphere'. Icons of salt, coal, oil, iron and copper pop out. A montage of mountains, valleys, deserts and plains appears under the label 'Geodiversity'. Then plants, animals and microbes fill land, water and air under 'Biosphere'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The solid parts of Earth, rocks, soils and minerals, form the geosphere. Minerals give us salt, coal, oil, and metals like iron and copper." },
+          { "speaker": "NEO", "text": "Soil has nutrients like nitrogen and potassium, which come from the slow breakdown of rocks and the remains of plants and animals." },
+          { "speaker": "NEO", "text": "The variety of landforms, rocks and soils is called geodiversity. And all living beings, with the places they live, make up the biosphere." }
+        ]
+      },
+      {
+        "animation": "A forest is cut down; ripples spread out and hit a rain cloud, the soil, the air and the animals, which all droop. Then the four band members link arms around the globe. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Even a small change, like cutting down a forest, can affect rainfall, soil, air quality and animals. Life survives because everything works together in balance." },
+          { "speaker": "NEO", "text": "Exam tip: match each sphere correctly. Atmosphere is air, hydrosphere is water, geosphere is the solid Earth, and biosphere is life." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Air and sunlight: photosynthesis, respiration, warmth', '2. Hydrosphere and geosphere: water, soil, minerals, geodiversity', '3. All spheres interact in balance'. The band plays in tune again.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: air and sunlight support photosynthesis and respiration, and the atmosphere keeps Earth warm." },
+          { "speaker": "NEO", "text": "Two: the hydrosphere gives water, and the geosphere gives soil, rocks and minerals." },
+          { "speaker": "NEO", "text": "Three: the atmosphere, hydrosphere, geosphere and biosphere interact in balance to sustain life." },
+          { "speaker": "ZIPPY", "text": "Encore! And nobody cut down the forest." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Our Home: Earth, a Unique Life Sustaining Planet",
+    "topic_no": 4,
+    "name": "Continuity of Life: Genes and Asexual Reproduction",
+    "scenes": [
+      {
+        "animation": "A cow stands next to its calf; a cat next to its kittens. Zippy holds up a hen's egg to a dog, who looks offended.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why don't dogs lay eggs? And why does a cow never have a kitten?" },
+          { "speaker": "NEO", "text": "Great questions. The answer is hidden inside every cell." }
+        ]
+      },
+      {
+        "animation": "A cell opens like a cupboard to reveal a thick instruction manual labelled 'Genes'. Pages flip: 'Make blood', 'Build bones', 'Grow muscles', 'Make skin'. A calf grows into a cow as the pages turn.",
+        "lines": [
+          { "speaker": "NEO", "text": "Without reproduction, life would disappear from Earth. Reproduction keeps each type of organism going." },
+          { "speaker": "NEO", "text": "Parents pass on instructions to their offspring about how to develop from a single cell. These instructions are called genetic material, or genes." },
+          { "speaker": "NEO", "text": "Genes are like an instruction manual in every cell. Some pages say how to make blood, others how to form bones, muscles or skin." }
+        ]
+      },
+      {
+        "animation": "A camel in a desert slowly gains a hump over many generations shown as ghostly outlines. Bacteria shrug off an antibiotic pill labelled 'Resistant'. Two doors appear: 'Asexual: one parent, exact copies' and 'Sexual: two parents, mixed instructions'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Reproduction also allows small changes in these instructions. Over time, camels developed humps to store fat and survive in deserts. Some bacteria became resistant to antibiotics." },
+          { "speaker": "NEO", "text": "There are two types. In asexual reproduction, a single parent produces new individuals that are exact copies of itself. In sexual reproduction, instructions from two parents combine." }
+        ]
+      },
+      {
+        "animation": "Step-by-step activity: a money plant cutting goes into a glass of water; potato 'eyes' and a piece of ginger go into moist soil, not too deep. Sun, water drop and air icons tick on. A day counter runs as roots, stem and the first new leaf appear, and a notebook records the days.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I've never seen seeds of bamboo or sugarcane. So how do they grow?" },
+          { "speaker": "NEO", "text": "Many plants grow from a leaf, stem or root planted in soil. This is vegetative propagation. Let's try it." },
+          { "speaker": "NEO", "text": "Take a money plant cutting, the eyes of a sprouted potato, and a piece of ginger. Plant each in moist soil, not too deep. The money plant can just sit in a glass of water." },
+          { "speaker": "NEO", "text": "Give them water, air and sunlight. Watch daily and note how many days roots, stem and the first new leaf take to appear." }
+        ]
+      },
+      {
+        "animation": "A bacterium and an amoeba each split into two identical cells. A Hydra grows a bud that breaks off into a new Hydra. A Planaria is cut and each piece regrows into a full worm. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Microbes and simple animals reproduce asexually too. Bacteria and amoebae divide into two identical individuals." },
+          { "speaker": "NEO", "text": "Hydra grows tiny buds that break off into new individuals. And Planaria, a flatworm, can regrow from just a small piece of its body!" },
+          { "speaker": "NEO", "text": "Exam tip: a common question asks for examples of vegetative propagation. Money plant, potato, ginger, bamboo and sugarcane make a good list of five." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Reproduction ensures continuity of life', '2. Genes = instructions passed from parents', '3. Asexual: one parent, exact copies (vegetative propagation, division, budding)'. Zippy proudly shows a sprouting potato.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: reproduction ensures the continuity of life on Earth." },
+          { "speaker": "NEO", "text": "Two: genes are the instructions that parents pass on to their offspring." },
+          { "speaker": "NEO", "text": "Three: in asexual reproduction, one parent produces exact copies, like vegetative propagation in plants and budding in Hydra." },
+          { "speaker": "ZIPPY", "text": "My potato has a baby. I'm a grandparent now." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Our Home: Earth, a Unique Life Sustaining Planet",
+    "topic_no": 5,
+    "name": "Sexual Reproduction in Plants and Animals",
+    "scenes": [
+      {
+        "animation": "A family photo: a mother, father and two kids. Zippy draws arrows: one child has the mother's nose, the other the father's eyes. The kids look nothing like each other.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Same parents, but the two kids look totally different. Was there a mix-up at the hospital?" },
+          { "speaker": "NEO", "text": "No mix-up. That's what sexual reproduction does." }
+        ]
+      },
+      {
+        "animation": "Two instruction books, one from each parent, each tear in half into a smaller booklet labelled 'Gamete: half the instructions'. The two halves join into one complete book labelled 'New cell: full set'. A '×2 every generation?' warning is crossed out.",
+        "lines": [
+          { "speaker": "NEO", "text": "In sexual reproduction, two parents are involved, usually called male and female." },
+          { "speaker": "ZIPPY", "text": "If both parents give instructions, won't the child get double? And more every generation?" },
+          { "speaker": "NEO", "text": "No, because each parent makes special reproductive cells called gametes. They carry only half of the parent's genetic material. When they join, the new cell has a complete set, half from each parent." },
+          { "speaker": "NEO", "text": "The instructions mix differently each time, so every child is unique." }
+        ]
+      },
+      {
+        "animation": "A flower in cross-section: the anther holds pollen grains labelled 'Male gametes', and deep inside, ovules labelled 'Female gametes'. A bee carries pollen to another flower (tag 'Pollination'), gametes fuse (tag 'Fertilisation → zygote → seed'), and the fleshy part swells into a fruit. A bird eats the fruit and later a banyan sapling sprouts from a wall crack after rain.",
+        "lines": [
+          { "speaker": "NEO", "text": "In plants, pollen grains in the anther are the male gametes, and ovules deep inside the flower are the female gametes." },
+          { "speaker": "NEO", "text": "Wind, insects or animals carry pollen to another flower. This is pollination. When the gametes combine, it is fertilisation, forming a zygote that becomes the seed." },
+          { "speaker": "NEO", "text": "The fleshy part around the ovule becomes the fruit. When birds eat fruit, seeds get dropped far away. That's how a banyan can sprout in a wall crack after the rains." }
+        ]
+      },
+      {
+        "animation": "Underwater, a fish and a frog release eggs and sperm into a pond; they meet to form zygotes that develop into embryos in the water. Then a split screen: a hen lays an egg that later hatches into a chick, while a cow carries a calf inside her body until birth.",
+        "lines": [
+          { "speaker": "NEO", "text": "In animals, the gametes are sperm, male, and eggs, female. In fish and frogs, they are released into water, where fertilisation and development happen." },
+          { "speaker": "NEO", "text": "In birds and mammals, including humans, fertilisation happens inside the female's body." },
+          { "speaker": "NEO", "text": "A bird lays the fertilised egg, and the embryo develops after laying, fed by food packed in the egg. In most mammals, the embryo develops inside the mother, who provides food and oxygen until birth." }
+        ]
+      },
+      {
+        "animation": "A comparison card builds: 'Asexual: one parent, exact copies' vs 'Sexual: two parents, mixed traits, variation'. A yellow 'EXAM TIP' card slides in over the words 'pollination' and 'fertilisation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: don't confuse pollination with fertilisation. Pollination carries pollen to the flower. Fertilisation is the joining of the male and female gametes." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Gametes carry half the instructions; offspring get a mix', '2. Plants: pollen + ovule → zygote → seed; fruit spreads seeds', '3. Fertilisation in water (fish, frogs) or inside the female (birds, mammals)'. Zippy re-hangs the family photo proudly.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: gametes carry half of each parent's instructions, so offspring are a unique mix." },
+          { "speaker": "NEO", "text": "Two: in plants, pollen and ovule join to form a zygote that becomes the seed, and fruits help spread seeds." },
+          { "speaker": "NEO", "text": "Three: fish and frogs fertilise in water, while in birds and mammals fertilisation happens inside the female's body." },
+          { "speaker": "ZIPPY", "text": "No hospital mix-up. Just genes." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Our Home: Earth, a Unique Life Sustaining Planet",
+    "topic_no": 6,
+    "name": "Threats to Life on Earth and How We Can Help",
+    "scenes": [
+      {
+        "animation": "Earth sits in a hospital bed with a thermometer in its mouth reading higher and higher. Three worried visitors enter, labelled 'Climate change', 'Biodiversity loss' and 'Pollution'. Zippy, as a nurse, looks alarmed.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Doctor Neo, the patient has a fever! What's wrong with Earth?" },
+          { "speaker": "NEO", "text": "Three problems at once, together called the triple planetary crisis: climate change, biodiversity loss and pollution." }
+        ]
+      },
+      {
+        "animation": "Coal and oil burn in a chimney, releasing carbon dioxide and methane clouds that thicken the atmosphere blanket. Trees and ocean plankton try to soak up the carbon but can't keep up. Ice caps melt, the sea rises towards a coastal city, and storms swirl.",
+        "lines": [
+          { "speaker": "NEO", "text": "Burning fossil fuels like coal and oil releases greenhouse gases like carbon dioxide and methane. They trap more heat and cause global warming." },
+          { "speaker": "NEO", "text": "Trees, plants and ocean plankton absorb carbon dioxide, but fossil fuels release carbon locked underground for millions of years, faster than Earth can absorb it." },
+          { "speaker": "NEO", "text": "Warming can melt ice caps, raise sea levels and bring extreme weather. Long-term changes in temperature, rainfall and weather are called climate change." }
+        ]
+      },
+      {
+        "animation": "A grassland food chain: grass vanishes, then deer and grasshoppers fade, then a tiger and a fox look hungry. Next, factory and vehicle smoke creates smog and acid rain; plastic and waste pour into a river where fish struggle; fertiliser sacks spill onto soil.",
+        "lines": [
+          { "speaker": "NEO", "text": "When habitats are destroyed, species may disappear. If grasses vanish, deer and grasshoppers struggle, and then tigers and foxes lose their food." },
+          { "speaker": "NEO", "text": "Air pollution from factories, vehicles and burning fuels causes breathing problems, damages crops, and leads to smog and acid rain." },
+          { "speaker": "NEO", "text": "Factory, farm and plastic waste pollute water, and excess fertilisers pollute soil, spreading harmful substances through the food chain." }
+        ]
+      },
+      {
+        "animation": "A timeline builds: 'Montreal Protocol 1987: cut CFCs, ozone recovering', 'Earth Summit 1992', 'Kyoto Protocol 2005', 'Paris Agreement 2015: limit warming below 1.5 °C'. A red note: 'As of 2025, not on track'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Countries have made global agreements. The Montreal Protocol of 1987 reduced harmful CFCs, so the ozone layer is slowly recovering." },
+          { "speaker": "NEO", "text": "The Paris Agreement of 2015 set a goal to limit warming to below 1.5 degrees Celsius. But as of 2025, the world is not on track." },
+          { "speaker": "ZIPPY", "text": "So what can a kid like me do?" }
+        ]
+      },
+      {
+        "animation": "Quick montage of actions: solar panels and windmills, a family cycling, a child repairing a torn school bag, sorting plastic for recycling, turning off a tap and a fan. Each action adds a green leaf to the Earth. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Plenty! Use renewable energy like solar and wind, and choose eco-friendly travel. Reuse, repair and recycle clothes and plastic." },
+          { "speaker": "NEO", "text": "Save energy and water. Small actions add up. Preserving biodiversity keeps ecosystems strong." },
+          { "speaker": "NEO", "text": "Exam tip: remember that all Earth systems are connected, so damage to one sphere affects the others. Mention this in long answers." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Triple planetary crisis: climate change, biodiversity loss, pollution', '2. Fossil fuels → greenhouse gases → global warming', '3. Renewable energy, reuse, repair, recycle, save water and energy'. Earth sits up in bed, smiling, its thermometer cooling.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: climate change, biodiversity loss and pollution together form the triple planetary crisis." },
+          { "speaker": "NEO", "text": "Two: burning fossil fuels releases greenhouse gases that cause global warming." },
+          { "speaker": "NEO", "text": "Three: renewable energy, reusing, repairing, recycling and saving water and energy help protect our unique planet." },
+          { "speaker": "ZIPPY", "text": "Patient improving. Keep the curiosity alive!" }
+        ]
+      }
+    ]
+  }
+]

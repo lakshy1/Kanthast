@@ -1,0 +1,239 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "A Square and A Cube",
+    "topic_no": 1,
+    "name": "The Locker Puzzle and Square Numbers",
+    "scenes": [
+      {
+        "animation": "A candle-lit palace hall. A scroll unrolls reading 'The Will of Queen Ratnamanjuri'. Behind a curtain, 100 numbered lockers glow; Zippy zooms past them, counting on sparks, and gets dizzy at 37.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A hundred lockers, a hundred relatives, and one treasure. Whoever solves the puzzle first keeps everything!" },
+          { "speaker": "NEO", "text": "Queen Ratnamanjuri's son, Khoisnam, solved it before anyone touched a locker. Let's see how." }
+        ]
+      },
+      {
+        "animation": "Cartoon relatives in turbans and saris walk in one by one. Person 1 opens all lockers; Person 2 flips every 2nd door; Person 3 flips every 3rd. A spotlight follows locker 6: its door opens, shuts, opens, shuts, with a counter '1, 2, 3, 6' ticking beside it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Person 1 opens every locker. Person 2 toggles every second locker. Person 3 toggles every third, and so on up to Person 100." },
+          { "speaker": "NEO", "text": "Watch locker 6. Persons 1, 2, 3 and 6 touch it. Open, close, open, close." },
+          { "speaker": "NEO", "text": "The number of toggles equals the number of factors of the locker number. Four factors, four toggles, so locker 6 ends up closed." }
+        ]
+      },
+      {
+        "animation": "Factors of 36 appear as dancing pairs holding hands: 1–36, 2–18, 3–12, 4–9. Then 6 steps forward alone and holds hands with a mirror copy of itself, labelled '6 × 6'. A counter shows '9 factors: odd!'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But every factor has a partner. So every number has an even number of factors, right?" },
+          { "speaker": "NEO", "text": "Almost. Look at 36. The pairs are 1 and 36, 2 and 18, 3 and 12, 4 and 9." },
+          { "speaker": "NEO", "text": "Then 6 pairs with itself, because 6 times 6 is 36. So 36 has nine factors, an odd number." },
+          { "speaker": "NEO", "text": "Only square numbers have a factor that partners itself. So only squares have an odd number of factors." }
+        ]
+      },
+      {
+        "animation": "Lockers 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100 swing open with golden light. Then lockers 2, 3, 5, 7 and 11 blink twice each, and the code '2-3-5-7-11' types onto a safe.",
+        "lines": [
+          { "speaker": "NEO", "text": "So the open lockers are the squares: 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100. Ten lockers." },
+          { "speaker": "NEO", "text": "Inside, a clue asks for the first five lockers touched exactly twice." },
+          { "speaker": "ZIPPY", "text": "Touched twice means only two factors, 1 and itself. Those are primes!" },
+          { "speaker": "NEO", "text": "Exactly. The passcode is 2, 3, 5, 7, 11." }
+        ]
+      },
+      {
+        "animation": "Grids of unit squares grow: 1×1, 2×2, 3×3, 4×4, with areas 1, 4, 9, 16 written inside. The notation 'n × n = n²' writes itself. A side card shows '(2.5)² = 6.25' with an 'Exam Tip' sticker.",
+        "lines": [
+          { "speaker": "NEO", "text": "Why call them squares? A square of side 4 units holds 4 times 4, or 16 unit squares." },
+          { "speaker": "NEO", "text": "We write n times n as n squared. So 5 squared is 25." },
+          { "speaker": "NEO", "text": "Fractions and decimals can be squared too. 2.5 squared is 6.25." },
+          { "speaker": "NEO", "text": "Exam tip: only squares of natural numbers, like 1, 4, 9 and 16, are called perfect squares. 6.25 is a square, but not a perfect square." }
+        ]
+      },
+      {
+        "animation": "Recap board beside the open treasure chest. Points appear: '1. Number of toggles = number of factors', '2. Only squares have an odd number of factors', '3. n × n = n²; squares of natural numbers are perfect squares'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a locker is toggled once for each factor of its number." },
+          { "speaker": "NEO", "text": "Two: only square numbers have an odd number of factors, so only square lockers stay open." },
+          { "speaker": "NEO", "text": "Three: n times n is n squared, and squares of natural numbers are perfect squares." },
+          { "speaker": "ZIPPY", "text": "Next time someone reads a will, I'm bringing a factor list." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "A Square and A Cube",
+    "topic_no": 2,
+    "name": "Patterns in Perfect Squares",
+    "scenes": [
+      {
+        "animation": "A kirana shop counter. Zippy proudly holds a slate reading '2048 is a perfect square!'. A grumpy talking calculator named GANAK squints at the last digit '8' and honks a buzzer.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "2048 is a perfect square. I can feel it." },
+          { "speaker": "GANAK", "text": "I can see it isn't. Look at the last digit." }
+        ]
+      },
+      {
+        "animation": "A table of squares 1² to 20² scrolls by. The units digits light up and gather into six bins labelled 0, 1, 4, 5, 6, 9. Four empty bins labelled 2, 3, 7, 8 get a red cross.",
+        "lines": [
+          { "speaker": "NEO", "text": "Every perfect square ends in 0, 1, 4, 5, 6 or 9. None ends in 2, 3, 7 or 8." },
+          { "speaker": "NEO", "text": "So 2048 ends in 8 and cannot be a square." },
+          { "speaker": "ZIPPY", "text": "Then 26 ends in 6, so it must be a square!" },
+          { "speaker": "NEO", "text": "No. The last digit can only rule a square out. 26 ends in 6, but it is not a square." }
+        ]
+      },
+      {
+        "animation": "10² = 100, 20² = 400, 100² = 10000, 700² = 490000 appear, with trailing zeros highlighted in pairs. A caption: 'zeros at the end of a square come in pairs'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now look at zeros. 20 has one zero, and 20 squared, 400, has two." },
+          { "speaker": "NEO", "text": "700 has two zeros, and 700 squared, 490000, has four." },
+          { "speaker": "NEO", "text": "The zeros double, so a perfect square always ends in an even number of zeros." }
+        ]
+      },
+      {
+        "animation": "Coloured tiles build a square in inverted L-shapes: 1 tile, then 3 more, then 5, then 7. Labels grow: '1 = 1', '1 + 3 = 4', '1 + 3 + 5 = 9', '1 + 3 + 5 + 7 = 16'. No words appear, just the picture proof.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here is a proof without words. Each new L-shaped layer adds the next odd number." },
+          { "speaker": "NEO", "text": "1 plus 3 is 4. Add 5 to get 9. Add 7 to get 16." },
+          { "speaker": "NEO", "text": "So the sum of the first n odd numbers is n squared." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Given 35² = 1225, find 36².' Steps write line by line: 'nth odd number = 2n − 1', '36th odd number = 2 × 36 − 1 = 71', '1225 + 71 = 1296', '36² = 1296 ✓'. A check line flashes '36 × 36 = 1080 + 216 = 1296'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Puzzle time. If 35 squared is 1225, what is 36 squared, without multiplying?" },
+          { "speaker": "NEO", "text": "1225 is the sum of the first 35 odd numbers. We just add the 36th odd number." },
+          { "speaker": "NEO", "text": "The nth odd number is 2n minus 1. So the 36th is 72 minus 1, which is 71." },
+          { "speaker": "NEO", "text": "1225 plus 71 is 1296. Check: 36 times 30 is 1080, 36 times 6 is 216, total 1296." },
+          { "speaker": "NEO", "text": "Exam tip: a common trap is adding 36 or 72. Add 2n minus 1, which is 71." }
+        ]
+      },
+      {
+        "animation": "Recap board with a tiled square. Points: '1. Squares end in 0, 1, 4, 5, 6, 9 and an even number of zeros', '2. 1 + 3 + 5 + ... (n odd numbers) = n²', '3. (n + 1)² = n² + (2n + 1)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: squares end in 0, 1, 4, 5, 6 or 9, and in an even number of zeros." },
+          { "speaker": "NEO", "text": "Two: adding the first n odd numbers gives n squared." },
+          { "speaker": "NEO", "text": "Three: to go from one square to the next, add the next odd number." },
+          { "speaker": "GANAK", "text": "And never trust a square ending in 8." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "A Square and A Cube",
+    "topic_no": 3,
+    "name": "Square Roots and Estimating Them",
+    "scenes": [
+      {
+        "animation": "Aribam and Bijou play a quick-fire game on a school bench. '25!' '5!' '81!' '9!' Then Aribam shouts '250!' and Bijou freezes with a spinning loading wheel over his head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Bijou was winning the square-root game until Aribam said 250. Now he's stuck!" },
+          { "speaker": "NEO", "text": "Because 250 is not a perfect square. Let's learn to find roots, and to estimate them." }
+        ]
+      },
+      {
+        "animation": "A square tile of area 49 sq cm shrinks to show its side, 7 cm. Text: 'If y = x², then x is a square root of y.' Two arrows show 8 × 8 = 64 and (−8) × (−8) = 64, then '√64 = 8' boxed as the positive root.",
+        "lines": [
+          { "speaker": "NEO", "text": "A square of area 49 square centimetres has side 7 centimetres. We call 7 the square root of 49." },
+          { "speaker": "NEO", "text": "Both 8 and minus 8 give 64 when squared, so 64 has two square roots." },
+          { "speaker": "NEO", "text": "The root symbol means the positive one. So root 64 is 8." }
+        ]
+      },
+      {
+        "animation": "A factor tree for 324 splits into 2, 2, 3, 3, 3, 3. The primes pair up in coloured boxes: (2×2)(3×3)(3×3), then regroup into two equal teams '(2×3×3) × (2×3×3) = 18 × 18'. Next, 156 = 2×2×3×13 leaves 3 and 13 unpaired with a red flag.",
+        "lines": [
+          { "speaker": "NEO", "text": "Prime factorisation works well. 324 is 2 times 2 times 3 times 3 times 3 times 3." },
+          { "speaker": "NEO", "text": "Split them into two equal groups: 2 times 3 times 3 in each. That is 18, so root 324 is 18." },
+          { "speaker": "NEO", "text": "Now 156 is 2 times 2 times 3 times 13. The 3 and the 13 have no partners, so 156 is not a perfect square." }
+        ]
+      },
+      {
+        "animation": "A number line from 40 to 50 zooms in. Steps appear line by line: '40² = 1600 < 1936 < 2500 = 50²', 'last digit 6 → root ends in 4 or 6', '45² = 1600 + 400 + 25 = 2025 > 1936', 'so root is 44', '44² = 1936 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's find root 1936. It lies between 1600, which is 40 squared, and 2500, which is 50 squared." },
+          { "speaker": "NEO", "text": "It ends in 6, so the root ends in 4 or 6. It is 44 or 46." },
+          { "speaker": "NEO", "text": "45 squared is 1600 plus 400 plus 25, which is 2025. That's bigger than 1936, so the root is below 45." },
+          { "speaker": "NEO", "text": "So it's 44. Check: 44 times 44 is 1936." }
+        ]
+      },
+      {
+        "animation": "Back to Bijou: '15² = 225 < 250 < 256 = 16²'. The needle on a gauge sits near 16. Then Akhil holds a square cloth of area 125 cm²; a 15 cm hanky outline is too big, and an 11 cm hanky fits, with '11² = 121 ≤ 125 < 144 = 12²'. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "For 250, 15 squared is 225 and 16 squared is 256. So root 250 is between 15 and 16, and very close to 16." },
+          { "speaker": "NEO", "text": "Akhil has a square cloth of area 125 square centimetres. 11 squared is 121 and 12 squared is 144." },
+          { "speaker": "NEO", "text": "So the biggest square handkerchief with a whole-number side is 11 centimetres. A 15 centimetre one needs 225." },
+          { "speaker": "NEO", "text": "Exam tip: when estimating, always name the two perfect squares that trap your number." }
+        ]
+      },
+      {
+        "animation": "Recap board. Points: '1. √y = x means x² = y (positive root)', '2. Pair prime factors: all paired → perfect square', '3. Estimate by trapping between neighbouring squares'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: if x squared is y, then x is a square root of y, and the symbol gives the positive one." },
+          { "speaker": "NEO", "text": "Two: if all prime factors pair up, the number is a perfect square." },
+          { "speaker": "NEO", "text": "Three: estimate a root by trapping the number between two neighbouring squares." },
+          { "speaker": "ZIPPY", "text": "Bijou, the answer is almost 16. You're welcome." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "A Square and A Cube",
+    "topic_no": 4,
+    "name": "Cubes, Taxicab Numbers and Cube Roots",
+    "scenes": [
+      {
+        "animation": "A 1920s Cambridge hospital room. G. H. Hardy steps out of a black taxi numbered 1729 and yawns, 'Rather a dull number.' Ramanujan sits up in bed, eyes sparkling.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "1729 is just a taxi number. What's so special?" },
+          { "speaker": "NEO", "text": "Ramanujan said it is the smallest number that is a sum of two cubes in two different ways. Let's meet cubes first." }
+        ]
+      },
+      {
+        "animation": "Unit cubes stack into a 2×2×2 cube (8) and a 3×3×3 cube (27). A 4×4×4 cube is built layer by layer, each layer showing '4 × 4 = 16', with a total '16 × 4 = 64'. Text: 'n × n × n = n³'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A cube of side 2 needs 8 unit cubes. A cube of side 3 needs 27." },
+          { "speaker": "NEO", "text": "A cube of side 4 has 4 layers of 16, which makes 64. We write n times n times n as n cubed." },
+          { "speaker": "NEO", "text": "So 1, 8, 27, 64 and 125 are perfect cubes. Numbers from 9 to 26 are not." }
+        ]
+      },
+      {
+        "animation": "Two stacks of blocks: '1³ + 12³ = 1 + 1728 = 1729' and '9³ + 10³ = 729 + 1000 = 1729'. They lock together with a click and the taxi number glows. A caption: 'Taxicab numbers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "1 cubed plus 12 cubed is 1 plus 1728, which is 1729." },
+          { "speaker": "NEO", "text": "9 cubed plus 10 cubed is 729 plus 1000, also 1729." },
+          { "speaker": "NEO", "text": "Numbers like this are called taxicab numbers. The next two are 4104 and 13832." }
+        ]
+      },
+      {
+        "animation": "Odd numbers fall into rows: '1 = 1³', '3 + 5 = 8 = 2³', '7 + 9 + 11 = 27 = 3³', '13 + 15 + 17 + 19 = 64 = 4³'. Then a factor tree for 3375 splits into 3,3,3,5,5,5, regrouped into three teams '(3×5)(3×5)(3×5) = 15³'. Next, 500 = 2×2×5×5×5 shows the 2s failing to form a triplet.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cubes hide odd numbers too. 3 plus 5 is 8. 7 plus 9 plus 11 is 27." },
+          { "speaker": "NEO", "text": "The cube root undoes a cube. The cube root of 8 is 2." },
+          { "speaker": "NEO", "text": "Is 3375 a cube? It is 3 times 3 times 3 times 5 times 5 times 5. That makes three equal groups of 3 times 5, so the cube root is 15." },
+          { "speaker": "NEO", "text": "500 is 2 times 2 times 5 times 5 times 5. The twos can't make a triplet, so 500 is not a cube." }
+        ]
+      },
+      {
+        "animation": "A palm-leaf manuscript unrolls with Sanskrit terms: 'varga = square', 'ghana = cube', 'mula = root'. A plant's roots grow down into the words 'varga-mula' and 'ghana-mula'. An 'Exam Tip' sticker: 'Cube of a negative number is negative: (−6)³ = −216'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In ancient India, a square was called varga and a cube was called ghana." },
+          { "speaker": "NEO", "text": "Mula means the root of a plant. So square root was varga-mula, and cube root was ghana-mula." },
+          { "speaker": "NEO", "text": "Exam tip: a cube keeps the sign. Minus 6 cubed is minus 216." }
+        ]
+      },
+      {
+        "animation": "Recap board with a Rubik-style cube. Points: '1. n³ = n × n × n', '2. 1729 = 1³ + 12³ = 9³ + 10³', '3. Prime factors in three equal groups → perfect cube'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: n cubed is n times n times n." },
+          { "speaker": "NEO", "text": "Two: 1729 is the smallest taxicab number, a sum of two cubes in two ways." },
+          { "speaker": "NEO", "text": "Three: if prime factors split into three equal groups, the number is a perfect cube." },
+          { "speaker": "ZIPPY", "text": "From now on, no number is dull. Especially my taxi fare." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,341 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "Exploring Forces",
+    "topic_no": 1,
+    "name": "What Is a Force and What Can It Do?",
+    "scenes": [
+      {
+        "animation": "A village road on a windy day. Sonali and Ragini cycle into a strong headwind; Ragini's dupatta flaps wildly. Zippy clings to Ragini's handlebar, his spark-hair blown flat.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo! The wind is pushing us backwards! Who is doing this?" },
+          { "speaker": "NEO", "text": "Nobody is angry with you, Zippy. The wind is simply applying a push. Today we meet the idea behind every push and pull." }
+        ]
+      },
+      {
+        "animation": "Activity 5.1 panel. A large cardboard box sits in a classroom. Zippy tries three ways, each labelled as it happens: 'Pushing', 'Pulling', 'Lifting (pulling up) and carrying'. A big caption appears: 'Force = a push or a pull'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.1. Take a large cardboard box and move it in as many ways as you can." },
+          { "speaker": "ZIPPY", "text": "I pushed it, pulled it, and lifted it. Is lifting a push or a pull?" },
+          { "speaker": "NEO", "text": "Lifting is pulling up. Every time, you applied a push or a pull. In science, a push or pull on an object is called force." }
+        ]
+      },
+      {
+        "animation": "Activity 5.2: Table 5.1 builds row by row with icons: a friend holding a moving bicycle from behind (Pull, speed decreases), a bat hitting a moving ball (Push, direction changes), a hand pressing a balloon (Push, shape changes). Then quick clips: rolling a chapati, opening a drawer, turning an autorickshaw handle.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.2. List situations where a force acts and write its effect." },
+          { "speaker": "NEO", "text": "Your friend holds your moving bicycle from behind. That pull slows it down or stops it." },
+          { "speaker": "NEO", "text": "A bat hits a moving ball. That push changes its direction. Pressing a balloon changes its shape. Rolling a chapati does the same to the dough." }
+        ]
+      },
+      {
+        "animation": "A four-item checklist ticks itself: 'Move an object from rest', 'Change its speed', 'Change its direction of motion', 'Change its shape'. A fifth line glows: 'or cause some or all of these effects'. A book lying still on a desk shows two equal arrows cancelling, labelled 'Balanced forces (higher grades)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So a force may move an object from rest, change its speed, change its direction of motion, or change its shape. It can also cause some or all of these together." },
+          { "speaker": "ZIPPY", "text": "So a book lying still has no force on it at all!" },
+          { "speaker": "NEO", "text": "Not quite. It means the forces on it are balancing one another. You will learn about balanced forces in higher grades." }
+        ]
+      },
+      {
+        "animation": "A hand pushes a table; glowing arrows appear on both the table and the hand. The moment the hand lifts off, both arrows vanish. The definition types out, then 'SI unit: newton (small n), symbol N'. An 'Exam Tip' sticker flashes.",
+        "lines": [
+          { "speaker": "NEO", "text": "When you push a table, your hand and the table are interacting. At least two objects must interact for a force to come into play." },
+          { "speaker": "NEO", "text": "A force is a push or pull on an object resulting from the object's interaction with another object." },
+          { "speaker": "NEO", "text": "Notice you feel a force on your hand too. Stop pushing, and both forces disappear." },
+          { "speaker": "NEO", "text": "Exam tip: the SI unit of force is newton, written with a small n, and its symbol is capital N." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cardboard box icon. Three points appear: '1. Force = push or pull from an interaction of two objects', '2. Force can start motion, change speed, direction or shape', '3. SI unit: newton (N)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a force is a push or pull that results from the interaction of at least two objects." },
+          { "speaker": "NEO", "text": "Two: a force can move an object from rest, change its speed or direction, or change its shape." },
+          { "speaker": "NEO", "text": "Three: the SI unit of force is the newton, symbol N." },
+          { "speaker": "ZIPPY", "text": "And the wind and I were just interacting. Very forcefully." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Exploring Forces",
+    "topic_no": 2,
+    "name": "Contact Forces: Muscular Force and Friction",
+    "scenes": [
+      {
+        "animation": "A school canteen. Zippy flicks a lunch box across a table, expecting it to slide forever; it slows and stops just short of the edge. Zippy stares at it suspiciously.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I pushed it once. Why did it give up and stop?" },
+          { "speaker": "NEO", "text": "Something is quietly pulling it back. Let's find that hidden force, and a few other forces that need a touch." }
+        ]
+      },
+      {
+        "animation": "A hand pushes a box directly, then with a stick, then pulls it with a rope; each is labelled 'direct contact' or 'indirect contact'. Then a montage: a boy lifting a school bag with muscle outlines glowing, a fish swimming, a bird flapping, and bullocks pulling a cart.",
+        "lines": [
+          { "speaker": "NEO", "text": "Forces which act only when there is physical contact between objects are called contact forces. The contact can be direct, with our hands, or indirect, with a stick or rope." },
+          { "speaker": "NEO", "text": "The force resulting from the action of muscles is called muscular force. Muscles contract and elongate when we walk, run, lift or jump." },
+          { "speaker": "NEO", "text": "Animals, birds, fish and insects use it too, and humans have long used the muscular force of animals like bullocks." }
+        ]
+      },
+      {
+        "animation": "A cartoon cutaway of the body: jaws chewing, food squeezed along the alimentary canal, and a heart pumping with blood arrows. Caption: 'Muscular force inside the body'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Muscular force works inside us too. It helps us chew food and push it through the alimentary canal. The heart muscles expand and contract to circulate blood." }
+        ]
+      },
+      {
+        "animation": "Activity 5.3: a geometry box is gently pushed on a table, slides and stops; then it is pushed the other way and stops again. Each time a red arrow labelled 'Friction' points opposite to the motion arrow. Zoom into the contact surface: jagged irregularities lock together like tiny teeth.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.3. Place a flat-based object like a geometry box on a table and push it gently. It stops. Push it the other way. It stops again." },
+          { "speaker": "NEO", "text": "The force that comes into play when an object moves or tries to move over another surface is called friction. It always acts opposite to the direction of motion." },
+          { "speaker": "NEO", "text": "Friction arises because even smooth-looking surfaces have minute irregularities. They lock into each other and oppose motion." }
+        ]
+      },
+      {
+        "animation": "Activity 5.4: the same box is pushed with the same effort across five strips: glass, cloth, wood, ceramic tile, sand. Stopping distances are marked with flags; sand gives the shortest. A side panel shows a streamlined aeroplane, ship and high-speed train with air and water arrows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.4. Repeat on glass, cloth, wood, ceramic tile and sand. The object stops after different distances." },
+          { "speaker": "NEO", "text": "So friction depends on the nature of the surfaces in contact, and it is greater on rough surfaces." },
+          { "speaker": "NEO", "text": "Air and water also exert friction, so aeroplanes, ships and high-speed trains are given special shapes to reduce it." },
+          { "speaker": "NEO", "text": "Exam tip: friction opposes motion, so a ball rolling on flat ground slows down. It never speeds it up." }
+        ]
+      },
+      {
+        "animation": "Recap board with a lunch box and a muscle icon. Points appear: '1. Contact forces need physical contact (direct or indirect)', '2. Muscular force: action of muscles', '3. Friction opposes motion; greater on rough surfaces'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: contact forces act only when objects are in physical contact, directly or indirectly." },
+          { "speaker": "NEO", "text": "Two: muscular force comes from the action of muscles, in humans and animals." },
+          { "speaker": "NEO", "text": "Three: friction acts opposite to motion because surface irregularities lock, and it is greater on rough surfaces." },
+          { "speaker": "ZIPPY", "text": "So the lunch box didn't give up. Friction just won." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Exploring Forces",
+    "topic_no": 3,
+    "name": "Non-Contact Forces: Magnetic and Electrostatic",
+    "scenes": [
+      {
+        "animation": "Zippy sits on a wooden stick where a ring magnet hovers in mid-air above another, with a clear gap between them. He waves his arms through the gap, baffled.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, this magnet is floating! Is it magic?" },
+          { "speaker": "NEO", "text": "No magic. Some forces push and pull without touching at all. They are called non-contact forces." }
+        ]
+      },
+      {
+        "animation": "Activity 5.5 step by step: a wooden stick held vertically over a wooden table; one ring magnet slides on; a second slides on with like poles facing (N over N) and floats. A finger pushes it down and it springs back. Then both magnets are reversed and the top one stays floating. Label: 'Like poles repel, unlike poles attract'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.5. Hold a wooden stick upright over a wooden table and slide one ring magnet onto it." },
+          { "speaker": "NEO", "text": "Now slide a second magnet above it so that like poles face each other. It floats. Push it down gently, and you feel a force." },
+          { "speaker": "NEO", "text": "Reverse the poles of both magnets. Like poles still face each other, so it still floats." },
+          { "speaker": "NEO", "text": "The force exerted by a magnet on another magnet or a magnetic material is called magnetic force. It acts from a distance, so it is a non-contact force." }
+        ]
+      },
+      {
+        "animation": "Activity 5.6: a plastic scale is rubbed vigorously with polythene; a warning icon reads 'Do not touch the rubbed part'. The scale is brought near small paper bits on a table, without touching, and they jump up and cling to it. Tiny plus and minus signs appear on the scale.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.6. Rub a plastic scale or straw vigorously with polythene. Do not touch the rubbed part with your hand or any metal." },
+          { "speaker": "NEO", "text": "Bring it close to small pieces of paper, without touching them. The paper jumps up and sticks!" },
+          { "speaker": "NEO", "text": "Rubbing builds up charges on the surfaces. These are called static charges, as they do not move by themselves. A charged object attracts uncharged objects like small paper pieces." }
+        ]
+      },
+      {
+        "animation": "Activity 5.7: two inflated balloons hang on threads, not touching. Both are rubbed with a woollen cloth and swing apart. Then the woollen cloth is brought near one balloon and they swing together. Labels: 'Like charges repel', 'Unlike charges attract', 'positive' and 'negative'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.7. Hang two inflated balloons apart. Rub both with a woollen cloth, without touching the rubbed parts. They move away from each other." },
+          { "speaker": "NEO", "text": "Now bring the woollen cloth near one balloon. They move towards each other." },
+          { "speaker": "NEO", "text": "Both balloons got similar charges, so like charges repel. The cloth got the opposite kind, so unlike charges attract. The two kinds are called positive and negative." }
+        ]
+      },
+      {
+        "animation": "Definition card: 'Electrostatic force: force exerted by a charged body on another charged or an uncharged body. Non-contact.' An 'Exam Tip' sticker points at the words 'or an uncharged body'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The force exerted by a charged body on another charged body or an uncharged body is called electrostatic force. It is a non-contact force." },
+          { "speaker": "NEO", "text": "Exam tip: two balloons rubbed with woollen cloth repel because they carry similar charges. Always give that reason, not just the observation." }
+        ]
+      },
+      {
+        "animation": "Recap board with a floating magnet and a balloon. Points appear: '1. Non-contact forces act without touching', '2. Magnetic force: like poles repel, unlike attract', '3. Electrostatic force: like charges repel, unlike attract'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: non-contact forces act even when objects do not touch." },
+          { "speaker": "NEO", "text": "Two: magnetic force is exerted by a magnet on another magnet or magnetic material. Like poles repel, unlike poles attract." },
+          { "speaker": "NEO", "text": "Three: electrostatic force is exerted by a charged body. Like charges repel and unlike charges attract." },
+          { "speaker": "ZIPPY", "text": "I'm a spark, so I'm basically a celebrity in this chapter." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Exploring Forces",
+    "topic_no": 4,
+    "name": "Gravitational Force and Weight",
+    "scenes": [
+      {
+        "animation": "A school ground. Zippy throws a cricket ball straight up, then harder and higher, then with all his might. Every time it drops back into his hands with a thud. He glares at the sky.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I threw it harder every time. Why won't it stay up there?" },
+          { "speaker": "NEO", "text": "Because the Earth keeps pulling it back. Let's meet that invisible pull." }
+        ]
+      },
+      {
+        "animation": "Activity 5.8 montage: a ball thrown up falls back, a mango drops from a tree, rain falls, a leaf floats down. Arrows from each object point towards the Earth's centre. Caption: 'Gravitational force = gravity. Always attractive.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.8. Throw a ball vertically upwards, then throw it harder. It always comes back down." },
+          { "speaker": "NEO", "text": "All objects fall towards the Earth because the Earth attracts them. The force with which the Earth attracts objects towards itself is called gravitational force, or simply gravity." },
+          { "speaker": "NEO", "text": "It acts without contact, so it is a non-contact force. And unlike magnetic or electrostatic force, gravitational force is always attractive." }
+        ]
+      },
+      {
+        "animation": "Split screen: (a) a stone dropped from a height falls in a straight vertical line; (b) a ball thrown straight up slows, speed bars shrinking, stops with a 'pause' icon at the top, then falls with growing speed bars. Label: 'Vertical motion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A dropped object takes a straight vertical path downwards." },
+          { "speaker": "NEO", "text": "An object thrown vertically up slows down, stops for a moment at the top, changes direction, and then speeds up as it comes down." },
+          { "speaker": "ZIPPY", "text": "So at the very top, gravity takes a tea break?" },
+          { "speaker": "NEO", "text": "No! Gravity acts downwards all the time, even at the top. That is why the ball comes back." }
+        ]
+      },
+      {
+        "animation": "Definition card: 'Weight = force with which the Earth pulls an object towards itself. SI unit: newton (N).' A cartoon Earth tugs on a school bag with a rope labelled 'weight'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The force with which the Earth pulls an object towards itself is called its weight. Since weight is a force, its SI unit is also the newton." }
+        ]
+      },
+      {
+        "animation": "Activity 5.9 step by step: a spring hangs from a nail. A pencil box is hung and the spring stretches a little; a tiffin box stretches it more; a small stone stretches it by a different amount. A ruler beside it marks each stretch.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.9. Hang a spring from a nail. Hang a pencil box, then a tiffin box, then a small stone from its free end, one by one." },
+          { "speaker": "NEO", "text": "The spring stretches because the Earth pulls the object. And the stretch is different for different objects." },
+          { "speaker": "NEO", "text": "So the Earth pulls different objects with different forces. In other words, different objects have different weights." },
+          { "speaker": "NEO", "text": "Exam tip: when a ball is at its topmost point, the only force named should be gravity, acting downwards." }
+        ]
+      },
+      {
+        "animation": "Recap board with a falling mango icon. Points appear: '1. Gravity: Earth attracts all objects; non-contact; always attractive', '2. Thrown up: slows, stops at top, falls faster', '3. Weight = Earth's pull on an object, in newton'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: gravitational force is the Earth's pull on objects. It is a non-contact force and always attractive." },
+          { "speaker": "NEO", "text": "Two: an object thrown up slows down, stops momentarily at the top, and speeds up on its way down." },
+          { "speaker": "NEO", "text": "Three: weight is the force with which the Earth pulls an object, measured in newton." },
+          { "speaker": "ZIPPY", "text": "Fine, Earth. You win. Keep the ball." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Exploring Forces",
+    "topic_no": 5,
+    "name": "Measuring Weight: Spring Balance, Mass and Weight",
+    "scenes": [
+      {
+        "animation": "A kirana shop. The shopkeeper says a wheat bag weighs 10 kg. A small science referee pops up with a whistle and a yellow card reading 'kg is a unit of mass!'. Zippy gasps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Uncle said the wheat bag weighs 10 kilograms. Why is the referee angry?" },
+          { "speaker": "NEO", "text": "Because in science, kilogram measures mass, not weight. Let's learn to measure weight properly." }
+        ]
+      },
+      {
+        "animation": "A spring balance appears in close-up: spring fixed at the top, hook at the bottom, a newton scale on one side and a gram scale on the other. Activity 5.10: the pointer slides to the end and '0 to 10 N' is highlighted.",
+        "lines": [
+          { "speaker": "NEO", "text": "A spring balance has a spring fixed at one end and a hook at the other. Hang an object and the spring stretches; the stretch gives its weight." },
+          { "speaker": "NEO", "text": "Activity 5.10. Look at the scale. The maximum weight this balance can measure is 10 newton, so its range is 0 to 10 newton." }
+        ]
+      },
+      {
+        "animation": "Activity 5.11: the camera zooms between the 0 and 1 N marks. Five small divisions light up one by one, counted 1 to 5. The working writes itself: '1 N ÷ 5 = 0.2 N'. A box reads 'Smallest reading = 0.2 N'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.11. Find the smallest value it can read. Between two bigger marks, like 0 and 1 newton, the difference is 1 newton." },
+          { "speaker": "NEO", "text": "There are 5 small divisions between them. So one small division is 1 newton divided by 5, which is 0.2 newton." },
+          { "speaker": "NEO", "text": "Your school balance may have a different range and smallest division, so always check your instrument first." }
+        ]
+      },
+      {
+        "animation": "Activity 5.12: a pencil box, then a partially filled water bottle, hangs from the hook; readings fill Table 5.2. A red warning icon shows an overloaded balance with a strained spring: 'Never exceed the maximum!'",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.12. Suspend objects like a pencil box and a partially filled water bottle one by one, and record their weights." },
+          { "speaker": "NEO", "text": "Careful: the object must not be heavier than the maximum the balance can measure, or it may get damaged." }
+        ]
+      },
+      {
+        "animation": "Comparison table builds: 'Mass: amount of matter, g or kg, same everywhere' versus 'Weight: gravitational pull, N, can change'. Then a 1 kg block hops across planets with weight tags: Earth 10 N, Moon 1.6 N, Mars 3.8 N, Venus 9 N, Jupiter 25.4 N, while its '1 kg' tag never changes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mass is the amount of matter in an object, measured in grams or kilograms. It stays the same at every place." },
+          { "speaker": "NEO", "text": "Weight is the gravitational force with which the Earth, or another planet, pulls it. So weight can change, but mass does not." },
+          { "speaker": "NEO", "text": "A 1 kilogram object weighs 10 newton on the Earth, but only 1.6 newton on the Moon, and 25.4 newton on Jupiter. Its mass stays 1 kilogram." },
+          { "speaker": "NEO", "text": "Exam tip: on the Moon, weight changes, but mass does not become one-sixth. Mass never changes." }
+        ]
+      },
+      {
+        "animation": "Recap board with a spring balance icon. Points appear: '1. Spring balance measures weight in N', '2. Smallest reading = gap between big marks ÷ number of divisions', '3. Mass stays the same; weight can change'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a spring balance measures weight, in newton, from the stretch of its spring." },
+          { "speaker": "NEO", "text": "Two: find its smallest reading by dividing the gap between big marks by the number of small divisions." },
+          { "speaker": "NEO", "text": "Three: mass is the amount of matter and stays the same; weight is a force and can change from place to place." },
+          { "speaker": "ZIPPY", "text": "Jupiter makes me heavier, the Moon makes me lighter. I'm moving to the Moon." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Exploring Forces",
+    "topic_no": 6,
+    "name": "Floating and Sinking",
+    "scenes": [
+      {
+        "animation": "A bathroom with a full bucket. Zippy drops a coin, which sinks instantly, then a big wooden block, which bobs happily on top. Zippy points at the block, outraged.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The block is much bigger than the coin, and it floats! Gravity is being unfair!" },
+          { "speaker": "NEO", "text": "Gravity pulls both. But the water pushes back. Let's feel that push." }
+        ]
+      },
+      {
+        "animation": "Activity 5.13 step by step: an empty bottle with its lid tightly closed is pushed down into a bucket of water; a big upward arrow resists the hand. The hand lets go and the bottle bounces up to the surface. Label: 'Upthrust / buoyant force'. A mug drawing water also looks lighter inside the bucket.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 5.13. Take an empty bottle with its lid closed tightly and push it into a bucket of water." },
+          { "speaker": "NEO", "text": "You feel an upward push. Release it, and it bounces back up." },
+          { "speaker": "NEO", "text": "The force applied by a liquid on an object in the upward direction is called upthrust, or buoyant force. That is why a mug feels lighter inside the bucket." }
+        ]
+      },
+      {
+        "animation": "An object in water shows two arrows: a downward arrow 'Gravitational force' and an upward arrow 'Buoyant force'. When the down arrow is longer, the object sinks; when the arrows are equal, it floats. A small tag reads 'Depends on density of liquid (later chapter)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In a liquid, gravitational force acts downwards and buoyant force acts upwards." },
+          { "speaker": "NEO", "text": "If the gravitational force is more than the buoyant force, the object sinks. If the two forces are equal, the object floats." },
+          { "speaker": "NEO", "text": "One factor the buoyant force depends on is the density of the liquid. You will learn about density later in this book." }
+        ]
+      },
+      {
+        "animation": "A sepia scene: Archimedes, a Greek scientist in a robe, lowers a block into a full tub; the overflowing water is weighed on a pan. Caption: 'Upward force = weight of liquid displaced'.",
+        "lines": [
+          { "speaker": "ARCHIMEDES", "text": "When an object is fully or partially immersed in a liquid, it feels an upward force equal to the weight of the liquid it displaces." },
+          { "speaker": "NEO", "text": "That is Archimedes' Principle. If the displaced liquid weighs less than the object, it sinks. If it weighs the same, the object floats." }
+        ]
+      },
+      {
+        "animation": "A volcano cools lava full of gas bubbles into a spongy grey rock labelled 'Pumice'. The rock drops into water and floats. A 'Fun Fact' badge appears, followed by an 'Exam Tip' sticker.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some rocks even float! Pumice forms when lava full of gas and water vapour cools quickly and traps tiny bubbles. It is less dense than water." },
+          { "speaker": "NEO", "text": "Exam tip: when explaining floating or sinking, always compare the two forces, gravitational force downwards and buoyant force upwards." }
+        ]
+      },
+      {
+        "animation": "Recap board with a floating bottle icon. Points appear: '1. Upthrust = upward force by a liquid', '2. Gravity > buoyant force: sinks; equal: floats', '3. Archimedes: upward force = weight of liquid displaced'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a liquid applies an upward force on objects, called upthrust or buoyant force." },
+          { "speaker": "NEO", "text": "Two: if gravitational force is more than the buoyant force, the object sinks; if they are equal, it floats." },
+          { "speaker": "NEO", "text": "Three: by Archimedes' Principle, the upward force equals the weight of the liquid displaced." },
+          { "speaker": "ZIPPY", "text": "Sorry, gravity. The water was just pushing back." }
+        ]
+      }
+    ]
+  }
+]

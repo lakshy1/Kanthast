@@ -1,0 +1,188 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "Unit 3: Mystery and Magic",
+    "topic_no": 1,
+    "name": "The Case of the Fifth Word",
+    "scenes": [
+      {
+        "animation": "A desk calendar under a spotlight with four strange words scrawled across it: 'NOM UTES SWEDEN HURTS'. Zippy scratches his head; the letters spin around like a jumbled puzzle.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Nom, Utes, Sweden, Hurts? Is this a secret language?" },
+          { "speaker": "NEO", "text": "It's a coded clue from The Case of the Fifth Word, a mystery by Donald J. Sobol." }
+        ]
+      },
+      {
+        "animation": "Idaville, USA. A boy with glasses and a notebook, Encyclopedia Brown, sits at the dinner table while his father, the Chief of Police, frowns at a case file. A caption: 'Boy detective'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Encyclopedia Brown is a young, brilliant detective in Idaville. His father is the Chief of Police, and he quietly helps him solve hard cases." },
+          { "speaker": "NEO", "text": "This time, two men, Nolan and Davenport, are suspected in a hold-up. Davenport has disappeared, and Nolan has died, leaving four odd words on his desk calendar." }
+        ]
+      },
+      {
+        "animation": "The four words line up. Letters rearrange themselves one by one: NOM → MON, UTES → TUES, SWEDEN → WEDNES, HURTS → THURS. The missing '-DAY' flies away. A blank fifth slot glows with a question mark.",
+        "lines": [
+          { "speaker": "NEO", "text": "Encyclopedia notices a pattern. Each word is a day of the week, without the letters d-a-y, and with the letters jumbled." },
+          { "speaker": "NEO", "text": "Nom is Mon. Utes is Tues. Sweden is Wednes. Hurts is Thurs." },
+          { "speaker": "ZIPPY", "text": "So the next day is Friday. Fri... but jumbled?" }
+        ]
+      },
+      {
+        "animation": "FRI scrambles into FIR. The scene cuts to Nolan's plant nursery full of palm trees. Among them stands one small fir tree in a big jug of earth. Police dig and sparkling stolen jewellery appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exactly. The unwritten fifth word is Fri, and jumbled, it becomes fir." },
+          { "speaker": "NEO", "text": "Nolan ran a nursery of palm trees. One odd fir tree was growing there in a jug of earth, and the stolen jewels were hidden inside it." }
+        ]
+      },
+      {
+        "animation": "A detective toolkit opens: 'Notice patterns', 'Question the odd one out', 'Test your idea'. Word cards: 'anagram: letters rearranged', 'deduction'. Exclamation bubbles pop: 'Aha!', 'Of course!'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The theme: logical thinking and close attention to detail can crack any mystery." },
+          { "speaker": "NEO", "text": "Each clue word is an anagram, a word made by rearranging the letters of another. And the fir tree is the odd one out among palms." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How did Encyclopedia find the jewels?' A flowchart builds: 'Four words = days' → 'Fifth day = Fri' → 'Fri = fir' → 'Fir tree in palm nursery'. An 'Exam Tip' sticker flashes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how did Encyclopedia Brown find the hidden jewels?" },
+          { "speaker": "NEO", "text": "Answer approach: explain the steps in order. Four days of the week, the missing fifth word, Fri as fir, and the fir tree in a palm nursery." },
+          { "speaker": "NEO", "text": "Exam tip: for mystery stories, write the reasoning as clear steps. Examiners reward the logic, not just the answer." }
+        ]
+      },
+      {
+        "animation": "Recap board shaped like a calendar page: '1. Four jumbled words = four days', '2. The fifth word, Fri, becomes fir', '3. Jewels hidden in the fir tree'. Zippy jumbles his own name into 'PYZIP' and looks proud.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the four strange words are jumbled days of the week." },
+          { "speaker": "NEO", "text": "Two: the fifth word, Fri, becomes fir." },
+          { "speaker": "NEO", "text": "Three: the jewels are hidden in the only fir tree among palms." },
+          { "speaker": "ZIPPY", "text": "Call me Pyzip, the anagram detective!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Unit 3: Mystery and Magic",
+    "topic_no": 2,
+    "name": "The Magic Brush of Dreams",
+    "scenes": [
+      {
+        "animation": "A village girl draws a bowl of rice in the sand with a stick. Suddenly a real steaming bowl of rice pops up from the picture. Zippy's eyes go wide as he grabs a spoon.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "She drew food and now it's real? I need that stick for lunch!" },
+          { "speaker": "NEO", "text": "Not a stick, a magic brush. This is the story poem The Magic Brush of Dreams." }
+        ]
+      },
+      {
+        "animation": "Young Gopi, barefoot, draws in the sand by the river. A mysterious stranger in a long cloak hands her a glowing paintbrush. His words appear: 'Paint not for the wealthy ones, but only for the poor.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Gopi is a poor, kind girl who loves to draw. One day a mysterious man gives her a magic brush." },
+          { "speaker": "NEO", "text": "There is one rule. She must paint only for the poor, never for the wealthy." }
+        ]
+      },
+      {
+        "animation": "Gopi paints and each picture leaps to life: food for a hungry family, warm clothes for a shivering child, a plough and tools for a farmer. Villagers cheer as colours swirl around them.",
+        "lines": [
+          { "speaker": "NEO", "text": "Whatever Gopi paints comes to life. She paints food, clothes and tools for the needy villagers." },
+          { "speaker": "ZIPPY", "text": "She could paint a palace for herself, but she paints ploughs. Respect." }
+        ]
+      },
+      {
+        "animation": "A greedy Zamindar in silk rubs his hands and orders Gopi to paint gold and a fortress. Gopi instead paints a road, a horse, a rushing river and a fierce beast. The Zamindar is chased away as the villagers celebrate.",
+        "lines": [
+          { "speaker": "NEO", "text": "Then the greedy Zamindar hears about the brush. He orders Gopi to paint treasures and a grand fortress for him." },
+          { "speaker": "NEO", "text": "Gopi keeps her promise. She cleverly paints a river and a beast that stop him, and the Zamindar is driven away." }
+        ]
+      },
+      {
+        "animation": "A devices board: 'Narrative poem / ballad: tells a story in verse', 'Contrast: kind Gopi vs greedy Zamindar', 'Exclamations: How wonderful! What a sight!'. The word 'draw' shows several meanings: draw a picture, draw water, draw a crowd.",
+        "lines": [
+          { "speaker": "NEO", "text": "This is a narrative poem. It tells a folk-style story in verse, with a clear hero and villain." },
+          { "speaker": "NEO", "text": "The theme: talents are gifts, and they should be used to help others, not to feed greed." },
+          { "speaker": "NEO", "text": "Language tip: the verb draw has many meanings. You can draw a picture, draw water, or draw a crowd." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why did Gopi refuse to paint for the Zamindar?' Answer points: 'Promise to the stranger', 'Brush meant for the poor', 'Greed must not win'. An 'Exam Tip' sticker glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why did Gopi refuse to paint riches for the Zamindar?" },
+          { "speaker": "NEO", "text": "Answer approach: she had promised to paint only for the poor, and helping a greedy man would misuse her gift." },
+          { "speaker": "NEO", "text": "Exam tip: in a character question, describe Gopi with two qualities, like kind and clever, and support each with an event." }
+        ]
+      },
+      {
+        "animation": "Recap board painted in bright brushstrokes: '1. A stranger gives Gopi a magic brush', '2. She paints only for the poor', '3. Kindness defeats the Zamindar's greed'. Zippy paints a samosa in the air; nothing happens.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a stranger gives Gopi a magic brush with one rule." },
+          { "speaker": "NEO", "text": "Two: she paints food, clothes and tools for the poor." },
+          { "speaker": "NEO", "text": "Three: her kindness and cleverness defeat the greedy Zamindar." },
+          { "speaker": "ZIPPY", "text": "My samosa didn't come to life. I guess I'm not poor enough." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Unit 3: Mystery and Magic",
+    "topic_no": 3,
+    "name": "Spectacular Wonders",
+    "scenes": [
+      {
+        "animation": "A car on a Ladakh mountain road rolls slowly uphill with its engine off. Zippy, in the back seat, screams and points. A caption blinks: 'Magic?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo! The car is rolling uphill all by itself! Is the mountain haunted?" },
+          { "speaker": "NEO", "text": "Not haunted, just amazing. Welcome to Spectacular Wonders, a tour of India's natural marvels." }
+        ]
+      },
+      {
+        "animation": "A map of India with pins popping up one by one: Valley of Flowers (Uttarakhand), Living Root Bridges (Meghalaya), Lonar Crater Lake (Maharashtra), Magnetic Hill (Ladakh), Glowing Waters (Kerala), Sundarbans (West Bengal), Chandipur Beach (Odisha).",
+        "lines": [
+          { "speaker": "NEO", "text": "The chapter takes us to natural wonders across India. Let's pin them on the map." },
+          { "speaker": "NEO", "text": "The Valley of Flowers in Uttarakhand, the Living Root Bridges of Meghalaya, the Lonar Crater Lake in Maharashtra, and the Magnetic Hill in Ladakh." },
+          { "speaker": "NEO", "text": "Then the glowing waters of Kerala, the Sundarbans in West Bengal, and Chandipur Beach." }
+        ]
+      },
+      {
+        "animation": "Quick cuts: a meadow bursting with colourful flowers; villagers guiding tree roots across a stream until they form a bridge; a meteorite streaking down and blasting a round crater that fills with water.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Valley of Flowers is a Himalayan meadow full of rare blooms." },
+          { "speaker": "NEO", "text": "In Meghalaya, local people guide the roots of living trees across streams. Over many years, the roots grow into strong bridges." },
+          { "speaker": "NEO", "text": "Lonar Lake formed in a crater made when a meteorite struck the Earth. Its water is salty." }
+        ]
+      },
+      {
+        "animation": "The Ladakh road again, with a dotted line showing that the 'uphill' is really a gentle downhill hidden by the landscape. Then night waves in Kerala glowing blue, and mangrove roots in the Sundarbans with a tiger's eyes peeping out.",
+        "lines": [
+          { "speaker": "NEO", "text": "At the Magnetic Hill, cars only seem to roll uphill. It is an optical illusion created by the slope of the land around." },
+          { "speaker": "NEO", "text": "In Kerala, tiny living organisms make the waves glow at night. This is called bioluminescence." },
+          { "speaker": "NEO", "text": "The Sundarbans is the world's largest mangrove forest, and it protects the coast." },
+          { "speaker": "ZIPPY", "text": "Glowing waves? That's my kind of beach party!" }
+        ]
+      },
+      {
+        "animation": "A theme card: a globe held in two gentle hands. Words appear: 'Wonder', 'Respect', 'Protect'. Vocabulary cards: 'bioluminescence', 'optical illusion', 'mangrove', 'crater'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The theme: nature is full of wonders, and we must respect and protect them for the future." },
+          { "speaker": "NEO", "text": "Notice how many wonders have a scientific explanation. Wonder and science go together." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why do vehicles seem to move uphill at the Magnetic Hill?' Answer block: 'Optical illusion; the road actually slopes gently downhill'. An 'Exam Tip' sticker appears beside a checklist: 'Place + State + Feature'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why do vehicles seem to roll uphill at the Magnetic Hill?" },
+          { "speaker": "NEO", "text": "Answer approach: call it an optical illusion. The surroundings make a gentle downhill slope look like an uphill one." },
+          { "speaker": "NEO", "text": "Exam tip: for each wonder, remember three things. The place, the state, and the special feature." }
+        ]
+      },
+      {
+        "animation": "Recap board with the map of India and three glowing points: '1. Seven natural wonders across India', '2. Many have scientific explanations', '3. Respect and protect nature'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the chapter tours natural wonders across India, from Ladakh to Kerala." },
+          { "speaker": "NEO", "text": "Two: many of them, like bioluminescence and the magnetic hill, have scientific explanations." },
+          { "speaker": "NEO", "text": "Three: these wonders are ours to respect and protect." },
+          { "speaker": "ZIPPY", "text": "Next holiday, root bridges. I'll bring snacks for the trees." }
+        ]
+      }
+    ]
+  }
+]

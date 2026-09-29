@@ -1,0 +1,282 @@
+[
+  {
+    "chapter_no": 10,
+    "chapter": "A Journey Through Indian Architecture",
+    "topic_no": 1,
+    "name": "The Beginnings: Harappan Cities and Stupas",
+    "scenes": [
+      {
+        "animation": "Zippy stacks school bags into a wobbly tower in a classroom; it collapses with a thud. Neo glides in holding a rolled-up map labelled 'Journey Through Indian Architecture'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Building things is easy, Neo. You just pile them up!" },
+          { "speaker": "NEO", "text": "And that is why your tower fell. Architecture is the art and technique of design and construction. It combines what is useful with what is beautiful." },
+          { "speaker": "NEO", "text": "India has excelled at it for several millennia. Let's take a journey." }
+        ]
+      },
+      {
+        "animation": "A blank map of India appears; glowing pins drop one by one for Dholavira, Sanchi, Bharhut, Ellora, Thanjavur and more. Below it a 'river of time' timeline flows from '2600 BCE: Dholavira' on the left to '20th century' on the right.",
+        "lines": [
+          { "speaker": "NEO", "text": "Our guide is a map of monuments and a river of time. We will stop at a few representative structures, grouped by type." },
+          { "speaker": "ZIPPY", "text": "A road trip across four thousand years? I call the window seat!" }
+        ]
+      },
+      {
+        "animation": "Top view of Mohenjo-daro's lower town builds up brick by brick: wide streets and narrow lanes on a compass grid, houses with small bathing areas, and blue water flowing out through covered drains. A large house splits into two floors: servants downstairs, owners upstairs away from street dust.",
+        "lines": [
+          { "speaker": "NEO", "text": "Harappan architecture is the earliest known tradition of urban planning in the subcontinent. Cities were carefully laid out, with a focus on drainage, water management and civic organisation." },
+          { "speaker": "NEO", "text": "Most cities used bricks, because they stood on alluvial plains where clay was plentiful." },
+          { "speaker": "NEO", "text": "In Mohenjo-daro, streets roughly followed the cardinal directions. Almost every home had a bathing area, and used water left the city through an efficient network of drains." }
+        ]
+      },
+      {
+        "animation": "The map zooms to the Rann of Kachchh; Dholavira's plan draws itself with fortified areas, streets and reservoirs. The camera walks through the smooth stone eastern gate of the 'Castle', past a sentinel room where a cartoon guard checks visitors.",
+        "lines": [
+          { "speaker": "NEO", "text": "Dholavira, in the Rann of Kachchh, is famous for its precise planning. Unlike most Harappan cities, it used a lot of stone, because stone was available locally." },
+          { "speaker": "ZIPPY", "text": "So the builders used whatever was nearby. Smart and cheap!" }
+        ]
+      },
+      {
+        "animation": "A dome-shaped stupa rises at Sanchi, Madhya Pradesh; a railing (vedika) circles it and four carved gateways (toranas) slide into place. Tiny worshippers walk clockwise around it; symbols of footprints and a wheel glow on a panel instead of a human figure.",
+        "lines": [
+          { "speaker": "NEO", "text": "From the 4th or 3rd century BCE, with the rise of Buddhism, thousands of stupas were built. A stupa is a dome-shaped structure housing relics of the Buddha or revered monks." },
+          { "speaker": "NEO", "text": "Early art showed the Buddha through symbols, like footprints, the wheel of dharma or the stupa itself, not in human form." },
+          { "speaker": "NEO", "text": "The main stupa at Sanchi, first patronised by Ashoka, marks the earliest phase of monumental stone religious architecture in India. Worshippers entered through toranas and walked around it inside the railings." },
+          { "speaker": "NEO", "text": "Exam tip: learn the pairs. Torana means gateway, vedika means railing. At Bharhut, also in Madhya Pradesh, carved panels even show people worshipping a stupa." }
+        ]
+      },
+      {
+        "animation": "Recap board shaped like a stupa. Three points pop up: '1. Architecture = useful + beautiful', '2. Harappan cities: planned streets, drains; bricks, but stone at Dholavira', '3. Stupas: dome with relics; Sanchi toranas and vedika'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: architecture combines function with beauty, and India has excelled at it for millennia." },
+          { "speaker": "NEO", "text": "Two: Harappan cities like Mohenjo-daro and Dholavira show planned streets, drains and smart use of local material." },
+          { "speaker": "NEO", "text": "Three: stupas are dome-shaped relic shrines, and Sanchi's stupa with its toranas is among India's earliest monumental stone architecture." },
+          { "speaker": "ZIPPY", "text": "Next time, I'm building my bag tower with a drain system." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "A Journey Through Indian Architecture",
+    "topic_no": 2,
+    "name": "Rock-Cut Caves and Water Structures",
+    "scenes": [
+      {
+        "animation": "Zippy tries to carve a room into a hillside with a tiny hammer and chisel; after a hundred taps, he has made a hole the size of a coin. Neo peers in, amused.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, how long does it take to carve a house out of a mountain?" },
+          { "speaker": "NEO", "text": "Longer than your patience, Zippy. But Indian builders did exactly that, again and again." }
+        ]
+      },
+      {
+        "animation": "A map of India: a pin drops near Bhubaneswar, Odisha, labelled 'Udayagiri-Khandagiri caves, from 2nd century BCE'. Cave doorways open in a rocky hill, and cartoon Jain monks settle inside.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rock-cut architecture means carving directly into rock to create caves for worship, living or assembly. It was efficient and very durable." },
+          { "speaker": "NEO", "text": "The Udayagiri-Khandagiri caves near Bhubaneswar, begun in the 2nd century BCE under royal patronage, are among India's first. Most were homes for Jain monks. One cave holds Kharavela's famous inscription." }
+        ]
+      },
+      {
+        "animation": "A pin drops in Maharashtra for Ellora. Rock chips fly away as cave no. 10 appears: an arched ceiling with carved stone 'beams', a stupa at the end with a huge seated Buddha in a teaching pose. Dotted arrows show monks walking clockwise along the aisle behind the pillars; label 'pradakshina = going around clockwise'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In Maharashtra, Ajanta and Ellora are famous for their scale and skill. Thousands of tonnes of rock were chipped away to leave Ellora's monolithic Kailasha Temple." },
+          { "speaker": "NEO", "text": "Ellora's cave no. 10 has a massive seated Buddha leaning against a stupa. Its arched roof imitates timber beams from city buildings." },
+          { "speaker": "NEO", "text": "Monks walked around the stupa along the aisle. This custom, pradakshina, going around clockwise, continued in later temples." }
+        ]
+      },
+      {
+        "animation": "A cutaway of a Harappan well: trapezoid-shaped bricks lock together in a ring while arrows of underground water push in and fail. Then Shringaverpur in Uttar Pradesh appears: a channel from the Ganga fills a chain of connected tanks, and brown silt settles in the first tank.",
+        "lines": [
+          { "speaker": "NEO", "text": "India's monsoon climate made people build many structures to harvest, store and distribute water." },
+          { "speaker": "NEO", "text": "The Harappans made wells with trapezoid-shaped bricks that lock together, so the wells did not collapse inward." },
+          { "speaker": "NEO", "text": "At Shringaverpur in Uttar Pradesh, where the Ramayana says Rama, Sita and Lakshmana crossed the Ganga, excavations found large linked reservoirs fed by a channel from the river. The first tanks let silt settle down." },
+          { "speaker": "ZIPPY", "text": "Like letting the mud settle in a glass before you drink!" }
+        ]
+      },
+      {
+        "animation": "A pin drops in Gujarat for Rani ki Vav; the camera descends its many pillared levels past rows of statues to cool water, where villagers chat on the steps. Next, a temple pushkarini at Vijayanagara fills with neat stairways. A final shot shows plastic waste floating in an old tank, with a red 'Needs care' tag.",
+        "lines": [
+          { "speaker": "NEO", "text": "In Gujarat and Rajasthan, a tradition of stepwells developed. Rani ki Vav has several pillared levels and hundreds of statues." },
+          { "speaker": "NEO", "text": "Stepwells stored rainwater, and also gave people a cool place to sit and share the news. Temples often had tanks called pushkarinis for water harvesting and rituals." },
+          { "speaker": "NEO", "text": "Today many such structures suffer from pollution, waste dumping and poor maintenance. Exam tip: if asked why stepwells mattered, give both reasons, water storage and social space." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cave icon and a water-drop icon. Points appear: '1. Rock-cut caves: Udayagiri-Khandagiri, Ellora cave 10', '2. Pradakshina = clockwise circumambulation', '3. Water: Harappan wells, Shringaverpur tanks, stepwells, pushkarinis'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: rock-cut caves, like Udayagiri-Khandagiri and Ellora, were carved straight into hills for worship and living." },
+          { "speaker": "NEO", "text": "Two: pradakshina, walking clockwise around the sacred centre, began in such caves and continued in temples." },
+          { "speaker": "NEO", "text": "Three: India built clever water structures, from Harappan wells to stepwells like Rani ki Vav and temple pushkarinis." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "A Journey Through Indian Architecture",
+    "topic_no": 3,
+    "name": "Classical Temple Architecture",
+    "scenes": [
+      {
+        "animation": "Zippy stands at a temple gateway holding a bag of prasad, confused by the layers of walls ahead. Neo points: 'Every wall you cross takes you further inward.'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does a temple have so many gates and halls? The main shrine is right there!" },
+          { "speaker": "NEO", "text": "Because a temple visit is meant to be a journey, from the outer world to the inner world." }
+        ]
+      },
+      {
+        "animation": "A simplified ground plan builds step by step from outer to inner: the enclosure (prakara), the gateway (gopuram), pillared halls (mandapas), secondary shrines, the pradakshina corridor and finally the garbhagriha. An arrow shows the east-west alignment with the garbhagriha facing east.",
+        "lines": [
+          { "speaker": "NEO", "text": "Classical temples emerged in the Gupta era. They were built following shilpa shastra, the discipline of arts and crafts." },
+          { "speaker": "NEO", "text": "The main parts are a ceremonial entrance, called gopuram in south India or torana in some north Indian temples; pillared halls called mandapas; and the garbhagriha, the innermost chamber holding the murti of the deity." },
+          { "speaker": "NEO", "text": "The temple is usually aligned east-west, with the garbhagriha facing east." }
+        ]
+      },
+      {
+        "animation": "Two towers rise side by side: a curved one labelled 'shikhara (north)' and a stepped pyramid labelled 'vimana (south)'. Then a faint outline of a seated cosmic figure overlays a temple elevation: head at the top of the tower, feet at the platform; label 'Temple as Purusha'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Above the garbhagriha rises a tower. In north India it is the shikhara. In south India it is the vimana." },
+          { "speaker": "NEO", "text": "Exam tip: never mix these up. North, shikhara. South, vimana." },
+          { "speaker": "NEO", "text": "A temple is also planned like the body of Purusha, the cosmic being. The top of the tower is the head, and the platform is the feet. So the temple becomes a symbol of our own being and of the cosmos." },
+          { "speaker": "ZIPPY", "text": "So walking into a temple is like walking into... yourself? Deep!" }
+        ]
+      },
+      {
+        "animation": "Map pins drop at Thanjavur, Tamil Nadu and Bhubaneswar, Odisha. The Brihadishvara Temple rises with a huge pyramidal vimana tagged 'over 60 m' and a giant monolithic Nandi facing the shrine; tag 'Rajaraja Chola I, around 1010'. Next, the Lingaraja Temple appears with three mandapas and a sandstone-and-laterite label.",
+        "lines": [
+          { "speaker": "NEO", "text": "Temples were modest until the 8th or 9th century. From the 10th century they grew into vast complexes with many shrines and enclosures." },
+          { "speaker": "NEO", "text": "In Thanjavur, Rajaraja Chola I built the Brihadishvara Temple around 1010. Its vimana is over 60 metres high, and a massive Nandi carved from a single stone faces the shrine." },
+          { "speaker": "NEO", "text": "The Lingaraja Temple in Bhubaneswar, from the early 11th century, has three large mandapas and is built of local sandstone and laterite. Both temples are dedicated to Shiva." }
+        ]
+      },
+      {
+        "animation": "Pins at Mount Abu, Rajasthan and Bishnupur, West Bengal. White marble Dilwara halls glow with lace-like carvings; then a brick Bishnupur temple shows square terracotta panels being hand-carved and slid into a kiln. A geometry grid briefly overlays a temple plan.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Dilwara Temples at Mount Abu are five Jain temples of white marble, built between the 11th and 13th centuries, with carvings covering every surface." },
+          { "speaker": "NEO", "text": "The 17th and 18th century temples of Bishnupur in West Bengal are brick, decorated with terracotta panels carved by hand and then fired in a kiln." },
+          { "speaker": "NEO", "text": "Such temples needed skilled architects, engineers and craftsmen, and even advanced geometry." }
+        ]
+      },
+      {
+        "animation": "Recap board shaped like a temple plan. Points appear: '1. Gopuram/torana, mandapa, garbhagriha', '2. Shikhara (north) vs vimana (south); temple as Purusha', '3. Brihadishvara, Lingaraja, Dilwara, Bishnupur'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a classical temple has an entrance, mandapas and the garbhagriha, where the murti is kept." },
+          { "speaker": "NEO", "text": "Two: the tower is a shikhara in the north and a vimana in the south, and the temple represents Purusha, the cosmic being." },
+          { "speaker": "NEO", "text": "Three: regional styles range from Brihadishvara's granite vimana to Dilwara's marble and Bishnupur's terracotta." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "A Journey Through Indian Architecture",
+    "topic_no": 4,
+    "name": "Mosques, Forts and Palaces",
+    "scenes": [
+      {
+        "animation": "A Friday afternoon in Old Delhi: Zippy counts people streaming into a huge red courtyard and gives up at 'a lot'. A number tag flips to '25,000'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, how many people fit in this courtyard?" },
+          { "speaker": "NEO", "text": "Up to twenty-five thousand. Welcome to the Jama Masjid of Delhi, India's largest mosque." }
+        ]
+      },
+      {
+        "animation": "A mosque diagram assembles: a prayer hall with an arrow pointing toward Mecca, a mihrab niche in the wall, domes on top and a minaret on each side where a muezzin calls to prayer. Label 'Jama = gathering, Masjid = mosque'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mosques are places of prayer, and also of religious education and community gatherings. The prayer hall faces Mecca, and the mihrab is the niche that points in that direction." },
+          { "speaker": "NEO", "text": "Large mosques have domes and minarets. Big mosques for Friday prayers are called Jama Masjid. Jama means gathering, and masjid means mosque." }
+        ]
+      },
+      {
+        "animation": "Map pins at Ahmedabad and Delhi. Ahmedabad's yellow sandstone Jama Masjid shows arches, stone jalis and temple-style pillars, while ghost outlines show its minaret tops lost to earthquakes. Delhi's red sandstone mosque then appears with three domes, two 40 m minarets and Qur'anic calligraphy on the arches.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sultan Ahmed Shah I built Ahmedabad's Jama Masjid in the 15th century. Its jalis and temple-style pillars suggest that local Hindu and Jain artisans helped build it." },
+          { "speaker": "NEO", "text": "This blend is called Indo-Islamic architecture, with domes, arches, jalis and floral motifs." },
+          { "speaker": "NEO", "text": "Shah Jahan built Delhi's Jama Masjid in the mid-17th century, in red sandstone with white marble. It has three domes and two 40-metre minarets." }
+        ]
+      },
+      {
+        "animation": "A fort rises on a hilltop above Jodhpur's blue houses: Mehrangarh, built of red sandstone blocks. Then Agra's Red Fort: red sandstone palaces turn into white marble ones, and a Persian wheel lifts Yamuna water into wall tanks that feed cooling fountains.",
+        "lines": [
+          { "speaker": "NEO", "text": "Forts protected kingdoms, so they were placed near important routes, often on hilltops. Many also held royal palaces." },
+          { "speaker": "NEO", "text": "Mehrangarh Fort in Jodhpur was begun in the mid-15th century and expanded by Rajput rulers. Today much of it is a museum." },
+          { "speaker": "NEO", "text": "Akbar rebuilt the Agra Fort using red sandstone from Dholpur. Shah Jahan, who loved marble, replaced many buildings with marble palaces. Fountains fed by Persian wheels kept it cool." },
+          { "speaker": "NEO", "text": "Exam tip: the Agra Fort is not Delhi's Red Fort. Keep the two apart." }
+        ]
+      },
+      {
+        "animation": "A pin on the Betwa river in Madhya Pradesh: Orchha's Jahangir Mahal appears with Rajput and Mughal features side by side. Then a pin in Mysuru: Amba Vilas Palace lights up with thousands of bulbs on a Sunday evening.",
+        "lines": [
+          { "speaker": "NEO", "text": "Bundela Rajput kings built the Orchha Fort-Palace complex on the Betwa in the mid-16th century. Its Jahangir Mahal blends Rajput and Mughal styles." },
+          { "speaker": "NEO", "text": "The Mysuru Palace, home of the Wadiyar dynasty, was rebuilt early in the 20th century after fire destroyed the older wooden palace." },
+          { "speaker": "ZIPPY", "text": "Nearly one lakh lights every Sunday? Imagine that electricity bill!" }
+        ]
+      },
+      {
+        "animation": "Recap board with a dome and a fort-tower icon. Points appear: '1. Mosque: prayer hall facing Mecca, mihrab, domes, minarets', '2. Indo-Islamic blend: Ahmedabad and Delhi Jama Masjids', '3. Forts: Mehrangarh, Agra, Orchha; Mysuru Palace'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a mosque's prayer hall faces Mecca, with a mihrab, domes and minarets." },
+          { "speaker": "NEO", "text": "Two: Indo-Islamic architecture blends Islamic design with Indian craftsmanship, as in the Jama Masjids of Ahmedabad and Delhi." },
+          { "speaker": "NEO", "text": "Three: forts like Mehrangarh, Agra and Orchha guarded kingdoms and held palaces." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "A Journey Through Indian Architecture",
+    "topic_no": 5,
+    "name": "Tombs, Houses, Churches and Colonial Buildings",
+    "scenes": [
+      {
+        "animation": "Sunrise at the Taj Mahal: the white marble turns pink, then gold, then white. Zippy rubs his eyes, convinced someone is repainting it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Who keeps changing the colour of this building?" },
+          { "speaker": "NEO", "text": "The sun does, Zippy. White marble seems to change colour as the light shifts through the day." }
+        ]
+      },
+      {
+        "animation": "A symmetrical garden draws itself around Humayun's Tomb in Delhi, with marble domes, arches and a six-pointed star on the facade; tag 'Commissioned 1558 by Bega Begum; Persian architects'. Then the Taj Mahal: a charbagh garden splits into four parts, followed by arched doorways, calligraphy, chhatris and colourful stones inlaid into marble.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mausoleums are grand buildings housing tombs. Their architecture follows strict symmetry, extending even to the gardens." },
+          { "speaker": "NEO", "text": "Humayun's Tomb in Delhi was commissioned by his chief wife, Bega Begum, in 1558, and designed by Persian architects." },
+          { "speaker": "NEO", "text": "In the mid-17th century, Shah Jahan built the Taj Mahal for Mumtaz Mahal. It blends three cultures: Persian charbagh gardens and arched doorways, Arabic calligraphy and geometric patterns, and Indian chhatris, lotus designs and marble screens." }
+        ]
+      },
+      {
+        "animation": "Chimneys puff yellow smoke near the Taj, leaving a yellow tinge on the marble. A gavel labelled 'PIL in the Supreme Court' taps, the chimneys switch off with a 'Ban: mid-1990s' stamp, and the marble brightens.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the 1970s, smoke from local industries burning coal left a yellowish tinge on the Taj. After an expert committee and a PIL in the Supreme Court, industrial pollution in the area was banned in the mid-1990s." }
+        ]
+      },
+      {
+        "animation": "A haveli plan builds around a central open courtyard, with rooms on all sides and rain falling into the middle. Pins drop in Shekhawati, Rajasthan, showing painted frescoes, and in Chettinadu, Tamil Nadu, showing teak pillars and chillies drying in the sun.",
+        "lines": [
+          { "speaker": "NEO", "text": "Many traditional homes of richer families have rooms arranged around a central courtyard. Some larger Harappan houses used this plan around 4,500 years ago." },
+          { "speaker": "NEO", "text": "Shekhawati havelis in Rajasthan are known for painted frescoes. Chettinadu houses in Tamil Nadu, built by merchant families, used teak from Burma and marble from Italy. Their courtyards were even used for sun-drying papads and chillies." },
+          { "speaker": "ZIPPY", "text": "A courtyard and a papad factory in one. Genius!" }
+        ]
+      },
+      {
+        "animation": "A Kerala church appears with a sloped tiled roof and a stambha flag post in front, borrowed from temple design. Then Madras High Court, completed in 1892, builds up in red sandstone with domes, pointed arches and temple-style pillars; label 'Indo-Saracenic = Islamic + Hindu + Gothic'.",
+        "lines": [
+          { "speaker": "NEO", "text": "By tradition, India's first churches were built on the coast of Kerala. Some later churches copied European styles, while others, like at Mulanthuruthy near Kochi, used local features such as a stambha." },
+          { "speaker": "NEO", "text": "During the British Raj, a colonial style called Indo-Saracenic blended Islamic, Hindu and Gothic elements. The Madras High Court is an example." },
+          { "speaker": "NEO", "text": "Exam tip: preserving this heritage is a Fundamental Duty, to value and preserve the rich heritage of our composite culture." }
+        ]
+      },
+      {
+        "animation": "Recap board with a Taj silhouette, a courtyard house and a court building. Points appear: '1. Tombs: symmetry; Humayun's Tomb, Taj Mahal', '2. Courtyard houses: Shekhawati havelis, Chettinadu', '3. Churches and Indo-Saracenic style; protect heritage'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: mausoleums like Humayun's Tomb and the Taj Mahal show strict symmetry and a blend of cultures." },
+          { "speaker": "NEO", "text": "Two: traditional courtyard houses, like Shekhawati havelis and Chettinadu homes, suit the local climate." },
+          { "speaker": "NEO", "text": "Three: churches mixed local and European styles, and Indo-Saracenic buildings mixed Islamic, Hindu and Gothic ones. Protecting all of it is our duty." }
+        ]
+      }
+    ]
+  }
+]

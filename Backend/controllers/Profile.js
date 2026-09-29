@@ -10,7 +10,7 @@ import {
 
 const defaultSettings = {
   language: "English",
-  appearance: "System",
+  appearance: "Light",
   defaultPlaybackSpeed: "1x",
   profileVisibility: "enrolled",
   emailUpdates: true,

@@ -1,0 +1,225 @@
+[
+  {
+    "chapter_no": 10,
+    "chapter": "Proportional Reasoning-2",
+    "topic_no": 1,
+    "name": "Ratios in Maps",
+    "scenes": [
+      {
+        "animation": "Zippy spreads out a map of South India and lays a ruler between Bengaluru and Chennai. It reads '5 cm'. He cheers, 'Chennai is only 5 cm away! I'll walk!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Chennai is just 5 centimetres from Bengaluru. I'll walk there before lunch!" },
+          { "speaker": "NEO", "text": "Look at the corner of the map first. There's a ratio hiding there." }
+        ]
+      },
+      {
+        "animation": "The map corner zooms in: 'RF 1 : 60,00,000'. A label: 'Representative Fraction = map distance : actual distance'. A 1 cm segment stretches out across the landscape to a signpost '60,00,000 cm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "This is the Representative Fraction, or RF. It is the ratio of a distance on the map to the actual distance on the ground." },
+          { "speaker": "NEO", "text": "1 is to 60 lakh means 1 centimetre on the map stands for 60 lakh centimetres on the ground." }
+        ]
+      },
+      {
+        "animation": "Conversion steps line by line: '100 cm = 1 m', '1000 m = 1 km', '1 km = 1,00,000 cm', '60,00,000 cm ÷ 1,00,000 = 60 km'. Then '5 cm × 60 km = 300 km'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A kilometre is 1000 metres, and each metre is 100 centimetres. So 1 kilometre is 1 lakh centimetres." },
+          { "speaker": "NEO", "text": "60 lakh centimetres divided by 1 lakh is 60 kilometres. So 1 centimetre on this map means 60 kilometres." },
+          { "speaker": "NEO", "text": "Your 5 centimetres is 5 times 60, which is about 300 kilometres." },
+          { "speaker": "ZIPPY", "text": "Three hundred kilometres! That's a lot more than a morning walk." }
+        ]
+      },
+      {
+        "animation": "A dotted straight line joins the two cities 'as the crow flies', while a winding road snakes between them. Labels: 'geographical distance' on the straight line and 'road distance' on the road. An 'Exam Tip' sticker: 'Convert cm to km: divide by 1,00,000'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the bus will travel exactly 300 kilometres?" },
+          { "speaker": "NEO", "text": "Not quite. The map gives straight-line, geographical distance. Roads bend, so road distance is usually more." },
+          { "speaker": "NEO", "text": "Exam tip: when using an RF, convert centimetres to kilometres by dividing by 1 lakh." }
+        ]
+      },
+      {
+        "animation": "Students sketch their classroom on graph paper with the scale '1 : 50'. The teacher's desk, blackboard, fans and lights appear as small symbols. A 6 m wall becomes '600 cm ÷ 50 = 12 cm' on paper.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try making your own map. Draw your classroom at 1 is to 50." },
+          { "speaker": "NEO", "text": "A wall 6 metres long is 600 centimetres. Divided by 50, that's 12 centimetres on your paper." }
+        ]
+      },
+      {
+        "animation": "Recap board over the South India map. Points: '1. RF = map distance : actual distance', '2. 1 : 60,00,000 → 1 cm = 60 km', '3. Maps show straight-line, not road, distance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the Representative Fraction compares map distance to actual distance." },
+          { "speaker": "NEO", "text": "Two: at 1 is to 60 lakh, 1 centimetre on the map is 60 kilometres." },
+          { "speaker": "NEO", "text": "Three: maps give straight-line distance, which is usually shorter than road distance." },
+          { "speaker": "ZIPPY", "text": "Okay. I'll take the bus." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Proportional Reasoning-2",
+    "topic_no": 2,
+    "name": "Ratios with More Than Two Terms",
+    "scenes": [
+      {
+        "animation": "Viswanath grinds a spice mix in a mixer: '8 spoons coriander : 4 red chillies : 2 spoons toor dal : 1 spoon methi'. Puneet opens his kitchen shelf and finds only 2 red chillies.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Puneet wants the same spice mix, but he has only 2 red chillies." },
+          { "speaker": "NEO", "text": "This ratio has four terms: 8 is to 4 is to 2 is to 1. Every term must change by the same factor." }
+        ]
+      },
+      {
+        "animation": "The ratio '8 : 4 : 2 : 1' gets '× 1/2' arrows on every term, giving '4 : 2 : 1 : 0.5'. The two ratios are joined by '::'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puneet has half the chillies, so he halves everything." },
+          { "speaker": "NEO", "text": "4 spoons of coriander, 2 chillies, 1 spoon of toor dal and half a spoon of methi. That's 4 is to 2 is to 1 is to 0.5." }
+        ]
+      },
+      {
+        "animation": "Paint tins: 'Red : Blue : White = 2 : 3 : 5'. Yasmin has 10 L of white. Steps: '5 parts = 10 L', '1 part = 2 L', 'red = 4 L, blue = 6 L', 'total = 20 L'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Yasmin mixes purple paint in the ratio red to blue to white of 2 is to 3 is to 5. She has 10 litres of white." },
+          { "speaker": "NEO", "text": "White is 5 parts, so 1 part is 2 litres. Red is 4 litres and blue is 6 litres, making 20 litres of purple." }
+        ]
+      },
+      {
+        "animation": "A construction site with concrete ratio 'cement : sand : gravel = 1 : 1.5 : 3'. Steps build: '1 + 1.5 + 3 = 5.5', '110 ÷ 5.5 = 20', 'cement 20, sand 30, gravel 60', 'check: 20 + 30 + 60 = 110 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Strong concrete for pillars uses cement, sand and gravel in the ratio 1 is to 1.5 is to 3. We need 110 units." },
+          { "speaker": "NEO", "text": "One batch is 1 plus 1.5 plus 3, which is 5.5 units. 110 divided by 5.5 is 20 batches." },
+          { "speaker": "NEO", "text": "So 20 units of cement, 30 of sand and 60 of gravel. Check: 20 plus 30 plus 60 is 110." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Triangle angles in ratio 1 : 3 : 5'. Steps: '1 + 3 + 5 = 9', '180 ÷ 9 = 20', 'angles 20°, 60°, 100°'. A protractor draws the triangle. An 'Exam Tip' sticker: 'Divide the whole by the SUM of the terms'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Puzzle for you: a triangle's angles are in the ratio 1 is to 3 is to 5." },
+          { "speaker": "NEO", "text": "The angles add to 180. The terms add to 9, and 180 divided by 9 is 20." },
+          { "speaker": "NEO", "text": "So the angles are 20, 60 and 100 degrees." },
+          { "speaker": "NEO", "text": "Exam tip: to split a whole in a ratio, divide by the sum of all the terms, then multiply by each term." }
+        ]
+      },
+      {
+        "animation": "Recap board with the spice jar, paint tins and triangle. Points: '1. Ratios can have many terms', '2. Scale every term by the same factor', '3. Share x in a : b : c → x × a/(a + b + c), ...'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: ratios can have three, four or more terms." },
+          { "speaker": "NEO", "text": "Two: to keep the mix the same, scale every term by the same factor." },
+          { "speaker": "NEO", "text": "Three: to share a whole, divide by the sum of the terms, then multiply by each term." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Proportional Reasoning-2",
+    "topic_no": 3,
+    "name": "A Slice of the Pie",
+    "scenes": [
+      {
+        "animation": "A class teacher pins test results on a board: 'Grade A 12, B 10, C 8, D 6, E 4 (40 students)'. A giant round pizza rolls in and Zippy holds a knife, confused about where to cut.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The teacher wants a pie chart. How big should each slice be?" },
+          { "speaker": "NEO", "text": "Each slice's angle must be proportional to the number of students in that grade." }
+        ]
+      },
+      {
+        "animation": "The ratio '12 : 10 : 8 : 6 : 4' is divided by the HCF 2 → '6 : 5 : 4 : 3 : 2'. Sum: '6 + 5 + 4 + 3 + 2 = 20'. '360° ÷ 20 = 18°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A full circle is 360 degrees. So we split 360 in the ratio 12 is to 10 is to 8 is to 6 is to 4." },
+          { "speaker": "NEO", "text": "Divide by the HCF, 2, to get 6 is to 5 is to 4 is to 3 is to 2. The terms add to 20." },
+          { "speaker": "NEO", "text": "360 divided by 20 is 18 degrees for each part." }
+        ]
+      },
+      {
+        "animation": "Angles appear line by line: 'A: 6 × 18 = 108°', 'B: 5 × 18 = 90°', 'C: 4 × 18 = 72°', 'D: 3 × 18 = 54°', 'E: 2 × 18 = 36°'. A check line: '108 + 90 + 72 + 54 + 36 = 360 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Grade A gets 6 times 18, which is 108 degrees. Grade B gets 90." },
+          { "speaker": "NEO", "text": "C gets 72, D gets 54 and E gets 36 degrees." },
+          { "speaker": "NEO", "text": "Check: 108 plus 90 plus 72 plus 54 plus 36 is 360. The pie is complete." }
+        ]
+      },
+      {
+        "animation": "Construction animates step by step: a circle with radius AB; a protractor measures 108° anticlockwise from AB to draw AC; then 90° from AC to draw AD; then 72°, 54°, and the last 36° slice fills itself. The slices are coloured and labelled.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now draw it. Draw a circle and one radius. Measure 108 degrees from it and draw the next radius." },
+          { "speaker": "NEO", "text": "From that radius, measure 90 degrees, then 72, then 54. The last slice should come out as 36." }
+        ]
+      },
+      {
+        "animation": "A second pie: 'Entertainment 50%, Sports 25%, News 15%, Information 10%'. Steps: '50% of 360 = 180°', '25% = 90°', '15% = 54°', '10% = 36°'. An 'Exam Tip' sticker: 'Angles must total 360°'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if the data is already in percentages?" },
+          { "speaker": "NEO", "text": "Even easier. 50 per cent of 360 is 180 degrees. 25 per cent is 90, 15 per cent is 54 and 10 per cent is 36." },
+          { "speaker": "NEO", "text": "Exam tip: always add your angles. If they don't make 360, recheck before drawing." }
+        ]
+      },
+      {
+        "animation": "Recap board with the finished, colourful pie chart. Points: '1. Slice angle ∝ quantity', '2. Angle = part ÷ total × 360°', '3. All angles add to 360°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: in a pie chart, each slice's angle is proportional to its quantity." },
+          { "speaker": "NEO", "text": "Two: the angle is the part divided by the total, times 360 degrees." },
+          { "speaker": "NEO", "text": "Three: all the angles must add up to 360." },
+          { "speaker": "ZIPPY", "text": "Now can we eat the pizza version?" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Proportional Reasoning-2",
+    "topic_no": 4,
+    "name": "Inverse Proportions",
+    "scenes": [
+      {
+        "animation": "A road-laying crew of 20 workers finishes in 4 days. The foreman announces only 10 workers are available. Zippy calculates on a slate: '4 ÷ 2 = 2 days!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Half the workers, so half the days. Two days!" },
+          { "speaker": "NEO", "text": "Fewer workers means more days, Zippy. Some quantities move in opposite directions." }
+        ]
+      },
+      {
+        "animation": "A table from Lucknow to Kanpur: 'Walk 5 km/h, 18 h', 'Bicycle 15 km/h, 6 h', 'Motorcycle 30 km/h, 3 h', 'Car 60 km/h, 1.5 h'. Arrows show '× 3' on speed and '× 1/3' on time. Every row's product glows '= 90 km'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Look at travelling from Lucknow to Kanpur. Walking at 5 kilometres per hour takes 18 hours. Cycling at 15 takes 6 hours." },
+          { "speaker": "NEO", "text": "Speed became 3 times, and time became one-third. They change by the same factor, but in opposite directions." },
+          { "speaker": "NEO", "text": "In every row, speed times time is 90 kilometres. That's inverse proportion: x times y stays constant." }
+        ]
+      },
+      {
+        "animation": "Back to the road crew: '20 × 4 = 10 × y', '80 = 10y', 'y = 8 days'. Then pumps: '2 pumps × 18 h = 4 pumps × x', 'x = 36 ÷ 4 = 9 h'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For the road, workers times days is constant. 20 times 4 is 80, so 10 workers need 8 days." },
+          { "speaker": "NEO", "text": "2 pumps fill a tank in 18 hours. With 4 pumps, 2 times 18 equals 4 times x, so x is 9 hours." }
+        ]
+      },
+      {
+        "animation": "A school kitchen store: 'Food for 80 students, 15 days'. Twenty more students arrive. Steps: '80 × 15 = 100 × x', '1200 = 100x', 'x = 12 days'. Then a contrast card: '5 workers move 4500 bricks → 18,000 bricks needs 20 workers (direct)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Food for 80 students lasts 15 days. If 20 more join, 80 times 15 equals 100 times x. So x is 12 days." },
+          { "speaker": "NEO", "text": "But not everything is inverse. If 5 workers move 4500 bricks a day, then 18,000 bricks need 20 workers. More bricks, more workers. That's direct." }
+        ]
+      },
+      {
+        "animation": "Ram and Shyam chop vegetables. 'Ram: 1 job in 1 h', 'Shyam: 1 job in 1.5 h → 2/3 job per hour'. Steps: 'together: 1 + 2/3 = 5/3 job per hour', 'time = 1 ÷ 5/3 = 3/5 h = 36 min'. An 'Exam Tip' sticker: 'Ask: does one go up when the other goes down?'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Ram cuts the vegetables in 1 hour, Shyam in 1.5 hours. Together, 2.5 hours?" },
+          { "speaker": "NEO", "text": "Together they must be faster! In one hour, Ram does 1 job and Shyam does two-thirds. That's five-thirds of a job each hour." },
+          { "speaker": "NEO", "text": "So one job takes three-fifths of an hour, which is 36 minutes." },
+          { "speaker": "NEO", "text": "Exam tip: before using a rule, ask whether one quantity rises as the other falls. If yes, it's inverse." }
+        ]
+      },
+      {
+        "animation": "Recap board with the road crew and the Lucknow–Kanpur table. Points: '1. Inverse: one × n, the other × 1/n', '2. x × y = constant', '3. Direct: x ÷ y = constant'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: in inverse proportion, when one quantity is multiplied by n, the other is divided by n." },
+          { "speaker": "NEO", "text": "Two: their product stays constant, like speed times time equals distance." },
+          { "speaker": "NEO", "text": "Three: in direct proportion, it's the quotient that stays constant." },
+          { "speaker": "ZIPPY", "text": "Eight days for the road. I'll bring snacks for the workers." }
+        ]
+      }
+    ]
+  }
+]

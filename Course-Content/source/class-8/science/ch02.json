@@ -1,0 +1,359 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "The Invisible Living World: Beyond Our Naked Eye",
+    "topic_no": 1,
+    "name": "Seeing the Invisible: Lenses and the First Microscopes",
+    "scenes": [
+      {
+        "animation": "Zippy squints at a kitchen shelf, trying to spot something on a slice of bread. A giant question mark floats above, and faint cartoon silhouettes of tiny creatures wave at him, unseen.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, I'm staring as hard as I can. Why can't I see anything living on this bread?" },
+          { "speaker": "NEO", "text": "Because the human eye can only see objects above a certain size. A whole world is hiding below that size." },
+          { "speaker": "ZIPPY", "text": "A hidden world? Then how do we get in?" }
+        ]
+      },
+      {
+        "animation": "A lentil seed rolls onto the screen and morphs into a glass lens, thick in the middle and thin at the edge. Label 'lens = lentil-shaped glass'. A timeline shows 'magnifying glass' growing into 'microscope'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Long ago, people discovered that a curved piece of glass could make small things look bigger." },
+          { "speaker": "NEO", "text": "It was shaped like a lentil seed, thick in the middle and thin at the edge, so they called it a lens." },
+          { "speaker": "NEO", "text": "Lenses kept improving, from simple magnifying glasses to microscopes, which showed what our eyes could not." }
+        ]
+      },
+      {
+        "animation": "Activity 2.1 step by step: a round-bottom glass flask is filled with water, closed with a cork, then placed on an open book. The letters under the flask swell to twice their size. Then a real magnifying glass hovers over an ant, showing its legs and antennae clearly.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try Activity 2.1. Fill a round-bottom glass flask with water and close its mouth with a cork." },
+          { "speaker": "NEO", "text": "Place it on an open book and look at the letters through it." },
+          { "speaker": "ZIPPY", "text": "The letters got huge! Is the flask magic?" },
+          { "speaker": "NEO", "text": "No magic. The water-filled flask acts like a magnifying glass. Now use a real magnifying glass on an ant, and see its body in detail." }
+        ]
+      },
+      {
+        "animation": "Sepia 1665 scene: Robert Hooke sketches at a desk beside his microscope, with the book 'Micrographia' open. A thin slice of cork zooms in to show honeycomb-like boxes, each labelled 'cell'. A caption reads 'Magnified 200 to 300 times'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1665, Robert Hooke published a book called Micrographia, full of drawings of tiny things seen through his microscope." },
+          { "speaker": "NEO", "text": "His microscope made things look 200 to 300 times bigger." },
+          { "speaker": "NEO", "text": "He looked at a thin slice of cork and saw many small, empty spaces, like a honeycomb. He called each space a cell." },
+          { "speaker": "ZIPPY", "text": "So the word cell was born from a bottle cork!" }
+        ]
+      },
+      {
+        "animation": "A Dutch windmill backdrop; Antonie van Leeuwenhoek polishes a tiny lens. Through his microscope, cartoon bacteria and blood cells wiggle into view. A golden badge drops on him: 'Father of Microbiology'. A 'Exam Tip' sticker pops up beside two name cards: 'Hooke: named the cell' and 'Leeuwenhoek: first saw bacteria'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Around the same time, in the 1660s, a Dutch scientist, Antonie van Leeuwenhoek, made better lenses and more useful microscopes." },
+          { "speaker": "NEO", "text": "He was the first person to clearly see and describe tiny living things like bacteria and blood cells." },
+          { "speaker": "NEO", "text": "That is why he is known as the Father of Microbiology." },
+          { "speaker": "NEO", "text": "Exam tip: don't mix them up. Hooke first used the word cell. Leeuwenhoek first saw bacteria." }
+        ]
+      },
+      {
+        "animation": "Recap board with a lens icon. Points appear one by one: '1. Lens = curved, lentil-shaped glass that magnifies', '2. Hooke, 1665, Micrographia: named the cell from cork', '3. Leeuwenhoek: first saw bacteria, Father of Microbiology'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a lens is a curved, lentil-shaped glass that makes small things look bigger." },
+          { "speaker": "NEO", "text": "Two: in 1665, Robert Hooke saw compartments in cork and called them cells." },
+          { "speaker": "NEO", "text": "Three: Leeuwenhoek first described bacteria and blood cells, and is the Father of Microbiology." },
+          { "speaker": "ZIPPY", "text": "I'm never looking at a cork the same way again." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "The Invisible Living World: Beyond Our Naked Eye",
+    "topic_no": 2,
+    "name": "What Is a Cell? Onion Peel and Cheek Cells",
+    "scenes": [
+      {
+        "animation": "Zippy chops an onion in a home kitchen, tears streaming. A thin, see-through layer peels off and floats up like a ghost sheet saying 'Look at me under a microscope!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This onion is making me cry, and now its skin is talking to me!" },
+          { "speaker": "NEO", "text": "Good. That thin layer can show us what all living beings are made of: cells." }
+        ]
+      },
+      {
+        "animation": "Activity 2.2 built step by step with a 'Teacher demonstration' badge: wash onion, cut vertically, lift the peel with forceps, dip in red safranin for 30 seconds, rinse in water with a brush, place on slide, add glycerin, lower coverslip at an angle with a needle, blot extra glycerin. Each step gets a numbered tick.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 2.2 is a teacher demonstration. Wash an onion, cut it vertically, and pull the thin inner layer out with forceps. That's the onion peel." },
+          { "speaker": "NEO", "text": "Put it in a few drops of safranin, a red stain, for 30 seconds, then rinse it in water to remove extra stain." },
+          { "speaker": "NEO", "text": "Place it on a slide, add a drop of glycerin so the cells don't dry, and lower a coverslip slowly with a needle so no air bubbles get trapped." }
+        ]
+      },
+      {
+        "animation": "Microscope view: pink, nearly rectangular onion cells packed tightly. Beside it, a brick wall slides in and the two images line up perfectly.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "It looks like a brick wall!" },
+          { "speaker": "NEO", "text": "Exactly. You see nearly rectangular cells, closely arranged with no space between them. All plants are made up of cells." }
+        ]
+      },
+      {
+        "animation": "Activity 2.3: Zippy rinses his mouth, gently scrapes the inner cheek with the blunt end of a clean toothpick, spreads it in a drop of water on a slide, adds blue methylene blue, waits one minute, adds glycerin and a coverslip. Microscope view shows flat, polygon-shaped blue cells.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now Activity 2.3. Rinse your mouth and gently scrape the inside of your cheek with the blunt end of a clean toothpick." },
+          { "speaker": "NEO", "text": "Spread it in a drop of water on a slide and add methylene blue, a blue stain that increases contrast." },
+          { "speaker": "NEO", "text": "After one minute, add glycerin and a coverslip. You'll see polygon-shaped cheek cells that line your mouth." }
+        ]
+      },
+      {
+        "animation": "A labelled cheek cell and onion cell side by side. Labels pop in: 'Cell membrane', 'Cytoplasm', 'Nucleus', and on the onion cell only, a thick green outline 'Cell wall'. Each label glows as its function appears in a speech bubble.",
+        "lines": [
+          { "speaker": "NEO", "text": "Every cell has three basic parts. The cell membrane is the outer layer. It is porous, letting in materials needed for life and letting out waste." },
+          { "speaker": "NEO", "text": "Cytoplasm fills the space between membrane and nucleus. Most life processes happen here." },
+          { "speaker": "NEO", "text": "The nucleus, covered by a thin membrane, regulates all activities in the cell, including growth." },
+          { "speaker": "NEO", "text": "Plant cells like onion peel have an extra cell wall, which gives rigidity and strength." }
+        ]
+      },
+      {
+        "animation": "Split screen: a plant cell with green rod-shaped chloroplasts and a big vacuole; an animal cell with tiny or no vacuoles. An 'Exam Tip' sticker flashes over the cell wall and big vacuole in the plant cell.",
+        "lines": [
+          { "speaker": "NEO", "text": "Going further, plant cells have plastids. Chloroplasts contain green chlorophyll for photosynthesis." },
+          { "speaker": "NEO", "text": "Plant cells also have a large vacuole that stores substances, removes waste and keeps the cell's shape. In animal cells, vacuoles are usually absent or small." },
+          { "speaker": "NEO", "text": "Exam tip: when you label a plant cell, never forget the cell wall and the large vacuole." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cell icon. Points: '1. Onion peel: rectangular cells with cell wall', '2. Basic parts: cell membrane, cytoplasm, nucleus', '3. Plant cells: cell wall, chloroplasts, large vacuole'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: onion peel cells are nearly rectangular and tightly packed, while cheek cells are polygon-shaped." },
+          { "speaker": "NEO", "text": "Two: the basic parts of a cell are the cell membrane, cytoplasm and nucleus." },
+          { "speaker": "NEO", "text": "Three: plant cells also have a cell wall, plastids like chloroplasts, and a large vacuole." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "The Invisible Living World: Beyond Our Naked Eye",
+    "topic_no": 3,
+    "name": "Cell Shapes and Levels of Organisation",
+    "scenes": [
+      {
+        "animation": "A cell identity parade: a spindle-shaped muscle cell, a long branched nerve cell, a flat cheek cell and a tube-like plant cell stand in a line-up. Zippy holds a clipboard, confused.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, these are all cells? They look like totally different species!" },
+          { "speaker": "NEO", "text": "They are all cells. Their shape, size and structure are matched to the job they do." }
+        ]
+      },
+      {
+        "animation": "Close-ups: a nerve cell stretches its branches across a cartoon body, passing a glowing message like a relay baton. A flat cheek cell forms a smooth protective tile layer. A tube-like plant cell carries blue water upward.",
+        "lines": [
+          { "speaker": "NEO", "text": "A muscle cell is shaped like a spindle. A nerve cell, or neuron, is very long and has branches." },
+          { "speaker": "NEO", "text": "Neurons carry messages. Their long, branched shape helps them reach different parts of the body and pass messages quickly." },
+          { "speaker": "NEO", "text": "Cheek cells are thin and flat, forming a protective lining. Some plant cells form long tubes that carry water through the plant." }
+        ]
+      },
+      {
+        "animation": "A cartoon roti travels down the food pipe; spindle-shaped muscle cells squeeze behind it in a wave. In the stomach, muscle cells churn while lining cells squirt digestive juice and acid.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So how does my roti actually get down to my stomach?" },
+          { "speaker": "NEO", "text": "Muscle cells in the food pipe contract and relax in a wave, pushing food down. They can do it because they are thin, flexible and spindle-shaped." },
+          { "speaker": "NEO", "text": "In the stomach, muscle cells churn the food, while cells in the lining make digestive juices and acid. All these cells work together." }
+        ]
+      },
+      {
+        "animation": "A staircase builds itself step by step: 'Cell' (one brick), 'Tissue' (a row of bricks), 'Organ' (a stomach), 'Organ system' (digestive system), 'Organism' (a child). Arrows connect each step.",
+        "lines": [
+          { "speaker": "NEO", "text": "The cell is the basic unit of life, just like a brick is the basic unit of a wall." },
+          { "speaker": "NEO", "text": "A group of similar cells forms a tissue. Different tissues form an organ. Several organs work together as an organ system." },
+          { "speaker": "NEO", "text": "All the organ systems together make up a complete organism, like a plant or an animal." }
+        ]
+      },
+      {
+        "animation": "A single egg cell divides into 2, 4, 8, then many cells, growing into a cartoon chick. A giant ostrich egg rolls in with a ruler reading '130 mm to 170 mm'. 'Exam Tip' sticker shows the correct order of levels.",
+        "lines": [
+          { "speaker": "NEO", "text": "Complex organisms begin life as a single cell, the egg. It divides again and again to form a living being made of many cells, a multicellular organism." },
+          { "speaker": "ZIPPY", "text": "So what's the biggest single cell?" },
+          { "speaker": "NEO", "text": "The yolk of an ostrich egg, about 130 to 170 millimetres across. It is the largest known cell." },
+          { "speaker": "NEO", "text": "Exam tip: write the levels in the right order: cell, tissue, organ, organ system, organism. Swapping tissue and organ is a common mistake." }
+        ]
+      },
+      {
+        "animation": "Recap board with a staircase icon. Points: '1. Cell shape suits its function', '2. Cell → Tissue → Organ → Organ system → Organism', '3. Life begins as one cell, the egg'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: cells differ in shape and size, and the shape suits the function, like long branched neurons." },
+          { "speaker": "NEO", "text": "Two: the levels of organisation are cell, tissue, organ, organ system and organism." },
+          { "speaker": "NEO", "text": "Three: complex organisms start as a single egg cell that divides many times." },
+          { "speaker": "ZIPPY", "text": "From one brick to a whole building. Nice!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "The Invisible Living World: Beyond Our Naked Eye",
+    "topic_no": 4,
+    "name": "Microorganisms and Their Cells",
+    "scenes": [
+      {
+        "animation": "Zippy peers into a muddy puddle after monsoon rain. A microscope lens swoops down and the drop becomes a busy city of swimming, wriggling creatures.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "It's just muddy water. Nothing lives in there, right?" },
+          { "speaker": "NEO", "text": "Put one drop under a microscope, and you'll find a crowded city." }
+        ]
+      },
+      {
+        "animation": "Activity 2.4: a teacher helps collect pond water; a dropper places one drop on a slide, coverslip added. Activity 2.5: moist soil scooped into a beaker with a spoon (a 'Use a spoon or gloves' warning icon), water poured, stirred with a glass rod, left to settle, and a drop from the top layer placed on a slide.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 2.4: collect pond or stagnant water with the help of your teacher or elders. Put one drop on a slide, add a coverslip, and observe." },
+          { "speaker": "NEO", "text": "Activity 2.5: collect moist soil in a beaker. Don't touch soil with bare hands; use a spoon or gloves." },
+          { "speaker": "NEO", "text": "Add water and stir. This is soil suspension. Let it settle, then observe a drop from the top layer." }
+        ]
+      },
+      {
+        "animation": "Activity 2.6 as two tables building on screen. Pond water: Amoeba (irregular shape), Paramecium (moves with special structures), green algae. Soil: bread mould and mould (branched filaments, no chlorophyll), algae (green, spherical), bacteria (spherical, comma, spiral, rod).",
+        "lines": [
+          { "speaker": "NEO", "text": "Tiny creatures we cannot see with the naked eye are called microorganisms, or microbes. Micro means very small." },
+          { "speaker": "NEO", "text": "In pond water you may find protozoa like Amoeba, with an irregular shape, and Paramecium, plus green algae." },
+          { "speaker": "NEO", "text": "In soil, there are fungi like bread mould, which have branched filaments without chlorophyll, and bacteria that are spherical, comma, spiral or rod-shaped." }
+        ]
+      },
+      {
+        "animation": "A sorting machine drops microbes into two bins: 'Unicellular' (bacterium, Amoeba, yeast) and 'Multicellular' (mould, some algae). A bacterial cell zooms in, showing a loose tangled region labelled 'Nucleoid, no nuclear membrane'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Bacteria and protozoa are unicellular. They do everything for survival in just one cell." },
+          { "speaker": "NEO", "text": "Algae and fungi can be one or more cells. Yeast is a unicellular fungus, while mould is multicellular." },
+          { "speaker": "NEO", "text": "Fungal cells have a cell wall but no chloroplasts, so they cannot make their own food." },
+          { "speaker": "NEO", "text": "Bacteria have no well-defined nucleus or nuclear membrane. Instead, they have a nucleoid." }
+        ]
+      },
+      {
+        "animation": "A zoom dial turns: 'School microscope: 100 to 400 times', then 'Electron microscope: about 10,00,000 times'. A spiky virus drifts in with a label 'Acellular: multiplies only inside a living cell'. 'Exam Tip' sticker on 'Nucleoid'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Are viruses microbes too?" },
+          { "speaker": "NEO", "text": "Viruses are microscopic but acellular. They multiply only when they enter a living cell, and may cause disease." },
+          { "speaker": "NEO", "text": "A lab microscope magnifies microbes 100 to 400 times. An electron microscope magnifies a cell about 10,00,000 times." },
+          { "speaker": "NEO", "text": "Exam tip: if a question asks which cell lacks a well-defined nucleus, the answer is the bacterial cell, with its nucleoid." }
+        ]
+      },
+      {
+        "animation": "Recap board with a microscope icon. Points: '1. Microbes: too small for the naked eye; found in water, soil, air, our body', '2. Unicellular: bacteria, protozoa, yeast. Multicellular: mould', '3. Bacteria have a nucleoid; viruses are acellular'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: microorganisms are too small for the naked eye and live in water, soil, air, and even inside us." },
+          { "speaker": "NEO", "text": "Two: bacteria and protozoa are unicellular, while fungi can be unicellular like yeast or multicellular like mould." },
+          { "speaker": "NEO", "text": "Three: bacteria have a nucleoid instead of a proper nucleus, and viruses are acellular." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "The Invisible Living World: Beyond Our Naked Eye",
+    "topic_no": 5,
+    "name": "Microbes: Nature's Cleaning Crew",
+    "scenes": [
+      {
+        "animation": "A tomato left on a kitchen counter grows a powdery, cotton-like fuzz in time-lapse. Beside it, a jar of mango pickle and a bowl of amla murabba stay perfectly fine. Zippy points back and forth.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The tomato went fuzzy, but Nani's pickle is fine after months. Unfair!" },
+          { "speaker": "NEO", "text": "The tomato was infected by microbes. They are everywhere, in water, soil, air and even some food." },
+          { "speaker": "NEO", "text": "But pickles and murabbas have lots of salt or sugar. High concentrations of salt or sugar don't let microbes grow." }
+        ]
+      },
+      {
+        "animation": "A world map lights up microbe icons in hot springs, snowy zones and a cartoon gut. Then Activity 2.7 builds step by step: a container half-filled with garden soil, fruit and vegetable peels added, a layer of soil on top, a calendar flipping '2 to 3 weeks'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Microbes live even in extreme places like hot springs and snow, and our gut has bacteria that help digestion." },
+          { "speaker": "NEO", "text": "Now Activity 2.7. Fill a container halfway with garden soil. Add fruit and vegetable peels, cover with a layer of soil, and leave it." },
+          { "speaker": "NEO", "text": "Observe after 2 to 3 weeks." }
+        ]
+      },
+      {
+        "animation": "The container is opened: the peels have turned into dark, crumbly material labelled 'Manure'. Zoom in: cartoon fungi and bacteria chop big leaf molecules into small glowing nutrient beads that sink into soil and feed a sprouting plant.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The peels disappeared into dark stuff!" },
+          { "speaker": "NEO", "text": "That's manure, rich in nutrients. Fungi and bacteria in the soil broke the peels down." },
+          { "speaker": "NEO", "text": "Microbes break complex substances into simpler, nutrient-rich ones. This is called decomposition." },
+          { "speaker": "NEO", "text": "They decompose dead plants, animal bodies and even dung, returning nutrients to the soil. Manure forms best at optimal temperature and moisture." }
+        ]
+      },
+      {
+        "animation": "A gobar gas plant in a village: cow dung goes in, bubbles rise, and a gas stove lights with a blue flame. Label 'Biogas: methane + carbon dioxide'. A scroll unrolls with 'Krimi: Drishya and Adrishya'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some bacteria live without oxygen and decompose plant and animal waste. They release biogas, mostly carbon dioxide and a high proportion of methane." },
+          { "speaker": "NEO", "text": "Biogas is used for cooking, heating, making electricity and even running vehicles." },
+          { "speaker": "NEO", "text": "Our ancient Vedic texts mention Krimi, tiny entities that are Drishya, visible, and Adrishya, invisible." }
+        ]
+      },
+      {
+        "animation": "An oil slick on the sea; cartoon bacteria gobble it up. A portrait card: 'Ananda Mohan Chakrabarty (1938–2020): oil-eating bacterium, 1971; patent, 1980'. 'Exam Tip' sticker on the word 'decomposition'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Scientist Ananda Mohan Chakrabarty developed a special bacterium in 1971 that could break down oil spills. It got a patent in 1980." },
+          { "speaker": "NEO", "text": "Exam tip: when asked why dry leaves put in pits turn into manure, write the word decomposition and name the microbes, bacteria and fungi." }
+        ]
+      },
+      {
+        "animation": "Recap board with a compost-pit icon. Points: '1. Salt or sugar stops microbes: pickles last', '2. Decomposition: microbes turn waste into manure', '3. Biogas and oil-eating bacteria clean the environment'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: high salt or sugar stops microbes, which is why pickles and murabbas last." },
+          { "speaker": "NEO", "text": "Two: bacteria and fungi decompose waste into nutrient-rich manure." },
+          { "speaker": "NEO", "text": "Three: microbes also give us biogas and can even clean oil spills." },
+          { "speaker": "ZIPPY", "text": "Tiny cleaners, huge job!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "The Invisible Living World: Beyond Our Naked Eye",
+    "topic_no": 6,
+    "name": "Microbes in Food, Farms and Water",
+    "scenes": [
+      {
+        "animation": "A Sunday breakfast table: fluffy bhature, soft idli, a bowl of curd. Zippy sniffs the bhatura and sees tiny cartoon chefs waving from inside it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Who made this bhatura so puffy? There are tiny chefs inside!" },
+          { "speaker": "NEO", "text": "Microbes, Zippy. Let's test it in the kitchen." }
+        ]
+      },
+      {
+        "animation": "Activity 2.8 step by step: bowls A and B each get 200 g atta and a pinch of sugar; only bowl A gets yeast powder. Both kneaded with warm water, covered with a damp cloth, kept warm. A clock spins '4 to 5 hours'; dough A rises and fills with bubbles labelled 'CO₂', dough B stays flat.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 2.8. Take bowls A and B with 200 grams of flour and a pinch of sugar each. Add yeast only to bowl A." },
+          { "speaker": "NEO", "text": "Knead both with warm water, cover with a damp cloth and keep them warm for 4 to 5 hours." },
+          { "speaker": "NEO", "text": "Dough A rises, turns fluffy and smells different. Yeast, a fungus, respires and releases carbon dioxide, whose bubbles make the dough soft." },
+          { "speaker": "NEO", "text": "It also makes a little alcohol, which gives the smell. Bacteria like Lactobacillus help ferment idli and dosa batter too." }
+        ]
+      },
+      {
+        "animation": "Activity 2.9: bowl A with lukewarm milk in a warm spot, bowl B with cold milk in a fridge, a spoon of curd stirred into each. Overnight, bowl A becomes thick curd; bowl B stays liquid. Rod-shaped Lactobacillus munch 'lactose' and puff out 'lactic acid'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 2.9. Put lukewarm milk in bowl A and cold milk in bowl B. Add a spoon of curd to each, cover, and keep A warm and B in the fridge." },
+          { "speaker": "NEO", "text": "Bowl A turns into curd. Lactobacillus feeds on milk sugar, lactose, multiplies and makes lactic acid, which makes curd sour." },
+          { "speaker": "ZIPPY", "text": "And bowl B stayed milk because the bacteria were too cold!" },
+          { "speaker": "NEO", "text": "Right. They grow well in warm conditions." }
+        ]
+      },
+      {
+        "animation": "Underground view of a pea plant's roots with swollen nodules. Inside, Rhizobium bacteria catch 'N' symbols from air bubbles and hand them to the roots. A farmer rotates legumes and wheat across two seasons.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rhizobium bacteria live in root nodules of legumes like beans, peas and lentils." },
+          { "speaker": "NEO", "text": "They trap nitrogen from the air and make it useful for plants, so farmers grow legumes in rotation with other crops." }
+        ]
+      },
+      {
+        "animation": "A pond with glowing green microalgae releasing oxygen bubbles; a big label 'More than half of Earth's oxygen'. Jars labelled Spirulina, Chlorella and Diatoms. 'Exam Tip' card: 'Yeast → CO₂ + alcohol; Lactobacillus → lactic acid'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Microalgae make their own food using sunlight and produce more than half of Earth's oxygen supply." },
+          { "speaker": "NEO", "text": "Spirulina, Chlorella and Diatoms are used as health supplements. Microalgae also clean water and are used to make biofuel." },
+          { "speaker": "NEO", "text": "Exam tip: yeast gives carbon dioxide and alcohol, but Lactobacillus gives lactic acid. Don't swap them." }
+        ]
+      },
+      {
+        "animation": "Recap board with a kitchen-and-field icon. Points: '1. Yeast: CO₂ makes dough fluffy', '2. Lactobacillus: milk to curd, needs warmth', '3. Rhizobium fixes nitrogen; microalgae give oxygen'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: yeast releases carbon dioxide, which makes dough soft and fluffy." },
+          { "speaker": "NEO", "text": "Two: Lactobacillus turns warm milk into curd by making lactic acid." },
+          { "speaker": "NEO", "text": "Three: Rhizobium traps nitrogen for legumes, and microalgae produce over half of Earth's oxygen." },
+          { "speaker": "ZIPPY", "text": "I'll thank the tiny chefs before every bhatura." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,213 @@
+[
+  {
+    "chapter_no": 6,
+    "chapter": "Geography: India – Size and Location",
+    "topic_no": 1,
+    "name": "Where Is India on the Globe?",
+    "scenes": [
+      {
+        "animation": "Zippy spins a giant classroom globe too fast; it wobbles off its stand and rolls into the corridor. Neo stops it with one wing, exactly on India, and a gold pin drops onto the map.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Oops! Well, at least it stopped on India. But where exactly is India on this ball?" },
+          { "speaker": "NEO", "text": "Let's give it a proper address, using latitudes and longitudes." }
+        ]
+      },
+      {
+        "animation": "The globe zooms to a flat map. The Equator glows at the bottom; India is highlighted above it with the label 'Northern Hemisphere'. Four lines draw themselves around the mainland: '8°4'N', '37°6'N', '68°7'E', '97°25'E'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India is a vast country, lying entirely in the Northern hemisphere." },
+          { "speaker": "NEO", "text": "The mainland extends between latitudes 8 degrees 4 minutes North and 37 degrees 6 minutes North." },
+          { "speaker": "NEO", "text": "And between longitudes 68 degrees 7 minutes East and 97 degrees 25 minutes East." }
+        ]
+      },
+      {
+        "animation": "A bright red dashed line slices across the middle of India labelled 'Tropic of Cancer 23°30'N'. The half above tints light green, the half below light yellow, with a small label on each half: 'almost two equal parts'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hey, a red line is cutting India in half!" },
+          { "speaker": "NEO", "text": "That's the Tropic of Cancer, at 23 degrees 30 minutes North. It divides the country into almost two equal parts." },
+          { "speaker": "NEO", "text": "It passes through eight states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura and Mizoram." }
+        ]
+      },
+      {
+        "animation": "The camera pans south-east: a chain of green islands pops up in the Bay of Bengal labelled 'Andaman and Nicobar Islands'. It pans south-west: tiny coral dots appear in the Arabian Sea labelled 'Lakshadweep Islands'. A compass rose spins in the corner.",
+        "lines": [
+          { "speaker": "NEO", "text": "To the southeast of the mainland lie the Andaman and Nicobar Islands, in the Bay of Bengal." },
+          { "speaker": "NEO", "text": "To the southwest lie the Lakshadweep Islands, in the Arabian Sea." },
+          { "speaker": "ZIPPY", "text": "So India has islands on both sides. Like two bodyguards!" }
+        ]
+      },
+      {
+        "animation": "A blank outline map of India fills the screen with a 'MAP WORK' stamp. A hand marks the Tropic of Cancer, the southern tip at Kanniyakumari, and labels both island groups in their seas, one after the other.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: in map questions, draw the Tropic of Cancer carefully across the middle of India, and name the correct sea for each island group." },
+          { "speaker": "NEO", "text": "Students often swap them. Remember, Andaman is in the Bay of Bengal, and Lakshadweep is in the Arabian Sea." }
+        ]
+      },
+      {
+        "animation": "Recap board with a globe icon. Points appear one by one: '1. Northern Hemisphere; mainland 8°4'N–37°6'N, 68°7'E–97°25'E', '2. Tropic of Cancer (23°30'N) divides India into almost two equal parts', '3. Andaman & Nicobar: Bay of Bengal; Lakshadweep: Arabian Sea'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: India lies in the Northern hemisphere, with the mainland between 8 degrees 4 minutes and 37 degrees 6 minutes North, and 68 degrees 7 minutes and 97 degrees 25 minutes East." },
+          { "speaker": "NEO", "text": "Two: the Tropic of Cancer divides India into almost two equal parts." },
+          { "speaker": "NEO", "text": "Three: the Andaman and Nicobar Islands are in the Bay of Bengal, and Lakshadweep is in the Arabian Sea." },
+          { "speaker": "ZIPPY", "text": "Address saved. The globe can stop rolling now." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Geography: India – Size and Location",
+    "topic_no": 2,
+    "name": "How Big Is India? Size and Standard Time",
+    "scenes": [
+      {
+        "animation": "Early morning. On the left, a boy in Arunachal Pradesh is already walking to school in bright sunshine. On the right, a girl in Gujarat is still asleep under a starry sky. Both clocks on the wall show the same time: 5:30 a.m.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait. The sun is up in Arunachal, but it's dark in Gujarat. Yet both clocks say the same time. Is somebody's clock broken?" },
+          { "speaker": "NEO", "text": "No clock is broken. India is just very wide. Let's see how big it really is." }
+        ]
+      },
+      {
+        "animation": "A world map with India glowing. A pie chart pops up: a thin slice labelled '2.4%' marked 'India's share of world area'. A number counter rolls up to '3.28 million sq km'. A podium appears with India standing on step '7th largest'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The land mass of India has an area of 3.28 million square kilometres." },
+          { "speaker": "NEO", "text": "That is 2.4 per cent of the total geographical area of the world. India is the seventh largest country in the world." }
+        ]
+      },
+      {
+        "animation": "A measuring tape runs along India's land border with a counter reading 'about 15,200 km'. Then a wave-shaped tape runs along the coast of the mainland and the islands, reading '7,516.6 km'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has a land boundary of about 15,200 kilometres." },
+          { "speaker": "NEO", "text": "The total length of the coastline of the mainland, including the Andaman and Nicobar and Lakshadweep, is 7,516.6 kilometres." }
+        ]
+      },
+      {
+        "animation": "Two arrows stretch across the map: north–south and east–west, both labelled 'about 30°'. A sun icon moves west from Arunachal Pradesh to Gujarat and a timer shows '2 hours'. A vertical line drops through Mirzapur, Uttar Pradesh, labelled '82°30'E Standard Meridian'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The latitudinal and longitudinal extent of the mainland is about 30 degrees each. Yet the east-west extent looks smaller than the north-south extent." },
+          { "speaker": "NEO", "text": "From Gujarat to Arunachal Pradesh, there is a time lag of two hours. So the sun rises two hours earlier in Arunachal." },
+          { "speaker": "NEO", "text": "That's why the time along the Standard Meridian of India, 82 degrees 30 minutes East, passing through Mirzapur in Uttar Pradesh, is taken as the standard time for the whole country." }
+        ]
+      },
+      {
+        "animation": "A scale moves from Kanniyakumari to Kashmir. At Kanniyakumari, a day and night bar is almost equal; in Kashmir the bars differ a lot. A 'BOARD TIP' card flashes: 'Standard Meridian 82°30'E — Mirzapur (UP)'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Does the north-south stretch change anything?" },
+          { "speaker": "NEO", "text": "Yes. It affects the duration of day and night. The difference is small at Kanniyakumari, but much larger in Kashmir." },
+          { "speaker": "NEO", "text": "Board tip: questions on why India has one standard time, and which place the Standard Meridian passes through, are very common." }
+        ]
+      },
+      {
+        "animation": "Recap board with a clock and a ruler. Points appear: '1. Area 3.28 million sq km = 2.4% of world; 7th largest', '2. Land boundary ~15,200 km; coastline 7,516.6 km', '3. 2-hour time lag; Standard Meridian 82°30'E through Mirzapur'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: India covers 3.28 million square kilometres, which is 2.4 per cent of the world's area, and it is the seventh largest country." },
+          { "speaker": "NEO", "text": "Two: its land boundary is about 15,200 kilometres, and its coastline is 7,516.6 kilometres." },
+          { "speaker": "NEO", "text": "Three: there's a two-hour time lag from Gujarat to Arunachal, so we follow the Standard Meridian at 82 degrees 30 minutes East, through Mirzapur." },
+          { "speaker": "ZIPPY", "text": "So the Gujarat girl isn't lazy. She's just in the west!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Geography: India – Size and Location",
+    "topic_no": 3,
+    "name": "India and the World",
+    "scenes": [
+      {
+        "animation": "Zippy wears a sailor cap and spins a ship's wheel in the middle of the Indian Ocean. Ships from Europe, Africa, West Asia and East Asia pass by, all waving at India.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Captain Zippy reporting! Every ship I see seems to pass near India. Why?" },
+          { "speaker": "NEO", "text": "Because India sits at a very special spot on the world map." }
+        ]
+      },
+      {
+        "animation": "A map of Asia: India glows at the centre, with arrows to 'West Asia' on the left and 'East Asia' on the right. The Deccan Peninsula pushes down into the ocean like a pointer, labelled 'Trans Indian Ocean routes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Indian landmass has a central location between East and West Asia. India is a southward extension of the Asian continent." },
+          { "speaker": "NEO", "text": "The trans Indian Ocean routes, which connect the countries of Europe in the West and the countries of East Asia, give India a strategic central location." },
+          { "speaker": "NEO", "text": "The Deccan Peninsula protrudes into the Indian Ocean, helping India to have close contact with West Asia, Africa and Europe from the western coast, and with Southeast and East Asia from the eastern coast." }
+        ]
+      },
+      {
+        "animation": "A banner stretches across the ocean: 'INDIAN OCEAN'. The long Indian coastline glows. A small ship then passes through a narrow canal in Egypt labelled 'Suez Canal, 1869', and a distance counter drops by '7,000 km'.",
+        "lines": [
+          { "speaker": "NEO", "text": "No other country has a long coastline on the Indian Ocean as India has. That's why an ocean is named after it." },
+          { "speaker": "ZIPPY", "text": "An entire ocean named after us? Now that's a flex." },
+          { "speaker": "NEO", "text": "Since the opening of the Suez Canal in 1869, India's distance from Europe has been reduced by 7,000 kilometres." }
+        ]
+      },
+      {
+        "animation": "Mountain passes open like gates in the north. Scrolls marked 'Upanishads', 'Ramayana', 'Panchtantra' and a board of 'Indian numerals and the decimal system' travel out; bags of spices and rolls of muslin follow on camels. Coming in: a Greek statue and a domed building with minarets.",
+        "lines": [
+          { "speaker": "NEO", "text": "India's contacts with the world are much older than sea routes. The passes across the mountains in the north gave passage to travellers in ancient times." },
+          { "speaker": "NEO", "text": "The ideas of the Upanishads and the Ramayana, the stories of Panchtantra, the Indian numerals and the decimal system reached many parts of the world. Spices and muslin went out with traders." },
+          { "speaker": "NEO", "text": "In return, the influence of Greek sculpture, and the architectural styles of domes and minarets from West Asia, can be seen in different parts of our country." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' sticker slaps onto the screen: 'Why is India's location called strategic? → central in East–West Asia + trans Indian Ocean routes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: when asked why India's location is important, write about its central location, the trans Indian Ocean routes, and the peninsula that faces both west and east." }
+        ]
+      },
+      {
+        "animation": "Recap board with a ship and a camel icon. Points appear: '1. Central location between East and West Asia', '2. Indian Ocean named after India; Suez Canal (1869) cut 7,000 km', '3. Land routes carried ideas, numerals, spices and muslin'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: India has a central location between East and West Asia, on the trans Indian Ocean routes." },
+          { "speaker": "NEO", "text": "Two: an ocean is named after India, and the Suez Canal cut the distance to Europe by 7,000 kilometres." },
+          { "speaker": "NEO", "text": "Three: the land routes carried ideas, stories, numerals, spices and muslin across the world, and brought art and architecture back." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Geography: India – Size and Location",
+    "topic_no": 4,
+    "name": "India's Neighbours",
+    "scenes": [
+      {
+        "animation": "A colony-style map: India is a big house, and neighbouring countries are houses on its lanes. Zippy runs door to door with a box of Diwali sweets but keeps getting lost.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I want to give Diwali sweets to all our neighbours, but I don't know who lives where!" },
+          { "speaker": "NEO", "text": "Then let's walk around India's borders together." }
+        ]
+      },
+      {
+        "animation": "An outline map of India with internal borders; a counter reads '28 States and 8 Union Territories'. Then neighbours light up in turn: Pakistan and Afghanistan in the northwest; China (Tibet), Nepal and Bhutan in the north; Myanmar and Bangladesh in the east.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has 28 States and 8 Union Territories. It occupies an important strategic position in South Asia." },
+          { "speaker": "NEO", "text": "Pakistan and Afghanistan share land boundaries with India in the northwest." },
+          { "speaker": "NEO", "text": "China, Tibet, Nepal and Bhutan are in the north. Myanmar and Bangladesh are in the east." }
+        ]
+      },
+      {
+        "animation": "The camera moves south across water. Sri Lanka appears, separated from India by a narrow strait and a gulf, labelled 'Palk Strait' and 'Gulf of Mannar'. Further south of the Lakshadweep dots, the Maldives islands appear.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Do we have neighbours across the sea too?" },
+          { "speaker": "NEO", "text": "Yes. Our southern neighbours across the sea are the two island countries, Sri Lanka and Maldives." },
+          { "speaker": "NEO", "text": "Sri Lanka is separated from India by a narrow channel of sea formed by the Palk Strait and the Gulf of Mannar. The Maldives Islands are situated to the south of the Lakshadweep Islands." },
+          { "speaker": "ZIPPY", "text": "So Sri Lanka is just a big Indian island, like the Andamans?" },
+          { "speaker": "NEO", "text": "No! Sri Lanka and Maldives are independent countries. The Andaman and Nicobar and Lakshadweep Islands are parts of India." }
+        ]
+      },
+      {
+        "animation": "A shared-history montage: trade caravans, a shared festival scene, a shared river. The India map pulses with friendly handshakes at each border. A 'MAP WORK' stamp appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has had strong geographical and historical links with its neighbours. Mountain passes, rivers and the sea have carried people, goods and ideas between us for centuries." },
+          { "speaker": "NEO", "text": "Exam tip: on the outline map, practise labelling the neighbouring countries, and the Palk Strait and Gulf of Mannar between India and Sri Lanka." }
+        ]
+      },
+      {
+        "animation": "Recap board with a map of South Asia. Points appear: '1. 28 States, 8 Union Territories', '2. Land neighbours: Pakistan, Afghanistan (NW); China, Nepal, Bhutan (N); Myanmar, Bangladesh (E)', '3. Sea neighbours: Sri Lanka (Palk Strait, Gulf of Mannar) and Maldives'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: India has 28 States and 8 Union Territories." },
+          { "speaker": "NEO", "text": "Two: Pakistan and Afghanistan are in the northwest, China, Nepal and Bhutan in the north, and Myanmar and Bangladesh in the east." },
+          { "speaker": "NEO", "text": "Three: across the sea are Sri Lanka, beyond the Palk Strait and Gulf of Mannar, and the Maldives, south of Lakshadweep." },
+          { "speaker": "ZIPPY", "text": "Great. Now I need nine boxes of sweets." }
+        ]
+      }
+    ]
+  }
+]

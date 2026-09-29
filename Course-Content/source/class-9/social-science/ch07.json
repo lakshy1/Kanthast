@@ -1,0 +1,273 @@
+[
+  {
+    "chapter_no": 7,
+    "chapter": "Geography: Physical Features of India",
+    "topic_no": 1,
+    "name": "The Himalayas: Three Parallel Ranges",
+    "scenes": [
+      {
+        "animation": "Zippy is on a school trip bus climbing a hill road in Himachal. He looks out and sees three rows of mountains, one behind the other, each taller than the last, like a class photo with short kids in front.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why are the mountains standing in rows, like a class photo?" },
+          { "speaker": "NEO", "text": "Because the Himalayas are made of three parallel ranges. Shortest in front, tallest at the back." }
+        ]
+      },
+      {
+        "animation": "An outline map of India. A snowy arc draws itself along the northern border from the Indus to the Brahmaputra, labelled 'about 2,400 km'. A width bar shrinks from '400 km' in Kashmir to '150 km' in Arunachal Pradesh. A sticker says 'Young fold mountains'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Himalayas are geologically young and structurally fold mountains. They stretch over the northern borders of India." },
+          { "speaker": "NEO", "text": "They form an arc covering a distance of about 2,400 kilometres, from the Indus to the Brahmaputra." },
+          { "speaker": "NEO", "text": "Their width varies from 400 kilometres in Kashmir to 150 kilometres in Arunachal Pradesh." }
+        ]
+      },
+      {
+        "animation": "A cross-section builds from back to front. The tallest snowy row rises first, labelled 'Great or Inner Himalayas (Himadri): average height 6,000 m, perennially snowbound, core of granite'. Peaks pop up with flags and heights.",
+        "lines": [
+          { "speaker": "NEO", "text": "The northernmost range is the Great or Inner Himalayas, also called the Himadri. It is the most continuous range, with the loftiest peaks and an average height of 6,000 metres." },
+          { "speaker": "NEO", "text": "Its core is made of granite, and it is perennially snowbound. Many glaciers descend from this range." }
+        ]
+      },
+      {
+        "animation": "The middle row rises, labelled 'Himachal or Lesser Himalaya: 3,700–4,500 m, average width 50 km'. Range names appear: 'Pir Panjal', 'Dhaula Dhar', 'Mahabharat'. Valleys glow: 'Kashmir', 'Kangra', 'Kullu'. Tiny hill-station signboards pop up.",
+        "lines": [
+          { "speaker": "NEO", "text": "South of the Himadri is the Himachal or Lesser Himalaya. Its altitude varies between 3,700 and 4,500 metres, and its average width is 50 kilometres." },
+          { "speaker": "NEO", "text": "The Pir Panjal range forms the longest and most important range. The Dhaula Dhar and the Mahabharat ranges are also prominent." },
+          { "speaker": "NEO", "text": "This range has the famous valleys of Kashmir, and the Kangra and Kullu valleys in Himachal Pradesh. It is well known for its hill stations." }
+        ]
+      },
+      {
+        "animation": "The front row rises, labelled 'Shiwaliks: width 10–50 km, altitude 900–1,100 m, unconsolidated sediments'. Flat valleys between the Lesser Himalaya and Shiwaliks glow: 'Duns — Dehra Dun, Kotli Dun, Patli Dun'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The outermost range is the Shiwaliks. They are 10 to 50 kilometres wide, with an altitude between 900 and 1,100 metres." },
+          { "speaker": "NEO", "text": "They are made of unconsolidated sediments brought down by rivers from the main ranges." },
+          { "speaker": "ZIPPY", "text": "And the flat valleys in between?" },
+          { "speaker": "NEO", "text": "Those longitudinal valleys between the Lesser Himalaya and the Shiwaliks are called Duns. Dehra Dun, Kotli Dun and Patli Dun are examples." }
+        ]
+      },
+      {
+        "animation": "Recap board with three stacked mountain rows. Points appear: '1. Himadri: ~6,000 m, loftiest, snowbound', '2. Himachal: 3,700–4,500 m, Pir Panjal, hill stations', '3. Shiwaliks: 900–1,100 m; Duns between'. A 'MAP WORK' tag lists 'Shiwalik range'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Himadri is the tallest range, averaging 6,000 metres, and is perennially snowbound." },
+          { "speaker": "NEO", "text": "Two: the Himachal lies between 3,700 and 4,500 metres, with the Pir Panjal and famous valleys." },
+          { "speaker": "NEO", "text": "Three: the Shiwaliks are the outermost range, with Duns like Dehra Dun behind them." },
+          { "speaker": "ZIPPY", "text": "Short kids in front, giants at the back. Class photo complete!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Geography: Physical Features of India",
+    "topic_no": 2,
+    "name": "Divisions of the Himalayas and the Purvachal",
+    "scenes": [
+      {
+        "animation": "Zippy tries to cut a very long Himalayan cake into slices, but has no idea where to cut. Neo hands him a knife shaped like a river.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This Himalayan cake is 2,400 kilometres long. Where do I cut it?" },
+          { "speaker": "NEO", "text": "Use the rivers. The Himalayas are divided from west to east by river valleys." }
+        ]
+      },
+      {
+        "animation": "An outline map of the Himalayan arc. Blue rivers draw from west to east: Indus, Satluj, Kali, Teesta, Dihang. As each pair appears, the section between them fills with colour and a label.",
+        "lines": [
+          { "speaker": "NEO", "text": "The part between the Indus and the Satluj is traditionally known as the Punjab Himalaya. It is also known regionally as the Kashmir and Himachal Himalaya." },
+          { "speaker": "NEO", "text": "The part between the Satluj and the Kali is the Kumaon Himalayas." },
+          { "speaker": "NEO", "text": "Between the Kali and the Teesta lie the Nepal Himalayas, and between the Teesta and the Dihang lie the Assam Himalayas." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds: 'Indus → Punjab Himalaya → Satluj → Kumaon Himalayas → Kali → Nepal Himalayas → Teesta → Assam Himalayas → Dihang'. A 'BOARD TIP' star flashes beside it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Indus, Satluj, Kali, Teesta, Dihang. That sounds like a batting order!" },
+          { "speaker": "NEO", "text": "Good way to remember it. Board tip: questions often ask which rivers bound each division, so learn this order from west to east." }
+        ]
+      },
+      {
+        "animation": "The Brahmaputra is shown at the eastern end. Beyond the Dihang gorge, the mountain chain bends south along India's eastern border. Hills label themselves one by one: 'Patkai hills', 'Naga hills', 'Manipur hills', 'Mizo hills'. A header reads 'Purvachal or Eastern hills'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Brahmaputra marks the easternmost boundary of the Himalayas. Beyond the Dihang gorge, the Himalayas bend sharply to the south and spread along the eastern boundary of India." },
+          { "speaker": "NEO", "text": "These are known as the Purvachal or the Eastern hills and mountains." },
+          { "speaker": "NEO", "text": "They include the Patkai hills, the Naga hills, the Manipur hills and the Mizo hills. They are mostly composed of strong sandstones and are covered with dense forests." }
+        ]
+      },
+      {
+        "animation": "A 'MAP WORK' outline of India: the student's pen marks Karakoram, Zaskar, Shiwalik ranges in the north and the Patkai, Naga, Manipur and Mizo hills in the east, each with a pop of colour.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: in map work, the Purvachal hills run north to south along the eastern border. Don't draw them parallel to the main Himalayas." }
+        ]
+      },
+      {
+        "animation": "Recap board with a sliced mountain cake. Points appear: '1. Divided by river valleys from west to east', '2. Punjab, Kumaon, Nepal, Assam Himalayas', '3. Purvachal: Patkai, Naga, Manipur, Mizo hills'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Himalayas are divided on the basis of river valleys." },
+          { "speaker": "NEO", "text": "Two: from west to east they are the Punjab, Kumaon, Nepal and Assam Himalayas." },
+          { "speaker": "NEO", "text": "Three: beyond the Dihang gorge, the Purvachal hills bend south, including the Patkai, Naga, Manipur and Mizo hills." },
+          { "speaker": "ZIPPY", "text": "Cake sliced perfectly. Now can I eat it?" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Geography: Physical Features of India",
+    "topic_no": 3,
+    "name": "The Northern Plains",
+    "scenes": [
+      {
+        "animation": "A farmer in Uttar Pradesh is ploughing soft, dark soil. Zippy digs with a tiny spade, expecting rocks, but finds only fine soil layer after layer.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I've dug forever and found no rocks. Just soft soil. Where did it all come from?" },
+          { "speaker": "NEO", "text": "From the rivers. The whole Northern Plain was built by river deposits." }
+        ]
+      },
+      {
+        "animation": "Three rivers flow down from the Himalayas on an outline map: Indus, Ganga, Brahmaputra with their tributaries. Silt particles pour out and fill the plains. Labels appear: 'about 7 lakh sq km', 'about 2,400 km long', '240–320 km broad'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Northern Plain has been formed by the interplay of three major river systems, the Indus, the Ganga and the Brahmaputra, along with their tributaries." },
+          { "speaker": "NEO", "text": "It is made of alluvial soil. It spreads over an area of 7 lakh square kilometres, is about 2,400 kilometres long, and 240 to 320 kilometres broad." },
+          { "speaker": "NEO", "text": "With rich soil, adequate water and a favourable climate, it is agriculturally a very productive part of India." }
+        ]
+      },
+      {
+        "animation": "The plain splits into three coloured sections: 'Punjab Plains (west)', 'Ganga Plain (Ghaggar to Teesta)', 'Brahmaputra Plain (Assam)'. Within the Punjab Plains, strips between rivers are labelled 'Doab = do + ab'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Northern Plain is divided into three sections. The western part is the Punjab Plains, formed by the Indus and its tributaries. A larger part of this plain lies in Pakistan." },
+          { "speaker": "NEO", "text": "The Punjab Plain is dominated by doabs. 'Do' means two, and 'ab' means water." },
+          { "speaker": "NEO", "text": "The Ganga plain extends between the Ghaggar and the Teesta rivers. The Brahmaputra plain lies further east, particularly in Assam." }
+        ]
+      },
+      {
+        "animation": "A cross-section from the Shiwalik foothills southwards. Pebbles roll down into a belt labelled 'Bhabar (8–16 km)', where a stream vanishes underground. Next, marshy land with frogs and deer: 'Terai'. Then a raised older plain: 'Bhangar' with kankar lumps, and a low flood plain: 'Khadar' with fresh silt.",
+        "lines": [
+          { "speaker": "NEO", "text": "The plains also vary in relief. Near the Shiwaliks, rivers deposit pebbles in a narrow belt, 8 to 16 kilometres wide, called bhabar. All the streams disappear in this belt." },
+          { "speaker": "NEO", "text": "South of it, the streams re-emerge and create a wet, swampy and marshy region called terai, rich in wildlife." },
+          { "speaker": "NEO", "text": "The largest part is formed of older alluvium, called bhangar. It lies above the flood plains and contains calcareous deposits called kankar. The newer, younger deposits of the flood plains are called khadar. They are renewed almost every year, so they are fertile." }
+        ]
+      },
+      {
+        "animation": "Zippy holds two soil bags labelled 'Bhangar' and 'Khadar', and puts a gold medal on the wrong one. A 'BOARD TIP' card corrects him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Bhangar is older, so it must be the most fertile!" },
+          { "speaker": "NEO", "text": "Other way round. Khadar is new alluvium renewed by floods, so it is more fertile. Board tip: the difference between bhangar and khadar is a favourite question." }
+        ]
+      },
+      {
+        "animation": "Recap board with three river icons. Points appear: '1. Formed by Indus, Ganga, Brahmaputra; ~7 lakh sq km', '2. Punjab, Ganga and Brahmaputra plains', '3. Bhabar → Terai → Bhangar (old) / Khadar (new)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Northern Plains were formed by the Indus, Ganga and Brahmaputra, and cover about 7 lakh square kilometres." },
+          { "speaker": "NEO", "text": "Two: they have three sections, the Punjab, Ganga and Brahmaputra plains." },
+          { "speaker": "NEO", "text": "Three: from north to south we find bhabar and terai, and the plain itself has old bhangar and new, fertile khadar." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Geography: Physical Features of India",
+    "topic_no": 4,
+    "name": "The Peninsular Plateau",
+    "scenes": [
+      {
+        "animation": "Zippy and Neo stand on a flat-topped hill in the Deccan. Zippy tries to find the peak, walks in circles on the flat top, and finally sits down on a rock, puzzled.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Where's the top of this mountain? It's flat like a table!" },
+          { "speaker": "NEO", "text": "You're on a tableland. Welcome to the Peninsular Plateau, one of the oldest landmasses on Earth." }
+        ]
+      },
+      {
+        "animation": "An animated globe shows a supercontinent labelled 'Gondwana land' breaking apart; one piece drifts north and becomes the Indian peninsula. Rock types label themselves: 'old crystalline, igneous and metamorphic rocks'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Peninsular Plateau is a tableland composed of old crystalline, igneous and metamorphic rocks." },
+          { "speaker": "NEO", "text": "It was formed due to the breaking and drifting of the Gondwana land. It has broad and shallow valleys and rounded hills." }
+        ]
+      },
+      {
+        "animation": "An outline map: the Narmada river draws itself as a divider. North of it, 'Central Highlands' fills in, bounded by the 'Vindhyan range' to the south and the 'Aravalis' to the northwest; 'Malwa plateau', 'Bundelkhand', 'Baghelkhand' and 'Chotanagpur plateau' label themselves. South of it, a triangle fills in: 'Deccan Plateau', with 'Satpura range' along its northern base.",
+        "lines": [
+          { "speaker": "NEO", "text": "The plateau has two broad divisions. The part north of the Narmada river, covering a major area of the Malwa plateau, is called the Central Highlands." },
+          { "speaker": "NEO", "text": "It is bounded by the Vindhyan range in the south and the Aravalis in the northwest. Its eastward extensions are called Bundelkhand and Baghelkhand. The Chotanagpur plateau marks a further eastward extension, drained by the Damodar river." },
+          { "speaker": "NEO", "text": "The Deccan Plateau is a triangular landmass that lies south of the Narmada. The Satpura range flanks its broad base in the north. It is higher in the west and slopes gently eastwards." }
+        ]
+      },
+      {
+        "animation": "The western and eastern edges of the Deccan light up. On the west, a tall continuous wall labelled 'Western Ghats, 900–1,600 m' with peaks 'Anai Mudi 2,695 m' and 'Doda Betta 2,637 m'. On the east, broken low hills labelled 'Eastern Ghats, ~600 m' with 'Mahendragiri 1,501 m'. A lava splash marks the northwest: 'Deccan Trap — black soil'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Western Ghats lie parallel to the western coast. They are continuous and can be crossed only through passes. Their average elevation is 900 to 1,600 metres." },
+          { "speaker": "NEO", "text": "The Eastern Ghats are discontinuous and irregular, and are dissected by rivers draining into the Bay of Bengal. Their average elevation is about 600 metres." },
+          { "speaker": "NEO", "text": "The highest peaks of the Western Ghats are Anai Mudi, 2,695 metres, and Doda Betta, 2,637 metres. Mahendragiri, 1,501 metres, is the highest peak in the Eastern Ghats." },
+          { "speaker": "NEO", "text": "A distinct feature of the plateau is the black soil area known as the Deccan Trap. It is of volcanic origin." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: a two-column table builds itself, 'Western Ghats | Eastern Ghats' with rows 'continuous | discontinuous' and 'higher | lower'. A 'MAP WORK' tag lists 'Aravali, Vindhya, Satpura, Western Ghats, Eastern Ghats, Anai Mudi'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: a comparison of the Western and Eastern Ghats is asked very often. Write it as a table, point against point." }
+        ]
+      },
+      {
+        "animation": "Recap board with a table-shaped plateau. Points appear: '1. Oldest landmass; formed from Gondwana land', '2. Central Highlands (north of Narmada) and Deccan Plateau (south)', '3. Western Ghats continuous and higher; Eastern Ghats broken and lower'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Peninsular Plateau is a tableland of old rocks, formed from the breaking of Gondwana land." },
+          { "speaker": "NEO", "text": "Two: it has the Central Highlands north of the Narmada, and the triangular Deccan Plateau to its south." },
+          { "speaker": "NEO", "text": "Three: the Western Ghats are continuous and higher, while the Eastern Ghats are broken and lower." },
+          { "speaker": "ZIPPY", "text": "A mountain with a flat top. Perfect for a picnic!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Geography: Physical Features of India",
+    "topic_no": 5,
+    "name": "The Indian Desert, Coastal Plains and Islands",
+    "scenes": [
+      {
+        "animation": "Zippy rides a camel in the Thar desert, then is instantly teleported to a beach in Kerala, then to a tiny coral island. He spins dizzily.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Desert, beach, island, all in one day? My head is spinning." },
+          { "speaker": "NEO", "text": "That's India. Let's finish our tour with the desert, the coasts and the islands." }
+        ]
+      },
+      {
+        "animation": "An outline map: the area west of the Aravali hills fills with sand. A rain gauge shows 'below 150 mm per year'. Crescent dunes appear labelled 'Barchans'; a lone river is labelled 'Luni'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Indian desert lies towards the western margins of the Aravali hills. It is an undulating sandy plain covered with sand dunes." },
+          { "speaker": "NEO", "text": "This region receives very low rainfall, below 150 millimetres per year. It has an arid climate with low vegetation cover." },
+          { "speaker": "NEO", "text": "Streams appear during the rainy season but soon disappear. Luni is the only large river. Crescent-shaped dunes, called barchans, cover larger areas." }
+        ]
+      },
+      {
+        "animation": "The camera sweeps down the west coast: a narrow strip between the Western Ghats and the Arabian Sea splits into 'Konkan (Mumbai–Goa)', 'Kannad Plain', 'Malabar coast'. It then sweeps up the east coast: a wide strip labelled 'Coromandel Coast' in the south and 'Northern Circar' in the north, with deltas of the Mahanadi, Godavari, Krishna and Kaveri blooming. A lake south of the Mahanadi delta glows: 'Chilika Lake'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The western coast lies between the Western Ghats and the Arabian Sea. It is a narrow plain with three sections: the Konkan, from Mumbai to Goa, the Kannad Plain, and the Malabar coast." },
+          { "speaker": "NEO", "text": "The plains along the Bay of Bengal are wide and level. The northern part is the Northern Circar, and the southern part is the Coromandel Coast." },
+          { "speaker": "NEO", "text": "Large rivers like the Mahanadi, Godavari, Krishna and Kaveri have formed extensive deltas on this coast. Chilika Lake, south of the Mahanadi delta, is the largest salt water lake in India." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: tiny coral dots in the Arabian Sea labelled 'Lakshadweep: area 32 sq km, HQ Kavaratti'; a bird flock circles 'Pitti island'. Right: a long chain in the Bay of Bengal labelled 'Andaman (north), Nicobar (south)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Lakshadweep Islands lie close to the Malabar coast of Kerala. This group is composed of small coral islands. It covers a small area of 32 square kilometres, and Kavaratti is its administrative headquarters." },
+          { "speaker": "NEO", "text": "Pitti island, which is uninhabited, has a bird sanctuary." },
+          { "speaker": "NEO", "text": "The Andaman and Nicobar Islands form an elongated chain in the Bay of Bengal, from north to south. They are bigger, more numerous and scattered, and are of great strategic importance." }
+        ]
+      },
+      {
+        "animation": "Zippy points at Kerala and says 'Coromandel!'; a buzzer sounds. A 'BOARD TIP' card: 'West: Konkan, Kannad, Malabar | East: Northern Circar, Coromandel'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So Kerala is on the Coromandel Coast, right?" },
+          { "speaker": "NEO", "text": "No, Kerala is on the Malabar coast, in the west. Coromandel is in the east. Board tip: these coastal plains are regular map-work items." }
+        ]
+      },
+      {
+        "animation": "Recap board with three icons: a camel, a coastline, a palm island. Points appear: '1. Desert west of Aravalis; below 150 mm rain; barchans; Luni', '2. West coast: Konkan, Kannad, Malabar; East coast: Northern Circar, Coromandel', '3. Lakshadweep: coral; Andaman & Nicobar: long chain, strategic'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Indian desert lies west of the Aravalis, gets below 150 millimetres of rain, and has barchans and the Luni river." },
+          { "speaker": "NEO", "text": "Two: the narrow western coast has the Konkan, Kannad and Malabar, while the wide eastern coast has the Northern Circar and Coromandel." },
+          { "speaker": "NEO", "text": "Three: Lakshadweep is a group of coral islands, and the Andaman and Nicobar Islands are a long, strategic chain." }
+        ]
+      }
+    ]
+  }
+]

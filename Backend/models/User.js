@@ -9,7 +9,7 @@ const userSettingsSchema = new mongoose.Schema(
     appearance: {
       type: String,
       enum: ["System", "Light", "Dark"],
-      default: "System",
+      default: "Light",
     },
     defaultPlaybackSpeed: {
       type: String,

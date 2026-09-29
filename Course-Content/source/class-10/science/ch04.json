@@ -1,0 +1,446 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "Carbon and Its Compounds",
+    "topic_no": 1,
+    "name": "Covalent Bonding in Carbon",
+    "scenes": [
+      {
+        "animation": "A school lab bench. A cartoon carbon atom with four outer electrons circling like fielders sits on a stool; Zippy tosses four extra electrons at it and they bounce off comically, then Zippy tries to yank four electrons away and the carbon atom holds on tight.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Carbon, just grab four more electrons and become C four minus. Noble gas configuration, done!" },
+          { "speaker": "NEO", "text": "Nice try, Zippy. But carbon has only six protons. Holding on to ten electrons would be very difficult." },
+          { "speaker": "ZIPPY", "text": "Fine. Then lose four electrons and become C four plus!" },
+          { "speaker": "NEO", "text": "That would need a huge amount of energy to remove four electrons. So carbon does neither." }
+        ]
+      },
+      {
+        "animation": "A shell diagram builds up: nucleus labelled '6', K shell with 2 electrons, L shell with 4 electrons; the text 'Atomic number 6 → 2, 4' slides in and the four outer electrons glow yellow. Zippy appears holding a samosa split in half.",
+        "lines": [
+          { "speaker": "NEO", "text": "Carbon has atomic number six, so its electronic configuration is two, four. It needs four more electrons to reach a noble gas configuration." },
+          { "speaker": "NEO", "text": "Its solution is simple. It shares electrons." },
+          { "speaker": "ZIPPY", "text": "Sharing? Like splitting a samosa with my best friend?" },
+          { "speaker": "NEO", "text": "Exactly. A bond formed by sharing a pair of electrons between two atoms is called a covalent bond." }
+        ]
+      },
+      {
+        "animation": "Two hydrogen atoms drift together; their single electrons pair up as dots between them, then morph into one line 'H–H'. Next, two oxygen atoms share two pairs to form 'O=O', then two nitrogen atoms share three pairs to form 'N≡N', each with its electron dot structure beside it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two hydrogen atoms share one pair of electrons. That is a single bond, drawn as one line." },
+          { "speaker": "NEO", "text": "Each oxygen atom has six valence electrons and needs two more. So two oxygen atoms share two pairs. That is a double bond." },
+          { "speaker": "ZIPPY", "text": "And nitrogen has five and needs three. So a triple bond?" },
+          { "speaker": "NEO", "text": "Correct. A nitrogen molecule has a triple bond." }
+        ]
+      },
+      {
+        "animation": "A carbon atom sits in the centre; four hydrogen atoms zoom in from four sides like fielders taking positions. Each shared pair appears as a dot-and-cross, then the picture switches to the structural formula of CH4 labelled 'Methane: four single covalent bonds'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now watch carbon in action. It shares its four valence electrons with four hydrogen atoms to form methane, C H four." },
+          { "speaker": "NEO", "text": "Methane is a major component of biogas and compressed natural gas, or CNG." },
+          { "speaker": "ZIPPY", "text": "So is everyone in methane happy now?" },
+          { "speaker": "NEO", "text": "Yes. Carbon now has eight electrons in its outer shell, and each hydrogen has two, like helium." }
+        ]
+      },
+      {
+        "animation": "A beaker of a covalent liquid boils over a small flame while a battery-and-bulb circuit dipped in it stays dark; label 'No ions → poor conductor'. Inside, molecules are held together by thick bonds but tug at each other with thin, weak strings. A yellow 'Board tip' sticky note flutters in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Covalent compounds have strong bonds within the molecule, but weak forces between molecules." },
+          { "speaker": "NEO", "text": "That is why most carbon compounds have low melting and boiling points. And since no ions are formed, they are poor conductors of electricity." },
+          { "speaker": "NEO", "text": "Board tip: in electron dot structures, show only the outermost electrons, and count them before you finish." }
+        ]
+      },
+      {
+        "animation": "Neo stands beside a green chalkboard; three recap points tick in one by one: '1. Carbon (2, 4) cannot easily form C⁴⁻ or C⁴⁺', '2. It shares electrons: single, double, triple covalent bonds', '3. Covalent compounds: low m.p. and b.p., poor conductors'. Zippy high-fives the carbon atom.",
+        "lines": [
+          { "speaker": "NEO", "text": "Quick recap. One: carbon cannot easily gain or lose four electrons. Two: it shares electrons, forming single, double or triple covalent bonds. Three: covalent compounds have low melting and boiling points and are poor conductors of electricity." },
+          { "speaker": "ZIPPY", "text": "Sharing is caring. Even for atoms!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Carbon and Its Compounds",
+    "topic_no": 2,
+    "name": "The Versatile Nature of Carbon",
+    "scenes": [
+      {
+        "animation": "A towering heap of everyday items looms over Zippy: sugar packet, medicine strip, plastic toy, petrol can, cotton kurta, each stamped with a big 'C'. A counter in the corner spins up to 'about 3 million'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, why does everything in this pile have a big C stamped on it?" },
+          { "speaker": "NEO", "text": "Because they are all made of carbon compounds. The number of carbon compounds with known formulae was recently estimated at about three million." },
+          { "speaker": "ZIPPY", "text": "Three million? From one little element?" },
+          { "speaker": "NEO", "text": "Two special properties explain it: catenation and tetravalency." }
+        ]
+      },
+      {
+        "animation": "Carbon atoms link hands to form a long straight chain, then a branch sprouts off the side, then the ends of another chain curl into a ring. The word 'Catenation' stamps across the screen in bold.",
+        "lines": [
+          { "speaker": "NEO", "text": "Catenation is carbon's unique ability to form bonds with other carbon atoms." },
+          { "speaker": "NEO", "text": "This gives rise to long chains, branched chains, and even carbon atoms arranged in rings." },
+          { "speaker": "ZIPPY", "text": "Can't any other element do that?" },
+          { "speaker": "NEO", "text": "Silicon forms compounds with hydrogen having chains of only up to seven or eight atoms, and these compounds are very reactive. No other element shows catenation to the extent carbon does." }
+        ]
+      },
+      {
+        "animation": "A single carbon atom sprouts four arms; atoms wearing name tags 'O', 'H', 'N', 'S', 'Cl' and other carbons queue up to hold its hands, and the molecule reshuffles into a new compound each time a different atom joins.",
+        "lines": [
+          { "speaker": "NEO", "text": "Next, tetravalency. Carbon has a valency of four, so it can bond with four other atoms." },
+          { "speaker": "NEO", "text": "These can be other carbon atoms, or atoms of oxygen, hydrogen, nitrogen, sulphur, chlorine and many more." },
+          { "speaker": "NEO", "text": "Each new partner gives a compound with different properties." }
+        ]
+      },
+      {
+        "animation": "Zoom into a tiny carbon nucleus gripping its shared electron pairs tightly, like a wicketkeeper holding a catch; beside it a big atom's nucleus fumbles its shared pair. Label: 'Small size → strong, stable bonds'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But why are carbon's bonds so strong?" },
+          { "speaker": "NEO", "text": "Because carbon is small. Its nucleus holds the shared pairs of electrons strongly." },
+          { "speaker": "NEO", "text": "So carbon compounds are exceptionally stable. Bonds formed by bigger atoms are much weaker." }
+        ]
+      },
+      {
+        "animation": "A board-exam answer sheet slides in with the question 'Give two reasons for the large number of carbon compounds.' Two neat bullet points write themselves: 'Catenation' and 'Tetravalency', each with a one-line explanation, and a red '2/2' appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: 'Why does carbon form so many compounds?' is a favourite two-mark question." },
+          { "speaker": "NEO", "text": "Write catenation and tetravalency, and explain each in one line. Mention the strong bonds due to small size for a complete answer." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap with three points ticking in: '1. Catenation: chains, branches, rings', '2. Tetravalency: bonds with 4 atoms', '3. Small size: strong, stable bonds'. Zippy flexes a tiny arm.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: catenation lets carbon form long chains, branched chains and rings. Two: tetravalency lets it bond with four atoms of carbon or other elements. Three: its small size makes these bonds strong and stable." },
+          { "speaker": "ZIPPY", "text": "Small but mighty. Just like me!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Carbon and Its Compounds",
+    "topic_no": 3,
+    "name": "Saturated and Unsaturated Hydrocarbons",
+    "scenes": [
+      {
+        "animation": "A cartoon 'Hydrocarbon Hostel'. In one room, carbon atoms each hold hands with one neighbour; in the next room, two carbon atoms hold hands twice. Zippy peeks through the door, puzzled.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, why are these two carbon atoms holding hands twice?" },
+          { "speaker": "NEO", "text": "That is a double bond. Today we meet saturated and unsaturated hydrocarbons." },
+          { "speaker": "NEO", "text": "Hydrocarbons are compounds made of only carbon and hydrogen." }
+        ]
+      },
+      {
+        "animation": "Two carbon atoms join with a single line; six hydrogen atoms pop onto the free valencies, forming the structure of 'Ethane, C2H6'. A green stamp lands: 'Only single bonds = Saturated'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Take two carbon atoms joined by a single bond. Fill the remaining valencies with hydrogen, and you get ethane, C two H six." },
+          { "speaker": "NEO", "text": "Carbon compounds with only single bonds between carbon atoms are called saturated compounds." }
+        ]
+      },
+      {
+        "animation": "Two hydrogens are plucked off ethane and the carbons snap into a double bond: 'Ethene, C2H4'. Two more are plucked off and the bond becomes triple: 'Ethyne, C2H2'. Orange labels flash 'Unsaturated'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if there aren't enough hydrogen atoms to go around?" },
+          { "speaker": "NEO", "text": "Then the carbon atoms satisfy their valency by forming double or triple bonds between themselves." },
+          { "speaker": "NEO", "text": "Ethene, C two H four, has a double bond. Ethyne, C two H two, has a triple bond. These are unsaturated compounds." },
+          { "speaker": "NEO", "text": "Unsaturated carbon compounds are more reactive than saturated ones." }
+        ]
+      },
+      {
+        "animation": "Three columns slide in: 'Alkanes: CnH2n+2' with methane, 'Alkenes: CnH2n' with ethene, 'Alkynes: CnH2n−2' with ethyne. Each example builds itself atom by atom.",
+        "lines": [
+          { "speaker": "NEO", "text": "Saturated hydrocarbons are called alkanes, with the general formula C n H two n plus two." },
+          { "speaker": "NEO", "text": "Alkenes have one double bond, C n H two n. Alkynes have one triple bond, C n H two n minus two." }
+        ]
+      },
+      {
+        "animation": "Four carbon atoms line up straight as butane, then one hops to the side to form a branch; both versions show the same tag 'C4H10'. Then six carbons curl into cyclohexane, and a benzene ring with alternating double bonds spins in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Do carbon chains always grow in a straight line?" },
+          { "speaker": "NEO", "text": "No. Butane, C four H ten, can have a straight chain or a branched chain. Same formula, different structures. These are structural isomers." },
+          { "speaker": "NEO", "text": "Carbon atoms can even form rings, like cyclohexane, C six H twelve, and benzene, C six H six." },
+          { "speaker": "NEO", "text": "Board tip: after drawing any structure, check that every carbon has exactly four bonds. Examiners check that first." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Saturated = only single bonds (alkanes)', '2. Unsaturated = double or triple bonds, more reactive', '3. Chains, branches, rings; isomers'. Zippy holds up scorecards reading 1, 2, 3.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: saturated hydrocarbons have only single bonds; they are alkanes. Two: unsaturated hydrocarbons have double or triple bonds and are more reactive. Three: carbon forms straight chains, branched chains and rings, and the same formula can have different structures." },
+          { "speaker": "ZIPPY", "text": "Single, double, triple. Carbon is basically a cricket scoreboard!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Carbon and Its Compounds",
+    "topic_no": 4,
+    "name": "Homologous Series and Functional Groups",
+    "scenes": [
+      {
+        "animation": "A family photo on a living-room wall: Methane, Ethane, Propane and Butane stand in height order like siblings, each one a '–CH2–' block taller. Zippy measures them with a ruler.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "These molecules look like siblings lined up for a family photo!" },
+          { "speaker": "NEO", "text": "Good eye. They belong to a homologous series." }
+        ]
+      },
+      {
+        "animation": "CH3OH, C2H5OH, C3H7OH and C4H9OH stack up; a glowing '–CH2–' block slides in between each pair with a bouncing label '+14 u'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A homologous series is a series of compounds in which the same functional group substitutes for hydrogen in a carbon chain." },
+          { "speaker": "NEO", "text": "Look at C H three O H, C two H five O H, C three H seven O H. Each member differs from the next by a C H two unit." },
+          { "speaker": "ZIPPY", "text": "So the mass goes up by fourteen every time?" },
+          { "speaker": "NEO", "text": "Exactly. One carbon of twelve u plus two hydrogens gives fourteen u." }
+        ]
+      },
+      {
+        "animation": "A bar graph of boiling points climbs like a staircase along the series, while each member wears the same badge 'Same chemical properties'.",
+        "lines": [
+          { "speaker": "NEO", "text": "As molecular mass increases, physical properties like melting point, boiling point and solubility show a gradation." },
+          { "speaker": "NEO", "text": "But chemical properties stay similar, because they are decided by the functional group." }
+        ]
+      },
+      {
+        "animation": "A carbon chain tries on different hats, each lighting up with its name: '–Cl / –Br: Halo', '–OH: Alcohol', '–CHO: Aldehyde', '–CO–: Ketone', '–COOH: Carboxylic acid'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Functional group? Like a class WhatsApp group?" },
+          { "speaker": "NEO", "text": "Not quite. Heteroatoms like oxygen, nitrogen, sulphur or a halogen replace hydrogen in a hydrocarbon chain." },
+          { "speaker": "NEO", "text": "The heteroatom, or the group containing it, gives the compound its specific properties. That is the functional group." },
+          { "speaker": "NEO", "text": "Halo group is chlorine or bromine. Alcohol is O H. Aldehyde is C H O. Ketone is a C double bond O within the chain. Carboxylic acid is C O O H." }
+        ]
+      },
+      {
+        "animation": "A board-exam question card: 'Write the next homologue of CH3OH.' Zippy scribbles 'C2H4OH', a buzzer sounds and it gets a red cross; Neo writes 'C2H5OH' with a green tick.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Next homologue of methanol? Easy, C two H four O H!" },
+          { "speaker": "NEO", "text": "Close, but no. Add a full C H two unit. The answer is C two H five O H, ethanol." },
+          { "speaker": "NEO", "text": "Board tip: always add C H two, never just a carbon. Then check that each carbon has four bonds." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Same functional group; members differ by CH2 (14 u)', '2. Physical properties: gradation; chemical properties: similar', '3. Functional groups: –X, –OH, –CHO, –CO–, –COOH'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: members of a homologous series have the same functional group and differ by C H two, that is fourteen u. Two: physical properties show gradation, chemical properties stay similar. Three: functional groups like O H, C H O, C O and C O O H decide chemical behaviour." },
+          { "speaker": "ZIPPY", "text": "Family traits, but with chemistry!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Carbon and Its Compounds",
+    "topic_no": 5,
+    "name": "Nomenclature of Carbon Compounds",
+    "scenes": [
+      {
+        "animation": "A molecule stands at a school admission desk; the clerk, a talking test tube wearing spectacles, holds a register and asks for its name. The molecule shrugs; Zippy bounces in shouting names.",
+        "lines": [
+          { "speaker": "TEST TUBE", "text": "Name, please? I cannot admit a molecule without a proper name." },
+          { "speaker": "ZIPPY", "text": "Let's call it Bunty!" },
+          { "speaker": "NEO", "text": "Chemists prefer a system, Zippy. Let's name it the IUPAC way, in three steps." }
+        ]
+      },
+      {
+        "animation": "The molecule's carbon chain lights up atom by atom as it is counted; a table slides in: '1 C: meth', '2 C: eth', '3 C: prop', '4 C: but', '5 C: pent', '6 C: hex'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Step one: count the carbon atoms in the chain. One carbon is meth, two is eth, three is prop, four is but, five is pent, six is hex." },
+          { "speaker": "NEO", "text": "So a three-carbon chain gets the parent name propane." }
+        ]
+      },
+      {
+        "animation": "Functional group cards flip over one by one: 'Chloro- / Bromo- (prefix)', '-ol (alcohol)', '-al (aldehyde)', '-one (ketone)', '-oic acid (carboxylic acid)', '-ene (double bond)', '-yne (triple bond)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Step two: identify the functional group. It is shown as either a prefix or a suffix." },
+          { "speaker": "NEO", "text": "Halogens become prefixes, like chloro or bromo. Alcohol is ol, aldehyde is al, ketone is one, and carboxylic acid is oic acid." },
+          { "speaker": "NEO", "text": "A double bond is ene, and a triple bond is yne. So a three-carbon chain with a double bond is propene." },
+          { "speaker": "ZIPPY", "text": "And a two-carbon chain with a triple bond is ethyne?" },
+          { "speaker": "NEO", "text": "Spot on." }
+        ]
+      },
+      {
+        "animation": "The final 'e' of 'propane' is rubbed off with a pencil eraser as '-one' snaps in to make 'propanone'. A table fills in: 'CH3CH2CH2Cl → chloropropane', 'CH3CH2CHO → propanal', 'CH3COCH3 → propanone', 'CH3CH2COOH → propanoic acid'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Step three: if the suffix begins with a vowel, drop the final e of the parent name. Propane plus one becomes propanone." },
+          { "speaker": "ZIPPY", "text": "So a three-carbon aldehyde is propanal?" },
+          { "speaker": "NEO", "text": "Yes. A three-carbon acid is propanoic acid. And with chlorine as a prefix, it is chloropropane." }
+        ]
+      },
+      {
+        "animation": "Zippy proudly writes 'CH3CHO = methanal' on the board; a buzzer sounds and Neo circles both carbon atoms in red, then rewrites it as 'ethanal' with a tick. A 'Board tip' sticky note appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Easy one! C H three C H O has one C H three, so it's methanal." },
+          { "speaker": "NEO", "text": "Careful. The carbon in C H O also counts. That's two carbons, so it is ethanal." },
+          { "speaker": "NEO", "text": "Board tip: always count the carbon inside the functional group. It is the most common naming mistake." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Count carbons: meth, eth, prop, but', '2. Add prefix or suffix for the functional group', '3. Drop final e before a vowel suffix'. The test tube clerk stamps 'ADMITTED' on the register.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: count the carbon atoms to get the parent name. Two: add the functional group as a prefix or a suffix. Three: drop the final e before a suffix that starts with a vowel." },
+          { "speaker": "TEST TUBE", "text": "Propanone. Admitted!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Carbon and Its Compounds",
+    "topic_no": 6,
+    "name": "Chemical Properties of Carbon Compounds",
+    "scenes": [
+      {
+        "animation": "A home kitchen: a steel pan on the gas stove has a sooty black bottom, the burner shows a lazy yellow flame, and Zippy pops up from behind it with a soot-covered face.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, the gas stove turned this pan black. And my face!" },
+          { "speaker": "NEO", "text": "A yellow, sooty flame means the fuel isn't burning completely. The air holes are probably blocked." },
+          { "speaker": "NEO", "text": "Let's look at four reactions of carbon compounds: combustion, oxidation, addition and substitution." }
+        ]
+      },
+      {
+        "animation": "Equations write themselves in flame: 'C + O2 → CO2 + heat and light' and 'CH4 + 2O2 → CO2 + 2H2O + heat and light'. Split screen: a clean blue flame labelled 'Saturated' and a yellow smoky flame labelled 'Unsaturated'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Combustion: carbon and its compounds burn in oxygen to give carbon dioxide, along with heat and light." },
+          { "speaker": "NEO", "text": "Methane burns as C H four plus two O two gives C O two plus two H two O." },
+          { "speaker": "NEO", "text": "Saturated hydrocarbons generally give a clean blue flame. Unsaturated ones give a yellow flame with lots of black smoke." }
+        ]
+      },
+      {
+        "animation": "A drop of purple 'alkaline KMnO4' falls into warm ethanol and the purple colour fades; an arrow shows 'CH3CH2OH → CH3COOH', and the KMnO4 bottle wears a cape labelled 'Oxidising agent'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Oxidation: alcohols can be converted to carboxylic acids by oxidising agents like alkaline potassium permanganate or acidified potassium dichromate." },
+          { "speaker": "NEO", "text": "So ethanol becomes ethanoic acid. An oxidising agent is a substance that adds oxygen to others." }
+        ]
+      },
+      {
+        "animation": "A vegetable oil bottle; H2 molecules rush in escorted by a nickel coin labelled 'Catalyst'. The double bonds in the oil molecules open up and each carbon grabs a hydrogen, turning the oil into a solid fat.",
+        "lines": [
+          { "speaker": "NEO", "text": "Addition: unsaturated hydrocarbons add hydrogen in the presence of catalysts like palladium or nickel, giving saturated compounds." },
+          { "speaker": "NEO", "text": "This is used in the hydrogenation of vegetable oils." },
+          { "speaker": "ZIPPY", "text": "So which is healthier, oil or animal fat?" },
+          { "speaker": "NEO", "text": "Oils with unsaturated fatty acids are better. Animal fats contain saturated fatty acids, which are said to be harmful for health." }
+        ]
+      },
+      {
+        "animation": "A methane molecule sunbathes on a beach chair; a chlorine atom swaps places with one hydrogen, which walks off holding the other chlorine. Equation: 'CH4 + Cl2 → CH3Cl + HCl' with 'sunlight' written over the arrow.",
+        "lines": [
+          { "speaker": "NEO", "text": "Substitution: saturated hydrocarbons are fairly unreactive. But in sunlight, chlorine replaces hydrogen atoms one by one." },
+          { "speaker": "NEO", "text": "C H four plus C l two, in the presence of sunlight, gives C H three C l plus H C l." },
+          { "speaker": "NEO", "text": "Board tip: always write the condition over the arrow. Sunlight for substitution, nickel or palladium catalyst for addition." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Combustion: CO2 + heat + light', '2. Oxidation: ethanol → ethanoic acid; Addition: H2 + Ni/Pd', '3. Substitution: Cl replaces H in sunlight'. Zippy scrubs the stove burner clean.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: combustion gives carbon dioxide, heat and light, and saturated fuels burn with a clean blue flame. Two: oxidising agents turn ethanol into ethanoic acid, and hydrogen adds to unsaturated compounds with a catalyst. Three: in sunlight, chlorine substitutes hydrogen in methane." },
+          { "speaker": "ZIPPY", "text": "And I'll unblock the stove's air holes!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Carbon and Its Compounds",
+    "topic_no": 7,
+    "name": "Ethanol and Ethanoic Acid",
+    "scenes": [
+      {
+        "animation": "A kitchen shelf: a jar of Nani's mango pickle and a cough syrup bottle chat like neighbours. Zippy sniffs each one and pulls a face.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does Nani's pickle smell sour, and this cough syrup smell like a hospital?" },
+          { "speaker": "NEO", "text": "Meet two famous carbon compounds: ethanoic acid in vinegar, and ethanol in the syrup." }
+        ]
+      },
+      {
+        "animation": "An ethanol character in a 'C2H5OH' T-shirt; a small piece of sodium drops into it and bubbles fizz; a lit splinter makes a 'pop'. Equation: '2Na + 2CH3CH2OH → 2CH3CH2O⁻Na⁺ + H2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ethanol is a liquid at room temperature and mixes with water in all proportions. It is used in tincture of iodine, cough syrups and tonics." },
+          { "speaker": "NEO", "text": "Even a small amount of pure ethanol, called absolute alcohol, can be lethal." },
+          { "speaker": "NEO", "text": "Ethanol reacts with sodium to give sodium ethoxide and hydrogen gas." }
+        ]
+      },
+      {
+        "animation": "Ethanol is heated at '443 K' with excess 'conc. H2SO4'; a water droplet is yanked out of the molecule and it becomes 'CH2=CH2 (ethene) + H2O'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Heat ethanol at four hundred forty-three kelvin with excess concentrated sulphuric acid, and it loses water to give ethene." },
+          { "speaker": "NEO", "text": "Here, concentrated sulphuric acid acts as a dehydrating agent." }
+        ]
+      },
+      {
+        "animation": "A vinegar bottle labelled '5–8% ethanoic acid in water'. Cut to a snowy hill station where a bottle of pure ethanoic acid freezes into icy crystals: 'Glacial acetic acid, m.p. 290 K'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ethanoic acid, also called acetic acid, is a weak acid. A five to eight percent solution in water is vinegar, used to preserve pickles." },
+          { "speaker": "NEO", "text": "Pure ethanoic acid melts at two hundred ninety kelvin, so it often freezes in cold climates. That's why it's called glacial acetic acid." }
+        ]
+      },
+      {
+        "animation": "Ethanol and ethanoic acid shake hands over a drop of acid catalyst; a flower-scented cloud floats up: 'CH3COOH + CH3CH2OH → CH3COOCH2CH3 + H2O'. Then a baking-soda packet fizzes in vinegar: 'CH3COOH + NaHCO3 → CH3COONa + H2O + CO2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ethanoic acid reacts with ethanol, with an acid catalyst, to form an ester. Esters are sweet-smelling and used in perfumes and flavouring agents." },
+          { "speaker": "NEO", "text": "Treat the ester with sodium hydroxide, and you get back the alcohol and sodium ethanoate. This is saponification." },
+          { "speaker": "NEO", "text": "With carbonates and hydrogencarbonates, ethanoic acid gives a salt, water and carbon dioxide." },
+          { "speaker": "ZIPPY", "text": "Like baking soda fizzing in vinegar!" },
+          { "speaker": "NEO", "text": "Board tip: to tell ethanol from ethanoic acid, add sodium hydrogencarbonate. Only the acid gives brisk bubbles of carbon dioxide." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Ethanol + Na → H2; + hot conc. H2SO4 → ethene', '2. Ethanoic acid: weak acid; vinegar = 5–8%', '3. Acid + alcohol → ester; acid + carbonate → CO2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: ethanol gives hydrogen with sodium, and ethene with hot concentrated sulphuric acid. Two: ethanoic acid is a weak acid, and vinegar is its five to eight percent solution. Three: acid plus alcohol gives a sweet-smelling ester, and acid plus a carbonate gives carbon dioxide." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Carbon and Its Compounds",
+    "topic_no": 8,
+    "name": "Soaps and Detergents",
+    "scenes": [
+      {
+        "animation": "Zippy splashes curry on a white school shirt; he scrubs it under plain tap water and the yellow oil stain just slides around, grinning back at him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Water isn't working! This curry stain is laughing at me!" },
+          { "speaker": "NEO", "text": "Oil and water don't mix, Zippy. You need soap. Let's see why it works." }
+        ]
+      },
+      {
+        "animation": "A soap molecule appears as a tadpole: a round red head labelled 'Ionic end: hydrophilic' and a long wavy tail labelled 'Hydrocarbon chain: hydrophobic'. The head splashes happily in water; the tail dives into an oil drop.",
+        "lines": [
+          { "speaker": "NEO", "text": "Soaps are sodium or potassium salts of long-chain carboxylic acids." },
+          { "speaker": "NEO", "text": "A soap molecule has two ends. The ionic end interacts with water, so it is hydrophilic." },
+          { "speaker": "NEO", "text": "The long carbon chain avoids water and dissolves in oil. It is hydrophobic." }
+        ]
+      },
+      {
+        "animation": "Hundreds of tadpole molecules surround the oil droplet with tails pointing inward into the oil and heads facing outward into the water, forming a ball labelled 'Micelle'. Rinse water carries the balls away, and the shirt gleams white.",
+        "lines": [
+          { "speaker": "NEO", "text": "In water, soap molecules cluster so that the tails are inside, away from water, and the ionic ends face outward. This cluster is a micelle." },
+          { "speaker": "NEO", "text": "The oily dirt collects in the centre of the micelle, and rinsing washes it away." },
+          { "speaker": "ZIPPY", "text": "Why don't the micelles clump together again?" },
+          { "speaker": "NEO", "text": "Because of ion-ion repulsion. They stay in the solution as a colloid." }
+        ]
+      },
+      {
+        "animation": "Scene shifts to a handpump bucket labelled 'Hard water: Ca²⁺, Mg²⁺'. Soap is added, and instead of lather, a white curdy layer labelled 'Scum' floats up. Zippy scrubs harder and gets nowhere.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now try soap in hard water. Calcium and magnesium salts react with soap to form an insoluble substance called scum." },
+          { "speaker": "NEO", "text": "A lot of soap is wasted, and very little lather forms." }
+        ]
+      },
+      {
+        "animation": "A detergent molecule jumps in wearing a badge 'Sulphonate / Ammonium salt'; in the same hard-water bucket it lathers happily and bubbles rise. A 'Board tip' card shows a micelle with a red circle around the inward-pointing tails.",
+        "lines": [
+          { "speaker": "NEO", "text": "Detergents solve this. They are generally sodium salts of sulphonic acids, or ammonium salts with chloride or bromide ions." },
+          { "speaker": "NEO", "text": "Their charged ends do not form insoluble precipitates with calcium and magnesium ions, so they work even in hard water." },
+          { "speaker": "NEO", "text": "That's why detergents are used in shampoos and for washing clothes." },
+          { "speaker": "NEO", "text": "Board tip: when you draw a micelle, point the tails inward into the oil. Reversed tails is the most common mistake." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Soap: hydrophilic head, hydrophobic tail', '2. Micelle traps oily dirt in the centre', '3. Hard water → scum; detergents still lather'. Zippy holds up the spotless shirt.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: soap molecules have a hydrophilic ionic end and a hydrophobic carbon chain. Two: they form micelles that trap oily dirt in the centre. Three: soaps form scum in hard water, but detergents keep working." },
+          { "speaker": "ZIPPY", "text": "Shirt saved. Mission accomplished!" }
+        ]
+      }
+    ]
+  }
+]

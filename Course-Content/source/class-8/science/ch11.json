@@ -1,0 +1,347 @@
+[
+  {
+    "chapter_no": 11,
+    "chapter": "Keeping Time with the Skies",
+    "topic_no": 1,
+    "name": "Watching the Moon: Phases, Waxing and Waning",
+    "scenes": [
+      {
+        "animation": "Makar Sankranti in Ahmedabad: the sky is full of colourful kites at the Patang Mahotsav. Zippy is tangled in a kite string when he spots a pale, not-quite-round Moon in the bright daytime sky and freezes, pointing.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo! The Moon is out in the daytime! Did it forget to go home?" },
+          { "speaker": "NEO", "text": "The Moon is often visible in daylight. And notice, it is not a full circle today." },
+          { "speaker": "ZIPPY", "text": "But the Moon is a sphere. Why don't we see all of it every night?" },
+          { "speaker": "NEO", "text": "To answer that, we must watch the Moon carefully for a whole month." }
+        ]
+      },
+      {
+        "animation": "A notebook opens to a table with columns 'Day', 'Date', 'Moon seen at', 'Appearance of the Moon', 'Size of bright portion', 'Moon and Sun separation'. At sunrise, Neo points west at the Moon; an empty circle in the table gets shaded with a pencil to show the dark part.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity time. Start on the first day after the full Moon, at sunrise. Look for the Moon in the western direction." },
+          { "speaker": "NEO", "text": "In your table, write the date, and whether you saw the Moon at sunrise or sunset. Shade a circle to show its bright portion." },
+          { "speaker": "NEO", "text": "From the second day, also note two things. Is the bright portion increasing or decreasing? And is the Moon closer to or farther from the Sun than the day before?" }
+        ]
+      },
+      {
+        "animation": "A calendar strip flips quickly through about 15 days. The sunrise Moon shrinks and slides towards the Sun until it vanishes. The scene switches to sunset, and the Moon reappears as a thin crescent that grows each evening. Caption: 'Next 15 days: observe at sunset'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Day fifteen. I stood outside at sunrise and saw nothing!" },
+          { "speaker": "NEO", "text": "That is expected. After about 15 days you may not see the Moon at sunrise or sunset. For the next 15 days, observe at sunset." }
+        ]
+      },
+      {
+        "animation": "A ring of Moon shapes builds around a small Earth, as in the textbook figure: full Moon, gibbous, half, crescent, new Moon, then crescent, half, gibbous, full again. The shrinking half glows purple, labelled 'Waning: Krishna Paksha'; the growing half glows gold, labelled 'Waxing: Shukla Paksha'. Tags 'About 1 week' appear between the full, half and new shapes.",
+        "lines": [
+          { "speaker": "NEO", "text": "After the full Moon, the bright portion shrinks to a half circle in about a week. In another week, it is no longer visible." },
+          { "speaker": "NEO", "text": "This two-week period is the waning period. In India, it is called the Krishna Paksha." },
+          { "speaker": "NEO", "text": "After the new Moon, the bright side grows to a half circle in about a week, and to a full circle in another week. This is the waxing period, or Shukla Paksha." },
+          { "speaker": "ZIPPY", "text": "So Purnima is the full Moon day, and Amavasya is when the Moon disappears?" },
+          { "speaker": "NEO", "text": "Exactly. Amavasya is the new Moon day. The cycle from one full Moon to the next takes about a month." }
+        ]
+      },
+      {
+        "animation": "A horizon scene at sunrise: the full Moon sets in the West as the Sun rises in the East. Over the next mornings the Moon slides closer to the Sun, reaching overhead as a half circle, then becoming a crescent near the Sun. A sticker reads 'Waxing: spot at sunset. Waning: spot at sunrise'. A yellow 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "On a full Moon day, the Moon is nearly opposite the Sun. When the Sun rises in the East, the Moon is almost setting in the West." },
+          { "speaker": "NEO", "text": "On later mornings, the Moon appears closer to the Sun. When it becomes a half circle, it is overhead at sunrise." },
+          { "speaker": "NEO", "text": "Exam tip: a waxing Moon is easiest to spot at sunset, and a waning Moon at sunrise. Don't mix these up." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Phases = changing shapes of the Moon's bright portion seen from Earth', '2. Waning = Krishna Paksha; Waxing = Shukla Paksha; full cycle about a month', '3. Purnima = full Moon; Amavasya = new Moon'. Zippy flies a kite shaped like a crescent Moon.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the changing shapes of the bright portion of the Moon, seen from Earth, are called the phases of the Moon." },
+          { "speaker": "NEO", "text": "Two: the waning period is Krishna Paksha and the waxing period is Shukla Paksha. One full cycle takes about a month." },
+          { "speaker": "NEO", "text": "Three: the full Moon day is Purnima, and the new Moon day is Amavasya." },
+          { "speaker": "ZIPPY", "text": "My kite is in its crescent phase. Permanently." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Keeping Time with the Skies",
+    "topic_no": 2,
+    "name": "Why Does the Moon Show Phases?",
+    "scenes": [
+      {
+        "animation": "Zippy stands on a stool with a torch, dramatically 'blocking' the Moon with a cardboard Earth, shouting 'Earth's shadow makes the phases!'. Neo gently lowers the torch. A big red 'MYTH?' stamp hovers.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Easy! Earth's shadow covers part of the Moon. That's the phases." },
+          { "speaker": "NEO", "text": "A very popular idea, and it is wrong. Let's find the real reason." }
+        ]
+      },
+      {
+        "animation": "A Moon globe in space: sunrays hit it from the left, lighting exactly one half, labelled 'Illuminated'; the other half is dark, labelled 'Non-illuminated'. A small Earth sits nearby with an eye icon, and orange dashed lines mark the half of the Moon that faces Earth.",
+        "lines": [
+          { "speaker": "NEO", "text": "The shape of the Moon never changes. Only what we see changes." },
+          { "speaker": "NEO", "text": "The Moon has no light of its own. The half facing the Sun is illuminated, and the other half stays dark." },
+          { "speaker": "NEO", "text": "Only one half of the Moon always faces the Earth. But that half is not always the lit half. We can see only the illuminated part that faces us." }
+        ]
+      },
+      {
+        "animation": "Night, a dark open ground. A teacher shines a torch from about 3 m. A student holds a soft ball on a stick at arm's length, slightly above the head, first towards the torch (position E), then turns slowly anti-clockwise. Inset panels A to H show the lit part of the ball changing: full at A, dark at E, curved edges in between.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's test it. Insert a stick into a small soft ball. This is the Moon. Your head is the Earth." },
+          { "speaker": "NEO", "text": "Go to a dark open place at night. Ask a teacher or guardian to shine a torch from about 3 metres, or stand near an electric lamp." },
+          { "speaker": "NEO", "text": "Hold the ball at arm's length, slightly above your head, towards the lamp. Then turn slowly anti-clockwise and keep watching the ball." },
+          { "speaker": "ZIPPY", "text": "When the ball faces the lamp, I see only its dark side. And opposite the lamp, it's fully bright!" },
+          { "speaker": "NEO", "text": "Just like the new Moon and the full Moon. In between, the line separating light and dark looks curved." }
+        ]
+      },
+      {
+        "animation": "The orbit diagram builds step by step: Earth at centre, sunrays from the right, the Moon at positions A to H. A is labelled 'Full Moon', E 'New Moon', B and H 'Gibbous: more than half', D and F 'Crescent: less than half', C and G 'Half'. Arrows mark 'A to C to E: waning' and 'E to G to A: waxing'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Moon revolves around the Earth from A to H and back to A in about one month." },
+          { "speaker": "NEO", "text": "At B and H, we see more than half of the lit portion. That is the gibbous phase. At D and F, we see less than half. That is the crescent phase." },
+          { "speaker": "NEO", "text": "The change in the fraction of the lit portion we see causes the phases. And on a given day, people all over the Earth see nearly the same phase." }
+        ]
+      },
+      {
+        "animation": "A cartoon observer stands on a spinning Earth, with the Moon overhead. The Earth turns once, but the Moon has crept ahead in its orbit; a clock ticks on to '+ about 50 min' before the Moon is overhead again. Then a split panel: 'Earth's shadow on Moon = lunar eclipse' versus 'Phases = changing Sun-Moon-Earth orientation'. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "In one day, the Moon moves a little ahead in its orbit. So the Earth must rotate some more, and the Moon rises about 50 minutes later each day." },
+          { "speaker": "NEO", "text": "Exam tip: phases are not caused by Earth's shadow. Earth's shadow on the Moon causes a lunar eclipse." },
+          { "speaker": "NEO", "text": "A lunar eclipse can happen only on a full Moon day, and a solar eclipse only on a new Moon day. They don't happen every month because the Moon's orbit is slightly tilted." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Half of the Moon is always lit by the Sun', '2. Phases = change in the lit fraction we see as the Moon revolves', '3. Not Earth's shadow; Moon rises about 50 min later daily'. Zippy tosses away his cardboard Earth.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: half of the Moon is always lit by the Sun, but we see only the lit part facing us." },
+          { "speaker": "NEO", "text": "Two: as the Moon revolves around the Earth, the fraction of the lit portion we see changes. That causes phases, from full to gibbous, half, crescent and new." },
+          { "speaker": "NEO", "text": "Three: phases are not due to Earth's shadow. And the Moon rises about 50 minutes later each day." },
+          { "speaker": "ZIPPY", "text": "Myth busted. My cardboard Earth is retiring." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Keeping Time with the Skies",
+    "topic_no": 3,
+    "name": "Nature's Clocks: Day, Month, Year and Lunar Calendars",
+    "scenes": [
+      {
+        "animation": "Zippy's wall clock and phone both die. He panics, holding a blank calendar. Neo calmly points upward at the Sun, the Moon and a looping Earth orbit.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "No clock, no phone, no calendar! How will I ever know the time?" },
+          { "speaker": "NEO", "text": "The sky has three clocks that never need charging. Let's read them." }
+        ]
+      },
+      {
+        "animation": "A rotating Earth makes the Sun appear to rise in the East and set in the West. The Sun climbs to its highest point; a timer runs from that point to the next day's highest point, stopping at '24 hours', with the label 'Mean solar day'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Sun appears to rise in the East and set in the West, mainly because the Earth rotates on its axis. This cycle gives us the day." },
+          { "speaker": "NEO", "text": "The average time the Sun takes to go from its highest position one day to its highest position the next day is 24 hours. This is the mean solar day." },
+          { "speaker": "ZIPPY", "text": "How do I know when the Sun is highest?" },
+          { "speaker": "NEO", "text": "The shadow of an object is shortest when the Sun is at its highest point." }
+        ]
+      },
+      {
+        "animation": "A sunny school ground. A 1 m stick is fixed upright. From 11:00 a.m., a dot appears at the shadow's tip every minute until about 1:10 p.m.; the dots curve in and out. The shortest shadow glows. A table fills in: '22 March 2025: 12:20', '23 March 2025: 12:20, day = 24:00', '24 March 2025: 12:19, day = 23:59'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's measure a day. Fix a 1 metre stick upright on flat, sunny ground." },
+          { "speaker": "NEO", "text": "Start at 11 a.m. Every minute, mark a dot at the tip of the shadow. Keep going till around ten past one." },
+          { "speaker": "NEO", "text": "Find the shortest shadow and its time by counting dots. Repeat for a few days, and find the difference between two consecutive days." },
+          { "speaker": "ZIPPY", "text": "Twenty-four hours, then twenty-three fifty-nine. That's nearly 24 hours!" }
+        ]
+      },
+      {
+        "animation": "The Moon cycles through its phases around the Earth, with a counter reaching 'about 29.5 days = a month'. Then the Earth circles the Sun as trees change through seasons, the counter reading 'nearly 365 and a quarter days = a solar year'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Moon takes about 29.5 days to cycle through all its phases. This is the basis for a month." },
+          { "speaker": "NEO", "text": "The Earth takes nearly 365 and a quarter days to revolve around the Sun, going through one cycle of seasons. This defines a solar year." }
+        ]
+      },
+      {
+        "animation": "Ancient sky-watchers line up 12 Moon cycles inside one ring of seasons, forming a 'Lunar year = 12 lunar months = 354 days' banner. A season marker slowly slides out of step each year, labelled 'Seasons: about 365 days'. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Long ago, people noticed that nearly 12 cycles of Moon phases fit into one cycle of seasons. That gave lunar calendars: the day, a month of nearly 29.5 days, and a year of 12 lunar months." },
+          { "speaker": "NEO", "text": "But a lunar year is 354 days long, while seasons repeat in about 365 days. So in a lunar calendar, seasons do not stay with the same months." },
+          { "speaker": "NEO", "text": "Exam tip: remember the matching. Day comes from Earth's rotation, month from the Moon's phases, and year from the cycle of seasons." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Day: Sun's highest point to highest point, mean solar day = 24 hours', '2. Month: Moon's phases, about 29.5 days', '3. Lunar year: 12 lunar months = 354 days; seasons about 365 days'. Zippy wears the stick as a sundial hat.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the mean solar day, from the Sun's highest point to the next, is 24 hours." },
+          { "speaker": "NEO", "text": "Two: the cycle of the Moon's phases, about 29.5 days, is the basis for a month." },
+          { "speaker": "NEO", "text": "Three: a lunar year of 12 lunar months has 354 days, so it drifts away from the seasons." },
+          { "speaker": "ZIPPY", "text": "I am now a walking sundial." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Keeping Time with the Skies",
+    "topic_no": 4,
+    "name": "Solar and Luni-solar Calendars",
+    "scenes": [
+      {
+        "animation": "A farmer in a field looks at a lunar calendar showing 'sowing month', but the monsoon clouds arrive at the wrong time and the seedlings look confused. Zippy holds an umbrella upside down.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The calendar says it's sowing time, but the rain hasn't come!" },
+          { "speaker": "NEO", "text": "That's the trouble with a purely lunar calendar. Farmers needed a year that stays in step with the seasons." }
+        ]
+      },
+      {
+        "animation": "A Gregorian calendar fans out its twelve months. Month tiles tagged '30', '31' and a small February tagged '28' stack up into a tower labelled '365 days'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Knowing when seasons arrive was important for farming. This need led to solar calendars." },
+          { "speaker": "NEO", "text": "The Gregorian calendar we use today is a solar calendar. Its months are adjusted to add up to 365 days." },
+          { "speaker": "NEO", "text": "That's why some months have 30 days, others 31, and February has only 28." }
+        ]
+      },
+      {
+        "animation": "Four quarter-day slices collect in a jar over four years, then merge into one whole day that hops into February, making '29'. A sub-panel flags 1700, 1800 and 1900 in grey as 'skipped', and 1600 and 2000 in green as 'leap years added back'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But the Earth takes 365 and a quarter days. Where does the quarter go?" },
+          { "speaker": "NEO", "text": "Those extra hours add up to about one day every four years. So we add a leap day." },
+          { "speaker": "NEO", "text": "In the Gregorian calendar, if a year is divisible by four, February gets 29 days. That keeps the calendar in step with the seasons." },
+          { "speaker": "NEO", "text": "Fun fact: this adds a little too much, so leap years are skipped every 100 years, like 1900. But every 400 years they are added back, like in 2000." }
+        ]
+      },
+      {
+        "animation": "A balance: 12 Moon discs totalling '354 days' on one pan, a Sun with '365 days' on the other; a gap marked 'nearly 11 days' grows each year. After 2 to 3 years the gap becomes nearly a month, and a bonus month card labelled 'Adhika Maasa' drops in to balance the scale.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some calendars use both clocks. They count days and months by the Moon's phases, but stay in step with the seasons." },
+          { "speaker": "NEO", "text": "Twelve lunar months add up to 354 days, nearly 11 days short of the solar year. Every 2 to 3 years, the difference becomes close to a full month." },
+          { "speaker": "NEO", "text": "So every few years, some calendars add an extra month, called Adhika Maasa or the intercalary month. These are luni-solar calendars, used in many parts of India." }
+        ]
+      },
+      {
+        "animation": "A wheel of 12 month names spins: Chaitra, Vaisakha, Jyeshtha, Ashadha, Shravana, Bhadrapada, Ashwin, Kartika, Margashirsha, Pausha, Magha, Phalguna. Two tags appear: 'Amant: month ends on new Moon' and 'Purnimant: month ends on full Moon'. An 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My grandmother talks about Shravana and Kartika! Are those luni-solar months?" },
+          { "speaker": "NEO", "text": "Yes. In Amant calendars, a month ends on the new Moon. In Purnimant calendars, it ends on the full Moon." },
+          { "speaker": "NEO", "text": "Exam tip: if asked why an intercalary month is needed, write that 12 lunar months fall about 11 days short of the solar year." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Solar calendar: 365 days, matches seasons (Gregorian)', '2. Leap year: divisible by 4, February has 29 days', '3. Luni-solar: lunar months + Adhika Maasa every few years'. Zippy's umbrella finally catches rain.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: solar calendars, like the Gregorian calendar, have 365 days and stay with the seasons." },
+          { "speaker": "NEO", "text": "Two: a leap year comes when the year is divisible by four, and February gets 29 days." },
+          { "speaker": "NEO", "text": "Three: luni-solar calendars use lunar months and add an Adhika Maasa every few years." },
+          { "speaker": "ZIPPY", "text": "Rain on time. Calendar approved." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Keeping Time with the Skies",
+    "topic_no": 5,
+    "name": "The Indian National Calendar and Our Festivals",
+    "scenes": [
+      {
+        "animation": "Zippy flips through five years of wall calendars, circling Diwali in red. The circles jump around between October and November. He scratches his head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Diwali keeps changing its date! Is the festival confused?" },
+          { "speaker": "NEO", "text": "Not at all. Diwali follows the Moon, not the Gregorian calendar. But first, let's meet India's own national calendar." }
+        ]
+      },
+      {
+        "animation": "A calendar titled 'Shaka Era 1947' opens to Chaitra, with 'March 22 to April 20, 2025' underneath. Month tiles show '30' for month 1 and '31' for months 2 to 6, then '30' for the rest. A leap-year switch flips, and Chaitra gains a day as the start date changes to '21 March'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Government of India uses a national calendar along with the Gregorian calendar for official purposes." },
+          { "speaker": "NEO", "text": "It is a solar calendar with 365 days. The year begins on 22 March, the day after the spring equinox." },
+          { "speaker": "NEO", "text": "Its months have 30 or 31 days. In a regular year, the second to sixth months have 31 days, and the rest have 30." },
+          { "speaker": "NEO", "text": "In a leap year, Chaitra, the first month, gets an extra day, so the year begins on 21 March." }
+        ]
+      },
+      {
+        "animation": "A sepia 1952 meeting room: Meghnad Saha, labelled 'Chairperson, Calendar Reform Committee', studies stacks of different calendars. A stamp prints '21 March 1956 CE = 1 Chaitra 1878 Saka'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1952, the government set up a Calendar Reform Committee, chaired by the astrophysicist Meghnad Saha." },
+          { "speaker": "NEO", "text": "Its unified national calendar was adopted from 21 March 1956, that is, 1 Chaitra 1878 Saka." }
+        ]
+      },
+      {
+        "animation": "A festival carousel: Diwali lamps under a new Moon tagged 'Kartika', Holi colours under a full Moon tagged 'Phalguna', Buddha Purnima under a full Moon tagged 'Vaisakha', a crescent Moon over Eid-ul-Fitr tagged 'end of Ramazan', and Dussehra tagged 'tenth day of Ashwina'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Many Indian festivals are tied to the Moon's phases. Diwali falls on the new Moon of Kartika, and Holi on the full Moon of Phalguna." },
+          { "speaker": "NEO", "text": "Buddha Purnima is on the full Moon of Vaisakha. Eid-ul-Fitr is celebrated after sighting the crescent Moon at the end of Ramazan. Dussehra is on the tenth day of Ashwina." }
+        ]
+      },
+      {
+        "animation": "Two tracks across Gregorian months: Diwali's marker wobbles within a short band, snapping back when an 'Adhika Maasa' block appears. Eid-ul-Fitr's marker keeps sliding earlier through the months, year after year. A third row shows Makar Sankranti, Pongal, Bihu, Vaisakhi, Poila Baisakh and Puthandu sitting nearly still. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "For luni-solar festivals like Diwali, the date shifts, but usually by less than a month, because the intercalary month corrects the drift." },
+          { "speaker": "NEO", "text": "Purely lunar calendars have no such correction. So Eid-ul-Fitr can fall in different Gregorian months year after year." },
+          { "speaker": "NEO", "text": "Festivals like Makar Sankranti, Pongal, Bihu and Vaisakhi follow a solar sidereal calendar, so they come on almost the same date every year." },
+          { "speaker": "NEO", "text": "Exam tip: if asked why festival dates change, name the calendar type, lunar or luni-solar, and explain the gap between lunar and solar years." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Indian National Calendar: solar, 365 days, starts 22 March', '2. Diwali, Holi, Eid follow Moon phases', '3. Luni-solar festivals shift less than a month; lunar ones move across months'. Zippy lights a diya, with a new Moon above.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Indian National Calendar is solar, has 365 days, and begins on 22 March." },
+          { "speaker": "NEO", "text": "Two: festivals like Diwali, Holi and Eid-ul-Fitr are tied to the phases of the Moon." },
+          { "speaker": "NEO", "text": "Three: luni-solar festivals shift by less than a month, while purely lunar ones move through different months." },
+          { "speaker": "ZIPPY", "text": "Diwali isn't confused. I was." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Keeping Time with the Skies",
+    "topic_no": 6,
+    "name": "Artificial Satellites",
+    "scenes": [
+      {
+        "animation": "An evening rooftop in a small town. Zippy points at a tiny dot of light racing across the sky among still stars and gasps, 'A shooting star that won't stop!'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, that star is moving! Is it lost?" },
+          { "speaker": "NEO", "text": "That's no star. It's probably an artificial satellite, a machine made by humans, circling our Earth." }
+        ]
+      },
+      {
+        "animation": "Earth with the Moon labelled 'Natural satellite'. Closer in, many small satellites orbit, one highlighted with tags 'about 800 km above Earth' and 'one orbit in roughly 100 minutes'. Icons pop up around it: phone signal, map pin, rain cloud, flood rescue boat, telescope.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Moon is Earth's natural satellite. Many countries have also sent up man-made satellites that orbit the Earth." },
+          { "speaker": "NEO", "text": "Most orbit about 800 kilometres above Earth's surface and take roughly 100 minutes for one orbit." },
+          { "speaker": "NEO", "text": "They help us in communication, navigation, weather monitoring, disaster management and scientific research." }
+        ]
+      },
+      {
+        "animation": "An ISRO gallery: Cartosat snaps a map of a city, which flows into the Bhuvan platform showing terrain and vegetation. AstroSat looks at stars. Small cards fly past: 'Chandrayaan 1, 2, 3: Moon', 'Aditya L1: Sun', 'Mangalyaan: Mars', and a student-built trio 'AzaadiSat, InspireSat-1, Jugnu'.",
+        "lines": [
+          { "speaker": "NEO", "text": "ISRO, the Indian Space Research Organisation, has launched many satellites. The Cartosat series captures detailed images of the Earth for maps, city planning and handling disasters." },
+          { "speaker": "NEO", "text": "The Bhuvan platform uses these images to show terrain, soil, land use and vegetation. AstroSat observes stars and other celestial objects." },
+          { "speaker": "NEO", "text": "India has also sent Chandrayaan 1, 2 and 3 to the Moon, Aditya L1 to study the Sun, and Mangalyaan to Mars." },
+          { "speaker": "ZIPPY", "text": "And students built satellites too, like AzaadiSat, InspireSat-1 and Jugnu!" }
+        ]
+      },
+      {
+        "animation": "Step-by-step checklist animates beside a family on an open field at dusk: '1. Just before sunrise or after sunset', '2. Go with an adult', '3. Clear view, no trees or tall buildings', '4. Look for a fast-moving point of light', '5. Naked eye, binoculars or a satellite app'. A safety shield icon glows beside step 2.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's identify one. Go out just before sunrise or just after sunset, always with an adult." },
+          { "speaker": "NEO", "text": "Choose a place with a clear view of the sky, without trees or tall buildings in the way." },
+          { "speaker": "NEO", "text": "Look for a point of light, steady or flickering, moving very fast across the sky. You can use your eyes or binoculars." },
+          { "speaker": "NEO", "text": "Mobile apps or websites can tell you when satellites will pass over your location." }
+        ]
+      },
+      {
+        "animation": "Old satellites and rocket parts tumble in orbit as grey 'space debris', nearly hitting a working satellite. Small bits burn up like sparks entering the atmosphere. A portrait card of Vikram Sarabhai appears, labelled 'Father of the Indian Space Programme'. An 'EXAM TIP' card follows.",
+        "lines": [
+          { "speaker": "NEO", "text": "After their useful life, many satellites and rocket parts become space debris. It crowds space and could hit working satellites." },
+          { "speaker": "NEO", "text": "India's space journey was pioneered by Vikram Sarabhai, known as the Father of the Indian Space Programme." },
+          { "speaker": "NEO", "text": "Exam tip: when asked the purpose of artificial satellites, list at least three uses, like communication, navigation and weather monitoring." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Artificial satellites: human-made, about 800 km up, about 100 min per orbit', '2. Uses: communication, navigation, weather, disasters, research', '3. Spot them at dawn or dusk, with an adult'. Zippy waves at a passing satellite.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: artificial satellites are human-made. Most orbit about 800 kilometres up, taking roughly 100 minutes per orbit." },
+          { "speaker": "NEO", "text": "Two: they help in communication, navigation, weather monitoring, disaster management and research." },
+          { "speaker": "NEO", "text": "Three: you can spot them just before sunrise or after sunset, as fast-moving points of light." },
+          { "speaker": "ZIPPY", "text": "Bye, satellite! See you in about 100 minutes." }
+        ]
+      }
+    ]
+  }
+]

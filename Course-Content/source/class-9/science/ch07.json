@@ -1,0 +1,434 @@
+[
+  {
+    "chapter_no": 7,
+    "chapter": "Motion",
+    "topic_no": 1,
+    "name": "Reference Point, Distance and Displacement",
+    "scenes": [
+      {
+        "animation": "Zippy sits inside a moving train, sipping chai from a kulhad. A passenger beside him insists Zippy is not moving at all, while a cow on the platform outside insists he is zooming past. Zippy's eyes spin between them.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The man next to me says I'm still. The cow outside says I'm speeding. Who's lying?" },
+          { "speaker": "NEO", "text": "Nobody. Both are right, because each is using a different reference point." }
+        ]
+      },
+      {
+        "animation": "The scene freezes. A glowing pin labelled 'Reference point (origin)' drops onto the platform, and a second pin drops onto the passenger's seat. Arrows show Zippy's position changing relative to the platform pin but not to the seat pin.",
+        "lines": [
+          { "speaker": "NEO", "text": "An object is in motion when its position changes with time. But position is always described from a fixed point called the reference point, or origin." },
+          { "speaker": "NEO", "text": "Compared to the passenger, your position doesn't change. Compared to the platform, it does. So motion is relative." }
+        ]
+      },
+      {
+        "animation": "A straight road is drawn as a number line with O at 0 m, A at 60 m and B at 35 m. Zippy runs from O to A and then back to B, leaving a dotted trail that is measured: '60 m + 25 m = 85 m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's make it measurable. Zippy runs along a straight road from O to A, sixty metres away, then turns back to B, which is thirty-five metres from O." },
+          { "speaker": "NEO", "text": "The total path length he covered is sixty plus twenty-five, which is eighty-five metres. This is the distance." }
+        ]
+      },
+      {
+        "animation": "The dotted trail fades; a single bold arrow shoots straight from O to B, labelled 'Displacement = 35 m, towards A'. Beside it two cards appear: 'Distance: magnitude only' and 'Displacement: magnitude + direction'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Displacement is the shortest distance measured from the initial position to the final position. Here, it's just thirty-five metres, in the direction of A." },
+          { "speaker": "NEO", "text": "Distance needs only a numerical value, called magnitude. Displacement needs both magnitude and direction." },
+          { "speaker": "ZIPPY", "text": "So displacement can never be bigger than distance?" },
+          { "speaker": "NEO", "text": "Exactly. It can be equal or smaller, but never larger." }
+        ]
+      },
+      {
+        "animation": "Zippy jogs one full lap of the school ground and stops at the exact starting flag. A counter reads 'Distance = 400 m' while the displacement arrow shrinks to a dot labelled '0 m'. A yellow 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I just ran a full lap and ended where I started. Four hundred metres of sweat!" },
+          { "speaker": "NEO", "text": "Four hundred metres of distance, yes. But your displacement is zero, because your final position is your initial position." },
+          { "speaker": "NEO", "text": "Exam tip: a favourite question asks whether displacement can be zero when distance is not. The answer is yes, whenever the object returns to its starting point." }
+        ]
+      },
+      {
+        "animation": "Recap board with a train icon. Three points pop in: '1. Motion = change of position with time, described from a reference point', '2. Distance = total path length (magnitude only)', '3. Displacement = shortest path from start to end (magnitude + direction); can be zero'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: motion is a change in position with time, always described with respect to a reference point." },
+          { "speaker": "NEO", "text": "Two: distance is the total path length, and it has only magnitude." },
+          { "speaker": "NEO", "text": "Three: displacement is the shortest distance from start to finish, with direction, and it can even be zero." },
+          { "speaker": "ZIPPY", "text": "Zero displacement. Great, all that running for nothing." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Motion",
+    "topic_no": 2,
+    "name": "Uniform and Non-uniform Motion; Speed",
+    "scenes": [
+      {
+        "animation": "Two racers on a straight track: a toy robot ticking forward in perfectly equal steps, and Zippy zig-zagging in bursts, stopping to wave at the crowd. Stopwatch icons float above both.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I beat the robot, but it says it was more consistent. What does that even mean?" },
+          { "speaker": "NEO", "text": "It means the robot was in uniform motion, and you were not." }
+        ]
+      },
+      {
+        "animation": "Footprints appear on a timeline: the robot's prints are evenly spaced with '5 m' under every 1 s mark; Zippy's prints are bunched and stretched unevenly. Labels 'Uniform motion' and 'Non-uniform motion' stamp above each row.",
+        "lines": [
+          { "speaker": "NEO", "text": "When an object covers equal distances in equal intervals of time, it is in uniform motion." },
+          { "speaker": "NEO", "text": "When it covers unequal distances in equal intervals of time, it is in non-uniform motion. A car in city traffic is a good example." }
+        ]
+      },
+      {
+        "animation": "A speedometer needle wobbles. The formula 'Average speed = Total distance travelled / Total time taken' writes itself, followed by 'v = s / t' and 'SI unit: m s⁻¹ (also cm s⁻¹, km h⁻¹)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Speed is the distance travelled by an object in unit time. Its SI unit is metre per second." },
+          { "speaker": "NEO", "text": "Most objects don't move at a constant speed, so we use average speed, which is total distance travelled divided by total time taken." }
+        ]
+      },
+      {
+        "animation": "A worked example builds line by line: 'Part 1: 16 m in 4 s', 'Part 2: 16 m in 2 s', 'Total distance = 32 m, total time = 6 s', 'Average speed = 32 / 6 = 5.33 m s⁻¹'. A red cross flashes over the wrong shortcut '(4 + 8) / 2 = 6'.",
+        "lines": [
+          { "speaker": "NEO", "text": "An object travels sixteen metres in four seconds, and then another sixteen metres in two seconds. What is its average speed?" },
+          { "speaker": "ZIPPY", "text": "Easy. Four metres per second, then eight metres per second. Average is six!" },
+          { "speaker": "NEO", "text": "Careful. Total distance is thirty-two metres, total time is six seconds. Thirty-two by six is five point three three metres per second." }
+        ]
+      },
+      {
+        "animation": "A car's odometer rolls from '2000 km' to '2400 km' while a clock spins 2 hours. Working appears: '400 km / 2 h = 200 km h⁻¹', then '200 × 1000 m / 3600 s = 55.6 m s⁻¹'. An 'EXAM TIP' sticker highlights '× 5/18'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Another one. A car's odometer reads two thousand kilometres at the start and two thousand four hundred at the end of a two-hour trip." },
+          { "speaker": "NEO", "text": "Distance is four hundred kilometres, so average speed is two hundred kilometres per hour. In SI units, that's two lakh metres divided by three thousand six hundred seconds, about fifty-five point six metres per second." },
+          { "speaker": "NEO", "text": "Exam tip: to change kilometres per hour into metres per second, multiply by five by eighteen." }
+        ]
+      },
+      {
+        "animation": "Recap board with the robot and Zippy shaking hands. Points appear: '1. Uniform: equal distances in equal time; non-uniform: unequal', '2. Average speed = total distance / total time (m s⁻¹)', '3. km h⁻¹ → m s⁻¹: × 5/18'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: uniform motion means equal distances in equal time intervals; non-uniform means unequal distances." },
+          { "speaker": "NEO", "text": "Two: average speed is total distance divided by total time, measured in metres per second." },
+          { "speaker": "NEO", "text": "Three: to convert kilometres per hour into metres per second, multiply by five by eighteen." },
+          { "speaker": "ZIPPY", "text": "Never averaging the speeds again. Promise." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Motion",
+    "topic_no": 3,
+    "name": "Velocity and Average Velocity",
+    "scenes": [
+      {
+        "animation": "Zippy proudly says '20 km/h!' into a phone to a friend waiting at a crossroads. The friend runs north; Zippy was heading south. They end up further apart, both shrugging.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I told my friend my speed, and he still went the wrong way!" },
+          { "speaker": "NEO", "text": "Because you forgot to tell him your direction. Speed plus direction is called velocity." }
+        ]
+      },
+      {
+        "animation": "An arrow labelled '20 km h⁻¹' is drawn, then a compass rose snaps onto it and the label grows to '20 km h⁻¹ towards south'. The definition 'Velocity = speed of an object moving in a definite direction' appears underneath.",
+        "lines": [
+          { "speaker": "NEO", "text": "Velocity is the speed of an object moving in a definite direction. Its SI unit is the same as speed, metre per second." },
+          { "speaker": "NEO", "text": "Velocity can change in three ways: by changing the speed, by changing the direction, or by changing both." }
+        ]
+      },
+      {
+        "animation": "A swimming pool 90 m long. Usha, a cartoon swimmer, swims to the far end and back in exactly one minute. Two meters fill: 'Distance = 180 m' and 'Displacement = 0 m'. Then: 'Average speed = 180 m / 60 s = 3 m s⁻¹' and 'Average velocity = 0 m / 60 s = 0 m s⁻¹'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here's a classic. Usha swims in a ninety-metre pool. She swims to the other end and back in one minute." },
+          { "speaker": "NEO", "text": "Distance is one hundred and eighty metres in sixty seconds, so her average speed is three metres per second." },
+          { "speaker": "NEO", "text": "But she ends where she began. Her displacement is zero, so her average velocity is zero." },
+          { "speaker": "ZIPPY", "text": "She's tired and her velocity is zero? That's rude." }
+        ]
+      },
+      {
+        "animation": "A car's velocity rises smoothly from 'u = 10 m s⁻¹' to 'v = 20 m s⁻¹' on a straight road. The formula 'Average velocity = (u + v) / 2' writes itself, then '(10 + 20) / 2 = 15 m s⁻¹'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When velocity changes at a uniform rate, average velocity is the average of the initial velocity and the final velocity." },
+          { "speaker": "NEO", "text": "So average velocity equals u plus v, divided by two. A car going from ten to twenty metres per second uniformly has an average velocity of fifteen metres per second." }
+        ]
+      },
+      {
+        "animation": "A two-column table builds: 'Speed | Velocity', rows 'Scalar (magnitude) | Vector (magnitude + direction)', 'Always positive | Can be positive, negative or zero', 'distance/time | displacement/time'. An 'EXAM TIP' flag waves beside the last row.",
+        "lines": [
+          { "speaker": "NEO", "text": "Average velocity uses displacement, while average speed uses distance. That's why they can differ." },
+          { "speaker": "NEO", "text": "Exam tip: the formula u plus v by two works only when velocity changes at a uniform rate. Don't use it for a random stop-and-go journey." }
+        ]
+      },
+      {
+        "animation": "Recap board with a compass arrow. Points appear: '1. Velocity = speed in a definite direction (m s⁻¹)', '2. Average velocity uses displacement; can be zero', '3. Uniform change: average velocity = (u + v)/2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: velocity is speed in a definite direction, measured in metres per second." },
+          { "speaker": "NEO", "text": "Two: average velocity uses displacement, so it can be zero even when average speed is not." },
+          { "speaker": "NEO", "text": "Three: when velocity changes uniformly, average velocity equals u plus v by two." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Motion",
+    "topic_no": 4,
+    "name": "Rate of Change of Velocity: Acceleration",
+    "scenes": [
+      {
+        "animation": "Rahul on a bicycle starts from the school gate as the bell rings. Zippy rides on the handlebar, hair (sparks) blown back as the cycle speeds up.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Faster, Rahul! I can feel the speed piling up!" },
+          { "speaker": "NEO", "text": "What you're feeling is acceleration, the rate at which velocity changes." }
+        ]
+      },
+      {
+        "animation": "The formula builds on a chalkboard: 'a = (v − u) / t', with arrows labelling u 'initial velocity', v 'final velocity', t 'time'. Then 'SI unit: m s⁻²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Acceleration is the change in velocity per unit time. So a equals v minus u, divided by t." },
+          { "speaker": "NEO", "text": "Here, u is the initial velocity, v the final velocity, and t the time taken. The SI unit of acceleration is metre per second squared." }
+        ]
+      },
+      {
+        "animation": "Worked example, part 1: 'u = 0, v = 6 m s⁻¹, t = 30 s', 'a = (6 − 0) / 30 = 0.2 m s⁻²'. A green '+' arrow points forward along Rahul's motion.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rahul starts from rest and reaches six metres per second in thirty seconds." },
+          { "speaker": "NEO", "text": "His acceleration is six minus zero, divided by thirty. That's zero point two metres per second squared, in the direction of motion." }
+        ]
+      },
+      {
+        "animation": "Part 2: Rahul squeezes the brakes near a speed breaker. Working appears: 'u = 6 m s⁻¹, v = 4 m s⁻¹, t = 5 s', 'a = (4 − 6) / 5 = −0.4 m s⁻²'. A red arrow points backwards, opposite the motion.",
+        "lines": [
+          { "speaker": "NEO", "text": "Then he applies brakes, and his velocity drops to four metres per second in the next five seconds." },
+          { "speaker": "NEO", "text": "Now a is four minus six, divided by five, which is minus zero point four metres per second squared." },
+          { "speaker": "ZIPPY", "text": "Negative acceleration? Is that even allowed?" },
+          { "speaker": "NEO", "text": "Absolutely. Negative means the acceleration is opposite to the direction of velocity, so the object slows down." }
+        ]
+      },
+      {
+        "animation": "Split screen: a mango falling freely from a tree with evenly growing velocity arrows, labelled 'Uniform acceleration'; a car in traffic with erratic arrows, labelled 'Non-uniform acceleration'. An 'EXAM TIP' card highlights 'Always write the unit m s⁻²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "If velocity changes by equal amounts in equal time intervals, the acceleration is uniform, like a freely falling body." },
+          { "speaker": "NEO", "text": "If velocity changes by unequal amounts, the acceleration is non-uniform, like a car on a crowded road." },
+          { "speaker": "NEO", "text": "Exam tip: keep the minus sign in your answer and write the unit as metre per second squared. Both carry marks." }
+        ]
+      },
+      {
+        "animation": "Recap board with a bicycle icon. Points: '1. a = (v − u)/t, SI unit m s⁻²', '2. Positive: along velocity (speeding up); negative: opposite (slowing down)', '3. Uniform vs non-uniform acceleration'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: acceleration is the change in velocity per unit time, v minus u by t, in metres per second squared." },
+          { "speaker": "NEO", "text": "Two: positive acceleration is along the velocity; negative acceleration is opposite to it." },
+          { "speaker": "NEO", "text": "Three: equal changes in equal times mean uniform acceleration; otherwise it's non-uniform." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Motion",
+    "topic_no": 5,
+    "name": "Distance–Time Graphs",
+    "scenes": [
+      {
+        "animation": "Zippy hands Neo a long table of numbers from his morning walk, written on a paper so long it unrolls down a staircase. Neo rolls it up into a neat little graph card.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I recorded my walk every second. Now I can't read my own table." },
+          { "speaker": "NEO", "text": "Then let's draw it. A graph shows the whole journey in one picture." }
+        ]
+      },
+      {
+        "animation": "Axes are drawn: 'Time (s)' along the x-axis, 'Distance (m)' along the y-axis. Points from a table (0 s, 0 m), (1 s, 5 m), (2 s, 10 m), (3 s, 15 m) pop onto the grid one by one, and a straight line draws itself through them.",
+        "lines": [
+          { "speaker": "NEO", "text": "Time goes on the x-axis and distance on the y-axis." },
+          { "speaker": "NEO", "text": "Here the object covers five metres every second. When we join the points, we get a straight line." },
+          { "speaker": "NEO", "text": "A straight-line distance-time graph means uniform speed." }
+        ]
+      },
+      {
+        "animation": "A right-angled triangle is drawn under the line between t = 1 s and t = 3 s. The sides are labelled 'Δs = 15 − 5 = 10 m' and 'Δt = 3 − 1 = 2 s', then 'Speed = slope = 10 / 2 = 5 m s⁻¹'.",
+        "lines": [
+          { "speaker": "NEO", "text": "To find the speed, pick two points. Between one second and three seconds, distance goes from five to fifteen metres." },
+          { "speaker": "NEO", "text": "That's ten metres in two seconds, so the speed is five metres per second. This ratio is the slope of the graph." },
+          { "speaker": "ZIPPY", "text": "So a steeper line means a faster walker?" },
+          { "speaker": "NEO", "text": "Exactly. Steeper slope, greater speed." }
+        ]
+      },
+      {
+        "animation": "A second graph draws itself as an upward-bending curve, labelled 'Non-uniform motion (accelerated)'. A third draws a flat horizontal line labelled 'Object at rest'. Zippy lies on the flat line, napping.",
+        "lines": [
+          { "speaker": "NEO", "text": "If the object covers unequal distances in equal time, the graph becomes a curve. This shows non-uniform motion, like a car speeding up." },
+          { "speaker": "NEO", "text": "And if the line is flat, parallel to the time axis, the distance isn't changing at all. The object is at rest." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: a correct graph with evenly marked axes and units, beside a wrong one with a missing label and uneven scale crossed out in red.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Do I really need to label the axes? Everyone knows which one is time." },
+          { "speaker": "NEO", "text": "The examiner doesn't assume anything. Exam tip: when you plot a graph, choose a suitable scale, label both axes with quantities and units, and mark the origin. Marks are given for each of these." }
+        ]
+      },
+      {
+        "animation": "Recap board with three mini graphs: straight line, curve, flat line. Points: '1. Straight line = uniform speed', '2. Slope of distance-time graph = speed', '3. Curve = non-uniform motion; flat line = rest'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a straight-line distance-time graph shows uniform speed." },
+          { "speaker": "NEO", "text": "Two: the slope of a distance-time graph gives the speed." },
+          { "speaker": "NEO", "text": "Three: a curve shows non-uniform motion, and a flat line shows an object at rest." },
+          { "speaker": "ZIPPY", "text": "My nap has a graph now. I'm famous." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Motion",
+    "topic_no": 6,
+    "name": "Velocity–Time Graphs",
+    "scenes": [
+      {
+        "animation": "A car on a highway cruises with its speedometer needle frozen at '40 km/h' for two hours. Zippy, bored, is counting milestones out of the window.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Same speed for two hours. How far have we gone? I lost count at milestone seven." },
+          { "speaker": "NEO", "text": "Draw a velocity-time graph. The answer is hidden in its area." }
+        ]
+      },
+      {
+        "animation": "Axes are drawn: 'Time (h)' on x, 'Velocity (km h⁻¹)' on y. A horizontal line draws itself at 40 from t = 0 to t = 2. The rectangle under it fills with colour, and '40 km h⁻¹ × 2 h = 80 km' appears inside.",
+        "lines": [
+          { "speaker": "NEO", "text": "For uniform velocity, the velocity-time graph is a straight line parallel to the time axis." },
+          { "speaker": "NEO", "text": "The area under this line is velocity multiplied by time. Forty kilometres per hour into two hours gives eighty kilometres." },
+          { "speaker": "NEO", "text": "So the area under a velocity-time graph gives the displacement." }
+        ]
+      },
+      {
+        "animation": "A new graph: a straight sloping line draws itself from (0 s, 0 m s⁻¹) to (4 s, 10 m s⁻¹), labelled 'Uniform acceleration'. A triangle under it lights up.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now a car starts from rest and its velocity rises uniformly to ten metres per second in four seconds." },
+          { "speaker": "NEO", "text": "For uniformly accelerated motion, the velocity-time graph is a straight line sloping upward." }
+        ]
+      },
+      {
+        "animation": "Working appears beside the graph line by line: 'Slope = (10 − 0) / 4 = 2.5 m s⁻²  →  acceleration', then 'Area = ½ × 4 s × 10 m s⁻¹ = 20 m  →  distance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The slope of this graph is the acceleration. Ten metres per second gained in four seconds gives two point five metres per second squared." },
+          { "speaker": "NEO", "text": "The area of the triangle under it is half into four into ten, which is twenty metres. That's the distance covered." },
+          { "speaker": "ZIPPY", "text": "So the slope gives acceleration and the area gives distance. Two answers from one line!" }
+        ]
+      },
+      {
+        "animation": "A wavy, irregular velocity-time curve draws itself, labelled 'Non-uniform acceleration'. An 'EXAM TIP' card compares side by side: 'd-t graph: slope = speed' and 'v-t graph: slope = acceleration, area = displacement'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For non-uniformly accelerated motion, the velocity-time graph can have any curved shape. Think of a bus in city traffic, speeding up and slowing down again and again." },
+          { "speaker": "NEO", "text": "Exam tip: don't mix up the two graphs. The slope of a distance-time graph is speed, but the slope of a velocity-time graph is acceleration." }
+        ]
+      },
+      {
+        "animation": "Recap board with the flat line and sloping line side by side. Points: '1. Uniform velocity: line parallel to time axis', '2. Uniform acceleration: straight sloping line; slope = acceleration', '3. Area under v-t graph = displacement'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: uniform velocity gives a straight line parallel to the time axis." },
+          { "speaker": "NEO", "text": "Two: uniform acceleration gives a straight sloping line, and its slope is the acceleration." },
+          { "speaker": "NEO", "text": "Three: the area under a velocity-time graph gives the displacement." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Motion",
+    "topic_no": 7,
+    "name": "Equations of Motion: Solving Numericals",
+    "scenes": [
+      {
+        "animation": "A train pulls out of a station. Zippy, holding a clipboard, is buried under a pile of crumpled graph papers, trying to plot every single problem.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I've drawn forty graphs for one homework sheet. There must be a shortcut." },
+          { "speaker": "NEO", "text": "There is. For uniform acceleration along a straight line, three equations do the job." }
+        ]
+      },
+      {
+        "animation": "Three equations slide in one at a time and lock into glowing frames: 'v = u + at', 's = ut + ½at²', '2as = v² − u²'. A key underneath reads 'u: initial velocity, v: final velocity, a: acceleration, t: time, s: distance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "First: v equals u plus a t. Second: s equals u t plus half a t squared. Third: two a s equals v squared minus u squared." },
+          { "speaker": "NEO", "text": "Here u is initial velocity, v is final velocity, a is uniform acceleration, t is time and s is the distance travelled." }
+        ]
+      },
+      {
+        "animation": "Example 1 builds line by line: 'u = 0, v = 72 km h⁻¹ = 20 m s⁻¹, t = 5 min = 300 s', 'a = (v − u)/t = 20/300 = 1/15 ≈ 0.067 m s⁻²', 's = ½at² = ½ × (1/15) × 300 × 300 = 3000 m = 3 km'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A train starting from rest attains seventy-two kilometres per hour in five minutes. Find its acceleration and the distance travelled." },
+          { "speaker": "NEO", "text": "Seventy-two into five by eighteen is twenty metres per second, and five minutes is three hundred seconds." },
+          { "speaker": "NEO", "text": "So a is twenty by three hundred, one fifteenth, about zero point zero six seven metres per second squared." },
+          { "speaker": "NEO", "text": "Then s is half into one fifteenth into three hundred squared. That's three thousand metres, or three kilometres." }
+        ]
+      },
+      {
+        "animation": "Example 2: a car screeches to a stop with skid marks. Working appears: 'a = −6 m s⁻², t = 2 s, v = 0', 'u = v − at = 0 − (−6)(2) = 12 m s⁻¹', 's = ut + ½at² = 12 × 2 + ½ × (−6) × 2² = 24 − 12 = 12 m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The brakes of a car give it an acceleration of minus six metres per second squared, and it stops in two seconds. How far does it go?" },
+          { "speaker": "NEO", "text": "From v equals u plus a t, zero equals u minus twelve, so u is twelve metres per second." },
+          { "speaker": "NEO", "text": "Then s equals twelve into two, plus half into minus six into four. That's twenty-four minus twelve, which is twelve metres." },
+          { "speaker": "ZIPPY", "text": "Twelve metres to stop. That's why we don't cross in front of cars!" }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' checklist ticks itself: '1. Write given values with units', '2. Convert km h⁻¹ and minutes to SI', '3. Pick the equation with only one unknown', '4. Keep the sign of a'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: list the given values, convert everything to SI units first, and choose the equation that has only one unknown. Keep the minus sign for retardation." }
+        ]
+      },
+      {
+        "animation": "Recap board with the three framed equations. Points: '1. v = u + at; s = ut + ½at²; 2as = v² − u²', '2. Valid only for uniform acceleration in a straight line', '3. Convert to SI units before substituting'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the three equations are v equals u plus a t, s equals u t plus half a t squared, and two a s equals v squared minus u squared." },
+          { "speaker": "NEO", "text": "Two: they work only for uniform acceleration along a straight line." },
+          { "speaker": "NEO", "text": "Three: convert all values to SI units before you substitute." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Motion",
+    "topic_no": 8,
+    "name": "Uniform Circular Motion",
+    "scenes": [
+      {
+        "animation": "At a school sports day, an athlete runs around a circular track. Zippy holds a speed gun that shows a steady number, but a second gadget labelled 'Velocity' keeps beeping and flashing 'CHANGED!'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Her speed isn't changing, but this gadget says her velocity keeps changing. Is it broken?" },
+          { "speaker": "NEO", "text": "Not broken at all. On a circle, her direction changes at every moment." }
+        ]
+      },
+      {
+        "animation": "The track morphs into a square, then a hexagon, then an octagon, with the athlete turning at each corner. As the number of sides grows, the shape smooths into a circle, and direction arrows keep rotating.",
+        "lines": [
+          { "speaker": "NEO", "text": "On a square track, she changes direction four times per lap. On a hexagon, six times. On an octagon, eight times." },
+          { "speaker": "NEO", "text": "Keep adding sides, and the track becomes a circle. Now she changes direction at every point." }
+        ]
+      },
+      {
+        "animation": "A velocity arrow slides around the circle, always tangent to it, pointing a new way at each position. The label reads 'Constant speed + changing direction = accelerated motion', then 'Uniform circular motion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Since velocity includes direction, a change in direction means a change in velocity. So circular motion at constant speed is still accelerated motion." },
+          { "speaker": "NEO", "text": "When an object moves in a circular path with uniform speed, its motion is called uniform circular motion." }
+        ]
+      },
+      {
+        "animation": "A circle of radius r is drawn. The circumference unrolls into a straight line labelled '2πr'. The formula 'v = 2πr / t' appears. Next, a stone tied to a thread whirls around; the thread is released and the stone flies off along a straight line tangent to the circle.",
+        "lines": [
+          { "speaker": "NEO", "text": "If an object takes time t to go once around a circle of radius r, its speed is two pi r by t." },
+          { "speaker": "NEO", "text": "Whirl a stone on a thread and let go. The stone flies off in a straight line along the tangent, the direction it was moving at that instant." },
+          { "speaker": "NEO", "text": "Other examples are the moon going around the earth, and a satellite in a circular orbit." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'Diameter = 200 m, 1 round = 40 s', 'Circumference = π × 200 = (22/7) × 200 ≈ 628.6 m', '2 min 20 s = 140 s = 3.5 rounds', 'Distance = 3.5 × (22/7) × 200 = 2200 m', 'Displacement = diameter = 200 m'. An 'EXAM TIP' tag sits on the half-round.",
+        "lines": [
+          { "speaker": "NEO", "text": "An athlete completes one round of a circular track of diameter two hundred metres in forty seconds. Find the distance and displacement after two minutes twenty seconds." },
+          { "speaker": "NEO", "text": "That's one hundred and forty seconds, which is three and a half rounds. Distance is three point five into twenty-two by seven into two hundred, which is two thousand two hundred metres." },
+          { "speaker": "NEO", "text": "After half a round extra, she is exactly opposite the start, so her displacement is the diameter, two hundred metres. Exam tip: always check where the object ends up." }
+        ]
+      },
+      {
+        "animation": "Recap board with a circling satellite icon. Points: '1. Circular motion: direction changes continuously → accelerated', '2. Uniform circular motion: constant speed on a circle; v = 2πr/t', '3. Released object moves along the tangent'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in circular motion, direction changes continuously, so it is accelerated motion." },
+          { "speaker": "NEO", "text": "Two: uniform circular motion has constant speed, and v equals two pi r by t." },
+          { "speaker": "NEO", "text": "Three: when released, the object moves off along the tangent." },
+          { "speaker": "ZIPPY", "text": "Tangent. Noted. Not letting go of any stones near windows." }
+        ]
+      }
+    ]
+  }
+]

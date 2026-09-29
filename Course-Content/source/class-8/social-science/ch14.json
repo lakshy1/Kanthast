@@ -1,0 +1,263 @@
+[
+  {
+    "chapter_no": 14,
+    "chapter": "India's Urban Landscape",
+    "topic_no": 1,
+    "name": "Urban and Rural Areas and Population Density",
+    "scenes": [
+      {
+        "animation": "Zippy hosts a birthday party in a small room: first five friends dance comfortably, then the doorbell rings and thirty more squeeze in until Zippy is pressed flat against the wall like a sticker.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, help! Same room, more people, and suddenly I can't breathe!" },
+          { "speaker": "NEO", "text": "Congratulations, Zippy. You have just discovered population density." }
+        ]
+      },
+      {
+        "animation": "A scroll unrolls with sketches of Harappan Dholavira, Kalibangan and Rakhigarhi, then Vijayanagara, Varanasi and Ujjain, each glowing on a map of India. The scroll then morphs into a modern skyline.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has a rich urban legacy. Think of Harappan cities like Dholavira, Kalibangan and Rakhigarhi, and historic ones like Vijayanagara, Varanasi and Ujjain." },
+          { "speaker": "NEO", "text": "Many of these cities are still flourishing today." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: a city with dense buildings, offices, a bus stand and a municipal office labelled 'Elected local body'. Right: a village with fields, a close-knit chaupal and a sign 'Gram Panchayat'. Labels list features on each side.",
+        "lines": [
+          { "speaker": "NEO", "text": "Urban areas have many people, many kinds of businesses and jobs, government institutions, and big transport and communication systems. Elected local bodies look after them." },
+          { "speaker": "NEO", "text": "Rural areas are villages with fewer people, close-knit communities, more farm-based work, and gram panchayats." }
+        ]
+      },
+      {
+        "animation": "Three flags pop up with counters: Denmark '220', Japan '50,000', India '5,000', each labelled 'people needed to count as urban'. Zippy's eyes spin between the numbers.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So how many people make a place a town?" },
+          { "speaker": "NEO", "text": "It depends on the country! In Denmark, a place becomes urban above 220 people. In Japan, 50,000. In India, 5,000." }
+        ]
+      },
+      {
+        "animation": "The formula builds on a blackboard: 'Population density = total population of a region / area in sq km'. Then two satellite views from Haryana slide in side by side: village Asadpur Khera with green and brown fields, and Gurugram with grey built-up blocks. Dots representing people pack densely into Gurugram.",
+        "lines": [
+          { "speaker": "NEO", "text": "Population density is the number of people living per square kilometre. Divide the total population of a region by its area." },
+          { "speaker": "NEO", "text": "Look at these satellite views from Haryana. The village has open fields. Gurugram is packed with buildings, so its density is much higher." },
+          { "speaker": "NEO", "text": "Two of the world's most populous cities are in India: Kolkata and New Delhi." },
+          { "speaker": "NEO", "text": "Exam tip: always write the unit, people per square kilometre, when you give a density answer." }
+        ]
+      },
+      {
+        "animation": "The party room clears out as three recap points appear on the wall like party banners.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: India has an urban legacy from Harappan cities to Varanasi and Ujjain. Two: urban areas have elected local bodies, while villages have gram panchayats, and India counts a place as urban above 5,000 people. Three: population density is people per square kilometre." },
+          { "speaker": "ZIPPY", "text": "Next party, I am booking a stadium." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "India's Urban Landscape",
+    "topic_no": 2,
+    "name": "How Cities Become Centres of Economic Activities",
+    "scenes": [
+      {
+        "animation": "A tiny village with one tea stall. Time-lapse: a road appears, then a small factory, then a bank, a hotel, a bus stand, until high-rises and a metro line surround the original tea stall, now a busy chai cafe.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Whoa! That tea stall grew a whole city around it!" },
+          { "speaker": "NEO", "text": "That is urbanisation. Villages slowly become towns, and towns become cities." }
+        ]
+      },
+      {
+        "animation": "A map shows old cities growing beside rivers, at crossroads of trade routes, and near farmland and mines. A pie chart morphs from '17% urban (1951)' to 'about 40% urban (2025)' for India, and a globe label reads '55% now, 68% by 2050'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Places grew into cities because they were near rivers, on trade routes, or close to farm produce and raw materials." },
+          { "speaker": "NEO", "text": "Today, 55 per cent of the world lives in cities, and the United Nations expects 68 per cent by 2050." },
+          { "speaker": "NEO", "text": "In India, the urban population rose from 17 per cent in 1951 to around 40 per cent in 2025." }
+        ]
+      },
+      {
+        "animation": "A flowchart of Fig. 7.6 builds step by step: 'Rural origins: farm work' then 'Early urbanisation: small industries, transport, services' then 'Small towns and trading centres' then 'People arrive, population grows' then 'New infrastructure and many kinds of jobs' then 'Metropolitan area'.",
+        "lines": [
+          { "speaker": "NEO", "text": "It starts with farm work. Then small industries, transport and services appear. Small towns and trading centres emerge." },
+          { "speaker": "NEO", "text": "People arrive for jobs. Factories, banks, hotels and stadiums are built. Finally, cities expand into metropolitan areas." }
+        ]
+      },
+      {
+        "animation": "A map of Jharkhand zooms into the Chota Nagpur Plateau: the village Sakchi sits beside glowing iron ore. A steel plant rises, tree-lined streets and gardens are drawn in, and the signboard changes from 'Sakchi' to 'Jamshedpur, 1919'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sakchi was a small village near rich iron ore deposits. It was chosen as the site of Asia's first steel plant." },
+          { "speaker": "NEO", "text": "The Tata family planned a township with wide, tree-lined streets and gardens. Sakchi was renamed Jamshedpur in 1919. Today it is Jharkhand's largest industrial city." }
+        ]
+      },
+      {
+        "animation": "A map of India highlights Mumbai on the Arabian Sea and Kolkata near the eastern coast with ship icons. In Mumbai, a 'BSE 1875' building appears, then a film reel from the 1910s, then the Bandra Worli Sea Link.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So every city needs iron ore?" },
+          { "speaker": "NEO", "text": "No! Location matters too. Mumbai on the Arabian Sea and Kolkata near the eastern coast became port cities for trade." },
+          { "speaker": "NEO", "text": "After the Bombay Stock Exchange was set up in 1875, Mumbai became India's financial capital. Its film industry began in the 1910s." },
+          { "speaker": "NEO", "text": "Exam tip: urbanisation means a population shift from rural to urban areas. Learn that definition exactly." }
+        ]
+      },
+      {
+        "animation": "The Jamshedpur and Mumbai scenes shrink into postcards; three recap points appear beside them.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: cities grew near rivers, trade routes and raw materials. Two: India's urban population rose from 17 per cent in 1951 to around 40 per cent in 2025. Three: Jamshedpur grew from iron ore, while Mumbai grew as a port and financial capital." },
+          { "speaker": "ZIPPY", "text": "Next stop, my tea stall's metro line!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "India's Urban Landscape",
+    "topic_no": 3,
+    "name": "Specialised Cities and Cities as Cultural Hubs",
+    "scenes": [
+      {
+        "animation": "Zippy runs a quiz show with buzzers. On screen: a brass pot, a wooden toy, a silk saree and a laptop. Contestants must match each to a city on a map of India.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Quiz time! Brass pot, wooden toy, silk saree, laptop. Which city makes what?" },
+          { "speaker": "NEO", "text": "Easy. Many Indian cities are famous for one special thing. Let's put them on the map." }
+        ]
+      },
+      {
+        "animation": "A map of India fills pin by pin: Bengaluru and Hyderabad with laptop icons; Moradabad with brass; Ludhiana and Tirupur with textiles; Jaipur with gems and handicrafts; Channapatna with wooden toys; Kanchipuram with silk sarees.",
+        "lines": [
+          { "speaker": "NEO", "text": "Bengaluru, the Silicon Valley of India, grew as an IT hub with software firms, start-ups and colleges working closely together. Hyderabad is a major tech centre too." },
+          { "speaker": "NEO", "text": "Moradabad is known for brass, Ludhiana and Tirupur for textiles, Jaipur for handicrafts and gem jewellery, Channapatna for wooden toys, and Kanchipuram for silk sarees." }
+        ]
+      },
+      {
+        "animation": "The Taj Mahal glows in Agra with a visitor counter reading '70-80 lakh a year'. Pilgrims walk towards Amritsar and Varanasi, where flower sellers, tea stalls, rickshaws and saree shops light up.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some cities thrive on history and faith. Agra, home to the Taj Mahal, gets 70 to 80 lakh visitors every year." },
+          { "speaker": "NEO", "text": "Pilgrims visit Amritsar and Varanasi. This supports transport, hotels, food vendors and handicrafts." }
+        ]
+      },
+      {
+        "animation": "A timeline of Delhi builds: 'Iron Age', 'Rajputs, Turks, Mughals: forts, roads, markets', 'British: new capital, railways, electricity', 'After 1947: capital of the Republic'. Then a map of NCR expands to include NOIDA, Ghaziabad and Gurugram, with metro lines drawn in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Delhi has been a centre of culture, trade and administration since the Iron Age. After Independence, New Delhi became the capital of the Republic." },
+          { "speaker": "NEO", "text": "As it grew crowded, the National Capital Region was created, including NOIDA and Ghaziabad. Since the 1990s, Gurugram has become a major IT and BPO hub." }
+        ]
+      },
+      {
+        "animation": "A Mumbai mill worker bites into a vada pav; labels float over it: 'Maharashtrian potato vada' and 'pav: Portuguese'. Then Kolkata's Durga Puja pandals light up with a UNESCO badge '2021', beside libraries, museums and stadiums.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Do cities only make money?" },
+          { "speaker": "NEO", "text": "No, they mix cultures too. Mumbai's vada pav combines a Maharashtrian potato vada with Portuguese-style pav. It became popular with textile mill workers." },
+          { "speaker": "NEO", "text": "Kolkata's Durga Puja was added to UNESCO's Intangible Cultural Heritage list in 2021." },
+          { "speaker": "NEO", "text": "Exam tip: in map work, practise locating these specialised cities on an outline map of India." }
+        ]
+      },
+      {
+        "animation": "The quiz board flips to show three recap points as the final answers.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: many cities specialise, like Bengaluru in IT and Moradabad in brass. Two: tourism and pilgrimage support cities like Agra, Amritsar and Varanasi. Three: cities are cultural hubs, from vada pav to Kolkata's Durga Puja." },
+          { "speaker": "ZIPPY", "text": "I'm taking a vada pav as my prize." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "India's Urban Landscape",
+    "topic_no": 4,
+    "name": "Challenges Faced by Cities",
+    "scenes": [
+      {
+        "animation": "Zippy rides an auto-rickshaw through a city: a traffic jam, a hazy sky, an overflowing garbage heap and a flooded underpass flash past. The auto stalls, and Zippy coughs a small grey cloud.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Cities are exciting, but why is everything jammed, smoky and flooded?" },
+          { "speaker": "NEO", "text": "Because too many people and too little planning put pressure on resources." }
+        ]
+      },
+      {
+        "animation": "A collage of Fig. 7.18 assembles tile by tile: poor air quality, water scarcity, traffic jams, reduced green spaces, waste generation, flooding during monsoons, urban slums. A thermometer rises over a grey block labelled 'Heat island'.",
+        "lines": [
+          { "speaker": "NEO", "text": "More people need more food, water, energy and housing. Roads get crowded, unplanned colonies grow, and waste piles up." },
+          { "speaker": "NEO", "text": "Concrete creates heat islands, raising temperatures. Crime can also be higher because of density and inequality." }
+        ]
+      },
+      {
+        "animation": "An AQI meter over NCR swings past '400' into deep red while a green zone at '50' is marked 'safe limit'. Masked children wait at a bus stop.",
+        "lines": [
+          { "speaker": "NEO", "text": "The National Capital Region often records Air Quality Index levels over 400. The safe limit is 50." },
+          { "speaker": "ZIPPY", "text": "That's eight times over the safe limit!" },
+          { "speaker": "NEO", "text": "Yes, and it poses serious health risks to residents." }
+        ]
+      },
+      {
+        "animation": "Beside a railway track, crowded shacks with little water or drainage. Residents head out as a vegetable vendor, domestic helper, construction worker and plumber. A new building rises with a board 'Pradhan Mantri Aawaas Yojana'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Slums are overcrowded settlements with poor housing, water and sanitation. They grow near railway tracks and industrial areas, because there is not enough affordable housing." },
+          { "speaker": "NEO", "text": "Slum dwellers support the city by selling vegetables, doing domestic help, construction and plumbing. The Pradhan Mantri Aawaas Yojana provides affordable housing for economically weaker households." }
+        ]
+      },
+      {
+        "animation": "A map of Bengaluru is dotted with about 1,000 blue lakes that fade until about 200 remain; Bellandur and Varthur froth with foam and a small flame. Then volunteers desilt, repair bunds, plant native plants and release fish, and Yelahanka Lake turns clear blue.",
+        "lines": [
+          { "speaker": "NEO", "text": "Bengaluru once had around 1,000 lakes. Rapid urbanisation reduced them to about 200, and many were polluted. Bellandur and Varthur lakes even caught fire!" },
+          { "speaker": "NEO", "text": "Now nonprofits, Resident Welfare Associations and communities are reviving lakes by desilting, repairing bunds and planting native species." },
+          { "speaker": "NEO", "text": "Exam tip: when asked about urban challenges, give a problem and a solution, like Bengaluru's lake revival." }
+        ]
+      },
+      {
+        "animation": "Clear blue sky returns over the city as three recap points appear on a billboard.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: crowded cities face traffic, pollution, waste, heat islands and floods. Two: slums grow when affordable housing is short, yet slum dwellers keep cities running. Three: collective action, like reviving Bengaluru's lakes, can fix problems." },
+          { "speaker": "ZIPPY", "text": "Community power beats traffic jams!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "India's Urban Landscape",
+    "topic_no": 5,
+    "name": "Planning Our Cities",
+    "scenes": [
+      {
+        "animation": "Zippy plays a city-building game on a tablet, dropping a factory next to a school and a highway through a park. Alarms blare and pixel citizens wave angry signs.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My game city is a disaster! Everyone is angry!" },
+          { "speaker": "NEO", "text": "That is why real cities need urban planners. Let's learn from the best." }
+        ]
+      },
+      {
+        "animation": "An urban planner walk-on unrolls a blueprint with questions popping up: 'How many people?', 'What jobs?', 'What transport?', 'Where do homes, parks, schools and hospitals go?', 'Safe streets, fire and police stations?'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Planners ask many questions. How many people live here? What jobs do they do? How will they travel?" },
+          { "speaker": "NEO", "text": "Where should homes, parks, schools and hospitals go? And how do we keep streets safe for walkers and cyclists?" }
+        ]
+      },
+      {
+        "animation": "A 1727 parchment unrolls: a grid of rectangular blocks labelled 'chowkris', wide streets, nine public squares, and a wall with seven gates built step by step. The buildings turn pink sandstone, and a stepwell fills with water.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1727, Maharaja Sawai Jai Singh II asked Vidyadhar Bhattacharya to design Jaipur. He used vastu shastra and shilpa shastra." },
+          { "speaker": "NEO", "text": "The city had a grid of blocks called chowkris, wide streets and nine public squares. A 20-foot wall with seven gates kept it safe." },
+          { "speaker": "NEO", "text": "Buildings used pink sandstone, which is why Jaipur is called the Pink City." }
+        ]
+      },
+      {
+        "animation": "A globe zooms to Singapore: an overcrowded 1960s port transforms into green high-rises with vertical gardens. Labels appear: 'Over 8,000 people per sq km', 'Concept Plan: 40 years ahead', 'Master Plan: updated every 5 years'. An MRT train and park connectors link the city.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What about a modern example?" },
+          { "speaker": "NEO", "text": "Singapore has over 8,000 people per square kilometre, yet a high quality of life. Its Concept Plan looks up to 40 years ahead, and its Master Plan is updated every 5 years." },
+          { "speaker": "NEO", "text": "It mixes homes, offices and parks nearby, links rail, buses and cycle paths, and grows vertical gardens on buildings." }
+        ]
+      },
+      {
+        "animation": "Back in India: the Sabarmati Riverfront in Ahmedabad with promenades and the Atal Bridge, then Gangtok's M.G. Road, a clean pedestrian-only shopping street. An 'Exam Tip' card flips beside Jaipur's grid.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has fine examples too. Ahmedabad's Sabarmati Riverfront has parks, promenades and the Atal Bridge. Gangtok's M.G. Road is a clean, pedestrian-only hub." },
+          { "speaker": "NEO", "text": "Exam tip: remember Jaipur's chief planner, Vidyadhar Bhattacharya, and the year 1727." }
+        ]
+      },
+      {
+        "animation": "Zippy's game city rebuilds itself neatly with parks and metro lines as three recap points appear.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: urban planners decide where people live, work, travel and play. Two: Jaipur, planned in 1727, used grids, squares and pink sandstone. Three: Singapore plans ahead and updates often, while India has spaces like the Sabarmati Riverfront." },
+          { "speaker": "ZIPPY", "text": "My city just got a garden on every wall!" }
+        ]
+      }
+    ]
+  }
+]

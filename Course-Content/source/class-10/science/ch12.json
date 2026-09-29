@@ -1,0 +1,273 @@
+[
+  {
+    "chapter_no": 12,
+    "chapter": "Magnetic Effects of Electric Current",
+    "topic_no": 1,
+    "name": "Magnetic Field and Field Lines",
+    "scenes": [
+      {
+        "animation": "Zippy sprinkles iron filings on a sheet of paper over a bar magnet, expecting a random mess. The filings leap up and snap into neat curved patterns, one landing on Zippy's nose.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I just wanted to make a mess, but the filings arranged themselves into a pattern!" },
+          { "speaker": "NEO", "text": "That pattern is a map of the magnetic field, Zippy. The magnet is drawing it for you." }
+        ]
+      },
+      {
+        "animation": "A compass needle is shown as a tiny bar magnet with its north-seeking end painted red. Two bar magnets approach: like poles push apart with a bounce, unlike poles snap together. Label 'Like poles repel, unlike poles attract'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A compass needle is a small bar magnet. The end that points north is its north pole." },
+          { "speaker": "NEO", "text": "Like poles repel and unlike poles attract." },
+          { "speaker": "NEO", "text": "The region around a magnet where its force can be detected is its magnetic field. It has both magnitude and direction." }
+        ]
+      },
+      {
+        "animation": "A compass is moved step by step from the north pole of a bar magnet, with a dot marked at each needle tip; the dots are joined into a curved line ending at the south pole. More lines are drawn the same way, with arrows added.",
+        "lines": [
+          { "speaker": "NEO", "text": "Place a compass near the magnet, mark where the needle points, move it forward, and mark again. Joining the dots gives a magnetic field line." },
+          { "speaker": "NEO", "text": "The direction of a field line is the direction in which the north pole of a compass needle moves." }
+        ]
+      },
+      {
+        "animation": "A full field-line diagram glows: outside the magnet, arrows run from N to S; a cutaway shows lines inside running from S to N, closing each loop. Lines are crowded near the poles, glowing brighter there. Two lines try to cross and a compass at the crossing spins in confusion before a red cross appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Outside the magnet, field lines go from the north pole to the south pole. Inside, they go from south to north. So field lines are closed curves." },
+          { "speaker": "NEO", "text": "Where the lines are crowded, the field is stronger. That is why the field is strongest near the poles." },
+          { "speaker": "ZIPPY", "text": "Can two lines ever cross?" },
+          { "speaker": "NEO", "text": "Never. At a crossing, the compass would have to point in two directions at once, which is impossible." }
+        ]
+      },
+      {
+        "animation": "A 'Board Tip' clipboard shows a student's diagram with missing arrows and two crossing lines, both circled in red. Neo redraws it correctly with arrowheads and lines bunched at the poles.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: in field-line diagrams, always add arrows from north to south outside the magnet, crowd the lines near the poles, and never let them cross." },
+          { "speaker": "NEO", "text": "'Why do two field lines never intersect?' is also a classic two-mark question." }
+        ]
+      },
+      {
+        "animation": "Recap board with a bar magnet icon. Points: '1. Field lines: N to S outside, S to N inside, closed curves', '2. Crowded lines = stronger field', '3. Field lines never intersect'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: field lines run from north to south outside a magnet and south to north inside, forming closed curves." },
+          { "speaker": "NEO", "text": "Two: the closer the lines, the stronger the field." },
+          { "speaker": "NEO", "text": "Three: two field lines never intersect." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Magnetic Effects of Electric Current",
+    "topic_no": 2,
+    "name": "Magnetic Field Due to a Straight Current-Carrying Conductor",
+    "scenes": [
+      {
+        "animation": "A sepia-toned lab in 1820. Walk-on character Oersted, with a large collar, closes a switch; a compass needle beside the wire jerks sideways. Zippy, dressed as a time-travelling reporter, holds out a microphone.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Breaking news from 1820! A wire just moved a compass needle without touching it!" },
+          { "speaker": "OERSTED", "text": "When current flows through the wire, the needle deflects. Electricity and magnetism are connected." },
+          { "speaker": "NEO", "text": "Hans Christian Oersted discovered this. The unit of magnetic field strength, the oersted, is named after him." }
+        ]
+      },
+      {
+        "animation": "A straight vertical wire passes through a horizontal cardboard sheet sprinkled with iron filings. Current is switched on and the filings shuffle into concentric circles around the wire; compasses placed on a circle all point along it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Pass a current through a straight wire held vertically through a cardboard sheet, and sprinkle iron filings around it." },
+          { "speaker": "NEO", "text": "The filings form concentric circles around the wire. So the magnetic field lines of a straight conductor are concentric circles." },
+          { "speaker": "NEO", "text": "Reverse the current, and the direction of the field reverses too." }
+        ]
+      },
+      {
+        "animation": "A cartoon right hand grips the wire with the thumb pointing up along a current arrow; the curled fingers glow and circular arrows sweep in the same direction. Label 'Right-hand thumb rule'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How do I know which way the circles go?" },
+          { "speaker": "NEO", "text": "Use the right-hand thumb rule. Hold the wire in your right hand with the thumb pointing in the direction of current." },
+          { "speaker": "NEO", "text": "Your fingers wrap around the wire in the direction of the magnetic field lines. This is also called Maxwell's corkscrew rule." }
+        ]
+      },
+      {
+        "animation": "Two side-by-side panels: turning up a rheostat thickens the field circles and the compass deflects more, label 'Current ↑ → field ↑'; moving the compass farther from the wire makes the deflection shrink, label 'Distance ↑ → field ↓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The magnetic field is stronger when the current is larger." },
+          { "speaker": "NEO", "text": "It becomes weaker as you move farther from the wire. The concentric circles get larger and more spread out." }
+        ]
+      },
+      {
+        "animation": "A 'Board Tip' card shows a wire drawn across the page with the current arrow pointing right, and question marks above and below it. Neo's right hand grips it, thumb to the right, and symbols appear: a dot labelled 'out of page' above the wire and a cross labelled 'into page' below it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: questions often ask the direction of the field above or below a wire. Always apply the right-hand thumb rule step by step, and state the rule by name in your answer." },
+          { "speaker": "ZIPPY", "text": "Right hand only. Left hand stays in my pocket for now." }
+        ]
+      },
+      {
+        "animation": "Recap board with a wire and circles icon. Points: '1. Current produces a magnetic field (Oersted)', '2. Field lines are concentric circles; right-hand thumb rule', '3. Field ∝ current, decreases with distance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: an electric current produces a magnetic field, as Oersted discovered." },
+          { "speaker": "NEO", "text": "Two: around a straight wire, field lines are concentric circles, and their direction is given by the right-hand thumb rule." },
+          { "speaker": "NEO", "text": "Three: the field increases with current and decreases with distance from the wire." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Magnetic Effects of Electric Current",
+    "topic_no": 3,
+    "name": "Magnetic Field Due to a Circular Loop and a Solenoid",
+    "scenes": [
+      {
+        "animation": "At a scrapyard, a giant crane magnet lifts an old scooter, then drops it when the operator flips a switch. Zippy, dangling from the scooter, lands in a pile of tyres.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "That magnet switched off! Real magnets don't have switches!" },
+          { "speaker": "NEO", "text": "This one does, Zippy. It is an electromagnet, and it starts with a simple loop of wire." }
+        ]
+      },
+      {
+        "animation": "A straight wire bends into a circular loop. Small concentric circles around each part of the wire grow larger; at the centre they merge into nearly straight lines all pointing the same way. Label 'At the centre: lines appear straight'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Bend a current-carrying wire into a circular loop. Every point on the wire produces concentric circles around it." },
+          { "speaker": "NEO", "text": "Near the wire the circles are small. At the centre, the arcs become so large that they look like straight lines." },
+          { "speaker": "NEO", "text": "Every section of the loop adds to the field in the same direction inside the loop." }
+        ]
+      },
+      {
+        "animation": "A coil gains turns one by one, with a counter 'n = 1, 2, 3 … 10'. The field arrow at the centre grows longer each time, label 'Field ∝ n'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The field at the centre is proportional to the current. With a coil of n turns, the field becomes n times that of a single turn, because the effects of the turns add up." }
+        ]
+      },
+      {
+        "animation": "A long insulated copper wire winds tightly around an invisible cylinder, forming a solenoid. Field lines are drawn: straight and parallel inside, looping around outside exactly like a bar magnet beside it. The ends get 'N' and 'S' labels.",
+        "lines": [
+          { "speaker": "NEO", "text": "A coil of many circular turns of insulated copper wire wrapped closely in the shape of a cylinder is called a solenoid." },
+          { "speaker": "NEO", "text": "Its field pattern is just like a bar magnet. One end behaves as a north pole and the other as a south pole." },
+          { "speaker": "NEO", "text": "Inside, the field lines are parallel straight lines. That means the field is the same at all points inside, a uniform magnetic field." }
+        ]
+      },
+      {
+        "animation": "A soft iron rod slides into the solenoid; paper clips jump onto it when the current is on and fall off when it is off. Label 'Electromagnet'. A 'Board Tip' card shows a solenoid diagram with parallel lines inside ticked in green.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the scrapyard crane is a solenoid with an iron core?" },
+          { "speaker": "NEO", "text": "Exactly. The strong field inside a solenoid can magnetise a piece of soft iron placed in it. That makes an electromagnet." },
+          { "speaker": "NEO", "text": "Board tip: when drawing a solenoid's field, show parallel, evenly spaced lines inside. That detail earns the diagram mark." }
+        ]
+      },
+      {
+        "animation": "Recap board with a coil icon. Points: '1. Loop: lines at the centre appear straight', '2. Field ∝ current and number of turns', '3. Solenoid: like a bar magnet, uniform field inside; soft iron core = electromagnet'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: at the centre of a circular loop, the field lines appear as straight lines." },
+          { "speaker": "NEO", "text": "Two: the field increases with current and with the number of turns." },
+          { "speaker": "NEO", "text": "Three: a solenoid behaves like a bar magnet with a uniform field inside, and a soft iron core turns it into an electromagnet." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Magnetic Effects of Electric Current",
+    "topic_no": 4,
+    "name": "Force on a Current-Carrying Conductor",
+    "scenes": [
+      {
+        "animation": "A small aluminium rod hangs horizontally between the poles of a horseshoe magnet. Zippy switches on the current and the rod swings out and taps Zippy on the head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Ow! The rod just kicked me the moment I turned on the current!" },
+          { "speaker": "NEO", "text": "The magnet pushed it, Zippy. A current-carrying conductor feels a force in a magnetic field." }
+        ]
+      },
+      {
+        "animation": "Replay in slow motion with labels: the rod moves out when current flows from B to A; with the current reversed, it moves in; with the magnet flipped, it also moves in. Walk-on André-Marie Ampère nods beside a caption 'Magnet exerts an equal and opposite force on the conductor'.",
+        "lines": [
+          { "speaker": "NEO", "text": "André-Marie Ampère suggested that just as a current exerts a force on a magnet, a magnet exerts an equal and opposite force on a current-carrying conductor." },
+          { "speaker": "NEO", "text": "Reverse the current, and the rod moves the other way. Reverse the magnet's poles, and it also moves the other way." },
+          { "speaker": "NEO", "text": "The displacement is largest when the current is at right angles to the magnetic field." }
+        ]
+      },
+      {
+        "animation": "A cartoon left hand stretches out its thumb, forefinger and middle finger at right angles. Labels pop up: forefinger 'Field', middle finger 'Current', thumb 'Motion / Force'. The hand rotates in 3D so viewers can copy it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How do I predict which way it moves?" },
+          { "speaker": "NEO", "text": "Use Fleming's left-hand rule. Stretch your thumb, forefinger and middle finger so they are mutually perpendicular." },
+          { "speaker": "NEO", "text": "Point the forefinger along the magnetic field and the middle finger along the current. The thumb shows the direction of motion, or force, on the conductor." }
+        ]
+      },
+      {
+        "animation": "Quick montage: an electric motor spinning, a loudspeaker cone vibrating, a microphone and a measuring meter needle swinging. Then a hospital MRI scanner with a heart and brain glowing softly, caption 'Magnetism in medicine'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Devices like electric motors, generators, loudspeakers, microphones and measuring instruments use current-carrying conductors and magnetic fields." },
+          { "speaker": "NEO", "text": "Even our body produces weak magnetic fields, especially in the heart and brain, because of currents in nerve cells. MRI uses magnetism to image the inside of the body." }
+        ]
+      },
+      {
+        "animation": "A 'Board Tip' card shows an electron zipping to the right through a field. A thought bubble 'current to the right?' is crossed out and replaced with 'current to the left', then Fleming's left hand is applied.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: if a question gives an electron's motion, the current is in the opposite direction. Flip it first, then apply Fleming's left-hand rule." }
+        ]
+      },
+      {
+        "animation": "Recap board with a horseshoe magnet icon. Points: '1. Current in a magnetic field feels a force', '2. Force is maximum when current ⟂ field; reverses with current or field', '3. Fleming's left-hand rule: Field, Current, Motion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a current-carrying conductor in a magnetic field experiences a force." },
+          { "speaker": "NEO", "text": "Two: the force is greatest when the current is perpendicular to the field, and it reverses if the current or the field is reversed." },
+          { "speaker": "NEO", "text": "Three: Fleming's left-hand rule gives the direction: forefinger field, middle finger current, thumb motion." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Magnetic Effects of Electric Current",
+    "topic_no": 5,
+    "name": "Domestic Electric Circuits",
+    "scenes": [
+      {
+        "animation": "A festive evening: Zippy plugs a heater, a kettle, an iron and a string of lights into one multi-plug socket. The socket smokes, a spark flies, and everything goes dark with a pop.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I just wanted everything on at once. Why did the whole house go dark?" },
+          { "speaker": "NEO", "text": "You overloaded the circuit, Zippy. Luckily, the fuse saved the day. Let's see how your home is wired." }
+        ]
+      },
+      {
+        "animation": "Cutaway of a house: power arrives from a pole through three colour-coded wires, red labelled 'Live', black 'Neutral', green 'Earth'. The wires pass through a main fuse, an electricity meter and a main switch, with a tag '220 V AC, 50 Hz'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Electricity reaches our homes through the mains, by overhead poles or underground cables." },
+          { "speaker": "NEO", "text": "The live wire has red insulation, the neutral wire has black insulation, and the potential difference between them in India is 220 volts." },
+          { "speaker": "NEO", "text": "The supply is alternating current with a frequency of 50 hertz. It passes through a main fuse and an electricity meter to the main switch." }
+        ]
+      },
+      {
+        "animation": "Two circuits branch from the distribution box: a thick line labelled '15 A: geyser, air cooler' and a thin line labelled '5 A: bulbs, fans'. Each appliance sits on its own parallel branch with its own switch; one switch turns off and the rest stay lit.",
+        "lines": [
+          { "speaker": "NEO", "text": "Homes usually have two circuits: a 15 ampere circuit for high-power appliances like geysers and air coolers, and a 5 ampere circuit for bulbs and fans." },
+          { "speaker": "NEO", "text": "Appliances are connected in parallel, each with its own switch, so each gets the same potential difference." }
+        ]
+      },
+      {
+        "animation": "A toaster with a metal body shows a green earth wire running to a metal plate buried deep in the ground. A fault makes current leak into the body; it flows down the earth wire instead of into Zippy's hand, and Zippy gives a relieved thumbs up.",
+        "lines": [
+          { "speaker": "NEO", "text": "The earth wire has green insulation and connects to a metal plate deep in the earth. It is used for appliances with metallic bodies, like irons, toasters and refrigerators." },
+          { "speaker": "NEO", "text": "It gives leaking current a low-resistance path, keeping the metal body at the earth's potential, so the user does not get a severe shock." }
+        ]
+      },
+      {
+        "animation": "Two warning panels: 'Short circuit' shows damaged insulation letting the red and black wires touch, with the current meter spiking; 'Overloading' shows too many plugs in one socket and a voltage spike symbol. In both, the fuse wire melts and the circuit opens. A 'Board Tip' card flips in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Short-circuiting happens when the live and neutral wires come into direct contact, often due to damaged insulation or a fault in an appliance. The current rises abruptly." },
+          { "speaker": "NEO", "text": "Overloading happens when too many appliances are connected to one socket, or the supply voltage suddenly rises. The fuse protects against both." },
+          { "speaker": "NEO", "text": "Board tip: learn the colour codes, red live, black neutral, green earth, and the difference between short-circuiting and overloading. Both are asked often." }
+        ]
+      },
+      {
+        "animation": "Recap board with a house icon. Points: '1. Live (red), neutral (black), earth (green); 220 V, 50 Hz', '2. Appliances in parallel; 15 A and 5 A circuits', '3. Earthing and fuse protect against shocks, short circuits and overloading'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: homes get 220 volt AC at 50 hertz through a red live wire and a black neutral wire, plus a green earth wire." },
+          { "speaker": "NEO", "text": "Two: appliances are connected in parallel, on 15 ampere and 5 ampere circuits." },
+          { "speaker": "NEO", "text": "Three: the earth wire and the fuse protect us from shocks, short-circuiting and overloading." }
+        ]
+      }
+    ]
+  }
+]

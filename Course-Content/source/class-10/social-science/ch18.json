@@ -1,0 +1,226 @@
+[
+  {
+    "chapter_no": 18,
+    "chapter": "Economics: Development",
+    "topic_no": 1,
+    "name": "What Development Promises: Different People, Different Goals",
+    "scenes": [
+      {
+        "animation": "A school canteen. Zippy stands on a table holding a mic labelled 'What does development mean to YOU?'. Speech bubbles pop up from different students: 'A new phone!', 'A girls' toilet!', 'Better marks!'. Zippy looks confused as the bubbles collide.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I asked everyone what development means. I got twenty different answers!" },
+          { "speaker": "NEO", "text": "That is exactly the first lesson. Different persons can have different developmental goals." }
+        ]
+      },
+      {
+        "animation": "A two-column table builds row by row, titled 'Developmental goals for different categories of persons'. Left column shows cartoon icons: a landless rural labourer, a prosperous farmer from Punjab, a farmer who depends on rain, a rural woman from a land-owning family, urban unemployed youth, a boy from a rich urban family, a girl from a rich urban family, an adivasi from Narmada valley. Right column fills with short goals like 'more days of work', 'assured high prices', 'regular job', 'freedom to decide'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A landless rural labourer wants more days of work and better wages, and a local school for the children." },
+          { "speaker": "NEO", "text": "A prosperous farmer from Punjab wants assured high prices for crops and hardworking, cheap labourers." },
+          { "speaker": "NEO", "text": "A girl from a rich urban family may want as much freedom as her brother, and to be able to decide what she wants to do in life." }
+        ]
+      },
+      {
+        "animation": "A river valley. An industrialist cartoon points at a giant dam blueprint with the label 'More electricity'. On the other side, adivasi families watch their village outlined in blue as water level rises. A red label reads 'Conflicting goals'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So everyone just wants different things. Easy." },
+          { "speaker": "NEO", "text": "Not always easy. Goals can also conflict. An industrialist may want more dams for electricity. But dams can submerge land and disrupt the lives of people who are displaced, such as tribals." },
+          { "speaker": "NEO", "text": "What may be development for one may not be development for the other. It may even be destructive for the other." }
+        ]
+      },
+      {
+        "animation": "A scale balances a money bag labelled 'Income' on one side. On the other side, blocks drop one by one: 'Equal treatment', 'Freedom', 'Security', 'Respect of others', 'Safe environment for women'. The scale tips toward the blocks.",
+        "lines": [
+          { "speaker": "NEO", "text": "Notice something. Most people want regular work, better wages and decent prices. In other words, they want more income." },
+          { "speaker": "NEO", "text": "But people also seek things like equal treatment, freedom, security and respect of others. They resent discrimination." },
+          { "speaker": "NEO", "text": "If women are engaged in paid work outside, their dignity in the household and society increases. And a safe and secure environment may allow more women to take up jobs or run a business." },
+          { "speaker": "ZIPPY", "text": "So money is important, but it is not the whole list." }
+        ]
+      },
+      {
+        "animation": "A shopping trolley tries to grab items labelled 'Pollution-free air', 'Unadulterated medicines', 'Protection from infectious diseases'. Each item bounces off with a 'Not for sale' sticker. Neo holds up a board-tip card.",
+        "lines": [
+          { "speaker": "NEO", "text": "Money cannot buy all the goods and services you need. It cannot buy you a pollution-free environment or ensure that you get unadulterated medicines, unless you can afford to shift to a community that already has these things." },
+          { "speaker": "NEO", "text": "Board tip: questions often ask why development goals differ, or how they conflict. The dam example is a safe answer." }
+        ]
+      },
+      {
+        "animation": "Recap board with a signpost icon pointing in many directions. Three points appear one by one: '1. Different people, different goals', '2. Goals can conflict (dam example)', '3. Income matters, but so do equality, freedom, security, respect'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: different persons have different developmental goals." },
+          { "speaker": "NEO", "text": "Two: one person's development can be destructive for another, like a dam that displaces people." },
+          { "speaker": "NEO", "text": "Three: people want more income, but also equal treatment, freedom, security and respect." },
+          { "speaker": "ZIPPY", "text": "My goal remains a new phone. But I respect everyone else's goals." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 18,
+    "chapter": "Economics: Development",
+    "topic_no": 2,
+    "name": "National Development and Average Income",
+    "scenes": [
+      {
+        "animation": "Two cartoon countries labelled 'Country A' and 'Country B' stand on a stage, each holding a trophy engraved 'Average income: 10,000'. Zippy, as quiz host, declares them tied. Neo raises an eyebrow.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Both countries have the same average income. So both are equally developed. Next question!" },
+          { "speaker": "NEO", "text": "Wait. Let's look at how that income is shared before we give out trophies." }
+        ]
+      },
+      {
+        "animation": "A glowing formula card appears: 'Average income = Total income of the country ÷ Total population'. A second label slides in: 'Also called per capita income'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When we compare countries, income is considered one of the most important attributes. Countries with higher income are more developed than others with less income." },
+          { "speaker": "NEO", "text": "But total income is not useful for comparison, because populations differ. So we use average income: the total income of the country divided by its total population. It is also called per capita income." }
+        ]
+      },
+      {
+        "animation": "A table builds row by row, 'Monthly incomes of citizens in 2007 (in Rupees)'. Country A: 9500, 10500, 9800, 10000, 10200, average 10000. Country B: 500, 500, 500, 500, 48000, average 10000. The four 500 cells in Country B flash red while the 48000 cell balloons in size.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here are five citizens from each country. In Country A, incomes are nine thousand five hundred, ten thousand five hundred, nine thousand eight hundred, ten thousand and ten thousand two hundred." },
+          { "speaker": "NEO", "text": "In Country B, four people earn only five hundred each, while one earns forty-eight thousand." },
+          { "speaker": "ZIPPY", "text": "Both averages come to ten thousand. But I'd rather live in Country A!" },
+          { "speaker": "NEO", "text": "Exactly. Average income is useful for comparison, but it hides disparities. Country A has more equitable distribution. In Country B, most citizens are poor." }
+        ]
+      },
+      {
+        "animation": "A world map with countries shaded by income bands. A World Bank building icon appears with the heading 'World Development Report'. Labels pop up: 'Rich: US$ 49,300 and above (2019)', 'Low income: US$ 2,500 or less', and an arrow to India reading 'Low middle income: US$ 6,700 (2019)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The World Bank uses per capita income to classify countries in its World Development Report." },
+          { "speaker": "NEO", "text": "Countries with per capita income of US dollars forty-nine thousand three hundred per annum and above in 2019 are called rich countries. Those with US dollars two thousand five hundred or less are called low-income countries." },
+          { "speaker": "NEO", "text": "India comes in the category of low middle income countries, because its per capita income in 2019 was just US dollars six thousand seven hundred per annum." }
+        ]
+      },
+      {
+        "animation": "A chalkboard lists: 'Rich countries, excluding countries of Middle East and certain other small countries = developed countries'. A red box underneath reads 'Limitation: average hides distribution'. Neo taps it with a pointer.",
+        "lines": [
+          { "speaker": "NEO", "text": "The rich countries, excluding countries of the Middle East and certain other small countries, are generally called developed countries." },
+          { "speaker": "NEO", "text": "Board tip: a common question asks for the main criterion used by the World Bank, and its limitation. Answer: per capita income, and it does not tell us how income is distributed." }
+        ]
+      },
+      {
+        "animation": "Recap board with a calculator icon. Points appear: '1. Per capita income = total income ÷ population', '2. Averages hide disparities (Country A vs B)', '3. World Bank: India = low middle income (US$ 6,700, 2019)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: average or per capita income is total income divided by total population." },
+          { "speaker": "NEO", "text": "Two: averages are useful for comparison but hide disparities." },
+          { "speaker": "NEO", "text": "Three: the World Bank uses per capita income, and India is a low middle income country." },
+          { "speaker": "ZIPPY", "text": "Trophy withdrawn from Country B. Pending review." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 18,
+    "chapter": "Economics: Development",
+    "topic_no": 3,
+    "name": "Income and Other Criteria: Public Facilities",
+    "scenes": [
+      {
+        "animation": "Three cartoon states walk onto a podium labelled Haryana, Kerala and Bihar. Haryana holds the biggest money bag. Zippy starts to put a gold medal on Haryana, but Neo holds up a 'Wait' sign.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Haryana has the highest income of these three. Gold medal, done." },
+          { "speaker": "NEO", "text": "Let's check a few more numbers first. Income alone may not tell the whole story." }
+        ]
+      },
+      {
+        "animation": "Table 'Per capita income of select states, 2018-19 (in Rupees)' builds: Haryana 2,36,147; Kerala 2,04,105; Bihar 40,982. Bars grow beside each row, with Haryana tallest and Bihar shortest.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 2018-19, per capita income was two lakh thirty-six thousand one hundred forty-seven rupees in Haryana, two lakh four thousand one hundred five rupees in Kerala, and just forty thousand nine hundred eighty-two rupees in Bihar." }
+        ]
+      },
+      {
+        "animation": "A second table builds column by column: 'Infant Mortality Rate per 1,000 live births (2018)': Haryana 30, Kerala 7, Bihar 32. 'Literacy Rate % (2017-18)': Haryana 82, Kerala 94, Bihar 62. 'Net Attendance Ratio, secondary stage, age 14 and 15 (2017-18)': Haryana 61, Kerala 83, Bihar 43. Kerala's cells glow green.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now look at other indicators. Kerala's infant mortality rate is only seven per thousand live births, compared to thirty in Haryana and thirty-two in Bihar." },
+          { "speaker": "NEO", "text": "Kerala's literacy rate is ninety-four per cent. Haryana's is eighty-two and Bihar's sixty-two. Kerala also leads in net attendance ratio." },
+          { "speaker": "ZIPPY", "text": "Wait, Kerala has lower income than Haryana but better health and schooling?" },
+          { "speaker": "NEO", "text": "Yes. Kerala has a low infant mortality rate because it has adequate provision of basic health and educational facilities." }
+        ]
+      },
+      {
+        "animation": "Definition cards flip in: 'Infant Mortality Rate: children who die before age one, per 1,000 live births', 'Literacy Rate: literate population in the 7 and above age group', 'Net Attendance Ratio: children aged 14 and 15 attending school, as % of all children in that age group'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Quick definitions. Infant mortality rate is the number of children that die before the age of one year, as a proportion of one thousand live children born in that year." },
+          { "speaker": "NEO", "text": "Literacy rate measures the proportion of literate population in the seven and above age group. Net attendance ratio is the total number of children of age group fourteen and fifteen attending school, as a percentage of total children in that age group." }
+        ]
+      },
+      {
+        "animation": "A village scene. A money bag tries to buy a 'Pollution-free air' bubble and a 'Clean water' tap and fails. Then a government building labelled 'Collective provision' builds a school, a health centre and a ration shop marked 'PDS'. Board-tip card flashes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Money in your pocket cannot buy everything. It is cheaper to provide some goods and services collectively, like security, schools and health facilities." },
+          { "speaker": "NEO", "text": "In some states, a well-functioning public distribution system also improves health and nutrition. Kerala is an example." },
+          { "speaker": "NEO", "text": "Board tip: expect a question on why Kerala does better than a richer state. Mention public facilities for health, education and PDS." }
+        ]
+      },
+      {
+        "animation": "Recap board with a hospital, school and ration shop icon. Points appear: '1. Higher income does not guarantee better health or education', '2. IMR, literacy rate, net attendance ratio', '3. Public facilities matter: Kerala example'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: higher per capita income does not guarantee better health and education." },
+          { "speaker": "NEO", "text": "Two: infant mortality rate, literacy rate and net attendance ratio are key indicators." },
+          { "speaker": "NEO", "text": "Three: public facilities, like in Kerala, make a big difference." },
+          { "speaker": "ZIPPY", "text": "Gold medal postponed. Kerala gets a special mention." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 18,
+    "chapter": "Economics: Development",
+    "topic_no": 4,
+    "name": "Human Development Index and Sustainability of Development",
+    "scenes": [
+      {
+        "animation": "A report card slides onto Neo's desk, stamped 'Human Development Report, UNDP'. It has three subjects instead of one: 'Income', 'Health', 'Education'. Zippy peeks and gasps at the ranking column.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Countries get report cards too? Who is the class teacher?" },
+          { "speaker": "NEO", "text": "The United Nations Development Programme. Its Human Development Report compares countries on education, health and income." }
+        ]
+      },
+      {
+        "animation": "A three-legged stool builds, each leg labelled 'Per capita income', 'Life expectancy at birth', 'Education: mean years of schooling, expected years of schooling'. The seat of the stool reads 'HDI'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Once we realise that income alone is not adequate, we look at health and education too. The Human Development Index combines per capita income with life expectancy and educational levels." },
+          { "speaker": "NEO", "text": "Life expectancy at birth is the average expected length of life of a person at the time of birth." }
+        ]
+      },
+      {
+        "animation": "A map of South Asia. India and Sri Lanka light up. Rank labels hover above: Sri Lanka's rank sits much higher than India's. Zippy points at the tiny island in surprise.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Sri Lanka is so much smaller. How is it ranked higher than India?" },
+          { "speaker": "NEO", "text": "In the Human Development Report, Sri Lanka is much ahead of India in every respect. A big country like India does not automatically rank higher." },
+          { "speaker": "NEO", "text": "Board tip: remember the three components of HDI, and that HDI broadens the idea of development beyond income." }
+        ]
+      },
+      {
+        "animation": "An underground cross-section of India. Blue groundwater layers shrink as cartoon pumps suck water up. A label reads 'Groundwater overuse'. Next, oil barrels empty one by one, labelled 'Non-renewable: will get exhausted'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now, can development go on forever? Scientists warn that the present type and levels of development are not sustainable." },
+          { "speaker": "NEO", "text": "Groundwater is a renewable resource, replenished by rain. But we are overusing it in many parts of the country, taking out more than is being replenished." },
+          { "speaker": "NEO", "text": "Non-renewable resources, like crude oil, will get exhausted after years of use. We have a fixed stock on earth which cannot be replenished." }
+        ]
+      },
+      {
+        "animation": "A smoky cloud drifts across a map of India, ignoring state borders drawn as dotted lines. The caption reads 'Environmental degradation does not respect boundaries'. A small sapling grows at the bottom labelled 'Sustainable development'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Consequences of environmental degradation do not respect national or state boundaries. This issue is no longer region or nation specific." },
+          { "speaker": "NEO", "text": "Our future is linked together. Sustainability of development is essential, so that future generations also have resources." },
+          { "speaker": "ZIPPY", "text": "So development today must not steal from tomorrow." }
+        ]
+      },
+      {
+        "animation": "Recap board with the HDI stool and a sapling. Points appear: '1. HDI = income + health + education', '2. Sri Lanka ranks above India', '3. Development must be sustainable: groundwater, non-renewable resources'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the Human Development Index combines income, health and education." },
+          { "speaker": "NEO", "text": "Two: Sri Lanka is ahead of India in human development, so size and income are not everything." },
+          { "speaker": "NEO", "text": "Three: development must be sustainable, protecting groundwater and non-renewable resources." },
+          { "speaker": "ZIPPY", "text": "I'm turning off the tap while brushing. Starting now." }
+        ]
+      }
+    ]
+  }
+]

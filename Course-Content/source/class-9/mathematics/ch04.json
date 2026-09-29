@@ -1,0 +1,168 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "Linear Equations in Two Variables",
+    "topic_no": 1,
+    "name": "What Is a Linear Equation in Two Variables?",
+    "scenes": [
+      {
+        "animation": "A balance scale in a kirana shop. On one pan sits a bag labelled 'x' and a bag labelled 'y'; on the other, weights reading '10 kg'. Zippy stares, trying to guess both bags at once.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Last year I solved for one unknown. Now there are two bags of mystery!" },
+          { "speaker": "NEO", "text": "Welcome to linear equations in two variables. x plus y equals ten is one of them." }
+        ]
+      },
+      {
+        "animation": "A flashback card from Class 8: '2x + 5 = 0 → x = −5/2' with the root marked on a number line. It slides aside, and a new card writes itself: 'ax + by + c = 0, where a, b, c are real numbers and a, b are not both zero'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In earlier classes you solved equations in one variable, like two x plus five equals zero. Its root is minus five by two." },
+          { "speaker": "NEO", "text": "An equation that can be put in the form a x plus b y plus c equals zero, where a, b and c are real numbers, and a and b are not both zero, is called a linear equation in two variables." }
+        ]
+      },
+      {
+        "animation": "Worked example on a chalkboard, line by line with a, b, c boxes filled in each time: '2x + 3y = 4.37 → 2x + 3y − 4.37 = 0 → a = 2, b = 3, c = −4.37'; 'x − 4 = √3 y → x − √3 y − 4 = 0 → a = 1, b = −√3, c = −4'; '4 = 5x − 3y → 5x − 3y − 4 = 0 → a = 5, b = −3, c = −4'; '2x = y → 2x − y + 0 = 0 → a = 2, b = −1, c = 0'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's write some equations in this form and read off a, b and c." },
+          { "speaker": "NEO", "text": "Two x plus three y equals four point three seven becomes two x plus three y minus four point three seven equals zero. So a is two, b is three, and c is minus four point three seven." },
+          { "speaker": "NEO", "text": "x minus four equals root three y becomes x minus root three y minus four equals zero. So a is one, b is minus root three, c is minus four." },
+          { "speaker": "NEO", "text": "Four equals five x minus three y becomes five x minus three y minus four equals zero." },
+          { "speaker": "NEO", "text": "And two x equals y becomes two x minus y plus zero equals zero. Here c is zero." }
+        ]
+      },
+      {
+        "animation": "Two 'hidden variable' examples glow: 'x = −5 → 1·x + 0·y + 5 = 0', 'y = 2 → 0·x + 1·y − 2 = 0'. A cartoon 'y' peeks out from behind a '0·' curtain.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What about x equals minus five? There's no y at all!" },
+          { "speaker": "NEO", "text": "The y is hiding with a zero coefficient. Write it as one x plus zero y plus five equals zero." },
+          { "speaker": "NEO", "text": "Similarly, y equals two is zero x plus one y minus two equals zero." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Move everything to the LEFT side. Signs flip when a term crosses the = sign. Then read a, b, c with their signs.' A cartoon minus sign does a somersault as it crosses the equals sign.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: bring every term to the left side before you read a, b and c. Keep their signs. Most lost marks come from a forgotten minus." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Form: ax + by + c = 0, a and b not both zero', '2. Move all terms left, then read a, b, c with signs', '3. x = k is 1·x + 0·y − k = 0'. The kirana balance scale settles level.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a linear equation in two variables has the form a x plus b y plus c equals zero, with a and b not both zero." },
+          { "speaker": "NEO", "text": "Two: to find a, b and c, move every term to the left and keep the signs." },
+          { "speaker": "NEO", "text": "Three: even x equals minus five is a linear equation in two variables, with b equal to zero." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Linear Equations in Two Variables",
+    "topic_no": 2,
+    "name": "Writing Real Situations as Linear Equations",
+    "scenes": [
+      {
+        "animation": "A cricket stadium in Nagpur. The scoreboard reads 'India: two batsmen together — 176 runs'. Zippy, in a tiny helmet, squints at the board trying to see each batsman's score, but those cells are blurred.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Two batsmen scored one hundred seventy-six together. But how much did each one score?" },
+          { "speaker": "NEO", "text": "We don't know yet. But we can still write this fact as an equation." }
+        ]
+      },
+      {
+        "animation": "Step by step: 'Let runs by batsman 1 = x', 'Let runs by batsman 2 = y', 'x + y = 176', 'x + y − 176 = 0'. Coloured underlines connect words in the sentence to the symbols.",
+        "lines": [
+          { "speaker": "NEO", "text": "Step one: name the unknowns. Let one batsman score x runs and the other y runs." },
+          { "speaker": "NEO", "text": "Step two: turn the words into symbols. Together they scored one seventy-six, so x plus y equals one seventy-six." },
+          { "speaker": "NEO", "text": "Step three: put it in standard form. x plus y minus one seventy-six equals zero. Here a is one, b is one and c is minus one seventy-six." }
+        ]
+      },
+      {
+        "animation": "A stationery shop. A notebook wears a price tag '₹x' and a pen '₹y'. A speech bubble: 'Notebook costs twice the pen'. Line by line: 'x = 2y', 'x − 2y = 0', 'a = 1, b = −2, c = 0'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Another one. The cost of a notebook is twice the cost of a pen." },
+          { "speaker": "NEO", "text": "Let the notebook cost x rupees and the pen cost y rupees." },
+          { "speaker": "NEO", "text": "Twice the pen's cost is two y, so x equals two y." },
+          { "speaker": "NEO", "text": "In standard form, x minus two y plus zero equals zero." }
+        ]
+      },
+      {
+        "animation": "A school canteen. A sign says 'Samosa ₹15, Chai ₹10'. Zippy's bill shows '₹85'. Working appears: 'Let samosas = x, cups of chai = y', '15x + 10y = 85', '15x + 10y − 85 = 0'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My turn! Samosas cost fifteen rupees and chai costs ten. I paid eighty-five." },
+          { "speaker": "NEO", "text": "Let x be the number of samosas and y the cups of chai." },
+          { "speaker": "NEO", "text": "Samosas cost fifteen x, chai costs ten y, and together that is eighty-five. So fifteen x plus ten y minus eighty-five equals zero." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Always write \"Let … = x\" first. Examiners award a mark for defining variables.' A red pen ticks the 'Let' line.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: always begin with a line saying what x and y stand for. It makes your answer clear and often carries a mark." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Name the unknowns: Let … = x, … = y', '2. Translate words into an equation', '3. Rewrite as ax + by + c = 0'. The Nagpur scoreboard finally reveals both batsmen's names, still with a question mark for runs.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: name your two unknowns clearly." },
+          { "speaker": "NEO", "text": "Two: translate each phrase of the problem into symbols." },
+          { "speaker": "NEO", "text": "Three: rearrange into a x plus b y plus c equals zero." },
+          { "speaker": "ZIPPY", "text": "So one equation, but still two mysteries. Hmm." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Linear Equations in Two Variables",
+    "topic_no": 3,
+    "name": "Solutions of a Linear Equation",
+    "scenes": [
+      {
+        "animation": "A game-show door labelled '2x + y = 7'. Zippy knocks with the pair (1, 5) and the door opens; Neo knocks with (2, 3) and it opens again; a cartoon chaiwala knocks with (0, 7) and it opens too. Zippy's jaw drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, how can the same door have three different keys?" },
+          { "speaker": "NEO", "text": "Because a linear equation in two variables has more than one solution. In fact, infinitely many." }
+        ]
+      },
+      {
+        "animation": "Definition card: 'A solution is a PAIR (x, y) that makes both sides equal'. Check line by line: 'x = 1, y = 5: 2(1) + 5 = 2 + 5 = 7 ✓', 'x = 2, y = 3: 2(2) + 3 = 4 + 3 = 7 ✓', 'x = 1, y = 4: 2(1) + 4 = 6 ≠ 7 ✗'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A solution is a pair of values, one for x and one for y, that makes both sides of the equation equal." },
+          { "speaker": "NEO", "text": "For two x plus y equals seven, try x equals one and y equals five. Two plus five is seven. It works." },
+          { "speaker": "NEO", "text": "x equals two and y equals three gives four plus three, which is seven. It works too." },
+          { "speaker": "NEO", "text": "But x equals one and y equals four gives six, not seven. So that pair is not a solution." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'Find four solutions of 2x + y = 7'. A table builds row by row: 'x = 0 → y = 7 − 0 = 7 → (0, 7)', 'x = 1 → y = 7 − 2 = 5 → (1, 5)', 'x = 2 → y = 7 − 4 = 3 → (2, 3)', 'x = 3 → y = 7 − 6 = 1 → (3, 1)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here's how to find solutions yourself. Pick any value of x, then solve for y." },
+          { "speaker": "NEO", "text": "Rewrite the equation as y equals seven minus two x." },
+          { "speaker": "NEO", "text": "x equals zero gives y equals seven. x equals one gives y equals five." },
+          { "speaker": "NEO", "text": "x equals two gives y equals three. x equals three gives y equals one." },
+          { "speaker": "NEO", "text": "Since we can choose any real x, there is no end to the solutions." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'If x = 2, y = 1 is a solution of 2x + 3y = k, find k'. Lines: '2(2) + 3(1) = k', '4 + 3 = k', 'k = 7'. The letter k unmasks itself as 7.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if the equation has a mystery number k in it?" },
+          { "speaker": "NEO", "text": "If x equals two and y equals one is a solution of two x plus three y equals k, just substitute." },
+          { "speaker": "NEO", "text": "Two times two plus three times one is four plus three, which is seven. So k equals seven." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Fastest two solutions: put x = 0, then put y = 0'. Example: 'x − 2y = 4: x = 0 → y = −2 → (0, −2); y = 0 → x = 4 → (4, 0)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: for two quick solutions, put x equal to zero, then put y equal to zero. For x minus two y equals four, you get zero comma minus two and four comma zero." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. A solution is a pair (x, y)', '2. A linear equation in two variables has infinitely many solutions', '3. Pick x, solve for y; or put x = 0, then y = 0'. The door stays wide open with a queue of pairs walking through.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a solution of a linear equation in two variables is a pair of values." },
+          { "speaker": "NEO", "text": "Two: such an equation has infinitely many solutions." },
+          { "speaker": "NEO", "text": "Three: to find them, choose a value for x and solve for y. Zero is the easiest choice." },
+          { "speaker": "ZIPPY", "text": "Infinite keys. I'm never getting locked out again." }
+        ]
+      }
+    ]
+  }
+]

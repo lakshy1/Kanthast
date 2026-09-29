@@ -1,0 +1,199 @@
+[
+  {
+    "chapter_no": 15,
+    "chapter": "Political Science: Working of Institutions",
+    "topic_no": 1,
+    "name": "How Is a Major Policy Decision Taken?",
+    "scenes": [
+      {
+        "animation": "A dusty government office. A grumpy old file cabinet with a face groans as a clerk pulls out a thin paper labelled 'Office Memorandum, 13 August 1990'. The paper glows, and newspaper headlines swirl around it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "One small sheet of paper made all the newspapers go crazy?" },
+          { "speaker": "NEO", "text": "That sheet was a major policy decision. Let's see which institutions were involved in making it." }
+        ]
+      },
+      {
+        "animation": "A timeline builds: '1979 — Second Backward Classes Commission set up, headed by B.P. Mandal' → '1980 — Report submitted: 27% of government jobs for SEBC' → 'Report gathers dust' → '1989 — Janata Dal promises to implement it; V.P. Singh becomes Prime Minister'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1979, the Government of India appointed the Second Backward Classes Commission, headed by B.P. Mandal. It is popularly called the Mandal Commission." },
+          { "speaker": "NEO", "text": "It gave its report in 1980, and recommended that 27 per cent of government jobs be reserved for the socially and educationally backward classes." },
+          { "speaker": "NEO", "text": "The report was discussed for years. In the 1989 Lok Sabha election, the Janata Dal promised to implement it. After the election, V.P. Singh became the Prime Minister." }
+        ]
+      },
+      {
+        "animation": "A flowchart of institutions lights up in sequence: 'President — announces the government's intention in his address to Parliament' → 'Union Cabinet — formal decision on 6 August 1990' → 'Prime Minister — informs both Houses of Parliament' → 'Department of Personnel and Training — drafts order' → 'Office Memorandum issued, 13 August 1990, signed by a Joint Secretary'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The President of India announced the government's intention to implement the recommendations in his address to Parliament." },
+          { "speaker": "NEO", "text": "On 6 August 1990, the Union Cabinet took a formal decision. The next day, Prime Minister V.P. Singh informed both Houses of Parliament." },
+          { "speaker": "NEO", "text": "Senior officers drafted the order, and it was issued as an Office Memorandum on 13 August 1990, signed by a Joint Secretary." }
+        ]
+      },
+      {
+        "animation": "Protest placards on one side, support placards on the other. Then a courtroom: 'Indira Sawhney and others vs Union of India'. A panel of judges announces in '1992': 'Order valid — but exclude well-to-do persons among backward classes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The decision caused a lot of debate. Some people and organisations filed cases in the courts. The Supreme Court bunched them together as the Indira Sawhney and others versus Union of India case." },
+          { "speaker": "NEO", "text": "In 1992, the Supreme Court declared the order valid. But it asked the government to modify the order, so that well-to-do persons among the backward classes are excluded from the benefit." }
+        ]
+      },
+      {
+        "animation": "A triangle of three institutions: 'Legislature', 'Executive', 'Judiciary', with arrows between them. A 'BOARD TIP' card: 'Office Memorandum = order issued by a government department'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the Joint Secretary made the big decision?" },
+          { "speaker": "NEO", "text": "No. He only signed the order. The decision came from the elected government, and the court checked it. Board tip: name all the institutions involved, in the right order." }
+        ]
+      },
+      {
+        "animation": "Recap board with the institution triangle. Points appear: '1. Mandal Commission (1979) recommended 27% reservation for SEBC (1980)', '2. Cabinet decided on 6 Aug 1990; Office Memorandum on 13 Aug 1990', '3. Supreme Court upheld it in 1992, excluding the well-to-do'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Mandal Commission recommended 27 per cent reservation for backward classes." },
+          { "speaker": "NEO", "text": "Two: the Cabinet decided, Parliament was informed, and an Office Memorandum was issued on 13 August 1990." },
+          { "speaker": "NEO", "text": "Three: in 1992, the Supreme Court upheld the order, but excluded the well-to-do among backward classes." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 15,
+    "chapter": "Political Science: Working of Institutions",
+    "topic_no": 2,
+    "name": "Parliament: Why We Need It and Its Two Houses",
+    "scenes": [
+      {
+        "animation": "Zippy visits Parliament House with a school group. Inside, members argue loudly, papers wave, and the Speaker bangs a gavel. Zippy covers his ears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Everyone is shouting. Is this really where laws are made?" },
+          { "speaker": "NEO", "text": "Debate can be noisy, but Parliament is the most important institution of our democracy." }
+        ]
+      },
+      {
+        "animation": "Four icon cards appear in turn: a law book ('Final authority for making laws'), a magnifying glass on a minister ('Controls those who run the government'), a treasure chest ('Controls all money'), and a microphone ('Highest forum of discussion and debate').",
+        "lines": [
+          { "speaker": "NEO", "text": "Parliament is the final authority for making laws in any country. It can make new laws, change existing laws, or abolish them." },
+          { "speaker": "NEO", "text": "Parliaments exercise some control over those who run the government. In India, the government can take decisions only so long as it enjoys the support of Parliament." },
+          { "speaker": "NEO", "text": "Parliament controls all the money that governments have. And it is the highest forum of discussion and debate on public issues and national policy." }
+        ]
+      },
+      {
+        "animation": "A building splits into two chambers: green 'Lok Sabha — House of the People, directly elected by the people' and red 'Rajya Sabha — Council of States, elected by members of State Legislative Assemblies'. The President stands at the entrance with a label 'Part of Parliament, not a member of either House'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India's Parliament has two Houses. The Lok Sabha, or House of the People, is usually directly elected by the people and exercises the real power on their behalf." },
+          { "speaker": "NEO", "text": "The Rajya Sabha, or Council of States, is elected indirectly, mainly by the members of State Legislative Assemblies. It looks after the interests of the states." },
+          { "speaker": "NEO", "text": "The President is a part of Parliament, although not a member of either House." }
+        ]
+      },
+      {
+        "animation": "A tug-of-war between the two Houses. Round 1 'Ordinary law': in a tie, a 'Joint sitting' sign appears and the bigger Lok Sabha team wins. Round 2 'Money matters': Rajya Sabha can only delay '14 days'. Round 3: 'No-confidence' — only Lok Sabha holds the rope that controls the Council of Ministers.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Which House is more powerful?" },
+          { "speaker": "NEO", "text": "The Lok Sabha. Any ordinary law needs to be passed by both Houses. If there is a difference, a joint session is held, and because it has more members, the view of the Lok Sabha is likely to prevail." },
+          { "speaker": "NEO", "text": "In money matters, the Lok Sabha exercises more power. The Rajya Sabha can only delay a money bill by 14 days, or suggest changes." },
+          { "speaker": "NEO", "text": "And the Lok Sabha controls the Council of Ministers. If a majority of its members say they have no confidence, the whole government, including the Prime Minister, has to quit." }
+        ]
+      },
+      {
+        "animation": "Recap board with two chamber icons. Points appear: '1. Parliament makes laws, controls government and money, is the highest forum of debate', '2. Lok Sabha: directly elected; Rajya Sabha: elected by MLAs, represents states', '3. Lok Sabha is more powerful: money bills, no-confidence, joint sitting'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Parliament makes laws, controls the government and its money, and is the highest forum of debate." },
+          { "speaker": "NEO", "text": "Two: the Lok Sabha is directly elected, while the Rajya Sabha is elected by MLAs and represents the states." },
+          { "speaker": "NEO", "text": "Three: the Lok Sabha is more powerful in money matters and in controlling the Council of Ministers. Exam tip: this comparison is asked almost every year." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 15,
+    "chapter": "Political Science: Working of Institutions",
+    "topic_no": 3,
+    "name": "The Political Executive: Prime Minister, Cabinet and President",
+    "scenes": [
+      {
+        "animation": "A school where the head boy changes every year after an election, but the office staff who run the timetable stay the same for years. Zippy looks from the smiling new head boy to the calm, experienced office clerk.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The head boy changes every year, but the office staff never do. Who really runs the school?" },
+          { "speaker": "NEO", "text": "Both, in different ways. Governments also have two kinds of executives." }
+        ]
+      },
+      {
+        "animation": "Two columns build: 'Political executive — elected for a specific period; ministers; take overall decisions' and 'Permanent executive — civil servants; appointed on a long-term basis; remain even when the ruling party changes'. An arrow shows the minister with 'final say'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The political executive is elected by the people for a specific period. Political leaders who take the big decisions fall in this category." },
+          { "speaker": "NEO", "text": "The permanent executive, or civil services, are appointed on a long-term basis. They remain in office even when the ruling party changes." },
+          { "speaker": "NEO", "text": "Civil servants are usually more educated and have more expert knowledge. But the minister has the final say, because in a democracy the will of the people is supreme." }
+        ]
+      },
+      {
+        "animation": "The President appoints a leader labelled 'Prime Minister — leader of majority party or coalition in Lok Sabha'. A pyramid of ministers builds: top 'Cabinet Ministers (about 25)', middle 'Ministers of State with independent charge', bottom 'Ministers of State'. A label: 'Council of Ministers: usually 60 to 80'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The President appoints the leader of the majority party, or the coalition of parties that commands a majority in the Lok Sabha, as the Prime Minister. The Prime Minister does not have a fixed tenure." },
+          { "speaker": "NEO", "text": "The Council of Ministers is the official name for the body that includes all the ministers. It usually has 60 to 80 ministers of different ranks." },
+          { "speaker": "NEO", "text": "Cabinet ministers are usually top-level leaders of the ruling party in charge of major ministries. The Cabinet, of about 25 ministers, is the inner ring of the Council of Ministers. Every minister works under collective responsibility." }
+        ]
+      },
+      {
+        "animation": "A grand chair labelled 'President — Head of the State'. Documents on the desk all say 'In the name of the President'. Voters shown as 'elected MPs and MLAs' cast votes to elect the President. The President sends one file back once, marked 'Please reconsider', then signs when it returns.",
+        "lines": [
+          { "speaker": "NEO", "text": "The President is the head of the State. The President is elected indirectly, by the elected members of Parliament and the elected members of the State Legislative Assemblies." },
+          { "speaker": "NEO", "text": "All governmental activities take place in the name of the President, but the President exercises these powers only on the advice of the Council of Ministers." },
+          { "speaker": "NEO", "text": "The President can ask the Council of Ministers to reconsider its advice. But if the same advice is given again, the President is bound to act according to it." },
+          { "speaker": "ZIPPY", "text": "So the President is like a very polite rubber stamp?" },
+          { "speaker": "NEO", "text": "A nominal executive, yes. Board tip: the Prime Minister is the real head of the government, and the President is the nominal head of the State." }
+        ]
+      },
+      {
+        "animation": "Recap board with a crown for President and a pyramid for ministers. Points appear: '1. Political executive (elected) vs permanent executive (civil servants)', '2. PM appointed by President; Council of Ministers 60–80; Cabinet about 25', '3. President: elected indirectly; nominal head; acts on advice'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the political executive is elected, while the permanent executive of civil servants stays on." },
+          { "speaker": "NEO", "text": "Two: the President appoints the Prime Minister, who leads a Council of Ministers of 60 to 80, with a Cabinet of about 25." },
+          { "speaker": "NEO", "text": "Three: the President is elected indirectly and acts on the advice of the Council of Ministers." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 15,
+    "chapter": "Political Science: Working of Institutions",
+    "topic_no": 4,
+    "name": "The Judiciary",
+    "scenes": [
+      {
+        "animation": "A kirana shop owner and a big company argue over an unfair contract. The shopkeeper, tiny next to the company's giant tower, walks into a courtroom. The judge's gavel falls in his favour, and the tower shrinks.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The small shopkeeper beat the giant company?" },
+          { "speaker": "NEO", "text": "In court, everyone is equal. That's why an independent judiciary matters." }
+        ]
+      },
+      {
+        "animation": "A pyramid builds from the top: 'Supreme Court — for the entire nation', 'High Courts — in the states', 'District Courts', 'Courts at the local level'. A single thread labelled 'Integrated judiciary' runs through all of them.",
+        "lines": [
+          { "speaker": "NEO", "text": "All the courts at different levels in a country put together are called the judiciary. The Indian judiciary consists of a Supreme Court for the entire nation, High Courts in the states, District Courts and the courts at the local level." },
+          { "speaker": "NEO", "text": "India has an integrated judiciary. The Supreme Court controls the judicial administration in the country, and its decisions are binding on all other courts." }
+        ]
+      },
+      {
+        "animation": "An independence shield forms around a judge: 'Not under control of legislature or executive'. Appointment flowchart: 'President appoints — on advice of PM, in consultation with Chief Justice'. Removal: a balance with 'Impeachment motion — passed separately by two-thirds members of both Houses'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Independence of the judiciary means that it is not under the control of the legislature or the executive. The judges do not act on the direction of the government or according to the wishes of the party in power." },
+          { "speaker": "NEO", "text": "Judges of the Supreme Court and the High Courts are appointed by the President, on the advice of the Prime Minister and in consultation with the Chief Justice of India. In practice, senior judges now select new judges." },
+          { "speaker": "NEO", "text": "A judge can be removed only by an impeachment motion passed separately by two-thirds members of the two Houses of Parliament." }
+        ]
+      },
+      {
+        "animation": "A law passed by Parliament walks up to the Supreme Court; the court holds it against the Constitution with a magnifying glass and stamps 'Invalid' on one clause. Label: 'Judicial review'. Then a citizen posts a letter labelled 'Public Interest Litigation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The judiciary in India is one of the most powerful in the world. The Supreme Court and the High Courts have the power to interpret the Constitution. They can declare invalid any law or action of the government if it is against the Constitution. This is known as judicial review." },
+          { "speaker": "NEO", "text": "The courts also protect the Fundamental Rights. Any citizen can approach the courts if public interest is hurt by the actions of the government. This is called public interest litigation." },
+          { "speaker": "ZIPPY", "text": "So the court can even say no to Parliament?" },
+          { "speaker": "NEO", "text": "If Parliament breaks the Constitution, yes. Board tip: explain both judicial review and the impeachment process in answers on judicial independence." }
+        ]
+      },
+      {
+        "animation": "Recap board with a gavel. Points appear: '1. Integrated judiciary: Supreme Court at the top', '2. Independent; judges removed only by impeachment (two-thirds of both Houses)', '3. Judicial review and public interest litigation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: India has an integrated judiciary, with the Supreme Court at the top." },
+          { "speaker": "NEO", "text": "Two: judges are independent and can be removed only by an impeachment motion passed by two-thirds of both Houses separately." },
+          { "speaker": "NEO", "text": "Three: through judicial review and public interest litigation, courts protect the Constitution and citizens' rights." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,229 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "Number Play",
+    "topic_no": 1,
+    "name": "Plus-Minus Puzzles and Parity",
+    "scenes": [
+      {
+        "animation": "Anshu sits at a desk scribbling '7 = 3 + 4', '15 = 7 + 8 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5'. Zippy bounces on the page, knocking the numbers around like skittles.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Anshu writes 15 three different ways as sums of consecutive numbers. Show-off!" },
+          { "speaker": "NEO", "text": "He's exploring. And he's about to find something that always happens." }
+        ]
+      },
+      {
+        "animation": "Four number tiles 3, 4, 5, 6 with three sign slots between them. A branching tree lists all eight sign patterns, each evaluating in turn: '18, 6, 8, −4, 10, −2, 0, −12'. Every answer turns blue with the label 'EVEN'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Take 3, 4, 5 and 6. Put a plus or a minus in each gap. There are eight ways." },
+          { "speaker": "NEO", "text": "3 plus 4 minus 5 plus 6 is 8. 3 minus 4 minus 5 minus 6 is minus 12." },
+          { "speaker": "NEO", "text": "All eight answers are 18, 6, 8, minus 4, 10, minus 2, 0 and minus 12. Every single one is even!" }
+        ]
+      },
+      {
+        "animation": "Zippy tries 5, 6, 7, 8 and then random numbers 2, 9, 4, 13. For each set, the eight results all share one colour: all blue or all orange. A caption: 'Same parity every time'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Let me try random numbers, like 2, 9, 4 and 13." },
+          { "speaker": "NEO", "text": "Here the answers are all even again, because the sum 28 is even. With other numbers, they might all be odd." },
+          { "speaker": "NEO", "text": "But within one set, all eight answers always have the same parity. Why?" }
+        ]
+      },
+      {
+        "animation": "Algebra card: 'a + b − c − d' and 'a − b − c − d'. The subtraction writes line by line: '(a + b − c − d) − (a − b − c − d)', '= a + b − c − d − a + b + c + d', '= 2b'. The '2b' glows as an even number.",
+        "lines": [
+          { "speaker": "NEO", "text": "Use letters. Take a plus b minus c minus d, and switch the plus b to minus b." },
+          { "speaker": "NEO", "text": "Subtract the two expressions. Open the brackets carefully and everything cancels except 2b." },
+          { "speaker": "NEO", "text": "So switching one sign changes the answer by an even number. Two numbers that differ by an even number have the same parity." }
+        ]
+      },
+      {
+        "animation": "Quick-check cards flip: '43 + 37 → odd + odd = even', '4 × 347 × 3 → has factor 4 → even', 'x² + 2: x = 6 gives 38, x = 3 gives 11'. An 'Exam Tip' sticker: 'One counterexample proves an expression is not always even'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Parity rules help without calculating. 43 plus 37 is odd plus odd, so even." },
+          { "speaker": "NEO", "text": "Is x squared plus 2 always even? If x is 6, we get 38. If x is 3, we get 11, which is odd." },
+          { "speaker": "NEO", "text": "Exam tip: to show a claim is not always true, one counterexample is enough. To show it is always true, you need algebra." }
+        ]
+      },
+      {
+        "animation": "Recap board with the eight-branch tree. Points: '1. With ± signs between 4 numbers, all results have the same parity', '2. Switching a sign changes the value by 2b (even)', '3. Counterexample disproves; algebra proves'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: put plus or minus signs between four numbers, and all eight results have the same parity." },
+          { "speaker": "NEO", "text": "Two: switching one sign changes the value by twice a number, which is even." },
+          { "speaker": "NEO", "text": "Three: a counterexample disproves a claim, but algebra proves it for every case." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Number Play",
+    "topic_no": 2,
+    "name": "Always, Sometimes or Never: Multiples and Remainders",
+    "scenes": [
+      {
+        "animation": "A game-show stage titled 'ALWAYS, SOMETIMES or NEVER?' with three glowing buzzers. Zippy is the contestant; a talking microphone named MIKE is the host.",
+        "lines": [
+          { "speaker": "MIKE", "text": "Welcome to Always, Sometimes or Never! Our contestant is a small blue spark." },
+          { "speaker": "ZIPPY", "text": "I'll just press Always for everything. Easy money." }
+        ]
+      },
+      {
+        "animation": "Statement card: 'If 8 divides two numbers, it divides their sum.' Dot grids of 8 per row: 'a rows' plus 'b rows' stack into '(a + b) rows'. The algebra '8a + 8b = 8(a + b)' writes itself. The ALWAYS buzzer lights.",
+        "lines": [
+          { "speaker": "NEO", "text": "First: if 8 divides two numbers, does it divide their sum? Write them as 8a and 8b." },
+          { "speaker": "NEO", "text": "8a plus 8b is 8 times a plus b. Always true. The same works for the difference." }
+        ]
+      },
+      {
+        "animation": "Statement card: 'Divisible by 6 and by 4 ⇒ divisible by 24?' The number 12 steps up, divisible by 6 and 4, but '12 ÷ 24' shows a red cross. Then 'Divisible by 9 and 4 ⇒ divisible by 36?' with 'LCM(9, 4) = 36' stamped green.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Next: divisible by 6 and by 4 means divisible by 24. Always!" },
+          { "speaker": "NEO", "text": "Try 12. It's divisible by 6 and by 4, but not by 24. So it's only sometimes true." },
+          { "speaker": "NEO", "text": "The real rule uses the LCM. The LCM of 6 and 4 is 12, not 24. But the LCM of 9 and 4 is 36, so that one is always true." }
+        ]
+      },
+      {
+        "animation": "Numbers 3, 8, 13, 18, 23 hop onto a number line, each landing 3 past a multiple of 5. A dot grid shows 'k rows of 5 + 3 extra'. The label '5k + 3' appears, and '5k − 2' shows the same list starting at k = 1.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now remainders. Which numbers leave remainder 3 when divided by 5?" },
+          { "speaker": "NEO", "text": "3, 8, 13, 18, 23. Each is 3 more than a multiple of 5, so we write them as 5k plus 3." },
+          { "speaker": "NEO", "text": "They're also 2 less than a multiple of 5, so 5k minus 2 works too." }
+        ]
+      },
+      {
+        "animation": "A pebble riddle scroll: 'Groups of 3, one left; pairs, one left; groups of 5, one left; groups of 7, none left; fewer than 100.' Steps: 'LCM(2, 3, 5) = 30', 'number = 30k + 1', 'candidates: 31, 61, 91', '91 = 7 × 13 ✓'. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puzzle. In groups of 2, 3 or 5, one pebble is left over. In groups of 7, none. There are fewer than 100." },
+          { "speaker": "NEO", "text": "One more than a multiple of 2, 3 and 5 means one more than a multiple of 30. So 31, 61 or 91." },
+          { "speaker": "NEO", "text": "Only 91 is a multiple of 7, because 7 times 13 is 91. So there are 91 pebbles." },
+          { "speaker": "NEO", "text": "Exam tip: for Always, Sometimes or Never questions, give an example and a non-example, or an algebraic proof." }
+        ]
+      },
+      {
+        "animation": "Recap board on the game-show stage. Points: '1. a | M and a | N ⇒ a | M + N and M − N', '2. Divisible by k and m ⇒ divisible by LCM(k, m)', '3. Remainder r on division by n: nk + r'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: if a number divides two numbers, it divides their sum and difference." },
+          { "speaker": "NEO", "text": "Two: divisible by k and by m means divisible by their LCM, not always their product." },
+          { "speaker": "NEO", "text": "Three: numbers leaving remainder r when divided by n have the form n k plus r." },
+          { "speaker": "MIKE", "text": "And our contestant learned not to press Always every time!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Number Play",
+    "topic_no": 3,
+    "name": "Divisibility Shortcuts for 9, 3 and 11",
+    "scenes": [
+      {
+        "animation": "At a school sports day, 7309 students must stand in rows of 9. The PE teacher stares at a huge crowd. Zippy whispers, 'Will anyone be left over?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "7309 students in rows of 9. Will anyone be left out?" },
+          { "speaker": "NEO", "text": "We can answer without dividing. Let's see why the digit-sum shortcut works." }
+        ]
+      },
+      {
+        "animation": "Place values split: '10 = 9 + 1', '100 = 99 + 1', '1000 = 999 + 1'. Each leaves one yellow 'leftover' cube after grouping in nines. For 427, four leftovers from hundreds, two from tens and seven ones pile up: '4 + 2 + 7 = 13', then '13 = 9 + 4', 'remainder 4'.",
+        "lines": [
+          { "speaker": "NEO", "text": "10 is 9 plus 1. 100 is 99 plus 1. 1000 is 999 plus 1. Each place value leaves remainder 1 when divided by 9." },
+          { "speaker": "NEO", "text": "So in 427, the 4 hundreds leave 4, the 2 tens leave 2, and there are 7 ones." },
+          { "speaker": "NEO", "text": "4 plus 2 plus 7 is 13. One more group of 9 leaves 4. So 427 leaves remainder 4." }
+        ]
+      },
+      {
+        "animation": "Worked example: '7309 → 7 + 3 + 0 + 9 = 19 → 1 + 9 = 10 → 1 + 0 = 1'. The PE teacher lines students in rows of 9; one student is left, waving. A check card: '9 × 812 = 7308, 7309 − 7308 = 1 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For 7309, add the digits: 7 plus 3 plus 0 plus 9 is 19. Then 1 plus 9 is 10, and 1 plus 0 is 1." },
+          { "speaker": "NEO", "text": "So one student is left over. Check: 9 times 812 is 7308, and 7309 minus 7308 is 1." },
+          { "speaker": "NEO", "text": "A number is divisible by 9 exactly when its digit sum is divisible by 9. The same shortcut works for 3." }
+        ]
+      },
+      {
+        "animation": "Place values for 11 alternate: '1 = 0 + 1 (one more)', '10 = 11 − 1 (one less)', '100 = 99 + 1', '1000 = 1001 − 1'. Then 5529 gets alternating signs from the units digit: '+9 − 2 + 5 − 5 = 7', 'remainder 7'. Check: '11 × 502 = 5522, 5529 − 5522 = 7 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For 11, place values alternate. 1 is one more than a multiple of 11, 10 is one less, 100 is one more, 1000 is one less." },
+          { "speaker": "NEO", "text": "So start at the units digit and alternate plus and minus. For 5529: plus 9, minus 2, plus 5, minus 5. That's 7." },
+          { "speaker": "NEO", "text": "5529 leaves remainder 7. Check: 11 times 502 is 5522, and 5529 minus 5522 is 7." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Divisible by 24? Check 4 and 6?' The number 12 passes both checks but fails 24, flashing red. Then '24 = 3 × 8' with the tick 'check 3 and 8 instead'. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "To test 24, I'll just test 4 and 6, since 4 times 6 is 24." },
+          { "speaker": "NEO", "text": "Careful. 12 passes both tests, but isn't divisible by 24. 4 and 6 share a factor of 2." },
+          { "speaker": "NEO", "text": "Use 3 and 8 instead. They share no common factor, and 3 times 8 is 24." },
+          { "speaker": "NEO", "text": "Exam tip: combine tests only for factors with no common factor, like 2 and 3 for 6." }
+        ]
+      },
+      {
+        "animation": "Recap board with the students standing in perfect rows. Points: '1. Divisible by 9 (or 3) ⇔ digit sum divisible by 9 (or 3)', '2. For 11: alternate + and − from the units digit', '3. For 24, test 3 and 8'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a number is divisible by 9 or 3 when its digit sum is." },
+          { "speaker": "NEO", "text": "Two: for 11, alternate plus and minus from the units digit to get the remainder." },
+          { "speaker": "NEO", "text": "Three: combine tests only for factors that share no common factor." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Number Play",
+    "topic_no": 4,
+    "name": "Digital Roots and Digits in Disguise",
+    "scenes": [
+      {
+        "animation": "A detective-style scene with a magnifying glass. A note reads 'PQ × 8 = RS'. Zippy in a deerstalker hat squints at the letters.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Letters pretending to be digits? This is a case for Detective Zippy!" },
+          { "speaker": "NEO", "text": "These are cryptarithms. But first, a useful tool: the digital root." }
+        ]
+      },
+      {
+        "animation": "The number 489710 shrinks step by step: '4 + 8 + 9 + 7 + 1 + 0 = 29', '2 + 9 = 11', '1 + 1 = 2'. A badge 'Digital root = 2' pins on. A palm-leaf scroll labelled 'Aryabhata II, Mahasiddhanta, c. 950 CE' unrolls beside it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Add the digits again and again until one digit remains. For 489710, that's 29, then 11, then 2." },
+          { "speaker": "NEO", "text": "That single digit is the digital root. It equals the remainder when dividing by 9, except multiples of 9 have root 9." },
+          { "speaker": "NEO", "text": "Aryabhata the Second described this around 950 CE, to check calculations." }
+        ]
+      },
+      {
+        "animation": "Digital roots of multiples of 3 cycle on a wheel: '3, 6, 9, 3, 6, 9'. Then twelve consecutive numbers show roots '1, 2, 3, ..., 9, 1, 2, 3'. A card: '8-digit number with root 5 → add 10 → root 6'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Multiples of 3 have digital roots that cycle 3, 6, 9, 3, 6, 9." },
+          { "speaker": "NEO", "text": "If a number has root 5, adding 10 adds one more to the leftover, so the new root is 6." }
+        ]
+      },
+      {
+        "animation": "Cryptarithm 'PQ × 8 = RS' solved line by line: '10 × 8 = 80 ✗ (same units digit)', '11 ✗ (P = Q)', '12 × 8 = 96 ✓', '13 × 8 = 104 ✗ (3 digits)'. The letters flip over to reveal 1, 2, 9, 6.",
+        "lines": [
+          { "speaker": "NEO", "text": "PQ times 8 is RS. Different letters are different digits, and a two-digit answer means PQ is small." },
+          { "speaker": "NEO", "text": "10 times 8 is 80, but both end in zero. 11 repeats a digit. 12 times 8 is 96. That works!" },
+          { "speaker": "NEO", "text": "13 times 8 is 104, which has three digits. So 12 is the only answer." }
+        ]
+      },
+      {
+        "animation": "Next case: 'BYE × 6 = RAY'. Reasoning bubbles pop: 'B = 2 ⇒ product > 1200 ✗, so B = 1', 'Y = 7 ⇒ 170 × 6 = 1020 ✗, so Y < 7', 'Y is the units digit of 6 × E ⇒ Y even'. An 'Exam Tip' sticker: 'The first digit of a number is never 0'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Harder case: BYE times 6 is RAY." },
+          { "speaker": "NEO", "text": "If B were 2, the product would pass 1200. So B is 1." },
+          { "speaker": "NEO", "text": "If Y were 7, 170 times 6 is 1020, too big. And Y is the last digit of 6 times E, so Y is even." },
+          { "speaker": "NEO", "text": "Exam tip: in cryptarithms, the first digit is never zero, and each letter stands for one digit only." }
+        ]
+      },
+      {
+        "animation": "Recap board with Detective Zippy's case file stamped 'SOLVED'. Points: '1. Digital root = repeated digit sum', '2. Digital root = remainder on ÷ 9 (9 for multiples of 9)', '3. Solve cryptarithms by reasoning about size and units digits'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the digital root comes from adding digits until one digit remains." },
+          { "speaker": "NEO", "text": "Two: it gives the remainder on dividing by 9, and multiples of 9 have root 9." },
+          { "speaker": "NEO", "text": "Three: crack cryptarithms by reasoning about the size of numbers and their units digits." },
+          { "speaker": "ZIPPY", "text": "Case closed. The digits confessed." }
+        ]
+      }
+    ]
+  }
+]

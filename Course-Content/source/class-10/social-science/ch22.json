@@ -1,0 +1,215 @@
+[
+  {
+    "chapter_no": 22,
+    "chapter": "Economics: Consumer Rights",
+    "topic_no": 1,
+    "name": "The Consumer in the Marketplace",
+    "scenes": [
+      {
+        "animation": "A kirana shop. The shopkeeper weighs a kilo of sugar, but his thumb is secretly pressing the scale. Zippy, carrying a big shopping bag, doesn't notice. Neo zooms in with a magnifying glass on the thumb.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "One kilo of sugar, perfectly weighed. What a helpful shopkeeper!" },
+          { "speaker": "NEO", "text": "Look closer, Zippy. That thumb is doing some weighing of its own." }
+        ]
+      },
+      {
+        "animation": "A marketplace with producers and consumers in two groups. A signboard reads 'Rules and regulations needed'. An individual consumer stands small and alone in front of a giant company building.",
+        "lines": [
+          { "speaker": "NEO", "text": "We participate in the market both as producers and as consumers. Rules and regulations are needed to protect consumers in the marketplace." },
+          { "speaker": "NEO", "text": "Individual consumers often find themselves in a weak position. Whenever there is a complaint regarding a good or service, the seller tries to shift all the responsibility on to the buyer." }
+        ]
+      },
+      {
+        "animation": "A list of exploitation builds, each with an animated icon: 'Weighing less than they should' with a tampered scale; 'Adding charges not mentioned before' with a bill growing extra lines; 'Selling adulterated or defective goods' with water pouring into milk; 'False information through the media' with a TV ad showing a magic cream.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exploitation in the marketplace happens in various ways. Sometimes traders indulge in unfair trade practices, like weighing less than they should." },
+          { "speaker": "NEO", "text": "They may add charges that were not mentioned before, or sell adulterated or defective goods." },
+          { "speaker": "NEO", "text": "Large companies with huge wealth, power and reach can manipulate the market in various ways. At times, false information is passed on through the media and other sources to attract consumers." },
+          { "speaker": "ZIPPY", "text": "Like that cream that promises I'll become fair in seven days?" },
+          { "speaker": "NEO", "text": "Exactly the kind of claim a consumer must question." }
+        ]
+      },
+      {
+        "animation": "A tin of baby milk powder on a billboard claims 'Better than mother's milk!'. Years pass on a flipping calendar; a stamp 'False claim' slams onto the billboard. Next, a cigarette pack gets a red label 'Can cause cancer' as a court gavel falls.",
+        "lines": [
+          { "speaker": "NEO", "text": "For example, a company for years sold powder milk for babies all over the world as the most scientific product, claiming it is better than mother's milk. It took years of sustained struggle before the company was forced to accept that it had been making false claims." },
+          { "speaker": "NEO", "text": "Similarly, a long battle had to be fought in courts to make cigarette companies accept that their product could cause cancer." }
+        ]
+      },
+      {
+        "animation": "A board-tip card: 'Forms of consumer exploitation'. Four ticks appear beside underweight, extra charges, adulteration, false information.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: when asked about ways consumers are exploited, list at least three forms with an everyday example for each." }
+        ]
+      },
+      {
+        "animation": "Recap board with a shopping bag icon. Points appear: '1. Consumers are often in a weak position', '2. Exploitation: underweight, extra charges, adulteration, false claims', '3. Rules and regulations protect consumers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: individual consumers are often in a weak position in the market." },
+          { "speaker": "NEO", "text": "Two: exploitation includes underweighing, extra charges, adulteration and false information." },
+          { "speaker": "NEO", "text": "Three: rules and regulations are needed to protect consumers." },
+          { "speaker": "ZIPPY", "text": "Shopkeeper uncle, thumb off the scale, please." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 22,
+    "chapter": "Economics: Consumer Rights",
+    "topic_no": 2,
+    "name": "The Consumer Movement and COPRA",
+    "scenes": [
+      {
+        "animation": "A 1960s-style black-and-white scene. A long queue outside a ration shop. The shopkeeper hides sacks of grain behind a curtain labelled 'Hoarding'. A man pours something into a tin of edible oil. Zippy, in a vintage cap, gasps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hidden grain, mixed-up oil. Did nobody complain?" },
+          { "speaker": "NEO", "text": "They did. And those complaints grew into the consumer movement." }
+        ]
+      },
+      {
+        "animation": "A timeline builds step by step: '1960s: consumer movement in an organised form' → 'Till 1970s: articles and exhibitions' → 'Consumer groups: ration shops, road transport' → '1986: Consumer Protection Act (COPRA)'. Each box pops up with a small icon.",
+        "lines": [
+          { "speaker": "NEO", "text": "The consumer movement arose out of dissatisfaction of consumers, as many unfair practices were being indulged in by sellers." },
+          { "speaker": "NEO", "text": "In India, rampant food shortages, hoarding, black marketing, and adulteration of food and edible oil gave birth to the consumer movement in an organised form in the 1960s." },
+          { "speaker": "NEO", "text": "Till the 1970s, consumer organisations were largely engaged in writing articles and holding exhibitions. Later, consumer groups formed to look into malpractices in ration shops and overcrowding in road passenger transport." }
+        ]
+      },
+      {
+        "animation": "A government building stamps a large document: 'Consumer Protection Act, 1986 (COPRA)'. The date '24 December' glows on a calendar with the label 'National Consumer Day'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A major step was taken in 1986 by the Indian government. This was the enactment of the Consumer Protection Act, 1986, popularly known as COPRA." },
+          { "speaker": "NEO", "text": "In India, twenty-fourth December is observed as National Consumer Day. It was on this day that the Indian Parliament enacted the Consumer Protection Act in 1986." }
+        ]
+      },
+      {
+        "animation": "A shift in thinking is shown: a seesaw where 'Consumer beware' tips down and 'Seller responsible' tips up. Then a globe appears with the label '1985: UN Guidelines for Consumer Protection', and 'Consumers International' links groups across countries.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So what changed after the movement?" },
+          { "speaker": "NEO", "text": "The movement put pressure on business firms and the government. Responsibility for ensuring quality of goods and services moved towards the sellers, not just the buyers." },
+          { "speaker": "NEO", "text": "At the international level, in 1985 the United Nations adopted the UN Guidelines for Consumer Protection. Consumers International became an umbrella body for consumer organisations around the world." }
+        ]
+      },
+      {
+        "animation": "A board-tip card with '24 December = National Consumer Day' and 'COPRA = 1986' in bold.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: COPRA, 1986 and National Consumer Day on twenty-fourth December are quick one-mark facts. Don't mix up the dates." }
+        ]
+      },
+      {
+        "animation": "Recap board with a raised fist and a shopping bag. Points appear: '1. Organised movement: 1960s', '2. COPRA enacted in 1986', '3. 24 December: National Consumer Day; 1985 UN Guidelines'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: food shortages, hoarding and adulteration led to an organised consumer movement in the 1960s." },
+          { "speaker": "NEO", "text": "Two: the Consumer Protection Act, COPRA, was enacted in 1986." },
+          { "speaker": "NEO", "text": "Three: twenty-fourth December is National Consumer Day." },
+          { "speaker": "ZIPPY", "text": "I'm marking my calendar. December twenty-fourth, consumer power!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 22,
+    "chapter": "Economics: Consumer Rights",
+    "topic_no": 3,
+    "name": "Consumer Rights: Safety, Information and Choice",
+    "scenes": [
+      {
+        "animation": "Zippy's kitchen. A pressure cooker whistles wildly and starts shaking. Zippy hides behind the fridge. Neo calmly points to the safety valve, which releases steam safely.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The cooker's going to explode!" },
+          { "speaker": "NEO", "text": "Relax. It has a safety valve. That valve exists because you have a right to safety." }
+        ]
+      },
+      {
+        "animation": "A shield labelled 'Right to Safety' covers a pressure cooker, an electrical appliance, a car and a hospital bed. A caption reads 'Protected against goods and services hazardous to life and property'.",
+        "lines": [
+          { "speaker": "NEO", "text": "While using many goods and services, we as consumers have the right to be protected against the marketing of goods and delivery of services that are hazardous to life and property." },
+          { "speaker": "NEO", "text": "Producers need to strictly follow the required safety rules and regulations. A defective safety valve in a pressure cooker can cause a serious accident." }
+        ]
+      },
+      {
+        "animation": "A packet of biscuits spins and zooms in on the label: 'Ingredients', 'Price (MRP)', 'Batch number', 'Date of manufacture', 'Expiry date', 'Address of manufacturer'. Each field lights up. Then a document appears: 'Right to Information Act, October 2005'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Next, the right to be informed. When you buy a commodity, you find details on the packing: ingredients, price, batch number, date of manufacture, expiry date and the address of the manufacturer." },
+          { "speaker": "NEO", "text": "Consumers can complain and ask for compensation or replacement if the product proves defective. And sellers cannot charge more than the printed maximum retail price." },
+          { "speaker": "NEO", "text": "In October 2005, the Government of India enacted the Right to Information Act, which ensures citizens all information about the functions of government departments." }
+        ]
+      },
+      {
+        "animation": "A gas agency counter. The dealer insists, 'Gas connection only with our stove!' A big 'Right to Choose' stamp slams onto the counter and the forced stove rolls away.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My uncle was told he'd get a gas connection only if he bought their stove too." },
+          { "speaker": "NEO", "text": "That denies him the right to choose. Any consumer who receives a service, in whatever capacity, has the right to choose whether to continue it." },
+          { "speaker": "NEO", "text": "Sometimes you are forced to buy things you may not wish to own, and you are left with no choice. That is a violation of this right." }
+        ]
+      },
+      {
+        "animation": "A board-tip card lists: 'Right to Safety: cooker safety valve', 'Right to Information: packet details, MRP', 'Right to Choose: no forced purchase'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: match each right with a real-life example. Case-based questions often describe a situation and ask which right has been violated." }
+        ]
+      },
+      {
+        "animation": "Recap board with a shield, an info icon and a choice icon. Points appear: '1. Right to Safety', '2. Right to be Informed (MRP, expiry, RTI Act 2005)', '3. Right to Choose'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the right to safety protects us from hazardous goods and services." },
+          { "speaker": "NEO", "text": "Two: the right to be informed means details like MRP and expiry date on packets, and the RTI Act of 2005 for government information." },
+          { "speaker": "NEO", "text": "Three: the right to choose means no one can force us to buy something we don't want." },
+          { "speaker": "ZIPPY", "text": "I choose to trust the safety valve. From a distance." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 22,
+    "chapter": "Economics: Consumer Rights",
+    "topic_no": 4,
+    "name": "Seeking Redressal: Consumer Courts, Representation and Standard Marks",
+    "scenes": [
+      {
+        "animation": "Zippy holds a brand-new phone with a cracked screen that arrived in the box. The shop's door has a sign 'No returns, no complaints'. Zippy looks at Neo with big teary eyes.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The phone came broken, and the shop says it's not their problem. What can I do?" },
+          { "speaker": "NEO", "text": "Plenty. You have the right to seek redressal." }
+        ]
+      },
+      {
+        "animation": "A card appears: 'Right to seek redressal: against unfair trade practices and exploitation'. Next, a card: 'Right to represent: in consumer courts'. Consumer forum volunteers wave from a small office labelled 'Consumer forum / Consumer protection council'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Consumers have the right to seek redressal against unfair trade practices and exploitation. If any damage is done, they have the right to get compensation, depending on the degree of damage." },
+          { "speaker": "NEO", "text": "The Consumer Protection Act has also enabled consumers to have the right to represent in consumer courts." },
+          { "speaker": "NEO", "text": "Voluntary organisations, called consumer forums or consumer protection councils, guide consumers on how to file cases, and sometimes represent individual consumers in consumer courts." }
+        ]
+      },
+      {
+        "animation": "A three-step pyramid builds from bottom to top: 'District level', 'State level', 'National level'. Arrows on the side show 'Claims of higher value go higher' and 'Appeal upward if the case is dismissed'. A label on top reads 'Three-tier quasi-judicial machinery under COPRA'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Under COPRA, a three-tier quasi-judicial machinery at the district, state and national levels was set up for redressal of consumer disputes." },
+          { "speaker": "NEO", "text": "The district level court deals with cases of smaller claims, the state level with larger claims, and the national level with the largest claims. If a case is dismissed at the district level, the consumer can appeal at the state and then the national level." },
+          { "speaker": "ZIPPY", "text": "So I don't need a big fancy lawyer to fight for my phone?" },
+          { "speaker": "NEO", "text": "No. Consumers can represent themselves in consumer courts." }
+        ]
+      },
+      {
+        "animation": "Three logos fly in and stick onto products: 'ISI' on an electric iron, 'Agmark' on a packet of honey, 'Hallmark' on a gold bangle. A label reads 'Certified quality'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Consumer education also means knowing standard marks. ISI, Agmark and Hallmark logos help consumers be assured of quality while purchasing goods and services." },
+          { "speaker": "NEO", "text": "Organisations that monitor and issue these certificates allow producers to use the logos if they follow certain quality standards." },
+          { "speaker": "NEO", "text": "Board tip: this chapter is often done as a project. A case study of a real consumer complaint, with the right violated and the court approached, works well." }
+        ]
+      },
+      {
+        "animation": "Recap board with a gavel and three quality logos. Points appear: '1. Right to seek redressal and to represent', '2. Three-tier courts: district, state, national', '3. Look for ISI, Agmark, Hallmark'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: consumers have the right to seek redressal and to represent themselves in consumer courts." },
+          { "speaker": "NEO", "text": "Two: COPRA set up a three-tier system of consumer courts at district, state and national levels." },
+          { "speaker": "NEO", "text": "Three: standard marks like ISI, Agmark and Hallmark assure quality." },
+          { "speaker": "ZIPPY", "text": "Bill saved. Complaint drafted. Watch out, phone shop." }
+        ]
+      }
+    ]
+  }
+]

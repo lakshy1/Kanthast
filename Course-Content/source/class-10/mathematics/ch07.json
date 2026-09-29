@@ -1,0 +1,112 @@
+[
+  {
+    "chapter_no": 7,
+    "chapter": "Coordinate Geometry",
+    "topic_no": 1,
+    "name": "The Distance Formula",
+    "scenes": [
+      {
+        "animation": "A city map on a grid. Zippy's house sits at one point and the chai stall at another. Zippy walks along the grid roads, right then up, puffing, while a crow flies straight across in a diagonal line and arrives first, sipping chai.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The crow beat me to the chai stall! How far did it actually fly?" },
+          { "speaker": "NEO", "text": "It flew the straight-line distance. The distance formula calculates exactly that." }
+        ]
+      },
+      {
+        "animation": "Points P(x₁, y₁) and Q(x₂, y₂) are plotted. A right triangle forms with horizontal leg '(x₂ − x₁)' and vertical leg '(y₂ − y₁)'. Pythagoras writes itself: 'PQ² = (x₂ − x₁)² + (y₂ − y₁)²', then 'PQ = √[(x₂ − x₁)² + (y₂ − y₁)²]'. A side card: 'Distance from origin: √(x² + y²)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Join the two points, and draw horizontal and vertical lines to form a right triangle." },
+          { "speaker": "NEO", "text": "The legs are x2 minus x1, and y2 minus y1. By the Pythagoras theorem, PQ equals the square root of x2 minus x1 squared, plus y2 minus y1 squared." },
+          { "speaker": "NEO", "text": "The distance of a point x, y from the origin is root of x squared plus y squared." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'P(3, 2), Q(−2, −3), R(2, 3)'. Lines compute one by one: 'PQ = √[(−2 − 3)² + (−3 − 2)²] = √(25 + 25) = √50', 'QR = √[(2 + 2)² + (3 + 3)²] = √(16 + 36) = √52', 'PR = √[(2 − 3)² + (3 − 2)²] = √(1 + 1) = √2'. The three sides of triangle PQR light up.",
+        "lines": [
+          { "speaker": "NEO", "text": "Do the points P 3, 2, Q minus 2, minus 3, and R 2, 3 form a triangle? Find all three sides." },
+          { "speaker": "NEO", "text": "PQ: minus 2 minus 3 is minus 5, and minus 3 minus 2 is minus 5. So PQ is root of 25 plus 25, which is root 50." },
+          { "speaker": "NEO", "text": "QR: 2 plus 2 is 4, and 3 plus 3 is 6. So QR is root of 16 plus 36, which is root 52." },
+          { "speaker": "NEO", "text": "PR: 2 minus 3 is minus 1, and 3 minus 2 is 1. So PR is root of 1 plus 1, which is root 2." }
+        ]
+      },
+      {
+        "animation": "Decimal values appear: '√50 ≈ 7.07, √52 ≈ 7.21, √2 ≈ 1.41', '7.07 + 1.41 = 8.48 > 7.21 ✓ ⇒ triangle'. Then: 'PQ² + PR² = 50 + 2 = 52 = QR²', '⇒ right-angled at P'. A right-angle box appears at P.",
+        "lines": [
+          { "speaker": "NEO", "text": "The sum of any two sides is greater than the third, so the points form a triangle." },
+          { "speaker": "ZIPPY", "text": "Wait, 50 plus 2 is 52. PQ squared plus PR squared equals QR squared!" },
+          { "speaker": "NEO", "text": "Sharp eyes. By the converse of Pythagoras, it's a right triangle, with the right angle at P." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: '(−2 − 3)² = (−5)² = 25, not −25'. Brackets around negative numbers glow. A side note: 'Collinear check: sum of two distances = third'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: put negative coordinates in brackets before squaring. A square is never negative." },
+          { "speaker": "NEO", "text": "Also, if the sum of two distances equals the third exactly, the three points are collinear, not a triangle." }
+        ]
+      },
+      {
+        "animation": "Recap board with the crow and its chai. Points appear: '1. PQ = √[(x₂ − x₁)² + (y₂ − y₁)²]', '2. From origin: √(x² + y²)', '3. Use distances to test triangles, right angles, collinearity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the distance between two points is root of the difference in x squared, plus the difference in y squared." },
+          { "speaker": "NEO", "text": "Two: from the origin, it's root of x squared plus y squared." },
+          { "speaker": "NEO", "text": "Three: distances help us test for triangles, right angles and collinear points." },
+          { "speaker": "ZIPPY", "text": "Next time, I'm flying with the crow." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Coordinate Geometry",
+    "topic_no": 2,
+    "name": "The Section Formula",
+    "scenes": [
+      {
+        "animation": "A cricket pitch drawn on a grid from wicket A(4, −3) to wicket B(8, 5). The coach wants a practice cone placed so that it divides the pitch in the ratio 3 : 1 from A. Zippy runs back and forth with the cone, unsure where to stop.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Coach wants the cone three-quarters of the way from A to B. Where exactly is that?" },
+          { "speaker": "NEO", "text": "The section formula gives the exact coordinates. No running needed." }
+        ]
+      },
+      {
+        "animation": "A segment AB with point P between them, the parts labelled 'm₁' and 'm₂'. A golden formula card builds: 'P divides A(x₁, y₁) and B(x₂, y₂) internally in m₁ : m₂', 'P = ((m₁x₂ + m₂x₁)/(m₁ + m₂), (m₁y₂ + m₂y₁)/(m₁ + m₂))'. Arrows show m₁ pairing with B's coordinates and m₂ with A's.",
+        "lines": [
+          { "speaker": "NEO", "text": "If P divides the segment joining A x1, y1, and B x2, y2, internally in the ratio m1 to m2, then:" },
+          { "speaker": "NEO", "text": "x equals m1 x2 plus m2 x1, over m1 plus m2. And y equals m1 y2 plus m2 y1, over m1 plus m2." },
+          { "speaker": "NEO", "text": "Notice the cross pairing: m1 goes with B, and m2 goes with A." }
+        ]
+      },
+      {
+        "animation": "Worked lines: 'm₁ : m₂ = 3 : 1, A(4, −3), B(8, 5)', 'x = (3 × 8 + 1 × 4)/(3 + 1) = (24 + 4)/4 = 28/4 = 7', 'y = (3 × 5 + 1 × (−3))/4 = (15 − 3)/4 = 12/4 = 3', 'P = (7, 3)'. The cone drops onto (7, 3).",
+        "lines": [
+          { "speaker": "NEO", "text": "Here m1 is 3 and m2 is 1. x equals 3 into 8, plus 1 into 4, over 4. That's 28 by 4, which is 7." },
+          { "speaker": "NEO", "text": "y equals 3 into 5, plus 1 into minus 3, over 4. That's 12 by 4, which is 3." },
+          { "speaker": "ZIPPY", "text": "So the cone goes at 7, 3. Placed!" }
+        ]
+      },
+      {
+        "animation": "A midpoint card: 'm₁ = m₂ ⇒ midpoint = ((x₁ + x₂)/2, (y₁ + y₂)/2)', with the example 'Midpoint of A(4, −3), B(8, 5) = (6, 1)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When the ratio is 1 to 1, P is the midpoint: x1 plus x2 by 2, and y1 plus y2 by 2. The midpoint of this pitch is 6, 1." }
+        ]
+      },
+      {
+        "animation": "A 'find the ratio' card: 'In what ratio does (−4, 6) divide the join of (−6, 10) and (3, −8)?', 'Let ratio = k : 1', '−4 = (3k − 6)/(k + 1)', '−4k − 4 = 3k − 6', '2 = 7k ⇒ k = 2/7 ⇒ 2 : 7'. A check: 'y = (2(−8) + 7(10))/9 = (−16 + 70)/9 = 54/9 = 6 ✓'. A 'BOARD TIP' sticker lands on 'k : 1'.",
+        "lines": [
+          { "speaker": "NEO", "text": "To find a ratio, take it as k to 1. Say minus 4, 6 divides the join of minus 6, 10 and 3, minus 8." },
+          { "speaker": "NEO", "text": "Using x: minus 4 equals 3k minus 6, over k plus 1. So minus 4k minus 4 equals 3k minus 6, giving 7k equals 2, and k is 2 by 7. The ratio is 2 to 7." },
+          { "speaker": "NEO", "text": "Board tip: check with the y-coordinate. Minus 16 plus 70, over 9, is 6. Correct." }
+        ]
+      },
+      {
+        "animation": "Recap board with the cricket pitch and cone. Points appear: '1. P = ((m₁x₂ + m₂x₁)/(m₁ + m₂), (m₁y₂ + m₂y₁)/(m₁ + m₂))', '2. Midpoint: ((x₁ + x₂)/2, (y₁ + y₂)/2)', '3. Unknown ratio: take k : 1, verify with the other coordinate'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the section formula pairs m1 with B and m2 with A, over m1 plus m2." },
+          { "speaker": "NEO", "text": "Two: the midpoint is the average of the coordinates." },
+          { "speaker": "NEO", "text": "Three: for an unknown ratio, take k to 1, solve, and verify with the other coordinate." },
+          { "speaker": "ZIPPY", "text": "Cone placed, coach happy." }
+        ]
+      }
+    ]
+  }
+]

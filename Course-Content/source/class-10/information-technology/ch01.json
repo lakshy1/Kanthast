@@ -1,0 +1,568 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "Employability Skills",
+    "topic_no": 1,
+    "name": "Communication Skills-II",
+    "scenes": [
+      {
+        "animation": "A school canteen. Zippy shouts an order across the noisy counter: 'One samosa!' The canteen uncle hands over five samosas. Zippy stares at the plate, sparks fizzing in confusion.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "I said one samosa! Why did I get five?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Your message left you correctly, Zippy. Somewhere on the way, the communication broke. Let's find out where."
+          }
+        ]
+      },
+      {
+        "animation": "A circular diagram builds step by step with arrows: 'Sender' (Zippy) → 'Message' (a speech bubble with a samosa) → 'Channel' (a sound wave) → 'Receiver' (canteen uncle) → 'Feedback' (arrow looping back to Zippy). Each label pops in as Neo names it.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Every communication follows a cycle. The sender begins the communication."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The message is the information to be shared, and the channel is the means used to send it."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The receiver gets the message and replies with feedback. Feedback completes the communication cycle."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So if uncle had repeated my order, I'd have caught the mistake!"
+          }
+        ]
+      },
+      {
+        "animation": "Three cards flip in: a green thumbs-up 'Positive feedback', an orange 'Negative feedback', a grey blank card 'No feedback'. Then a checklist appears: 'Specific, Timely, Polite, Offering continuing support'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Feedback can be positive, negative, or even no feedback at all."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Good feedback is specific, timely and polite, and it offers continuing support."
+          },
+          {
+            "speaker": "NEO",
+            "text": "'Your essay is bad' is useless. 'Your second paragraph needs an example' actually helps."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So feedback is like a GPS for improving, not a scolding."
+          }
+        ]
+      },
+      {
+        "animation": "The canteen scene rewinds. Obstacles pop up between Zippy and the uncle, each labelled: a loud mixer grinder 'Physical', a Tamil-speaking tourist confused by Hindi 'Linguistic', Zippy too shy to speak 'Interpersonal', a long line of bosses passing a note 'Organisational', and a festival greeting misunderstood 'Cultural'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Things that block the message are barriers. The mixer noise was a physical barrier."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Not knowing a language is a linguistic barrier. Stage fear or unwillingness to talk is an interpersonal barrier."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Rigid rules and hierarchy create organisational barriers, and different customs create cultural barriers."
+          }
+        ]
+      },
+      {
+        "animation": "Seven glowing letter 'C' badges line up on a shelf: Clear, Concise, Concrete, Correct, Coherent, Complete, Courteous. Zippy tries the order again with each badge lighting up, and receives exactly one samosa. A yellow 'BOARD TIP' card slides in listing all seven.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "To beat these barriers, follow the 7 Cs: clear, concise, concrete, correct, coherent, complete and courteous."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Uncle ji, please, one aloo samosa, only one. Thank you!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: the 7 Cs are asked very often. Learn all seven, and remember that missing any one can cause miscommunication."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a samosa icon. Points appear: '1. Sender → Message → Channel → Receiver → Feedback', '2. Good feedback: specific, timely, polite, supportive', '3. Barriers: physical, linguistic, interpersonal, organisational, cultural; beat them with the 7 Cs'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: the communication cycle runs from sender, message and channel to receiver, and feedback completes it."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: good feedback is specific, timely, polite and supportive."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: barriers can be physical, linguistic, interpersonal, organisational or cultural, and the 7 Cs help us overcome them."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "And now I have four extra samosas to return."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Employability Skills",
+    "topic_no": 2,
+    "name": "Self-Management Skills-II",
+    "scenes": [
+      {
+        "animation": "Night before a board pre-exam. Zippy flickers wildly over a mountain of books, a phone buzzing with memes, a half-eaten packet of chips. A stress meter above him climbs into the red.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Exam tomorrow, five chapters left, and my brain is buffering!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "That's stress, Zippy. The good news is that stress can be managed with a few simple skills."
+          }
+        ]
+      },
+      {
+        "animation": "Three blocks stack up labelled 'A: Adversity (the stressful event)', 'B: Beliefs (the way you respond)', 'C: Consequences (actions and outcomes)'. Zippy's worried face changes to calm as the B block is rotated to a positive side.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Use the ABC of stress management. A is adversity, the stressful event."
+          },
+          {
+            "speaker": "NEO",
+            "text": "B is your beliefs, the way you respond to it. C is the consequences, the actions and outcomes that follow."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Change how you respond, and you change the result. Good sleep, exercise in fresh air, a balanced diet and time management all help."
+          },
+          {
+            "speaker": "NEO",
+            "text": "First, be aware that you are stressed. Watch for signs like headaches, sleeplessness and excessive worrying, then find the cause."
+          }
+        ]
+      },
+      {
+        "animation": "A dartboard; Zippy throws a vague dart labelled 'I'll study more' and it misses. Then a new dart shows 'Revise 2 chapters of IT by Sunday, 1 hour a day'. As it hits the bullseye, letters S-M-A-R-T light up: Specific, Measurable, Achievable, Realistic, Time-bound.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Self-regulation begins with goal setting. Use the SMART method."
+          },
+          {
+            "speaker": "NEO",
+            "text": "A goal should be specific, measurable, achievable, realistic and time-bound."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So 'I'll study more' is not SMART, but 'two IT chapters by Sunday' is!"
+          }
+        ]
+      },
+      {
+        "animation": "A four-step staircase builds: 'Organise' (a neat desk and timetable), 'Prioritise' (a to-do list ranked 1, 2, 3), 'Control' (phone placed in a drawer), 'Track' (ticks on a calendar). Zippy climbs it step by step.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Next, time management has four steps. Organise your day and keep your desk tidy."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Prioritise with a ranked to-do list. Control distractions, and track how you actually spent your time."
+          }
+        ]
+      },
+      {
+        "animation": "Two engines inside Zippy: a heart labelled 'Internal motivation: LOVE' and a trophy labelled 'External motivation: REWARD'. A 'BOARD TIP' card appears: 'Suresh practises daily to win a prize = External'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Self-motivation is the force within you that drives you. Internal motivation comes from love of the task; external motivation comes from rewards and recognition."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So learning to dance just because it feels good is internal motivation?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Exactly. To build self-motivation, set a goal, make a plan, and stay loyal to it even in difficult times."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: case questions ask you to identify the type. Working for a prize or an award is external motivation."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a calm Zippy meditating on a stack of books. Points appear: '1. ABC: Adversity, Beliefs, Consequences', '2. SMART goals', '3. Time management: Organise, Prioritise, Control, Track'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: the ABC of stress management is adversity, beliefs and consequences."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: set SMART goals: specific, measurable, achievable, realistic and time-bound."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: manage time in four steps: organise, prioritise, control and track."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Stress meter: green. Chips: finished. Revision: started."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Employability Skills",
+    "topic_no": 3,
+    "name": "ICT Skills-II",
+    "scenes": [
+      {
+        "animation": "A school computer lab. Zippy spills a glass of nimbu pani on a keyboard while a pop-up flashes 'You have won Rs 10 lakh! Deposit Rs 5,000 to claim'. The monitor wobbles and groans.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "I just won ten lakh rupees! Also, the keyboard is sticky."
+          },
+          {
+            "speaker": "NEO",
+            "text": "That's two problems in one second, Zippy. Today: caring for computers and keeping data safe."
+          }
+        ]
+      },
+      {
+        "animation": "A cartoon computer takes a 'health check-up'. Icons tick in: soft brush on keyboard, soft cloth wiping screen, no food or drinks nearby, CPU fan spinning, charger unplugged at 100 percent, USB plugged in gently, extra apps closing.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Clean the keyboard with a soft brush and wipe the screen with a soft cloth. Keep food and drinks away."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Keep the computer cool, don't overcharge the battery, plug in devices gently, and don't run too many programs at once."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Oops. So nimbu pani and keyboards are not friends."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Never. Any liquid spilt on a device can spoil it beyond repair."
+          }
+        ]
+      },
+      {
+        "animation": "A calendar with four tabs: 'Daily: clean e-mail inbox', 'Weekly: clean keyboard and monitor, back up data', 'Monthly: run disk cleaner and full virus scan', 'Yearly: update OS, renew anti-virus'. A backup arrow copies files to an external drive.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Make a maintenance schedule: daily, weekly, monthly and yearly."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Back up your data to another device, so it can be recovered if the computer stops working."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Delete spam regularly, and run a disk cleaner to remove unnecessary files and improve performance."
+          }
+        ]
+      },
+      {
+        "animation": "A rogues' gallery of cartoon threats: a masked thief grabbing a laptop 'Physical theft', a hacker wearing Zippy's face 'Identity theft', a pirate copying CDs 'Software piracy', a worm multiplying across files 'Worm', a wooden horse with a gift tag 'Trojan Horse', and the lottery pop-up 'Internet scam'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Threats include theft: physical theft, identity theft and software piracy."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Viruses damage data. Worms copy themselves and spread to all files. A Trojan Horse looks useful but behaves like a virus once inside."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "And my lottery win is an internet scam. Ugh."
+          }
+        ]
+      },
+      {
+        "animation": "A shield assembles piece by piece: 'Strong password: aB3#kq9!', 'Anti-virus + Firewall', 'Encrypt data (e.g. BitLocker)', 'Use secure https sites', 'Log out when leaving'. A yellow 'BOARD TIP' card: 'Worm replicates; Trojan disguises'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Protect data with passwords that mix small letters, capital letters, numbers and special characters."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Install anti-virus and a firewall, encrypt important data, share bank details only on secure sites, and always log out."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: remember the difference. A worm replicates itself; a Trojan Horse disguises itself as useful software."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a shiny, clean computer wearing a shield. Points appear: '1. Clean, cool, careful handling', '2. Maintenance schedule + backup', '3. Threats: theft, viruses, scams; protect with passwords, anti-virus, firewall, encryption'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: keep devices clean, cool and handle them carefully."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: follow a maintenance schedule and back up your data."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: guard against theft, viruses and scams with strong passwords, anti-virus, firewalls and encryption."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Goodbye, fake ten lakh. Hello, real anti-virus."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Employability Skills",
+    "topic_no": 4,
+    "name": "Entrepreneurial Skills-II",
+    "scenes": [
+      {
+        "animation": "A busy street market. Two plant shops side by side: Ramu dozes behind his counter, while Ramya walks around delivering potted plants to homes on a cycle. Zippy hovers between them, puzzled.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Both of them sell plants. Aren't they both entrepreneurs?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Not quite. Ramu waits for customers. Ramya grows her business with a new idea. That makes Ramya the entrepreneur."
+          }
+        ]
+      },
+      {
+        "animation": "Bharti from Bihar makes jute earrings. Arrows show: 'Demand: girls like earrings', 'Local material: jute from a farmer', 'Jobs: local women hired'. Coins flow to the farmer and the women. Labels pop: 'Create jobs', 'Share wealth', 'Lower prices'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Entrepreneurs fulfil customer needs, use local materials and help society."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Bharti buys jute from a local farmer and hires local women. She creates jobs and shares wealth."
+          },
+          {
+            "speaker": "NEO",
+            "text": "And when many entrepreneurs sell the same product, like mobile phones, prices go down."
+          }
+        ]
+      },
+      {
+        "animation": "A five-part wheel spins: 'Making decisions', 'Managing the business', 'Divide income', 'Taking risk', 'Create a new method, idea or product'. Ramya's cycle-cart moves around the wheel, stopping at each slice.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Entrepreneurs are confident, patient, creative and hard-working. They take responsibility and do not give up."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Their functions are making decisions, managing the business, dividing income, taking risks, and creating new methods, ideas or products."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So when Ramya pays rent and salaries from her earnings, that is dividing income?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Right. And insuring her shop against fire and theft is taking a risk wisely."
+          }
+        ]
+      },
+      {
+        "animation": "Four myth balloons float up and Zippy pops each with a pin: 'Every idea must be unique', 'You need lots of money', 'Only big businesses count', 'Entrepreneurs are born, not made'. Behind each, a truth card appears, e.g. Sheila with her one taxi.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Let's bust four myths. A business idea need not be unique; it must meet a demand in a better way."
+          },
+          {
+            "speaker": "NEO",
+            "text": "You don't need huge capital; start with what you have. Sheila with one taxi is also an entrepreneur."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "And entrepreneurs are made, not born. So I can be one too!"
+          }
+        ]
+      },
+      {
+        "animation": "A three-step path: 'Enter' (Sanjana opens a small grocery store), 'Survive' (she beats nearby competitors and adds two floors), 'Grow' (a chain of four more stores). A yellow 'BOARD TIP' card: 'Match the story to Enter / Survive / Grow'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "As a career, entrepreneurship has three stages: enter the market, survive the competition, and grow the business."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: questions often give a short story and ask you to identify the stage. Opening more branches means grow."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with Ramya's cycle-cart. Points appear: '1. Entrepreneurs create jobs, share wealth, lower prices', '2. Functions: decide, manage, divide income, take risk, innovate', '3. Career stages: Enter → Survive → Grow'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: entrepreneurs help society by creating jobs, sharing wealth and lowering prices."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: their functions are deciding, managing, dividing income, taking risks and innovating."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: an entrepreneurial career moves from enter, to survive, to grow."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Step one: enter the samosa business."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Employability Skills",
+    "topic_no": 5,
+    "name": "Green Skills-II",
+    "scenes": [
+      {
+        "animation": "Zippy happily sips chai from a plastic cup at a railway station, then tosses it. The cup lands on a mountain of plastic cups. A tiny sapling next to it wilts.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "It's just one cup, Neo. What harm can it do?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "One cup from a billion people is a mountain. Let's talk about sustainable development."
+          }
+        ]
+      },
+      {
+        "animation": "A see-saw balances three weights: 'Economic growth', 'Care for environment', 'Social well-being'. A child of today and a child of the future sit at each end, level. The definition types itself on screen.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Sustainable development is development that meets the needs of the present without compromising the ability of future generations to meet their own needs."
+          },
+          {
+            "speaker": "NEO",
+            "text": "It balances economic growth, care for the environment and social well-being."
+          }
+        ]
+      },
+      {
+        "animation": "Three warning signs light up: 'Food: fertile land shrinking, soil nutrients depleted', 'Water: rivers polluted with garbage', 'Fuel: trees cut, extreme weather'. Then the Charanka Solar Park in Gujarat appears, panels glinting on barren land.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Three major problems are food, water and fuel."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Fertile land is shrinking, rivers are getting polluted, and cutting trees for fuel is affecting the climate."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Clean solutions exist. The Charanka Solar Park in Gujarat produces solar power on barren land."
+          },
+          {
+            "speaker": "NEO",
+            "text": "We can also reduce waste, recycle, use biodegradable materials and plant more trees."
+          }
+        ]
+      },
+      {
+        "animation": "A UN globe; 17 coloured tiles fan out around it, with 'Launched September 2015, New York' and 'Target: 2030'. Tiles for Quality Education, Clean Water and Sanitation, Affordable and Clean Energy, and Life on Land glow brighter.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "The United Nations launched 17 Sustainable Development Goals in September 2015, with targets to be achieved by 2030."
+          },
+          {
+            "speaker": "NEO",
+            "text": "They aim to end poverty, protect the planet and ensure peace and prosperity for all."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Seventeen goals? Even cricket only needs one!"
+          }
+        ]
+      },
+      {
+        "animation": "Railway platform again: the plastic cup is replaced by a clay kulhad. Three benefits pop up: 'Fewer trees cut', 'Jobs for potters', 'Less plastic waste'. Then quick icons: switching off fans, LED bulbs, cloth bags, fixing a leaking tap. A 'BOARD TIP' card: 'SDGs = 17, by the UN'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Railways introduced kulhads to replace plastic and paper cups. That saves trees, creates jobs for potters and cuts plastic waste."
+          },
+          {
+            "speaker": "NEO",
+            "text": "You can help too: switch off lights and fans, use LED bulbs, carry cloth bags and fix leaking taps."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: MCQs often ask how many SDGs there are and who made them. The answer: 17, by the United Nations."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a kulhad of chai and a healthy sapling. Points appear: '1. Meet present needs without harming future generations', '2. Problems: food, water, fuel', '3. 17 UN SDGs (2015 → 2030); act locally'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: sustainable development meets today's needs without harming the future's."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: the major problems are food, water and fuel."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: the UN's 17 goals guide the world till 2030, and each of us can help locally."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Kulhad chai tastes better anyway."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -20,29 +20,9 @@ import {
   schoolClassOptions,
   setSelectedSchoolClass,
 } from "../utils/schoolTrack";
+import MEDICAL_PLANS from "../data/medicalPlans";
 
-const plans = [
-  {
-    id: "usmle-1y",
-    title: "USMLE / Medicine",
-    durationLabel: "1 Year Plan",
-    durationYears: 1,
-    amountUsd: 110,
-    priceLabel: "110 USD",
-    highlight: false,
-    desc: "Full access to all videos and images for one year. Great for a focused exam cycle.",
-  },
-  {
-    id: "usmle-2y",
-    title: "USMLE / Medicine",
-    durationLabel: "2 Year Plan",
-    durationYears: 2,
-    amountUsd: 200,
-    priceLabel: "200 USD",
-    highlight: true,
-    desc: "Best value — just $100/year. Save $20 vs two annual plans. Ideal for med students who want uninterrupted access through clerkships and boards.",
-  },
-];
+const plans = MEDICAL_PLANS;
 
 const formatDate = (value) => {
   if (!value) return "-";
@@ -238,7 +218,7 @@ export default function SubscriptionPage() {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_8%_5%,_#cffafe,_#eff6ff_35%,_#f8fafc_90%)] px-4 md:px-8 py-10">
-      <div className="max-w-6xl mx-auto">
+      <div className="page-frame">
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -251,7 +231,7 @@ export default function SubscriptionPage() {
               <h1 className="text-3xl md:text-4xl font-black text-ink mt-2">
                 Unlock USMLE / Medicine Content
               </h1>
-              <p className="text-ink-muted mt-2">Secure checkout simulation for subscription purchase flow.</p>
+              <p className="text-ink-muted mt-2">Get full access to every animated lesson, quiz, and progress tool.</p>
             </div>
             <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-cyan-800 font-semibold">
               <FaStethoscope />
@@ -309,7 +289,7 @@ export default function SubscriptionPage() {
             </p>
             <p className="text-ink-muted text-sm mt-1">Need help before purchasing? Ask the chatbot.</p>
             <Link to="/chatbot" className="inline-block mt-3 text-cyan-700 font-semibold hover:text-cyan-800">
-              Open Chatbot Support
+              Ask the Assistant
             </Link>
           </div>
 
@@ -592,7 +572,7 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
         />
       </Helmet>
 
-      <div className="mx-auto max-w-6xl">
+      <div className="page-frame">
         <section className="rounded-card border border-line bg-surface p-6 shadow-e4 md:p-8">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
             <div>
@@ -601,7 +581,7 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
                 Choose class. Pay once. Learn all year.
               </h1>
               <p className="mt-3 max-w-2xl text-ink-muted">
-                Annual access unlocks the selected class content inside Lists and Dashboard. Each student gets one
+                Annual access unlocks the selected class content in the Library and Dashboard. Each student gets one
                 focused class plan for clean progress tracking.
               </p>
             </div>
@@ -649,7 +629,7 @@ function SchoolSubscriptionPage({ token, user, setUser }) {
                 type="button"
                 onClick={purchaseSchoolPlan}
                 disabled={status === "loading"}
-                className="btn w-full mt-6 bg-cyan-500 font-bold text-slate-950 hover:bg-cyan-400"
+                className="btn-primary w-full mt-6 font-bold"
               >
                 {status === "loading" ? "Activating..." : "Pay Rs 5,000 and Activate"}
               </button>

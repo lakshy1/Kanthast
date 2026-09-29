@@ -1,0 +1,170 @@
+[
+  {
+    "chapter_no": 10,
+    "chapter": "Heron's Formula",
+    "topic_no": 1,
+    "name": "Heron's Formula: Area Without the Height",
+    "scenes": [
+      {
+        "animation": "A triangular park in a colony. Zippy tries to find its height by climbing a ladder in the middle of the grass, wobbling, while a gardener waves him down. The three sides are labelled 40 m, 32 m and 24 m.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I need the height of this park to find its area. Where exactly is the height?" },
+          { "speaker": "NEO", "text": "Get down! If you know all three sides, you don't need the height at all." }
+        ]
+      },
+      {
+        "animation": "The formula 'Area = ½ × base × height' appears, then a scalene triangle with no visible altitude gets a big question mark. A sepia portrait of Heron of Alexandria fades in beside the text 'Heron, about 10 AD – 75 AD'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Area is half into base into height. But for a scalene triangle, the height is often hard to find." },
+          { "speaker": "NEO", "text": "Heron, a mathematician who lived in Egypt, gave a formula that uses only the three sides." }
+        ]
+      },
+      {
+        "animation": "The formula builds on a chalkboard: 's = (a + b + c) ÷ 2 (semi-perimeter)', then 'Area = √[s(s − a)(s − b)(s − c)]'. Each bracket lights up in a different colour.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let the sides be a, b and c. First find s, the semi-perimeter, which is half the perimeter: a plus b plus c, divided by 2." },
+          { "speaker": "NEO", "text": "Then the area is the square root of s into s minus a into s minus b into s minus c." },
+          { "speaker": "ZIPPY", "text": "Four numbers multiplied under one root. Got it." }
+        ]
+      },
+      {
+        "animation": "Worked example on the park, line by line: 'a = 40, b = 32, c = 24 (m)', 's = (40 + 32 + 24) ÷ 2 = 96 ÷ 2 = 48 m', 's − a = 8, s − b = 16, s − c = 24', 'Area = √(48 × 8 × 16 × 24)', '48 × 8 = 384 and 16 × 24 = 384', 'Area = √(384 × 384) = 384 m²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The park has sides 40, 32 and 24 metres. The perimeter is 96, so s is 48 metres." },
+          { "speaker": "NEO", "text": "s minus a is 8, s minus b is 16, and s minus c is 24." },
+          { "speaker": "NEO", "text": "Area is the root of 48 into 8 into 16 into 24. Now, 48 into 8 is 384, and 16 into 24 is also 384." },
+          { "speaker": "NEO", "text": "So the area is the root of 384 into 384, which is 384 square metres." }
+        ]
+      },
+      {
+        "animation": "A check panel: '24² + 32² = 576 + 1024 = 1600 = 40²' with a right-angle box snapping into the triangle. Then '½ × 24 × 32 = 384 m² ✓'. An 'EXAM TIP' card: 'Write s − a, s − b, s − c separately first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's check. 24 squared plus 32 squared is 576 plus 1024, which is 1600, or 40 squared. So this is a right triangle." },
+          { "speaker": "NEO", "text": "Half into 24 into 32 is also 384. Both methods agree." },
+          { "speaker": "NEO", "text": "Exam tip: write s minus a, s minus b and s minus c on separate lines before multiplying. Most errors happen there." }
+        ]
+      },
+      {
+        "animation": "Recap board with the park icon: '1. s = (a + b + c) ÷ 2', '2. Area = √[s(s − a)(s − b)(s − c)]', '3. Useful when height is hard to find'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the semi-perimeter s is half the sum of the three sides." },
+          { "speaker": "NEO", "text": "Two: the area is the root of s into s minus a into s minus b into s minus c." },
+          { "speaker": "NEO", "text": "Three: use Heron's formula when you know all three sides but not the height." },
+          { "speaker": "ZIPPY", "text": "Ladder returned. Formula kept." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Heron's Formula",
+    "topic_no": 2,
+    "name": "Heron's Formula with Ratios and Large Numbers",
+    "scenes": [
+      {
+        "animation": "A farmer, KISAN KAKA, stands beside a triangular plot with a signboard 'Sides in ratio 3 : 5 : 7, Perimeter 300 m'. Zippy scratches his head, surrounded by floating question marks.",
+        "lines": [
+          { "speaker": "KISAN KAKA", "text": "I know the ratio of my plot's sides and its perimeter. Can you tell me its area?" },
+          { "speaker": "ZIPPY", "text": "But you didn't give the sides!" },
+          { "speaker": "NEO", "text": "The ratio and the perimeter are enough to find them. Watch." }
+        ]
+      },
+      {
+        "animation": "Step-by-step on a chalkboard: 'Sides = 3x, 5x, 7x', '3x + 5x + 7x = 15x = 300', 'x = 20', 'Sides = 60 m, 100 m, 140 m'. Three measuring tapes roll out along the plot.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let the sides be 3x, 5x and 7x. Their sum is 15x, which equals 300." },
+          { "speaker": "NEO", "text": "So x is 20, and the sides are 60, 100 and 140 metres." }
+        ]
+      },
+      {
+        "animation": "The formula fills in line by line: 's = 300 ÷ 2 = 150 m', 's − a = 150 − 60 = 90', 's − b = 150 − 100 = 50', 's − c = 150 − 140 = 10', 'Area = √(150 × 90 × 50 × 10)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The semi-perimeter is 300 divided by 2, which is 150 metres." },
+          { "speaker": "NEO", "text": "s minus a is 90, s minus b is 50, and s minus c is 10." },
+          { "speaker": "NEO", "text": "So the area is the root of 150 into 90 into 50 into 10." }
+        ]
+      },
+      {
+        "animation": "Numbers break into factors on screen: '150 = 3 × 50', '90 = 9 × 10', '50', '10'. Pairs group together: '(50 × 50)(10 × 10)(3 × 9)'. Then '√ = 50 × 10 × √27 = 500 × 3√3 = 1500√3 m²'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "That's a giant number. Do I multiply it all out?" },
+          { "speaker": "NEO", "text": "No. Break it into pairs. 150 is 3 into 50, and 90 is 9 into 10." },
+          { "speaker": "NEO", "text": "Now we have 50 into 50, 10 into 10, and 3 into 9, which is 27." },
+          { "speaker": "NEO", "text": "The root of 27 is 3 root 3. So the area is 50 into 10 into 3 root 3, which is 1500 root 3 square metres." }
+        ]
+      },
+      {
+        "animation": "A second quick example: triangular park with sides 120 m, 80 m, 50 m. Lines: 's = 250 ÷ 2 = 125', 's − a = 5, s − b = 45, s − c = 75', 'Area = √(125 × 5 × 45 × 75) = 375√15 m²'. An 'EXAM TIP' card: 'Factorise before multiplying'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try one more: a park with sides 120, 80 and 50 metres. s is 125, and the three differences are 5, 45 and 75." },
+          { "speaker": "NEO", "text": "Pairing the factors, the area simplifies to 375 root 15 square metres." },
+          { "speaker": "NEO", "text": "Exam tip: factorise inside the root before multiplying. It saves time and avoids big-number mistakes." }
+        ]
+      },
+      {
+        "animation": "Recap board with Kisan Kaka giving a thumbs-up: '1. Ratio sides: 3x, 5x, 7x → use perimeter to find x', '2. Find s and the three differences', '3. Factorise into pairs, then take the root'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: for sides in a ratio, write them with x and use the perimeter to find x." },
+          { "speaker": "NEO", "text": "Two: find s, then s minus a, s minus b and s minus c." },
+          { "speaker": "NEO", "text": "Three: factorise into pairs under the root before simplifying." },
+          { "speaker": "KISAN KAKA", "text": "1500 root 3 square metres. My plot is bigger than I thought!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Heron's Formula",
+    "topic_no": 3,
+    "name": "Heron's Formula for Isosceles and Equilateral Triangles",
+    "scenes": [
+      {
+        "animation": "A Diwali lantern-making table: Zippy cuts triangular coloured paper panels. One panel has two equal sides, another has all three equal. A price card says 'Paper cost per cm²'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I need the area of these lantern panels to buy paper. Some have two equal sides, some have three." },
+          { "speaker": "NEO", "text": "Heron's formula works for all of them. Let's try both." }
+        ]
+      },
+      {
+        "animation": "Isosceles triangle with perimeter 32 cm and ratio label 'equal side : base = 3 : 2'. Lines build: 'Sides = 3x, 3x, 2x', '8x = 32 ⇒ x = 4', 'Sides = 12 cm, 12 cm, 8 cm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: an isosceles triangle has perimeter 32 centimetres. The ratio of an equal side to the base is 3 to 2." },
+          { "speaker": "NEO", "text": "The sides are 3x, 3x and 2x. They add up to 8x, which is 32. So x is 4." },
+          { "speaker": "NEO", "text": "The sides are 12, 12 and 8 centimetres." }
+        ]
+      },
+      {
+        "animation": "Calculation line by line: 's = 32 ÷ 2 = 16', 's − a = 4, s − b = 4, s − c = 8', 'Area = √(16 × 4 × 4 × 8)', '= √(16 × 16 × 8)', '= 16 × √8 = 16 × 2√2 = 32√2 cm²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "s is 16. The differences are 4, 4 and 8." },
+          { "speaker": "NEO", "text": "Area is the root of 16 into 4 into 4 into 8. Now 4 into 4 is 16, so we have 16 into 16 into 8." },
+          { "speaker": "NEO", "text": "That gives 16 root 8. Root 8 is 2 root 2, so the area is 32 root 2 square centimetres." }
+        ]
+      },
+      {
+        "animation": "Equilateral triangle of side 10 cm. Lines build: 's = 30 ÷ 2 = 15', 's − a = s − b = s − c = 5', 'Area = √(15 × 5 × 5 × 5)', '= √(25 × 75) = 5 × 5√3 = 25√3 cm²'. A side panel shows '√3/4 × a² = √3/4 × 100 = 25√3 ✓'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Now the equilateral one. Side 10 centimetres." },
+          { "speaker": "NEO", "text": "s is 15, and each difference is 5. Area is the root of 15 into 5 into 5 into 5." },
+          { "speaker": "NEO", "text": "That is the root of 25 into 75. Root 25 is 5, and root 75 is 5 root 3. So the area is 25 root 3 square centimetres." },
+          { "speaker": "NEO", "text": "It matches the shortcut, root 3 by 4 into side squared, which is root 3 by 4 into 100, or 25 root 3." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Keep the answer in surd form unless asked for a decimal; units in cm²'. Zippy stamps 'cm²' on each lantern panel.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: leave the answer in root form unless the question gives a value of root 3 or root 2. And always write square units." }
+        ]
+      },
+      {
+        "animation": "Recap board with a glowing lantern: '1. Isosceles: write sides as 3x, 3x, 2x from the ratio', '2. Pair equal factors under the root', '3. Equilateral: Heron gives √3/4 × a²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: for an isosceles triangle, use the ratio and perimeter to get the sides." },
+          { "speaker": "NEO", "text": "Two: pair equal factors under the root to simplify quickly." },
+          { "speaker": "NEO", "text": "Three: for an equilateral triangle, Heron's formula gives the same answer as root 3 by 4 into side squared." },
+          { "speaker": "ZIPPY", "text": "Paper bought. Lanterns glowing!" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    "chapter_no": 12,
+    "chapter": "Surface Areas and Volumes",
+    "topic_no": 1,
+    "name": "Surface Area of a Combination of Solids",
+    "scenes": [
+      {
+        "animation": "Zippy holds a wooden lattu (top) and a paint brush, surrounded by tins of colour. He tries to paint the flat face where the cone meets the hemisphere, but it is hidden inside the toy.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I'm colouring this lattu. Do I add the full surface of the cone and the full surface of the hemisphere?" },
+          { "speaker": "NEO", "text": "Careful. Where the two solids are joined, the surfaces are hidden. You only paint what you can see." }
+        ]
+      },
+      {
+        "animation": "The lattu splits apart into a cone and a hemisphere. Their flat circular bases glow red and fade out with a cross, labelled 'hidden, not counted'. The remaining curved surfaces glow green: 'TSA = CSA of hemisphere + CSA of cone'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The lattu is a cone surmounted on a hemisphere. The flat circular faces are stuck together, so they are not part of the outside." },
+          { "speaker": "NEO", "text": "So the total surface area of the lattu is the curved surface area of the hemisphere plus the curved surface area of the cone." },
+          { "speaker": "NEO", "text": "The total surface area of a combination is not the sum of the total surface areas of its parts." }
+        ]
+      },
+      {
+        "animation": "A formula strip appears: 'CSA hemisphere = 2πr²', 'CSA cone = πrl', 'l = √(r² + h²)'. Then the data: 'Total height = 5 cm, diameter = 3.5 cm, r = 1.75 cm'. A measuring bar shows 'cone height h = 5 − 1.75 = 3.25 cm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: the whole lattu is 5 centimetres tall, and its diameter is 3.5 centimetres. Find the area to be coloured, taking pi as 22 by 7." },
+          { "speaker": "NEO", "text": "The radius is 1.75 centimetres. The hemisphere is as tall as its radius, so the cone's height is 5 minus 1.75, which is 3.25 centimetres." }
+        ]
+      },
+      {
+        "animation": "Working line by line: 'CSA hemisphere = 2 × (22/7) × 1.75 × 1.75 = 11 × 1.75 = 19.25 cm²'. 'l = √(1.75² + 3.25²) = √(3.0625 + 10.5625) = √13.625 ≈ 3.7 cm'. 'CSA cone = (22/7) × 1.75 × 3.7 = 5.5 × 3.7 = 20.35 cm²'. 'TSA = 19.25 + 20.35 = 39.6 cm² (approx.)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Hemisphere first: 2 into 22 by 7 into 1.75 into 1.75. Here 2 into 22 by 7 into 1.75 is 11, and 11 into 1.75 is 19.25 square centimetres." },
+          { "speaker": "NEO", "text": "The slant height is root of 1.75 squared plus 3.25 squared. That is root of 3.0625 plus 10.5625, root 13.625, about 3.7 centimetres." },
+          { "speaker": "NEO", "text": "The cone's curved surface is 22 by 7 into 1.75 into 3.7. That is 5.5 into 3.7, which is 20.35 square centimetres." },
+          { "speaker": "NEO", "text": "Total: 19.25 plus 20.35, about 39.6 square centimetres." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Before calculating, list which surfaces are visible. Height of cone ≠ total height.' Zippy's wrong answer with the full height 5 cm is crossed out in red.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I almost used 5 as the cone's height!" },
+          { "speaker": "NEO", "text": "Most students do. Board tip: first write which surfaces are visible, then find each part's own height before using any formula." }
+        ]
+      },
+      {
+        "animation": "Recap board with the lattu spinning: '1. Count only the visible surfaces', '2. TSA of combination = sum of visible CSAs (+ any exposed bases)', '3. Find each part's own height and slant height'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: only the visible surfaces count; the joined faces are hidden." },
+          { "speaker": "NEO", "text": "Two: add the curved surface areas of the parts, plus any flat face that is still exposed." },
+          { "speaker": "NEO", "text": "Three: work out each part's own height and slant height before you calculate." },
+          { "speaker": "ZIPPY", "text": "39.6 square centimetres of rainbow. Let it spin!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Surface Areas and Volumes",
+    "topic_no": 2,
+    "name": "Volume of a Combination of Solids",
+    "scenes": [
+      {
+        "animation": "A factory shed with a curved roof. Zippy blows up balloons inside to fill it with air, and the balloons pile up to the roof as he gasps for breath.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How many balloons of air does this shed hold? I'm out of breath!" },
+          { "speaker": "NEO", "text": "Put the balloons down. We'll find the volume with two formulas." }
+        ]
+      },
+      {
+        "animation": "The shed turns transparent and splits into a cuboid block and a half-cylinder roof, which glow in different colours and then click back together. Caption: 'Volume of combination = sum of volumes of the parts'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The shed is a cuboid surmounted by a half cylinder." },
+          { "speaker": "NEO", "text": "Unlike surface area, volume simply adds up. The volume of the combination is the sum of the volumes of its parts." },
+          { "speaker": "ZIPPY", "text": "So no hidden bits to worry about this time?" },
+          { "speaker": "NEO", "text": "Right. Every bit of space inside counts." }
+        ]
+      },
+      {
+        "animation": "Data appears on the diagram: 'Base 15 m × 7 m', 'Cuboid height = 8 m', 'Half-cylinder: diameter 7 m → r = 3.5 m, length h = 15 m'. Formula strip: 'V(cuboid) = l × b × h', 'V(half cylinder) = ½ πr²h'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: the base of the shed is 15 metres by 7 metres, and the cuboid part is 8 metres high. Find the volume of air it can hold." },
+          { "speaker": "NEO", "text": "The half cylinder sits on the 7 metre width, so its radius is 3.5 metres, and its length is 15 metres." }
+        ]
+      },
+      {
+        "animation": "Working line by line: 'Cuboid = 15 × 7 × 8 = 840 m³'. 'Half cylinder = ½ × (22/7) × 3.5 × 3.5 × 15', '= ½ × 38.5 × 15', '= 288.75 m³'. 'Total = 840 + 288.75 = 1128.75 m³'. A side bubble checks '(22/7) × 3.5 × 3.5 = 11 × 3.5 = 38.5'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The cuboid: 15 into 7 into 8. That's 105 into 8, which is 840 cubic metres." },
+          { "speaker": "NEO", "text": "The half cylinder: half into 22 by 7 into 3.5 into 3.5 into 15." },
+          { "speaker": "NEO", "text": "22 by 7 into 3.5 is 11, and 11 into 3.5 is 38.5. Half of 38.5 into 15 is 288.75 cubic metres." },
+          { "speaker": "NEO", "text": "Total volume of air: 840 plus 288.75, which is 1128.75 cubic metres." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Read what is asked: space inside (volume) or material outside (surface area)? If machinery or people are inside, subtract their volume.' A small machine icon is subtracted with a minus sign.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: read carefully whether the question wants space inside, which is volume, or covering outside, which is surface area." },
+          { "speaker": "NEO", "text": "If machines or people occupy the shed, subtract their volume from the total to get the air left." }
+        ]
+      },
+      {
+        "animation": "Recap board with the shed icon: '1. Volume of combination = sum of volumes of parts', '2. Identify each shape and its own dimensions', '3. Units: m³ or cm³'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the volume of a combination is the sum of the volumes of its parts." },
+          { "speaker": "NEO", "text": "Two: break the solid into known shapes and read each one's own dimensions." },
+          { "speaker": "NEO", "text": "Three: always give volume in cubic units." },
+          { "speaker": "ZIPPY", "text": "1128.75 cubic metres. I'd have needed a million balloons." }
+        ]
+      }
+    ]
+  }
+]

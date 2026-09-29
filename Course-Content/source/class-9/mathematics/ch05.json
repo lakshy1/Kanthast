@@ -1,0 +1,226 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "Introduction to Euclid's Geometry",
+    "topic_no": 1,
+    "name": "From Earth Measurement to Euclid's Definitions",
+    "scenes": [
+      {
+        "animation": "Ancient Egypt: the Nile floods and washes away the boundary stones between farms. Angry cartoon farmers argue over whose field is whose, while Zippy floats past on a reed boat holding a measuring rope.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The river ate their fences! How will they know whose land is whose?" },
+          { "speaker": "NEO", "text": "They measured it again. And that need to measure land gave geometry its name." }
+        ]
+      },
+      {
+        "animation": "The word 'GEOMETRY' splits into 'geo = earth' and 'metrein = to measure'. A timeline builds left to right: 'Egypt: land measurement, pyramids', 'Indus Valley (c. 3000 BC): bricks in ratio 4 : 2 : 1', 'Sulbasutras (800 BC–500 BC): altar constructions', 'Thales: first known proof', 'Euclid (c. 300 BC), Alexandria: Elements, 13 books'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Geometry comes from the Greek words geo, meaning earth, and metrein, meaning to measure." },
+          { "speaker": "NEO", "text": "The Egyptians used it to remeasure land and build pyramids. In the Indus Valley, around 3000 BC, bricks were made in the ratio length to breadth to thickness of four to two to one." },
+          { "speaker": "NEO", "text": "In India, the Sulbasutras, from 800 BC to 500 BC, were manuals of geometrical constructions for altars." },
+          { "speaker": "NEO", "text": "The Greek mathematician Thales gave the first known proof, that a circle is bisected by its diameter." },
+          { "speaker": "NEO", "text": "Around 300 BC, Euclid, a teacher in Alexandria, collected all known geometry into a treatise called Elements, divided into thirteen chapters called books." }
+        ]
+      },
+      {
+        "animation": "A cartoon Harappan brick-maker holds a brick marked 'length = 28 cm'. Working appears line by line: 'Ratio 4 : 2 : 1', 'One part = 28 ÷ 4 = 7 cm', 'Breadth = 2 × 7 = 14 cm', 'Thickness = 1 × 7 = 7 cm'. The brick's edges get labelled as each value appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Four to two to one? Let me try. If the brick is twenty-eight centimetres long, what about the rest?" },
+          { "speaker": "NEO", "text": "Length is four parts, so one part is twenty-eight divided by four, which is seven centimetres." },
+          { "speaker": "NEO", "text": "Breadth is two parts, so fourteen centimetres. Thickness is one part, so seven centimetres." }
+        ]
+      },
+      {
+        "animation": "A scroll unrolls with Euclid's definitions appearing one by one beside matching doodles: 'A point is that which has no part' (a tiny dot), 'A line is breadthless length' (a thin line), 'The ends of a line are points', 'A surface is that which has length and breadth only' (a flat sheet), 'The edges of a surface are lines'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Euclid began with definitions. A point is that which has no part." },
+          { "speaker": "NEO", "text": "A line is breadthless length, and the ends of a line are points." },
+          { "speaker": "NEO", "text": "A surface is that which has length and breadth only, and the edges of a surface are lines." }
+        ]
+      },
+      {
+        "animation": "Zippy tugs the definition 'no part' and it unravels into more words: 'part?', 'length?', 'breadth?', each sprouting a new question mark in an endless chain. Neo stamps three words 'point, line, plane' with 'UNDEFINED TERMS'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But what is a part? And what is breadth? Every definition needs another definition!" },
+          { "speaker": "NEO", "text": "Exactly the problem. The chain never ends. So mathematicians agree to leave some terms undefined." },
+          { "speaker": "NEO", "text": "In geometry, point, line and plane are taken as undefined terms. We only picture them intuitively." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Undefined terms: point, line, plane. Know why: defining them needs other words that also need defining.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: a common question asks which terms are undefined and why. Answer: point, line and plane, because defining them needs more terms that must be defined in turn." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Geometry = earth measurement; Egypt, Indus Valley, Sulbasutras', '2. Euclid, c. 300 BC, Elements in 13 books', '3. Point, line, plane: undefined terms'. The Egyptian farmers shake hands over new boundary stones.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: geometry began as earth measurement in Egypt, the Indus Valley and India's Sulbasutras." },
+          { "speaker": "NEO", "text": "Two: Euclid organised geometry in his Elements, written in thirteen books." },
+          { "speaker": "NEO", "text": "Three: point, line and plane are undefined terms." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Introduction to Euclid's Geometry",
+    "topic_no": 2,
+    "name": "Euclid's Axioms",
+    "scenes": [
+      {
+        "animation": "Zippy and Neo each hold a cricket bat. A measuring tape shows Zippy's bat equals the stumps, and Neo's bat equals the stumps too. Zippy scratches his head; a thought bubble shows both bats side by side.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My bat equals the stumps. Your bat equals the stumps. So our bats are equal. Do I have to prove that?" },
+          { "speaker": "NEO", "text": "No. That's so obvious that Euclid simply assumed it. Such assumptions are called axioms." }
+        ]
+      },
+      {
+        "animation": "Seven axiom cards flip over one at a time with tiny visual examples: '1. Things equal to the same thing are equal to one another', '2. If equals are added to equals, the wholes are equal', '3. If equals are subtracted from equals, the remainders are equal', '4. Things which coincide with one another are equal to one another', '5. The whole is greater than the part', '6. Things which are double of the same things are equal to one another', '7. Things which are halves of the same things are equal to one another'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Euclid assumed certain properties without proof, because they were obviously universal truths." },
+          { "speaker": "NEO", "text": "He called the ones used throughout mathematics axioms. Here are some." },
+          { "speaker": "NEO", "text": "One: things which are equal to the same thing are equal to one another." },
+          { "speaker": "NEO", "text": "Two: if equals are added to equals, the wholes are equal. Three: if equals are subtracted from equals, the remainders are equal." },
+          { "speaker": "NEO", "text": "Four: things which coincide with one another are equal to one another. Five: the whole is greater than the part." },
+          { "speaker": "NEO", "text": "Six and seven: things which are double, or halves, of the same things are equal to one another." }
+        ]
+      },
+      {
+        "animation": "Proof built step by step. Segment AB with point C in the middle. 'Given: AC = BC. To prove: AC = ½ AB'. Lines appear: '1. AC = BC (given)', '2. AC + AC = BC + AC (Axiom 2: equals added to equals)', '3. BC + AC coincides with AB, so BC + AC = AB (Axiom 4)', '4. 2 AC = AB', '5. AC = ½ AB'. Each step flashes the axiom number used.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's use them in a proof. Point C lies between A and B, and AC equals BC. Prove that AC is half of AB." },
+          { "speaker": "NEO", "text": "Step one: AC equals BC, given." },
+          { "speaker": "NEO", "text": "Step two: add AC to both sides. AC plus AC equals BC plus AC, by axiom two." },
+          { "speaker": "NEO", "text": "Step three: BC plus AC coincides with AB, so it equals AB, by axiom four." },
+          { "speaker": "NEO", "text": "Step four: so two AC equals AB, which means AC is half of AB. Proved." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Write the reason next to every step: (Given), (Axiom 2), (Axiom 4).' A red pen draws a bracket next to each step of the proof.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: in any proof, write the reason beside every step, like given, or axiom two. Marks are given for the reasons, not just the steps." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Axioms: obvious universal truths, taken without proof', '2. Seven axioms, e.g. equals to the same thing are equal; the whole > the part', '3. Proofs cite an axiom for each step'. The two cricket bats stand side by side, labelled 'equal (Axiom 1)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: axioms are obvious universal truths that are assumed without proof." },
+          { "speaker": "NEO", "text": "Two: for example, things equal to the same thing are equal, and the whole is greater than the part." },
+          { "speaker": "NEO", "text": "Three: in a proof, every step needs a reason, often an axiom." },
+          { "speaker": "ZIPPY", "text": "Axiom one says our bats are equal. Case closed." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Introduction to Euclid's Geometry",
+    "topic_no": 3,
+    "name": "Euclid's Five Postulates",
+    "scenes": [
+      {
+        "animation": "Zippy draws two dots on a whiteboard and tries to connect them with a wiggly line, then a zig-zag, then a straight line. A ruler character named RULER taps the straight one and says 'Only one of these is straight'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How many straight lines can I draw through two dots?" },
+          { "speaker": "RULER", "text": "Only one, kiddo. And that's a rule Euclid wrote down." }
+        ]
+      },
+      {
+        "animation": "Card: 'Axioms = assumptions used throughout mathematics. Postulates = assumptions specific to geometry (Euclid's usage)'. Then 'Postulate 1: A straight line may be drawn from any one point to any other point', rewritten below as 'Axiom 5.1: Given two distinct points, there is a unique line that passes through them'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Euclid used the word postulate for assumptions specific to geometry, and axiom for those used throughout mathematics." },
+          { "speaker": "NEO", "text": "Postulate one: a straight line may be drawn from any one point to any other point." },
+          { "speaker": "NEO", "text": "It also assumes that this line is unique. So we state: given two distinct points, there is a unique line that passes through them." }
+        ]
+      },
+      {
+        "animation": "Postulates 2, 3 and 4 animate one after another: a segment extends endlessly in both directions ('A terminated line can be produced indefinitely'); a compass draws circles of different sizes ('A circle can be drawn with any centre and any radius'); several right angles in different orientations stack exactly on top of each other ('All right angles are equal to one another').",
+        "lines": [
+          { "speaker": "NEO", "text": "Postulate two: a terminated line can be produced indefinitely. In other words, a line segment can be extended on either side to form a line." },
+          { "speaker": "NEO", "text": "Postulate three: a circle can be drawn with any centre and any radius." },
+          { "speaker": "NEO", "text": "Postulate four: all right angles are equal to one another." }
+        ]
+      },
+      {
+        "animation": "Postulate 5 builds step by step: line PQ crosses lines AB and CD. Interior angles on the left are marked '∠1' and '∠2' with a note '∠1 + ∠2 < 180°'. AB and CD extend to the left and meet at a point, which flashes. Worked check: '∠1 = 80°, ∠2 = 85°, sum = 165° < 180° → lines meet on the left side'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Postulate five: if a straight line falling on two straight lines makes the interior angles on the same side of it taken together less than two right angles, then the two straight lines, if produced indefinitely, meet on that side." },
+          { "speaker": "ZIPPY", "text": "That's a mouthful. Can we try numbers?" },
+          { "speaker": "NEO", "text": "Sure. Say the two interior angles on the left are eighty degrees and eighty-five degrees." },
+          { "speaker": "NEO", "text": "Their sum is one sixty-five degrees, which is less than two right angles, one eighty degrees. So the lines will meet on the left side." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Two right angles = 180°. Postulate 5 is far more complex than Postulates 1–4.' The fifth postulate card is shown visibly longer than the other four.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: remember that two right angles means one hundred eighty degrees. And note that postulate five is much more complex than the other four." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Postulates: assumptions specific to geometry', '2. Unique line through two distinct points; lines extend; circles of any centre and radius; right angles equal', '3. Postulate 5: interior angles < 180° ⇒ lines meet on that side'. Ruler salutes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: postulates are assumptions specific to geometry." },
+          { "speaker": "NEO", "text": "Two: a unique line passes through two distinct points, segments can be extended, circles can have any centre and radius, and all right angles are equal." },
+          { "speaker": "NEO", "text": "Three: if interior angles on one side add to less than one eighty degrees, the lines meet on that side." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Introduction to Euclid's Geometry",
+    "topic_no": 4,
+    "name": "Proving with Euclid: Equilateral Triangle and Theorem 5.1",
+    "scenes": [
+      {
+        "animation": "Zippy is handed a single line segment AB and a compass, with a challenge card: 'Build an equilateral triangle. No protractor. No measuring.' He looks around for a ruler with markings, but it's been taken away.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "No protractor, no measuring? That's impossible!" },
+          { "speaker": "NEO", "text": "Euclid did it using only his postulates and axioms. Let's follow him." }
+        ]
+      },
+      {
+        "animation": "Construction built step by step: segment AB; a circle with centre A and radius AB (tag 'Postulate 3'); a circle with centre B and radius BA; the circles meet at C; segments AC and BC drawn (tag 'Postulate 1'). Proof lines appear: 'AB = AC (radii of same circle)', 'AB = BC (radii of same circle)', 'AC = BC = AB (Axiom 1)', '∴ △ABC is equilateral'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Given segment AB, draw a circle with centre A and radius AB. Postulate three lets us do this." },
+          { "speaker": "NEO", "text": "Draw another circle with centre B and radius BA. Let the circles meet at point C." },
+          { "speaker": "NEO", "text": "Draw segments AC and BC, using postulate one." },
+          { "speaker": "NEO", "text": "AB equals AC, since they are radii of the same circle. And AB equals BC, radii of the other circle." },
+          { "speaker": "NEO", "text": "Things equal to the same thing are equal to one another, by axiom one. So AB, BC and AC are all equal. Triangle ABC is equilateral." }
+        ]
+      },
+      {
+        "animation": "Two lines l and m cross at a single glowing point P. Zippy tries to bend line m so it touches l again at a second point Q, but the lines are drawn as perfectly straight rods that refuse to bend. Title: 'Theorem 5.1: Two distinct lines cannot have more than one point in common'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can two different straight lines cross at two places?" },
+          { "speaker": "NEO", "text": "No. Theorem 5.1: two distinct lines cannot have more than one point in common. Let's prove it." }
+        ]
+      },
+      {
+        "animation": "Proof by contradiction builds line by line: 'Suppose lines l and m meet at two distinct points P and Q', 'Then two distinct lines pass through P and Q', 'But Axiom 5.1: only ONE unique line passes through two distinct points', 'Contradiction! So our assumption is false', '∴ two distinct lines have at most one common point'. A big red 'CONTRADICTION' stamp lands on the assumption.",
+        "lines": [
+          { "speaker": "NEO", "text": "Suppose two distinct lines l and m meet at two distinct points, P and Q." },
+          { "speaker": "NEO", "text": "Then we have two different lines passing through the same two points P and Q." },
+          { "speaker": "NEO", "text": "But axiom five point one says only one unique line passes through two distinct points." },
+          { "speaker": "NEO", "text": "This is a contradiction, so our assumption was wrong. Two distinct lines cannot have more than one point in common." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'In the equilateral-triangle proof, quote Postulate 3 for circles, Postulate 1 for joining points, Axiom 1 for equal sides.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: in the equilateral triangle proof, name the postulate or axiom behind each step. Circles need postulate three, joining points needs postulate one, and equal sides come from axiom one." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Equilateral triangle on any segment: two circles of radius AB', '2. Equal sides by Axiom 1', '3. Theorem 5.1: distinct lines meet at most once (by contradiction)'. Zippy proudly holds up his perfect triangle.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: an equilateral triangle can be built on any segment using two circles of radius AB." },
+          { "speaker": "NEO", "text": "Two: its sides are equal because things equal to the same thing are equal." },
+          { "speaker": "NEO", "text": "Three: two distinct lines cannot have more than one point in common." },
+          { "speaker": "ZIPPY", "text": "Look, Neo! No protractor needed!" }
+        ]
+      }
+    ]
+  }
+]

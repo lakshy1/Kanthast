@@ -1,0 +1,276 @@
+[
+  {
+    "chapter_no": 20,
+    "chapter": "Economics: Money and Credit",
+    "topic_no": 1,
+    "name": "Money as a Medium of Exchange",
+    "scenes": [
+      {
+        "animation": "A school canteen with no money anywhere. Zippy holds out his pencil box and asks the canteen uncle for a samosa. The canteen uncle shakes his head and points to a sign: 'Only accepting cricket bats'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I'll trade my pencil box for a samosa. Deal?" },
+          { "speaker": "NEO", "text": "Only if the canteen uncle wants a pencil box. Welcome to the world without money." }
+        ]
+      },
+      {
+        "animation": "A village marketplace. A shoe manufacturer carrying a pile of shoes walks from stall to stall, looking for wheat. A wheat farmer appears, but wants a shirt, not shoes. A thought-bubble shows two arrows meeting in the middle, labelled 'Double coincidence of wants'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Imagine a shoe manufacturer who wants to sell shoes and buy wheat. In a barter system, he must find a wheat farmer who not only sells wheat, but also wants to buy shoes." },
+          { "speaker": "NEO", "text": "Both parties have to agree to sell and buy each other's commodities. This is known as double coincidence of wants." },
+          { "speaker": "ZIPPY", "text": "That could take all day. Or all year!" }
+        ]
+      },
+      {
+        "animation": "A glowing rupee coin drops into the marketplace. The shoe manufacturer sells shoes for coins, walks to the wheat farmer and buys wheat with the same coins. The two steps are labelled '1. Sell for money' and '2. Buy with money'. A caption reads 'Money = intermediate in the exchange process'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Money solves this problem. The shoe manufacturer first exchanges shoes for money, and then exchanges money for wheat." },
+          { "speaker": "NEO", "text": "Since money acts as an intermediate in the exchange process, it is called a medium of exchange. It eliminates the need for double coincidence of wants." }
+        ]
+      },
+      {
+        "animation": "A timeline slides across: grain and cattle as money, then gold, silver and copper coins, then paper notes. Each item appears with a small 'Used as money' tag.",
+        "lines": [
+          { "speaker": "NEO", "text": "Before coins, a variety of objects was used as money. In the very early stages, Indians used grains and cattle." },
+          { "speaker": "NEO", "text": "Then came metallic coins of gold, silver and copper, which continued through the last century. Now, we have currency notes and coins." }
+        ]
+      },
+      {
+        "animation": "Neo holds a board-tip card. Beside it, a comparison table builds: 'Barter: needs double coincidence of wants' versus 'Money: medium of exchange, removes that need'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: a common question asks how money solves the problem of double coincidence of wants. Always use the word medium of exchange, and explain the two steps." }
+        ]
+      },
+      {
+        "animation": "Recap board with a rupee coin icon. Points appear: '1. Barter needs double coincidence of wants', '2. Money is a medium of exchange', '3. Grains, cattle, metal coins, then paper currency'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: barter needs a double coincidence of wants, where both parties want each other's goods." },
+          { "speaker": "NEO", "text": "Two: money acts as a medium of exchange and removes this problem." },
+          { "speaker": "NEO", "text": "Three: objects used as money evolved from grains and cattle to metal coins and paper notes." },
+          { "speaker": "ZIPPY", "text": "Okay. Here's ten rupees. One samosa, please." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 20,
+    "chapter": "Economics: Money and Credit",
+    "topic_no": 2,
+    "name": "Modern Forms of Money: Currency and Deposits",
+    "scenes": [
+      {
+        "animation": "Zippy tries to pay a vegetable seller with a shiny piece of paper he drew himself, with 'Zippy Bank 100' written on it. The vegetable seller laughs. Neo holds up a real currency note.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why can't I print my own money? It's just paper!" },
+          { "speaker": "NEO", "text": "Because a currency note is accepted only when it is authorised by the government." }
+        ]
+      },
+      {
+        "animation": "A large building labelled 'Reserve Bank of India' appears with a printing press. Notes flow out with a stamp 'Issued on behalf of the Central Government'. A banner reads 'No individual in India can legally refuse a payment made in rupees'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Modern forms of money include currency, which is paper notes and coins. Unlike older forms, modern currency is not made of precious metal." },
+          { "speaker": "NEO", "text": "In India, the Reserve Bank of India issues currency notes on behalf of the central government. As per Indian law, no other individual or organisation is allowed to issue currency." },
+          { "speaker": "NEO", "text": "The law legalises the use of the rupee as a medium of payment that cannot be refused in settling transactions in India." }
+        ]
+      },
+      {
+        "animation": "A worker receives salary in cash, walks to a bank and deposits most of it. The bank vault fills with money bags labelled 'Demand deposits'. A tag reads 'Withdraw on demand' and a small coin labelled 'Interest' pops out.",
+        "lines": [
+          { "speaker": "NEO", "text": "The other form of money is deposits with banks. People deposit extra cash in their bank accounts. Banks keep it safe and also pay an amount as interest." },
+          { "speaker": "NEO", "text": "Since money in these accounts can be withdrawn as and when required, these deposits are called demand deposits." }
+        ]
+      },
+      {
+        "animation": "A cheque slides onto the screen with fields highlighted: 'Pay', 'Rupees', 'Account number', 'Signature'. A shoe manufacturer, M. Salim, signs it and hands it to a leather supplier. Arrows show the bank transferring money from Salim's account to the supplier's account.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But how do you buy things with money locked in a bank?" },
+          { "speaker": "NEO", "text": "With a cheque. A cheque is a paper instructing the bank to pay a specific amount from the person's account to the person in whose name the cheque has been issued." },
+          { "speaker": "NEO", "text": "Suppose a shoe manufacturer pays a leather supplier by cheque. The supplier deposits it in his bank, and the money is transferred from one account to the other. No cash changes hands." }
+        ]
+      },
+      {
+        "animation": "A board-tip card appears with the heading 'Demand deposits = money'. Two arrows connect 'Demand deposits' to 'Accepted widely' and 'Cheques settle payments without cash'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Demand deposits share the essential features of money. The facility of cheques makes it possible to directly settle payments without the use of cash." },
+          { "speaker": "NEO", "text": "Board tip: remember that it is the Reserve Bank of India that issues currency, on behalf of the central government. A frequent one-mark question." }
+        ]
+      },
+      {
+        "animation": "Recap board with a note and a cheque icon. Points appear: '1. Currency: issued by RBI for central government', '2. Demand deposits: withdraw on demand', '3. Cheques settle payments without cash'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: currency notes are issued by the Reserve Bank of India on behalf of the central government." },
+          { "speaker": "NEO", "text": "Two: bank deposits that can be withdrawn on demand are called demand deposits." },
+          { "speaker": "NEO", "text": "Three: cheques allow payments to be settled without cash." },
+          { "speaker": "ZIPPY", "text": "Zippy Bank is officially closed." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 20,
+    "chapter": "Economics: Money and Credit",
+    "topic_no": 3,
+    "name": "Loan Activities of Banks and Two Credit Situations",
+    "scenes": [
+      {
+        "animation": "Zippy peeks into a bank vault expecting it to be full of money. Most shelves are empty; a small pile sits in one corner labelled 'Cash kept'. Zippy gasps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Where did all the money go? Did someone rob the bank?" },
+          { "speaker": "NEO", "text": "No. The bank lent it out. That's its main business." }
+        ]
+      },
+      {
+        "animation": "A pie chart forms from the deposits: a small slice labelled 'About 15% kept as cash' and a large slice labelled 'Loans'. Arrows show money flowing from depositors to the bank and on to borrowers, with 'Interest' coins flowing back.",
+        "lines": [
+          { "speaker": "NEO", "text": "Banks in India these days hold about fifteen per cent of their deposits as cash. This is kept to pay depositors who come to withdraw money on any given day." },
+          { "speaker": "NEO", "text": "Banks use the major portion of deposits to extend loans. Borrowers pay a higher interest on loans than what banks offer on deposits. This difference is the main source of income for banks." }
+        ]
+      },
+      {
+        "animation": "A shoe workshop at festival time. M. Salim gets a big order from a large trader. He takes a loan, buys leather and pays workers. At the end, shoes are delivered, the loan is repaid, and a small coin labelled 'Profit' remains. The screen turns green.",
+        "lines": [
+          { "speaker": "NEO", "text": "Credit, or a loan, is an agreement where the lender supplies the borrower with money, goods or services in return for the promise of future payment." },
+          { "speaker": "NEO", "text": "In the festival season, Salim, a shoe manufacturer, gets a big order. He takes a loan to buy raw materials and pay workers. He delivers on time, repays the loan and makes a profit." },
+          { "speaker": "NEO", "text": "Here, credit helped him meet his working capital needs and increase his earnings." }
+        ]
+      },
+      {
+        "animation": "A groundnut field. Swapna, a small farmer, borrows from a moneylender. Pests attack the crop, leaves turn brown. She cannot repay; the debt grows like a snowball. She sells part of her land. The screen turns red and a label reads 'Debt trap'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now meet Swapna, a small farmer. She borrows from a moneylender to meet the expenses of cultivation. But her crop is hit by pests and fails." },
+          { "speaker": "NEO", "text": "She cannot repay. The debt grows, and she has to sell part of her land. Credit has pushed her into a situation from which recovery is very painful. This is called a debt trap." },
+          { "speaker": "ZIPPY", "text": "So the same loan can help one person and hurt another?" },
+          { "speaker": "NEO", "text": "Yes. Whether credit is useful depends on the risks in the situation, and whether there is some support in case of loss." }
+        ]
+      },
+      {
+        "animation": "A seesaw with Salim on the high side labelled 'Credit raises earnings' and Swapna on the low side labelled 'Debt trap'. A board-tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: when asked about credit, give both sides. Credit can help increase earnings, or push the borrower into a debt trap." }
+        ]
+      },
+      {
+        "animation": "Recap board with a bank vault icon. Points appear: '1. Banks keep about 15% as cash, lend the rest', '2. Interest difference = bank income', '3. Credit can help (Salim) or trap (Swapna)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: banks keep about fifteen per cent of deposits as cash and lend the rest." },
+          { "speaker": "NEO", "text": "Two: the difference between interest on loans and deposits is the main income of banks." },
+          { "speaker": "NEO", "text": "Three: credit can raise earnings, like for Salim, or cause a debt trap, like for Swapna." },
+          { "speaker": "ZIPPY", "text": "Vault mystery solved. No robbery, just lending." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 20,
+    "chapter": "Economics: Money and Credit",
+    "topic_no": 4,
+    "name": "Terms of Credit and Formal versus Informal Sources",
+    "scenes": [
+      {
+        "animation": "Zippy stands at a bank counter holding a single paper that says 'I promise to pay back. Pinky promise.' The bank clerk hands him a thick checklist instead.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I promised to pay it back. Why do I need all these papers?" },
+          { "speaker": "NEO", "text": "Because every loan comes with terms of credit. Let's read the fine print." }
+        ]
+      },
+      {
+        "animation": "A checklist builds with four ticks: 'Interest rate', 'Collateral', 'Documentation', 'Mode of repayment'. Under 'Collateral', icons appear: land, building, vehicle, livestock, bank deposits. A house key is locked in a bank drawer with a tag 'Kept until loan is repaid'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Every loan agreement specifies an interest rate, which the borrower must pay to the lender along with the principal." },
+          { "speaker": "NEO", "text": "Lenders may also demand collateral. Collateral is an asset that the borrower owns, such as land, building, vehicle, livestock or deposits with banks, used as a guarantee until the loan is repaid." },
+          { "speaker": "NEO", "text": "If the borrower fails to repay, the lender has the right to sell the collateral. Interest rate, collateral, documentation and the mode of repayment together are called the terms of credit." }
+        ]
+      },
+      {
+        "animation": "A two-column chart builds. Left 'Formal sources': a bank and a cooperative society, with an umbrella labelled 'Supervised by RBI'. Right 'Informal sources': a moneylender, a trader, an employer, relatives and friends, with no umbrella. Interest-rate meters show higher rates on the right.",
+        "lines": [
+          { "speaker": "NEO", "text": "Loans from banks and cooperatives are formal sector loans. Loans from moneylenders, traders, employers, relatives and friends are informal sector loans." },
+          { "speaker": "NEO", "text": "The Reserve Bank of India supervises the functioning of formal sources. It checks that banks maintain a minimum cash balance, and that they give loans not just to profit-making businesses, but also to small cultivators, small-scale industries and small borrowers." },
+          { "speaker": "NEO", "text": "There is no organisation which supervises informal lenders. They can lend at any interest rate they choose, and may use unfair means to get money back." }
+        ]
+      },
+      {
+        "animation": "Two households appear. The rich household walks confidently into a bank. The poor household is turned back from the bank for lack of collateral and heads to a moneylender. A caption reads 'Rich: formal credit. Poor: informal credit'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So why doesn't everyone just borrow from banks?" },
+          { "speaker": "NEO", "text": "Poor households often lack collateral and documents, so they depend largely on informal sources. Rich households mostly get cheaper formal credit." },
+          { "speaker": "NEO", "text": "Higher cost of borrowing means a larger part of earnings goes to repay loans. That's why banks and cooperatives must expand, especially in rural areas, and formal credit must be distributed more equally." }
+        ]
+      },
+      {
+        "animation": "A board-tip card appears with a table heading 'Formal vs Informal' and rows: 'Supervisor', 'Interest rate', 'Collateral'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: differences between formal and informal credit, and the role of the RBI, are asked almost every year." }
+        ]
+      },
+      {
+        "animation": "Recap board with a checklist icon. Points appear: '1. Terms of credit: interest, collateral, documentation, repayment', '2. Formal: banks, cooperatives, supervised by RBI', '3. Poor depend on costlier informal credit'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: terms of credit include interest rate, collateral, documentation and mode of repayment." },
+          { "speaker": "NEO", "text": "Two: formal lenders like banks and cooperatives are supervised by the RBI." },
+          { "speaker": "NEO", "text": "Three: poor households depend on costlier informal credit, so formal credit must reach them." },
+          { "speaker": "ZIPPY", "text": "Pinky promises are not accepted as collateral. Noted." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 20,
+    "chapter": "Economics: Money and Credit",
+    "topic_no": 5,
+    "name": "Self Help Groups for the Poor",
+    "scenes": [
+      {
+        "animation": "A village courtyard. Fifteen women sit in a circle; each drops a few coins into a shared steel box. Zippy watches as the box slowly fills and glows.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why are they all putting money into one box? Is it a lottery?" },
+          { "speaker": "NEO", "text": "No. It's a Self Help Group. Small savings, pooled together, can open big doors." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds step by step: '15 to 20 members, usually women, from one neighbourhood' → 'Pool savings regularly' → 'Give small loans to members from pooled savings' → 'After a year or two: eligible for a bank loan' → 'Loan in the name of the group'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A typical Self Help Group has fifteen to twenty members, usually belonging to one neighbourhood, who meet and save regularly." },
+          { "speaker": "NEO", "text": "Members can take small loans from the group itself. After a year or two, if the group is regular in savings, it becomes eligible for a loan from the bank." },
+          { "speaker": "NEO", "text": "The loan is sanctioned in the name of the group, and is meant to create self-employment opportunities for the members." }
+        ]
+      },
+      {
+        "animation": "A woman uses an SHG loan to buy a sewing machine; another buys a cow; another repairs her house. A shield labelled 'Group responsibility' surrounds them, and a red 'Collateral required' sign fades out.",
+        "lines": [
+          { "speaker": "NEO", "text": "Loans can be for releasing mortgaged land, for working capital like seeds and fertilisers, or for buying assets like sewing machines, handlooms and cattle." },
+          { "speaker": "NEO", "text": "Most important decisions regarding savings and loan activities are taken by the group members. The group is responsible for repayment. If anyone does not repay, other members follow it up seriously." },
+          { "speaker": "ZIPPY", "text": "So the group is the guarantee, not land or gold!" },
+          { "speaker": "NEO", "text": "Exactly. That's why banks are willing to lend to poor women organised in SHGs, even though they have no collateral." }
+        ]
+      },
+      {
+        "animation": "The women speak at a village meeting; one holds a mic. Labels float up: 'Financially self-reliant', 'Platform to discuss social issues: health, nutrition, domestic violence'. A small inset map of Bangladesh shows 'Grameen Bank, Muhammad Yunus, Nobel Peace Prize 2006'.",
+        "lines": [
+          { "speaker": "NEO", "text": "SHGs help borrowers overcome the problem of lack of collateral. They get timely loans at a reasonable interest rate." },
+          { "speaker": "NEO", "text": "They also help women become financially self-reliant, and give them a platform to discuss social issues like health, nutrition and domestic violence." },
+          { "speaker": "NEO", "text": "A similar idea, the Grameen Bank of Bangladesh, was started by Professor Muhammad Yunus, who received the Nobel Peace Prize in 2006." }
+        ]
+      },
+      {
+        "animation": "A board-tip card with the heading 'SHG: 3 benefits' and ticks for 'No collateral', 'Reasonable interest', 'Empowers women'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: when asked about SHGs, explain how they work and list their benefits. Mention that the group is responsible for repayment." }
+        ]
+      },
+      {
+        "animation": "Recap board with the steel savings box. Points appear: '1. 15 to 20 members pool savings', '2. Bank loan in the group's name, no collateral needed', '3. Empowers women and reduces dependence on moneylenders'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: an SHG has fifteen to twenty members who pool their savings." },
+          { "speaker": "NEO", "text": "Two: banks lend to the group without collateral, and the group is responsible for repayment." },
+          { "speaker": "NEO", "text": "Three: SHGs empower women and reduce dependence on informal lenders." },
+          { "speaker": "ZIPPY", "text": "Not a lottery. Better than a lottery." }
+        ]
+      }
+    ]
+  }
+]

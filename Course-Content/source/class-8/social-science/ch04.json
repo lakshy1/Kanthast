@@ -1,0 +1,290 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "The Colonial Era in India",
+    "topic_no": 1,
+    "name": "The Age of Colonialism and the First Europeans in India",
+    "scenes": [
+      {
+        "animation": "Zippy plants a tiny flag labelled 'Zippy Land' on Neo's desk, pushes Neo's books aside and announces new rules. Neo raises an eyebrow as the word 'COLONIALISM' drops from the top of the screen.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This desk is now my colony! My rules, my language, and all your biscuits belong to me." },
+          { "speaker": "NEO", "text": "You've just acted out colonialism, Zippy. Let's see what it really means, and why Europeans came to India." }
+        ]
+      },
+      {
+        "animation": "A definition card builds line by line: 'Colonialism = one country takes control of another region + sets up settlements + imposes its political, economic and cultural systems'. A world map then shows arrows from Spain, Portugal, Britain, France and the Netherlands reaching Africa, Asia, the Americas and Australia, with a label 'From the 15th century'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Colonialism is when one country takes control of another region, sets up settlements there, and imposes its own political, economic and cultural systems." },
+          { "speaker": "NEO", "text": "The Age of Colonialism usually means Europe's expansion from the 15th century, led by Spain, Portugal, Britain, France and the Netherlands." },
+          { "speaker": "NEO", "text": "Their motives were competition with rivals, resources, markets and trade routes, spreading Christianity, and scientific curiosity about the world." },
+          { "speaker": "NEO", "text": "Colonisers claimed a 'civilising mission', but the book shows the reality was loss of independence and exploitation for the colonised." }
+        ]
+      },
+      {
+        "animation": "A world GDP pie chart fills in: a large slice glows 'India: at least one-fourth' next to a similar slice 'China'. Around India, icons of spices, cotton, gems, sandalwood and wootz steel float toward ships heading west.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But why India?" },
+          { "speaker": "NEO", "text": "India was rich. Its spices, cotton, gems, sandalwood and wootz steel were in demand for centuries." },
+          { "speaker": "NEO", "text": "Economist Angus Maddison's estimates suggest India made up at least one-fourth of world GDP, with China, until the 16th century. That wealth attracted Europe." }
+        ]
+      },
+      {
+        "animation": "A map of India builds step by step. A ship sails to 'Kappad, near Kozhikode, 1498' with a label 'Vasco da Gama', then a Portuguese flag drops on 'Goa (1510)'. A pass stamped 'cartaz' pops over ships in the Arabian Sea. A small hero card 'Rani Abbakka, Ullal' shows fireballs from coconut shells hitting ships.",
+        "lines": [
+          { "speaker": "NEO", "text": "First came the Portuguese. Vasco da Gama reached Kappad, near Kozhikode in Kerala, in 1498." },
+          { "speaker": "NEO", "text": "They captured Goa in 1510 and forced ships in the Arabian Sea to buy passes called cartaz. In Goa, they set up the Inquisition in 1560, which persecuted people for their faith." },
+          { "speaker": "NEO", "text": "Rani Abbakka of Ullal in Karnataka resisted them bravely, and Rani Abbakka II is said to have set Portuguese ships on fire." }
+        ]
+      },
+      {
+        "animation": "The same map adds Dutch flags at Surat, Cochin, Nagapattinam and Masulipatnam, then a battle icon at 'Colachel, 1741' with 'Travancore wins'. French flags appear at 'Surat (1668)' and 'Pondicherry (1674)'; a label 'Dupleix: sepoys + puppet rulers' appears, then 'Carnatic Wars 1746-1763' pushes the French back to Pondicherry.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Dutch came in the early 17th century, mainly for the spice trade. In 1741, King Marthanda Varma of Travancore defeated them at the Battle of Colachel." },
+          { "speaker": "NEO", "text": "The French set up posts at Surat in 1668 and Pondicherry in 1674. Their governor Dupleix trained Indian soldiers called sepoys and used puppet Indian rulers." },
+          { "speaker": "NEO", "text": "But in the Carnatic Wars, from 1746 to 1763, the British checked the French, who were left with Pondicherry and a few small enclaves." },
+          { "speaker": "NEO", "text": "Exam tip: Colachel, 1741, is a rare case of an Asian power defeating a European colonial force. Mark Colachel in southern Kerala on your map." }
+        ]
+      },
+      {
+        "animation": "Recap board with four small flags. Three points appear: '1. Colonialism: control + settlement + imposed systems', '2. India's wealth drew Europeans (about 1/4 of world GDP)', '3. Portuguese (1498), Dutch (Colachel 1741), French (Carnatic Wars)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: colonialism means taking control of a region and imposing your systems on it." },
+          { "speaker": "NEO", "text": "Two: India's great wealth made it a target for European powers." },
+          { "speaker": "NEO", "text": "Three: the Portuguese, the Dutch and the French came first, and each was later checked." },
+          { "speaker": "ZIPPY", "text": "Fine, I return your desk. And the biscuits." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "The Colonial Era in India",
+    "topic_no": 2,
+    "name": "Enter the British: From Traders to Rulers",
+    "scenes": [
+      {
+        "animation": "A smiling shopkeeper in an English coat sets up a small stall at a busy Indian port. Each time the camera cuts back, the stall is bigger, until it becomes a fort with cannons and a flag. Zippy's jaw drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, that little shop just turned into a fort with cannons?" },
+          { "speaker": "NEO", "text": "That's roughly the story of the English East India Company, Zippy. A trading company slowly became a ruling power." }
+        ]
+      },
+      {
+        "animation": "A royal charter with a wax seal labelled 'Queen Elizabeth I' unrolls, and a small private army marches out of it. A map of India builds as pins drop in order: Surat, Madras, Bombay, Calcutta, while the timeline shows '1612-1690: English trading posts'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Company got a royal charter from Queen Elizabeth I, with special powers, such as raising a private army." },
+          { "speaker": "NEO", "text": "Its agents acted like simple traders and set up posts along the coast, first at Surat, Madras, Bombay and Calcutta." },
+          { "speaker": "NEO", "text": "Local rulers did not mind, because India had welcomed foreign trade for centuries." }
+        ]
+      },
+      {
+        "animation": "Two cartoon kings argue over a crown while a Company agent quietly offers soldiers to one of them, then pockets a map piece. The words 'Divide and rule' appear. The scene shifts to a battlefield at 'Palashi (Plassey), 1757', about 150 km north of Kolkata; one large block of the Nawab's army labelled 'Mir Jafar' stands still as a smaller British force advances.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Company took sides in quarrels between rulers and in family disputes over thrones. This is called 'divide and rule'. It also exploited divisions within Indian society." },
+          { "speaker": "NEO", "text": "At the Battle of Plassey in 1757, Robert Clive made a secret deal with Mir Jafar, the commander of Siraj-ud-daulah, the Nawab of Bengal." },
+          { "speaker": "NEO", "text": "Mir Jafar's forces, the bulk of the Nawab's army, stood aside, so the smaller British force won. He was made the new Nawab." },
+          { "speaker": "ZIPPY", "text": "So that's why people call a traitor a Mir Jafar!" }
+        ]
+      },
+      {
+        "animation": "A princely-state crown sits on a cushion; when a ruler with no natural son departs, a stamp 'LAPSED' slams down and the state turns British red. Next, a 'Resident' walks into another court and a bill labelled 'Pay for British troops' lands in the ruler's lap. A caption reads 'Hyderabad, 1798: among the first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the 19th century came the Doctrine of Lapse. If a ruler died without a natural male heir, his state was annexed. It ignored the Hindu tradition of adoption." },
+          { "speaker": "NEO", "text": "Then there was the subsidiary alliance. A British Resident sat in the ruler's court, the ruler paid for British troops, and his foreign relations went only through the British." },
+          { "speaker": "NEO", "text": "The ruler of Hyderabad was among the first to join, in 1798. It was called an empire on the cheap." }
+        ]
+      },
+      {
+        "animation": "A two-column table builds on a chalkboard: 'Doctrine of Lapse: no natural male heir, state annexed' and 'Subsidiary Alliance: Resident + pay for British troops + no independent foreign policy'. A 'Board Tip' sticker lands between them.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: don't confuse the two. Lapse took over states with no natural heir. Subsidiary alliance kept the ruler, but took away his real power." },
+          { "speaker": "NEO", "text": "A princely state was ruled by an Indian prince under British protection. At Independence there were over 500 of them, covering about 40 per cent of the Subcontinent." }
+        ]
+      },
+      {
+        "animation": "Recap board with a small shop icon turning into a fort. Points appear: '1. Charter + trading posts: Surat, Madras, Bombay, Calcutta', '2. Divide and rule; Plassey 1757 (Clive + Mir Jafar)', '3. Doctrine of Lapse and subsidiary alliance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the East India Company began as traders with a royal charter and coastal posts." },
+          { "speaker": "NEO", "text": "Two: using divide and rule, it won at Plassey in 1757 with Mir Jafar's betrayal." },
+          { "speaker": "NEO", "text": "Three: the Doctrine of Lapse and subsidiary alliances expanded British control." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "The Colonial Era in India",
+    "topic_no": 3,
+    "name": "From Paradise to Hell? Famines and the Drain of Wealth",
+    "scenes": [
+      {
+        "animation": "A lush green postcard of Bengal reads 'the paradise of the earth' - Clive. Zippy admires it, then the postcard slowly dries into cracked brown fields under a harsh sun, and the title 'From Paradise to Hell?' appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Paradise of the earth! Sounds like a holiday brochure." },
+          { "speaker": "NEO", "text": "That's how Robert Clive described Bengal. Within a few years, it faced one of the worst famines in its history." }
+        ]
+      },
+      {
+        "animation": "A map lights up Bengal, Bihar and Odisha with a label 'Company collects revenue'. A farmer's basket of grain shrinks as a tax collector's bag stays the same size, then grows. A counter shows 'Bengal famine 1770-1772: about 10 million, nearly one-third of the population'.",
+        "lines": [
+          { "speaker": "NEO", "text": "After Plassey, the Company won the right to collect revenue in Bengal, Bihar and Odisha." },
+          { "speaker": "NEO", "text": "In 1770 to 1772, after two years of crop failure, farmers still had to pay high cash taxes whatever the harvest. The Company even raised the land tax." },
+          { "speaker": "NEO", "text": "The famine killed nearly one-third of Bengal's people, an estimated 10 million." }
+        ]
+      },
+      {
+        "animation": "A timeline adds 'Great Famine 1876-1878: up to 8 million, mostly Deccan'. Beside it, grain sacks are loaded onto ships on Madras beach while a queue waits at a small relief camp. A quote card reads 'no interference ... with the object of reducing the price of food' - Lord Lytton.",
+        "lines": [
+          { "speaker": "NEO", "text": "Such famines kept recurring. In the Great Famine of 1876 to 1878, up to 8 million Indians died, mostly in the Deccan." },
+          { "speaker": "NEO", "text": "Grain was still exported, and Viceroy Lytton ordered no government action to lower food prices. Relief camps were too few." },
+          { "speaker": "NEO", "text": "Estimates of total famine deaths under British rule range from 50 to 100 million. Famines had happened in India before, but never on such a scale." }
+        ]
+      },
+      {
+        "animation": "A giant pipe runs from a map of India to a map of Britain; gold coins flow through it. Portrait cards pop up one by one: Brooks Adams, William Digby, Dadabhai Naoroji with a book 'Poverty and Un-British Rule in India (1901)', and R.C. Dutt with 'Economic History of India'. A counter reads 'Utsa Patnaik estimate, 1765-1938: 45 trillion US dollars'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Where did all that wealth go?" },
+          { "speaker": "NEO", "text": "Much of it flowed to Britain. This is called the drain of wealth." },
+          { "speaker": "NEO", "text": "In 1901, Dadabhai Naoroji, the first Indian elected to the British House of Commons, wrote Poverty and Un-British Rule in India. R.C. Dutt made a similar study." },
+          { "speaker": "NEO", "text": "A recent estimate by Utsa Patnaik puts the drain from 1765 to 1938 at about 45 trillion US dollars in today's value." },
+          { "speaker": "NEO", "text": "Exam tip: link each name to its work. Naoroji wrote Poverty and Un-British Rule in India. Dutt wrote Economic History of India." }
+        ]
+      },
+      {
+        "animation": "The painting 'The East offering its riches to Britannia' appears; labels pop onto it: 'Britannia, seated high', 'India offering pearls and jewels', 'bent posture of the colonies'. A big question mark hovers: 'Offered, or taken?'",
+        "lines": [
+          { "speaker": "NEO", "text": "Look at this 1778 painting made for the Company. Britannia sits high above, while India offers jewels from a bent posture." },
+          { "speaker": "NEO", "text": "The book asks a sharp question: was this wealth really offered, or taken by force?" }
+        ]
+      },
+      {
+        "animation": "Recap board in the shape of a grain sack. Points appear: '1. Bengal famine 1770-1772: harsh taxes, ~10 million died', '2. Famines recurred; 50-100 million victims in all', '3. Drain of wealth: Naoroji, Dutt; about $45 trillion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: harsh revenue collection turned the 1770 crop failure in Bengal into a terrible famine." },
+          { "speaker": "NEO", "text": "Two: famines recurred through British rule, with tens of millions of victims." },
+          { "speaker": "NEO", "text": "Three: the drain of wealth, studied by Naoroji and Dutt, sent huge sums from India to Britain." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "The Colonial Era in India",
+    "topic_no": 4,
+    "name": "Changing Landscapes under Colonial Rule",
+    "scenes": [
+      {
+        "animation": "Zippy tries on a feather-light muslin scarf in a crafts fair and nearly floats away with it. A weaver at a handloom smiles, then the loom slowly fades to grey and a factory chimney in Britain puffs smoke.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This cloth is so thin, it's practically air!" },
+          { "speaker": "NEO", "text": "Indian muslins were famous worldwide. Colonial rule changed that, and much more. Let's look at four big changes." }
+        ]
+      },
+      {
+        "animation": "Two trade arrows between India and Britain: the India-to-Britain arrow hits a tall wall labelled 'Heavy duties', while the Britain-to-India arrow passes through a tiny gate labelled 'Minimal tariffs'. A bar chart shows 'India's share of world GDP' shrinking to 'about 5% at Independence'.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, industries. Britain put heavy duties on Indian textiles, but forced India to accept British goods with minimal tariffs." },
+          { "speaker": "NEO", "text": "Indian textile exports fell sharply, and skilled weavers were pushed into poverty and farming. Iron, steel and paper suffered too." },
+          { "speaker": "NEO", "text": "India's share of world GDP fell to hardly 5 per cent by Independence." }
+        ]
+      },
+      {
+        "animation": "A cosy village scene: elders under a banyan tree solving a dispute, villagers repairing an irrigation channel. A quote card appears: 'The village communities are little republics' - Charles Metcalfe. Then a tall grey office block labelled 'Centralised bureaucracy: tax + order' casts a shadow over the village.",
+        "lines": [
+          { "speaker": "NEO", "text": "Second, governance. Village councils once settled disputes and organised works like irrigation. Charles Metcalfe called them little republics." },
+          { "speaker": "NEO", "text": "The British replaced them with a centralised bureaucracy focused on collecting taxes and keeping order." },
+          { "speaker": "NEO", "text": "British law codes also ignored local customs, and courts became costly, slow and ran in a foreign language." }
+        ]
+      },
+      {
+        "animation": "Village schools labelled 'pathshalas', 'madrasas' and 'viharas' appear across a map, with a counter '100,000 to 150,000 schools in Bengal and Bihar'. A document stamps down: '1835: Macaulay's Minute on Indian Education', and the schools gradually fade while a small group in English suits grows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Third, education. India had pathshalas, madrasas, viharas and apprenticeships. Reports counted 100,000 to 150,000 village schools in Bengal and Bihar alone." },
+          { "speaker": "NEO", "text": "In his 1835 Minute on Indian Education, Macaulay wanted Indians who were Indian in blood and colour, but English in taste and opinions." },
+          { "speaker": "NEO", "text": "Traditional schools slowly disappeared, and English became a mark of prestige." },
+          { "speaker": "NEO", "text": "Exam tip: remember the date 1835 and the aim, to create a class of Indians serving British interests, such as clerks." }
+        ]
+      },
+      {
+        "animation": "A steam locomotive of the 1860s puffs across a map; its tracks run from the interior straight to ports like Bombay, Madras and Calcutta, carrying cotton bales out and British goods in. A coin labelled 'Indian tax revenue' drops into a box marked 'Railway cost'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But the railways were a gift, right?" },
+          { "speaker": "NEO", "text": "They did connect people and markets. But they were mainly built to carry raw materials to ports, spread British goods, and move troops fast." },
+          { "speaker": "NEO", "text": "And they were mostly paid for by Indian taxes. As the book says, Indians funded their own subjugation." }
+        ]
+      },
+      {
+        "animation": "Recap board with four icons: a loom, a banyan tree, a school slate and a train. Points appear: '1. Textile industry ruined by unfair duties', '2. Village self-government and customary law replaced', '3. Macaulay (1835) reshaped education; railways paid by Indians'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: unfair duties ruined India's textile industry." },
+          { "speaker": "NEO", "text": "Two: village councils and customary laws gave way to a centralised system." },
+          { "speaker": "NEO", "text": "Three: Macaulay's 1835 Minute changed education, and the railways served mainly colonial needs." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "The Colonial Era in India",
+    "topic_no": 5,
+    "name": "Early Resistance and the Great Rebellion of 1857",
+    "scenes": [
+      {
+        "animation": "A huge globe spins with a British flag and a banner 'The empire on which the sun never sets'. Zippy pokes it and small sparks of resistance light up across India one by one.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "An empire where the sun never sets? Sounds unbeatable." },
+          { "speaker": "NEO", "text": "The British called India the jewel in their crown. But almost from the start, Indians resisted. Let's map the sparks." }
+        ]
+      },
+      {
+        "animation": "An India map builds one pin at a time. 'Bengal, after 1770: Sannyasi-Fakir Rebellion' with a book icon 'Anandamath (1882), Vande Mataram'. 'Chota Nagpur, 1831-1832: Kol Uprising'. 'Jharkhand, Bihar, West Bengal, 1855-1856: Santhal Rebellion - Sidhu and Kanhu Murmu'. 'Bengal, 1859-1862: Indigo Revolt' with blue plants.",
+        "lines": [
+          { "speaker": "NEO", "text": "After the 1770 famine, sannyasis and fakirs in Bengal attacked British treasuries. This rebellion later inspired Bankim Chandra's novel Anandamath, which has the song Vande Mataram." },
+          { "speaker": "NEO", "text": "Tribals lost access to forests and land. The Kol Uprising of 1831 to 1832 took place in Chota Nagpur." },
+          { "speaker": "NEO", "text": "In 1855 to 1856, the Santhals rose against moneylenders and landlords, led by the brothers Sidhu and Kanhu Murmu." },
+          { "speaker": "NEO", "text": "In the Indigo Revolt of 1859 to 1862, Bengal peasants forced to grow indigo refused, supported by the Bengali press." }
+        ]
+      },
+      {
+        "animation": "A timeline draws step by step: '1806: Vellore', '1857: Barrackpore - Mangal Pandey', then an arrow from 'Meerut' to 'Delhi' with a card 'Bahadur Shah Zafar proclaimed leader'. Flames of revolt then spread on the map to Kanpur, Lucknow and Jhansi.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sepoys were unhappy too. In 1806, rules against religious marks sparked a revolt at Vellore." },
+          { "speaker": "NEO", "text": "In 1857, rumours spread that rifle cartridges were greased with cow and pig fat. At Barrackpore, Mangal Pandey attacked British officers." },
+          { "speaker": "NEO", "text": "At Meerut, sepoys marched to Delhi and proclaimed the elderly Mughal emperor Bahadur Shah Zafar their leader. The revolt spread to Kanpur, Lucknow and Jhansi." },
+          { "speaker": "NEO", "text": "Exam tip: the British called it the Sepoy Mutiny. Following many scholars, the book calls it the Great Rebellion of 1857." }
+        ]
+      },
+      {
+        "animation": "Two heroine cards slide in. 'Rani Lakshmibai of Jhansi' rides toward 'Gwalior fort' with 'Tatia Tope' beside her, and the date '18 June 1858' appears. 'Begum Hazrat Mahal of Awadh' stands at 'Lucknow' holding a scroll labelled 'counter-proclamation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rani Lakshmibai of Jhansi, helped by Tatia Tope, escaped a besieged Jhansi and captured Gwalior fort. She fell in battle on 18 June 1858." },
+          { "speaker": "NEO", "text": "Begum Hazrat Mahal of Awadh led the defence of Lucknow and warned Indians not to trust British promises." },
+          { "speaker": "ZIPPY", "text": "Why did the rebellion fail, then?" },
+          { "speaker": "NEO", "text": "Some historians say the rebels lacked a unified command and a consistent strategy. The British crushed it brutally." }
+        ]
+      },
+      {
+        "animation": "A document stamps '1858: British Crown takes over from the East India Company - the British Raj begins'. A small seed labelled 'Foreign rule is unacceptable' sprouts. Then books titled 'Bhagavad Gita, 1785 English translation' fly from India to Europe, as a caption reads 'We study the past to understand it, not to blame anyone today'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1858, the British Crown took direct control from the Company. The rebellion failed, but it planted the idea that foreign rule was unacceptable." },
+          { "speaker": "NEO", "text": "Colonial rule also had unintended effects: surveys, archaeology, and translations of Sanskrit texts that influenced Europe. But thousands of artefacts were also taken away." },
+          { "speaker": "NEO", "text": "We study this period to understand it, not to blame anyone today." }
+        ]
+      },
+      {
+        "animation": "Recap board with a map dotted with resistance sparks. Points appear: '1. Early resistance: Sannyasi-Fakir, Kol, Santhal, Indigo', '2. 1857: Mangal Pandey, Meerut to Delhi, Lakshmibai, Hazrat Mahal', '3. 1858: Crown rule; seed of the freedom struggle'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: sannyasis, fakirs, tribals and peasants resisted colonial rule early on." },
+          { "speaker": "NEO", "text": "Two: the Great Rebellion of 1857 spread from Meerut to Delhi and beyond, with brave leaders like Rani Lakshmibai." },
+          { "speaker": "NEO", "text": "Three: in 1858 the Crown took over, and the seed of the freedom struggle was sown." }
+        ]
+      }
+    ]
+  }
+]

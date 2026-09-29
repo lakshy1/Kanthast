@@ -1,0 +1,229 @@
+[
+  {
+    "chapter_no": 11,
+    "chapter": "Surface Areas and Volumes",
+    "topic_no": 1,
+    "name": "Surface Area of a Right Circular Cone",
+    "scenes": [
+      {
+        "animation": "A birthday party: Zippy wears a paper party cap. He unrolls it flat on the table and it becomes a curved fan shape, not a triangle. Zippy gasps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My party cap unrolled into a fan! I thought cones were made of triangles." },
+          { "speaker": "NEO", "text": "They're made of a sector of a circle. And that shape gives us the area formula." }
+        ]
+      },
+      {
+        "animation": "A right circular cone with labels: 'r = base radius', 'h = height (vertex to centre of base, at right angles)', 'l = slant height (vertex to any point on the base edge)'. The right triangle inside glows, and 'l² = r² + h²' writes itself.",
+        "lines": [
+          { "speaker": "NEO", "text": "A right circular cone has a base radius r and a height h, measured from the vertex straight down to the centre of the base." },
+          { "speaker": "NEO", "text": "The slant height l runs from the vertex to the edge of the base." },
+          { "speaker": "NEO", "text": "r, h and l form a right triangle, so l squared equals r squared plus h squared." }
+        ]
+      },
+      {
+        "animation": "The unrolled sector is cut into many thin slices, each almost a triangle of height l. The slices line up; their bases add to 'arc length = 2πr'. Formula builds: 'Area = ½ × l × 2πr = πrl'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cut the sector into many thin pieces. Each is nearly a triangle with height l." },
+          { "speaker": "NEO", "text": "Their bases together make the arc, which was the base circle, so they add up to 2 pi r." },
+          { "speaker": "NEO", "text": "Area is half into l into 2 pi r. So the curved surface area of a cone is pi r l." },
+          { "speaker": "NEO", "text": "Add the circular base, pi r squared, to get the total surface area: pi r into l plus r." }
+        ]
+      },
+      {
+        "animation": "Worked example on a chalkboard, line by line: 'r = 7 cm, h = 24 cm', 'l = √(7² + 24²) = √(49 + 576) = √625 = 25 cm', 'CSA = πrl = 22/7 × 7 × 25 = 22 × 25 = 550 cm²', 'TSA = πr(l + r) = 22/7 × 7 × (25 + 7) = 22 × 32 = 704 cm²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a cone has base radius 7 centimetres and height 24 centimetres. Take pi as 22 by 7." },
+          { "speaker": "NEO", "text": "Slant height is the root of 49 plus 576, which is the root of 625, or 25 centimetres." },
+          { "speaker": "NEO", "text": "Curved surface area is 22 by 7 into 7 into 25. The sevens cancel, leaving 22 into 25, which is 550 square centimetres." },
+          { "speaker": "NEO", "text": "Total surface area is 22 by 7 into 7 into 32, which is 704 square centimetres." }
+        ]
+      },
+      {
+        "animation": "A joker's cap and an ice-cream cone appear with a stamp 'Open cone → CSA only'. A closed conical toy gets 'Closed → TSA'. An 'EXAM TIP' card: 'Given h? Find l first.'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "For my party cap, do I include the base?" },
+          { "speaker": "NEO", "text": "No, a cap is open, so use only the curved surface area." },
+          { "speaker": "NEO", "text": "Exam tip: the formula needs slant height l. If the question gives height h, find l first." }
+        ]
+      },
+      {
+        "animation": "Recap board with the party cap: '1. l² = r² + h²', '2. CSA of cone = πrl', '3. TSA of cone = πr(l + r)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: slant height squared equals radius squared plus height squared." },
+          { "speaker": "NEO", "text": "Two: the curved surface area of a cone is pi r l." },
+          { "speaker": "NEO", "text": "Three: the total surface area is pi r into l plus r." },
+          { "speaker": "ZIPPY", "text": "Cap measured. Cake next!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Surface Areas and Volumes",
+    "topic_no": 2,
+    "name": "Surface Area of a Sphere and a Hemisphere",
+    "scenes": [
+      {
+        "animation": "Zippy tries to gift-wrap a cricket ball with flat paper; the paper crinkles everywhere and Zippy ends up wrapped instead of the ball.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Help! How much paper does a ball even need?" },
+          { "speaker": "NEO", "text": "A ball is a sphere. There's a neat experiment to find its surface area." }
+        ]
+      },
+      {
+        "animation": "Activity animated step by step: a nail is pushed into a round ball, and string is wound neatly around it until the ball is covered; pins mark the start and end. The string is unwound and used to fill circles of the ball's radius: it exactly fills four circles.",
+        "lines": [
+          { "speaker": "NEO", "text": "Wind a string around a ball until it is fully covered. Then unwind it." },
+          { "speaker": "NEO", "text": "Now draw circles with the same radius as the ball, and fill them with the same string." },
+          { "speaker": "NEO", "text": "The string exactly fills four circles. Each circle has area pi r squared." },
+          { "speaker": "NEO", "text": "So the surface area of a sphere is 4 pi r squared." }
+        ]
+      },
+      {
+        "animation": "A sphere is sliced through its centre into two hemispheres. One half's curved dome glows: 'CSA = 2πr²'. Then its flat circular face glows: '+ πr²', giving 'TSA = 3πr²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cut a sphere through its centre and you get two hemispheres." },
+          { "speaker": "NEO", "text": "The curved surface of a hemisphere is half of 4 pi r squared, which is 2 pi r squared." },
+          { "speaker": "NEO", "text": "A solid hemisphere also has a flat circular face, pi r squared. So its total surface area is 3 pi r squared." }
+        ]
+      },
+      {
+        "animation": "Worked examples line by line: 'Sphere, r = 7 cm: 4 × 22/7 × 7 × 7 = 4 × 22 × 7 = 616 cm²'. Then 'Hemisphere, r = 21 cm: 22/7 × 21 × 21 = 22 × 3 × 21 = 1386', 'CSA = 2 × 1386 = 2772 cm²', 'TSA = 3 × 1386 = 4158 cm²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: find the surface area of a sphere of radius 7 centimetres." },
+          { "speaker": "NEO", "text": "4 into 22 by 7 into 7 into 7. One seven cancels, leaving 4 into 22 into 7, which is 616 square centimetres." },
+          { "speaker": "NEO", "text": "Now a solid hemisphere of radius 21 centimetres. Pi r squared is 22 by 7 into 21 into 21, which is 1386." },
+          { "speaker": "NEO", "text": "Curved surface area is twice that, 2772 square centimetres. Total surface area is three times, 4158 square centimetres." }
+        ]
+      },
+      {
+        "animation": "A balloon inflates from radius 7 cm to 14 cm. A ratio card: 'r doubles → surface area × 4 (ratio 1 : 4)'. An 'EXAM TIP' card: 'Hollow bowl → CSA; solid hemisphere → TSA'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If I blow a balloon to double its radius, is the rubber surface double too?" },
+          { "speaker": "NEO", "text": "No, four times. Area depends on r squared, so the ratio is 1 to 4." },
+          { "speaker": "NEO", "text": "Exam tip: a bowl is open, so use 2 pi r squared. A solid hemisphere uses 3 pi r squared." }
+        ]
+      },
+      {
+        "animation": "Recap board with the unwrapped ball: '1. Sphere: 4πr²', '2. Hemisphere CSA: 2πr²', '3. Solid hemisphere TSA: 3πr²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the surface area of a sphere is 4 pi r squared." },
+          { "speaker": "NEO", "text": "Two: the curved surface area of a hemisphere is 2 pi r squared." },
+          { "speaker": "NEO", "text": "Three: the total surface area of a solid hemisphere is 3 pi r squared." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Surface Areas and Volumes",
+    "topic_no": 3,
+    "name": "Volume of a Right Circular Cone",
+    "scenes": [
+      {
+        "animation": "An ice-cream cart. Zippy holds a cone and a cup shaped like a cylinder with the same base and height. The vendor charges the same price for both; Zippy squints suspiciously.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Same base, same height, same price. But does the cone hold as much as the cup?" },
+          { "speaker": "NEO", "text": "Not even close. Let's measure." }
+        ]
+      },
+      {
+        "animation": "Activity animated: a hollow cylinder and a hollow cone with the same radius and height. The cone is filled with sand and poured into the cylinder: one third full, two thirds full, then exactly full after the third pour. Counter shows '1, 2, 3'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Take a hollow cylinder and a hollow cone with the same base radius and the same height." },
+          { "speaker": "NEO", "text": "Fill the cone with sand and empty it into the cylinder. It takes exactly three cones to fill the cylinder." },
+          { "speaker": "NEO", "text": "So the volume of a cone is one third of the cylinder's volume: one third pi r squared h." }
+        ]
+      },
+      {
+        "animation": "Worked example on a chalkboard, line by line: 'r = 7 cm, h = 15 cm', 'V = ⅓ × 22/7 × 7 × 7 × 15', '22/7 × 49 = 154', '154 × 15 = 2310', '2310 ÷ 3 = 770 cm³'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a cone has radius 7 centimetres and height 15 centimetres. Take pi as 22 by 7." },
+          { "speaker": "NEO", "text": "22 by 7 into 49 is 154. Then 154 into 15 is 2310." },
+          { "speaker": "NEO", "text": "One third of 2310 is 770. So the volume is 770 cubic centimetres." }
+        ]
+      },
+      {
+        "animation": "A conical pit in a farm, diameter 3.5 m, depth 12 m, labelled. Lines build: 'r = 3.5 ÷ 2 = 1.75 m', 'V = ⅓ × 22/7 × 1.75 × 1.75 × 12', '= 22/7 × 3.0625 × 4 = 22/7 × 12.25', '= 22 × 1.75 = 38.5 m³', '1 m³ = 1 kL ⇒ 38.5 kL'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Next, a conical pit has a top diameter of 3.5 metres and a depth of 12 metres. Find its capacity in kilolitres." },
+          { "speaker": "NEO", "text": "The radius is half the diameter, 1.75 metres. One third of 12 is 4, and 1.75 squared into 4 is 12.25." },
+          { "speaker": "NEO", "text": "22 by 7 into 12.25 is 22 into 1.75, which is 38.5 cubic metres." },
+          { "speaker": "NEO", "text": "One cubic metre is one kilolitre, so the pit holds 38.5 kilolitres." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Diameter given? Halve it first', and a second card: '1000 cm³ = 1 L, 1 m³ = 1000 L = 1 kL'. Zippy crosses out '3.5' and writes '1.75'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I almost used 3.5 as the radius!" },
+          { "speaker": "NEO", "text": "Exam tip: if a diameter is given, halve it first. And remember, 1000 cubic centimetres make one litre." }
+        ]
+      },
+      {
+        "animation": "Recap board with the ice-cream cone: '1. Three cones fill one cylinder of same r and h', '2. Volume of cone = ⅓πr²h', '3. 1 m³ = 1 kL; 1000 cm³ = 1 L'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: three cones fill a cylinder with the same base and height." },
+          { "speaker": "NEO", "text": "Two: the volume of a cone is one third pi r squared h." },
+          { "speaker": "NEO", "text": "Three: one cubic metre is one kilolitre, and 1000 cubic centimetres is one litre." },
+          { "speaker": "ZIPPY", "text": "Next time, I'm buying the cup." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Surface Areas and Volumes",
+    "topic_no": 4,
+    "name": "Volume of a Sphere and a Hemisphere",
+    "scenes": [
+      {
+        "animation": "Zippy drops a big ladoo into a brimful glass of water; water spills into a tray below. He holds up the tray, amazed.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My ladoo pushed out water! Is that its volume?" },
+          { "speaker": "NEO", "text": "Exactly. The water that overflows equals the volume of the sphere." }
+        ]
+      },
+      {
+        "animation": "Activity animated: spheres of different radii are dipped one at a time into a vessel filled to the brim; overflow water collects in a measuring cylinder. A table appears comparing overflow volumes with 'r³', and the formula 'V = 4/3 πr³' writes itself.",
+        "lines": [
+          { "speaker": "NEO", "text": "Dip spheres of different sizes into a vessel full of water, and measure the overflow each time." },
+          { "speaker": "NEO", "text": "The overflow is always four thirds pi into the cube of the radius." },
+          { "speaker": "NEO", "text": "So the volume of a sphere is four thirds pi r cubed." }
+        ]
+      },
+      {
+        "animation": "A sphere splits into two hemispheres; one is labelled 'V = ½ × 4/3 πr³ = 2/3 πr³'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A hemisphere is half a sphere, so its volume is two thirds pi r cubed." },
+          { "speaker": "ZIPPY", "text": "Half a ladoo, half the volume. Fair enough, but I still want the whole one." }
+        ]
+      },
+      {
+        "animation": "Worked example on a chalkboard, line by line: 'r = 21 cm', 'V = 4/3 × 22/7 × 21 × 21 × 21', '21 ÷ 7 = 3 and 21 ÷ 3 = 7', 'V = 4 × 22 × 3 × 7 × 21', '= 88 × 441 = 38808 cm³'. Then 'Hemispherical bowl: 38808 ÷ 2 = 19404 cm³ ≈ 19.4 L'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: find the volume of a sphere of radius 21 centimetres." },
+          { "speaker": "NEO", "text": "Four thirds into 22 by 7 into 21 into 21 into 21. One 21 cancels the 7, leaving 3. Another 21 cancels the 3, leaving 7." },
+          { "speaker": "NEO", "text": "Now we have 4 into 22 into 3 into 7 into 21. That is 88 into 441, which is 38808 cubic centimetres." },
+          { "speaker": "NEO", "text": "A hemispherical bowl of the same radius holds half of that, 19404 cubic centimetres, or about 19.4 litres." }
+        ]
+      },
+      {
+        "animation": "Two balls: radius r and radius 2r. A ratio card flips: '(2r)³ = 8r³ → volume × 8'. An 'EXAM TIP' card: 'Volume: r³ and cm³; surface area: r² and cm²'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So if I double the radius, the volume doubles?" },
+          { "speaker": "NEO", "text": "No. Two cubed is eight, so the volume becomes eight times." },
+          { "speaker": "NEO", "text": "Exam tip: volume uses r cubed and cubic units. Surface area uses r squared and square units. Don't mix them." }
+        ]
+      },
+      {
+        "animation": "Recap board with the ladoo: '1. Volume of sphere = 4/3 πr³', '2. Volume of hemisphere = 2/3 πr³', '3. Radius × 2 ⇒ volume × 8'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the volume of a sphere is four thirds pi r cubed." },
+          { "speaker": "NEO", "text": "Two: the volume of a hemisphere is two thirds pi r cubed." },
+          { "speaker": "NEO", "text": "Three: doubling the radius makes the volume eight times bigger." },
+          { "speaker": "ZIPPY", "text": "An eight-times ladoo. Now that's a Diwali plan!" }
+        ]
+      }
+    ]
+  }
+]

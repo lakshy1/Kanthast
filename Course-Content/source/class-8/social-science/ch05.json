@@ -1,0 +1,296 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "Universal Franchise and India's Electoral System",
+    "topic_no": 1,
+    "name": "Universal Adult Franchise",
+    "scenes": [
+      {
+        "animation": "A busy street during election season: newspaper headlines flutter past, and people with inked fingers smile at the camera. Zippy, holding a newspaper upside down, looks confused while Neo points at a banner reading 'General Elections 2024'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "It's just voting! Why is the whole country so excited?" },
+          { "speaker": "NEO", "text": "Just voting? It's the biggest celebration of our democracy, the general elections!" },
+          { "speaker": "NEO", "text": "In 2024, over 968 million voters were eligible to vote for the 543 constituencies of the Lok Sabha." }
+        ]
+      },
+      {
+        "animation": "A glossary card flips open: 'Franchise = a right granted by the constitution or government (also called suffrage)'. Below it, a long queue of very different citizens forms: a farmer, a doctor, a student, an elderly woman. Each holds up one identical ballot marked '1 vote = equal value'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Franchise means a right granted by the constitution or government. Another word for it is suffrage." },
+          { "speaker": "NEO", "text": "Universal adult franchise means every adult citizen gets one vote, and all votes have equal value." },
+          { "speaker": "NEO", "text": "Every Indian citizen aged 18 and above can vote, irrespective of caste, creed, race, religion, gender, education or income. That is what 'universal' means." },
+          { "speaker": "ZIPPY", "text": "So the richest person and a chaiwala both get exactly one vote?" },
+          { "speaker": "NEO", "text": "Exactly. And no one can vote on another person's behalf." }
+        ]
+      },
+      {
+        "animation": "A horizontal timeline builds from left to right: 'Before Independence: about 13% could vote', 'From the start: universal adult franchise in the Constitution', '1988: voting age lowered from 21 to 18'. A small tag reads 'Article 326'. A voter-registration card slides in with the word 'Registered in your constituency'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Before Independence, only around 13 per cent of Indians were allowed to vote." },
+          { "speaker": "NEO", "text": "The Constitution makers made universal adult franchise a feature of Indian democracy right from the outset. It is in Article 326." },
+          { "speaker": "NEO", "text": "In 1988, India lowered the minimum voting age from 21 to 18." },
+          { "speaker": "NEO", "text": "To vote, you must be registered as a voter in your constituency, an area whose voters elect a representative." }
+        ]
+      },
+      {
+        "animation": "A world map lights up country by country. A 1913 women's suffrage parade marches across the USA; Switzerland glows with the label '1971'. India glows from the very start with the label 'Women voted from the beginning'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Did women have to fight for their vote here too?" },
+          { "speaker": "NEO", "text": "In many countries, yes. Women in Switzerland got the vote only in 1971." },
+          { "speaker": "NEO", "text": "In India, a progressive constitutional vision and deep democratic values ensured women could vote from the very beginning." }
+        ]
+      },
+      {
+        "animation": "A mindmap builds from a central bubble 'Why universal adult franchise?'. Branches pop out one by one: 'Everyone is equal', 'Everyone's voice matters', 'Power to determine one's future', 'Fosters civic engagement', 'Representatives answerable to voters'. An 'Exam Tip' sticker lands on the 'Everyone is equal' branch.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1947, our literacy rate was only about 14 per cent. Some argued that only literate people should vote." },
+          { "speaker": "NEO", "text": "But the Constitution makers trusted the common citizen. Universal franchise means everyone is equal and everyone's voice matters." },
+          { "speaker": "NEO", "text": "It gives people the power to decide their future, and representatives become answerable to voters, who can vote them out." },
+          { "speaker": "NEO", "text": "Exam tip: when asked why universal adult franchise matters, give at least two clear reasons, like equality and accountability." }
+        ]
+      },
+      {
+        "animation": "Recap board with a ballot-box icon. Points appear one by one: '1. Every citizen 18+ gets one vote of equal value', '2. Adopted from the start; age lowered from 21 to 18 in 1988', '3. Ensures equality, voice and accountability'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: universal adult franchise gives every citizen aged 18 and above one vote of equal value." },
+          { "speaker": "NEO", "text": "Two: India adopted it right from the start, and lowered the voting age from 21 to 18 in 1988." },
+          { "speaker": "NEO", "text": "Three: it ensures equality, gives everyone a voice, and keeps leaders answerable." },
+          { "speaker": "ZIPPY", "text": "I'm counting the days till I turn 18!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Universal Franchise and India's Electoral System",
+    "topic_no": 2,
+    "name": "Bridging Barriers: Ensuring Everyone Can Vote",
+    "scenes": [
+      {
+        "animation": "A jeep bumps up a snowy mountain road carrying polling officials and a voting machine. Zippy peeks out of a crate. At the top, a tiny polling booth is set up for one woman voter, who waves happily.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "All this trouble for just one voter? Seriously?" },
+          { "speaker": "NEO", "text": "Seriously. In a democracy, no voter should be left behind." }
+        ]
+      },
+      {
+        "animation": "A comparison graphic: a crowd of Indian voters labelled '15x' stands next to a small crowd labelled 'UK population'; then an outline of India beside France labelled 'India = 6x larger in area'. Mountains, deserts and islands pop up on an India map to show geographic diversity.",
+        "lines": [
+          { "speaker": "NEO", "text": "India is large, diverse and complex. Our eligible voters are fifteen times the population of the United Kingdom." },
+          { "speaker": "NEO", "text": "India is also six times larger than France in area, with mountains, deserts and islands." },
+          { "speaker": "NEO", "text": "The Election Commission of India organises elections, keeping all this in mind." }
+        ]
+      },
+      {
+        "animation": "Icons appear one by one around a polling booth: an elderly man voting from home, a postal envelope, a braille voter card, a phone app requesting a wheelchair, and a ramp. A banner reads 'Removing barriers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The ECI takes special steps to remove barriers. Officials travel to remote places so every citizen can vote." },
+          { "speaker": "NEO", "text": "In 2024, for the first time, the elderly and people with disabilities could vote from home." },
+          { "speaker": "NEO", "text": "There were braille-enabled voter cards, postal voting for some voters, and app-based requests for wheelchairs and ramps." },
+          { "speaker": "ZIPPY", "text": "But did everyone actually vote?" },
+          { "speaker": "NEO", "text": "No. About 34 per cent of eligible voters did not vote in 2024. That is something to think about." }
+        ]
+      },
+      {
+        "animation": "A classroom at Suryodaya School. Three candidate cards appear: Ahmed (cleanliness poster), Gurmat (peer coaching noticeboard), Ravi (lunchtime music show). Ms. Usha wears an 'Election Officer' badge and sets up a voting corner with a ballot box and a braille ballot for Neha.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's see an election in a Grade 8 class. Ahmed, Gurmat and Ravi contest for Class Representative." },
+          { "speaker": "NEO", "text": "Their teacher, Ms. Usha, is the Election Officer. She explains the secret ballot, so no one knows who voted for whom." },
+          { "speaker": "NEO", "text": "She even arranges a braille ballot paper for Neha." }
+        ]
+      },
+      {
+        "animation": "The sealed box opens while Ms. Sheeba watches. A bar chart builds: Ahmed 8, Gurmat 12, Ravi 10, plus one grey slip marked 'Invalid'. Gurmat's bar glows gold. A side card slides in: 'NOTA = None Of The Above'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Thirty-three votes were cast. One unmarked paper was invalid. Ahmed got 8, Gurmat 12 and Ravi 10." },
+          { "speaker": "NEO", "text": "Gurmat, with the most votes, became Class Representative." },
+          { "speaker": "ZIPPY", "text": "What if I didn't like any candidate?" },
+          { "speaker": "NEO", "text": "India offers NOTA, None Of The Above. It doesn't change the result, but it tells everyone that voters want better choices." },
+          { "speaker": "NEO", "text": "Exam tip: a secret ballot means your vote is private, so you can choose freely without fear. This is a favourite question." }
+        ]
+      },
+      {
+        "animation": "Recap board with a wheelchair ramp icon, a braille card and a sealed ballot box. Points appear: '1. ECI removes barriers: home voting, braille, postal votes', '2. Secret ballot keeps voting private and fair', '3. NOTA lets voters reject all candidates'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the ECI removes barriers with home voting, braille cards, postal votes and help like ramps." },
+          { "speaker": "NEO", "text": "Two: a secret ballot keeps every vote private and the election fair." },
+          { "speaker": "NEO", "text": "Three: NOTA lets a voter reject all candidates without changing the result." },
+          { "speaker": "ZIPPY", "text": "Congratulations, Gurmat! Now please fix our timetable." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Universal Franchise and India's Electoral System",
+    "topic_no": 3,
+    "name": "The Election Commission of India",
+    "scenes": [
+      {
+        "animation": "Zippy stands in front of a mountain of numbers: '968 million voters', '543 constituencies', 'over 1 million polling stations'. The numbers topple onto him like a pile of books.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Who on earth manages an election this big?" },
+          { "speaker": "NEO", "text": "The Election Commission of India, or ECI. Let's meet it." }
+        ]
+      },
+      {
+        "animation": "The ECI building in Delhi appears with a nameplate. Cards flip in: 'Independent constitutional body', 'Established 1950', 'First general elections: 1951-52'. Then four task icons pop up: a calendar, a party registration form, a rulebook labelled 'MCC', and an eye overseeing everything.",
+        "lines": [
+          { "speaker": "NEO", "text": "The ECI is an independent constitutional body that conducts free and fair elections. It was established in 1950." },
+          { "speaker": "NEO", "text": "It conducts elections to the Lok Sabha, Rajya Sabha, state legislative assemblies, and the offices of the President and Vice President." },
+          { "speaker": "NEO", "text": "It sets election dates, registers political parties, enforces the Model Code of Conduct and oversees the whole process." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds top-down in three levels: 'National: Chief Election Commissioner + two Election Commissioners' then 'State/UT: Chief Electoral Officer' then 'District: District Election Officer', which splits into 'Returning Officer (conducts elections)' and 'Electoral Registration Officer (manages voter list)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "At the national level, there is a Chief Election Commissioner and two Election Commissioners." },
+          { "speaker": "NEO", "text": "Each state or union territory has a Chief Electoral Officer, and each district has a District Election Officer." },
+          { "speaker": "NEO", "text": "Below them, the Returning Officer conducts elections, and the Electoral Registration Officer manages the voter list." }
+        ]
+      },
+      {
+        "animation": "A polling booth in four steps, animated as Zippy moves through: officer 1 checks the voter list and ID; officer 2 inks his finger, gives a chit and takes a signature; officer 3 takes the chit and checks the ink; at the EVM, Zippy presses a button, hears a beep and sees a slip in the VVPAT window.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here's how you vote. The first polling officer checks your name and ID." },
+          { "speaker": "NEO", "text": "The second inks your finger, gives a chit and takes your signature. The third takes the chit and checks your finger." },
+          { "speaker": "NEO", "text": "Then you press a button on the electronic voting machine, or EVM, and hear a beep. The VVPAT shows a printed slip so you can verify your vote." },
+          { "speaker": "ZIPPY", "text": "Beep! I voted! Well, pretend-voted." }
+        ]
+      },
+      {
+        "animation": "A rulebook titled 'Model Code of Conduct' opens with three rules: 'No new schemes by the government during elections', 'Restraint and peace', 'No gifts for votes'. A red cross stamps a scene of a candidate handing out sarees. A portrait card of T.N. Seshan slides in with 'CEC from 1990: voter IDs, spending checks'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Model Code of Conduct lists dos and don'ts for parties and candidates." },
+          { "speaker": "NEO", "text": "The government cannot announce new schemes to influence voters, candidates must keep the peace, and giving gifts for votes is punishable." },
+          { "speaker": "NEO", "text": "The code was first adopted in Kerala in 1960. T.N. Seshan, Chief Election Commissioner from 1990, brought reforms like voter IDs to stop proxy voting." },
+          { "speaker": "NEO", "text": "Exam tip: remember the full form VVPAT, Voter Verifiable Paper Audit Trail. It gives a paper backup for checking votes." }
+        ]
+      },
+      {
+        "animation": "Recap board with the ECI logo-style icon of a ballot box. Points appear: '1. ECI: independent constitutional body, set up in 1950', '2. Voting: 3 polling officers, then EVM + VVPAT', '3. Model Code of Conduct keeps elections fair'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the ECI is an independent constitutional body, set up in 1950, that runs free and fair elections." },
+          { "speaker": "NEO", "text": "Two: a voter passes three polling officers, then votes on the EVM and checks the VVPAT slip." },
+          { "speaker": "NEO", "text": "Three: the Model Code of Conduct keeps parties and candidates in line during elections." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Universal Franchise and India's Electoral System",
+    "topic_no": 4,
+    "name": "Elections to the Lok Sabha and State Assemblies",
+    "scenes": [
+      {
+        "animation": "A festival scene with lights and rangoli, but instead of diyas, voters hold up inked fingers. A banner reads 'Festival of Democracy'. Zippy dances with a sparkler.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A festival? Where are the sweets?" },
+          { "speaker": "NEO", "text": "Elections are called the Festival of Democracy. The treat is choosing your own representatives freely and fairly." }
+        ]
+      },
+      {
+        "animation": "Three stacked layers appear like floors of a building: 'Lok Sabha: national level', 'State Legislative Assembly: state level', 'Local bodies: city and village level'. A map of India splits into 543 small constituency pieces.",
+        "lines": [
+          { "speaker": "NEO", "text": "Citizens vote at many levels: the Lok Sabha at the national level, legislative assemblies at the state level, and local bodies in cities and villages." },
+          { "speaker": "NEO", "text": "For the Lok Sabha, India is divided into 543 constituencies." },
+          { "speaker": "NEO", "text": "Those elected to the Lok Sabha are Members of Parliament, or MPs. Those elected to state assemblies are Members of Legislative Assembly, or MLAs." }
+        ]
+      },
+      {
+        "animation": "Two cartoon representatives stand side by side: an MP in front of the Parliament building labelled 'National issues', and an MLA in front of a state assembly labelled 'Regional issues'. A signboard lists names 'Vidhan Sabha' and 'Niyama Sabha'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So what's the difference between an MP and an MLA?" },
+          { "speaker": "NEO", "text": "MPs represent us in the national Parliament and focus on issues of the whole country. MLAs represent us in the state assembly and focus mainly on regional issues." },
+          { "speaker": "NEO", "text": "The state assembly has many regional names, like Vidhan Sabha or Niyama Sabha." }
+        ]
+      },
+      {
+        "animation": "A finish-line race: three candidates run, a flag reads 'First-Past-the-Post'. The one crossing first wins, even though a pie chart above him shows only 36% of votes. A flashback bubble shows Gurmat's '12 out of 33'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India uses the First-Past-the-Post system. The candidate with the most votes in a constituency wins." },
+          { "speaker": "NEO", "text": "So a candidate can win without getting even 50 per cent of the votes, just like Gurmat won with 12 out of 33." },
+          { "speaker": "NEO", "text": "Exam tip: 'most votes' is not the same as 'majority of votes'. Examiners love this difference." }
+        ]
+      },
+      {
+        "animation": "A seat chart of the Lok Sabha fills in: 84 seats coloured 'SC', 47 'ST' and 412 'General'. Then a flowchart: 'Party or coalition wins majority of seats' leads to 'Forms government' leads to 'Leader becomes Prime Minister'; a parallel state track ends in 'Chief Minister'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the Lok Sabha, 84 constituencies are reserved for scheduled castes and 47 for scheduled tribes." },
+          { "speaker": "NEO", "text": "After voting, the party or coalition that wins a majority of seats forms the national government. Its leader typically becomes the Prime Minister." },
+          { "speaker": "NEO", "text": "A coalition is two or more parties working together. In a state, the leader of the majority becomes the Chief Minister." }
+        ]
+      },
+      {
+        "animation": "Recap board with a Parliament icon and a state assembly icon. Points appear: '1. 543 Lok Sabha constituencies elect MPs; states elect MLAs', '2. First-Past-the-Post: most votes wins', '3. Majority of seats forms the government; leader becomes PM or CM'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: 543 Lok Sabha constituencies elect MPs, while state assembly constituencies elect MLAs." },
+          { "speaker": "NEO", "text": "Two: in First-Past-the-Post, the candidate with the most votes wins." },
+          { "speaker": "NEO", "text": "Three: the party or coalition with a majority of seats forms the government, and its leader becomes Prime Minister or Chief Minister." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Universal Franchise and India's Electoral System",
+    "topic_no": 5,
+    "name": "Indirect Elections and the Road Ahead",
+    "scenes": [
+      {
+        "animation": "At Suryodaya School, class representatives from every class walk into a room labelled 'School Council' and cast votes, while ordinary students watch through the window. Zippy presses his face to the glass.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hey, why can't the rest of us vote for the school council?" },
+          { "speaker": "NEO", "text": "Because the class reps vote on your behalf. That's an indirect election, and India uses it too." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds: 'MLAs' arrow to 'Elect 233 Rajya Sabha members', and 'President of India' arrow to 'Nominates 12'. The total '245' glows. A map shows Uttar Pradesh with many seat icons and Arunachal Pradesh with few.",
+        "lines": [
+          { "speaker": "NEO", "text": "Members of the Rajya Sabha are also MPs, but they are chosen through indirect elections." },
+          { "speaker": "NEO", "text": "Of its 245 members, 233 are elected by MLAs, and the President nominates 12." },
+          { "speaker": "NEO", "text": "Seats depend on population, so Uttar Pradesh has more seats than Arunachal Pradesh." },
+          { "speaker": "NEO", "text": "MLAs vote using a single transferable vote system, ranking candidates by preference." }
+        ]
+      },
+      {
+        "animation": "A clock ticks; every two years, one-third of the Rajya Sabha seats light up and are refilled, while the house itself never goes dark. Labels: 'Permanent House', 'Term: 6 years', '1/3 retire every 2 years'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Rajya Sabha is called the Permanent House. It is never dissolved." },
+          { "speaker": "NEO", "text": "Each member has a six-year term, and one-third of the members retire every two years." },
+          { "speaker": "NEO", "text": "Exam tip: the Lok Sabha is directly elected, while the Rajya Sabha is indirectly elected. This comparison is frequently asked." }
+        ]
+      },
+      {
+        "animation": "An 'Electoral College' box fills with MPs from both Houses and elected MLAs of states, Delhi and Puducherry, who drop ballots in. Nominated members and legislative council members stand outside with a 'Not included' sign. A second box for the Vice President fills with all MPs, elected and nominated.",
+        "lines": [
+          { "speaker": "NEO", "text": "The President is elected by an electoral college of elected MPs of both Houses and elected MLAs of the states, Delhi and Puducherry." },
+          { "speaker": "NEO", "text": "Nominated members do not vote. This way, only directly elected representatives choose the President." },
+          { "speaker": "NEO", "text": "The Vice President is elected by all members of both Houses of Parliament, elected and nominated. The Vice President chairs the Rajya Sabha." }
+        ]
+      },
+      {
+        "animation": "Three storm clouds float over a ballot box: 'Money power', 'Candidates with criminal records', 'Voter apathy in cities'. A young voter with a lantern marked 'Awareness' pushes the clouds away.",
+        "lines": [
+          { "speaker": "NEO", "text": "Our system faces challenges: the influence of money, candidates with criminal records, and voter apathy, especially in cities." },
+          { "speaker": "NEO", "text": "The answer is informed voters. An aware and vigilant voter is the strongest safeguard of democracy." }
+        ]
+      },
+      {
+        "animation": "Recap board with icons for the Rajya Sabha, the President's residence and a lantern. Points appear: '1. Rajya Sabha: 233 elected by MLAs + 12 nominated', '2. President and VP chosen by electoral colleges', '3. Aware voters meet democracy's challenges'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the Rajya Sabha has 233 members elected by MLAs and 12 nominated by the President." },
+          { "speaker": "NEO", "text": "Two: the President and Vice President are chosen by electoral colleges, not directly by the people." },
+          { "speaker": "NEO", "text": "Three: aware, vigilant voters are the answer to democracy's challenges." },
+          { "speaker": "ZIPPY", "text": "Vigilant voter reporting for duty!" }
+        ]
+      }
+    ]
+  }
+]

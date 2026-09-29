@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion as Motion, AnimatePresence } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button, Field, LiveRegion } from "../components/ui";
 import { login } from "../utils/authApi";
 import { trackAnalyticsEvent } from "../utils/settings";
 import { getClientDeviceInfo, requestBrowserLocation } from "../utils/device";
 import { updateCurrentSessionLocation } from "../utils/authApi";
 import EdtechLoader from "./EdtechLoader";
-import { isSchoolTrack, setSelectedSchoolClass } from "../utils/schoolTrack";
+import { setSelectedSchoolClass } from "../utils/schoolTrack";
 
 const panelVariants = {
   hidden: { opacity: 0, y: 28, scale: 0.98 },
@@ -27,7 +27,11 @@ const itemVariants = {
 
 export default function Login() {
   const navigate = useNavigate();
-  const schoolMode = isSchoolTrack();
+  const location = useLocation();
+  // Route decides which login this is — /school/login always shows the
+  // School copy, /login always shows Medical, regardless of what track
+  // page was visited earlier in this browser.
+  const schoolMode = location.pathname.startsWith("/school");
   const [form, setForm] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle");
@@ -133,7 +137,7 @@ export default function Login() {
       >
         <Motion.div variants={itemVariants}>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">Welcome Back</p>
-          <h1 className="mt-2 text-3xl md:text-4xl font-black text-ink">Sign In</h1>
+          <h1 className="mt-2 text-3xl md:text-4xl font-black text-ink">Log In</h1>
           <p className="mt-2 text-sm md:text-base text-ink-muted">
             {schoolMode ? "Continue your class-wise visual learning journey." : "Continue your medical learning journey."}
           </p>
@@ -175,13 +179,13 @@ export default function Login() {
               loading={status === "loading"}
               loadingText="Logging In..."
             >
-              Sign In
+              Log In
             </Button>
           </Motion.div>
 
           <Motion.p variants={itemVariants} className="text-center text-sm text-ink-muted">
             Don't have an account?{" "}
-            <Link to="/signup" className="font-semibold text-cyan-700 hover:text-cyan-800">
+            <Link to={schoolMode ? "/school/signup" : "/signup"} className="font-semibold text-cyan-700 hover:text-cyan-800">
               Sign Up
             </Link>
           </Motion.p>

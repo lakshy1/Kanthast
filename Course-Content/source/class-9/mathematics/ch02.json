@@ -1,0 +1,284 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "Polynomials",
+    "topic_no": 1,
+    "name": "Polynomials in One Variable",
+    "scenes": [
+      {
+        "animation": "A school canteen menu board reads 'Samosa: ₹x each'. Zippy orders 3 samosas and a ₹5 chai, and the bill writes itself as '3x + 5'. The bill sprouts cartoon legs and bows.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My canteen bill just turned into algebra!" },
+          { "speaker": "NEO", "text": "Three x plus five is a polynomial. Let's learn what makes something a polynomial and what doesn't." }
+        ]
+      },
+      {
+        "animation": "The expression '2x³ − 5x² + x + 7' is split into coloured blocks, each labelled 'term'. Arrows point to the numbers '2, −5, 1, 7' labelled 'coefficients'. The letter x glows as 'variable'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A variable is a symbol like x that can take any real value." },
+          { "speaker": "NEO", "text": "A polynomial in one variable x is an algebraic expression whose terms are of the form a x to the n, where n is a whole number." },
+          { "speaker": "NEO", "text": "In two x cubed minus five x squared plus x plus seven, there are four terms, and the coefficients are two, minus five, one and seven." }
+        ]
+      },
+      {
+        "animation": "Two bins: 'Polynomial ✓' collects '4x + 2', 'y² + √2', '7'. The 'Not a polynomial ✗' bin collects 'x + 1/x' and '√x + 3', with tags 'x⁻¹' and 'x^(1/2)' showing the bad powers.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is x plus one by x a polynomial?" },
+          { "speaker": "NEO", "text": "No. One by x is x to the minus one, and minus one is not a whole number." },
+          { "speaker": "NEO", "text": "Root x plus three fails too, because root x is x to the power half. But y squared plus root two is fine, since the coefficient can be irrational." }
+        ]
+      },
+      {
+        "animation": "A leaderboard titled 'Degree = highest power' ranks: '5x³ − 4x² + x − √2 → degree 3 (cubic)', 'y² + 3 → degree 2 (quadratic)', '4x + 5 → degree 1 (linear)', '7 → degree 0 (constant)', '0 → degree not defined'. Side labels: 'monomial = 1 term, binomial = 2 terms, trinomial = 3 terms'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The highest power of the variable is the degree of the polynomial." },
+          { "speaker": "NEO", "text": "Example: in five x cubed minus four x squared plus x minus root two, the highest power is three, so the degree is three. It's a cubic polynomial." },
+          { "speaker": "NEO", "text": "Degree one is linear, degree two is quadratic. A non-zero constant like seven has degree zero, and the degree of the zero polynomial is not defined." },
+          { "speaker": "NEO", "text": "By terms, one term is a monomial, two terms a binomial and three terms a trinomial." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' clipboard: 'Degree of 3 − y² + 2y⁵? Rearrange first: 2y⁵ − y² + 3 → degree 5'. The term '2y⁵' zooms to the front of the line.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: terms are not always written in order. In three minus y squared plus two y to the five, the degree is five, not two. Look for the highest power, wherever it sits." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Polynomial: powers of x are whole numbers', '2. Degree = highest power', '3. Linear 1, quadratic 2, cubic 3; constant 0'. The canteen bill '3x + 5' gets a badge 'Linear, binomial'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in a polynomial, every power of the variable is a whole number." },
+          { "speaker": "NEO", "text": "Two: the degree is the highest power of the variable." },
+          { "speaker": "NEO", "text": "Three: degree one is linear, two is quadratic, three is cubic, and a non-zero constant has degree zero." },
+          { "speaker": "ZIPPY", "text": "So my bill is a linear binomial. Fancy!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Polynomials",
+    "topic_no": 2,
+    "name": "Zeroes of a Polynomial",
+    "scenes": [
+      {
+        "animation": "A cartoon machine labelled 'p(x) = 5x³ − 2x² + 3x − 2' has an input slot. Zippy throws in number cards; most give random outputs, but when one card goes in, a bell rings and the screen shows '0'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why did the machine ring the bell?" },
+          { "speaker": "NEO", "text": "Because that input made the polynomial equal to zero. Such a number is called a zero of the polynomial." }
+        ]
+      },
+      {
+        "animation": "Worked example line by line: 'p(x) = 5x³ − 2x² + 3x − 2', 'p(0) = −2', 'p(1) = 5 − 2 + 3 − 2 = 4', 'p(−1) = −5 − 2 − 3 − 2 = −12'. Each output pops out of the machine.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, the value of a polynomial. Replace x by a number and simplify." },
+          { "speaker": "NEO", "text": "For p of x equal to five x cubed minus two x squared plus three x minus two, p of zero is minus two." },
+          { "speaker": "NEO", "text": "p of one is five minus two plus three minus two, which is four." },
+          { "speaker": "NEO", "text": "p of minus one is minus five minus two minus three minus two, which is minus twelve." }
+        ]
+      },
+      {
+        "animation": "Definition card: 'c is a zero of p(x) if p(c) = 0'. Example: 'p(x) = x − 1, p(1) = 1 − 1 = 0 ✓ so 1 is a zero'. Then 'q(x) = x² − 4: q(2) = 0, q(−2) = 0'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A real number c is a zero of p of x if p of c equals zero." },
+          { "speaker": "NEO", "text": "For x minus one, p of one is one minus one, which is zero. So one is a zero." },
+          { "speaker": "NEO", "text": "For x squared minus four, both two and minus two are zeroes, because two squared and minus two squared are both four." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'Find the zero of p(x) = 2x + 1', 'Set 2x + 1 = 0', '2x = −1', 'x = −1/2', 'Check: 2(−1/2) + 1 = −1 + 1 = 0 ✓'. Then a general formula card: 'Zero of ax + b (a ≠ 0) is x = −b/a'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's find the zero of two x plus one." },
+          { "speaker": "NEO", "text": "Set it equal to zero. Two x equals minus one, so x equals minus one by two." },
+          { "speaker": "NEO", "text": "Check: two times minus half is minus one, and minus one plus one is zero. Correct." },
+          { "speaker": "NEO", "text": "In general, a linear polynomial a x plus b, with a not zero, has exactly one zero, minus b by a." }
+        ]
+      },
+      {
+        "animation": "Two special cards: a constant '5' with a sad face labelled 'no zero', and the zero polynomial '0' surrounded by every number holding hands, labelled 'every real number is a zero'. An 'EXAM TIP' ribbon: '0 can be a zero; a zero need not be 0'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Does the zero of a polynomial have to be the number zero?" },
+          { "speaker": "NEO", "text": "No. Exam tip: a zero of a polynomial need not be zero, though zero itself may be one. For x squared plus x, zero is a zero." },
+          { "speaker": "NEO", "text": "Also, a non-zero constant polynomial has no zero, while every real number is a zero of the zero polynomial." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Value p(c): substitute x = c', '2. c is a zero if p(c) = 0', '3. Zero of ax + b is −b/a'. The machine rings its bell three times.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: to find p of c, replace x by c and simplify." },
+          { "speaker": "NEO", "text": "Two: c is a zero of p of x when p of c is zero." },
+          { "speaker": "NEO", "text": "Three: a linear polynomial a x plus b has exactly one zero, minus b by a." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Polynomials",
+    "topic_no": 3,
+    "name": "The Factor Theorem and Splitting the Middle Term",
+    "scenes": [
+      {
+        "animation": "A locksmith character named LOCKSMITH holds a lock engraved 'x³ + 3x² + 5x + 6' and a key labelled 'x + 2'. He hesitates before trying the key.",
+        "lines": [
+          { "speaker": "LOCKSMITH", "text": "Will this key fit? I don't want to spend all day on long division." },
+          { "speaker": "NEO", "text": "You don't have to. The Factor Theorem tells you in one substitution." }
+        ]
+      },
+      {
+        "animation": "Theorem card writes itself: 'Factor Theorem: If p(x) has degree n ≥ 1 and a is a real number, then (i) x − a is a factor of p(x) if p(a) = 0, and (ii) p(a) = 0 if x − a is a factor'. An arrow shows 'x + 2 = x − (−2) → test p(−2)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Factor Theorem: if p of x has degree one or more and a is a real number, then x minus a is a factor of p of x if p of a is zero." },
+          { "speaker": "NEO", "text": "And the other way round: if x minus a is a factor, then p of a is zero." },
+          { "speaker": "NEO", "text": "The key is x plus two, which is x minus minus two. So we test p of minus two." }
+        ]
+      },
+      {
+        "animation": "Worked example line by line: 'p(−2) = (−2)³ + 3(−2)² + 5(−2) + 6', '= −8 + 12 − 10 + 6', '= 0 ✓'. The key turns and the lock clicks open with 'x + 2 is a factor'.",
+        "lines": [
+          { "speaker": "NEO", "text": "p of minus two is minus two cubed, plus three times minus two squared, plus five times minus two, plus six." },
+          { "speaker": "NEO", "text": "That is minus eight plus twelve minus ten plus six." },
+          { "speaker": "NEO", "text": "Minus eight plus twelve is four. Four minus ten is minus six. Minus six plus six is zero. So x plus two is a factor." }
+        ]
+      },
+      {
+        "animation": "Worked example on a chalkboard: 'Factorise 6x² + 17x + 5', 'Need p + q = 17 and pq = 6 × 5 = 30', 'p = 2, q = 15', '6x² + 2x + 15x + 5', '= 2x(3x + 1) + 5(3x + 1)', '= (3x + 1)(2x + 5)'. Factor pairs of 30 scroll by until '2 and 15' light up.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What about quadratics like six x squared plus seventeen x plus five?" },
+          { "speaker": "NEO", "text": "Split the middle term. Find two numbers that add to seventeen and multiply to six times five, which is thirty." },
+          { "speaker": "NEO", "text": "Two and fifteen work: two plus fifteen is seventeen, and two times fifteen is thirty." },
+          { "speaker": "NEO", "text": "So write six x squared plus two x plus fifteen x plus five. Group it: two x into three x plus one, plus five into three x plus one." },
+          { "speaker": "NEO", "text": "That gives three x plus one, times two x plus five." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Always expand to check: (3x + 1)(2x + 5) = 6x² + 15x + 2x + 5 = 6x² + 17x + 5 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: always multiply your factors back out to check. Three x plus one times two x plus five gives six x squared plus seventeen x plus five. Perfect." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. x − a is a factor ⇔ p(a) = 0', '2. For x + a, test p(−a)', '3. Split the middle term: sum = b, product = ac'. The locksmith hangs his key on a wall full of opened locks.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: x minus a is a factor of p of x exactly when p of a is zero." },
+          { "speaker": "NEO", "text": "Two: to test x plus a, find p of minus a." },
+          { "speaker": "NEO", "text": "Three: to factorise a x squared plus b x plus c, split b into two numbers whose product is a times c." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Polynomials",
+    "topic_no": 4,
+    "name": "Factorising Cubic Polynomials",
+    "scenes": [
+      {
+        "animation": "A monster made of symbols, 'x³ − 23x² + 142x − 120', stomps through a city of number blocks. Zippy hides behind a lamp post holding a tiny sign 'Factor me?'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "That cubic is huge! Where do we even start?" },
+          { "speaker": "NEO", "text": "With a smart guess and the Factor Theorem. Watch the monster break into three friendly pieces." }
+        ]
+      },
+      {
+        "animation": "A tip card: 'Try factors of the constant term 120: ±1, ±2, ±3, ±4, ±5, …'. Then line by line: 'p(1) = 1 − 23 + 142 − 120', '= 143 − 143 = 0 ✓', 'So (x − 1) is a factor'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here the coefficient of x cubed is one, so try the factors of the constant term, one hundred twenty." },
+          { "speaker": "NEO", "text": "Start with one. p of one is one minus twenty-three plus one forty-two minus one twenty." },
+          { "speaker": "NEO", "text": "One plus one forty-two is one forty-three. Twenty-three plus one twenty is also one forty-three. So p of one is zero, and x minus one is a factor." }
+        ]
+      },
+      {
+        "animation": "The cubic is rewritten step by step: 'x³ − x² − 22x² + 22x + 120x − 120', '= x²(x − 1) − 22x(x − 1) + 120(x − 1)', '= (x − 1)(x² − 22x + 120)'. Each pulled-out (x − 1) flies into one bracket.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now pull out x minus one. Split the terms so that x minus one appears each time." },
+          { "speaker": "NEO", "text": "x cubed minus x squared, minus twenty-two x squared plus twenty-two x, plus one twenty x minus one twenty." },
+          { "speaker": "NEO", "text": "That is x squared into x minus one, minus twenty-two x into x minus one, plus one twenty into x minus one." },
+          { "speaker": "NEO", "text": "So we get x minus one, times x squared minus twenty-two x plus one twenty." }
+        ]
+      },
+      {
+        "animation": "The quadratic 'x² − 22x + 120' is split: 'Need sum −22, product 120 → −10 and −12', '= x² − 10x − 12x + 120', '= x(x − 10) − 12(x − 10)', '= (x − 10)(x − 12)'. Final line glows: 'x³ − 23x² + 142x − 120 = (x − 1)(x − 10)(x − 12)'. The monster splits into three smiling brackets.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now factorise the quadratic. We need two numbers that add to minus twenty-two and multiply to one twenty." },
+          { "speaker": "NEO", "text": "Minus ten and minus twelve work. So it becomes x minus ten, times x minus twelve." },
+          { "speaker": "NEO", "text": "The full answer is x minus one, times x minus ten, times x minus twelve." },
+          { "speaker": "ZIPPY", "text": "Can we check the ten?" },
+          { "speaker": "NEO", "text": "Sure. One thousand minus two thousand three hundred plus one thousand four hundred twenty minus one twenty is zero. It works." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Check p(1) first: it is just the sum of all coefficients'. Coefficients '1, −23, 142, −120' add up to '0' on a cartoon abacus.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: p of one is simply the sum of the coefficients. If they add to zero, x minus one is a factor instantly." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Guess a zero from factors of the constant term', '2. Pull out (x − a) by splitting terms', '3. Factorise the leftover quadratic'. The three brackets high-five Zippy.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: guess a zero by trying factors of the constant term." },
+          { "speaker": "NEO", "text": "Two: once p of a is zero, take out x minus a by splitting the terms." },
+          { "speaker": "NEO", "text": "Three: factorise the quadratic that is left by splitting its middle term." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Polynomials",
+    "topic_no": 5,
+    "name": "Algebraic Identities",
+    "scenes": [
+      {
+        "animation": "A quiz show stage. The host, a cartoon microphone named QUIZMASTER, flashes '104³ = ?' with a 10-second timer. Zippy frantically scribbles long multiplication.",
+        "lines": [
+          { "speaker": "QUIZMASTER", "text": "One hundred four cubed. Ten seconds. Go!" },
+          { "speaker": "ZIPPY", "text": "Ten seconds? That's impossible without a calculator!" },
+          { "speaker": "NEO", "text": "Not with the right identity. Let me show you the shortcuts." }
+        ]
+      },
+      {
+        "animation": "Identity cards drop one by one: '(x + y + z)² = x² + y² + z² + 2xy + 2yz + 2zx', '(x + y)³ = x³ + y³ + 3xy(x + y)', '(x − y)³ = x³ − y³ − 3xy(x − y)'. A 3 × 3 grid of x, y, z squares assembles to show the first identity visually.",
+        "lines": [
+          { "speaker": "NEO", "text": "You already know x plus y whole squared. Now meet the bigger ones." },
+          { "speaker": "NEO", "text": "x plus y plus z, whole squared, is x squared plus y squared plus z squared, plus two x y plus two y z plus two z x." },
+          { "speaker": "NEO", "text": "x plus y, whole cubed, is x cubed plus y cubed plus three x y into x plus y." },
+          { "speaker": "NEO", "text": "x minus y, whole cubed, is x cubed minus y cubed minus three x y into x minus y." }
+        ]
+      },
+      {
+        "animation": "Worked example line by line: '104³ = (100 + 4)³', '= 100³ + 4³ + 3(100)(4)(100 + 4)', '= 1000000 + 64 + 1200 × 104', '= 1000000 + 64 + 124800', '= 1124864'. The timer stops at 3 seconds.",
+        "lines": [
+          { "speaker": "NEO", "text": "Write one hundred four as one hundred plus four." },
+          { "speaker": "NEO", "text": "Its cube is one hundred cubed plus four cubed plus three times one hundred times four times one hundred four." },
+          { "speaker": "NEO", "text": "That is ten lakh plus sixty-four plus twelve hundred times one hundred four." },
+          { "speaker": "NEO", "text": "Twelve hundred times one hundred four is one lakh twenty-four thousand eight hundred." },
+          { "speaker": "NEO", "text": "Total: eleven lakh twenty-four thousand eight hundred sixty-four." }
+        ]
+      },
+      {
+        "animation": "A new card: 'x³ + y³ + z³ − 3xyz = (x + y + z)(x² + y² + z² − xy − yz − zx)'. A sub-card lights up: 'If x + y + z = 0, then x³ + y³ + z³ = 3xyz'. Example builds: '(−12)³ + 7³ + 5³', '−12 + 7 + 5 = 0', '= 3(−12)(7)(5) = −1260'. A check line: '−1728 + 343 + 125 = −1260 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "One more: x cubed plus y cubed plus z cubed minus three x y z equals x plus y plus z, times x squared plus y squared plus z squared minus x y minus y z minus z x." },
+          { "speaker": "NEO", "text": "So if x plus y plus z is zero, then x cubed plus y cubed plus z cubed equals three x y z." },
+          { "speaker": "NEO", "text": "Find minus twelve cubed plus seven cubed plus five cubed. Minus twelve plus seven plus five is zero." },
+          { "speaker": "NEO", "text": "So the answer is three times minus twelve times seven times five, which is minus twelve sixty." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Before cubing, check whether x + y + z = 0. It saves the whole calculation.' A cartoon stopwatch gives a thumbs-up.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: whenever you see a sum of three cubes, first check if the bases add to zero. That one check can save you five minutes." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. (x + y + z)² has three squares and three 2xy-type terms', '2. (x ± y)³ = x³ ± y³ ± 3xy(x ± y)', '3. x + y + z = 0 ⇒ x³ + y³ + z³ = 3xyz'. The Quizmaster hands Zippy a trophy.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: x plus y plus z, whole squared, has three squares and three double products." },
+          { "speaker": "NEO", "text": "Two: x plus or minus y, whole cubed, is x cubed plus or minus y cubed plus or minus three x y into x plus or minus y." },
+          { "speaker": "NEO", "text": "Three: if x plus y plus z is zero, then the sum of their cubes is three x y z." },
+          { "speaker": "ZIPPY", "text": "Trophy secured in three seconds!" }
+        ]
+      }
+    ]
+  }
+]

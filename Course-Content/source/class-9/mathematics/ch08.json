@@ -1,0 +1,172 @@
+[
+  {
+    "chapter_no": 8,
+    "chapter": "Quadrilaterals",
+    "topic_no": 1,
+    "name": "Parallelogram: Sides and Angles",
+    "scenes": [
+      {
+        "animation": "Zippy cuts a parallelogram-shaped paper along one diagonal with cartoon scissors. The two triangle halves fly up, spin, and land exactly on top of each other with a 'click'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I cut my parallelogram in half and the pieces are identical. Did I cheat?" },
+          { "speaker": "NEO", "text": "No, you discovered a theorem. A diagonal always splits a parallelogram into two congruent triangles." }
+        ]
+      },
+      {
+        "animation": "Parallelogram ABCD with arrow marks showing AB ∥ DC and AD ∥ BC. The definition appears: 'Parallelogram: both pairs of opposite sides parallel'. Diagonal AC is drawn in green.",
+        "lines": [
+          { "speaker": "NEO", "text": "A parallelogram is a quadrilateral whose both pairs of opposite sides are parallel." },
+          { "speaker": "NEO", "text": "Let's prove that diagonal AC divides it into two congruent triangles." }
+        ]
+      },
+      {
+        "animation": "Proof built step by step. With AC as transversal, alternate angles light up in pairs: '∠BCA = ∠DAC (AD ∥ BC)', '∠BAC = ∠DCA (AB ∥ DC)', 'AC = CA (common)', '∴ △ABC ≅ △CDA (ASA)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "AC is a transversal to the parallel lines AD and BC. So angle BCA equals angle DAC, as alternate angles." },
+          { "speaker": "NEO", "text": "AC is also a transversal to AB and DC. So angle BAC equals angle DCA." },
+          { "speaker": "NEO", "text": "AC is common. So triangle ABC is congruent to triangle CDA by ASA." }
+        ]
+      },
+      {
+        "animation": "From the congruent triangles, CPCT arrows pop out: 'AB = DC', 'AD = BC', '∠B = ∠D'. A second card shows '∠A = ∠C'. Then a flip card: 'Converse: opposite sides equal ⇒ parallelogram; opposite angles equal ⇒ parallelogram'.",
+        "lines": [
+          { "speaker": "NEO", "text": "By CPCT, AB equals DC and AD equals BC. So in a parallelogram, opposite sides are equal." },
+          { "speaker": "NEO", "text": "Similarly, angle B equals angle D, and using the other diagonal, angle A equals angle C. Opposite angles are equal." },
+          { "speaker": "NEO", "text": "The converses are true too. If each pair of opposite sides is equal, or each pair of opposite angles is equal, the quadrilateral is a parallelogram." }
+        ]
+      },
+      {
+        "animation": "Worked example on a chalkboard, line by line: 'ABCD is a parallelogram, ∠A = 70°', '∠C = ∠A = 70° (opposite angles)', '∠A + ∠B = 180° (co-interior, AD ∥ BC)', '∠B = 180° − 70° = 110°', '∠D = ∠B = 110°', 'Check: 70 + 110 + 70 + 110 = 360° ✓'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If angle A is 70 degrees, are all the angles 70?" },
+          { "speaker": "NEO", "text": "Only the opposite one. Angle C equals angle A, so angle C is 70 degrees." },
+          { "speaker": "NEO", "text": "Angles A and B are co-interior angles between parallel lines, so they add up to 180. Angle B is 180 minus 70, which is 110 degrees." },
+          { "speaker": "NEO", "text": "Angle D equals angle B, which is 110 degrees. Check: 70 plus 110 plus 70 plus 110 is 360. Correct." },
+          { "speaker": "NEO", "text": "Exam tip: adjacent angles of a parallelogram are supplementary. Name the reason as co-interior angles." }
+        ]
+      },
+      {
+        "animation": "Recap board with the two matching paper triangles: '1. A diagonal divides a parallelogram into two congruent triangles', '2. Opposite sides equal; opposite angles equal (and converses)', '3. Adjacent angles add to 180°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a diagonal divides a parallelogram into two congruent triangles." },
+          { "speaker": "NEO", "text": "Two: opposite sides are equal and opposite angles are equal, and the converses hold." },
+          { "speaker": "NEO", "text": "Three: adjacent angles of a parallelogram add up to 180 degrees." },
+          { "speaker": "ZIPPY", "text": "So I didn't cheat. I proved!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Quadrilaterals",
+    "topic_no": 2,
+    "name": "Diagonals of a Parallelogram",
+    "scenes": [
+      {
+        "animation": "A kite-flying scene on a rooftop at Makar Sankranti. Zippy's rhombus-shaped kite has two sticks crossing inside; a magnifier shows the sticks crossing at exactly 90° and cutting each other in half.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does the kite-maker tie the sticks exactly at their middles, at a right angle?" },
+          { "speaker": "NEO", "text": "Because that is what the diagonals of a rhombus do. Let's see why." }
+        ]
+      },
+      {
+        "animation": "Parallelogram ABCD with diagonals AC and BD crossing at O. Half-segments get tick marks: OA = OC with one tick, OB = OD with two ticks. Theorem box: 'The diagonals of a parallelogram bisect each other'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Theorem: the diagonals of a parallelogram bisect each other." },
+          { "speaker": "NEO", "text": "In triangles AOB and COD, AB equals CD, and the alternate angles at A and C, and at B and D, are equal. So they are congruent by ASA, which gives OA equals OC and OB equals OD." },
+          { "speaker": "NEO", "text": "The converse is also true: if the diagonals of a quadrilateral bisect each other, it is a parallelogram." }
+        ]
+      },
+      {
+        "animation": "Rhombus ABCD with all sides ticked equal and diagonals meeting at O. Proof lines appear: 'OA = OC (diagonals bisect)', 'AB = CB (sides of rhombus)', 'OB = OB (common)', '∴ △AOB ≅ △COB (SSS)', '∠AOB = ∠COB (CPCT)', '∠AOB + ∠COB = 180° (linear pair)', '∴ ∠AOB = 90°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A rhombus is a parallelogram with all sides equal. Let's show its diagonals are perpendicular." },
+          { "speaker": "NEO", "text": "OA equals OC, since the diagonals bisect each other. AB equals CB, as sides of the rhombus. OB is common." },
+          { "speaker": "NEO", "text": "So triangle AOB is congruent to triangle COB by SSS, and angle AOB equals angle COB by CPCT." },
+          { "speaker": "NEO", "text": "These two angles form a linear pair, so each is 180 divided by 2, which is 90 degrees." }
+        ]
+      },
+      {
+        "animation": "Worked example: rhombus with diagonals labelled AC = 10 cm, BD = 24 cm. Lines build: 'OA = 10 ÷ 2 = 5 cm', 'OB = 24 ÷ 2 = 12 cm', '∠AOB = 90°', 'AB² = 5² + 12² = 25 + 144 = 169', 'AB = 13 cm'. A kite string measures 13 cm with a tick.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My kite sticks are 10 and 24 centimetres long. How long is each side?" },
+          { "speaker": "NEO", "text": "Half of 10 is 5, and half of 24 is 12. They meet at a right angle." },
+          { "speaker": "NEO", "text": "By Pythagoras, side squared is 5 squared plus 12 squared, which is 25 plus 144, or 169. So each side is 13 centimetres." }
+        ]
+      },
+      {
+        "animation": "A rectangle appears with equal diagonals glowing, next to the rhombus. A comparison card: 'Rectangle: each angle 90°, diagonals equal', 'Rhombus: diagonals perpendicular', 'Square: both'. An 'EXAM TIP' sticker flashes.",
+        "lines": [
+          { "speaker": "NEO", "text": "A rectangle is a parallelogram with one angle 90 degrees. Then every angle becomes 90 degrees, and its diagonals are equal." },
+          { "speaker": "NEO", "text": "Exam tip: when proving a special parallelogram, first show it is a parallelogram, then prove the extra property." }
+        ]
+      },
+      {
+        "animation": "Recap board with the kite fluttering: '1. Diagonals of a parallelogram bisect each other (and converse)', '2. Rhombus: diagonals are perpendicular bisectors', '3. Rectangle: all angles 90°, diagonals equal'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the diagonals of a parallelogram bisect each other, and the converse is true." },
+          { "speaker": "NEO", "text": "Two: the diagonals of a rhombus bisect each other at right angles." },
+          { "speaker": "NEO", "text": "Three: a rectangle has all angles 90 degrees and equal diagonals." },
+          { "speaker": "ZIPPY", "text": "Kite approved by geometry. Launching!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Quadrilaterals",
+    "topic_no": 3,
+    "name": "The Mid-point Theorem",
+    "scenes": [
+      {
+        "animation": "A triangular slice of pizza sits on a plate. Zippy marks the midpoints of two edges with ketchup dots and joins them with a ketchup line; a ruler pops up showing the line is parallel to the crust and exactly half its length.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I joined two midpoints and got a line parallel to the third side. And it's exactly half as long!" },
+          { "speaker": "NEO", "text": "That's the mid-point theorem. It works for every triangle." }
+        ]
+      },
+      {
+        "animation": "Triangle ABC with E the midpoint of AB and F the midpoint of AC, both ticked. Segment EF glows. Theorem box: 'EF ∥ BC and EF = ½ BC'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mid-point theorem: the line segment joining the mid-points of any two sides of a triangle is parallel to the third side." },
+          { "speaker": "NEO", "text": "Also, it is half of the third side." }
+        ]
+      },
+      {
+        "animation": "Proof builds step by step: a line through C parallel to BA is drawn, and EF is extended to meet it at D. Lines appear: 'AF = CF (F is mid-point)', '∠AFE = ∠CFD (vertically opposite)', '∠EAF = ∠DCF (alternate angles, BA ∥ CD)', '∴ △AEF ≅ △CDF (ASA)', 'EF = DF and AE = CD (CPCT)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Draw a line through C parallel to BA, and extend EF to meet it at D." },
+          { "speaker": "NEO", "text": "In triangles AEF and CDF: AF equals CF. Angle AFE equals angle CFD, vertically opposite. Angle EAF equals angle DCF, as alternate angles." },
+          { "speaker": "NEO", "text": "So the triangles are congruent by ASA. By CPCT, EF equals DF and AE equals CD." }
+        ]
+      },
+      {
+        "animation": "Quadrilateral BCDE is shaded. Lines appear: 'BE = AE = CD', 'BE ∥ CD', '∴ BCDE is a parallelogram', '∴ ED ∥ BC and ED = BC', 'EF = ½ ED = ½ BC'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now BE equals AE, which equals CD. And BE is parallel to CD." },
+          { "speaker": "NEO", "text": "A quadrilateral with one pair of opposite sides equal and parallel is a parallelogram. So BCDE is a parallelogram." },
+          { "speaker": "NEO", "text": "So ED is parallel to BC and equal to it. Since EF is half of ED, EF is half of BC." },
+          { "speaker": "NEO", "text": "The converse: a line through the mid-point of one side, parallel to another side, bisects the third side." }
+        ]
+      },
+      {
+        "animation": "Worked example: triangle with sides 6 cm, 7 cm, 8 cm. Midpoints are joined to form a small inner triangle. Lines build: 'Inner sides: 6 ÷ 2 = 3 cm, 7 ÷ 2 = 3.5 cm, 8 ÷ 2 = 4 cm', 'Perimeter = 3 + 3.5 + 4 = 10.5 cm'. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a triangle has sides 6, 7 and 8 centimetres. Find the perimeter of the triangle formed by joining the mid-points of its sides." },
+          { "speaker": "NEO", "text": "Each inner side is half the side it is parallel to. So they are 3, 3.5 and 4 centimetres." },
+          { "speaker": "NEO", "text": "Perimeter is 3 plus 3.5 plus 4, which is 10.5 centimetres. That's half of the original perimeter, 21." },
+          { "speaker": "NEO", "text": "Exam tip: always state both parts, parallel and half, when you quote the theorem." }
+        ]
+      },
+      {
+        "animation": "Recap board with the ketchup-line pizza: '1. Mid-points joined ⇒ parallel to third side', '2. That segment = ½ the third side', '3. Converse: line through a mid-point, parallel to a side, bisects the third side'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the segment joining the mid-points of two sides is parallel to the third side." },
+          { "speaker": "NEO", "text": "Two: it is half the length of the third side." },
+          { "speaker": "NEO", "text": "Three: a line through a mid-point, parallel to another side, bisects the third side." },
+          { "speaker": "ZIPPY", "text": "And now I'll prove that pizza is half gone." }
+        ]
+      }
+    ]
+  }
+]

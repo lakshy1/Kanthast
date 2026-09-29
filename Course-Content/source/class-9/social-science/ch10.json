@@ -1,0 +1,214 @@
+[
+  {
+    "chapter_no": 10,
+    "chapter": "Geography: Natural Vegetation and Wildlife",
+    "topic_no": 1,
+    "name": "India's Biodiversity and Natural Vegetation",
+    "scenes": [
+      {
+        "animation": "Zippy proudly shows Neo a neat garden with rows of roses and a lawn, and puts up a signboard 'Natural Vegetation'. A wild vine sneaks up behind and quietly crosses out the word 'Natural'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Look at my garden! Pure natural vegetation." },
+          { "speaker": "NEO", "text": "Sorry, Zippy. Anything you planted and look after is not natural vegetation." }
+        ]
+      },
+      {
+        "animation": "A counter spins up: 'Plant species: about 47,000'. A world podium shows India at '10th in the world' and '4th in Asia'. A second counter: 'Flowering plants: about 15,000 = 6% of world total'. A badge reads 'One of the 12 mega bio-diversity countries'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India is one of the twelve mega bio-diversity countries of the world." },
+          { "speaker": "NEO", "text": "With about 47,000 plant species, India occupies the tenth place in the world and fourth in Asia in plant diversity." },
+          { "speaker": "NEO", "text": "There are about 15,000 flowering plants in India, which account for 6 per cent of the world's total number of flowering plants." }
+        ]
+      },
+      {
+        "animation": "A dense, untouched forest grows on its own from seeds scattered by wind and birds, labelled 'Natural vegetation = virgin vegetation'. A farm with rows of wheat and a fruit orchard fade in beside it, stamped 'Cultivated — NOT natural vegetation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Natural vegetation refers to a plant community which has grown naturally without human aid, and has been left undisturbed by humans for a long time. This is termed as virgin vegetation." },
+          { "speaker": "NEO", "text": "So cultivated crops, fruits and orchards form part of vegetation, but not natural vegetation." }
+        ]
+      },
+      {
+        "animation": "Two plant characters: one with an Indian flag badge labelled 'Endemic — purely Indian', and one with a suitcase and a passport labelled 'Exotic — came from outside India'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The virgin vegetation which is purely Indian is known as endemic, or indigenous species." },
+          { "speaker": "NEO", "text": "Those which have come from outside India are termed as exotic plants." },
+          { "speaker": "ZIPPY", "text": "So my roses might be tourists?" },
+          { "speaker": "NEO", "text": "Possibly! Exam tip: the difference between endemic and exotic plants is a common one-mark question." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds, box by box, from a header 'Major types of vegetation in India': 'Tropical Evergreen Forests', 'Tropical Deciduous Forests', 'Tropical Thorn Forests and Scrubs', 'Montane Forests', 'Mangrove Forests'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has five major types of vegetation: tropical evergreen forests, tropical deciduous forests, tropical thorn forests and scrubs, montane forests, and mangrove forests." },
+          { "speaker": "NEO", "text": "Which type grows where depends mostly on how much rain a place gets, and on its temperature and altitude. We'll visit each of them, one by one." },
+          { "speaker": "ZIPPY", "text": "A forest tour of India. I'm packing my raincoat and my sunglasses." }
+        ]
+      },
+      {
+        "animation": "Recap board with a leaf icon. Points appear: '1. Mega bio-diversity country; about 47,000 plant species; 10th in world, 4th in Asia', '2. Natural (virgin) vegetation grows without human aid', '3. Endemic = purely Indian; Exotic = from outside'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: India is a mega bio-diversity country, with about 47,000 plant species." },
+          { "speaker": "NEO", "text": "Two: natural vegetation grows without human aid; crops and orchards are not natural vegetation." },
+          { "speaker": "NEO", "text": "Three: endemic plants are purely Indian, and exotic plants come from outside India." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Geography: Natural Vegetation and Wildlife",
+    "topic_no": 2,
+    "name": "Tropical Evergreen and Deciduous Forests",
+    "scenes": [
+      {
+        "animation": "Zippy visits the same forest twice. In the first shot, a Western Ghats forest is lush green all year. In the second, a teak forest in Madhya Pradesh has bare branches in summer, with leaves carpeting the ground. Zippy gasps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo! This forest has lost all its leaves. Is it sick?" },
+          { "speaker": "NEO", "text": "Not sick, just smart. It sheds leaves to save water in the dry season." }
+        ]
+      },
+      {
+        "animation": "An outline map of India: green patches light up on the Western Ghats, the Lakshadweep and Andaman and Nicobar islands, upper Assam and the Tamil Nadu coast. A rain gauge reads 'more than 200 cm'. Layered trees grow to a height marker '60 m or above'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Tropical evergreen forests, also called rain forests, are restricted to heavy rainfall areas of the Western Ghats, the island groups of Lakshadweep, Andaman and Nicobar, upper parts of Assam and the Tamil Nadu coast." },
+          { "speaker": "NEO", "text": "They grow best where rainfall is more than 200 centimetres, with a short dry season. The trees reach great heights, up to 60 metres or above." },
+          { "speaker": "NEO", "text": "There is no definite time for trees to shed their leaves, so these forests look green all the year round." }
+        ]
+      },
+      {
+        "animation": "Tree name tags pop onto trunks: 'ebony', 'mahogany', 'rosewood', 'rubber', 'cinchona'. Animals appear: elephants, monkeys, lemur, deer; a one-horned rhinoceros wades in a swamp labelled 'Assam and West Bengal'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some of the commercially important trees here are ebony, mahogany, rosewood, rubber and cinchona." },
+          { "speaker": "NEO", "text": "Common animals are elephants, monkeys, lemur and deer. One horned rhinoceroses are found in the jungles of Assam and West Bengal." }
+        ]
+      },
+      {
+        "animation": "A second map layer: 'Tropical deciduous (monsoon) forests: 200–70 cm' covers a large area. It splits into 'Moist deciduous: 200–100 cm' in the northeast, Himalayan foothills, eastern Western Ghats and Odisha, and 'Dry deciduous: 100–70 cm' across the peninsular plateau and the plains of Bihar and UP. A leaf clock shows 'leaves shed for 6–8 weeks in dry summer'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Tropical deciduous forests are the most widespread forests of India. They are also called monsoon forests, and spread over regions receiving rainfall between 200 and 70 centimetres." },
+          { "speaker": "NEO", "text": "Trees shed their leaves for about six to eight weeks in the dry summer." },
+          { "speaker": "NEO", "text": "Moist deciduous forests are found where rainfall is between 200 and 100 centimetres. Teak, bamboos, sal, shisham, sandalwood, khair, kusum, arjun and mulberry are important species." },
+          { "speaker": "NEO", "text": "Dry deciduous forests are found where rainfall is between 100 and 70 centimetres. Teak, sal, peepal and neem grow here. Common animals include the lion, tiger, pig, deer and elephant." }
+        ]
+      },
+      {
+        "animation": "Zippy stands with a sign 'Deciduous = dry'. A 'BOARD TIP' card: 'Deciduous = sheds leaves. Moist: 200–100 cm; Dry: 100–70 cm'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So deciduous means dry?" },
+          { "speaker": "NEO", "text": "No, it means trees that shed their leaves. Board tip: always write the rainfall range with each forest type. Examiners look for it." }
+        ]
+      },
+      {
+        "animation": "Recap board with two tree icons. Points appear: '1. Evergreen: >200 cm; Western Ghats, islands, upper Assam; ebony, mahogany, rosewood', '2. Deciduous (monsoon): 200–70 cm; most widespread; shed leaves 6–8 weeks', '3. Moist 200–100 cm (teak, sal, bamboo); Dry 100–70 cm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: tropical evergreen forests need more than 200 centimetres of rain and stay green all year." },
+          { "speaker": "NEO", "text": "Two: tropical deciduous or monsoon forests are the most widespread, and shed leaves for six to eight weeks in summer." },
+          { "speaker": "NEO", "text": "Three: moist deciduous forests get 200 to 100 centimetres, and dry deciduous forests get 100 to 70 centimetres." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Geography: Natural Vegetation and Wildlife",
+    "topic_no": 3,
+    "name": "Thorn, Montane and Mangrove Forests",
+    "scenes": [
+      {
+        "animation": "Zippy hugs a cactus in Rajasthan and yelps. Then he is swept up a Himalayan slope where pine cones fall on him, and finally slides down into a Sunderbans swamp where a tiger watches from the roots.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Ouch, a cactus. Ouch, pine cones. And is that a tiger?" },
+          { "speaker": "NEO", "text": "Welcome to the three remaining forest types: thorn, montane and mangrove." }
+        ]
+      },
+      {
+        "animation": "An outline map: the north-western part turns sandy, covering semi-arid Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Uttar Pradesh and Haryana. A rain gauge reads 'less than 70 cm'. Acacias, palms, euphorbias and cacti sprout, with long roots going deep. Rats, a fox, a wolf, a wild ass and a camel wander past.",
+        "lines": [
+          { "speaker": "NEO", "text": "In regions with less than 70 centimetres of rainfall, the natural vegetation consists of thorny trees and bushes. These are found in the north-western part of the country, including semi-arid areas." },
+          { "speaker": "NEO", "text": "Acacias, palms, euphorbias and cacti are the main plant species. The trees have long roots penetrating deep into the soil to get moisture. Leaves are mostly thick and small to minimise evaporation." },
+          { "speaker": "NEO", "text": "Common animals are rats, mice, rabbits, fox, wolf, tiger, lion, wild ass, horses and camels." }
+        ]
+      },
+      {
+        "animation": "A Himalayan mountainside with altitude bands building up from the bottom: '1,000–2,000 m: wet temperate forests, oak and chestnut', '1,500–3,000 m: temperate forests, pine, deodar, silver fir, spruce, cedar', higher up 'alpine: silver fir, junipers, pines, birches', then 'alpine grasslands' with Gujjar and Bakarwal herders, and 'tundra: mosses and lichens' near the snow.",
+        "lines": [
+          { "speaker": "NEO", "text": "In mountainous areas, temperature falls with increasing altitude, so vegetation changes in bands." },
+          { "speaker": "NEO", "text": "Between 1,000 and 2,000 metres, wet temperate forests with oaks and chestnuts grow. Between 1,500 and 3,000 metres, temperate forests of pine, deodar, silver fir, spruce and cedar are found." },
+          { "speaker": "NEO", "text": "Higher up, alpine vegetation with silver fir, junipers, pines and birches appears, then alpine grasslands used by nomadic tribes like the Gujjars and the Bakarwals. At still higher altitudes, mosses and lichens form part of tundra vegetation." },
+          { "speaker": "NEO", "text": "Animals here include the Kashmir stag, spotted deer, wild sheep, yak, snow leopard, bear and the rare red panda." }
+        ]
+      },
+      {
+        "animation": "A delta coastline: tides rise and fall around trees standing on stilt roots. Labels on the map: deltas of 'Ganga', 'Mahanadi', 'Krishna', 'Godavari', 'Kaveri'. In the Ganga-Brahmaputra delta a tall tree is tagged 'Sundari — hard, durable timber'. A Royal Bengal tiger, turtles, crocodiles and gharials appear.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mangrove, or tidal, forests are found in areas of coasts influenced by tides. The roots of the plants are submerged under water." },
+          { "speaker": "NEO", "text": "The deltas of the Ganga, Mahanadi, Krishna, Godavari and Kaveri are covered by such vegetation. In the Ganga-Brahmaputra delta, sundari trees are found, which provide durable hard timber." },
+          { "speaker": "NEO", "text": "The Royal Bengal tiger is the famous animal of these forests. Turtles, crocodiles, gharials and snakes are also found." }
+        ]
+      },
+      {
+        "animation": "Recap board with three icons: a cactus, a pine tree, a mangrove. Points appear: '1. Thorn forests: <70 cm; acacia, palm, euphorbia, cacti', '2. Montane: bands change with altitude — oak, chestnut → pine, deodar → alpine → tundra', '3. Mangroves: tidal, deltas; sundari; Royal Bengal tiger'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: thorn forests grow where rainfall is below 70 centimetres, with acacias, palms, euphorbias and cacti." },
+          { "speaker": "NEO", "text": "Two: montane forests change with altitude, from oak and chestnut to pine and deodar, then alpine and tundra vegetation." },
+          { "speaker": "NEO", "text": "Three: mangroves grow in tidal deltas, with sundari trees and the Royal Bengal tiger. Exam tip: montane bands are best answered with a labelled diagram." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Geography: Natural Vegetation and Wildlife",
+    "topic_no": 4,
+    "name": "Wildlife of India",
+    "scenes": [
+      {
+        "animation": "A cartoon talent show on stage: a lion and a tiger both step up to receive a trophy labelled 'India'. The audience of birds and fish cheers. Zippy, the host, looks confused holding the mic.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A tie between a lion and a tiger? Which one is India's?" },
+          { "speaker": "NEO", "text": "Both! India is the only country in the world that has both tigers and lions." }
+        ]
+      },
+      {
+        "animation": "Counters pop up in sequence: 'Animal species: approximately 90,000', 'Birds: about 2,000 species = 13% of world total', 'Fish: 2,546 species = nearly 12% of world stock', 'Amphibians, reptiles and mammals: 5–8% of world'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India is rich in its fauna. It has approximately 90,000 animal species." },
+          { "speaker": "NEO", "text": "The country has about 2,000 species of birds, which is 13 per cent of the world's total. There are 2,546 species of fish, which account for nearly 12 per cent of the world's stock." },
+          { "speaker": "NEO", "text": "India also shares between 5 and 8 per cent of the world's amphibians, reptiles and mammals." }
+        ]
+      },
+      {
+        "animation": "An outline map of India with animal icons dropping into place: elephants in 'Assam, Karnataka and Kerala'; one-horned rhinoceros in 'Assam and West Bengal'; wild ass in the 'Rann of Kachchh'; camels in the 'Thar desert'; Indian bison, nilgai, chousingha and gazelle in the peninsula.",
+        "lines": [
+          { "speaker": "NEO", "text": "Elephants are the most majestic animals among the mammals. They are found in the hot wet forests of Assam, Karnataka and Kerala." },
+          { "speaker": "NEO", "text": "One-horned rhinoceroses live in the swampy and marshy lands of Assam and West Bengal. Arid areas of the Rann of Kachchh and the Thar desert are the habitat for wild asses and camels." },
+          { "speaker": "NEO", "text": "The Indian bison, nilgai or blue bull, chousingha or four-horned antelope, and gazel are some other animals found in India." }
+        ]
+      },
+      {
+        "animation": "Map zoom: a lion's roar echoes from 'Gir forest, Gujarat'. Tiger icons appear in 'forests of Madhya Pradesh', 'Sunderbans of West Bengal' and 'the Himalayan region'. Then a flock of birds flies over: peacock, pheasants, ducks, parakeets, cranes and pigeons.",
+        "lines": [
+          { "speaker": "NEO", "text": "The natural habitat of the Indian lion is the Gir forest in Gujarat." },
+          { "speaker": "NEO", "text": "Tigers are found in the forests of Madhya Pradesh, the Sunderbans of West Bengal and the Himalayan region." },
+          { "speaker": "NEO", "text": "Peacocks, pheasants, ducks, parakeets, cranes and pigeons are some of the birds inhabiting the forests and wetlands of the country." }
+        ]
+      },
+      {
+        "animation": "Zippy points at the Sunderbans and says 'Lions live here!' A buzzer sounds. A 'BOARD TIP' card: 'Lion — Gir (Gujarat) | Tiger — MP forests, Sunderbans, Himalayas | Rhino — Assam, WB'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Lions in the Sunderbans, right?" },
+          { "speaker": "NEO", "text": "No, those are tigers. Lions are only in Gir. Board tip: questions often ask you to match animals with their habitats, so learn these pairs." }
+        ]
+      },
+      {
+        "animation": "Recap board with a paw print icon. Points appear: '1. About 90,000 animal species; 2,000 bird species (13%); 2,546 fish species (12%)', '2. Elephants: Assam, Karnataka, Kerala; rhino: Assam, WB; wild ass: Rann of Kachchh', '3. Only country with both lions (Gir) and tigers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: India has about 90,000 animal species, including about 2,000 bird species and 2,546 fish species." },
+          { "speaker": "NEO", "text": "Two: elephants live in Assam, Karnataka and Kerala, rhinos in Assam and West Bengal, and wild asses in the Rann of Kachchh." },
+          { "speaker": "NEO", "text": "Three: India is the only country with both lions, in Gir, and tigers." },
+          { "speaker": "ZIPPY", "text": "So the trophy gets shared. Fair enough." }
+        ]
+      }
+    ]
+  }
+]

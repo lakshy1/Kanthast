@@ -1,0 +1,169 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "Real Numbers",
+    "topic_no": 1,
+    "name": "The Fundamental Theorem of Arithmetic",
+    "scenes": [
+      {
+        "animation": "A kirana shop counter. Zippy smashes the number 32760 with a toy hammer; it cracks into smaller number-blocks that keep cracking until only glowing prime blocks 2, 3, 5, 7 and 13 remain, rattling on the counter.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I broke 32760 into tiny pieces and now they won't break any more!" },
+          { "speaker": "NEO", "text": "That's because you reached primes. Primes are the atoms of the number world." }
+        ]
+      },
+      {
+        "animation": "A 'Prime Factory' conveyor belt: prime blocks 2, 3, 5, 7, 11, 13 drop into a machine and multiply out composite numbers like 6, 30 and 1001. A banner writes itself: 'Every composite number = product of primes, unique up to order'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Multiply primes together and you can build any composite number." },
+          { "speaker": "NEO", "text": "The Fundamental Theorem of Arithmetic says that every composite number can be expressed as a product of primes." },
+          { "speaker": "NEO", "text": "And this factorisation is unique, apart from the order in which the prime factors occur." }
+        ]
+      },
+      {
+        "animation": "A factor tree grows downward line by line: '32760 = 2 × 16380', '16380 = 2 × 8190', '8190 = 2 × 4095', '4095 = 3 × 1365', '1365 = 3 × 455', '455 = 5 × 91', '91 = 7 × 13'. Prime leaves glow green, then collect into '32760 = 2³ × 3² × 5 × 7 × 13'. A check line follows: '8 × 9 = 72, 72 × 5 = 360, 360 × 7 = 2520, 2520 × 13 = 32760 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's factorise 32760 with a factor tree. Divide by 2 three times: 16380, 8190, then 4095." },
+          { "speaker": "NEO", "text": "4095 is divisible by 3, giving 1365, and by 3 again, giving 455. Then 455 is 5 into 91, and 91 is 7 into 13." },
+          { "speaker": "NEO", "text": "So 32760 equals 2 cubed into 3 squared into 5 into 7 into 13." },
+          { "speaker": "ZIPPY", "text": "Let me check. 8 into 9 is 72, into 5 is 360, into 7 is 2520, into 13 is 32760. It works!" }
+        ]
+      },
+      {
+        "animation": "A question card: 'Can 4ⁿ end with the digit 0?'. Worked steps appear: '4ⁿ = (2²)ⁿ = 2²ⁿ', 'Ending in 0 ⇒ divisible by 10 = 2 × 5', 'Prime 5 not in 2²ⁿ', '∴ 4ⁿ never ends in 0'. A red cross stamps on a fake '…0'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can 4 to the power n ever end with zero? Maybe if n is really big?" },
+          { "speaker": "NEO", "text": "A number ending in zero is divisible by 10, so its prime factors must include both 2 and 5." },
+          { "speaker": "NEO", "text": "But 4 to the power n is 2 to the power 2n. Its only prime is 2. By uniqueness, no 5 can ever sneak in." },
+          { "speaker": "NEO", "text": "So 4 to the power n never ends with the digit zero, for any natural number n." }
+        ]
+      },
+      {
+        "animation": "A yellow 'BOARD TIP' sticky note: 'Write primes in ascending order with powers: 2³ × 3² × 5 × 7 × 13'. Zippy's messy answer '13 × 5 × 3 × 2 × 7 × 2 × 3 × 2' gets neatly rearranged.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: write the final answer in ascending order of primes, using powers. It is neat and easy for the examiner to check." },
+          { "speaker": "ZIPPY", "text": "So no more prime spaghetti." }
+        ]
+      },
+      {
+        "animation": "Recap board with a prime-block icon. Points appear: '1. Every composite number = product of primes', '2. Factorisation is unique apart from order', '3. Uniqueness ⇒ 4ⁿ never ends in 0'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: every composite number can be written as a product of primes." },
+          { "speaker": "NEO", "text": "Two: this prime factorisation is unique, apart from the order of the factors." },
+          { "speaker": "NEO", "text": "Three: uniqueness lets us prove facts, like 4 to the power n never ending in zero." },
+          { "speaker": "ZIPPY", "text": "Primes: small blocks, big power." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Real Numbers",
+    "topic_no": 2,
+    "name": "HCF and LCM by Prime Factorisation",
+    "scenes": [
+      {
+        "animation": "A school canteen: 96 samosas and 404 jalebis sit on two trays. Zippy tries to pack them into equal plates and ends up buried under a mountain of plates.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I want the biggest plates with equal numbers of snacks and nothing left over. Help!" },
+          { "speaker": "NEO", "text": "You need the HCF. Prime factorisation finds it in seconds." }
+        ]
+      },
+      {
+        "animation": "Two prime-factor strips appear: '96 = 2⁵ × 3' and '404 = 2² × 101'. Common primes glow; a rule card writes: 'HCF = product of smallest power of each common prime', 'LCM = product of greatest power of each prime involved'.",
+        "lines": [
+          { "speaker": "NEO", "text": "First factorise. 96 is 2 to the power 5 into 3. 404 is 2 squared into 101." },
+          { "speaker": "NEO", "text": "HCF is the product of the smallest power of each common prime factor." },
+          { "speaker": "NEO", "text": "LCM is the product of the greatest power of each prime factor involved in the numbers." }
+        ]
+      },
+      {
+        "animation": "Worked lines appear one by one: 'Common prime: 2; smallest power 2² ⇒ HCF = 4', 'LCM = 2⁵ × 3 × 101 = 32 × 303 = 9696', 'Check: HCF × LCM = 4 × 9696 = 38784', '96 × 404 = 38784 ✓'. A green tick bounces.",
+        "lines": [
+          { "speaker": "NEO", "text": "The only common prime is 2, and its smallest power is 2 squared. So the HCF is 4." },
+          { "speaker": "NEO", "text": "For the LCM, take 2 to the power 5, then 3, then 101. 32 into 3 is 96, and 96 into 101 is 9696." },
+          { "speaker": "NEO", "text": "Now check: HCF into LCM is 4 into 9696, which is 38784. And 96 into 404 is also 38784." },
+          { "speaker": "ZIPPY", "text": "So HCF times LCM equals the product of the two numbers!" }
+        ]
+      },
+      {
+        "animation": "Three numbers 6, 72 and 120 appear with strips '2 × 3', '2³ × 3²', '2³ × 3 × 5'. Lines build: 'HCF = 2 × 3 = 6', 'LCM = 2³ × 3² × 5 = 360', '6 × 360 = 2160 ≠ 6 × 72 × 120 = 51840'. A red 'Only for TWO numbers!' stamp lands.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try three numbers: 6, 72 and 120. Their factorisations are 2 into 3, 2 cubed into 3 squared, and 2 cubed into 3 into 5." },
+          { "speaker": "NEO", "text": "The HCF is 2 into 3, which is 6. The LCM is 8 into 9 into 5, which is 360." },
+          { "speaker": "NEO", "text": "But 6 into 360 is 2160, while the product of the three numbers is 51840. So the product rule works only for two numbers." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card slides in: 'HCF(a, b) × LCM(a, b) = a × b — two numbers only'. Zippy writes the rule on his palm with a marker.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: a common question gives the HCF and asks for the LCM. Use HCF into LCM equals a into b, but only for two numbers." }
+        ]
+      },
+      {
+        "animation": "Recap board with plates of samosas neatly stacked. Points appear: '1. HCF: smallest powers of common primes', '2. LCM: greatest powers of all primes', '3. HCF × LCM = a × b for two numbers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: HCF is the product of the smallest powers of the common prime factors." },
+          { "speaker": "NEO", "text": "Two: LCM is the product of the greatest powers of all the prime factors." },
+          { "speaker": "NEO", "text": "Three: for two numbers, HCF into LCM equals the product of the numbers." },
+          { "speaker": "ZIPPY", "text": "Four samosas per plate. Finally, peace." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Real Numbers",
+    "topic_no": 3,
+    "name": "Proving Numbers Irrational",
+    "scenes": [
+      {
+        "animation": "A courtroom. √2 stands in the dock; Zippy, in a lawyer's wig, points at it and shouts 'It's a fraction in disguise!'. Judge Neo bangs a gavel labelled 'PROOF BY CONTRADICTION'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Your Honour, root 2 is secretly a fraction. I'm sure of it!" },
+          { "speaker": "NEO", "text": "Then let's assume you're right, and see if the assumption leads to nonsense." }
+        ]
+      },
+      {
+        "animation": "A theorem card appears: 'Theorem: If p is prime and p divides a², then p divides a (a positive integer)'. Example strip: '3 | 36 = 6² ⇒ 3 | 6'.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, a tool. If p is a prime and p divides a squared, then p divides a itself." },
+          { "speaker": "NEO", "text": "For example, 3 divides 36, which is 6 squared, and 3 divides 6 too. This follows from the uniqueness of prime factorisation." }
+        ]
+      },
+      {
+        "animation": "The proof builds line by line on a chalkboard: 'Assume √2 = a/b, a and b coprime', 'b√2 = a', '2b² = a²', '⇒ 2 | a² ⇒ 2 | a', 'Let a = 2c', '2b² = 4c² ⇒ b² = 2c²', '⇒ 2 | b²  ⇒ 2 | b'. Each line slides in with a chalk scratch sound.",
+        "lines": [
+          { "speaker": "NEO", "text": "Suppose root 2 is rational. Then root 2 equals a by b, where a and b are coprime integers, with b not zero." },
+          { "speaker": "NEO", "text": "So b root 2 equals a. Squaring, 2 b squared equals a squared. So 2 divides a squared, and by our theorem, 2 divides a." },
+          { "speaker": "NEO", "text": "Write a as 2c. Then 2 b squared equals 4 c squared, so b squared equals 2 c squared." },
+          { "speaker": "NEO", "text": "Now 2 divides b squared, so 2 divides b as well." }
+        ]
+      },
+      {
+        "animation": "The words 'a and b coprime' and '2 divides a and b' collide and explode in red sparks. The final line appears: '∴ √2 is irrational'. Zippy's wig falls off.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, 2 divides both a and b? But you said they have no common factor!" },
+          { "speaker": "NEO", "text": "Exactly. That contradiction comes from our wrong assumption. So root 2 is irrational." }
+        ]
+      },
+      {
+        "animation": "A second board: 'Show 3 + 2√5 is irrational'. Lines build: 'Assume 3 + 2√5 = a/b, a, b coprime, b ≠ 0', '2√5 = a/b − 3', '√5 = (a − 3b)/2b', 'RHS rational, but √5 irrational ⇒ contradiction', '∴ 3 + 2√5 is irrational'. A 'BOARD TIP' sticker flashes on 'coprime'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now show 3 plus 2 root 5 is irrational, given root 5 is irrational. Assume it equals a by b, with a and b coprime." },
+          { "speaker": "NEO", "text": "Rearranging, root 5 equals a minus 3b, all over 2b. The right side is rational, but root 5 is irrational. Contradiction." },
+          { "speaker": "NEO", "text": "Board tip: always write the word coprime in your assumption. Marks are given for stating it and for naming the contradiction." }
+        ]
+      },
+      {
+        "animation": "Recap board with a gavel icon. Points appear: '1. p prime, p | a² ⇒ p | a', '2. √2 irrational: assume a/b coprime, reach contradiction', '3. Rational ± rational × irrational: rearrange to isolate the irrational part'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: if a prime divides a squared, it divides a." },
+          { "speaker": "NEO", "text": "Two: to prove root 2 irrational, assume a coprime fraction and reach a contradiction." },
+          { "speaker": "NEO", "text": "Three: for numbers like 3 plus 2 root 5, isolate the root and show a rational would equal an irrational." },
+          { "speaker": "ZIPPY", "text": "Case closed. Root 2 walks free, and irrational." }
+        ]
+      }
+    ]
+  }
+]

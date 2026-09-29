@@ -1,0 +1,328 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "व्याकरण और लेखन",
+    "topic_no": 1,
+    "name": "समानार्थी शब्द और शब्द-परिवार",
+    "scenes": [
+      {
+        "animation": "Zippy writes an essay where the word 'देश' appears in every line, highlighted in red again and again. The teacher's pen draws a big frowning face in the margin.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "मैंने इतना अच्छा निबंध लिखा, फिर भी टीचर ने लिखा, शब्द दोहराए गए हैं!" },
+          { "speaker": "NEO", "text": "क्योंकि तुमने हर लाइन में देश ही लिखा है। आज सीखते हैं समानार्थी शब्द, ताकि भाषा में रंग आए।" }
+        ]
+      },
+      {
+        "animation": "A title card 'समानार्थी शब्द = एक जैसे अर्थ वाले शब्द'. The word 'देश' splits into cards: 'राष्ट्र', 'वतन', 'मुल्क'. Then 'हृदय' splits into 'दिल', 'मन'.",
+        "lines": [
+          { "speaker": "NEO", "text": "जिन शब्दों का अर्थ लगभग एक जैसा हो, उन्हें समानार्थी या पर्यायवाची शब्द कहते हैं।" },
+          { "speaker": "NEO", "text": "देश के लिए राष्ट्र और वतन भी लिख सकते हैं। हृदय के लिए दिल भी चलता है।" },
+          { "speaker": "NEO", "text": "स्वदेश कविता में जोश शब्द आया है। उसका समानार्थी है उमंग।" }
+        ]
+      },
+      {
+        "animation": "A matching game on a chalkboard: left column 'जोश, हृदय, धरती, जल', right column 'उमंग, दिल, पृथ्वी, पानी'. Zippy draws lines; one line goes wrong and Neo gently moves it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "मैं जोड़ता हूँ! धरती का मतलब पानी!" },
+          { "speaker": "NEO", "text": "नहीं, ज़िप्पी। धरती का समानार्थी पृथ्वी है, और जल का पानी। मिलान से पहले दोनों शब्दों को वाक्य में रखकर जाँचो।" },
+          { "speaker": "NEO", "text": "ध्यान रहे, समानार्थी शब्दों का अर्थ बिल्कुल एक नहीं होता। हर शब्द का अपना हल्का-सा रंग होता है।" }
+        ]
+      },
+      {
+        "animation": "A word-web grows from the centre word 'स्वदेश': branches sprout 'देशभक्ति', 'देशप्रेम', 'तिरंगा', 'मातृभूमि', 'नागरिक', each popping in with a small spark.",
+        "lines": [
+          { "speaker": "NEO", "text": "अब शब्द-परिवार बनाते हैं। एक शब्द के चारों ओर उससे जुड़े शब्द लिखो।" },
+          { "speaker": "NEO", "text": "स्वदेश से जुड़े शब्द हैं: देशप्रेम, देशभक्ति, मातृभूमि, तिरंगा और नागरिक।" },
+          { "speaker": "ZIPPY", "text": "यह तो दिमाग़ का माइंड मैप है! अब निबंध में शब्दों की कमी नहीं होगी।" },
+          { "speaker": "NEO", "text": "एक खेल भी खेलो। कोई भी शब्द लो, जैसे पानी, और एक मिनट में उससे जुड़े जितने शब्द याद आएँ, लिख डालो। बारिश, नदी, घड़ा, प्यास, बादल। देखो, कितनी जल्दी भंडार भरता है।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' sticker appears on a sample question: 'दिए गए शब्दों के समानार्थी लिखिए'. A tip box reads 'एक से अधिक सही उत्तर हो सकते हैं'.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: समानार्थी पूछे जाएँ तो कम से कम दो शब्द लिखो, जब तक एक ही न माँगा गया हो।" },
+          { "speaker": "NEO", "text": "और विलोम से गड़बड़ मत करना। विलोम उल्टे अर्थ वाला शब्द है, जैसे प्रेम का विलोम घृणा।" }
+        ]
+      },
+      {
+        "animation": "Zippy's essay is rewritten with colourful varied words, and the teacher's frowning face turns into a smiley. Recap cards: '1. समानार्थी = मिलते-जुलते अर्थ', '2. वाक्य में रखकर जाँचो', '3. शब्द-परिवार से शब्द-भंडार बढ़ाओ'.",
+        "lines": [
+          { "speaker": "NEO", "text": "याद रखो। पहला, समानार्थी शब्दों के अर्थ मिलते-जुलते होते हैं। दूसरा, मिलान से पहले उन्हें वाक्य में रखकर जाँचो। तीसरा, शब्द-परिवार बनाकर अपना शब्द-भंडार बढ़ाओ।" },
+          { "speaker": "ZIPPY", "text": "मेरा शब्द-भंडार अब मेरे टिफ़िन से भी बड़ा हो गया!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "व्याकरण और लेखन",
+    "topic_no": 2,
+    "name": "योजक चिह्न और शब्द-युग्म",
+    "scenes": [
+      {
+        "animation": "Two words 'दाना' and 'पानी' stand apart like two shy kids. A tiny dash character runs in, holds both their hands, and they become 'दाना-पानी'. Zippy claps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "यह छोटी-सी डंडी कौन है, जो शब्दों को दोस्त बना देती है?" },
+          { "speaker": "NEO", "text": "इसे योजक चिह्न कहते हैं। योजक यानी जोड़ने वाला। आज इसी से दोस्ती करते हैं।" }
+        ]
+      },
+      {
+        "animation": "A title card: 'योजक चिह्न ( - )'. Examples slide in from the lesson poems: 'संसार-संग', 'दाना-पानी', 'राजा-रानी', 'हरी-भरी'.",
+        "lines": [
+          { "speaker": "NEO", "text": "जब दो शब्द मिलकर एक साथ बोले जाते हैं, तो उनके बीच छोटी रेखा लगाते हैं। इसे योजक चिह्न कहते हैं।" },
+          { "speaker": "NEO", "text": "जैसे दाना-पानी, राजा-रानी, हरी-भरी। ऐसे जोड़े को शब्द-युग्म कहते हैं।" }
+        ]
+      },
+      {
+        "animation": "The pair 'राजा-रानी' opens like a zip, and the hidden word 'और' pops out between them: 'राजा और रानी'. Same with 'माता-पिता' → 'माता और पिता'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कई युग्मों में योजक के पीछे और छिपा होता है। राजा-रानी यानी राजा और रानी। माता-पिता यानी माता और पिता।" },
+          { "speaker": "ZIPPY", "text": "तो डंडी असल में और की शॉर्टकट है!" },
+          { "speaker": "NEO", "text": "कई बार हाँ। पर हर जगह नहीं। कुछ युग्म दोहराव वाले होते हैं, जैसे धीरे-धीरे, बार-बार।" }
+        ]
+      },
+      {
+        "animation": "Three coloured boxes sort word pairs: 'समान अर्थ: धन-दौलत', 'विपरीत अर्थ: सुख-दुख, दिन-रात', 'दोहराव: धीरे-धीरे, घर-घर'. Each pair drops into its box with a thud.",
+        "lines": [
+          { "speaker": "NEO", "text": "शब्द-युग्म तीन तरह के देखो। पहले, मिलते-जुलते अर्थ वाले, जैसे धन-दौलत।" },
+          { "speaker": "NEO", "text": "दूसरे, उल्टे अर्थ वाले, जैसे सुख-दुख और दिन-रात। तीसरे, एक ही शब्द दो बार, जैसे घर-घर और धीरे-धीरे।" },
+          { "speaker": "ZIPPY", "text": "और खाना-वाना, पढ़ाई-वढ़ाई?" },
+          { "speaker": "NEO", "text": "वे बोलचाल के युग्म हैं। मज़ेदार हैं, पर परीक्षा में औपचारिक उदाहरण ही लिखना।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' card shows a common mistake: 'दाना पानी' with a red cross and 'दाना-पानी' with a green tick. A second card: 'योजक चिह्न ≠ डैश (—)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: युग्म लिखते समय योजक चिह्न लगाना मत भूलो। बिना चिह्न के अंक कट सकते हैं।" },
+          { "speaker": "NEO", "text": "योजक छोटी रेखा है। इसे लंबी डैश जैसी मत बनाना।" },
+          { "speaker": "ZIPPY", "text": "और अगर पूछें कि युग्म को विस्तार से लिखो, तो?" },
+          { "speaker": "NEO", "text": "तो योजक हटाकर बीच में और लिख दो, जैसे सुख-दुख से सुख और दुख। पर दोहराव वाले युग्म, जैसे धीरे-धीरे, वैसे ही रहते हैं।" }
+        ]
+      },
+      {
+        "animation": "The shy words now dance together in pairs at a party. Recap cards: '1. योजक चिह्न शब्द जोड़ता है', '2. अक्सर बीच में और छिपा', '3. युग्म: समान, विपरीत, दोहराव'.",
+        "lines": [
+          { "speaker": "NEO", "text": "सार यह है। पहला, योजक चिह्न दो शब्दों को जोड़ता है। दूसरा, कई युग्मों में बीच में और छिपा होता है। तीसरा, युग्म समान अर्थ, उल्टे अर्थ या दोहराव वाले होते हैं।" },
+          { "speaker": "ZIPPY", "text": "नियो-ज़िप्पी भी तो शब्द-युग्म हैं, हम दोस्त जो हैं!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "व्याकरण और लेखन",
+    "topic_no": 3,
+    "name": "क्रियाविशेषण: काम कैसे हुआ?",
+    "scenes": [
+      {
+        "animation": "The mother from 'दो गौरैया' laughs heartily while the father chases sparrows. The word 'खिलखिलाकर' bounces above her head. Zippy points at it curiously.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "माँ हँसीं, यह तो पता है। पर यह खिलखिलाकर शब्द क्या बता रहा है?" },
+          { "speaker": "NEO", "text": "यह बता रहा है कि माँ कैसे हँसीं। ऐसे शब्द को क्रियाविशेषण कहते हैं।" }
+        ]
+      },
+      {
+        "animation": "A title card: 'क्रियाविशेषण = क्रिया की विशेषता बताने वाला शब्द'. A verb 'हँसी' sits on a stage, and an arrow from 'खिलखिलाकर' points to it.",
+        "lines": [
+          { "speaker": "NEO", "text": "क्रिया यानी काम, जैसे हँसना, दौड़ना, बोलना। जो शब्द क्रिया की विशेषता बताए, वह क्रियाविशेषण है।" },
+          { "speaker": "NEO", "text": "माँ खिलखिलाकर हँसीं। यहाँ हँसीं क्रिया है, और खिलखिलाकर उसका क्रियाविशेषण।" }
+        ]
+      },
+      {
+        "animation": "Four doors open with questions on them: 'कैसे?', 'कब?', 'कहाँ?', 'कितना?'. Behind each door stands an example: 'धीरे से', 'कल', 'ऊपर', 'बहुत'.",
+        "lines": [
+          { "speaker": "NEO", "text": "क्रिया से चार सवाल पूछो। कैसे, कब, कहाँ और कितना।" },
+          { "speaker": "NEO", "text": "कैसे का उत्तर है रीतिवाचक, जैसे धीरे से बोला। कब का उत्तर कालवाचक, जैसे कल आया।" },
+          { "speaker": "NEO", "text": "कहाँ का उत्तर स्थानवाचक, जैसे ऊपर बैठा। कितना का उत्तर परिमाणवाचक, जैसे बहुत खाया।" },
+          { "speaker": "ZIPPY", "text": "चार सवाल, चार प्रकार। यह तो आसान है!" }
+        ]
+      },
+      {
+        "animation": "A quick quiz: sentences appear one by one with a blank: 'पिताजी ___ चिल्लाए', 'गौरैया ___ उड़ गई'. Zippy fills 'ज़ोर से' and 'फुर्र से', and ticks appear.",
+        "lines": [
+          { "speaker": "NEO", "text": "चलो वाक्य बनाओ। पिताजी कैसे चिल्लाए?" },
+          { "speaker": "ZIPPY", "text": "पिताजी ज़ोर से चिल्लाए! और गौरैया फुर्र से उड़ गई!" },
+          { "speaker": "NEO", "text": "शाबाश। ज़ोर से और फुर्र से, दोनों रीतिवाचक क्रियाविशेषण हैं।" },
+          { "speaker": "NEO", "text": "अब एक और। गौरैया रोज़ सुबह घोंसले में लौट आती थी। यहाँ रोज़ सुबह बताता है कि कब, इसलिए यह कालवाचक क्रियाविशेषण है।" },
+          { "speaker": "ZIPPY", "text": "और घोंसले में बताता है कहाँ! पर वह तो संज्ञा के साथ में है, है न?" },
+          { "speaker": "NEO", "text": "सही पकड़ा। घोंसले में स्थान बताता है, पर ऊपर, नीचे, यहाँ, वहाँ जैसे शब्द ही असली स्थानवाचक क्रियाविशेषण माने जाते हैं।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' card compares two sentences: 'सुंदर लड़की गाती है' with an arrow to the noun, and 'लड़की सुंदर गाती है' with an arrow to the verb. Labels: 'विशेषण' and 'क्रियाविशेषण'.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: विशेषण और क्रियाविशेषण में गड़बड़ मत करना। विशेषण संज्ञा की बात करता है, क्रियाविशेषण क्रिया की।" },
+          { "speaker": "NEO", "text": "सुंदर लड़की में सुंदर विशेषण है। लड़की सुंदर गाती है में सुंदर क्रियाविशेषण बन गया।" }
+        ]
+      },
+      {
+        "animation": "The four question doors line up. Recap cards: '1. क्रियाविशेषण = क्रिया की विशेषता', '2. कैसे, कब, कहाँ, कितना', '3. विशेषण ≠ क्रियाविशेषण'.",
+        "lines": [
+          { "speaker": "NEO", "text": "याद रखो। पहला, क्रियाविशेषण क्रिया की विशेषता बताता है। दूसरा, कैसे, कब, कहाँ और कितना पूछकर इसे पहचानो। तीसरा, विशेषण संज्ञा के साथ, क्रियाविशेषण क्रिया के साथ।" },
+          { "speaker": "ZIPPY", "text": "मैं यह वीडियो बहुत ध्यान से देखता रहा। देखो, क्रियाविशेषण!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "व्याकरण और लेखन",
+    "topic_no": 4,
+    "name": "मात्रा बदली, अर्थ बदला",
+    "scenes": [
+      {
+        "animation": "Zippy sends a text 'मैं दिन हूँ' instead of 'मैं दीन हूँ'. The receiving phone shows a confused sun emoji. Neo facepalms.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "मैंने तो बस एक छोटी-सी मात्रा बदली थी। दोस्त इतना कन्फ़्यूज़ क्यों है?" },
+          { "speaker": "NEO", "text": "क्योंकि हिंदी में एक मात्रा बदलते ही पूरा अर्थ बदल सकता है। आज यही खेल सीखेंगे।" }
+        ]
+      },
+      {
+        "animation": "A card 'दिन' transforms into 'दीन' as the small इ-मात्रा stretches into a long ई-मात्रा. A sun appears beside 'दिन' and a poor man beside 'दीन'.",
+        "lines": [
+          { "speaker": "NEO", "text": "दिन यानी दिवस। दीन यानी गरीब या दुखी। छोटी इ और बड़ी ई ने अर्थ बदल दिया।" },
+          { "speaker": "NEO", "text": "इसी तरह कम और काम। कम यानी थोड़ा, काम यानी कार्य। बीच में आ की मात्रा आते ही अर्थ बदल गया।" }
+        ]
+      },
+      {
+        "animation": "A word machine takes 'हार' in and outputs 'हारा' and 'हरा', each with a picture: a garland, a sad player, and a green leaf.",
+        "lines": [
+          { "speaker": "NEO", "text": "अब देखो हार। हार का एक अर्थ माला है और दूसरा अर्थ पराजय।" },
+          { "speaker": "NEO", "text": "हार में अंत में आ लगाओ तो बना हारा, यानी जो हार गया। और बीच की आ हटाओ तो बना हरा, यानी हरे रंग का।" },
+          { "speaker": "ZIPPY", "text": "एक शब्द से तीन शब्द! यह तो शब्दों की जादूगरी है।" }
+        ]
+      },
+      {
+        "animation": "A lineup of pairs with pictures: 'बल — बाल', 'पिता — पीता', 'सुत — सूत', 'कुल — कूल'. Each pair flips to show its meaning.",
+        "lines": [
+          { "speaker": "NEO", "text": "कुछ और जोड़े देखो। बल यानी ताकत, बाल यानी केश। पिता यानी पापा, पीता यानी पीने की क्रिया।" },
+          { "speaker": "NEO", "text": "सुत यानी पुत्र और सूत यानी धागा। कुल यानी वंश, और कूल यानी किनारा।" },
+          { "speaker": "ZIPPY", "text": "तो सूत कातने वाले को मैं पुत्र कातने वाला नहीं लिख सकता!" },
+          { "speaker": "NEO", "text": "बिल्कुल नहीं। इसलिए लिखते समय हर मात्रा ध्यान से देखो।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' notebook shows a question 'मात्रा बदलकर नए शब्द बनाइए और वाक्य में प्रयोग कीजिए'. A tick appears beside a full sentence answer.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: नया शब्द बनाओ तो उसका वाक्य भी लिखो। जैसे, पेड़ की पत्तियाँ हरी हैं। वाक्य से अर्थ साफ़ हो जाता है।" },
+          { "speaker": "NEO", "text": "छोटी इ और बड़ी ई, छोटा उ और बड़ा ऊ, इन पर सबसे ज़्यादा गलतियाँ होती हैं।" }
+        ]
+      },
+      {
+        "animation": "Zippy re-sends his message correctly and gets a thumbs-up. Recap cards: '1. एक मात्रा = नया अर्थ', '2. इ/ई, उ/ऊ पर ध्यान', '3. नया शब्द + वाक्य प्रयोग'.",
+        "lines": [
+          { "speaker": "NEO", "text": "सार यह है। पहला, एक मात्रा बदलने से अर्थ बदल सकता है। दूसरा, छोटी-बड़ी इ और उ पर सबसे ज़्यादा ध्यान दो। तीसरा, नया शब्द बनाओ तो वाक्य में प्रयोग करके दिखाओ।" },
+          { "speaker": "ZIPPY", "text": "अब मैं दिन में भी ध्यान रखूँगा और रात में भी!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "व्याकरण और लेखन",
+    "topic_no": 5,
+    "name": "मुहावरे और व्यंग्य",
+    "scenes": [
+      {
+        "animation": "Zippy literally tries to stand on his own feet by balancing on one tiny foot, wobbling. Neo raises an eyebrow. A caption reads 'अपने पाँवों पर खड़े होना?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "कविता में लिखा था, अपने पाँवों पर खड़े हों। मैं कोशिश कर रहा हूँ, पर गिर रहा हूँ!" },
+          { "speaker": "NEO", "text": "ज़िप्पी, यह मुहावरा है। इसका अर्थ है आत्मनिर्भर होना, सचमुच खड़े होना नहीं।" }
+        ]
+      },
+      {
+        "animation": "A title card: 'मुहावरा = ऐसा वाक्यांश जिसका अर्थ शब्दों से अलग, ख़ास होता है'. A literal picture of a phrase fades into its real meaning.",
+        "lines": [
+          { "speaker": "NEO", "text": "मुहावरा ऐसा शब्द-समूह है, जिसका अर्थ उसके शब्दों से अलग और ख़ास होता है।" },
+          { "speaker": "NEO", "text": "मुहावरे भाषा को चटपटा बनाते हैं, जैसे दाल में तड़का।" },
+          { "speaker": "NEO", "text": "मुहावरा वाक्य का हिस्सा बनकर आता है, अकेला पूरा वाक्य नहीं होता। वाक्य में उसका रूप बदल सकता है, जैसे आँखें खुलना से आँखें खुल गईं।" }
+        ]
+      },
+      {
+        "animation": "Cards from the lessons flip: 'आँखें खुलना' with the landlord realising his wrong; 'हार न मानना' with a child getting up after a fall; 'मन पिघलना' with the father smiling at the sparrows.",
+        "lines": [
+          { "speaker": "NEO", "text": "एक टोकरी भर मिट्टी में ज़मींदार की आँखें खुल गईं। आँखें खुलना यानी सच समझ आ जाना।" },
+          { "speaker": "NEO", "text": "दो गौरैया में पिताजी का मन पिघल गया। मन पिघलना यानी दया आ जाना।" },
+          { "speaker": "ZIPPY", "text": "तो मुहावरे पाठों में छिपे होते हैं, बस पहचानने पड़ते हैं!" }
+        ]
+      },
+      {
+        "animation": "The mother from 'दो गौरैया' says a sweet line while a speech bubble shows a hidden arrow poking the father. A label appears: 'व्यंग्य = मीठे शब्दों में कड़वी बात'.",
+        "lines": [
+          { "speaker": "NEO", "text": "अब व्यंग्य। जब कोई बात सीधे न कहकर हँसी-मज़ाक में चुभती हुई कही जाए, तो उसे व्यंग्य कहते हैं।" },
+          { "speaker": "NEO", "text": "दो गौरैया में माँ पिताजी पर ऐसे ही मीठे व्यंग्य करती हैं। और नए मेहमान का पूरा अंत ही व्यंग्य है।" },
+          { "speaker": "ZIPPY", "text": "जैसे मम्मी कहें, वाह बेटा, कमरा तो बहुत साफ़ है, जब वह बिल्कुल गंदा हो!" },
+          { "speaker": "NEO", "text": "एकदम सही उदाहरण। यही व्यंग्य है।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' card: 'मुहावरा → अर्थ → वाक्य'. Example sentence builds: 'मेहनत करके रीना अपने पाँवों पर खड़ी हो गई।'",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: मुहावरे का वाक्य ऐसा बनाओ कि अर्थ साफ़ दिखे। जैसे, मेहनत करके रीना अपने पाँवों पर खड़ी हो गई।" },
+          { "speaker": "NEO", "text": "मुहावरे का शब्दशः अर्थ मत लिखना। यही सबसे आम गलती है।" }
+        ]
+      },
+      {
+        "animation": "Zippy finally stands confidently, holding a certificate labelled 'आत्मनिर्भर'. Recap cards: '1. मुहावरे का अर्थ ख़ास होता है', '2. पाठों में मुहावरे खोजो', '3. व्यंग्य = मज़ाक में चुभती बात'.",
+        "lines": [
+          { "speaker": "NEO", "text": "याद रखो। पहला, मुहावरे का अर्थ उसके शब्दों से अलग होता है। दूसरा, पाठों में मुहावरे खोजो और वाक्य बनाओ। तीसरा, व्यंग्य मज़ाक में कही गई चुभती बात है।" },
+          { "speaker": "ZIPPY", "text": "मेरा तो सिर चकरा गया। अरे, यह भी मुहावरा है!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "व्याकरण और लेखन",
+    "topic_no": 6,
+    "name": "पत्र-लेखन और संवाद-लेखन",
+    "scenes": [
+      {
+        "animation": "Zippy stares at a blank page titled 'पत्र लिखिए', chewing his pencil. Next to him, a floating letter from Bharatendu labelled 'हरिद्वार' glows invitingly.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "भारतेंदु जी ने इतना सुंदर पत्र लिखा। मैं तो पहली लाइन पर ही अटक गया!" },
+          { "speaker": "NEO", "text": "पत्र का एक ढाँचा होता है। ढाँचा आ गया तो लिखना आसान हो जाएगा।" }
+        ]
+      },
+      {
+        "animation": "A letter template builds step by step with labelled boxes: 'पता और दिनांक', 'संबोधन', 'अभिवादन', 'मुख्य बात', 'समापन', 'नाम'. Each box slides into place.",
+        "lines": [
+          { "speaker": "NEO", "text": "सबसे ऊपर अपना पता और दिनांक लिखो। फिर संबोधन, जैसे आदरणीय पिताजी या प्रिय मित्र।" },
+          { "speaker": "NEO", "text": "उसके बाद अभिवादन, जैसे सादर प्रणाम। फिर मुख्य बात, छोटे-छोटे अनुच्छेदों में।" },
+          { "speaker": "NEO", "text": "अंत में समापन, जैसे आपका प्यारा बेटा, और फिर अपना नाम।" }
+        ]
+      },
+      {
+        "animation": "Two envelopes appear: a friendly one with hearts labelled 'अनौपचारिक: मित्र, परिवार', and a formal one with a stamp labelled 'औपचारिक: प्रधानाचार्य, संपादक'.",
+        "lines": [
+          { "speaker": "NEO", "text": "पत्र दो तरह के होते हैं। अनौपचारिक पत्र घर वालों और दोस्तों को लिखते हैं।" },
+          { "speaker": "NEO", "text": "औपचारिक पत्र प्रधानाचार्य, अधिकारी या संपादक को लिखते हैं। भारतेंदु जी का हरिद्वार वाला पत्र भी एक संपादक को लिखा गया था।" },
+          { "speaker": "ZIPPY", "text": "तो छुट्टी के लिए प्रधानाचार्य को लिखूँ तो भाषा सीधी और विनम्र रखूँ!" }
+        ]
+      },
+      {
+        "animation": "A stage with two sparrows and the father from 'दो गौरैया'. Speech lines appear in a script format: 'गौरैया: ...', 'पिताजी: ...'. Quotation marks and a colon glow.",
+        "lines": [
+          { "speaker": "NEO", "text": "अब संवाद-लेखन। संवाद यानी दो या अधिक पात्रों की बातचीत।" },
+          { "speaker": "NEO", "text": "हर संवाद से पहले पात्र का नाम लिखो, फिर कोलन लगाओ, फिर उसकी बात। वाक्य छोटे और स्वाभाविक रखो।" },
+          { "speaker": "ZIPPY", "text": "जैसे, गौरैया: पिताजी, हमें बस एक कोना चाहिए! पिताजी: ठीक है, पर शोर कम करना!" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' checklist ticks off: 'दिनांक', 'सही संबोधन', 'विषय (औपचारिक पत्र में)', 'शब्द-सीमा'.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: औपचारिक पत्र में विषय लिखना ज़रूरी है, और दिनांक कभी मत भूलो। शब्द-सीमा का भी ध्यान रखो।" },
+          { "speaker": "ZIPPY", "text": "और संवाद में क्या कटता है?" },
+          { "speaker": "NEO", "text": "अगर पात्रों के नाम न लिखो या सारी बातें एक लंबे पैराग्राफ़ में भर दो, तो अंक कटते हैं। हर पात्र की बात नई पंक्ति में लिखो।" }
+        ]
+      },
+      {
+        "animation": "Zippy proudly holds up a finished letter and a short dialogue script. Recap cards: '1. पत्र का ढाँचा याद रखो', '2. औपचारिक बनाम अनौपचारिक', '3. संवाद: नाम, कोलन, छोटी बात'.",
+        "lines": [
+          { "speaker": "NEO", "text": "सार यह है। पहला, पत्र का ढाँचा याद रखो: पता, दिनांक, संबोधन, मुख्य बात और समापन। दूसरा, औपचारिक और अनौपचारिक पत्र की भाषा अलग होती है। तीसरा, संवाद में पात्र का नाम, कोलन और छोटे, स्वाभाविक वाक्य लिखो।" },
+          { "speaker": "ZIPPY", "text": "अब मैं नियो को चिट्ठी लिखूँगा: प्रिय नियो, मेरा होमवर्क भी कर दो!" }
+        ]
+      }
+    ]
+  }
+]

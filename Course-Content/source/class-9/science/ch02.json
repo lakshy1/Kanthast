@@ -1,0 +1,383 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "Is Matter Around Us Pure?",
+    "topic_no": 1,
+    "name": "Pure Substances and Mixtures",
+    "scenes": [
+      {
+        "animation": "A supermarket aisle. A milk packet, a ghee tin and a bottle of juice each wear a shiny '100% PURE' badge. Zippy salutes them proudly, then Neo holds up a magnifying glass that shows the milk made of water, fat and proteins.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This milk says pure. So it's a pure substance, right?" },
+          { "speaker": "NEO", "text": "For a shopkeeper, pure means no adulteration. For a scientist, milk is actually a mixture of water, fat, proteins and more." }
+        ]
+      },
+      {
+        "animation": "A definition card builds: 'Pure substance: all constituent particles have the same chemical nature'. Beside it, a jar of identical blue particles gets a gold 'PURE' ribbon, and a jar of mixed coloured particles gets a 'MIXTURE' tag.",
+        "lines": [
+          { "speaker": "NEO", "text": "For a scientist, a pure substance consists of a single type of particles. All its constituent particles have the same chemical nature." },
+          { "speaker": "NEO", "text": "A mixture contains more than one substance, element or compound, mixed in any proportion." }
+        ]
+      },
+      {
+        "animation": "Examples scroll past: sea water, minerals, soil, air and chai labelled 'mixtures'. Then a dish of salt water is heated; water evaporates and white salt crystals remain. Label: 'Mixture can be separated by physical methods'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sea water, minerals, soil and air are all mixtures." },
+          { "speaker": "NEO", "text": "Dissolved sodium chloride can be separated from water by the physical process of evaporation. But sodium chloride itself cannot be separated into its parts by physical processes. It is a pure substance." }
+        ]
+      },
+      {
+        "animation": "Two beakers side by side: A has copper sulphate dissolved evenly, uniformly blue; B has sand in water, with grains visible and settling. Labels build: 'Homogeneous mixture: uniform composition throughout' and 'Heterogeneous mixture: non-uniform composition'. Extra tags pop up: 'salt + water', 'sugar + water' under A; 'sodium chloride + iron filings', 'salt + sulphur', 'oil + water' under B.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mixtures are of two types. Salt in water or sugar in water has a uniform composition throughout. These are homogeneous mixtures, also called solutions." },
+          { "speaker": "NEO", "text": "Sand in water, iron filings with salt, or oil and water have physically distinct parts and non-uniform compositions. These are heterogeneous mixtures." },
+          { "speaker": "ZIPPY", "text": "So a plate of chole bhature is definitely heterogeneous!" },
+          { "speaker": "NEO", "text": "Very heterogeneous, and delicious." }
+        ]
+      },
+      {
+        "animation": "Two solutions of copper sulphate: one light blue, one dark blue. Both still get the 'Homogeneous' label. A yellow 'EXAM TIP' sticker: 'Different composition, still homogeneous'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A light blue and a dark blue copper sulphate solution have different compositions, but both are homogeneous. Each is uniform throughout." },
+          { "speaker": "NEO", "text": "Exam tip: when classifying, ask whether the composition is the same everywhere in the sample, not whether it is dilute or concentrated." }
+        ]
+      },
+      {
+        "animation": "Recap board with a milk packet icon. Points appear: '1. Pure substance: particles of the same chemical nature', '2. Mixture: more than one substance; separable by physical methods', '3. Homogeneous = uniform; heterogeneous = non-uniform'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a pure substance has particles of the same chemical nature." },
+          { "speaker": "NEO", "text": "Two: a mixture has more than one substance and can be separated by physical methods." },
+          { "speaker": "NEO", "text": "Three: homogeneous mixtures are uniform throughout, and heterogeneous mixtures are not." },
+          { "speaker": "ZIPPY", "text": "Sorry, milk. You're a mixture now." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Is Matter Around Us Pure?",
+    "topic_no": 2,
+    "name": "What Is a Solution?",
+    "scenes": [
+      {
+        "animation": "A chemistry lab. Zippy pours lemonade into a filter paper funnel, hoping to catch the sugar. Clear lemonade drips through and the filter paper stays empty.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I tried to filter the sugar out of my nimbu pani, and nothing stayed on the paper!" },
+          { "speaker": "NEO", "text": "Because nimbu pani is a solution. Its particles are too tiny for a filter paper." }
+        ]
+      },
+      {
+        "animation": "A definition card: 'Solution = homogeneous mixture of two or more substances'. The lemonade splits into labelled parts: water tagged 'Solvent (larger amount, dissolves)' and sugar tagged 'Solute (smaller amount, dissolved)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A solution is a homogeneous mixture of two or more substances." },
+          { "speaker": "NEO", "text": "The component that dissolves the other and is present in larger amount is the solvent. The component dissolved in it, present in lesser quantity, is the solute." },
+          { "speaker": "NEO", "text": "In sugar solution, water is the solvent and sugar is the solute." }
+        ]
+      },
+      {
+        "animation": "Three example cards flip in: 'Solid in liquid: sugar in water', 'Solid in solid: alloys like brass (≈30% zinc, 70% copper)', 'Solid in liquid: iodine in alcohol (tincture of iodine)', 'Gas in liquid: soda water (CO2 in water)', 'Gas in gas: air, mainly oxygen (21%) and nitrogen (78%)'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So solutions are always liquids?" },
+          { "speaker": "NEO", "text": "Not at all. Alloys are homogeneous mixtures of metals. Brass is a mixture of approximately thirty percent zinc and seventy percent copper." },
+          { "speaker": "NEO", "text": "Tincture of iodine is iodine dissolved in alcohol. Soda water has carbon dioxide in water. And air is a gas in gas solution, mainly oxygen at twenty-one percent and nitrogen at seventy-eight percent." }
+        ]
+      },
+      {
+        "animation": "Properties are built one by one with icons: a ruler showing 'particles smaller than 1 nm (10⁻⁹ m)'; an eye with a cross 'not visible to naked eye'; a torch beam passing straight through clear liquid 'path of light not visible'; a filter paper 'cannot be separated by filtration'; a beaker left overnight 'stable, particles do not settle'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now the properties of a solution. Its particles are smaller than one nanometre in diameter, so they cannot be seen by the naked eye." },
+          { "speaker": "NEO", "text": "Because the particles are so small, they do not scatter a beam of light. The path of light is not visible in a solution." },
+          { "speaker": "NEO", "text": "The solute particles cannot be separated by filtration, and they do not settle down when left undisturbed. A solution is stable." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card: 'Alloy is a mixture: shows properties of its constituents and has variable composition'. Brass trumpet and a copper vessel appear side by side.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: an alloy cannot be separated into its components by physical methods, yet it is a mixture. It shows the properties of its constituents and can have variable composition." }
+        ]
+      },
+      {
+        "animation": "Recap board with a lemonade glass icon. Points appear: '1. Solution = homogeneous mixture; solvent + solute', '2. Solutions can be solid, liquid or gas (alloys, soda water, air)', '3. Particles < 1 nm: invisible, no scattering, no filtration, stable'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a solution is a homogeneous mixture of a solvent and a solute." },
+          { "speaker": "NEO", "text": "Two: solutions can be solid, liquid or gaseous, like alloys, soda water and air." },
+          { "speaker": "NEO", "text": "Three: solution particles are smaller than one nanometre, so they are invisible, don't scatter light, pass through filter paper and never settle." },
+          { "speaker": "ZIPPY", "text": "Fine, I'll just drink the nimbu pani then." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Is Matter Around Us Pure?",
+    "topic_no": 3,
+    "name": "Concentration of a Solution",
+    "scenes": [
+      {
+        "animation": "A chai stall. Zippy keeps spooning sugar into a small glass of water; after many spoons, sugar crystals pile at the bottom and refuse to dissolve. The glass puts up a 'HOUSEFULL' sign.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The water stopped taking my sugar! Is it on a diet?" },
+          { "speaker": "NEO", "text": "The solution is saturated. At this temperature, it can't dissolve any more sugar." }
+        ]
+      },
+      {
+        "animation": "Three glasses labelled 'Dilute', 'Concentrated' and 'Saturated', with more solute particles in each. The saturated glass is heated and the leftover crystals dissolve; then it is cooled and crystals reappear. Label: 'Solubility = amount of solute in a saturated solution at that temperature'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When no more solute can be dissolved in a solution at a given temperature, it is called a saturated solution." },
+          { "speaker": "NEO", "text": "The amount of the solute present in the saturated solution at this temperature is called its solubility. If less solute is present, the solution is unsaturated." },
+          { "speaker": "NEO", "text": "Heat a saturated solution and it can dissolve more. Cool it slowly and crystals come back." },
+          { "speaker": "NEO", "text": "Different substances have different solubilities in the same solvent." }
+        ]
+      },
+      {
+        "animation": "A definition card: 'Concentration = amount of solute in a given amount (mass or volume) of solution'. Two formulas build: 'Mass by mass % = (Mass of solute / Mass of solution) × 100' and 'Mass by volume % = (Mass of solute / Volume of solution) × 100'. Under the first, 'Mass of solution = mass of solute + mass of solvent' is highlighted in orange.",
+        "lines": [
+          { "speaker": "NEO", "text": "The concentration of a solution is the amount of solute present in a given amount, by mass or by volume, of solution." },
+          { "speaker": "NEO", "text": "Mass by mass percentage equals mass of solute divided by mass of solution, into one hundred." },
+          { "speaker": "NEO", "text": "Mass by volume percentage equals mass of solute divided by volume of solution, into one hundred." }
+        ]
+      },
+      {
+        "animation": "Worked example writes itself line by line on a blackboard: 'Q: 40 g common salt in 320 g water. Mass by mass % = ?', 'Mass of solute = 40 g', 'Mass of solvent = 320 g', 'Mass of solution = 40 + 320 = 360 g', 'Concentration = (40 / 360) × 100 = 11.1%'. A calculator character nods at each line.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's solve one. A solution contains 40 grams of common salt in 320 grams of water. Find its mass by mass percentage." },
+          { "speaker": "ZIPPY", "text": "Easy! 40 divided by 320, into 100!" },
+          { "speaker": "NEO", "text": "Careful, that is the classic trap. We divide by the mass of the solution, not the solvent." },
+          { "speaker": "NEO", "text": "Mass of solution is 40 plus 320, which is 360 grams. So concentration is 40 by 360, into 100, which is 11.1 percent." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' banner: 'Always add solute + solvent first'. Zippy's wrong answer '12.5%' gets a red cross, and '11.1%' gets a green tick.",
+        "lines": [
+          { "speaker": "NEO", "text": "Zippy's shortcut would give 12.5 percent, which is wrong. Exam tip: always add solute and solvent first to get the mass of the solution." }
+        ]
+      },
+      {
+        "animation": "Recap board with a chai glass icon. Points appear: '1. Saturated solution: no more solute dissolves; solubility is that amount', '2. Mass by mass % = solute/solution × 100', '3. Mass of solution = solute + solvent'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a saturated solution can't dissolve more solute at that temperature, and that amount is the solubility." },
+          { "speaker": "NEO", "text": "Two: mass by mass percentage is mass of solute over mass of solution, into one hundred." },
+          { "speaker": "NEO", "text": "Three: the mass of the solution is solute plus solvent." },
+          { "speaker": "ZIPPY", "text": "So my chai was just saturated, not sulking." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Is Matter Around Us Pure?",
+    "topic_no": 4,
+    "name": "Suspensions and Colloidal Solutions",
+    "scenes": [
+      {
+        "animation": "Early morning in a dense forest. Sunbeams slice through the leafy canopy as bright visible rays in the misty air. Zippy tries to catch one of the beams in a jar.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why can I see these sunbeams here, but never in my clean glass of water?" },
+          { "speaker": "NEO", "text": "The mist contains tiny droplets that scatter light. It's called the Tyndall effect." }
+        ]
+      },
+      {
+        "animation": "A beaker of chalk powder in water: particles visible and a beam of torchlight shows its path. Left undisturbed, particles settle at the bottom and filter paper catches them. Label: 'Suspension: heterogeneous, particles visible, settle down'.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, a suspension. It is a heterogeneous mixture in which solids are dispersed in liquids, like chalk powder in water." },
+          { "speaker": "NEO", "text": "Its particles can be seen by the naked eye. They scatter a beam of light, so its path is visible." },
+          { "speaker": "NEO", "text": "When left undisturbed, the particles settle down, so a suspension is unstable. They can be separated by filtration." }
+        ]
+      },
+      {
+        "animation": "A beaker of milk diluted with water: it looks uniform, but a torch beam shows a glowing path. The beaker sits undisturbed; nothing settles. Filter paper catches nothing. Then it spins in a centrifuge and the particles separate. Label: 'Colloid: appears homogeneous, actually heterogeneous'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now a colloid. It looks homogeneous, but it is actually a heterogeneous mixture, like milk." },
+          { "speaker": "NEO", "text": "Colloid particles are too small to be individually seen by the naked eye. But they are big enough to scatter light and show its path. That's the Tyndall effect." },
+          { "speaker": "NEO", "text": "They do not settle, so a colloid is stable. They pass through filter paper, but can be separated by centrifugation." }
+        ]
+      },
+      {
+        "animation": "A light beam enters a dark room through a small hole; dust particles glow along its path. Then a table builds row by row: 'Dispersed phase | Dispersion medium | Type | Example': 'Liquid | Gas | Aerosol | Fog, clouds, mist', 'Solid | Gas | Aerosol | Smoke', 'Gas | Liquid | Foam | Shaving cream', 'Liquid | Liquid | Emulsion | Milk, face cream', 'Solid | Liquid | Sol | Milk of magnesia, mud', 'Gas | Solid | Foam | Foam rubber, sponge, pumice', 'Liquid | Solid | Gel | Jelly, cheese, butter', 'Solid | Solid | Solid sol | Coloured gemstone, milky glass'.",
+        "lines": [
+          { "speaker": "NEO", "text": "You also see the Tyndall effect when a beam of light enters a dark room through a small hole." },
+          { "speaker": "NEO", "text": "In a colloid, the particles are the dispersed phase, and the medium they are spread in is the dispersion medium." },
+          { "speaker": "NEO", "text": "Fog and clouds are aerosols, liquid in gas. Smoke is solid in gas. Milk is an emulsion, liquid in liquid. Shaving cream is a foam, gas in liquid. Jelly and cheese are gels, liquid in solid." },
+          { "speaker": "ZIPPY", "text": "Cheese is a colloid? My pizza is full of science!" }
+        ]
+      },
+      {
+        "animation": "A three-column comparison builds: 'Solution | Colloid | Suspension' for 'particle size', 'visible?', 'Tyndall effect', 'settles?', 'filtration?'. The 'Tyndall effect' row highlights 'No | Yes | Yes'. A yellow 'EXAM TIP' sticker points at it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: solutions do not show the Tyndall effect, but colloids and suspensions do. And a colloid never settles, while a suspension does." }
+        ]
+      },
+      {
+        "animation": "Recap board with a forest sunbeam icon. Points appear: '1. Suspension: heterogeneous, visible particles, settles', '2. Colloid: looks homogeneous, shows Tyndall effect, stable, separated by centrifugation', '3. Dispersed phase in dispersion medium: aerosol, emulsion, foam, sol, gel'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a suspension is heterogeneous, its particles are visible, and they settle down." },
+          { "speaker": "NEO", "text": "Two: a colloid looks homogeneous, shows the Tyndall effect, is stable and can be separated by centrifugation." },
+          { "speaker": "NEO", "text": "Three: colloids are classified by their dispersed phase and dispersion medium." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Is Matter Around Us Pure?",
+    "topic_no": 5,
+    "name": "Physical and Chemical Changes",
+    "scenes": [
+      {
+        "animation": "Diwali night. Zippy lights a candle; wax melts and drips, and the flame burns. Zippy tries to stick the drips back on, then notices the candle is still getting shorter.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I can stick the melted wax back, but the candle keeps shrinking. What's going on?" },
+          { "speaker": "NEO", "text": "Two different kinds of changes are happening at once. Let's separate them." }
+        ]
+      },
+      {
+        "animation": "A card: 'Physical properties: colour, hardness, rigidity, fluidity, density, melting point, boiling point'. Then 'Physical change: no change in chemical composition'. Ice melts to water and freezes back, with 'H2O' staying the same on both sides.",
+        "lines": [
+          { "speaker": "NEO", "text": "Properties that can be observed and specified, like colour, hardness, rigidity, fluidity, density, melting point and boiling point, are physical properties." },
+          { "speaker": "NEO", "text": "A change in physical properties without any change in chemical composition is a physical change." },
+          { "speaker": "NEO", "text": "Ice melting into water is physical. Both are the same substance, water, just in different states." }
+        ]
+      },
+      {
+        "animation": "A card: 'Chemical change: new substance formed, chemical properties change'. A piece of paper burns into ash and smoke that cannot be turned back. A rusting iron nail and a curdling bowl of milk appear as extra examples with the label 'Chemical reaction'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A chemical change brings a change in chemical properties, and we get new substances. It is also called a chemical reaction." },
+          { "speaker": "NEO", "text": "Burning is a chemical change. During burning, one substance reacts with another to undergo a change in chemical composition." },
+          { "speaker": "ZIPPY", "text": "So burnt toast can never become bread again?" },
+          { "speaker": "NEO", "text": "Correct. Sadly for your breakfast." }
+        ]
+      },
+      {
+        "animation": "Back to the candle, split into two halves: left half shows 'Wax melts → liquid wax → solid again: PHYSICAL CHANGE'; right half shows 'Wax burns → carbon dioxide + water vapour: CHEMICAL CHANGE'. Both halves glow.",
+        "lines": [
+          { "speaker": "NEO", "text": "In a burning candle, both changes happen. Wax melting is a physical change, since the liquid wax solidifies back." },
+          { "speaker": "NEO", "text": "Wax burning in the flame is a chemical change, because new substances form and the candle gets used up." }
+        ]
+      },
+      {
+        "animation": "Classification game: tiles fly into two bins 'Physical' and 'Chemical'. 'Cutting trees', 'melting butter', 'dissolving salt in water' land in Physical; 'burning of paper and wood', 'rusting of almirah', 'cooking of food', 'digestion of food' land in Chemical. An 'EXAM TIP' sticker: 'Ask: is a new substance formed?'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's sort some. Melting butter in a pan and dissolving salt in water are physical changes." },
+          { "speaker": "NEO", "text": "Rusting of an almirah, cooking of food, digestion of food and burning of paper and wood are chemical changes." },
+          { "speaker": "NEO", "text": "Exam tip: in these questions, ask one thing. Is a new substance with a new composition formed? If yes, it is chemical." }
+        ]
+      },
+      {
+        "animation": "Recap board with a candle icon. Points appear: '1. Physical change: no change in chemical composition', '2. Chemical change: new substances formed', '3. Burning candle shows both'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a physical change alters physical properties without changing chemical composition." },
+          { "speaker": "NEO", "text": "Two: a chemical change forms new substances with new chemical properties." },
+          { "speaker": "NEO", "text": "Three: a burning candle shows both, as melting wax and burning wax." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Is Matter Around Us Pure?",
+    "topic_no": 6,
+    "name": "Elements: Metals, Non-metals and Metalloids",
+    "scenes": [
+      {
+        "animation": "A kirana shop. Zippy tries to break a copper wire, a piece of charcoal, and a spoonful of sugar into 'something simpler' with a toy hammer. Sugar turns black on heating; charcoal and copper stay stubborn.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I can break sugar down by heating it, but copper just stays copper! Why?" },
+          { "speaker": "NEO", "text": "Because copper is an element. It cannot be broken into simpler substances by chemical reactions." }
+        ]
+      },
+      {
+        "animation": "A sepia timeline: '1661: Robert Boyle first uses the term element' and 'Antoine Laurent Lavoisier: element = basic form of matter that cannot be broken down into simpler substances by chemical reactions'. The definition glows in gold.",
+        "lines": [
+          { "speaker": "NEO", "text": "Robert Boyle was the first scientist to use the term element, in 1661." },
+          { "speaker": "NEO", "text": "Antoine Laurent Lavoisier gave the first useful definition. An element is a basic form of matter that cannot be broken down into simpler substances by chemical reactions." }
+        ]
+      },
+      {
+        "animation": "A metals showcase: a gold ring shines ('lustre'), a copper wire carries current to a bulb ('conducts heat and electricity'), silver wire stretches ('ductile'), aluminium foil is hammered flat ('malleable'), a school bell rings ('sonorous'). A silver mercury drop rolls across with the tag 'Liquid at room temperature'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Elements are normally divided into metals, non-metals and metalloids." },
+          { "speaker": "NEO", "text": "Metals usually have lustre, and they conduct heat and electricity. They are ductile, which means they can be drawn into wires, and malleable, which means they can be hammered into thin sheets." },
+          { "speaker": "NEO", "text": "They are sonorous, making a ringing sound when hit. Gold, silver, copper, iron, sodium and potassium are metals. Mercury is the only metal that is liquid at room temperature." }
+        ]
+      },
+      {
+        "animation": "A non-metals showcase: yellow sulphur, black carbon, purple iodine crystals, and bubbles of hydrogen and oxygen. Tags: 'Various colours', 'Poor conductors', 'Not lustrous, sonorous or malleable'. Then a metalloid corner with 'Boron, Silicon, Germanium' tagged 'Intermediate properties'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Non-metals display a variety of colours, are poor conductors of heat and electricity, and are not lustrous, sonorous or malleable. Hydrogen, oxygen, iodine, carbon, bromine and chlorine are examples." },
+          { "speaker": "NEO", "text": "Some elements have properties intermediate between metals and non-metals. They are metalloids, like boron, silicon and germanium." }
+        ]
+      },
+      {
+        "animation": "A fact board builds: 'Known elements: more than 100', '92 occur naturally, rest man-made', 'Most are solids', '11 gases at room temperature', '2 liquids: mercury and bromine', 'Gallium and cesium become liquid slightly above room temperature (303 K)'. A 'EXAM TIP' sticker on 'mercury and bromine'.",
+        "lines": [
+          { "speaker": "NEO", "text": "More than one hundred elements are known. Ninety-two occur naturally, and the rest are man-made." },
+          { "speaker": "NEO", "text": "Most elements are solids. Eleven are gases at room temperature. Only two, mercury and bromine, are liquids. Gallium and cesium become liquid slightly above room temperature, at 303 kelvin." },
+          { "speaker": "NEO", "text": "Exam tip: remember that bromine is a non-metal and mercury is a metal. Students often mix these two up." }
+        ]
+      },
+      {
+        "animation": "Recap board with a copper wire icon. Points appear: '1. Element: cannot be broken down by chemical reactions (Lavoisier)', '2. Metals: lustrous, conductors, ductile, malleable, sonorous', '3. Non-metals are the opposite; metalloids are in between'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: an element cannot be broken into simpler substances by chemical reactions." },
+          { "speaker": "NEO", "text": "Two: metals are lustrous, conduct heat and electricity, and are ductile, malleable and sonorous." },
+          { "speaker": "NEO", "text": "Three: non-metals lack these properties, and metalloids like silicon lie in between." },
+          { "speaker": "ZIPPY", "text": "Copper, you stubborn little element. Respect." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Is Matter Around Us Pure?",
+    "topic_no": 7,
+    "name": "Compounds and How They Differ from Mixtures",
+    "scenes": [
+      {
+        "animation": "A magician's stage. Iron filings and yellow sulphur powder are shown in two bowls. Neo pours them into two china dishes, labelled 'Group I: just mixed' and 'Group II: heated'. Zippy waves a magnet like a wand over both.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Same iron, same sulphur. Why did my magnet grab the iron from one dish but not the other?" },
+          { "speaker": "NEO", "text": "Because one dish holds a mixture and the other holds a compound. Let's watch the experiment." }
+        ]
+      },
+      {
+        "animation": "Activity built step by step: Group I, 5 g iron filings + 3 g sulphur powder crushed together; Group II, the same heated strongly till red hot, then cooled into a black mass. A magnet is brought near each: Group I iron jumps to the magnet; Group II nothing moves. Labels: 'Mixture' and 'Compound: iron sulphide'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Divide iron filings and sulphur into two groups. Crush Group One together. Heat Group Two strongly until red hot, then cool it." },
+          { "speaker": "NEO", "text": "Bring a magnet near both. In Group One the iron is still attracted. In Group Two, nothing is attracted, because a new substance, iron sulphide, has formed." }
+        ]
+      },
+      {
+        "animation": "Dilute sulphuric acid added to each group. Group I bubbles an odourless gas; a burning splinter pops, 'Hydrogen'. Group II gives a gas with a cartoon stink cloud, 'Hydrogen sulphide: smell of rotten eggs'. Carbon disulphide dissolves the sulphur only from Group I.",
+        "lines": [
+          { "speaker": "NEO", "text": "Add dilute acid. Group One gives hydrogen, which is colourless and odourless. Group Two gives hydrogen sulphide, which smells like rotten eggs." },
+          { "speaker": "ZIPPY", "text": "Eww! So the compound acts totally differently." },
+          { "speaker": "NEO", "text": "Exactly. A compound is a substance composed of two or more elements, chemically combined with one another in a fixed proportion." }
+        ]
+      },
+      {
+        "animation": "A comparison table builds row by row, 'Mixture | Compound': 'Elements or compounds just mix; no new compound | Elements react to form new compounds', 'Variable composition | Fixed composition', 'Shows properties of constituents | New substance has totally different properties', 'Separated by physical methods | Separated only by chemical or electrochemical reactions'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Four differences. In a mixture, no new compound forms. In a compound, the elements react to form a new substance." },
+          { "speaker": "NEO", "text": "A mixture has a variable composition. A compound always has a fixed composition." },
+          { "speaker": "NEO", "text": "A mixture shows the properties of its constituents. A compound has totally different properties." },
+          { "speaker": "NEO", "text": "A mixture can be separated by physical methods. A compound can be separated only by chemical or electrochemical reactions." }
+        ]
+      },
+      {
+        "animation": "A classification tree builds: 'Matter' → 'Pure substances' (→ 'Elements', 'Compounds') and 'Mixtures' (→ 'Homogeneous', 'Heterogeneous'). A yellow 'EXAM TIP': 'The iron–sulphur activity and the 4-point table are frequent 3-mark questions'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So, matter is either a pure substance or a mixture. Pure substances are elements or compounds. Mixtures are homogeneous or heterogeneous." },
+          { "speaker": "NEO", "text": "Exam tip: the mixture versus compound table is a favourite three-mark question. Write it in two neat columns." }
+        ]
+      },
+      {
+        "animation": "Recap board with a magnet icon. Points appear: '1. Compound: elements chemically combined in fixed proportion', '2. Iron + sulphur heated → iron sulphide, not magnetic, gives H2S', '3. Mixtures: variable, physical separation; compounds: fixed, chemical separation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a compound has two or more elements chemically combined in a fixed proportion." },
+          { "speaker": "NEO", "text": "Two: heated iron and sulphur form iron sulphide, which is not magnetic and gives hydrogen sulphide with acid." },
+          { "speaker": "NEO", "text": "Three: mixtures have variable composition and separate physically, while compounds have fixed composition and separate only chemically." }
+        ]
+      }
+    ]
+  }
+]

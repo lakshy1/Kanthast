@@ -1,0 +1,288 @@
+[
+  {
+    "chapter_no": 7,
+    "chapter": "Proportional Reasoning-1",
+    "topic_no": 1,
+    "name": "Similar Pictures and Ratios",
+    "scenes": [
+      {
+        "animation": "On a phone screen, Zippy resizes a tiger photo. Dragging one corner stretches the tiger into a long noodle; dragging another squashes it into a round furball. The tiger glares.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I only made the photo smaller! Why does the tiger look like a noodle?" },
+          { "speaker": "NEO", "text": "Because you changed the width and height differently. Let's measure." }
+        ]
+      },
+      {
+        "animation": "Five tiger images line up with rulers: 'A: 60 × 40 mm', 'B: 40 × 20 mm', 'C: 30 × 20 mm', 'D: 90 × 60 mm', 'E: 60 × 60 mm'. A, C and D glow green as 'look similar'; B and E glow red as 'distorted'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Image A is 60 millimetres wide and 40 high. Image C is 30 by 20. Both sides were halved." },
+          { "speaker": "NEO", "text": "Image B is 40 by 20. Both sides dropped by 20, but the width was not halved. So B looks stretched." },
+          { "speaker": "NEO", "text": "When both sides change by the same factor, by multiplication, the pictures look similar. We say the changes are proportional." }
+        ]
+      },
+      {
+        "animation": "Ratio notation builds: 'width : height = 60 : 40'. Labels point to '60' and '40' as 'terms'. A caption reads 'for every 60 mm of width, there are 40 mm of height'.",
+        "lines": [
+          { "speaker": "NEO", "text": "We write the width to height of image A as the ratio 60 is to 40." },
+          { "speaker": "NEO", "text": "60 and 40 are the terms of the ratio. It means for every 60 millimetres of width, there are 40 of height." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'A: 60 : 40, HCF = 20 → 3 : 2', 'D: 90 : 60, HCF = 30 → 3 : 2', 'B: 40 : 20 → 2 : 1', 'E: 60 : 60 → 1 : 1'. Then '60 : 40 :: 90 : 60' appears with the '::' symbol highlighted.",
+        "lines": [
+          { "speaker": "NEO", "text": "To compare ratios, reduce them to simplest form by dividing by the HCF." },
+          { "speaker": "NEO", "text": "60 is to 40, divided by 20, is 3 is to 2. 90 is to 60, divided by 30, is also 3 is to 2." },
+          { "speaker": "NEO", "text": "B becomes 2 is to 1, and E becomes 1 is to 1. Different ratios, different shapes." },
+          { "speaker": "NEO", "text": "Equal simplest forms mean the ratios are in proportion. We write 60 is to 40 as 90 is to 60, with a double colon." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Are 3 : 4 and 72 : 96 proportional?' Steps: 'HCF(72, 96) = 24', '72 ÷ 24 = 3, 96 ÷ 24 = 4', '→ 3 : 4 ✓'. An 'Exam Tip' sticker: 'Subtracting the same amount does NOT keep a ratio'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Are 3 is to 4 and 72 is to 96 in proportion?" },
+          { "speaker": "NEO", "text": "The HCF of 72 and 96 is 24. 72 divided by 24 is 3, and 96 divided by 24 is 4. So yes, both are 3 is to 4." },
+          { "speaker": "NEO", "text": "Exam tip: proportional change means multiplying both terms by the same factor. Adding or subtracting the same amount usually breaks the ratio." }
+        ]
+      },
+      {
+        "animation": "Recap board with the tiger now perfectly resized. Points: '1. Proportional change: both quantities × same factor', '2. Ratio a : b, simplify using HCF', '3. a : b :: c : d when simplest forms match'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a change is proportional when both quantities are multiplied by the same factor." },
+          { "speaker": "NEO", "text": "Two: write a ratio as a is to b, and simplify it using the HCF." },
+          { "speaker": "NEO", "text": "Three: two ratios are in proportion when their simplest forms are the same." },
+          { "speaker": "ZIPPY", "text": "Sorry, tiger. Three is to two from now on." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Proportional Reasoning-1",
+    "topic_no": 2,
+    "name": "Proportions in Everyday Life",
+    "scenes": [
+      {
+        "animation": "Kesang stirs a steel vessel of lemonade for a family celebration: 6 glasses with 10 spoons of sugar shown in a small counter. Her father waves in more guests and holds up '18 glasses'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Kesang needs 18 glasses now, with the same sweetness. How much sugar?" },
+          { "speaker": "NEO", "text": "The ratio of glasses to spoons must stay proportional." }
+        ]
+      },
+      {
+        "animation": "Worked example: '6 : 10 :: 18 : ?', an arrow '× 3' from 6 to 18, and a matching '× 3' from 10 to '30'. The sugar jar pours 30 spoons.",
+        "lines": [
+          { "speaker": "NEO", "text": "6 is to 10 as 18 is to what? From 6 to 18, we multiply by 3." },
+          { "speaker": "NEO", "text": "So the spoons must also be multiplied by 3. 10 times 3 is 30 spoons of sugar." }
+        ]
+      },
+      {
+        "animation": "Nitin and Hari build compound walls: '60 ft with 3 bags' and '40 ft with 2 bags'. Nitin looks worried. Steps: '60 : 3 = 20 : 1', '40 : 2 = 20 : 1', and both walls get a green 'equally strong' badge.",
+        "lines": [
+          { "speaker": "NEO", "text": "Nitin built a 60-foot wall with 3 bags of cement. Hari built a 40-foot wall with 2 bags." },
+          { "speaker": "NEO", "text": "Nitin worries Hari's wall is weaker. But 60 is to 3 is 20 is to 1, and 40 is to 2 is also 20 is to 1." },
+          { "speaker": "NEO", "text": "The ratios are proportional, so both walls are equally strong." }
+        ]
+      },
+      {
+        "animation": "A birthday timeline: 'Neelima 3, Mother 30 → 3 : 30 = 1 : 10'. Nine years pass as calendar pages fly: 'Neelima 12, Mother 39 → 12 : 39 = 4 : 13'. A big '≠' appears between 1 : 10 and 4 : 13.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neelima's mother was 10 times her age. So she'll always be 10 times older!" },
+          { "speaker": "NEO", "text": "When Neelima was 3, her mother was 30. That's 1 is to 10." },
+          { "speaker": "NEO", "text": "After 9 years, they are 12 and 39. That's 4 is to 13, a different ratio. Adding the same number to both terms changes the ratio." }
+        ]
+      },
+      {
+        "animation": "Manjunath's coffee stall: cups labelled 'Regular 15 : 35', 'Strong 20 : 30', 'Light 10 : 40', with the colour darkening or lightening. A test cup '24 : 56' simplifies line by line: 'HCF 8 → 3 : 7', and '15 : 35 → 3 : 7', stamped 'Regular'. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Manjunath's regular filter coffee is 15 millilitres of decoction to 35 of milk." },
+          { "speaker": "NEO", "text": "Is 24 to 56 regular? Divide both by 8 to get 3 is to 7. And 15 is to 35 is also 3 is to 7. So yes, regular." },
+          { "speaker": "NEO", "text": "Exam tip: always simplify both ratios fully before comparing." }
+        ]
+      },
+      {
+        "animation": "Recap board with a lemonade glass and a coffee cup. Points: '1. Scale both terms by the same factor', '2. Equal simplest forms ⇒ same strength or sweetness', '3. Adding the same number changes a ratio'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: to keep a ratio, multiply both terms by the same factor." },
+          { "speaker": "NEO", "text": "Two: equal simplest forms mean the same sweetness, strength or mix." },
+          { "speaker": "NEO", "text": "Three: adding the same number to both terms usually changes the ratio." },
+          { "speaker": "ZIPPY", "text": "One regular coffee, please. Three is to seven." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Proportional Reasoning-1",
+    "topic_no": 3,
+    "name": "Trairasika: The Rule of Three",
+    "scenes": [
+      {
+        "animation": "A rainy day at a school. The mid-day meal cook stands beside a huge pot labelled '15 kg rice for 120 students'. Only 80 students arrive, shaking umbrellas.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Only 80 kids came today. If the cook makes 15 kilograms, food will be wasted!" },
+          { "speaker": "NEO", "text": "Three numbers are known and one is missing. Ancient Indian mathematicians had a rule for exactly this." }
+        ]
+      },
+      {
+        "animation": "Steps build: '120 : 15 :: 80 : ?', 'factor = 80 ÷ 120 = 2/3', '15 × 2/3 = 10 kg'. The pot shrinks to 10 kg.",
+        "lines": [
+          { "speaker": "NEO", "text": "120 students is to 15 kilograms, as 80 students is to what?" },
+          { "speaker": "NEO", "text": "80 divided by 120 is two-thirds. So the rice is also multiplied by two-thirds." },
+          { "speaker": "NEO", "text": "15 times two-thirds is 10 kilograms." }
+        ]
+      },
+      {
+        "animation": "Algebra card: 'a : b :: c : d', 'c = fa, d = fb', 'c/a = d/b', 'ad = bc'. Arrows cross between a and d, and b and c, forming an X labelled 'cross multiplication'. Then an old manuscript shows 'pramana : phala :: ichchha : ichchhaphala'.",
+        "lines": [
+          { "speaker": "NEO", "text": "If a is to b as c is to d, both terms change by the same factor. This gives a times d equals b times c. That's cross multiplication." },
+          { "speaker": "NEO", "text": "In ancient India, Aryabhata called these Rule of Three problems. The given terms were pramana, phala and ichchha." },
+          { "speaker": "NEO", "text": "He said: multiply the phala by the ichchha and divide by the pramana. That gives the ichchhaphala, the answer." }
+        ]
+      },
+      {
+        "animation": "A car on a highway: '90 km in 150 minutes. Distance in 4 hours?' Zippy writes '150 : 90 :: 4 : ?' and a red cross appears over the mixed units. Corrected steps: '4 h = 240 min', '150 : 90 :: 240 : x', '150x = 240 × 90 = 21600', 'x = 21600 ÷ 150 = 144 km'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A car goes 90 kilometres in 150 minutes. In 4 hours? 150 is to 90 as 4 is to..." },
+          { "speaker": "NEO", "text": "Stop! 150 is in minutes and 4 is in hours. Convert first: 4 hours is 240 minutes." },
+          { "speaker": "NEO", "text": "150 is to 90 as 240 is to x. Cross multiply: 150 x equals 240 times 90, which is 21600." },
+          { "speaker": "NEO", "text": "21600 divided by 150 is 144. The car covers 144 kilometres." }
+        ]
+      },
+      {
+        "animation": "A motorcycle trip from Lucknow to Kanpur: '50 km/h takes 2 hours'. At 75 km/h the bike arrives sooner, and the proportion '50 : 2 :: 75 : ?' gets a red cross. An 'Exam Tip' sticker: 'Check: does one quantity increase when the other increases?'.",
+        "lines": [
+          { "speaker": "NEO", "text": "But careful. At 50 kilometres per hour, a trip takes 2 hours. At 75, will it take longer?" },
+          { "speaker": "ZIPPY", "text": "No, faster means less time!" },
+          { "speaker": "NEO", "text": "Right. Speed up, time goes down, so the Rule of Three doesn't apply here." },
+          { "speaker": "NEO", "text": "Exam tip: use the Rule of Three only when both quantities increase together, and always match the units." }
+        ]
+      },
+      {
+        "animation": "Recap board with the rice pot and car. Points: '1. a : b :: c : d ⇒ ad = bc', '2. Rule of Three: answer = phala × ichchha ÷ pramana', '3. Same units; both quantities must grow together'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: if a is to b as c is to d, then a d equals b c." },
+          { "speaker": "NEO", "text": "Two: in the Rule of Three, multiply phala by ichchha and divide by pramana." },
+          { "speaker": "NEO", "text": "Three: match units, and check that both quantities increase together." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Proportional Reasoning-1",
+    "topic_no": 4,
+    "name": "Sharing, but Not Equally",
+    "scenes": [
+      {
+        "animation": "Prashanti and Bhuvan stand at their food cart near school, arguing over a cash box with '₹4,000 profit'. Zippy referees with a whistle.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "They earned 4000 rupees. Just split it half and half!" },
+          { "speaker": "NEO", "text": "But Prashanti invested more. They agreed to share in the ratio of their investments." }
+        ]
+      },
+      {
+        "animation": "Twelve coins on a table. Two hands take coins in rounds: '3 for you, 1 for me', three times, until the pile is empty: '9 and 3'. A caption: '12 ÷ (3 + 1) = 3 per group'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's warm up. Share 12 coins in the ratio 3 is to 1." },
+          { "speaker": "NEO", "text": "Take turns: 3 for one, 1 for the other. After three rounds, it's 9 and 3." },
+          { "speaker": "NEO", "text": "Faster: 3 plus 1 is 4 groups. 12 divided by 4 is 3 per group. So 3 groups of 3 is 9, and 1 group is 3." }
+        ]
+      },
+      {
+        "animation": "42 counters form 7 equal piles of 6. Four piles slide left, three slide right: '4 × 6 = 24' and '3 × 6 = 18'. The general rule writes: 'parts = m × x/(m + n) and n × x/(m + n)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now share 42 in the ratio 4 is to 3. That's 7 groups, and 42 divided by 7 is 6." },
+          { "speaker": "NEO", "text": "One person gets 4 groups, which is 24. The other gets 3 groups, which is 18." },
+          { "speaker": "NEO", "text": "In general, to split x in the ratio m is to n, each group is x divided by m plus n." }
+        ]
+      },
+      {
+        "animation": "Back at the food cart: '75,000 : 25,000 → 3 : 1', '3 + 1 = 4', '4000 ÷ 4 = 1000', 'Prashanti 3 × 1000 = ₹3,000', 'Bhuvan 1 × 1000 = ₹1,000'. Check: '3000 + 1000 = 4000 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Prashanti put in 75,000 rupees and Bhuvan 25,000. That's 3 is to 1." },
+          { "speaker": "NEO", "text": "4000 divided by 4 groups is 1000. So Prashanti gets 3000 and Bhuvan gets 1000." },
+          { "speaker": "NEO", "text": "Check: 3000 plus 1000 is 4000." }
+        ]
+      },
+      {
+        "animation": "A construction site with a 40 kg sand-cement heap in ratio 3 : 1. Steps: 'sand = 3/4 × 40 = 30 kg', 'cement = 10 kg', 'new ratio 5 : 2 :: 30 : ?', '30 × 2/5 = 12 kg', 'add 12 − 10 = 2 kg'. An 'Exam Tip' sticker: 'Find what stays fixed first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puzzle. 40 kilograms of sand and cement are mixed 3 is to 1. How much cement makes it 5 is to 2?" },
+          { "speaker": "NEO", "text": "Sand is three-quarters of 40, which is 30. Cement is 10." },
+          { "speaker": "NEO", "text": "Sand stays 30. 5 is to 2 as 30 is to 12, so we need 12 kilograms of cement. Add 2 kilograms." },
+          { "speaker": "NEO", "text": "Exam tip: when one ingredient is added, find the quantity that stays fixed first." }
+        ]
+      },
+      {
+        "animation": "Recap board with the food cart now smiling. Points: '1. Total groups = m + n', '2. Group size = total ÷ (m + n)', '3. Parts = m groups and n groups'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: for a ratio m is to n, count m plus n groups." },
+          { "speaker": "NEO", "text": "Two: divide the total by that number to get one group." },
+          { "speaker": "NEO", "text": "Three: the parts are m groups and n groups." },
+          { "speaker": "ZIPPY", "text": "Fair isn't always equal. Got it." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Proportional Reasoning-1",
+    "topic_no": 5,
+    "name": "Unit Conversions",
+    "scenes": [
+      {
+        "animation": "A tourist from abroad at a Delhi weather board reading '25 °C' looks confused: 'Is that cold?'. Zippy holds a plot of farmland with a sign '1 acre' and a ruler in feet.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Our visitor thinks in Fahrenheit and feet. How do I explain 25 degrees and acres?" },
+          { "speaker": "NEO", "text": "With unit conversions. They're just proportions with fixed ratios." }
+        ]
+      },
+      {
+        "animation": "A reference card builds line by line: '1 metre = 3.281 feet', '1 square metre = 10.764 square feet', '1 acre = 43,560 square feet', '1 hectare = 10,000 square metres = 2.471 acres', '1 mL = 1 cc', '1 litre = 1000 mL'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some useful facts. 1 metre is about 3.281 feet. 1 acre is 43,560 square feet." },
+          { "speaker": "NEO", "text": "So a farm plot 200 feet by 500 feet is 1,00,000 square feet. Divide by 43,560, and it's about 2.3 acres." },
+          { "speaker": "NEO", "text": "1 hectare is 10,000 square metres, which is about 2.471 acres." },
+          { "speaker": "NEO", "text": "And 1 litre is 1000 millilitres. One millilitre is one cubic centimetre." }
+        ]
+      },
+      {
+        "animation": "A thermometer with Celsius on the left and Fahrenheit on the right. Formula: 'F = 9/5 × C + 32'. Worked example: '9/5 × 25 = 45', '45 + 32 = 77 °F'. The tourist nods and takes off a jacket.",
+        "lines": [
+          { "speaker": "NEO", "text": "Temperature is trickier because 0 degrees Celsius is 32 degrees Fahrenheit." },
+          { "speaker": "NEO", "text": "Fahrenheit is nine-fifths of Celsius, plus 32. For 25 degrees, nine-fifths of 25 is 45. Add 32 to get 77." },
+          { "speaker": "NEO", "text": "So 25 degrees Celsius is 77 degrees Fahrenheit. A pleasant day." }
+        ]
+      },
+      {
+        "animation": "A tap fills a 500 mL mug in 15 seconds, then a 10-litre bucket. Steps: '10 L = 10,000 mL', '10,000 ÷ 500 = 20 mugs', '20 × 15 s = 300 s = 5 minutes'. A stopwatch spins to 5:00.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A tap fills a 500 millilitre mug in 15 seconds. How long for a 10 litre bucket?" },
+          { "speaker": "NEO", "text": "First, same units. 10 litres is 10,000 millilitres." },
+          { "speaker": "NEO", "text": "That's 10,000 divided by 500, or 20 mugs. 20 times 15 seconds is 300 seconds, which is 5 minutes." }
+        ]
+      },
+      {
+        "animation": "A Himachal tea packet '200 g for ₹200' and a Meghalaya packet '1 kg for ₹800'. Steps: '200 g = 1/5 kg', 'Himachal 1 kg = 200 × 5 = ₹1000', 'Meghalaya 1 kg = ₹800'. An 'Exam Tip' sticker: 'Convert to the same unit before comparing'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Which tea costs more? Himachal sells 200 grams for 200 rupees. Meghalaya sells 1 kilogram for 800." },
+          { "speaker": "NEO", "text": "200 grams is one-fifth of a kilogram, so a kilogram of Himachal tea costs 1000 rupees. That's the costlier one." },
+          { "speaker": "NEO", "text": "Exam tip: never compare grams with kilograms or minutes with hours. Convert first." }
+        ]
+      },
+      {
+        "animation": "Recap board with a thermometer, a measuring jug and a farm plot. Points: '1. Conversions are fixed ratios', '2. F = 9/5 × C + 32', '3. Convert to the same unit before calculating'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: unit conversions are fixed ratios, like 1 hectare to 10,000 square metres." },
+          { "speaker": "NEO", "text": "Two: Fahrenheit is nine-fifths of Celsius plus 32." },
+          { "speaker": "NEO", "text": "Three: always bring quantities to the same unit before calculating or comparing." }
+        ]
+      }
+    ]
+  }
+]

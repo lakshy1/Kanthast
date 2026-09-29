@@ -148,7 +148,7 @@ export default function Profile() {
 
   return (
     <div className={`min-h-screen bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#f8fafc_38%,_#ecfeff_86%)] ${compact ? "px-3 md:px-6 py-6" : "px-4 md:px-8 py-8"}`}>
-      <div className="max-w-6xl mx-auto">
+      <div className="page-frame">
 
         {/* ── HERO CARD ── */}
         <MotionSection
@@ -213,7 +213,7 @@ export default function Profile() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.06, duration: 0.45, ease: "easeOut" }}
-            className="mt-6 grid lg:grid-cols-[1.2fr_0.8fr] gap-6 lg:items-stretch"
+            className="mt-6 grid lg:grid-cols-[1.2fr_0.8fr] gap-6 lg:items-start"
           >
             {/* ── PERSONAL INFORMATION ── */}
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-e4">
@@ -315,7 +315,7 @@ export default function Profile() {
                   </p>
                 </div>
               ) : profile?.about ? (
-                <p className="mt-4 text-slate-600 leading-relaxed flex-1">{profile.about}</p>
+                <p className="mt-4 text-slate-600 leading-relaxed">{profile.about}</p>
               ) : (
                 <div className="mt-4 flex-1 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-200 py-10 px-4 text-center">
                   <FaPencilAlt className="text-slate-300 text-2xl mb-3" />

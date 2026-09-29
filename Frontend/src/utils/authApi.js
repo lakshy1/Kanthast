@@ -52,6 +52,17 @@ function handleUnauthorized(path) {
   }
 }
 
+// The credential endpoints answer a wrong password with 401 too. That is a form
+// error, not an expired session, so it must not wipe the session and redirect
+// (which reloaded /login and lost the message, and logged users out of
+// Settings for mistyping their old password).
+const CREDENTIAL_PATHS = ["/auth/login", "/auth/admin-login", "/auth/signup", "/auth/sendotp"];
+const CREDENTIAL_MESSAGES = {
+  "Invalid credentials": "That email and password don't match. Check them and try again.",
+  "Invalid admin credentials": "That admin ID and password don't match.",
+  "Invalid old password": "Your current password is incorrect.",
+};
+
 async function readResponseBody(response) {
   const contentType = response.headers.get("content-type") || "";
   if (contentType.includes("application/json")) {
@@ -74,6 +85,9 @@ async function post(path, payload) {
   const data = await readResponseBody(response);
 
   if (response.status === 401) {
+    if (CREDENTIAL_PATHS.includes(path)) {
+      throw new Error(CREDENTIAL_MESSAGES[data.message] || data.message || "Those details weren't accepted.");
+    }
     handleUnauthorized(path);
     throw new Error("Session expired. Please log in again.");
   }
@@ -183,12 +197,15 @@ export async function changePassword(token, payload) {
     body: JSON.stringify(payload),
   });
 
+  const data = await response.json().catch(() => ({}));
+
   if (response.status === 401) {
+    if (data.message === "Invalid old password") {
+      throw new Error(CREDENTIAL_MESSAGES[data.message]);
+    }
     handleUnauthorized("/auth/change-password");
     throw new Error("Session expired. Please log in again.");
   }
-
-  const data = await response.json().catch(() => ({}));
 
   if (!response.ok || !data.success) {
     throw new Error(data.message || "Failed to change password");

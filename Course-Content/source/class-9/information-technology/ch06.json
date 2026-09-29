@@ -1,0 +1,335 @@
+[
+  {
+    "chapter_no": 6,
+    "chapter": "Digital Presentation",
+    "topic_no": 1,
+    "name": "What Makes an Effective Presentation",
+    "scenes": [
+      {
+        "animation": "A classroom project day. Zippy's slide on the projector is crammed with tiny text in red on a purple background. The class squints; one student pulls out binoculars; the teacher's glasses fog up.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I put my whole project on one slide. Why is nobody clapping?" },
+          { "speaker": "NEO", "text": "Because nobody can read it. Let's learn what makes a presentation work." }
+        ]
+      },
+      {
+        "animation": "A definition card: 'Presentation = sharing ideas with an audience using a series of slides'. A stack of slides fans out, and a speaker cartoon points at them while an audience nods.",
+        "lines": [
+          { "speaker": "NEO", "text": "A presentation is a way of sharing information or ideas with an audience, using a series of slides." },
+          { "speaker": "NEO", "text": "Software like LibreOffice Impress helps you create these slides and show them on a screen." }
+        ]
+      },
+      {
+        "animation": "Icons pop onto a slide one at a time with labels: 'Text', 'Images', 'Audio', 'Video', 'Animation', 'Charts and tables'. Each icon does a small bounce as it lands.",
+        "lines": [
+          { "speaker": "NEO", "text": "The elements of a presentation are text, images, audio, video, animation, and charts or tables." },
+          { "speaker": "NEO", "text": "Text gives the key points. Pictures, sound and video make the message clear and interesting." },
+          { "speaker": "ZIPPY", "text": "So I should add every sound effect and every spinning animation?" },
+          { "speaker": "NEO", "text": "No. Each element must help the message. Too many effects distract the audience." }
+        ]
+      },
+      {
+        "animation": "Zippy's messy slide is fixed live, with a tick appearing beside each rule: 'Short points, not paragraphs', 'Large readable font', 'Contrast: dark text on light background', 'Same design on every slide', 'Relevant pictures', 'Logical order: intro, body, conclusion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "An effective presentation is simple. Use short points, not long paragraphs." },
+          { "speaker": "NEO", "text": "Use a large, readable font and colours with good contrast, like dark text on a light background." },
+          { "speaker": "NEO", "text": "Keep the same design on every slide, use relevant pictures, and follow a clear order from introduction to conclusion." },
+          { "speaker": "NEO", "text": "And know your audience. A talk for Class 3 is different from one for the principal." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Take one crowded slide. 2. Cut it to 4 short points. 3. Fix the colours. 4. Add one relevant picture.' Then a yellow 'BOARD TIP' card: 'List 4 characteristics of a good presentation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: take one crowded slide, cut it down to four short points, fix the colours, and add one helpful picture." },
+          { "speaker": "NEO", "text": "Board tip: a common question asks for characteristics of an effective presentation. Simple, readable, consistent, and suited to the audience are safe points." }
+        ]
+      },
+      {
+        "animation": "Recap board with a projector icon. Points appear: '1. Presentation = ideas shared through slides', '2. Elements: text, images, audio, video, animation', '3. Keep it simple, readable, consistent, relevant'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a presentation shares ideas with an audience through slides." },
+          { "speaker": "NEO", "text": "Two: its elements are text, images, audio, video and animation." },
+          { "speaker": "NEO", "text": "Three: a good presentation is simple, readable, consistent and relevant." },
+          { "speaker": "ZIPPY", "text": "Binoculars returned. Applause received." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Digital Presentation",
+    "topic_no": 2,
+    "name": "Starting LibreOffice Impress and Creating a Presentation",
+    "scenes": [
+      {
+        "animation": "Zippy stands before a school science fair judge with a cardboard chart that keeps flopping over. Neo flies in holding a laptop showing a neat slide titled 'Solar Energy'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My chart paper keeps falling down. There has to be a better way!" },
+          { "speaker": "NEO", "text": "There is. LibreOffice Impress. Let's make your first presentation." }
+        ]
+      },
+      {
+        "animation": "Animated UI: in the LibreOffice Start Center, 'Impress Presentation' is clicked. A 'Select a Template' dialog opens with template thumbnails; one is chosen. Labels then pop onto the Impress window: 'Menu bar', 'Toolbars', 'Slides pane', 'Workspace', 'Sidebar', 'Status bar'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Open the Start Center and click Impress Presentation. A Select a Template box lets you start from a ready design, or close it for a blank one." },
+          { "speaker": "NEO", "text": "Older versions opened a Presentation Wizard here instead. Your textbook may show it." },
+          { "speaker": "NEO", "text": "The window has a menu bar and toolbars on top, the Slides pane on the left, the workspace in the middle, and the Sidebar on the right." }
+        ]
+      },
+      {
+        "animation": "The Sidebar's 'Layouts' panel is opened; thumbnails 'Title Slide', 'Title, Content', 'Title and 2 Content', 'Title Only', 'Blank Slide' glow. 'Title Slide' is clicked and the slide gets 'Click to add Title' and 'Click to add Text' boxes. 'Solar Energy' is typed in.",
+        "lines": [
+          { "speaker": "NEO", "text": "A slide layout decides where the title, text and pictures go. Pick one from the Layouts panel in the Sidebar, or from Slide, Layout." },
+          { "speaker": "NEO", "text": "Click the placeholder boxes and type your title and points." }
+        ]
+      },
+      {
+        "animation": "Key caps 'Ctrl+S' flash; the Save dialog shows 'SolarEnergy.odp'. Then key cap 'F5' starts a full-screen slide show; 'Esc' ends it. 'File > Export as PDF' creates 'SolarEnergy.pdf'. Finally 'File > Close' and 'Help > LibreOffice Help' with key cap 'F1' are shown.",
+        "lines": [
+          { "speaker": "NEO", "text": "Save with File, Save, or Control S. Impress saves as an O D P file." },
+          { "speaker": "NEO", "text": "Press F5 to run the slide show from the first slide. Press Escape to stop." },
+          { "speaker": "ZIPPY", "text": "What if the judge's computer doesn't have Impress?" },
+          { "speaker": "NEO", "text": "Use File, Export as PDF. A PDF opens almost anywhere. Close the file with File, Close, and press F1 for Help." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Open Impress. 2. Choose a template. 3. Make a title slide. 4. Save, press F5, then export as PDF.' Then a yellow 'BOARD TIP' card: 'F5 = slide show · .odp = Impress file'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: open Impress, choose a template, make a title slide, save it, run it with F5, and export a PDF." },
+          { "speaker": "NEO", "text": "Board tip: remember that F5 starts the slide show and that Impress files use the O D P extension." }
+        ]
+      },
+      {
+        "animation": "Recap board with a laptop icon. Points appear: '1. Impress window: Slides pane, workspace, Sidebar', '2. Template + layout to create slides', '3. Ctrl+S save, F5 show, File > Export as PDF'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Impress has a Slides pane, a workspace and a Sidebar." },
+          { "speaker": "NEO", "text": "Two: start from a template and choose a layout for each slide." },
+          { "speaker": "NEO", "text": "Three: save with Control S, show with F5, and share as PDF." },
+          { "speaker": "ZIPPY", "text": "Chart paper, you may finally rest." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Digital Presentation",
+    "topic_no": 3,
+    "name": "Working with Slides and Views",
+    "scenes": [
+      {
+        "animation": "Zippy's presentation on Indian festivals has Diwali after Holi after Pongal in the wrong order. He tries to fix it by retyping each slide, sweating over a keyboard with smoke rising.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My slides are in the wrong order. Do I have to type them all again?" },
+          { "speaker": "NEO", "text": "Never. Impress lets you add, copy, move and delete whole slides in seconds." }
+        ]
+      },
+      {
+        "animation": "Animated UI: 'Slide > New Slide' with key caps 'Ctrl+M' adds a blank slide in the Slides pane. 'Slide > Duplicate Slide' creates an exact copy. The Layouts panel changes the new slide to 'Title, Content'. Right-click on a thumbnail shows 'Rename Slide' and 'Delete Slide'; the slide is renamed 'Diwali'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Add a slide with Slide, New Slide, or Control M. Slide, Duplicate Slide makes an exact copy." },
+          { "speaker": "NEO", "text": "Change its layout from the Layouts panel. Right-click a slide in the Slides pane to rename or delete it." }
+        ]
+      },
+      {
+        "animation": "In the Slides pane, the Diwali thumbnail is dragged to position 1 and the others shuffle down. Then a thumbnail is copied with 'Ctrl+C' and pasted with 'Ctrl+V'. On a slide, a text box is selected, copied, pasted, dragged to a new spot, then deleted with the Delete key.",
+        "lines": [
+          { "speaker": "NEO", "text": "To move a slide, drag its thumbnail to a new place. To copy it, use copy and paste." },
+          { "speaker": "NEO", "text": "Contents work the same way. Select a text box or picture, then copy, cut, paste, drag or delete it." },
+          { "speaker": "ZIPPY", "text": "So cut and paste moves it, and copy and paste clones it?" },
+          { "speaker": "NEO", "text": "Exactly right." }
+        ]
+      },
+      {
+        "animation": "The zoom slider in the status bar slides from 60% to 150%; 'View > Zoom' is also shown. Then the View menu opens and each view flashes on screen: 'Normal' (edit one slide), 'Outline' (all titles and points as text), 'Notes' (slide with speaker notes below), 'Slide Sorter' (grid of thumbnails).",
+        "lines": [
+          { "speaker": "NEO", "text": "Zoom in or out with the slider on the status bar, or View, Zoom." },
+          { "speaker": "NEO", "text": "The View menu gives four workspace views. Normal is for editing one slide at a time." },
+          { "speaker": "NEO", "text": "Outline shows the titles and points of all slides as text. Notes lets you write speaker notes under each slide." },
+          { "speaker": "NEO", "text": "Slide Sorter shows every slide as a thumbnail, perfect for rearranging." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Make 4 festival slides with Ctrl+M. 2. Duplicate one. 3. Reorder in Slide Sorter. 4. Add notes in Notes view.' Then a yellow 'BOARD TIP' card: 'Slide Sorter = rearrange · Notes = speaker notes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: make four festival slides, duplicate one, put them in order in Slide Sorter, and add a speaker note." },
+          { "speaker": "NEO", "text": "Board tip: match each view to its use. Slide Sorter for arranging, Outline for text, Notes for speaker notes." }
+        ]
+      },
+      {
+        "animation": "Recap board with a shuffle-cards icon. Points appear: '1. Ctrl+M new slide; Duplicate, Rename, Delete', '2. Drag or copy/paste to move and copy', '3. Views: Normal, Outline, Notes, Slide Sorter'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: add, duplicate, rename and delete slides from the Slide menu or right-click." },
+          { "speaker": "NEO", "text": "Two: move and copy slides or contents by dragging or with copy and paste." },
+          { "speaker": "NEO", "text": "Three: use Normal, Outline, Notes and Slide Sorter views." },
+          { "speaker": "ZIPPY", "text": "Diwali first. As it should be." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Digital Presentation",
+    "topic_no": 4,
+    "name": "Formatting Text and Custom Animation",
+    "scenes": [
+      {
+        "animation": "Zippy's slide about the water cycle shows plain grey text all in one block. Then every word flies in from a different direction at once, colliding in the middle like dodgem cars.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "First it was boring, so I animated everything. Now it's a traffic jam!" },
+          { "speaker": "NEO", "text": "Let's format the text neatly and animate only what matters." }
+        ]
+      },
+      {
+        "animation": "Animated UI: text is selected and the Formatting toolbar and Sidebar Character panel glow: font name, font size, Bold (Ctrl+B), Italic (Ctrl+I), Underline (Ctrl+U), font colour. Then alignment buttons with key caps: Left 'Ctrl+L', Centre 'Ctrl+E', Right 'Ctrl+R', Justified 'Ctrl+J'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Select the text first. Then use the Formatting toolbar or the Sidebar to change font, size and colour." },
+          { "speaker": "NEO", "text": "Bold is Control B, italic Control I, underline Control U." },
+          { "speaker": "NEO", "text": "Alignment can be left, centred, right or justified. Titles usually look best centred." }
+        ]
+      },
+      {
+        "animation": "Four lines 'Evaporation, Condensation, Precipitation, Collection' get bullets, then switch to '1. 2. 3. 4.' numbering using the toolbar toggles. 'Format > Bullets and Numbering' opens a dialog showing bullet shapes and number styles. Key caps 'Tab' and 'Shift+Tab' indent a point one level in and back out.",
+        "lines": [
+          { "speaker": "NEO", "text": "For lists, use bullets or numbering from the toolbar. Numbers suit steps in order, like the water cycle." },
+          { "speaker": "NEO", "text": "Format, Bullets and Numbering lets you pick the bullet symbol or number style." },
+          { "speaker": "NEO", "text": "Press Tab at the start of a point to move it one level in, and Shift Tab to bring it back out." }
+        ]
+      },
+      {
+        "animation": "A cloud picture is selected. 'View > Animation' opens the Animation deck in the Sidebar. The '+' Add button is clicked; categories 'Entrance, Emphasis, Exit, Motion Paths, Misc Effects' appear; 'Entrance > Fly In' is chosen. Fields show 'Start: On click', 'Direction: From left', 'Duration'. A 'Play' preview runs.",
+        "lines": [
+          { "speaker": "NEO", "text": "Custom animation moves objects on a slide. Select the object and open the Animation deck in the Sidebar." },
+          { "speaker": "NEO", "text": "Click the Add button and choose a category, like entrance, emphasis or exit, and then an effect, like Fly In." },
+          { "speaker": "NEO", "text": "Set when it starts: on click, with previous, or after previous. You can also set its direction and duration." },
+          { "speaker": "ZIPPY", "text": "So one smooth effect per point, not twelve!" }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Make a numbered water-cycle list. 2. Centre the title. 3. Add Fly In to the cloud, Start: On click. 4. Press Play.' Then a yellow 'BOARD TIP' card: 'Animation = objects on a slide · Transition = between slides'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: make a numbered water-cycle list, centre the title, and give the cloud a Fly In entrance." },
+          { "speaker": "NEO", "text": "Board tip: do not mix up animation and transition. Animation moves objects on a slide. Transition is the effect between slides." }
+        ]
+      },
+      {
+        "animation": "Recap board with a raindrop icon. Points appear: '1. Formatting toolbar: font, size, bold, alignment', '2. Bullets and numbering for lists', '3. Animation deck: Add effect, set Start, direction, duration'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: format text with the Formatting toolbar and alignment buttons." },
+          { "speaker": "NEO", "text": "Two: use bullets or numbering for lists." },
+          { "speaker": "NEO", "text": "Three: add custom animation from the Animation deck and set how it starts." },
+          { "speaker": "ZIPPY", "text": "Traffic jam cleared. The rain arrives on time." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Digital Presentation",
+    "topic_no": 5,
+    "name": "Tables, Images and Graphic Objects",
+    "scenes": [
+      {
+        "animation": "Zippy presents a slide on Indian states using long sentences with lots of spaces to line up numbers. The numbers wobble out of line, and a map he pasted appears upside down.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My numbers won't line up, and my map is doing a headstand!" },
+          { "speaker": "NEO", "text": "Use a table for the numbers and the image tools for the map." }
+        ]
+      },
+      {
+        "animation": "Animated UI: 'Insert > Table' opens the Insert Table dialog with 'Number of columns: 2', 'Number of rows: 4'. The table appears; 'State, Capital' is typed in the header, and the Tab key moves the cursor cell to cell: 'Kerala, Thiruvananthapuram', 'Punjab, Chandigarh', 'Assam, Dispur'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Choose Insert, Table, enter the number of columns and rows, and click OK." },
+          { "speaker": "NEO", "text": "Click a cell to type. Press Tab to jump to the next cell." }
+        ]
+      },
+      {
+        "animation": "Cells are selected by dragging: one cell, a whole row, a whole column. A column border is dragged to widen it; a row border is dragged to make it taller. The Table toolbar's Borders, Border Style and Area Style buttons, and 'Table Properties', add a border and a light blue background to the header row.",
+        "lines": [
+          { "speaker": "NEO", "text": "Drag across cells to select a cell, a row or a column. Drag a border line to change column width or row height." },
+          { "speaker": "NEO", "text": "The Table toolbar appears when the table is selected. Use it, or Table Properties, to add borders and a background colour." }
+        ]
+      },
+      {
+        "animation": "'Insert > Image' opens a file picker and a map image lands on the slide. Then the Sidebar's Gallery is opened and a clip-art arrow is dragged in. The map is dragged to move it, resized with a corner handle, and turned right side up with the rotation handles. The Image toolbar shows Filter, Colour, Transparency and Crop buttons.",
+        "lines": [
+          { "speaker": "NEO", "text": "Add a picture from your computer with Insert, Image, or drag one in from the Gallery in the Sidebar." },
+          { "speaker": "NEO", "text": "Drag the picture to move it, and drag a corner handle to resize it. Format, Position and Size lets you rotate it exactly." },
+          { "speaker": "NEO", "text": "When an image is selected, the Image toolbar gives you filters, colour, transparency and cropping." }
+        ]
+      },
+      {
+        "animation": "From the Drawing toolbar a rectangle, a circle and an arrow line are drawn. They are selected together with Shift+click; 'Shape > Group > Group' with key caps 'Ctrl+Shift+G' joins them, and they move as one. 'Ungroup' separates them again. A 'MINI PRACTICAL' card and a yellow 'BOARD TIP' card follow.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Drawing toolbar adds lines and shapes. Select several shapes with Shift and click, then press Control Shift G to group them." },
+          { "speaker": "ZIPPY", "text": "Grouped shapes move together, like a school trip in a line!" },
+          { "speaker": "NEO", "text": "Try it: make a states table, add a map, and group three shapes into a label." },
+          { "speaker": "NEO", "text": "Board tip: grouping joins objects so they move and resize as one. Ungrouping separates them." }
+        ]
+      },
+      {
+        "animation": "Recap board with a table-and-picture icon. Points appear: '1. Insert > Table; Tab moves between cells', '2. Insert > Image or Gallery; move, resize, rotate', '3. Shapes from Drawing toolbar; group with Ctrl+Shift+G'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: insert tables, then format their size, borders and background." },
+          { "speaker": "NEO", "text": "Two: add images from a file or the Gallery, and move, resize or rotate them." },
+          { "speaker": "NEO", "text": "Three: draw lines and shapes and group them with Control Shift G." },
+          { "speaker": "ZIPPY", "text": "Map right side up. India is relieved." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Digital Presentation",
+    "topic_no": 6,
+    "name": "Slide Masters and Transitions",
+    "scenes": [
+      {
+        "animation": "Zippy has thirty slides and must add the school logo to each. He pastes it one slide at a time; by slide nine, logos are at different sizes and positions, like a wobbly sticker book.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Thirty slides, thirty logos, and none of them in the same place!" },
+          { "speaker": "NEO", "text": "Put it on the slide master once, and every slide gets it." }
+        ]
+      },
+      {
+        "animation": "Animated UI: 'View > Master Slide' switches the workspace; a 'Master View' toolbar appears. The logo is placed in the top corner, the title font is changed to bold dark blue, and footer text 'Class 9 Project' is added. 'Close Master View' is clicked, and all thirty thumbnails update at once with a ripple effect.",
+        "lines": [
+          { "speaker": "NEO", "text": "A slide master is the template behind your slides. It holds the background, fonts, colours, logo and footer." },
+          { "speaker": "NEO", "text": "Choose View, Master Slide. Add the logo, change the title style, then click Close Master View." },
+          { "speaker": "NEO", "text": "Every slide using that master changes together. It saves time and keeps the design consistent." }
+        ]
+      },
+      {
+        "animation": "The Sidebar's 'Master Slides' panel shows 'Used in This Presentation' and 'Available for Use'. A different master is clicked and the selected slides take on its design.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Master Slides panel in the Sidebar shows the masters in use and others you can apply to your slides." },
+          { "speaker": "ZIPPY", "text": "So the master is like the school uniform, and every slide wears it?" },
+          { "speaker": "NEO", "text": "Exactly. Same look, different content." }
+        ]
+      },
+      {
+        "animation": "'Slide > Slide Transition' opens the Slide Transition deck in the Sidebar. Effect thumbnails 'Wipe, Fade, Push, Cover, Dissolve' appear; 'Fade' is chosen. Fields show 'Variant', 'Duration', 'Sound', and 'Advance Slide: On mouse click / Automatically after 5 sec'. 'Apply Transition to All Slides' is clicked, then 'Play' previews it.",
+        "lines": [
+          { "speaker": "NEO", "text": "A transition is the effect when one slide changes to the next. Choose Slide, Slide Transition, or open it in the Sidebar." },
+          { "speaker": "NEO", "text": "Pick an effect like Fade, set its duration, and add a sound if needed." },
+          { "speaker": "NEO", "text": "Under Advance Slide, choose on mouse click or automatically after some seconds. Click Apply Transition to All Slides for a matching show." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. View > Master Slide: add a logo and footer. 2. Close Master View. 3. Add a Fade transition to all slides. 4. Press F5.' Then a yellow 'BOARD TIP' card: 'Master = common design for all slides'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: add a logo and footer on the master, then apply one transition to all slides and run the show." },
+          { "speaker": "NEO", "text": "Board tip: if asked why we use a slide master, say it applies a common design to all slides at once." }
+        ]
+      },
+      {
+        "animation": "Recap board with a uniform-and-logo icon. Points appear: '1. Slide master = common background, fonts, logo', '2. View > Master Slide, then Close Master View', '3. Slide > Slide Transition: effect, duration, advance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a slide master gives all slides a common design." },
+          { "speaker": "NEO", "text": "Two: edit it with View, Master Slide, then close master view." },
+          { "speaker": "NEO", "text": "Three: transitions set how slides change, with effect, duration and advance options." },
+          { "speaker": "ZIPPY", "text": "One logo, thirty slides, zero wobble." }
+        ]
+      }
+    ]
+  }
+]

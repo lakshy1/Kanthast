@@ -1,0 +1,646 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "Electronic Spreadsheet (Advanced)",
+    "topic_no": 1,
+    "name": "Consolidating Data",
+    "scenes": [
+      {
+        "animation": "A school Diwali mela. Zippy runs a snack stall and has three LibreOffice Calc sheets tabs at the bottom: 'Day1', 'Day2', 'Day3'. He flips between them with a calculator in hand, adding numbers on his fingers and losing count.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Three days of samosa and chai sales on three sheets. How do I get one total?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Don't add by hand. Calc can consolidate all three sheets into one summary."
+          }
+        ]
+      },
+      {
+        "animation": "The three sheets appear side by side, each with the same layout: A1 'Item', B1 'Sales'; A2 'Samosa', A3 'Chai'. Day1: 120, 200. Day2: 150, 180. Day3: 130, 220. Arrows funnel them into a fourth sheet labelled 'Summary'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Consolidation combines data from several ranges into one range, using a function like sum or average."
+          },
+          {
+            "speaker": "NEO",
+            "text": "It works best when every sheet has the same layout, with the same row and column labels."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So if Day 2 had the items in a different order, it could still match them by their labels?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Yes, if you use labels. That is exactly what the label options are for."
+          }
+        ]
+      },
+      {
+        "animation": "Animated UI: on the Summary sheet, the menu path 'Data > Consolidate' highlights. The Consolidate dialog shows 'Function: Sum'. In 'Source data ranges' the cursor selects $Day1.$A$1:$B$3 and clicks 'Add', then does the same for Day2 and Day3. 'Copy results to: $Summary.$A$1' is set. Under 'Options', 'Row labels' and 'Column labels' are ticked.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Go to the Summary sheet. Choose Data, Consolidate."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Select the function Sum. In Source data ranges, select the range on Day 1 and click Add. Repeat for Day 2 and Day 3."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Set Copy results to, and under Options tick row labels and column labels so matching items are added together."
+          }
+        ]
+      },
+      {
+        "animation": "OK is clicked. Summary fills in: Samosa 400, Chai 600. Working appears beside it: '120 + 150 + 130 = 400', '200 + 180 + 220 = 600'. Then the 'Link to source data' checkbox is shown ticked; Zippy changes Day3 Chai to 230 and Summary updates to 610.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Click OK. Samosas total 400 and chai totals 600."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "What if I fix a wrong number on Day 3 later?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Tick Link to source data under Options. Then the summary updates when the source values change."
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Make 3 sheets with the same 2 items. 2. Data > Consolidate, Sum, Add 3 ranges. 3. Tick Link to source data. 4. Change one value and watch.' Then a yellow 'BOARD TIP' card: 'Data > Consolidate; Add each source range'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: create three sheets with the same items, consolidate them with Sum, then change one value and watch the summary."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: remember the menu path Data, Consolidate, and that each source range must be added separately with the Add button."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a samosa and chai icon. Points appear: '1. Consolidate = combine ranges with one function', '2. Data > Consolidate: Function, Add ranges, Copy results to', '3. Options: row/column labels, Link to source data'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: consolidation combines data from several ranges using one function."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: use Data, Consolidate, choose the function, add each range, and set where results go."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: use labels to match items, and link to source data for automatic updates."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "A thousand rupees of snacks. I'm basically a tycoon."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Electronic Spreadsheet (Advanced)",
+    "topic_no": 2,
+    "name": "Groups and Subtotals",
+    "scenes": [
+      {
+        "animation": "A long Calc sheet of a class quiz fundraiser: columns 'Section', 'Student', 'Amount'. Zippy scrolls endlessly, trying to add Section A's amounts with a highlighter, then Section B's.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "I need a total for each section, and one grand total. My highlighter is dying."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Use subtotals. Calc groups the rows and adds each group for you."
+          }
+        ]
+      },
+      {
+        "animation": "A small table builds row by row: 'A, Rahul, 40', 'A, Priya, 60', 'B, Aman, 50', 'B, Sara, 70'. The Section column glows to show it is sorted so that same values sit together.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Subtotals summarise data by groups. Here, the groups are sections A and B."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The data should be sorted by the group column, so that rows of the same section sit together."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "What if the sections are all mixed up?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Then Calc sorts them first. The Pre-sort option in the dialog is ticked by default."
+          }
+        ]
+      },
+      {
+        "animation": "Animated UI: the range A1:C5 is selected, then 'Data > Subtotals' is clicked. The Subtotals dialog shows the '1st Group' tab: 'Group by: Section', 'Calculate subtotals for: Amount' ticked, 'Use function: Sum'. The Options tab briefly shows 'Pre-sort area according to groups'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Select the data and choose Data, Subtotals."
+          },
+          {
+            "speaker": "NEO",
+            "text": "On the first group tab, set Group by to Section, tick Amount under Calculate subtotals for, and choose the function Sum."
+          },
+          {
+            "speaker": "NEO",
+            "text": "You can use other functions too, like count, average, max or min."
+          }
+        ]
+      },
+      {
+        "animation": "OK is clicked. New rows slide in: 'A Sum 100', 'B Sum 120', 'Grand Total 220'. Working floats beside: '40 + 60 = 100', '50 + 70 = 120', '100 + 120 = 220'. On the left, outline buttons '1 2 3' and minus signs appear; clicking '2' collapses the list to only the subtotal rows.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Section A totals 100, section B totals 120, and the grand total is 220."
+          },
+          {
+            "speaker": "NEO",
+            "text": "On the left you get outline buttons. Click the level numbers or the minus signs to hide details and see only totals."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Like folding a map, and only seeing the cities!"
+          }
+        ]
+      },
+      {
+        "animation": "Rows 2 to 3 are selected; 'Data > Group and Outline > Group' is clicked with key cap 'F12', and a bracket with a minus sign appears. 'Ungroup' shows key caps 'Ctrl+F12'. A 'MINI PRACTICAL' card and a yellow 'BOARD TIP' card follow.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "You can also group rows yourself. Select them and choose Data, Group and Outline, Group, or press F12. Control F12 ungroups them."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Try it: enter this table, add subtotals by section, then collapse to level two."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: in the Subtotals dialog, know the three settings: group by, calculate subtotals for, and use function."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a folded-map icon. Points appear: '1. Sort by the group column', '2. Data > Subtotals: Group by, Calculate for, Function', '3. Outline buttons collapse; F12 groups rows'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: keep rows of the same group together by sorting."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: use Data, Subtotals, and set group by, the column to total, and the function."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: outline buttons collapse and expand groups, and F12 groups rows manually."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Highlighter retired with honours."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Electronic Spreadsheet (Advanced)",
+    "topic_no": 3,
+    "name": "What-If Analysis: Scenarios and Goal Seek",
+    "scenes": [
+      {
+        "animation": "Zippy's snack stall sheet: B1 'Price 20', B2 'Cost 12', B3 'Units 50', B4 'Profit' with formula '=(B1-B2)*B3' showing 400. Zippy keeps retyping price and units, erasing each old answer and forgetting it.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "What if I charge 25? What if only 30 people come? I keep erasing my answers!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Those are what-if questions. Calc has tools that save each possibility for you."
+          }
+        ]
+      },
+      {
+        "animation": "Animated UI: cells B1:B3 are selected, then 'Tools > Scenarios' is clicked. The Create Scenario dialog shows name 'Festival', a comment box, and 'Display border' ticked. Values are changed to 25 and 60; profit shows 780 with working '(25 - 12) × 60 = 780'. A second scenario 'Slow day' uses 18 and 30: '(18 - 12) × 30 = 180'. A dropdown on the coloured scenario border switches between them.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "A scenario is a saved set of input values. Select the changing cells and choose Tools, Scenarios. Name it and click OK."
+          },
+          {
+            "speaker": "NEO",
+            "text": "In the Festival scenario, price is 25 and units are 60, so profit is 13 into 60, which is 780."
+          },
+          {
+            "speaker": "NEO",
+            "text": "In the Slow day scenario, price 18 and 30 units give 6 into 30, which is 180. Switch scenarios from the dropdown or the Navigator."
+          }
+        ]
+      },
+      {
+        "animation": "A second tool: a column D lists units 40, 50, 60. 'Data > Multiple Operations' opens with 'Formulas: $B$4' and 'Column input cell: $B$3'. Column E fills with 320, 400, 480.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "To try many values at once, use the what-if tool, Data, Multiple Operations."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Give the formula cell and the input cell, and Calc fills a table. At price 20, 40, 50 and 60 units give 320, 400 and 480."
+          }
+        ]
+      },
+      {
+        "animation": "'Tools > Goal Seek' opens: 'Formula cell: $B$4', 'Target value: 1000', 'Variable cell: $B$3'. OK is clicked; a message offers to insert the result, and B3 becomes 125. Working: '1000 ÷ (20 - 12) = 125'. 'Tools > Solver' is shown briefly as the tool for more complex problems.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Now reverse it. How many units must I sell to earn a profit of 1000?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Use Tools, Goal Seek. Set the formula cell to profit, the target value to 1000, and the variable cell to units."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Calc finds 125 units, because 1000 divided by 8 is 125. For problems with several conditions, Calc also has Solver."
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Build the profit sheet. 2. Create two scenarios. 3. Goal Seek profit = 1000.' Then a yellow 'BOARD TIP' card: 'Goal Seek works backwards: result known, find one input'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: build this sheet, create two scenarios, then use Goal Seek to find the units for a profit of 1000."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: Goal Seek works backwards. You know the result you want, and it finds the one input value that gives it."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a crystal-ball icon. Points appear: '1. Tools > Scenarios: saved sets of inputs', '2. Data > Multiple Operations: a table of what-if results', '3. Tools > Goal Seek: formula cell, target, variable cell'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: scenarios save different sets of input values that you can switch between."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: Multiple Operations builds a table of results for many inputs."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: Goal Seek finds the input needed for a target result."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Target: 125 samosas. Challenge accepted."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Electronic Spreadsheet (Advanced)",
+    "topic_no": 4,
+    "name": "Using Macros in Calc",
+    "scenes": [
+      {
+        "animation": "Zippy formats a heading row in 30 sheets: bold, yellow background, centred. Each time he clicks the same three buttons. By sheet 12 his clicking finger wears a tiny bandage.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Same three clicks, thirty times. My finger has filed a complaint."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Record those clicks once as a macro, and replay them whenever you want."
+          }
+        ]
+      },
+      {
+        "animation": "A cartoon tape recorder labelled 'Macro' records the three clicks. A definition card: 'Macro = saved sequence of commands or keystrokes'. Then 'Tools > Options > LibreOffice > Advanced' shows 'Enable macro recording' being ticked.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "A macro is a saved sequence of commands or keystrokes that can be played back later."
+          },
+          {
+            "speaker": "NEO",
+            "text": "If the recorder is missing, turn it on in Tools, Options, LibreOffice, Advanced, and tick Enable macro recording."
+          }
+        ]
+      },
+      {
+        "animation": "Animated UI: 'Tools > Macros > Record Macro' is clicked; a small 'Stop Recording' button floats on screen. Zippy makes row 1 bold, yellow and centred, then clicks Stop Recording. The Basic Macros dialog opens: the document's 'Standard' library is chosen, 'New Module' creates 'Module1', the name 'FormatHeader' is typed, and Save is clicked.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Choose Tools, Macros, Record Macro. Do your formatting, then click Stop Recording."
+          },
+          {
+            "speaker": "NEO",
+            "text": "In the dialog, pick the Standard library of your document, create a module, name the macro, and save it. Macro names cannot contain spaces."
+          }
+        ]
+      },
+      {
+        "animation": "On a fresh sheet, 'Tools > Macros > Run Macro' opens the Macro Selector; FormatHeader is chosen and Run is clicked. The header formats itself instantly. Then 'Tools > Macros > Organize Macros > Basic' shows buttons 'Run', 'Edit', 'Delete', 'Organizer'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "To run it, choose Tools, Macros, Run Macro, select it, and click Run."
+          },
+          {
+            "speaker": "NEO",
+            "text": "To organise macros, use Tools, Macros, Organize Macros, Basic. From there you can edit, delete or move them."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Thirty sheets, thirty seconds!"
+          }
+        ]
+      },
+      {
+        "animation": "The Basic IDE opens via 'Tools > Macros > Edit Macros'. Code types itself: 'Function SquareIt(x)', '    SquareIt = x * x', 'End Function'. Back in Calc, A1 holds 7 and B1 gets '=SQUAREIT(A1)', showing 49. A 'MINI PRACTICAL' card and a yellow 'BOARD TIP' card follow.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "A macro can also work as a function. In the Basic editor, write a function called SquareIt that returns x into x."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Now type equals SquareIt of A1 in a cell. If A1 holds 7, the answer is 49, just like a built-in function."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Try it: record a formatting macro, run it on a new sheet, then write the SquareIt function."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: questions ask for the steps to record a macro. Start with Tools, Macros, Record Macro, and end with Stop Recording and saving it in a module."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with the tape recorder. Points appear: '1. Macro = recorded sequence of commands', '2. Tools > Macros > Record Macro / Run Macro / Organize Macros', '3. Basic functions like =SQUAREIT(A1) work in cells'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: a macro records a sequence of commands to automate repetitive work."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: record, run and organise macros from Tools, Macros."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: a macro written as a function can be used in a cell like a built-in function."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Bandage off. Finger rehired."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Electronic Spreadsheet (Advanced)",
+    "topic_no": 5,
+    "name": "Linking Data and Sheets",
+    "scenes": [
+      {
+        "animation": "Zippy's budget file has sheet tabs 'January', 'February', 'Summary'. He copies January's total into Summary by typing it. Then he edits January, and Summary still shows the old number, wearing a sleepy face.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "I changed January, but my Summary sheet didn't notice."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Because you typed a number instead of linking the cell. Let's build live links."
+          }
+        ]
+      },
+      {
+        "animation": "Animated UI: 'Sheet > Insert Sheet' adds a sheet; right-click on the tab shows 'Rename Sheet'. Then in Summary!B2 Zippy types '=', clicks the January tab, clicks cell B10, and presses Enter. The formula bar shows '=$January.B10'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Insert new sheets with Sheet, Insert Sheet, and rename them from the tab's right-click menu."
+          },
+          {
+            "speaker": "NEO",
+            "text": "To reference another sheet with the mouse, type equals, click the other sheet's tab, click the cell, and press Enter."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The formula reads dollar January dot B10. In Calc, a dot separates the sheet name from the cell address."
+          }
+        ]
+      },
+      {
+        "animation": "A second file 'Sales.ods' opens beside the first. The formula builds: '='file:///C:/Users/Zippy/Documents/Sales.ods'#$Sheet1.B5'. Labels point to the parts: 'file path', '#', 'sheet', 'cell'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "You can even link to another document. With both files open, type equals and click the cell in the other file."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Calc writes the file path, a hash sign, the sheet name and the cell. Type it with the keyboard the same way."
+          }
+        ]
+      },
+      {
+        "animation": "'Insert > Hyperlink' with key caps 'Ctrl+K' opens the Hyperlink dialog; the 'Document' tab is chosen and a target '#Summary.A1' is set. A clickable link 'Go to Summary' appears. Right-click shows 'Edit Hyperlink' and 'Remove Hyperlink'. A side panel compares 'Absolute link: full path' with 'Relative link: path from current file'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "For quick navigation, add a hyperlink with Insert, Hyperlink, or Control K. It can jump to a sheet, a file or a web page."
+          },
+          {
+            "speaker": "NEO",
+            "text": "An absolute hyperlink stores the full path, so it breaks if the files move. A relative hyperlink stores the path from the current file, so it keeps working when the whole folder moves."
+          }
+        ]
+      },
+      {
+        "animation": "'Sheet > Link to External Data' opens: a URL of a web page with a table is entered, the table is chosen from 'Available tables/ranges', and 'Update every 60 seconds' is ticked. Then 'View > Data Sources' (Ctrl+Shift+F4) shows a registered database; a table is dragged into the sheet. A 'MINI PRACTICAL' card and a yellow 'BOARD TIP' card follow.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Sheet, Link to External Data imports tables from web pages or other files, and can refresh them. View, Data Sources shows registered databases whose tables you can drag in."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Try it: link Summary to January and February, then add a hyperlink back to Summary."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: in Calc, a sheet reference uses a dot, like Sheet2 dot A1, not an exclamation mark."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a chain-link icon. Points appear: '1. =$Sheet.Cell links sheets', '2. 'file path'#$Sheet.Cell links documents', '3. Ctrl+K hyperlinks; Link to External Data; Data Sources'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: link sheets with references like dollar January dot B10."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: link other documents with the file path, a hash, the sheet and the cell."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: use hyperlinks to jump around, and link to external data and registered data sources."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Summary sheet: officially awake."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Electronic Spreadsheet (Advanced)",
+    "topic_no": 6,
+    "name": "Sharing and Reviewing a Spreadsheet",
+    "scenes": [
+      {
+        "animation": "The class sports-day budget sheet sits on a shared school drive. Zippy and Meera both open it; Zippy saves, then Meera saves, and Zippy's changes vanish with a puff of smoke.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Meera saved over my work! Where did my changes go?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "You were both editing an unshared file. Let's share it properly and track every change."
+          }
+        ]
+      },
+      {
+        "animation": "Animated UI: 'Tools > Share Spreadsheet' opens the Share Document dialog; 'Share this spreadsheet with other users' is ticked and OK is clicked. The file is saved and the title bar shows '(shared)'. A small list shows the users currently editing.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Choose Tools, Share Spreadsheet, tick Share this spreadsheet with other users, and save. The title bar now says shared."
+          },
+          {
+            "speaker": "NEO",
+            "text": "When others open and save the shared file, Calc merges their changes. If two people change the same cell, a Resolve Conflicts box lets you keep one version."
+          }
+        ]
+      },
+      {
+        "animation": "'Edit > Track Changes > Record Changes' with key caps 'Ctrl+Shift+C'. Meera changes C4 from 500 to 650; the cell gets a coloured border, and hovering shows 'Meera, date, changed from 500 to 650'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "To see who changed what, turn on Edit, Track Changes, Record Changes."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Changed cells get a coloured border, and hovering shows the author, the date and the old value."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So nobody can secretly change the medal budget any more."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Exactly. Every change leaves a signature."
+          }
+        ]
+      },
+      {
+        "animation": "'Insert > Comment' (Ctrl+Alt+C) adds a note to C4: 'Price of medals went up'. A tiny red triangle marks the cell. Right-click shows 'Edit Comment', 'Delete Comment', 'Show Comment'; in edit mode, a right-click on the comment box opens formatting for font and background colour.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Explain your edit with a comment: Insert, Comment, or Control Alt C. A small red mark shows the cell has a comment."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Right-click the cell to edit, show or delete the comment. While editing, you can format its text and background."
+          }
+        ]
+      },
+      {
+        "animation": "'Edit > Track Changes > Manage' opens a list of changes with buttons 'Accept', 'Reject', 'Accept All', 'Reject All'. Zippy accepts Meera's medal change. Then 'Edit > Track Changes > Merge Document' and 'Compare Document' are shown one after another. A 'MINI PRACTICAL' card and a yellow 'BOARD TIP' card follow.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "To review, open Edit, Track Changes, Manage, and accept or reject each change."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Merge Document combines edited copies of the same file. Compare Document shows differences between two versions."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Try it: share a sheet, record changes, edit two cells with a comment, then accept one and reject one."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: the menu for sharing is Tools, Share Spreadsheet, but recording, managing, merging and comparing are all under Edit, Track Changes."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with two happy sparks sharing one laptop. Points appear: '1. Tools > Share Spreadsheet', '2. Edit > Track Changes > Record; Insert > Comment', '3. Manage: Accept/Reject; Merge; Compare'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: share a sheet with Tools, Share Spreadsheet."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: record changes and add comments to explain edits."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: accept or reject changes, and merge or compare documents."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Meera and I are friends again. Mostly."
+          }
+        ]
+      }
+    ]
+  }
+]

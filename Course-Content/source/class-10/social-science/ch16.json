@@ -1,0 +1,203 @@
+[
+  {
+    "chapter_no": 16,
+    "chapter": "Political Science: Political Parties",
+    "topic_no": 1,
+    "name": "Why Do We Need Political Parties?",
+    "scenes": [
+      {
+        "animation": "Zippy imagines an election with no parties: 543 independent candidates each shouting a different promise from a different soapbox. Nobody knows who will form the government. The scene dissolves into a question mark.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why not just elect independents? No parties, no drama!" },
+          { "speaker": "NEO", "text": "Then nobody could promise any major policy change, and nobody would be responsible for running the country. Let's see what parties actually do." }
+        ]
+      },
+      {
+        "animation": "A definition card builds: 'Political party = a group of people who come together to contest elections and hold power in the government'. Three parts light up underneath: 'Leaders', 'Active members', 'Followers'. A pie labelled 'Society' shows a slice labelled 'Party = part'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A political party is a group of people who come together to contest elections and hold power in the government. They agree on some policies and programmes for society with a view to promote the collective good." },
+          { "speaker": "NEO", "text": "A party is known by which part it stands for, which policies it supports and whose interests it upholds. It has three components: the leaders, the active members and the followers." }
+        ]
+      },
+      {
+        "animation": "A flowchart titled 'Functions of political parties' grows seven branches one by one, each with an icon: ballot box 'Contest elections', scroll 'Put forward policies', gavel 'Make laws', chair 'Form and run governments', magnifier 'Play opposition', megaphone 'Shape public opinion', open door 'Access to government machinery and welfare schemes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Parties contest elections. In India, top party leaders choose candidates. Parties put forward different policies and programmes, and voters choose from them." },
+          { "speaker": "NEO", "text": "Parties play a decisive role in making laws, because members follow the direction of the party leadership. Parties form and run governments." },
+          { "speaker": "NEO", "text": "Parties that lose elections play the role of opposition, voicing different views and criticising the government. Parties shape public opinion by raising and highlighting issues." },
+          { "speaker": "NEO", "text": "Parties also provide people access to government machinery and welfare schemes. For an ordinary citizen, it is easier to approach a local party leader than a government officer." }
+        ]
+      },
+      {
+        "animation": "Zippy's 543 soapboxes return; each independent shouts, 'My constituency only!' A caption stamps 'Without parties: unpredictable, no one responsible'. Then panchayat elections appear as an example of non-party based elections.",
+        "lines": [
+          { "speaker": "NEO", "text": "Without parties, every candidate would be independent. Each would be accountable to their constituency, but nobody would be responsible for how the country is run." },
+          { "speaker": "NEO", "text": "Parties arose along with representative democracies. As societies became large and complex, they needed some agency to gather different views and bring them together." },
+          { "speaker": "NEO", "text": "Board tip: list the functions of political parties with one line each. This is a regular five-mark question." }
+        ]
+      },
+      {
+        "animation": "Recap board with a party flag icon. Points appear: '1. Party: contest elections, hold power', '2. Seven functions from elections to welfare', '3. Needed for representative democracy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a party is a group that contests elections to hold power, for the collective good." },
+          { "speaker": "NEO", "text": "Two: parties contest elections, propose policies, make laws, form governments, oppose, shape opinion and give access to welfare." },
+          { "speaker": "NEO", "text": "Three: representative democracy cannot work without parties." },
+          { "speaker": "ZIPPY", "text": "Fine. I'll put away my 543 soapboxes." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 16,
+    "chapter": "Political Science: Political Parties",
+    "topic_no": 2,
+    "name": "How Many Parties Should We Have?",
+    "scenes": [
+      {
+        "animation": "A kirana shop menu shows three versions: one with a single brand of every item, one with exactly two brands, one with many brands. Zippy stares at the choices, then the brands turn into party flags.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "One brand, two brands or twenty brands. Which shop is best?" },
+          { "speaker": "NEO", "text": "Countries face a similar question with political parties. Let's compare party systems." }
+        ]
+      },
+      {
+        "animation": "Card one: a map of China with a single flag and a crossed-out ballot, labelled 'One-party system'. The text 'Not a democratic option' stamps across it.",
+        "lines": [
+          { "speaker": "NEO", "text": "In some countries, only one party is allowed to control and run the government. These are called one-party systems. In China, only the Communist Party is allowed to rule." },
+          { "speaker": "NEO", "text": "We cannot consider one-party system as a good option, because this is not a democratic option. Any democratic system must allow at least two parties to compete fairly." }
+        ]
+      },
+      {
+        "animation": "Card two: a see-saw with two large flags, labelled 'Two-party system: USA, UK'. Smaller flags stand at the edges but never reach the seats. Card three: a map of India with many flags forming groups, labelled 'Multiparty system', with alliance tags 'NDA', 'UPA', 'Left Front'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In some countries, power usually changes between two main parties. Other parties exist but only the two main ones have a serious chance of winning majority seats. The United States of America and the United Kingdom are examples of this two-party system." },
+          { "speaker": "NEO", "text": "When several parties compete for power, and more than two parties have a reasonable chance of coming to power, it is a multiparty system. India has a multiparty system." },
+          { "speaker": "NEO", "text": "When several parties in a multiparty system join hands to contest elections and win power, it is called an alliance or a front. In India, there were three such major alliances in 2004: the National Democratic Alliance, the United Progressive Alliance and the Left Front." }
+        ]
+      },
+      {
+        "animation": "A scale weighs 'Multiparty: messy, political instability' against 'Multiparty: many interests and opinions get representation'. Then the scale fades into a map of India's social and geographical diversity.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So which system is best?" },
+          { "speaker": "NEO", "text": "The multiparty system often appears very messy and leads to political instability. At the same time, it allows a variety of interests and opinions to enjoy political representation." },
+          { "speaker": "NEO", "text": "No system is ideal for all countries. Party systems evolve over a long time, depending on the nature of society, its social and regional divisions, its history and its system of elections. India's diversity is not easily absorbed by two parties." }
+        ]
+      },
+      {
+        "animation": "Recap board with three shop icons. Points appear: '1. One-party: China; not democratic', '2. Two-party: USA, UK', '3. Multiparty: India; alliances like NDA, UPA, Left Front'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a one-party system, like China, is not a democratic option." },
+          { "speaker": "NEO", "text": "Two: the USA and the UK have two-party systems." },
+          { "speaker": "NEO", "text": "Three: India has a multiparty system with alliances. Board tip: give one country example for each system." },
+          { "speaker": "ZIPPY", "text": "Many brands, many flags. I'll take the multiparty kirana." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 16,
+    "chapter": "Political Science: Political Parties",
+    "topic_no": 3,
+    "name": "National and State Parties",
+    "scenes": [
+      {
+        "animation": "Zippy tries to register a party called 'Zippy Sparks Party' at an Election Commission counter. An officer hands him a form: 'Registration: yes. Recognition: earn it.'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I registered my party. So now I get a national symbol, right?" },
+          { "speaker": "NEO", "text": "Registration isn't recognition. Every party in the country has to register with the Election Commission, but only some get special facilities as recognised parties." }
+        ]
+      },
+      {
+        "animation": "A badge labelled 'Recognised party' shines with two perks: 'Unique symbol' and 'Special facilities'. Two ladders appear: 'State party' and 'National party', each with rules written on its rungs.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Election Commission treats all parties equally, but offers some special facilities to large and established parties. They are given a unique symbol, which only the official candidates of that party can use." },
+          { "speaker": "NEO", "text": "The Commission has laid down detailed criteria for the proportion of votes and seats a party must get to be a recognised party." }
+        ]
+      },
+      {
+        "animation": "The 'State party' ladder lights up: '6% of total votes in a State Assembly election' plus 'at least 2 seats'. The 'National party' ladder lights up: '6% of total votes in Lok Sabha elections or Assembly elections in four States' plus 'at least 4 seats in Lok Sabha'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A party that secures at least six per cent of the total votes in an election to the Legislative Assembly of a State and wins at least two seats is recognised as a State party." },
+          { "speaker": "NEO", "text": "A party that secures at least six per cent of the total votes in Lok Sabha elections or Assembly elections in four States, and wins at least four seats in the Lok Sabha, is recognised as a National party." },
+          { "speaker": "ZIPPY", "text": "Six per cent and two seats for a state, six per cent in four states and four Lok Sabha seats for national. Got it." }
+        ]
+      },
+      {
+        "animation": "A map of India fills with flags of recognised parties. Some party flags spread across the country as national parties, including the Indian National Congress and the Bharatiya Janata Party; many regional flags plant themselves in individual states. A banner reads 'Regional parties: part of coalition governments'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some national parties are the Indian National Congress, founded in 1885, and the Bharatiya Janata Party, founded in 1980." },
+          { "speaker": "NEO", "text": "State parties are commonly called regional parties. But several of them have developed national-level organisations with units in several states." },
+          { "speaker": "NEO", "text": "Over the last three decades, the number and strength of these parties has expanded. No national party is able to secure a majority in the Lok Sabha on its own, so national parties are compelled to form alliances with state parties. This has strengthened federalism and democracy." }
+        ]
+      },
+      {
+        "animation": "A 'Board Tip' sticker lands on the two ladders, circling the numbers 6%, 2 seats, four States and 4 seats.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: the criteria for a national and a state party are asked very often. Learn both sets of numbers exactly." }
+        ]
+      },
+      {
+        "animation": "Recap board with an Election Commission badge icon. Points appear: '1. Recognised parties get a unique symbol', '2. State party: 6% votes + 2 seats', '3. National party: 6% votes + 4 Lok Sabha seats'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: every party registers with the Election Commission, but recognised parties get a unique symbol." },
+          { "speaker": "NEO", "text": "Two: a State party needs six per cent of votes in a State Assembly election and two seats." },
+          { "speaker": "NEO", "text": "Three: a National party needs six per cent in Lok Sabha or four State Assembly elections, and four Lok Sabha seats." },
+          { "speaker": "ZIPPY", "text": "Zippy Sparks Party: still collecting votes." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 16,
+    "chapter": "Political Science: Political Parties",
+    "topic_no": 4,
+    "name": "Challenges to Political Parties and Reforms",
+    "scenes": [
+      {
+        "animation": "A cartoon party office: one leader sits on a throne while members stand outside a locked door labelled 'Internal elections: cancelled'. A family portrait above the throne shows the next leader already chosen.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is the door locked? Aren't parties supposed to be democratic?" },
+          { "speaker": "NEO", "text": "They should be. Parties are the most visible face of democracy, so people blame them for what goes wrong. Let's see the four big challenges." }
+        ]
+      },
+      {
+        "animation": "Four warning signs drop in turn: 'Lack of internal democracy', 'Dynastic succession', 'Money and muscle power', 'Lack of meaningful choice'. Under the third, a sack of cash and a flexing bodybuilder appear; under the fourth, two party manifestos look almost identical.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, lack of internal democracy. Power concentrates in one or a few leaders at the top. Parties do not keep membership registers or hold organisational meetings and internal elections regularly." },
+          { "speaker": "NEO", "text": "Second, dynastic succession. Top positions are often controlled by members of one family, which is unfair to other members." },
+          { "speaker": "NEO", "text": "Third, the growing role of money and muscle power, especially during elections. Parties sometimes support criminals who can win elections." },
+          { "speaker": "NEO", "text": "Fourth, lack of meaningful choice. Ideological differences among parties have reduced, so voters don't get very different options." }
+        ]
+      },
+      {
+        "animation": "A toolbox opens with three 'Done' tools: 'Anti-defection law', 'Affidavit of property and criminal cases', 'Election Commission: organisational elections and income tax returns'. A turncoat figure trying to switch party flags is stopped by a gate.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some reforms have been made. The Constitution was amended to stop elected representatives from changing parties. If an MLA or MP changes parties, they will lose the seat in the legislature. This is the anti-defection law." },
+          { "speaker": "NEO", "text": "The Supreme Court made it mandatory for every candidate to file an affidavit giving details of property and criminal cases pending against them." },
+          { "speaker": "NEO", "text": "The Election Commission made it necessary for parties to hold organisational elections and file income tax returns." }
+        ]
+      },
+      {
+        "animation": "A second tray slides out with 'Suggestions': 'Law to regulate internal affairs of parties', 'One-third tickets to women', 'State funding of elections'. Then crowds with petitions and a newspaper headline push the tray forward, labelled 'Pressure from people'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Other suggestions include a law to regulate the internal affairs of parties, making it mandatory to give about one-third of tickets to women candidates, and state funding of elections." },
+          { "speaker": "NEO", "text": "Parties can also be reformed through pressure from people, through petitions, publicity and agitations, and when people who want reform join political parties themselves." },
+          { "speaker": "NEO", "text": "Board tip: the anti-defection law and the affidavit rule are the most asked reforms." }
+        ]
+      },
+      {
+        "animation": "Recap board with a toolbox icon. Points appear: '1. Challenges: internal democracy, dynasty, money and muscle, no meaningful choice', '2. Reforms: anti-defection, affidavits, EC orders', '3. Suggestions and people's pressure'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the four challenges are lack of internal democracy, dynastic succession, money and muscle power, and lack of meaningful choice." },
+          { "speaker": "NEO", "text": "Two: the anti-defection law, affidavits and Election Commission orders are reforms already made." },
+          { "speaker": "NEO", "text": "Three: people's pressure and participation can reform parties further." },
+          { "speaker": "ZIPPY", "text": "Door unlocked. Internal elections are back on!" }
+        ]
+      }
+    ]
+  }
+]

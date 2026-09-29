@@ -1,0 +1,174 @@
+[
+  {
+    "chapter_no": 8,
+    "chapter": "Introduction to Trigonometry",
+    "topic_no": 1,
+    "name": "Trigonometric Ratios",
+    "scenes": [
+      {
+        "animation": "A school canteen: a ladder leans against the wall to fix the fan. Zippy climbs it, and the ladder, wall and floor light up in yellow as a right triangle with a small square at the corner.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, why is every ladder in this school a triangle?" },
+          { "speaker": "NEO", "text": "Because wall, floor and ladder make a right triangle. And right triangles have a secret language called trigonometry." }
+        ]
+      },
+      {
+        "animation": "Right triangle ABC with the right angle at B. Angle A glows orange. Labels pop on one by one: BC 'side opposite to ∠A', AB 'side adjacent to ∠A', AC 'hypotenuse'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Take triangle ABC, right-angled at B, and focus on angle A." },
+          { "speaker": "NEO", "text": "BC is the side opposite to angle A, AB is the side adjacent to angle A, and AC is the hypotenuse." },
+          { "speaker": "ZIPPY", "text": "And if I focus on angle C instead?" },
+          { "speaker": "NEO", "text": "Then opposite and adjacent swap places. The hypotenuse never changes." }
+        ]
+      },
+      {
+        "animation": "Six cards flip onto a board: 'sin A = BC/AC', 'cos A = AB/AC', 'tan A = BC/AB', then their reciprocals 'cosec A = 1/sin A', 'sec A = 1/cos A', 'cot A = 1/tan A'. A small line joins them: 'tan A = sin A / cos A'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sine of A is opposite over hypotenuse, BC by AC. Cosine of A is adjacent over hypotenuse, AB by AC. Tangent of A is opposite over adjacent, BC by AB." },
+          { "speaker": "NEO", "text": "Cosecant, secant and cotangent are simply their reciprocals. Also, tan A equals sin A by cos A." },
+          { "speaker": "ZIPPY", "text": "So sin A means sin multiplied by A?" },
+          { "speaker": "NEO", "text": "No! Sin A is one symbol, the sine of angle A. You can't separate sin from A." }
+        ]
+      },
+      {
+        "animation": "A small triangle and a giant triangle with the same angle A are stacked; their ratio BC/AC shows the same value on both. Text: 'Ratios depend only on the angle, not on the size of the triangle'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Enlarge the triangle, keep the angle, and every ratio stays the same. The ratios depend only on the angle." },
+          { "speaker": "NEO", "text": "And since the hypotenuse is the longest side, sin A and cos A are always less than one for an acute angle." }
+        ]
+      },
+      {
+        "animation": "Worked example written line by line: 'tan A = 4/3', 'BC = 4k, AB = 3k', 'AC² = (4k)² + (3k)² = 16k² + 9k² = 25k²', 'AC = 5k', 'sin A = 4/5, cos A = 3/5', 'cosec A = 5/4, sec A = 5/3, cot A = 3/4'. A 'BOARD TIP' sticker lands on 'k'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: if tan A is four by three, find the other ratios." },
+          { "speaker": "NEO", "text": "Tan A is BC by AB, so let BC be 4k and AB be 3k." },
+          { "speaker": "NEO", "text": "By Pythagoras, AC squared is 16k squared plus 9k squared, which is 25k squared. So AC is 5k." },
+          { "speaker": "NEO", "text": "Then sin A is four by five, cos A is three by five, cosec A is five by four, sec A is five by three, and cot A is three by four." },
+          { "speaker": "NEO", "text": "Board tip: always take the sides as 4k and 3k, not just 4 and 3. It shows the examiner you know only the ratio is given." }
+        ]
+      },
+      {
+        "animation": "Recap board with the ladder triangle in the corner: '1. Opposite, adjacent, hypotenuse depend on the angle chosen', '2. sin = opp/hyp, cos = adj/hyp, tan = opp/adj; cosec, sec, cot are reciprocals', '3. Ratios depend only on the angle'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: opposite and adjacent depend on which angle you look from." },
+          { "speaker": "NEO", "text": "Two: sine is opposite by hypotenuse, cosine is adjacent by hypotenuse, tangent is opposite by adjacent, and the other three are reciprocals." },
+          { "speaker": "NEO", "text": "Three: the ratios depend only on the angle, not on the size of the triangle." },
+          { "speaker": "ZIPPY", "text": "Ladders, you have been decoded." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Introduction to Trigonometry",
+    "topic_no": 2,
+    "name": "Trigonometric Ratios of Specific Angles",
+    "scenes": [
+      {
+        "animation": "A quiz show stage. A buzzer flashes 'sin 30° = ?' Zippy frantically types on a calculator that shows 'LOW BATTERY' and dies.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "No calculator in the board exam? How do I find sin 30 degrees?" },
+          { "speaker": "NEO", "text": "With two simple triangles. For 0, 30, 45, 60 and 90 degrees, you can work it out by hand." }
+        ]
+      },
+      {
+        "animation": "An isosceles right triangle ABC is drawn with right angle at B, AB = BC = a. The hypotenuse builds: 'AC² = a² + a² = 2a²', 'AC = a√2'. Then 'sin 45° = 1/√2', 'cos 45° = 1/√2', 'tan 45° = 1'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In a right triangle with one angle 45 degrees, the other acute angle is also 45 degrees, so the two legs are equal. Call each one a." },
+          { "speaker": "NEO", "text": "Then the hypotenuse is a root two." },
+          { "speaker": "NEO", "text": "So sin 45 and cos 45 are both one by root two, and tan 45 is one." }
+        ]
+      },
+      {
+        "animation": "An equilateral triangle ABC of side 2a. A perpendicular AD drops to BC, cutting it into halves of length a. Build: 'AD² = (2a)² − a² = 3a²', 'AD = a√3'. In triangle ABD: 'sin 30° = 1/2', 'cos 30° = √3/2', 'sin 60° = √3/2', 'cos 60° = 1/2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For 30 and 60, take an equilateral triangle of side 2a and drop a perpendicular. It splits the base into two halves of a." },
+          { "speaker": "NEO", "text": "The perpendicular is root of 4a squared minus a squared, which is a root three." },
+          { "speaker": "NEO", "text": "In the half triangle, the angles are 30 and 60 degrees. So sin 30 is one half, cos 30 is root three by two, sin 60 is root three by two, and cos 60 is one half." }
+        ]
+      },
+      {
+        "animation": "The full table fills row by row for 0°, 30°, 45°, 60°, 90°. The sin row glows as '√0/2, √1/2, √2/2, √3/2, √4/2' and simplifies to '0, 1/2, 1/√2, √3/2, 1'. The cos row slides in as the same values reversed. 'tan 90°: not defined' blinks red.",
+        "lines": [
+          { "speaker": "NEO", "text": "A memory trick: sin of 0, 30, 45, 60 and 90 is root 0, root 1, root 2, root 3 and root 4, each divided by two." },
+          { "speaker": "NEO", "text": "Cos is the same list written backwards. Tan is sin by cos, and tan 90 is not defined, because cos 90 is zero." }
+        ]
+      },
+      {
+        "animation": "Worked example line by line: '2 tan² 45° + cos² 30° − sin² 60°', '= 2(1)² + (√3/2)² − (√3/2)²', '= 2 + 3/4 − 3/4', '= 2'. A 'BOARD TIP' card: 'tan² 45° means (tan 45°)²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: evaluate 2 tan squared 45 plus cos squared 30 minus sin squared 60." },
+          { "speaker": "NEO", "text": "Tan 45 is one, so the first term is 2. Cos 30 and sin 60 are both root three by two, so each squared is three by four." },
+          { "speaker": "NEO", "text": "So we get 2 plus three by four minus three by four, which is 2." },
+          { "speaker": "NEO", "text": "Board tip: tan squared 45 means the whole of tan 45, squared. It is not tan of 45 squared." }
+        ]
+      },
+      {
+        "animation": "Recap board with the two triangles as icons: '1. 45°: isosceles right triangle, sides a, a, a√2', '2. 30° and 60°: half of an equilateral triangle, sides a, a√3, 2a', '3. sin: √0/2 … √4/2; cos is the reverse; tan 90° not defined'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: 45 degrees comes from an isosceles right triangle with sides a, a and a root two." },
+          { "speaker": "NEO", "text": "Two: 30 and 60 come from half an equilateral triangle, with sides a, a root three and 2a." },
+          { "speaker": "NEO", "text": "Three: sin goes root 0 by 2 up to root 4 by 2, cos is the reverse, and tan 90 is not defined." },
+          { "speaker": "ZIPPY", "text": "Who needs batteries anyway?" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Introduction to Trigonometry",
+    "topic_no": 3,
+    "name": "Trigonometric Identities",
+    "scenes": [
+      {
+        "animation": "Zippy plugs random angles into a glowing machine labelled 'sin² A + cos² A'. For 30°, 45°, 60° the output screen shows '1' every time, and Zippy's jaw drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I keep feeding it different angles and it keeps saying one. Is it broken?" },
+          { "speaker": "NEO", "text": "Not broken. That's an identity: an equation that is true for every value of the angle involved." }
+        ]
+      },
+      {
+        "animation": "Right triangle ABC, right-angled at B. 'AB² + BC² = AC²' appears. Each term is divided by AC² with a sweeping slash: '(AB/AC)² + (BC/AC)² = 1', which morphs into 'cos² A + sin² A = 1'. Tag: 'valid for 0° ≤ A ≤ 90°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Start with Pythagoras in triangle ABC: AB squared plus BC squared equals AC squared." },
+          { "speaker": "NEO", "text": "Divide every term by AC squared. AB by AC is cos A, and BC by AC is sin A." },
+          { "speaker": "NEO", "text": "So cos squared A plus sin squared A equals one, for all A from 0 to 90 degrees." }
+        ]
+      },
+      {
+        "animation": "The same Pythagoras line is divided by AB² to give '1 + tan² A = sec² A' (tag '0° ≤ A < 90°'), then by BC² to give 'cot² A + 1 = cosec² A' (tag '0° < A ≤ 90°'). The three identities stack in a golden frame.",
+        "lines": [
+          { "speaker": "NEO", "text": "Divide the same equation by AB squared instead, and you get one plus tan squared A equals sec squared A. This is true for A from 0 up to, but not including, 90 degrees." },
+          { "speaker": "NEO", "text": "Divide by BC squared, and you get cot squared A plus one equals cosec squared A, for A above 0 up to 90 degrees." },
+          { "speaker": "ZIPPY", "text": "Why leave out 90 and 0?" },
+          { "speaker": "NEO", "text": "Because tan and sec are not defined at 90, and cot and cosec are not defined at 0." }
+        ]
+      },
+      {
+        "animation": "Worked proof written line by line: 'LHS = sec A (1 − sin A)(sec A + tan A)', '= (1/cos A)(1 − sin A)(1/cos A + sin A/cos A)', '= (1 − sin A)(1 + sin A) / cos² A', '= (1 − sin² A) / cos² A', '= cos² A / cos² A', '= 1 = RHS  ∴ proved'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: prove that sec A into one minus sin A into sec A plus tan A equals one." },
+          { "speaker": "NEO", "text": "Write sec A as one by cos A, and tan A as sin A by cos A." },
+          { "speaker": "NEO", "text": "The bracket sec A plus tan A becomes one plus sin A, all over cos A. Multiplying, we get one minus sin A into one plus sin A, over cos squared A." },
+          { "speaker": "NEO", "text": "The top is one minus sin squared A, which is cos squared A. Cos squared A over cos squared A is one. Hence proved." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' clipboard: 'Start from one side (usually the messier one) and reach the other. Do not cross-multiply both sides.' Beside it, a strategy chip: 'Convert everything to sin and cos'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: in a proof, start from one side, usually the more complicated one, and simplify until it equals the other side." },
+          { "speaker": "NEO", "text": "When stuck, change everything into sin and cos. Examiners give step marks for each correct line." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. sin² A + cos² A = 1', '2. 1 + tan² A = sec² A', '3. 1 + cot² A = cosec² A — all from Pythagoras'. The identity machine prints '1' one last time.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: sin squared A plus cos squared A equals one." },
+          { "speaker": "NEO", "text": "Two: one plus tan squared A equals sec squared A." },
+          { "speaker": "NEO", "text": "Three: one plus cot squared A equals cosec squared A, and all three come straight from Pythagoras." },
+          { "speaker": "ZIPPY", "text": "So the machine was just doing Pythagoras in disguise!" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,225 @@
+[
+  {
+    "chapter_no": 6,
+    "chapter": "Lines and Angles",
+    "topic_no": 1,
+    "name": "Basic Terms and Types of Angles",
+    "scenes": [
+      {
+        "animation": "A cricket fielder named FIELDER stands at the boundary. The captain yells 'Move 30 degrees to your left!' and the fielder spins in a full confused circle. Zippy watches from the stands with popcorn.",
+        "lines": [
+          { "speaker": "FIELDER", "text": "Thirty degrees from what? Left of who?" },
+          { "speaker": "NEO", "text": "To talk about angles precisely, we first need a few basic terms." }
+        ]
+      },
+      {
+        "animation": "Three items build side by side: a segment with two endpoints 'A—B (line segment)', a segment with one endpoint and an arrow 'ray AB', and a line with arrows at both ends 'line AB'. Then three dots on one line labelled 'collinear' and three dots not on one line labelled 'non-collinear'. Finally, two rays leave a common point: 'arms' and 'vertex' labels appear.",
+        "lines": [
+          { "speaker": "NEO", "text": "A part of a line with two end points is a line segment. A part of a line with one end point is a ray." },
+          { "speaker": "NEO", "text": "If three or more points lie on the same line, they are collinear. Otherwise they are non-collinear." },
+          { "speaker": "NEO", "text": "An angle is formed when two rays start from the same end point. The rays are the arms, and the end point is the vertex." }
+        ]
+      },
+      {
+        "animation": "An angle-meter dial sweeps around, stopping at labelled zones: 'Acute: between 0° and 90°', 'Right: exactly 90°', 'Obtuse: between 90° and 180°', 'Straight: exactly 180°', 'Reflex: between 180° and 360°'. Each zone lights up in a different colour.",
+        "lines": [
+          { "speaker": "NEO", "text": "An acute angle lies between zero and ninety degrees. A right angle is exactly ninety." },
+          { "speaker": "NEO", "text": "An obtuse angle lies between ninety and one eighty. A straight angle is exactly one eighty." },
+          { "speaker": "NEO", "text": "And a reflex angle lies between one eighty and three sixty degrees." }
+        ]
+      },
+      {
+        "animation": "Two cards: 'Complementary: sum = 90°' and 'Supplementary: sum = 180°'. Worked example line by line: 'Complement of 35° = 90° − 35° = 55°', 'Supplement of 35° = 180° − 35° = 145°'. Then: 'Supplementary angles in ratio 2 : 3', '2k + 3k = 180°', '5k = 180°, k = 36°', 'Angles = 72° and 108°', 'Check: 72° + 108° = 180° ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two angles whose sum is ninety degrees are complementary. Two angles whose sum is one eighty are supplementary." },
+          { "speaker": "NEO", "text": "The complement of thirty-five degrees is ninety minus thirty-five, which is fifty-five degrees. Its supplement is one eighty minus thirty-five, which is one forty-five." },
+          { "speaker": "ZIPPY", "text": "What if two supplementary angles are in the ratio two is to three?" },
+          { "speaker": "NEO", "text": "Call them two k and three k. Then five k equals one eighty, so k is thirty-six." },
+          { "speaker": "NEO", "text": "The angles are seventy-two and one hundred eight degrees. Check: they add to one eighty." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Complementary → 90 (C comes before S, 90 before 180). Supplementary → 180 (S for Straight).'",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: don't mix them up. Complementary makes a corner, ninety degrees. Supplementary makes a straight line, one eighty degrees." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Segment: 2 endpoints; ray: 1 endpoint; line: none', '2. Acute, right, obtuse, straight, reflex', '3. Complementary = 90°, supplementary = 180°'. The fielder finally turns exactly 30° and catches the ball.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a segment has two end points, a ray has one, and a line has none." },
+          { "speaker": "NEO", "text": "Two: angles can be acute, right, obtuse, straight or reflex." },
+          { "speaker": "NEO", "text": "Three: complementary angles add to ninety, and supplementary angles add to one eighty." },
+          { "speaker": "FIELDER", "text": "Caught it! Thirty degrees, no confusion." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Lines and Angles",
+    "topic_no": 2,
+    "name": "Intersecting Lines, Adjacent Angles and the Linear Pair Axiom",
+    "scenes": [
+      {
+        "animation": "Railway tracks run side by side into the distance, never meeting. Beside them, two roads cross at a busy chowk with a traffic policeman in the middle. Zippy stands between the two scenes, looking back and forth.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why do roads cross but railway tracks never do?" },
+          { "speaker": "NEO", "text": "Because roads here are intersecting lines, and the rails are non-intersecting, or parallel, lines." }
+        ]
+      },
+      {
+        "animation": "Two lines cross at a point labelled 'intersecting'. Two parallel lines appear with several perpendicular segments drawn between them, all labelled the same length, captioned 'parallel lines: common perpendicular distance is the same everywhere'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two lines in a plane either intersect or do not intersect. Lines that do not intersect are called parallel lines." },
+          { "speaker": "NEO", "text": "The lengths of the common perpendiculars between two parallel lines are the same everywhere. This is the distance between them." }
+        ]
+      },
+      {
+        "animation": "Line AB with a ray OC standing on it at point O. Labels: '∠AOC and ∠BOC: common vertex O, common arm OC, non-common arms OA and OB on opposite sides → adjacent angles'. Then OA and OB glow as 'opposite rays', and the pair is stamped 'LINEAR PAIR'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two angles are adjacent if they have a common vertex, a common arm, and their non-common arms are on different sides of the common arm." },
+          { "speaker": "NEO", "text": "Here, angle AOC and angle BOC are adjacent. Their non-common arms, OA and OB, are opposite rays, so together they make a straight line." },
+          { "speaker": "NEO", "text": "Such adjacent angles form a linear pair." }
+        ]
+      },
+      {
+        "animation": "Axiom cards appear: 'Axiom 6.1: If a ray stands on a line, the sum of the two adjacent angles so formed is 180°.' 'Axiom 6.2: If the sum of two adjacent angles is 180°, their non-common arms form a line.' A bracket joins both: 'Linear Pair Axiom'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Axiom six point one: if a ray stands on a line, then the sum of the two adjacent angles so formed is one hundred eighty degrees." },
+          { "speaker": "NEO", "text": "Axiom six point two is the reverse: if the sum of two adjacent angles is one eighty degrees, then the non-common arms form a line." },
+          { "speaker": "NEO", "text": "Together, these are called the Linear Pair Axiom." }
+        ]
+      },
+      {
+        "animation": "Worked example: ray OC on line AB with '∠AOC : ∠BOC = 4 : 5'. Lines appear: '∠AOC + ∠BOC = 180° (Linear Pair Axiom)', '4k + 5k = 180°', '9k = 180°, k = 20°', '∠AOC = 80°, ∠BOC = 100°', 'Check: 80° + 100° = 180° ✓'. An 'EXAM TIP' tag: 'Write the reason: (Linear Pair Axiom)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: ray OC stands on line AB, and angle AOC to angle BOC is four is to five. Find both angles." },
+          { "speaker": "NEO", "text": "By the Linear Pair Axiom, they add to one eighty. So four k plus five k equals one eighty." },
+          { "speaker": "NEO", "text": "Nine k is one eighty, so k is twenty. The angles are eighty and one hundred degrees." },
+          { "speaker": "NEO", "text": "Exam tip: always write Linear Pair Axiom as the reason for that first step." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Parallel lines never meet; distance between them is constant', '2. Adjacent angles with opposite non-common arms form a linear pair', '3. Linear Pair Axiom: they add to 180°, and vice versa'. The traffic policeman waves Zippy across the chowk.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: parallel lines never meet, and the distance between them stays the same." },
+          { "speaker": "NEO", "text": "Two: adjacent angles whose non-common arms are opposite rays form a linear pair." },
+          { "speaker": "NEO", "text": "Three: by the Linear Pair Axiom, a linear pair adds to one eighty degrees, and the converse is also true." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Lines and Angles",
+    "topic_no": 3,
+    "name": "Vertically Opposite Angles",
+    "scenes": [
+      {
+        "animation": "A pair of scissors opens slowly. The blades form an X, and the angle between the handles and the angle between the blades both glow orange with the same number, '40°', flashing on each.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "When I open these scissors, the blade angle and the handle angle always match. Coincidence?" },
+          { "speaker": "NEO", "text": "Not a coincidence. It's a theorem. Vertically opposite angles are always equal." }
+        ]
+      },
+      {
+        "animation": "Lines AB and CD cross at O. Pairs are colour-coded: '∠AOC and ∠BOD' in orange, '∠AOD and ∠BOC' in blue, each pair labelled 'vertically opposite'. Title: 'Theorem 6.1: If two lines intersect each other, then the vertically opposite angles are equal'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When two lines AB and CD intersect at O, they form two pairs of vertically opposite angles." },
+          { "speaker": "NEO", "text": "Angle AOC and angle BOD are one pair. Angle AOD and angle BOC are the other." },
+          { "speaker": "NEO", "text": "Theorem six point one: if two lines intersect each other, then the vertically opposite angles are equal." }
+        ]
+      },
+      {
+        "animation": "Proof built step by step with reasons: '1. Ray OA stands on line CD: ∠AOC + ∠AOD = 180° (Linear Pair Axiom)', '2. Ray OD stands on line AB: ∠AOD + ∠BOD = 180° (Linear Pair Axiom)', '3. So ∠AOC + ∠AOD = ∠AOD + ∠BOD', '4. Subtract ∠AOD: ∠AOC = ∠BOD', '5. Similarly ∠AOD = ∠BOC'. The common ∠AOD fades out of both sides.",
+        "lines": [
+          { "speaker": "NEO", "text": "Proof. Ray OA stands on line CD, so angle AOC plus angle AOD is one eighty, by the Linear Pair Axiom." },
+          { "speaker": "NEO", "text": "Ray OD stands on line AB, so angle AOD plus angle BOD is also one eighty." },
+          { "speaker": "NEO", "text": "So angle AOC plus angle AOD equals angle AOD plus angle BOD." },
+          { "speaker": "NEO", "text": "Take away angle AOD from both sides. Angle AOC equals angle BOD." },
+          { "speaker": "NEO", "text": "In the same way, angle AOD equals angle BOC. Proved." }
+        ]
+      },
+      {
+        "animation": "Worked example: lines PQ and RS intersect at O with '∠POR : ∠ROQ = 5 : 7'. Lines appear: '∠POR + ∠ROQ = 180° (linear pair)', '5k + 7k = 180°, 12k = 180°, k = 15°', '∠POR = 75°, ∠ROQ = 105°', '∠SOQ = ∠POR = 75° (vert. opp.)', '∠POS = ∠ROQ = 105° (vert. opp.)'. All four angles light up around O.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: lines PQ and RS intersect at O. Angle POR to angle ROQ is five is to seven. Find all the angles." },
+          { "speaker": "NEO", "text": "They form a linear pair, so five k plus seven k is one eighty. Twelve k is one eighty, so k is fifteen." },
+          { "speaker": "NEO", "text": "Angle POR is seventy-five degrees, and angle ROQ is one hundred five degrees." },
+          { "speaker": "NEO", "text": "By vertically opposite angles, angle SOQ is seventy-five and angle POS is one hundred five." },
+          { "speaker": "ZIPPY", "text": "And all four add up to three sixty. Checked!" }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Vertically opposite = across the X, NOT side by side. Side-by-side angles form a linear pair.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: vertically opposite angles sit across the X from each other. Angles side by side are a linear pair, and add to one eighty." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Two intersecting lines make two pairs of vertically opposite angles', '2. Vertically opposite angles are equal (proof via linear pairs)', '3. Neighbouring angles add to 180°'. The scissors snip a paper X in celebration.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: two intersecting lines form two pairs of vertically opposite angles." },
+          { "speaker": "NEO", "text": "Two: vertically opposite angles are equal, which we proved using two linear pairs." },
+          { "speaker": "NEO", "text": "Three: angles next to each other at the crossing add to one eighty degrees." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Lines and Angles",
+    "topic_no": 4,
+    "name": "Lines Parallel to the Same Line",
+    "scenes": [
+      {
+        "animation": "Three runners on a school sports-day track, each in a straight lane. Lane 1 is parallel to lane 2, and lane 2 is parallel to lane 3. Zippy, holding a clipboard, asks whether lanes 1 and 3 might collide.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Lane one is parallel to lane two, and lane two is parallel to lane three. Could lanes one and three still crash?" },
+          { "speaker": "NEO", "text": "Never. Lines parallel to the same line are parallel to each other. Let's see why this helps." }
+        ]
+      },
+      {
+        "animation": "A quick recall card titled 'From earlier classes: a transversal cutting two parallel lines' shows eight angles. Pairs glow in turn: 'corresponding angles: equal', 'alternate interior angles: equal', 'interior angles on the same side: sum 180°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, recall from earlier classes. A transversal is a line that cuts two or more lines at distinct points." },
+          { "speaker": "NEO", "text": "When it cuts two parallel lines, corresponding angles are equal and alternate interior angles are equal." },
+          { "speaker": "NEO", "text": "And interior angles on the same side of the transversal add up to one hundred eighty degrees." }
+        ]
+      },
+      {
+        "animation": "Theorem card: 'Lines which are parallel to the same line are parallel to each other.' Diagram builds: line m ∥ line n, line l ∥ line n, then an arrow shows 'so l ∥ m'. Symbol '∥' is highlighted.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now the theorem: lines which are parallel to the same line are parallel to each other." },
+          { "speaker": "NEO", "text": "So if line l is parallel to line n, and line m is parallel to line n, then l is parallel to m." }
+        ]
+      },
+      {
+        "animation": "Worked example: three horizontal lines AB, CD, EF with 'AB ∥ CD, CD ∥ EF'. A transversal cuts all three. Angles y and z sit between CD and EF on the same side; x sits at AB in the position corresponding to z. Lines appear: 'y : z = 3 : 7', 'y + z = 180° (interior angles, same side)', '3k + 7k = 180°, k = 18°', 'y = 54°, z = 126°', 'AB ∥ EF (both ∥ CD)', 'x = z = 126° (corresponding angles)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: AB is parallel to CD, and CD is parallel to EF. A transversal cuts all three." },
+          { "speaker": "NEO", "text": "Angles y and z are interior angles on the same side between CD and EF, in the ratio three is to seven." },
+          { "speaker": "NEO", "text": "They add to one eighty, so three k plus seven k is one eighty. Ten k is one eighty, so k is eighteen." },
+          { "speaker": "NEO", "text": "That gives y equal to fifty-four degrees and z equal to one hundred twenty-six degrees." },
+          { "speaker": "NEO", "text": "Now AB and EF are both parallel to CD, so AB is parallel to EF. Angle x corresponds to z, so x is also one hundred twenty-six degrees." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'State the reason \"lines parallel to the same line are parallel to each other\" before using angles between AB and EF.' A red arrow points to the step 'AB ∥ EF'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: before you use angle facts between AB and EF, first write that they are parallel because both are parallel to CD. That step carries the mark." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Transversal + parallel lines: corresponding and alternate angles equal, same-side interior angles sum to 180°', '2. Lines parallel to the same line are parallel to each other', '3. Use it to link angles across three parallel lines'. The three runners cross the finish line in their own lanes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: with parallel lines, corresponding and alternate angles are equal, and same-side interior angles add to one eighty." },
+          { "speaker": "NEO", "text": "Two: lines parallel to the same line are parallel to each other." },
+          { "speaker": "NEO", "text": "Three: this lets you connect angles across three parallel lines." },
+          { "speaker": "ZIPPY", "text": "No crashes on sports day. Excellent!" }
+        ]
+      }
+    ]
+  }
+]

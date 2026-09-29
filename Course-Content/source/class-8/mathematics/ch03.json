@@ -1,0 +1,289 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "A Story of Numbers",
+    "topic_no": 1,
+    "name": "How Counting Began",
+    "scenes": [
+      {
+        "animation": "Reema flips through an old book; a paper covered in wedge-shaped marks flutters out. She runs to her father. A sepia map zooms to Mesopotamia in western Asia, around present-day Iraq, with a caption '≈ 4000 years ago'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Those scratchy wedges are numbers? They look like bird footprints!" },
+          { "speaker": "NEO", "text": "They are numbers from Mesopotamia, about 4000 years old. Let's go back even further, to the Stone Age." }
+        ]
+      },
+      {
+        "animation": "A Stone Age herder leads cows out to graze. For each cow passing the gate, a stick drops into a pile; arrows link cow to stick, one to one. In the evening, each returning cow takes back a stick, and one stick is left over with a worried herder.",
+        "lines": [
+          { "speaker": "NEO", "text": "Imagine a herder with no number names. How does he know all his cows came back?" },
+          { "speaker": "NEO", "text": "He keeps one stick for each cow. In the evening, he matches each returning cow to a stick." },
+          { "speaker": "NEO", "text": "A stick left over means a cow is missing. Matching each object to exactly one stick is called a one-to-one mapping." }
+        ]
+      },
+      {
+        "animation": "Three methods appear as cards: 'Sticks: unending, but bulky', 'Letters a to z: easy, but stops at 26', 'Symbols I, II, III, IV, V...'. A caption: 'Number system = a standard sequence with a fixed order'.",
+        "lines": [
+          { "speaker": "NEO", "text": "We could also count with letters: a for 1, b for 2, up to z for 26." },
+          { "speaker": "ZIPPY", "text": "And for 27 cows? The alphabet ran out!" },
+          { "speaker": "NEO", "text": "Exactly. We need a standard sequence with a fixed order that never ends. That is a number system." },
+          { "speaker": "NEO", "text": "Its written symbols are called numerals." }
+        ]
+      },
+      {
+        "animation": "A museum case shows the Lebombo bone with 29 notches, tagged 'South Africa, ≈ 44,000 years', and the Ishango bone, tagged 'Democratic Republic of Congo, 20,000–35,000 years'. The notches glow one by one.",
+        "lines": [
+          { "speaker": "NEO", "text": "One of the oldest methods is tally marks, notches cut on bone or cave walls." },
+          { "speaker": "NEO", "text": "The Lebombo bone from South Africa has 29 notches and is about 44,000 years old." },
+          { "speaker": "NEO", "text": "The Ishango bone from Congo is 20,000 to 35,000 years old." }
+        ]
+      },
+      {
+        "animation": "Puzzle card with Gumulgal words: '1 urapon, 2 ukasar, 3 ukasar-urapon, 4 ukasar-ukasar'. Zippy fills in '5 = ?' as 'ukasar-ukasar-urapon' and '6 = ukasar-ukasar-ukasar' with pairs of dots grouping in twos. Then a box of 7 dots appears; most viewers must count. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puzzle. The Gumulgal people of Australia said urapon for 1 and ukasar for 2. Ukasar-urapon is 3. What is 5?" },
+          { "speaker": "ZIPPY", "text": "Two plus two plus one. Ukasar-ukasar-urapon!" },
+          { "speaker": "NEO", "text": "Right. They counted in twos. Grouping made names shorter than tally marks." },
+          { "speaker": "NEO", "text": "Exam tip: remember the big idea here. Counting in groups of a fixed size is the first step towards efficient number systems." }
+        ]
+      },
+      {
+        "animation": "Recap board with a stick, a notched bone and the word 'ukasar'. Points: '1. One-to-one mapping', '2. Number system = standard sequence in fixed order; symbols = numerals', '3. Grouping (like counting in 2s) makes counting efficient'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: counting starts with one-to-one mapping." },
+          { "speaker": "NEO", "text": "Two: a number system is a standard sequence in a fixed order, and its written symbols are numerals." },
+          { "speaker": "NEO", "text": "Three: counting in groups, like the Gumulgal twos, was a big early idea." },
+          { "speaker": "ZIPPY", "text": "Ukasar-ukasar-ukasar cheers for that!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "A Story of Numbers",
+    "topic_no": 2,
+    "name": "Landmark Numbers and Roman Numerals",
+    "scenes": [
+      {
+        "animation": "A Roman soldier in a helmet, named MARCUS, stands at a market stall trying to multiply CCXXXI by MDCCCLII on a wax tablet. Steam rises from his helmet.",
+        "lines": [
+          { "speaker": "MARCUS", "text": "Multiply CCXXXI by MDCCCLII? By Jupiter, I need an abacus!" },
+          { "speaker": "NEO", "text": "Roman numerals were good for writing numbers, but hard for calculating. Let's see why." }
+        ]
+      },
+      {
+        "animation": "Seven tiles line up: 'I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000', each labelled 'landmark number'. Five tally marks collapse into a V, and ten into an X.",
+        "lines": [
+          { "speaker": "NEO", "text": "Most people can't recognise five or more objects at a glance. So a new symbol for a group helps." },
+          { "speaker": "NEO", "text": "The Romans gave symbols to landmark numbers: I, V, X, L, C, D and M, for 1, 5, 10, 50, 100, 500 and 1000." }
+        ]
+      },
+      {
+        "animation": "Worked example: '2367' splits into coins: 'M M C C C L X V I I'. The line writes '2367 = 1000 + 1000 + 100 + 100 + 100 + 50 + 10 + 5 + 1 + 1' and then 'MMCCCLXVII'. A side card shows 'IV = 5 − 1', 'XL = 50 − 10'.",
+        "lines": [
+          { "speaker": "NEO", "text": "To write 2367, take as many of the largest landmarks as possible." },
+          { "speaker": "NEO", "text": "Two thousands, three hundreds, one fifty, one ten, one five and two ones." },
+          { "speaker": "NEO", "text": "So 2367 is M M C C C L X V I I." },
+          { "speaker": "NEO", "text": "Four is written IV, one less than five. Forty is often XL, ten less than fifty." }
+        ]
+      },
+      {
+        "animation": "Addition puzzle: 'CCXXXII + CCCCXIII'. Symbols pour into bins: 'C: 6', 'X: 4', 'I: 5'. Five Is merge into V; five Cs merge into D, leaving one C. Result: 'DCXXXXV', then 'DCXLV = 645'. A check line: '232 + 413 = 645 ✓'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Let me try adding CCXXXII and CCCCXIII without converting!" },
+          { "speaker": "NEO", "text": "Count the symbols. Six Cs, four Xs and five Is." },
+          { "speaker": "NEO", "text": "Five Is make a V. Five Cs make a D, leaving one C. So we get D C X X X X V, which is 645." },
+          { "speaker": "NEO", "text": "Check: 232 plus 413 is 645. The regrouping is by 5 sometimes and by 2 other times, which is messy." }
+        ]
+      },
+      {
+        "animation": "Marcus tries 'V × L'; a pile of 5 Ls merges slowly into 'CCL'. Then 'VII × IX' shows a jumble of symbols finally settling as 'LXIII'. An 'Exam Tip' sticker: 'Roman system: landmark numbers, but no base and no zero'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Multiplication is worse. V times L is 250, written CCL. VII times IX is 63, written LXIII." },
+          { "speaker": "NEO", "text": "There is no simple rule, because the landmarks are not all powers of one number." },
+          { "speaker": "NEO", "text": "Exam tip: Roman numerals have no zero and no place value. That is why big numbers need more and more new symbols." }
+        ]
+      },
+      {
+        "animation": "Recap board with Marcus finally smiling. Points: '1. Landmark numbers: I V X L C D M', '2. Write numbers by taking the largest landmarks first', '3. Easy to write, hard to multiply'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the Roman system uses landmark numbers I, V, X, L, C, D and M." },
+          { "speaker": "NEO", "text": "Two: we write a number using as many of the largest landmarks as possible." },
+          { "speaker": "NEO", "text": "Three: grouping by landmarks is efficient for writing, but arithmetic is hard." },
+          { "speaker": "MARCUS", "text": "I'm keeping my abacus, thank you." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "A Story of Numbers",
+    "topic_no": 3,
+    "name": "The Idea of a Base",
+    "scenes": [
+      {
+        "animation": "Along the Nile around 3000 BCE, an Egyptian scribe carves symbols on a wall: a stroke for 1, a heel-bone arch for 10, a coil of rope for 100. Zippy tries to carve a squiggle and gets told off.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does this scribe only use a stroke, an arch and a rope?" },
+          { "speaker": "NEO", "text": "Because the Egyptians chose their landmark numbers very cleverly. Each one is ten times the last." }
+        ]
+      },
+      {
+        "animation": "Pebbles group into bundles: 10 ones make a ten, 10 tens make a hundred, 10 hundreds make a thousand. Labels: '1, 10, 100, 1000 = 10⁰, 10¹, 10², 10³'. The number 324 is carved as three ropes, two arches and four strokes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Start with 1. Ten ones make the next landmark, 10. Ten tens make 100, and so on." },
+          { "speaker": "NEO", "text": "So every landmark is a power of 10. 324 is three hundreds, two tens and four ones." }
+        ]
+      },
+      {
+        "animation": "Now bundles of 5: '1, 5, 25, 125, 625' labelled '5⁰, 5¹, 5², 5³, 5⁴'. Worked puzzle: '143 = ?' → '125 + 5 + 5 + 5 + 1 + 1 + 1', with a check '125 + 15 + 3 = 143 ✓'. A definition card: 'base-n system: landmarks 1, n, n², n³...'.",
+        "lines": [
+          { "speaker": "NEO", "text": "What if we bundle in fives instead? The landmarks become 1, 5, 25, 125 and 625." },
+          { "speaker": "NEO", "text": "Let's write 143. The largest landmark below it is 125. That leaves 18." },
+          { "speaker": "NEO", "text": "18 is three fives and three ones. So 143 is one 125, three 5s and three 1s." },
+          { "speaker": "NEO", "text": "When landmarks are the powers of a number n, we call it a base-n system. The Egyptian system is base 10, also called decimal." }
+        ]
+      },
+      {
+        "animation": "Two landmark tiles collide: '10² × 10³' and merge into '10⁵'. A base-5 pair '5 × 25 = 125' merges the same way. Then an Egyptian sum with 15 arches and 15 strokes regroups: ten strokes become an arch, ten arches become a rope.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here's the magic. Multiply two landmarks and you get another landmark. 100 times 1000 is 10 to the 5." },
+          { "speaker": "NEO", "text": "In addition, ten of any symbol always turn into the next one. The same rule every time." },
+          { "speaker": "ZIPPY", "text": "That's just like carrying over in our sums!" }
+        ]
+      },
+      {
+        "animation": "A medieval abacus board: lines for 1, 10, 100, 1000 with counters. 3426 appears as 3, 4, 2 counters, and the ones line shows one counter above the line worth 5 plus one below. Then an Egyptian scribe runs out of symbols after ten million, with a question mark. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Even Roman users later calculated on an abacus built on powers of 10." },
+          { "speaker": "NEO", "text": "But the Egyptian system had a problem. Bigger numbers needed brand new symbols for every new power of 10." },
+          { "speaker": "NEO", "text": "Exam tip: in a base-n system, no symbol appears n or more times, because n of them make the next landmark." }
+        ]
+      },
+      {
+        "animation": "Recap board with carved Egyptian symbols. Points: '1. Base-n: landmarks are 1, n, n², n³...', '2. Landmark × landmark = landmark', '3. Egyptian = base 10, but needs endless new symbols'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: in a base-n system, the landmarks are powers of n, starting from 1." },
+          { "speaker": "NEO", "text": "Two: the product of two landmarks is another landmark, which makes arithmetic easy." },
+          { "speaker": "NEO", "text": "Three: the Egyptian base-10 system still needed new symbols for ever larger powers." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "A Story of Numbers",
+    "topic_no": 4,
+    "name": "Place Value: Mesopotamia, Maya and China",
+    "scenes": [
+      {
+        "animation": "Zippy stares at a clock. The minute hand hits 60 and the hour hand ticks forward. A Mesopotamian scribe winks from a clay tablet.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why sixty minutes in an hour? Why not a hundred?" },
+          { "speaker": "NEO", "text": "Blame Mesopotamia. They counted in base 60, and we still use it for time." }
+        ]
+      },
+      {
+        "animation": "A clay tablet shows a nail symbol for 1 and a wedge for 10. Worked example: '7530 = 2 × 3600 + 5 × 60 + 30', check line '7200 + 300 + 30 = 7530 ✓'. The three groups slide into three columns labelled '3600s | 60s | 1s' and the column labels fade away.",
+        "lines": [
+          { "speaker": "NEO", "text": "They used a nail symbol for 1 and a wedge for 10, so they could write 1 to 59." },
+          { "speaker": "NEO", "text": "Let's write 7530. Two 3600s make 7200. That leaves 330, which is five 60s and 30." },
+          { "speaker": "NEO", "text": "Check: 7200 plus 300 plus 30 is 7530." },
+          { "speaker": "NEO", "text": "Their big idea: drop the landmark symbols. The position tells you whether a group counts 1s, 60s or 3600s." }
+        ]
+      },
+      {
+        "animation": "Two tablets look identical: a single nail symbol. One is read as '1', the other as '60', and a third as '3600'. Zippy scratches his head. Then a slanted double-wedge placeholder slides into the gap between groups.",
+        "lines": [
+          { "speaker": "NEO", "text": "This is a place value system. But there was a problem with blank spaces." },
+          { "speaker": "ZIPPY", "text": "One nail could mean 1, or 60, or 3600. How do you tell?" },
+          { "speaker": "NEO", "text": "You can't. Later Mesopotamians added a placeholder symbol for a gap in the middle, like our zero. But not at the end." }
+        ]
+      },
+      {
+        "animation": "A Mayan temple. Dots and bars stack vertically: bottom level for 1s, next for 20s, next for 360s. Puzzle: '77 = 3 × 20 + 17' shows three dots above three bars and two dots. A seashell symbol marks an empty level in '361 = 1 × 360 + 0 × 20 + 1'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In Central America, the Maya built their own place value system, written from bottom to top." },
+          { "speaker": "NEO", "text": "A dot meant 1 and a bar meant 5. 77 is three 20s and 17 ones." },
+          { "speaker": "NEO", "text": "Their third landmark was 360, not 400, and they used a seashell as a zero placeholder." }
+        ]
+      },
+      {
+        "animation": "Chinese counting rods on a board: vertical zong rods and horizontal heng rods alternate in columns. '2634' is laid out heng-zong-heng-zong, with labels '10³ 10² 10 1'. An 'Exam Tip' sticker: 'Place value + base + zero digit = no ambiguity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "China used rod numerals in base 10. Vertical zong and horizontal heng rods alternated place by place." },
+          { "speaker": "NEO", "text": "So 2634 is heng 2, zong 6, heng 3, zong 4. They also used a blank for an empty place." },
+          { "speaker": "NEO", "text": "Exam tip: a place value system needs a base and positions. Without a zero digit, blanks cause confusion." }
+        ]
+      },
+      {
+        "animation": "Recap board with a clay tablet, a Mayan shell and Chinese rods. Points: '1. Mesopotamia: base 60, position shows the landmark', '2. Blanks were confusing → placeholder', '3. Maya (seashell zero) and China (rods) also used place value'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: Mesopotamia used base 60 with position telling the landmark." },
+          { "speaker": "NEO", "text": "Two: blank spaces caused confusion, so a placeholder was invented." },
+          { "speaker": "NEO", "text": "Three: the Maya and the Chinese also built place value systems." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "A Story of Numbers",
+    "topic_no": 5,
+    "name": "Zero and the Hindu Number System",
+    "scenes": [
+      {
+        "animation": "A world map. Zippy tries to write 1729 in Roman, Egyptian and Mesopotamian styles, and the page fills with symbols. Then he writes '1729' in four neat digits and the page sparkles.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Four little digits and I'm done. Who invented this shortcut?" },
+          { "speaker": "NEO", "text": "It came from India. And the star of the story is zero." }
+        ]
+      },
+      {
+        "animation": "A place value chart: '375 = 3 × 10² + 7 × 10 + 5 × 1'. Then '305' shows a 0 sitting in the tens place like a guard. Ten digit tiles 0 to 9 line up with the label 'base 10, place value, zero as a digit'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Hindu number system is base 10 and uses place value. 375 is three hundreds, seven tens and five ones." },
+          { "speaker": "NEO", "text": "It has ten digits, 0 to 9, and one digit in each place. Zero fills empty places." },
+          { "speaker": "NEO", "text": "So 305 and 35 can never be confused." }
+        ]
+      },
+      {
+        "animation": "A timeline builds left to right: 'Bakhshali manuscript (c. 3rd century CE): zero as a dot', 'Aryabhata (c. 499 CE): computations with 10 digits', 'Brahmagupta (628 CE): rules for 0 as a number'. A small card shows '0 + a = a', 'a × 0 = 0'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Bakhshali manuscript, from around the third century CE, shows ten digits with zero written as a dot." },
+          { "speaker": "NEO", "text": "Aryabhata, around 499 CE, fully explained and computed with this system." },
+          { "speaker": "NEO", "text": "In 628 CE, Brahmagupta gave rules for zero as a number, like a number plus zero is the same number." }
+        ]
+      },
+      {
+        "animation": "Arrows sweep across the map: 'India → Arab world (≈ 800 CE)', with scholars Al-Khwarizmi (c. 825) and Al-Kindi (c. 830) holding books titled 'Hindu Numerals'; then 'Europe (≈ 1100 CE)', with Fibonacci around 1200 CE. A caption: 'Hindu numerals / Indian numerals / Hindu-Arabic numerals'.",
+        "lines": [
+          { "speaker": "NEO", "text": "By about 800 CE, the system reached the Arab world. Al-Khwarizmi wrote On the Calculation with Hindu Numerals." },
+          { "speaker": "NEO", "text": "Around 1200, Fibonacci urged Europe to adopt them. Europeans called them Arabic numerals, but Arab scholars called them Hindu numerals." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'If we had 8 fingers, how would we write 25?' Steps: '25 = 3 × 8 + 1', 'base 8: 31'. Then 'base 5: 25 = 1 × 25 + 0 × 5 + 0 × 1 → 100'. A cartoon eight-fingered alien waves. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puzzle. If humans had 8 fingers, we might count in base 8. How would we write 25?" },
+          { "speaker": "NEO", "text": "25 is three 8s and 1. So in base 8 it's written 3 1." },
+          { "speaker": "NEO", "text": "In base 5, 25 is exactly one 25, no fives and no ones. So it's 1 0 0." },
+          { "speaker": "NEO", "text": "Exam tip: know the order of big ideas. Grouping, landmark numbers, a base, place value, and finally zero as a digit and a number." }
+        ]
+      },
+      {
+        "animation": "Recap board with a glowing 0. Points: '1. Hindu system: base 10, place value, digits 0–9', '2. Bakhshali, Aryabhata (499 CE), Brahmagupta (628 CE)', '3. Spread via the Arab world to Europe'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: our system is base 10 with place value and ten digits, including zero." },
+          { "speaker": "NEO", "text": "Two: it grew in India through the Bakhshali manuscript, Aryabhata and Brahmagupta." },
+          { "speaker": "NEO", "text": "Three: it spread through the Arab world to Europe and then everywhere." },
+          { "speaker": "ZIPPY", "text": "Zero: the nothing that changed everything." }
+        ]
+      }
+    ]
+  }
+]

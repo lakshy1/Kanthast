@@ -1,0 +1,464 @@
+[
+  {
+    "chapter_no": 12,
+    "chapter": "Geography: Lifelines of National Economy",
+    "topic_no": 1,
+    "name": "Transport and Roadways",
+    "scenes": [
+      {
+        "animation": "Zippy orders a mango from a kirana shop app; the mango's journey plays in fast-forward: a truck from an orchard, a train, a highway, a delivery bike. Caption: 'Transport, communication and trade are complementary'.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "My mango travelled more than I did this year!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "That's because the movement of goods and services from their supply locations to demand locations needs transport. Efficient means of transport are prerequisites for fast development."
+          }
+        ]
+      },
+      {
+        "animation": "A road winds up a mountain, through a village and to a doorstep. Reasons pop up beside it: 'Cheaper construction than railways', 'Traverse dissected and undulating topography', 'Climb gradients and mountains like the Himalayas', 'Economical over short distances', 'Door to door service', 'Feeder to other modes'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "India has one of the largest road networks in the world. Roadways have an edge over railways: construction cost is much lower, roads can traverse dissected and undulating topography and climb gradients like the Himalayas, they are economical for few persons and small goods over short distances, and they provide door to door service."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Roads also act as a feeder to other modes of transport, linking railway stations, air and sea ports."
+          }
+        ]
+      },
+      {
+        "animation": "A map of India draws a glowing six-lane quadrilateral linking 'Delhi, Kolkata, Chennai, Mumbai', labelled 'Golden Quadrilateral Super Highways'. Then two lines cross it: 'North-South corridor: Srinagar to Kanyakumari' and 'East-West corridor: Silchar to Porbandar'. A badge reads 'NHAI'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "The government launched a major road development project linking Delhi, Kolkata, Chennai and Mumbai by six-lane Super Highways, called the Golden Quadrilateral. The North-South corridor links Srinagar in Jammu and Kashmir with Kanyakumari in Tamil Nadu, and the East-West corridor connects Silchar in Assam with Porbandar in Gujarat."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The major objective is to reduce the time and distance between the mega cities of India. These highway projects are implemented by the National Highway Authority of India, NHAI."
+          }
+        ]
+      },
+      {
+        "animation": "A road ladder with rungs: 'National Highways: Central Public Works Department', 'State Highways: State Public Works Department', 'District Roads: Zila Parishad', 'Other Roads: rural roads, Pradhan Mantri Grameen Sadak Yojana', 'Border Roads: Border Roads Organisation, 1960'. A BRO truck climbs a snowy pass.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "National Highways link extreme parts of the country and are maintained by the Central Public Works Department. State Highways link state capitals with district headquarters. District roads connect district headquarters with other places in the district."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Other roads link rural areas and villages with towns, and received special impetus under the Pradhan Mantri Grameen Sadak Yojana. Border Roads Organisation, established in 1960, builds strategically important roads along the northern and north-eastern borders."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Roads with their own organisation? Fancy."
+          }
+        ]
+      },
+      {
+        "animation": "A traffic jam in a city; a pothole swallows a scooter wheel; a sign flashes 'Road density: length of road per 100 sq km of area'. Then a board-tip sticky note appears.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "The length of road per 100 square kilometres of area is known as the density of roads. Roadways face problems too: the road network is inadequate for the volume of traffic, and roads are highly congested in cities."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: the Golden Quadrilateral cities and the two corridors are a favourite short answer. Learn all four cities and both corridor end points."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a highway sign: '1. Roads: cheaper, flexible, door to door, feeder to other modes', '2. Golden Quadrilateral: Delhi-Kolkata-Chennai-Mumbai; N-S and E-W corridors; NHAI', '3. Classes: National, State, District, Other, Border Roads'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: roadways are cheaper, flexible and give door to door service."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: the Golden Quadrilateral links Delhi, Kolkata, Chennai and Mumbai, crossed by the North-South and East-West corridors."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: roads are classified as National Highways, State Highways, District roads, other roads and Border roads."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "And my mango used at least three of them."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Geography: Lifelines of National Economy",
+    "topic_no": 2,
+    "name": "Railways and Pipelines",
+    "scenes": [
+      {
+        "animation": "Zippy rides on the roof of a long passenger train like a hero, until Neo waves him down into a proper seat. A banner behind the train: 'Railways: principal mode of transport for freight and passengers'.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Trains are the best. Chai, samosas and window seats!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Railways are the principal mode of transportation for freight and passengers in India. They also make it possible to conduct many activities like business, sightseeing and pilgrimage, along with transportation of goods over longer distances."
+          }
+        ]
+      },
+      {
+        "animation": "A relief map of India. Railway lines grow densely across the flat northern plains. They thin out and zig-zag through the Himalayas, cross sandy Rajasthan, and snake through the hills of the peninsula. A coastal line runs down the west coast labelled 'Konkan Railway'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "The distribution of the railway network is largely influenced by physiographic, economic and administrative factors."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The northern plains, with vast level land, high population density and rich agricultural resources, provided the most favourable conditions for railways. But a large number of rivers requiring construction of bridges posed some obstacles."
+          },
+          {
+            "speaker": "NEO",
+            "text": "In the hilly terrains of the peninsular region, railway tracks are laid through low hills, gaps or tunnels. The Himalayan mountainous regions are unfavourable because of high relief, sparse population and lack of economic opportunities. It was also difficult to lay tracks on the sandy plain of western Rajasthan, the swamps of Gujarat and the forested tracts of Madhya Pradesh, Chhattisgarh, Odisha and Jharkhand."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The Konkan railway along the west coast has facilitated the movement of passengers and goods in this most important economic region of India."
+          }
+        ]
+      },
+      {
+        "animation": "An underground cutaway reveals pipelines carrying crude oil, gas and slurry. Three pipelines draw on the map: 'Upper Assam to Kanpur via Guwahati, Barauni and Allahabad', 'Salaya (Gujarat) to Jalandhar via Viramgam, Mathura, Delhi and Sonipat', 'Gas pipeline: Hazira (Gujarat) to Jagdishpur (Uttar Pradesh) via Vijaipur (Madhya Pradesh)'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Pipelines are a new arrival on the transportation map of India. Earlier, they transported water to cities and industries. Now they carry crude oil, petroleum products and natural gas from oil and natural gas fields to refineries, fertiliser factories and big thermal power plants. Solids can also be transported through pipelines when converted into slurry."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The initial cost of laying pipelines is high, but the subsequent running costs are minimal. They also rule out trans-shipment losses or delays."
+          },
+          {
+            "speaker": "NEO",
+            "text": "There are three important networks. One runs from the oil field in upper Assam to Kanpur in Uttar Pradesh, via Guwahati, Barauni and Allahabad. Another runs from Salaya in Gujarat to Jalandhar in Punjab, via Viramgam, Mathura, Delhi and Sonipat. The third is a gas pipeline from Hazira in Gujarat, connected with Jagdishpur in Uttar Pradesh via Vijaipur in Madhya Pradesh."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Oil travelling underground with no traffic jams. Lucky oil."
+          }
+        ]
+      },
+      {
+        "animation": "A chalkboard shows two maps side by side: the dense rail web of the northern plains and a few thin lines through the Himalayas and the Thar desert. A question in chalk: 'Why is the rail network uneven?'",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Board tip: a classic question asks why the rail network is uneven. Answer with relief, population density and economic opportunities."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a train and a pipe: '1. Railways: principal mode for freight and passengers', '2. Network shaped by physiographic, economic and administrative factors', '3. Pipelines: high initial cost, minimal running cost; three major networks'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: railways are the principal mode of transport for freight and passengers."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: the network is dense in the plains and sparse in the mountains and deserts."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: pipelines cost a lot to lay but little to run, and India has three important networks."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Seat taken. Samosa acquired."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Geography: Lifelines of National Economy",
+    "topic_no": 3,
+    "name": "Waterways and Major Sea Ports",
+    "scenes": [
+      {
+        "animation": "Zippy floats down a river on a paper boat carrying a tiny cargo crate. A barge overtakes him, loaded with containers, and honks. Caption: 'Waterways: cheapest means of transport'.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Paper-boat logistics. Very eco-friendly!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Waterways are the cheapest means of transport. They are most suitable for carrying heavy and bulky goods, and are fuel-efficient and environment friendly."
+          }
+        ]
+      },
+      {
+        "animation": "The map of India highlights three national waterways step by step: 'NW-1: Ganga, Haldia to Allahabad, 1620 km', 'NW-2: Brahmaputra, Sadiya to Dhubri, 891 km', 'NW-3: West-Coast Canal in Kerala, Kottapuram to Kollam, 205 km'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Some important national waterways are: the Ganga river between Haldia and Allahabad, 1620 kilometres, as National Waterway Number 1; the Brahmaputra river between Sadiya and Dhubri, 891 kilometres, as National Waterway Number 2; and the West-Coast Canal in Kerala, from Kottapuram to Kollam, 205 kilometres, as National Waterway Number 3."
+          }
+        ]
+      },
+      {
+        "animation": "A coastline map of India. Ports pop up on the west coast from north to south with short tags: 'Kandla (Kachchh): first port after Independence; tidal port', 'Mumbai: biggest port with a spacious natural and well-sheltered harbour', 'Jawaharlal Nehru port: planned to decongest Mumbai', 'Marmagao (Goa): premier iron ore exporting port', 'New Mangalore: exports iron ore from Kudremukh', 'Kochi: at the entrance of a lagoon, natural harbour'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "With a long coastline, India has major sea ports that handle most of its foreign trade. On the west coast, Kandla in Kachchh was the first port developed soon after Independence, to ease the volume of trade on Mumbai port after the loss of Karachi port to Pakistan. It is a tidal port."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Mumbai is the biggest port with a spacious natural and well-sheltered harbour. Jawaharlal Nehru port was planned to decongest Mumbai. Marmagao port in Goa is the premier iron ore exporting port. New Mangalore port exports iron ore concentrates from Kudremukh mines, and Kochi is the extreme south-western port, located at the entrance of a lagoon with a natural harbour."
+          }
+        ]
+      },
+      {
+        "animation": "Ports now pop up along the east coast, south to north: 'Tuticorin (Tamil Nadu): natural harbour', 'Chennai: one of the oldest artificial ports', 'Visakhapatnam: deepest landlocked and well-protected port', 'Paradip (Odisha): specialises in iron ore export', 'Kolkata: inland riverine port', 'Haldia: subsidiary port to relieve Kolkata'. A cartoon compass spins and shouts 'Map work!'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "On the east coast, Tuticorin port in Tamil Nadu has a natural harbour and rich hinterland. Chennai is one of the oldest artificial ports of the country. Visakhapatnam is the deepest landlocked and well-protected port."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Paradip port in Odisha specialises in the export of iron ore. Kolkata is an inland riverine port, and Haldia port was developed as a subsidiary port to relieve growing pressure on Kolkata port."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Wait, Kolkata is a sea port that isn't on the sea?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Right. It is on the Hugli river. Board tip: map work asks you to locate the major sea ports, Kandla, Mumbai, Marmagao, New Mangalore, Kochi, Tuticorin, Chennai, Visakhapatnam, Paradip and Haldia."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with an anchor icon: '1. Waterways: cheapest, fuel-efficient; NW-1 Ganga, NW-2 Brahmaputra, NW-3 West-Coast Canal', '2. West coast ports: Kandla, Mumbai, JNPT, Marmagao, New Mangalore, Kochi', '3. East coast ports: Tuticorin, Chennai, Visakhapatnam, Paradip, Kolkata, Haldia'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: waterways are the cheapest means of transport, with three important national waterways."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: Kandla was the first port after Independence, and Mumbai is the biggest."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: Visakhapatnam is the deepest landlocked port, and Kolkata is an inland riverine port."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "My paper boat is now officially a minor port."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Geography: Lifelines of National Economy",
+    "topic_no": 4,
+    "name": "Airways and Communication",
+    "scenes": [
+      {
+        "animation": "Zippy tries to reach a friend in the north-east by bouncing across mountains and rivers, exhausted. A plane zooms overhead and delivers a postcard in seconds. Caption: 'Fastest, most comfortable and prestigious'.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Mountains, forests, rivers. My legs quit."
+          },
+          {
+            "speaker": "NEO",
+            "text": "That is why air travel matters. It is the fastest, most comfortable and prestigious mode of transport. It can cover very difficult terrains like high mountains, dreary deserts, dense forests and long oceanic stretches with great ease."
+          }
+        ]
+      },
+      {
+        "animation": "A plane lands in the north-eastern hills. A helicopter labelled 'Pawan Hans' hovers over an offshore oil rig marked 'ONGC'. A second tag reads 'Air India: domestic and international air services'. Map-work pins for international airports appear: 'Amritsar (Raja Sansi)', 'Delhi (Indira Gandhi International)', 'Mumbai (Chhatrapati Shivaji)', 'Chennai (Meenambakkam)', 'Kolkata (Netaji Subhash Chandra Bose)', 'Hyderabad (Rajiv Gandhi)'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Air travel has made access easier in the north-eastern part of the country, marked by big rivers, dissected relief, dense forests, frequent floods and international frontiers."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Air India provides domestic and international air services. Pawan Hans Helicopters Limited provides helicopter services to the Oil and Natural Gas Corporation in its offshore operations, to inaccessible areas and difficult terrains. Air travel is not within the reach of the common people, except in the north-eastern states where special provisions are made."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: map work asks you to locate the international airports at Amritsar, Delhi, Mumbai, Chennai, Kolkata and Hyderabad."
+          }
+        ]
+      },
+      {
+        "animation": "A giant red post box opens and letters sort themselves into two trays: 'First class mail: cards and envelopes, airlifted' and 'Second class mail: book packets, newspapers, periodicals; surface mail'. Six coloured channels branch out: 'Rajdhani', 'Metro', 'Green', 'Business', 'Bulk mail', 'Periodical'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "The Indian postal network is the largest in the world. It handles parcels as well as personal written communications. Cards and envelopes are first class mail and are airlifted between stations covering both land and air."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Second class mail includes book packets, registered newspapers and periodicals, carried by surface mail. To facilitate quick delivery in large towns and cities, six mail channels have been introduced: Rajdhani channel, Metro channel, Green channel, Business channel, Bulk mail channel and Periodical channel."
+          }
+        ]
+      },
+      {
+        "animation": "A telephone line stretches across villages, with a tag 'STD facility'. Then a living room: a radio labelled 'All India Radio', a TV labelled 'Doordarshan', a stack of newspapers in many languages, and a film reel stamped 'Central Board of Film Certification'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "India has one of the largest telecom networks in Asia. STD facility is available in most places, and India has integrated the development in space technology with communication technology."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Mass communication provides entertainment and creates awareness among people. All India Radio broadcasts a variety of programmes in national, regional and local languages. Doordarshan, the national television channel of India, is one of the largest terrestrial networks in the world."
+          },
+          {
+            "speaker": "NEO",
+            "text": "India publishes a large number of newspapers and periodicals, and is the largest producer of feature films in the world. The Central Board of Film Certification is the authority to certify both Indian and foreign films."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Movies are geography too? Best chapter ever."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a plane, a post box and a TV: '1. Airways: fastest; Air India, Pawan Hans; six international airports on the map', '2. Postal network: largest in the world; first and second class mail; six channels', '3. Mass media: AIR, Doordarshan, newspapers, films'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: airways are the fastest mode and crucial for the north-east."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: India's postal network is the largest in the world, with six special mail channels."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: radio, television, newspapers and films connect and inform the country."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Postcard sent. Legs resting."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Geography: Lifelines of National Economy",
+    "topic_no": 5,
+    "name": "International Trade and Tourism as a Trade",
+    "scenes": [
+      {
+        "animation": "Zippy runs a tiny chai stall and swaps cups of chai for biscuits with a neighbouring stall. The scene zooms out to ships swapping containers between India and other countries. Caption: 'Trade: exchange of goods among people, states and countries'.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "I just traded two chais for a packet of biscuits. Am I an economist now?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "You are a trader. The exchange of goods among people, states and countries is referred to as trade. The market is the place where such exchanges take place."
+          }
+        ]
+      },
+      {
+        "animation": "Two arrows appear: 'Local trade: in cities, towns and villages', 'State level trade: between two or more states', and a globe arrow 'International trade: between two or more countries, through sea, air or land routes'. A caption: 'Economic barometer of a country'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Trade between two countries is called international trade. It may take place through sea, air or land routes. Local trade is carried on in cities, towns and villages, and state level trade is carried between two or more states."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Advancement of international trade of a country is an index of its economic prosperity. It is therefore considered the economic barometer for a country."
+          }
+        ]
+      },
+      {
+        "animation": "A balance scale tips back and forth. When the 'Exports' pan is heavier, a green label reads 'Favourable balance of trade'. When 'Imports' is heavier, a red label reads 'Unfavourable balance of trade'. Tags drift by: 'India: trading partner with many countries and blocs'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Exports and imports are the components of trade. The balance of trade of a country is the difference between its exports and imports."
+          },
+          {
+            "speaker": "NEO",
+            "text": "When the value of exports exceeds the value of imports, it is called a favourable balance of trade. If the value of imports exceeds the value of exports, it is termed an unfavourable balance of trade."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So selling more chai than I buy biscuits is favourable. Got it."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: examiners often ask you to define balance of trade and distinguish favourable from unfavourable. Keep the definitions exact."
+          }
+        ]
+      },
+      {
+        "animation": "A tourist family arrives at a heritage fort, then a beach, then a hill station and a yoga retreat. Icons pop up: 'Foreign exchange', 'Direct and indirect employment', 'National integration', 'Support to local handicrafts and cultural pursuits', 'International understanding'. Tour types appear as badges: 'Heritage', 'Eco', 'Adventure', 'Cultural', 'Medical', 'Business'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Tourism in India has grown substantially over the last few decades. It gives direct and indirect employment to millions of people and earns foreign exchange."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Tourism also promotes national integration, provides support to local handicrafts and cultural pursuits, and helps in the development of international understanding about our culture and heritage."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Foreign tourists visit India for heritage tourism, eco tourism, adventure tourism, cultural tourism, medical tourism and business tourism."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a globe, a balance scale and a suitcase: '1. Trade: local, state level and international; economic barometer', '2. Balance of trade: favourable when exports exceed imports, unfavourable when imports exceed exports', '3. Tourism: jobs, foreign exchange, national integration, handicrafts'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: international trade is the economic barometer of a country."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: balance of trade is the difference between exports and imports, and it can be favourable or unfavourable."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: tourism creates jobs, earns foreign exchange and brings the country together."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Chai stall now accepting tourists. Foreign exchange welcome."
+          }
+        ]
+      }
+    ]
+  }
+]

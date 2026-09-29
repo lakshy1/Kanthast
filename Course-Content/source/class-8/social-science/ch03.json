@@ -1,0 +1,297 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "The Rise of the Marathas",
+    "topic_no": 1,
+    "name": "The Marathas and the Rise of Chhatrapati Shivaji",
+    "scenes": [
+      {
+        "animation": "Zippy zooms up a steep mountain with a picnic basket and lands at the grand stone entrance of Raigad Fort. Neo flutters beside him as a golden caption appears: 'Raigad, 1674: a coronation that began an empire'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Great picnic spot, Neo! Nice view, big gate, zero crowds." },
+          { "speaker": "NEO", "text": "This is Raigad Fort, Zippy. In 1674, a king was crowned right here, and it marked the formal beginning of the Maratha Empire." },
+          { "speaker": "ZIPPY", "text": "Okay, picnic postponed. Who were these Marathas?" }
+        ]
+      },
+      {
+        "animation": "An outline map of India appears; the Deccan plateau glows orange and present-day Maharashtra is shaded darker with the label 'Marathi'. A pin drops at 'Devagiri (Daulatabad)' with a small Yadava banner, which is then pushed aside by an arrow labelled 'Khilji Sultanate, early 14th century'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Marathas are people native to the Deccan plateau, mainly present-day Maharashtra." },
+          { "speaker": "NEO", "text": "They are identified with their language, Marathi, which has a rich literary history going back to the 12th century." },
+          { "speaker": "NEO", "text": "In the 13th century, the Yadava dynasty ruled most of Maharashtra from Devagiri, today's Daulatabad. In the early 14th century, the Khilji Sultanate of Delhi overcame them." }
+        ]
+      },
+      {
+        "animation": "Four friendly saint figures appear on a stage with name tags: Dnyaneshwar, Namdev, Tukaram, Ramdas. Scrolls labelled 'Upanishads' and 'Bhagavad Gita' float into their hands and come out as books labelled 'Marathi', which fly to villagers in a crowd.",
+        "lines": [
+          { "speaker": "NEO", "text": "Through all these political changes, the bhakti tradition stayed alive. Bhakti means devotion to the divine." },
+          { "speaker": "NEO", "text": "Saints like Dnyaneshwar, Namdev, Tukaram and Ramdas helped translate texts like the Upanishads and the Bhagavad Gita into Marathi, so ordinary people could understand them." },
+          { "speaker": "NEO", "text": "This gave Maratha society a strong cultural foundation, which later helped it organise into a political power." }
+        ]
+      },
+      {
+        "animation": "A timeline arrow draws itself left to right. A marker pops up at '1630: Birth of Chhatrapati Shivaji' with a family card 'Bhonsle clan: Shahji + Jijabai', then a second marker '1646: Beginning of his rule (age 16)'. A small glossary card slides in: 'Jagir = land given for service; holder collects taxes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Chhatrapati Shivaji was born in 1630 in the Bhonsle clan, to Shahji and Jijabai." },
+          { "speaker": "NEO", "text": "His father served the Deccan sultanates, so Shivaji grew up in the family jagir at Pune, guided by Jijabai and trusted officials." },
+          { "speaker": "ZIPPY", "text": "Jagir? Is that a kind of jalebi?" },
+          { "speaker": "NEO", "text": "Ha! No. A jagir was land given by a ruler as a reward for service. The holder collected taxes from it." },
+          { "speaker": "NEO", "text": "At just 16, Shivaji began capturing neglected forts around Pune and strengthening them. His dream was Swarajya, a sovereign kingdom of his own." }
+        ]
+      },
+      {
+        "animation": "The camera pans to the west coast; ships with saffron flags sail out from 'Sindhudurg' as the timeline adds '1657: Founding of the Maratha navy'. Then a forested hill labelled 'Pratapgad' appears; tiny Maratha soldiers hide among trees and dart out in quick arrows around a large marching army.",
+        "lines": [
+          { "speaker": "NEO", "text": "As his kingdom reached the west coast, Shivaji founded a navy in 1657. This was revolutionary, because the Bijapur Sultanate had no full-time navy and the Mughals used one very little." },
+          { "speaker": "NEO", "text": "On land, he used guerrilla warfare: small groups using speed, surprise and knowledge of the terrain to defeat bigger armies." },
+          { "speaker": "NEO", "text": "Bijapur sent its veteran general Afzal Khan. At a meeting at the foot of Pratapgad fort, Shivaji killed Afzal Khan, and his hidden soldiers routed the Khan's army." },
+          { "speaker": "NEO", "text": "Exam tip: don't mix up 1630, his birth, with 1646, the start of his rule. Both appear on the chapter timeline." }
+        ]
+      },
+      {
+        "animation": "Recap board shaped like a fort wall with a saffron flag. Three stone blocks slide in: '1. Marathas: Deccan people, Marathi language, bhakti roots', '2. Shivaji: born 1630, rule from 1646, dream of Swarajya', '3. Navy (1657) + guerrilla warfare'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the Marathas are Deccan people who speak Marathi, and bhakti saints gave them a strong cultural foundation." },
+          { "speaker": "NEO", "text": "Two: Chhatrapati Shivaji, born in 1630, began his rule at 16 with the dream of Swarajya." },
+          { "speaker": "NEO", "text": "Three: he built a navy in 1657 and used guerrilla warfare against bigger armies." },
+          { "speaker": "ZIPPY", "text": "Now can we have the picnic?" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "The Rise of the Marathas",
+    "topic_no": 2,
+    "name": "Chhatrapati Shivaji: From Surat to the Coronation",
+    "scenes": [
+      {
+        "animation": "In a busy Mughal camp at night, Zippy tiptoes around tents. Suddenly torches flare, a small band of Maratha riders sweeps in and out, and a startled nobleman escapes over a tent wall. A caption reads 'The night raid on Shaista Khan'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A tiny group attacks a huge army camp at night? That's either brave or bonkers!" },
+          { "speaker": "NEO", "text": "It was a clever plan. The Mughal nobleman Shaista Khan had attacked Shivaji's lands for three years with a big army." },
+          { "speaker": "NEO", "text": "Shivaji raided his camp at night with only a few soldiers. The Khan barely escaped, losing a few fingers, and quickly left Maharashtra." }
+        ]
+      },
+      {
+        "animation": "A glossary card flips: 'Surgical strike = attack on one specific target with minimal damage to others'. A map of western India draws itself; an arrow travels from Pune north to 'Surat (Mughal port, Gujarat)', where a treasure chest labelled 'about 1 crore rupees' opens, while a temple and a house labelled 'Mohandas Parekh' stay untouched with green ticks.",
+        "lines": [
+          { "speaker": "NEO", "text": "This daring raid resembles a modern surgical strike, an attack on one specific target." },
+          { "speaker": "NEO", "text": "In return for those years of attacks, Shivaji sacked Surat, a wealthy Mughal port in present-day Gujarat, and took treasure worth almost one crore rupees." },
+          { "speaker": "NEO", "text": "But he did not attack religious places, and he spared the house of Mohandas Parekh, a charitable man. The news even reached the London Gazette in England." }
+        ]
+      },
+      {
+        "animation": "A Mughal banner with 'Jai Singh' marches to 'Purandar Fort (near Pune)', and a treaty scroll unrolls as part of the Maratha territory on the map fades. Then a scene at the Agra court shows Shivaji walking out; guards check big fruit baskets, then yawn and stop checking, and two baskets roll away out of the gate. The timeline adds '1666: Imprisonment at, and escape from, Agra'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Aurangzeb then sent Jai Singh, a distinguished Rajput general. Shivaji had to accept defeat at Purandar Fort, sign a treaty and give up a big part of his kingdom." },
+          { "speaker": "NEO", "text": "At the Mughal court in Agra, he was insulted and put under house arrest." },
+          { "speaker": "ZIPPY", "text": "So how did he get out? Dig a tunnel?" },
+          { "speaker": "NEO", "text": "Sweeter than that. He sent out baskets of fruits and sweets as gifts. The guards stopped checking them, and Shivaji and his son Sambhaji escaped hidden inside the baskets." }
+        ]
+      },
+      {
+        "animation": "Back at Raigad, a grand coronation with a throne and a Vedic fire; a title banner unfurls: 'Shri Raja Shiva Chhatrapati'. The timeline adds '1674: Coronation at Raigad' in gold, and a new calendar page labelled 'Rajyabhisheka shaka' tears off.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1674, Shivaji was crowned with full Vedic rites at the mountain fortress of Raigad." },
+          { "speaker": "NEO", "text": "His title became Shri Raja Shiva Chhatrapati, and he started his own era, the Rajyabhisheka shaka." },
+          { "speaker": "NEO", "text": "Exam tip: 1674, the coronation at Raigad, is the most asked date in this chapter. It marks the formal beginning of the Maratha Empire." }
+        ]
+      },
+      {
+        "animation": "The map of Fig. 3.9 builds step by step: first the Arabian Sea and Bay of Bengal, then pins for Pune, Raigad, Pratapgad, Sindhudurg and Vijaydurg on the west; then an arrow sweeps south in 1677 to Gingee and Vellore, shading the new area. A second colour marks 'Thanjavur (Ekoji)'. The timeline adds '1677: Dakshina digvijaya' and '1680: Death of Chhatrapati Shivaji'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Next came the dakshina digvijaya, the conquest of the South, covering parts of present-day northern Tamil Nadu and Karnataka." },
+          { "speaker": "NEO", "text": "This southern land later gave the Marathas strategic depth against the Mughals." },
+          { "speaker": "NEO", "text": "In the South, he also forbade the Dutch from trading Indians as slaves." },
+          { "speaker": "NEO", "text": "In 1680, a fever took his life at the age of fifty. His fame had spread so far that the Bundela prince Chhatrasal and the Hindi poet Bhushan drew inspiration from him." }
+        ]
+      },
+      {
+        "animation": "Recap scroll unrolls beside the finished timeline. Three points light up: '1. Shaista Khan raid and sack of Surat', '2. Purandar treaty; escape from Agra (1666)', '3. Coronation at Raigad (1674); conquest of the South (1677)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: Shivaji raided Shaista Khan's camp and sacked Surat, sparing religious places." },
+          { "speaker": "NEO", "text": "Two: after the treaty of Purandar, he was held at Agra and escaped in fruit baskets in 1666." },
+          { "speaker": "NEO", "text": "Three: he was crowned at Raigad in 1674 and then conquered parts of the South." },
+          { "speaker": "ZIPPY", "text": "Note to self: never let fruit baskets through without checking." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "The Rise of the Marathas",
+    "topic_no": 3,
+    "name": "The Marathas after Chhatrapati Shivaji",
+    "scenes": [
+      {
+        "animation": "Zippy stands with a stopwatch in a relay race; a baton marked 'Maratha power' passes from runner to runner. Neo holds a sign: 'After 1680: who carried the baton?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Shivaji is gone. So that's the end of the Marathas, right?" },
+          { "speaker": "NEO", "text": "Not at all, Zippy. The Marathas went on to become the largest Indian power before the British. Let's follow the relay." }
+        ]
+      },
+      {
+        "animation": "Family cards appear: 'Sambhaji' and 'Rajaram', sons of Shivaji. On a Deccan map, Mughal arrows capture 'Bijapur' and 'Golconda', then 'Raigad' turns grey. A dotted arrow runs from Maharashtra down to 'Gingee (Tamil Nadu)', and the timeline shows '1682-1707: Mughal-Maratha wars'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Shivaji's son Sambhaji became the next Chhatrapati. The Marathas were now the only obstacle to full Mughal control of the Deccan." },
+          { "speaker": "NEO", "text": "Aurangzeb conquered the Bijapur and Golconda Sultanates, captured and executed Sambhaji, and took Raigad." },
+          { "speaker": "NEO", "text": "Rajaram became Chhatrapati and moved to Gingee in present-day Tamil Nadu, so the war spread to south India." },
+          { "speaker": "NEO", "text": "The Marathas defended their forts firmly, and Aurangzeb died without defeating them." }
+        ]
+      },
+      {
+        "animation": "A portrait card of 'Tarabai, Rajaram's queen' glows as big Maratha arrows push north into Mughal lands. Then a structure diagram changes: a single central crown with spokes turns into a crown surrounded by several strong chiefs, with the biggest labelled 'Peshwa = prime minister'. Name tags 'Bajirao I' and 'Nanasaheb Peshwa' pop up.",
+        "lines": [
+          { "speaker": "NEO", "text": "Led by Tarabai, Rajaram's queen, the Marathas stopped defending and pushed deep into Mughal territory." },
+          { "speaker": "NEO", "text": "As they expanded, their state became more decentralised. The Chhatrapati stayed at the centre, but chiefs gained more power." },
+          { "speaker": "NEO", "text": "The most powerful was the Peshwa, a Persian word for prime minister. Peshwa Bajirao I and his son Nanasaheb Peshwa led the pan-Indian expansion." },
+          { "speaker": "NEO", "text": "The book also notes that more power for regional chiefs sometimes led to indiscipline, unlike Shivaji's values." }
+        ]
+      },
+      {
+        "animation": "A north India map builds: arrows reach 'Lahore', 'Attock' and 'Peshawar'. A red cross flashes on 'Panipat, 1761' with the label 'Maratha defeat', then a green arrow shows 'Delhi recaptured, 1771 (Mahadji Shinde)'. The timeline adds 1754, 1761 and 1771.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Did they ever lose big?" },
+          { "speaker": "NEO", "text": "Yes. After briefly reaching Lahore, Attock and even Peshawar, they suffered a disastrous defeat against the Afghans at Panipat in 1761." },
+          { "speaker": "NEO", "text": "But they recovered quickly under Peshwa Madhavrao I. Led by Mahadji Shinde, they recaptured Delhi in 1771 and held it for about three decades." }
+        ]
+      },
+      {
+        "animation": "The timeline finishes with three swords labelled 'Anglo-Maratha Wars, 1775-1818': the first glows green '1775-1782: Maratha victory', the last dims '1818: end of Maratha power'. A card shows 'Nana Phadnavis: first pan-Indian anti-British alliance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the late 18th century, the Marathas were the chief rivals of the British. Three Anglo-Maratha wars were fought between 1775 and 1818." },
+          { "speaker": "NEO", "text": "The Marathas won the first, and Nana Phadnavis organised the first pan-Indian alliance against the British." },
+          { "speaker": "NEO", "text": "But internal disunity and superior British organisation and technology ended Maratha power in 1818. So the British took India from the Marathas more than from anyone else." },
+          { "speaker": "NEO", "text": "Exam tip: Panipat in 1761 was a defeat, not the end. The end came with the Third Anglo-Maratha War in 1818." }
+        ]
+      },
+      {
+        "animation": "Recap board with a relay baton icon. Three points appear: '1. Sambhaji, Rajaram, Tarabai resisted the Mughals', '2. Peshwas led pan-Indian expansion; Panipat 1761, Delhi 1771', '3. Anglo-Maratha wars 1775-1818 ended Maratha power'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: Sambhaji, Rajaram and Tarabai kept resisting, and Aurangzeb never defeated the Marathas." },
+          { "speaker": "NEO", "text": "Two: under the Peshwas, they expanded across India, recovering from Panipat in 1761 to retake Delhi in 1771." },
+          { "speaker": "NEO", "text": "Three: the three Anglo-Maratha wars, from 1775 to 1818, ended Maratha power." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "The Rise of the Marathas",
+    "topic_no": 4,
+    "name": "Maratha Administration",
+    "scenes": [
+      {
+        "animation": "Zippy wears a paper crown and sits on a school-canteen chair, shouting orders to nobody. Neo lands with a clipboard: 'Running a kingdom needs a system!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Being a king is easy. I just sit here and give orders!" },
+          { "speaker": "NEO", "text": "Then who collects taxes, judges cases and guards the coast? Let's see how the Marathas ran their state." }
+        ]
+      },
+      {
+        "animation": "A chart builds step by step, as in Fig. 3.13: 'Chhatrapati, the Sovereign King' at the centre, then eight ministers pop out around him: Pradhan (Prime Minister), Amatya (Finance), Sachiv (Land Revenue), Mantri (Intelligence), Sumant (Foreign Affairs), Senapati (Commander-in-chief), Nyayadhish (Chief Justice), Panditrao (Religious Affairs). A banner reads 'Ashta Pradhan Mandal'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Shivaji ran a fairly centralised government. He abolished hereditary posts and paid every official a salary from the treasury, and transferred officials often." },
+          { "speaker": "NEO", "text": "He also gave pensions to widows of soldiers who died in battle." },
+          { "speaker": "NEO", "text": "He was helped by the Ashta Pradhan Mandal, a council of eight ministers, from the Pradhan, or prime minister, to the Nyayadhish, the chief justice." },
+          { "speaker": "NEO", "text": "Exam tip: learn the eight posts with their jobs. Amatya is finance, Senapati is commander-in-chief, Sumant is foreign affairs." }
+        ]
+      },
+      {
+        "animation": "A mango tree and a jackfruit tree stand safe with green shields while a woodcutter heads to a teak tree marked 'Navy'. Then a coin stack shows '25% chauth' plus '10% sardeshmukhi' being paid by a province, with a shield icon labelled 'protection' in return.",
+        "lines": [
+          { "speaker": "NEO", "text": "Shivaji told officials not to take even a blade of grass by force. He said teak could be cut for the navy with permission, but not mango or jackfruit trees, which people care for like their children." },
+          { "speaker": "NEO", "text": "From provinces not directly under them, the Marathas collected chauth, 25 per cent, and sardeshmukhi, an extra 10 per cent. In return, they protected those provinces." }
+        ]
+      },
+      {
+        "animation": "Three army blocks appear: infantry, cavalry and navy. The cavalry splits into 'Bargirs: horse paid by the state' and 'Shiledars: own horse and equipment'. A hill fort rises with a quote card: 'Forts are the core of the state' - Ramachandrapant Amatya, Ajnapatra.",
+        "lines": [
+          { "speaker": "NEO", "text": "The army had three parts: infantry, cavalry and navy." },
+          { "speaker": "ZIPPY", "text": "So all horse riders were the same?" },
+          { "speaker": "NEO", "text": "No. Bargirs got horses and equipment from the state. Shiledars paid for their own." },
+          { "speaker": "NEO", "text": "Forts controlled routes and sheltered the army. Shivaji's finance minister wrote in the Ajnapatra that forts are the core of the state." }
+        ]
+      },
+      {
+        "animation": "On the Arabian Sea, Maratha ships led by a captain labelled 'Kanhoji Angre' use the coastline to outmanoeuvre larger European ships. A 'cartaz' pass flips around so the Marathas are now issuing it. Then a trade map draws dotted routes from the Konkan coast to 'Mocha (Yemen)', 'Muscat (Oman)' and 'Malacca (Malaysia)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "At sea, Kanhoji Angre led the Marathas to many victories in the 18th century, using geography and smart tactics." },
+          { "speaker": "NEO", "text": "Europeans forced Indian ships to buy naval passes, called cartaz. The Marathas turned the tables and demanded passes from the Europeans." },
+          { "speaker": "NEO", "text": "For justice, the local panchayat of officials and prominent men gave verdicts, and people could appeal to a Maratha chief. Shivaji's ships also traded as far as Mocha, Muscat and Malacca." }
+        ]
+      },
+      {
+        "animation": "Recap board with icons of a crown, a fort and a ship. Points appear: '1. Salaried officials + Ashta Pradhan (8 ministers)', '2. Chauth 25% + sardeshmukhi 10%; bargirs and shiledars', '3. Forts, navy (Kanhoji Angre), panchayat justice, sea trade'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: Shivaji paid officials salaries and ruled with a council of eight ministers." },
+          { "speaker": "NEO", "text": "Two: the Marathas collected chauth and sardeshmukhi, and their cavalry had bargirs and shiledars." },
+          { "speaker": "NEO", "text": "Three: forts, a strong navy, panchayat justice and sea trade held the state together." },
+          { "speaker": "ZIPPY", "text": "Okay, I'm hiring eight ministers for the canteen." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "The Rise of the Marathas",
+    "topic_no": 5,
+    "name": "Cultural Revival and the Maratha Legacy",
+    "scenes": [
+      {
+        "animation": "Zippy watches a Bharatanatyam performance in a school function and claps wildly. A thought bubble connects the dancer to a Maratha palace in Thanjavur with a question mark.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, what does Bharatanatyam have to do with the Marathas? They were warriors!" },
+          { "speaker": "NEO", "text": "They were also great patrons of culture. Let's see how." }
+        ]
+      },
+      {
+        "animation": "A royal seal stamps onto a page, showing a Sanskrit inscription instead of a Persian one. A dictionary labelled 'Rajya-Vyavahara-Kosha' swaps Persian words for Sanskrit ones. A saffron flag rises over a rebuilt temple.",
+        "lines": [
+          { "speaker": "NEO", "text": "Shivaji's seal carried a Sanskrit inscription, a big change from the usual Persian seals." },
+          { "speaker": "NEO", "text": "He had a treatise called the Rajya-Vyavahara-Kosha made, giving Sanskrit words in place of Persian ones used in diplomacy." },
+          { "speaker": "NEO", "text": "A devout Hindu who respected other religions, he rebuilt damaged temples and supported Sanskrit and Marathi literature. His saffron flag was adopted by all Marathas." }
+        ]
+      },
+      {
+        "animation": "Two portrait cards: 'Tarabai' with arrows pointing north, and 'Ahilyabai Holkar' next to Indore. An India map lights up with temple, ghat and well icons from 'Kedarnath' in the north to 'Rameswaram' in the south, with special stars on 'Kashi Vishwanath, Varanasi' and 'Somnath, Gujarat', and a handloom icon on 'Maheshwar'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two remarkable women stand out. Tarabai was the architect of the northward Maratha expansion." },
+          { "speaker": "NEO", "text": "Ahilyabai Holkar governed a state around present-day Indore for thirty years, caring for the common people." },
+          { "speaker": "NEO", "text": "She built and restored hundreds of temples, ghats, wells and roads from Kedarnath to Rameswaram, including the Kashi Vishwanath and Somnath temples. She also promoted the Maheshwar weaving industry." }
+        ]
+      },
+      {
+        "animation": "The map zooms to 'Thanjavur, Tamil Nadu'. A card reads 'Ekoji, half-brother of Shivaji, late 17th century'. Then 'Serfoji II' appears surrounded by icons: a music note 'Carnatic music', a dancer 'Bharatanatyam', a medicine jar 'Dhanwantari Mahal', and a printing press. Three language bubbles, Tamil, Telugu and Marathi, overlap in the middle.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the South, Ekoji, Shivaji's half-brother, began Maratha rule in Thanjavur in the late 17th century." },
+          { "speaker": "NEO", "text": "Its most notable ruler, Serfoji II, supported musicians. In his time, modern Carnatic music took shape, along with the early stages of Bharatanatyam." },
+          { "speaker": "NEO", "text": "He set up the Dhanwantari Mahal, which gave free treatment using Indian and Western medicine, and started a printing press, the first by a native ruler." },
+          { "speaker": "ZIPPY", "text": "Warrior, dancer, doctor, printer. That's some resume!" }
+        ]
+      },
+      {
+        "animation": "A large map of India shades the Maratha-controlled areas of central and northern India. A small seed labelled 'Swarajya' sprouts into a young tree labelled 'Freedom movement'. A caption appears: 'We study the past to understand it.'",
+        "lines": [
+          { "speaker": "NEO", "text": "The Marathas challenged Mughal dominance and built the largest Indian empire before the British." },
+          { "speaker": "NEO", "text": "Their ideal of Swarajya later inspired Indians to believe they could govern themselves, planting early seeds of the freedom movement." },
+          { "speaker": "NEO", "text": "Exam tip: when asked about the Maratha legacy, write three points: largest Indian empire before the British, efficient administration, and the idea of Swarajya." }
+        ]
+      },
+      {
+        "animation": "Recap board decorated with a Thanjavur-style gold frame. Points appear: '1. Sanskrit seal, Rajya-Vyavahara-Kosha, temples rebuilt', '2. Tarabai and Ahilyabai Holkar', '3. Thanjavur under Serfoji II; Swarajya inspired freedom'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: Shivaji promoted Sanskrit and Marathi, and rebuilt temples." },
+          { "speaker": "NEO", "text": "Two: Tarabai led the northward expansion, and Ahilyabai Holkar restored temples across India." },
+          { "speaker": "NEO", "text": "Three: Thanjavur flourished under Serfoji II, and the ideal of Swarajya inspired the freedom movement." }
+        ]
+      }
+    ]
+  }
+]

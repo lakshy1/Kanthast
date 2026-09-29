@@ -1,0 +1,288 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "Quadrilaterals",
+    "topic_no": 1,
+    "name": "The Carpenter's Problem: Rectangles",
+    "scenes": [
+      {
+        "animation": "A carpenter's workshop. A carpenter holds an 8 cm wooden strip and a second blank strip, with a thread looped around their ends forming a wobbly, lopsided shape. Zippy tangles himself in the thread.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "She wants the thread to make a perfect rectangle. But the strips keep making wonky shapes!" },
+          { "speaker": "NEO", "text": "The strips are the diagonals. Let's deduce how they must be placed." }
+        ]
+      },
+      {
+        "animation": "Rectangle ABCD appears with diagonals AC and BD. Triangles ADC and DAB highlight in two colours, sharing side AD; tick marks show AB = CD and right angles at A and D. A stamp: 'SAS ⇒ AC = BD'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Suppose ABCD is a rectangle. Look at triangles ADC and DAB." },
+          { "speaker": "NEO", "text": "AB equals CD, the angles at A and D are both 90 degrees, and AD is common. So they are congruent by SAS." },
+          { "speaker": "NEO", "text": "That means AC equals BD. The other strip must also be 8 centimetres." }
+        ]
+      },
+      {
+        "animation": "Triangles AOB and COD light up at the crossing point O. Vertically opposite angles glow, then the alternate angle pair. A stamp: 'AAS ⇒ OA = OC, OB = OD'. Both diagonals split into two 4 cm halves.",
+        "lines": [
+          { "speaker": "NEO", "text": "Where should they cross? Compare triangles AOB and COD. Using the angles and the equal sides, they are congruent by AAS." },
+          { "speaker": "NEO", "text": "So OA equals OC, and OB equals OD. The diagonals cut each other into equal halves." },
+          { "speaker": "NEO", "text": "We say the diagonals of a rectangle bisect each other." }
+        ]
+      },
+      {
+        "animation": "Puzzle: two equal diagonals bisecting at O with a 60° angle. Step by step: '∠AOB = 60°', 'OA = OB ⇒ base angles equal = a', 'a + a + 60 = 180', '2a = 120', 'a = 60'. The neighbouring triangle gets angles 120°, 30°, 30°. At each corner '60° + 30° = 90°' flashes.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Does the angle between the strips matter? Let me cross them at 60 degrees." },
+          { "speaker": "NEO", "text": "In triangle AOB, OA equals OB, so the base angles are equal. Call each a." },
+          { "speaker": "NEO", "text": "a plus a plus 60 is 180, so 2a is 120 and a is 60." },
+          { "speaker": "NEO", "text": "The next triangle has a 120 degree angle, so its base angles are 30 each. Every corner is 60 plus 30, which is 90 degrees." },
+          { "speaker": "NEO", "text": "Try any angle x and the corners still add to 90. So any equal, bisecting diagonals make a rectangle." }
+        ]
+      },
+      {
+        "animation": "The carpenter ties two 8 cm strips at their midpoints and the thread snaps into a perfect rectangle. A small map pin marks Mozambique with farmers pegging out a house base the same way. An 'Exam Tip' sticker: 'Measuring gives a conjecture; deduction gives proof'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So the carpenter joins two equal strips at their midpoints. Farmers in Mozambique use this trick to lay out house bases." },
+          { "speaker": "NEO", "text": "Also, if all four angles are 90 degrees, the opposite sides are automatically equal. So a rectangle is simply a quadrilateral with all angles 90 degrees." },
+          { "speaker": "NEO", "text": "Exam tip: measuring a few rectangles only gives a conjecture. A congruence argument proves it for every rectangle." }
+        ]
+      },
+      {
+        "animation": "Recap board with the finished wooden frame. Points: '1. Rectangle: all angles 90°', '2. Opposite sides equal and parallel', '3. Diagonals equal and bisect each other'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a rectangle is a quadrilateral with all angles 90 degrees." },
+          { "speaker": "NEO", "text": "Two: its opposite sides are equal and parallel." },
+          { "speaker": "NEO", "text": "Three: its diagonals are equal and bisect each other, and equal bisecting diagonals always give a rectangle." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Quadrilaterals",
+    "topic_no": 2,
+    "name": "Squares and the Angle Sum of a Quadrilateral",
+    "scenes": [
+      {
+        "animation": "Two friends argue at a school canteen: 'I'm Indian!' 'I'm Malayali!' The same boy says 'I'm both!' A Venn diagram draws itself: a small 'Malayali' circle inside a big 'Indian' circle. Then the labels morph into 'Square' inside 'Rectangle'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How can someone be both Indian and Malayali?" },
+          { "speaker": "NEO", "text": "The same way a shape can be both a square and a rectangle. Every square is a rectangle, but not every rectangle is a square." }
+        ]
+      },
+      {
+        "animation": "Square ABCD with diagonals meeting at O. Triangles BOA and BOC are highlighted; sides BA = BC, OA = OC, BO common. A stamp 'SSS'. The two angles at O merge on a straight line: 'x + x = 180°, x = 90°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A square is a rectangle with all sides equal. So its diagonals are equal and bisect each other." },
+          { "speaker": "NEO", "text": "But there's more. Triangles BOA and BOC have all three sides equal, so they're congruent by SSS." },
+          { "speaker": "NEO", "text": "Their angles at O are equal and together make 180 degrees. So each is 90 degrees." }
+        ]
+      },
+      {
+        "animation": "In triangle ADC of the square, AD = DC with a right angle at D. Steps: '∠1 + ∠3 + 90 = 180', '∠1 = ∠3', '∠1 = ∠3 = 45°'. The diagonal splits each corner into two 45° wedges.",
+        "lines": [
+          { "speaker": "NEO", "text": "In triangle ADC, AD equals DC, so the two base angles are equal. Together they make 90." },
+          { "speaker": "NEO", "text": "So each is 45 degrees. The diagonals of a square bisect its angles." },
+          { "speaker": "NEO", "text": "To build a square, draw equal diagonals that bisect each other at right angles." }
+        ]
+      },
+      {
+        "animation": "Quadrilateral SOME with diagonal SM drawn, forming triangles SEM and SOM. Each triangle shows '180°'. Steps: '∠1 + ∠2 + ∠3 = 180°', '∠4 + ∠5 + ∠6 = 180°', 'total = 360°', and the angles regroup into the four corners.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now a rule for every quadrilateral. Draw a diagonal to split it into two triangles." },
+          { "speaker": "NEO", "text": "Each triangle's angles add to 180 degrees. Together that's 360." },
+          { "speaker": "NEO", "text": "The six triangle angles regroup into the four corners. So the angles of any quadrilateral add to 360 degrees." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Three angles are 90°. Can the fourth be 80°?' Steps: '90 + 90 + 90 + x = 360', '270 + x = 360', 'x = 90'. A red cross on '80°'. An 'Exam Tip' sticker: 'Angle sum = 360° for every quadrilateral, even a dented one'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can I draw a quadrilateral with three right angles and a fourth of 80 degrees?" },
+          { "speaker": "NEO", "text": "Let's check. 90 plus 90 plus 90 is 270. 360 minus 270 is 90." },
+          { "speaker": "NEO", "text": "The fourth angle must be 90. So three right angles force a rectangle." },
+          { "speaker": "NEO", "text": "Exam tip: the 360 degree rule also works for a dented, arrowhead-shaped quadrilateral. Split it along the inside diagonal." }
+        ]
+      },
+      {
+        "animation": "Recap board with a Venn diagram of Square inside Rectangle. Points: '1. Square: all angles 90°, all sides equal', '2. Diagonals equal, bisect at 90°, bisect the angles', '3. Angle sum of any quadrilateral = 360°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a square has all angles 90 degrees and all sides equal, so every square is a rectangle." },
+          { "speaker": "NEO", "text": "Two: its diagonals are equal, bisect each other at right angles, and bisect its angles." },
+          { "speaker": "NEO", "text": "Three: the angles of any quadrilateral add up to 360 degrees." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Quadrilaterals",
+    "topic_no": 3,
+    "name": "Parallelograms",
+    "scenes": [
+      {
+        "animation": "Zippy pushes the top of a rectangular photo frame sideways; it leans into a slanted shape while the sides stay parallel. The frame creaks, 'I'm still parallel!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Oops, I tilted the frame. Is it broken now?" },
+          { "speaker": "NEO", "text": "No, it's a parallelogram. Its opposite sides are still parallel." }
+        ]
+      },
+      {
+        "animation": "Construction animates step by step: 'AB = 4 cm' drawn, 'AD = 5 cm' at 30° to AB. A set-square slides to draw a line through D parallel to AB, and another through B parallel to AD; they meet at C.",
+        "lines": [
+          { "speaker": "NEO", "text": "A parallelogram is a quadrilateral whose opposite sides are parallel." },
+          { "speaker": "NEO", "text": "Let's build one. Draw AB of 4 centimetres and AD of 5 centimetres with 30 degrees between them." },
+          { "speaker": "NEO", "text": "Draw a line through D parallel to AB, and one through B parallel to AD. They meet at C." }
+        ]
+      },
+      {
+        "animation": "Angles fill in line by line: 'AB ∥ DC, AD transversal: ∠A + ∠D = 180°', '∠D = 180 − 30 = 150°', '∠B = 150°', '∠C = 30°'. Opposite corners pulse in matching colours.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now find the other angles. AB is parallel to DC, and AD cuts across them. So angle A plus angle D is 180." },
+          { "speaker": "NEO", "text": "Angle D is 180 minus 30, which is 150 degrees. In the same way, angle B is 150 and angle C is 30." },
+          { "speaker": "NEO", "text": "Adjacent angles add to 180, and opposite angles are equal." }
+        ]
+      },
+      {
+        "animation": "Diagonal BD splits the parallelogram into triangles ABD and CDB; alternate angles glow with double arcs and a stamp shows 'AAS ⇒ AD = CB, AB = CD'. Then both diagonals appear in parallelogram EASY, meeting at O, each split into equal halves.",
+        "lines": [
+          { "speaker": "NEO", "text": "Draw diagonal BD. Using alternate angles, triangles ABD and CDB are congruent." },
+          { "speaker": "NEO", "text": "So opposite sides are equal: AD is 5 centimetres and CB is 5 too." },
+          { "speaker": "NEO", "text": "With both diagonals drawn, another congruence shows they cut each other in half. The diagonals bisect each other." }
+        ]
+      },
+      {
+        "animation": "Zippy measures the two diagonals of the slanted frame: one long, one short. A thought bubble: 'Equal?' gets a cross. The Venn diagram grows: 'Parallelogram' ⊃ 'Rectangle' ⊃ 'Square'. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the diagonals are equal too, like a rectangle?" },
+          { "speaker": "NEO", "text": "No. In a slanted parallelogram, one diagonal is longer. They bisect each other, but are not equal." },
+          { "speaker": "NEO", "text": "Every rectangle is a parallelogram with all angles 90 degrees." },
+          { "speaker": "NEO", "text": "Exam tip: when naming congruent triangles, match the vertices in order. Triangle ABD matches CDB, not CBD." }
+        ]
+      },
+      {
+        "animation": "Recap board with the tilted frame. Points: '1. Opposite sides parallel and equal', '2. Adjacent angles add to 180°; opposite angles equal', '3. Diagonals bisect each other (not always equal)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a parallelogram has opposite sides parallel and equal." },
+          { "speaker": "NEO", "text": "Two: adjacent angles add to 180 degrees, and opposite angles are equal." },
+          { "speaker": "NEO", "text": "Three: its diagonals bisect each other, but need not be equal." },
+          { "speaker": "ZIPPY", "text": "So I didn't break the frame. I upgraded it." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Quadrilaterals",
+    "topic_no": 4,
+    "name": "The Rhombus",
+    "scenes": [
+      {
+        "animation": "A kite-shaped Diwali lantern frame of four equal sticks is squashed by Zippy into a diamond. It stays four equal sides. The frame says, 'Still all sides equal, but not a square!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Four equal sides, but no right angles. Is this a squashed square?" },
+          { "speaker": "NEO", "text": "It's a rhombus: a quadrilateral with all sides the same length." }
+        ]
+      },
+      {
+        "animation": "Construction: AB and AD equal, with 50° at A. A compass set to AB swings arcs from B and D, which cross at C. The equal sides get matching tick marks.",
+        "lines": [
+          { "speaker": "NEO", "text": "Draw two equal sides AB and AD with 50 degrees between them." },
+          { "speaker": "NEO", "text": "With the compass set to the same length, cut arcs from B and D. They meet at C." },
+          { "speaker": "NEO", "text": "Now we have a rhombus. Let's find its other angles." }
+        ]
+      },
+      {
+        "animation": "Diagonal BD splits the rhombus. In triangle ABD, the base angles are marked 'a'. Steps write: 'a + a + 50 = 180', '2a = 130', 'a = 65°'. Then corner B shows '65° + 65° = 130°'. Final angles: '50°, 130°, 50°, 130°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Draw diagonal BD. In a rhombus, a diagonal makes four equal angles with the sides. Call each one a." },
+          { "speaker": "NEO", "text": "In triangle ABD, a plus a plus 50 is 180. So 2a is 130, and a is 65 degrees." },
+          { "speaker": "NEO", "text": "Angle B is 65 plus 65, which is 130. The angles are 50, 130, 50 and 130 degrees." },
+          { "speaker": "NEO", "text": "Check: 50 plus 130 plus 50 plus 130 is 360." }
+        ]
+      },
+      {
+        "animation": "The equal angles along diagonal AE in rhombus GAME are alternate angles, so arrows show 'EM ∥ GA' and 'GE ∥ AM'. The rhombus joins the Venn diagram inside 'Parallelogram', overlapping 'Rectangle', with 'Square' in the overlap.",
+        "lines": [
+          { "speaker": "NEO", "text": "Those equal angles are alternate angles, so the opposite sides are parallel. Every rhombus is a parallelogram." },
+          { "speaker": "NEO", "text": "A square is both a rectangle and a rhombus. It sits where they overlap." }
+        ]
+      },
+      {
+        "animation": "Diagonals of rhombus GAME cross at O. Triangles GEO and MEO are shaded and a stamp shows 'SSS'. The angles at O merge: 'x + x = 180°, x = 90°'. An 'Exam Tip' sticker: 'Rhombus diagonals: perpendicular, not equal'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Do the rhombus diagonals cross at any special angle?" },
+          { "speaker": "NEO", "text": "Yes. Triangles GEO and MEO are congruent, so their angles at O are equal. They add to 180, so each is 90 degrees." },
+          { "speaker": "NEO", "text": "Exam tip: rhombus diagonals are perpendicular and bisect the angles, but they are usually not equal. Equal diagonals make it a square." }
+        ]
+      },
+      {
+        "animation": "Recap board with the lantern frame. Points: '1. Rhombus: all sides equal; it is a parallelogram', '2. Opposite angles equal; adjacent add to 180°', '3. Diagonals bisect each other at 90° and bisect the angles'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a rhombus has all sides equal, and every rhombus is a parallelogram." },
+          { "speaker": "NEO", "text": "Two: its opposite angles are equal and adjacent angles add to 180 degrees." },
+          { "speaker": "NEO", "text": "Three: its diagonals bisect each other at right angles and bisect its angles." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Quadrilaterals",
+    "topic_no": 5,
+    "name": "Playing with Quadrilaterals: Kites and Trapeziums",
+    "scenes": [
+      {
+        "animation": "Makar Sankranti rooftop. Zippy holds two cardboard triangles with sides 6 cm, 9 cm and 12 cm, flipping and joining them along the 12 cm side. They snap into a kite shape that catches the wind and flies.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I joined two triangles and made a kite. A real one!" },
+          { "speaker": "NEO", "text": "Mathematically, too. Joining triangles in different ways gives different quadrilaterals." }
+        ]
+      },
+      {
+        "animation": "Two equilateral triangles of side 8 cm join to form a rhombus with angles 60° and 120°. Two isosceles triangles 8, 8, 6 join one way into a rhombus and another way into a parallelogram, and mirror-joined into a kite.",
+        "lines": [
+          { "speaker": "NEO", "text": "Join two equilateral triangles of side 8 centimetres. All four sides are 8, so you get a rhombus with angles 60 and 120 degrees." },
+          { "speaker": "NEO", "text": "With two identical triangles, rotating one gives a parallelogram. Flipping one like a mirror image gives a kite." }
+        ]
+      },
+      {
+        "animation": "Kite ABCD with AB = BC and CD = DA, tick marks in two colours. Diagonal BD is drawn; triangles AOB and COB are compared, then 'AO = OC' and a right-angle mark at O appear.",
+        "lines": [
+          { "speaker": "NEO", "text": "A kite has two pairs of equal adjacent sides: AB equals BC, and CD equals DA." },
+          { "speaker": "NEO", "text": "The diagonal BD bisects the angles at B and D." },
+          { "speaker": "NEO", "text": "It also cuts the other diagonal in half, at right angles." }
+        ]
+      },
+      {
+        "animation": "Trapezium PQRS with PQ ∥ SR shown by arrows. A worked example builds: '∠S = 105°', '∠P = 180 − 105 = 75°'. Then an isosceles trapezium UVWX: perpendiculars from X and W make a rectangle XWZY in the middle; congruent triangles at the ends give '∠U = ∠V'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A trapezium has at least one pair of parallel opposite sides." },
+          { "speaker": "NEO", "text": "Along each non-parallel side, the two angles add to 180. If angle S is 105, angle P is 180 minus 105, which is 75 degrees." },
+          { "speaker": "NEO", "text": "If the non-parallel sides are equal, it's an isosceles trapezium, and its base angles are equal." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Isosceles trapezium, one base angle 80°. Find all angles.' Steps: '∠A = ∠B = 80°', '∠D = 180 − 80 = 100°', '∠C = 100°', 'check: 80 + 80 + 100 + 100 = 360 ✓'. An 'Exam Tip' sticker: 'Every rhombus is a kite; not every kite is a rhombus'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puzzle. An isosceles trapezium has a base angle of 80 degrees. Find the rest." },
+          { "speaker": "ZIPPY", "text": "The other base angle is also 80. Each top angle is 180 minus 80, so 100!" },
+          { "speaker": "NEO", "text": "Correct. Check: 80 plus 80 plus 100 plus 100 is 360." },
+          { "speaker": "NEO", "text": "Exam tip: every rhombus is a kite, but a kite need not be a rhombus." }
+        ]
+      },
+      {
+        "animation": "Recap board with the full family Venn diagram: Trapezium containing Parallelogram; Kite overlapping Parallelogram in Rhombus; Rectangle and Rhombus overlapping in Square. Points: '1. Joining triangles makes quadrilaterals', '2. Kite: diagonal bisects the other at 90°', '3. Trapezium: ≥ 1 pair of parallel sides'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: joining two identical triangles can give a rhombus, a parallelogram or a kite." },
+          { "speaker": "NEO", "text": "Two: in a kite, one diagonal bisects the other at right angles." },
+          { "speaker": "NEO", "text": "Three: a trapezium has at least one pair of parallel sides, and an isosceles trapezium has equal base angles." },
+          { "speaker": "ZIPPY", "text": "And my kite still has the best angles in the sky." }
+        ]
+      }
+    ]
+  }
+]

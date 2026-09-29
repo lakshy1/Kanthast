@@ -1,0 +1,285 @@
+[
+  {
+    "chapter_no": 6,
+    "chapter": "The Parliamentary System: Legislature and Executive",
+    "topic_no": 1,
+    "name": "Composition of the Parliament of India",
+    "scenes": [
+      {
+        "animation": "A school bus of Grade 8 students pulls up at the new Parliament building in Delhi. Zippy zooms around its soft triangular outline, tracing it with a glowing trail, while carvings of peacocks, lotuses and the Ashokan emblem shimmer on the walls.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "It's not square, it's not round. Is it a samosa?" },
+          { "speaker": "NEO", "text": "Ha! It's a soft triangle. The three-sided design reflects balance, inclusivity and purpose." },
+          { "speaker": "NEO", "text": "It even uses green construction to cut electricity use by 30 per cent." }
+        ]
+      },
+      {
+        "animation": "A split screen: the old circular building labelled 'Samvidhan Sadan, built 1920s' and the new 'Sansad Bhavan'. A counter ticks from '1st Lok Sabha, 1952' to '18th Lok Sabha, June 2024'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The people of India directly elect members of the Lok Sabha. A majority group among them forms the government." },
+          { "speaker": "NEO", "text": "The Parliament is the supreme law-making body. It controls and guides the work of the government, so the government works with the people's consent." },
+          { "speaker": "NEO", "text": "The 18th Lok Sabha was constituted in June 2024." }
+        ]
+      },
+      {
+        "animation": "A diagram builds step by step: a box 'Parliament of India' splits into three parts: 'President', 'Lok Sabha: House of the People, Lower House' and 'Rajya Sabha: Council of States, Upper House'. The word 'bicameral' splits into 'bi = two' and 'cameral = chamber'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Parliament is made up of the President and two Houses: the Lok Sabha and the Rajya Sabha." },
+          { "speaker": "NEO", "text": "A structure with two Houses is called bicameral. 'Bi' means two, and 'cameral' means chamber." },
+          { "speaker": "ZIPPY", "text": "Why two Houses? Isn't one enough?" },
+          { "speaker": "NEO", "text": "The Constitution makers felt one directly elected House would not be enough. In the spirit of federalism, a Council of States was needed too." },
+          { "speaker": "NEO", "text": "Federalism means power is shared between the centre, the states and local governments." }
+        ]
+      },
+      {
+        "animation": "Inside the Lok Sabha chamber, a Speaker taps a gavel as members raise hands. In the Rajya Sabha, the Vice President sits in the chair. A golden sceptre with Nandi on top, labelled 'Sengol', glows beside the Speaker's chair.",
+        "lines": [
+          { "speaker": "NEO", "text": "Each House has a presiding officer. Lok Sabha members elect a Speaker, who runs sessions and maintains discipline." },
+          { "speaker": "NEO", "text": "The Rajya Sabha is presided over by the Vice President of India, as its chairperson." },
+          { "speaker": "NEO", "text": "Near the Speaker's chair stands the Sengol, a sceptre from the Chola period. It was handed to Jawaharlal Nehru on 14 August 1947 to mark the transfer of power." },
+          { "speaker": "NEO", "text": "Exam tip: the Speaker presides over the Lok Sabha, but the Vice President presides over the Rajya Sabha. Don't mix them up." }
+        ]
+      },
+      {
+        "animation": "Speech bubbles in many Indian scripts float around the chamber. A counter shows '12 languages' and then '+6 more', as tags appear: Bodo, Dogri, Maithili, Manipuri, Urdu, Sanskrit.",
+        "lines": [
+          { "speaker": "NEO", "text": "To make debates accessible, interpretation was available in 12 languages. Six more were added recently, including Bodo, Dogri and Sanskrit." },
+          { "speaker": "ZIPPY", "text": "So a member can speak in their own language and everyone understands? Cool!" }
+        ]
+      },
+      {
+        "animation": "Recap board with a triangular Parliament icon. Points appear: '1. Parliament = President + Lok Sabha + Rajya Sabha', '2. Bicameral: two Houses, for federal balance', '3. Speaker presides over Lok Sabha; Vice President over Rajya Sabha'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the Parliament is made up of the President, the Lok Sabha and the Rajya Sabha." },
+          { "speaker": "NEO", "text": "Two: India has a bicameral Parliament, with the Rajya Sabha representing the states." },
+          { "speaker": "NEO", "text": "Three: the Speaker presides over the Lok Sabha, and the Vice President over the Rajya Sabha." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "The Parliamentary System: Legislature and Executive",
+    "topic_no": 2,
+    "name": "Legislative Functions: How a Bill Becomes a Law",
+    "scenes": [
+      {
+        "animation": "A cartoon rolled-up document with a face and a name tag 'RTE' walks into the frame, carrying a school bag. Zippy stares at it.",
+        "lines": [
+          { "speaker": "RTE", "text": "Hello! I'm the Right to Education Act. It took me almost a century to become a law!" },
+          { "speaker": "ZIPPY", "text": "A hundred years? I thought laws were just written overnight!" }
+        ]
+      },
+      {
+        "animation": "Four boxes appear one by one under the heading 'Functions of Parliament': '1. Constitutional functions', '2. Lawmaking', '3. Executive accountability', '4. Financial accountability'. The first box opens to show icons for electing the President and amending the Constitution.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Parliament has four key functions: constitutional functions, lawmaking, executive accountability and financial accountability." },
+          { "speaker": "NEO", "text": "Constitutional functions include electing the President and Vice President, and amending the Constitution." },
+          { "speaker": "NEO", "text": "The Parliament also upholds core values like universal adult suffrage, separation of powers, federalism, and Fundamental Rights." }
+        ]
+      },
+      {
+        "animation": "A timeline builds left to right as RTE walks along it: 'Roots in Directive Principles', 'Early 1990s: court case links education to Right to Life', '2002: 86th Amendment adds Article 21A, ages 6 to 14', '2008: tabled as a bill in the Rajya Sabha', 'August 2009: passed, President's assent'.",
+        "lines": [
+          { "speaker": "RTE", "text": "My roots lie in the Directive Principles of State Policy." },
+          { "speaker": "RTE", "text": "In 2002, the 86th Constitutional Amendment added Article 21A: free and compulsory education for all children from 6 to 14 years." },
+          { "speaker": "RTE", "text": "Six years later, I was tabled as a bill in the Rajya Sabha. A committee studied me, and in August 2009, I was passed in the Lok Sabha and got the President's assent." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds step by step, each box lighting up as a paper bill slides through: 'Introduction in either House' then 'Reading of the bill' then 'Referred to Standing Committee' then 'Clause-by-clause discussion and amendments' then 'Vote on the bill' then 'Process repeated in other House' then 'Presidential assent' then 'Gazette notification'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A bill is a draft of a proposed law. It is introduced in either House and read." },
+          { "speaker": "NEO", "text": "It may be sent to a Standing Committee, a permanent committee of MPs that studies it." },
+          { "speaker": "NEO", "text": "Then it is discussed clause by clause, amended and voted on. The same process happens in the other House." },
+          { "speaker": "NEO", "text": "Finally, the President gives assent, and it is published in the Gazette, the official government publication." }
+        ]
+      },
+      {
+        "animation": "A bill stamped 'Money Bill' tries to enter the Rajya Sabha door, but a sign reads 'Lok Sabha only'. It turns around and enters the Lok Sabha after receiving a small 'Recommended by the President' stamp.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can every bill start in either House?" },
+          { "speaker": "NEO", "text": "Not every bill. A Money Bill, about taxes or government borrowing, can be introduced only in the Lok Sabha, with the President's prior recommendation." },
+          { "speaker": "NEO", "text": "Exam tip: learn the steps from bill to act in order. Drawing this flowchart neatly can earn easy marks." }
+        ]
+      },
+      {
+        "animation": "Recap board with a scroll turning into a stamped law book. Points appear: '1. Four functions: constitutional, lawmaking, executive and financial accountability', '2. Bill: introduction, reading, committee, clauses, vote, other House, assent, gazette', '3. Money Bills start only in the Lok Sabha'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: Parliament's four functions are constitutional, lawmaking, executive accountability and financial accountability." },
+          { "speaker": "NEO", "text": "Two: a bill passes through both Houses, gets the President's assent and a gazette notification to become an act." },
+          { "speaker": "NEO", "text": "Three: Money Bills can start only in the Lok Sabha." },
+          { "speaker": "RTE", "text": "And that's how I got every child a seat in school!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "The Parliamentary System: Legislature and Executive",
+    "topic_no": 3,
+    "name": "Accountability and the Union Executive",
+    "scenes": [
+      {
+        "animation": "A school canteen: the canteen manager stands before a table of students who fire questions: 'Why is the samosa cold?', 'Where did the money go?'. The scene morphs into a minister standing up in the Lok Sabha during 'Question Hour'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is everyone grilling that minister?" },
+          { "speaker": "NEO", "text": "It's Question Hour. In a democracy, those who run the government must answer questions." }
+        ]
+      },
+      {
+        "animation": "A diagram builds: 'Union Executive' splits into 'President', 'Vice President' and 'Council of Ministers headed by the Prime Minister'. An arrow labelled 'answerable' points from the Council of Ministers to the Lok Sabha.",
+        "lines": [
+          { "speaker": "NEO", "text": "Making laws is the legislative function. Making sure laws are implemented is the executive function." },
+          { "speaker": "NEO", "text": "The Union Executive is the President, the Vice President and the Council of Ministers headed by the Prime Minister." },
+          { "speaker": "NEO", "text": "Ministers are chosen from MPs of both Houses, and they are collectively responsible to the Lok Sabha." }
+        ]
+      },
+      {
+        "animation": "A clock shows the first hour of the session with the label 'Question Hour'. Then a committee room appears where officials from a ministry answer MPs across a table. Finally, a big budget folder is passed around, with coins flowing to different ministry boxes.",
+        "lines": [
+          { "speaker": "NEO", "text": "In Question Hour, usually the first hour of a sitting, MPs ask ministers about government policies. This keeps the executive accountable." },
+          { "speaker": "NEO", "text": "Committees also question ministries about their work." },
+          { "speaker": "NEO", "text": "For financial accountability, Parliament approves and monitors spending through the annual budget." },
+          { "speaker": "ZIPPY", "text": "Of course! It's the people's money, so someone must check it." }
+        ]
+      },
+      {
+        "animation": "Two figures stand side by side: the President with a crown-like label 'Head of State, nominal head' and the Prime Minister with a steering wheel labelled 'de facto executive'. Four task cards orbit the Prime Minister: 'Leads Council of Ministers', 'Coordinates ministries', 'Advises the President', 'Shapes national policies'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The President is the Head of State and the nominal head of the executive. The President appoints the Prime Minister and ministers, summons Parliament and gives assent to bills." },
+          { "speaker": "NEO", "text": "In a political crisis, like when no party has a clear majority, the President can use discretionary powers." },
+          { "speaker": "NEO", "text": "The Prime Minister is the de facto executive authority. The President appoints the leader of the majority in the Lok Sabha as Prime Minister." },
+          { "speaker": "NEO", "text": "Civil servants help ministers implement laws and policies." }
+        ]
+      },
+      {
+        "animation": "A sepia flashback to 1956: a train accident headline, then Lal Bahadur Shastri handing a resignation letter across a desk. A label reads 'Moral responsibility'. An 'Exam Tip' sticker pops up beside the words 'nominal head' and 'de facto head'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1956, Railway Minister Lal Bahadur Shastri resigned after a train accident, though he was not blamed. He believed a minister must take moral responsibility." },
+          { "speaker": "NEO", "text": "Exam tip: the President is the nominal head, but the Prime Minister is the de facto, or real, executive head. This is asked often." }
+        ]
+      },
+      {
+        "animation": "Recap board with a question-mark microphone and a budget folder. Points appear: '1. Executive = President, Vice President, Council of Ministers led by PM', '2. Question Hour and committees keep ministers accountable', '3. President: nominal head; PM: de facto head'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the Union Executive is the President, the Vice President and the Council of Ministers led by the Prime Minister." },
+          { "speaker": "NEO", "text": "Two: Question Hour, committees and the budget keep the executive accountable to Parliament." },
+          { "speaker": "NEO", "text": "Three: the President is the nominal head, and the Prime Minister is the real executive head." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "The Parliamentary System: Legislature and Executive",
+    "topic_no": 4,
+    "name": "Legislature, Executive and Judiciary: Checks and Balances",
+    "scenes": [
+      {
+        "animation": "A cricket match where one player is batting, bowling and also umpiring. Zippy, as the fielder, throws up his hands. The scoreboard reads 'Unfair!'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "He's the batter, the bowler and the umpire? That's not fair!" },
+          { "speaker": "NEO", "text": "Exactly. That's why a democracy never gives all the power to one organ." }
+        ]
+      },
+      {
+        "animation": "A two-column table builds row by row, 'Legislature' on the left in blue and 'Executive' on the right in orange: 'Makes laws, oversees executive' vs 'Enforces laws'; 'Asks questions, seeks explanations' vs 'Gives information and explanations'; 'Sanctions expenses' vs 'Prepares and implements budget'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The legislature makes laws and oversees the executive. The executive enforces those laws." },
+          { "speaker": "NEO", "text": "Most bills are introduced by the executive, but the legislature keeps a check by asking questions and seeking explanations." },
+          { "speaker": "NEO", "text": "The legislature sanctions all government expenses, while the executive prepares and implements the budget that Parliament approves." }
+        ]
+      },
+      {
+        "animation": "Zippy points at a minister who sits in the Lok Sabha and also heads a ministry office; a dotted line connects both seats. Neo draws a line between 'making laws' and 'running the government', with the Lok Sabha holding a leash labelled 'accountability'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hold on. Ministers are MPs too. So how are the legislature and executive separate?" },
+          { "speaker": "NEO", "text": "Good catch! Ministers sit in Parliament, but their roles are different. As the executive, they run the government day to day." },
+          { "speaker": "NEO", "text": "And the legislature can still question them, and they must answer to the Lok Sabha." }
+        ]
+      },
+      {
+        "animation": "A third pillar labelled 'Judiciary' rises beside the other two, holding a copy of the Constitution. A law scroll from the Parliament passes under its magnifying glass and gets a green tick; another scroll gets a red flag reading 'Violates Constitution'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The judiciary interprets and applies the laws and resolves disputes through a system of courts." },
+          { "speaker": "NEO", "text": "It is the custodian of the Constitution. It checks that laws passed by Parliament do not violate the Constitution." },
+          { "speaker": "NEO", "text": "If the executive violates the Constitution while implementing a law, the judiciary can step in too." },
+          { "speaker": "ZIPPY", "text": "So the judiciary is the third umpire!" }
+        ]
+      },
+      {
+        "animation": "Three pillars, Legislature, Executive and Judiciary, hold up a roof labelled 'Democracy'. Arrows loop between them showing each checking the others. The phrase 'Separation of powers + checks and balances' writes itself across the roof.",
+        "lines": [
+          { "speaker": "NEO", "text": "This is the separation of powers, with a system of checks and balances." },
+          { "speaker": "NEO", "text": "Each organ watches the others, so that no one organ becomes too powerful, and citizens' rights stay protected." },
+          { "speaker": "NEO", "text": "Exam tip: in one line, the legislature makes laws, the executive implements them, and the judiciary ensures they follow the Constitution." }
+        ]
+      },
+      {
+        "animation": "Recap board with three pillar icons. Points appear: '1. Legislature makes laws and checks the executive', '2. Executive enforces laws and answers to the legislature', '3. Judiciary guards the Constitution; no organ is too powerful'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the legislature makes laws and keeps a check on the executive." },
+          { "speaker": "NEO", "text": "Two: the executive enforces laws and must explain its actions to the legislature." },
+          { "speaker": "NEO", "text": "Three: the judiciary guards the Constitution, so no organ becomes too powerful." },
+          { "speaker": "ZIPPY", "text": "Batter, bowler, umpire: three different people. Fair game!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "The Parliamentary System: Legislature and Executive",
+    "topic_no": 5,
+    "name": "State Legislatures and Challenges Ahead",
+    "scenes": [
+      {
+        "animation": "Zippy stands in front of the grand Vidhana Soudha building in Karnataka, then zooms back to the Parliament in Delhi, looking between the two.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, states have their own Parliament too?" },
+          { "speaker": "NEO", "text": "Kind of! Each state has its own legislature and executive, built like a mini version of the Union." }
+        ]
+      },
+      {
+        "animation": "Three circles appear: 'Union List' (Parliament), 'State List' (state legislature) and an overlapping 'Concurrent List' in the middle with icons for education and environment. The RTE character stands in the overlap, with an arrow showing the Union law applying all over India.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Constitution divides subjects into lists. Parliament makes laws on the Union List, and states on the State List." },
+          { "speaker": "NEO", "text": "On the Concurrent List, both can make laws. But if the Union legislates on it, the state must follow." },
+          { "speaker": "NEO", "text": "Education is on the Concurrent List, yet the RTE Act applies all over India." }
+        ]
+      },
+      {
+        "animation": "A mirror-image table builds row by row: 'President' mirrors 'Governor, appointed by the President'; 'Prime Minister' mirrors 'Chief Minister'; 'Lok Sabha' mirrors 'Vidhan Sabha'; 'Rajya Sabha' mirrors 'Vidhan Parishad, some states only'. An India map highlights six states: Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana and Uttar Pradesh.",
+        "lines": [
+          { "speaker": "NEO", "text": "The state structure mirrors the Union. The Governor, appointed by the President, is the nominal head. The Chief Minister is the real executive head." },
+          { "speaker": "NEO", "text": "The Council of Ministers is collectively responsible to the Vidhan Sabha, the legislative assembly." },
+          { "speaker": "NEO", "text": "Only six states have two Houses, with a Vidhan Parishad: Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana and Uttar Pradesh. The rest are unicameral." },
+          { "speaker": "NEO", "text": "Exam tip: learn these six bicameral states for map and short-answer questions." }
+        ]
+      },
+      {
+        "animation": "A calendar shows three session blocks: 'Budget', 'Monsoon', 'Winter'. A bar chart of Lok Sabha sittings shrinks: 1st Lok Sabha 677, 2nd 567, 10th 423, 13th 356. Storm clouds labelled 'disruptions' and 'absenteeism' hover over an empty chamber.",
+        "lines": [
+          { "speaker": "NEO", "text": "Parliament usually meets in three sessions a year: Budget, Monsoon and Winter." },
+          { "speaker": "NEO", "text": "But the number of sittings has fallen, from 677 in the first Lok Sabha to 356 in the thirteenth." },
+          { "speaker": "NEO", "text": "Absenteeism, disruptions of Question Hour and poor-quality debates are serious challenges." },
+          { "speaker": "ZIPPY", "text": "So how do we fix it?" },
+          { "speaker": "NEO", "text": "Citizens can stay informed, join public discussions and engage with their representatives." }
+        ]
+      },
+      {
+        "animation": "Recap board with a Union building and a state building side by side. Points appear: '1. Union, State and Concurrent Lists divide lawmaking', '2. Governor and Chief Minister mirror President and Prime Minister', '3. Informed citizens help legislatures work better'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the Union, State and Concurrent Lists decide who makes laws on what." },
+          { "speaker": "NEO", "text": "Two: in states, the Governor is the nominal head and the Chief Minister is the real head." },
+          { "speaker": "NEO", "text": "Three: informed, engaged citizens help our legislatures work better." }
+        ]
+      }
+    ]
+  }
+]

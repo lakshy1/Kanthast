@@ -1,0 +1,442 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "Beehive: Poetry",
+    "topic_no": 1,
+    "name": "The Road Not Taken by Robert Frost",
+    "scenes": [
+      {
+        "animation": "An autumn forest in yellow and gold. A path splits into two. Zippy stands at the fork, spinning like a compass needle, unable to choose, while a traveller in a coat stands thinking beside him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Left or right? Science or commerce? Samosa or vada pav? I can never choose!" },
+          { "speaker": "NEO", "text": "Then you'll understand this traveller. This is The Road Not Taken, by Robert Frost." }
+        ]
+      },
+      {
+        "animation": "The poem's scene builds: 'Two roads diverged in a yellow wood'. The traveller peers down one road to where it bends into the undergrowth, then studies the other, grassy and less worn. Leaves lie untrodden on both.",
+        "lines": [
+          { "speaker": "NEO", "text": "The speaker stands where two roads diverged in a yellow wood. He is sorry he cannot travel both." },
+          { "speaker": "NEO", "text": "He looks down one as far as he can, then takes the other, which seems grassier and less worn." },
+          { "speaker": "NEO", "text": "Yet he admits that both were really about the same that morning." }
+        ]
+      },
+      {
+        "animation": "The traveller walks on. A thought bubble shows him saving the first road 'for another day', then the bubble pops as road after road branches away ahead. Later, an older version of him sighs, looking back.",
+        "lines": [
+          { "speaker": "NEO", "text": "He keeps the first road for another day, but knows one way leads on to another, so he may never come back." },
+          { "speaker": "NEO", "text": "Ages later, he says, he will tell this with a sigh: he took the one less traveled by, and that has made all the difference." },
+          { "speaker": "ZIPPY", "text": "Is the sigh happy or sad?" },
+          { "speaker": "NEO", "text": "The poem leaves that open. It may be satisfaction, or a little regret." }
+        ]
+      },
+      {
+        "animation": "Device tags stick onto the forest: 'Symbolism: roads = life choices', 'Yellow wood = autumn, a mature stage of life', 'Rhyme scheme: abaab', 'Four stanzas of five lines'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The roads are a symbol of choices in life. The yellow wood suggests autumn, a time of change." },
+          { "speaker": "NEO", "text": "The poem has four stanzas of five lines each, with the rhyme scheme a b a a b." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. What does the poet mean by \"that has made all the difference\"?' Answer bullets build: 'one choice shapes the whole future', 'no going back', 'ambiguity: pride or regret'. Sticker: 'Board Tip'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: what does the last line mean?" },
+          { "speaker": "NEO", "text": "Answer approach: the choice he made shaped his whole life, because one road leads to another and we rarely return." },
+          { "speaker": "NEO", "text": "Board tip: mention that the tone can be read as pride or as regret. Examiners like that balance." }
+        ]
+      },
+      {
+        "animation": "Recap board with a forked path icon. Points appear: '1. Two roads in a yellow wood; he picks one', '2. Roads = life choices; no going back', '3. abaab rhyme; the choice made all the difference'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the traveller chooses one of two roads in a yellow wood." },
+          { "speaker": "NEO", "text": "Two: the roads symbolise life's choices, and we can rarely go back." },
+          { "speaker": "NEO", "text": "Three: with an a b a a b rhyme, the poem ends on how one choice made all the difference." },
+          { "speaker": "ZIPPY", "text": "Fine. I choose samosa. And I will tell this with a sigh." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Beehive: Poetry",
+    "topic_no": 2,
+    "name": "Wind by Subramania Bharati",
+    "scenes": [
+      {
+        "animation": "A study room. A gust bursts through the window: shutters bang, papers fly, books tumble, and pages tear. Zippy clings to the curtain, flapping like a flag.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hey wind, I just arranged those papers! Please be gentle!" },
+          { "speaker": "NEO", "text": "The poet says the same thing: wind, come softly. This is Wind, by Subramania Bharati, translated from Tamil by A. K. Ramanujan." }
+        ]
+      },
+      {
+        "animation": "The wind appears as a mighty cartoon figure with puffed cheeks. It shakes crumbling houses, weak doors and rafters. Then it pauses at a frail person with a trembling heart. A caption: 'The wind god winnows and crushes them all'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The poet asks the wind not to break the shutters, scatter the papers or throw down the books. But the wind does not listen." },
+          { "speaker": "NEO", "text": "It breaks weak, crumbling houses, doors and rafters, and weak bodies and hearts too. The poet says the wind god winnows and crushes them all." }
+        ]
+      },
+      {
+        "animation": "Builders firmly fix doors into strong walls; a person exercises; a glowing heart becomes solid like a rock. Then fires: a weak flame blows out, a strong flame roars bigger in the wind.",
+        "lines": [
+          { "speaker": "NEO", "text": "So the poet's advice is: build strong homes, fix the doors firmly, practise to make the body firm, and make the heart steadfast." },
+          { "speaker": "NEO", "text": "Then the wind will be our friend. The wind blows out weak fires, but makes strong fires roar and flourish." },
+          { "speaker": "ZIPPY", "text": "So the wind is really about problems in life?" },
+          { "speaker": "NEO", "text": "Exactly. Hard times crush the weak but make the strong stronger." }
+        ]
+      },
+      {
+        "animation": "Device tags float in the breeze: 'Personification: the wind god, he', 'Symbol: wind = difficulties', 'Free verse: no fixed rhyme', 'Tone: from complaint to advice'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Key devices: personification, as the wind is called a god and he. The wind symbolises the difficulties of life." },
+          { "speaker": "NEO", "text": "The poem is in free verse, and its tone moves from a request to a lesson." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How can we make the wind our friend?' Answer bullets build: 'strong homes', 'firm body', 'steadfast heart'. Sticker: 'Board Tip: explain the symbol'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how can we make the wind our friend?" },
+          { "speaker": "NEO", "text": "Answer approach: by building strong homes, a firm body and a steadfast heart. Then explain that it means facing difficulties with inner strength." },
+          { "speaker": "NEO", "text": "Board tip: always explain the symbolic meaning, not just the literal wind." }
+        ]
+      },
+      {
+        "animation": "Recap board with a roaring flame beside a windmill. Points appear: '1. Wind destroys the weak things', '2. Be strong in body, home and heart', '3. Wind = life's hardships; the strong flourish'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the wind destroys everything that is weak." },
+          { "speaker": "NEO", "text": "Two: the poet tells us to make our homes, bodies and hearts strong." },
+          { "speaker": "NEO", "text": "Three: the wind stands for hardships, which make strong people flourish. His friendship is good, and we praise him every day." },
+          { "speaker": "ZIPPY", "text": "Paperweights. My first step towards a steadfast heart." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Beehive: Poetry",
+    "topic_no": 3,
+    "name": "Rain on the Roof by Coates Kinney",
+    "scenes": [
+      {
+        "animation": "A rainy night over a small cottage. Inside, a man lies in bed under a warm blanket, eyes half-closed, as raindrops tap on the roof shingles. Zippy counts the drops and falls asleep mid-count.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Pitter-patter, pitter-patter... sorry, I nearly dozed off. Why does rain feel so cosy?" },
+          { "speaker": "NEO", "text": "The poet Coates Kinney wondered the same. This is Rain on the Roof." }
+        ]
+      },
+      {
+        "animation": "Humid shadows hover over a starry sky; the dark clouds are drawn with sad, gentle faces that weep raindrops. Label: 'Darkness gently weeps in rainy tears'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When humid shadows cover the starry sky, the poet says the melancholy darkness gently weeps in rainy tears." },
+          { "speaker": "NEO", "text": "He feels it is pure bliss to press the pillow of a cottage bed and listen to the patter of the soft rain overhead." }
+        ]
+      },
+      {
+        "animation": "Each raindrop on the roof shingle sends a little ripple into the poet's heart. From the ripples rise dreamy thought-bubbles, then a gentle glowing image of his mother looking fondly at him.",
+        "lines": [
+          { "speaker": "NEO", "text": "Every tinkle on the shingles has an echo in his heart. A thousand dreamy fancies and old memories come back." },
+          { "speaker": "NEO", "text": "Above all, he remembers his mother, who used to look fondly at him, years ago. In his dreamy mood, he feels her loving look once more." },
+          { "speaker": "ZIPPY", "text": "So the rain is like a time machine for his memories." },
+          { "speaker": "NEO", "text": "Nicely put. A simple, everyday sound opens the door to the past." }
+        ]
+      },
+      {
+        "animation": "Device tags drip onto the roof: 'Personification: darkness weeps', 'Onomatopoeia: patter, tinkle', 'Imagery: sight and sound', 'Rhyme: second and fourth lines rhyme'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Key devices: personification, as darkness weeps; onomatopoeia in words like patter and tinkle." },
+          { "speaker": "NEO", "text": "There is rich sound imagery, and in each stanza the second and fourth lines rhyme." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. What memories does the rain bring back to the poet?' Answer bullets: 'childhood fancies', 'his mother's loving look'. Sticker: 'Board Tip: link nature and nostalgia'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: what does the sound of the rain make the poet remember?" },
+          { "speaker": "NEO", "text": "Answer approach: it brings back dreamy childhood memories, especially of his mother looking fondly at him." },
+          { "speaker": "NEO", "text": "Board tip: use the word nostalgia, and link the sound of the rain to his feelings." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cottage roof and raindrops. Points appear: '1. Listening to rain in a cosy cottage bed', '2. Each drop echoes in his heart; memories return', '3. Personification, onomatopoeia, imagery'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the poet enjoys the patter of rain from his cottage bed." },
+          { "speaker": "NEO", "text": "Two: each drop echoes in his heart and brings back memories of his mother." },
+          { "speaker": "NEO", "text": "Three: look for personification, onomatopoeia and sound imagery." },
+          { "speaker": "ZIPPY", "text": "Next monsoon, I'm calling my mother. And maybe asking for pakoras." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Beehive: Poetry",
+    "topic_no": 4,
+    "name": "The Lake Isle of Innisfree by W. B. Yeats",
+    "scenes": [
+      {
+        "animation": "A grey city pavement with honking traffic. A man in a coat stops still, closes his eyes, and the grey street melts into a small green island on a shining lake, humming with bees.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "He's standing in traffic with his eyes shut. Is he okay?" },
+          { "speaker": "NEO", "text": "He's travelling in his mind to a peaceful island. This is The Lake Isle of Innisfree, by W. B. Yeats." }
+        ]
+      },
+      {
+        "animation": "The island builds step by step as the poet speaks: a small cabin of clay and wattles, nine rows of beans, a beehive, and a glade loud with buzzing bees.",
+        "lines": [
+          { "speaker": "NEO", "text": "The poet says: I will arise and go now, and go to Innisfree." },
+          { "speaker": "NEO", "text": "There he will build a small cabin of clay and wattles, grow nine bean-rows, keep a hive for the honey-bee, and live alone in the bee-loud glade." }
+        ]
+      },
+      {
+        "animation": "A day-cycle wheel spins over the lake: 'Midnight: all a glimmer', 'Noon: a purple glow', 'Evening: full of the linnet's wings'. Peace falls slowly like mist onto the cabin roof.",
+        "lines": [
+          { "speaker": "NEO", "text": "He will find peace there, because peace comes dropping slow. Midnight is all a glimmer, noon a purple glow, and evening full of the linnet's wings." },
+          { "speaker": "NEO", "text": "Even standing on the roadway or the pavements grey, he hears the lake water lapping, deep in his heart's core." },
+          { "speaker": "ZIPPY", "text": "So the island lives inside him." }
+        ]
+      },
+      {
+        "animation": "Device tags hover over the lake: 'Imagery: sight and sound', 'Alliteration: lake water lapping', 'Contrast: grey city vs natural island', 'Rhyme scheme: abab'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Key devices: rich imagery of sight and sound, and alliteration in lake water lapping." },
+          { "speaker": "NEO", "text": "There is a contrast between the grey city and the island. The rhyme scheme is a b a b." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why does the poet want to go to Innisfree?' Answer bullets: 'escape from city life', 'peace, simplicity, nature', 'deep longing'. Sticker: 'Board Tip: quote one image'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why does the poet long to go to Innisfree?" },
+          { "speaker": "NEO", "text": "Answer approach: he is tired of the grey city, and wants a simple life of peace close to nature." },
+          { "speaker": "NEO", "text": "Board tip: support your answer with one image, like the bee-loud glade or the lake water lapping." }
+        ]
+      },
+      {
+        "animation": "Recap board with a small cabin by a lake. Points appear: '1. A dream of a simple cabin on Innisfree', '2. Peace comes dropping slow', '3. City vs nature; imagery; abab'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the poet dreams of a simple cabin on Innisfree." },
+          { "speaker": "NEO", "text": "Two: there, peace comes dropping slow, and he hears the lake in his heart." },
+          { "speaker": "NEO", "text": "Three: note the city and nature contrast, rich imagery and an a b a b rhyme." },
+          { "speaker": "ZIPPY", "text": "Nine bean-rows? I'd settle for nine samosas." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Beehive: Poetry",
+    "topic_no": 5,
+    "name": "A Legend of the Northland by Phoebe Cary",
+    "scenes": [
+      {
+        "animation": "A snowy northern land with very short days; children in fur coats sit around a fire listening to a storyteller. Snow swirls into the shape of an old woman at an oven.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why do the children look so serious around that fire?" },
+          { "speaker": "NEO", "text": "They're hearing an old legend. This is A Legend of the Northland, by Phoebe Cary." }
+        ]
+      },
+      {
+        "animation": "An old woman bakes cakes. Saint Peter, tired and hungry after fasting, knocks and asks for just one cake. She makes a tiny cake, frowns 'too big', makes a smaller one, then an even thinner one, and puts them all away.",
+        "lines": [
+          { "speaker": "NEO", "text": "The legend comes from Lapland, where the days are short in winter. Saint Peter, faint with fasting, asks a little old lady for one cake." },
+          { "speaker": "NEO", "text": "She makes a very small one, but it seems too big to give away. She makes a smaller one, and then a thinner one, but she keeps them all." },
+          { "speaker": "ZIPPY", "text": "Wow. She'd rather lose a cake-making contest than share!" }
+        ]
+      },
+      {
+        "animation": "Saint Peter's face grows stern. The woman shrinks, sprouts wings and flies up the chimney; she comes out as a woodpecker with a red cap on her head and the rest of her feathers charred black.",
+        "lines": [
+          { "speaker": "NEO", "text": "Saint Peter is angry at her selfishness. He turns her into a bird that must build as birds do and find her food by boring into hard, dry wood." },
+          { "speaker": "NEO", "text": "She flies up the chimney and becomes a woodpecker, with her red cap still on her head and the rest burnt black." }
+        ]
+      },
+      {
+        "animation": "Device tags: 'Ballad: a story told in a poem', 'Quatrains with abcb rhyme', 'Moral: greed is punished'. A woodpecker taps on a tree trunk in rhythm with the tags.",
+        "lines": [
+          { "speaker": "NEO", "text": "This poem is a ballad: a story told in verse, in simple four-line stanzas where the second and fourth lines rhyme." },
+          { "speaker": "NEO", "text": "The moral is clear: selfishness and greed bring punishment." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why was the old lady punished? Is the punishment fair?' Answer bullets build: 'selfishness to a hungry guest', 'kept even the tiniest cake', 'your opinion with reason'. Sticker: 'Board Tip'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why was the old lady punished, and do you think it was fair?" },
+          { "speaker": "NEO", "text": "Answer approach: she refused even the smallest cake to a hungry, tired man. Then give your view, with a reason." },
+          { "speaker": "NEO", "text": "Board tip: in an opinion question, both answers are accepted if you support them from the poem." }
+        ]
+      },
+      {
+        "animation": "Recap board with a woodpecker in a red cap. Points appear: '1. Saint Peter asks for one cake', '2. The old lady keeps every cake', '3. She becomes a woodpecker; greed is punished'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in Lapland, a hungry Saint Peter asks an old lady for one cake." },
+          { "speaker": "NEO", "text": "Two: she is so selfish that she keeps even the tiniest cake." },
+          { "speaker": "NEO", "text": "Three: she is turned into a woodpecker, a ballad lesson against greed." },
+          { "speaker": "ZIPPY", "text": "Neo, want half my cookie? I'm not risking the chimney." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Beehive: Poetry",
+    "topic_no": 6,
+    "name": "No Men Are Foreign by James Kirkup",
+    "scenes": [
+      {
+        "animation": "Two soldiers in different uniforms face each other across a barbed-wire border, guns raised. Their uniforms turn transparent, revealing two identical breathing bodies and beating hearts.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Whoa, under the uniforms, they look exactly the same!" },
+          { "speaker": "NEO", "text": "That's the message of No Men Are Foreign, by James Kirkup." }
+        ]
+      },
+      {
+        "animation": "A glowing line of text: 'Remember, no men are strange, no countries foreign'. A globe spins; people from many lands walk on the same earth, under the same sun, drinking the same water.",
+        "lines": [
+          { "speaker": "NEO", "text": "The poem begins: remember, no men are strange, no countries foreign." },
+          { "speaker": "NEO", "text": "Beneath all uniforms, a single body breathes like ours. We walk upon the same earth, and we will lie in it in the end." },
+          { "speaker": "NEO", "text": "All people are fed by the same sun, air and water, and they too have eyes like ours, and strength that can be won by love." }
+        ]
+      },
+      {
+        "animation": "A green field is scarred by bombs; smoke rises and blackens the sky. A caption: 'Hells of fire and dust'. A dove circles above, looking sad.",
+        "lines": [
+          { "speaker": "NEO", "text": "The poet warns that when we hate our brothers or take up arms, we harm ourselves." },
+          { "speaker": "NEO", "text": "War's hells of fire and dust outrage the innocence of the air, and it is the human earth that we defile." },
+          { "speaker": "ZIPPY", "text": "So hurting others is like hurting our own home." },
+          { "speaker": "NEO", "text": "Yes. The poet wants us to see every stranger as a fellow human, not an enemy." }
+        ]
+      },
+      {
+        "animation": "Device tags: 'Repetition: Remember', 'Theme: universal brotherhood', 'Anti-war message', 'Free verse with a serious, persuasive tone'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Key devices: repetition of the word remember, which makes the message urgent." },
+          { "speaker": "NEO", "text": "The themes are universal brotherhood and the futility of war. The poem is written in free verse, with a serious, persuasive tone." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How does the poet prove that no men are foreign?' Answer bullets build: 'same body', 'same earth, sun, air, water', 'same need for peace and love'. Sticker: 'Board Tip'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how does the poet show that all people are alike?" },
+          { "speaker": "NEO", "text": "Answer approach: we have the same bodies, share the same earth and nature, and can all be won by love." },
+          { "speaker": "NEO", "text": "Board tip: end with the message: war harms the whole human earth, so we must choose peace." }
+        ]
+      },
+      {
+        "animation": "Recap board with a globe wrapped in joined hands. Points appear: '1. No men are strange, no countries foreign', '2. Same bodies, same earth, same nature', '3. War defiles our shared earth'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: no men are strange, and no countries foreign." },
+          { "speaker": "NEO", "text": "Two: we share the same bodies, earth, sun, air and water." },
+          { "speaker": "NEO", "text": "Three: war and hatred defile the earth we all share." },
+          { "speaker": "ZIPPY", "text": "Remember. Remember. Okay, I remember!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Beehive: Poetry",
+    "topic_no": 7,
+    "name": "On Killing a Tree by Gieve Patel",
+    "scenes": [
+      {
+        "animation": "A man with an axe gives a huge tree a single chop. The tree just yawns; within seconds, fresh green twigs sprout from the cut. Zippy's jaw drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "He hit it with an axe, and it just grew back? Is this tree a superhero?" },
+          { "speaker": "NEO", "text": "In a way. It takes much time to kill a tree. That's how Gieve Patel begins On Killing a Tree." }
+        ]
+      },
+      {
+        "animation": "A cross-section of the trunk shows years of growth: it has fed on the earth's crust, absorbed sunlight, air and water. Hacking and chopping make the bark bleed sap, but tiny green shoots curl out of the wounds.",
+        "lines": [
+          { "speaker": "NEO", "text": "A tree grows slowly, consuming the earth, feeding on sunlight, air and water, for years." },
+          { "speaker": "NEO", "text": "So a simple jab of the knife will not do it. Even hacking and chopping cause only pain; the bleeding bark heals, and green twigs rise again." }
+        ]
+      },
+      {
+        "animation": "A rope ties the trunk; it is pulled out of the anchoring earth, exposing a white, wet root. The root lies under a harsh sun, browning, hardening, twisting and withering, each word stamping on screen.",
+        "lines": [
+          { "speaker": "NEO", "text": "The only way is to pull out the root, out of the anchoring earth, where it was hidden for years." },
+          { "speaker": "NEO", "text": "Then comes the scorching and choking in sun and air: browning, hardening, twisting, withering. And then it is done." },
+          { "speaker": "ZIPPY", "text": "That's so cold. It sounds like a recipe!" },
+          { "speaker": "NEO", "text": "That's the irony. The calm tone makes the cruelty shocking." }
+        ]
+      },
+      {
+        "animation": "Device tags: 'Irony: step-by-step instructions to kill', 'Personification: bleeding bark', 'Imagery: white and wet root', 'Free verse'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Key devices: irony, since the poem sounds like instructions but really protests against killing trees." },
+          { "speaker": "NEO", "text": "Personification in the bleeding bark, strong imagery, and free verse." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why is it not easy to kill a tree? What is the poet's real message?' Answer bullets build: 'deep roots, strong life force', 'uprooting needed', 'message: save trees'. Sticker: 'Board Tip'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why does the poet say it is hard to kill a tree, and what does he really want?" },
+          { "speaker": "NEO", "text": "Answer approach: a tree has great life force and heals itself; only uprooting it kills it. Then say the poem is a protest against cutting trees." },
+          { "speaker": "NEO", "text": "Board tip: always mention irony when you explain the tone." }
+        ]
+      },
+      {
+        "animation": "Recap board with a small sapling sprouting from a pot. Points appear: '1. A tree has a strong life force', '2. Only uprooting it kills it', '3. Ironic tone; a plea to save trees'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a tree grows for years and has a strong life force." },
+          { "speaker": "NEO", "text": "Two: only pulling out its root kills it." },
+          { "speaker": "NEO", "text": "Three: the calm, ironic tone is really a plea to save trees." },
+          { "speaker": "ZIPPY", "text": "I'm planting one today. It takes much time to grow one, too." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Beehive: Poetry",
+    "topic_no": 8,
+    "name": "A Slumber Did My Spirit Seal by William Wordsworth",
+    "scenes": [
+      {
+        "animation": "A quiet hillside at dusk. The poet sits alone under a tree, holding a faded flower. Zippy, usually bouncy, floats gently down and sits beside him, dimming his own glow.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is everything so quiet here?" },
+          { "speaker": "NEO", "text": "Because this is a poem about loss. A Slumber Did My Spirit Seal, by William Wordsworth. It has just eight lines." }
+        ]
+      },
+      {
+        "animation": "Stanza one: a warm, sunlit memory of a young girl running through a meadow; the poet watches, relaxed, eyes half-closed as if in a sweet sleep. Caption: 'I had no human fears'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the first stanza, the poet says a slumber sealed his spirit. He was unaware, as if asleep, and had no human fears." },
+          { "speaker": "NEO", "text": "The girl he loved seemed a thing that could not feel the touch of earthly years. He thought she would never age or die." }
+        ]
+      },
+      {
+        "animation": "Stanza two: the meadow fades to grey. The earth slowly rotates; the girl is now part of the landscape, among rocks, stones and trees. Caption: 'Rolled round in earth's diurnal course'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the second stanza, she has died. No motion has she now, no force; she neither hears nor sees." },
+          { "speaker": "NEO", "text": "She is rolled round in earth's diurnal course, with rocks, and stones, and trees." },
+          { "speaker": "ZIPPY", "text": "Diurnal?" },
+          { "speaker": "NEO", "text": "Daily. She is now part of the earth as it turns each day." }
+        ]
+      },
+      {
+        "animation": "Device tags drift in: 'Contrast: stanza 1 life vs stanza 2 death', 'Rhyme scheme: abab', 'Metaphor: slumber = unawareness', 'Imagery: rocks, stones, trees'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Key devices: a sharp contrast between the two stanzas, before and after death, and the rhyme scheme a b a b." },
+          { "speaker": "NEO", "text": "Slumber is a metaphor for the poet's unawareness, and the closing image joins her with nature." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How does the poet's view of his beloved change from the first stanza to the second?' Answer bullets: 'seemed beyond time', 'now lifeless, one with nature', 'shock and grief, calmly expressed'. Sticker: 'Board Tip'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how does the poet's understanding change between the two stanzas?" },
+          { "speaker": "NEO", "text": "Answer approach: first she seemed untouched by time; then he faces her death, as she becomes part of nature." },
+          { "speaker": "NEO", "text": "Board tip: mention the calm, controlled tone, which makes the grief feel deeper." }
+        ]
+      },
+      {
+        "animation": "Recap board with a single tree on a turning globe. Points appear: '1. Stanza 1: she seemed beyond earthly years', '2. Stanza 2: she is dead, one with nature', '3. Contrast; abab; calm grief'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: at first, the poet felt she could never age or die." },
+          { "speaker": "NEO", "text": "Two: now she is gone, rolled round with rocks, stones and trees." },
+          { "speaker": "NEO", "text": "Three: the contrast between stanzas and the calm tone express deep grief." },
+          { "speaker": "ZIPPY", "text": "Eight lines, but it feels much bigger." }
+        ]
+      }
+    ]
+  }
+]

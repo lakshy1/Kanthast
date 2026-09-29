@@ -1,0 +1,233 @@
+[
+  {
+    "chapter_no": 6,
+    "chapter": "We Distribute, Yet Things Multiply",
+    "topic_no": 1,
+    "name": "How Products Change: The Distributive Property",
+    "scenes": [
+      {
+        "animation": "A school hall with chairs arranged in 23 rows of 27. The principal adds one more chair to every row, then one more row. Zippy counts frantically with a clipboard.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "23 rows of 27 chairs. Now one more row and one more chair per row. I have to count everything again!" },
+          { "speaker": "NEO", "text": "No need. The distributive property tells us exactly how much the total grows." }
+        ]
+      },
+      {
+        "animation": "A dot grid of a rows and b columns sits beside another grid of a rows and c columns; they slide together into one grid with the label 'a(b + c) = ab + ac'. A scroll labelled 'Brahmagupta, 628 CE: khanda-gunana, multiplication by parts' unrolls.",
+        "lines": [
+          { "speaker": "NEO", "text": "A grid of a rows and b columns, plus a grid of a rows and c columns, makes a rows of b plus c." },
+          { "speaker": "NEO", "text": "So a times b plus c equals ab plus ac. This is the distributive property." },
+          { "speaker": "NEO", "text": "Brahmagupta stated it clearly in 628 CE and called it multiplication by parts." }
+        ]
+      },
+      {
+        "animation": "The 23 × 27 grid gains one extra column: '23 (27 + 1) = 23 × 27 + 23', with the new column of 23 dots glowing. Then one extra row too: '(a + 1)(b + 1) = ab + a + b + 1' with the new row, new column and one corner dot in different colours.",
+        "lines": [
+          { "speaker": "NEO", "text": "Add one chair to each row. That's 23 times 27 plus 1, so the total rises by 23." },
+          { "speaker": "NEO", "text": "Now add one row as well. a plus 1 times b plus 1 equals ab plus a plus b plus 1." },
+          { "speaker": "NEO", "text": "The new column, the new row and the one corner chair." }
+        ]
+      },
+      {
+        "animation": "Worked example writes line by line: '23 × 27 = 621', 'increase = 23 + 27 + 1 = 51', '24 × 28 = 621 + 51 = 672'. A check line: '24 × 28 = 480 + 192 = 672 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "23 times 27 is 621. The increase is 23 plus 27 plus 1, which is 51." },
+          { "speaker": "NEO", "text": "So 24 times 28 is 621 plus 51, which is 672." },
+          { "speaker": "NEO", "text": "Check: 24 times 20 is 480, 24 times 8 is 192, total 672. It matches." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Increase one number by 1, decrease the other by 1. Does the product always grow?' Steps: '(a + 1)(b − 1) = ab + b − a − 1'. Examples: 'a = 23, b = 27: change = 27 − 23 − 1 = +3', 'a = 27, b = 23: change = 23 − 27 − 1 = −5'. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If I add 1 to one number and take 1 from the other, the product stays the same, right?" },
+          { "speaker": "NEO", "text": "Let's expand. a plus 1 times b minus 1 is ab plus b minus a minus 1." },
+          { "speaker": "NEO", "text": "For 23 and 27, the change is 27 minus 23 minus 1, which is plus 3. For 27 and 23, it's minus 5." },
+          { "speaker": "NEO", "text": "Exam tip: in (a + m)(b + n), multiply every term of one bracket by every term of the other. You get four terms: ab, an, mb and mn." }
+        ]
+      },
+      {
+        "animation": "Recap board with the chair grid. Points: '1. a(b + c) = ab + ac', '2. (a + 1)(b + 1) = ab + a + b + 1', '3. (a + m)(b + n) = ab + an + mb + mn'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a times b plus c is ab plus ac." },
+          { "speaker": "NEO", "text": "Two: increasing both numbers by 1 increases the product by a plus b plus 1." },
+          { "speaker": "NEO", "text": "Three: a plus m times b plus n is ab plus an plus mb plus mn." },
+          { "speaker": "ZIPPY", "text": "672 chairs, and I didn't count a single one." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "We Distribute, Yet Things Multiply",
+    "topic_no": 2,
+    "name": "Expanding Products and Fast Multiplication",
+    "scenes": [
+      {
+        "animation": "A quiz show buzzer. The question '3874 × 11 = ?' flashes. A contestant named PRIYA answers in one second, '42614!'. Zippy's jaw drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "She multiplied by 11 in one second. Is she a calculator?" },
+          { "speaker": "NEO", "text": "No, she just uses the distributive property. Let's first learn to expand longer products." }
+        ]
+      },
+      {
+        "animation": "An expansion builds term by term: '(a + b)(a + b) = (a + b)a + (a + b)b', '= a² + ba + ab + b²'. The like terms 'ba' and 'ab' glow and merge into '2ab'. Result: 'a² + 2ab + b²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Expand a plus b times a plus b. Multiply each term by each term: a squared, ba, ab and b squared." },
+          { "speaker": "NEO", "text": "ba and ab are like terms, since they have the same letter-numbers. They add to 2ab." },
+          { "speaker": "NEO", "text": "So we get a squared plus 2ab plus b squared." }
+        ]
+      },
+      {
+        "animation": "3874 × 11 splits: '3874 × (10 + 1) = 38740 + 3874'. The two numbers stack in columns, and the digit pairs add with carries shown in small orange bubbles: '4', '7 + 4 = 11 → 1 carry 1', '8 + 7 + 1 = 16 → 6 carry 1', '3 + 8 + 1 = 12 → 2 carry 1', '3 + 1 = 4'. Result: '42614'.",
+        "lines": [
+          { "speaker": "NEO", "text": "3874 times 11 is 3874 times 10, plus 3874. That's 38740 plus 3874." },
+          { "speaker": "NEO", "text": "So the answer is built from neighbouring digit sums. Write the last digit 4. Then 7 plus 4 is 11: write 1, carry 1." },
+          { "speaker": "NEO", "text": "8 plus 7 plus 1 is 16: write 6, carry 1. 3 plus 8 plus 1 is 12: write 2, carry 1. Finally 3 plus 1 is 4." },
+          { "speaker": "NEO", "text": "The answer is 42614." }
+        ]
+      },
+      {
+        "animation": "Now 3874 × 101: '387400 + 3874' stacks up with digits two places apart. Line by line: '391274'. A check: '3874 × 100 = 387400, + 3874 = 391274 ✓'. A caption: 'Brahmagupta, Sridharacharya and Bhaskaracharya described such fast methods'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can Priya's trick work for 101?" },
+          { "speaker": "NEO", "text": "Yes. 3874 times 101 is 387400 plus 3874. Now the digits added are two places apart." },
+          { "speaker": "NEO", "text": "387400 plus 3874 is 391274." },
+          { "speaker": "NEO", "text": "Indian mathematicians like Brahmagupta, Sridharacharya and Bhaskaracharya described such quick methods." }
+        ]
+      },
+      {
+        "animation": "Example: '(a + b)(a² + 2ab + b²)' expands into six terms, then like terms 'a²b + 2a²b' and 'ab² + 2ab²' merge. Result: 'a³ + 3a²b + 3ab² + b³'. An 'Exam Tip' sticker: 'Combine only like terms: 3a² and 3a are NOT like terms'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Longer brackets work the same way. a plus b times a squared plus 2ab plus b squared gives six terms." },
+          { "speaker": "NEO", "text": "Combine like terms and you get a cubed plus 3 a squared b plus 3 a b squared plus b cubed." },
+          { "speaker": "NEO", "text": "Exam tip: only like terms can be added. a squared and a are different, so they stay separate." }
+        ]
+      },
+      {
+        "animation": "Recap board with Priya holding a trophy. Points: '1. Multiply every term by every term', '2. Add only like terms', '3. × 11 = × 10 + × 1; × 101 = × 100 + × 1'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: to expand, multiply every term of one bracket by every term of the other." },
+          { "speaker": "NEO", "text": "Two: then add only the like terms." },
+          { "speaker": "NEO", "text": "Three: multiplying by 11 or 101 is just adding shifted copies of the number." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "We Distribute, Yet Things Multiply",
+    "topic_no": 3,
+    "name": "Squares of Sums and Differences",
+    "scenes": [
+      {
+        "animation": "A square rangoli of side 65 units is being filled with colour. Zippy only knows the areas of a 60-square (3600) and a 5-square (25), shown on flashcards.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I know 60 squared and 5 squared. Can I get 65 squared without long multiplication?" },
+          { "speaker": "NEO", "text": "Yes. Cut the square into pieces." }
+        ]
+      },
+      {
+        "animation": "The 65 × 65 square splits into four regions: a 60 × 60 square (3600), a 5 × 5 square (25), and two 60 × 5 rectangles (300 each). Line by line: '65² = 3600 + 300 + 300 + 25 = 4225'. The identity '(a + b)² = a² + 2ab + b²' appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "A 65 square splits into a 60 square, a 5 square and two 60 by 5 rectangles." },
+          { "speaker": "NEO", "text": "That's 3600 plus 300 plus 300 plus 25, which is 4225." },
+          { "speaker": "NEO", "text": "In general, a plus b, all squared, is a squared plus 2ab plus b squared." }
+        ]
+      },
+      {
+        "animation": "A 55-square sits inside a 60-square. Two 60 × 5 strips are removed, and the small 5 × 5 corner flashes red for being removed twice, then gets added back. Line by line: '55² = 3600 − 300 − 300 + 25 = 3025'. Identity '(a − b)² = a² − 2ab + b²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now 55 squared. Start with the 60 square and remove two 60 by 5 strips." },
+          { "speaker": "NEO", "text": "But the small 5 square got removed twice, so add it back once." },
+          { "speaker": "NEO", "text": "3600 minus 300 minus 300 plus 25 is 3025. So a minus b, squared, is a squared minus 2ab plus b squared." }
+        ]
+      },
+      {
+        "animation": "Pattern cards: '9×9 − 1×1 = 10 × 8', '7×7 − 2×2 = 9 × 5'. The identity '(a + b)(a − b) = a² − b²' forms. Example: '98 × 102 = (100 − 2)(100 + 2) = 10000 − 4 = 9996'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Look: 9 times 9 minus 1 times 1 is 80, and so is 10 times 8." },
+          { "speaker": "NEO", "text": "In general, a plus b times a minus b equals a squared minus b squared." },
+          { "speaker": "NEO", "text": "So 98 times 102 is 100 squared minus 2 squared. That's 10000 minus 4, or 9996." }
+        ]
+      },
+      {
+        "animation": "Sridharacharya's trick (750 CE) on a scroll: 'a² = (a + b)(a − b) + b²'. Worked example: '197² = (197 + 3)(197 − 3) + 3²', '= 200 × 194 + 9', '= 38800 + 9 = 38809'. An 'Exam Tip' sticker: '(5m + 6n)² ≠ 25m² + 36n²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sridharacharya, around 750 CE, used this to square numbers fast: a squared is a plus b times a minus b, plus b squared." },
+          { "speaker": "NEO", "text": "For 197 squared, take b as 3. That's 200 times 194, plus 9." },
+          { "speaker": "NEO", "text": "200 times 194 is 38800. Add 9 to get 38809." },
+          { "speaker": "NEO", "text": "Exam tip: never drop the middle term. 5m plus 6n, squared, also has 60mn." }
+        ]
+      },
+      {
+        "animation": "Recap board with the cut-up rangoli square. Points: '1. (a + b)² = a² + 2ab + b²', '2. (a − b)² = a² − 2ab + b²', '3. (a + b)(a − b) = a² − b²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a plus b, squared, is a squared plus 2ab plus b squared." },
+          { "speaker": "NEO", "text": "Two: a minus b, squared, is a squared minus 2ab plus b squared." },
+          { "speaker": "NEO", "text": "Three: a plus b times a minus b is a squared minus b squared." },
+          { "speaker": "ZIPPY", "text": "Rangoli done, and the maths too!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "We Distribute, Yet Things Multiply",
+    "topic_no": 4,
+    "name": "Mind the Mistake, and Many Ways to One Answer",
+    "scenes": [
+      {
+        "animation": "A notebook page with red-circle stamps on algebra work. A grumpy talking red pen named LAL scribbles 'Mistake!' across '2(x − 1) + 3(x + 4) = 5x + 3'.",
+        "lines": [
+          { "speaker": "LAL", "text": "Another mistake! Who distributed only half the bracket?" },
+          { "speaker": "ZIPPY", "text": "Er, it was me. What went wrong?" }
+        ]
+      },
+      {
+        "animation": "The wrong line '2x − 1 + 3x + 4' gets crossed out. Correct steps appear line by line: '2(x − 1) = 2x − 2', '3(x + 4) = 3x + 12', '2x − 2 + 3x + 12 = 5x + 10'. A check with x = 1: '2(0) + 3(5) = 15' and '5(1) + 10 = 15 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "2 times x minus 1 is 2x minus 2, not 2x minus 1. The 2 must multiply both terms." },
+          { "speaker": "NEO", "text": "Likewise 3 times x plus 4 is 3x plus 12. Together, 5x plus 10." },
+          { "speaker": "NEO", "text": "Check with x equals 1. The left side is 0 plus 15. The right side is 5 plus 10. Both are 15." }
+        ]
+      },
+      {
+        "animation": "Second mistake: '(a + 2)(b + 4) = ab + 8'. A 2 × 2 box grid fills with 'ab', '4a', '2b', '8', and the missing '4a' and '2b' tiles glow. Correct: 'ab + 4a + 2b + 8'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Next: a plus 2 times b plus 4 was written as ab plus 8." },
+          { "speaker": "NEO", "text": "A box grid shows all four products: ab, 4a, 2b and 8. Two were missing." }
+        ]
+      },
+      {
+        "animation": "A pattern of circles grows: Step 1 has 3, Step 2 has 8, Step 3 has 15. Four students colour it differently: 'Method 1: (k + 1)² − 1', 'Method 2: k² + 2k', 'Method 3: k(k + 1) + k', 'Method 4: k(k + 2)'. Each simplifies line by line to 'k² + 2k'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now a pattern of circles: 3, then 8, then 15. Four students saw it four ways." },
+          { "speaker": "NEO", "text": "One saw a square of side k plus 1, minus 1. Another saw k squared plus 2k. Others saw k times k plus 1, plus k, or k times k plus 2." },
+          { "speaker": "NEO", "text": "Expand each carefully, and all four become k squared plus 2k." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Circles in Step 15?' Steps: '15² + 2 × 15', '= 225 + 30', '= 255'. Check with Method 4: '15 × 17 = 255 ✓'. An 'Exam Tip' sticker: 'Test your expansion with a small number'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How many circles in Step 15?" },
+          { "speaker": "NEO", "text": "15 squared plus 2 times 15. That's 225 plus 30, which is 255." },
+          { "speaker": "NEO", "text": "Check with k times k plus 2: 15 times 17 is also 255." },
+          { "speaker": "NEO", "text": "Exam tip: after expanding, substitute a small value like 1 or 2 on both sides. If they differ, find the mistake." }
+        ]
+      },
+      {
+        "animation": "Recap board with LAL now smiling and drawing ticks. Points: '1. Multiply the outside number into every term', '2. Two brackets of two terms give four products', '3. Different correct methods give the same expression'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the number outside a bracket multiplies every term inside." },
+          { "speaker": "NEO", "text": "Two: two brackets of two terms each give four products before simplifying." },
+          { "speaker": "NEO", "text": "Three: correct methods may look different, but they simplify to the same expression." },
+          { "speaker": "LAL", "text": "Finally, a page with no red ink." }
+        ]
+      }
+    ]
+  }
+]

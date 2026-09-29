@@ -1,0 +1,252 @@
+[
+  {
+    "chapter_no": 10,
+    "chapter": "Geography: Minerals and Energy Resources",
+    "topic_no": 1,
+    "name": "What Is a Mineral? Modes of Occurrence and Classification",
+    "scenes": [
+      {
+        "animation": "Zippy wakes up and everything he touches glows with a mineral label: the steel spoon 'iron', the toothpaste 'minerals', the phone 'copper', the salt shaker 'salt from sea water'. Neo sips chai from a glass labelled 'sand'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, my whole morning is made of rocks!" },
+          { "speaker": "NEO", "text": "Pretty much. Everything we use, from a tiny pin to a towering building or a big ship, is made from minerals." }
+        ]
+      },
+      {
+        "animation": "A glittering diamond and a crumbly lump of talc face off on a stage. Captions: 'Hardest: diamond', 'Softest: talc'. A definition card slides in: 'A homogenous, naturally occurring substance with a definable internal structure'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Geologists define a mineral as a homogenous, naturally occurring substance with a definable internal structure." },
+          { "speaker": "NEO", "text": "Minerals are found in varied forms, from the hardest diamond to the softest talc. Rocks are combinations of homogenous substances called minerals." }
+        ]
+      },
+      {
+        "animation": "A cutaway of the Earth's crust builds layer by layer. 1: cracks in igneous and metamorphic rocks glow as 'veins and lodes: tin, copper, zinc, lead'. 2: sedimentary layers show 'beds: coal, gypsum, potash salt, sodium salt'. 3: a weathered surface shows 'decomposition: bauxite'. 4: a river valley glitters with 'placer deposits: gold, silver, tin, platinum'. 5: ocean waves carry 'common salt, magnesium, bromine'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Minerals occur in different ways. In igneous and metamorphic rocks, they occur in cracks, crevices, faults or joints. Smaller occurrences are called veins and larger ones are called lodes. Tin, copper, zinc and lead come this way." },
+          { "speaker": "NEO", "text": "In sedimentary rocks, minerals occur in beds or layers, like coal, gypsum, potash salt and sodium salt. Bauxite forms through the decomposition of surface rocks." },
+          { "speaker": "NEO", "text": "Some minerals occur as alluvial deposits in the sands of valley floors and the base of hills. These are called placer deposits, and include gold, silver, tin and platinum. Ocean waters give us common salt, magnesium and bromine." },
+          { "speaker": "ZIPPY", "text": "Gold in river sand? I'm going to the river." }
+        ]
+      },
+      {
+        "animation": "A flowchart grows from a box 'Minerals': 'Metallic' splits into 'Ferrous: iron ore, manganese, nickel, cobalt', 'Non-ferrous: copper, lead, tin, bauxite' and 'Precious: gold, silver, platinum'; 'Non-metallic: mica, salt, potash, sulphur, granite, limestone, marble, sandstone'; 'Energy minerals: coal, petroleum, natural gas'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Minerals are classified into three groups. Metallic minerals are ferrous, like iron ore and manganese, non-ferrous, like copper, lead, tin and bauxite, and precious, like gold, silver and platinum." },
+          { "speaker": "NEO", "text": "Non-metallic minerals include mica, salt, potash, sulphur, granite, limestone, marble and sandstone. Energy minerals are coal, petroleum and natural gas." }
+        ]
+      },
+      {
+        "animation": "A hillside in Meghalaya: narrow tunnels dug into the slope, labelled 'Rat hole mining: Jowai and Cherrapunjee'. A red warning stamp reads 'Board tip: veins vs lodes, placers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the north-east, most minerals are owned by individuals or communities. In Meghalaya, there are large deposits of coal, iron ore, limestone and dolomite. Coal mining in Jowai and Cherrapunjee is done by family members in the form of a long narrow tunnel, known as rat hole mining." },
+          { "speaker": "NEO", "text": "Board tip: questions on modes of occurrence are common. Always give one mineral example for each mode." }
+        ]
+      },
+      {
+        "animation": "Recap board with a glowing gem icon: '1. Mineral: homogenous, naturally occurring, definable internal structure', '2. Occurrence: veins and lodes, beds, decomposition, placers, ocean waters', '3. Classification: metallic, non-metallic, energy minerals'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a mineral is a homogenous, naturally occurring substance with a definable internal structure." },
+          { "speaker": "NEO", "text": "Two: minerals occur in veins and lodes, beds, decomposed rocks, placer deposits and ocean waters." },
+          { "speaker": "NEO", "text": "Three: they are classified as metallic, non-metallic and energy minerals." },
+          { "speaker": "ZIPPY", "text": "And I'm classified as a very shiny spark." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Geography: Minerals and Energy Resources",
+    "topic_no": 2,
+    "name": "Ferrous Minerals: Iron Ore Belts and Manganese",
+    "scenes": [
+      {
+        "animation": "Zippy tries to build a steel bridge out of chalk; it snaps. Neo drops an iron ore rock onto the table with a thud. Caption: 'Iron ore: the basic mineral and backbone of industrial development'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My bridge keeps breaking. What's missing?" },
+          { "speaker": "NEO", "text": "Iron. Ferrous minerals account for about three-fourths of the total value of the production of metallic minerals, and they give a strong base for metallurgical industries." }
+        ]
+      },
+      {
+        "animation": "Two ore characters. Magnetite gleams with a badge 'Finest ore, up to 70% iron, excellent magnetic qualities'. Hematite stands beside it: 'Most important industrial iron ore by quantity used; 50-60% iron'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Iron ore is the basic mineral and the backbone of industrial development. Magnetite is the finest iron ore, with a very high content of iron, up to 70 per cent. It has excellent magnetic qualities, especially valuable in the electrical industry." },
+          { "speaker": "NEO", "text": "Hematite is the most important industrial iron ore in terms of the quantity used, with an iron content of 50 to 60 per cent." }
+        ]
+      },
+      {
+        "animation": "A map of India draws itself and four iron ore belts light up one by one with pins. Belt 1: 'Odisha-Jharkhand: Badampahar (Mayurbhanj, Kendujhar); Gua and Noamundi (Singhbhum)'. Belt 2: 'Durg-Bastar-Chandrapur: Bailadila hills, shaped like an ox's hump'. Belt 3: 'Ballari-Chitradurga-Chikkamagaluru-Tumakuru: Kudremukh'. Belt 4: 'Maharashtra-Goa: Goa and Ratnagiri'. Arrows from Bailadila run to Visakhapatnam port and on to Japan and South Korea; a slurry pipeline runs from Kudremukh to a port near Mangaluru; a ship leaves Marmagao port.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has four major iron ore belts. The Odisha-Jharkhand belt has high grade hematite at the Badampahar mines in Mayurbhanj and Kendujhar districts of Odisha, and at Gua and Noamundi in Singhbhum district of Jharkhand." },
+          { "speaker": "NEO", "text": "The Durg-Bastar-Chandrapur belt lies in Chhattisgarh and Maharashtra. The Bailadila range of hills in Bastar, shaped like the hump of an ox, has very high grade hematites. This iron ore is exported to Japan and South Korea via Visakhapatnam port." },
+          { "speaker": "NEO", "text": "The Ballari-Chitradurga-Chikkamagaluru-Tumakuru belt in Karnataka has large reserves. The Kudremukh mines in the Western Ghats are a hundred per cent export unit, and the ore is transported as slurry through a pipeline to a port near Mangaluru." },
+          { "speaker": "NEO", "text": "The Maharashtra-Goa belt includes Goa and Ratnagiri district of Maharashtra. Its ore is not of very high quality, but is efficiently exploited and exported through Marmagao port." },
+          { "speaker": "ZIPPY", "text": "An ox-hump hill full of iron. Geography is weird." }
+        ]
+      },
+      {
+        "animation": "A steel mill cauldron with a counter: '1 tonne of steel needs about 10 kg of manganese'. Manganese also dives into bottles labelled 'bleaching powder', 'insecticides' and 'paints'. A map pin flashes on Odisha: 'Largest producer of manganese ores'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Manganese is mainly used in the manufacturing of steel and ferro-manganese alloy. Nearly 10 kilograms of manganese is required to manufacture one tonne of steel. It is also used in making bleaching powder, insecticides and paints." },
+          { "speaker": "NEO", "text": "Board tip: when asked to explain an iron ore belt, name the state, one mine and the export port. That trio earns full marks." }
+        ]
+      },
+      {
+        "animation": "Recap board with a steel beam icon: '1. Magnetite finest (up to 70%); hematite most used (50-60%)', '2. Four belts: Odisha-Jharkhand, Durg-Bastar-Chandrapur, Ballari-Chitradurga-Chikkamagaluru-Tumakuru, Maharashtra-Goa', '3. Manganese: about 10 kg per tonne of steel'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: magnetite is the finest iron ore, and hematite is the most used." },
+          { "speaker": "NEO", "text": "Two: India has four iron ore belts, from Odisha-Jharkhand to Maharashtra-Goa." },
+          { "speaker": "NEO", "text": "Three: about 10 kilograms of manganese goes into every tonne of steel." },
+          { "speaker": "ZIPPY", "text": "My bridge now has iron. And a little manganese. For style." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Geography: Minerals and Energy Resources",
+    "topic_no": 3,
+    "name": "Non-Ferrous and Non-Metallic Minerals, and Conservation of Minerals",
+    "scenes": [
+      {
+        "animation": "Zippy grabs a copper wire and zaps himself happily; an aluminium soft-drink can rolls past; a mica flake shimmers like glass. Neo holds up a sign: 'Not iron, but still important!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Copper wire! My favourite snack." },
+          { "speaker": "NEO", "text": "Copper is a non-ferrous mineral. India's reserves and production of non-ferrous minerals are not very satisfactory, yet these minerals play a vital role in many industries." }
+        ]
+      },
+      {
+        "animation": "A copper card: 'Malleable, ductile, good conductor: electrical cables, electronics, chemical industries'. Map pins glow: 'Balaghat mines, Madhya Pradesh', 'Khetri mines, Rajasthan', 'Singhbhum, Jharkhand'. A bauxite card follows: 'Clays formed by decomposition of aluminium silicate rocks'; pins on 'Amarkantak plateau, Maikal hills, Bilaspur-Katni plateau' and 'Panchpatmali, Koraput, Odisha'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Copper is malleable, ductile and a good conductor, so it is mainly used in electrical cables, electronics and chemical industries. The Balaghat mines in Madhya Pradesh, the Khetri mines in Rajasthan and Singhbhum district of Jharkhand are leading producers." },
+          { "speaker": "NEO", "text": "Aluminium is an important metal because it combines the strength of metals such as iron with extreme lightness, good conductivity and great malleability. It comes from bauxite, formed by the decomposition of a wide variety of rocks rich in aluminium silicates." },
+          { "speaker": "NEO", "text": "Bauxite deposits are mainly found in the Amarkantak plateau, the Maikal hills and the plateau region of Bilaspur-Katni. Odisha is the largest bauxite producing state, and the Panchpatmali deposits in Koraput district are important." }
+        ]
+      },
+      {
+        "animation": "Thin transparent mica sheets split apart like pages. Pins light up: 'Gaya-Hazaribagh belt, Jharkhand', 'Ajmer, Rajasthan', 'Nellore mica belt, Andhra Pradesh'. Then a block of limestone drops into a cement mixer and a blast furnace, labelled 'Basic raw material for cement; essential for smelting iron ore'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mica is made up of a series of plates or leaves that split easily into thin sheets. Because of its excellent dielectric strength and resistance to high voltage, it is one of the most indispensable minerals in electric and electronic industries." },
+          { "speaker": "NEO", "text": "Mica deposits are found on the northern edge of the Chota Nagpur plateau. The Koderma, Gaya and Hazaribagh belt of Jharkhand is the leading producer. In Rajasthan, the major mica producing area is around Ajmer. The Nellore mica belt of Andhra Pradesh is also important." },
+          { "speaker": "NEO", "text": "Limestone is the basic raw material for the cement industry and is essential for smelting iron ore in the blast furnace." }
+        ]
+      },
+      {
+        "animation": "A miner coughs in a dusty tunnel; warning icons appear: 'dust and noxious fumes', 'pulmonary diseases', 'collapsing roofs, flooding, fires'. Then a clock shows millions of years ticking slowly, and a recycle arrow wraps around scrap metal: 'Recycle, use substitutes, planned and sustainable use'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mining is dangerous. Miners inhale dust and noxious fumes, which makes them vulnerable to pulmonary diseases. There is also the risk of collapsing mine roofs, inundation and fires in coalmines." },
+          { "speaker": "NEO", "text": "Minerals take millions of years to form, while we consume them rapidly. So we must use them in a planned and sustainable manner. Improved technologies to use low grade ores, recycling of metals using scrap, and using substitutes can help conserve them." },
+          { "speaker": "NEO", "text": "Board tip: expect a question on why we should conserve minerals. Start with the idea that minerals are finite and non-renewable." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Copper: Balaghat, Khetri, Singhbhum; bauxite: Odisha largest, Panchpatmali', '2. Mica: Koderma-Gaya-Hazaribagh, Ajmer, Nellore; limestone for cement', '3. Conserve: recycle, substitutes, sustainable use'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: copper comes from Balaghat, Khetri and Singhbhum, and Odisha leads in bauxite." },
+          { "speaker": "NEO", "text": "Two: mica is vital for electronics, and limestone is vital for cement." },
+          { "speaker": "NEO", "text": "Three: minerals are finite, so we must recycle and use them sustainably." },
+          { "speaker": "ZIPPY", "text": "Fine. I'll stop eating copper wire." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Geography: Minerals and Energy Resources",
+    "topic_no": 4,
+    "name": "Conventional Sources of Energy: Coal, Petroleum, Natural Gas and Electricity",
+    "scenes": [
+      {
+        "animation": "Power cut in the hostel. Zippy lights up the room by himself, sweating. Neo flicks a switch and a wire traces back to a coal mine, an oil rig and a dam. Caption: 'Where does energy come from?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I can't be the hostel's light bulb forever!" },
+          { "speaker": "NEO", "text": "Energy can be generated from fuel minerals like coal, petroleum, natural gas and uranium, and from electricity. Conventional sources include firewood, cattle dung cake, coal, petroleum, natural gas and electricity." }
+        ]
+      },
+      {
+        "animation": "A coal ladder rises in four steps: 'Peat: low carbon, high moisture', 'Lignite: low grade brown coal, Neyveli (Tamil Nadu)', 'Bituminous: most popular commercial coal; metallurgical coal for blast furnaces', 'Anthracite: highest quality hard coal'. Then a map shows 'Gondwana coal, over 200 million years old: Damodar valley - Jharia, Raniganj, Bokaro' and 'Tertiary coal, about 55 million years old: Meghalaya, Assam, Arunachal Pradesh, Nagaland'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In India, coal is the most abundantly available fossil fuel. Depending on compression, it ranges from peat, to lignite, a low grade brown coal mined at Neyveli in Tamil Nadu, to bituminous coal, the most popular in commercial use, to anthracite, the highest quality hard coal." },
+          { "speaker": "NEO", "text": "Coal occurs in rock series of two main geological ages. Gondwana coal, a little over 200 million years in age, is found in the Damodar valley, with Jharia, Raniganj and Bokaro as important coalfields. Tertiary deposits, about 55 million years old, occur in the north-eastern states." }
+        ]
+      },
+      {
+        "animation": "A cross-section of folded rock: oil and gas trapped in the crest of an arch labelled 'anticline', and in a 'fault trap'. Map pins pop up: 'Mumbai High' offshore, 'Ankeleshwar, Gujarat', and 'Digboi, Naharkatia, Moran-Hugrijan, Assam'. A gas pipeline draws itself: 'Hazira-Vijaipur-Jagdishpur'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Petroleum is the next major energy source after coal. Most petroleum occurrences in India are associated with anticlines and fault traps in rock formations of the tertiary age." },
+          { "speaker": "NEO", "text": "Mumbai High is the largest producing area. Ankeleshwar is the most important field of Gujarat. Assam is the oldest oil producing state, with important fields at Digboi, Naharkatia and Moran-Hugrijan." },
+          { "speaker": "NEO", "text": "Natural gas is found with or without petroleum. It is used as a source of energy and as an industrial raw material in the petrochemical industry. Large reserves have been discovered in the Krishna-Godavari basin. The Hazira-Vijaipur-Jagdishpur cross-country gas pipeline links Mumbai High and Bassien with fertiliser, power and industrial complexes." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: water rushes down a dam and spins a turbine, labelled 'Hydro electricity: renewable; Bhakra Nangal, Damodar Valley Corporation, Kopili Hydel Project'. Right: coal burns in a chimney, labelled 'Thermal electricity: coal, petroleum, natural gas; non-renewable'. Map pins: 'Thermal: Namrup, Singrauli, Ramagundam'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Electricity is generated in two main ways. Fast flowing water produces hydro electricity, a renewable resource. Projects include Bhakra Nangal, the Damodar Valley Corporation and the Kopili Hydel Project." },
+          { "speaker": "NEO", "text": "Burning coal, petroleum and natural gas drives turbines to produce thermal power. Thermal power stations use non-renewable fossil fuels." },
+          { "speaker": "NEO", "text": "Board tip: in map work, locate and label the thermal power plants at Namrup, Singrauli and Ramagundam." }
+        ]
+      },
+      {
+        "animation": "Recap board with three energy icons: '1. Coal: peat to anthracite; Gondwana (Damodar valley) and tertiary (north-east)', '2. Petroleum: anticlines and fault traps; Mumbai High, Ankeleshwar, Digboi', '3. Electricity: hydel (renewable) and thermal (non-renewable)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: coal ranges from peat to anthracite, and most of it is Gondwana coal." },
+          { "speaker": "NEO", "text": "Two: petroleum hides in anticlines and fault traps, with Mumbai High as the largest producer." },
+          { "speaker": "NEO", "text": "Three: electricity comes from renewable hydel power and non-renewable thermal power." },
+          { "speaker": "ZIPPY", "text": "Great. Hostel lights restored. Spark off duty." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Geography: Minerals and Energy Resources",
+    "topic_no": 5,
+    "name": "Non-Conventional Sources of Energy and Conservation of Energy",
+    "scenes": [
+      {
+        "animation": "A petrol pump meter spins furiously while a smog cloud forms over a city. Zippy wears a gas mask. Neo points to the sun, the wind and a cow, each with a green halo.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Petrol prices up, smoke up, patience down. Any other options?" },
+          { "speaker": "NEO", "text": "Growing consumption of energy has made us dependent on fossil fuels, which are finite and polluting. So there is a pressing need to use renewable energy sources." }
+        ]
+      },
+      {
+        "animation": "A uranium atom splits in a glowing flash. Map pins appear: 'Uranium and thorium: Jharkhand and the Aravalli ranges of Rajasthan', 'Monazite sands of Kerala: rich in thorium'. Then nuclear power plant pins light up with labels: 'Narora', 'Kakrapar', 'Tarapur', 'Kalpakkam'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Nuclear or atomic energy is obtained by altering the structure of atoms. Uranium and thorium, available in Jharkhand and the Aravalli ranges of Rajasthan, are used to generate it. The monazite sands of Kerala are also rich in thorium." },
+          { "speaker": "NEO", "text": "Board tip: map work asks you to locate the nuclear power plants at Narora, Kakrapar, Tarapur and Kalpakkam." }
+        ]
+      },
+      {
+        "animation": "A sunny panel field near Bhuj, labelled 'Largest solar plant: Madhapur, near Bhuj'; a milk can shines, labelled 'sterilises milk cans'. Wind turbines spin along a line from 'Nagarcoil' to 'Madurai' in Tamil Nadu, with extra pins on Andhra Pradesh, Karnataka, Gujarat, Kerala, Maharashtra and Lakshadweep, and 'Nagarcoil and Jaisalmer' highlighted.",
+        "lines": [
+          { "speaker": "NEO", "text": "India is a tropical country with enormous possibilities of tapping solar energy. The largest solar plant of India is located at Madhapur, near Bhuj, where solar energy is used to sterilise milk cans." },
+          { "speaker": "NEO", "text": "The largest wind farm cluster is located in Tamil Nadu, from Nagarcoil to Madurai. Andhra Pradesh, Karnataka, Gujarat, Kerala, Maharashtra and Lakshadweep also have important wind farms. Nagarcoil and Jaisalmer are well known for effective use of wind energy." }
+        ]
+      },
+      {
+        "animation": "A village gobar gas plant: cow dung goes in, a blue flame lights a stove and a bulb. Then ocean tides rush into a gulf, labelled 'Gulf of Khambhat, Gulf of Kachchh, Gangetic delta in the Sundarban'. Finally steam rises from hot springs: 'Parvati valley near Manikarn, Himachal Pradesh' and 'Puga valley, Ladakh'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Shrubs, farm waste, animal and human waste produce biogas in rural areas. Gobar gas plants give farmers energy and improved quality of manure. They also prevent the loss of trees and manure due to burning of fuel wood and cow dung cakes." },
+          { "speaker": "NEO", "text": "Tidal energy can be harnessed in the Gulf of Khambhat, the Gulf of Kachchh in Gujarat on the western coast, and the Gangetic delta in the Sundarban regions of West Bengal." },
+          { "speaker": "NEO", "text": "Geothermal energy uses heat from the interior of the Earth. Two experimental projects have been set up, one in the Parvati valley near Manikarn in Himachal Pradesh, and the other in the Puga valley in Ladakh." }
+        ]
+      },
+      {
+        "animation": "A checklist on a fridge door ticks off: 'Use public transport', 'Switch off electricity when not in use', 'Use power-saving devices', 'Use non-conventional sources'. Zippy dims his own glow to save energy.",
+        "lines": [
+          { "speaker": "NEO", "text": "Energy saved is energy produced. We can conserve energy by using public transport instead of individual vehicles, switching off electricity when not in use, using power-saving devices and using non-conventional sources of energy." },
+          { "speaker": "ZIPPY", "text": "I'll dim myself to energy-saver mode." }
+        ]
+      },
+      {
+        "animation": "Recap board with a sun, a wind turbine and an atom: '1. Nuclear: uranium and thorium; Narora, Kakrapar, Tarapur, Kalpakkam', '2. Solar near Bhuj; wind from Nagarcoil to Madurai', '3. Biogas, tidal, geothermal; energy saved is energy produced'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: nuclear energy uses uranium and thorium." },
+          { "speaker": "NEO", "text": "Two: India's largest solar plant is near Bhuj, and its largest wind farm cluster runs from Nagarcoil to Madurai." },
+          { "speaker": "NEO", "text": "Three: biogas, tides and the Earth's heat are also sources, and saving energy matters as much as producing it." },
+          { "speaker": "ZIPPY", "text": "Energy-saver Zippy, signing off." }
+        ]
+      }
+    ]
+  }
+]

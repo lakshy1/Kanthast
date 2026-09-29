@@ -1,0 +1,283 @@
+[
+  {
+    "chapter_no": 9,
+    "chapter": "The Baudhayana-Pythagoras Theorem",
+    "topic_no": 1,
+    "name": "Doubling and Halving a Square",
+    "scenes": [
+      {
+        "animation": "An ancient Vedic courtyard. A priest marks a square fire altar with cords and pegs. A scroll labelled 'Baudhayana's Sulba-Sutra, c. 800 BCE' reads: 'Make an altar with double the area.' Zippy stretches every side to double length and the altar balloons hugely.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Double the area? Easy. I doubled every side!" },
+          { "speaker": "NEO", "text": "Look again, Zippy. Your altar is now four times as big, not two." }
+        ]
+      },
+      {
+        "animation": "A 1 × 1 square next to a 2 × 2 square split into four unit squares, labelled '2 × 2 = 4 times the area'. Zippy's face falls.",
+        "lines": [
+          { "speaker": "NEO", "text": "Doubling each side makes the area 2 times 2, which is 4 times the original." },
+          { "speaker": "NEO", "text": "Baudhayana, around 800 BCE, asked how to make a square with exactly double the area." }
+        ]
+      },
+      {
+        "animation": "A square with its diagonal drawn. A new tilted square is built on the diagonal. East-west and north-south lines are added, and the figure divides into small congruent triangles: the original square holds 2, the new square holds 4. Text: 'The diagonal of a square produces double the area.'",
+        "lines": [
+          { "speaker": "NEO", "text": "His answer: the square built on the diagonal has double the area." },
+          { "speaker": "NEO", "text": "Baudhayana called these east-west and north-south lines. Draw them through the corners of the new square." },
+          { "speaker": "NEO", "text": "Now the original square is made of 2 small triangles, all identical." },
+          { "speaker": "NEO", "text": "The new square on the diagonal is made of 4 identical triangles. So it's exactly double." }
+        ]
+      },
+      {
+        "animation": "A paper square is folded so all four corners meet at the centre. The creases form a tilted square PQRS through the midpoints of the sides. Four corner flaps fold over to exactly cover the inner square.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can we go the other way and halve a square?" },
+          { "speaker": "NEO", "text": "Yes. Fold each corner of a square paper to the centre. The creases join the midpoints of the sides." },
+          { "speaker": "NEO", "text": "The folded corners exactly cover the inner square, so the inner square is half the area." },
+          { "speaker": "ZIPPY", "text": "So a square with half the side would be too small?" },
+          { "speaker": "NEO", "text": "Yes. It would be a quarter, as the next picture shows." }
+        ]
+      },
+      {
+        "animation": "A sequence of squares grows, each built on the diagonal of the previous one, made of 2, 4 and 8 small triangles. An 'Exam Tip' sticker: 'Half the side gives a quarter of the area, not half'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Keep going, and each square doubles again: 2, then 4, then 8 triangles." },
+          { "speaker": "NEO", "text": "Exam tip: halving the side of a square gives one quarter of the area, not one half. Four such squares fill the original." }
+        ]
+      },
+      {
+        "animation": "Recap board beside the finished altar. Points: '1. Doubling the side gives 4 times the area', '2. The square on the diagonal has double the area', '3. Joining midpoints of sides gives half the area'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: doubling the side of a square makes its area four times larger." },
+          { "speaker": "NEO", "text": "Two: Baudhayana showed that the square on the diagonal has double the area." },
+          { "speaker": "NEO", "text": "Three: the square joining the midpoints of the sides has half the area." },
+          { "speaker": "ZIPPY", "text": "One perfect altar, coming up." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "The Baudhayana-Pythagoras Theorem",
+    "topic_no": 2,
+    "name": "The Hypotenuse of an Isosceles Right Triangle and √2",
+    "scenes": [
+      {
+        "animation": "A samosa-shaped isosceles right triangle with legs '1' and '1' and a hypotenuse marked '?'. Zippy measures it with a ruler, which reads '1.4-something'. He shakes the ruler.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Sides of 1 and 1. The long side is 1.4 something. My ruler can't decide!" },
+          { "speaker": "NEO", "text": "Your ruler never will. Let's find it with areas." }
+        ]
+      },
+      {
+        "animation": "Two such triangles form a unit square PEAR. A square REST is built on its diagonal ER, which is double the area. Steps: 'Area REST = 2 × 1 = 2', 'c × c = 2', 'c = √2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two of these triangles make a square of side 1, with area 1." },
+          { "speaker": "NEO", "text": "The square on its diagonal has double the area, so 2 square units. If the hypotenuse is c, then c squared is 2." },
+          { "speaker": "NEO", "text": "So c is the square root of 2." }
+        ]
+      },
+      {
+        "animation": "A number line zooms in step by step: '1² = 1 < 2 < 4 = 2²', '1.4² = 1.96, 1.5² = 2.25', '1.41² = 1.9881, 1.42² = 2.0164', '1.414² = 1.999396, 1.415² = 2.002225'. The trapped region shrinks each time.",
+        "lines": [
+          { "speaker": "NEO", "text": "1 squared is 1 and 2 squared is 4, so root 2 is between 1 and 2." },
+          { "speaker": "NEO", "text": "1.4 squared is 1.96, and 1.5 squared is 2.25. So it's between 1.4 and 1.5." },
+          { "speaker": "NEO", "text": "Zoom again: 1.414 squared is just below 2, and 1.415 squared is just above. So root 2 is about 1.414." },
+          { "speaker": "NEO", "text": "In fact, its decimals never end, and it can't be written as a fraction m by n. Root 2 is 1.41421356 and so on." }
+        ]
+      },
+      {
+        "animation": "General triangle with legs 'a, a' and hypotenuse 'c'. Formula: 'c² = 2a²'. Worked example 1: 'a = 12 → c² = 2 × 144 = 288', '16² = 256 < 288 < 289 = 17²'. Example 2: 'c = √72 → 72 = 2a² → a² = 36 → a = 6'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For any isosceles right triangle with equal sides a, the hypotenuse c satisfies c squared equals 2 a squared." },
+          { "speaker": "NEO", "text": "If a is 12, c squared is 2 times 144, which is 288. 16 squared is 256 and 17 squared is 289. So c is between 16 and 17." },
+          { "speaker": "NEO", "text": "Backwards: if c is root 72, then 2 a squared is 72, so a squared is 36, and a is 6." }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' sticker slaps onto a board reading 'c = a√2, NOT 2a'. Zippy's earlier guess '2' is crossed out.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the hypotenuse is just double the side?" },
+          { "speaker": "NEO", "text": "No. It's the side times root 2, about 1.414 times the side." },
+          { "speaker": "NEO", "text": "Exam tip: when a square root isn't a whole number, give it between two whole numbers, or leave it as a root." }
+        ]
+      },
+      {
+        "animation": "Recap board with the samosa triangle. Points: '1. Isosceles right triangle: c² = 2a²', '2. For a = 1, c = √2 ≈ 1.414', '3. √2 is a non-terminating decimal and not a fraction'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: in an isosceles right triangle, c squared equals 2 a squared." },
+          { "speaker": "NEO", "text": "Two: when the equal sides are 1, the hypotenuse is root 2, about 1.414." },
+          { "speaker": "NEO", "text": "Three: root 2 has a never-ending decimal and can't be written as a fraction." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "The Baudhayana-Pythagoras Theorem",
+    "topic_no": 3,
+    "name": "Combining Two Squares: Baudhayana's Theorem",
+    "scenes": [
+      {
+        "animation": "Two square rangoli tiles of different sizes, a small one with side a and a big one with side b. A villager asks for one single square tile with the same total colour. Zippy tries to glue them and gets an L-shape.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Two different squares into one square? I just get an L!" },
+          { "speaker": "NEO", "text": "Baudhayana solved exactly this in his Sulba-Sutra. Let's follow his steps." }
+        ]
+      },
+      {
+        "animation": "The two squares are placed side by side. A rectangle of sides a and b is marked in the big square, and its diagonal drawn, forming a right triangle with legs a and b. Three more identical triangles are added around, building a tilted four-sided figure. Pieces T, U, V, W and X are labelled.",
+        "lines": [
+          { "speaker": "NEO", "text": "Place the squares side by side. Mark a rectangle using the side of the smaller square, and draw its diagonal." },
+          { "speaker": "NEO", "text": "That diagonal is the hypotenuse of a right triangle with sides a and b. Build three more copies of this triangle around it." },
+          { "speaker": "NEO", "text": "The four equal hypotenuses make a new figure. Its angles are x plus 90 minus x, which is 90 degrees. So it's a square." }
+        ]
+      },
+      {
+        "animation": "Paper cutting: the joined squares are cut along two lines into three pieces, which slide and rotate to form one big square of side c. Then the proof card: 'a² + b² = c²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cut along the two diagonals and rearrange the three pieces. They fill one big square exactly." },
+          { "speaker": "NEO", "text": "Its side is the hypotenuse c. So a squared plus b squared equals c squared." },
+          { "speaker": "NEO", "text": "Baudhayana stated this rule generally long before Pythagoras, around 500 BCE. So we call it the Baudhayana-Pythagoras Theorem." }
+        ]
+      },
+      {
+        "animation": "Worked example: a right triangle with legs 3 cm and 4 cm drawn with a set-square. Steps write: '3² + 4² = c²', '9 + 16 = 25', 'c = 5 cm'. A ruler measures exactly 5 cm. Then '8² + b² = 17²', '64 + b² = 289', 'b² = 225', 'b = 15'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it. Legs of 3 and 4 centimetres. 9 plus 16 is 25, so the hypotenuse is 5 centimetres. Measure it, and it's 5!" },
+          { "speaker": "NEO", "text": "Now one leg is 8 and the hypotenuse is 17. 64 plus b squared is 289. So b squared is 225, and b is 15." }
+        ]
+      },
+      {
+        "animation": "A triangle with the right angle highlighted and 'c' opposite it glowing. Zippy writes '8² + 17² = b²' and a red cross appears. An 'Exam Tip' sticker: 'c is always the side opposite the right angle'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I added 8 squared and 17 squared. Why is my answer huge?" },
+          { "speaker": "NEO", "text": "Because 17 is the hypotenuse. It goes alone on one side of the equation." },
+          { "speaker": "NEO", "text": "Exam tip: find the side opposite the right angle first. That's c, the longest side." }
+        ]
+      },
+      {
+        "animation": "Recap board with the combined rangoli tile. Points: '1. Square on the hypotenuse = sum of squares on the other sides', '2. a² + b² = c², c opposite the right angle', '3. Stated by Baudhayana in the Sulba-Sutra'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the square on the hypotenuse equals the two other squares combined." },
+          { "speaker": "NEO", "text": "Two: a squared plus b squared equals c squared, where c is opposite the right angle." },
+          { "speaker": "NEO", "text": "Three: Baudhayana stated this in his Sulba-Sutra, centuries before Pythagoras." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "The Baudhayana-Pythagoras Theorem",
+    "topic_no": 4,
+    "name": "Baudhayana Triples and Fermat's Last Theorem",
+    "scenes": [
+      {
+        "animation": "A treasure chest labelled 'Whole-number right triangles' opens to reveal glowing number trios: '(3, 4, 5)', '(5, 12, 13)', '(8, 15, 17)', '(7, 24, 25)'. Zippy grabs them like gold coins.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Right triangles where every side is a whole number? Treasure!" },
+          { "speaker": "NEO", "text": "Baudhayana listed several in his Sulba-Sutra. They're called Baudhayana triples." }
+        ]
+      },
+      {
+        "animation": "Scaling: '(3, 4, 5) × 2 = (6, 8, 10)', '× 3 = (9, 12, 15)', '× 4 = (12, 16, 20)'. Algebra: '(3k)² + (4k)² = 9k² + 16k² = 25k² = (5k)²'. Labels 'primitive' on (3, 4, 5) and 'scaled' on the rest.",
+        "lines": [
+          { "speaker": "NEO", "text": "Multiply 3, 4, 5 by any number k. 3k squared plus 4k squared is 9 k squared plus 16 k squared, which is 25 k squared." },
+          { "speaker": "NEO", "text": "That's 5k squared. So there are infinitely many triples." },
+          { "speaker": "NEO", "text": "A triple with no common factor above 1, like 3, 4, 5, is called primitive. 9, 12, 15 is just a scaled copy." }
+        ]
+      },
+      {
+        "animation": "Odd numbers stack as tiles: '1 + 3 + 5 + ... + 25 = 13²'. The last tile, 25, glows as '5²'. Steps: '(n − 1)² + (2n − 1) = n²', 'n = 13 → 12² + 5² = 13²', 'check: 144 + 25 = 169 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here's a trick for new ones. The sum of the first n odd numbers is n squared." },
+          { "speaker": "NEO", "text": "So n minus 1, squared, plus the nth odd number, 2n minus 1, equals n squared." },
+          { "speaker": "NEO", "text": "Pick an odd number that is a square, like 25. It's the 13th odd number. So 12 squared plus 5 squared is 13 squared." },
+          { "speaker": "NEO", "text": "Check: 144 plus 25 is 169. It works." }
+        ]
+      },
+      {
+        "animation": "17th-century France. Pierre de Fermat scribbles in a book margin: 'xⁿ + yⁿ = zⁿ has no solution for n > 2. I have a marvellous proof, but this margin is too small.' Pages of failed attempts pile up over 300 years. Then 1963: a 10-year-old Andrew Wiles reads a library book; 1994: an older Wiles writes 'Q.E.D.'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can a cube be a sum of two cubes, like with squares?" },
+          { "speaker": "NEO", "text": "Fermat claimed no cube, fourth power or higher power can be split like that. He said his proof didn't fit in the margin." },
+          { "speaker": "NEO", "text": "For over 300 years, nobody could prove it. In 1963, ten-year-old Andrew Wiles read about it and resolved to solve it. He proved it in 1994." }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' sticker: 'Check a triple: add the squares of the two smaller numbers'. Example: '(15, 36, 39): 225 + 1296 = 1521 = 39² ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: to test a triple, square the two smaller numbers and add. For 15, 36, 39: 225 plus 1296 is 1521, which is 39 squared." }
+        ]
+      },
+      {
+        "animation": "Recap board with the treasure chest. Points: '1. Baudhayana triple: whole numbers with a² + b² = c²', '2. (ka, kb, kc) is a triple too; primitive = no common factor', '3. Fermat's Last Theorem: no solutions for n > 2 (Wiles, 1994)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a Baudhayana triple is three whole numbers with a squared plus b squared equal to c squared." },
+          { "speaker": "NEO", "text": "Two: scaling a triple gives another, and primitive triples have no common factor." },
+          { "speaker": "NEO", "text": "Three: for powers above 2, there are no such solutions. That's Fermat's Last Theorem." },
+          { "speaker": "ZIPPY", "text": "I'm writing my proofs on big paper. No margin problems." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "The Baudhayana-Pythagoras Theorem",
+    "topic_no": 5,
+    "name": "The Lotus in the Lake: Applying the Theorem",
+    "scenes": [
+      {
+        "animation": "A serene lake with chakra and krauncha birds. A lotus peeps 1 unit above the water. A breeze bends it until its tip touches the water 3 units away. A scroll reads 'Bhaskaracharya's Lilavati'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A lotus, a breeze and some birds. How can anyone find the lake's depth from that?" },
+          { "speaker": "NEO", "text": "Bhaskaracharya asked this in Lilavati. It seems like too little information, but there's enough." }
+        ]
+      },
+      {
+        "animation": "The picture freezes into a right triangle: vertical side 'x' (depth), horizontal side '3', and slanted side 'x + 1' (the full stem). Right-angle mark at the lake floor below the original position.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let the depth be x. The stem stands 1 unit above water, so its full length is x plus 1." },
+          { "speaker": "NEO", "text": "When it bends, the same stem becomes the hypotenuse of a right triangle with sides x and 3." }
+        ]
+      },
+      {
+        "animation": "Steps write line by line: '3² + x² = (x + 1)²', '9 + x² = x² + 2x + 1', 'subtract x²: 9 = 2x + 1', '2x = 8', 'x = 4'. A check: '3² + 4² = 9 + 16 = 25 = 5² ✓'. A depth gauge in the lake reads 4.",
+        "lines": [
+          { "speaker": "NEO", "text": "By the theorem, 3 squared plus x squared equals x plus 1, squared." },
+          { "speaker": "NEO", "text": "Expand: 9 plus x squared equals x squared plus 2x plus 1. The x squared cancels, leaving 9 equals 2x plus 1." },
+          { "speaker": "NEO", "text": "So 2x is 8, and x is 4. The lake is 4 units deep." },
+          { "speaker": "NEO", "text": "Check: 3, 4, 5. The stem is 5 units long, a perfect Baudhayana triple!" }
+        ]
+      },
+      {
+        "animation": "A rhombus-shaped kite with diagonals 24 and 70 crossing at right angles. One quarter triangle is highlighted: legs 12 and 35. Steps: '12² + 35² = 144 + 1225 = 1369', '√1369 = 37'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Another one. A rhombus has diagonals of 24 and 70. Its diagonals bisect each other at right angles." },
+          { "speaker": "NEO", "text": "So each side is the hypotenuse of a triangle with legs 12 and 35. 144 plus 1225 is 1369." },
+          { "speaker": "NEO", "text": "37 squared is 1369, so each side is 37 units." }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' sticker on a sketch: 'Draw the right triangle first; label the hypotenuse'. Zippy draws a neat diagram with the lotus stem labelled 'c'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the trick is finding the hidden right triangle." },
+          { "speaker": "NEO", "text": "Exactly. Exam tip: always sketch the right triangle and label the hypotenuse before writing the equation." }
+        ]
+      },
+      {
+        "animation": "Recap board with the lotus and the rhombus kite. Points: '1. Spot the hidden right triangle', '2. Use a² + b² = c² to form an equation', '3. Solve and check with a triple'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: many real problems hide a right triangle. Find it." },
+          { "speaker": "NEO", "text": "Two: use a squared plus b squared equals c squared to write an equation." },
+          { "speaker": "NEO", "text": "Three: solve it, then check that your sides really satisfy the theorem." }
+        ]
+      }
+    ]
+  }
+]

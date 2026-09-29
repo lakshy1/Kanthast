@@ -1,0 +1,862 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 1,
+    "name": "Formal Letter: Format and Marking",
+    "scenes": [
+      {
+        "animation": "Zippy writes a letter to the Municipal Commissioner that begins 'Hey bro! Wassup?' with a smiley. The letter flies to a stern office, where the Commissioner, a cartoon file with glasses, drops it straight into a dustbin labelled 'Informal'.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Why did my complaint land in the dustbin?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Because a formal letter needs a formal format and a formal tone. Let's build one, block by block."
+          }
+        ]
+      },
+      {
+        "animation": "A blank letter sheet. Blocks drop in one at a time from top to bottom, each labelled: '1. Sender's address', '2. Date', '3. Receiver's designation and address', '4. Subject', '5. Salutation: Sir / Madam', '6. Body', '7. Yours faithfully / Yours sincerely', '8. Name (and signature)'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Start with your address, then the date. Next, the receiver's designation and address."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Then a clear subject line, and the salutation, Sir or Madam."
+          },
+          {
+            "speaker": "NEO",
+            "text": "After the body, close with yours faithfully or yours sincerely, followed by your name."
+          }
+        ]
+      },
+      {
+        "animation": "The body block zooms in and splits into three coloured slices: 'Para 1: who you are and why you write', 'Para 2: details, facts, reasons', 'Para 3: request / action expected, thanks'. A word counter in the corner ticks up to '100-120 words'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Write the body in three short paragraphs. First, introduce yourself and state the purpose."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Second, give the details, facts and reasons. Third, say what action you expect, and thank the reader."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The word limit is one hundred to one hundred and twenty words."
+          }
+        ]
+      },
+      {
+        "animation": "A marks meter fills in four coloured segments: 'Format 1', 'Content 2', 'Organisation of ideas 1', 'Accuracy 1'. A small note under Format reads 'Half mark lost if one or two parts are missing'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "The letter carries five marks. One for format, two for content, one for organisation of ideas, and one for accuracy."
+          },
+          {
+            "speaker": "NEO",
+            "text": "In the CBSE marking scheme, missing one or two parts of the format costs half a mark, and missing more costs the whole mark."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So the address and date are free marks!"
+          }
+        ]
+      },
+      {
+        "animation": "A mini practice card: 'Which is wrong in a formal letter? (a) Subject line (b) Yours faithfully (c) Dear Buddy (d) Date'. '(c) Dear Buddy' is stamped with a red cross. A 'BOARD TIP' sticker reads 'Choose 1 of 2 questions; no slang, no SMS language'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Quick check. Which does not belong in a formal letter: subject line, yours faithfully, dear buddy, or the date?"
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Dear buddy. Obviously."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: you get a choice of one out of two letters. Pick the one where you have more ideas, and never use slang or short forms like pls."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a neat letter mascot wearing a tie. Points appear: '1. Address, date, receiver, subject, salutation, body, close, name', '2. Three paragraphs, 100-120 words', '3. Format 1 + Content 2 + Organisation 1 + Accuracy 1'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: follow the full format, from your address to your name."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: write three short paragraphs in one hundred to one hundred and twenty words."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: marks go to format, content, organisation and accuracy."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Dear Commissioner, I sincerely apologise for bro."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 2,
+    "name": "Formal Letter: Letter to the Editor",
+    "scenes": [
+      {
+        "animation": "A street full of stray plastic bags that fly around like ghosts. Zippy shouts at them, but nobody hears. Neo hands him a newspaper whose front page grows into a huge loudspeaker.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "The whole colony is drowning in plastic, and nobody listens to me!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Then write to the editor of a newspaper. Thousands of people, and the officials, will read it."
+          }
+        ]
+      },
+      {
+        "animation": "The letter format builds up with the receiver block highlighted: 'The Editor, The Times of India, New Delhi'. Then the subject line types itself: 'Subject: Need for a ban on single-use plastic in our locality'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "A letter to the editor is written to raise a public issue, not a personal problem."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Address it to the Editor, with the newspaper's name and city. Keep the subject short and specific."
+          }
+        ]
+      },
+      {
+        "animation": "A three-slice body appears. Slice 1 shows the opening line 'Through the columns of your esteemed newspaper, I wish to draw the attention of the authorities to...'. Slice 2 shows icons of blocked drains and a cow eating plastic. Slice 3 shows icons of cloth bags and a municipal van.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Open with the classic line: through the columns of your esteemed newspaper, I wish to draw the attention of the authorities to the problem."
+          },
+          {
+            "speaker": "NEO",
+            "text": "In the second paragraph, give the causes and effects, like blocked drains and animals eating plastic."
+          },
+          {
+            "speaker": "NEO",
+            "text": "In the third, suggest solutions and appeal to the authorities to act."
+          }
+        ]
+      },
+      {
+        "animation": "Zippy writes 'This is the WORST colony ever!!!' in angry red letters; Neo gently replaces it with 'The situation needs urgent attention.' A tone dial swings from 'angry' to 'firm and polite'.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Can I say it's the worst colony in the world?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Be firm but polite. Say the situation needs urgent attention. Examiners reward a formal tone."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Also, avoid naming or blaming individuals. Focus on the issue and on what the authorities can do."
+          }
+        ]
+      },
+      {
+        "animation": "A practice card: 'Write a letter to the editor about the rising noise pollution during festivals.' Three content bullets appear: 'effects on the sick, elderly and students', 'loudspeakers beyond permitted hours', 'suggest time limits and strict checks'. A 'BOARD TIP' sticker reads 'Content marks = points covered from the question'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Practice. Plan a letter to the editor about noise pollution during festivals."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Problem: loudspeakers late at night. Effects: the sick, the elderly and students suffer. Solution: time limits and strict checks."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Well planned. Board tip: content marks come from covering every point the question gives you, so tick them off as you write."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with the newspaper-loudspeaker. Points appear: '1. Public issue, addressed to The Editor', '2. Open: Through the columns of your esteemed newspaper...', '3. Problem → effects → solutions; firm, polite tone'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: a letter to the editor raises a public issue and is addressed to the Editor."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: begin with, through the columns of your esteemed newspaper."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: describe the problem, its effects and solutions, in a firm, polite tone."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Dear Editor, the plastic bags have been warned."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 3,
+    "name": "Formal Letter: Letter of Complaint",
+    "scenes": [
+      {
+        "animation": "Zippy unboxes a brand-new mixer grinder. He presses the switch; the jar spins off, flies around the kitchen and lands in a pot of dal. Zippy stands dripping with dal.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Two days old, and my mixer grinder is already a flying saucer!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Time for a letter of complaint. Clear facts, a firm tone, and a specific demand."
+          }
+        ]
+      },
+      {
+        "animation": "The letter builds with the receiver block highlighted: 'The Manager, Sharma Electronics, Karol Bagh, New Delhi'. The subject types itself: 'Subject: Complaint regarding a defective mixer grinder'. A bill with 'Invoice No. 4521' flashes beside it.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Address the person who can fix the problem, like the manager of the shop or the head of a department."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The subject should say complaint regarding, followed by the problem."
+          }
+        ]
+      },
+      {
+        "animation": "The body builds in three slices with icons. Slice 1: a calendar and shopping bag 'what, when, where bought'. Slice 2: the flying jar and a crack 'exact defect'. Slice 3: a replacement box and a clock 'demand + time limit'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Paragraph one: what you bought, when and where, with the bill number."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Paragraph two: the exact defect and the trouble it caused."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Paragraph three: what you want, a repair, a replacement or a refund, within a reasonable time."
+          }
+        ]
+      },
+      {
+        "animation": "Zippy types 'Fix it or I will destroy your shop!!!' The letters catch fire and fall away. Neo's version appears: 'I request you to replace the product at the earliest, failing which I shall be compelled to approach the consumer forum.'",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Can I threaten them a little?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "No threats. Say politely that if the matter is not settled, you will be compelled to approach the consumer forum."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Avoid exaggeration too. State facts the reader can check, like the date of purchase, the bill number and the model."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Model number noted. Dal stains not included."
+          }
+        ]
+      },
+      {
+        "animation": "A practice card: 'Write a complaint to the Municipal Corporation about irregular garbage collection in your area.' Three points pop up: 'garbage not collected for a week', 'foul smell, flies, disease risk', 'request daily collection and more bins'. A 'BOARD TIP' sticker reads 'Stick to the given situation — do not invent a new one'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Practice. Plan a complaint to the Municipal Corporation about irregular garbage collection."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Not collected for a week. Foul smell, flies and a risk of disease. Please collect daily and add more bins."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Good. Board tip: stay inside the situation the question gives. If the question names you and your address, use exactly those details."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with the mixer grinder now fixed and spinning neatly. Points appear: '1. Address the authority who can act', '2. What happened → exact problem → specific demand', '3. Firm, polite; no threats'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: write to the person or authority who can solve the problem."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: give the facts, the exact problem, and a specific demand."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: stay firm and polite, never rude."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "And maybe keep the dal away from the mixer next time."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 4,
+    "name": "Formal Letter: Letter to Place an Order or Make an Enquiry",
+    "scenes": [
+      {
+        "animation": "The school library shelves are empty except for one dusty book. A cartoon librarian with round spectacles sighs; Zippy is handed a pen and a letterhead reading 'Librarian, Sunrise Public School'.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "The librarian wants me to order new books. Do I just send a list?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "You send a letter to place an order. It's a business letter, so it must be precise."
+          }
+        ]
+      },
+      {
+        "animation": "The receiver block lights up: 'The Manager, Modern Book Depot, Daryaganj, New Delhi'. The subject types: 'Subject: Order for books for the school library'. The writer's block shows 'Librarian, Sunrise Public School'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Write as the person in the question, for example, the librarian of your school, and address the manager of the supplier."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The subject should say order for, followed by the items."
+          }
+        ]
+      },
+      {
+        "animation": "A neat table draws itself inside the letter with columns 'S. No.', 'Title', 'Author', 'Publisher', 'Copies'. Rows fill in. Below, icons appear for 'delivery date', 'discount', 'mode of payment'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "In the body, list the items in a small table: title, author or brand, and quantity."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Then mention the delivery date, the discount you expect, and how you will pay."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Add a line asking them to ensure the goods are not damaged."
+          }
+        ]
+      },
+      {
+        "animation": "A second letter slides in labelled 'Letter of Enquiry'. A question mark bounces on the subject line 'Subject: Enquiry about summer coaching camp'. Bullets appear: 'fees', 'timings', 'facilities', 'last date to join'.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "What if I only want information, like the fees for a cricket camp?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "That's a letter of enquiry. Ask clear questions about fees, timings, facilities and the last date, and request a prospectus."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Keep an enquiry short and polite, since you are asking for help. End with, I shall be grateful for an early reply."
+          }
+        ]
+      },
+      {
+        "animation": "A practice card: 'Complete: I would like to place an order for the following ____ .' The answer 'items' drops in. A 'BOARD TIP' sticker reads 'Tables are allowed but count toward the word limit; keep the list short'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Mini practice. Finish the opening: I would like to place an order for the following blank."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Items. Or books, if it's for the library."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Right. Board tip: keep the list short and relevant, so that your letter stays near one hundred and twenty words. Don't forget the complimentary close."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a stack of new books flying onto the library shelves. Points appear: '1. Write as the person named; address the supplier', '2. Order: items table + delivery + discount + payment', '3. Enquiry: clear questions, request a prospectus'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: write as the person named in the question, to the right supplier or office."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: an order letter lists the items and states delivery, discount and payment."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: an enquiry letter asks clear questions and requests details."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "The dusty book is finally getting friends."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 5,
+    "name": "Analytical Paragraph: Charts and Graphs",
+    "scenes": [
+      {
+        "animation": "A bar graph titled 'Hours spent on screens by teenagers, 2019-2023' stands on stage. Zippy reads every bar aloud like a train announcer: 'Two hours! Three hours! Four hours!' The audience falls asleep.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "I read out every number. Why is everyone asleep?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Because an analytical paragraph isn't a list of numbers. It explains the trend, compares, and draws a conclusion."
+          }
+        ]
+      },
+      {
+        "animation": "A paragraph template builds up in three colour bands inside one block: 'Introduction: what the graph shows, place, period', 'Body: overall trend, highest, lowest, comparisons with figures', 'Conclusion: what it means'. A crossed-out 'Title' tag floats away.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Write one single paragraph of one hundred to one hundred and twenty words, with no title."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Begin by saying what the graph shows, and for which period. Then describe the overall trend, the highest and lowest points, and compare them with figures."
+          },
+          {
+            "speaker": "NEO",
+            "text": "End with a conclusion about what the data suggests."
+          }
+        ]
+      },
+      {
+        "animation": "Arrows zoom along the bars with trend words sticking to them: 'rose steadily', 'peaked at', 'dipped slightly', 'remained constant', 'doubled'. A word bank card slides in.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Use trend words: rose steadily, peaked, fell sharply, remained constant, and doubled."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So instead of two, three, four hours, I say screen time doubled from two hours in 2019 to four hours in 2023!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Exactly. That's analysis."
+          }
+        ]
+      },
+      {
+        "animation": "A marks meter fills: 'Content 2', 'Organisation of ideas 2', 'Accuracy 1'. A warning sign flashes: 'Not a description. Not a summary.'",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "It carries five marks: two for content, two for organisation of ideas, and one for accuracy."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The CBSE marking scheme warns that it should not be just a description or a summary. Examine the data and give inputs."
+          }
+        ]
+      },
+      {
+        "animation": "A practice card shows a simple chart: 'Cycle sales in a town: 2020 = 500, 2024 = 1,000'. The answer sentence builds: 'Cycle sales doubled from 500 in 2020 to 1,000 in 2024, suggesting a shift towards eco-friendly travel.' A 'BOARD TIP' sticker reads 'Quote the figures accurately; use the past tense for past data'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Practice. Cycle sales in a town were five hundred in 2020 and one thousand in 2024. Write one analytical sentence."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Cycle sales doubled from five hundred in 2020 to one thousand in 2024, suggesting a shift towards eco-friendly travel."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Perfect. Board tip: copy the figures exactly from the chart, and use the past tense for past data."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with the bar graph now awake and smiling. Points appear: '1. One paragraph, 100-120 words, no title', '2. Intro → trends and comparisons with figures → conclusion', '3. Content 2 + Organisation 2 + Accuracy 1'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: one paragraph, one hundred to one hundred and twenty words, no title."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: introduce the data, analyse trends with figures, and conclude."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: marks go to content, organisation of ideas, and accuracy."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Screen time doubled. My sleep halved."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 6,
+    "name": "Analytical Paragraph: Maps and Cues",
+    "scenes": [
+      {
+        "animation": "Two maps of the same town side by side, labelled '2005' and '2025'. In 2025 a lake has shrunk, a metro line has appeared and fields have turned into apartment blocks. Zippy plays 'spot the difference' with a magnifying glass.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "It's a spot-the-difference game! Do I just list the changes?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "You list them, group them, and explain what they mean. That's how you analyse a map."
+          }
+        ]
+      },
+      {
+        "animation": "Changes on the map glow in groups with colour tags: green for 'lost' (fields, part of the lake), blue for 'added' (metro, hospital, mall), grey for 'unchanged' (the old temple, the school).",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Start by saying what the maps show, the place and the years."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Then group the changes: what was added, what was lost, and what stayed the same."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Use location words like to the north of, next to, and replaced by."
+          }
+        ]
+      },
+      {
+        "animation": "A sentence builds on screen: 'Over two decades, the farmland to the east was replaced by housing, while a metro line now connects the town to the city.' The phrases 'replaced by' and 'while' glow.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Link ideas with words like while, whereas, however and as a result."
+          },
+          {
+            "speaker": "NEO",
+            "text": "End with a conclusion, for example, the town has become more urban, but at the cost of green spaces."
+          }
+        ]
+      },
+      {
+        "animation": "A different question appears: two candidate cards for 'Guest speaker for the school debate', each with a few cue points. Zippy weighs them on a cartoon balance scale.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "What if there's no map, just cues?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Then examine the cues closely. If you are asked to choose, like a guest speaker from two candidates, state your choice, show its strengths, and contrast it with the other."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The marking scheme says any view is valid if the reasoning is strong and uses the given evidence."
+          }
+        ]
+      },
+      {
+        "animation": "A practice card: 'Map cue: 2005 — one bus stop; 2025 — metro station and three bus stops.' The answer builds: 'Public transport expanded considerably, with a metro station added and bus stops rising from one to three.' A 'BOARD TIP' sticker reads 'Use only what is given; no outside facts'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Practice. In 2005 there was one bus stop; in 2025 there is a metro station and three bus stops. One sentence, please."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Public transport expanded considerably, with a metro station added and bus stops rising from one to three."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Excellent. Board tip: use only the information given, and don't invent facts that aren't on the map or in the cues."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with both maps pinned side by side. Points appear: '1. Introduce place and period', '2. Group changes: added, lost, unchanged; use location and linking words', '3. Cues: choose, justify with evidence, contrast; conclude'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: introduce what the map or cues show."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: group the changes, using location and linking words."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: with cues, take a view, justify it with evidence, and conclude."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "I'd still vote for keeping the lake."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 7,
+    "name": "Reading Comprehension: Discursive Passage",
+    "scenes": [
+      {
+        "animation": "Zippy stares at a long passage that grows taller and taller until it towers over him like a skyscraper. He tries to read every word with a tiny torch and gets lost inside.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Four hundred words of someone's opinion! Where do I even start?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Start with the questions, not the passage. Then the passage becomes a treasure map."
+          }
+        ]
+      },
+      {
+        "animation": "A card explains: 'Section A: Reading — 20 marks'. It splits into 'Discursive passage, 400-450 words, 10 marks' and 'Case-based factual passage, 200-250 words, 10 marks'. The discursive half glows.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Section A has two unseen passages worth twenty marks in all."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The discursive passage is four hundred to four hundred and fifty words long, for ten marks. It presents an argument or a viewpoint on an issue."
+          }
+        ]
+      },
+      {
+        "animation": "A three-step path lights up: 'Step 1: Read the questions, underline key words', 'Step 2: Skim the passage for the main idea', 'Step 3: Scan to find each answer; mark the paragraph'. Zippy walks the path with a highlighter.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Step one: read the questions and underline the key words."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Step two: skim the passage for its main idea and the writer's tone."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Step three: scan for each answer, and mark the paragraph where you found it."
+          },
+          {
+            "speaker": "NEO",
+            "text": "For questions on the writer's view, look for signal words like I believe, clearly, however and unfortunately."
+          }
+        ]
+      },
+      {
+        "animation": "Question types appear as game cards: 'MCQ', 'Complete the sentence', 'Short answer 30-40 words', 'Find the word that means...'. For the vocabulary card, a magnifying glass hovers over 'paragraph 3'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "You'll see multiple choice, sentence completion, short answers of thirty to forty words, and vocabulary."
+          },
+          {
+            "speaker": "NEO",
+            "text": "They test inference, analysis, interpretation, evaluation and vocabulary."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Inference means reading between the lines, right?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Yes. The answer isn't written directly; you work it out from the clues."
+          }
+        ]
+      },
+      {
+        "animation": "A mini passage appears: 'Although exams test memory, they rarely measure creativity.' A question: 'The writer's attitude to exams is: (a) admiring (b) critical (c) indifferent (d) angry'. '(b) critical' glows. A 'BOARD TIP' sticker reads 'Answer in your own words; don't copy whole lines'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Practice. Although exams test memory, they rarely measure creativity. Is the writer admiring, critical, indifferent or angry?"
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Critical. The word rarely gives it away, but it's not angry."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Correct. Board tip: in short answers, use your own words and keep to the word limit; copying whole lines can cost marks."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with the skyscraper passage shrunk to a neat map. Points appear: '1. Discursive: 400-450 words, 10 marks', '2. Questions first → skim → scan', '3. Inference from clues; own words for short answers'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: the discursive passage is four hundred to four hundred and fifty words, for ten marks."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: read the questions first, then skim, then scan."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: infer from clues, and answer in your own words."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Skyscraper defeated."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 8,
+    "name": "Reading Comprehension: Case-Based Factual Passage",
+    "scenes": [
+      {
+        "animation": "A short passage about pens has a pie chart glued to it. Zippy reads the words carefully but covers the chart with his hand, then gets a question wrong and a buzzer honks.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "I read the whole passage. How did I get it wrong?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "You ignored the chart. In a case-based passage, half the facts hide in the visual."
+          }
+        ]
+      },
+      {
+        "animation": "A card reads 'Case-based factual passage: 200-250 words + visual input (statistical data / chart), 10 marks'. A table, a bar graph and a pie chart orbit the passage like moons.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "This passage is two hundred to two hundred and fifty words long and carries ten marks."
+          },
+          {
+            "speaker": "NEO",
+            "text": "It comes with a visual input, such as a table, chart or survey data, and presents facts rather than opinions."
+          }
+        ]
+      },
+      {
+        "animation": "A magnifying glass reads the chart: the title, the axis labels, the units '%' and the legend light up one by one. Then it links a sentence in the passage to a bar with a glowing thread.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Read the chart title, the labels and the units first. Is it a percentage, a number or a year?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Then connect each fact in the passage to the matching part of the chart."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Beware of trap options that are true in real life but not supported by the data. Choose only what the passage and chart actually say."
+          }
+        ]
+      },
+      {
+        "animation": "A survey table appears: 'Preferred pen among students: Ballpoint 45%, Gel 35%, Fountain 20%'. A question: 'What percentage do not prefer ballpoint?' The calculation '100 - 45 = 55%' writes itself.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Practice. Forty-five percent prefer ballpoint pens, thirty-five percent gel, and twenty percent fountain pens. What percentage do not prefer ballpoint?"
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Hundred minus forty-five. Fifty-five percent!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Correct. Gel plus fountain, thirty-five plus twenty, also gives fifty-five. Always double-check."
+          }
+        ]
+      },
+      {
+        "animation": "Question types appear: 'Identify the trend', 'Complete with a figure from the table', 'Why might...? (inference)', 'Find a word meaning...'. A 'BOARD TIP' sticker reads 'Quote the exact figure with its unit'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Expect questions that ask you to identify a trend, complete a statement with a figure, infer a reason, or find a word."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: when the answer is a number, write it with its unit, like fifty-five percent, not just fifty-five."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So units are the seatbelts of numbers."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with the chart and passage shaking hands. Points appear: '1. 200-250 words + visual, 10 marks', '2. Read title, labels, units; link passage to chart', '3. Check calculations; write figures with units'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: the case-based passage is two hundred to two hundred and fifty words, with a visual, for ten marks."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: read the chart's title, labels and units, and link them to the passage."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: double-check calculations and always write the unit."
+          }
+        ]
+      }
+    ]
+  }
+]

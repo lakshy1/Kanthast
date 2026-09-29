@@ -1,0 +1,339 @@
+[
+  {
+    "chapter_no": 12,
+    "chapter": "How Nature Works in Harmony",
+    "topic_no": 1,
+    "name": "Habitats: Biotic and Abiotic Components",
+    "scenes": [
+      {
+        "animation": "Night in a village in Odisha. A huge elephant quietly munches a banana plant in a farm while Zippy, on a scarecrow's hat, whispers in panic. Behind them, a shrinking forest turns brown and a waterhole dries up.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo! An elephant is eating the farmer's bananas! Why isn't it in the forest?" },
+          { "speaker": "NEO", "text": "Because its forest is shrinking. When vegetation is scarce and waterholes dry up, elephants wander into farms looking for food like bananas and sugarcane." }
+        ]
+      },
+      {
+        "animation": "A map of India highlights Odisha, Jharkhand, West Bengal, Assam and Chhattisgarh. Roads and buildings cut through green forest patches; then a green 'Elephant corridor' band links two forests, and a herd walks safely along it, away from villages.",
+        "lines": [
+          { "speaker": "NEO", "text": "Changes in rainfall and temperature affect vegetation. Cutting trees for roads and buildings makes it worse." },
+          { "speaker": "NEO", "text": "So wildlife ecologists have marked corridors. These connect forest habitats, so elephants can travel between forests without conflict with people." },
+          { "speaker": "ZIPPY", "text": "So one change in the forest reached all the way to a farmer's bananas!" }
+        ]
+      },
+      {
+        "animation": "A teacher leads a group of students with notebooks to a pond and a big banyan tree; a 'Caution: explore in groups with your teacher' badge appears. A table titled 'Pond' and 'Forest' fills in: 'Living beings: fish, grass, trees, birds' and 'Non-living things: water, soil'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A habitat is simply a place where an organism lives. It could even be the bark of a tree." },
+          { "speaker": "NEO", "text": "Activity time. Explore in groups with your teacher. Pick two habitats, like a pond, a forest, a farm, or a large banyan, mango or pilkhan tree." },
+          { "speaker": "NEO", "text": "List the living beings and the non-living things you see in each, and record them in a table." }
+        ]
+      },
+      {
+        "animation": "The table's columns re-label themselves: 'Living beings' glows green as 'Biotic components', 'Non-living things' glows blue as 'Abiotic components'. Underwater, a cartoon fish nibbles tiny plants (tag 'biotic need: food') and breathes oxygen from water (tag 'abiotic need: oxygen'). Frogs, turtles, snails, ducks, algae, duckweed and lotus pop in around it. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "The living beings in a habitat are its biotic components. The non-living things are its abiotic components." },
+          { "speaker": "NEO", "text": "A pond provides food, oxygen, shelter and space to grow. Fish get food, a biotic need, from small plants and animals, and oxygen, an abiotic need, from water." },
+          { "speaker": "NEO", "text": "Exam tip: when classifying, remember that air, water, sunlight, soil and temperature are abiotic. Plants, animals and microbes are biotic." }
+        ]
+      },
+      {
+        "animation": "A forest split into day and night halves. On the warm day side, a rodent scurries for seeds; on the cool night side, a snake glides out. Both share the same tree. A label reads 'Same habitat, different conditions'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If everyone shares one habitat, don't they get in each other's way?" },
+          { "speaker": "NEO", "text": "Organisms use resources differently. A forest may be warm by day and cool at night." },
+          { "speaker": "NEO", "text": "A snake active at night and a rodent active by day live in the same habitat but face different conditions. That's how they coexist in harmony." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Habitat = place where an organism lives', '2. Biotic = living; Abiotic = air, water, sunlight, temperature, soil', '3. Different habitats offer different living conditions'. The elephant waves from inside its corridor.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a habitat is the place where an organism lives." },
+          { "speaker": "NEO", "text": "Two: living beings are biotic components, while air, water, sunlight, temperature and soil are abiotic components." },
+          { "speaker": "NEO", "text": "Three: different habitats offer different living conditions, and organisms share them in harmony." },
+          { "speaker": "ZIPPY", "text": "And elephants get their own highway. Nice." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "How Nature Works in Harmony",
+    "topic_no": 2,
+    "name": "Populations, Communities and Why Every Organism Matters",
+    "scenes": [
+      {
+        "animation": "Zippy stares into a pond and counts fish on his fingers, running out of fingers. A caption reads 'Same kind of fish, lots of them!'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Twelve, thirteen... they all look the same! Is this one big fish family?" },
+          { "speaker": "NEO", "text": "Scientists have a name for that crowd. It's called a population." }
+        ]
+      },
+      {
+        "animation": "A school garden. Students in four to five groups use string to mark a 1 m by 1 m square. Inside it, plants get counted with number bubbles. A table fills in: 'Plant 1: 20', 'Plant 2: 05', 'Animal 1', 'Animal 2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A group of fish of the same kind living together in a pond is a population of that fish." },
+          { "speaker": "NEO", "text": "Let's record one. Divide the class into four to five groups. Mark an area of 1 metre by 1 metre in the school garden." },
+          { "speaker": "NEO", "text": "Count the organisms of each kind in that area and record them. Then compile the data from all groups." },
+          { "speaker": "ZIPPY", "text": "Our square has 20 of one plant and only 5 of another!" }
+        ]
+      },
+      {
+        "animation": "The pond zooms out: separate bubbles of fish, frogs, lotus and snails merge into one big circle labelled 'Community = different populations sharing a habitat'. A cutaway shows a flower with labels 'sepals', 'petals', 'stamens (male)', 'carpels (female)', and a bee carrying yellow pollen between flowers.",
+        "lines": [
+          { "speaker": "NEO", "text": "So a population is a group of the same type of organisms in a habitat at a given time." },
+          { "speaker": "NEO", "text": "A community is made of different populations sharing the same habitat. Plants, animals and microorganisms together form it, and they depend on one another." },
+          { "speaker": "NEO", "text": "For example, wind, water, insects, bats and birds carry pollen from stamens to carpels. This is pollination, and it is essential for fruits and seeds." }
+        ]
+      },
+      {
+        "animation": "Two ponds side by side: Pond A with fish and many flowers around it, Pond B without fish and few flowers. Arrows build step by step: fish eat dragonfly larvae; dragonflies drop in Pond A; bees and butterflies increase; flowers get pollinated and make more seeds. Red arrows are direct effects, green arrows indirect effects.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now a real study. Researchers compared Pond A, with fish and many flowering plants, and Pond B, without fish and fewer flowering plants." },
+          { "speaker": "NEO", "text": "Fish eat dragonfly larvae, so Pond A had fewer dragonflies. Dragonflies usually eat flies, bees and butterflies." },
+          { "speaker": "NEO", "text": "With fewer dragonflies, there were more bees, flies and butterflies. They pollinate nearby flowers, so plants near ponds with fish may produce more seeds." },
+          { "speaker": "ZIPPY", "text": "Wait, the fish never even touched the flowers!" }
+        ]
+      },
+      {
+        "animation": "A web diagram connecting fish, dragonflies, pollinators and plants, with abiotic icons for temperature, water and nutrients around the edge. A fishing net rises from the pond with a question mark: 'Overfishing?'. An 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exactly. This shows how biotic and abiotic components interact and affect each other. So could overfishing by humans change this balance? Think about it." },
+          { "speaker": "NEO", "text": "Exam tip: don't mix up population and community. Population is one kind of organism. Community is many different populations together." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Population = same type of organism, one habitat, one time', '2. Community = different populations sharing a habitat', '3. Fish → fewer dragonflies → more pollinators → more seeds'. Zippy wears a dragonfly costume and gets chased by a fish.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a population is a group of the same type of organisms in a habitat at a given time." },
+          { "speaker": "NEO", "text": "Two: a community is made of different populations sharing the same habitat." },
+          { "speaker": "NEO", "text": "Three: every organism matters. Fish in a pond can even increase seed production in nearby plants." },
+          { "speaker": "ZIPPY", "text": "Bad costume choice. Very bad." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "How Nature Works in Harmony",
+    "topic_no": 3,
+    "name": "Ecosystems: Interactions, Producers and Consumers",
+    "scenes": [
+      {
+        "animation": "A busy pond scene freezes like a paused video. Glowing lines connect a frog to an insect, sunlight to the water surface, and an earthworm to moist soil. Zippy tries to untangle the lines and gets wrapped up.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Help! Everything here is connected to everything else!" },
+          { "speaker": "NEO", "text": "That's the point. Let's sort those connections into three kinds." }
+        ]
+      },
+      {
+        "animation": "A three-column table builds up, one example sliding into place at a time. 'Criterion 1: biotic and abiotic': earthworms live in moist soil; a fish lays eggs in water. 'Criterion 2: two abiotic': bright sunlight raises day temperature; sunlight makes water evaporate fast. 'Criterion 3: among biotic': a frog eats insects; a water snake eats fish; frogs and fish compete for insect larvae.",
+        "lines": [
+          { "speaker": "NEO", "text": "Criterion one: interactions between biotic and abiotic components. Earthworms live in moist soil, and a fish lays eggs in water." },
+          { "speaker": "NEO", "text": "Criterion two: interactions between two abiotic components. The day temperature is high due to bright sunlight, and water evaporates fast due to sunlight." },
+          { "speaker": "NEO", "text": "Criterion three: interactions among biotic components. A frog eats insects, a water snake eats fish, and frogs and fish may compete for small insect larvae." }
+        ]
+      },
+      {
+        "animation": "Nested circles grow outward: 'Individual' (one deer), 'Population' (a herd), 'Community' (deer, trees, birds), 'Ecosystem' (plus soil, water, air, sunlight). Then a landscape shows a small river (aquatic) winding past mountains, forest, grassland and farmland (terrestrial), with the farm tagged 'human-made'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The biotic and abiotic components in a habitat interact with each other to form an ecosystem." },
+          { "speaker": "NEO", "text": "Ponds, rivers and lakes are aquatic ecosystems. Forests, farms and even a large banyan tree are terrestrial ecosystems. Farmland is a human-made ecosystem." },
+          { "speaker": "ZIPPY", "text": "So an ecosystem can be as big as a forest or as small as one tree?" },
+          { "speaker": "NEO", "text": "Yes. Ecosystems can be large or small, and they overlap and interact." }
+        ]
+      },
+      {
+        "animation": "Two-way arrows: sunlight, carbon dioxide and water flow into a leaf making food; soil feeds roots; air gives oxygen to animals. Then reverse arrows: the plant releases oxygen, roots grip soil against erosion, and leaves keep the soil moist and cool the air.",
+        "lines": [
+          { "speaker": "NEO", "text": "Living things depend on non-living ones. Plants need sunlight, carbon dioxide and water to make food, and soil gives them nutrients." },
+          { "speaker": "NEO", "text": "And non-living things are shaped by living ones. Plants release oxygen, roots hold soil and prevent erosion, and plants keep soil moist and help cool the air." }
+        ]
+      },
+      {
+        "animation": "A forest picture with a table: Deer, Hare, Vulture, Bengal Fox, Shikra, Squirrel, Mouse, Mushroom, Tree. The tree gets a 'Producer / Autotroph: auto = self, troph = food' badge. The animals get 'Consumer / Heterotroph: hetero = other' badges, then sort into 'Herbivore: deer, hare', 'Carnivore: leopard', 'Omnivore: crows, foxes, mice'. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's classify. Using the library or internet, find out what each forest organism eats, and fill in the table." },
+          { "speaker": "NEO", "text": "Plants make their own food by photosynthesis, so they are producers, or autotrophs. Organisms that depend on others for food are consumers, or heterotrophs." },
+          { "speaker": "NEO", "text": "Herbivores like deer and hare eat only plants. Carnivores like the leopard eat only animals. Omnivores like crows, foxes and mice eat both." },
+          { "speaker": "NEO", "text": "Exam tip: learn the word meanings. Auto means self, hetero means other, and troph means food." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Three kinds of interactions: biotic-abiotic, abiotic-abiotic, biotic-biotic', '2. Ecosystem = biotic + abiotic interacting; aquatic or terrestrial', '3. Producers (autotrophs) and consumers (heterotrophs)'. Zippy finally untangles himself.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: interactions happen between biotic and abiotic parts, between two abiotic parts, and among biotic parts." },
+          { "speaker": "NEO", "text": "Two: biotic and abiotic components interacting together form an ecosystem, which can be aquatic or terrestrial." },
+          { "speaker": "NEO", "text": "Three: producers make their own food; consumers are herbivores, carnivores or omnivores." },
+          { "speaker": "ZIPPY", "text": "Untangled. I'm an ecosystem expert now." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "How Nature Works in Harmony",
+    "topic_no": 4,
+    "name": "Food Chains, Food Webs and Decomposers",
+    "scenes": [
+      {
+        "animation": "A grassland lunch queue: grass waits nervously, a hare nibbles it, then a leopard eyes the hare. Zippy holds a clipboard titled 'Who eats whom?' and ducks behind a bush.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I'm doing a survey. Question one: who's eating whom around here?" },
+          { "speaker": "NEO", "text": "Good question. The answer draws a food chain." }
+        ]
+      },
+      {
+        "animation": "On a grassland card, pictures of grass, frog, hare, grasshopper, snake and eagle appear. Arrows draw themselves: 'Grass → Hare → Leopard' first, then a second chain builds link by link: 'Grass → Grasshopper → Frog → Snake → Eagle'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In a grassland, grass is eaten by the hare, and the hare is eaten by the leopard. That is a food chain." },
+          { "speaker": "NEO", "text": "Activity: take grass, frog, hare, grasshopper, snake and eagle, and draw arrows for who eats whom." },
+          { "speaker": "NEO", "text": "One answer is grass to grasshopper to frog to snake to eagle. A food chain is a simple sequence showing who eats whom in an ecosystem." }
+        ]
+      },
+      {
+        "animation": "A crop field with many millet plants, fewer mice and one eagle. A counting table appears, then the numbers stack into a pyramid: millet at the wide base, mice in the middle, eagle at the narrow top. Side labels read 'Trophic level 1: producers', '2: herbivores', '3: small carnivores', 'next: large carnivores'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now count the millet plants, mice and eagles in a crop field. Put the highest number at the base and the lowest at the top. What do you get?" },
+          { "speaker": "ZIPPY", "text": "A pyramid! Lots of millet, fewer mice, and one eagle on top." },
+          { "speaker": "NEO", "text": "Each position in a food chain is a trophic level. Producers are at the first level, herbivores like hares and deer at the second, small carnivores like frogs at the third, and large carnivores like tigers or vultures at the next." }
+        ]
+      },
+      {
+        "animation": "Grasses, mouse, hare, grasshopper, frog, bird, snake, owl, fox and hawk are scattered on a board. Several food chains are drawn in different colours, and they start sharing organisms; arrows multiply until the chains form a net labelled 'Food web'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In a real ecosystem, each organism may be eaten by two or more types of organisms." },
+          { "speaker": "NEO", "text": "So food chains are interlinked, forming a network called a food web." }
+        ]
+      },
+      {
+        "animation": "Rainy season: mushrooms pop up on a fallen log, and beetles and flies work on a pile of elephant dung. Zoom in: fungi and bacteria break big molecules into small pieces, which sink into the soil as glowing nutrient dots that roots then absorb. Tag: 'sapro = rotten, troph = food'. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "What about dead matter and waste? Fungi like mushrooms and bacteria break down complex substances in dead plants and animals into simpler ones." },
+          { "speaker": "NEO", "text": "Beetles and flies on elephant dung help too. This is decomposition, and these organisms are decomposers, or saprotrophs." },
+          { "speaker": "NEO", "text": "Decomposers return nutrients to the soil. In nature, nothing is wasted." },
+          { "speaker": "NEO", "text": "Exam tip: in food chain questions, arrows point from the organism eaten to the one that eats it." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Food chain = who eats whom; food web = interlinked chains', '2. Trophic levels: producers → herbivores → small carnivores → large carnivores', '3. Decomposers (saprotrophs) recycle nutrients'. Zippy's clipboard now shows a food web.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a food chain shows who eats whom, and interlinked food chains form a food web." },
+          { "speaker": "NEO", "text": "Two: producers are at the first trophic level, then herbivores, then carnivores." },
+          { "speaker": "NEO", "text": "Three: decomposers, or saprotrophs, break down dead matter and recycle nutrients." },
+          { "speaker": "ZIPPY", "text": "Survey complete. Nobody wanted to eat me." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "How Nature Works in Harmony",
+    "topic_no": 5,
+    "name": "Balance in Ecosystems: Chain Reactions and Relationships",
+    "scenes": [
+      {
+        "animation": "Zippy flicks one domino labelled 'Pond pollution'. It knocks down 'Plants die', 'Less oxygen', 'Fish die', 'More insects', 'Pests damage crops', 'More pesticides'. Zippy stares at the fallen line.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I only touched one domino. How did the whole line fall?" },
+          { "speaker": "NEO", "text": "That's how ecosystems work. One small change leads to many others." }
+        ]
+      },
+      {
+        "animation": "A pond flowchart builds arrow by arrow: pollution kills plants, oxygen bubbles fade, fish float away, insects swarm out to nearby farmland, and a farmer sprays pesticide, which drips back into the soil and water.",
+        "lines": [
+          { "speaker": "NEO", "text": "Suppose many plants in a pond die because of pollution. Fewer plants make less oxygen in the water, so the fish population drops." },
+          { "speaker": "NEO", "text": "With fewer fish, insects increase and spread to nearby farms. Farmers are then compelled to use pesticides, which may harm the environment again." }
+        ]
+      },
+      {
+        "animation": "A 1980s newspaper headline: 'India exports frog legs'. An Indian bullfrog, labelled 'Hoplobatrachus tigerinus', disappears from paddy fields; insect pests swarm the crops; pesticide cans multiply. A government stamp 'Export banned' thumps down.",
+        "lines": [
+          { "speaker": "NEO", "text": "This really happened. In the 1980s, India was a big exporter of frog legs, especially of the Indian bullfrog." },
+          { "speaker": "NEO", "text": "Frog numbers fell. Since frogs eat insects, agricultural pests rose, and farmers used more synthetic pesticides, harming soil, water and health." },
+          { "speaker": "NEO", "text": "So the Government of India banned the export of frog legs." },
+          { "speaker": "ZIPPY", "text": "Frogs were the farmers' free pest control all along!" }
+        ]
+      },
+      {
+        "animation": "Deer and other animals jostle at one waterhole and plants stretch for sunlight, labelled 'Competition: food, water, space, sunlight'. A see-saw labelled 'Ecosystem balance' stays level. A text card reads 'Balance is dynamic, not fixed'.",
+        "lines": [
+          { "speaker": "NEO", "text": "An ecosystem is in balance when interactions keep populations and resources stable. This balance is dynamic, not fixed." },
+          { "speaker": "NEO", "text": "Organisms also compete for food, water, space or sunlight. Competition controls population size. Without it, one species could multiply too much." }
+        ]
+      },
+      {
+        "animation": "Three panels with plus and minus signs. 'Mutualism': a bee sips nectar (+) while the flower gets pollinated (+). 'Commensalism': an orchid gets support on a tree (+), the branch is unaffected (0). 'Parasitism': a tick feeds on a dog's blood (+), the dog gets skin irritation (−). An 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "There are other relationships too. In mutualism, both benefit, like honeybees and flowers." },
+          { "speaker": "NEO", "text": "In commensalism, one benefits and the other is not affected, like orchids on trees. In parasitism, one benefits and the other is harmed, like ticks on dogs." },
+          { "speaker": "NEO", "text": "Exam tip: for these three, always write who benefits and who is harmed or unaffected, with one example each." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. One change leads to another (frog legs → pests → pesticides)', '2. Competition keeps populations in check; balance is dynamic', '3. Mutualism (+,+), commensalism (+,0), parasitism (+,−)'. Zippy stands the dominoes back up.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in an ecosystem, one change leads to another, like the frog legs story." },
+          { "speaker": "NEO", "text": "Two: competition controls population size and keeps the balance, which is dynamic." },
+          { "speaker": "NEO", "text": "Three: in mutualism both benefit, in commensalism one benefits and one is unaffected, and in parasitism one benefits while the other is harmed." },
+          { "speaker": "ZIPPY", "text": "Dominoes restored. Nobody touch anything." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "How Nature Works in Harmony",
+    "topic_no": 6,
+    "name": "Benefits of Ecosystems and Sustainable Farming",
+    "scenes": [
+      {
+        "animation": "Zippy lists his morning on a scroll: fresh air, water, rice, a cotton shirt, a wooden desk, medicine. Each item flies back to a forest or a river. Zippy's scroll ends with 'Thank you, ecosystems?'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My breakfast, my shirt and my desk all came from nature?" },
+          { "speaker": "NEO", "text": "Yes. Ecosystems quietly support us every single day." }
+        ]
+      },
+      {
+        "animation": "Icons pop out of a forest: fresh air, fertile soil, food, fibres, timber, medicines. A lake gives water and fish. A family picnics by a river, labelled 'aesthetic and recreational value'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Forests provide fresh air, fertile soil, food, fibres, timber and medicines. Aquatic ecosystems provide water and food." },
+          { "speaker": "NEO", "text": "Ecosystems also have aesthetic and recreational value. But when we overuse or misuse resources, we disturb nature's balance." }
+        ]
+      },
+      {
+        "animation": "A map where the Ganges and Brahmaputra meet between India and Bangladesh, zooming into mangrove roots. Mangroves block storm waves and wind, absorb carbon dioxide and release oxygen. A 'UNESCO World Heritage Site, 1987' badge appears, then threats: axes, poachers, sewage pipes. A strip of protected areas follows: Jim Corbett, Manas, Chilika, Keibul Lamjao.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Sundarbans have the largest mangrove forests in the world, where the Ganges and Brahmaputra meet. They slow down strong winds and waves during storms and floods." },
+          { "speaker": "NEO", "text": "UNESCO declared them a World Heritage Site in 1987. But mangroves are cut for fuelwood and farming, and pollution and illegal hunting harm them." },
+          { "speaker": "NEO", "text": "Protected areas, like national parks, wildlife sanctuaries and biosphere reserves, help save such habitats." }
+        ]
+      },
+      {
+        "animation": "A timeline: '1950 to 1965: food crisis'. Tractors, fertiliser sacks and pesticide cans roll in under a 'Green Revolution' banner and grain piles rise. Then warning icons appear: overused chemicals, falling groundwater, and one crop repeated field after field, labelled 'Monoculture'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Humans also build ecosystems, like fish ponds, farms and parks. These need human care and management." },
+          { "speaker": "NEO", "text": "Between 1950 and 1965, India faced a food crisis. Tractors, synthetic fertilisers and pesticides raised food production. This was the Green Revolution." },
+          { "speaker": "NEO", "text": "But overusing chemicals, pumping too much groundwater and growing only one crop are now seen as unsustainable." }
+        ]
+      },
+      {
+        "animation": "Students with a teacher interview a farmer under a neem tree, with question cards: 'How have your practices changed?', 'Effects of synthetic fertilisers and pesticides?', 'Changes in soil health?'. A cutaway of soil shows humus and friendly microbes fading, then a beetle eating pests. An ancient palm-leaf manuscript glows: 'Vrikshayurveda: Kunapa Jala'. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity: visit a farm with your parents or teacher. Ask farmers how their practices changed, and what fertilisers and pesticides did to their soil. Then write a report." },
+          { "speaker": "NEO", "text": "Overusing synthetic fertilisers can reduce friendly microbes and humus, making soil prone to erosion. It can also reduce natural predators, so pests increase." },
+          { "speaker": "NEO", "text": "The ancient text Vrikshayurveda recommends nourishing soil with organic manure like Kunapa Jala. Today, some farmers are exploring organic and natural farming." },
+          { "speaker": "NEO", "text": "Exam tip: growing the same crop repeatedly is called monoculture. It reduces biodiversity and affects pollinators." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Ecosystems give air, water, food, fibres, timber, medicines', '2. Sundarbans: largest mangroves, protect against storms, under threat', '3. Sustainable farming protects soil, predators and pollinators'. Zippy plants a sapling next to the farmer.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: ecosystems give us fresh air, water, food, fibres, timber and medicines." },
+          { "speaker": "NEO", "text": "Two: the Sundarbans, the largest mangrove forests in the world, protect us from storms but are under threat." },
+          { "speaker": "NEO", "text": "Three: sustainable farming protects soil health, natural predators and pollinators." },
+          { "speaker": "ZIPPY", "text": "Thank you, ecosystems. No question mark this time." }
+        ]
+      }
+    ]
+  }
+]

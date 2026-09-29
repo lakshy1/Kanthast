@@ -1,0 +1,291 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "Power Play",
+    "topic_no": 1,
+    "name": "Folding Paper to the Moon",
+    "scenes": [
+      {
+        "animation": "Zippy grunts as he folds a giant newspaper for the seventh time; it springs open and flattens him. Estu and Roxie laugh. A thought bubble shows a paper tower reaching the Moon.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Someone told me that if I fold paper 46 times, it reaches the Moon. That's crazy!" },
+          { "speaker": "NEO", "text": "It sounds crazy. Let's calculate it and see." }
+        ]
+      },
+      {
+        "animation": "A single sheet labelled '0.001 cm' sits on a table. With each fold, a counter doubles: '0.002 cm, 0.004 cm, 0.008 cm, 0.016 cm'. At fold 10 a ruler pops up showing '1.024 cm'. At fold 17 the stack stands beside Zippy: '≈ 131 cm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Say a sheet is 0.001 centimetre thick. Each fold doubles the thickness." },
+          { "speaker": "NEO", "text": "One fold gives 0.002. Two folds give 0.004. Three folds give 0.008." },
+          { "speaker": "NEO", "text": "After 10 folds it is 1.024 centimetres. After 17 folds, about 131 centimetres, taller than you, Zippy." }
+        ]
+      },
+      {
+        "animation": "The stack shoots upward past landmarks with labels: 'Fold 26 ≈ 670 m' beside the Burj Khalifa (830 m), 'Fold 30 ≈ 10.7 km' beside a cruising aeroplane, then 'Fold 46 > 7,00,000 km' as it pierces past the Moon.",
+        "lines": [
+          { "speaker": "NEO", "text": "After 26 folds, about 670 metres. The Burj Khalifa is 830 metres tall." },
+          { "speaker": "NEO", "text": "After 30 folds, about 10.7 kilometres, where aeroplanes fly." },
+          { "speaker": "NEO", "text": "After 46 folds, more than 7 lakh kilometres. The Moon is only about 3 lakh 84 thousand kilometres away." }
+        ]
+      },
+      {
+        "animation": "A table highlights jumps of 10 folds: '0 → 10: × 1024', '10 → 20: × 1024', '20 → 30: × 1024'. Below, '2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 = 1024' writes itself one '× 2' at a time.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How does it grow so fast?" },
+          { "speaker": "NEO", "text": "Every 3 folds multiply the thickness by 2 times 2 times 2, which is 8." },
+          { "speaker": "NEO", "text": "Every 10 folds multiply it by 2 multiplied by itself ten times. That is 1024." },
+          { "speaker": "NEO", "text": "This is multiplicative growth, also called exponential growth." }
+        ]
+      },
+      {
+        "animation": "Quiz card: 'Initial thickness v. Thickness after 10 folds = ?' Options flip up: '10v', '10 + v', '2 × 10 × v', '2¹⁰v'. The wrong ones crumple; '2¹⁰v' glows. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puzzle. If the starting thickness is v, what is the thickness after 10 folds?" },
+          { "speaker": "ZIPPY", "text": "Easy. 10 times v!" },
+          { "speaker": "NEO", "text": "That would be adding v ten times. But folding doubles each time, so it is 2 to the power 10, times v." },
+          { "speaker": "NEO", "text": "Exam tip: repeated doubling means a power of 2, not multiplying by the number of folds." }
+        ]
+      },
+      {
+        "animation": "Recap board with a paper stack reaching a smiling Moon. Points: '1. Each fold doubles thickness', '2. 10 folds → × 2¹⁰ = × 1024', '3. After n folds: thickness = 2ⁿ × v'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: each fold doubles the thickness." },
+          { "speaker": "NEO", "text": "Two: every 10 folds multiply it by 1024." },
+          { "speaker": "NEO", "text": "Three: after n folds, the thickness is 2 to the power n times the starting thickness." },
+          { "speaker": "ZIPPY", "text": "I'm not folding. I'm booking a rocket." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Power Play",
+    "topic_no": 2,
+    "name": "Exponents and Their Laws",
+    "scenes": [
+      {
+        "animation": "A king in a storybook palace hands out gifts. A tree diagram branches: King → 3 daughters → 3 baskets each → 3 keys each → 3 rooms each. Zippy tries counting rooms with his fingers and runs out.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Three daughters, three baskets each, three keys each, three rooms each. I've run out of fingers!" },
+          { "speaker": "NEO", "text": "Let powers do the counting. This is the puzzle of the stones that shine." }
+        ]
+      },
+      {
+        "animation": "Notation builds: '5 × 5 × 5 × 5 = 5⁴ = 625' with arrows labelling '5 = base' and '4 = exponent'. Then the room count: '3 × 3 = 9, 9 × 3 = 27, 27 × 3 = 81 = 3⁴'.",
+        "lines": [
+          { "speaker": "NEO", "text": "5 times 5 times 5 times 5 is written 5 to the power 4. Here 5 is the base and 4 is the exponent." },
+          { "speaker": "NEO", "text": "The rooms are 3 times 3 times 3 times 3. That's 3 to the power 4, or 81 rooms." }
+        ]
+      },
+      {
+        "animation": "Each room gets tables and necklaces and diamonds: three more factors of 3 appear. Steps write line by line: 'diamonds = 3⁷', '3⁷ = 3⁴ × 3³', '= 81 × 27', '= 2187'. A check line: '81 × 27 = 1620 + 567 = 2187 ✓'. Then 'nᵃ × nᵇ = nᵃ⁺ᵇ'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Each room has 3 tables, each table 3 necklaces, each necklace 3 diamonds. So diamonds are 3 to the power 7." },
+          { "speaker": "NEO", "text": "We already know 3 to the 4 is 81. 3 to the 7 is 3 to the 4 times 3 cubed, so 81 times 27." },
+          { "speaker": "NEO", "text": "81 times 20 is 1620. 81 times 7 is 567. Total 2187 diamonds." },
+          { "speaker": "NEO", "text": "So n to the a times n to the b is n to the a plus b." }
+        ]
+      },
+      {
+        "animation": "4⁶ splits two ways: '(4×4×4)(4×4×4) = (4³)² = 64 × 64' and '(4×4)(4×4)(4×4) = (4²)³ = 16 × 16 × 16', both reaching '4096'. The rule '(nᵃ)ᵇ = nᵃᵇ' appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "4 to the power 6 can be grouped as two groups of 4 cubed, or three groups of 4 squared." },
+          { "speaker": "NEO", "text": "64 times 64 is 4096, and 16 times 16 times 16 is also 4096." },
+          { "speaker": "NEO", "text": "So a power of a power multiplies the exponents: n to the a, raised to b, is n to the a times b." }
+        ]
+      },
+      {
+        "animation": "A magical pond fills with pink lotuses, doubling daily; Day 30 is full, Day 29 half full. Then Damayanti moves lotuses to a tripling pond: '2⁴ × 3⁴ = (2 × 3)⁴ = 6⁴ = 1296'. An 'Exam Tip' sticker shows '4 + 4 + 4 = 12 but 4 × 4 × 4 = 64'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Lotuses double every day and fill the pond on day 30. So half full on day 15!" },
+          { "speaker": "NEO", "text": "No, on day 29. One more doubling fills it." },
+          { "speaker": "NEO", "text": "Damayanti gets 2 to the 4 lotuses, then they triple for 4 days: 2 to the 4 times 3 to the 4. That is 6 to the 4, or 1296." },
+          { "speaker": "NEO", "text": "Exam tip: 4 cubed is 4 times 4 times 4, which is 64, not 4 times 3." }
+        ]
+      },
+      {
+        "animation": "Recap board with a lotus. Points: '1. nᵃ: base n, exponent a', '2. nᵃ × nᵇ = nᵃ⁺ᵇ and (nᵃ)ᵇ = nᵃᵇ', '3. mᵃ × nᵃ = (mn)ᵃ'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: n to the a means n multiplied by itself a times." },
+          { "speaker": "NEO", "text": "Two: multiplying powers of the same base adds exponents, and a power of a power multiplies them." },
+          { "speaker": "NEO", "text": "Three: m to the a times n to the a is m n, to the power a." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Power Play",
+    "topic_no": 3,
+    "name": "Combinations, Zero and Negative Powers",
+    "scenes": [
+      {
+        "animation": "Estu and Roxie find great-grandfather's dusty safe with a 5-digit dial. Estu spins it hopelessly while a calendar flips pages behind him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "They'll try every password. How long can that take?" },
+          { "speaker": "NEO", "text": "Let's count them. When a problem is hard, try a simpler version first." }
+        ]
+      },
+      {
+        "animation": "A 2-digit lock: 10 wheels for the first digit, each branching to 10 for the second, '10 × 10 = 100'. A third wheel: '100 × 10 = 1000'. Then '10 × 10 × 10 × 10 × 10 = 10⁵ = 1,00,000'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A 2-digit lock has 10 choices for each digit. That's 10 times 10, or 100 passwords." },
+          { "speaker": "NEO", "text": "A third digit multiplies it by 10 again: 1000." },
+          { "speaker": "NEO", "text": "So a 5-digit lock has 10 to the power 5, which is 1 lakh passwords." },
+          { "speaker": "NEO", "text": "Same idea: 4 dresses and 3 caps give 4 times 3, or 12 outfits." }
+        ]
+      },
+      {
+        "animation": "A glowing line 16 units long. Scissors halve it: '2⁴ ÷ 2 = 2³ = 8', again '2⁴ ÷ 2² = 2² = 4', again '2⁴ ÷ 2³ = 2¹ = 2'. The rule 'nᵃ ÷ nᵇ = nᵃ⁻ᵇ' stamps down.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now the other side of powers. Take a line 16 units long, which is 2 to the 4." },
+          { "speaker": "NEO", "text": "Halve it three times. That's 2 to the 4 divided by 2 cubed, which leaves 2." },
+          { "speaker": "NEO", "text": "So dividing powers of the same base subtracts the exponents." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: '2⁴ ÷ 2⁴ = ?' Two ways: '16 ÷ 16 = 1' and '2⁴⁻⁴ = 2⁰', joined by '= 1'. Then '2⁴ ÷ 2⁵ = 2⁻¹ = 1/2' as the line shrinks to half a unit, and '2⁴ ÷ 2¹⁰ = 2⁻⁶ = 1/64'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What's 2 to the power zero? Zero twos multiplied is zero, right?" },
+          { "speaker": "NEO", "text": "Let's test it. 2 to the 4 divided by 2 to the 4 is 16 divided by 16, which is 1." },
+          { "speaker": "NEO", "text": "The rule says it is 2 to the 4 minus 4, which is 2 to the zero. So 2 to the zero must be 1." },
+          { "speaker": "NEO", "text": "Halve 16 five times and you get half a unit. The rule gives 2 to the minus 1. So 2 to the minus 1 is one half." }
+        ]
+      },
+      {
+        "animation": "A 'power line' ladder of 4s: 4⁴ = 256, 4³ = 64, 4² = 16, 4¹ = 4, 4⁰ = 1, 4⁻¹ = 1/4, 4⁻² = 1/16. Each step down is '÷ 4'. An 'Exam Tip' sticker: 'n⁻ᵃ = 1/nᵃ, n ≠ 0'.",
+        "lines": [
+          { "speaker": "NEO", "text": "On a power line of 4, each step down divides by 4. After 1 comes one quarter, then one sixteenth." },
+          { "speaker": "NEO", "text": "In general, n to the minus a is 1 over n to the a." },
+          { "speaker": "NEO", "text": "Exam tip: a negative exponent makes a fraction, not a negative number. 2 to the minus 3 is one eighth." }
+        ]
+      },
+      {
+        "animation": "Recap board with the safe finally open. Points: '1. 5-digit lock → 10⁵ passwords', '2. nᵃ ÷ nᵇ = nᵃ⁻ᵇ; n⁰ = 1', '3. n⁻ᵃ = 1/nᵃ'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: choices multiply, so a 5-digit lock has 10 to the 5 passwords." },
+          { "speaker": "NEO", "text": "Two: dividing powers subtracts exponents, and any non-zero number to the power zero is 1." },
+          { "speaker": "NEO", "text": "Three: n to the minus a is 1 over n to the a." },
+          { "speaker": "ZIPPY", "text": "And the safe opened on the very last password. Of course." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Power Play",
+    "topic_no": 4,
+    "name": "Powers of 10 and Scientific Notation",
+    "scenes": [
+      {
+        "animation": "Zippy reads a space fact aloud from a long banner of zeros, 'Earth's mass is 59,76,00,00,00...' and gets tangled in commas like a kite string.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Earth's mass is fifty-nine... seventy-six... how many zeros was that?" },
+          { "speaker": "NEO", "text": "Counting zeros is risky. Scientists use powers of 10 instead." }
+        ]
+      },
+      {
+        "animation": "47561 unfolds into place-value blocks: '4 × 10⁴ + 7 × 10³ + 5 × 10² + 6 × 10¹ + 1 × 10⁰'. Then 561.903 shows decimal places as '9 × 10⁻¹ + 0 × 10⁻² + 3 × 10⁻³'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Place values are powers of 10. 47561 is 4 times 10 to the 4, plus 7 times 10 cubed, and so on." },
+          { "speaker": "NEO", "text": "Decimals use negative powers. In 561.903, the 9 is 9 times 10 to the minus 1." }
+        ]
+      },
+      {
+        "animation": "5900 transforms step by step: '590 × 10¹', '59 × 10²', '5.9 × 10³', with the last one boxed green. A rule card: 'x × 10ʸ, 1 ≤ x < 10, y an integer'. Examples: '20800 = 2.08 × 10⁴', '80,00,000 = 8 × 10⁶'.",
+        "lines": [
+          { "speaker": "NEO", "text": "5900 can be 59 times 10 squared, or 5.9 times 10 cubed." },
+          { "speaker": "NEO", "text": "In scientific notation, the first number must be at least 1 and less than 10. So 5900 is 5.9 times 10 cubed." },
+          { "speaker": "NEO", "text": "20800 is 2.08 times 10 to the 4. 80 lakh is 8 times 10 to the 6." }
+        ]
+      },
+      {
+        "animation": "Worked example: '34,30,000' → decimal point hops left 6 places, shown by numbered arcs → '3.43 × 10⁶'. Then Mumbai's population '2 × 10⁷': changing 2 to 3 adds a crore, changing 7 to 8 multiplies by 10, drawn as a skyline growing tenfold.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's write 34 lakh 30 thousand. Move the decimal point left until one digit remains in front: that's 6 hops." },
+          { "speaker": "NEO", "text": "So 34,30,000 is 3.43 times 10 to the 6." },
+          { "speaker": "NEO", "text": "The exponent matters most. Mumbai's 2 crore is 2 times 10 to the 7. Change 7 to 8 and it becomes 20 crore." }
+        ]
+      },
+      {
+        "animation": "Three distances slide in: 'Sun–Saturn 1.4335 × 10¹² m', 'Saturn–Uranus 1.439 × 10¹² m', 'Sun–Earth 1.496 × 10¹¹ m'. Zippy points at 1.496 as the biggest; the exponents light up and the Sun–Earth bar shrinks to the smallest. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Which distance is smallest?" },
+          { "speaker": "ZIPPY", "text": "Sun to Earth has 1.496, the biggest number, so it's the longest!" },
+          { "speaker": "NEO", "text": "Compare exponents first. 10 to the 11 is less than 10 to the 12, so Sun to Earth is the smallest." },
+          { "speaker": "NEO", "text": "Exam tip: in standard form, check that the coefficient is between 1 and 10. 34.3 times 10 to the 5 is not standard form." }
+        ]
+      },
+      {
+        "animation": "Recap board with a tidy planet chart. Points: '1. Place values are powers of 10', '2. Standard form: x × 10ʸ, 1 ≤ x < 10', '3. Compare exponents first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: every place value is a power of 10, including negative powers for decimals." },
+          { "speaker": "NEO", "text": "Two: scientific notation is x times 10 to the y, with x from 1 up to, but not including, 10." },
+          { "speaker": "NEO", "text": "Three: to compare big numbers, look at the exponent first." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Power Play",
+    "topic_no": 5,
+    "name": "Linear vs Exponential Growth: Thinking Big",
+    "scenes": [
+      {
+        "animation": "Roxie reads a sci-fi novel under a tree. A cartoon ladder rises from her village all the way to the Moon, with Zippy climbing and panting on step 3.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Roxie's book has a ladder to the Moon. How many steps would it have?" },
+          { "speaker": "NEO", "text": "Guess first, then calculate. Thousands? Lakhs? Crores?" }
+        ]
+      },
+      {
+        "animation": "A number card: 'Earth–Moon = 3,84,400 km'. Conversion steps appear line by line: '1 km = 1,00,000 cm', '3,84,400 km = 38,44,00,00,000 cm', '÷ 20 cm per step', '= 1,92,20,00,000 steps'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Moon is about 3,84,400 kilometres away. Assume each step is 20 centimetres." },
+          { "speaker": "NEO", "text": "One kilometre is 1 lakh centimetres, so the distance is 38,44,00,00,000 centimetres." },
+          { "speaker": "NEO", "text": "Divide by 20. That's 1,92,20,00,000 steps. About 192 crore steps!" }
+        ]
+      },
+      {
+        "animation": "Split screen race: on the left, a ladder adds '+ 20 cm' per step for 192 crore steps; on the right, a paper sheet doubles '× 2' and reaches the Moon in 46 folds. Labels: 'Linear growth: additive' and 'Exponential growth: multiplicative'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Each step adds the same 20 centimetres. Adding a fixed amount is linear growth." },
+          { "speaker": "NEO", "text": "Folding paper doubled the thickness each time. That's exponential growth." },
+          { "speaker": "NEO", "text": "The ladder needs 192 crore steps. The paper needs only 46 folds." }
+        ]
+      },
+      {
+        "animation": "A stopwatch counts '10⁶ seconds'. Steps appear: '1 day = 24 × 60 × 60 = 86,400 s', '10,00,000 ÷ 86,400 ≈ 11.57 days'. Then '10⁹ s ≈ 31.7 years' with a candle-covered birthday cake.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If I've lived a million seconds, how old am I?" },
+          { "speaker": "NEO", "text": "A day has 24 times 60 times 60, which is 86,400 seconds." },
+          { "speaker": "NEO", "text": "10 lakh divided by 86,400 is about 11.6 days. So you're a baby!" },
+          { "speaker": "NEO", "text": "But a billion seconds, 10 to the 9, is about 31.7 years. Three more zeros made it a thousand times longer." }
+        ]
+      },
+      {
+        "animation": "A ladder of number names climbs: 'lakh 10⁵, crore 10⁷, arab 10⁹, kharab 10¹¹, neel 10¹³, padma 10¹⁵'. Side cards: '8.2 × 10⁹ humans', '2 × 10¹⁶ ants'. An 'Exam Tip' sticker: '10⁹ + 10⁹ = 2 × 10⁹, not 10¹⁸'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Indian number names jump by 100: lakh is 10 to the 5, crore 10 to the 7, arab 10 to the 9, then kharab, neel and padma." },
+          { "speaker": "NEO", "text": "There are about 8.2 arab humans, and about 20 padma ants, which is 2 times 10 to the 16." },
+          { "speaker": "NEO", "text": "Exam tip: 10 to the 9 plus 10 to the 9 is 2 times 10 to the 9. Adding does not add exponents." }
+        ]
+      },
+      {
+        "animation": "Recap board with the ladder and the paper tower side by side. Points: '1. Linear = add a fixed amount', '2. Exponential = multiply by a fixed factor', '3. Guess, assume, then calculate'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: linear growth adds the same amount each time." },
+          { "speaker": "NEO", "text": "Two: exponential growth multiplies by the same factor each time, and grows far faster." },
+          { "speaker": "NEO", "text": "Three: for big questions, guess first, make sensible assumptions, then calculate." },
+          { "speaker": "ZIPPY", "text": "Ladder cancelled. Too many steps." }
+        ]
+      }
+    ]
+  }
+]

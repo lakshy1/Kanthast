@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { motion as Motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import DemoVideoModal from "../components/DemoVideoModal";
+import { ClickSparkles } from "../components/landing/CursorEffects";
 import schoolHeroImage from "../assets/images/School-Hero-I.png";
 import demoVideo from "../../resources/Kanthast-demo.mp4";
 import {
@@ -15,10 +16,13 @@ import {
   FaChevronRight,
   FaChevronDown,
   FaCirclePlay,
+  FaCubes,
+  FaLandmark,
   FaMagnifyingGlassChart,
   FaRegCircleCheck,
   FaShieldHeart,
   FaStar,
+  FaUserGraduate,
 } from "react-icons/fa6";
 
 
@@ -155,10 +159,10 @@ const painSolutions = [
   },
 ];
 const stats = [
-  { icon: "STU", value: "50,000+", label: "Students learning" },
-  { icon: "3D", value: "500+", label: "3D animated lessons" },
-  { icon: "BRD", value: "20+", label: "Boards covered" },
-  { icon: "TOP", value: "4.8/5", label: "Average rating" },
+  { Icon: FaUserGraduate, value: "50,000+", label: "Students learning" },
+  { Icon: FaCubes, value: "500+", label: "3D animated lessons" },
+  { Icon: FaLandmark, value: "20+", label: "Boards covered" },
+  { Icon: FaStar, value: "4.8/5", label: "Average rating" },
 ];
 const testimonials = [
   {
@@ -430,6 +434,7 @@ export default function SchoolHomepage() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#0B1120] text-slate-50">
+      <ClickSparkles />
       <Helmet>
         <title>Kanthast School | Learning that actually sticks</title>
         <meta
@@ -438,7 +443,8 @@ export default function SchoolHomepage() {
         />
       </Helmet>
 
-      {/* Inter and Nunito are loaded globally from index.html, so the
+      {/* Inter is loaded globally from index.html (one brand across tracks:
+          the School page shares the Medical type and differs by accent only), so the
           duplicate font link here was removed. The eleven custom properties
           that used to sit in this rule went too: "var(--" appeared zero times
           in the file, so they were declared and never consumed, duplicating
@@ -446,14 +452,13 @@ export default function SchoolHomepage() {
           hex values below. */}
       <style>{`
         .school-page {
-          font-family: 'Inter', sans-serif;
           background:
             radial-gradient(circle at 78% 18%, rgba(245,158,11,0.11), transparent 24%),
             radial-gradient(circle at 14% 24%, rgba(16,185,129,0.08), transparent 26%),
             linear-gradient(180deg, rgba(11,17,32,1), rgba(11,17,32,1));
         }
         .school-display {
-          font-family: 'Nunito', sans-serif;
+          letter-spacing: -0.02em;
         }
         .hero-dot-grid {
           background-image:
@@ -485,7 +490,7 @@ export default function SchoolHomepage() {
       <div className="school-page">
         <section className="hero-dot-grid relative overflow-hidden border-b border-slate-800/70 pt-6 md:pt-8">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_50%,rgba(245,158,11,0.08)_0%,transparent_60%)]" />
-          <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-16 pt-10 md:px-10 md:pb-20 md:pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-16 lg:pb-24 lg:pt-14">
+          <div className="mx-auto grid max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 gap-14 px-6 pb-16 pt-10 md:px-10 md:pb-20 md:pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-24 lg:pt-14">
             <Motion.div
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
@@ -549,7 +554,7 @@ export default function SchoolHomepage() {
         </section>
 
         <section id="subjects" className="border-b border-slate-800/70 py-8">
-          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
+          <div className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 md:px-10">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-400">
               Subjects covered
             </p>
@@ -571,7 +576,7 @@ export default function SchoolHomepage() {
           </div>
         </section>
 
-        <section id="how-it-works" className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-16">
+        <section id="how-it-works" className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 py-20 md:px-10">
           <div className="max-w-3xl">
             <SectionLabel>How Kanthast School works</SectionLabel>
             <h2 className="school-display mt-5 w-full text-4xl font-black leading-tight text-slate-50 md:text-5xl">
@@ -587,7 +592,7 @@ export default function SchoolHomepage() {
                   key={step.number}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.25 }}
+                  viewport={{ once: false, amount: 0.2 }}
                   transition={{ duration: 0.45, delay: index * 0.08 }}
                   className="relative rounded-[24px] border border-[#1E2D45] bg-[#111827] p-6 shadow-e4"
                 >
@@ -613,7 +618,7 @@ export default function SchoolHomepage() {
         </section>
 
         <section className="border-y border-slate-800/70 bg-[linear-gradient(180deg,rgba(17,24,39,0.55),rgba(11,17,32,0.92))] py-20">
-          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
+          <div className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 md:px-10">
             <div className="max-w-3xl">
               <SectionLabel>Interactive subject deep dive</SectionLabel>
               <h2 className="school-display mt-5 text-4xl font-black leading-tight text-slate-50 md:text-5xl">
@@ -680,7 +685,7 @@ export default function SchoolHomepage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-16">
+        <section className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 py-20 md:px-10">
           <div className="w-full">
             <SectionLabel>Sound familiar?</SectionLabel>
             <h2 className="school-display mt-5 w-full text-4xl font-black leading-tight text-slate-50 md:text-5xl">
@@ -797,19 +802,19 @@ export default function SchoolHomepage() {
         </section>
 
         <section className="border-y border-slate-800/70 bg-[#111827] py-12">
-          <div className="mx-auto grid max-w-7xl gap-6 px-6 md:grid-cols-2 md:px-10 lg:grid-cols-4 lg:px-16">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-3xl">{stat.icon}</p>
-                <p className="school-display mt-3 text-4xl font-black text-amber-300">{stat.value}</p>
-                <p className="mt-2 text-sm text-slate-400">{stat.label}</p>
+          <div className="mx-auto grid max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 gap-6 px-6 md:grid-cols-2 md:px-10 lg:grid-cols-4">
+            {stats.map(({ Icon, value, label }) => (
+              <div key={label} className="text-center">
+                <Icon className="mx-auto text-3xl text-amber-300" aria-hidden="true" />
+                <p className="school-display mt-3 text-4xl font-black text-amber-300">{value}</p>
+                <p className="mt-2 text-sm text-slate-400">{label}</p>
               </div>
             ))}
           </div>
         </section>
 
         <section className="py-20">
-          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
+          <div className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 md:px-10">
             <div className="max-w-3xl">
               <SectionLabel>What students & parents say</SectionLabel>
               <h2 className="school-display mt-5 text-4xl font-black leading-tight text-slate-50 md:text-5xl">
@@ -848,7 +853,7 @@ export default function SchoolHomepage() {
         </section>
 
         <section id="pricing" className="border-y border-slate-800/70 bg-[linear-gradient(180deg,rgba(17,24,39,0.8),rgba(11,17,32,1))] py-20">
-          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
+          <div className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 md:px-10">
             <div className="max-w-3xl">
               <SectionLabel>Simple pricing</SectionLabel>
               <h2 className="school-display mt-5 text-4xl font-black leading-tight text-slate-50 md:text-5xl">
@@ -930,7 +935,7 @@ export default function SchoolHomepage() {
           </div>
         </section>
 
-        <section id="parents" className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-16">
+        <section id="parents" className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 py-20 md:px-10">
           <div className="max-w-3xl">
             <SectionLabel>For parents</SectionLabel>
             <h2 className="school-display mt-5 text-4xl font-black leading-tight text-slate-50 md:text-5xl">
@@ -946,7 +951,7 @@ export default function SchoolHomepage() {
                   key={feature.title}
                   initial={{ opacity: 0, y: 22 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
+                  viewport={{ once: false, amount: 0.15 }}
                   transition={{ duration: 0.4, delay: index * 0.08 }}
                   className="rounded-[24px] border border-[#1E2D45] bg-[#111827] p-6"
                 >
@@ -1022,7 +1027,7 @@ export default function SchoolHomepage() {
             <Motion.div
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.15 }}
               transition={{ duration: 0.45 }}
             >
               <SectionLabel>Start now</SectionLabel>

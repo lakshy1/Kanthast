@@ -1,0 +1,331 @@
+[
+  {
+    "chapter_no": 10,
+    "chapter": "Light: Mirrors and Lenses",
+    "topic_no": 1,
+    "name": "What Are Spherical Mirrors?",
+    "scenes": [
+      {
+        "animation": "A science centre hall of funny mirrors. Meena looks into one curved mirror and her face balloons huge; her brother, standing farther back, appears upside down. In the next mirror, Zippy shrinks to a tiny spark. Zippy shrieks.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo! That mirror made Meena's face giant, flipped her brother upside down, and shrank me to a speck!" },
+          { "speaker": "NEO", "text": "Relax. These are not plane mirrors. They are spherical mirrors, curved inward or outward. That's why the images look different." }
+        ]
+      },
+      {
+        "animation": "Activity 10.1 step by step: Zippy holds a shiny steel spoon close to his face. On the inner, caved-in side, his reflection is upside down. He flips the spoon; on the bulging outer side, his image is upright but small. Labels: 'Inner curve: inverted' and 'Outer curve: erect, smaller'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it with a shiny steel spoon from your kitchen. Hold its curved surface close to your face and slowly move it away." },
+          { "speaker": "NEO", "text": "On the inner side, which curves inwards, your image is inverted." },
+          { "speaker": "NEO", "text": "Flip it. On the outer side, which bulges outwards, your image is erect but smaller." },
+          { "speaker": "ZIPPY", "text": "The spoon is a mirror! Breakfast just got interesting." }
+        ]
+      },
+      {
+        "animation": "A transparent hollow sphere appears; a curved piece glows and lifts out of it, labelled 'Spherical mirror'. Two versions split apart: one with the shiny side curving in, labelled 'Concave', and one with the shiny side bulging out, labelled 'Convex'. Their schematic symbols draw below, with the non-reflecting side shown shaded.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mirrors whose reflecting surfaces are spherical are called spherical mirrors. They are shaped like a part of a hollow sphere." },
+          { "speaker": "NEO", "text": "A spherical mirror whose reflecting surface curves inwards is a concave mirror." },
+          { "speaker": "NEO", "text": "One whose reflecting surface curves outwards is a convex mirror. In diagrams, the non-reflecting side is shown shaded." }
+        ]
+      },
+      {
+        "animation": "A flat glass piece on a grinding wheel becomes curved. A thin silver layer labelled 'Aluminium coating' is sprayed on the outer curve, and the inside becomes a concave mirror; sprayed on the inner curve, the outside becomes a convex mirror.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So factories slice up giant glass balls?" },
+          { "speaker": "NEO", "text": "No. Spherical mirrors are made by grinding and polishing flat glass into a curve." },
+          { "speaker": "NEO", "text": "A reflective coating, like a thin layer of aluminium, on the outer curved surface makes a concave mirror. On the inner curved surface, it makes a convex mirror." }
+        ]
+      },
+      {
+        "animation": "Activity 10.2: two mirrors lie face up on a table. The camera drops to eye level at the side. One surface dips like a bowl, tagged 'Concave'; the other rises like a hill, tagged 'Convex'. A yellow 'EXAM TIP' card: 'Concave = caves IN'.",
+        "lines": [
+          { "speaker": "NEO", "text": "To tell them apart, place both mirrors on a table with reflecting surfaces facing up. View them from the side at eye level." },
+          { "speaker": "NEO", "text": "If the reflecting surface curves inwards, it is concave. If it curves outwards, it is convex." },
+          { "speaker": "NEO", "text": "Exam tip: remember, concave caves in. Many students mix up these two names, and it costs easy marks." }
+        ]
+      },
+      {
+        "animation": "Recap board with a spoon mascot. Points appear: '1. Spherical mirror: part of a hollow sphere', '2. Concave: curves inwards; Convex: curves outwards', '3. Spoon: inner side gives inverted image, outer side erect and smaller'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: spherical mirrors have reflecting surfaces shaped like a part of a hollow sphere." },
+          { "speaker": "NEO", "text": "Two: a concave mirror's reflecting surface curves inwards, and a convex mirror's curves outwards." },
+          { "speaker": "NEO", "text": "Three: a spoon's inner side can show an inverted image, while its outer side shows an erect, smaller image." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Light: Mirrors and Lenses",
+    "topic_no": 2,
+    "name": "Images Formed by Spherical Mirrors and Their Uses",
+    "scenes": [
+      {
+        "animation": "A scooter's side mirror shows a small auto-rickshaw behind with the printed warning 'Objects in mirror are closer than they appear'. Zippy squints at the text.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does this mirror warn me that things are closer? Is it lying?" },
+          { "speaker": "NEO", "text": "It is a convex mirror, and it shows things smaller. Let's see how each spherical mirror forms images." }
+        ]
+      },
+      {
+        "animation": "Activity 10.3 builds step by step: a concave and a convex mirror stand upright on wooden blocks, side by side. A small toy elephant sits 3 to 4 cm in front. The concave mirror shows a big upright elephant; the convex mirror shows a small upright elephant.",
+        "lines": [
+          { "speaker": "NEO", "text": "Stand a concave mirror and a convex mirror upright on wooden blocks. Place a small toy about 3 to 4 centimetres in front." },
+          { "speaker": "NEO", "text": "In the concave mirror, the image is erect and enlarged. In the convex mirror, it is erect but smaller." }
+        ]
+      },
+      {
+        "animation": "The toy slides slowly away. In the concave mirror, the elephant flips upside down and then keeps shrinking. In the convex mirror, it stays upright and shrinks only a little. A comparison table fills: 'Plane: erect, same size', 'Concave: changes with distance, may invert', 'Convex: always erect, diminished'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now move the toy away slowly. In the concave mirror, the image becomes inverted. It is enlarged at first, then keeps getting smaller." },
+          { "speaker": "NEO", "text": "In the convex mirror, the image is always erect and diminished. It gets only slightly smaller as the toy moves away." },
+          { "speaker": "NEO", "text": "A plane mirror always gives an erect image of the same size. And lateral inversion is seen in all three types of mirrors." }
+        ]
+      },
+      {
+        "animation": "Concave mirror uses: a torch reflector, a car and scooter headlight, a dentist's small mirror showing a big tooth, and a giant concave mirror inside an observatory telescope.",
+        "lines": [
+          { "speaker": "NEO", "text": "Concave mirrors are used as reflectors in torches and in the headlights of cars and scooters." },
+          { "speaker": "NEO", "text": "A dentist's mirror is concave. Held close to the teeth, it gives an enlarged view." },
+          { "speaker": "NEO", "text": "Most modern telescopes use a large concave mirror as the main mirror." }
+        ]
+      },
+      {
+        "animation": "Convex mirror uses: a side-view mirror covering a wide stretch of road, a round orange safety mirror at a sharp hill bend showing two approaching cars, and a dome mirror in a big store watching many aisles. A yellow 'EXAM TIP' card flips.",
+        "lines": [
+          { "speaker": "NEO", "text": "Convex mirrors are used as side-view mirrors. They show the traffic behind as erect and smaller, and they show a much wider area of the road." },
+          { "speaker": "NEO", "text": "They are also placed at road intersections and sharp bends to prevent collisions, and in big stores to deter thefts." },
+          { "speaker": "NEO", "text": "Exam tip: if a question asks why convex mirrors are used in vehicles, write two points: always erect image, and a wider field of view." }
+        ]
+      },
+      {
+        "animation": "Recap board with three mirror icons. Points appear: '1. Concave: erect and enlarged when close; inverted when far', '2. Convex: always erect and diminished', '3. Concave: torch, dentist; Convex: side-view, road bends, stores'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a concave mirror gives an erect, enlarged image when the object is close, and an inverted image when it is farther away." },
+          { "speaker": "NEO", "text": "Two: a convex mirror always gives an erect, diminished image." },
+          { "speaker": "NEO", "text": "Three: concave mirrors are used in torches and by dentists, and convex mirrors as side-view and road safety mirrors." },
+          { "speaker": "ZIPPY", "text": "So the mirror wasn't lying. It was just being careful." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Light: Mirrors and Lenses",
+    "topic_no": 3,
+    "name": "The Laws of Reflection",
+    "scenes": [
+      {
+        "animation": "Zippy bounces a ball against a wall at different angles, and it always bounces away at a matching angle. Then a torch beam hits a mirror and bounces off the same way. Zippy's eyes light up.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Light bounces off mirrors like my ball off the wall. Is there a rule?" },
+          { "speaker": "NEO", "text": "There are two rules. We call them the laws of reflection. Let's discover them." }
+        ]
+      },
+      {
+        "animation": "Activity 10.4 builds step by step: a comb held upright by a paper clip, all its gaps covered with black paper except one in the middle. A torch shines through the slit, making a thin beam along white paper, and hits an upright plane mirror. The torch shifts and the reflected beam shifts too.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cover all the openings of a comb with black paper except one in the middle. Shine a torch through this slit to get a thin beam along a white sheet." },
+          { "speaker": "NEO", "text": "Let the beam fall on an upright plane mirror. Now change the angle of the beam. The reflected beam also shifts." }
+        ]
+      },
+      {
+        "animation": "The drawing builds step by step: a line for the mirror; an arrowed 'Incident ray' coming in; an arrowed 'Reflected ray' going out; a dashed 'Normal' at 90° at point 'O'; arcs marked 'i' and 'r' between each ray and the normal. A protractor measures both and Table 10.1 fills with equal pairs.",
+        "lines": [
+          { "speaker": "NEO", "text": "We draw light as straight lines with arrows, called rays. The ray falling on the mirror is the incident ray. The ray coming back is the reflected ray." },
+          { "speaker": "NEO", "text": "At the point of incidence, O, draw a line at 90 degrees to the mirror. This is the normal." },
+          { "speaker": "NEO", "text": "The angle between the normal and the incident ray is the angle of incidence, i. The angle between the normal and the reflected ray is the angle of reflection, r." },
+          { "speaker": "NEO", "text": "Measure them for many beams. The angle of incidence is equal to the angle of reflection. That is the first law. If the beam falls along the normal, both angles are zero." }
+        ]
+      },
+      {
+        "animation": "Activity 10.5: a stiff chart paper lies on a table with part hanging past the edge; the reflected beam shows on the extended part. The extended part is bent down along the table edge and the beam vanishes. It is flattened again and the beam reappears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now place the mirror on a stiff chart paper that extends past the table edge. The reflected beam shows on the extended part." },
+          { "speaker": "NEO", "text": "Bend that part down. The beam disappears. Flatten it, and the beam comes back." },
+          { "speaker": "NEO", "text": "So the incident ray, the normal at the point of incidence and the reflected ray all lie in the same plane. That is the second law." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card shows a ray hitting a mirror at 40° from the normal; the reflected ray is drawn at 40° from the normal, and a highlighted angle of '50°' appears between the reflected ray and the mirror surface. Then an ancient scene: astronomers from Bhaskara II's time peer through tubes at stars reflected in a shallow bowl of water.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: angles are always measured from the normal, not from the mirror. If the incident ray makes 40 degrees with the normal, the reflected ray makes 50 degrees with the mirror." },
+          { "speaker": "NEO", "text": "More than 800 years ago, in the time of Bhaskara II, astronomers used shallow bowls of water to observe reflected stars and planets." }
+        ]
+      },
+      {
+        "animation": "Recap board with a comb, torch and mirror. Points appear: '1. i = r', '2. Incident ray, normal, reflected ray: same plane', '3. Laws hold for plane and spherical mirrors'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the angle of incidence is equal to the angle of reflection, both measured from the normal." },
+          { "speaker": "NEO", "text": "Two: the incident ray, the normal at the point of incidence and the reflected ray all lie in the same plane." },
+          { "speaker": "NEO", "text": "Three: these laws are valid for all kinds of mirrors, plane, concave and convex." },
+          { "speaker": "ZIPPY", "text": "My ball follows the rules too. Mostly." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Light: Mirrors and Lenses",
+    "topic_no": 4,
+    "name": "Spherical Mirrors Converge and Diverge Light",
+    "scenes": [
+      {
+        "animation": "Zippy uncovers all the gaps of the comb and a fan of parallel torch beams spreads over the table. He points the beams at three mirrors lined up in a row: plane, concave and convex.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "One beam is boring. What happens if I fire lots of beams at once?" },
+          { "speaker": "NEO", "text": "Good question. The laws of reflection hold for every mirror, but curved mirrors do something surprising with many rays." }
+        ]
+      },
+      {
+        "animation": "Activity 10.6 builds step by step: many parallel beams hit the plane mirror and bounce back still parallel. At the concave mirror, the reflected beams squeeze together, labelled 'Converge'. At the convex mirror, they fan out, labelled 'Diverge'. The ray diagrams are then drawn neatly beside each mirror.",
+        "lines": [
+          { "speaker": "NEO", "text": "Use the same setup, but uncover many openings of the comb to get multiple parallel beams. Let them fall on a plane, a concave and a convex mirror, one by one." },
+          { "speaker": "NEO", "text": "From a plane mirror, the reflected beams stay parallel." },
+          { "speaker": "NEO", "text": "From a concave mirror, they come closer together. They converge. From a convex mirror, they spread out. They diverge." },
+          { "speaker": "NEO", "text": "Each ray still follows the laws of reflection. It is the curved surface that makes them converge or diverge." }
+        ]
+      },
+      {
+        "animation": "A red 'SAFETY FIRST' banner: 'Teacher or adult present. Never look at the Sun or into the mirror reflecting the Sun. Aim only at paper, never at faces.' Zippy pulls on dark goggles and nods seriously.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If a concave mirror squeezes light together, would the light get concentrated in one spot?" },
+          { "speaker": "NEO", "text": "Let's test that, safely. Do this only with a teacher or an adult. Never look at the Sun, or into the mirror reflecting the Sun. Aim the light only at paper, never at anyone's face or eyes." }
+        ]
+      },
+      {
+        "animation": "Activity 10.7: a concave mirror faces the Sun and throws a light patch onto a sheet of newspaper. The paper is moved until the patch shrinks to a sharp bright dot. A timer ticks for a few minutes; a wisp of smoke curls up and a tiny scorch mark appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Hold a concave mirror facing the Sun and direct the reflected light onto a thin sheet of paper." },
+          { "speaker": "NEO", "text": "Adjust the distance until you get a sharp, bright spot. Hold everything steady for a few minutes. The paper may start to burn, producing smoke." },
+          { "speaker": "NEO", "text": "The sunlight is concentrated at that point, producing enough heat to ignite the paper." }
+        ]
+      },
+      {
+        "animation": "A field of curved mirrors focuses sunlight onto a pipe that makes steam; the steam spins a turbine and a bulb glows. Next panel: a large community kitchen and a solar furnace melting steel. A yellow 'EXAM TIP' card: 'Concave mirror = converging; Convex mirror = diverging'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Devices that concentrate sunlight using mirrors and lenses are called solar concentrators. They heat liquids to make steam for electricity, large-scale cooking, and even solar furnaces that melt steel." },
+          { "speaker": "NEO", "text": "Exam tip: a concave mirror converges a light beam and a convex mirror diverges it. Don't swap them." }
+        ]
+      },
+      {
+        "animation": "Recap board with three mirrors and beam diagrams. Points appear: '1. Plane mirror: parallel beams stay parallel', '2. Concave converges, convex diverges', '3. Concave mirror can focus sunlight to burn paper; never look at the Sun'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: parallel beams reflected from a plane mirror stay parallel." },
+          { "speaker": "NEO", "text": "Two: a concave mirror converges the beams, and a convex mirror diverges them." },
+          { "speaker": "NEO", "text": "Three: a concave mirror can concentrate sunlight enough to burn paper, but never look at the Sun or its reflection." },
+          { "speaker": "ZIPPY", "text": "Solar-powered paper burning. Supervised, of course." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Light: Mirrors and Lenses",
+    "topic_no": 5,
+    "name": "What Is a Lens? Convex and Concave Lenses",
+    "scenes": [
+      {
+        "animation": "Nani squints at the tiny print on a medicine strip, then holds up a magnifying glass and the letters jump big. Zippy grabs the magnifying glass and his own eye becomes enormous.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How does Nani's magnifying glass make tiny letters huge?" },
+          { "speaker": "NEO", "text": "It is a lens. And you can make a simple lens yourself with just a drop of water." }
+        ]
+      },
+      {
+        "animation": "Activity 10.8 builds step by step: a thin coat of oil is rubbed on a clear plastic scale; a dropper places a round water drop on the oiled spot. Side view shows the drop's surface bulging outwards. The scale is placed over printed text and the letters under the drop look larger than the letters beside it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rub a thin coat of oil or wax on a flat glass or clear plastic strip, like a scale. Place a small drop of water on it. The oil helps it form a nice round drop." },
+          { "speaker": "NEO", "text": "The surface of the drop curves outwards. Put some printed text under it and look through the drop." },
+          { "speaker": "NEO", "text": "The letters under the drop may look larger than the letters nearby. The curved drop is acting like a simple lens." }
+        ]
+      },
+      {
+        "animation": "A glass disc shaped fat in the middle, labelled 'Convex lens: thicker at the middle', and one pinched in the middle, labelled 'Concave lens: thicker at the edges'. Their symbols draw below. A light ray passes through the lens while another ray bounces off a mirror, captioned 'Mirror: see IN it. Lens: see THROUGH it'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A lens is a piece of transparent material, usually glass or plastic, with curved surfaces." },
+          { "speaker": "NEO", "text": "A lens thicker at the middle than at the edges is a convex lens. A lens thicker at the edges than at the middle is a concave lens." },
+          { "speaker": "NEO", "text": "Unlike mirrors, lenses let light pass through them. So we see things through a lens, not in it." }
+        ]
+      },
+      {
+        "animation": "Activity 10.9 builds step by step: a convex lens stands upright in a holder, with a small toy on a block behind it. Close by, the toy appears big and upright; as it slides away, it flips upside down, first big, then smaller. The convex lens is swapped for a concave lens and the toy looks small and upright at every distance.",
+        "lines": [
+          { "speaker": "NEO", "text": "Put a convex lens in a holder and place a small object behind it. Look at it through the lens from the other side." },
+          { "speaker": "NEO", "text": "When the object is close, it appears erect and enlarged. As you move it farther, it appears inverted, first enlarged and then diminished." },
+          { "speaker": "NEO", "text": "Repeat with a concave lens. The object always appears erect and diminished." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card shows two matching pairs side by side: 'Concave MIRROR ↔ Convex LENS: image changes with distance, can invert' and 'Convex MIRROR ↔ Concave LENS: always erect, diminished'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, convex lens behaves like the concave mirror? My brain just flipped upside down." },
+          { "speaker": "NEO", "text": "Exam tip: exactly that. A convex lens and a concave mirror can both enlarge or invert. A concave lens and a convex mirror always give erect, diminished images." }
+        ]
+      },
+      {
+        "animation": "Recap board with a water drop, a magnifying glass and two lens shapes. Points appear: '1. Lens: transparent, curved surfaces', '2. Convex: thick middle; Concave: thick edges', '3. Convex lens: erect and enlarged when close, inverted when far; Concave lens: always erect, diminished'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a lens is a transparent material with curved surfaces, and even a water drop can act as one." },
+          { "speaker": "NEO", "text": "Two: a convex lens is thicker at the middle, and a concave lens is thicker at the edges." },
+          { "speaker": "NEO", "text": "Three: through a convex lens, a close object looks erect and enlarged, and a far one looks inverted. Through a concave lens, it is always erect and diminished." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Light: Mirrors and Lenses",
+    "topic_no": 6,
+    "name": "Lenses Converge and Diverge Light; Uses of Lenses",
+    "scenes": [
+      {
+        "animation": "Zippy lines up a flat glass plate, a convex lens and a concave lens in a row, then fires his comb-and-torch 'beam cannon' at them, grinning.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Mirrors converge and diverge light. Do lenses play the same game?" },
+          { "speaker": "NEO", "text": "They do, but light goes through them instead of bouncing back. Let's check." }
+        ]
+      },
+      {
+        "animation": "Activity 10.10 builds step by step: two identical books side by side with white paper spread on top; a thin glass plate stands upright between them. Parallel beams from the comb pass straight through it. It is replaced by a convex lens and the beams bend inward to meet ('Converging lens'), then by a concave lens and the beams spread out ('Diverging lens').",
+        "lines": [
+          { "speaker": "NEO", "text": "Fix a thin glass plate upright between two books, with white paper spread on them. Send multiple parallel beams from the comb through it." },
+          { "speaker": "NEO", "text": "The beams pass through the glass plate as they are." },
+          { "speaker": "NEO", "text": "Replace it with a convex lens. The beams converge. With a concave lens, they diverge." },
+          { "speaker": "NEO", "text": "So a convex lens is called a converging lens, and a concave lens is called a diverging lens." }
+        ]
+      },
+      {
+        "animation": "A red 'SAFETY FIRST' banner flashes: 'Never look at the Sun directly or through a lens. It can damage your eyes.' Then Activity 10.11: a convex lens held in sunlight focuses a bright dot on paper; smoke curls up.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If a convex lens converges light, can it burn paper like the concave mirror?" },
+          { "speaker": "NEO", "text": "Repeat the concave mirror activity with a convex lens in the path of sunlight, under supervision. And never look at the Sun directly or through the lens. It can damage your eyes." },
+          { "speaker": "NEO", "text": "The convex lens concentrates the sunlight into a bright spot, just like the concave mirror did." }
+        ]
+      },
+      {
+        "animation": "A quick montage: a grandfather's eyeglasses, a smartphone with three camera lenses, a telescope, and a school microscope. Then a cut-away of a human eye with a convex lens inside that bulges for reading a book and flattens for viewing a faraway mountain.",
+        "lines": [
+          { "speaker": "NEO", "text": "Lenses are used everywhere. Eyeglasses are lenses. Cameras, telescopes and microscopes all use lenses." },
+          { "speaker": "NEO", "text": "Even our eye has a convex lens inside it. It can change its shape, which lets us read a book or see something far away." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card with a magnifying glass: 'Magnifying glass = convex lens. Holds close: erect, enlarged.' Zippy tries to write 'converging = concave' and Neo's wing swaps it to 'converging = convex lens'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: a magnifying glass is a convex lens. Also remember the pairs: convex lens converges, concave lens diverges. For mirrors, it is the other way round." }
+        ]
+      },
+      {
+        "animation": "Recap board with the three optics: glass plate, convex lens and concave lens with beam diagrams. Points appear: '1. Convex lens = converging lens', '2. Concave lens = diverging lens', '3. Lenses in spectacles, cameras, microscopes, telescopes and our eyes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a convex lens converges light beams, so it is a converging lens that can concentrate sunlight." },
+          { "speaker": "NEO", "text": "Two: a concave lens diverges light beams, so it is a diverging lens." },
+          { "speaker": "NEO", "text": "Three: lenses are used in eyeglasses, cameras, telescopes and microscopes, and our eye has its own convex lens." },
+          { "speaker": "ZIPPY", "text": "And I'll never stare at the Sun through one. Promise." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,438 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "Moments",
+    "topic_no": 1,
+    "name": "The Lost Child",
+    "scenes": [
+      {
+        "animation": "A colourful spring fair: toy stalls, sweets, balloons, a snake charmer, and a whirling roundabout. A small boy in the crowd suddenly spins around, and his parents are nowhere to be seen. The joyful music drops into silence.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Oh no! That little boy has lost his parents in the crowd!" },
+          { "speaker": "NEO", "text": "This is The Lost Child, by Mulk Raj Anand. Watch what he wants before, and after, he is lost." }
+        ]
+      },
+      {
+        "animation": "The child walks with his parents towards the fair through a yellow mustard field. He chases dragonflies and butterflies, and keeps lagging behind at toy shops and sweet stalls. His father gives a stern look; the child moves on.",
+        "lines": [
+          { "speaker": "NEO", "text": "It is the festival of spring. On the way to the fair, the child is thrilled by everything: toys, flowers, dragonflies." },
+          { "speaker": "NEO", "text": "He wants a toy, sweets like burfi, a garland of gulmohur, a balloon, and a look at the snake charmer. But each time, he knows his parents will refuse, so he moves on without asking." }
+        ]
+      },
+      {
+        "animation": "At the roundabout, the child turns to ask for a ride and finds no one behind him. He runs in panic through the crowd, crying for his mother and father, his turban coming loose.",
+        "lines": [
+          { "speaker": "NEO", "text": "At the roundabout, he finally gathers the courage to ask for a ride, and turns around. His parents are gone." },
+          { "speaker": "NEO", "text": "Terrified, he runs through the crowd, calling for his mother and father." }
+        ]
+      },
+      {
+        "animation": "A kind man lifts the boy up and offers him everything he wanted earlier: a roundabout ride, the snake charmer's music, balloons, flowers and sweets. The boy turns away from each one, sobbing.",
+        "lines": [
+          { "speaker": "NEO", "text": "A kind man picks him up and offers him a ride, the snake charmer's music, balloons, flowers and sweets." },
+          { "speaker": "NEO", "text": "But the child refuses them all. He only sobs: I want my mother, I want my father." },
+          { "speaker": "ZIPPY", "text": "All the things he wanted, and now none of them matter." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why does the child lose interest in the things he wanted earlier?' Answer bullets build: 'toys give joy only with parents near', 'love and security matter most'. Sticker: 'Board Tip'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why does the child refuse the things he longed for earlier?" },
+          { "speaker": "NEO", "text": "Answer approach: his joy in toys and sweets depended on the safety of his parents. Once lost, only their love matters." },
+          { "speaker": "NEO", "text": "Board tip: mention the contrast between the first half and the second half of the story." }
+        ]
+      },
+      {
+        "animation": "Recap board with a balloon and a small hand holding a larger hand. Points appear: '1. At the fair, the child wants everything', '2. He gets lost near the roundabout', '3. He rejects every offer; he wants only his parents'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: at the spring fair, the child wants toys, sweets and fun." },
+          { "speaker": "NEO", "text": "Two: he gets separated from his parents near the roundabout." },
+          { "speaker": "NEO", "text": "Three: he rejects every offer, because nothing matters more than his parents." },
+          { "speaker": "ZIPPY", "text": "I'm holding your wing at the next mela, Neo." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Moments",
+    "topic_no": 2,
+    "name": "The Adventures of Toto",
+    "scenes": [
+      {
+        "animation": "A bathroom with a big kettle warming on a fire. A small monkey sits inside it, enjoying a warm bath, as the water starts to bubble. Zippy flails his arms in alarm.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "That monkey is taking a bath in a kettle on the fire! Someone get him out!" },
+          { "speaker": "NEO", "text": "That's Toto, and that's just one of his adventures, in Ruskin Bond's The Adventures of Toto." }
+        ]
+      },
+      {
+        "animation": "A tonga-driver with a little red monkey tied to a feeding trough. Grandfather hands him five rupees. At home, Toto is hidden in a cupboard, where he tears the wallpaper and the narrator's school blazer.",
+        "lines": [
+          { "speaker": "NEO", "text": "The narrator's grandfather buys Toto, a pretty monkey, from a tonga-driver for five rupees." },
+          { "speaker": "NEO", "text": "Grandfather hides him from Grandmother in a cupboard. Toto quickly pulls the wallpaper off the wall and tears the narrator's school blazer to shreds." }
+        ]
+      },
+      {
+        "animation": "A train compartment. Toto pops his head out of a canvas bag; passengers jump. A ticket collector writes on a pad: 'Monkey = dog. Fare charged'. Grandfather sighs and pays.",
+        "lines": [
+          { "speaker": "NEO", "text": "When Grandfather takes Toto to Saharanpur in a bag on the train, Toto pokes his head out, and the ticket collector insists he is a dog and charges a fare." },
+          { "speaker": "ZIPPY", "text": "A monkey classified as a dog. The paperwork must be wild." }
+        ]
+      },
+      {
+        "animation": "Back home: Toto nearly boils himself in the kettle. Then, at lunch, he grabs a large dish of pulao and escapes up a jackfruit tree. Plates crash; Grandmother glares.",
+        "lines": [
+          { "speaker": "NEO", "text": "At home, Toto learns to bathe in warm water and nearly boils himself alive in a kettle." },
+          { "speaker": "NEO", "text": "He also runs off with a dish of pulao and eats it up in a jackfruit tree, and he keeps tearing and breaking things." },
+          { "speaker": "NEO", "text": "Finally, Grandfather sells him back to the same tonga-driver, for only three rupees." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why did Grandfather sell Toto back? What does the story say about keeping wild animals?' Answer bullets build: 'too mischievous and costly', 'wild animals need freedom'. Sticker: 'Board Tip'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why did Grandfather have to sell Toto back?" },
+          { "speaker": "NEO", "text": "Answer approach: Toto destroyed clothes, dishes and wallpaper, and he was too expensive and troublesome to keep." },
+          { "speaker": "NEO", "text": "Board tip: add a line on the theme. A wild animal does not belong in a house." }
+        ]
+      },
+      {
+        "animation": "Recap board with a monkey peeping out of a kettle. Points appear: '1. Bought for five rupees from a tonga-driver', '2. Chaos at home and on the train', '3. Sold back for three rupees'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Grandfather buys Toto from a tonga-driver for five rupees." },
+          { "speaker": "NEO", "text": "Two: Toto causes chaos at home and on the train." },
+          { "speaker": "NEO", "text": "Three: Grandfather sells him back for three rupees." },
+          { "speaker": "ZIPPY", "text": "Five in, three out. Toto was a terrible investment." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Moments",
+    "topic_no": 3,
+    "name": "Iswaran the Storyteller",
+    "scenes": [
+      {
+        "animation": "A dim room at night. A cook, Iswaran, waves his ladle wildly while telling a story; shadows on the wall turn into an elephant and ghosts. His listener, Mahendra, clutches his blanket.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is that cook telling a story, or directing a horror movie?" },
+          { "speaker": "NEO", "text": "Both. That's Iswaran, the storyteller, in R. K. Laxman's story." }
+        ]
+      },
+      {
+        "animation": "Mahendra, a junior supervisor, packs his bags as he moves from site to site: a dam, a bridge, a factory. Iswaran travels with him every time, cooking and cleaning cheerfully in a tent or a shed.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mahendra is a junior supervisor whose job sends him from one construction site to another." },
+          { "speaker": "NEO", "text": "His cook, Iswaran, goes everywhere with him. He can produce vegetables and a tasty meal even in the most remote places." },
+          { "speaker": "NEO", "text": "And he tells amazing stories, full of suspense and surprise endings." }
+        ]
+      },
+      {
+        "animation": "A timber yard: a mad elephant runs amok, scattering people. Young Iswaran calmly picks up a stick, strikes the elephant's toenail, and the giant collapses. Mahendra's eyebrows go up in doubt.",
+        "lines": [
+          { "speaker": "NEO", "text": "In one tale, Iswaran claims that as a boy he stopped a mad elephant from a timber yard. He struck its toenail with a stick, and it collapsed." },
+          { "speaker": "ZIPPY", "text": "That sounds a little, um, exaggerated." },
+          { "speaker": "NEO", "text": "Mahendra thinks so too, but he still enjoys every word. Iswaran builds suspense with pauses, gestures and a dramatic voice, so the listener cannot stop listening." }
+        ]
+      },
+      {
+        "animation": "Moonlit night over a site near an old burial ground. Iswaran describes a ghost of a woman holding a baby. Later, Mahendra wakes to a moaning sound and sees a dark, cloudy shape outside the window. The next morning, he packs his bags.",
+        "lines": [
+          { "speaker": "NEO", "text": "Then Iswaran says the site was once a burial ground, haunted by the ghost of a woman carrying a baby." },
+          { "speaker": "NEO", "text": "Mahendra laughs it off, but one moonlit night he hears a moan and sees a dark, cloudy shape. He resigns and leaves the place the next day." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How did Iswaran's storytelling affect Mahendra?' Answer bullets build: 'entertained him', 'shaped his imagination', 'finally scared him away'. Sticker: 'Board Tip: power of storytelling'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how does Iswaran's storytelling influence Mahendra?" },
+          { "speaker": "NEO", "text": "Answer approach: the stories entertained him, but the ghost story worked on his mind so strongly that the rational Mahendra fled." },
+          { "speaker": "NEO", "text": "Board tip: mention Iswaran's skill: suspense, gestures and dramatic endings." }
+        ]
+      },
+      {
+        "animation": "Recap board with a ladle and a ghostly moon. Points appear: '1. Iswaran: cook and gifted storyteller', '2. The elephant tale: entertaining and exaggerated', '3. The ghost story drives Mahendra away'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Iswaran is a resourceful cook and a gifted storyteller." },
+          { "speaker": "NEO", "text": "Two: his elephant tale is thrilling, if exaggerated." },
+          { "speaker": "NEO", "text": "Three: his ghost story frightens Mahendra into leaving." },
+          { "speaker": "ZIPPY", "text": "Note to self: never let the cook tell bedtime stories." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Moments",
+    "topic_no": 4,
+    "name": "In the Kingdom of Fools",
+    "scenes": [
+      {
+        "animation": "A town where people sleep in the sunshine and go to work under the moon. A sign on a shop reads 'Everything: one duddu'. Zippy yawns at noon and stretches at midnight, totally confused.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Sleeping at noon, working at night, and everything costs the same? Where are we?" },
+          { "speaker": "NEO", "text": "In the Kingdom of Fools, a Kannada folktale retold by A. K. Ramanujan." }
+        ]
+      },
+      {
+        "animation": "A guru and his disciple arrive. The disciple happily buys cheap food and grows fat. The guru frowns and waves a warning finger before leaving: 'This is a kingdom of fools'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The foolish king and his minister have ordered that night is day and day is night, and everything costs one duddu." },
+          { "speaker": "NEO", "text": "A guru and his disciple arrive. The guru wants to leave at once, because in a land of fools no one knows what will happen next." },
+          { "speaker": "NEO", "text": "But the disciple loves the cheap food, stays on, and grows fat." }
+        ]
+      },
+      {
+        "animation": "A chain reaction: a thief breaks into a merchant's house and a wall falls on him. The blame passes like a relay baton: merchant, bricklayer, dancing girl, goldsmith, back to the merchant. The king points and pronounces the verdict.",
+        "lines": [
+          { "speaker": "NEO", "text": "One day, a wall falls on a thief breaking into a merchant's house. The king blames the merchant, who blames the bricklayer." },
+          { "speaker": "NEO", "text": "The blame passes to a dancing girl, then a goldsmith, and finally back to the merchant, who is sentenced to death on a stake." },
+          { "speaker": "ZIPPY", "text": "The thief was the criminal, and they punish the victim?" },
+          { "speaker": "NEO", "text": "That's the foolishness." }
+        ]
+      },
+      {
+        "animation": "The stake is too big for the thin merchant, so guards look for a fat man and seize the disciple. The guru hurries back, whispers a plan, and both of them argue loudly to be executed first. The king leans in, curious.",
+        "lines": [
+          { "speaker": "NEO", "text": "The merchant is too thin for the stake, so the king orders them to find a fat man. They seize the fat disciple." },
+          { "speaker": "NEO", "text": "The guru returns and tricks the king. He says whoever dies on this stake at this moment will be reborn as king of this land. Now both guru and disciple fight to die first." },
+          { "speaker": "NEO", "text": "The greedy king and minister go to the stake themselves, and the people make the guru and disciple their king and minister." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How did the guru save his disciple?' Answer bullets build: 'used the king's foolishness', 'rebirth trick', 'king and minister die'. Sticker: 'Board Tip: wisdom vs foolishness'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how does the guru save his disciple? Answer approach: he uses the king's foolishness and greed with the rebirth trick." },
+          { "speaker": "NEO", "text": "Board tip: add the moral: wisdom and presence of mind can defeat foolish power." }
+        ]
+      },
+      {
+        "animation": "Recap board with a stake and a crown. Points appear: '1. A foolish kingdom: day is night, everything one duddu', '2. Blame passes around; a fat disciple is picked', '3. The guru tricks the king; wisdom wins'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in this kingdom, night is day and everything costs one duddu." },
+          { "speaker": "NEO", "text": "Two: after a silly chain of blame, the fat disciple is chosen for the stake." },
+          { "speaker": "NEO", "text": "Three: the guru's clever trick makes the king and minister die instead." },
+          { "speaker": "ZIPPY", "text": "Moral: cheap food is not worth a kingdom of fools." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Moments",
+    "topic_no": 5,
+    "name": "The Happy Prince",
+    "scenes": [
+      {
+        "animation": "A tall golden statue on a column above a city: covered in gold leaf, sapphire eyes, and a red ruby on his sword-hilt. A tear rolls from one sapphire eye and lands on a small swallow resting at his feet.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A golden statue crying? Why is the Happy Prince so unhappy?" },
+          { "speaker": "NEO", "text": "That's the question at the heart of Oscar Wilde's The Happy Prince." }
+        ]
+      },
+      {
+        "animation": "A flashback: the Prince in a palace garden, dancing and laughing behind high walls, unaware of the world outside. Then the statue on its column looks down at the poor streets below.",
+        "lines": [
+          { "speaker": "NEO", "text": "When he was alive, the prince lived in a palace where sorrow was not allowed to enter, so he was called the Happy Prince." },
+          { "speaker": "NEO", "text": "Now, set high above the city as a statue, he can see all its ugliness and misery, and though his heart is made of lead, he cannot help weeping." }
+        ]
+      },
+      {
+        "animation": "The swallow flies out on three missions: the ruby to a seamstress with a feverish son, one sapphire eye to a young playwright freezing in a garret, the other eye to a little match-girl. Then he peels off gold leaf for the poor.",
+        "lines": [
+          { "speaker": "NEO", "text": "A swallow, on his way to Egypt for the winter, stops to rest at the statue's feet. The prince asks him to be his messenger." },
+          { "speaker": "NEO", "text": "The swallow takes the ruby to a poor seamstress with a sick child, and the sapphire eyes to a struggling young playwright and a little match-girl." },
+          { "speaker": "NEO", "text": "Then, leaf by leaf, he gives the gold to the poor." }
+        ]
+      },
+      {
+        "animation": "Snow falls. The blind, dull statue stands grey; the swallow, now too cold, kisses the prince and falls dead at his feet. A crack sounds inside the statue. Later, the lead heart and the dead bird lie on a dust-heap until an angel lifts them to heaven.",
+        "lines": [
+          { "speaker": "NEO", "text": "The swallow stays with the blind prince and dies of cold. The prince's lead heart breaks." },
+          { "speaker": "NEO", "text": "The town officials melt the shabby statue, but the broken heart will not melt, and is thrown on a dust-heap beside the dead bird." },
+          { "speaker": "NEO", "text": "When God asks for the two most precious things in the city, the angel brings the lead heart and the dead bird." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why did the angel choose the lead heart and the dead swallow?' Answer bullets: 'selfless love', 'sacrifice for the poor', 'true value lies within'. Sticker: 'Board Tip'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why are the heart and the bird the most precious things in the city? Answer approach: both showed selfless love and sacrificed everything for the poor." },
+          { "speaker": "ZIPPY", "text": "So real value isn't gold or jewels." }
+        ]
+      },
+      {
+        "animation": "Recap board with a lead heart and a swallow feather. Points appear: '1. The statue sees the city's misery', '2. The swallow gives away ruby, sapphires, gold', '3. Heart and bird: the most precious things'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: as a statue, the Happy Prince sees the suffering of the poor." },
+          { "speaker": "NEO", "text": "Two: the swallow gives away his ruby, sapphires and gold, and then dies." },
+          { "speaker": "NEO", "text": "Three: the lead heart and the dead bird are chosen as the most precious things." },
+          { "speaker": "ZIPPY", "text": "I'm not crying. It's just snowing in my eyes." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Moments",
+    "topic_no": 6,
+    "name": "The Last Leaf",
+    "scenes": [
+      {
+        "animation": "A small studio apartment. A pale young woman in bed stares out of the window at an ivy vine on a brick wall, counting falling leaves: 'twelve, eleven, ten...'. Zippy counts along, then stops, worried.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is she counting leaves? Is it a maths game?" },
+          { "speaker": "NEO", "text": "No. She believes she'll die when the last leaf falls. This is O. Henry's story The Last Leaf." }
+        ]
+      },
+      {
+        "animation": "Two young artists, Sue and Johnsy, share the studio. A doctor examines Johnsy and shakes his head, then speaks privately to Sue. A caption: 'Pneumonia'. Johnsy lies still, giving up.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sue and Johnsy are two young artists. Johnsy falls ill with pneumonia." },
+          { "speaker": "NEO", "text": "The doctor says her chances are poor because she has lost the will to live. Medicine cannot help someone who has decided to die." },
+          { "speaker": "NEO", "text": "Johnsy watches the ivy leaves fall and says that when the last one goes, she will go too." }
+        ]
+      },
+      {
+        "animation": "An old painter, Behrman, grumbles in his room below, sitting before a blank canvas meant for a masterpiece. Sue tells him Johnsy's fear; he scowls, but his eyes turn wet. Outside, a storm howls through the night.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sue tells their neighbour, Behrman, an old painter who has always talked of painting a masterpiece but never has." },
+          { "speaker": "NEO", "text": "That night, a fierce storm of rain and wind blows." },
+          { "speaker": "ZIPPY", "text": "Oh no. The last leaf won't survive that!" }
+        ]
+      },
+      {
+        "animation": "Morning: one ivy leaf still clings to the wall after the storm, and it survives a second night too. Johnsy sits up and asks for soup. Then the twist: a ladder, a lantern and a palette of green and yellow paint lie by the wall. Behrman is shown in a hospital bed.",
+        "lines": [
+          { "speaker": "NEO", "text": "But the next morning, one leaf is still there, and after another stormy night, it still clings on. Johnsy feels ashamed of wanting to die, and begins to recover." },
+          { "speaker": "NEO", "text": "Then Sue reveals the truth. Behrman painted the leaf on the wall in the storm, caught pneumonia, and died. The last leaf was his masterpiece." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why is the last leaf called Behrman's masterpiece?' Answer bullets build: 'so real it fooled Johnsy', 'saved her life', 'cost him his own'. Sticker: 'Board Tip: sacrifice and hope'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why is the painted leaf called Behrman's masterpiece?" },
+          { "speaker": "NEO", "text": "Answer approach: it looked so real that it gave Johnsy hope and saved her life, and he gave his own life to paint it. Board tip: mention the themes of hope and sacrifice." }
+        ]
+      },
+      {
+        "animation": "Recap board with a single green leaf on a brick wall. Points appear: '1. Johnsy, ill with pneumonia, loses hope', '2. The last leaf survives the storm; she recovers', '3. Behrman painted it and died: his masterpiece'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Johnsy, ill with pneumonia, believes she will die with the last leaf." },
+          { "speaker": "NEO", "text": "Two: the last leaf survives the storm, and her hope returns." },
+          { "speaker": "NEO", "text": "Three: Behrman painted it in the storm and died. It was his masterpiece." },
+          { "speaker": "ZIPPY", "text": "The greatest painting ever, and it was just one leaf." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Moments",
+    "topic_no": 7,
+    "name": "A House Is Not a Home",
+    "scenes": [
+      {
+        "animation": "A teenager stands in front of a burnt house, holding a single charred notebook. Smoke curls into the sky. Zippy's spark dims.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "His whole house burnt down? How does anyone recover from that?" },
+          { "speaker": "NEO", "text": "With a little help. This is A House Is Not a Home, by Zan Gaudioso." }
+        ]
+      },
+      {
+        "animation": "A new high school with unfamiliar faces. The narrator walks the corridors alone, missing old friends; he hides in the library at lunch. A caption: 'A new school, a lonely start'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The narrator has just started high school. It is a new place, his old friends are elsewhere, and he feels lonely and out of place." },
+          { "speaker": "NEO", "text": "His one comfort is his home, and his cat, who loves to lie on his homework papers." }
+        ]
+      },
+      {
+        "animation": "A Sunday afternoon. The narrator does homework; his mother tends the fireplace. A strange smell; smoke pours from the wall. They run out; his mother dashes back in for important papers, and the house goes up in flames. The cat is nowhere to be seen.",
+        "lines": [
+          { "speaker": "NEO", "text": "One Sunday, a fire starts in the house. He and his mother run out, but his mother rushes back in for important papers." },
+          { "speaker": "NEO", "text": "The house burns down, with all their things and his treasured memories. Worst of all, his cat is missing." },
+          { "speaker": "ZIPPY", "text": "That's everything gone at once." }
+        ]
+      },
+      {
+        "animation": "At school, he feels embarrassed in borrowed clothes. Then his classmates surprise him with bags of clothes, books and school supplies. Later, a kind woman walks up holding his lost cat. He hugs it tightly.",
+        "lines": [
+          { "speaker": "NEO", "text": "At school he feels awkward and alone, until his classmates, many almost strangers, bring him clothes, books and school supplies." },
+          { "speaker": "NEO", "text": "Later, a woman who had found his cat after the fire brings it back to him. He finally feels whole again." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. What does the title \"A House Is Not a Home\" mean?' Answer bullets build: 'house = building', 'home = people, love, belonging'. Sticker: 'Board Tip: link title to theme'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: explain the title." },
+          { "speaker": "NEO", "text": "Answer approach: a house is only a building that can burn. A home is made of the people and love around you, which the narrator discovers after the fire." },
+          { "speaker": "NEO", "text": "Board tip: mention both kindness from strangers and the return of the cat." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cat curled on a new doorstep. Points appear: '1. Lonely at a new school', '2. Fire destroys his house; his cat is lost', '3. Kind classmates and a stranger make him whole again'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the narrator feels lonely at a new school." },
+          { "speaker": "NEO", "text": "Two: a fire destroys his house, and his cat goes missing." },
+          { "speaker": "NEO", "text": "Three: his classmates' kindness and his cat's return show him what a home really is." },
+          { "speaker": "ZIPPY", "text": "Home is where the cat sits on your homework." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Moments",
+    "topic_no": 8,
+    "name": "The Beggar",
+    "scenes": [
+      {
+        "animation": "A snowy Russian street. A ragged beggar with drunken, dull eyes stops a well-dressed lawyer and tells a sad tale. The lawyer's eyes narrow in recognition.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "That beggar looks so sad. Surely the gentleman will give him money?" },
+          { "speaker": "NEO", "text": "The gentleman remembers this beggar telling a different story before. This is Anton Chekhov's The Beggar." }
+        ]
+      },
+      {
+        "animation": "Two speech bubbles from the beggar, Lushkoff, flash side by side: 'a village schoolteacher' and 'a student expelled'. Sergei, the lawyer, crosses his arms. Lushkoff admits he lied.",
+        "lines": [
+          { "speaker": "NEO", "text": "The lawyer, Sergei, catches the beggar Lushkoff in a lie. Earlier, he said he was a schoolteacher who lost his job; now he says he is an expelled student." },
+          { "speaker": "NEO", "text": "Lushkoff admits the truth. Angry but curious, Sergei offers him work instead of charity: chopping wood, for pay." }
+        ]
+      },
+      {
+        "animation": "A woodshed. Olga, the cook, grumbling and weeping, drives the axe into the logs while Lushkoff sits nearby on a log. Sergei watches from a window, proud, thinking Lushkoff is doing the work.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sergei calls his cook, Olga, to take Lushkoff to the woodshed. Sergei watches and thinks he is reforming the beggar through work." },
+          { "speaker": "NEO", "text": "Later, Sergei gives him more work and helps him find a job copying documents." },
+          { "speaker": "ZIPPY", "text": "Wait, is he really chopping the wood?" },
+          { "speaker": "NEO", "text": "Keep watching." }
+        ]
+      },
+      {
+        "animation": "Two years later, outside a theatre ticket office. A neat, well-dressed Lushkoff, now a notary, meets Sergei. A flashback shows Olga, not Lushkoff, chopping all the wood, crying and scolding him.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two years later, Sergei meets a respectable Lushkoff at a theatre ticket office. He is now a notary." },
+          { "speaker": "NEO", "text": "Lushkoff thanks Sergei, but reveals the truth. It was Olga who chopped the wood every time, scolding him and weeping over him." },
+          { "speaker": "NEO", "text": "Her words and her tears touched him and changed him. She saved his soul." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Who was responsible for Lushkoff's transformation?' Answer bullets build: 'Sergei gave work', 'Olga gave compassion', 'her kindness truly changed him'. Sticker: 'Board Tip'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: who truly reformed Lushkoff? Answer approach: Sergei gave him work, but Olga's compassion changed his heart." },
+          { "speaker": "NEO", "text": "Board tip: in a character sketch of Olga, mention that she was rough in words but kind in deeds." }
+        ]
+      },
+      {
+        "animation": "Recap board with an axe and a teardrop. Points appear: '1. Sergei catches Lushkoff lying', '2. Olga secretly chops the wood for him', '3. Her compassion transforms him'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the lawyer Sergei catches the beggar Lushkoff lying and offers him work." },
+          { "speaker": "NEO", "text": "Two: the cook Olga secretly does the chopping, scolding and weeping." },
+          { "speaker": "NEO", "text": "Three: her compassion, more than the work, transforms him." },
+          { "speaker": "ZIPPY", "text": "The real hero was in the woodshed all along." }
+        ]
+      }
+    ]
+  }
+]

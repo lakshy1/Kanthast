@@ -1,0 +1,283 @@
+[
+  {
+    "chapter_no": 8,
+    "chapter": "World Geography: Some Glimpses",
+    "topic_no": 1,
+    "name": "Mapping the Earth: Colours and Projections",
+    "scenes": [
+      {
+        "animation": "Zippy tries to flatten an orange peel on a school desk; it keeps tearing into odd petal shapes. Neo flies in holding a small globe and a rolled-up world map.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, I'm making a flat map of the Earth from this orange. Why won't the peel lie flat?" },
+          { "speaker": "NEO", "text": "Because the Earth, like your orange, is round. You can't flatten a curved surface without stretching or tearing it." }
+        ]
+      },
+      {
+        "animation": "The globe spins and gently squashes into a label 'Oblate spheroid: bulges at the equator, slightly flat at the poles'. The peel pieces slide onto a flat grid and a banner reads 'Map projection = showing the round Earth on a flat surface'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Earth is an oblate spheroid. It bulges at the equator and is slightly flattened at the poles because it rotates." },
+          { "speaker": "NEO", "text": "The process of showing the Earth on a flat surface is called a map projection. People who draw maps are called cartographers." },
+          { "speaker": "NEO", "text": "Since a round Earth never fits perfectly on paper, every map has some distortion." }
+        ]
+      },
+      {
+        "animation": "A blank physical world map fills with colour one layer at a time, each with a legend chip: blue oceans and rivers, green plains, yellow-brown plateaus, dark brown high mountains, light yellow deserts, white ice and glaciers.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "And why is this map painted like a box of crayons?" },
+          { "speaker": "NEO", "text": "Physical maps have their own colour language. Blue shows water bodies. Green shows plains. Yellow or brown shows plateaus." },
+          { "speaker": "NEO", "text": "Dark brown shows high mountains, light yellow shows deserts, and white shows ice and glaciers." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: a Mercator map with Greenland swelling to look as big as Africa and larger than India; a ship's compass icon labelled 'Good for navigation'. Right: a Robinson map with curved edges where Greenland shrinks back; label 'Compromise: balances size and shape'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here are two famous projections. The Mercator Projection keeps shapes and directions correct, so it is useful for navigation." },
+          { "speaker": "NEO", "text": "But it greatly distorts size near the poles. Greenland looks as big as Africa, and larger than India." },
+          { "speaker": "ZIPPY", "text": "So Greenland is bigger than India?" },
+          { "speaker": "NEO", "text": "No! In fact it is smaller. The Robinson Projection is a compromise that balances size and shape, so it looks more realistic." }
+        ]
+      },
+      {
+        "animation": "Latitude and longitude lines draw themselves over the globe; a pin drops on a city and its coordinates pop up. An 'Exam Tip' sticker slaps onto the Mercator map beside Greenland.",
+        "lines": [
+          { "speaker": "NEO", "text": "Every map is a compromise, so we should compare several projections to see the world fairly. Professionals use latitude and longitude coordinates for precise locations." },
+          { "speaker": "NEO", "text": "Exam tip: if asked why all map projections have distortion, answer that a nearly spherical Earth cannot be shown on a flat surface without stretching, like the orange peel." }
+        ]
+      },
+      {
+        "animation": "Recap board with a globe icon. Points appear one by one: '1. Map projection = round Earth on flat surface; all maps distort', '2. Colours: blue water, green plains, yellow/brown plateaus, dark brown mountains, white ice', '3. Mercator keeps shape (Greenland too big); Robinson balances size and shape'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a map projection shows the round Earth on a flat surface, so every map has some distortion." },
+          { "speaker": "NEO", "text": "Two: physical maps use colours, blue for water, green for plains, yellow or brown for plateaus, dark brown for mountains and white for ice." },
+          { "speaker": "NEO", "text": "Three: Mercator keeps shapes but makes Greenland look huge, while Robinson balances size and shape." },
+          { "speaker": "ZIPPY", "text": "I'm eating the orange now. Zero distortion in my stomach!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "World Geography: Some Glimpses",
+    "topic_no": 2,
+    "name": "The Blue Planet: Oceans, Reefs and Waterways",
+    "scenes": [
+      {
+        "animation": "Zippy floats in space beside an astronaut owl helmet on Neo; below them the Earth glows mostly blue. A pie chart pops up: '71% of surface = ocean', then a water drop icon: '97% of Earth's water is in oceans'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why do astronauts call Earth the blue planet? Did someone spill ink?" },
+          { "speaker": "NEO", "text": "No ink. Salty oceans cover about 71 per cent of the Earth's surface and hold 97 per cent of its water." }
+        ]
+      },
+      {
+        "animation": "A world map outline appears and the five oceans fill in one by one with name labels and icons: Pacific (whale, 'largest and deepest'), Atlantic (ships), Indian (coral and trade dhows), Arctic (polar bear on sea ice), Southern (penguins circling Antarctica). Tiny glowing plankton then drift up with bubbles labelled 'O2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "There are five oceans. The Pacific is the largest and deepest. The Atlantic has some of the busiest trade routes. The Indian Ocean has warm waters and rich biodiversity." },
+          { "speaker": "NEO", "text": "The Arctic is the smallest and shallowest, and the Southern Ocean encircles Antarctica." },
+          { "speaker": "NEO", "text": "Oceans absorb heat, release it slowly and add moisture for rain. Tiny plankton even give us almost half the oxygen we breathe." }
+        ]
+      },
+      {
+        "animation": "A red arrow traces the Gulf Stream from near the equator north across the Atlantic to Western Europe; a shivering cartoon Briton warms up and removes his scarf. Then the camera dives into a V-shaped Mariana Trench, with Mount Everest dropped inside for scale and a depth marker 'Challenger Deep: over 11,000 m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ocean currents are like giant rivers in the sea. Warm currents flow from the equator towards the poles, and cold currents flow from the poles towards the equator." },
+          { "speaker": "NEO", "text": "The warm Gulf Stream flows towards Western Europe, so the United Kingdom is warmer than other places at the same latitude." },
+          { "speaker": "NEO", "text": "The seafloor also has deep trenches. The Mariana Trench is the deepest; its Challenger Deep is over 11,000 metres below sea level." },
+          { "speaker": "ZIPPY", "text": "Everest would drown in there!" }
+        ]
+      },
+      {
+        "animation": "Off Australia's northeastern coast, a long turquoise ribbon draws itself, labelled 'Great Barrier Reef: over 2,000 km, about 350,000 sq km, UNESCO World Heritage Site'. Colourful corals full of fish, then one patch fades to white with a label 'Bleaching'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Reefs are called the rainforests of the sea. They give food and shelter to about one quarter of all ocean species." },
+          { "speaker": "NEO", "text": "The Great Barrier Reef stretches over 2,000 kilometres off Australia. But overfishing, pollution and climate change threaten it, and corals are bleaching." }
+        ]
+      },
+      {
+        "animation": "A table builds row by row with a map thumbnail for each: Sea - Arabian Sea; Gulf - Persian Gulf; Bay - Bay of Bengal; Strait - Strait of Malacca; Canal - Suez Canal. Then a dotted ship route draws from Mumbai through the Suez Canal to London, with a '1869' tag on the canal.",
+        "lines": [
+          { "speaker": "NEO", "text": "A sea is a large, partly enclosed saltwater area, like the Arabian Sea. A gulf cuts deep into land, like the Persian Gulf. A bay is a smaller, broad inlet, like the Bay of Bengal, the world's largest bay." },
+          { "speaker": "NEO", "text": "A strait is a narrow channel joining two seas, like the Strait of Malacca. A canal is man-made, like the Suez Canal, opened in 1869." },
+          { "speaker": "NEO", "text": "Exam tip: remember that the Suez Canal links the Red Sea and the Mediterranean, making it the shortest sea route from India to Europe." }
+        ]
+      },
+      {
+        "animation": "Recap board with a wave icon. Points appear: '1. Oceans: 71% of surface, 97% of water; regulate climate', '2. Currents and trenches: Gulf Stream warms UK; Mariana Trench deepest', '3. Reefs = rainforests of the sea; sea, gulf, bay, strait, canal'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: oceans cover about 71 per cent of the surface, hold 97 per cent of water, and help regulate climate." },
+          { "speaker": "NEO", "text": "Two: the warm Gulf Stream warms Britain, and the Mariana Trench is the deepest trench." },
+          { "speaker": "NEO", "text": "Three: reefs shelter a quarter of ocean species, and seas, gulfs, bays, straits and canals support trade." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "World Geography: Some Glimpses",
+    "topic_no": 3,
+    "name": "Asia: Plateau, Desert, Steppes and the Urals",
+    "scenes": [
+      {
+        "animation": "Neo and Zippy board a cartoon paper plane labelled 'World Tour' at Delhi; it lifts off over the snowy Himalayas. A physical map of Asia unrolls beneath them with a compass rose.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Seat belts on! Where's our first stop?" },
+          { "speaker": "NEO", "text": "Close to home, Asia. We'll spotlight one landform at a time, starting just north of the Himalayas." }
+        ]
+      },
+      {
+        "animation": "Two tectonic plates labelled 'Indo-Australian' and 'Eurasian' slide and crunch together, pushing up the Himalayas and a flat high table behind them labelled 'Tibetan Plateau'. Measurement arrows show '2,500 km east-west', '1,000 km north-south', 'average height over 4,500 m', and three blue rivers flow out: Indus, Brahmaputra, Yangtze.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Tibetan Plateau is the highest and largest plateau on Earth. It formed when the Indo-Australian and Eurasian plates collided, the same collision that raised the Himalayas." },
+          { "speaker": "NEO", "text": "Its average height is over 4,500 metres, and it is the source of rivers like the Indus, Brahmaputra and Yangtze." },
+          { "speaker": "NEO", "text": "Scientists call it the Third Pole, because it holds the largest freshwater reserves outside the polar regions." }
+        ]
+      },
+      {
+        "animation": "The plane flies northeast; a sandy patch labelled 'Gobi Desert (Mongolia and north China)' appears under a bright blue sky with a sun counter '8 to 9 months sunny', then a thermometer plunges to '-30 C'. Solar panels and windmills pop up on the sand.",
+        "lines": [
+          { "speaker": "NEO", "text": "Deserts get less than 25 centimetres of rain a year. Next is the Gobi Desert in Mongolia, called the Land of the Eternal Blue Sky." },
+          { "speaker": "ZIPPY", "text": "Blue sky all year? Perfect for flying kites!" },
+          { "speaker": "NEO", "text": "About 8 to 9 months are sunny, but winters can drop to minus 30 degrees Celsius. Herders migrate with the seasons to find pastures." }
+        ]
+      },
+      {
+        "animation": "A long green band draws itself west to east across the map, labelled 'Eurasian Steppes: over 8,000 km'. Carbon dioxide arrows sink into the grass roots; Siberian cranes land by a lake; a round nomad's yurt appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Going north, we reach the Steppes, flat unforested grasslands stretching over 8,000 kilometres." },
+          { "speaker": "NEO", "text": "They are a global carbon sink. They absorb carbon from the air and store it underground. Migratory birds like the Siberian crane rest here." }
+        ]
+      },
+      {
+        "animation": "A brown ridge line draws north to south from the Arctic Ocean to Kazakhstan's border, labelled 'Ural Mountains, about 2,500 km'; the map splits into 'EUROPE' on the left and 'ASIA' on the right. Gem icons, taiga conifers and a frozen tundra with 'permafrost' label appear. An 'Exam Tip' sticker lands on the Urals.",
+        "lines": [
+          { "speaker": "NEO", "text": "Westward are the Ural Mountains, an ancient range about 2,500 kilometres long. They form a natural boundary between Europe and Asia." },
+          { "speaker": "NEO", "text": "They are rich in iron ore, copper, gold and coal, with taiga forests and a treeless tundra in the north, where the frozen soil is called permafrost." },
+          { "speaker": "NEO", "text": "Exam tip: map questions love this. Mark the Urals as the Europe-Asia divide, and the Tibetan Plateau north of the Himalayas." }
+        ]
+      },
+      {
+        "animation": "Recap board with the Asia map shrinking to a corner. Points appear: '1. Tibetan Plateau: highest, largest; Third Pole', '2. Gobi: Land of the Eternal Blue Sky; Steppes: carbon sink', '3. Urals: boundary between Europe and Asia'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the Tibetan Plateau is the highest and largest plateau, called the Third Pole." },
+          { "speaker": "NEO", "text": "Two: the Gobi is a cold, sunny desert, and the Steppes are grasslands that store carbon." },
+          { "speaker": "NEO", "text": "Three: the Ural Mountains divide Europe from Asia." },
+          { "speaker": "ZIPPY", "text": "Next stop, Europe. I've packed my woollens!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "World Geography: Some Glimpses",
+    "topic_no": 4,
+    "name": "Europe and Africa: Plains, Alps, Sahara, Savannah and the Nile",
+    "scenes": [
+      {
+        "animation": "The paper plane glides over the Urals into a wide flat golden landscape of wheat fields. Zippy rolls across the flat ground like a marble without stopping.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This land is so flat I could roll all the way to the sea!" },
+          { "speaker": "NEO", "text": "Welcome to the European Plain, one of the largest flat lands in the world." }
+        ]
+      },
+      {
+        "animation": "A map of Europe builds: a green plain spreads across several countries; city pins pop up for Moscow, Warsaw, Berlin, Amsterdam and Paris; crop icons for wheat, barley, rye and potatoes; blue rivers Rhine and Danube draw in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Plains are formed by sediment deposition, so their soils are fertile. Wheat, barley, rye and potatoes grow widely here." },
+          { "speaker": "NEO", "text": "Flat land and a good climate helped cities like Moscow, Berlin, Paris, Amsterdam and Warsaw grow. Rivers carry trade, and the plain also has coal, oil and natural gas." }
+        ]
+      },
+      {
+        "animation": "A crescent-shaped range draws itself across south-central Europe, labelled 'The Alps, about 1,200 km', with a peak tag 'Mont Blanc'. An edelweiss flower blooms, an ibex hops by, and meltwater streams flow into the Rhine and the Danube's tributaries.",
+        "lines": [
+          { "speaker": "NEO", "text": "To the southwest rise the crescent-shaped Alps, famous for skiing and peaks like Mont Blanc." },
+          { "speaker": "NEO", "text": "They feed rivers like the Rhine and tributaries of the Danube, supplying drinking water, irrigation and hydroelectric power to lowland Europe." }
+        ]
+      },
+      {
+        "animation": "The plane flies south to a map of Africa. A huge sandy area fills the north labelled 'Sahara: largest hot desert', with a thermometer '30 C to 46 C' and a rain gauge 'below 25 cm'. An oasis with date palms, a camel caravan and a big-eared fennec fox appear.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Sahara is the largest hot desert in the world. Temperatures range from 30 to 46 degrees Celsius, with rainfall below 25 centimetres." },
+          { "speaker": "NEO", "text": "Nomadic tribes herd sheep, goats and camels here, and ancient trade routes carried gold and salt across it." },
+          { "speaker": "ZIPPY", "text": "That fox has ears like satellite dishes!" },
+          { "speaker": "NEO", "text": "They help it lose heat and hear prey underground." }
+        ]
+      },
+      {
+        "animation": "South of the Sahara, a band of grassland with scattered trees fills in, labelled 'African Savannah', with elephants, lions, zebras and giraffes. Then a blue line traces the River Nile northward through Uganda, South Sudan, Sudan and Egypt to the Mediterranean, labelled 'Nile: about 6,650 km, longest river'. An 'Exam Tip' sticker points at the flow arrow.",
+        "lines": [
+          { "speaker": "NEO", "text": "The savannah is a tropical grassland with scattered trees and distinct wet and dry seasons. It is home to elephants, lions, zebras and giraffes." },
+          { "speaker": "NEO", "text": "Africa also has the Nile, the longest river in the world, almost 6,650 kilometres long. It was the cradle of ancient Egyptian civilisation." },
+          { "speaker": "NEO", "text": "Exam tip: when tracing the Nile on a map, remember it flows northward into the Mediterranean Sea." }
+        ]
+      },
+      {
+        "animation": "Recap board with small icons of wheat, a mountain and a camel. Points appear: '1. European Plain: fertile, farms and big cities', '2. Alps: crescent range, Mont Blanc, feed Rhine and Danube', '3. Sahara: largest hot desert; Savannah: grassland; Nile: longest river'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the European Plain is fertile and supports farming and major cities." },
+          { "speaker": "NEO", "text": "Two: the crescent-shaped Alps feed rivers like the Rhine and the Danube's tributaries." },
+          { "speaker": "NEO", "text": "Three: the Sahara is the largest hot desert, the savannah is a tropical grassland, and the Nile is the longest river." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "World Geography: Some Glimpses",
+    "topic_no": 5,
+    "name": "The Americas and Australia: Mountains, Forests and Deserts",
+    "scenes": [
+      {
+        "animation": "A puff of Sahara dust blows off Africa, crosses the Atlantic as a dotted arrow and settles on green Amazon trees, which perk up; a label reads 'Phosphorus delivery'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, the Sahara is sending parcels across the ocean!" },
+          { "speaker": "NEO", "text": "Dust from the Sahara really does reach the Amazon rainforest, carrying phosphorus the plants need. Let's follow it to South America." }
+        ]
+      },
+      {
+        "animation": "A map of South America builds: a brown ridge draws down the west coast labelled 'Andes', a peak tag 'Aconcagua', a white patch in Bolivia 'Uyuni Salt Flats', then the blue Amazon River flows east from Peru to the Atlantic through a green 'Amazon Rainforest'. A dry strip in Chile appears labelled 'Atacama Desert'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Andes run along the west coast. They hold Mount Aconcagua, the highest peak in the Western Hemisphere, and the Uyuni Salt Flats, the largest on Earth." },
+          { "speaker": "NEO", "text": "They feed the Amazon, the world's largest river by volume. The Amazon Rainforest, home to almost 400 indigenous communities, is threatened by deforestation." },
+          { "speaker": "NEO", "text": "In Chile lies the Atacama, one of the driest places on Earth, now also a dump for fast-fashion clothes." }
+        ]
+      },
+      {
+        "animation": "A map of North America builds: a long ridge in the west 'Rocky Mountains, over 4,800 km', a red layered highland 'Colorado Plateau' with the 'Grand Canyon' carved in, an older rounded ridge in the east 'Appalachian Mountains', and five blue lakes 'Great Lakes'. Wolves trot into Yellowstone with a '1995' tag.",
+        "lines": [
+          { "speaker": "NEO", "text": "In North America, the Colorado Plateau is made of layers of sedimentary rock, uplifted and eroded over millions of years to carve the Grand Canyon." },
+          { "speaker": "NEO", "text": "The Rockies stretch over 4,800 kilometres. At Yellowstone, wolves introduced in 1995 reduced overgrazing elk and restored the balance." },
+          { "speaker": "NEO", "text": "In the east are the Appalachians, among the oldest ranges in the world, and the Great Lakes, a chain of five freshwater lakes." }
+        ]
+      },
+      {
+        "animation": "The plane lands in Australia; most of the map turns light yellow, labelled 'Great Australian Desert' with 'Great Victoria Desert' inside. A bilby, a dingo and a feral camel appear. The camera pans south to a white icy continent with a label 'Antarctica: largest and coldest desert, over 14 million sq km'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Our last stop, Australia. A large part of it is desert, called the Great Australian Desert, including the Great Victoria Desert." },
+          { "speaker": "NEO", "text": "The Spinifex people have lived in this desert for over 25,000 years." },
+          { "speaker": "ZIPPY", "text": "So the biggest desert on Earth must be the Sahara." },
+          { "speaker": "NEO", "text": "Surprise! The largest desert is Antarctica, a cold desert of over 14 million square kilometres." }
+        ]
+      },
+      {
+        "animation": "A globe shows small icons across all continents: an axe on the Amazon, bleached coral, melting permafrost. An 'Exam Tip' sticker flashes over the Amazon.",
+        "lines": [
+          { "speaker": "NEO", "text": "Everywhere we went, landforms shape climate, wildlife and human life, and human actions like deforestation and pollution upset the balance." },
+          { "speaker": "NEO", "text": "Exam tip: the Amazon is called the Lungs of the Earth because its vast forest produces oxygen and absorbs carbon dioxide. Link this to why deforestation matters." }
+        ]
+      },
+      {
+        "animation": "Recap board with the full world tour route traced on a map. Points appear: '1. Andes, Amazon, Atacama in South America', '2. Colorado Plateau, Rockies, Appalachians, Great Lakes in North America', '3. Australia mostly desert; Antarctica = largest desert'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: South America has the Andes, the Amazon River and rainforest, and the dry Atacama Desert." },
+          { "speaker": "NEO", "text": "Two: North America has the Colorado Plateau, the Rockies, the old Appalachians and the Great Lakes." },
+          { "speaker": "NEO", "text": "Three: much of Australia is desert, and Antarctica is the largest desert on Earth." },
+          { "speaker": "ZIPPY", "text": "World tour done, and I didn't even need a passport!" }
+        ]
+      }
+    ]
+  }
+]

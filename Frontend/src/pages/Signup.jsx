@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
 import { Button, Field, LiveRegion } from "../components/ui";
 import { sendOtp, signUp } from "../utils/authApi";
 import { trackAnalyticsEvent } from "../utils/settings";
-import { getSelectedSchoolClass, isSchoolTrack, schoolClassOptions, setSelectedSchoolClass } from "../utils/schoolTrack";
+import { getSelectedSchoolClass, schoolClassOptions, setSelectedSchoolClass } from "../utils/schoolTrack";
 
 const panelVariants = {
   hidden: { opacity: 0, y: 30, scale: 0.98 },
@@ -25,7 +25,9 @@ const itemVariants = {
 
 export default function Signup() {
   const navigate = useNavigate();
-  const schoolMode = isSchoolTrack();
+  const location = useLocation();
+  // Route decides which signup this is — see Login.jsx for the same fix.
+  const schoolMode = location.pathname.startsWith("/school");
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -296,8 +298,8 @@ export default function Signup() {
 
           <motion.p variants={itemVariants} className="text-center text-sm text-ink-muted">
             Already have an account?{" "}
-            <Link to="/login" className="font-semibold text-cyan-700 hover:text-cyan-800">
-              Sign In
+            <Link to={schoolMode ? "/school/login" : "/login"} className="font-semibold text-cyan-700 hover:text-cyan-800">
+              Log In
             </Link>
           </motion.p>
 

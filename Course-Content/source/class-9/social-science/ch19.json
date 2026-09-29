@@ -1,0 +1,216 @@
+[
+  {
+    "chapter_no": 19,
+    "chapter": "Economics: Poverty as a Challenge",
+    "topic_no": 1,
+    "name": "Faces of Poverty: Two Typical Cases",
+    "scenes": [
+      {
+        "animation": "Zippy happily munches a samosa outside a railway station. His eyes move to a child in torn clothes watching him from a distance. Zippy stops chewing, breaks the samosa in half, and the camera slowly pulls back to show many such faces across the station.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I never noticed how many people around us are struggling." },
+          { "speaker": "NEO", "text": "In fact, every fourth person in India is poor. That is roughly two hundred and seventy million, or twenty-seven crore people, in 2011-12." }
+        ]
+      },
+      {
+        "animation": "An urban case file opens: 'Ram Saran, 33, daily-wage labourer in a wheat flour mill near Ranchi, Jharkhand'. Icons fill in: a one-room rented shack in a crowded basti, a family of six, dal and rice twice a day, children not in school, only two pairs of clothes each.",
+        "lines": [
+          { "speaker": "NEO", "text": "Meet Ram Saran. He is thirty-three and works as a daily-wage labourer in a wheat flour mill near Ranchi in Jharkhand. He finds work only now and then." },
+          { "speaker": "NEO", "text": "His family of six lives in a one-room rented house in a crowded basti. They manage a meagre meal of dal and rice twice a day. None of the children go to school, and the younger ones are undernourished." }
+        ]
+      },
+      {
+        "animation": "A rural case file opens: 'Lakha Singh, small village near Meerut, Uttar Pradesh'. Icons: a kuchha hut, odd jobs for big farmers, wages sometimes paid in wheat or dal, a family of eight, a father who died of TB for lack of medicine, a school he never attended.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now meet Lakha Singh, from a small village near Meerut in Uttar Pradesh. His family owns no land, so they do odd jobs for big farmers, sometimes paid only in wheat or dal." },
+          { "speaker": "NEO", "text": "His family of eight cannot always manage two square meals a day. His father died of TB for lack of medication. Lakha never went to school and started earning when he was ten." }
+        ]
+      },
+      {
+        "animation": "A word cloud forms from both case files: 'Landlessness', 'Unemployment', 'Size of families', 'Illiteracy', 'Poor health', 'Child labour', 'Helplessness'. The word 'Helplessness' pulses largest.",
+        "lines": [
+          { "speaker": "NEO", "text": "These cases show that poverty means hunger and lack of shelter. It means parents cannot send children to school and sick people cannot afford treatment." },
+          { "speaker": "NEO", "text": "It means lack of clean water, sanitation and a regular job. Above all, it means living with a sense of helplessness." }
+        ]
+      },
+      {
+        "animation": "Two new lenses slide over the scene. Lens 1, 'Social exclusion': a poor family is kept outside a fence while others enjoy facilities. Lens 2, 'Vulnerability': a flood wave approaches and some houses have no safety net. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Social scientists look at poverty through more indicators. Social exclusion is a process through which individuals or groups are excluded from facilities, benefits and opportunities that others enjoy. The caste system is a typical example." },
+          { "speaker": "NEO", "text": "Vulnerability describes the greater probability of certain communities or individuals becoming, or remaining, poor in the coming years, for example when a flood strikes or jobs disappear." },
+          { "speaker": "NEO", "text": "Exam tip: define social exclusion and vulnerability in your own words, with one example each." }
+        ]
+      },
+      {
+        "animation": "Recap board with two case-file icons: '1. Every fourth Indian is poor: about 270 million in 2011-12', '2. Poverty = hunger, no shelter, no schooling, no healthcare, helplessness', '3. Social exclusion and vulnerability'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: every fourth person in India is poor." },
+          { "speaker": "NEO", "text": "Two: Ram Saran and Lakha Singh show that poverty affects food, shelter, schooling, health and dignity." },
+          { "speaker": "NEO", "text": "Three: social exclusion and vulnerability help us see poverty more fully." },
+          { "speaker": "ZIPPY", "text": "Poverty isn't just about money. Got it." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 19,
+    "chapter": "Economics: Poverty as a Challenge",
+    "topic_no": 2,
+    "name": "The Poverty Line and Poverty Estimates",
+    "scenes": [
+      {
+        "animation": "A long horizontal rope is stretched across a village and a city, labelled 'Poverty line'. Zippy walks on it like a tightrope walker, wobbling. People below it hold empty plates.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is the poverty line a real line? Can I walk on it?" },
+          { "speaker": "NEO", "text": "It's an imaginary line. A person is considered poor if his or her income or consumption falls below a minimum level needed to meet basic needs." }
+        ]
+      },
+      {
+        "animation": "A plate fills with cereals, pulses, vegetables, milk, oil and sugar. Calorie meters appear: 'Rural: 2400 calories per person per day' with a farmer ploughing, and 'Urban: 2100 calories per person per day' with an office worker.",
+        "lines": [
+          { "speaker": "NEO", "text": "In India, the poverty line considers minimum needs for food, clothing, footwear, fuel and light, education and medical care." },
+          { "speaker": "NEO", "text": "The food requirement is based on calories. The accepted average is two thousand four hundred calories per person per day in rural areas and two thousand one hundred in urban areas." },
+          { "speaker": "NEO", "text": "Rural people do more physical work, so their requirement is higher." }
+        ]
+      },
+      {
+        "animation": "A money meter shows '2011-12 poverty line: ₹816 per person per month (rural), ₹1000 (urban)'. It multiplies: 'Family of five: about ₹4,080 (rural), ₹5,000 (urban)'. A label reads 'Estimated every five years through NSSO surveys'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For 2011-12, the poverty line was fixed at eight hundred and sixteen rupees per person per month in rural areas and one thousand rupees in urban areas." },
+          { "speaker": "NEO", "text": "Urban needs are lower in calories, but many essential products cost more in cities. The poverty line is estimated periodically, normally every five years, through sample surveys by the National Sample Survey Organisation." }
+        ]
+      },
+      {
+        "animation": "A data table builds row by row with columns 'Year | Poverty ratio % (Rural, Urban, Total) | Number of poor, millions': '1993-94: 50.1, 31.8, about 45 | 403.7', '2004-05: 41.8, 25.7, 37.2 | 407.1', '2011-12: 25.7, 13.7, 21.9 | 269.3'. A line graph drops alongside.",
+        "lines": [
+          { "speaker": "NEO", "text": "Poverty ratios in India fell substantially, from about forty-five per cent in 1993-94 to 37.2 per cent in 2004-05. By 2011-12, it came down to about 21.9 per cent." },
+          { "speaker": "NEO", "text": "The number of poor fell from 407.1 million in 2004-05 to 269.3 million in 2011-12." },
+          { "speaker": "ZIPPY", "text": "Wait, the ratio fell between 1993 and 2004, but the number of poor went up slightly?" },
+          { "speaker": "NEO", "text": "Yes, because the population grew. That's why we study both the ratio and the number." }
+        ]
+      },
+      {
+        "animation": "A globe spins with a single ruler labelled 'World Bank: uniform standard for comparing countries'. Beside it, a car shown in the USA with the note 'Different countries, different poverty lines'. An 'EXAM TIP' card flips over.",
+        "lines": [
+          { "speaker": "NEO", "text": "Each country uses a poverty line suited to its level of development. To compare developing countries, international organisations like the World Bank use a uniform standard." },
+          { "speaker": "NEO", "text": "Exam tip: the calorie norms of 2400 and 2100, and the rupee figures of 816 and 1000, are frequently asked. Write rural and urban correctly." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Poverty line: minimum level for basic needs; 2400 rural, 2100 urban calories', '2. 2011-12: ₹816 rural, ₹1000 urban per person per month', '3. Poverty ratio: about 45% (1993-94) → 21.9% (2011-12)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the poverty line is based on minimum needs, with calorie norms of 2400 in rural and 2100 in urban areas." },
+          { "speaker": "NEO", "text": "Two: in 2011-12, it was eight hundred and sixteen rupees for rural and one thousand for urban areas per month." },
+          { "speaker": "NEO", "text": "Three: the poverty ratio fell from about forty-five per cent to 21.9 per cent." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 19,
+    "chapter": "Economics: Poverty as a Challenge",
+    "topic_no": 3,
+    "name": "Vulnerable Groups, Inter-State Disparities and Global Poverty",
+    "scenes": [
+      {
+        "animation": "A family sits down to eat. The father and son get full plates; the mother, grandmother and little daughter get smaller portions. Zippy frowns and pushes his own plate toward the girl.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is the girl getting the smallest plate?" },
+          { "speaker": "NEO", "text": "Because poverty doesn't hit everyone equally, not even within one family." }
+        ]
+      },
+      {
+        "animation": "A bar chart builds: most vulnerable groups labelled 'Scheduled Caste households', 'Scheduled Tribe households', 'Rural agricultural labour households', 'Urban casual labour households'. Inside a family, icons for 'Women', 'Children, especially the girl child', 'Old people' are marked 'Poorest of the poor'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The social groups most vulnerable to poverty are scheduled caste and scheduled tribe households. Among economic groups, the most vulnerable are rural agricultural labour households and urban casual labour households." },
+          { "speaker": "NEO", "text": "Within poor families, women, elderly people and female infants are often denied equal access to resources. So women, children, especially the girl child, and old people are the poorest of the poor." }
+        ]
+      },
+      {
+        "animation": "A map of India is shaded by poverty. 'Bihar' and 'Odisha' glow darkest, labelled 'Two poorest states'. Other states light up with reasons: 'Punjab and Haryana: high agricultural growth', 'Kerala: human resource development', 'West Bengal: land reforms', 'Andhra Pradesh and Tamil Nadu: public distribution of food grains'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The proportion of poor people is not the same in every state. Bihar and Odisha continue to be the two poorest states." },
+          { "speaker": "NEO", "text": "Other states reduced poverty in different ways. Punjab and Haryana used high agricultural growth. Kerala focused on human resource development. In West Bengal, land reform measures helped." },
+          { "speaker": "NEO", "text": "In Andhra Pradesh and Tamil Nadu, public distribution of food grains could have been responsible for the improvement." }
+        ]
+      },
+      {
+        "animation": "A world map. China and Southeast Asia glow green with arrows labelled 'Rapid economic growth + investment in human resource development'. South Asia shows a slower decline. Sub-Saharan Africa glows red: 'Poverty declined much less'. Russia shows a small warning: 'Poverty resurfaced'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Globally, the proportion of people living in extreme poverty has fallen. But there are great regional differences." },
+          { "speaker": "NEO", "text": "Poverty declined substantially in China and Southeast Asian countries, due to rapid economic growth and massive investments in human resource development. In South Asia, the decline has not been as rapid." },
+          { "speaker": "NEO", "text": "Sub-Saharan Africa remains a major concern, and poverty has resurfaced in some former socialist countries like Russia." }
+        ]
+      },
+      {
+        "animation": "A matching board: states on the left, reasons on the right, lines connecting them. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Punjab, farming. Kerala, people. West Bengal, land. Easy!" },
+          { "speaker": "NEO", "text": "Exactly. Exam tip: the state-and-reason match is a favourite three-mark question." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Most vulnerable: SC and ST households, rural agricultural labour, urban casual labour', '2. Bihar and Odisha poorest; Punjab, Kerala, West Bengal succeeded', '3. China fell fast; Sub-Saharan Africa and South Asia slower'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: SC and ST households and rural and urban labour households are most vulnerable, and women, children and the elderly suffer most." },
+          { "speaker": "NEO", "text": "Two: poverty varies across states, with Bihar and Odisha the poorest." },
+          { "speaker": "NEO", "text": "Three: globally, China and Southeast Asia reduced poverty fastest." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 19,
+    "chapter": "Economics: Poverty as a Challenge",
+    "topic_no": 4,
+    "name": "Causes of Poverty and Anti-Poverty Measures",
+    "scenes": [
+      {
+        "animation": "A spinning wheel labelled 'Cycle of poverty' traps a small farmer: 'Low income' → 'Borrow for seeds and fertiliser' → 'Cannot repay' → 'Debt' → 'Low income'. Zippy tries to jump in and stop the wheel.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How do people get stuck in this loop?" },
+          { "speaker": "NEO", "text": "Let's look at the causes. Then we'll see how the government tries to break the cycle." }
+        ]
+      },
+      {
+        "animation": "A cause list builds with icons: 'Colonial rule: handicrafts ruined, textiles discouraged', 'Low growth + high population growth', 'Unequal distribution of land; land reforms not implemented properly', 'Social obligations and religious ceremonies', 'Indebtedness'. Small slums form on the edges of a city.",
+        "lines": [
+          { "speaker": "NEO", "text": "One historical reason is the low level of economic development under British rule. Colonial policies ruined traditional handicrafts and discouraged industries like textiles." },
+          { "speaker": "NEO", "text": "Low growth combined with a high population growth rate kept per capita income low. Unable to find proper jobs in cities, many people became rickshaw pullers, vendors or construction workers and lived in slums." },
+          { "speaker": "NEO", "text": "Unequal distribution of land, poorly implemented land reforms, spending on social ceremonies, and indebtedness also cause poverty." }
+        ]
+      },
+      {
+        "animation": "A two-plank bridge crosses a river of poverty. Plank 1: 'Promotion of economic growth'. Plank 2: 'Targeted anti-poverty programmes'. A growth meter rises from 'About 3.5% in the 1970s' to 'About 6% in the 1980s and 1990s'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The government's anti-poverty strategy rests on two planks: promotion of economic growth, and targeted anti-poverty programmes." },
+          { "speaker": "NEO", "text": "Growth jumped from an average of about three and a half per cent a year in the 1970s to about six per cent in the 1980s and 1990s, helping to reduce poverty." }
+        ]
+      },
+      {
+        "animation": "An animated timeline builds scheme by scheme: '1993: PMRY, self-employment for educated unemployed youth', '1995: REGP, self-employment in rural areas and small towns', '1999: SGSY, self-help groups, bank credit and subsidy', '2000: PMGY, basic services', '2005: MGNREGA, 100 days of wage employment, one-third jobs for women'. An 'Antyodaya Anna Yojana' badge sits at the end.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Mahatma Gandhi National Rural Employment Guarantee Act, 2005, aims to provide one hundred days of wage employment to every rural household. One-third of the proposed jobs are reserved for women." },
+          { "speaker": "NEO", "text": "Prime Minister Rozgar Yojana, started in 1993, creates self-employment for educated unemployed youth. The Rural Employment Generation Programme came in 1995. Swarnajayanti Gram Swarozgar Yojana, in 1999, organises poor families into self-help groups." },
+          { "speaker": "NEO", "text": "Pradhan Mantri Gramodaya Yojana, launched in 2000, gives states extra help for basic services. Antyodaya Anna Yojana is another important scheme." }
+        ]
+      },
+      {
+        "animation": "A mixed report card reads 'Results: mixed'. Red notes: 'Improper implementation', 'Wrong targeting', 'Overlapping schemes'. A 'BOARD TIP' card flips over with 'MGNREGA 2005: 100 days' highlighted.",
+        "lines": [
+          { "speaker": "NEO", "text": "The results have been mixed, mainly due to lack of proper implementation and right targeting, and overlapping schemes." },
+          { "speaker": "NEO", "text": "Board tip: match each scheme to its year and aim. MGNREGA, 2005, one hundred days, is asked almost every year." }
+        ]
+      },
+      {
+        "animation": "Recap board with a broken-wheel icon: '1. Causes: colonial legacy, low growth, population, unequal land, debt', '2. Strategy: economic growth + targeted programmes', '3. MGNREGA 2005, PMRY 1993, REGP 1995, SGSY 1999, PMGY 2000'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: poverty has historical, economic and social causes." },
+          { "speaker": "NEO", "text": "Two: India fights poverty through economic growth and targeted programmes." },
+          { "speaker": "NEO", "text": "Three: MGNREGA guarantees one hundred days of work, alongside schemes like PMRY, REGP, SGSY and PMGY." },
+          { "speaker": "ZIPPY", "text": "Time to break that wheel for good." }
+        ]
+      }
+    ]
+  }
+]

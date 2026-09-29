@@ -1,0 +1,377 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "दीपकम्: पाठ",
+    "topic_no": 1,
+    "name": "संगच्छध्वं संवदध्वम्",
+    "scenes": [
+      {
+        "animation": "A school kabaddi match. Zippy's team runs in all directions, each player shouting a different plan, and they lose a point. The other team moves like one body and wins. Zippy's team slumps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "नियो, हमारे खिलाड़ी तेज़ थे, फिर भी हार गए। क्यों?" },
+          { "speaker": "NEO", "text": "क्योंकि वे साथ नहीं खेले। ऋग्वेद हज़ारों साल पहले ही कह चुका है: संगच्छध्वं संवदध्वम्।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 1 — संगच्छध्वं संवदध्वम्'. A classroom: a teacher labelled 'आचार्यः' and students discuss a trophy. An ancient scroll labelled 'ऋग्वेदः — संज्ञानसूक्तम्' unrolls on the board.",
+        "lines": [
+          { "speaker": "NEO", "text": "इस पाठ में एक शिक्षक और छात्र एक खेल की जीत पर बात करते हैं। शिक्षक बताते हैं कि जीत एकता से मिली।" },
+          { "speaker": "NEO", "text": "फिर वे ऋग्वेद के संज्ञान सूक्त के मंत्र सिखाते हैं। इसे संगठन सूक्त भी कहते हैं।" },
+          { "speaker": "ZIPPY", "text": "यानी वेदों में भी टीमवर्क का पाठ है!" }
+        ]
+      },
+      {
+        "animation": "The words split on screen: 'सम् + गच्छध्वम् = साथ चलो', 'सम् + वदध्वम् = साथ बोलो'. Cartoon people walk in step and speak in one speech bubble.",
+        "lines": [
+          { "speaker": "NEO", "text": "पहला मंत्र है: संगच्छध्वं संवदध्वं सं वो मनांसि जानताम्।" },
+          { "speaker": "NEO", "text": "अर्थ है: साथ-साथ चलो, साथ मिलकर बोलो, और तुम्हारे मन एक-दूसरे को समझें।" },
+          { "speaker": "NEO", "text": "यहाँ सम् उपसर्ग का अर्थ है साथ या अच्छी तरह। गच्छध्वम् यानी चलो, और वदध्वम् यानी बोलो।" }
+        ]
+      },
+      {
+        "animation": "Three hearts, three minds and three arrows labelled 'आकूतिः' align into one bright shape. Text: 'समानी व आकूतिः समाना हृदयानि वः'.",
+        "lines": [
+          { "speaker": "NEO", "text": "एक और मंत्र है: समानी व आकूतिः समाना हृदयानि वः।" },
+          { "speaker": "NEO", "text": "अर्थ: तुम्हारे संकल्प एक जैसे हों और तुम्हारे हृदय एक जैसे हों।" },
+          { "speaker": "NEO", "text": "आगे कहा है: समानमस्तु वो मनो यथा वः सुसहासति। तुम्हारा मन एक हो, ताकि तुम सब अच्छी तरह साथ रह सको।" },
+          { "speaker": "ZIPPY", "text": "मतलब एक जैसा सोचो, तो साथ रहना आसान हो जाता है!" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' board shows the verb forms: 'गच्छध्वम्, वदध्वम् — लोट् लकार, मध्यम पुरुष, बहुवचन (आत्मनेपद)'. A second line: 'सम् = उपसर्ग'.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: गच्छध्वम् और वदध्वम् आज्ञा बताने वाले रूप हैं। ये लोट् लकार, मध्यम पुरुष, बहुवचन में हैं।" },
+          { "speaker": "NEO", "text": "मंत्र का अर्थ पूछा जाए तो सरल हिंदी में लिखो और अंत में एक पंक्ति में संदेश लिखो: एकता में शक्ति है।" }
+        ]
+      },
+      {
+        "animation": "Zippy's kabaddi team now moves in perfect sync and wins. Recap cards: '1. स्रोत: ऋग्वेद, संज्ञानसूक्त', '2. साथ चलो, साथ बोलो', '3. समान मन, समान हृदय'.",
+        "lines": [
+          { "speaker": "NEO", "text": "तीन बातें याद रखो। पहला, ये मंत्र ऋग्वेद के संज्ञान सूक्त से हैं। दूसरा, संगच्छध्वं संवदध्वम् यानी साथ चलो, साथ बोलो। तीसरा, समान मन और समान हृदय से ही संगठन मज़बूत होता है।" },
+          { "speaker": "ZIPPY", "text": "संगच्छध्वम्, टीम! इस बार ट्रॉफ़ी हमारी!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "दीपकम्: पाठ",
+    "topic_no": 2,
+    "name": "अल्पानामपि वस्तूनां संहतिः कार्यसाधिका",
+    "scenes": [
+      {
+        "animation": "Zippy tries to tie up a big toy elephant with a single thin blade of grass; it snaps. Neo twists many blades into a thick rope and the elephant is held firmly.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "एक तिनका तो तुरंत टूट गया। फिर तुमने हाथी कैसे बाँध लिया?" },
+          { "speaker": "NEO", "text": "बहुत सारे तिनकों को मिलाकर। यही इस पाठ का संदेश है: छोटी चीज़ें भी मिल जाएँ, तो बड़ा काम कर देती हैं।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 2 — अल्पानामपि वस्तूनां संहतिः कार्यसाधिका'. A book labelled 'हितोपदेशः' opens, and a flock of pigeons flies out, led by a pigeon with a crown labelled 'चित्रग्रीवः'.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह कहानी हितोपदेश से ली गई है। इसमें कबूतरों का राजा है चित्रग्रीव।" },
+          { "speaker": "NEO", "text": "एक दिन आकाश में उड़ते कबूतरों ने ज़मीन पर बिखरे चावल के दाने देखे। उन्हें लालच आ गया।" },
+          { "speaker": "ZIPPY", "text": "सुनसान जंगल में चावल? मुझे तो कुछ गड़बड़ लग रही है!" }
+        ]
+      },
+      {
+        "animation": "A hunter labelled 'व्याधः' hides behind a tree. The pigeons land on the grains and a net drops on them. They flap in panic. Chitragriva raises a wing calmly.",
+        "lines": [
+          { "speaker": "NEO", "text": "दाने असल में एक शिकारी ने बिछाए थे। कबूतर जैसे ही उतरे, जाल में फँस गए।" },
+          { "speaker": "ZIPPY", "text": "अब तो सब घबरा गए होंगे!" },
+          { "speaker": "NEO", "text": "हाँ, पर चित्रग्रीव ने धीरज रखा। उसने कहा, सब एक मन होकर जाल लेकर उड़ जाओ।" }
+        ]
+      },
+      {
+        "animation": "All pigeons flap together and the whole net lifts into the sky. The hunter runs below, then gives up. The flock lands near a burrow where a mouse labelled 'हिरण्यकः' pops out and gnaws the net strand by strand.",
+        "lines": [
+          { "speaker": "NEO", "text": "सबने एक साथ ज़ोर लगाया और पूरा जाल लेकर उड़ गए। शिकारी देखता रह गया।" },
+          { "speaker": "NEO", "text": "चित्रग्रीव उन्हें अपने मित्र चूहे हिरण्यक के पास ले गया। हिरण्यक ने अपने दाँतों से जाल काट दिया और सब आज़ाद हो गए।" },
+          { "speaker": "ZIPPY", "text": "एकता से उड़े, और दोस्ती से छूटे। डबल सीख!" }
+        ]
+      },
+      {
+        "animation": "A shloka writes itself on a scroll: 'अल्पानामपि वस्तूनां संहतिः कार्यसाधिका। तृणैर्गुणत्वमापन्नैर्बध्यन्ते मत्तदन्तिनः॥' Grass blades twist into a rope and bind an elephant. An 'Exam Tip' sticker shows 'संहतिः = एकता, संगठन'.",
+        "lines": [
+          { "speaker": "NEO", "text": "पाठ का श्लोक है: अल्पानामपि वस्तूनां संहतिः कार्यसाधिका।" },
+          { "speaker": "NEO", "text": "अर्थ: छोटी-छोटी चीज़ों का मेल भी काम पूरा कर देता है। जैसे तिनकों से बनी रस्सी से मतवाले हाथी भी बाँध दिए जाते हैं।" },
+          { "speaker": "NEO", "text": "परीक्षा टिप: संहतिः का अर्थ है एकता या संगठन। और कहानी का स्रोत हितोपदेश लिखना मत भूलो।" }
+        ]
+      },
+      {
+        "animation": "The pigeons and the mouse sit together happily. Recap cards: '1. स्रोत: हितोपदेश', '2. लालच से जाल, एकता से मुक्ति', '3. मित्र हिरण्यक ने जाल काटा'.",
+        "lines": [
+          { "speaker": "NEO", "text": "याद रखो। पहला, यह कहानी हितोपदेश से है। दूसरा, लालच ने कबूतरों को फँसाया, पर एकता ने उन्हें बचाया। तीसरा, सच्चा मित्र हिरण्यक मुसीबत में काम आया।" },
+          { "speaker": "ZIPPY", "text": "अब मैं भी अपने दोस्तों के साथ मिलकर होमवर्क करूँगा। संहतिः!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "दीपकम्: पाठ",
+    "topic_no": 3,
+    "name": "सुभाषितरसं पीत्वा जीवनं सफलं कुरु",
+    "scenes": [
+      {
+        "animation": "Zippy sips a glowing golden drink from a glass labelled 'सुभाषित-रस' and his spark shines brighter. Neo smiles with a stack of palm-leaf manuscripts.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "यह कौन-सा जूस है? पीते ही दिमाग़ चमक गया!" },
+          { "speaker": "NEO", "text": "यह सुभाषित-रस है। सुभाषित यानी सुंदर ढंग से कही गई अच्छी बात। आज कुछ सुभाषितों का स्वाद लेते हैं।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 3 — सुभाषितरसं पीत्वा जीवनं सफलं कुरु'. A map of India glows while gods in the clouds sing and point at it. Text: 'गायन्ति देवाः किल गीतकानि'.",
+        "lines": [
+          { "speaker": "NEO", "text": "पाठ का नाम कहता है: सुभाषितों का रस पीकर जीवन सफल करो।" },
+          { "speaker": "NEO", "text": "एक सुभाषित है: गायन्ति देवाः किल गीतकानि, धन्यास्तु ते भारतभूमिभागे।" },
+          { "speaker": "NEO", "text": "अर्थ: देवता भी गीत गाते हैं कि वे लोग धन्य हैं, जो भारत की भूमि पर जन्म लेते हैं।" },
+          { "speaker": "ZIPPY", "text": "मतलब हम तो लकी हैं!" }
+        ]
+      },
+      {
+        "animation": "A mango tree bends low with fruit; dark rain clouds hang low; a kind person bows while giving. Text: 'भवन्ति नम्रास्तरवः फलोद्गमैः'.",
+        "lines": [
+          { "speaker": "NEO", "text": "दूसरा सुभाषित: भवन्ति नम्रास्तरवः फलोद्गमैः।" },
+          { "speaker": "NEO", "text": "अर्थ: फल आने पर पेड़ झुक जाते हैं, और पानी से भरे बादल नीचे आ जाते हैं। वैसे ही सज्जन धन पाकर भी नम्र रहते हैं।" }
+        ]
+      },
+      {
+        "animation": "A goldsmith tests a gold bar four ways, each labelled: 'निघर्षण (रगड़ना)', 'छेदन (काटना)', 'ताप (तपाना)', 'ताडन (पीटना)'. Then a person is tested on four cards: 'त्याग', 'शील', 'गुण', 'कर्म'.",
+        "lines": [
+          { "speaker": "NEO", "text": "तीसरा सुभाषित: यथा चतुर्भिः कनकं परीक्ष्यते, निघर्षणच्छेदनतापताडनैः।" },
+          { "speaker": "NEO", "text": "सोने को चार तरह से परखा जाता है: रगड़कर, काटकर, तपाकर और पीटकर।" },
+          { "speaker": "NEO", "text": "वैसे ही मनुष्य की परख भी चार बातों से होती है: त्याग, शील, गुण और कर्म।" },
+          { "speaker": "ZIPPY", "text": "यानी इंसान का भी चार-पेपर वाला एग्ज़ाम होता है!" }
+        ]
+      },
+      {
+        "animation": "A chariot with only one wheel wobbles and does not move. A second wheel labelled 'पुरुषकार (मेहनत)' is added beside 'दैव (भाग्य)' and the chariot rolls forward. An 'Exam Tip' sticker appears on 'अन्वय + अर्थ'.",
+        "lines": [
+          { "speaker": "NEO", "text": "एक और सुभाषित: यथा ह्येकेन चक्रेण न रथस्य गतिर्भवेत्। एक पहिये से रथ नहीं चलता।" },
+          { "speaker": "NEO", "text": "वैसे ही मेहनत के बिना केवल भाग्य से काम सफल नहीं होता।" },
+          { "speaker": "NEO", "text": "परीक्षा टिप: श्लोक का अर्थ लिखने से पहले उसका अन्वय, यानी सीधा क्रम, सोचो। फिर अर्थ आसान हो जाता है।" }
+        ]
+      },
+      {
+        "animation": "Zippy lines up four glasses of golden juice. Recap cards: '1. भारतभूमि धन्य है', '2. सज्जन नम्र, सोने जैसी परख', '3. भाग्य + मेहनत = सफलता'.",
+        "lines": [
+          { "speaker": "NEO", "text": "सार याद रखो। पहला, भारत की भूमि पर जन्म धन्य माना गया है। दूसरा, सज्जन फलदार पेड़ की तरह नम्र रहते हैं और सोने की तरह परखे जाते हैं। तीसरा, भाग्य के साथ मेहनत का पहिया भी चाहिए।" },
+          { "speaker": "ZIPPY", "text": "एक गिलास और! सफलता का रस कभी ज़्यादा नहीं होता।" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "दीपकम्: पाठ",
+    "topic_no": 4,
+    "name": "प्रणम्यो देशभक्तोऽयं गोपबन्धुर्महामनाः",
+    "scenes": [
+      {
+        "animation": "A flooded village in Odisha. A man in a simple dhoti wades through water carrying a sack of rice on his shoulder to stranded families. Zippy hovers above with an umbrella.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "बाढ़ में सब भाग रहे हैं, और ये सज्जन पानी में उतरकर चावल बाँट रहे हैं! ये कौन हैं?" },
+          { "speaker": "NEO", "text": "ये हैं ओडिशा के महान देशभक्त गोपबन्धु दास। लोग इन्हें प्यार से उत्कलमणि कहते हैं।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 4 — प्रणम्यो देशभक्तोऽयं गोपबन्धुर्महामनाः'. The title splits into word labels: 'प्रणम्यः = प्रणाम के योग्य', 'देशभक्तः', 'महामनाः = विशाल मन वाले'.",
+        "lines": [
+          { "speaker": "NEO", "text": "पाठ के नाम का अर्थ है: विशाल हृदय वाले यह देशभक्त गोपबन्धु प्रणाम के योग्य हैं।" },
+          { "speaker": "NEO", "text": "उत्कल ओडिशा का पुराना नाम है। उत्कलमणि यानी उत्कल का रत्न।" }
+        ]
+      },
+      {
+        "animation": "An open-air school under trees labelled 'सत्यवादी वनविद्यालयः'. Students sit in a circle around a teacher. Then a printing press rolls out a newspaper titled 'समाज'.",
+        "lines": [
+          { "speaker": "NEO", "text": "गोपबन्धु ने सत्यवादी में पेड़ों के नीचे चलने वाला एक वन विद्यालय शुरू किया, जहाँ बच्चों को देशप्रेम और सेवा भी सिखाई जाती थी।" },
+          { "speaker": "NEO", "text": "उन्होंने समाज नाम का ओड़िया समाचार-पत्र भी शुरू किया, जो आज भी छपता है।" },
+          { "speaker": "ZIPPY", "text": "स्कूल भी खोला और अख़बार भी! ये तो मल्टीटास्किंग के बादशाह थे।" }
+        ]
+      },
+      {
+        "animation": "Scenes of service: flood relief boats, a jail cell where Gopabandhu writes by lamplight, and a crowd following Gandhi's call. A label reads 'स्वतन्त्रता-संग्रामः'.",
+        "lines": [
+          { "speaker": "NEO", "text": "बाढ़ और अकाल के समय उन्होंने गाँव-गाँव जाकर लोगों की सेवा की।" },
+          { "speaker": "NEO", "text": "वे गांधीजी के साथ स्वतंत्रता आंदोलन में जुड़े और जेल भी गए। जेल में भी उन्होंने ओड़िया में प्रेरणा देने वाली रचनाएँ लिखीं।" },
+          { "speaker": "NEO", "text": "उनकी भावना थी कि मेरा शरीर इसी देश की मिट्टी में मिल जाए। पाठ में यह भाव संस्कृत में आया है: स्वदेशभूमौ मम लीयतां तनुः।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' card shows the sandhi: 'देशभक्तः + अयम् = देशभक्तोऽयम्'. The avagraha sign 'ऽ' blinks in orange.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: देशभक्तोऽयम् में संधि है। देशभक्तः और अयम् मिलकर देशभक्तोऽयम् बना। यह ऽ चिह्न अवग्रह कहलाता है।" },
+          { "speaker": "NEO", "text": "प्रश्न आ सकता है कि गोपबन्धु को क्या उपाधि मिली। उत्तर है उत्कलमणि।" },
+          { "speaker": "ZIPPY", "text": "और महामनाः का अर्थ? मुझे लगा किसी का नाम है!" },
+          { "speaker": "NEO", "text": "नहीं, महामनाः एक विशेषण है। महत् मनः यस्य सः, यानी जिसका मन महान हो। यहाँ यह गोपबन्धु के विशाल हृदय को बताता है।" }
+        ]
+      },
+      {
+        "animation": "A statue of Gopabandhu with students bowing respectfully. Recap cards: '1. उत्कलमणि गोपबन्धु दास', '2. वन विद्यालय और समाज पत्र', '3. सेवा, त्याग, स्वतंत्रता संग्राम'.",
+        "lines": [
+          { "speaker": "NEO", "text": "याद रखो। पहला, गोपबन्धु दास को उत्कलमणि कहा जाता है। दूसरा, उन्होंने सत्यवादी वन विद्यालय और समाज समाचार-पत्र शुरू किया। तीसरा, उनका जीवन सेवा, त्याग और स्वतंत्रता संग्राम को समर्पित था।" },
+          { "speaker": "ZIPPY", "text": "प्रणम्यो देशभक्तोऽयम्! मेरा भी प्रणाम।" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "दीपकम्: पाठ",
+    "topic_no": 5,
+    "name": "गीता सुगीता कर्तव्या",
+    "scenes": [
+      {
+        "animation": "Zippy loses a video game, throws the controller and fumes with red smoke. Then he forgets which level he was on and crashes again. Neo calmly holds a small book labelled 'श्रीमद्भगवद्गीता'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "गुस्से में खेला तो और हार गया! और तो और, भूल भी गया कि कहाँ था!" },
+          { "speaker": "NEO", "text": "यही तो गीता पाँच हज़ार साल पुरानी भाषा में समझाती है। क्रोध से सोचने की शक्ति चली जाती है।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 5 — गीता सुगीता कर्तव्या'. A festive fair at Kurukshetra with a banner 'गीताजयन्ती-महोत्सवः'. A boy and his father listen to a speaker; a flashback shows Krishna guiding Arjuna in a chariot.",
+        "lines": [
+          { "speaker": "NEO", "text": "इस पाठ में कुरुक्षेत्र में गीता जयंती का उत्सव है। एक बालक अपने पिता के साथ वहाँ जाता है और गीता के बारे में सीखता है।" },
+          { "speaker": "NEO", "text": "गीता में श्रीकृष्ण ने युद्धभूमि में अर्जुन को उपदेश दिया था। पाठ का नाम कहता है: गीता का अच्छी तरह पाठ और पालन करना चाहिए।" }
+        ]
+      },
+      {
+        "animation": "A calm person stands still while a storm labelled 'दुःख' blows on one side and a shower of sweets labelled 'सुख' falls on the other. Text: 'दुःखेष्वनुद्विग्नमनाः सुखेषु विगतस्पृहः'.",
+        "lines": [
+          { "speaker": "NEO", "text": "पहला श्लोक: दुःखेष्वनुद्विग्नमनाः सुखेषु विगतस्पृहः।" },
+          { "speaker": "NEO", "text": "अर्थ: जो दुख में घबराता नहीं और सुख में लालच नहीं करता, और जिसके मन से राग, भय और क्रोध चले गए हों, वही स्थिर बुद्धि वाला है।" },
+          { "speaker": "ZIPPY", "text": "यानी न हार में रोना, न जीत में उछलना!" }
+        ]
+      },
+      {
+        "animation": "A chain reaction of falling dominoes, each labelled: 'क्रोधः → सम्मोहः → स्मृतिविभ्रमः → बुद्धिनाशः → विनाशः'. The last domino crashes with a small puff.",
+        "lines": [
+          { "speaker": "NEO", "text": "दूसरा श्लोक: क्रोधाद्भवति सम्मोहः, सम्मोहात्स्मृतिविभ्रमः।" },
+          { "speaker": "NEO", "text": "क्रोध से मोह यानी भ्रम पैदा होता है, भ्रम से याददाश्त गड़बड़ाती है, उससे बुद्धि नष्ट होती है, और बुद्धि नष्ट होने से मनुष्य का पतन हो जाता है।" },
+          { "speaker": "ZIPPY", "text": "ओह, इसलिए मैं अपना लेवल भूल गया था!" }
+        ]
+      },
+      {
+        "animation": "A student bows to a teacher, serves, and asks questions; a light bulb of knowledge glows. Then 'श्रद्धावाँल्लभते ज्ञानम्' appears. An 'Exam Tip' sticker reads 'श्लोक का भाव + जीवन से उदाहरण'.",
+        "lines": [
+          { "speaker": "NEO", "text": "एक और श्लोक कहता है: श्रद्धावाँल्लभते ज्ञानम्। श्रद्धा रखने वाला, और इंद्रियों को वश में रखने वाला ज्ञान पाता है।" },
+          { "speaker": "NEO", "text": "परीक्षा टिप: श्लोक का भाव लिखो और साथ में रोज़ की ज़िंदगी का एक उदाहरण दो, जैसे खेल या परीक्षा में शांत रहना।" }
+        ]
+      },
+      {
+        "animation": "Zippy plays the game again, calm and focused, and wins. Recap cards: '1. सुख-दुख में सम रहो', '2. क्रोध → विनाश की सीढ़ी', '3. श्रद्धा से ज्ञान'.",
+        "lines": [
+          { "speaker": "NEO", "text": "तीन बातें याद रखो। पहला, सुख और दुख दोनों में मन शांत रखो। दूसरा, क्रोध से शुरू होकर विनाश तक पूरी सीढ़ी बनती है। तीसरा, श्रद्धा और संयम से ही ज्ञान मिलता है।" },
+          { "speaker": "ZIPPY", "text": "शांत दिमाग़, पक्की जीत! गीता सुगीता कर्तव्या!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "दीपकम्: पाठ",
+    "topic_no": 6,
+    "name": "डिजिभारतम् — युगपरिवर्तनम्",
+    "scenes": [
+      {
+        "animation": "At a village chai stall, a grandmother scans a QR code with her phone and pays. Zippy's jaw drops. A 'ding' sound and a green tick appear on the phone screen.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "दादी जी ने चाय का पैसा फ़ोन से दे दिया! यह कब हुआ?" },
+          { "speaker": "NEO", "text": "यही तो युग परिवर्तन है, ज़िप्पी। आज का पाठ है डिजिभारतम्, यानी डिजिटल भारत।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 6 — डिजिभारतम् — युगपरिवर्तनम्'. A teacher labelled 'शिक्षकः' and a group of students walk through a technology exhibition, pointing at screens.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह पाठ संवाद के रूप में है। शिक्षक और छात्र मिलकर बात करते हैं कि तकनीक ने भारत का जीवन कैसे बदल दिया।" },
+          { "speaker": "NEO", "text": "युगपरिवर्तनम् यानी युग का बदलना। पहले के काम और आज के काम में बहुत बड़ा अंतर आ गया है।" }
+        ]
+      },
+      {
+        "animation": "Split screen: left side, a long queue at a bank counter; right side, a phone showing 'UPI' and money moving instantly. Label: 'नगदरहितः व्यवहारः (कैशलेस)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "पहले पैसे भेजने के लिए बैंक की लंबी लाइन में लगना पड़ता था। अब यूपीआई से कुछ ही पलों में भुगतान हो जाता है।" },
+          { "speaker": "ZIPPY", "text": "और ऊपर से छुट्टे पैसों का झंझट भी ख़त्म!" }
+        ]
+      },
+      {
+        "animation": "A phone screen opens app icons one by one: a locker labelled 'डिजिलॉकर', a book labelled 'दीक्षा', a farmer's market labelled 'ई-नाम'. Each opens with a small example scene.",
+        "lines": [
+          { "speaker": "NEO", "text": "डिजिलॉकर में हम अपने ज़रूरी दस्तावेज़ सुरक्षित रख सकते हैं। खो जाने का डर नहीं।" },
+          { "speaker": "NEO", "text": "दीक्षा जैसे मंच पर बच्चे कहीं से भी पढ़ाई कर सकते हैं। और किसान ई-नाम से अपनी उपज ऑनलाइन बेच सकते हैं।" },
+          { "speaker": "NEO", "text": "एक बटन दबाते ही अनेक नागरिक सुविधाएँ मिल जाती हैं। इससे भारतीयों का जीवन अधिक सरल हो गया है।" }
+        ]
+      },
+      {
+        "animation": "A padlock icon over a phone and a warning sign 'OTP किसी को न बताएँ'. An 'Exam Tip' sticker appears on the words 'युग + परिवर्तनम्'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "पर अगर कोई मेरा पासवर्ड चुरा ले तो?" },
+          { "speaker": "NEO", "text": "इसलिए डिजिटल दुनिया में सावधानी ज़रूरी है। ओटीपी और पासवर्ड कभी किसी को मत बताओ।" },
+          { "speaker": "NEO", "text": "परीक्षा टिप: पाठ के नए संस्कृत शब्द ध्यान से याद करो, जैसे युगपरिवर्तनम् यानी युग का बदलना। संवाद से प्रश्नों के उत्तर संस्कृत में ही पूरे वाक्य में लिखो।" }
+        ]
+      },
+      {
+        "animation": "A glowing map of India lit with network lines connecting villages and cities. Recap cards: '1. डिजिटल भारत = युग परिवर्तन', '2. UPI, डिजिलॉकर, दीक्षा, ई-नाम', '3. सुविधा के साथ सावधानी'.",
+        "lines": [
+          { "speaker": "NEO", "text": "सार यह है। पहला, डिजिटल भारत एक नए युग की शुरुआत है। दूसरा, यूपीआई, डिजिलॉकर, दीक्षा और ई-नाम जैसी सेवाओं ने जीवन सरल बनाया। तीसरा, सुविधा के साथ सावधानी भी ज़रूरी है।" },
+          { "speaker": "ZIPPY", "text": "दादी जी डिजिटल हो गईं, अब मैं भी संस्कृत में टाइप करना सीखूँगा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "दीपकम्: पाठ",
+    "topic_no": 7,
+    "name": "मञ्जुलमञ्जूषा सुन्दरसुरभाषा",
+    "scenes": [
+      {
+        "animation": "An old carved wooden box labelled 'मञ्जूषा' sits on a table. Zippy opens it and out float glowing treasures: tiny Vedas, the Ramayana, a telescope, medicinal herbs and musical notes.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "वाह! इस छोटे-से बक्से में इतना ख़ज़ाना?" },
+          { "speaker": "NEO", "text": "यह बक्सा है संस्कृत भाषा। आज का पाठ एक गीत है, जो संस्कृत को सुंदर मञ्जूषा, यानी पेटी कहता है।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 7 — मञ्जुलमञ्जूषा सुन्दरसुरभाषा'. The title breaks into parts: 'मञ्जुल = सुंदर', 'मञ्जूषा = पेटी', 'सुरभाषा = देवताओं की भाषा'.",
+        "lines": [
+          { "speaker": "NEO", "text": "मञ्जुल यानी सुंदर, मञ्जूषा यानी पेटी, और सुरभाषा यानी देवताओं की भाषा।" },
+          { "speaker": "NEO", "text": "संस्कृत को देववाणी भी कहा जाता है। यह गीत संस्कृत की महिमा गाता है।" }
+        ]
+      },
+      {
+        "animation": "Sages in a forest ashram write on palm leaves, and poets recite in a royal court. Text builds: 'मुनिवरविकसित — कविवरविलसित'.",
+        "lines": [
+          { "speaker": "NEO", "text": "गीत की पंक्ति है: मुनिवरविकसितकविवरविलसितमञ्जुलमञ्जूषा, सुन्दरसुरभाषा।" },
+          { "speaker": "NEO", "text": "अर्थ: यह भाषा श्रेष्ठ मुनियों ने विकसित की और श्रेष्ठ कवियों ने इसे सजाया। यह ज्ञान की सुंदर पेटी है।" },
+          { "speaker": "ZIPPY", "text": "इतना लंबा शब्द! यह एक शब्द है या पूरी रेलगाड़ी?" },
+          { "speaker": "NEO", "text": "यह समास है। संस्कृत में कई शब्द मिलकर एक लंबा शब्द बना देते हैं, डिब्बों की तरह जुड़कर।" }
+        ]
+      },
+      {
+        "animation": "Portrait cards appear: 'वाल्मीकिः — रामायणम्', 'वेदव्यासः — महाभारतम्', 'कालिदासः'. Then a family tree shows many Indian languages branching and taking words from Sanskrit.",
+        "lines": [
+          { "speaker": "NEO", "text": "संस्कृत में वाल्मीकि ने रामायण और वेदव्यास ने महाभारत की रचना की। कालिदास जैसे महाकवियों ने भी इसी भाषा में लिखा।" },
+          { "speaker": "NEO", "text": "भारत की बहुत सारी भाषाओं ने संस्कृत से शब्द लिए हैं। इसमें वेद, दर्शन, गणित और आयुर्वेद का ज्ञान भी सुरक्षित है।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' card splits the long compound into chunks with plus signs: 'मुनिवर + विकसित + कविवर + विलसित + मञ्जुल + मञ्जूषा'.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: लंबे समस्त पदों को तोड़कर पढ़ो। मुनिवर, विकसित, कविवर, विलसित, मञ्जुल, मञ्जूषा। अर्थ अपने आप खुल जाएगा।" },
+          { "speaker": "NEO", "text": "गीत को लय में गाकर याद करो। गाने से याद रखना आसान होता है।" },
+          { "speaker": "ZIPPY", "text": "और सुरभाषा में सुर का मतलब संगीत वाला सुर है क्या?" },
+          { "speaker": "NEO", "text": "नहीं, यहाँ सुर का अर्थ है देवता। सुरभाषा यानी देवताओं की भाषा। यह गलती परीक्षा में बहुत होती है।" }
+        ]
+      },
+      {
+        "animation": "Zippy closes the glowing box and hugs it. Recap cards: '1. संस्कृत = सुंदर ज्ञान-मञ्जूषा', '2. मुनियों ने विकसित, कवियों ने सजाई', '3. भारतीय ज्ञान और भाषाओं का आधार'.",
+        "lines": [
+          { "speaker": "NEO", "text": "याद रखो। पहला, संस्कृत को सुंदर ज्ञान की पेटी कहा गया है। दूसरा, मुनियों ने इसे विकसित किया और कवियों ने इसे सजाया। तीसरा, यह भारतीय ज्ञान और अनेक भाषाओं का आधार है।" },
+          { "speaker": "ZIPPY", "text": "मेरे पास भी अब एक मञ्जूषा है, और उसकी चाबी भी!" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,268 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "History: Socialism in Europe and the Russian Revolution",
+    "topic_no": 1,
+    "name": "The Age of Social Change: Liberals, Radicals and Conservatives",
+    "scenes": [
+      {
+        "animation": "A nineteenth-century debate hall with three podiums. A cautious speaker, a fiery speaker and a grumpy old speaker shout at once; Zippy acts as moderator with a school bell, ringing it frantically.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Order, order! Everyone wants change, but nobody agrees on how much!" },
+          { "speaker": "NEO", "text": "That is Europe after the French Revolution. People split into three main groups: liberals, radicals and conservatives." }
+        ]
+      },
+      {
+        "animation": "The first podium lights up with the label 'LIBERALS'. Speech bubbles appear: 'Tolerate all religions', 'No uncontrolled power for rulers', 'Elected parliament, independent judiciary'. A ballot box has a padlock that opens only for a man holding a property deed.",
+        "lines": [
+          { "speaker": "NEO", "text": "Liberals wanted a nation which tolerated all religions. They opposed the uncontrolled power of dynastic rulers and wanted a representative, elected parliamentary government with a well-trained, independent judiciary." },
+          { "speaker": "NEO", "text": "But they were not democrats. They did not believe in universal adult franchise. They felt only men of property should vote, and not women." }
+        ]
+      },
+      {
+        "animation": "The second podium glows: 'RADICALS'. A crowd of workers and women with suffrage sashes cheers. A factory owner and a landlord frown at a sign 'Against concentration of property', while a small cottage labelled 'Private property: OK' stays untouched.",
+        "lines": [
+          { "speaker": "NEO", "text": "Radicals wanted a nation where government was based on the majority of a country's population. Many supported women's suffragette movements." },
+          { "speaker": "NEO", "text": "They opposed the privileges of great landowners and wealthy factory owners. But they were not against private property itself, only its concentration in the hands of a few." }
+        ]
+      },
+      {
+        "animation": "The third podium: 'CONSERVATIVES'. An old man clutches a clock labelled 'The past'. The hand moves forward very slowly as the label 'Change: yes, but slowly' appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "And the grumpy one wants nothing to change, right?" },
+          { "speaker": "NEO", "text": "Not quite. Earlier they opposed change. But after the Revolution, they accepted that some change was inevitable. They believed the past had to be respected and change had to be brought about through a slow process." }
+        ]
+      },
+      {
+        "animation": "A smoky industrial town: long working hours, low wages, crowded housing. Liberals and radicals, drawn as factory owners, point at a sign 'Freedom + effort = prosperity'. A board tip card lists the three groups in a three-column table.",
+        "lines": [
+          { "speaker": "NEO", "text": "This was also a time of industrial revolution. New cities grew, with long working hours and poor wages, and unemployment was common." },
+          { "speaker": "NEO", "text": "Many liberals and radicals were themselves property owners and employers. They believed that if freedom of individuals was ensured, society would progress." },
+          { "speaker": "NEO", "text": "Exam tip: questions often ask you to compare these three groups. Remember the one-line test: who should vote, and how fast should society change?" }
+        ]
+      },
+      {
+        "animation": "Recap board with three podium icons: '1. Liberals: elected parliament, but vote only for men of property', '2. Radicals: majority rule, women's suffrage, against concentrated property', '3. Conservatives: respect the past, slow change'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: liberals wanted elected parliaments, but votes only for men of property." },
+          { "speaker": "NEO", "text": "Two: radicals wanted government by the majority and supported women's suffrage." },
+          { "speaker": "NEO", "text": "Three: conservatives accepted change, but only slowly, respecting the past." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "History: Socialism in Europe and the Russian Revolution",
+    "topic_no": 2,
+    "name": "The Coming of Socialism to Europe",
+    "scenes": [
+      {
+        "animation": "A cartoon factory owner counts a mountain of coins while workers leave with a single coin each. Zippy stares at the mountain, then at the single coin, and his spark flickers angrily.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The workers make everything, but the owner keeps the mountain? That's not fair!" },
+          { "speaker": "NEO", "text": "By the mid-nineteenth century, many Europeans agreed with you. That idea was called socialism." }
+        ]
+      },
+      {
+        "animation": "A large padlock labelled 'Private property' is shown as the root of problems; socialists try to unlock it. Speech bubble: 'Property owners care only about personal gain, not the welfare of workers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Socialists were against private property. They saw it as the root of all social ills." },
+          { "speaker": "NEO", "text": "Why? Individuals who owned property gave employment, but they were concerned only with personal gain, not with the welfare of those who made the property productive." }
+        ]
+      },
+      {
+        "animation": "Portrait cards slide in with dates. 'Robert Owen (1771 to 1858), English manufacturer' builds a tiny village labelled 'New Harmony, Indiana, USA'. 'Louis Blanc (1813 to 1882), France' shows government handing money to cooperatives.",
+        "lines": [
+          { "speaker": "NEO", "text": "Socialists had different visions. Some believed in cooperatives. Robert Owen, a leading English manufacturer, sought to build a cooperative community called New Harmony in Indiana, USA." },
+          { "speaker": "NEO", "text": "Others felt cooperatives could not be built on individual initiative alone. Louis Blanc of France wanted the government to encourage cooperatives and replace capitalist enterprises." }
+        ]
+      },
+      {
+        "animation": "Two bearded thinkers appear: 'Karl Marx (1818 to 1882)' and 'Friedrich Engels (1820 to 1895)'. A flowchart builds: 'Capitalists own capital' → 'Profit from workers' labour' → 'Workers overthrow capitalism' → 'Communist society: all property socially controlled'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Karl Marx and Friedrich Engels added new arguments. Marx argued that industrial society was capitalist. Capitalists owned the capital invested in factories, and their profit was produced by workers." },
+          { "speaker": "NEO", "text": "He believed workers had to overthrow capitalism and private property. They would build a communist society where all property was socially controlled." }
+        ]
+      },
+      {
+        "animation": "A map of Europe with badges popping up: 'Second International', 'Germany: Social Democratic Party (SPD)', 'Britain: Labour Party, 1905', 'France: Socialist Party, 1905'. A thought bubble shows workers' funds for sickness and old age. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "By the 1870s, socialist ideas spread across Europe, and socialists formed an international body called the Second International." },
+          { "speaker": "NEO", "text": "Workers formed associations to fight for better living and working conditions. In Germany, they worked closely with the Social Democratic Party. By 1905, socialists and trade unionists in Britain formed a Labour Party, and a Socialist Party was formed in France." },
+          { "speaker": "NEO", "text": "Exam tip: remember that until 1914, socialists never succeeded in forming a government in Europe. That changed with Russia." }
+        ]
+      },
+      {
+        "animation": "Recap board with a padlock, a cooperative village and a book: '1. Socialists opposed private property', '2. Owen and Blanc: cooperatives', '3. Marx and Engels: communist society'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: socialists saw private property as the root of social ills." },
+          { "speaker": "NEO", "text": "Two: Robert Owen and Louis Blanc promoted cooperatives." },
+          { "speaker": "NEO", "text": "Three: Marx and Engels argued that workers must build a communist society." },
+          { "speaker": "ZIPPY", "text": "Next stop: Russia. I'm packing a sweater." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "History: Socialism in Europe and the Russian Revolution",
+    "topic_no": 3,
+    "name": "The Russian Empire in 1914 and the 1905 Revolution",
+    "scenes": [
+      {
+        "animation": "Snowy St Petersburg. A peaceful procession of workers carrying icons walks towards a grand building labelled 'Winter Palace'. Mounted soldiers block the way; the screen freezes and turns grey with the caption 'Bloody Sunday'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is this Sunday called bloody?" },
+          { "speaker": "NEO", "text": "Because a peaceful march of workers was fired upon. To understand why, let's look at Russia first." }
+        ]
+      },
+      {
+        "animation": "A map of the Russian Empire in 1914 spreads out from Europe to the Pacific. A crown labelled 'Tsar Nicholas II' sits over Moscow. A pie chart fills in: '85% earned their living from agriculture'. Small factory icons light up in 'St Petersburg' and 'Moscow'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1914, Tsar Nicholas the Second ruled Russia and its vast empire. It stretched from Europe all the way to the Pacific." },
+          { "speaker": "NEO", "text": "The vast majority of Russia's people were agriculturists. About eighty-five per cent earned their living from agriculture. Industry existed in pockets, with St Petersburg and Moscow the prominent industrial areas." },
+          { "speaker": "NEO", "text": "Workers faced long hours and low wages, and peasants wanted the land of the nobility." }
+        ]
+      },
+      {
+        "animation": "Party logos stamp onto the map: 'Russian Social Democratic Workers Party, 1898' and 'Socialist Revolutionary Party, 1900'. The first party splits into two groups labelled 'Bolsheviks: led by Lenin' and 'Mensheviks'.",
+        "lines": [
+          { "speaker": "NEO", "text": "All political parties were illegal in Russia before 1914. Still, the Russian Social Democratic Workers Party was founded in 1898 by socialists who respected Marx's ideas." },
+          { "speaker": "NEO", "text": "The Socialist Revolutionary Party, formed in 1900, struggled for peasants' rights. The Social Democrats later split into Bolsheviks, led by Lenin, and Mensheviks." }
+        ]
+      },
+      {
+        "animation": "A graph shows prices shooting up while a 'Real wages' line drops by '20%' in 1904. Back to the frozen procession: 'Led by Father Gapon'. Casualty count: 'Over 100 killed, about 300 wounded'. Then a new building appears: 'Duma: elected consultative Parliament'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1904, prices of essential goods rose so quickly that real wages declined by twenty per cent." },
+          { "speaker": "NEO", "text": "In 1905, a procession of workers led by Father Gapon reached the Winter Palace. It was attacked by the police and the Cossacks. Over a hundred workers were killed and about three hundred wounded. This was Bloody Sunday." },
+          { "speaker": "NEO", "text": "Strikes spread across the country. The Tsar allowed the creation of an elected consultative Parliament, the Duma, but he dismissed the first Duma within seventy-five days." }
+        ]
+      },
+      {
+        "animation": "1914: soldiers march off to war. A casualty counter races past '7 million by 1917'. The city sign 'St Petersburg' is repainted 'Petrograd'. Burning crops and empty bread shelves appear. A 'BOARD TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Then came the First World War. Russia's armies lost badly in Germany and Austria between 1914 and 1916. There were over seven million casualties by 1917." },
+          { "speaker": "NEO", "text": "St Petersburg was renamed Petrograd, because the old name sounded German. Retreating armies destroyed crops, and bread became scarce." },
+          { "speaker": "NEO", "text": "Board tip: in the 1905 question, always mention Bloody Sunday, Father Gapon and the Duma." }
+        ]
+      },
+      {
+        "animation": "Recap board with a snowy crown icon: '1. 1914: Tsar Nicholas II, 85% in agriculture', '2. 1905: Bloody Sunday → Duma', '3. First World War: over 7 million casualties by 1917'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in 1914, most Russians were peasants under Tsar Nicholas the Second." },
+          { "speaker": "NEO", "text": "Two: Bloody Sunday in 1905 led to the creation of the Duma." },
+          { "speaker": "NEO", "text": "Three: the First World War brought huge losses and food shortages." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "History: Socialism in Europe and the Russian Revolution",
+    "topic_no": 4,
+    "name": "The February and October Revolutions of 1917",
+    "scenes": [
+      {
+        "animation": "Petrograd, winter 1917. Long bread queues in the snow. Women workers walk out of a factory holding banners; the calendar page reads 'International Women's Day'. Zippy shivers in the queue holding an empty basket.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Standing in the snow for bread? I'd start a revolution too." },
+          { "speaker": "NEO", "text": "That's pretty much what happened. In February 1917, women led the way." }
+        ]
+      },
+      {
+        "animation": "A timeline builds across the top: '22 February: factory lockout; women lead strikes', '25 February: Duma suspended', '27 February: police HQ ransacked; soldiers join', '2 March: Tsar abdicates'. A banner appears: 'Petrograd Soviet' and 'Provisional Government'.",
+        "lines": [
+          { "speaker": "NEO", "text": "On 22 February, there was a lockout at a factory. Workers in fifty factories struck in sympathy, and in many factories women led the way. This came to be called International Women's Day." },
+          { "speaker": "NEO", "text": "On 25 February, the government suspended the Duma. Soon soldiers refused to fire on the crowds and joined them. Workers and soldiers formed a council, the Petrograd Soviet." },
+          { "speaker": "NEO", "text": "On 2 March, the Tsar abdicated. A Provisional Government was formed to run the country. This was the February Revolution." }
+        ]
+      },
+      {
+        "animation": "A train pulls into Petrograd station; a man steps out labelled 'Lenin returns from exile, April 1917'. He unrolls a scroll titled 'April Theses' with three points appearing one by one: 'End the war', 'Land to the peasants', 'Nationalise the banks'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In April 1917, the Bolshevik leader Vladimir Lenin returned from exile. He put forward three demands, known as the April Theses." },
+          { "speaker": "NEO", "text": "The war should be brought to a close, land should be transferred to the peasants, and banks should be nationalised." }
+        ]
+      },
+      {
+        "animation": "October timeline pins: '16 October: Lenin persuades the Soviet and the Party', 'Military Revolutionary Committee under Leon Trotskii', '24 October: uprising'. A ship labelled 'Aurora' fires at the Winter Palace. By nightfall, a red flag rises over the city.",
+        "lines": [
+          { "speaker": "NEO", "text": "On 16 October 1917, Lenin persuaded the Petrograd Soviet and the Bolshevik Party to agree to a socialist seizure of power. A Military Revolutionary Committee was appointed under Leon Trotskii." },
+          { "speaker": "NEO", "text": "The uprising began on 24 October. Prime Minister Kerenskii had left the city. The ship Aurora shelled the Winter Palace, and by nightfall the city was under the committee's control." },
+          { "speaker": "ZIPPY", "text": "So the Winter Palace got a very loud wake-up call." }
+        ]
+      },
+      {
+        "animation": "Two calendars sit side by side: 'Julian: 25 October' and 'Gregorian: 7 November'. A label: 'Russia followed the Julian calendar until 1 February 1918'. An 'EXAM TIP' sticker flashes.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, some books call it the November Revolution!" },
+          { "speaker": "NEO", "text": "Good catch. Russia followed the Julian calendar until 1 February 1918. So the October Revolution happened on 7 November by the Gregorian calendar we use." },
+          { "speaker": "NEO", "text": "Exam tip: February brought down the Tsar; October brought the Bolsheviks to power. Don't mix them up." }
+        ]
+      },
+      {
+        "animation": "Recap board with a two-part timeline: '1. February 1917: strikes, Petrograd Soviet, Tsar abdicates', '2. April Theses: end war, land to peasants, nationalise banks', '3. 24 October 1917: Bolsheviks seize power'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the February Revolution ended the monarchy, and a Provisional Government took over." },
+          { "speaker": "NEO", "text": "Two: Lenin's April Theses demanded peace, land and nationalised banks." },
+          { "speaker": "NEO", "text": "Three: on 24 October 1917, the Bolsheviks seized power in Petrograd." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "History: Socialism in Europe and the Russian Revolution",
+    "topic_no": 5,
+    "name": "What Changed After October: Civil War, Planning and Collectivisation",
+    "scenes": [
+      {
+        "animation": "A Russian village. A peasant's small field and his two cows are tagged with a sign 'Collective farm: kolkhoz'. The peasant scratches his head; Zippy pops out from behind a haystack.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Where did his own farm go?" },
+          { "speaker": "NEO", "text": "It became part of a collective farm. But let's first see how the Bolsheviks changed Russia after October." }
+        ]
+      },
+      {
+        "animation": "A checklist writes itself: 'November 1917: most industry and banks nationalised', 'Land declared social property', 'Party renamed Russian Communist Party (Bolshevik)', 'January 1918: Constituent Assembly dismissed', 'March 1918: peace with Germany at Brest Litovsk'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Immediately after the revolution, most industry and banks were nationalised in November 1917. Land was declared social property, and peasants were allowed to seize the land of the nobility." },
+          { "speaker": "NEO", "text": "The Bolshevik Party was renamed the Russian Communist Party. When the Bolsheviks failed to win a majority in the Constituent Assembly, it was dismissed in January 1918." },
+          { "speaker": "NEO", "text": "In March 1918, they made peace with Germany at Brest Litovsk." }
+        ]
+      },
+      {
+        "animation": "The map of Russia fills with coloured armies: red flags labelled 'Reds: Bolsheviks' clash with 'Whites: pro-Tsarists' and 'Greens: Socialist Revolutionaries'. Then the map calms and a planning board appears with 'Five Year Plans: 1927 to 1932, 1933 to 1938'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A civil war followed. The Bolsheviks, called the reds, fought the greens, who were Socialist Revolutionaries, and the whites, who were pro-Tsarists." },
+          { "speaker": "NEO", "text": "After the war, the government introduced centralised planning. Officials worked out how the economy should run and set targets for five years. These were the Five Year Plans, the first from 1927 to 1932 and the second from 1933 to 1938." }
+        ]
+      },
+      {
+        "animation": "Town bread shelves empty; a caption reads '1927 to 1928: grain shortage in towns'. Officials raid richer peasants' storerooms, labelled 'kulaks'. Then '1929: Stalin's collectivisation': small plots merge into one giant field; a cattle counter drops 'one-third, 1929 to 1931'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1927 and 1928, towns in Soviet Russia faced an acute shortage of grain. Party members blamed the better-off peasants, called kulaks, for hoarding." },
+          { "speaker": "NEO", "text": "From 1929, Stalin's Party forced all peasants to cultivate in collective farms, or kolkhoz. Land and implements were transferred to the collective farm, and peasants shared its profit." },
+          { "speaker": "NEO", "text": "Many peasants resisted and killed their livestock. Between 1929 and 1931, the number of cattle fell by one-third. Those who resisted were severely punished, and many were deported and exiled." }
+        ]
+      },
+      {
+        "animation": "A balance scale: on one side 'Industry grew, free education and healthcare'; on the other 'Denial of freedom, repression'. A 'BOARD TIP' card flips over with the words 'kulak, kolkhoz, Five Year Plan'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Russian Revolution gave the world its first socialist state. But its methods also led to harsh repression." },
+          { "speaker": "NEO", "text": "Board tip: the terms kulak, kolkhoz and Five Year Plan are frequently asked in one-mark and short-answer questions." }
+        ]
+      },
+      {
+        "animation": "Recap board with a tractor and a planning chart icon: '1. Nationalisation and Brest Litovsk peace', '2. Civil war: reds, whites, greens; Five Year Plans', '3. Stalin's collectivisation from 1929: kolkhoz'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Bolsheviks nationalised banks and industry and made peace with Germany." },
+          { "speaker": "NEO", "text": "Two: after a civil war, the economy was run through centralised Five Year Plans." },
+          { "speaker": "NEO", "text": "Three: from 1929, Stalin forced peasants into collective farms." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,262 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "History: The Age of Industrialisation",
+    "topic_no": 1,
+    "name": "Before the Industrial Revolution: Proto-industrialisation",
+    "scenes": [
+      {
+        "animation": "Zippy draws the 'Industrial Revolution' as a giant smoking factory on a whiteboard. Neo erases the factory and draws a cosy eighteenth-century village cottage where a whole family spins yarn at one wheel.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hey! Industry means factories. Why did you rub mine out?" },
+          { "speaker": "NEO", "text": "Because even before factories, there was large-scale production for an international market, done in village homes. Historians call it proto-industrialisation." }
+        ]
+      },
+      {
+        "animation": "A town gate guarded by stern cartoon guild masters holding a sign 'Monopoly: no new entrants'. A merchant with a money bag turns away and walks to the countryside, where enclosed fences close around common lands and poor peasants look worried.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the seventeenth and eighteenth centuries, merchants wanted to expand production. But in towns, powerful craft and trade guilds controlled production, regulated prices and restricted new entrants." },
+          { "speaker": "NEO", "text": "So merchants turned to the countryside. Commons were being enclosed, and poor peasants needed extra income. They eagerly took the merchants' advances to produce goods." }
+        ]
+      },
+      {
+        "animation": "A flowchart animates along a road: 'Wool stapler → spinners → weavers → fullers → dyers → finishing in London → export merchant'. Each stage shows a family cottage, with a small counter '20–25 workers per stage'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A merchant clothier in England bought wool from a wool stapler and took it to spinners. The yarn went to weavers, fullers and dyers, and the finishing was done in London." },
+          { "speaker": "NEO", "text": "At each stage, each merchant employed 20 to 25 workers, so one clothier controlled hundreds of workers. The peasants stayed in the village and kept farming their small plots." }
+        ]
+      },
+      {
+        "animation": "A timeline: 'By the 1730s: earliest factories in England', 'late eighteenth century: factories multiply'. A bar chart animates raw cotton imports: '1760: 2.5 million pounds' to '1787: 22 million pounds'. Richard Arkwright opens the doors of a cotton mill and all the scattered cottage processes fly under one roof.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Okay, so when do the factories finally show up?" },
+          { "speaker": "NEO", "text": "The earliest factories in England came up by the 1730s, and multiplied in the late eighteenth century. Cotton was the first symbol of the new era. Britain's raw cotton imports rose from 2.5 million pounds in 1760 to 22 million pounds by 1787." },
+          { "speaker": "NEO", "text": "Richard Arkwright created the cotton mill. All processes came under one roof and management, allowing better supervision, quality control and regulation of labour." }
+        ]
+      },
+      {
+        "animation": "A 'EXAM TIP' card flips over: 'Proto-industrialisation = merchant-controlled, countryside, family labour, international market, no factories'. Four keywords glow in turn.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: when asked what proto-industrialisation means, include four points: production for an international market, controlled by merchants, done in rural homes with family labour, and not in factories." }
+        ]
+      },
+      {
+        "animation": "Recap board with a spinning-wheel icon: '1. Guilds blocked merchants in towns', '2. Proto-industrialisation: village homes, international market', '3. Arkwright's cotton mill brought processes under one roof'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: powerful town guilds pushed merchants to the countryside." },
+          { "speaker": "NEO", "text": "Two: proto-industrialisation meant village families producing for an international market, controlled by merchants." },
+          { "speaker": "NEO", "text": "Three: from the late eighteenth century, factories like Arkwright's cotton mill brought all processes under one roof." },
+          { "speaker": "ZIPPY", "text": "Fine. I'll draw a cottage next to my factory." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "History: The Age of Industrialisation",
+    "topic_no": 2,
+    "name": "The Pace of Change: Hand Labour and Steam Power",
+    "scenes": [
+      {
+        "animation": "A cartoon salesman proudly unveils a shiny steam engine to a Victorian factory owner, who shakes his head and points to a long queue of job-seekers outside his gate.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why would anyone say no to a steam engine? It's magic!" },
+          { "speaker": "NEO", "text": "Because in Victorian Britain, human hands were cheap and plentiful. Industrial change was much slower than you think." }
+        ]
+      },
+      {
+        "animation": "A relay race: a runner labelled 'Cotton' leads until '1840s' and passes the baton to 'Iron and steel', as railways stretch out behind. A bar chart shows '1873: iron and steel exports £77 million, double the value of cotton exports'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cotton was the leading sector until the 1840s. Then, with the spread of railways, iron and steel led the way. By 1873, Britain exported iron and steel worth about 77 million pounds, double its cotton exports." },
+          { "speaker": "NEO", "text": "Yet even at the end of the nineteenth century, less than 20 per cent of the workforce was in technologically advanced industries." }
+        ]
+      },
+      {
+        "animation": "James Watt tinkers with an engine, a patent certificate stamped '1781'; Mathew Boulton stands by a warehouse full of unsold engines. A pie chart builds: '321 steam engines in England: 80 cotton, 9 wool, rest in mining, canals and iron works'.",
+        "lines": [
+          { "speaker": "NEO", "text": "James Watt improved Newcomen's steam engine and patented it in 1781. His friend Mathew Boulton manufactured it, but for years found no buyers." },
+          { "speaker": "NEO", "text": "At the beginning of the nineteenth century, there were no more than 321 steam engines in all of England: 80 in cotton, nine in wool, and the rest in mining, canal works and iron works." }
+        ]
+      },
+      {
+        "animation": "A four-panel grid: 'Plenty of labour → low wages', 'Seasonal work: gas works, breweries, bookbinders before Christmas', '500 varieties of hammers, 45 kinds of axes', 'Upper classes: handmade = refinement'. Each panel lights up in turn.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So why did industrialists prefer hand labour?" },
+          { "speaker": "NEO", "text": "First, labour was plentiful, so wages were low. Second, many industries like gas works, breweries and bookbinders had seasonal demand, so they hired workers for the season." },
+          { "speaker": "NEO", "text": "Third, many products needed skill. Mid-nineteenth-century Britain produced 500 varieties of hammers and 45 kinds of axes. Fourth, the upper classes preferred handmade goods as a sign of refinement." }
+        ]
+      },
+      {
+        "animation": "Job-seekers sleep under bridges and in night shelters. Then women spinners confront a Spinning Jenny with one wheel turning many spindles, label 'James Hargreaves, 1764'. After '1840s', construction cranes, railway stations and tunnels spring up. An 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "For workers, life was hard. Many waited weeks for jobs, and in slumps like the 1830s, unemployment went up to between 35 and 75 per cent in different regions." },
+          { "speaker": "NEO", "text": "The Spinning Jenny, devised by James Hargreaves in 1764, let one worker turn many spindles. Women who survived on hand spinning attacked these machines. Exam tip: 'Why did some industrialists prefer hand labour' needs all four reasons." }
+        ]
+      },
+      {
+        "animation": "Recap board with a hammer icon: '1. Cotton led till the 1840s, then iron and steel', '2. Only 321 steam engines in England, early 1800s', '3. Hand labour preferred: cheap labour, seasonal demand, skill, class taste'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: cotton led industrial growth until the 1840s, then iron and steel." },
+          { "speaker": "NEO", "text": "Two: new technology spread slowly; England had only 321 steam engines in the early nineteenth century." },
+          { "speaker": "NEO", "text": "Three: cheap labour, seasonal demand, skilled products and upper-class tastes kept hand labour alive." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "History: The Age of Industrialisation",
+    "topic_no": 3,
+    "name": "Industrialisation in the Colonies: What Happened to Weavers?",
+    "scenes": [
+      {
+        "animation": "A fine Indian muslin floats across a world map like a magic carpet, and European buyers reach out for it. Zippy tries it on as a cape.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This cloth is so fine, it's practically air!" },
+          { "speaker": "NEO", "text": "Before machine industries, silk and cotton goods from India dominated the international textile market. Then things changed." }
+        ]
+      },
+      {
+        "animation": "A map of India with trade routes: camel caravans move from Punjab to Afghanistan, eastern Persia and Central Asia; ships sail from Surat to the Gulf and Red Sea, and from Masulipatam and Hoogly to Southeast Asia. Then Surat's trade counter drops from 'Rs 16 million (late 1600s)' to 'Rs 3 million (1740s)' while Bombay and Calcutta light up.",
+        "lines": [
+          { "speaker": "NEO", "text": "Surat on the Gujarat coast connected India to the Gulf and Red Sea ports. Masulipatam on the Coromandel coast and Hoogly in Bengal traded with Southeast Asia." },
+          { "speaker": "NEO", "text": "As European companies gained monopoly rights, old ports declined. Trade through Surat fell from 16 million rupees in the late seventeenth century to 3 million by the 1740s. Bombay and Calcutta grew instead." }
+        ]
+      },
+      {
+        "animation": "An arrogant cartoon gomastha marches into a weaving village with sepoys, holding a register. A weaver receives a loan bag with a chain attached leading to the East India Company office. Some weavers pack their looms and leave the village.",
+        "lines": [
+          { "speaker": "NEO", "text": "After establishing political power, the East India Company wanted regular supplies. It appointed a paid servant called the gomastha to supervise weavers, collect supplies and examine quality." },
+          { "speaker": "NEO", "text": "Weavers who took the Company's advances had to hand over cloth only to the gomastha. Gomasthas were outsiders who punished weavers for delays. Many weavers deserted villages or revolted." }
+        ]
+      },
+      {
+        "animation": "Two opposite bar charts animate. 'Piece-goods share of India's exports: 33% (1811-12) → 3% (1850-51)'. 'Cotton piece-goods share of India's imports: over 31% (1850) → over 50% (1870s)'. Bales stamped 'MANCHESTER' pile up in an Indian market.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Then why did Indian exports fall?" },
+          { "speaker": "NEO", "text": "Britain put import duties on cotton textiles to protect Manchester goods, and British cloth was sold in India. In 1811-12, piece-goods were 33 per cent of India's exports. By 1850-51 they were no more than 3 per cent." },
+          { "speaker": "NEO", "text": "Meanwhile, cotton piece-goods rose to over 31 per cent of India's imports by 1850, and over 50 per cent by the 1870s." }
+        ]
+      },
+      {
+        "animation": "An American Civil War cannon blocks US cotton ships; British ships turn to India, and a raw cotton price tag in India shoots up while a weaver's basket stays empty. An 'EXAM TIP' card: 'Weavers' problems: export market collapsed, local market glutted, costly raw cotton, Indian factories'.",
+        "lines": [
+          { "speaker": "NEO", "text": "By the 1860s, the American Civil War cut off US cotton, so Britain bought raw cotton from India. Prices shot up, and weavers could not afford good raw cotton." },
+          { "speaker": "NEO", "text": "Exam tip: list the weavers' problems in order: collapsing exports, a local market flooded by Manchester, costly raw cotton, and later, Indian factories." }
+        ]
+      },
+      {
+        "animation": "Recap board with a loom icon: '1. Surat and Hoogly declined; Bombay and Calcutta grew', '2. Gomasthas and advances tied weavers to the Company', '3. Manchester imports: exports 33% → 3%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: as European companies took control, Surat and Hoogly declined, and Bombay and Calcutta grew." },
+          { "speaker": "NEO", "text": "Two: the Company used gomasthas and advances to control weavers." },
+          { "speaker": "NEO", "text": "Three: Manchester goods flooded India, and textile exports fell from 33 to 3 per cent." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "History: The Age of Industrialisation",
+    "topic_no": 4,
+    "name": "Factories Come Up in India",
+    "scenes": [
+      {
+        "animation": "Zippy wears a hard hat on a building site in 1850s Bombay; a mill chimney rises behind him with a sign 'First cotton mill, 1854'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Finally, Indian factories! Who built them?" },
+          { "speaker": "NEO", "text": "Traders who had made money in other businesses. Let's watch the mills come up." }
+        ]
+      },
+      {
+        "animation": "An animated timeline with an India map, pins dropping as dates appear: '1854: first cotton mill, Bombay (production two years later)', '1855: first jute mill, Bengal', '1862: another jute mill; 4 Bombay mills with 94,000 spindles and 2,150 looms', '1860s: Elgin Mill, Kanpur', 'a year later: first cotton mill, Ahmedabad', '1874: first spinning and weaving mill, Madras'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The first cotton mill in Bombay came up in 1854 and went into production two years later. The first jute mill in Bengal came up in 1855." },
+          { "speaker": "NEO", "text": "The Elgin Mill was started in Kanpur in the 1860s, and a year later the first cotton mill of Ahmedabad. By 1874, the first spinning and weaving mill of Madras began production." }
+        ]
+      },
+      {
+        "animation": "Portrait cards flip in with labels: 'Dwarkanath Tagore: China trade; six joint-stock companies, 1830s-40s', 'Dinshaw Petit and Jamsetjee Nusserwanjee Tata: China exports, raw cotton to England', 'Seth Hukumchand: first Indian jute mill, Calcutta, 1917', 'J.N. Tata: iron and steel works, Jamshedpur, 1912'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Many early entrepreneurs made money in the China trade. In Bengal, Dwarkanath Tagore set up six joint-stock companies in the 1830s and 1840s." },
+          { "speaker": "NEO", "text": "In Bombay, Parsis like Dinshaw Petit and Jamsetjee Nusserwanjee Tata built huge industrial empires. Seth Hukumchand set up the first Indian jute mill in Calcutta in 1917. In 1912, J. N. Tata set up the first iron and steel works in India at Jamshedpur." }
+        ]
+      },
+      {
+        "animation": "A village-to-city path: workers walk from Ratnagiri to Bombay mills, labelled 'over 50% of Bombay cotton workers in 1911'. At the mill gate, a jobber in a fancy turban takes gifts from newcomers. Next, a bar chart: 'Cotton piece-goods production doubled, 1900–1912'; a 'First World War' banner shows Indian mills making jute bags, uniforms, tents and boots.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "And who worked in these mills?" },
+          { "speaker": "NEO", "text": "Mostly people from nearby districts. In 1911, over 50 per cent of Bombay's cotton mill workers came from Ratnagiri. Industrialists used a jobber, often an old trusted worker, who later began demanding money and gifts." },
+          { "speaker": "NEO", "text": "During the First World War, Manchester imports declined and Indian mills supplied the army with jute bags, uniforms, tents and boots. Industrial production boomed." }
+        ]
+      },
+      {
+        "animation": "A bar chart: 'Workers in registered factories: 5% (1911), 10% (1931)'. A handloom with a fly shuttle speeds up; a label reads 'Handloom cloth production almost trebled, 1900–1940'. An 'EXAM TIP' card: 'Why did production increase during WWI?'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Still, small-scale industries predominated. Only 5 per cent of industrial workers were in registered factories in 1911, and 10 per cent in 1931. Handloom production almost trebled between 1900 and 1940, helped by the fly shuttle." },
+          { "speaker": "NEO", "text": "Exam tip: 'Why did Indian industrial production increase during the First World War' is a textbook question. Mention falling Manchester imports and war supplies." }
+        ]
+      },
+      {
+        "animation": "Recap board with a chimney icon: '1. Bombay 1854, Bengal jute 1855, Kanpur, Ahmedabad, Madras 1874', '2. Entrepreneurs from the China trade; jobbers recruited workers', '3. WWI boom; small-scale industry still predominant'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Indian mills began in Bombay in 1854 and spread to Bengal, Kanpur, Ahmedabad and Madras." },
+          { "speaker": "NEO", "text": "Two: many entrepreneurs made their money in the China trade, and jobbers controlled recruitment." },
+          { "speaker": "NEO", "text": "Three: the First World War boosted Indian industry, but small-scale production still predominated." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "History: The Age of Industrialisation",
+    "topic_no": 5,
+    "name": "Market for Goods: Labels, Calendars and Advertisements",
+    "scenes": [
+      {
+        "animation": "A TV ad break plays in Zippy's living room: a cricket star sells a soft drink. Zippy grabs his wallet. Then the TV fades into an old cloth bundle label with 'MADE IN MANCHESTER' in bold.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I don't even like that drink, but now I want it!" },
+          { "speaker": "NEO", "text": "That's the power of advertising. It has shaped consumers since the very beginning of the industrial age." }
+        ]
+      },
+      {
+        "animation": "Manchester cloth bundles get labels stamped 'MADE IN MANCHESTER'. The labels bloom with illustrations of Indian gods and goddesses, like Kartika, Lakshmi and Saraswati, and a portrait of Maharaja Ranjit Singh.",
+        "lines": [
+          { "speaker": "NEO", "text": "Manchester industrialists put labels on cloth bundles to make the place of manufacture and company familiar, and as a mark of quality." },
+          { "speaker": "NEO", "text": "Images of Indian gods and goddesses appeared on the labels, as if giving divine approval. They also made foreign goods look familiar to Indian people." }
+        ]
+      },
+      {
+        "animation": "A calendar hangs in a chai shop, then in a poor home, then in an office. The pages flip through a year; the product advertisement stays visible every day. Example: a 1934 Sunlight soap calendar with God Vishnu bringing sunlight across the skies.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why calendars? Why not newspapers?" },
+          { "speaker": "NEO", "text": "Because calendars were used even by people who could not read. They hung in tea shops and poor people's homes as much as in offices, so people saw the advertisement day after day." },
+          { "speaker": "NEO", "text": "Figures of emperors and nawabs were also used. The message was: if you respect the royal figure, respect this product." }
+        ]
+      },
+      {
+        "animation": "An Indian mill cloth label shows a goddess offering cloth from an Ahmedabad mill, with a caption 'Use things made in India'. The word 'SWADESHI' glows over the label. An 'EXAM TIP' card flips in.",
+        "lines": [
+          { "speaker": "NEO", "text": "When Indian manufacturers advertised, the nationalist message was loud and clear: if you care for the nation, buy products Indians produce. Advertisements became a vehicle of swadeshi." },
+          { "speaker": "NEO", "text": "Exam tip: in source-based questions on labels or calendars, explain the purpose of each image: divine approval, familiarity, royal respect or nationalism." }
+        ]
+      },
+      {
+        "animation": "A split frame returns to the chapter's opening images: the 1900 'Dawn of the Century' angel of progress, and beside her, a weaver with a fly-shuttle loom. Caption: 'Industrialisation = machines AND hand labour'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So the age of industries meant new technology and factories, but hand technology and small-scale production remained an important part of the story." }
+        ]
+      },
+      {
+        "animation": "Recap board with a label icon: '1. Labels: place of make + mark of quality', '2. Gods, royals and calendars made products familiar and respected', '3. Indian ads carried the swadeshi message'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: labels made the manufacturer familiar and signalled quality." },
+          { "speaker": "NEO", "text": "Two: images of gods and royal figures, and calendars, helped sell new products even to people who could not read." },
+          { "speaker": "NEO", "text": "Three: Indian manufacturers used advertisements to spread the message of swadeshi." },
+          { "speaker": "ZIPPY", "text": "From now on, I'm reading every ad like a historian." }
+        ]
+      }
+    ]
+  }
+]

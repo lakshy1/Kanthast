@@ -1,0 +1,272 @@
+[
+  {
+    "chapter_no": 8,
+    "chapter": "Heredity",
+    "topic_no": 1,
+    "name": "Accumulation of Variation",
+    "scenes": [
+      {
+        "animation": "A colourful wedding family photo. Zippy zooms in with a magnifying glass: a cousin's nose glows and a dotted line links it to Grandpa's nose, while the cousin's brother has a different nose with a question mark over it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, my cousin has Grandpa's nose, but his own brother doesn't. Who decided that?" },
+          { "speaker": "NEO", "text": "Heredity and variation, working together. Heredity passes traits on reliably. Variation makes each child a little different." }
+        ]
+      },
+      {
+        "animation": "A parent cartoon and offspring cartoon stand side by side with matching body outlines; small differences glow in orange. Labels: 'Heredity = inheritance of traits', 'common body design + subtle differences'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Heredity means the inheritance of traits from one generation to the next." },
+          { "speaker": "NEO", "text": "Reproduction gives offspring a common basic body design, along with subtle changes in it." }
+        ]
+      },
+      {
+        "animation": "A generation tree builds from top to bottom, as in the textbook figure: one organism gives two in the first generation, each with one coloured dot of difference; the next generation keeps the old dot and adds a new one, so dots pile up. Label: 'variations accumulate'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Watch this tree for an asexually reproducing organism. The first generation has two individuals, slightly different because DNA copying is not perfect." },
+          { "speaker": "NEO", "text": "In the second generation, each one passes on its difference and adds a new one. So variations accumulate over generations." }
+        ]
+      },
+      {
+        "animation": "Split screen: left side shows asexual offspring in a row, near-identical, labelled 'minor differences'; right side shows two parents whose DNA strands braid together, producing a varied row of offspring labelled 'greater diversity'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is there more variation in asexual or sexual reproduction?" },
+          { "speaker": "NEO", "text": "In asexual reproduction, the differences are very minor, caused only by small errors in DNA copying." },
+          { "speaker": "NEO", "text": "In sexual reproduction, DNA from two individuals combines. So it generates much greater diversity." }
+        ]
+      },
+      {
+        "animation": "A group of cartoon bacteria faces a heat wave; the sun icon pulses and a thermometer rises. Only the bacteria wearing tiny sun-hats survive and multiply. Label: 'environment selects variants'. Tip card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Are all variations equally useful?" },
+          { "speaker": "NEO", "text": "No. Different individuals have different kinds of advantages, depending on the environment." },
+          { "speaker": "NEO", "text": "For example, bacteria that can withstand heat will survive better in a heat wave." },
+          { "speaker": "NEO", "text": "The selection of such variants by environmental factors forms the basis for evolutionary processes." },
+          { "speaker": "NEO", "text": "Board tip: if asked why sexual reproduction gives more variation, write that it combines DNA from two different individuals." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard as three recap points appear with ticks: '1. Heredity: traits passed on', '2. Variations accumulate; sexual > asexual', '3. Environment selects useful variants'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: heredity is the inheritance of traits, with a common body design and small variations." },
+          { "speaker": "NEO", "text": "Two: variations accumulate over generations, and sexual reproduction creates far more variation than asexual reproduction." },
+          { "speaker": "NEO", "text": "Three: variations give different survival advantages, and the environment selects the useful ones." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Heredity",
+    "topic_no": 2,
+    "name": "Mendel and the Monohybrid Cross",
+    "scenes": [
+      {
+        "animation": "A kitchen table heaped with pea pods. Neo sits with a notebook, sorting peas into labelled bowls and tallying marks. Zippy peeks in holding a sabzi ladle.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, why are you counting peas? Is this for tonight's sabzi?" },
+          { "speaker": "NEO", "text": "Not sabzi, science. A monk named Gregor Mendel counted pea plants like this and discovered the rules of inheritance." }
+        ]
+      },
+      {
+        "animation": "Two parent silhouettes each hand over a DNA bundle of equal size to a child silhouette. Then three pairs of contrasting pea traits appear as cards: 'round / wrinkled seeds', 'tall / short plants', 'violet / white flowers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Both the father and the mother contribute practically equal amounts of genetic material to the child. So each child has two versions of every trait, one from each parent." },
+          { "speaker": "NEO", "text": "Mendel used garden peas with clear contrasting traits, like round or wrinkled seeds, tall or short plants, and violet or white flowers." }
+        ]
+      },
+      {
+        "animation": "A tall pea plant and a short pea plant stand on two pots with a '×' between them. A row of F1 plants pops up below, all tall. Label: 'F1: all tall'. Zippy scratches his head.",
+        "lines": [
+          { "speaker": "NEO", "text": "He crossed a pure tall plant with a pure short plant. The first generation, called F1, were all tall. None were medium height." },
+          { "speaker": "ZIPPY", "text": "So the short trait just vanished?" },
+          { "speaker": "NEO", "text": "That's what it looks like. Let's check the next generation." }
+        ]
+      },
+      {
+        "animation": "An F1 tall plant self-pollinates with a small sparkle. Four F2 plants grow: three tall and one short, which pops up with a cheeky wave. Label: 'F2: 3/4 tall, 1/4 short'. Words 'dominant' and 'recessive' stamp onto the tall and short plants.",
+        "lines": [
+          { "speaker": "NEO", "text": "He let the F1 plants self-pollinate. In the F2 generation, three quarters were tall and one quarter were short." },
+          { "speaker": "NEO", "text": "So the F1 plants carried the short trait, hidden. The trait that shows is called dominant, here tallness. The hidden one is recessive, here shortness." }
+        ]
+      },
+      {
+        "animation": "A checkerboard builds: parents 'TT' and 'tt' give F1 'Tt'. Then a 2 by 2 grid for 'Tt × Tt' fills in with 'TT', 'Tt', 'Tt', 'tt'; three boxes turn green (tall), one turns grey (short). Ratio '3 : 1' and '1 TT : 2 Tt : 1 tt' appear. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now with letters. A pure tall plant is TT, and a pure short plant is tt. The F1 is Tt, and it's tall, because a single copy of T is enough for tallness." },
+          { "speaker": "NEO", "text": "Crossing Tt with Tt gives TT, Tt, Tt and tt. That's three tall to one short, a three to one ratio. By letters, it's one TT, two Tt, one tt." },
+          { "speaker": "NEO", "text": "Board tip: a tall plant can be TT or Tt, but a short plant must be tt. Always show the checkerboard, it earns marks." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard beside a small checkerboard thumbnail as recap points appear: '1. Both parents contribute equally', '2. F1 all tall: tall is dominant', '3. F2 = 3 tall : 1 short'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: both parents contribute practically equal genetic material, so every trait has two copies." },
+          { "speaker": "NEO", "text": "Two: when pure tall and pure short plants are crossed, all F1 plants are tall, so tallness is dominant." },
+          { "speaker": "NEO", "text": "Three: self-pollinating F1 gives an F2 ratio of three tall to one short, bringing back the recessive trait." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Heredity",
+    "topic_no": 3,
+    "name": "Dihybrid Cross and Independent Inheritance",
+    "scenes": [
+      {
+        "animation": "A snack counter menu board lists 'Round Yellow', 'Wrinkled Green' combos. Zippy points at the board and orders a combo that isn't listed; the shopkeeper, a talking pea pod, shrugs.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "One round green pea combo, please! Wait, that's not on the menu." },
+          { "speaker": "NEO", "text": "In Mendel's garden, new combos did appear. Let's see how, when we track two traits at once." }
+        ]
+      },
+      {
+        "animation": "Two parent pea seeds appear with labels: 'Round, green: RRyy' and 'Wrinkled, yellow: rrYY', with a '×' between. A row of F1 seeds pops out, all round and yellow, labelled 'RrYy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mendel crossed plants with round, green seeds and plants with wrinkled, yellow seeds. Round is R, and yellow is Y." },
+          { "speaker": "NEO", "text": "All the F1 seeds were round and yellow. So round is dominant over wrinkled, and yellow is dominant over green." }
+        ]
+      },
+      {
+        "animation": "The F1 plant self-pollinates. Four gamete types slide out as tiles: 'RY', 'Ry', 'rY', 'ry'. A 4 by 4 checkerboard fills box by box with sixteen seed icons.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "And when the F1 plants self-pollinate?" },
+          { "speaker": "NEO", "text": "Each F1 plant makes germ cells with four combinations: RY, Ry, rY and ry. Put them in a sixteen-box checkerboard." }
+        ]
+      },
+      {
+        "animation": "The sixteen boxes sort themselves into four colour-coded groups: 9 round yellow, 3 round green, 3 wrinkled yellow, 1 wrinkled green. Ratio '9 : 3 : 3 : 1' bounces up; the two new combinations sparkle with a 'NEW!' tag.",
+        "lines": [
+          { "speaker": "NEO", "text": "The F2 has four kinds of seeds: nine round yellow, three round green, three wrinkled yellow and one wrinkled green, out of sixteen." },
+          { "speaker": "NEO", "text": "Look at round green and wrinkled yellow. Neither F1 plant looked like that. These are new combinations." }
+        ]
+      },
+      {
+        "animation": "Two separate conveyor belts, one carrying 'seed shape' tiles and one carrying 'seed colour' tiles, move without touching each other and meet only at the end to form combinations. Label: 'inherited independently'. Tip card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So seed shape and seed colour don't travel together?" },
+          { "speaker": "NEO", "text": "Right. New combinations mean the two traits are inherited independently of each other." },
+          { "speaker": "NEO", "text": "Mendel saw the same with tall plants and round seeds. The F2 included tall plants with wrinkled seeds, and short plants with round seeds." },
+          { "speaker": "NEO", "text": "Board tip: learn the 9 to 3 to 3 to 1 ratio, and write that new combinations prove independent inheritance. Also check each trait alone: twelve round to four wrinkled is still three to one." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard beside a mini 4 by 4 grid as recap points appear: '1. F1 all round yellow', '2. F2 = 9 : 3 : 3 : 1', '3. New combinations → independent inheritance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: crossing round green with wrinkled yellow gives F1 seeds that are all round and yellow." },
+          { "speaker": "NEO", "text": "Two: the F2 shows four types in the ratio nine to three to three to one." },
+          { "speaker": "NEO", "text": "Three: new combinations appear, showing that different traits are inherited independently." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Heredity",
+    "topic_no": 4,
+    "name": "How Do Traits Get Expressed?",
+    "scenes": [
+      {
+        "animation": "A giant letter 'T' stands next to a pea plant, holding a megaphone and shouting at it; the plant doesn't budge. Zippy watches, confused.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, how does the letter T make a pea plant tall? Does it just shout 'grow'?" },
+          { "speaker": "NEO", "text": "Ha! No. The T stands for a gene, and genes work through proteins. Let's see how." }
+        ]
+      },
+      {
+        "animation": "Zoom into a cell nucleus, where a long DNA strand unrolls like a recipe scroll. One highlighted section is labelled 'gene'; an arrow leads from it to a folded protein shape labelled 'protein'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cellular DNA is the information source for making proteins." },
+          { "speaker": "NEO", "text": "A section of DNA that provides information for one protein is called the gene for that protein." }
+        ]
+      },
+      {
+        "animation": "Split screen of two pea plants. Left: a speedy enzyme character churns out many 'hormone' drops, and the plant grows tall. Right: a sleepy enzyme makes only a few drops, and the plant stays short. Labels: 'efficient enzyme' and 'less efficient enzyme'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Plants have hormones that can trigger growth. Plant height depends on the amount of a particular plant hormone." },
+          { "speaker": "NEO", "text": "The amount of hormone made depends on how efficient an enzyme is in making it. And that enzyme is a protein, made using a gene." },
+          { "speaker": "NEO", "text": "If the gene gives an efficient enzyme, a lot of hormone is made, and the plant is tall. If the gene is altered and the enzyme is less efficient, less hormone is made, and the plant is short." },
+          { "speaker": "ZIPPY", "text": "So genes control traits by controlling proteins!" }
+        ]
+      },
+      {
+        "animation": "A cell shows its DNA as several separate coloured rods rather than one thread, labelled 'chromosomes'. Each rod has a partner; one of each pair is tinted blue ('from father') and one pink ('from mother').",
+        "lines": [
+          { "speaker": "NEO", "text": "Both parents contribute equally to the DNA of the offspring. But each gene set is not one long thread. It is present as separate, independent pieces called chromosomes." },
+          { "speaker": "NEO", "text": "Each cell has two copies of each chromosome, one from the male parent and one from the female parent." }
+        ]
+      },
+      {
+        "animation": "The paired chromosomes split so each germ cell receives one from every pair. A male and a female germ cell then merge, and the chromosome count on a counter returns to normal with a satisfying 'ding'. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "When germ cells form, each one takes just one chromosome from each pair. When a male and a female germ cell combine, the normal number of chromosomes is restored." },
+          { "speaker": "NEO", "text": "This keeps the DNA of the species stable across generations." },
+          { "speaker": "ZIPPY", "text": "And since each pair is sorted separately, traits can mix in new combinations!" },
+          { "speaker": "NEO", "text": "Exactly. That explains independent inheritance. Board tip: 'a gene is a section of DNA that provides information for one protein' is a frequent one-mark answer." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard as recap points appear with small icons: '1. Gene → protein', '2. Efficient enzyme → more hormone → tall', '3. Germ cells get one chromosome of each pair'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a gene is a section of DNA that provides information for one protein." },
+          { "speaker": "NEO", "text": "Two: genes control traits through proteins, like an enzyme that decides how much growth hormone a plant makes." },
+          { "speaker": "NEO", "text": "Three: germ cells carry one chromosome from each pair, so fertilisation restores the normal number." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Heredity",
+    "topic_no": 5,
+    "name": "Sex Determination",
+    "scenes": [
+      {
+        "animation": "A sandy nest of cartoon reptile eggs with a thermometer stuck in the sand. Zippy holds a clipboard; as the thermometer needle moves up and down, little 'M' and 'F' tags flicker above the eggs.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, is it true that for some animals, a thermometer decides whether the baby is male or female?" },
+          { "speaker": "NEO", "text": "In some animals, yes. The temperature at which fertilised eggs are kept decides the sex of the young ones." }
+        ]
+      },
+      {
+        "animation": "A cartoon snail slides across a leaf and its label flips from 'male' to 'female' with a card-flip effect. Then a human silhouette appears with a DNA icon and the label 'genetically determined'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In some animals like snails, individuals can even change sex. So sex is not always decided by genes." },
+          { "speaker": "NEO", "text": "But in human beings, the sex of the individual is largely genetically determined." }
+        ]
+      },
+      {
+        "animation": "A neat chart of 23 chromosome pairs appears; 22 matched pairs glow grey, and the 23rd pair is highlighted. For the female chart it shows 'XX'; for the male chart it shows 'X' with a shorter 'Y'. Label: 'sex chromosomes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Humans have 23 pairs of chromosomes. Twenty-two pairs are matched in both males and females." },
+          { "speaker": "NEO", "text": "The 23rd pair is the sex chromosomes. Women have a perfect pair, called X and X. Men have a mismatched pair: one normal-sized X and one short Y." }
+        ]
+      },
+      {
+        "animation": "A cross diagram builds: mother 'XX' gives only 'X' eggs; father 'XY' gives 'X' sperms and 'Y' sperms. Arrows combine them into 'XX: girl' and 'XY: boy', each tagged '50%'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So how is the sex of a child decided?" },
+          { "speaker": "NEO", "text": "All children get an X chromosome from their mother, because she has only X chromosomes to give." },
+          { "speaker": "NEO", "text": "So the sex depends on what the child inherits from the father. An X from the father gives a girl, and a Y gives a boy." },
+          { "speaker": "NEO", "text": "Since half the sperms carry X and half carry Y, the chance of a girl or a boy is equal." }
+        ]
+      },
+      {
+        "animation": "An old-fashioned speech bubble reading 'It's the mother's fault!' appears; Neo pops it with a pin, and the words 'Myth' and 'Science: depends on father's chromosome' appear. Tip card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So blaming a mother for having a daughter makes no sense!" },
+          { "speaker": "NEO", "text": "None at all. Science shows the mother always contributes an X. And both daughters and sons are equally welcome." },
+          { "speaker": "NEO", "text": "Board tip: draw the XX by XY cross diagram in your answer. It is the clearest way to show why the chance is fifty-fifty." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard beside a mini XX by XY cross diagram as recap points appear: '1. Some animals: temperature decides sex', '2. Humans: XX female, XY male', '3. Father's X or Y decides the child's sex'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in some animals, the temperature of the fertilised eggs decides the sex, and snails can change sex." },
+          { "speaker": "NEO", "text": "Two: in humans, sex is genetically determined, with women having XX and men having XY." },
+          { "speaker": "NEO", "text": "Three: the mother always gives an X, so the father's X or Y decides whether the child is a girl or a boy." }
+        ]
+      }
+    ]
+  }
+]

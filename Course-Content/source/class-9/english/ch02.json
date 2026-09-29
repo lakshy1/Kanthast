@@ -1,0 +1,333 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 1,
+    "name": "Descriptive Paragraph: Describing a Person",
+    "scenes": [
+      {
+        "animation": "Zippy holds up a paragraph about his grandmother that reads only 'She is nice. She is good. She is very nice.' The page yawns, stretches and falls asleep on the desk.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I described my nani. She is nice, she is good, she is very nice. Why is my page snoring?" },
+          { "speaker": "NEO", "text": "Because it tells, but it doesn't show. A descriptive paragraph should let the reader see the person." }
+        ]
+      },
+      {
+        "animation": "A task card slides in: 'Descriptive Paragraph | 100 to 120 words | a person, event or situation | visual or verbal cue | 5 marks | choose 1 of 2'. Each part lights up in turn.",
+        "lines": [
+          { "speaker": "NEO", "text": "In your Class 9 paper, you write a descriptive paragraph of 100 to 120 words, based on a picture or a few verbal cues." },
+          { "speaker": "NEO", "text": "It carries five marks, and you choose one out of two questions." }
+        ]
+      },
+      {
+        "animation": "A portrait of Nani is painted layer by layer: silver hair and round spectacles (appearance), a hand stirring halwa (habits), a group of neighbourhood children around her (qualities), a warm glow in the narrator's heart (impression). Labels pop beside each layer.",
+        "lines": [
+          { "speaker": "NEO", "text": "Build the person in four layers. First, appearance: my nani has silver hair and round spectacles that slide down her nose." },
+          { "speaker": "NEO", "text": "Second, habits and actions: every Sunday, she stirs a pot of halwa and hums old songs." },
+          { "speaker": "NEO", "text": "Third, qualities, with an example. Fourth, your own feeling about the person." }
+        ]
+      },
+      {
+        "animation": "A see-saw: on one side 'She is kind' (light, floats up); on the other 'She saves the first roti for the stray dog at our gate' (heavy, sinks down). Label: 'Show, don't just tell'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So instead of she is kind, I say she saves the first roti for the stray dog at our gate?" },
+          { "speaker": "NEO", "text": "Exactly. One real detail is worth three adjectives." },
+          { "speaker": "NEO", "text": "Use vivid words, and keep one tense, usually the present for a person you know well." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Describe a person who has inspired you, using the cues: appearance, nature, what you learnt.' A three-part plan appears: 'Opening line | Body: cues in order | Closing impression'. A sticker: 'EXAM TIP: use every cue'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A common question: describe a person who inspires you, with cues given." },
+          { "speaker": "NEO", "text": "Answer approach: an opening line that introduces the person, then cover each cue in order, then a closing line about their effect on you." },
+          { "speaker": "NEO", "text": "Exam tip: examiners check that every cue is used. A missing cue means missing content marks, so tick them off as you write." }
+        ]
+      },
+      {
+        "animation": "Recap board with Nani's portrait, now wide awake and smiling. Points appear: '1. 100 to 120 words, from visual or verbal cues', '2. Appearance, habits, qualities, impression', '3. Show with details; cover every cue'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a descriptive paragraph is 100 to 120 words, based on cues." },
+          { "speaker": "NEO", "text": "Two: build appearance, habits, qualities and your impression." },
+          { "speaker": "NEO", "text": "Three: show with real details, and cover every cue." },
+          { "speaker": "ZIPPY", "text": "My nani's halwa deserves at least 120 words." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 2,
+    "name": "Descriptive Paragraph: Describing an Event or Situation",
+    "scenes": [
+      {
+        "animation": "A school sports day. Zippy's report floats above: 'Sports day happened. It was fun. Then it ended.' A disappointed trophy slumps on the podium.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Sports day happened, it was fun, then it ended. That covers everything, right?" },
+          { "speaker": "NEO", "text": "That covers nothing. When you describe an event, the reader should feel they were standing in the crowd." }
+        ]
+      },
+      {
+        "animation": "Five senses icons orbit the stadium: an eye (colourful flags), an ear (whistles and cheering), a nose (the smell of wet grass), a tongue (cold lemonade), a hand (a sweaty baton). Each icon drops a phrase onto the page.",
+        "lines": [
+          { "speaker": "NEO", "text": "Use the senses. What did you see, hear and smell? Colourful flags fluttered, whistles shrieked, and the smell of wet grass filled the air." },
+          { "speaker": "NEO", "text": "Sense details turn a list of facts into a scene." },
+          { "speaker": "ZIPPY", "text": "So I should mention the cold lemonade after my race?" },
+          { "speaker": "NEO", "text": "Yes, if it helps the reader taste the moment with you." }
+        ]
+      },
+      {
+        "animation": "A timeline arrow builds across the page: 'Setting (when, where)' -> 'Main moments in order' -> 'Your feeling at the end'. Small icons appear: a calendar, a relay race, a smiling face.",
+        "lines": [
+          { "speaker": "NEO", "text": "Organise it in order. Start with the setting: when and where it happened." },
+          { "speaker": "NEO", "text": "Then describe the main moments in sequence, and end with how you felt or what it meant." },
+          { "speaker": "ZIPPY", "text": "Beginning, middle, feeling. Like a mini movie." }
+        ]
+      },
+      {
+        "animation": "A monsoon street scene flickers in as a second example: 'a situation'. Rain floods a road; children float paper boats; a scooter splashes through. Past-tense verbs light up: 'poured', 'floated', 'splashed'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A situation works the same way. For a flooded street after heavy rain, describe the scene, the people's reactions, and the mood." },
+          { "speaker": "NEO", "text": "For a past event, stay in the past tense from start to finish. Switching tenses is a common error." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Describe the Annual Day celebration of your school in 100 to 120 words.' A plan builds: 'Date and venue | Chief guest, performances | Best moment | Your feeling'. A 'EXAM TIP' sticker: 'Title + word limit'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A likely question: describe your school's Annual Day." },
+          { "speaker": "NEO", "text": "Answer approach: date and venue, the main performances, one special moment in detail, and your feeling at the end." },
+          { "speaker": "NEO", "text": "Exam tip: stay close to 120 words. Going far beyond the limit wastes time and adds errors." }
+        ]
+      },
+      {
+        "animation": "Recap board with the trophy standing proud again. Points appear: '1. Use the five senses', '2. Setting, moments in order, feeling', '3. Keep one tense; respect the word limit'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: use sense details to bring the scene alive." },
+          { "speaker": "NEO", "text": "Two: move from setting to main moments to your feeling." },
+          { "speaker": "NEO", "text": "Three: keep one tense and stay within the word limit." },
+          { "speaker": "ZIPPY", "text": "The whistle shrieked, the crowd roared, and Zippy won the sack race. Allegedly." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 3,
+    "name": "Story Writing",
+    "scenes": [
+      {
+        "animation": "A campfire at night. Zippy tells a story: 'Once upon a time there was a boy. Then he found a box. The end.' The campfire sputters out in boredom.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Once there was a boy, he found a box, the end. Why did the fire go out?" },
+          { "speaker": "NEO", "text": "Your story has no problem, no suspense and no ending worth waiting for. Let's rebuild it." }
+        ]
+      },
+      {
+        "animation": "A task card: 'Story Writing | 100 to 120 words | on a given cue or title | 5 marks | choose 1 of 2 (story or diary entry)'. Then a story mountain rises: 'Beginning -> Problem -> Climax -> Resolution'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In your paper, you write a story of 100 to 120 words from a given opening line or title. It is five marks, with a choice between a story and a diary entry." },
+          { "speaker": "NEO", "text": "Every good story climbs a mountain: a beginning, a problem, a climax, and a resolution." }
+        ]
+      },
+      {
+        "animation": "The cue appears: 'Rohan opened the old tin box and gasped.' The mountain fills in: a dusty attic (beginning), a faded map and a note (problem), a race to the old banyan tree (climax), grandfather's childhood letters found (resolution).",
+        "lines": [
+          { "speaker": "NEO", "text": "Suppose the cue is: Rohan opened the old tin box and gasped. Start from exactly that line." },
+          { "speaker": "NEO", "text": "Build a problem: inside is a faded map pointing to the old banyan tree. Climax: he digs there as it begins to rain." },
+          { "speaker": "NEO", "text": "Resolution: he finds his grandfather's childhood letters, a treasure of a different kind." }
+        ]
+      },
+      {
+        "animation": "Tool badges clip onto the story: 'Title', 'Past tense', 'One line of dialogue', 'Clear ending'. A short speech bubble from Rohan appears: 'Dadaji, these are yours!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can I add dialogue?" },
+          { "speaker": "NEO", "text": "Yes, one or two short lines make a story lively. But keep the story in the past tense, and give it a title." },
+          { "speaker": "NEO", "text": "With only 120 words, use one main event and just two or three characters." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Complete the story: \"It was the day of the final match, and our best player was missing...\"' A checklist ticks: 'Use the cue as given', 'Title', 'Conflict and ending', 'Word limit'. Sticker: 'EXAM TIP'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: complete a story from a cue about a missing player on match day." },
+          { "speaker": "NEO", "text": "Answer approach: continue from the cue, raise the tension, and solve the problem clearly by the end." },
+          { "speaker": "NEO", "text": "Exam tip: do not change the given cue or its characters. Examiners check that your story grows out of it." }
+        ]
+      },
+      {
+        "animation": "Recap board by the relit campfire. Points appear: '1. 100 to 120 words from a cue or title', '2. Beginning, problem, climax, resolution', '3. Title, past tense, short dialogue'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: write 100 to 120 words, starting from the given cue or title." },
+          { "speaker": "NEO", "text": "Two: climb the mountain: beginning, problem, climax and resolution." },
+          { "speaker": "NEO", "text": "Three: add a title, keep the past tense, and use a little dialogue." },
+          { "speaker": "ZIPPY", "text": "And the fire is back. That's how you know it's a good story." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 4,
+    "name": "Diary Entry",
+    "scenes": [
+      {
+        "animation": "Zippy's diary lies open with a padlock. Inside, it reads like a timetable: '7 am: woke. 8 am: school. 2 pm: lunch.' The diary's lock pops open and the diary sighs 'Tell me how you FELT!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My diary is complaining. I wrote down everything I did today!" },
+          { "speaker": "NEO", "text": "A diary is not a timetable. It is a private talk with yourself about what happened and how you felt." }
+        ]
+      },
+      {
+        "animation": "A diary page builds its format piece by piece: 'Day and date' top left, 'Time' (optional) beside it, 'Dear Diary' salutation, body paragraphs, and a signature at the end. Each piece clicks into place.",
+        "lines": [
+          { "speaker": "NEO", "text": "Format first. Write the day and date at the top. Many students also add the time." },
+          { "speaker": "NEO", "text": "Then Dear Diary, if you like, the body, and your name or initial at the end." },
+          { "speaker": "NEO", "text": "The word limit is 100 to 120 words, and it shares its choice with story writing." }
+        ]
+      },
+      {
+        "animation": "A three-step staircase: 'What happened' (a result card in hand), 'How I felt' (a heart swinging from nervous to proud), 'What I learnt or will do next' (a lightbulb). Zippy hops up each step.",
+        "lines": [
+          { "speaker": "NEO", "text": "Organise the body in three steps. What happened. How you felt about it. What you learnt, or what you will do next." },
+          { "speaker": "ZIPPY", "text": "Like: today I got my maths result, I was nervous, then thrilled, and now I will practise geometry more." },
+          { "speaker": "NEO", "text": "Perfect shape." }
+        ]
+      },
+      {
+        "animation": "Language tags flutter around the diary: 'First person: I, me, my', 'Informal but correct', 'Past tense for events; present for feelings now'. A red cross appears over slang like 'lol' and 'gr8'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Write in the first person. The tone is personal and informal, but the grammar must still be correct." },
+          { "speaker": "NEO", "text": "Events of the day go in the past tense; feelings you have now can be in the present. And no text-message slang." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'You helped an injured stray puppy on your way home. Write a diary entry about the experience.' A plan appears: 'Date | the incident | your feelings | reflection on kindness'. Sticker: 'EXAM TIP: feelings carry marks'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: write a diary entry about helping an injured stray puppy." },
+          { "speaker": "NEO", "text": "Answer approach: the date, the incident briefly, your feelings in detail, and a reflection on kindness." },
+          { "speaker": "NEO", "text": "Exam tip: many students only narrate the event. Feelings and reflection are what make it a diary entry." }
+        ]
+      },
+      {
+        "animation": "Recap board with the diary, now happily locked again. Points appear: '1. Day, date, Dear Diary, signature', '2. What happened, how I felt, what I learnt', '3. First person, informal, correct'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: format with the day and date, Dear Diary and your name." },
+          { "speaker": "NEO", "text": "Two: write what happened, how you felt, and what you learnt." },
+          { "speaker": "NEO", "text": "Three: use the first person, an informal tone, and correct grammar." },
+          { "speaker": "ZIPPY", "text": "Dear Diary, today I learnt how to write to you. You're welcome." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 5,
+    "name": "Reading Comprehension: Discursive Passage",
+    "scenes": [
+      {
+        "animation": "An exam paper with a long passage stretches like a scroll down to the floor. Zippy starts reading word by word, and cobwebs slowly grow on him while the clock spins fast.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This passage is so long, I grew cobwebs just reading it!" },
+          { "speaker": "NEO", "text": "That's the discursive passage. It is 400 to 450 words, but a smart plan makes it quick." }
+        ]
+      },
+      {
+        "animation": "A label pops up: 'Discursive passage = the writer discusses an issue or gives an opinion'. Example title: 'Should mobile phones be allowed in schools?' Arrows mark 'for' and 'against' points in the text.",
+        "lines": [
+          { "speaker": "NEO", "text": "A discursive passage discusses an issue, gives opinions and argues. For example, whether mobile phones should be allowed in school." },
+          { "speaker": "NEO", "text": "The questions test comprehension, interpretation, inference, evaluation and vocabulary. It carries ten marks." }
+        ]
+      },
+      {
+        "animation": "A three-step strategy slides in as footprints: 'Step 1: read the questions first', 'Step 2: skim the passage for the main idea', 'Step 3: scan back for each answer'. A highlighter marks key lines.",
+        "lines": [
+          { "speaker": "NEO", "text": "Step one: read the questions first, so you know what to look for." },
+          { "speaker": "NEO", "text": "Step two: skim the passage quickly to get the main idea and the writer's view." },
+          { "speaker": "NEO", "text": "Step three: go back and scan the exact lines for each answer." },
+          { "speaker": "NEO", "text": "Underline the topic sentence of each paragraph. It tells you where each idea lives." }
+        ]
+      },
+      {
+        "animation": "Two question types split: 'Inference: why does the writer say...?' (a detective magnifying glass), 'Vocabulary: find a word that means...' (a dictionary). A small hint card: 'Answer from the passage, not your opinion'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if the answer is not written anywhere?" },
+          { "speaker": "NEO", "text": "Then it is an inference question. Use clues in the passage to work out what the writer means, but never add your own opinion." },
+          { "speaker": "NEO", "text": "For vocabulary, look near the paragraph number given, and match the part of speech." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Which word in paragraph 2 means \"harmful\"?' Zippy picks a verb; it bounces off. Neo taps the adjective 'detrimental' and it glows. Sticker: 'EXAM TIP: match the part of speech'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try: which word in paragraph two means harmful?" },
+          { "speaker": "ZIPPY", "text": "Harmful is an adjective, so the answer must be an adjective too. Detrimental!" },
+          { "speaker": "NEO", "text": "Exam tip: in short answers, write complete, precise sentences and don't copy long chunks of the passage." }
+        ]
+      },
+      {
+        "animation": "Recap board with the scroll neatly rolled up. Points appear: '1. Discursive: 400 to 450 words, issue or opinion', '2. Questions first, skim, then scan', '3. Infer from clues; match part of speech'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the discursive passage is 400 to 450 words about an issue or opinion." },
+          { "speaker": "NEO", "text": "Two: read the questions first, skim for the main idea, then scan for answers." },
+          { "speaker": "NEO", "text": "Three: infer from clues, and match the part of speech in vocabulary questions." },
+          { "speaker": "ZIPPY", "text": "No more cobwebs. I'm a scanning machine now." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Writing Skills",
+    "topic_no": 6,
+    "name": "Reading Comprehension: Case-Based Factual Passage",
+    "scenes": [
+      {
+        "animation": "A passage appears with a bar chart attached showing 'Hours of screen time per day' for different age groups. Zippy stares at the bars and says 'Why is there maths in my English paper?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Bars and percentages in English? Did someone mix up the papers?" },
+          { "speaker": "NEO", "text": "No mix-up. This is the case-based factual passage. It comes with a chart or data, and you read both together." }
+        ]
+      },
+      {
+        "animation": "A task card: 'Case-based factual passage | 200 to 250 words | visual input: statistical data or chart | 10 marks'. The passage and chart slide side by side, connected by glowing lines.",
+        "lines": [
+          { "speaker": "NEO", "text": "It is a factual passage of 200 to 250 words, with a visual input like a table or chart. It carries ten marks." },
+          { "speaker": "NEO", "text": "The text explains the facts, and the chart shows numbers. Many questions need both." }
+        ]
+      },
+      {
+        "animation": "A chart-reading drill: the title glows first, then the axis labels, then the legend, then the tallest and shortest bars get star stickers. Label: 'Title, axes, highest, lowest, trend'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Read the chart in order. First its title, then what each axis or column shows, then the units." },
+          { "speaker": "NEO", "text": "Next, spot the highest, the lowest and the overall trend. Is it rising, falling or steady?" }
+        ]
+      },
+      {
+        "animation": "A question card: 'According to the chart, which group spends the most time on screens?' Zippy points to the wrong bar; the bar blinks 'check the label!'. Neo points to the correct bar, and the matching sentence in the passage lights up too.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The longest bar is the answer. Easy!" },
+          { "speaker": "NEO", "text": "Only if the question asks for the most. Some ask for the least, or the difference between two values. Read the question word carefully." },
+          { "speaker": "NEO", "text": "And check that the passage and chart agree before you answer." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Based on the data, what conclusion can be drawn?' The answer builds: 'Trend + one figure as evidence'. Sticker: 'EXAM TIP: quote the number and its unit'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A likely question: what conclusion can be drawn from the data?" },
+          { "speaker": "NEO", "text": "Answer approach: state the trend in one sentence, and support it with one figure from the chart." },
+          { "speaker": "NEO", "text": "Exam tip: always write the unit, like percent or hours. A number without its unit can cost you the mark." }
+        ]
+      },
+      {
+        "animation": "Recap board with the bar chart now wearing a tiny graduation cap. Points appear: '1. 200 to 250 words + chart or data', '2. Title, axes, units, highest, lowest, trend', '3. Answer with evidence and units'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the case-based passage is 200 to 250 words with a chart or data." },
+          { "speaker": "NEO", "text": "Two: read the title, axes and units, then the highest, lowest and trend." },
+          { "speaker": "NEO", "text": "Three: support every answer with evidence, and always write the unit." },
+          { "speaker": "ZIPPY", "text": "My screen time chart? Let's not read that one." }
+        ]
+      }
+    ]
+  }
+]

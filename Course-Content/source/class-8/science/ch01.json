@@ -1,0 +1,176 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "Exploring the Investigative World of Science",
+    "topic_no": 1,
+    "name": "From Wonder to Investigation",
+    "scenes": [
+      {
+        "animation": "A school bag bursts open on a desk and three question marks fly out labelled 'Why is one side of a puri thinner?', 'More sand grains or more stars?', 'Why so many kinds of leaves?'. Zippy tries to catch all three at once and gets tangled.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo! The first page of our new science book is just questions. Is this a test already?" },
+          { "speaker": "NEO", "text": "Relax. These are not exam questions. They are invitations to get curious." },
+          { "speaker": "ZIPPY", "text": "Curious I can do. I'm curious about lunch right now." }
+        ]
+      },
+      {
+        "animation": "A three-step staircase builds up. Step 1 'Grade 6: Wonder' shows a child staring at a leaf with a 'Why?' bubble. Step 2 'Grade 7: Science keeps evolving' shows an old answer bulb being replaced by a new one. Step 3 'Grade 8: Investigate' lights up with a magnifying glass.",
+        "lines": [
+          { "speaker": "NEO", "text": "In Grade 6, we saw that science begins with wonder, with simple why and how questions." },
+          { "speaker": "NEO", "text": "In Grade 7, we learnt that science is always evolving. Each answer opens new questions." },
+          { "speaker": "NEO", "text": "Now in Grade 8, we step into the investigative world of science." }
+        ]
+      },
+      {
+        "animation": "A 'FACTS' vending machine drops ready-made fact cards; Zippy grabs them happily. Neo slides the machine aside and hands Zippy a toolkit labelled 'Ask a focused question', 'Design a simple experiment', 'Observe', 'Improve your understanding', each tool glowing in turn.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So we'll learn lots of new facts this year?" },
+          { "speaker": "NEO", "text": "Even better. We'll learn how to find new facts." },
+          { "speaker": "NEO", "text": "Investigating means asking focused questions and designing simple experiments to answer them." },
+          { "speaker": "NEO", "text": "Then we use our observations to improve our understanding." }
+        ]
+      },
+      {
+        "animation": "An open book page: at the bottom-left, a root sketch grows down into soil labelled 'Roots: solid foundation, careful observation'. At the top-right corner, a kite rises into a blue sky labelled 'Kite: curiosity takes flight, creative thinking'. A string connects the two.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is there a tiny root and a kite on every page number?" },
+          { "speaker": "NEO", "text": "The root stands for a deep, solid foundation of knowledge that keeps us connected to our environment and heritage." },
+          { "speaker": "NEO", "text": "The kite reminds us that curiosity must take flight to explore the unknown." },
+          { "speaker": "NEO", "text": "Good science balances both: grounded observation and soaring ideas." }
+        ]
+      },
+      {
+        "animation": "Zippy in a detective hat examines a rising lump of dough in a steel bowl, then looks up at a globe with a thermometer poking out. Captions: 'Everyday puzzle: Why does dough rise?' and 'Big puzzle: Is the world getting warmer?'. An 'EXAM TIP' sticky note appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Investigations can be about everyday puzzles, like why does dough rise, or big ones, like is the world getting warmer." },
+          { "speaker": "NEO", "text": "Exam tip: if asked what investigation in science means, say it is asking focused questions, testing them with experiments, and using observations to improve understanding." }
+        ]
+      },
+      {
+        "animation": "Recap board with a root at the bottom and a kite at the top. Three points appear: '1. Grade 6 wonder, Grade 7 evolving, Grade 8 investigate', '2. Learn how to find new facts', '3. Root = grounded observation, Kite = creative thinking'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: science starts with wonder, keeps evolving, and this year we investigate." },
+          { "speaker": "NEO", "text": "Two: our goal is not just to learn facts, but to learn how to find them." },
+          { "speaker": "NEO", "text": "Three: the root and the kite remind us to balance careful observation with creative thinking." },
+          { "speaker": "ZIPPY", "text": "Detective Zippy, reporting for duty!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Exploring the Investigative World of Science",
+    "topic_no": 2,
+    "name": "A Tour of This Year's Journey",
+    "scenes": [
+      {
+        "animation": "Neo unrolls a giant treasure map titled 'Curiosity Grade 8'. The first stop is a single drop of water that zooms up to reveal wriggling cartoon microbes waving at Zippy.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A treasure map! Where does it start?" },
+          { "speaker": "NEO", "text": "In a single drop of water. It hides a world of tiny organisms we cannot see with our naked eye." },
+          { "speaker": "NEO", "text": "Some help us digest food or make medicines. Others can cause infections." }
+        ]
+      },
+      {
+        "animation": "The path moves to a stop showing a plate of healthy food, a child skipping, and a vaccine vial with a shield. Next, a heater glows red and a motor spins, labelled 'Heating effect' and 'Magnetic effect' of electric current.",
+        "lines": [
+          { "speaker": "NEO", "text": "Next, we ask what keeps our body healthy. Nutritious food, exercise, medicines and vaccines all play a part." },
+          { "speaker": "NEO", "text": "Then comes electricity. Its heating effect keeps us warm, and its magnetic effect helps motors run." }
+        ]
+      },
+      {
+        "animation": "A cricket ball is thrown up and falls back; a scooter brakes to a stop. Arrows labelled 'Force' appear on both. The scene blows into a breeze, then a swirling cyclone on a weather map, labelled 'Pressure difference → wind → cyclone'.",
+        "lines": [
+          { "speaker": "NEO", "text": "We'll study forces, which make objects speed up, slow down or change direction." },
+          { "speaker": "NEO", "text": "That leads to pressure, and how pressure differences make air move." },
+          { "speaker": "NEO", "text": "A small difference gives a gentle breeze. A stronger one can bring strong winds and even cyclones." }
+        ]
+      },
+      {
+        "animation": "Zoom into a steel tumbler: particles vibrate in ice, slide in water and zoom around as steam. Three jars appear labelled 'Element', 'Compound', 'Mixture', then sugar dissolves into a cup of chai. A shiny steel spoon shows a funny stretched reflection of Zippy.",
+        "lines": [
+          { "speaker": "NEO", "text": "Everything is made of tiny particles. In solids they cannot move much, while in gases they move freely." },
+          { "speaker": "NEO", "text": "We'll sort materials into elements, compounds and mixtures, and see how sugar dissolves in tea." },
+          { "speaker": "ZIPPY", "text": "And why do I look so weird in this spoon?" },
+          { "speaker": "NEO", "text": "That's light reflecting from a curved surface. Mirrors and lenses are on the map too." }
+        ]
+      },
+      {
+        "animation": "The Moon cycles through its phases above a village rooftop, and a calendar page flips from 'Chaitra' onwards. Then a forest ecosystem appears with a deer, grass and a bird, and finally the whole Earth glows with a label 'Just right for life'. An 'EXAM TIP' card pops up.",
+        "lines": [
+          { "speaker": "NEO", "text": "The changing phases of the Moon helped humans make the first calendars." },
+          { "speaker": "NEO", "text": "We'll see how living things depend on air, water, sunlight and each other in ecosystems." },
+          { "speaker": "NEO", "text": "Finally, we ask what makes Earth just right for life, and how human activities are changing its climate." },
+          { "speaker": "NEO", "text": "Exam tip: keep this map in mind. Seeing how chapters connect makes revision much easier." }
+        ]
+      },
+      {
+        "animation": "Recap board shaped like the treasure map, with three flags: '1. Tiny microbes → health → electricity', '2. Forces → pressure → winds and cyclones; particles → mixtures → solutions', '3. Light → Moon and calendars → ecosystems → our unique Earth'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: we begin with microbes and health, then electricity." },
+          { "speaker": "NEO", "text": "Two: forces lead to pressure and winds, and particles lead to mixtures and solutions." },
+          { "speaker": "NEO", "text": "Three: light, the Moon and calendars, ecosystems, and finally our unique Earth." },
+          { "speaker": "ZIPPY", "text": "Map packed. Snacks packed. Let's go!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Exploring the Investigative World of Science",
+    "topic_no": 3,
+    "name": "Investigating Like a Scientist: The Puffing Puri",
+    "scenes": [
+      {
+        "animation": "A kitchen at home. A rolled circle of dough slides into a kadhai of hot oil and puffs up like a balloon. Zippy stares, the puri puffs bigger, and Zippy puffs up too in sync.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "It blew up like a balloon! And one side is thinner than the other. Why?" },
+          { "speaker": "NEO", "text": "Great question. You don't need a fancy lab. Your kitchen is a perfect place to investigate." },
+          { "speaker": "NEO", "text": "Scientists start with curiosity, careful observation, and asking, what happens if?" }
+        ]
+      },
+      {
+        "animation": "A board titled 'Things we can CHANGE' fills in one by one with icons: dough thickness, dough size, type of flour (atta, maida), oil temperature, and the way the dough is dropped (vertically, at an angle, slowly). An adult-supervision icon and a 'Hot oil! Adults only' warning glow in red.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, we ask a scientific question. What things may change the way a puri puffs up?" },
+          { "speaker": "NEO", "text": "We can change the thickness and size of the dough, or the type of flour, like atta or maida." },
+          { "speaker": "NEO", "text": "We can change the oil temperature, or the way we drop the dough in. Frying is only done by an adult." }
+        ]
+      },
+      {
+        "animation": "A second board titled 'Things we can OBSERVE or MEASURE' appears: a yes/no checkbox 'Did it puff up?', a stopwatch 'Time to puff (seconds)', and a ruler 'Is one side still thin?'. A notebook fills with notes: 'oil splattered', 'smoke?', 'smell?'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Next, we decide what we can observe or measure." },
+          { "speaker": "NEO", "text": "Some answers are yes or no, like, did it puff up? Some are numbers, like the time it takes to puff, in seconds." },
+          { "speaker": "NEO", "text": "Keep notes of everything you see and sense. Did the oil splatter, smell or smoke?" }
+        ]
+      },
+      {
+        "animation": "Three kadhais labelled 'Boiling hot', 'Hot' and 'Not very hot'. Zippy tries to drop in a thick puri, a thin puri and a maida puri at once; a red buzzer sounds. Neo lines up three identical dough circles with a 'Same thickness, same drop' tag. An 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Let's change everything at once. Faster results!" },
+          { "speaker": "NEO", "text": "Then you won't know which change made the difference. Change only one thing at a time, and keep everything else the same." },
+          { "speaker": "NEO", "text": "To test oil temperature, use dough circles of the same thickness, dropped in the same way." },
+          { "speaker": "NEO", "text": "Exam tip: in any experiment question, name the one thing you change and the things you keep the same." }
+        ]
+      },
+      {
+        "animation": "New question bubbles pop out of the finished puri: 'Fresh or stored dough?', 'What if I prick a hole?'. A cycle diagram draws itself: Question → Experiment → Observe → New questions → back to Question. A crescent Moon shrinks in the window.",
+        "lines": [
+          { "speaker": "NEO", "text": "After one round, you'll think of more questions. Do puris puff better from fresh dough? What if we prick a hole first?" },
+          { "speaker": "NEO", "text": "This is systematic investigation, and it's how all experiments are done, simple or complicated." },
+          { "speaker": "NEO", "text": "Here's a surprise. Even the puffing of a puri is not completely understood by scientists today!" }
+        ]
+      },
+      {
+        "animation": "Recap board beside a plate of golden puris. Three points appear: '1. Ask a scientific question', '2. List what you can change and what you can observe or measure', '3. Change one thing at a time; keep notes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: start with a scientific question about what you observe." },
+          { "speaker": "NEO", "text": "Two: list what you can change, and what you can observe or measure." },
+          { "speaker": "NEO", "text": "Three: change only one thing at a time, and keep careful notes." },
+          { "speaker": "ZIPPY", "text": "Happy investigating. And happy eating!" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gray-on-color",
+        "value": "*",
+        "files": [
+          "Frontend/src/pages/VideoPage.jsx"
+        ],
+        "createdAt": "2026-09-28T00:33:19.456Z",
+        "reason": "dark near-black text (slate-900/950) on bright accent backgrounds (amber-300, cyan-500) is a deliberate high-contrast pairing, not gray-on-color; heuristic false positive, verified same pattern in Courses.jsx"
+      }
+    ]
+  }
+}

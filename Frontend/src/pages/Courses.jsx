@@ -1,17 +1,16 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import Image1 from "../assets/images/Image-3.png";
-import Image2 from "../assets/images/Image-4.png";
-import Image3 from "../assets/images/Image-5.png";
-import { isSchoolTrack } from "../utils/schoolTrack";
+import { FaArrowRight } from "react-icons/fa6";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import PageHero from "../components/landing/PageHero";
+import SYLLABUS_SNAPSHOT from "../data/syllabusSnapshot";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 34 },
+  hidden: { opacity: 0, y: 24 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.68, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
@@ -19,20 +18,49 @@ const stagger = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.08,
+      staggerChildren: 0.1,
+      delayChildren: 0.05,
     },
   },
 };
 
-const sectionViewport = { once: true, amount: 0.22 };
+const sectionViewport = { once: true, amount: 0.2 };
+
+const PROGRAMS = [
+  {
+    id: "medicine",
+    title: "Medicine / USMLE",
+    summary: "Advanced clinical reasoning and systems-based learning for future physicians.",
+    body: "Master complex physiology, pathology, and clinical reasoning through immersive visual lessons designed for USMLE performance.",
+    cta: "Explore Medicine",
+  },
+  {
+    id: "neet-pg",
+    title: "NEET PG",
+    summary: "High-yield visual modules across Pathology, Pharmacology, Medicine, Surgery, and all 19 MBBS subjects.",
+    body: "India's most competitive PG medical entrance exam rewards conceptual clarity over rote learning. The Kanthast library starts with Biochemistry, Immunology, Pharmacology, Microbiology and Neuroanatomy, with animated lectures releasing subject by subject.",
+    cta: "Explore NEET PG",
+  },
+  {
+    id: "ini-cet",
+    title: "INI CET",
+    summary: "Focused preparation for AIIMS, JIPMER, PGIMER & NIMHANS with animation-driven clinical concepts.",
+    body: "The gateway to AIIMS, JIPMER, PGIMER, and NIMHANS — India's most prestigious postgraduate institutions. INI CET demands deep clinical reasoning alongside subject mastery. Our visual lessons make complex mechanisms intuitive, so you walk into the exam with clarity, not just facts.",
+    cta: "Explore INI CET",
+  },
+];
 
 export default function Courses() {
   const navigate = useNavigate();
-  if (isSchoolTrack()) return <SchoolCourses navigate={navigate} />;
+  const location = useLocation();
+  // The route is the source of truth here, not ambient browsing history:
+  // /school/courses always shows the School catalogue, /courses always
+  // shows Medical, regardless of which track page was visited previously
+  // in this browser.
+  if (location.pathname.startsWith("/school")) return <SchoolCourses navigate={navigate} />;
 
   return (
-    <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
+    <div className="home-page overflow-x-clip bg-surface text-ink">
       <Helmet>
         <title>Medical Courses | USMLE, NEET PG & INI CET Prep — Kanthast</title>
         <meta name="description" content="Explore Kanthast's visual medical courses for USMLE, NEET PG, and INI CET. 3D animations, clinical cases, and high-yield exam-focused preparation." />
@@ -53,207 +81,95 @@ export default function Courses() {
           ]
         })}</script>
       </Helmet>
-      <section className="relative overflow-hidden py-24">
-        <motion.div
-          animate={{ y: [0, -10, 0], opacity: [0.5, 0.75, 0.5] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="pointer-events-none absolute -top-20 -left-16 h-72 w-72 rounded-full bg-cyan-300/25 blur-3xl"
-        />
-        <motion.div
-          animate={{ y: [0, 12, 0], opacity: [0.45, 0.7, 0.45] }}
-          transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
-          className="pointer-events-none absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-blue-300/25 blur-3xl"
-        />
 
-        <div className="relative mx-auto max-w-6xl px-6 md:px-16">
+      <PageHero
+        kicker="Courses"
+        title="Programs built for every"
+        accent="medical stage."
+        lead="Animation-first learning tracks with exam-focused pathways for USMLE, NEET PG, and INI CET."
+        aside={
+          <motion.ul variants={stagger} initial="hidden" animate="show" className="grid gap-4">
+            {PROGRAMS.map((program) => (
+              <motion.li key={program.id} variants={fadeUp}>
+                <a
+                  href={`#${program.id}`}
+                  className="group flex items-start justify-between gap-6 rounded-card border border-line bg-surface-raised p-6 transition-colors duration-200 hover:border-brand/60"
+                >
+                  <span>
+                    <span className="block text-lg font-bold text-ink">{program.title}</span>
+                    <span className="mt-2 block leading-relaxed text-ink-muted">{program.summary}</span>
+                  </span>
+                  <FaArrowRight aria-hidden="true" className="mt-1.5 shrink-0 text-sm text-brand transition-transform duration-200 group-hover:translate-x-1" />
+                </a>
+              </motion.li>
+            ))}
+          </motion.ul>
+        }
+      />
+
+      {PROGRAMS.map((program, index) => (
+        <section
+          key={program.id}
+          id={program.id}
+          className={`scroll-mt-24 border-b border-line py-20 md:py-28 ${index % 2 ? "bg-surface" : "bg-surface-sunken"}`}
+        >
           <motion.div
             variants={stagger}
             initial="hidden"
-            animate="show"
-            className="rounded-card border border-line bg-surface/70 px-6 py-10 text-center backdrop-blur-2xl shadow-e4 md:px-12"
+            whileInView="show"
+            viewport={sectionViewport}
+            className="site-container grid items-center gap-12 lg:grid-cols-2 lg:gap-20"
           >
-            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-black leading-tight text-ink">
-              Programs Built for Every Medical Stage
-            </motion.h1>
-            <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-ink-muted">
-              Animation-first learning tracks with exam-focused pathways for USMLE, NEET PG, and INI CET.
-            </motion.p>
+            <motion.div variants={fadeUp} className={index % 2 ? "lg:order-2" : ""}>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
+                Program 0{index + 1}
+              </p>
+              <h2 className="mt-3 text-4xl text-ink md:text-5xl">{program.title}</h2>
+              <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-muted">{program.body}</p>
+              <button type="button" onClick={() => navigate("/lists")} className="btn-primary mt-8 px-7 text-base">
+                {program.cta}
+                <FaArrowRight aria-hidden="true" />
+              </button>
+            </motion.div>
+
+            <SyllabusPanel />
           </motion.div>
+        </section>
+      ))}
+
+      <section className="relative overflow-hidden bg-surface">
+        <div aria-hidden="true" className="home-glow home-glow-close" />
+        <div className="site-container relative flex flex-col items-start justify-between gap-8 py-20 md:flex-row md:items-center">
+          <h2 className="max-w-2xl text-3xl md:text-5xl">See every planned lecture in the library.</h2>
+          <Link to="/lists" className="btn-primary shrink-0 px-7 text-base">
+            Browse the library
+            <FaArrowRight aria-hidden="true" />
+          </Link>
         </div>
       </section>
-
-      <section className="py-14">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={sectionViewport}
-          className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-3 md:px-16"
-        >
-          {[
-            {
-              title: "Medicine / USMLE",
-              desc: "Advanced clinical reasoning and systems-based learning for future physicians.",
-            },
-            {
-              title: "NEET PG",
-              desc: "High-yield visual modules across Pathology, Pharmacology, Medicine, Surgery, and all 19 MBBS subjects.",
-            },
-            {
-              title: "INI CET",
-              desc: "Focused preparation for AIIMS, JIPMER, PGIMER & NIMHANS with animation-driven clinical concepts.",
-            },
-          ].map((item) => (
-            <motion.div
-              key={item.title}
-              variants={fadeUp}
-              whileHover={{ y: -8, scale: 1.02 }}
-              transition={{ duration: 0.28, ease: "easeOut" }}
-              className="rounded-card border border-line bg-surface/55 p-7 backdrop-blur-2xl shadow-e4"
-            >
-              <h3 className="text-xl font-bold text-ink">{item.title}</h3>
-              <p className="mt-3 text-ink-muted leading-relaxed">{item.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
-
-      <section id="medicine" className="py-10 md:py-14">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={sectionViewport}
-          className="mx-auto max-w-7xl px-6 md:px-16"
-        >
-          <div className="grid items-center gap-10 rounded-card border border-line bg-surface/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
-            <motion.div variants={fadeUp}>
-              <h2 className="text-3xl md:text-5xl font-black text-ink">Medicine / USMLE</h2>
-              <p className="mt-4 text-ink-muted text-lg leading-relaxed">
-                Master complex physiology, pathology, and clinical reasoning through immersive visual lessons designed
-                for USMLE performance.
-              </p>
-              <motion.button
-                whileHover={{ y: -3, scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => navigate("/lists")}
-                className="btn-primary mt-7"
-              >
-                Explore Medicine
-              </motion.button>
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              whileHover={{ y: -6, scale: 1.01 }}
-              transition={{ duration: 0.35 }}
-              className="overflow-hidden rounded-card border border-line shadow-xl"
-            >
-              <motion.img
-                src={Image1}
-                alt="Medicine course preview"
-                loading="lazy"
-                className="h-[380px] w-full object-cover"
-                whileHover={{ scale: 1.04 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              />
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
-
-      <section id="neet-pg" className="py-10 md:py-14">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={sectionViewport}
-          className="mx-auto max-w-7xl px-6 md:px-16"
-        >
-          <div className="grid items-center gap-10 rounded-card border border-line bg-surface/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
-            <motion.div
-              variants={fadeUp}
-              whileHover={{ y: -6, scale: 1.01 }}
-              transition={{ duration: 0.35 }}
-              className="overflow-hidden rounded-card border border-line shadow-xl"
-            >
-              <motion.img
-                src={Image2}
-                alt="NEET PG visual learning modules"
-                loading="lazy"
-                className="h-[380px] w-full object-cover"
-                whileHover={{ scale: 1.04 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              />
-            </motion.div>
-
-            <motion.div variants={fadeUp}>
-              <h2 className="text-3xl md:text-5xl font-black text-ink">NEET PG</h2>
-              <p className="mt-4 text-ink-muted text-lg leading-relaxed">
-                India's most competitive PG medical entrance exam demands more than rote learning. Kanthast's
-                animation-driven modules cover all 19 MBBS subjects — Pathology, Pharmacology, Medicine, Surgery,
-                OBG, Paediatrics, and more — building the conceptual clarity that turns high-yield facts into
-                long-term memory.
-              </p>
-              <motion.button
-                whileHover={{ y: -3, scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => navigate("/lists")}
-                className="btn-primary mt-7"
-              >
-                Explore NEET PG
-              </motion.button>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
-
-      <section id="ini-cet" className="pb-20 pt-10 md:pt-14">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={sectionViewport}
-          className="mx-auto max-w-7xl px-6 md:px-16"
-        >
-          <div className="grid items-center gap-10 rounded-card border border-line bg-surface/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
-            <motion.div variants={fadeUp}>
-              <h2 className="text-3xl md:text-5xl font-black text-ink">INI CET</h2>
-              <p className="mt-4 text-ink-muted text-lg leading-relaxed">
-                The gateway to AIIMS, JIPMER, PGIMER, and NIMHANS — India's most prestigious postgraduate
-                institutions. INI CET demands deep clinical reasoning alongside subject mastery. Our visual
-                lessons make complex mechanisms intuitive, so you walk into the exam with clarity, not just
-                facts.
-              </p>
-              <motion.button
-                whileHover={{ y: -3, scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => navigate("/lists")}
-                className="btn-primary mt-7"
-              >
-                Explore INI CET
-              </motion.button>
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              whileHover={{ y: -6, scale: 1.01 }}
-              transition={{ duration: 0.35 }}
-              className="overflow-hidden rounded-card border border-line shadow-xl"
-            >
-              <motion.img
-                src={Image3}
-                alt="INI CET preparation for AIIMS and JIPMER"
-                loading="lazy"
-                className="h-[380px] w-full object-cover"
-                whileHover={{ scale: 1.04 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              />
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
     </div>
+  );
+}
+
+// The real syllabus the three medical programs draw on. Replaced AI-generated
+// banners that advertised MCAT and NCLEX, which Kanthast does not offer.
+function SyllabusPanel() {
+  return (
+    <motion.div variants={fadeUp} className="rounded-card border border-line bg-surface-raised p-7 shadow-e3">
+      <p className="text-sm font-semibold uppercase tracking-[0.14em] text-ink-muted">In the library</p>
+      <ul className="mt-4 divide-y divide-line">
+        {SYLLABUS_SNAPSHOT.subjects.map((subject) => (
+          <li key={subject.name} className="flex items-baseline justify-between gap-4 py-3.5">
+            <span className="text-lg font-semibold text-ink">{subject.name}</span>
+            <span className="text-sm tabular-nums text-ink-subtle">{subject.chapters} chapters</span>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-4 text-sm text-ink-muted">
+        <span className="mr-2 inline-block h-2 w-2 rounded-full bg-brand align-middle" aria-hidden="true" />
+        Lectures are releasing subject by subject.
+      </p>
+    </motion.div>
   );
 }
 
@@ -277,7 +193,7 @@ function SchoolCourses({ navigate }) {
       </Helmet>
 
       <section className="border-b border-line bg-surface">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:px-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-20">
+        <div className="mx-auto grid max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 gap-10 px-6 py-16 md:px-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-20">
           <motion.div variants={stagger} initial="hidden" animate="show">
             <motion.p variants={fadeUp} className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-700">
               Kanthast School
@@ -310,14 +226,14 @@ function SchoolCourses({ navigate }) {
               <span className="pb-2 text-slate-300">per class</span>
             </div>
             <p className="mt-4 text-slate-300">
-              Use the class selector inside Lists to switch the school catalogue. Subscription unlocks the chosen class content in Lists and Dashboard.
+              Use the class selector in the Library to switch the school catalogue. A subscription unlocks the chosen class in the Library and Dashboard.
             </p>
             <button
               type="button"
               onClick={() => navigate("/lists")}
               className="mt-6 w-full rounded-control bg-cyan-500 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-400"
             >
-              Open School Lists
+              Open the School Library
             </button>
           </motion.div>
         </div>

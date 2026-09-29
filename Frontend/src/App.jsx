@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import OfflineBanner from "./components/OfflineBanner";
 import ComingSoon from "./pages/ComingSoon";
-import { warmupBackend, prefetchImages, prefetchContent } from "./utils/warmup";
+import { warmupBackend, prefetchContent } from "./utils/warmup";
 import { useAppSettings } from "./utils/settings";
 import { initCapacitorPlugins, setupBackButton } from "./utils/capacitor";
 
@@ -18,6 +18,7 @@ const SHOW_COMING_SOON = false;
 const Homepage = lazy(() => import("./pages/Homepage"));
 const SchoolHomepage = lazy(() => import("./pages/SchoolHomepage"));
 const About = lazy(() => import("./pages/About"));
+const Pricing = lazy(() => import("./pages/Pricing"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Courses = lazy(() => import("./pages/Courses"));
 const Login = lazy(() => import("./pages/Login"));
@@ -35,6 +36,8 @@ const SubscriptionPage = lazy(() => import("./pages/SubscriptionPage"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const AdminPanel = lazy(() => import("./pages/AdminPanel"));
 const PageLoader = lazy(() => import("./pages/PageLoader"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Legal = lazy(() => import("./pages/Legal"));
 
 const hasAuth = () =>
   Boolean(localStorage.getItem("kanthastToken") && localStorage.getItem("kanthastUser"));
@@ -135,17 +138,43 @@ function App() {
     setupBackButton(navigate);
   }, []);
 
-  // Parallel to the loading animation: wake up the Render backend and
-  // prefetch all page images into the browser cache using idle bandwidth.
+  // Parallel to the loading animation: wake up the Render backend, then
+  // prefetch the catalog.
   useEffect(() => {
     warmupBackend().then(() => prefetchContent());
-    const timer = setTimeout(prefetchImages, 2000);
-    return () => clearTimeout(timer);
   }, []);
 
   useLayoutEffect(() => {
-    if (location.hash) return;
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    if (!location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      return;
+    }
+
+    // The target section can be behind a lazy-loaded page chunk (Suspense),
+    // so it may not exist in the DOM yet on the render this effect runs in
+    // — a plain `scrollIntoView` here silently no-ops and the page is left
+    // at the top. Poll briefly for the element instead of assuming it's
+    // already mounted, and offset for the fixed navbar so the section
+    // isn't left hidden underneath it.
+    const id = location.hash.slice(1);
+    let attempts = 0;
+    let raf;
+    const tryScroll = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        const navbarH = parseFloat(
+          getComputedStyle(document.documentElement).getPropertyValue("--navbar-h")
+        ) || 64;
+        const top = el.getBoundingClientRect().top + window.scrollY - navbarH - 16;
+        window.scrollTo({ top, left: 0, behavior: "smooth" });
+        return;
+      }
+      attempts += 1;
+      if (attempts < 60) raf = requestAnimationFrame(tryScroll);
+    };
+    tryScroll();
+
+    return () => cancelAnimationFrame(raf);
   }, [location.pathname, location.search, location.hash]);
 
   // Move focus to the main landmark on navigation so screen readers announce
@@ -233,7 +262,8 @@ function App() {
         {!isAdminRoute && !isGatedRoute && <Navbar />}
 
         {/* Content shifts with the navbar — padding-top tracks --navbar-h CSS var */}
-        {/* padding-bottom on mobile clears the fixed bottom dock (always visible on mobile) */}
+        {/* Bottom-dock clearance sits inside the footer wrapper when the footer shows,
+            so it takes the footer colour instead of a pale strip below it. */}
         <main
           id="main-content"
           tabIndex={-1}
@@ -242,7 +272,7 @@ function App() {
             transition: "padding-top 250ms cubic-bezier(0.22,1,0.36,1)",
           }}
           className={`focus:outline-none ${
-            !isAdminRoute && !isGatedRoute ? "pb-16 md:pb-0" : ""
+            !isAdminRoute && !isGatedRoute ? (hasAuth() ? "pb-16 md:pb-0" : "") : ""
           }`}
         >
           <Suspense fallback={<ChunkFallback />}>
@@ -258,10 +288,17 @@ function App() {
                   <Route path="/" element={<Homepage />} />
                   <Route path="/school" element={<SchoolHomepage />} />
                   <Route path="/about" element={<About />} />
+                  <Route path="/pricing" element={<Pricing />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/terms" element={<Legal doc="terms" />} />
+                  <Route path="/privacy" element={<Legal doc="privacy" />} />
+                  <Route path="/refunds" element={<Legal doc="refunds" />} />
                   <Route path="/courses" element={<Courses />} />
+                  <Route path="/school/courses" element={<Courses />} />
                   <Route path="/login" element={<GuestOnly><Login /></GuestOnly>} />
+                  <Route path="/school/login" element={<GuestOnly><Login /></GuestOnly>} />
                   <Route path="/signup" element={<GuestOnly><Signup /></GuestOnly>} />
+                  <Route path="/school/signup" element={<GuestOnly><Signup /></GuestOnly>} />
                   <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
                   <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
                   <Route path="/settings" element={<RequireAuth><Settings /></RequireAuth>} />
@@ -273,6 +310,7 @@ function App() {
                   <Route path="/subscription" element={<RequireAuth><SubscriptionPage /></RequireAuth>} />
                   <Route path="/adminlogin" element={<AdminGuestOnly><AdminLogin /></AdminGuestOnly>} />
                   <Route path="/admin" element={<RequireAdmin><AdminPanel /></RequireAdmin>} />
+                  <Route path="*" element={<NotFound />} />
                 </Routes>
               )}
             </ErrorBoundary>
@@ -280,7 +318,7 @@ function App() {
 
           {/* Footer: hidden on mobile when logged in (bottom dock handles nav) */}
           {!isAdminRoute && !isGatedRoute && (
-            <div className={hasAuth() ? "hidden md:block" : ""}>
+            <div className={hasAuth() ? "hidden bg-[#060e1b] md:block md:pb-16 lg:pb-0" : "bg-[#060e1b] pb-16 lg:pb-0"}>
               <Footer />
             </div>
           )}

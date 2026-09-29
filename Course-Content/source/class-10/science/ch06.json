@@ -1,0 +1,325 @@
+[
+  {
+    "chapter_no": 6,
+    "chapter": "Control and Coordination",
+    "topic_no": 1,
+    "name": "The Nervous System and Neurons",
+    "scenes": [
+      {
+        "animation": "A Diwali snack plate; Zippy grabs a steaming pakora and flings it back in mid-air. The scene freezes, and the camera zooms into his arm to reveal glowing wires carrying flashes of light.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Ouch! How did my hand know to let go so fast?" },
+          { "speaker": "NEO", "text": "Thanks to your nervous system, the body's high-speed messaging network. Let's meet its basic unit, the neuron." }
+        ]
+      },
+      {
+        "animation": "A cartoon face lights up receptor zones one by one: taste buds on the tongue labelled 'Gustatory receptors', the inside of the nose labelled 'Olfactory receptors', and the skin of the fingertip labelled 'Receptors for heat and touch'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Information from the environment is detected by receptors, the specialised tips of some nerve cells. They are usually located in our sense organs." },
+          { "speaker": "NEO", "text": "Gustatory receptors in the tongue detect taste. Olfactory receptors in the nose detect smell." }
+        ]
+      },
+      {
+        "animation": "A neuron character wearing headphones is drawn step by step with labels: branched 'Dendrites', a round 'Cell body' with a nucleus, a long 'Axon', and the 'Nerve ending'. A yellow pulse travels from the dendrites through the cell body and along the axon.",
+        "lines": [
+          { "speaker": "NEO", "text": "A neuron has dendrites, a cell body, an axon and nerve endings." },
+          { "speaker": "NEO", "text": "Information is picked up at the tips of the dendrites, where a chemical reaction sets off an electrical impulse." },
+          { "speaker": "NEO", "text": "This impulse travels from the dendrite to the cell body, and then along the axon to its end." },
+          { "speaker": "ZIPPY", "text": "Like a cricket ball relayed from the boundary to the keeper!" }
+        ]
+      },
+      {
+        "animation": "Close-up where one neuron's axon ending meets the next neuron's dendrite: tiny chemical bubbles are released and float across a narrow gap labelled 'Synapse', and the next dendrite lights up with a new impulse. At the end of the chain, a muscle cell twitches.",
+        "lines": [
+          { "speaker": "NEO", "text": "At the end of the axon, the electrical impulse sets off the release of some chemicals." },
+          { "speaker": "NEO", "text": "These chemicals cross a gap called the synapse and start a similar electrical impulse in a dendrite of the next neuron." },
+          { "speaker": "ZIPPY", "text": "So the message goes from electric, to chemical, and back to electric?" },
+          { "speaker": "NEO", "text": "Exactly. A similar synapse finally delivers the impulse from a neuron to muscle cells or glands." }
+        ]
+      },
+      {
+        "animation": "A network of neurons lights up across a whole cartoon body like Diwali lights on a building. A 'Board tip' card shows the neuron diagram with an arrow marking the direction of the impulse.",
+        "lines": [
+          { "speaker": "NEO", "text": "Nervous tissue is an organised network of such nerve cells. It carries information as electrical impulses from one part of the body to another." },
+          { "speaker": "NEO", "text": "Board tip: the neuron diagram is a favourite. Label the dendrite, cell body, axon and nerve ending, and draw an arrow for the direction of the impulse." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Receptors detect information', '2. Dendrite → cell body → axon → nerve ending', '3. Synapse: chemicals carry the signal across'. The headphone neuron gives a thumbs-up.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: receptors in sense organs detect information from the environment. Two: the impulse travels from the dendrite, to the cell body, along the axon, to the nerve ending. Three: at the synapse, chemicals carry the signal to the next cell." },
+          { "speaker": "ZIPPY", "text": "Message received, loud and clear!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Control and Coordination",
+    "topic_no": 2,
+    "name": "Reflex Actions and the Human Brain",
+    "scenes": [
+      {
+        "animation": "Zippy's hand brushes a hot tawa and jerks back before a speech bubble reading 'HOT!' even appears. A slow-motion replay shows a glowing signal taking a shortcut at the spinal cord instead of going up to the brain.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My hand moved before I even thought about it!" },
+          { "speaker": "NEO", "text": "That's a reflex action, a sudden response to something in the environment, done without thinking." }
+        ]
+      },
+      {
+        "animation": "A reflex arc is drawn and labelled step by step: 'Receptor in skin' → 'Sensory neuron' → 'Relay neuron in spinal cord' → 'Motor neuron' → 'Effector: muscle in arm'. A pulse races along the loop and the arm muscle contracts.",
+        "lines": [
+          { "speaker": "NEO", "text": "The pathway is called a reflex arc. Receptors in the skin detect the heat and send a signal through a sensory neuron to the spinal cord." },
+          { "speaker": "NEO", "text": "There, a relay neuron passes it to a motor neuron, which makes the arm muscles pull the hand away." },
+          { "speaker": "ZIPPY", "text": "Why doesn't the signal just go to the brain?" },
+          { "speaker": "NEO", "text": "Thinking takes too long. Reflex arcs are formed in the spinal cord for a quick response. The information still reaches the brain later." }
+        ]
+      },
+      {
+        "animation": "A body outline: the brain and spinal cord glow orange, labelled 'Central nervous system'; nerves branching out from the brain and spinal cord glow blue, labelled 'Peripheral nervous system: cranial and spinal nerves'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The brain and spinal cord form the central nervous system." },
+          { "speaker": "NEO", "text": "Nerves arising from the brain are cranial nerves, and those from the spinal cord are spinal nerves. Together they form the peripheral nervous system." }
+        ]
+      },
+      {
+        "animation": "A human brain diagram builds in three colours: a large pink 'Fore-brain', a small 'Mid-brain', and the 'Hind-brain' with labels 'Pons', 'Medulla' and 'Cerebellum'. Icons pop beside each part: a thinking bubble, a salivating mouth for the medulla, a cyclist balancing for the cerebellum.",
+        "lines": [
+          { "speaker": "NEO", "text": "The brain has three major parts: the fore-brain, mid-brain and hind-brain." },
+          { "speaker": "NEO", "text": "The fore-brain is the main thinking part. It receives sensory impulses, has areas of association, and controls voluntary movements. It also has a centre for hunger." },
+          { "speaker": "NEO", "text": "Involuntary actions like blood pressure, salivation and vomiting are controlled by the medulla in the hind-brain." },
+          { "speaker": "NEO", "text": "The cerebellum is responsible for the precision of voluntary actions and for posture and balance, like riding a bicycle or picking up a pencil." }
+        ]
+      },
+      {
+        "animation": "The brain sits inside a skull drawn like a cricket helmet, floating in a fluid-filled balloon that absorbs a bump; the spinal cord slides safely inside a stack of vertebrae. A 'Board tip' card follows.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Such an important organ must be well protected." },
+          { "speaker": "NEO", "text": "It is. The brain sits inside a bony box, within a fluid-filled balloon for shock absorption. The vertebral column protects the spinal cord." },
+          { "speaker": "NEO", "text": "Board tip: draw the reflex arc in the correct order: receptor, sensory neuron, relay neuron, motor neuron, effector." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Reflex arc works through the spinal cord', '2. CNS = brain + spinal cord; PNS = cranial + spinal nerves', '3. Fore-brain thinks; medulla, cerebellum control involuntary actions and balance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: reflex arcs work through the spinal cord for a quick response. Two: the brain and spinal cord form the central nervous system, and cranial and spinal nerves form the peripheral nervous system. Three: the fore-brain is the thinking part, the medulla controls involuntary actions, and the cerebellum maintains posture and balance." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Control and Coordination",
+    "topic_no": 3,
+    "name": "How Nervous Tissue Causes Action",
+    "scenes": [
+      {
+        "animation": "A school gym: Zippy stares hard at a dumbbell, squinting with effort, but his cartoon arm doesn't move. Neo taps him on the head, a spark races down a nerve to the arm, and the bicep bulges as the dumbbell lifts.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I thought really hard about lifting this dumbbell. Why didn't it move?" },
+          { "speaker": "NEO", "text": "Thinking only creates the message. Action happens when that message reaches a muscle." }
+        ]
+      },
+      {
+        "animation": "Follow a glowing impulse from the brain down a nerve to a muscle fibre; at the nerve ending, a synapse releases chemical bubbles onto the muscle cell, which lights up.",
+        "lines": [
+          { "speaker": "NEO", "text": "The final destination of a nerve impulse is a muscle or a gland. At the nerve ending, the signal is passed on to the muscle cells." },
+          { "speaker": "NEO", "text": "But how does a muscle cell actually move?" }
+        ]
+      },
+      {
+        "animation": "Inside a muscle cell, special protein strands slide and rearrange like passengers squeezing together on a crowded local train bench, and the whole cell becomes shorter. Label: 'Proteins change shape and arrangement → cell becomes shorter'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Muscle cells contain special proteins. In response to nervous electrical impulses, these proteins change both their shape and their arrangement in the cell." },
+          { "speaker": "NEO", "text": "The new arrangement gives the muscle cell a shorter form. That is how a muscle contracts." },
+          { "speaker": "ZIPPY", "text": "So muscles don't grow new parts when they move? They just rearrange?" },
+          { "speaker": "NEO", "text": "Exactly. Movement comes from changes in the arrangement of these proteins." }
+        ]
+      },
+      {
+        "animation": "Split screen: a batter swings a cricket bat, labelled 'Voluntary muscles'; inside the body, the heart beats and the stomach churns on their own, labelled 'Involuntary muscles'. The brain diagram highlights the fore-brain for the swing and the mid-brain and hind-brain for the heart and stomach.",
+        "lines": [
+          { "speaker": "NEO", "text": "Muscles we move by conscious will, like those in our arms and legs, are voluntary muscles. Voluntary actions are based on decisions made in the fore-brain." },
+          { "speaker": "NEO", "text": "Muscles like those of the heart and stomach work without our conscious control. These are involuntary muscles." },
+          { "speaker": "NEO", "text": "Many involuntary actions are controlled by the mid-brain and hind-brain." }
+        ]
+      },
+      {
+        "animation": "A flow strip builds: 'Stimulus → receptor → nerve impulse → synapse → muscle proteins rearrange → movement'. Then a touch-me-not plant appears with a question mark: 'No nerves, no muscles?' A 'Board tip' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "So the full story is: receptors sense, nerves carry the impulse, and muscle proteins rearrange to produce movement." },
+          { "speaker": "NEO", "text": "Board tip: for 'How does a muscle cell move?', write two lines. Special proteins change their shape and arrangement in response to nerve impulses, making the cell shorter." },
+          { "speaker": "ZIPPY", "text": "Wait, plants have no nerves or muscles. So how do they move?" },
+          { "speaker": "NEO", "text": "Great question. That's our next topic." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Nerve impulse → muscle cell via synapse', '2. Special proteins change shape and arrangement', '3. Voluntary vs involuntary muscles'. Zippy lifts the dumbbell overhead, triumphant.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: nerve impulses reach muscle cells through a synapse. Two: special proteins in muscle cells change their shape and arrangement, making the cell shorter. Three: voluntary muscles act on our will, and involuntary muscles work on their own." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Control and Coordination",
+    "topic_no": 4,
+    "name": "Coordination in Plants",
+    "scenes": [
+      {
+        "animation": "A school garden: Zippy lightly touches a touch-me-not plant, and its leaflets fold up instantly and droop, as if it is offended. Zippy leaps back, startled.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Whoa, it's shy! But plants have no nerves or muscles. How did it move?" },
+          { "speaker": "NEO", "text": "Plants have no nervous system, yet they respond. They show two kinds of movement: immediate responses to stimuli, and movements due to growth." }
+        ]
+      },
+      {
+        "animation": "Zoom into the touched leaf: a signal hops from cell to cell like a spark; at the leaf base, water flows out of some cells, which shrink like deflating balloons, and the leaflets fold. Label: 'Change in water content → change in shape'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The touch-me-not uses electrical-chemical means to pass the information of touch from cell to cell." },
+          { "speaker": "NEO", "text": "To move, its cells change shape by changing the amount of water in them. They swell or shrink, and the leaves fold." },
+          { "speaker": "NEO", "text": "This movement does not involve growth." }
+        ]
+      },
+      {
+        "animation": "Time-lapse: a pea plant tendril touches a bamboo stick. The side away from the stick grows longer, shown with stretching stripes, and the tendril coils around the support.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some plants, like the pea plant, climb using tendrils, which are sensitive to touch." },
+          { "speaker": "NEO", "text": "The part of the tendril in contact with the support does not grow as rapidly as the part away from it. So the tendril circles around the support." },
+          { "speaker": "NEO", "text": "This movement is due to growth." }
+        ]
+      },
+      {
+        "animation": "Four quick panels with arrows: seedlings in a conical flask by a window bending towards the light ('Phototropism'); roots growing down and shoots up ('Geotropism'); roots bending towards a wet patch ('Hydrotropism'); pollen tubes growing towards ovules ('Chemotropism').",
+        "lines": [
+          { "speaker": "NEO", "text": "Directional growth in response to a stimulus is called a tropism." },
+          { "speaker": "NEO", "text": "Shoots bend towards light, and roots bend away from it. That is phototropism." },
+          { "speaker": "NEO", "text": "Roots grow downwards in response to gravity, and shoots grow upwards, away from it. That is geotropism." },
+          { "speaker": "NEO", "text": "Growth towards water is hydrotropism. Growth of pollen tubes towards ovules is chemotropism." },
+          { "speaker": "ZIPPY", "text": "So roots are positively geotropic, and shoots are negatively geotropic!" },
+          { "speaker": "NEO", "text": "Perfect." }
+        ]
+      },
+      {
+        "animation": "The flask activity: the flask is turned so light now falls from the other side; the shoots slowly bend towards the light again, while the roots keep growing down. A 'Board tip' card shows two columns: 'Touch-me-not: not growth' and 'Tendril: growth'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the flask activity, when the flask is turned, the shoots bend towards the light again. The roots don't." },
+          { "speaker": "NEO", "text": "Board tip: don't mix up the two kinds of movement. The touch-me-not's response is independent of growth, but a tendril's coiling depends on growth." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Touch-me-not: water moves, cells change shape', '2. Tendrils: unequal growth', '3. Tropisms: photo, geo, hydro, chemo'. The touch-me-not slowly reopens its leaves and waves.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the touch-me-not moves by changing the water content of its cells, not by growth. Two: tendrils coil around a support because of unequal growth. Three: tropisms are directional growth responses to light, gravity, water and chemicals." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Control and Coordination",
+    "topic_no": 5,
+    "name": "Plant Hormones",
+    "scenes": [
+      {
+        "animation": "A potted seedling on a classroom windowsill sulks on its shady side, then slowly bends towards the sunny window. A tiny courier character labelled 'Auxin' is seen running across the shoot tip, from the sunny side to the shady side.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How does this plant know which way to bend? It has no eyes and no brain!" },
+          { "speaker": "NEO", "text": "It uses chemical messengers called plant hormones. Let's meet the main ones." }
+        ]
+      },
+      {
+        "animation": "Step by step: light falls on the shoot from one side; auxin molecules made at the shoot tip drift to the shady side; the cells on that side stretch longer, animated like expanding accordions, and the shoot bends towards the light.",
+        "lines": [
+          { "speaker": "NEO", "text": "Auxin is synthesised at the shoot tip, and it helps cells grow longer." },
+          { "speaker": "NEO", "text": "When light comes from one side, auxin diffuses towards the shady side of the shoot." },
+          { "speaker": "NEO", "text": "This makes the cells on the shady side grow longer. So the plant appears to bend towards the light." }
+        ]
+      },
+      {
+        "animation": "Two new characters enter: 'Gibberellin' stretching a stem upwards like a rubber band, and 'Cytokinin' inside a mango and a seed, dealing out dividing cells like playing cards.",
+        "lines": [
+          { "speaker": "NEO", "text": "Gibberellins, like auxins, help in the growth of the stem." },
+          { "speaker": "NEO", "text": "Cytokinins promote cell division. So they are present in greater concentration where cell division is rapid, as in fruits and seeds." },
+          { "speaker": "ZIPPY", "text": "So all plant hormones help plants grow?" }
+        ]
+      },
+      {
+        "animation": "A leaf wilts in the May heat; a character labelled 'Abscisic acid' holds up a red STOP sign to a growing shoot, which halts mid-stretch.",
+        "lines": [
+          { "speaker": "NEO", "text": "Not all. Abscisic acid inhibits growth. Its effects include the wilting of leaves." },
+          { "speaker": "NEO", "text": "So plant hormones can promote or inhibit growth. Together they help coordinate growth, development and responses to the environment." }
+        ]
+      },
+      {
+        "animation": "A four-row table slides in: 'Auxin: cell elongation, bending towards light', 'Gibberellins: stem growth', 'Cytokinins: cell division', 'Abscisic acid: inhibits growth, wilting'. A 'Board tip' card follows with a sketch of a bending shoot.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: this table is a quick two or three marks. Remember that abscisic acid is the growth inhibitor in this list." },
+          { "speaker": "NEO", "text": "When asked to explain phototropism, mention auxin moving to the shady side and cells there growing longer. Just saying the plant likes light earns no marks." },
+          { "speaker": "ZIPPY", "text": "Got it. The shady side grows more, so the plant leans towards the sun." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Auxin: shady side grows longer → bends to light', '2. Gibberellins: stem growth; Cytokinins: cell division', '3. Abscisic acid: inhibits growth, wilting'. The seedling now stands tall, facing the window.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: auxin, made at the shoot tip, moves to the shady side and makes the shoot bend towards light. Two: gibberellins help stem growth, and cytokinins promote cell division. Three: abscisic acid inhibits growth and causes wilting of leaves." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Control and Coordination",
+    "topic_no": 6,
+    "name": "Hormones in Animals",
+    "scenes": [
+      {
+        "animation": "A dark lane at night; a stray dog suddenly barks. Zippy's cartoon heart pounds out of his chest, his sparks stand on end, and he sprints away. A big red label flashes: 'ADRENALINE!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My heart is racing! What just happened to me?" },
+          { "speaker": "NEO", "text": "Adrenaline, Zippy. Your body's emergency hormone." }
+        ]
+      },
+      {
+        "animation": "Neurons are shown as wires reaching only the cells they touch, with a 'Resetting…' timer on one cell; then a hormone droplet floats through the bloodstream and reaches cells all over the body.",
+        "lines": [
+          { "speaker": "NEO", "text": "Electrical impulses have limits. They reach only cells connected by nervous tissue, and a cell needs time to reset before it can send a new impulse." },
+          { "speaker": "NEO", "text": "So animals also use chemical communication. Hormones are released into the blood and can reach all cells of the body." }
+        ]
+      },
+      {
+        "animation": "Adrenal glands sitting on top of the kidneys spray adrenaline into the blood. The heart beats faster, the small arteries to the skin and gut tighten, and the diaphragm and rib muscles pump faster.",
+        "lines": [
+          { "speaker": "NEO", "text": "Adrenaline is secreted by the adrenal glands directly into the blood." },
+          { "speaker": "NEO", "text": "It makes the heart beat faster, supplying more oxygen to the muscles. Blood to the digestive system and skin is reduced, and the breathing rate increases." },
+          { "speaker": "NEO", "text": "All this prepares the body to deal with the situation." }
+        ]
+      },
+      {
+        "animation": "A map of the endocrine glands lights up in turn: the thyroid with a packet of iodised salt and a swollen-neck icon labelled 'Goitre'; the pituitary with a height chart; testes and ovaries with a 'Puberty' banner; the pancreas with a sugar cube.",
+        "lines": [
+          { "speaker": "NEO", "text": "The thyroid makes thyroxin, which needs iodine. Thyroxin regulates carbohydrate, protein and fat metabolism. Iodine deficiency can cause goitre, a swollen neck, so we use iodised salt." },
+          { "speaker": "NEO", "text": "Growth hormone from the pituitary regulates growth. Its deficiency in childhood leads to dwarfism." },
+          { "speaker": "NEO", "text": "Testosterone in males and oestrogen in females bring about the changes of puberty." },
+          { "speaker": "NEO", "text": "Insulin from the pancreas regulates blood sugar. If it is not secreted in proper amounts, blood sugar rises, causing diabetes." }
+        ]
+      },
+      {
+        "animation": "A see-saw labelled 'Blood sugar': when it tips up, pancreas cells detect it and release more insulin; as it tips down, insulin release slows. The label 'Feedback mechanism' glows. A 'Board tip' card follows.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But who decides how much hormone to release?" },
+          { "speaker": "NEO", "text": "Feedback mechanisms. When blood sugar rises, pancreas cells detect it and produce more insulin. As the sugar level falls, insulin secretion is reduced." },
+          { "speaker": "NEO", "text": "Board tip: expect questions linking iodine to goitre, insulin to diabetes, and on the feedback mechanism example." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Hormones travel in blood to all cells', '2. Adrenaline, thyroxin, growth hormone, sex hormones, insulin', '3. Feedback controls timing and amount'. Zippy calms down as the stray dog wags its tail.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: hormones travel in the blood and can reach every cell. Two: adrenaline prepares us for emergencies, thyroxin controls metabolism, growth hormone controls growth, sex hormones bring puberty, and insulin controls blood sugar. Three: feedback mechanisms regulate the timing and amount of hormone released." },
+          { "speaker": "ZIPPY", "text": "And my adrenaline can relax now. It's just a friendly dog!" }
+        ]
+      }
+    ]
+  }
+]

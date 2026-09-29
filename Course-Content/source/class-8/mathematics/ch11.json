@@ -1,0 +1,280 @@
+[
+  {
+    "chapter_no": 11,
+    "chapter": "Exploring Some Geometric Themes",
+    "topic_no": 1,
+    "name": "Fractals: The Sierpinski Carpet and Gasket",
+    "scenes": [
+      {
+        "animation": "Zippy zooms into a fern leaf. Each leaflet is a tiny copy of the whole fern, and each sub-leaflet a tinier copy. He keeps zooming, getting dizzier with each level.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Every time I zoom in, I see the same fern again. Is this a trick?" },
+          { "speaker": "NEO", "text": "No trick. It's a fractal: a shape that repeats itself at smaller and smaller scales." }
+        ]
+      },
+      {
+        "animation": "Montage of nature: a tree trunk splitting into limbs, branches and twigs; lightning forking; a jagged coastline; puffy clouds. Each gets a small label 'self-similar'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Trees, lightning, coastlines, clouds and mountains all show this self-similarity." },
+          { "speaker": "NEO", "text": "Mathematicians build fractals step by step, using a simple rule again and again." }
+        ]
+      },
+      {
+        "animation": "Sierpinski Carpet: Step 0 is a solid square. Step 1 splits it into a 3 × 3 grid and the centre square pops out as a hole. Step 2 repeats on each of the 8 remaining squares. Counters show 'R₀ = 1, R₁ = 8, R₂ = 64' and 'H₀ = 0, H₁ = 1, H₂ = 1 + 8 = 9'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Polish mathematician Sierpinski split a square into 9 equal squares and removed the centre one." },
+          { "speaker": "NEO", "text": "Then he repeated this on each of the 8 squares left. Each remaining square gives 8 new ones, so the count goes 1, 8, 64." },
+          { "speaker": "NEO", "text": "In general, the remaining squares at Step n are 8 to the power n." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Holes at Step 3?' Steps: 'H₃ = H₂ + R₂', '= 9 + 64', '= 73'. Each old hole stays, and each remaining square from Step 2 gets one new hole, shown as 64 tiny holes appearing.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How many holes at Step 3?" },
+          { "speaker": "NEO", "text": "Old holes stay, and every remaining square gets one new hole. So holes at Step 3 are holes at Step 2 plus squares at Step 2." },
+          { "speaker": "NEO", "text": "That's 9 plus 64, which is 73 holes." }
+        ]
+      },
+      {
+        "animation": "Sierpinski Gasket: an equilateral triangle, midpoints joined into 4 small triangles; the central one is removed. Repeats on 3 remaining triangles: '1, 3, 9'. An 'Exam Tip' sticker: 'Joining midpoints of an equilateral triangle gives 4 identical equilateral triangles'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Sierpinski Gasket uses a triangle. Join the midpoints of an equilateral triangle to get 4 identical triangles, then remove the middle one." },
+          { "speaker": "NEO", "text": "Repeat on the 3 that remain. The count goes 1, 3, 9, which is 3 to the power n." },
+          { "speaker": "NEO", "text": "Exam tip: find how each step creates the next. That rule gives you the formula." }
+        ]
+      },
+      {
+        "animation": "Recap board with the carpet and gasket side by side. Points: '1. Fractal = self-similar at smaller scales', '2. Carpet: Rₙ = 8ⁿ, Hₙ₊₁ = Hₙ + Rₙ', '3. Gasket: 3ⁿ triangles remain'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a fractal repeats the same pattern at smaller and smaller scales." },
+          { "speaker": "NEO", "text": "Two: in the Sierpinski Carpet, 8 to the n squares remain, and new holes equal the previous squares." },
+          { "speaker": "NEO", "text": "Three: in the Sierpinski Gasket, 3 to the n triangles remain at Step n." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Exploring Some Geometric Themes",
+    "topic_no": 2,
+    "name": "The Koch Snowflake and Fractals in Art",
+    "scenes": [
+      {
+        "animation": "A winter window. Zippy breathes on the glass and a snowflake outline grows spiky bumps on every edge, then smaller bumps on those bumps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This snowflake keeps growing spikes on its spikes!" },
+          { "speaker": "NEO", "text": "That's the Koch Snowflake, described by the Swedish mathematician von Koch in 1904." }
+        ]
+      },
+      {
+        "animation": "An equilateral triangle of side 1. One side splits into thirds; a small equilateral triangle rises on the middle third and the base of the bump disappears, leaving a 4-segment bump. Every side does the same: Step 1 shows a six-pointed star.",
+        "lines": [
+          { "speaker": "NEO", "text": "Start with an equilateral triangle. Split each side into 3 equal parts." },
+          { "speaker": "NEO", "text": "Raise a small equilateral triangle on the middle part, then remove that middle part. Each side becomes a bump of 4 small segments." },
+          { "speaker": "NEO", "text": "Repeat this on every side of the new shape, again and again." }
+        ]
+      },
+      {
+        "animation": "A table fills line by line: 'Step 0: 3 sides × 1 = perimeter 3', 'Step 1: 12 sides × 1/3 = 4', 'Step 2: 48 sides × 1/9 = 16/3 ≈ 5.33'. Then the general pattern: 'sides = 3 × 4ⁿ', 'perimeter = 3 × (4/3)ⁿ'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's count. Each side becomes 4 sides, each one-third as long." },
+          { "speaker": "NEO", "text": "Step 0 has 3 sides and perimeter 3. Step 1 has 12 sides of length one-third, so perimeter 4." },
+          { "speaker": "NEO", "text": "Step 2 has 48 sides of length one-ninth. 48 by 9 is sixteen-thirds, about 5.33." },
+          { "speaker": "NEO", "text": "At Step n, there are 3 times 4 to the n sides, and the perimeter is 3 times four-thirds to the power n." }
+        ]
+      },
+      {
+        "animation": "The Kandariya Mahadev Temple at Khajuraho rises on screen, labelled 'Madhya Pradesh, c. 1025 CE'. Its spires show smaller copies of the full structure, with even smaller copies on them. Then a Nigerian Fulani wedding blanket with diamonds inside diamonds, and an Escher-inspired print of lizards shrinking towards the centre.",
+        "lines": [
+          { "speaker": "NEO", "text": "Fractals appear in art too. The Kandariya Mahadev Temple in Khajuraho, completed around 1025 CE, has towers made of smaller copies of itself." },
+          { "speaker": "NEO", "text": "Fulani wedding blankets from Nigeria have diamonds inside diamonds. And the artist M. C. Escher drew lizards getting smaller and smaller." }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' sticker beside a Koch side: 'Each step: sides × 4, length ÷ 3 ⇒ perimeter × 4/3'. Zippy tries to draw Step 5 and runs out of pencil.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the perimeter keeps growing forever?" },
+          { "speaker": "NEO", "text": "Yes, it grows by four-thirds every step, while the snowflake still fits on your window." },
+          { "speaker": "NEO", "text": "Exam tip: each step multiplies the number of sides by 4 and divides each length by 3." }
+        ]
+      },
+      {
+        "animation": "Recap board with the snowflake and temple. Points: '1. Koch: each side → 4 segments of 1/3 length', '2. Sides 3 × 4ⁿ, perimeter 3 × (4/3)ⁿ', '3. Fractals in temples, blankets and art'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: in the Koch Snowflake, each side becomes 4 segments, each one-third as long." },
+          { "speaker": "NEO", "text": "Two: at Step n, there are 3 times 4 to the n sides, and the perimeter is multiplied by four-thirds each step." },
+          { "speaker": "NEO", "text": "Three: fractals appear in Indian temples, African textiles and modern art." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Exploring Some Geometric Themes",
+    "topic_no": 3,
+    "name": "Visualising Solids: Profiles, Prisms and Pyramids",
+    "scenes": [
+      {
+        "animation": "A cartoon cat bursts through a wall, leaving a perfect cat-shaped hole. An elephant does the same from the side and from the front, leaving two very different holes.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The elephant left two completely different holes! Which one is really the elephant?" },
+          { "speaker": "NEO", "text": "Both. The outline, or profile, of a solid depends on where you look from." }
+        ]
+      },
+      {
+        "animation": "A quote card appears: 'I start at once building it up in my imagination. — Nikola Tesla'. A cylinder rotates: from the side its profile is a rectangle, from the top a circle. A cone shows a triangle from the side and a circle from the top.",
+        "lines": [
+          { "speaker": "NEO", "text": "The inventor Nikola Tesla built machines in his imagination before building them for real. Let's practise." },
+          { "speaker": "NEO", "text": "A cylinder looks like a rectangle from the side and a circle from the top." },
+          { "speaker": "NEO", "text": "A cone looks like a triangle from the side, and a circle from above." }
+        ]
+      },
+      {
+        "animation": "A cube with one face shaded, one edge highlighted and one corner glowing, labelled 'face', 'edge', 'vertex'. A counter: 'Cube: 6 faces, 12 edges, 8 vertices'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Faces are the flat surfaces. Edges are where faces meet. Vertices are the corners where edges meet." },
+          { "speaker": "NEO", "text": "A cube has 6 faces, 12 edges and 8 vertices." }
+        ]
+      },
+      {
+        "animation": "A decagonal prism builds: two 10-sided faces joined by 10 parallelograms. Counters fill line by line: 'faces = 10 + 2 = 12', 'edges = 10 + 10 + 10 = 30', 'vertices = 10 + 10 = 20'. Then a decagonal pyramid: 'faces = 10 + 1 = 11', 'edges = 10 + 10 = 20', 'vertices = 10 + 1 = 11'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A prism has two matching polygons as opposite faces, with parallelograms joining them. A pyramid has a polygon base and one tip above it." },
+          { "speaker": "NEO", "text": "Puzzle: a prism with 10-sided ends. It has 10 side faces plus 2 ends, so 12 faces. 10 edges on top, 10 at the bottom and 10 joining them, so 30 edges. And 20 vertices." },
+          { "speaker": "NEO", "text": "A pyramid with a 10-sided base has 11 faces, 20 edges and 11 vertices." }
+        ]
+      },
+      {
+        "animation": "General formulas stack: 'n-sided prism: n + 2 faces, 3n edges, 2n vertices', 'n-sided pyramid: n + 1 faces, 2n edges, n + 1 vertices'. A triangular pyramid is labelled 'tetrahedron'. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "In general, an n-sided prism has n plus 2 faces, 3n edges and 2n vertices." },
+          { "speaker": "NEO", "text": "An n-sided pyramid has n plus 1 faces, 2n edges and n plus 1 vertices. A triangular pyramid is also called a tetrahedron." },
+          { "speaker": "NEO", "text": "Exam tip: count faces, edges and vertices level by level: top, sides, bottom. Don't count by staring at a picture." }
+        ]
+      },
+      {
+        "animation": "Recap board with the elephant-shaped hole. Points: '1. A solid's profile depends on the viewpoint', '2. Faces, edges, vertices', '3. n-prism: n + 2, 3n, 2n; n-pyramid: n + 1, 2n, n + 1'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a solid can have very different profiles from different viewpoints." },
+          { "speaker": "NEO", "text": "Two: solids with flat faces have faces, edges and vertices." },
+          { "speaker": "NEO", "text": "Three: an n-sided prism has 3n edges, and an n-sided pyramid has 2n edges." },
+          { "speaker": "ZIPPY", "text": "I'm using the door next time." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Exploring Some Geometric Themes",
+    "topic_no": 4,
+    "name": "Nets and the Ant's Shortest Path",
+    "scenes": [
+      {
+        "animation": "A hungry cartoon ant sits on the side of a cardboard box. A shiny laddu sits on the far side. The ant looks at several possible routes over the box and scratches its head with a leg.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The ant wants the laddu, but it can only walk on the box. Which way is shortest?" },
+          { "speaker": "NEO", "text": "Unfold the box flat. That flat shape is called a net." }
+        ]
+      },
+      {
+        "animation": "A cube unfolds into a cross-shaped net of 6 squares, then folds back. Other nets flash: some fold into a cube, one overlaps and gets a red cross. Counters: 'Cube: 11 nets', 'Regular tetrahedron: 2 nets', 'Octahedron: 11 nets', 'Dodecahedron: 43,380 nets'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A net is what you get when you unfold a solid onto a flat surface." },
+          { "speaker": "NEO", "text": "A cube has 11 different nets. A regular tetrahedron has only 2." },
+          { "speaker": "NEO", "text": "A dodecahedron, with 12 pentagon faces, has 43,380 nets!" }
+        ]
+      },
+      {
+        "animation": "A cylinder unrolls into a rectangle with two circles; the rectangle's length is labelled 'circumference of the base' and its width 'height'. A cone slits along a slant line and unrolls into a sector of a circle centred at the tip O.",
+        "lines": [
+          { "speaker": "NEO", "text": "A cylinder unrolls into a rectangle and two circles. The rectangle's length is the distance around the circle." },
+          { "speaker": "NEO", "text": "A cone unrolls into a slice of a circle, centred at its tip." }
+        ]
+      },
+      {
+        "animation": "Back to the ant. The box with dimensions labelled unfolds one way: the straight line from ant to laddu runs off the net, crossed in red. It unfolds another way: a right triangle appears with legs '24 cm' and '32 cm'. Steps: 'd² = 24² + 32²', '= 576 + 1024 = 1600', 'd = 40 cm'. Another unfolding shows a longer '42 cm' route.",
+        "lines": [
+          { "speaker": "NEO", "text": "A path on the box becomes a path of the same length on the net. On a flat net, the shortest path is a straight line." },
+          { "speaker": "NEO", "text": "But careful. If the straight line leaves the net, it isn't a real path on the box." },
+          { "speaker": "NEO", "text": "For this box, one unfolding gives a right triangle with sides 24 and 32. 576 plus 1024 is 1600, so the path is 40 centimetres." },
+          { "speaker": "NEO", "text": "Another unfolding gives 42 centimetres. So the way you unfold matters!" }
+        ]
+      },
+      {
+        "animation": "The ant follows the 40 cm path and happily eats the laddu. An 'Exam Tip' sticker: 'Try every unfolding; pick the shortest straight line that stays on the net'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So we must check all the different ways of unfolding?" },
+          { "speaker": "NEO", "text": "Yes. Exam tip: list the possible unfoldings, draw straight lines that stay on the net, and pick the shortest." }
+        ]
+      },
+      {
+        "animation": "Recap board with the ant holding half a laddu. Points: '1. A net unfolds a solid onto a plane', '2. Cube: 11 nets; cylinder: rectangle + 2 circles', '3. Shortest surface path = straight line on the right net'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a net is a solid unfolded onto a flat surface." },
+          { "speaker": "NEO", "text": "Two: a cube has 11 nets, and a cylinder unrolls into a rectangle and two circles." },
+          { "speaker": "NEO", "text": "Three: the shortest path on a box is a straight line on the right net, often found using Baudhayana's theorem." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Exploring Some Geometric Themes",
+    "topic_no": 5,
+    "name": "Projections, Shadows and Isometric Drawing",
+    "scenes": [
+      {
+        "animation": "An architect's desk with blueprints. An engineer named ENGINEER RAO holds up a drawing with three boxes labelled 'Front', 'Top', 'Side'. Zippy peers at it, 'Why three drawings of one thing?'",
+        "lines": [
+          { "speaker": "ENGINEER RAO", "text": "One drawing can fool you. Three views never lie." },
+          { "speaker": "NEO", "text": "She's using projections. Let's see what that means." }
+        ]
+      },
+      {
+        "animation": "A point P floats above a plane M. A line drops perpendicularly from P to O on the plane: 'O is the projection of P'. A slanted rod projects to a shorter shadow segment; when the rod is parallel to the plane, its projection matches its length.",
+        "lines": [
+          { "speaker": "NEO", "text": "Drop a perpendicular line from a point to a plane. Where it lands is the point's projection." },
+          { "speaker": "NEO", "text": "Project every point of an object, and you get the object's projection." },
+          { "speaker": "NEO", "text": "A tilted stick's projection is shorter than the stick. It's the same length only when the stick is parallel to the plane." }
+        ]
+      },
+      {
+        "animation": "A cuboid sits in a corner formed by three planes: vertical at the back, horizontal below, side plane to the right. Its projections slide onto each plane, labelled 'Front view', 'Top view', 'Side view'. Two different cuboids produce the same front view.",
+        "lines": [
+          { "speaker": "NEO", "text": "Different objects can have the same projection. So engineers use three: the front view, the top view and the side view." },
+          { "speaker": "NEO", "text": "Together, these three views pin down the shape." }
+        ]
+      },
+      {
+        "animation": "A torch shines on a parallelogram cutout held near a wall; its shadow is a bigger parallelogram. The torch moves far away and becomes the Sun; the shadow sharpens into an exact projection. A caption: 'Parallel lines project to parallel lines'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So a projection is like a shadow?" },
+          { "speaker": "NEO", "text": "Very close. With a distant light like the Sun shining straight at a wall, shadows match projections." },
+          { "speaker": "NEO", "text": "Tilt a parallelogram any way you like, and its shadow is still a parallelogram. Parallel lines stay parallel." }
+        ]
+      },
+      {
+        "animation": "A glass cube balances on one corner above the floor; its projection is a regular hexagon. Many hexagons tile the floor into an isometric grid with three line directions labelled 'height', 'length', 'depth'. A row of four cubes, a Tetris shape, is drawn edge by edge on the grid. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Balance a cube on one corner and project it. All the edges come out equal, and you get a regular hexagon. This is the isometric projection." },
+          { "speaker": "NEO", "text": "Isometric means equal measure. Tile hexagons and you get isometric grid paper, with directions for height, length and depth." },
+          { "speaker": "NEO", "text": "Exam tip: on isometric paper, draw edge by edge, counting units along each of the three directions." }
+        ]
+      },
+      {
+        "animation": "Recap board with a blueprint and an isometric Tetris block. Points: '1. Projection: perpendicular drop onto a plane', '2. Front, top and side views describe a solid', '3. Isometric: cube → regular hexagon; draw on isometric grids'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a projection drops every point perpendicularly onto a plane." },
+          { "speaker": "NEO", "text": "Two: front, top and side views together describe a solid." },
+          { "speaker": "NEO", "text": "Three: in an isometric projection, a cube becomes a regular hexagon, and we draw solids on isometric grids." },
+          { "speaker": "ENGINEER RAO", "text": "Welcome to the drawing office, Zippy." }
+        ]
+      }
+    ]
+  }
+]

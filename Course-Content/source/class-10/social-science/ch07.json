@@ -1,0 +1,225 @@
+[
+  {
+    "chapter_no": 7,
+    "chapter": "Geography: Forest and Wildlife Resources",
+    "topic_no": 1,
+    "name": "Biodiversity and Why We Conserve It",
+    "scenes": [
+      {
+        "animation": "Zippy stands in a forest shouting 'Who needs trees? I have an air purifier!' The purifier's plug is traced back along a wire to a giant tree whose leaves puff out clean air. A web of lines connects the tree to a bee, a river, soil and a farmer.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Who needs forests? I have an air purifier at home." },
+          { "speaker": "NEO", "text": "Plants, animals and micro-organisms re-create the air we breathe, the water we drink and the soil that grows our food. Your purifier can't do that." }
+        ]
+      },
+      {
+        "animation": "A food web builds itself: bacteria, lichens, a banyan tree, an elephant, a blue whale and a human, all linked by glowing threads. The word 'Biodiversity' appears, then 'Forests = primary producers' glows at the base of the web.",
+        "lines": [
+          { "speaker": "NEO", "text": "We share this planet with millions of living beings, from micro-organisms and lichens to banyan trees, elephants and blue whales. This is biodiversity." },
+          { "speaker": "NEO", "text": "We humans are only a part of this complex web, and we depend on it for our existence." },
+          { "speaker": "NEO", "text": "Forests play a key role because they are the primary producers on which all other living beings depend." }
+        ]
+      },
+      {
+        "animation": "India glows on a world map with a badge 'One of the world's richest countries in biodiversity'. Then a shield labelled 'Conservation' covers three icons: air, water and soil ('life support systems'), a DNA strand ('genetic diversity'), and a fishing boat with traditional crop seeds.",
+        "lines": [
+          { "speaker": "NEO", "text": "India is one of the world's richest countries in biological diversity. But our flora and fauna are under great stress, mainly due to insensitivity to our environment." },
+          { "speaker": "ZIPPY", "text": "So why exactly should we conserve them?" },
+          { "speaker": "NEO", "text": "Conservation preserves ecological diversity and our life support systems: water, air and soil." },
+          { "speaker": "NEO", "text": "It also preserves the genetic diversity of plants and animals for better growth and breeding. Agriculture still depends on traditional crop varieties, and fisheries depend on aquatic biodiversity." }
+        ]
+      },
+      {
+        "animation": "A timeline stamp slams down: '1960s-70s: demand for a national wildlife programme', then '1972: Indian Wildlife (Protection) Act'. Three icons appear under the Act: a crossed-out hunting rifle, a fenced habitat, and a crossed-out trade crate. An 'All-India list of protected species' scroll unrolls.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the 1960s and 1970s, conservationists demanded a national wildlife protection programme. So the Indian Wildlife (Protection) Act was implemented in 1972." },
+          { "speaker": "NEO", "text": "An all-India list of protected species was published. The Act banned hunting, gave legal protection to habitats and restricted trade in wildlife." }
+        ]
+      },
+      {
+        "animation": "Cards of protected animals flip onto the screen one after another: tiger, one-horned rhinoceros, Kashmir stag (hangul), three crocodiles (fresh water, saltwater, gharial), Asiatic lion. Then newer cards: Indian elephant, black buck, great Indian bustard, snow leopard. Last, butterfly and beetle cards join with '1980 and 1986', and a plant card with '1991: six plant species'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Special projects protected the tiger, the one-horned rhinoceros, the Kashmir stag or hangul, three types of crocodiles, and the Asiatic lion." },
+          { "speaker": "NEO", "text": "Under notifications of 1980 and 1986, several hundred butterflies, moths, beetles and one dragonfly were added to the protected list. In 1991, plants were added for the first time, starting with six species." },
+          { "speaker": "NEO", "text": "Exam tip: remember 1972 for the Wildlife Protection Act. It is a common one-mark question." }
+        ]
+      },
+      {
+        "animation": "Recap board with a leaf icon. Points appear: '1. Biodiversity: we are one part of the web', '2. Conserve for life support systems and genetic diversity', '3. Indian Wildlife (Protection) Act, 1972'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: humans are only one part of the web of biodiversity, and forests are its primary producers." },
+          { "speaker": "NEO", "text": "Two: conservation protects our air, water and soil, and genetic diversity." },
+          { "speaker": "NEO", "text": "Three: the Indian Wildlife Protection Act of 1972 protects habitats and bans hunting." },
+          { "speaker": "ZIPPY", "text": "Okay, okay. Thank you, trees." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Geography: Forest and Wildlife Resources",
+    "topic_no": 2,
+    "name": "Project Tiger",
+    "scenes": [
+      {
+        "animation": "A counter on a big scoreboard rolls down from '55,000' to '1,827' as tiger silhouettes fade away one by one. Zippy's jaw drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Fifty-five thousand tigers down to one thousand eight hundred and twenty-seven? What happened?" },
+          { "speaker": "NEO", "text": "That is what the authorities realised in 1973. The tiger population had dwindled from an estimated 55,000 at the turn of the century to just 1,827." }
+        ]
+      },
+      {
+        "animation": "Four threat cards circle a sad cartoon tiger: 'Poaching for trade', 'Shrinking habitat', 'Depletion of prey base species', 'Growing human population'. A shady figure carries a tiger skin and a bottle labelled 'bones for medicine'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The tiger is a key species in the faunal web. The major threats were poaching for trade, shrinking habitat, depletion of prey species and a growing human population." },
+          { "speaker": "NEO", "text": "The trade of tiger skins and the use of their bones in traditional medicines, especially in Asian countries, pushed tigers to the verge of extinction." }
+        ]
+      },
+      {
+        "animation": "A world map zooms to India and Nepal; a pie shows 'about two-thirds of the world's surviving tigers'. A target symbol then flashes over both countries, labelled 'Prime targets for poaching'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India and Nepal provide habitat to about two-thirds of the world's surviving tigers. So these two nations became prime targets for poaching and illegal trading." },
+          { "speaker": "ZIPPY", "text": "So what did India do?" },
+          { "speaker": "NEO", "text": "In 1973, it launched Project Tiger, one of the well-publicised wildlife campaigns in the world." }
+        ]
+      },
+      {
+        "animation": "An animated map of India drops tiger paw pins one by one with labels: 'Corbett NP, Uttarakhand', 'Sunderbans NP, West Bengal', 'Bandhavgarh NP, Madhya Pradesh', 'Sariska WLS, Rajasthan', 'Manas TR, Assam', 'Periyar TR, Kerala'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some tiger reserves of India are Corbett National Park in Uttarakhand, Sunderbans National Park in West Bengal, and Bandhavgarh National Park in Madhya Pradesh." },
+          { "speaker": "NEO", "text": "Also Sariska Wildlife Sanctuary in Rajasthan, Manas Tiger Reserve in Assam and Periyar Tiger Reserve in Kerala." },
+          { "speaker": "NEO", "text": "Exam tip: always pair each reserve with its state. That is where students lose marks." }
+        ]
+      },
+      {
+        "animation": "A single tiger icon expands into a whole forest ecosystem: deer, grass, rivers, birds and insects all glowing together. A caption reads 'Saving a tiger = saving a whole biotype'. Then a magnifying glass shows insects with the caption 'Focus shifts to biodiversity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Tiger conservation is not only about saving one endangered species. It is also a way of preserving biotypes of sizeable magnitude." },
+          { "speaker": "NEO", "text": "Conservation projects are now focusing on biodiversity rather than on a few of its components. Even insects are finding a place in conservation planning." }
+        ]
+      },
+      {
+        "animation": "Recap board with a tiger paw icon. Points appear: '1. 1973: tigers down to 1,827', '2. Threats: poaching, habitat loss, prey depletion, human population', '3. Project Tiger 1973; reserves like Corbett, Sunderbans, Periyar'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: by 1973, India's tigers had fallen to 1,827." },
+          { "speaker": "NEO", "text": "Two: poaching, shrinking habitat, loss of prey and human pressure were the main threats." },
+          { "speaker": "NEO", "text": "Three: Project Tiger was launched in 1973, with reserves like Corbett, Sunderbans and Periyar." },
+          { "speaker": "ZIPPY", "text": "Roar! Team Tiger forever." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Geography: Forest and Wildlife Resources",
+    "topic_no": 3,
+    "name": "Types and Distribution of Forest Resources",
+    "scenes": [
+      {
+        "animation": "Zippy tries to put up a 'ZIPPY'S FOREST, KEEP OUT' board. A cartoon Forest Department officer in khaki taps his shoulder and shows a file stamped 'Government owned or managed'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I found a forest. It's mine now." },
+          { "speaker": "NEO", "text": "Sorry. In India, most forest and wildlife resources are owned or managed by the government, through the Forest Department or other departments." }
+        ]
+      },
+      {
+        "animation": "A pie chart of 'Total forest land' draws itself: a big slice 'Reserved forests: more than half', a slice 'Protected forests: almost one-third', and the rest 'Unclassed forests'. Each slice gets an icon: a vault, a shield, and a village.",
+        "lines": [
+          { "speaker": "NEO", "text": "Forests are classified into three categories." },
+          { "speaker": "NEO", "text": "Reserved forests make up more than half of the total forest land. They are regarded as the most valuable for conserving forest and wildlife." },
+          { "speaker": "NEO", "text": "Protected forests are almost one-third of the total forest area. They are protected from any further depletion." },
+          { "speaker": "NEO", "text": "Unclassed forests are other forests and wastelands, belonging to both government and private individuals and communities." }
+        ]
+      },
+      {
+        "animation": "A bracket joins 'Reserved' and 'Protected' into one box labelled 'Permanent forest estates'. Arrows point to timber logs, forest produce and a protective shield.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Reserved plus protected. Is there a combined name?" },
+          { "speaker": "NEO", "text": "Yes. They are called permanent forest estates, maintained for producing timber and other forest produce, and for protective reasons." }
+        ]
+      },
+      {
+        "animation": "An animated India map colours states in turn: Madhya Pradesh glows with a badge '75% permanent forests'. Then J&K, Andhra Pradesh, Uttarakhand, Kerala, Tamil Nadu, West Bengal and Maharashtra shade dark green ('Reserved'). Bihar, Haryana, Punjab, Himachal Pradesh, Odisha and Rajasthan shade light green ('Protected'). The north-eastern states and parts of Gujarat shade brown ('Unclassed, managed by local communities').",
+        "lines": [
+          { "speaker": "NEO", "text": "Madhya Pradesh has the largest area under permanent forests, constituting 75 per cent of its total forest area." },
+          { "speaker": "NEO", "text": "Jammu and Kashmir, Andhra Pradesh, Uttarakhand, Kerala, Tamil Nadu, West Bengal and Maharashtra have large percentages of reserved forests." },
+          { "speaker": "NEO", "text": "Bihar, Haryana, Punjab, Himachal Pradesh, Odisha and Rajasthan have a bulk of their forests under protected forests." },
+          { "speaker": "NEO", "text": "All north-eastern states and parts of Gujarat have a very high percentage of unclassed forests managed by local communities." }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' sticker flashes over the Madhya Pradesh badge, with the question 'Which state has the largest area under permanent forests?'",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: Madhya Pradesh and 75 per cent is a favourite question. So is the difference between reserved and protected forests." }
+        ]
+      },
+      {
+        "animation": "Recap board with three coloured tree icons. Points appear: '1. Reserved (more than half), protected (about one-third), unclassed', '2. Reserved + protected = permanent forest estates', '3. MP: largest permanent forests, 75%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: forests are reserved, protected or unclassed." },
+          { "speaker": "NEO", "text": "Two: reserved and protected forests together form permanent forest estates." },
+          { "speaker": "NEO", "text": "Three: Madhya Pradesh has the largest area under permanent forests, and the north-east has mostly unclassed forests." },
+          { "speaker": "ZIPPY", "text": "Fine, I'll just visit the forest. As a guest." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Geography: Forest and Wildlife Resources",
+    "topic_no": 4,
+    "name": "Community and Conservation",
+    "scenes": [
+      {
+        "animation": "A bulldozer rolls toward a forest in Rajasthan. A line of villagers stands in front holding a book labelled 'Wildlife Protection Act'. The bulldozer screeches to a halt; Zippy cheers from a tree.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Whoa! Villagers stopped a bulldozer with a book?" },
+          { "speaker": "NEO", "text": "In Sariska Tiger Reserve in Rajasthan, villagers fought against mining by citing the Wildlife Protection Act." }
+        ]
+      },
+      {
+        "animation": "An India map zooms to Alwar district, Rajasthan. Five village icons join hands around a forest patch labelled 'Bhairodev Dakav Sonchuri, 1,200 hectares'. A rule board appears: 'No hunting. No encroachment.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Forests are also home to traditional communities, and many of them protect these habitats themselves." },
+          { "speaker": "NEO", "text": "The people of five villages in Alwar district, Rajasthan, declared 1,200 hectares of forest as the Bhairodev Dakav Sonchuri, with their own rules that do not allow hunting." }
+        ]
+      },
+      {
+        "animation": "Himalayan villagers hug trees as axes lower, labelled 'Chipko movement'. Next, a seed packet labelled 'Beej Bachao Andolan, Tehri' and a basket labelled 'Navdanya' show many kinds of crops with a 'No synthetic chemicals' badge.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Chipko movement in the Himalayas resisted deforestation, and showed that community afforestation with indigenous species can be very successful." },
+          { "speaker": "NEO", "text": "The Beej Bachao Andolan in Tehri and Navdanya showed that diversified crop production without synthetic chemicals is possible and economically viable." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds: '1988: Odisha passes first JFM resolution' leads to 'Village institutions protect degraded forest land', which leads to 'Benefits: non-timber forest produce + share in timber'. A handshake links a forest officer and a villager.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can the government and villagers work together?" },
+          { "speaker": "NEO", "text": "Yes. The Joint Forest Management programme has been in formal existence since 1988, when Odisha passed the first resolution for it." },
+          { "speaker": "NEO", "text": "Village institutions protect degraded forest land managed by the forest department. In return, they get non-timber forest produce and a share in the timber harvested by successful protection." }
+        ]
+      },
+      {
+        "animation": "A glowing untouched patch of forest labelled 'Sacred Grove'. Tree icons appear: mahua and kadamba worshipped by the Mundas and Santhals of Chota Nagpur; tamarind and mango worshipped at weddings in Odisha and Bihar. Then a Bishnoi village in Rajasthan with blackbucks, nilgai and peacocks walking freely.",
+        "lines": [
+          { "speaker": "NEO", "text": "Nature worship has preserved virgin forests called sacred groves, where any interference is banned." },
+          { "speaker": "NEO", "text": "The Mundas and Santhals of Chota Nagpur worship mahua and kadamba trees. In and around Bishnoi villages in Rajasthan, blackbuck, nilgai and peacocks live freely, and nobody harms them." },
+          { "speaker": "NEO", "text": "Exam tip: when asked about community conservation, give named examples like Chipko, JFM and Bishnoi villages." }
+        ]
+      },
+      {
+        "animation": "Recap board with joined-hands icon. Points appear: '1. Sariska and Bhairodev Dakav Sonchuri', '2. Chipko, Beej Bachao Andolan, Navdanya', '3. JFM since 1988 (Odisha); sacred groves'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: communities in Sariska and Alwar protect forests on their own." },
+          { "speaker": "NEO", "text": "Two: Chipko, Beej Bachao Andolan and Navdanya show people-led conservation." },
+          { "speaker": "NEO", "text": "Three: Joint Forest Management began in Odisha in 1988, and sacred groves protect forests through belief." },
+          { "speaker": "ZIPPY", "text": "I'm hugging this tree. For science." }
+        ]
+      }
+    ]
+  }
+]

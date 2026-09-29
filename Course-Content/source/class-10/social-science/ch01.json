@@ -1,0 +1,266 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "History: The Rise of Nationalism in Europe",
+    "topic_no": 1,
+    "name": "The French Revolution and the Idea of the Nation",
+    "scenes": [
+      {
+        "animation": "A gallery wall shows Frédéric Sorrieu's 1848 print. The tiny painted people start marching in a long train past the statue of Liberty; Zippy tries to join the queue waving a cricket flag and a guard owl stops him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is everyone in this painting marching with a flag? Is it a victory parade?" },
+          { "speaker": "NEO", "text": "It's a dream. In 1848, the French artist Frédéric Sorrieu imagined a world of 'democratic and social Republics', each people grouped as a nation with its own flag." },
+          { "speaker": "NEO", "text": "The United States and Switzerland lead, because they were already nation-states. Germany follows with a black, red and gold flag, though it wasn't united yet." }
+        ]
+      },
+      {
+        "animation": "An animated timeline draws itself left to right: '1789 French Revolution' glows first. A crown labelled 'Monarchy' passes a golden orb marked 'Sovereignty' to a crowd labelled 'French citizens'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The first clear expression of nationalism came with the French Revolution in 1789." },
+          { "speaker": "NEO", "text": "Sovereignty was transferred from the monarchy to a body of French citizens. The people would now constitute the nation and shape its destiny." }
+        ]
+      },
+      {
+        "animation": "A checklist board fills item by item with icons: 'la patrie' and 'le citoyen', a tricolour replacing the royal standard, 'Estates General → National Assembly', hymns and oaths, uniform weights and measures, Paris French as the common language.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How do you make millions of people feel like one team?" },
+          { "speaker": "NEO", "text": "The revolutionaries used the ideas of la patrie, the fatherland, and le citoyen, the citizen. A new tricolour flag replaced the royal standard." },
+          { "speaker": "NEO", "text": "The Estates General was renamed the National Assembly. Internal customs duties were abolished, a uniform system of weights and measures was adopted, and French as spoken in Paris became the common language." }
+        ]
+      },
+      {
+        "animation": "Napoleon stamps a thick book labelled 'Civil Code of 1804' onto a map of Europe; the Dutch Republic, Switzerland, Italy and Germany light up. Broken chains fall off cartoon peasants and guild padlocks snap open in towns.",
+        "lines": [
+          { "speaker": "NEO", "text": "Napoleon destroyed democracy in France by returning to monarchy, but he made administration more rational and efficient." },
+          { "speaker": "NEO", "text": "His Civil Code of 1804, usually known as the Napoleonic Code, did away with all privileges based on birth, established equality before the law and secured the right to property." },
+          { "speaker": "NEO", "text": "In conquered regions he abolished the feudal system, freed peasants from serfdom and manorial dues, and removed guild restrictions." }
+        ]
+      },
+      {
+        "animation": "Cities Brussels, Mainz, Milan and Warsaw cheer French soldiers with flowers; the flowers wilt as three stamps land on the scene: 'Increased taxation', 'Censorship', 'Forced conscription'. A 'BOARD TIP' sticker slaps on the Napoleonic Code book.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So everyone loved the French armies?" },
+          { "speaker": "NEO", "text": "At first, yes. But enthusiasm turned to hostility because the new arrangements did not bring political freedom. Increased taxation, censorship and forced conscription outweighed the benefits." },
+          { "speaker": "NEO", "text": "Board tip: 'changes introduced by Napoleon' is a favourite three-mark question. Write the Civil Code, abolition of feudalism, freeing of peasants and removal of guild restrictions." }
+        ]
+      },
+      {
+        "animation": "Recap board with a tiny tricolour icon: '1. 1789: sovereignty passes to the citizens', '2. Collective identity: la patrie, le citoyen, tricolour, one language', '3. Napoleonic Code 1804: equality before law, right to property'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the French Revolution of 1789 transferred sovereignty from the monarch to the citizens." },
+          { "speaker": "NEO", "text": "Two: symbols like la patrie, le citoyen, the tricolour and a common language created a collective identity." },
+          { "speaker": "NEO", "text": "Three: Napoleon's Civil Code of 1804 ended privileges of birth, but his rule brought little political freedom." },
+          { "speaker": "ZIPPY", "text": "Great rules, zero freedom. Bad deal, Napoleon." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "History: The Rise of Nationalism in Europe",
+    "topic_no": 2,
+    "name": "The Making of Nationalism in Europe",
+    "scenes": [
+      {
+        "animation": "A cartoon merchant pulls a cloth cart from Hamburg to Nuremberg; a counter in the corner ticks up at each customs gate, 1 to 11, while his money bag shrinks by '5%' each time.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Eleven toll gates for one trip? That's worse than the highway to Jaipur!" },
+          { "speaker": "NEO", "text": "That was a merchant's life in 1833. The German-speaking regions were a confederation of 39 states, each with its own currency and weights and measures." }
+        ]
+      },
+      {
+        "animation": "A map of Europe with no nation-states: Germany, Italy and Switzerland shatter into small coloured kingdoms and duchies. The Habsburg Empire becomes a patchwork quilt with speech bubbles in German, Italian, Magyar and Polish, stitched together only by a thread labelled 'Allegiance to the emperor'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In mid-eighteenth-century Europe there were no nation-states as we know them today. The Habsburg Empire was a patchwork of many regions and peoples." },
+          { "speaker": "NEO", "text": "A small landed aristocracy dominated. But industrialisation created a new middle class of industrialists, businessmen and professionals. Among these educated, liberal middle classes, ideas of national unity became popular." }
+        ]
+      },
+      {
+        "animation": "The word 'liberalism' hatches from a Latin egg 'liber = free'. Two columns build: 'Political: end of autocracy, constitution, representative government' and 'Economic: freedom of markets'. The 11 customs gates collapse into one gate labelled 'Zollverein 1834, Prussia'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Liberalism comes from the Latin root liber, meaning free. It stood for individual freedom, equality before the law and government by consent." },
+          { "speaker": "NEO", "text": "In economics, it meant freedom of markets. So in 1834, a customs union or zollverein was formed at the initiative of Prussia. It abolished tariff barriers and reduced currencies from over thirty to two." }
+        ]
+      },
+      {
+        "animation": "A timeline pops '1815'. Britain, Russia, Prussia and Austria sit at a table in Vienna with host Duke Metternich. On a map, the Bourbon crown drops back onto France, the kingdom of the Netherlands appears in the north, and Genoa joins Piedmont.",
+        "lines": [
+          { "speaker": "NEO", "text": "After Napoleon's defeat, Britain, Russia, Prussia and Austria met at Vienna in 1815. The Congress was hosted by the Austrian Chancellor Duke Metternich." },
+          { "speaker": "NEO", "text": "The Treaty of Vienna restored the Bourbon dynasty and set up states around France to stop its expansion. These conservative regimes were autocratic and imposed censorship." }
+        ]
+      },
+      {
+        "animation": "A candle-lit cellar: a young Giuseppe Mazzini draws two circles on a map, 'Young Italy, Marseilles' and 'Young Europe, Berne'. Metternich peeks in, gasps, and a caption reads 'the most dangerous enemy of our social order'. A 'BOARD TIP' card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the liberals just gave up?" },
+          { "speaker": "NEO", "text": "No, they went underground into secret societies. Giuseppe Mazzini, born in Genoa in 1805, founded Young Italy in Marseilles and Young Europe in Berne." },
+          { "speaker": "NEO", "text": "Metternich called him 'the most dangerous enemy of our social order'. Board tip: remember both societies and both cities; they are asked often." }
+        ]
+      },
+      {
+        "animation": "Recap board with a small customs-gate icon: '1. Liberal middle classes spread ideas of national unity', '2. Zollverein 1834: one economic territory', '3. Vienna 1815 restored conservatism; Mazzini fought back'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the educated, liberal middle classes carried the idea of national unity." },
+          { "speaker": "NEO", "text": "Two: the zollverein of 1834 bound the German states into one economic territory." },
+          { "speaker": "NEO", "text": "Three: the Vienna settlement of 1815 restored conservative monarchies, but revolutionaries like Mazzini kept the dream alive." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "History: The Rise of Nationalism in Europe",
+    "topic_no": 3,
+    "name": "The Age of Revolutions: 1830–1848",
+    "scenes": [
+      {
+        "animation": "A giant cartoon France sneezes 'ACHOO!' and the rest of the map of Europe shivers, wrapping itself in scarves. Metternich stands beside it holding a handkerchief.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is the whole of Europe catching a cold?" },
+          { "speaker": "NEO", "text": "Metternich once remarked, 'When France sneezes, the rest of Europe catches cold.' Let's see why." }
+        ]
+      },
+      {
+        "animation": "An animated timeline builds: 'July 1830: Bourbons overthrown, Louis Philippe constitutional monarch' → 'Brussels uprising: Belgium breaks from the United Kingdom of the Netherlands' → '1821 Greek struggle begins' → '1832 Treaty of Constantinople: Greece independent'. Lord Byron appears with a money bag.",
+        "lines": [
+          { "speaker": "NEO", "text": "In July 1830, liberal revolutionaries overthrew the Bourbon kings in France and installed a constitutional monarchy under Louis Philippe. This sparked an uprising in Brussels, and Belgium broke away from the United Kingdom of the Netherlands." },
+          { "speaker": "NEO", "text": "The Greek struggle for independence from the Ottoman Empire began in 1821. The English poet Lord Byron raised funds and died of fever in 1824. The Treaty of Constantinople of 1832 recognised Greece as independent." }
+        ]
+      },
+      {
+        "animation": "A storybook opens: the Grimm brothers write folktales; a Polish pianist plays a polonaise and a mazurka as dancers whirl; a priest in Poland preaches in Polish while a Russian officer points angrily. Label: 'Romanticism: culture builds the nation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Culture also built nations. Romantics like Johann Gottfried Herder said true German culture lay among the common people, das volk, in folk songs and dances." },
+          { "speaker": "NEO", "text": "In partitioned Poland, Karol Kurpinski turned the polonaise and mazurka into nationalist symbols. When Russian was imposed, priests used Polish as a weapon of national resistance." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: 1845 Silesian weavers march to a contractor's mansion; then 1848 Paris barricades and Louis Philippe fleeing. Right: '18 May 1848' stamps over the Church of St Paul in Frankfurt as 831 cartoon deputies march in; women stand in the gallery.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Did the poor revolt too, or only the professors?" },
+          { "speaker": "NEO", "text": "Both. In 1845, weavers in Silesia revolted against contractors. In 1848, food shortages and unemployment brought Paris onto the roads, and Louis Philippe fled." },
+          { "speaker": "NEO", "text": "Meanwhile, on 18 May 1848, 831 elected representatives took their places in the Frankfurt parliament in the Church of St Paul. Women were admitted only as observers." }
+        ]
+      },
+      {
+        "animation": "The deputies hold out a crown to Friedrich Wilhelm IV, King of Prussia; he pushes it away and troops march in, scattering the assembly. A 'BOARD TIP' banner reads 'Frankfurt Parliament: 18 May 1848, 831 deputies, Church of St Paul'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The parliament offered the crown to Friedrich Wilhelm IV, King of Prussia, but he rejected it. Troops were called in and the assembly was forced to disband." },
+          { "speaker": "NEO", "text": "Still, after 1848, serfdom and bonded labour were abolished in the Habsburg dominions and in Russia. Board tip: learn the date, number and venue of the Frankfurt parliament." }
+        ]
+      },
+      {
+        "animation": "Recap board with a sneezing France icon: '1. 1830: July Revolution; Belgium, Greece (1832) independent', '2. Romanticism: folklore, music and language build nations', '3. 1848: revolts of the poor and the Frankfurt parliament'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the July Revolution of 1830 sparked change, and Greece became independent in 1832." },
+          { "speaker": "NEO", "text": "Two: romanticism used folklore, music and language to create national feeling." },
+          { "speaker": "NEO", "text": "Three: 1848 saw revolts of the hungry poor and the liberal Frankfurt parliament, which was forced to disband." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "History: The Rise of Nationalism in Europe",
+    "topic_no": 4,
+    "name": "The Making of Germany and Italy",
+    "scenes": [
+      {
+        "animation": "A cartoon boot-shaped map of Italy lies in pieces like a jigsaw. Garibaldi holds the boot steady while King Victor Emmanuel II tries to pull it on, as in the 1859 English caricature. Zippy giggles.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is a king trying to wear a country like a boot?" },
+          { "speaker": "NEO", "text": "That's an English cartoon of 1859. It shows how Italy was being put together, piece by piece. Germany had its own story first." }
+        ]
+      },
+      {
+        "animation": "A map of the German states: Prussia glows blue. Three war icons appear with labels 'Denmark', 'Austria', 'France' under a banner 'Three wars over seven years'. The map fills in 1866, 1867, 1871. Final frame: the Hall of Mirrors at Versailles, '18 January 1871', William I proclaimed Kaiser, Bismarck beside him.",
+        "lines": [
+          { "speaker": "NEO", "text": "After 1848, Prussia took over the leadership of German unification. Its chief minister, Otto von Bismarck, was the architect of the process, with the Prussian army and bureaucracy." },
+          { "speaker": "NEO", "text": "Three wars over seven years, with Austria, Denmark and France, ended in Prussian victory. On 18 January 1871, William I was proclaimed German Emperor in the Hall of Mirrors at Versailles." }
+        ]
+      },
+      {
+        "animation": "A map of Italy in 1858 shows seven states in different colours: Sardinia-Piedmont in green, the north under Austrian Habsburgs, the centre under the Pope, the south under Bourbon kings of Spain. Labels pop up for each.",
+        "lines": [
+          { "speaker": "NEO", "text": "Italy was divided into seven states. Only Sardinia-Piedmont was ruled by an Italian princely house. The north was under the Austrian Habsburgs, the centre under the Pope, and the south under the Bourbon kings of Spain." },
+          { "speaker": "NEO", "text": "Mazzini's uprisings of 1831 and 1848 failed, so the task fell on King Victor Emmanuel II of Sardinia-Piedmont." }
+        ]
+      },
+      {
+        "animation": "An animated timeline with the Italy map colouring in: '1859: Sardinia-Piedmont + France defeat Austria' (Cavour shaking hands with France), '1860: Garibaldi's Red Shirts march into South Italy and the Kingdom of the Two Sicilies', '1861: Victor Emmanuel II king of united Italy', '1870: Papal States join'. A peasant scratches his head beside a speech bubble 'La Talia?'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Chief Minister Cavour made a diplomatic alliance with France, and Sardinia-Piedmont defeated Austria in 1859. In 1860, Giuseppe Garibaldi's volunteers, the Red Shirts, marched into South Italy and the Kingdom of the Two Sicilies." },
+          { "speaker": "NEO", "text": "In 1861, Victor Emmanuel II was proclaimed king of united Italy. Many peasants had never heard of Italia and thought 'La Talia' was the king's wife!" },
+          { "speaker": "ZIPPY", "text": "Ha! Nation-building level: confused." }
+        ]
+      },
+      {
+        "animation": "The British Isles map: England glows and spreads its colour over Scotland with a stamp 'Act of Union 1707', then over Ireland with '1801'. A Union Jack unfurls. A 'BOARD TIP' card reads 'Britain: long-drawn-out process, not revolution'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Britain was a strange case. Its nation-state came from a long-drawn-out process, not a revolution. The Act of Union of 1707 between England and Scotland formed the United Kingdom of Great Britain, and Ireland was forcibly incorporated in 1801." },
+          { "speaker": "NEO", "text": "Board tip: for 'How was Britain unlike the rest of Europe', stress English dominance and the suppression of Scottish and Irish cultures." }
+        ]
+      },
+      {
+        "animation": "Recap board with three flags: '1. Germany: Bismarck, three wars, Kaiser William I, 1871', '2. Italy: Cavour, Garibaldi, Victor Emmanuel II, 1861', '3. Britain: Act of Union 1707, Ireland 1801'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Germany was unified by Bismarck through three wars, with William I proclaimed emperor in 1871." },
+          { "speaker": "NEO", "text": "Two: Italy was unified by Cavour's diplomacy and Garibaldi's Red Shirts under Victor Emmanuel II in 1861." },
+          { "speaker": "NEO", "text": "Three: Britain became a nation-state slowly, through English dominance over Scotland and Ireland." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "History: The Rise of Nationalism in Europe",
+    "topic_no": 5,
+    "name": "Visualising the Nation, Nationalism and Imperialism",
+    "scenes": [
+      {
+        "animation": "Zippy stands before a blank canvas with a paintbrush, trying to paint 'a nation'. He draws a map, a flag, a mountain, then gives up with a scribble cloud over his head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How do you paint a portrait of a whole country? It doesn't have a face!" },
+          { "speaker": "NEO", "text": "Nineteenth-century artists solved that. They personified the nation as a female figure." }
+        ]
+      },
+      {
+        "animation": "A postage stamp of 1850 enlarges into Marianne wearing a red cap with a tricolour cockade; small statues of her pop up in town squares and on coins. Label: 'Allegory: an abstract idea expressed through a person'.",
+        "lines": [
+          { "speaker": "NEO", "text": "This figure did not stand for any real woman. She was an allegory, giving the abstract idea of the nation a concrete form." },
+          { "speaker": "NEO", "text": "In France she was christened Marianne, a popular Christian name that underlined the idea of a people's nation. Her red cap, tricolour and cockade came from Liberty and the Republic. Her images were on coins and stamps." }
+        ]
+      },
+      {
+        "animation": "Philip Veit's 1848 Germania banner hangs from a church ceiling. Labels fly in one by one beside each attribute: 'Crown of oak leaves: heroism', 'Broken chains: being freed', 'Breastplate with eagle: strength', 'Sword: readiness to fight', 'Olive branch: willingness to make peace', 'Rays of rising sun: beginning of a new era'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Germania became the allegory of the German nation. Philip Veit painted her in 1848 on a cotton banner for the Frankfurt parliament." },
+          { "speaker": "NEO", "text": "She wears a crown of oak leaves, because the German oak stands for heroism. The broken chains mean being freed, the sword means readiness to fight, and the olive branch means willingness to make peace." }
+        ]
+      },
+      {
+        "animation": "A map zooms to the Balkans; labels drop in: Romania, Bulgaria, Albania, Greece, Macedonia, Croatia, Bosnia-Herzegovina, Slovenia, Serbia, Montenegro. The Ottoman Empire crumbles at the edges while Russia, Germany, England and Austro-Hungary reach in with giant hands. The map turns red with sparks and a caption '1914'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So nationalism stayed nice and idealistic?" },
+          { "speaker": "NEO", "text": "No. By the last quarter of the nineteenth century, it became a narrow creed. The most serious source of tension after 1871 was the Balkans, whose inhabitants were broadly known as the Slavs." },
+          { "speaker": "NEO", "text": "As the Ottoman Empire disintegrated, Balkan states grew jealous of each other, and Russia, Germany, England and Austro-Hungary competed for control. This led to a series of wars and finally the First World War." }
+        ]
+      },
+      {
+        "animation": "Britannia sits on a globe surrounded by colonies in a map celebrating the British Empire; then colonised lands light up one by one with their own flags rising. A 'BOARD TIP' card: 'Balkans = Slav nationalism + Ottoman decline + big power rivalry'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Nationalism aligned with imperialism led Europe to disaster in 1914. But colonised peoples also began anti-imperial movements to form their own nation-states." },
+          { "speaker": "NEO", "text": "Board tip: for why the Balkans became explosive, give three reasons: Slav nationalism, the decline of the Ottoman Empire, and big power rivalry." }
+        ]
+      },
+      {
+        "animation": "Recap board with Marianne and Germania icons: '1. Nations shown as female allegories', '2. Marianne = France; Germania (oak leaves) = Germany', '3. Balkans after 1871 → First World War'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: artists personified nations as female allegories." },
+          { "speaker": "NEO", "text": "Two: Marianne stood for France, and Germania, with her crown of oak leaves, stood for Germany." },
+          { "speaker": "NEO", "text": "Three: nationalism tied to imperialism made the Balkans explosive and led to the First World War." }
+        ]
+      }
+    ]
+  }
+]

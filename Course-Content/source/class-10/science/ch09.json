@@ -1,0 +1,532 @@
+[
+  {
+    "chapter_no": 9,
+    "chapter": "Light: Reflection and Refraction",
+    "topic_no": 1,
+    "name": "Reflection of Light and Plane Mirrors",
+    "scenes": [
+      {
+        "animation": "A city street. An ambulance drives past with 'ECNALUBMA' painted on its bonnet; Zippy squints at it with a red pen as if correcting homework. Cut to a car's rear-view mirror, where the same word reads 'AMBULANCE' perfectly.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, the ambulance painter spelled it backwards! Somebody fail him!" },
+          { "speaker": "NEO", "text": "He did it on purpose. It's written for mirrors. In a driver's rear-view mirror, it reads correctly. Let's see why." }
+        ]
+      },
+      {
+        "animation": "A torch beam travels in a straight line and hits a shiny mirror, bouncing back. Label: 'Reflection: polished surface sends light back'. Then a dull wall scatters only a little light back.",
+        "lines": [
+          { "speaker": "NEO", "text": "We see objects when light falling on them is reflected into our eyes. A highly polished surface, like a mirror, reflects most of the light falling on it." }
+        ]
+      },
+      {
+        "animation": "A ray diagram builds: mirror line, a dashed normal at the point of incidence, the incident ray arriving and the reflected ray leaving. Angles 'i' and 'r' are marked from the normal, and '∠i = ∠r' pops up. All three lines slide onto one flat sheet labelled 'same plane'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Reflection follows two laws. First, the angle of incidence is equal to the angle of reflection." },
+          { "speaker": "NEO", "text": "Second, the incident ray, the normal to the mirror at the point of incidence and the reflected ray all lie in the same plane." },
+          { "speaker": "NEO", "text": "These laws apply to all reflecting surfaces, including curved ones." }
+        ]
+      },
+      {
+        "animation": "Zippy stands 2 m in front of a plane mirror; his image appears 2 m behind it, drawn with dashed lines, same size and upright. Zippy raises his right arm; the image raises its left. Labels pop up: 'virtual', 'erect', 'same size', 'same distance behind', 'laterally inverted'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So what kind of image does my bathroom mirror make?" },
+          { "speaker": "NEO", "text": "A plane mirror always makes a virtual and erect image. It is the same size as the object, and as far behind the mirror as the object is in front." },
+          { "speaker": "NEO", "text": "The image is also laterally inverted. Your right hand looks like the left hand of your image." },
+          { "speaker": "ZIPPY", "text": "Aha! So the reversed ambulance letters flip back in the mirror!" }
+        ]
+      },
+      {
+        "animation": "A student's notebook shows a wrong diagram with angles measured from the mirror surface, crossed out in red. Beside it, the correct one with angles from the normal gets a green tick. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: always measure the angles of incidence and reflection from the normal, not from the mirror surface. Draw the normal as a dotted line." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard beside a small reflection diagram as recap points appear: '1. ∠i = ∠r', '2. Incident ray, normal, reflected ray: same plane', '3. Plane mirror image: virtual, erect, same size, laterally inverted'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the angle of incidence equals the angle of reflection." },
+          { "speaker": "NEO", "text": "Two: the incident ray, the normal and the reflected ray lie in the same plane." },
+          { "speaker": "NEO", "text": "Three: a plane mirror forms a virtual, erect, same-size, laterally inverted image, as far behind as the object is in front." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Light: Reflection and Refraction",
+    "topic_no": 2,
+    "name": "Spherical Mirrors: Key Terms",
+    "scenes": [
+      {
+        "animation": "A shiny steel spoon at a dinner table. Zippy peers into its inner curve and sees himself tiny and upside down; he flips the spoon and sees himself small and upright on the back.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, this spoon flipped me upside down! And the back makes me upright again!" },
+          { "speaker": "NEO", "text": "Your spoon is a pair of spherical mirrors. Let's learn their vocabulary." }
+        ]
+      },
+      {
+        "animation": "A hollow glass sphere is sliced; one piece is silvered on the outside so the inside shines, labelled 'concave: reflecting surface curved inwards'. Another is silvered inside so the outside shines, labelled 'convex: reflecting surface curved outwards'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A spherical mirror is part of a hollow sphere. If the reflecting surface is curved inwards, facing the centre of the sphere, it's a concave mirror." },
+          { "speaker": "NEO", "text": "If the reflecting surface is curved outwards, it's a convex mirror." }
+        ]
+      },
+      {
+        "animation": "A concave mirror diagram builds step by step: 'P' at the centre of the mirror surface, 'C' at the centre of the full sphere shown in dotted lines, 'R' as the distance PC, and a straight line through P and C labelled 'principal axis'. The mirror's width is marked 'aperture'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The centre of the reflecting surface is the pole, P. The centre of the sphere the mirror is part of is the centre of curvature, C." },
+          { "speaker": "NEO", "text": "The radius of that sphere is the radius of curvature, R. The straight line through the pole and the centre of curvature is the principal axis." },
+          { "speaker": "NEO", "text": "The diameter of the reflecting surface is called the aperture." }
+        ]
+      },
+      {
+        "animation": "Parallel sunlight rays hit a concave mirror and converge to a bright point on the principal axis labelled 'F'; a paper at F starts smoking. Warning banner: 'Never look at the Sun or its reflection'. For a convex mirror, parallel rays spread out and dashed lines trace back to 'F' behind the mirror.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rays parallel to the principal axis, after reflecting from a concave mirror, meet at a point on the principal axis. This is the principal focus, F." },
+          { "speaker": "ZIPPY", "text": "So that's how a concave mirror can burn paper with sunlight!" },
+          { "speaker": "NEO", "text": "Yes, but never look at the Sun or its reflection. For a convex mirror, reflected rays appear to diverge from a point behind the mirror. That's its principal focus." },
+          { "speaker": "NEO", "text": "The distance between the pole and the principal focus is the focal length, f." }
+        ]
+      },
+      {
+        "animation": "The diagram shows F exactly midway between P and C, and the equation 'R = 2f' stamps on with a bounce. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "For spherical mirrors of small aperture, the radius of curvature is twice the focal length. R equals 2f. So the focus lies midway between the pole and the centre of curvature." },
+          { "speaker": "NEO", "text": "Board tip: questions like 'a mirror has R equals 20 centimetres, find f' are free marks. Just halve it." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard with a labelled concave mirror thumbnail as recap points appear: '1. Concave curves in, convex curves out', '2. P, C, R, F, f, aperture, principal axis', '3. R = 2f'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a concave mirror's reflecting surface curves inwards, and a convex mirror's curves outwards." },
+          { "speaker": "NEO", "text": "Two: know the pole, centre of curvature, radius of curvature, principal axis, principal focus, focal length and aperture." },
+          { "speaker": "NEO", "text": "Three: for small apertures, the radius of curvature is twice the focal length." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Light: Reflection and Refraction",
+    "topic_no": 3,
+    "name": "Image Formation by a Concave Mirror",
+    "scenes": [
+      {
+        "animation": "A science museum with a huge concave mirror. Zippy walks towards it from far away: first he sees himself tiny and upside down, then the image blurs out, then suddenly he appears giant and upright.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo! First I was tiny and upside down, then I vanished, now I'm a giant! Is this mirror haunted?" },
+          { "speaker": "NEO", "text": "Not haunted. A concave mirror makes different images depending on where the object is. Let's map them." }
+        ]
+      },
+      {
+        "animation": "Four ray rules animate one after another on a concave mirror with P, F and C marked: parallel ray reflects through F; ray through F reflects parallel; ray through C returns along the same path; ray at P reflects making equal angles with the principal axis.",
+        "lines": [
+          { "speaker": "NEO", "text": "Use any two of four rays. A ray parallel to the principal axis passes through F after reflection. A ray through F comes back parallel." },
+          { "speaker": "NEO", "text": "A ray through C reflects back along the same path. And a ray hitting the pole obliquely reflects at an equal angle to the principal axis." }
+        ]
+      },
+      {
+        "animation": "A candle object moves along the principal axis; for each position a ray diagram draws itself and a result card appears: 'At infinity → at F, point-sized, real, inverted'; 'Beyond C → between F and C, diminished, real, inverted'; 'At C → at C, same size, real, inverted'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Object at infinity: the image is at F, highly diminished and point-sized, real and inverted." },
+          { "speaker": "NEO", "text": "Object beyond C: the image is between F and C, diminished, real and inverted." },
+          { "speaker": "NEO", "text": "Object at C: the image is also at C, the same size, real and inverted." }
+        ]
+      },
+      {
+        "animation": "The candle keeps moving closer: 'Between C and F → beyond C, enlarged, real, inverted'; 'At F → at infinity, highly enlarged, real, inverted' with rays going parallel; 'Between P and F → behind mirror, enlarged, virtual, erect' with dashed rays extending behind the mirror.",
+        "lines": [
+          { "speaker": "NEO", "text": "Object between C and F: the image is beyond C, enlarged, real and inverted." },
+          { "speaker": "NEO", "text": "Object at F: the reflected rays are parallel, so the image is at infinity, highly enlarged, real and inverted." },
+          { "speaker": "NEO", "text": "Object between P and F: the image is behind the mirror, enlarged, virtual and erect." },
+          { "speaker": "ZIPPY", "text": "So I vanished at F, and became a giant when I got really close!" }
+        ]
+      },
+      {
+        "animation": "Quick montage with icons: torch and car headlight sending out parallel beams, a shaving mirror showing a large face, a dentist's mirror showing a big tooth, and a solar furnace focusing sunlight. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Concave mirrors are used in torches, search-lights and vehicle headlights to get powerful parallel beams. They are used as shaving mirrors, and by dentists, to see a larger image." },
+          { "speaker": "NEO", "text": "Large concave mirrors concentrate sunlight to produce heat in solar furnaces." },
+          { "speaker": "NEO", "text": "Board tip: the only case with a virtual, erect image is when the object is between P and F." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard beside a six-row summary table thumbnail as recap points appear: '1. Use any two of four ray rules', '2. Real, inverted except between P and F', '3. Uses: headlights, shaving, dentists, solar furnaces'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: draw images using any two of the four standard rays." },
+          { "speaker": "NEO", "text": "Two: a concave mirror gives real, inverted images, except when the object is between P and F, where the image is virtual, erect and enlarged." },
+          { "speaker": "NEO", "text": "Three: it is used in headlights, torches, shaving mirrors, dentists' mirrors and solar furnaces." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Light: Reflection and Refraction",
+    "topic_no": 4,
+    "name": "Convex Mirrors and Their Uses",
+    "scenes": [
+      {
+        "animation": "Zippy rides a scooter through traffic, glancing at the side mirror, which shows a wide, shrunken view of a whole line of cars, buses and an autorickshaw behind him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, my side mirror shows the whole road behind me, but everything looks tiny. Is it broken?" },
+          { "speaker": "NEO", "text": "It's working perfectly. That's a convex mirror, and it's designed to do exactly that." }
+        ]
+      },
+      {
+        "animation": "A convex mirror with P on its surface and F and C marked behind it. Rays animate: a parallel ray reflects so it appears to come from F (dashed extension); a ray aimed at F reflects parallel; a ray aimed at C reflects back along its path.",
+        "lines": [
+          { "speaker": "NEO", "text": "For a convex mirror, F and C lie behind the mirror. A ray parallel to the principal axis reflects so that it appears to come from F." },
+          { "speaker": "NEO", "text": "A ray directed towards F reflects parallel to the principal axis. And a ray directed towards C reflects back along the same path." }
+        ]
+      },
+      {
+        "animation": "Two ray diagrams build. First: object at infinity, image a point at F behind the mirror, card 'highly diminished, virtual, erect'. Second: a candle anywhere in front, dashed rays meet between P and F behind the mirror, card 'diminished, virtual, erect'.",
+        "lines": [
+          { "speaker": "NEO", "text": "There are only two cases. Object at infinity: the image is at F, behind the mirror, highly diminished and point-sized, virtual and erect." },
+          { "speaker": "NEO", "text": "Object anywhere between infinity and the pole: the image is between P and F behind the mirror, diminished, virtual and erect." },
+          { "speaker": "ZIPPY", "text": "So a convex mirror always gives a small, upright image, no matter where I stand?" },
+          { "speaker": "NEO", "text": "Always." }
+        ]
+      },
+      {
+        "animation": "Side-by-side comparison: a plane mirror showing a narrow slice of the road versus a convex mirror showing a wide sweep of traffic. A curved arc highlights the outward bulge, labelled 'wider field of view'.",
+        "lines": [
+          { "speaker": "NEO", "text": "That's why convex mirrors are used as rear-view mirrors, or wing mirrors, in vehicles." },
+          { "speaker": "NEO", "text": "They always give an erect image, although diminished. And because they curve outwards, they give a wider field of view, so the driver can see a much larger area." }
+        ]
+      },
+      {
+        "animation": "An exam paper with the question 'Why is a convex mirror used as a rear-view mirror?' and an answer box filling in with two highlighted points: 'erect image' and 'wider field of view'. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: when asked why convex mirrors are used as rear-view mirrors, give both reasons: an erect image and a wider field of view. One reason alone may cost you a mark." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard beside a small convex mirror ray diagram as recap points appear: '1. F and C are behind the mirror', '2. Image always virtual, erect, diminished', '3. Used as rear-view mirrors: wider view'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in a convex mirror, the focus and centre of curvature lie behind the mirror." },
+          { "speaker": "NEO", "text": "Two: the image is always virtual, erect and diminished, located between P and F, or at F for an object at infinity." },
+          { "speaker": "NEO", "text": "Three: convex mirrors are used as rear-view mirrors because they give erect images and a wider field of view." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Light: Reflection and Refraction",
+    "topic_no": 5,
+    "name": "Sign Convention, Mirror Formula and Magnification",
+    "scenes": [
+      {
+        "animation": "Zippy stares at his notebook showing 'f = −15 cm' and panics, sparks flying off him. Neo calmly places an x-y axis over the mirror diagram.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, I got the focal length as minus 15 centimetres! Did I break physics?" },
+          { "speaker": "NEO", "text": "Relax. Minus signs just tell us direction. We use the New Cartesian Sign Convention." }
+        ]
+      },
+      {
+        "animation": "A concave mirror sits on a graph with its pole at the origin and the principal axis as the x-axis. The object slides to the left side. Arrows appear: right labelled '+ (direction of incident light)', left '−', up '+', down '−'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The pole is the origin, and the principal axis is the x-axis. The object is always placed to the left of the mirror, so light falls from the left." },
+          { "speaker": "NEO", "text": "All distances are measured from the pole. Distances in the direction of incident light are positive, and those against it are negative." },
+          { "speaker": "NEO", "text": "Heights above the principal axis are positive, and heights below are negative." }
+        ]
+      },
+      {
+        "animation": "The mirror formula writes itself in chalk: '1/v + 1/u = 1/f'. Below, labels: 'u = object distance', 'v = image distance', 'f = focal length'. A mini table: 'concave: f negative', 'convex: f positive', 'u: always negative'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The mirror formula links object distance u, image distance v and focal length f: one over v plus one over u equals one over f." },
+          { "speaker": "NEO", "text": "Since the object is always in front, u is negative. A concave mirror's focus is in front, so its f is negative. A convex mirror's is behind, so f is positive." }
+        ]
+      },
+      {
+        "animation": "The formula 'm = h′/h = −v/u' appears with an object arrow and an image arrow. Cards: 'm negative → real, inverted', 'm positive → virtual, erect', 'plane mirror: m = +1'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Magnification, m, is the ratio of image height to object height. For mirrors, m equals h dash over h, which also equals minus v over u." },
+          { "speaker": "NEO", "text": "A negative m means a real, inverted image. A positive m means a virtual, erect image. For a plane mirror, m is plus one." }
+        ]
+      },
+      {
+        "animation": "A worked example appears line by line on a whiteboard: 'h = +4.0 cm, u = −25.0 cm, f = −15.0 cm'; '1/v = 1/f − 1/u = −1/15 + 1/25 = −2/75'; 'v = −37.5 cm'; 'h′ = −v·h/u = −6.0 cm'. Result stamp: 'real, inverted, enlarged'. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a 4.0 centimetre object is 25.0 centimetres in front of a concave mirror of focal length 15.0 centimetres. So u is minus 25.0 and f is minus 15.0." },
+          { "speaker": "NEO", "text": "One over v equals one over f minus one over u. That gives v equals minus 37.5 centimetres. The image is in front of the mirror." },
+          { "speaker": "NEO", "text": "Image height is minus v times h over u, which is minus 6.0 centimetres. So the image is real, inverted and enlarged." },
+          { "speaker": "ZIPPY", "text": "And the minus signs actually told us something!" },
+          { "speaker": "NEO", "text": "Board tip: write the signs of u and f before substituting. Most wrong answers come from missed signs." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard as recap points appear: '1. Distances from P; along incident light +', '2. 1/v + 1/u = 1/f', '3. m = h′/h = −v/u; negative → real'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: measure all distances from the pole, with the direction of incident light positive, and the object always on the left." },
+          { "speaker": "NEO", "text": "Two: the mirror formula is one over v plus one over u equals one over f." },
+          { "speaker": "NEO", "text": "Three: magnification is minus v over u; negative means real and inverted, positive means virtual and erect." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Light: Reflection and Refraction",
+    "topic_no": 6,
+    "name": "Refraction of Light and Its Laws",
+    "scenes": [
+      {
+        "animation": "A glass of nimbu pani with a pencil dipped in it; the pencil looks bent at the water surface. Zippy pulls it out, inspects it, and it's perfectly straight. He puts it back and it looks bent again.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, my pencil breaks in the water but heals when I take it out! Magic?" },
+          { "speaker": "NEO", "text": "Not magic. Light changes direction when it passes from water into air. That's refraction." }
+        ]
+      },
+      {
+        "animation": "Quick montage: a swimming pool whose bottom looks raised, a lemon in a glass of water looking bigger, and letters under a glass slab appearing raised. A light ray slows down as it enters water, shown by a running figure wading into a pool. Label: 'change in speed → change in direction'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A pool looks shallower than it is, and a lemon in water looks bigger. In each case, light travels obliquely from one medium into another and changes direction." },
+          { "speaker": "NEO", "text": "This is refraction. It happens because the speed of light changes when it enters a different transparent medium." }
+        ]
+      },
+      {
+        "animation": "A rectangular glass slab diagram builds: an incident ray enters, bends towards the dashed normal inside the glass, then bends away from the normal as it exits. The emergent ray runs parallel to the incident ray; the sideways shift is marked 'lateral displacement'. A ray along the normal passes straight through.",
+        "lines": [
+          { "speaker": "NEO", "text": "Look at light through a glass slab. Going from air, a rarer medium, into glass, a denser medium, the ray bends towards the normal." },
+          { "speaker": "NEO", "text": "Going from glass back to air, it bends away from the normal. The emergent ray is parallel to the incident ray, but shifted sideways." },
+          { "speaker": "ZIPPY", "text": "What if the light enters straight along the normal?" },
+          { "speaker": "NEO", "text": "Then it goes straight through without bending." }
+        ]
+      },
+      {
+        "animation": "The two laws appear as bold cards. Card 1: incident ray, refracted ray and normal slide onto one flat sheet labelled 'same plane'. Card 2: 'sin i / sin r = constant' with angles i and r marked from the normal; a label reads 'Snell's law'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Refraction follows two laws. First, the incident ray, the refracted ray and the normal at the point of incidence all lie in the same plane." },
+          { "speaker": "NEO", "text": "Second, for light of a given colour and a given pair of media, the ratio of sine of the angle of incidence to sine of the angle of refraction is a constant. This is Snell's law." }
+        ]
+      },
+      {
+        "animation": "A notebook glass slab diagram with 'emergent ray ∥ incident ray' and 'lateral displacement' labels highlighted in yellow. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: in the glass slab diagram, draw the emergent ray parallel to the incident ray, mark all normals, and label the lateral displacement." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard beside a small glass slab thumbnail as recap points appear: '1. Refraction: change in speed → change in direction', '2. Rarer → denser: towards normal', '3. Snell's law: sin i / sin r = constant'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: refraction is the change in direction of light when it enters another medium, due to a change in its speed." },
+          { "speaker": "NEO", "text": "Two: light bends towards the normal going into a denser medium, and away from it going into a rarer one." },
+          { "speaker": "NEO", "text": "Three: the incident ray, refracted ray and normal lie in one plane, and sine i over sine r is constant." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Light: Reflection and Refraction",
+    "topic_no": 7,
+    "name": "Refractive Index",
+    "scenes": [
+      {
+        "animation": "A racetrack with three lanes labelled 'vacuum', 'water' and 'glass'. Three identical light-beam runners start together; the vacuum runner zooms ahead, while the water and glass runners slow down as if jogging through thick syrup.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, it's not fair! The light in the vacuum lane is winning every time!" },
+          { "speaker": "NEO", "text": "Light is fastest in vacuum. How much a medium slows it down is measured by its refractive index." }
+        ]
+      },
+      {
+        "animation": "Two formulas write themselves: 'n₂₁ = v₁ / v₂' (medium 2 with respect to medium 1) and 'n = c / v' (absolute refractive index), with 'c = 3 × 10⁸ m/s' glowing beneath.",
+        "lines": [
+          { "speaker": "NEO", "text": "The refractive index of medium 2 with respect to medium 1 is the speed of light in medium 1 divided by the speed of light in medium 2." },
+          { "speaker": "NEO", "text": "When medium 1 is vacuum or air, we get the absolute refractive index: n equals c over v, where c is three times ten to the power eight metres per second." }
+        ]
+      },
+      {
+        "animation": "A table slides in with highlighted rows: 'Air 1.0003', 'Water 1.33', 'Kerosene 1.44', 'Crown glass 1.52', 'Diamond 2.42'. The diamond row sparkles.",
+        "lines": [
+          { "speaker": "NEO", "text": "Air is 1.0003, water is 1.33, crown glass is 1.52, and diamond is 2.42, the highest in your textbook table." },
+          { "speaker": "NEO", "text": "A refractive index of 2.42 means light in diamond travels at one over 2.42 times its speed in vacuum." }
+        ]
+      },
+      {
+        "animation": "Worked example on a whiteboard: 'n = 1.50, c = 3 × 10⁸ m/s', 'v = c / n = 3 × 10⁸ / 1.50', 'v = 2 × 10⁸ m/s'. The answer gets a bouncing box.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try one. Light enters glass of refractive index 1.50. What is its speed in the glass?" },
+          { "speaker": "ZIPPY", "text": "v equals c over n, so three times ten to the eight divided by 1.50. That's two times ten to the eight metres per second!" },
+          { "speaker": "NEO", "text": "Perfect." }
+        ]
+      },
+      {
+        "animation": "A beaker shows kerosene floating on water. Two labels appear: 'mass density: water > kerosene' and 'optical density: kerosene (1.44) > water (1.33)'. Zippy's jaw drops. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "A medium with a larger refractive index is optically denser. But optical density is not the same as mass density." },
+          { "speaker": "NEO", "text": "Kerosene floats on water, so its mass density is lower. Yet its refractive index is higher, so it is optically denser than water." },
+          { "speaker": "NEO", "text": "Board tip: refractive index is a ratio of two speeds, so it has no unit. Never write metres per second after it." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard as recap points appear: '1. n = c / v', '2. Higher n → optically denser, light slower', '3. Optical density ≠ mass density'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the absolute refractive index is the speed of light in vacuum divided by its speed in the medium." },
+          { "speaker": "NEO", "text": "Two: a higher refractive index means an optically denser medium, where light travels slower." },
+          { "speaker": "NEO", "text": "Three: optical density is different from mass density, as kerosene and water show." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Light: Reflection and Refraction",
+    "topic_no": 8,
+    "name": "Spherical Lenses and Image Formation",
+    "scenes": [
+      {
+        "animation": "Zippy squints at the tiny print on a cricket match ticket. Neo hands him a magnifying glass, and the words 'SEAT 21, NORTH STAND' swell up big and clear.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Whoa! This glass turned the tiny print into giant letters!" },
+          { "speaker": "NEO", "text": "That's a convex lens at work. Lenses bend light by refraction to form images." }
+        ]
+      },
+      {
+        "animation": "Two lens cross-sections appear. A convex lens (thicker at the middle) makes parallel rays converge to a point labelled 'F₂', tagged 'converging'. A concave lens (thicker at the edges) spreads rays so that dashed lines trace back to 'F₁', tagged 'diverging'. Labels build: 'O', 'C₁', 'C₂', 'principal axis', 'aperture'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A convex lens is thicker at the middle and converges light, so it's called a converging lens. A concave lens is thicker at the edges and diverges light." },
+          { "speaker": "NEO", "text": "A lens has two centres of curvature, C1 and C2, and two principal foci, F1 and F2. Its central point is the optical centre, O. The focal length is the distance from O to the principal focus." }
+        ]
+      },
+      {
+        "animation": "Three ray rules animate on a convex lens: parallel ray passes through F₂; ray through F₁ emerges parallel; ray through O goes straight, undeviated. The same rules replay for a concave lens with dashed extensions to F₁.",
+        "lines": [
+          { "speaker": "NEO", "text": "For a convex lens, a ray parallel to the principal axis passes through F2 after refraction. A ray through F1 emerges parallel. A ray through the optical centre passes without deviation." },
+          { "speaker": "NEO", "text": "For a concave lens, a parallel ray appears to diverge from F1, and a ray aimed at F2 emerges parallel." }
+        ]
+      },
+      {
+        "animation": "A candle slides along the principal axis of a convex lens; results appear as cards: 'infinity → F₂, point-sized', 'beyond 2F₁ → between F₂ and 2F₂, diminished', 'at 2F₁ → at 2F₂, same size', 'between F₁ and 2F₁ → beyond 2F₂, enlarged', 'at F₁ → infinity', each tagged 'real, inverted'. Finally 'between F₁ and O → same side, enlarged, virtual, erect'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For a convex lens: object at infinity, the image is at F2, point-sized. Beyond 2F1, the image is between F2 and 2F2, diminished. At 2F1, it's at 2F2, same size." },
+          { "speaker": "NEO", "text": "Between F1 and 2F1, it's beyond 2F2, enlarged. At F1, it's at infinity, infinitely large. All of these are real and inverted." },
+          { "speaker": "NEO", "text": "Between F1 and O, the image is on the same side as the object, enlarged, virtual and erect." },
+          { "speaker": "ZIPPY", "text": "So my ticket was between F1 and O!" }
+        ]
+      },
+      {
+        "animation": "A concave lens with two cases: 'infinity → at F₁, point-sized' and 'anywhere else → between F₁ and O, diminished', both tagged 'virtual, erect'. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "A concave lens always gives a virtual, erect, diminished image. For an object at infinity, it's at F1. Otherwise, it's between F1 and the optical centre." },
+          { "speaker": "NEO", "text": "Board tip: in lens ray diagrams, draw the arrow marks on rays and label F1, F2, 2F1 and 2F2. Unlabelled diagrams lose marks." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard beside convex and concave lens thumbnails as recap points appear: '1. Convex converges, concave diverges', '2. Ray through O: undeviated', '3. Convex: real except between F₁ and O; concave: always virtual, diminished'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a convex lens converges light and a concave lens diverges it." },
+          { "speaker": "NEO", "text": "Two: a ray through the optical centre passes without deviation." },
+          { "speaker": "NEO", "text": "Three: a convex lens forms real, inverted images except when the object is between F1 and O, while a concave lens always forms virtual, erect, diminished images." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Light: Reflection and Refraction",
+    "topic_no": 9,
+    "name": "Lens Formula and Magnification",
+    "scenes": [
+      {
+        "animation": "Zippy confidently writes '1/v + 1/u = 1/f' next to a lens diagram. A loud buzzer sounds and the plus sign glows red; Neo swaps it for a minus.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Easy! I'll just use the mirror formula for lenses." },
+          { "speaker": "NEO", "text": "Buzz! Lenses have their own formula, with a minus sign. Let's get it right." }
+        ]
+      },
+      {
+        "animation": "A convex lens sits on a graph, its optical centre at the origin. The object is placed on the left; arrows show '+' to the right and '−' to the left. Cards: 'convex lens: f positive', 'concave lens: f negative'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The sign convention is the same as for mirrors, except all distances are measured from the optical centre." },
+          { "speaker": "NEO", "text": "So a convex lens has a positive focal length, and a concave lens has a negative focal length." }
+        ]
+      },
+      {
+        "animation": "The lens formula writes itself in chalk: '1/v − 1/u = 1/f'. Then 'm = h′/h = v/u' appears beside it, with notes 'm negative → real, inverted' and 'm positive → virtual, erect'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The lens formula is one over v minus one over u equals one over f." },
+          { "speaker": "NEO", "text": "Magnification for a lens is h dash over h, which equals v over u. Again, a negative m means a real, inverted image, and a positive m means virtual and erect." }
+        ]
+      },
+      {
+        "animation": "Worked example line by line: 'h = +2.0 cm, u = −15 cm, f = +10 cm'; '1/v = 1/f + 1/u = 1/10 − 1/15 = 1/30'; 'v = +30 cm'; 'm = v/u = 30/−15 = −2'; 'h′ = m × h = −4.0 cm'. A ray diagram shows an inverted enlarged image on the far side. Stamp: 'real, inverted, enlarged'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a 2.0 centimetre object is 15 centimetres from a convex lens of focal length 10 centimetres. So u is minus 15 and f is plus 10." },
+          { "speaker": "NEO", "text": "One over v equals one over f plus one over u, which is one over 10 minus one over 15, or one over 30. So v is plus 30 centimetres, on the other side of the lens." },
+          { "speaker": "ZIPPY", "text": "And m is v over u, so 30 over minus 15, which is minus 2!" },
+          { "speaker": "NEO", "text": "Right. The image height is minus 4.0 centimetres. It's real, inverted and twice as large." }
+        ]
+      },
+      {
+        "animation": "A comparison table slides in: 'Mirror: 1/v + 1/u = 1/f, m = −v/u' vs 'Lens: 1/v − 1/u = 1/f, m = v/u', with the differing signs flashing. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: the mirror formula has a plus, the lens formula has a minus. Mirror magnification is minus v over u, lens magnification is plus v over u. Write both on your formula sheet side by side." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard as recap points appear: '1. Distances from optical centre; convex f +, concave f −', '2. 1/v − 1/u = 1/f', '3. m = h′/h = v/u'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: measure distances from the optical centre; convex lenses have positive f, concave lenses negative f." },
+          { "speaker": "NEO", "text": "Two: the lens formula is one over v minus one over u equals one over f." },
+          { "speaker": "NEO", "text": "Three: lens magnification is v over u, where a negative value means real and inverted." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Light: Reflection and Refraction",
+    "topic_no": 10,
+    "name": "Power of a Lens",
+    "scenes": [
+      {
+        "animation": "Grandpa's spectacle case lies open with a prescription slip reading '+2.0 D'. Zippy holds it up in horror, imagining a report card with a big red 'D'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, Grandpa's spectacles got a D grade! Plus two D!" },
+          { "speaker": "NEO", "text": "That D isn't a grade. It stands for dioptre, the unit of the power of a lens." }
+        ]
+      },
+      {
+        "animation": "Two convex lenses side by side: a thin one bends parallel rays gently to a far focus; a thick one bends them sharply to a near focus. Label on the thick lens: 'short f → more power'. The formula 'P = 1/f' stamps in.",
+        "lines": [
+          { "speaker": "NEO", "text": "The power of a lens is its ability to converge or diverge light rays. A lens with a short focal length bends light more, so it has more power." },
+          { "speaker": "NEO", "text": "Power is the reciprocal of focal length. P equals one over f." }
+        ]
+      },
+      {
+        "animation": "A unit card flips: 'SI unit: dioptre (D)', '1 D = 1 m⁻¹', 'f must be in metres'. A warning sign flashes over 'f = 25 cm' and converts it to 'f = 0.25 m → P = +4 D'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The SI unit of power is the dioptre, D. One dioptre is the power of a lens whose focal length is one metre. So one D equals one per metre." },
+          { "speaker": "NEO", "text": "The focal length must be in metres. A convex lens of 25 centimetres has f equal to 0.25 metres, so its power is plus 4 dioptres." }
+        ]
+      },
+      {
+        "animation": "Two spectacle lenses appear: '+2.0 D → convex, f = +0.50 m' in green and '−2.5 D → concave, f = −0.40 m' in blue. Small arrows show the green lens converging and the blue one diverging.",
+        "lines": [
+          { "speaker": "NEO", "text": "A convex lens has positive power, and a concave lens has negative power." },
+          { "speaker": "NEO", "text": "Grandpa's plus 2.0 dioptre lens is convex, with a focal length of plus 0.50 metres. A minus 2.5 dioptre lens is concave, with a focal length of minus 0.40 metres." },
+          { "speaker": "ZIPPY", "text": "So the sign tells the optician which lens to use!" }
+        ]
+      },
+      {
+        "animation": "Three thin lenses slide together along a principal axis; their power labels '+3 D', '+1 D' and '−2 D' add up on a calculator display to 'P = +2 D'. The formula 'P = P₁ + P₂ + P₃ + …' appears. Tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Optical instruments often combine lenses in contact. The net power is simply the sum of the individual powers: P equals P1 plus P2 plus P3, and so on." },
+          { "speaker": "NEO", "text": "Board tip: the most common mistake is using centimetres in P equals one over f. Convert to metres first, and always write the sign with the power." }
+        ]
+      },
+      {
+        "animation": "Neo at the chalkboard as recap points appear: '1. P = 1/f (f in metres)', '2. Unit: dioptre; 1 D = 1 m⁻¹', '3. Convex +, concave −; P = P₁ + P₂ + …'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: power of a lens is one over its focal length in metres." },
+          { "speaker": "NEO", "text": "Two: its SI unit is the dioptre, where one dioptre equals one per metre." },
+          { "speaker": "NEO", "text": "Three: convex lenses have positive power, concave lenses have negative power, and powers of lenses in contact simply add up." }
+        ]
+      }
+    ]
+  }
+]

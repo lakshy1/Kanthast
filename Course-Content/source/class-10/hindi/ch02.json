@@ -1,0 +1,334 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "क्षितिज: गद्य खंड",
+    "topic_no": 1,
+    "name": "नेताजी का चश्मा",
+    "scenes": [
+      {
+        "animation": "A small town square with a marble bust of Subhas Chandra Bose. The statue wears a real black-framed pair of spectacles. A jeep stops; Haldar Sahab leans out and blinks. Zippy climbs the statue and adjusts the specs.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "पत्थर की मूर्ति पर असली चश्मा? यह किसका आइडिया है?" },
+          { "speaker": "NEO", "text": "यही सवाल हालदार साहब के मन में भी आया था। आज हम स्वयं प्रकाश की कहानी नेताजी का चश्मा पढ़ेंगे।" }
+        ]
+      },
+      {
+        "animation": "Author card: 'स्वयं प्रकाश (1947-2019)', 'जन्म: इंदौर (म.प्र.)', 'मैकेनिकल इंजीनियरिंग, औद्योगिक नौकरी', 'कहानी संग्रह: सूरज कब निकलेगा, आएँगे अच्छे दिन भी, आदमी जात का आदमी, संधान', 'उपन्यास: बीच में विनय, ईंधन'.",
+        "lines": [
+          { "speaker": "NEO", "text": "स्वयं प्रकाश का जन्म सन 1947 में इंदौर में हुआ। उन्होंने मैकेनिकल इंजीनियरिंग पढ़ी और औद्योगिक प्रतिष्ठान में नौकरी की।" },
+          { "speaker": "NEO", "text": "सूरज कब निकलेगा, आएँगे अच्छे दिन भी, आदमी जात का आदमी और संधान उनके कहानी संग्रह हैं। बीच में विनय और ईंधन उनके उपन्यास हैं।" }
+        ]
+      },
+      {
+        "animation": "Flashback: the town's municipality board. A local drawing master labelled 'मोतीलाल' carves the bust in a hurry; the stone specs are missing. Then a thin, lame old man with a box of frames on a bamboo pole walks up and puts a real frame on the statue. A paan-wala laughs: 'कैप्टन!'",
+        "lines": [
+          { "speaker": "NEO", "text": "हालदार साहब हर पंद्रहवें दिन कंपनी के काम से उस कस्बे से गुज़रते थे। नगरपालिका ने चौराहे पर नेताजी की मूर्ति लगवाई थी, जिसे स्कूल के ड्राइंग मास्टर मोतीलाल ने बनाया था।" },
+          { "speaker": "NEO", "text": "मूर्ति में पत्थर का चश्मा नहीं था। तब एक बूढ़ा, मरियल-सा, लंगड़ा चश्मेवाला, जिसे सब कैप्टन कहते थे, नेताजी को अपना एक असली चश्मा पहना देता था।" },
+          { "speaker": "NEO", "text": "कोई ग्राहक वही फ्रेम माँगता, तो वह उसे उतारकर बेच देता और मूर्ति पर दूसरा फ्रेम लगा देता।" },
+          { "speaker": "NEO", "text": "पानवाला कैप्टन को लँगड़ा और पागल कहकर मज़ाक उड़ाता। हालदार साहब को यह बुरा लगा। उन्होंने सोचा कि जो कौम देश के लिए सब कुछ होम देने वालों पर भी हँसती है, उसका क्या होगा?" }
+        ]
+      },
+      {
+        "animation": "Time passes; calendar pages fly. Haldar Sahab passes by and sees the statue without any spectacles. The paan-wala's eyes fill with tears: 'कैप्टन मर गया'. Next visit: Haldar Sahab expects nothing, but the statue wears a tiny pair of spectacles made of sarkanda (reed), clearly made by children. He stands in attention, eyes wet.",
+        "lines": [
+          { "speaker": "NEO", "text": "एक बार हालदार साहब ने देखा कि मूर्ति पर कोई चश्मा नहीं है। पानवाले ने बताया कि कैप्टन मर गया।" },
+          { "speaker": "NEO", "text": "हालदार साहब बहुत दुखी हुए। उन्होंने तय किया कि अब चौराहे पर रुकेंगे नहीं, बिना चश्मे की मूर्ति देखना उनसे सहा नहीं जाएगा।" },
+          { "speaker": "ZIPPY", "text": "तो अब नेताजी बिना चश्मे के ही रहेंगे?" },
+          { "speaker": "NEO", "text": "नहीं। अगली बार मूर्ति पर सरकंडे से बना छोटा-सा चश्मा था, जैसा बच्चे बनाते हैं। हालदार साहब भावुक हो गए और उनकी आँखें भर आईं।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'सरकंडे का चश्मा देखकर हालदार साहब भावुक क्यों हो गए?' Answer bullets appear: 'देशभक्ति ज़िंदा है', 'नई पीढ़ी में उम्मीद', 'कैप्टन की भावना आगे बढ़ी'. 'BOARD TIP' sticker on 'देशभक्ति'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board का पक्का सवाल: सरकंडे का चश्मा देखकर हालदार साहब भावुक क्यों हो गए?" },
+          { "speaker": "NEO", "text": "उत्तर: उन्हें लगा था कि कैप्टन के जाने के बाद देशभक्ति की भावना खत्म हो गई। पर बच्चों का बनाया चश्मा बताता है कि नई पीढ़ी में देशप्रेम ज़िंदा है। यही उम्मीद उनकी आँखें नम कर गई।" },
+          { "speaker": "NEO", "text": "Board tip: कहानी का मूल भाव लिखो कि देशभक्ति सिर्फ़ बड़े कामों से नहीं, छोटे-छोटे कामों से भी दिखती है।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a tiny reed-spectacles icon. Points appear: '1. स्वयं प्रकाश, नेताजी का चश्मा', '2. कैप्टन चश्मेवाले की देशभक्ति', '3. सरकंडे का चश्मा = नई पीढ़ी की उम्मीद'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: नेताजी का चश्मा स्वयं प्रकाश की कहानी है।" },
+          { "speaker": "NEO", "text": "दो: गरीब कैप्टन चश्मेवाला मूर्ति को चश्मा पहनाकर अपनी देशभक्ति दिखाता है।" },
+          { "speaker": "NEO", "text": "तीन: बच्चों का सरकंडे वाला चश्मा बताता है कि देशप्रेम नई पीढ़ी में भी ज़िंदा है।" },
+          { "speaker": "ZIPPY", "text": "मैं भी कल एक सरकंडे का चश्मा बनाऊँगा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "क्षितिज: गद्य खंड",
+    "topic_no": 2,
+    "name": "बालगोबिन भगत",
+    "scenes": [
+      {
+        "animation": "A rainy Aashadh morning. Paddy fields full of water, women and children planting rice. A lean old man in a loincloth and a Kabirpanthi cap sings loudly while planting, and the whole village starts swaying to his tune. Zippy dances with muddy feet.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "ये बाबा खेत में गाना गा रहे हैं और पूरा गाँव झूम रहा है!" },
+          { "speaker": "NEO", "text": "ये हैं बालगोबिन भगत। रामवृक्ष बेनीपुरी का यह रेखाचित्र एक ऐसे साधु की कहानी है, जो साधु होकर भी गृहस्थ थे।" }
+        ]
+      },
+      {
+        "animation": "Author card: 'रामवृक्ष बेनीपुरी (1899-1968)', 'जन्म: बेनीपुर गाँव, मुज़फ़्फ़रपुर (बिहार)', 'स्वतंत्रता सेनानी, पत्रकार', 'माटी की मूरतें (रेखाचित्र), अंबपाली (नाटक), पतितों के देश में (उपन्यास)'. A tag: 'विधा: रेखाचित्र'.",
+        "lines": [
+          { "speaker": "NEO", "text": "रामवृक्ष बेनीपुरी का जन्म सन 1899 में बिहार के मुज़फ़्फ़रपुर ज़िले के बेनीपुर गाँव में हुआ। वे स्वतंत्रता सेनानी और पत्रकार थे।" },
+          { "speaker": "NEO", "text": "पतितों के देश में उपन्यास, अंबपाली नाटक और माटी की मूरतें रेखाचित्र उनकी प्रसिद्ध रचनाएँ हैं। यह पाठ भी एक रेखाचित्र है।" }
+        ]
+      },
+      {
+        "animation": "A character sheet of Bhagat builds: 'कबीर के भक्त', 'कभी झूठ नहीं', 'बिना पूछे किसी की चीज़ नहीं छूते', 'फसल कबीरपंथी मठ में, प्रसाद से गुज़ारा'. Seasons change around him: rainy Aashadh fields, a dark Bhado night, cold Kartik-to-Phagun dawns with him singing by a pond.",
+        "lines": [
+          { "speaker": "NEO", "text": "भगत कबीर को साहब मानते थे। वे कभी झूठ नहीं बोलते थे और किसी की चीज़ बिना पूछे नहीं छूते थे।" },
+          { "speaker": "NEO", "text": "खेत में जो पैदा होता, वह पहले कबीरपंथी मठ में ले जाते, और प्रसाद के रूप में जो मिलता, उसी से गुज़ारा करते।" },
+          { "speaker": "NEO", "text": "आषाढ़ की रिमझिम में वे धान रोपते हुए गाते, और कार्तिक से फागुन तक रोज़ सुबह प्रभातियाँ गाते।" }
+        ]
+      },
+      {
+        "animation": "A quiet hut. Bhagat's only son lies covered with a white cloth, flowers and a lamp beside him. Bhagat sits singing with calm devotion, while his daughter-in-law weeps. He gently tells her to celebrate. Later, he sends her off with her brother, gesturing 'marry again'.",
+        "lines": [
+          { "speaker": "NEO", "text": "सबसे चौंकाने वाला प्रसंग है उनके इकलौते बेटे की मृत्यु। भगत रोए नहीं। वे गीत गाते रहे और पतोहू से कहा कि रोओ नहीं, उत्सव मनाओ। आत्मा परमात्मा से मिल गई है।" },
+          { "speaker": "ZIPPY", "text": "इतने बड़े दुख में भी गाना?" },
+          { "speaker": "NEO", "text": "हाँ, क्योंकि वे मृत्यु को मिलन मानते थे। उन्होंने पतोहू से ही बेटे को मुखाग्नि दिलवाई, और उसके भाई को बुलाकर उसकी दूसरी शादी करवाने का आदेश दिया। उस समय के समाज के लिए यह बहुत बड़ी बात थी।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'बालगोबिन भगत ने किन सामाजिक रूढ़ियों का विरोध किया?' Three stamps land: 'बहू से मुखाग्नि', 'विधवा पुनर्विवाह', 'मृत्यु पर शोक नहीं, उत्सव'. 'BOARD TIP' sticker on 'गृहस्थ साधु'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board का सवाल: भगत ने किन सामाजिक रूढ़ियों को तोड़ा?" },
+          { "speaker": "NEO", "text": "उत्तर: उन्होंने बेटे की चिता को पतोहू से आग दिलवाई, विधवा पतोहू के पुनर्विवाह पर ज़ोर दिया, और मृत्यु पर रोने के बजाय उसे उत्सव माना।" },
+          { "speaker": "NEO", "text": "Board tip: साधु की पहचान वाला सवाल भी आता है। लिखो कि साधु होने के लिए वेशभूषा नहीं, सच्चा आचरण चाहिए, जैसे भगत का था।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a Kabirpanthi cap icon. Points appear: '1. बेनीपुरी का रेखाचित्र', '2. गृहस्थ होकर भी सच्चे साधु', '3. रूढ़ियों का विरोध: बहू से मुखाग्नि, पुनर्विवाह'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: बालगोबिन भगत रामवृक्ष बेनीपुरी का रेखाचित्र है।" },
+          { "speaker": "NEO", "text": "दो: भगत गृहस्थ होकर भी सच्चे साधु थे, क्योंकि उनका आचरण सच्चा और सरल था।" },
+          { "speaker": "NEO", "text": "तीन: उन्होंने पतोहू से मुखाग्नि दिलवाकर और उसके पुनर्विवाह की बात करके रूढ़ियाँ तोड़ीं।" },
+          { "speaker": "ZIPPY", "text": "आज से मैं भी सुबह प्रभातियाँ गाऊँगा... शायद।" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "क्षितिज: गद्य खंड",
+    "topic_no": 3,
+    "name": "लखनवी अंदाज़",
+    "scenes": [
+      {
+        "animation": "A second-class train compartment. A Nawab in fine clothes sits cross-legged with two fresh cucumbers on a towel. The author enters; the Nawab looks away, annoyed. Zippy sniffs the cucumbers hungrily.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "खीरे! मुझे एक फाँक मिलेगी क्या?" },
+          { "speaker": "NEO", "text": "रुको, ज़िप्पी। ये नवाब साहब हैं। खीरे खाने का उनका तरीका देखकर तुम हैरान रह जाओगे। यह है यशपाल की रचना लखनवी अंदाज़।" }
+        ]
+      },
+      {
+        "animation": "Author card: 'यशपाल (1903-1976)', 'जन्म: फ़िरोज़पुर छावनी (पंजाब)', 'क्रांतिकारी, भगत सिंह के साथी', 'उपन्यास: झूठा सच, दिव्या, दादा कामरेड, मेरी तेरी उसकी बात', 'कहानियाँ: ज्ञानदान, पिंजरे की उड़ान, फूलों का कुर्ता'.",
+        "lines": [
+          { "speaker": "NEO", "text": "यशपाल का जन्म सन 1903 में पंजाब की फ़िरोज़पुर छावनी में हुआ। लाहौर के नेशनल कॉलेज में पढ़ते समय वे भगत सिंह और सुखदेव के संपर्क में आए और क्रांतिकारी बने।" },
+          { "speaker": "NEO", "text": "झूठा सच, दिव्या, दादा कामरेड और मेरी तेरी उसकी बात उनके उपन्यास हैं। ज्ञानदान, पिंजरे की उड़ान और फूलों का कुर्ता उनके कहानी संग्रह हैं।" }
+        ]
+      },
+      {
+        "animation": "Step-by-step: the Nawab washes the cucumbers, peels them, cuts slices, sprinkles salt and red chilli. Then he lifts each slice, sniffs it with closed eyes, and throws it out of the window one by one. He lies back and gives a loud burp.",
+        "lines": [
+          { "speaker": "NEO", "text": "लेखक सोच रहे थे कि डिब्बे में कोई नहीं होगा, पर वहाँ नवाब साहब बैठे थे। उन्होंने लेखक से बात करने में कोई रुचि नहीं दिखाई।" },
+          { "speaker": "NEO", "text": "फिर नवाब साहब ने बड़े सलीके से खीरे धोए, छीले, फाँकें काटीं और उन पर नमक-मिर्च बुरका। लेखक को भी पूछा, पर लेखक ने मना कर दिया।" },
+          { "speaker": "NEO", "text": "इसके बाद नवाब साहब ने हर फाँक को सूँघा, स्वाद का आनंद लिया और खिड़की से बाहर फेंक दिया। फिर डकार भी ली!" },
+          { "speaker": "ZIPPY", "text": "बिना खाए डकार? यह तो जादू है!" }
+        ]
+      },
+      {
+        "animation": "The author holds a notebook titled 'नई कहानी' and imagines a story with no characters or events, just a floating question mark. Text: 'क्या बिना विचार, घटना और पात्रों के कहानी बन सकती है?' A satire meter needle swings to 'MAX'.",
+        "lines": [
+          { "speaker": "NEO", "text": "नवाब साहब ने कहा कि खीरा लज़ीज़ होता है, पर मेदे पर बोझ डाल देता है। यानी खानदानी रईस दिखना उनके लिए भूख से भी बड़ा था।" },
+          { "speaker": "NEO", "text": "लेखक सोचते हैं कि अगर खीरे की खुशबू से पेट भर सकता है, तो क्या बिना विचार, घटना और पात्रों के, सिर्फ़ लेखक की इच्छा से नई कहानी नहीं बन सकती?" },
+          { "speaker": "NEO", "text": "यहाँ दो व्यंग्य हैं। एक, पतनशील सामंती वर्ग के दिखावे पर। दो, उन लेखकों पर जो बिना कथानक के नई कहानी लिखने का दावा करते थे।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'नवाब साहब ने खीरे खाने की तैयारी करके उन्हें फेंक क्यों दिया?' Answer bullets appear: 'लेखक के सामने शान दिखाना', 'खीरा = आम आदमी का खाना', 'नवाबी दिखावा'. 'BOARD TIP' sticker on 'व्यंग्य'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board का सवाल: नवाब साहब ने खीरे तैयार करके भी क्यों फेंक दिए?" },
+          { "speaker": "NEO", "text": "उत्तर: लेखक ने उन्हें खीरा खाते देख लिया था, और खीरा आम लोगों का खाना माना जाता है। अपनी नवाबी शान दिखाने के लिए उन्होंने सिर्फ़ सूँघकर खीरे फेंक दिए।" },
+          { "speaker": "NEO", "text": "Board tip: पाठ के मूल भाव में व्यंग्य शब्द ज़रूर लिखो। यह पाठ दिखावे की ज़िंदगी पर करारा व्यंग्य है।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a cucumber slice icon. Points appear: '1. यशपाल, लखनवी अंदाज़', '2. नवाब का दिखावा: खीरे सूँघकर फेंके', '3. व्यंग्य: सामंती दिखावा और बिना कथानक की नई कहानी'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: लखनवी अंदाज़ यशपाल की व्यंग्य रचना है।" },
+          { "speaker": "NEO", "text": "दो: नवाब साहब ने शान दिखाने के लिए खीरे सिर्फ़ सूँघकर फेंक दिए।" },
+          { "speaker": "NEO", "text": "तीन: पाठ दिखावे वाली जीवन-शैली और बिना कथानक की कहानी, दोनों पर व्यंग्य करता है।" },
+          { "speaker": "ZIPPY", "text": "मैं तो खीरा खाऊँगा भी, और डकार भी लूँगा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "क्षितिज: गद्य खंड",
+    "topic_no": 4,
+    "name": "एक कहानी यह भी",
+    "scenes": [
+      {
+        "animation": "A 1940s house in Ajmer. A young girl stands on a street crossing, giving a fiery speech to a crowd of students. Her strict father watches from a distance with a stern face, then slowly looks surprised. Zippy holds a tiny flag.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "एक लड़की सड़क पर भाषण दे रही है, और उसके पापा देख रहे हैं! अब तो डाँट पड़ेगी!" },
+          { "speaker": "NEO", "text": "शायद, शायद नहीं। यह मन्नू भंडारी की आत्मकथ्य रचना एक कहानी यह भी है, जिसमें उनके जीवन के ऐसे ही पल हैं।" }
+        ]
+      },
+      {
+        "animation": "Author card: 'मन्नू भंडारी (1931-2021)', 'जन्म: भानपुरा, ज़िला मंदसौर (म.प्र.)', 'शिक्षा: अजमेर', 'मिरांडा हाउस, दिल्ली में अध्यापन', 'कहानी: एक प्लेट सैलाब, मैं हार गई, यही सच है, त्रिशंकु', 'उपन्यास: आपका बंटी, महाभोज'.",
+        "lines": [
+          { "speaker": "NEO", "text": "मन्नू भंडारी का जन्म सन 1931 में मध्य प्रदेश के मंदसौर ज़िले के भानपुरा गाँव में हुआ। उनकी शिक्षा अजमेर में हुई, और वे दिल्ली के मिरांडा हाउस कॉलेज में पढ़ाती रहीं।" },
+          { "speaker": "NEO", "text": "एक प्लेट सैलाब, मैं हार गई, यही सच है और त्रिशंकु उनके कहानी संग्रह हैं। आपका बंटी और महाभोज उनके प्रसिद्ध उपन्यास हैं।" }
+        ]
+      },
+      {
+        "animation": "Inside the house: the father sits with piles of books, dictating; he looks worried and suspicious. A comparison frame shows little Mannu next to her fair, healthy elder sister Sushila; the father praises Sushila, and Mannu shrinks with a label 'हीन भावना'.",
+        "lines": [
+          { "speaker": "NEO", "text": "लेखिका के पिता विद्वान थे, पर आर्थिक झटकों के बाद वे बहुत क्रोधी और शक्की हो गए थे।" },
+          { "speaker": "NEO", "text": "लेखिका काली और दुबली थीं, जबकि बड़ी बहन सुशीला गोरी और स्वस्थ थीं। पिता सुशीला की तारीफ़ करते, इसलिए लेखिका के मन में हीन भावना बैठ गई, जो बड़े होने तक नहीं गई।" }
+        ]
+      },
+      {
+        "animation": "A college classroom: a Hindi teacher labelled 'शीला अग्रवाल' hands Mannu a stack of books and points to a window showing freedom-movement processions of 1946-47. Mannu joins strikes and speeches. The father first rages, then hears praise from a respected friend and beams with pride.",
+        "lines": [
+          { "speaker": "NEO", "text": "फिर उनके जीवन में आईं हिंदी की प्राध्यापिका शीला अग्रवाल। उन्होंने लेखिका को अच्छा साहित्य पढ़ाया और देश की घटनाओं में सक्रिय होने की प्रेरणा दी।" },
+          { "speaker": "NEO", "text": "सन 1946-47 में लेखिका हड़तालों, जुलूसों और भाषणों में आगे रहीं। पिता चाहते थे कि बेटी जागरूक बने, पर घर की चारदीवारी में रहकर।" },
+          { "speaker": "ZIPPY", "text": "तो पिताजी ने डाँटा?" },
+          { "speaker": "NEO", "text": "जब पिता के एक सम्मानित मित्र, डॉ. अंबालाल, ने बेटी के भाषण की खूब तारीफ़ की, तो पिता गर्व से भर गए।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'लेखिका के व्यक्तित्व पर किन दो लोगों का प्रभाव पड़ा?' Two circles: 'पिता: हीन भावना, शक्की स्वभाव', 'शीला अग्रवाल: साहित्य और देशभक्ति, आत्मविश्वास'. 'BOARD TIP' sticker.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board का सवाल: लेखिका के व्यक्तित्व पर किन दो लोगों का प्रभाव पड़ा?" },
+          { "speaker": "NEO", "text": "उत्तर: पिता का, जिनके कारण उनके मन में हीन भावना आई, पर जिन्होंने उन्हें देश-समाज के प्रति जागरूक भी बनाया। और शीला अग्रवाल का, जिन्होंने उनमें साहित्य की समझ और आत्मविश्वास जगाया।" },
+          { "speaker": "NEO", "text": "Board tip: दोनों के अच्छे और बुरे, दोनों प्रभाव लिखो। सिर्फ़ एक पक्ष लिखने पर अंक कट सकते हैं।" }
+        ]
+      },
+      {
+        "animation": "Recap board with an old diary icon. Points appear: '1. मन्नू भंडारी का आत्मकथ्य', '2. पिता का प्रभाव: हीन भावना, जागरूकता', '3. शीला अग्रवाल: साहित्य और स्वतंत्रता आंदोलन में भागीदारी'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: एक कहानी यह भी मन्नू भंडारी का आत्मकथ्य है।" },
+          { "speaker": "NEO", "text": "दो: पिता के कारण उनमें हीन भावना आई, पर देश के प्रति जागरूकता भी।" },
+          { "speaker": "NEO", "text": "तीन: शीला अग्रवाल ने उन्हें साहित्य और स्वतंत्रता आंदोलन से जोड़ा, और उनमें आत्मविश्वास भरा।" },
+          { "speaker": "ZIPPY", "text": "मुझे भी एक शीला मैडम चाहिए, जो मुझे किताबें दें!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "क्षितिज: गद्य खंड",
+    "topic_no": 5,
+    "name": "नौबतखाने में इबादत",
+    "scenes": [
+      {
+        "animation": "Dawn at Varanasi ghats. A shehnai tune floats from the naubatkhana of the Balaji temple; the Ganga sparkles, bells ring. Zippy follows the music notes floating in the air like butterflies.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "ये सुबह-सुबह इतनी मीठी धुन कौन बजा रहा है?" },
+          { "speaker": "NEO", "text": "शहनाई के जादूगर, बिस्मिल्ला खाँ। यतींद्र मिश्र का यह व्यक्ति-चित्र उन्हीं के जीवन पर है।" }
+        ]
+      },
+      {
+        "animation": "Author card: 'यतींद्र मिश्र (जन्म 1977)', 'जन्म: अयोध्या (उ.प्र.)', 'कविता संग्रह: यदा-कदा, अयोध्या तथा अन्य कविताएँ, ड्योढ़ी पर आलाप', 'गिरिजा: गायिका गिरिजा देवी पर पुस्तक'. Then a portrait of Bismillah Khan: 'मूल नाम: अमीरुद्दीन', 'जन्म: डुमराँव (बिहार)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "यतींद्र मिश्र का जन्म सन 1977 में अयोध्या में हुआ। यदा-कदा, अयोध्या तथा अन्य कविताएँ और ड्योढ़ी पर आलाप उनके कविता संग्रह हैं।" },
+          { "speaker": "NEO", "text": "पाठ के नायक बिस्मिल्ला खाँ का असली नाम अमीरुद्दीन था। उनका जन्म बिहार के डुमराँव में हुआ, और छह साल की उम्र में वे ननिहाल काशी आ गए।" }
+        ]
+      },
+      {
+        "animation": "Young Amiruddin walks to the Balaji temple for riyaz, passing the houses of singer sisters Rasoolanbai and Batoolanbai, whose songs make him smile. A reed labelled 'रीड: नरकट' glows inside the shehnai. Text: 'सुषिर वाद्य', 'शाह-ए-नय'.",
+        "lines": [
+          { "speaker": "NEO", "text": "बचपन में अमीरुद्दीन मामा अलीबख्श खाँ से शहनाई सीखते थे, और बालाजी मंदिर के नौबतखाने में रियाज़ करते थे। रास्ते में रसूलनबाई और बतूलनबाई के गाने उन्हें संगीत से और जोड़ते थे।" },
+          { "speaker": "NEO", "text": "शहनाई एक सुषिर वाद्य है, यानी फूँककर बजाया जाने वाला। इसे शाह-ए-नय कहा गया, और इसकी रीड नरकट से बनती है।" }
+        ]
+      },
+      {
+        "animation": "Bismillah Khan in a simple patched lungi, bowing his head in prayer: 'मालिक, सच्चा सुर बख्श'. A student points at the torn lungi; he laughs and says the cloth can be stitched, but not a torn note. Montage: Muharram procession, Kashi ghats, a 'भारत रत्न' medal.",
+        "lines": [
+          { "speaker": "NEO", "text": "खाँ साहब पाँचों वक्त नमाज़ में खुदा से सच्चा सुर माँगते थे। वे मुहर्रम भी पूरी श्रद्धा से मनाते थे, और काशी विश्वनाथ व बालाजी के प्रति भी उनकी गहरी आस्था थी।" },
+          { "speaker": "ZIPPY", "text": "इतने बड़े कलाकार और फटी लुंगी?" },
+          { "speaker": "NEO", "text": "एक शिष्या ने यही टोका। खाँ साहब बोले कि भारत रत्न शहनाई पर मिला है, लुंगी पर नहीं। लुंगी फटी है तो सिल जाएगी, बस मालिक फटा सुर न दे।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'बिस्मिल्ला खाँ को मिली-जुली संस्कृति का प्रतीक क्यों कहा गया है?' Split image: Muharram on one side, Balaji temple and Ganga on the other, joined by a shehnai. 'BOARD TIP' sticker on 'सादगी'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board का सवाल: बिस्मिल्ला खाँ को मिली-जुली संस्कृति का प्रतीक क्यों कहा गया है?" },
+          { "speaker": "NEO", "text": "उत्तर: वे सच्चे मुसलमान थे और मुहर्रम मनाते थे, पर बालाजी मंदिर में शहनाई बजाते थे और गंगा व काशी से बहुत प्रेम करते थे। उनके लिए संगीत ही इबादत था।" },
+          { "speaker": "NEO", "text": "Board tip: उनके गुणों वाला सवाल भी आता है। सादगी, विनम्रता, धार्मिक सहिष्णुता और रियाज़ के प्रति लगन, ये चार शब्द याद रखो।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a shehnai icon. Points appear: '1. यतींद्र मिश्र का व्यक्ति-चित्र', '2. बिस्मिल्ला खाँ: सुर की साधना, सादगी', '3. गंगा-जमुनी तहज़ीब के प्रतीक'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: नौबतखाने में इबादत यतींद्र मिश्र का व्यक्ति-चित्र है, बिस्मिल्ला खाँ पर।" },
+          { "speaker": "NEO", "text": "दो: खाँ साहब ने भारत रत्न पाकर भी सादगी नहीं छोड़ी, और हमेशा सच्चा सुर माँगा।" },
+          { "speaker": "NEO", "text": "तीन: वे हिंदू-मुस्लिम मिली-जुली संस्कृति के प्रतीक थे।" },
+          { "speaker": "ZIPPY", "text": "मालिक, मुझे भी सच्चा सुर बख्श... कम से कम बाथरूम में!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "क्षितिज: गद्य खंड",
+    "topic_no": 6,
+    "name": "संस्कृति",
+    "scenes": [
+      {
+        "animation": "Zippy wears a fancy suit and holds a phone, posing: 'I am very cultured!' Neo raises an eyebrow. Behind them, a caveman rubs two stones and a spark creates fire.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "मेरे पास महँगा फ़ोन और सूट है, तो मैं सुसंस्कृत हूँ ना?" },
+          { "speaker": "NEO", "text": "ज़रूरी नहीं। भदंत आनंद कौसल्यायन अपने निबंध संस्कृति में समझाते हैं कि सभ्यता और संस्कृति में बड़ा फ़र्क है।" }
+        ]
+      },
+      {
+        "animation": "Author card: 'भदंत आनंद कौसल्यायन (1905-1988)', 'जन्म: सोहाना, अंबाला (पंजाब)', 'बचपन का नाम: हरनाम दास', 'बौद्ध भिक्षु, गांधीजी के साथ वर्धा में', 'भिक्षु के पत्र, जो भूल ना सका, आह! ऐसी दरिद्रता, बहानेबाज़ी, यदि बाबा ना होते, कहाँ क्या देखा'. Tag: 'विधा: निबंध'.",
+        "lines": [
+          { "speaker": "NEO", "text": "भदंत आनंद कौसल्यायन का जन्म सन 1905 में अंबाला के सोहाना गाँव में हुआ। उनका बचपन का नाम हरनाम दास था। वे बौद्ध भिक्षु थे और गांधीजी के साथ वर्धा में रहे।" },
+          { "speaker": "NEO", "text": "भिक्षु के पत्र, जो भूल ना सका, आह! ऐसी दरिद्रता, बहानेबाज़ी और कहाँ क्या देखा उनकी रचनाएँ हैं।" }
+        ]
+      },
+      {
+        "animation": "Two side-by-side scenes. Left: the first human discovers fire, with a glowing brain labelled 'संस्कृति: खोज की योग्यता'. Right: the next generation simply uses the fire, labelled 'सभ्यता: खोज का परिणाम'. Same pattern repeats with a needle and thread, and then Newton with an apple.",
+        "lines": [
+          { "speaker": "NEO", "text": "लेखक कहते हैं कि जिस योग्यता या प्रेरणा से किसी ने आग या सुई-धागे का आविष्कार किया, वह उस व्यक्ति की संस्कृति है। और उस आविष्कार से जो चीज़ मिली, वह सभ्यता है।" },
+          { "speaker": "NEO", "text": "न्यूटन ने गुरुत्वाकर्षण का सिद्धांत खोजा, इसलिए वे संस्कृत मानव थे। आज का विद्यार्थी वह सिद्धांत जानता है, पर उसे हम उतना संस्कृत नहीं कह सकते, हालाँकि वह ज़्यादा सभ्य हो सकता है।" },
+          { "speaker": "ZIPPY", "text": "यानी खोज करने वाला दिमाग संस्कृति, और उसका फल सभ्यता!" }
+        ]
+      },
+      {
+        "animation": "A gentle montage: Siddharth leaving his palace at night; Karl Marx writing at a desk; Lenin setting aside dry bread for others. Each glows with the label 'मानव कल्याण'. Then a dark scene of weapons labelled 'असंस्कृति' fades away.",
+        "lines": [
+          { "speaker": "NEO", "text": "लेखक के अनुसार संस्कृति सिर्फ़ पेट भरने या तन ढकने से नहीं, बल्कि मानव कल्याण की भावना से भी जुड़ी है।" },
+          { "speaker": "NEO", "text": "सिद्धार्थ ने मानव को सुखी देखने के लिए घर छोड़ा। कार्ल मार्क्स ने मज़दूरों के सुख का सपना देखते हुए जीवन बिताया। लेनिन ने अपनी डबल रोटी के सूखे टुकड़े दूसरों के लिए रखे।" },
+          { "speaker": "NEO", "text": "जो ज्ञान मनुष्य के विनाश में लगे, वह असंस्कृति है। लेखक कहते हैं कि मानव संस्कृति एक अविभाज्य वस्तु है, उसे बाँटा नहीं जा सकता।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'सभ्यता और संस्कृति में क्या अंतर है?' A two-column table builds: 'संस्कृति: आविष्कार की योग्यता/प्रेरणा' vs 'सभ्यता: उसका परिणाम'. Example row: 'आग की खोज' vs 'आग का उपयोग'. 'BOARD TIP' sticker.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board का सबसे पक्का सवाल: सभ्यता और संस्कृति में क्या अंतर है?" },
+          { "speaker": "NEO", "text": "उत्तर: संस्कृति वह योग्यता, प्रवृत्ति या प्रेरणा है जिससे आविष्कार होता है। सभ्यता उस आविष्कार का परिणाम है। जैसे आग की खोज संस्कृति है, और आग से खाना पकाना सभ्यता।" },
+          { "speaker": "NEO", "text": "Board tip: उत्तर में आग, सुई-धागा या न्यूटन में से कम से कम एक उदाहरण ज़रूर दो।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a small flame icon. Points appear: '1. संस्कृति = आविष्कार की योग्यता', '2. सभ्यता = उसका परिणाम', '3. मानव कल्याण ही सच्ची संस्कृति; विनाश = असंस्कृति'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: संस्कृति वह योग्यता और प्रेरणा है जिससे नई खोज होती है।" },
+          { "speaker": "NEO", "text": "दो: सभ्यता उस खोज का परिणाम है, जिसे हम इस्तेमाल करते हैं।" },
+          { "speaker": "NEO", "text": "तीन: जो मानव कल्याण करे वही संस्कृति है, और जो विनाश करे वह असंस्कृति।" },
+          { "speaker": "ZIPPY", "text": "ठीक है, सूट उतारता हूँ और कुछ नया खोजने चलता हूँ!" }
+        ]
+      }
+    ]
+  }
+]

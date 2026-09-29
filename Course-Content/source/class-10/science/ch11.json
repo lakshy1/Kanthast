@@ -1,0 +1,500 @@
+[
+  {
+    "chapter_no": 11,
+    "chapter": "Electricity",
+    "topic_no": 1,
+    "name": "Electric Current and Circuit",
+    "scenes": [
+      {
+        "animation": "A dark room; Zippy flicks a switch and a bulb lights up. Camera zooms into the wire, where cartoon electrons shuffle along like a queue at a ticket counter.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Whoa! How does the bulb know I pressed the switch?" },
+          { "speaker": "NEO", "text": "It doesn't. The switch just completes the path, so charge can finally flow." }
+        ]
+      },
+      {
+        "animation": "A simple loop is drawn: cell, wire, bulb and switch. When the switch opens, a gap appears and the electron queue freezes with the bulb going dark; when it closes, the queue moves and the bulb glows. Label 'Electric circuit: continuous, closed path'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A continuous and closed path of an electric current is called an electric circuit." },
+          { "speaker": "NEO", "text": "Open the switch and the circuit breaks, so the current stops and the bulb goes off." },
+          { "speaker": "NEO", "text": "In metal wires, the moving charges are electrons." }
+        ]
+      },
+      {
+        "animation": "A cartoon gatekeeper counts electrons passing a cross-section with a stopwatch. The equation 'I = Q / t' writes itself, then '1 A = 1 C / 1 s', then '1 C ≈ 6 × 10¹⁸ electrons' and 'charge of electron = 1.6 × 10⁻¹⁹ C'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Electric current is the amount of charge flowing through a cross-section of a conductor per unit time." },
+          { "speaker": "NEO", "text": "So I equals Q by t. Charge is measured in coulombs, and current in amperes." },
+          { "speaker": "NEO", "text": "One ampere is a flow of one coulomb of charge per second. One coulomb is the charge of nearly six into ten to the power eighteen electrons." },
+          { "speaker": "NEO", "text": "Smaller currents are measured in milliamperes and microamperes." }
+        ]
+      },
+      {
+        "animation": "Two arrows on the same wire: blue electrons march from the negative terminal to the positive, while a big orange arrow labelled 'Conventional current' points from positive to negative. A sepia flashback shows old scientists with a question mark over an electron.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, the electrons go from minus to plus, but your arrow goes from plus to minus. Which is right?" },
+          { "speaker": "NEO", "text": "Both, by agreement. When electricity was first studied, electrons were unknown, so current was taken as a flow of positive charge." },
+          { "speaker": "NEO", "text": "So conventional current flows opposite to the flow of electrons." }
+        ]
+      },
+      {
+        "animation": "An ammeter clicks into the loop in series, its needle reading 0.5 A. A worked example appears line by line: 'I = 0.5 A, t = 10 min = 600 s', 'Q = I × t = 300 C'. A 'Board Tip' sticker flashes on '600 s'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Current is measured by an ammeter, which is always connected in series in the circuit." },
+          { "speaker": "NEO", "text": "Example: a bulb filament draws 0.5 ampere for 10 minutes. Ten minutes is 600 seconds, so the charge is 0.5 into 600, which is 300 coulombs." },
+          { "speaker": "NEO", "text": "Board tip: always convert time into seconds before using I equals Q by t. Forgetting this is the most common slip." }
+        ]
+      },
+      {
+        "animation": "Recap board with a glowing bulb icon. Points appear: '1. Circuit = continuous, closed path', '2. I = Q/t; 1 A = 1 C/s', '3. Conventional current is opposite to electron flow; ammeter in series'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: current flows only in a continuous, closed path called a circuit." },
+          { "speaker": "NEO", "text": "Two: current is charge per unit time, I equals Q by t, and one ampere is one coulomb per second." },
+          { "speaker": "NEO", "text": "Three: conventional current flows opposite to electrons, and the ammeter goes in series." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Electricity",
+    "topic_no": 2,
+    "name": "Electric Potential and Potential Difference",
+    "scenes": [
+      {
+        "animation": "A copper wire lies on a lab table. Zippy peers in: the electrons inside are lounging on tiny deckchairs, not moving at all.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This wire is full of electrons. Why aren't they flowing?" },
+          { "speaker": "NEO", "text": "Because nobody is pushing them. They need a difference of electric pressure first." }
+        ]
+      },
+      {
+        "animation": "Split screen: a rooftop water tank sends water down a pipe to a tap, labelled 'Pressure difference → water flows'; beside it a cell connected across a wire makes the electrons jump up and move, labelled 'Potential difference → charge flows'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Water flows through a pipe only when there is a pressure difference between its ends." },
+          { "speaker": "NEO", "text": "In the same way, electrons move only when there is a difference of electric pressure, called potential difference." },
+          { "speaker": "NEO", "text": "A cell creates this potential difference through the chemical action inside it." }
+        ]
+      },
+      {
+        "animation": "A cartoon charge is lifted up a small hill from point A to point B by a worker labelled 'Work W'. The equation 'V = W / Q' builds up, followed by '1 V = 1 J / 1 C'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The potential difference between two points is the work done to move a unit charge from one point to the other." },
+          { "speaker": "NEO", "text": "So V equals W by Q. Its SI unit is the volt, named after Alessandro Volta." },
+          { "speaker": "NEO", "text": "One volt is the potential difference when one joule of work is done to move one coulomb of charge." }
+        ]
+      },
+      {
+        "animation": "A voltmeter is attached with two leads straddling a bulb, clearly parallel to it, while the ammeter sits in line with the wire. Labels 'Voltmeter: parallel' and 'Ammeter: series' blink alternately.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Do I plug the voltmeter in series like the ammeter?" },
+          { "speaker": "NEO", "text": "No. A voltmeter is always connected in parallel across the two points whose potential difference you want to measure." }
+        ]
+      },
+      {
+        "animation": "Worked example on a notebook page: 'Q = 2 C, V = 12 V', then 'W = V × Q = 12 × 2 = 24 J' with the answer boxed in green. A 'Board Tip' card slides in underneath.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: how much work is done in moving 2 coulombs of charge across a potential difference of 12 volts?" },
+          { "speaker": "NEO", "text": "Rearrange V equals W by Q to get W equals V into Q. That is 12 into 2, which is 24 joules." },
+          { "speaker": "NEO", "text": "Board tip: in definitions, write 'work done to move a unit charge'. Leaving out 'unit charge' is a common way to lose the mark." }
+        ]
+      },
+      {
+        "animation": "Recap board with a water tank icon. Points pop in: '1. Potential difference drives charge, like pressure drives water', '2. V = W/Q; 1 V = 1 J/C', '3. Voltmeter in parallel'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: charge flows only when there is a potential difference, just as water needs a pressure difference." },
+          { "speaker": "NEO", "text": "Two: V equals W by Q, and one volt is one joule per coulomb." },
+          { "speaker": "NEO", "text": "Three: a voltmeter is always connected in parallel." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Electricity",
+    "topic_no": 3,
+    "name": "Circuit Diagrams",
+    "scenes": [
+      {
+        "animation": "Zippy proudly shows a sketch of a torch circuit with a hand-drawn realistic battery, a detailed bulb, and wires tangled like Maggi noodles. Neo tilts his head; the sketch blows away in the wind.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Look at my circuit! It took me forty minutes." },
+          { "speaker": "NEO", "text": "Lovely noodles, Zippy. But scientists draw circuits with simple symbols, so anyone can read them in seconds." }
+        ]
+      },
+      {
+        "animation": "A symbol gallery builds one tile at a time. Tile 1: a cell with a long line marked '+' and a short line marked '−'. Tile 2: several cells joined, labelled 'Battery'.",
+        "lines": [
+          { "speaker": "NEO", "text": "An electric cell is drawn as two parallel lines. The longer line is the positive terminal and the shorter line is the negative terminal." },
+          { "speaker": "NEO", "text": "A battery is a combination of two or more cells joined together." },
+          { "speaker": "ZIPPY", "text": "So the two cells in our TV remote together make a battery?" },
+          { "speaker": "NEO", "text": "Exactly. In the diagram, you simply draw the cells side by side, long line next to short line." }
+        ]
+      },
+      {
+        "animation": "Next tiles: a plug key or switch shown open with a gap, then closed; a wire joint marked with a solid dot; two wires crossing with no dot, labelled 'Crossing without joining'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A plug key or switch can be open, which breaks the circuit, or closed, which completes it." },
+          { "speaker": "NEO", "text": "A dot shows a wire joint. Wires crossing without a dot are not connected." }
+        ]
+      },
+      {
+        "animation": "More tiles: an electric bulb symbol, a zigzag resistor labelled 'R', and the same zigzag with an arrow through it labelled 'Variable resistance (rheostat)'. Then circles with 'A' and 'V' inside, each marked '+' and '−'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Then we have the electric bulb, the resistor, and the variable resistance, also called a rheostat." },
+          { "speaker": "NEO", "text": "An ammeter is a circle with A inside, and a voltmeter is a circle with V inside." },
+          { "speaker": "ZIPPY", "text": "And the ammeter goes in series, the voltmeter in parallel. I remember!" }
+        ]
+      },
+      {
+        "animation": "The symbols fly together into a neat rectangular circuit drawn with a ruler: cell, plug key, bulb, ammeter in series, and a voltmeter across the bulb. A current arrow travels from the '+' terminal round to '−'. A 'Board Tip' stamp lands in the corner.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now combine them. Cell, plug key, bulb and ammeter in one loop, with the voltmeter across the bulb." },
+          { "speaker": "NEO", "text": "Board tip: draw circuits with straight lines and right-angled corners, mark the positive and negative terminals of the cell and meters, and show the current direction from the positive terminal." }
+        ]
+      },
+      {
+        "animation": "Recap board with a mini circuit icon. Points appear: '1. Cell: long line +, short line −', '2. Dot = joint; no dot = no connection', '3. Ammeter (A) in series, voltmeter (V) in parallel'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: in a cell, the long line is positive and the short line is negative." },
+          { "speaker": "NEO", "text": "Two: a dot means the wires are joined; crossing wires without a dot are not." },
+          { "speaker": "NEO", "text": "Three: the ammeter goes in series and the voltmeter goes in parallel." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Electricity",
+    "topic_no": 4,
+    "name": "Ohm's Law",
+    "scenes": [
+      {
+        "animation": "Zippy stuffs extra cells into a torch one by one; the beam gets brighter each time until Zippy is blown backwards by the glare, sunglasses flying.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "More cells, more light! Is there a rule for this?" },
+          { "speaker": "NEO", "text": "There is. It was found by Georg Simon Ohm, and it links voltage and current exactly." }
+        ]
+      },
+      {
+        "animation": "The NCERT set-up is drawn step by step: a nichrome wire XY, an ammeter in series, a voltmeter across XY, a plug key, and one to four cells. A table fills in; the column 'V/I' shows the same value in every row, highlighted green.",
+        "lines": [
+          { "speaker": "NEO", "text": "Connect a nichrome wire with an ammeter in series and a voltmeter across it." },
+          { "speaker": "NEO", "text": "Use one cell, then two, then three, then four, and note the current and potential difference each time." },
+          { "speaker": "NEO", "text": "V divided by I comes out approximately the same every time. The V–I graph is a straight line through the origin." }
+        ]
+      },
+      {
+        "animation": "The statement types itself onto a scroll while a thermometer beside it stays fixed. Equations appear: 'V ∝ I', then 'V = IR', then '1 Ω = 1 V / 1 A'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ohm's law: the potential difference across a metallic wire is directly proportional to the current through it, provided its temperature remains the same." },
+          { "speaker": "NEO", "text": "So V equals I R, where R is the resistance, a constant for the wire at a given temperature." },
+          { "speaker": "NEO", "text": "Resistance opposes the flow of charge. Its SI unit is the ohm: one ohm is one volt per ampere." }
+        ]
+      },
+      {
+        "animation": "A corridor of electrons: when the resistance door narrows, fewer electrons squeeze through. The equation 'I = V / R' glows, and a rheostat knob is turned to show the ammeter reading drop.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So if resistance goes up, current goes down?" },
+          { "speaker": "NEO", "text": "Exactly. I equals V by R, so current is inversely proportional to resistance. Double the resistance and the current halves." },
+          { "speaker": "NEO", "text": "A rheostat lets us change the resistance to control the current in a circuit." }
+        ]
+      },
+      {
+        "animation": "Worked example on a whiteboard: 'V = 220 V, R = 1200 Ω', 'I = V/R = 220/1200 ≈ 0.18 A'. A 'Board Tip' card slides in with the words 'temperature remains the same' underlined twice.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a bulb filament of 1200 ohms is connected to 220 volts. The current is 220 by 1200, which is about 0.18 ampere." },
+          { "speaker": "NEO", "text": "Board tip: when you state Ohm's law, always add 'provided the temperature remains the same'. Many students lose a mark by skipping it." }
+        ]
+      },
+      {
+        "animation": "Recap board with a straight-line V–I graph icon. Points tick in: '1. V ∝ I at constant temperature', '2. V = IR; 1 Ω = 1 V/A', '3. I = V/R: more resistance, less current'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: potential difference is directly proportional to current, provided temperature stays the same." },
+          { "speaker": "NEO", "text": "Two: V equals I R, and resistance is measured in ohms." },
+          { "speaker": "NEO", "text": "Three: current is inversely proportional to resistance." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Electricity",
+    "topic_no": 5,
+    "name": "Factors Affecting Resistance",
+    "scenes": [
+      {
+        "animation": "A stadium exit after a cricket match. Fans pour out easily through a short, wide gate, but crawl slowly through a long, narrow corridor. Zippy is stuck in the narrow corridor, squashed between fans.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The wide gate was so much faster than this long corridor!" },
+          { "speaker": "NEO", "text": "Electrons feel the same way, Zippy. The shape of a wire decides how much it resists them." }
+        ]
+      },
+      {
+        "animation": "Three comparison panels: a wire doubles in length and the resistance meter doubles, label 'R ∝ l'; a wire doubles in thickness and the meter drops, label 'R ∝ 1/A'; copper and nichrome wires of the same size give different readings, label 'Nature of material'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Resistance of a conductor is directly proportional to its length. A longer wire has more resistance." },
+          { "speaker": "NEO", "text": "It is inversely proportional to its area of cross-section. A thicker wire has less resistance." },
+          { "speaker": "NEO", "text": "It also depends on the nature of the material." }
+        ]
+      },
+      {
+        "animation": "The proportionalities merge into 'R = ρ l / A'. The symbol ρ glows and is labelled 'Resistivity, SI unit Ω m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Putting these together, R equals rho l by A, where rho is the electrical resistivity of the material." },
+          { "speaker": "NEO", "text": "Resistivity is a characteristic property of the material. Its SI unit is the ohm metre, and it varies with temperature." }
+        ]
+      },
+      {
+        "animation": "A resistivity scale bar: metals and alloys cluster at '10⁻⁸ to 10⁻⁶ Ω m', insulators like rubber and glass at '10¹² to 10¹⁷ Ω m'. Icons pop up: a nichrome coil in a toaster, a tungsten filament in a bulb, copper and aluminium cables on pylons.",
+        "lines": [
+          { "speaker": "NEO", "text": "Metals and alloys have very low resistivity, from about ten to the minus eight to ten to the minus six ohm metre. Insulators like rubber and glass range from ten to the twelve to ten to the seventeen." },
+          { "speaker": "NEO", "text": "Alloys have higher resistivity than their constituent metals and do not oxidise easily at high temperatures. So nichrome is used in irons and toasters." },
+          { "speaker": "NEO", "text": "Tungsten is used for bulb filaments, while copper and aluminium are used for transmission lines." }
+        ]
+      },
+      {
+        "animation": "A 'Board Tip' card shows two identical copper wires, one twice as long. The resistance label doubles on the long one, but the ρ label on both stays the same with a padlock icon.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So if I double the length, the resistivity doubles too?" },
+          { "speaker": "NEO", "text": "No! Resistance doubles, but resistivity stays the same. It depends only on the material and temperature, not on length or thickness." },
+          { "speaker": "NEO", "text": "Board tip: 'Why are heating coils made of an alloy rather than a pure metal?' is a favourite question. Answer: high resistivity, and it does not oxidise readily at high temperature." }
+        ]
+      },
+      {
+        "animation": "Recap board with a wire icon. Points: '1. R ∝ l and R ∝ 1/A', '2. R = ρl/A; ρ in Ω m, depends on material and temperature', '3. Alloys for heaters, tungsten for filaments, copper and aluminium for cables'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: resistance increases with length and decreases with area of cross-section." },
+          { "speaker": "NEO", "text": "Two: R equals rho l by A, and resistivity depends only on the material and temperature." },
+          { "speaker": "NEO", "text": "Three: alloys are used in heaters, tungsten in filaments, and copper and aluminium in cables." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Electricity",
+    "topic_no": 6,
+    "name": "Resistors in Series",
+    "scenes": [
+      {
+        "animation": "Diwali night. A string of fairy lights wired one after another decorates a balcony. One tiny bulb pops, and the whole string goes dark; Zippy gasps as the neighbours' lights keep shining.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "One bulb fused, and the whole string died! What kind of team is this?" },
+          { "speaker": "NEO", "text": "A series team, Zippy. In series, everyone shares one single path." }
+        ]
+      },
+      {
+        "animation": "Three resistors R1, R2 and R3 appear joined end to end with a battery. Ammeters placed before, between and after them all show the same reading, and a label 'Same current I everywhere' glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Resistors joined end to end are said to be connected in series." },
+          { "speaker": "NEO", "text": "The same current flows through every part of a series circuit. An ammeter anywhere in the loop gives the same reading." }
+        ]
+      },
+      {
+        "animation": "Voltmeters appear across each resistor showing V1, V2 and V3, and one across all three showing V. The equations build: 'V = V1 + V2 + V3', 'IRs = IR1 + IR2 + IR3', then 'Rs = R1 + R2 + R3' boxed in gold.",
+        "lines": [
+          { "speaker": "NEO", "text": "The total potential difference equals the sum of the potential differences across each resistor. V equals V1 plus V2 plus V3." },
+          { "speaker": "NEO", "text": "Using Ohm's law, I Rs equals I R1 plus I R2 plus I R3. Cancel I, and Rs equals R1 plus R2 plus R3." },
+          { "speaker": "NEO", "text": "So the equivalent resistance in series is greater than any individual resistance." }
+        ]
+      },
+      {
+        "animation": "Worked example: a 20 Ω lamp and a 4 Ω conductor in series with a 6 V battery. Lines appear one at a time: 'Rs = 24 Ω', 'I = 6/24 = 0.25 A', 'V lamp = 0.25 × 20 = 5 V', 'V conductor = 0.25 × 4 = 1 V', '5 V + 1 V = 6 V ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a 20 ohm lamp and a 4 ohm conductor are connected in series to a 6 volt battery." },
+          { "speaker": "NEO", "text": "Total resistance is 24 ohms. Current is 6 by 24, which is 0.25 ampere." },
+          { "speaker": "NEO", "text": "The lamp gets 0.25 into 20, which is 5 volts. The conductor gets 0.25 into 4, which is 1 volt. Together, 6 volts." }
+        ]
+      },
+      {
+        "animation": "A house wiring diagram in series turns red with warning signs: a heater and a bulb in one line, one labelled 'needs large current', the other 'needs small current'. A 'Board Tip' card flips in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why don't we wire our homes in series, then?" },
+          { "speaker": "NEO", "text": "Two reasons. If one component fails, the whole circuit breaks. And gadgets like a bulb and a heater need very different currents, which a series circuit cannot give." },
+          { "speaker": "NEO", "text": "Board tip: always check that the voltages across each resistor add up to the battery voltage. It is a quick way to catch errors." }
+        ]
+      },
+      {
+        "animation": "Recap board with three resistors in a line. Points: '1. Same current through each resistor', '2. V = V1 + V2 + V3', '3. Rs = R1 + R2 + R3 (greater than each)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: in series, the same current flows through every resistor." },
+          { "speaker": "NEO", "text": "Two: the total potential difference is the sum of the individual potential differences." },
+          { "speaker": "NEO", "text": "Three: Rs equals R1 plus R2 plus R3, which is more than any single resistance." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Electricity",
+    "topic_no": 7,
+    "name": "Resistors in Parallel",
+    "scenes": [
+      {
+        "animation": "A living room in summer. Zippy switches off the TV, but the ceiling fan keeps spinning and the tube light stays on. Zippy switches them on and off in turn, confused.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "In series, one fault killed everything. Here the TV is off but the fan still runs. Why?" },
+          { "speaker": "NEO", "text": "Because your home uses a parallel circuit. Each gadget gets its own path." }
+        ]
+      },
+      {
+        "animation": "Three resistors R1, R2 and R3 are drawn side by side between the same two points X and Y. The main current splits into I1, I2 and I3 like a river splitting into three streams, then joins again. A voltmeter across each shows the same V.",
+        "lines": [
+          { "speaker": "NEO", "text": "In parallel, resistors are connected between the same two points." },
+          { "speaker": "NEO", "text": "The potential difference across each resistor is the same." },
+          { "speaker": "NEO", "text": "The total current equals the sum of the currents in the branches. I equals I1 plus I2 plus I3." }
+        ]
+      },
+      {
+        "animation": "Equations build step by step: 'I = V/Rp', 'V/Rp = V/R1 + V/R2 + V/R3', then '1/Rp = 1/R1 + 1/R2 + 1/R3' boxed in gold. A small label reads 'Rp is less than the smallest resistance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Using Ohm's law in each branch, V by Rp equals V by R1 plus V by R2 plus V by R3." },
+          { "speaker": "NEO", "text": "Cancel V, and one by Rp equals one by R1 plus one by R2 plus one by R3." },
+          { "speaker": "NEO", "text": "The equivalent resistance in parallel is less than the smallest individual resistance." }
+        ]
+      },
+      {
+        "animation": "Worked example: 5 Ω, 10 Ω and 30 Ω in parallel across 12 V. Steps: '1/Rp = 1/5 + 1/10 + 1/30 = 10/30', 'Rp = 3 Ω', 'I = 12/3 = 4 A'. Branch currents 2.4 A, 1.2 A and 0.4 A appear and add up to 4 A with a tick.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: 5, 10 and 30 ohm resistors are connected in parallel to a 12 volt battery." },
+          { "speaker": "NEO", "text": "One by Rp is one fifth plus one tenth plus one thirtieth, which is ten by thirty. So Rp is 3 ohms, and the total current is 4 amperes." },
+          { "speaker": "NEO", "text": "The branch currents are 2.4, 1.2 and 0.4 amperes, and they add up to exactly 4." }
+        ]
+      },
+      {
+        "animation": "A house wiring diagram with a bulb, fan and heater each on its own branch, each drawing a different current while all get the same voltage. A 'Board Tip' card shows a crossed-out 'Rp = 10/30' and a corrected 'Rp = 30/10 = 3 Ω'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A parallel circuit divides the current among gadgets. Each gets the full voltage and draws the current it needs, so a bulb and a heater can run together." },
+          { "speaker": "ZIPPY", "text": "And if one fails, the others keep working!" },
+          { "speaker": "NEO", "text": "Board tip: after adding the fractions, remember to invert to get Rp. Writing ten by thirty ohms as the answer is a very common mistake." }
+        ]
+      },
+      {
+        "animation": "Recap board with three parallel branches. Points: '1. Same potential difference across each resistor', '2. I = I1 + I2 + I3', '3. 1/Rp = 1/R1 + 1/R2 + 1/R3 (less than the smallest)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: in parallel, every resistor has the same potential difference." },
+          { "speaker": "NEO", "text": "Two: the total current is the sum of the branch currents." },
+          { "speaker": "NEO", "text": "Three: one by Rp equals the sum of one by each resistance, so Rp is less than the smallest one." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Electricity",
+    "topic_no": 8,
+    "name": "Heating Effect of Electric Current",
+    "scenes": [
+      {
+        "animation": "Monday morning. Zippy irons a school shirt; the iron glows red-hot. Zippy imagines tiny electrons inside rubbing their hands together to keep warm.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The iron gets hot because the electrons are feeling cold and rubbing their hands, right?" },
+          { "speaker": "NEO", "text": "Cute theory, Zippy, but no. The heat comes from the work done by the source against resistance." }
+        ]
+      },
+      {
+        "animation": "A battery pushes charge through a resistor; energy bars leave the battery and turn into orange heat waves at the resistor. Equations build: 'W = VQ', 'Q = It', 'H = VIt', then 'H = I²Rt' boxed in gold with the label 'Joule's law of heating'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The source keeps spending energy to maintain the current. In a purely resistive circuit, all of it is dissipated as heat. This is the heating effect of electric current." },
+          { "speaker": "NEO", "text": "Work done is V into Q, and Q is I into t. So heat H equals V I t, which using Ohm's law becomes I squared R t." },
+          { "speaker": "NEO", "text": "This is Joule's law of heating. Heat is proportional to the square of the current, to the resistance, and to the time." }
+        ]
+      },
+      {
+        "animation": "Worked example on a notebook: '100 J per second, R = 4 Ω', '100 = I² × 4 × 1', 'I = 5 A', 'V = IR = 5 × 4 = 20 V'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: 100 joules of heat is produced each second in a 4 ohm resistance. Find the potential difference." },
+          { "speaker": "NEO", "text": "100 equals I squared into 4 into 1, so I is 5 amperes. Then V equals I R, which is 20 volts." }
+        ]
+      },
+      {
+        "animation": "Montage: an electric iron, a toaster, an oven, a kettle and a room heater glowing. Then a bulb interior: a coiled tungsten filament glowing white, labels 'Melting point 3380 °C' and 'Filled with nitrogen and argon'.",
+        "lines": [
+          { "speaker": "NEO", "text": "This heating is useful in electric irons, toasters, ovens, kettles and heaters." },
+          { "speaker": "NEO", "text": "In a bulb, the filament gets so hot that it gives out light. It is made of tungsten, which melts only at 3380 degrees Celsius." },
+          { "speaker": "NEO", "text": "Bulbs are filled with chemically inactive nitrogen and argon to prolong the filament's life. Still, most of the power consumed appears as heat." }
+        ]
+      },
+      {
+        "animation": "A fuse wire sits in series with an iron. A current surge arrives, the fuse wire glows, melts with a small 'snip', and the circuit opens safely. A label reads '1 kW iron at 220 V draws 4.54 A → use a 5 A fuse'. A 'Board Tip' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "A fuse also uses this effect. It is a wire of a metal or alloy with an appropriate melting point, connected in series with the device." },
+          { "speaker": "NEO", "text": "If the current exceeds a safe value, the fuse wire heats up, melts and breaks the circuit. A 1 kilowatt iron at 220 volts draws 4.54 amperes, so a 5 ampere fuse is used." },
+          { "speaker": "NEO", "text": "Board tip: heat depends on current squared. Double the current and the heat becomes four times, not two." }
+        ]
+      },
+      {
+        "animation": "Recap board with a glowing iron icon. Points: '1. H = I²Rt (Joule's law)', '2. Uses: iron, toaster, bulb with tungsten filament', '3. Fuse in series melts to break the circuit'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: heat produced is H equals I squared R t. That is Joule's law of heating." },
+          { "speaker": "NEO", "text": "Two: irons, toasters and bulbs use this heating effect; bulb filaments are made of tungsten." },
+          { "speaker": "NEO", "text": "Three: a fuse in series melts when the current is too high and protects the circuit." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Electricity",
+    "topic_no": 9,
+    "name": "Electric Power",
+    "scenes": [
+      {
+        "animation": "Zippy opens the monthly electricity bill at home; it reads '240 units'. Zippy looks around the house for boxes labelled 'units' and finds none.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "We used 240 units? Where are they? I never saw any units being delivered!" },
+          { "speaker": "NEO", "text": "A unit is energy, Zippy. To understand it, we first need electric power." }
+        ]
+      },
+      {
+        "animation": "A glowing bulb with an energy meter spinning beside it. Equations appear: 'P = VI', then 'P = I²R' and 'P = V²/R' branch out from it. Then '1 W = 1 V × 1 A' and '1 kW = 1000 W'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Electric power is the rate at which electric energy is consumed or dissipated." },
+          { "speaker": "NEO", "text": "P equals V into I. Using Ohm's law, it can also be written as I squared R, or V squared by R." },
+          { "speaker": "NEO", "text": "The SI unit is the watt. One watt is the power of a device carrying one ampere at one volt." }
+        ]
+      },
+      {
+        "animation": "A counter converts: '1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J'. A stamp reading '1 kWh = 1 unit' lands on the electricity bill.",
+        "lines": [
+          { "speaker": "NEO", "text": "The watt is small, so the commercial unit of electric energy is the kilowatt hour, commonly called a unit." },
+          { "speaker": "NEO", "text": "One kilowatt hour is 1000 watts for 3600 seconds, which is 3.6 into ten to the six joules." }
+        ]
+      },
+      {
+        "animation": "Two worked examples. First: '220 V, 0.50 A → P = 110 W'. Second: a fridge tagged '400 W, 8 h/day, 30 days, ₹3.00 per kWh' with steps '400 × 8 × 30 = 96,000 Wh = 96 kWh', 'Cost = 96 × 3 = ₹288'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example one: a bulb on 220 volts draws 0.50 ampere. Its power is 220 into 0.50, which is 110 watts." },
+          { "speaker": "NEO", "text": "Example two: a 400 watt refrigerator runs 8 hours a day for 30 days. Energy is 400 into 8 into 30, which is 96 kilowatt hours." },
+          { "speaker": "NEO", "text": "At three rupees per unit, the cost is 288 rupees." }
+        ]
+      },
+      {
+        "animation": "Zippy imagines electrons being eaten by the fan, shown with a red cross. Then the correct picture: electrons circulate round the loop unchanged while energy leaves as light and heat. A 'Board Tip' card shows 'kWh = unit of ENERGY' underlined.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So we pay because the fan eats up our electrons?" },
+          { "speaker": "NEO", "text": "No. Electrons are not consumed. We pay for the energy supplied to move them through our gadgets." },
+          { "speaker": "NEO", "text": "Board tip: kilowatt hour is a unit of energy, not power. And convert watts to kilowatts before multiplying by hours." }
+        ]
+      },
+      {
+        "animation": "Recap board with a bill icon. Points: '1. P = VI = I²R = V²/R', '2. 1 W = 1 V × 1 A', '3. 1 kWh = 1 unit = 3.6 × 10⁶ J'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: power is the rate of using electric energy, and P equals V I, I squared R, or V squared by R." },
+          { "speaker": "NEO", "text": "Two: one watt is one volt into one ampere." },
+          { "speaker": "NEO", "text": "Three: one kilowatt hour is one unit, equal to 3.6 into ten to the six joules." }
+        ]
+      }
+    ]
+  }
+]

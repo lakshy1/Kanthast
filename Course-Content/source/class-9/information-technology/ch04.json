@@ -1,0 +1,659 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "Digital Documentation",
+    "topic_no": 1,
+    "name": "Word Processing and the LibreOffice Writer Window",
+    "scenes": [
+      {
+        "animation": "Zippy writes a Diwali invitation by hand. He spots a spelling mistake on the last line, crumples the page, and throws it on a growing pile of paper balls. Neo slides a laptop across the table.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Fifth draft, and I still spelt 'invitation' wrong. There goes another page."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Use a word processor. You can fix mistakes without rewriting a single line."
+          }
+        ]
+      },
+      {
+        "animation": "App logos float up with labels: 'LibreOffice Writer (free and open source)', 'Microsoft Word', 'Google Docs', 'WordPad'. Writer is picked; its icon grows. A card reads: 'Word processing = creating, editing, formatting, saving and printing documents'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Word processing means creating, editing, formatting, saving and printing documents on a computer."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Popular word processors include Microsoft Word, Google Docs and LibreOffice Writer. We will use Writer, which is free and open source."
+          }
+        ]
+      },
+      {
+        "animation": "The Writer window appears and each part lights up with a label in turn: 'Title bar', 'Menu bar', 'Standard toolbar', 'Formatting toolbar', 'Ruler', 'Work area with blinking cursor', 'Sidebar', 'Scroll bars', 'Status bar (page count, word count, zoom)'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "At the top is the title bar with the document name. Below it, the menu bar holds menus like File, Edit, View and Format."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Next come the Standard and Formatting toolbars, then the ruler. The big white area is where you type."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The status bar at the bottom shows the page number, word count and zoom."
+          }
+        ]
+      },
+      {
+        "animation": "Menu paths animate with key caps: 'File > New > Text Document' (Ctrl+N), 'File > Open' (Ctrl+O), 'File > Save' (Ctrl+S) with the Save As dialog showing 'Invitation.odt', 'File > Close'. Then 'View' menu opens showing 'Normal', 'Web' and 'Full Screen' (Ctrl+Shift+J), and the page switches between views.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "File, New, Text Document, or Control N, starts a new document. Control O opens an existing one."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Control S saves it. The first time, Writer asks for a name, and saves it as dot o d t by default. File, Close closes it."
+          },
+          {
+            "speaker": "NEO",
+            "text": "From the View menu, choose Normal view to see pages as they will print, Web view to see it like a web page, or Full Screen."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Saved! Now my invitation can't end up on the paper pile."
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Open Writer. 2. Type a 3-line invitation. 3. Save as Invitation.odt. 4. Switch to Web view and back. 5. Close and reopen it.' A 'BOARD TIP' card: 'Writer default format = .odt; Save = Ctrl+S'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: type a short invitation, save it as Invitation, switch views, then close it and open it again."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: remember that Writer's default file format is ODT, the Open Document Text."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with the Writer window. Points appear: '1. Word processor: create, edit, format, save, print', '2. Parts: title bar, menu bar, toolbars, ruler, work area, status bar', '3. Ctrl+N, Ctrl+O, Ctrl+S; .odt; Normal and Web views'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: a word processor creates, edits, formats, saves and prints documents."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: the Writer window has a title bar, menu bar, toolbars, ruler, work area and status bar."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: Control N, O and S create, open and save files, which are saved as ODT."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Draft one, final draft. The paper pile is officially retired."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Digital Documentation",
+    "topic_no": 2,
+    "name": "Editing Text, Find and Replace, and Spelling",
+    "scenes": [
+      {
+        "animation": "Zippy's science project says 'Newton' on every page, and his teacher's red note says 'Change all to Sir Isaac Newton. Also, the school address is missing on page 5.' Zippy starts retyping the address letter by letter, then scrolls hunting Newtons with a magnifying glass, counting 'one... two... three...'.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Retype the address, fix forty-two Newtons, and check my spelling. This will take all night."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Or five minutes with Writer's editing tools. Let's start by selecting text."
+          }
+        ]
+      },
+      {
+        "animation": "Selection demos with highlighted text: drag across words; double-click selects a word; Shift + arrow keys extend a selection; 'Ctrl+A' selects all. One sentence is selected, Ctrl is held, and two separate sentences are added. Then 'Edit > Selection Mode > Block Area' (key caps 'Alt+Shift+F8') and a rectangle is dragged over just the marks column of a list.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Drag over text to select it, double-click to select a word, or hold Shift and use the arrow keys. Control A selects everything."
+          },
+          {
+            "speaker": "NEO",
+            "text": "To select pieces in different places, select the first, then hold Control while selecting the others. This is non-consecutive selection."
+          },
+          {
+            "speaker": "NEO",
+            "text": "For a vertical column, choose Edit, Selection Mode, Block Area, then drag a rectangle."
+          }
+        ]
+      },
+      {
+        "animation": "The school address is selected; Ctrl+C sends a copy flying to a clipboard icon, and Ctrl+V drops it on page 5. A paragraph is cut with Ctrl+X and pasted elsewhere. Zippy accidentally deletes a paragraph and screams; Ctrl+Z brings it back, Ctrl+Y redoes the deletion, and Undo once more restores it. Undo and Redo arrows glow on the Standard toolbar.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Copy with Control C and paste with Control V. To move text, cut it with Control X, then paste. Copy keeps the original; cut removes it."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Made a mistake? Control Z undoes it, and Control Y redoes what you undid."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Control Z is my new best friend."
+          }
+        ]
+      },
+      {
+        "animation": "'Edit > Find & Replace' (Ctrl+H) opens with 'Find: Newton', 'Replace: Sir Isaac Newton', 'Match case' and 'Whole words only' checkboxes; 'Replace All' shows '42 replacements'. Then 'Edit > Go to Page' (Ctrl+G) jumps to page 14, and 'View > Formatting Marks' (Ctrl+F10) reveals pilcrows, space dots and tab arrows.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Open Edit, Find and Replace, or press Control H. Type the word to find and its replacement. Replace changes one match; Replace All changes every match at once."
+          },
+          {
+            "speaker": "NEO",
+            "text": "To jump to a page, use Edit, Go to Page, or Control G."
+          },
+          {
+            "speaker": "NEO",
+            "text": "View, Formatting Marks, or Control F10, shows hidden spaces, tabs and paragraph marks. These non-printing characters never appear on paper."
+          }
+        ]
+      },
+      {
+        "animation": "Wavy red lines appear under 'enrgy' and 'gravty'. 'Tools > Spelling' (F7) opens the Spelling and Grammar dialog with suggestions and buttons 'Correct', 'Ignore Once', 'Add to Dictionary'. Then 'big' is selected and 'Tools > Thesaurus' (Ctrl+F7) lists 'large, huge, enormous'; a right-click also shows 'Synonyms'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Wavy red lines mark possible spelling mistakes. Right-click for suggestions, or check the whole document with Tools, Spelling, or F7. It checks grammar too."
+          },
+          {
+            "speaker": "NEO",
+            "text": "For a better word, press Control F7 to open the Thesaurus, or right-click and choose Synonyms."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Big becomes enormous. My project just sounded smarter."
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Copy an address. 2. Select a column with Block Area. 3. Replace All Newton. 4. Show formatting marks. 5. Run spell check and find a synonym.' A 'BOARD TIP' card: 'Cut vs Copy; Ctrl+H, F7, Ctrl+F7, Ctrl+F10'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: copy an address, select a column in block mode, replace a word everywhere, show formatting marks, and run a spell check."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: know the difference between cut and copy, and learn the shortcuts Control H, F7, Control F7 and Control F10."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with scissors, a magnifying glass and a dictionary. Points appear: '1. Select: Ctrl for non-consecutive, Block Area for columns', '2. Ctrl+C / X / V; Undo Ctrl+Z, Redo Ctrl+Y', '3. Find & Replace (Ctrl+H), Formatting Marks, Spelling (F7), Thesaurus (Ctrl+F7)'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: select text in many ways, with Control for separate pieces and Block Area for columns."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: copy, cut and paste, and undo or redo mistakes."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: Find and Replace, formatting marks, spelling check and the thesaurus polish your work."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Forty-two Newtons fixed. Time for an apple."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Digital Documentation",
+    "topic_no": 3,
+    "name": "Formatting Text and Paragraphs",
+    "scenes": [
+      {
+        "animation": "Zippy's school magazine article is one grey block of plain text. A reader yawns, falls asleep on it, and snores. Neo holds up a paint palette.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "My article is great, but nobody reads past the first line."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Good content needs good formatting. Let's dress it up."
+          }
+        ]
+      },
+      {
+        "animation": "Formatting toolbar highlights: font name, size, Bold, Italic, Underline, 'Font Color' (text turns blue) and 'Character Highlighting Color' (a yellow marker streak). 'Format > Character > Highlighting' tab is shown setting a background. 'Format > Text' opens: 'UPPERCASE', 'lowercase', 'Sentence case', 'Capitalize Every Word', 'tOGGLE cASE', and 'Superscript' (Ctrl+Shift+P) turns 'x2' into x², 'Subscript' (Ctrl+Shift+B) turns 'H2O' into H₂O.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Select text, then use the Formatting toolbar to change its font, size, style and font colour."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The Highlighting button marks text like a highlighter pen. You can also give characters a background from Format, Character."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Format, Text changes case: uppercase, lowercase, sentence case and more. It also has superscript for x squared, and subscript for H two O."
+          }
+        ]
+      },
+      {
+        "animation": "A messy paragraph with random fonts is selected; 'Format > Clear Direct Formatting' (Ctrl+M) resets it to plain default text. Next, alignment buttons animate with key caps: Left (Ctrl+L), Centre (Ctrl+E), Right (Ctrl+R), Justified (Ctrl+J). 'Format > Paragraph > Indents & Spacing' shows 'Before text', 'After text', 'First line', and the paragraph shifts on the ruler.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Formatting gone wrong? Format, Clear Direct Formatting, or Control M, removes the manual formatting."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Align paragraphs left, centre, right or justified with Control L, E, R and J."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Indents are set in Format, Paragraph, on the Indents and Spacing tab. First line indent moves only the first line."
+          }
+        ]
+      },
+      {
+        "animation": "A list of club names gets bullets via 'Format > Bullets and Numbering' and the toolbar buttons (Shift+F12 bullets, F12 numbering). Then a quote paragraph is selected: 'Format > Paragraph > Borders' draws a box around it and the 'Area' tab fills it pale yellow.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "For lists, use Format, Bullets and Numbering, or the toolbar buttons. F12 turns on numbering, and Shift F12 turns on bullets."
+          },
+          {
+            "speaker": "NEO",
+            "text": "To box a paragraph, use the Borders tab in Format, Paragraph. The Area tab gives it a background colour."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "A yellow box around my best quote. Now that's a headline!"
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Type H2O and x2 and fix with subscript/superscript. 2. Centre the title. 3. Indent the first line. 4. Bullet a list. 5. Border and shade a quote. 6. Clear formatting with Ctrl+M.' Then a 'BOARD TIP' card.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: write H two O and x squared correctly, centre a title, bullet a list, and box a quote."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: students often mix up superscript and subscript. Superscript goes up, subscript goes down."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board showing the article now bright and readable. Points appear: '1. Character: font colour, highlighting, case, superscript, subscript', '2. Paragraph: align, indent, bullets and numbering, border, background', '3. Ctrl+M clears direct formatting'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: character formatting covers font colour, highlighting, case, superscript and subscript."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: paragraph formatting covers alignment, indents, bullets, numbering, borders and background."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: Control M clears manual formatting."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Readers awake. Magazine saved."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Digital Documentation",
+    "topic_no": 4,
+    "name": "Page Formatting, Images and Special Characters",
+    "scenes": [
+      {
+        "animation": "Zippy prints his project. The title sits at the bottom of page one, there are no page numbers, and the pages slip out of order on the floor. He shuffles them like cards, confused.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "My pages fell and now I can't tell which comes first!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Page numbers, headers and proper page breaks. Let's format the pages, not just the text."
+          }
+        ]
+      },
+      {
+        "animation": "'Format > Page Style' opens the Page Style dialog. Tabs light up: 'Page' (paper size A4, Portrait/Landscape, margins), 'Area', 'Borders', 'Header', 'Footer', 'Columns'. Orientation flips to Landscape and back.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Format, Page Style controls the whole page. The Page tab sets paper size, orientation and margins."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Other tabs add a page border, a background, a header, a footer and columns."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Landscape for my wide chart, portrait for everything else. Got it."
+          }
+        ]
+      },
+      {
+        "animation": "Cursor before 'Chapter 2'; key caps 'Ctrl+Enter' and the path 'Insert > Page Break' push it to a fresh page. Then 'Insert > Header and Footer > Header > Default Page Style' adds a header with 'Science Project'; a footer is added the same way and 'Insert > Field > Page Number' places '1, 2, 3' on every page.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "To start a new page, press Control Enter, or choose Insert, Page Break."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Add a header with Insert, Header and Footer, Header, then Default Page Style. A footer is added the same way."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Click inside the footer and choose Insert, Field, Page Number. Every page gets its own number automatically."
+          }
+        ]
+      },
+      {
+        "animation": "'Insert > Image' adds a photo of the solar system. The Drawing toolbar or 'Insert > Shape' draws an arrow. 'Insert > Special Character' opens a grid; Zippy picks '₹' and '©'. Finally 'Format > Columns' splits a paragraph into two newspaper-style columns.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Insert, Image adds a picture from your computer. Insert, Shape draws lines, arrows and boxes."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Need symbols not on the keyboard, like the rupee or copyright sign? Use Insert, Special Character."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Format, Columns splits text into newspaper-style columns."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "My project looks like a real magazine now."
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Set landscape in Page Style. 2. Add a header and page numbers in the footer. 3. Insert a page break. 4. Add an image, a shape and the ₹ sign. 5. Make two columns.' A 'BOARD TIP' card: 'Page break = Ctrl+Enter'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: set landscape, add a header and page numbers, insert a page break, an image and a rupee sign, and make two columns."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: never press Enter many times to reach a new page. Use a page break, Control Enter."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with the project pages neatly numbered and stacked. Points appear: '1. Format > Page Style: size, orientation, margins, border, background', '2. Ctrl+Enter page break; header, footer, page numbers', '3. Insert image, shape, special character; Format > Columns'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: Page Style sets size, orientation, margins, borders and background."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: use page breaks, headers, footers and automatic page numbers."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: insert images, shapes and special characters, and split text into columns."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Let them fall. Page numbers will save me."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Digital Documentation",
+    "topic_no": 5,
+    "name": "Working with Tables",
+    "scenes": [
+      {
+        "animation": "Zippy makes a class timetable using spaces to line up columns. When he changes 'Maths' to 'Mathematics', the whole row slides out of line and the subjects collapse like dominoes.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "One longer word and my whole timetable fell apart!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Spaces cannot hold columns together. Tables can."
+          }
+        ]
+      },
+      {
+        "animation": "Menu path 'Table > Insert Table' animates with key caps 'Ctrl+F12'. The dialog shows 'Name', 'Columns: 6', 'Rows: 4', 'Heading' checkbox and table styles. Insert is clicked and a grid appears; labels point to 'Row', 'Column' and 'Cell'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "A table is a grid of rows and columns. Each box is called a cell."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Choose Table, Insert Table, or press Control F12. Set the number of columns and rows, then click Insert."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Press Tab to move to the next cell."
+          }
+        ]
+      },
+      {
+        "animation": "Cursor in a row; 'Table > Insert > Rows Below' adds a row, and 'Table > Insert > Columns After' adds a column. Then 'Table > Delete > Rows' and 'Table > Delete > Columns' remove them. Right-click on the table shows the same Insert and Delete options.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "To add a row, click in a row and choose Table, Insert, Rows Above or Rows Below. Columns can be inserted before or after."
+          },
+          {
+            "speaker": "NEO",
+            "text": "To remove them, choose Table, Delete, then Rows or Columns. The right-click menu has the same options."
+          }
+        ]
+      },
+      {
+        "animation": "A table's cursor is placed in row 3; 'Table > Split Table' breaks it into two tables with a gap. The gap is emptied and 'Table > Merge Table' joins them back. Then three header cells are selected and 'Table > Merge Cells' turns them into one wide cell reading 'Monday'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Table, Split Table breaks one table into two at the cursor. Table, Merge Table joins two tables that sit one after another with nothing in between."
+          },
+          {
+            "speaker": "NEO",
+            "text": "To join cells, select them and choose Table, Merge Cells."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So tables can split up and make up. Very dramatic."
+          }
+        ]
+      },
+      {
+        "animation": "Cursor inside the table; 'Ctrl+A' pressed twice highlights the whole table. Ctrl+C then Ctrl+V pastes a copy lower down; Ctrl+X and Ctrl+V move the original to page 2. Finally 'Table > Delete > Table' makes the copy vanish. A 'MINI PRACTICAL' card follows.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "To copy or move a whole table, click inside it and press Control A twice to select it. Then copy or cut, and paste it elsewhere."
+          },
+          {
+            "speaker": "NEO",
+            "text": "To delete it, choose Table, Delete, Table."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Try it: build a timetable, add a row, merge the header cells, split it, then merge it back. Exam tip: merge cells and merge table are different commands."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a neat colourful timetable. Points appear: '1. Table > Insert Table (Ctrl+F12)', '2. Table > Insert / Delete rows and columns', '3. Split and merge tables, merge cells; copy, move, delete a table'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: insert a table with Table, Insert Table, or Control F12."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: insert and delete rows and columns from the Table menu."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: split and merge tables, merge cells, and copy, move or delete a whole table."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Mathematics fits perfectly. Timetable, you're forgiven."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Digital Documentation",
+    "topic_no": 6,
+    "name": "Printing and Mail Merge",
+    "scenes": [
+      {
+        "animation": "The Annual Day is coming. Zippy must send invitation letters to 50 parents, each with a different name and address. A tower of 50 paper sheets wobbles over him as he writes 'Dear Mr...' again and again.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Fifty letters, fifty names, and I'm on letter three."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Write one letter and let mail merge make all fifty. But first, let's learn to print."
+          }
+        ]
+      },
+      {
+        "animation": "'File > Print Preview' (Ctrl+Shift+O) shows pages side by side with zoom and 'Close Preview'. Then 'File > Print' (Ctrl+P) opens the Print dialog: printer name, 'All Pages', 'Pages: 1, 3, 5-7', and 'Number of copies'. The 'Print Directly' icon on the Standard toolbar blinks as a shortcut.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Before printing, check File, Print Preview, or Control Shift O, to see exactly how the pages will look."
+          },
+          {
+            "speaker": "NEO",
+            "text": "File, Print, or Control P, opens the Print dialog. Choose All Pages, or type page numbers."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Type one page like 3, several pages like 1, 3, 5, or a range like 5 to 7 with a hyphen. Set the number of copies too."
+          }
+        ]
+      },
+      {
+        "animation": "Diagram: a 'Main Document' letter with gaps '<Name>' and '<Address>' plus a 'Data Source' table (spreadsheet or address list) with columns Name, Address, City. Arrows merge them into 50 personalised letters fanning out.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Mail merge combines two things. The main document has the text that stays the same."
+          },
+          {
+            "speaker": "NEO",
+            "text": "The data source is a list of names and addresses, like a spreadsheet or an address list. Each column is a field."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So one letter plus one list equals fifty letters!"
+          }
+        ]
+      },
+      {
+        "animation": "'Tools > Mail Merge Wizard' opens. Steps light up on the left: 'Select starting document', 'Select document type: Letter', 'Insert address block' (with 'Select Address List' then 'Create' to type a new list), 'Create salutation', 'Adjust layout'. 'Finish' is clicked and the Mail Merge toolbar appears with 'Edit Individual Documents', 'Save Merged Documents' and 'Print Merged Documents'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Open Tools, Mail Merge Wizard. Choose the current document and select Letter."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Select an address list, or create a new one, then insert the address block and a salutation. The fields fill in from the list."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Click Finish. Now you can edit individual documents, save the merged documents, or print them all."
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Print preview a document. 2. Print pages 1 and 3 only. 3. Make an address list of 3 friends. 4. Merge an invitation. 5. Save the merged file.' Then a 'BOARD TIP' card: 'Main document + Data source = Merged documents'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: preview and print selected pages, then merge an invitation for three friends and save the result."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: questions often ask for the two files needed in mail merge. Write main document and data source."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with 50 envelopes flying out neatly. Points appear: '1. Print Preview (Ctrl+Shift+O); Print (Ctrl+P): all, one or several pages', '2. Mail merge = main document + data source', '3. Tools > Mail Merge Wizard: fields, merge, edit, save, print'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: preview before you print, and choose all pages, one page, or several pages."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: mail merge joins a main document with a data source."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: the Mail Merge Wizard inserts fields, merges, and lets you edit, save and print the letters."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Fifty letters done. I even have time for the Annual Day dance."
+          }
+        ]
+      }
+    ]
+  }
+]

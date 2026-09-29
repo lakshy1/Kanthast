@@ -1,0 +1,341 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "Health: The Ultimate Treasure",
+    "topic_no": 1,
+    "name": "What Is Health and How Do We Stay Healthy?",
+    "scenes": [
+      {
+        "animation": "Zippy flexes tiny muscles in front of a mirror, wearing a 'Never Sick!' badge. Behind him, a phone screen glows at 2 a.m. and a pile of chips packets grows. Neo raises an eyebrow.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I haven't caught a cold all year. So I'm totally healthy, right?" },
+          { "speaker": "NEO", "text": "Not so fast. Being healthy is much more than just not falling sick." }
+        ]
+      },
+      {
+        "animation": "Activity 3.1 as a short comic strip: a Grade 8 boy in a new city sits alone, scrolls his phone, holds his head with headaches, lies awake at night. Then a doctor and a school counsellor help him make friends, and colour returns to the panels.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 3.1. A Grade 8 boy moved to a new city. With no friends and busy parents, he felt lonely and spent more time on social media." },
+          { "speaker": "NEO", "text": "He had headaches, lost weight and could not sleep. A doctor advised less screen time, and a counsellor helped him make friends." },
+          { "speaker": "ZIPPY", "text": "So loneliness made his body sick too?" }
+        ]
+      },
+      {
+        "animation": "A three-part circle builds: 'Physical', 'Mental', 'Social', joining into one ring labelled 'Health (WHO)'. A scroll unrolls with 'Ayurveda: dinacharya, ritucharya, prakriti'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exactly. The World Health Organization defines health as a state of complete physical, mental and social well-being, and not merely the absence of disease." },
+          { "speaker": "NEO", "text": "Ayurveda also teaches that true health is a balance of body, mind and surroundings, through daily and seasonal routines called dinacharya and ritucharya." }
+        ]
+      },
+      {
+        "animation": "Activity 3.2: two lists build side by side. Green 'Good habits': hygiene, balanced diet, exercise, relax or meditate. Red 'Harmful habits': too much screen time, daily junk food, sleeping late, skipping breakfast. Icons follow: fruits, cycling, yoga, a big 'NO' over tobacco and alcohol.",
+        "lines": [
+          { "speaker": "NEO", "text": "In Activity 3.2, list your habits. Good ones: personal hygiene, a balanced diet, regular exercise, and time to relax." },
+          { "speaker": "NEO", "text": "Harmful ones: too much screen time, junk food every day, sleeping late, and skipping breakfast." },
+          { "speaker": "NEO", "text": "A healthy lifestyle means fruits, vegetables and whole grains, outdoor play, enough sleep, yoga or pranayama, and saying no to tobacco, alcohol and drugs." }
+        ]
+      },
+      {
+        "animation": "Activity 3.3: two playgrounds side by side, one clean with green grass, one littered with flies and mosquitoes buzzing. Then a smoky city street with an 'AQI' meter needle swinging into red; a cartoon child coughs. 'Exam Tip' sticker on the three-part circle.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I'd pick the clean playground. The other one is full of mosquitoes!" },
+          { "speaker": "NEO", "text": "Right. People living in dirty surroundings may fall sick more often. Air pollution from vehicles and factories can cause coughing or asthma." },
+          { "speaker": "NEO", "text": "The Air Quality Index, or AQI, tells us how clean the air is." },
+          { "speaker": "NEO", "text": "Exam tip: when you write the WHO definition, include all three, physical, mental and social, plus 'not merely the absence of disease'." }
+        ]
+      },
+      {
+        "animation": "Recap board with a heart icon. Points: '1. Health = physical + mental + social well-being', '2. Healthy lifestyle: diet, exercise, sleep, no harmful substances', '3. Clean surroundings and good relationships matter'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: health is complete physical, mental and social well-being, not just the absence of disease." },
+          { "speaker": "NEO", "text": "Two: a balanced diet, exercise, enough sleep and limited screen time keep us healthy." },
+          { "speaker": "NEO", "text": "Three: clean surroundings, clean air and time with friends and family keep body and mind healthy." },
+          { "speaker": "ZIPPY", "text": "Phone down, cricket bat up!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Health: The Ultimate Treasure",
+    "topic_no": 2,
+    "name": "Signs, Symptoms and Types of Diseases",
+    "scenes": [
+      {
+        "animation": "Zippy lies on a sofa with a thermometer in his mouth, dramatically groaning. The thermometer pops out and reads a high number. Neo holds a doctor's clipboard.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I feel terrible, Neo. My head hurts, and I'm so tired." },
+          { "speaker": "NEO", "text": "And your thermometer says fever. You just gave me one symptom and one sign." }
+        ]
+      },
+      {
+        "animation": "A split screen: left side 'Symptom: what you feel' shows pain, tiredness, dizziness inside a thought bubble; right side 'Sign: can be seen or measured' shows a thermometer, a rash, a blood pressure cuff and a swollen ankle.",
+        "lines": [
+          { "speaker": "NEO", "text": "When we are unwell, something inside us is not working as it should." },
+          { "speaker": "NEO", "text": "A symptom is what we feel, like pain, tiredness or dizziness." },
+          { "speaker": "NEO", "text": "A sign is something that can be seen or measured, like high body temperature, a rash, high blood pressure or swelling. Both help doctors understand what is wrong." }
+        ]
+      },
+      {
+        "animation": "A body outline with organs; one organ flickers red. Text: 'Disease: affects normal working of body or mind'. Cartoon pathogens march in: bacteria, virus, fungus, worm, protozoa, with a banner 'Pathogens'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A disease is a condition that affects the normal working of the body or mind. It can happen when organs or organ systems stop working properly." },
+          { "speaker": "NEO", "text": "Some diseases are caused by germs like bacteria, viruses, fungi, worms or protozoa. Disease-causing organisms are called pathogens." },
+          { "speaker": "NEO", "text": "Other diseases come from poor nutrition or an unhealthy lifestyle." }
+        ]
+      },
+      {
+        "animation": "Two big doors open. Door 1 'Communicable' shows germs jumping between people: typhoid, dengue, flu, chickenpox, COVID-19. Door 2 'Non-communicable' shows cancer, diabetes and asthma with a 'Does not spread' stamp, linked to icons of junk food, a sofa and smoke.",
+        "lines": [
+          { "speaker": "NEO", "text": "Diseases fall into two major types. Communicable diseases are caused by pathogens and can spread from one person to another." },
+          { "speaker": "NEO", "text": "Examples are typhoid, dengue, flu, chickenpox and COVID-19." },
+          { "speaker": "NEO", "text": "Non-communicable diseases, like cancer, diabetes and asthma, are not caused by pathogens and do not spread. They are linked to lifestyle, diet or environment." }
+        ]
+      },
+      {
+        "animation": "A bar chart of India rises with a growing 'NCDs' bar labelled 'Most deaths in India today'. Icons of processed food, less exercise and a longer lifespan feed into it. 'Exam Tip' sticker on the words 'Symptom vs Sign'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So which kind is winning in India now?" },
+          { "speaker": "NEO", "text": "Non-communicable diseases like diabetes, heart disease and cancer have become more common, because people eat more processed food, exercise less and live longer." },
+          { "speaker": "NEO", "text": "Today, most deaths in India are caused by these NCDs." },
+          { "speaker": "NEO", "text": "Exam tip: pain is a symptom, but fever measured on a thermometer is a sign. Examiners love this difference." }
+        ]
+      },
+      {
+        "animation": "Recap board with a stethoscope icon. Points: '1. Symptom = felt; Sign = seen or measured', '2. Pathogens cause communicable diseases', '3. NCDs: not spread, linked to lifestyle; most deaths in India'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a symptom is what we feel, a sign is what can be seen or measured." },
+          { "speaker": "NEO", "text": "Two: communicable diseases are caused by pathogens and spread from person to person." },
+          { "speaker": "NEO", "text": "Three: non-communicable diseases do not spread, are linked to lifestyle, and cause most deaths in India." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Health: The Ultimate Treasure",
+    "topic_no": 3,
+    "name": "How Communicable Diseases Spread and How to Stop Them",
+    "scenes": [
+      {
+        "animation": "A crowded school bus in winter. A boy sneezes and a cloud of cartoon germs bursts out, riding air currents to every seat. Zippy dives behind a backpack.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "One sneeze, and the whole bus is under attack!" },
+          { "speaker": "NEO", "text": "That's how many communicable diseases spread. Let's trace the routes." }
+        ]
+      },
+      {
+        "animation": "A route map like a metro diagram, built line by line from an 'Infected person' station: 'By air' (cough, sneeze), 'Direct contact' (handshake), 'Indirect contact' (shared towel), 'By food and water', 'Mosquitoes and houseflies: vectors', 'Rabid animal'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Pathogens enter our body through the air we breathe, or through contaminated food and water." },
+          { "speaker": "NEO", "text": "They spread through air when someone coughs or sneezes, by direct contact like shaking hands, or indirectly by sharing an infected person's things." },
+          { "speaker": "NEO", "text": "Insects like mosquitoes and houseflies also spread pathogens. Such insects are called vectors." }
+        ]
+      },
+      {
+        "animation": "Activity 3.4: Table 3.1 builds row by row in three coloured bands. Air: cold and flu (virus), chickenpox (virus), measles (virus), TB (bacteria, lungs). Water and food: hepatitis A (virus, liver), cholera and typhoid (bacteria, intestine), ascariasis (worms). Insects: malaria (protozoa), dengue (virus).",
+        "lines": [
+          { "speaker": "NEO", "text": "In Activity 3.4, students listed common diseases. Through air: cold, flu, chickenpox and measles, all caused by viruses, and tuberculosis, caused by bacteria in the lungs." },
+          { "speaker": "NEO", "text": "Through contaminated water and food: hepatitis A, a virus attacking the liver, and cholera and typhoid, caused by bacteria in the intestine." },
+          { "speaker": "NEO", "text": "Through insects: malaria, caused by protozoa, and dengue, caused by a virus." }
+        ]
+      },
+      {
+        "animation": "A roundworm cartoon curls inside an intestine, stealing food pellets, with the label 'Parasite: lives in or on another living being'. Then a mosquito net drops over a bed, and a bucket of still water gets tipped out.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Worms can live inside us? Gross!" },
+          { "speaker": "NEO", "text": "Yes. Roundworms cause ascariasis. They feed on our nutrients and live as parasites, organisms that live in or on another living being." },
+          { "speaker": "NEO", "text": "For malaria and dengue, use mosquito nets and repellents, wear long-sleeved clothes, and stop mosquitoes breeding around your home." }
+        ]
+      },
+      {
+        "animation": "A checklist builds with ticks: soap handwash with bubbles, elbow-cough, mask in a crowd, own towel and handkerchief, boiled water on a stove, a sick child resting at home. 'Exam Tip' sticker: 'Cholera, Typhoid, Hepatitis A = water-borne'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Simple precautions work. Wash hands with soap and water, cover your mouth and nose when you cough or sneeze, and wear a mask in crowded places." },
+          { "speaker": "NEO", "text": "Don't share towels or handkerchiefs, keep food and water clean, and stay home to rest when unwell." },
+          { "speaker": "NEO", "text": "Exam tip: if drinking water is contaminated, think of hepatitis A, cholera and typhoid. Tuberculosis and chickenpox spread through air." }
+        ]
+      },
+      {
+        "animation": "Recap board with a soap-bubble icon. Points: '1. Routes: air, contact, food and water, vectors', '2. Malaria = protozoa; TB, cholera, typhoid = bacteria', '3. Hygiene, masks, clean water, nets prevent spread'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: pathogens spread through air, contact, contaminated food and water, and vectors like mosquitoes." },
+          { "speaker": "NEO", "text": "Two: malaria is caused by protozoa, while TB, cholera and typhoid are caused by bacteria." },
+          { "speaker": "NEO", "text": "Three: handwashing, covering coughs, clean water and mosquito nets stop the spread." },
+          { "speaker": "ZIPPY", "text": "Next bus ride, I'm sneezing into my elbow." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Health: The Ultimate Treasure",
+    "topic_no": 4,
+    "name": "Non-Communicable Diseases: Lifestyle Matters",
+    "scenes": [
+      {
+        "animation": "Zippy hides behind a mask and sanitiser bottle from a sofa, a plate of samosas and a sugary cold drink. Neo shakes his head: 'Masks won't stop these.'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I've got my mask on. No disease can get me now!" },
+          { "speaker": "NEO", "text": "A mask can't stop diabetes, Zippy. Some diseases don't come from germs at all." }
+        ]
+      },
+      {
+        "animation": "Three signposts point to non-communicable diseases: 'Lifestyle', 'Diet', 'Environment', leading to cancer, diabetes and asthma. A second branch shows Grade 6 deficiency diseases: 'Scurvy', 'Anaemia', 'Goitre' with an empty nutrient slot.",
+        "lines": [
+          { "speaker": "NEO", "text": "Non-communicable diseases like cancer, diabetes and asthma are linked to lifestyle, diet and environment. They are the most common cause of death in India." },
+          { "speaker": "NEO", "text": "Diseases like scurvy, anaemia and goitre come from a lack of specific nutrients. These deficiency diseases are also non-communicable." }
+        ]
+      },
+      {
+        "animation": "A calendar flips past three months while a patient keeps visiting a clinic; label 'Chronic: more than 3 months'. Then diabetes causes stack as blocks: hormonal imbalance, unhealthy eating, lack of activity, being overweight.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cancer, diabetes and asthma may last a long time, more than three months. These are called chronic diseases." },
+          { "speaker": "NEO", "text": "Diabetes is becoming common in adults and children. India now has one of the highest numbers of people with diabetes in the world." },
+          { "speaker": "NEO", "text": "It often develops from hormonal imbalance, unhealthy eating, lack of physical activity, and being overweight or obese." }
+        ]
+      },
+      {
+        "animation": "Activity 3.5: Zippy with a clipboard interviews a neighbourhood nurse and a grandparent. Table 3.2 fills in: 'Obesity: balanced diet and regular exercise', 'Diabetes: frequent urination, excessive thirst, weight loss, tiredness, slow healing', 'High blood pressure'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In Activity 3.5, survey the three most common lifestyle diseases in your neighbourhood. Talk to a doctor, nurse, health worker or an informed family member." },
+          { "speaker": "NEO", "text": "For obesity, the suggested change is a balanced diet and regular exercise." },
+          { "speaker": "NEO", "text": "Diabetes shows frequent urination, excessive thirst, weight loss, tiredness and slow healing." },
+          { "speaker": "ZIPPY", "text": "So the cure starts in my own kitchen and playground." }
+        ]
+      },
+      {
+        "animation": "A portrait card: 'Kamal Ranadive (1917–2001), biomedical researcher'. Icons of tobacco, junk food and factory smoke link to 'Cancer risk'. 'Exam Tip' sticker: 'Deficiency diseases are non-communicable'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Scientist Kamal Ranadive studied how hormones and certain viruses are linked to cancer. Her work showed that tobacco, diet and pollution raise cancer risk." },
+          { "speaker": "NEO", "text": "Exam tip: scurvy, anaemia and goitre are non-communicable. Don't list them under infections." }
+        ]
+      },
+      {
+        "animation": "Recap board with an apple icon. Points: '1. NCDs: lifestyle, diet, environment', '2. Chronic = lasts more than 3 months', '3. Diabetes: rising in India; prevent with diet and activity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: non-communicable diseases come from lifestyle, diet and environment, and include deficiency diseases." },
+          { "speaker": "NEO", "text": "Two: diseases lasting more than three months are called chronic." },
+          { "speaker": "NEO", "text": "Three: diabetes is rising in India, and a balanced diet and exercise help prevent it." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Health: The Ultimate Treasure",
+    "topic_no": 5,
+    "name": "Prevention, Immunity and Vaccines",
+    "scenes": [
+      {
+        "animation": "Two siblings in the same house during monsoon: one sneezes all week, the other plays happily. Zippy scratches his head between them.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Same house, same food. Why does only one of them keep falling sick?" },
+          { "speaker": "NEO", "text": "Because bodies differ in their ability to fight disease. But first, remember: prevention is better than cure." }
+        ]
+      },
+      {
+        "animation": "Activity 3.6: a map of Odisha zooms to Bhadrak district. Villagers build toilets; a chart of diarrhoea cases among children drops.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 3.6. In Bhadrak district, Odisha, a community sanitation campaign helped more people build and use toilets." },
+          { "speaker": "NEO", "text": "Open defecation fell, and children had fewer cases of diarrhoea and infections. Good sanitation greatly reduces communicable diseases." }
+        ]
+      },
+      {
+        "animation": "Inside the body: cartoon immune-system guards patrol. A vaccine drop enters; the guards study a 'wanted poster' of a harmless germ part, then instantly capture the real germ later. Labels: 'Immunity', 'Acquired immunity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The natural ability of our body to fight disease is immunity. Our immune system does this job." },
+          { "speaker": "NEO", "text": "A vaccine trains the immune system to recognise and attack harmful germs. This gives acquired immunity, protection developed after exposure to a pathogen or a vaccine." },
+          { "speaker": "NEO", "text": "Vaccines are made from weakened or dead pathogens, or their harmless parts. A tetanus shot contains an inactivated bacterial toxin." }
+        ]
+      },
+      {
+        "animation": "Sepia 1700s English countryside: a milkmaid with cowpox blisters, Edward Jenner taking notes. A 'Think like a scientist' ladder builds: Observation, Hypothesis, Experiment, Result, Application. A graph line of countries reporting smallpox falls to zero at '1979: eradicated'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the late 1700s, English doctor Edward Jenner noticed that milkmaids who had cowpox did not get smallpox." },
+          { "speaker": "NEO", "text": "He injected cowpox material into a boy, who later did not fall ill when exposed to smallpox. That was the first vaccine." },
+          { "speaker": "NEO", "text": "Mass vaccination eventually helped eradicate smallpox worldwide." }
+        ]
+      },
+      {
+        "animation": "An Indian village scene of old: a teekedaar performs variolation. Then modern Indian vaccine factories ship boxes across a globe. A card: 'Maharaj Kishan Bhan: Rotavirus vaccine'. 'Exam Tip' sticker: 'Vaccines = preventive, not curative'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India had an older method called variolation against smallpox, done by people called teekedaars. Today, India is one of the world's largest vaccine producers." },
+          { "speaker": "NEO", "text": "Scientist Maharaj Kishan Bhan played a key role in developing the Rotavirus vaccine, which protects children from diarrhoea." },
+          { "speaker": "ZIPPY", "text": "So if I'm already sick, I just take a vaccine?" },
+          { "speaker": "NEO", "text": "No. Exam tip: vaccines are preventive, not curative. They don't treat someone who is already sick." }
+        ]
+      },
+      {
+        "animation": "Recap board with a shield icon. Points: '1. Sanitation prevents communicable diseases', '2. Vaccines train the immune system: acquired immunity', '3. Jenner: first vaccine; smallpox eradicated'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: good sanitation, like using toilets, prevents communicable diseases." },
+          { "speaker": "NEO", "text": "Two: vaccines train the immune system and give acquired immunity. They prevent, not cure." },
+          { "speaker": "NEO", "text": "Three: Edward Jenner made the first vaccine, and vaccination wiped out smallpox." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Health: The Ultimate Treasure",
+    "topic_no": 6,
+    "name": "Treating Diseases: Antibiotics and Resistance",
+    "scenes": [
+      {
+        "animation": "Zippy with a runny nose rushes to a chemist counter waving money: 'One antibiotic, please, fast!' The chemist shakes his head and points to a sign 'Prescription needed'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I have a cold. One antibiotic will fix it, right?" },
+          { "speaker": "NEO", "text": "Stop right there. That's one of the biggest health mistakes people make." }
+        ]
+      },
+      {
+        "animation": "An antibiotic capsule targets a bacterium's unique parts and it pops. A virus and a protozoan stand unharmed as the capsule bounces off them. Label 'Antibiotics: bacteria only'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When our immune system fails, a doctor may give antibiotics, medicines that kill the bacteria causing a disease." },
+          { "speaker": "NEO", "text": "They target parts of bacterial cells that are different from human or animal cells." },
+          { "speaker": "NEO", "text": "So antibiotics do not work against viruses, like a cold, or diseases caused by protozoa." }
+        ]
+      },
+      {
+        "animation": "London, 1928: Alexander Fleming finds a discarded petri dish where a mould patch has a clear ring with no bacteria around it. A bottle labelled 'Penicillin: the first antibiotic' appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1928, Alexander Fleming, a bacteriologist from London, noticed a mould on a discarded petri dish that stopped bacteria from growing." },
+          { "speaker": "NEO", "text": "The mould released a substance that killed bacteria. This chance discovery gave us penicillin, the first antibiotic." }
+        ]
+      },
+      {
+        "animation": "Activity 3.7 infographic built step by step: a crowd of bacteria, a few coloured differently as 'resistant'; antibiotics wipe out the rest, including good bacteria; resistant ones multiply and pass resistance to others. Side panels show resistance spreading via hospitals, animal products and manure in fields.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 3.7. Study how resistance develops. A few bacteria become resistant. Antibiotics kill the others, including good bacteria that protect us." },
+          { "speaker": "NEO", "text": "The resistant bacteria grow, take over, and pass resistance to other bacteria." },
+          { "speaker": "NEO", "text": "This is antibiotic resistance: bacteria once killed by an antibiotic now survive and multiply. It spreads through people, hospitals, animals and crops." }
+        ]
+      },
+      {
+        "animation": "A green rulebook opens: 'Only with a doctor's prescription', 'Correct dose', 'Right duration'. A farmer puts away an antibiotic injection for his cattle. Herbs and oils appear with 'Ayurveda, Siddha, Unani'. 'Exam Tip' sticker on 'Not for viral infections'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So use antibiotics wisely: only when prescribed by a doctor, in the correct dose and for the right duration. Don't give them to cattle unnecessarily either." },
+          { "speaker": "NEO", "text": "Traditional systems like Ayurveda, Siddha and Unani use herbs, oils and minerals, but may not work for all diseases at all stages." },
+          { "speaker": "NEO", "text": "Non-communicable diseases are managed with medicines, lifestyle changes and rehabilitation. Early diagnosis is key." },
+          { "speaker": "NEO", "text": "Exam tip: asked why antibiotics are not given for cold or flu? Because these are viral, and antibiotics work only on bacteria." }
+        ]
+      },
+      {
+        "animation": "Recap board with a capsule icon. Points: '1. Antibiotics kill bacteria, not viruses', '2. Fleming, 1928: penicillin', '3. Misuse causes antibiotic resistance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: antibiotics kill bacteria, but not viruses or protozoa." },
+          { "speaker": "NEO", "text": "Two: Alexander Fleming discovered penicillin, the first antibiotic, in 1928." },
+          { "speaker": "NEO", "text": "Three: misusing antibiotics causes resistance, so take them only as a doctor prescribes." },
+          { "speaker": "ZIPPY", "text": "Fine. Tissues and rest for my cold, then." }
+        ]
+      }
+    ]
+  }
+]

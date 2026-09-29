@@ -1,0 +1,502 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "Beehive: Prose",
+    "topic_no": 1,
+    "name": "The Fun They Had",
+    "scenes": [
+      {
+        "animation": "A futuristic bedroom with a glowing screen. An eleven-year-old girl, Margie, scribbles in her diary: 'May 17, 2157. Today Tommy found a real book!' Zippy gasps as an ancient, yellowed paper book floats into view like a museum treasure.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Finding a real book is big news? What kind of world is this?" },
+          { "speaker": "NEO", "text": "The year 2157, in Isaac Asimov's story The Fun They Had. Books are on screens, and even teachers are machines." }
+        ]
+      },
+      {
+        "animation": "Tommy, thirteen, flips the crinkly pages; the words stand still on the page. Margie compares it with her telescreen where words move. Tommy grins: 'Centuries ago'. A caption: 'The book is about school'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Margie is eleven and her friend Tommy is thirteen. The old book is about school, the way it was centuries ago." },
+          { "speaker": "TOMMY", "text": "What a waste. When you're through with the book, you just throw it away." },
+          { "speaker": "NEO", "text": "He means their telescreen holds a million books, and you never throw it away." }
+        ]
+      },
+      {
+        "animation": "Margie's schoolroom right next to her bedroom: a big black mechanical teacher with a screen and a slot for homework. A red-faced County Inspector opens it with a box of tools and slows the geography sector to an average ten-year level.",
+        "lines": [
+          { "speaker": "NEO", "text": "Margie hates school. Her mechanical teacher kept giving her geography test after test, and she did worse and worse." },
+          { "speaker": "NEO", "text": "So the County Inspector took it apart and slowed the geography sector to an average ten-year level." },
+          { "speaker": "ZIPPY", "text": "A teacher you can repair with a screwdriver. That's both cool and creepy." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: Margie alone, inserting homework into a slot in a punch code. Right: a sepia old school with a building, a human teacher and children laughing and shouting in the yard, going home together.",
+        "lines": [
+          { "speaker": "NEO", "text": "Margie is amazed to read that children once went to a special building, all learning the same things, taught by a man." },
+          { "speaker": "NEO", "text": "They sat together, laughed and shouted in the schoolyard, and went home together." },
+          { "speaker": "NEO", "text": "As her machine drones on about fractions, Margie thinks about the fun they had." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why did Margie hate school? Why did she think the old kind of school was fun?' Answer points build: 'Lonely mechanical teacher', 'No friends in class', 'Shared learning, play, human teacher'. A 'Board Tip' sticker glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why did Margie hate school, and why did she think the old schools were fun?" },
+          { "speaker": "NEO", "text": "Answer approach: she studied alone with a machine that tested her again and again. Old schools had friends, play, and a human teacher." },
+          { "speaker": "NEO", "text": "Exam tip: connect it to the theme. Technology can teach, but learning is richer when it is shared." }
+        ]
+      },
+      {
+        "animation": "Recap board with an old book and a glowing screen side by side. Points appear: '1. 2157: Tommy finds a real book about old schools', '2. Margie studies alone with a mechanical teacher', '3. She longs for the fun of learning together'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in 2157, Tommy finds a real book about old schools." },
+          { "speaker": "NEO", "text": "Two: Margie studies alone with a mechanical teacher, and she hates it." },
+          { "speaker": "NEO", "text": "Three: she longs for the fun of learning with friends." },
+          { "speaker": "ZIPPY", "text": "I'm hugging my real classmates tomorrow. Even the noisy ones." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Beehive: Prose",
+    "topic_no": 2,
+    "name": "The Sound of Music",
+    "scenes": [
+      {
+        "animation": "A concert stage. A barefoot percussionist strikes a marimba; visible vibration waves travel up through the floor into her feet. Zippy covers his ears, then uncovers them in confusion.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is she playing barefoot? Did she forget her shoes?" },
+          { "speaker": "NEO", "text": "No. She feels the music through her body. Meet Evelyn Glennie, from part one of The Sound of Music." }
+        ]
+      },
+      {
+        "animation": "A Scottish school. Young Evelyn's report card marks drop; a doctor's chart shows a fading sound-wave: 'severe hearing loss'. Then a percussion teacher, Ron Forbes, tunes two drums to different notes and taps her hand on each.",
+        "lines": [
+          { "speaker": "NEO", "text": "By the time Evelyn was eleven, her marks had fallen. Doctors found her hearing was severely damaged, and she was told to get hearing aids and go to a school for the deaf." },
+          { "speaker": "NEO", "text": "Instead, percussionist Ron Forbes noticed her talent. He tuned two drums to different notes and told her to sense them, not listen with her ears." },
+          { "speaker": "NEO", "text": "She learned to feel higher notes in her upper body and lower notes from the waist down. She went on to the Royal Academy of Music in London." }
+        ]
+      },
+      {
+        "animation": "A royal court with a scowling Emperor Aurangzeb banning the shrill pungi. A barber from a musicians' family redesigns it into a longer pipe with holes; the royal chamber fills with sweet sound. Label: 'shah + nai = shehnai'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Part two is about the shehnai. Emperor Aurangzeb had banned the shrill pungi. A barber improved it, played it in the royal chamber, and it came to be called the shehnai." },
+          { "speaker": "NEO", "text": "Its greatest master was Ustad Bismillah Khan, born in 1916 in Dumraon, Bihar. As a boy he practised for hours in the temples of Benaras and on the banks of the Ganga." }
+        ]
+      },
+      {
+        "animation": "The Red Fort on 15 August 1947; a shehnai's notes rise over a crowd with tricolours. Then a montage: a film reel, a world map with concert pins, a Bharat Ratna medal. Finally, the Ganga at Benaras glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "On 15 August 1947, he played the shehnai at the Red Fort as India became independent." },
+          { "speaker": "NEO", "text": "He performed across the world and received the Bharat Ratna, but he refused to leave Benaras and the Ganga." },
+          { "speaker": "ZIPPY", "text": "Two musicians, two very different paths, and both refused to give up." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How did Evelyn Glennie overcome her disability? What values do both musicians share?' Answer tags attach: 'determination', 'hard work', 'love for music', 'love for roots'. A 'Board Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how did Evelyn overcome her hearing loss?" },
+          { "speaker": "NEO", "text": "Answer approach: mention Ron Forbes's help, her learning to sense sound through her body, and her sheer determination." },
+          { "speaker": "NEO", "text": "Exam tip: in a value question, compare both musicians: dedication to their art, and in Bismillah Khan's case, deep love for his roots." }
+        ]
+      },
+      {
+        "animation": "Recap board with a drum and a shehnai. Points appear: '1. Evelyn Glennie feels music through her body', '2. The shehnai grew from the banned pungi', '3. Bismillah Khan: Red Fort 1947, Bharat Ratna, loyal to Benaras'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Evelyn Glennie overcame deafness by feeling music through her body." },
+          { "speaker": "NEO", "text": "Two: the shehnai grew out of the pungi that Aurangzeb banned." },
+          { "speaker": "NEO", "text": "Three: Bismillah Khan played at the Red Fort in 1947, won the Bharat Ratna, and stayed loyal to Benaras." },
+          { "speaker": "ZIPPY", "text": "I'm taking my shoes off before music class from now on." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Beehive: Prose",
+    "topic_no": 3,
+    "name": "The Little Girl",
+    "scenes": [
+      {
+        "animation": "A little girl, Kezia, peeps from behind the stairs as a big shadow of her father fills the hallway. As he leaves in a buggy, she lets out a huge sigh of relief and sags like a deflated balloon.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is she so relieved when her father leaves? Is he a monster?" },
+          { "speaker": "NEO", "text": "To Kezia, he almost is. This is Katherine Mansfield's story, The Little Girl." }
+        ]
+      },
+      {
+        "animation": "At the dinner table, the father's voice booms; Kezia's speech bubble breaks into stuttering fragments 'I... I...'. A caption: 'Stern father, frightened child'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Kezia is afraid of her father. He is strict and stern, and in front of him she begins to stutter." },
+          { "speaker": "NEO", "text": "Her grandmother, whom she loves, suggests a birthday present for him: a pincushion." }
+        ]
+      },
+      {
+        "animation": "Kezia happily stuffs a pincushion with torn paper from her mother's room. Later, the father storms in, holding up empty pages: 'my great speech for the Port Authority'. He brings out a ruler; Kezia holds out her hands and cries.",
+        "lines": [
+          { "speaker": "NEO", "text": "She stuffs it with papers she finds in her mother's room. But those papers were his great speech for the Port Authority." },
+          { "speaker": "NEO", "text": "He punishes her by hitting her palms with a ruler, to teach her not to touch what does not belong to her." },
+          { "speaker": "ZIPPY", "text": "Ouch. And she was only trying to be nice." }
+        ]
+      },
+      {
+        "animation": "Over the fence, the Macdonald family plays: the father gives children rides on his shoulders and tickles them till they get hiccups. Kezia watches wide-eyed; the caption reads 'different sorts of fathers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Next door, Mr. Macdonald plays with his children and makes them laugh. Kezia decides there are different sorts of fathers." },
+          { "speaker": "NEO", "text": "Then one night, her mother is ill in hospital, and her grandmother has gone with her. Kezia has a nightmare about a butcher with a knife and wakes up screaming." }
+        ]
+      },
+      {
+        "animation": "Night. The father carries Kezia to his big bed and tucks her in. She rests her head on his chest; a soft heartbeat pulses on screen. He is shown tired and asleep. Her fear melts into a warm glow.",
+        "lines": [
+          { "speaker": "NEO", "text": "It is her father who comes, picks her up and lets her sleep beside him. She sees how tired he is after working so hard." },
+          { "speaker": "NEO", "text": "Resting her head on his chest, she says: what a big heart you've got, father dear." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How does Kezia's attitude towards her father change?' Arrows move from 'fear' to 'understanding' to 'love'. Sticker: 'Board Tip: give the turning point'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how does Kezia's view of her father change, and why?" },
+          { "speaker": "NEO", "text": "Answer approach: from fear to understanding. The turning point is the night he comforts her. Exam tip: mention that parents may be strict yet loving underneath." }
+        ]
+      },
+      {
+        "animation": "Recap board with a pincushion and a heart. Points appear: '1. Kezia fears her stern father', '2. The pincushion mistake and punishment', '3. After the nightmare, she sees his big heart'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Kezia fears her stern father." },
+          { "speaker": "NEO", "text": "Two: her pincushion gift destroys his speech, and he punishes her." },
+          { "speaker": "NEO", "text": "Three: after her nightmare, he comforts her, and she discovers his big heart." },
+          { "speaker": "ZIPPY", "text": "Note to self: check the paper before you stuff a pincushion." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Beehive: Prose",
+    "topic_no": 4,
+    "name": "A Truly Beautiful Mind",
+    "scenes": [
+      {
+        "animation": "A playground in 1880s Germany. Children point at a quiet boy building a tall house of cards and giggle 'Brother Boring!'. The boy calmly adds one more card; the tower stands perfectly.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "They call him Brother Boring? He looks like he's thinking about the universe." },
+          { "speaker": "NEO", "text": "He is. That boy is Albert Einstein, and his biography in your book is called A Truly Beautiful Mind." }
+        ]
+      },
+      {
+        "animation": "A map pins 'Ulm, Germany, 1879'. Then a strict Munich classroom with ticking clocks and marching desks; young Albert frowns. An arrow shows him leaving for Switzerland; a sign reads 'Zurich'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Einstein was born in Ulm, Germany, in 1879. He started speaking late, and his playmates called him Brother Boring." },
+          { "speaker": "NEO", "text": "He disliked the strict, regimented school in Munich, and later went to Switzerland, where he studied in Zurich." },
+          { "speaker": "NEO", "text": "There he met Mileva Maric, a fellow student, whom he later married." }
+        ]
+      },
+      {
+        "animation": "A patent office desk piled with files. Einstein secretly scribbles equations; the glowing formula 'E = mc²' floats up from the page. A calendar flips to 1905.",
+        "lines": [
+          { "speaker": "NEO", "text": "Unable to get a university job, he worked as a technical expert in the patent office in Bern." },
+          { "speaker": "NEO", "text": "In his spare time he worked on physics. In 1905 he published his special theory of relativity, which led to the famous formula E equals m c squared." },
+          { "speaker": "ZIPPY", "text": "He changed science from a patent office desk? That's my kind of multitasking." }
+        ]
+      },
+      {
+        "animation": "A newspaper headline about the general theory proved by a solar eclipse. Then a darker scene: a 1939 letter addressed to President Roosevelt; a mushroom cloud over Hiroshima; Einstein's sad face; a dove flying towards the United Nations building.",
+        "lines": [
+          { "speaker": "NEO", "text": "His general theory of relativity made him world-famous. But when Hitler came to power, Einstein, who was Jewish, left Germany for America." },
+          { "speaker": "NEO", "text": "In 1939 he wrote to President Roosevelt, warning that Germany might build an atom bomb. After the bombing of Hiroshima, he was deeply shocked and worked for world peace until he died in 1955." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why is Einstein called a \"truly beautiful mind\"?' Answer points build: 'brilliant scientist', 'independent thinker', 'worked for peace'. Sticker: 'Board Tip: link genius with humanity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why is Einstein called a truly beautiful mind?" },
+          { "speaker": "NEO", "text": "Answer approach: mention his genius in science, his independent thinking, and his campaign for peace after the bomb." },
+          { "speaker": "NEO", "text": "Exam tip: remember that his letter to Roosevelt was a warning, not a wish to see the bomb used." }
+        ]
+      },
+      {
+        "animation": "Recap board with the house of cards and E = mc². Points appear: '1. Born in Ulm, 1879; called Brother Boring', '2. Patent office, 1905: special relativity', '3. Warned Roosevelt; worked for peace; died 1955'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Einstein was born in Ulm in 1879 and was called Brother Boring." },
+          { "speaker": "NEO", "text": "Two: while at the patent office, he published the special theory of relativity in 1905." },
+          { "speaker": "NEO", "text": "Three: he warned Roosevelt about the bomb and later worked for peace." },
+          { "speaker": "ZIPPY", "text": "Brother Boring, huh? Best comeback ever: change physics." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Beehive: Prose",
+    "topic_no": 5,
+    "name": "The Snake and the Mirror",
+    "scenes": [
+      {
+        "animation": "A tiny rented room with a tiled roof and rafters. A young doctor admires himself in a mirror, twirling an imaginary moustache. Above him, a cobra peers down from the rafters. Zippy clamps his hands over his mouth.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Someone tell him to look up! Look up!" },
+          { "speaker": "NEO", "text": "He's too busy admiring himself. This is Vaikom Muhammad Basheer's funny and scary story, The Snake and the Mirror." }
+        ]
+      },
+      {
+        "animation": "The doctor, a poor homeopath, counts a few coins by lamplight. He grins at the mirror; thought-bubbles show a handsome moustache, a daily shave, and a smiling fat lady doctor with bags of money.",
+        "lines": [
+          { "speaker": "NEO", "text": "The narrator is a young homeopath who earns very little and lives in a rented room." },
+          { "speaker": "NEO", "text": "One hot night, looking in the mirror, he decides to shave every day, grow a thin moustache, and always smile to look handsome." },
+          { "speaker": "NEO", "text": "He even dreams of marrying a fat lady doctor with plenty of money." }
+        ]
+      },
+      {
+        "animation": "Thud! The snake drops onto his shoulder and coils around his left arm, its hood close to his face. The doctor freezes like a stone statue; a heartbeat thumps loudly; sweat drops fall in slow motion.",
+        "lines": [
+          { "speaker": "NEO", "text": "Suddenly, a snake falls from the rafters onto his shoulder and coils around his left arm." },
+          { "speaker": "NEO", "text": "He sits absolutely still, like a stone image, hardly breathing, and prays to God." },
+          { "speaker": "ZIPPY", "text": "No more moustache plans now, I bet." }
+        ]
+      },
+      {
+        "animation": "The snake slowly uncoils, slides to the table and gazes at its own reflection in the mirror. The doctor tiptoes out and runs into the night. The next morning, he finds the room emptied by a thief, except for a dirty vest.",
+        "lines": [
+          { "speaker": "NEO", "text": "Then the snake turns its head, sees itself in the mirror, and moves towards it, as if admiring its own looks." },
+          { "speaker": "NEO", "text": "The doctor slips out and runs. The next morning, a thief has taken almost everything from his room, except his dirty vest." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. What is the source of humour in the story?' Answer tags appear: 'vanity of the doctor', 'snake also admires itself', 'thief leaves the dirty vest'. Sticker: 'Board Tip: humour + fear'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how does the writer mix humour with fear?" },
+          { "speaker": "NEO", "text": "Answer approach: the doctor's vanity at the mirror, the snake seeming to admire itself just as he did, and the funny twist with the vest." },
+          { "speaker": "NEO", "text": "Exam tip: mention the theme too. Vanity looks silly when life is in danger." }
+        ]
+      },
+      {
+        "animation": "Recap board with a small mirror and a coiled snake. Points appear: '1. A poor, vain young doctor', '2. A snake coils around his arm; he freezes', '3. The snake turns to the mirror; he escapes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a poor young homeopath admires himself in the mirror." },
+          { "speaker": "NEO", "text": "Two: a snake falls on him and coils around his arm, and he freezes in terror." },
+          { "speaker": "NEO", "text": "Three: the snake turns to the mirror, and the doctor escapes." },
+          { "speaker": "ZIPPY", "text": "Moral of the story: check the ceiling before checking your face." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Beehive: Prose",
+    "topic_no": 6,
+    "name": "My Childhood",
+    "scenes": [
+      {
+        "animation": "A railway platform in Rameswaram in the 1940s. A train rushes past without stopping; a bundle of newspapers is flung out. A thin boy with bright eyes sprints to catch it and grins.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is that boy chasing newspapers thrown from a train?" },
+          { "speaker": "NEO", "text": "That's how he earned his first wages. The boy is A. P. J. Abdul Kalam, and this is My Childhood." }
+        ]
+      },
+      {
+        "animation": "A sturdy house on Mosque Street, Rameswaram. Kalam's father sits calmly; his mother serves food to many guests. Labels: 'Father: Jainulabdeen, honest, self-disciplined', 'Mother: Ashiamma, kind'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Kalam was born in Rameswaram, in a middle-class Tamil family. His father, Jainulabdeen, was honest and self-disciplined; his mother was generous and kind." },
+          { "speaker": "NEO", "text": "During the Second World War, he earned money helping his cousin Samsuddin distribute newspapers." }
+        ]
+      },
+      {
+        "animation": "A classroom. A new teacher glares at a Muslim cap and a sacred thread side by side on the front bench, and sends Kalam to the back. Ramanadha Sastry sits in tears. Later, his father, the temple priest, confronts the teacher.",
+        "lines": [
+          { "speaker": "NEO", "text": "His close friend Ramanadha Sastry was the son of the high priest of the Rameswaram temple." },
+          { "speaker": "NEO", "text": "A new teacher could not bear a Hindu priest's son sitting with a Muslim boy, and moved Kalam to the back bench." },
+          { "speaker": "NEO", "text": "Ramanadha's father, Lakshmana Sastry, told the teacher to apologise or leave. The teacher changed his ways." }
+        ]
+      },
+      {
+        "animation": "Science teacher Sivasubramania Iyer's kitchen. His wife refuses to serve a Muslim boy; Iyer serves Kalam himself and eats beside him. Next week, his wife serves Kalam with her own hands.",
+        "lines": [
+          { "speaker": "NEO", "text": "His science teacher, Sivasubramania Iyer, invited him home for a meal. His wife refused to serve a Muslim boy in her kitchen, so Iyer served him himself." },
+          { "speaker": "NEO", "text": "The next week, she served him inside her kitchen. Change had begun." },
+          { "speaker": "ZIPPY", "text": "One brave teacher changed a whole kitchen's rules!" }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How did Kalam's teachers and elders fight social barriers?' Answer points: 'Lakshmana Sastry corrects the teacher', 'Iyer serves Kalam', 'Father lets him leave to study'. Sticker: 'Board Tip: quote examples'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When Kalam wished to study at Ramanathapuram, his parents let him go, though it was hard for them." },
+          { "speaker": "NEO", "text": "Likely question: how were social barriers broken in young Kalam's world? Answer approach: give both examples, the priest and the science teacher." },
+          { "speaker": "NEO", "text": "Exam tip: link them to the theme of religious harmony and good values at home." }
+        ]
+      },
+      {
+        "animation": "Recap board with a newspaper bundle and a temple and mosque side by side. Points appear: '1. Rameswaram childhood; honest, loving parents', '2. First wages from newspapers', '3. Elders and teachers broke barriers of caste and religion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Kalam grew up in Rameswaram with honest, loving parents." },
+          { "speaker": "NEO", "text": "Two: he earned his first wages distributing newspapers." },
+          { "speaker": "NEO", "text": "Three: his elders and teachers broke barriers of religion and taught him harmony." },
+          { "speaker": "ZIPPY", "text": "From catching newspapers to making headlines. Now that's a story." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Beehive: Prose",
+    "topic_no": 7,
+    "name": "Reach for the Top",
+    "scenes": [
+      {
+        "animation": "Snowy summit of Mount Everest. A woman plants the Indian tricolour, then the scene rewinds a year and shows her doing it again. A counter clicks '1... 2!'. Zippy's jaw drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "She climbed Everest twice? I get tired climbing to the fourth floor!" },
+          { "speaker": "NEO", "text": "That's Santosh Yadav, from part one of Reach for the Top. Part two is about tennis star Maria Sharapova." }
+        ]
+      },
+      {
+        "animation": "A village in Haryana. Little Santosh in shorts refuses to wear a traditional dress. Later, she sits at a school desk in Delhi, then a college hostel in Jaipur, watching climbers disappear up the hills.",
+        "lines": [
+          { "speaker": "NEO", "text": "Santosh was born in Joniyawas, a village in Haryana, the only girl among five brothers. She refused to follow the tradition of early marriage." },
+          { "speaker": "NEO", "text": "She insisted on studying, went to school in Delhi, and later to Maharani College in Jaipur, where she watched climbers on the Aravalli hills." }
+        ]
+      },
+      {
+        "animation": "A mountaineering institute sign in Uttarkashi. Santosh trains, then on Everest she shares her oxygen with a struggling climber. Pins appear: '1992' and '1993'. Then she carries sacks of garbage down the slopes.",
+        "lines": [
+          { "speaker": "NEO", "text": "She joined a mountaineering course at Uttarkashi. In 1992 she climbed Everest, and within a year, she did it again, becoming the only woman to scale it twice." },
+          { "speaker": "NEO", "text": "On the mountain she shared her oxygen to help a fellow climber, and she brought down five hundred kilograms of garbage from the Himalayas." }
+        ]
+      },
+      {
+        "animation": "A Russian girl of nine says goodbye to her mother at an airport and flies with her father to America. She trains on sunlit courts, lonely at night. Later, a scoreboard shows 'World Number One'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Maria Sharapova was sent from Russia to America at just nine years old to train in tennis. Her mother could not come, and they were apart for two years." },
+          { "speaker": "NEO", "text": "She faced loneliness and hard training, and became the world's number one tennis player while still a teenager." },
+          { "speaker": "ZIPPY", "text": "Two continents, one message: sacrifice now, summit later." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. What qualities do Santosh Yadav and Maria Sharapova share?' Tags attach: 'determination', 'hard work', 'sacrifice', 'confidence'. Sticker: 'Board Tip: one example for each quality'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: what qualities do the two women share?" },
+          { "speaker": "NEO", "text": "Answer approach: name qualities like determination, hard work and sacrifice, and support each with an example from their lives." },
+          { "speaker": "NEO", "text": "Exam tip: don't mix up the details. Everest twice is Santosh; leaving home at nine is Maria." }
+        ]
+      },
+      {
+        "animation": "Recap board with a mountain flag and a tennis racquet. Points appear: '1. Santosh Yadav: Everest twice, 1992 and 1993', '2. Helped a climber, cleaned the Himalayas', '3. Maria Sharapova: training from age nine to world number one'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Santosh Yadav climbed Everest twice, in 1992 and 1993." },
+          { "speaker": "NEO", "text": "Two: she helped a fellow climber and cleared Himalayan garbage." },
+          { "speaker": "NEO", "text": "Three: Maria Sharapova left home at nine and rose to world number one." },
+          { "speaker": "ZIPPY", "text": "Right. Starting today, I'm reaching for the top shelf. Of the snack cupboard." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Beehive: Prose",
+    "topic_no": 8,
+    "name": "Kathmandu",
+    "scenes": [
+      {
+        "animation": "A crowded temple courtyard in Nepal: priests, hawkers, tourists, cows, monkeys and pigeons all at once. Two monkeys chase each other across the scene. Zippy dodges a monkey and lands in a flower basket.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Priests, cows, monkeys, tourists, all in one place? Where are we?" },
+          { "speaker": "NEO", "text": "In Kathmandu, with the travel writer Vikram Seth. This chapter comes from his book Heaven Lake." }
+        ]
+      },
+      {
+        "animation": "Pashupatinath temple with a sign 'Entrance for the Hindus only'. The Bagmati river flows by; washerwomen work, a body burns on the bank, a basket of flowers floats past. A small shrine half sticks out of a stone platform.",
+        "lines": [
+          { "speaker": "NEO", "text": "First he visits Pashupatinath, a Hindu temple. There is an atmosphere of feverish confusion: priests, hawkers, devotees, tourists and animals." },
+          { "speaker": "NEO", "text": "By the holy Bagmati river, a body is being burnt while washerwomen work nearby." },
+          { "speaker": "NEO", "text": "A small shrine sticks halfway out of a stone platform. People believe that when it fully emerges, the evil age of Kali Yuga will end." }
+        ]
+      },
+      {
+        "animation": "A calm white dome of the Baudhnath stupa under a blue sky, prayer flags fluttering. Around it, small Tibetan shops sell felt bags, prints and silver jewellery. The noisy soundtrack fades into stillness.",
+        "lines": [
+          { "speaker": "NEO", "text": "Next, the Baudhnath stupa, a Buddhist shrine. In contrast, it has a sense of stillness." },
+          { "speaker": "NEO", "text": "Its huge white dome is ringed by a road with small shops, many run by Tibetan immigrants." },
+          { "speaker": "ZIPPY", "text": "So one place is a festival, and the other is a deep breath." }
+        ]
+      },
+      {
+        "animation": "A busy Kathmandu street with cheap goods and music. The author munches roasted corn and marzipan. A flute seller stands with a pole of flutes sticking out like a porcupine's quills and plays a slow tune; the street seems to pause.",
+        "lines": [
+          { "speaker": "NEO", "text": "The city's streets are noisy and busy. After buying snacks and comics, the author decides to return to Delhi by bus and train." },
+          { "speaker": "NEO", "text": "Then he notices a flute seller with a pole of flutes like a porcupine. He plays slowly and calmly, and the author reflects that the flute is found in almost every culture." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Compare the atmosphere at Pashupatinath and Baudhnath.' A two-column table fills: 'Pashupatinath: noisy, crowded, confused' vs 'Baudhnath: quiet, peaceful, still'. Sticker: 'Board Tip: use contrast words'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: compare the atmosphere at Pashupatinath and Baudhnath." },
+          { "speaker": "NEO", "text": "Answer approach: Pashupatinath is crowded and chaotic; Baudhnath is quiet and still. Use words like whereas and in contrast." },
+          { "speaker": "NEO", "text": "Exam tip: remember which shrine is Hindu and which is Buddhist. Students often swap them." }
+        ]
+      },
+      {
+        "animation": "Recap board with a temple and a stupa side by side, and a flute on top. Points appear: '1. Pashupatinath: Hindu, crowded, feverish', '2. Baudhnath: Buddhist, calm, still', '3. The flute: a universal music'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Pashupatinath is a crowded Hindu temple by the Bagmati." },
+          { "speaker": "NEO", "text": "Two: the Baudhnath stupa is a calm Buddhist shrine." },
+          { "speaker": "NEO", "text": "Three: the flute seller's music reminds the author that music unites all cultures." },
+          { "speaker": "ZIPPY", "text": "And I'm keeping away from those monkeys." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Beehive: Prose",
+    "topic_no": 9,
+    "name": "If I Were You",
+    "scenes": [
+      {
+        "animation": "A lonely cottage at night. Gerrard, a well-dressed man, is on the phone. Behind him, a door creaks and a masked Intruder steps in holding a revolver. Theatre curtains frame the scene: 'A play by Douglas James'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A stranger with a gun, and that man is still so calm?" },
+          { "speaker": "NEO", "text": "That's Gerrard, and his calm is his weapon. This is the play If I Were You." }
+        ]
+      },
+      {
+        "animation": "The Intruder circles Gerrard, comparing their faces in a mirror. Thought-bubble: the Intruder wearing Gerrard's clothes, driving his car. A caption: 'The plan: kill Gerrard, become Gerrard'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Intruder is a criminal on the run from the police for murder. He looks rather like Gerrard." },
+          { "speaker": "INTRUDER", "text": "I'm going to kill you and take your identity." },
+          { "speaker": "NEO", "text": "He plans to shoot Gerrard and live as him, since Gerrard lives alone and few people know him." }
+        ]
+      },
+      {
+        "animation": "Gerrard leans back, smirking, and spins a story. Around him appear fake 'wanted' posters with his own face and a police car's flashing light outside the window. The Intruder's confidence cracks.",
+        "lines": [
+          { "speaker": "NEO", "text": "Gerrard stays cool and uses his wits. He claims that he himself is a crook, wanted by the police." },
+          { "speaker": "NEO", "text": "So if the Intruder becomes Gerrard, he will be caught for Gerrard's crimes. The police, he says, may already be on the way." },
+          { "speaker": "ZIPPY", "text": "Ha! Stealing his identity just became a terrible idea." }
+        ]
+      },
+      {
+        "animation": "Gerrard points to a door, saying it leads out. The Intruder rushes through it; it's a cupboard. Gerrard slams it shut and locks it. Muffled shouts. Gerrard picks up the phone, smiling.",
+        "lines": [
+          { "speaker": "NEO", "text": "The panicking Intruder wants to escape. Gerrard shows him a door as a way out, but it is really a cupboard, and Gerrard locks him in." },
+          { "speaker": "NEO", "text": "Then he calmly calls the police, and jokes on the phone that he might use this in his next play." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How does Gerrard outwit the Intruder?' Answer points: 'stays calm', 'invents a false criminal past', 'traps him in the cupboard'. Sticker: 'Board Tip: character sketch with evidence'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how does Gerrard outwit the Intruder?" },
+          { "speaker": "NEO", "text": "Answer approach: he stays calm, invents a false story that makes the plan dangerous, and traps the Intruder in a cupboard." },
+          { "speaker": "NEO", "text": "Exam tip: in a character sketch, call Gerrard witty, calm and quick-thinking, and back each quality with an event." }
+        ]
+      },
+      {
+        "animation": "Recap board with a locked cupboard door and a telephone. Points appear: '1. Intruder plans to kill Gerrard and take his identity', '2. Gerrard claims he is wanted by the police', '3. Gerrard traps the Intruder in a cupboard'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Intruder plans to kill Gerrard and become him." },
+          { "speaker": "NEO", "text": "Two: Gerrard invents a criminal past to make the plan dangerous." },
+          { "speaker": "NEO", "text": "Three: he tricks the Intruder into a cupboard and calls the police." },
+          { "speaker": "ZIPPY", "text": "Brains beat bullets. If I were the Intruder, I'd have stayed home." }
+        ]
+      }
+    ]
+  }
+]

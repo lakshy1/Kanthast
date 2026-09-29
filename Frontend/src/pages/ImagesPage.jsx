@@ -2,11 +2,6 @@ import { motion } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import { FaArrowLeft, FaBookOpen, FaClock, FaExpand, FaLayerGroup } from "react-icons/fa";
-import Image1 from "../assets/images/Image-1.png";
-import Image2 from "../assets/images/Image-2.png";
-import Image3 from "../assets/images/Image-3.png";
-import Image4 from "../assets/images/Image-4.png";
-import Image5 from "../assets/images/Image-5.png";
 import { getMedicineUsmleVideoDetails } from "../utils/authApi";
 import { ImagesPageSkeleton } from "../components/DataLoaderSkeletons";
 
@@ -24,12 +19,12 @@ function useLectureQuery() {
   };
 }
 
-const fallbackGallery = [Image1, Image2, Image3, Image4, Image5, Image2];
-
 export default function ImagesPage() {
   const data = useLectureQuery();
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(Boolean(data.subjectId && data.chapterId && data.videoId));
+  const [loadError, setLoadError] = useState(false);
+  const [attempt, setAttempt] = useState(0);
 
   useEffect(() => {
     let mounted = true;
@@ -41,6 +36,7 @@ export default function ImagesPage() {
     (async () => {
       try {
         setLoading(true);
+        setLoadError(false);
         const response = await getMedicineUsmleVideoDetails({
           subjectId: data.subjectId,
           chapterId: data.chapterId,
@@ -51,6 +47,7 @@ export default function ImagesPage() {
       } catch {
         if (!mounted) return;
         setPhotos([]);
+        setLoadError(true);
       } finally {
         if (mounted) setLoading(false);
       }
@@ -59,13 +56,11 @@ export default function ImagesPage() {
     return () => {
       mounted = false;
     };
-  }, [data.subjectId, data.chapterId, data.videoId]);
+  }, [data.subjectId, data.chapterId, data.videoId, attempt]);
 
+  // No stand-in art: a lecture without published images says so. The old
+  // fallback showed AI-generated banners (one advertising MCAT/NCLEX).
   const gallery = useMemo(() => {
-    if (!photos.length) {
-      return fallbackGallery.map((src, idx) => ({ imageLink: src, imageText: `Slide ${idx + 1}` }));
-    }
-
     return photos
       .filter((item) => item?.imageLink)
       .map((item, index) => ({
@@ -75,13 +70,13 @@ export default function ImagesPage() {
   }, [photos]);
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_20%_10%,_#dbeafe,_#f8fafc_40%,_#ecfeff_90%)] px-4 md:px-8 py-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-surface-sunken px-4 md:px-8 py-8">
+      <div className="page-frame">
         <Link
           to="/lists"
           className="inline-flex items-center gap-2 text-ink-muted hover:text-ink font-medium"
         >
-          <FaArrowLeft /> Back to Lists
+          <FaArrowLeft /> Back to Library
         </Link>
 
         <motion.header
@@ -90,8 +85,7 @@ export default function ImagesPage() {
           transition={{ duration: 0.45, ease: "easeOut" }}
           className="mt-4 rounded-card border border-line bg-surface/90 p-6 shadow-e4"
         >
-          <p className="text-sm uppercase tracking-[0.22em] text-cyan-700 font-semibold">Image Library</p>
-          <h1 className="mt-2 text-3xl md:text-4xl font-black text-ink">{data.title}</h1>
+          <h1 className="text-3xl md:text-4xl font-black text-ink">{data.title}</h1>
           <div className="mt-4 flex flex-wrap gap-3">
             <Chip icon={<FaLayerGroup />} label={data.module} />
             <Chip icon={<FaBookOpen />} label={data.section} />
@@ -101,6 +95,20 @@ export default function ImagesPage() {
 
         {loading ? (
           <ImagesPageSkeleton />
+        ) : loadError ? (
+          <div className="mt-6 rounded-card border border-line bg-surface p-8 text-center shadow-e2">
+            <p className="font-semibold text-ink">We couldn't load this lecture's images.</p>
+            <p className="mt-1 text-ink-muted">Check your connection and try again.</p>
+            <button type="button" onClick={() => setAttempt((n) => n + 1)} className="btn-primary mt-5">
+              Try again
+            </button>
+          </div>
+        ) : gallery.length === 0 ? (
+          <div className="mt-6 rounded-card border border-line bg-surface p-8 text-center shadow-e2">
+            <p className="font-semibold text-ink">No images for this lecture yet.</p>
+            <p className="mt-1 text-ink-muted">Images are added as each lecture is published.</p>
+            <Link to="/lists" className="btn-secondary mt-5">Back to Library</Link>
+          </div>
         ) : (
           <motion.section
             initial={{ opacity: 0, y: 18 }}
@@ -117,12 +125,18 @@ export default function ImagesPage() {
                 <div className="relative">
                   <img src={item.imageLink} alt={`${data.title} visual ${idx + 1}`} className="w-full h-52 object-cover" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition" />
-                  <button className="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface/90 text-ink-muted grid place-items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition">
+                  <a
+                    href={item.imageLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open image ${idx + 1} full size`}
+                    className="absolute top-2 right-2 grid h-touch w-touch place-items-center rounded-full bg-surface/90 text-ink-muted opacity-100 transition md:opacity-0 md:group-hover:opacity-100 md:focus-visible:opacity-100"
+                  >
                     <FaExpand />
-                  </button>
+                  </a>
                 </div>
                 <div className="p-4">
-                  <p className="font-semibold text-ink">Slide {idx + 1}</p>
+                  <p className="font-semibold text-ink">Image {idx + 1}</p>
                   <p className="text-sm text-ink-muted mt-1">{item.imageText || "Key visual aid for rapid recall."}</p>
                 </div>
               </motion.article>

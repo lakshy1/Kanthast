@@ -1,0 +1,263 @@
+[
+  {
+    "chapter_no": 8,
+    "chapter": "Geography: Water Resources",
+    "topic_no": 1,
+    "name": "Water Scarcity and the Need for Conservation",
+    "scenes": [
+      {
+        "animation": "Zippy floats on a lilo in the middle of a blue globe, sipping from an empty glass. A caption: 'Three-fourth of the earth is water'. A tiny tap labelled 'Freshwater' drips a single drop.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Three-fourth of the earth is water, and my glass is empty. How?" },
+          { "speaker": "NEO", "text": "Only a small proportion of it is freshwater that we can use. It comes mainly from surface run off and groundwater, renewed by the hydrological cycle." }
+        ]
+      },
+      {
+        "animation": "A cartoon calendar flips to '2025' with a counter reading 'nearly two billion people in absolute water scarcity'. Then three causes stamp onto a dried riverbed: 'Over-exploitation', 'Excessive use', 'Unequal access'.",
+        "lines": [
+          { "speaker": "NEO", "text": "It was predicted that by 2025, nearly two billion people would live in absolute water scarcity." },
+          { "speaker": "NEO", "text": "Water availability does vary over space and time. But scarcity in most cases is caused by over-exploitation, excessive use and unequal access to water among social groups." }
+        ]
+      },
+      {
+        "animation": "Three pressure gauges rise: 'Large population: more food, more irrigation' shows a farm tubewell pumping and a groundwater line dropping; 'Industries: heavy users of water and hydel power' shows a factory; 'Urban centres' shows a housing society with its own pump.",
+        "lines": [
+          { "speaker": "NEO", "text": "A large population needs more water, for homes and to grow more food. Irrigated agriculture is the largest consumer of water." },
+          { "speaker": "NEO", "text": "Farmers' own wells and tubewells can cause groundwater levels to fall. Industries are heavy users of water and also need power, much of it hydroelectric." },
+          { "speaker": "NEO", "text": "Growing cities with their own groundwater pumps have over-exploited fragile water resources." }
+        ]
+      },
+      {
+        "animation": "A clean-looking river is scanned by a magnifying glass revealing domestic waste, industrial chemicals, pesticides and fertilisers. A red 'Hazardous' label appears. Then a rural home gets a new tap labelled 'Jal Jeevan Mission: 55 litres per person per day'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if there is enough water but it's dirty?" },
+          { "speaker": "NEO", "text": "That is scarcity too. Water polluted by domestic and industrial wastes, chemicals, pesticides and fertilisers is hazardous for human use." },
+          { "speaker": "NEO", "text": "The Jal Jeevan Mission aims to give every rural household potable piped water at 55 litres per capita per day." }
+        ]
+      },
+      {
+        "animation": "An India map highlights seven states: Gujarat, Haryana, Karnataka, Madhya Pradesh, Maharashtra, Rajasthan and Uttar Pradesh, with a banner 'Atal Bhujal Yojana: 8220 Gram Panchayats'. An arrow turns the word 'Consumption' into 'Conservation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Atal Bhujal Yojana is being implemented in 8220 water stressed gram panchayats across seven states. Its key aim is to change community attitudes from consumption to conservation." },
+          { "speaker": "NEO", "text": "Board tip: when asked for causes of water scarcity, don't only write low rainfall. Write over-exploitation, excessive use, unequal access and poor quality." }
+        ]
+      },
+      {
+        "animation": "Recap board with a water-drop icon. Points appear: '1. Freshwater is limited; renewed by the hydrological cycle', '2. Scarcity: over-exploitation, excessive use, unequal access', '3. Poor quality water is also scarcity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: usable freshwater is only a small part of the earth's water." },
+          { "speaker": "NEO", "text": "Two: scarcity is mostly caused by over-exploitation, excessive use and unequal access." },
+          { "speaker": "NEO", "text": "Three: polluted water creates scarcity even where water is plentiful." },
+          { "speaker": "ZIPPY", "text": "I'm turning off the tap while brushing. Starting now." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Geography: Water Resources",
+    "topic_no": 2,
+    "name": "Multi-Purpose River Projects",
+    "scenes": [
+      {
+        "animation": "Zippy builds a tiny sand dam across a garden hose stream. The water pools behind it and he proudly labels it 'Zippy Sagar'. Neo zooms out to a massive real dam with a spillway.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Behold, Zippy Sagar! My very own dam." },
+          { "speaker": "NEO", "text": "Nice. A dam is a barrier across flowing water that obstructs, directs or retards the flow, often creating a reservoir." }
+        ]
+      },
+      {
+        "animation": "A sepia timeline scrolls: '1st century BC: Sringaverapura near Allahabad channels Ganga floodwater', 'Chandragupta Maurya: dams, lakes, irrigation', '11th century: Bhopal Lake', '13th-14th century: Hauz Khas tank, Delhi, by Allauddin Khilji'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has built hydraulic structures since ancient times. In the first century BC, Sringaverapura near Allahabad had a water harvesting system that channelled the flood water of the Ganga." },
+          { "speaker": "NEO", "text": "In the 11th century, Bhopal Lake was built, one of the largest artificial lakes of its time. The Hauz Khas tank in Delhi was built by Allauddin Khilji to supply water to the Siri Fort area." }
+        ]
+      },
+      {
+        "animation": "A big dam in the centre sprouts arrows to seven icons: irrigation, electricity, domestic and industrial water supply, flood control, recreation, inland navigation and fish breeding. A caption reads: 'Nehru: dams are the temples of modern India'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Today, dams are built for irrigation, electricity, domestic and industrial water supply, flood control, recreation, inland navigation and fish breeding. That's why they are called multi-purpose projects." },
+          { "speaker": "NEO", "text": "Jawaharlal Nehru proudly called dams the temples of modern India, because they would integrate agriculture and the village economy with rapid industrialisation." },
+          { "speaker": "NEO", "text": "In the Sutluj-Beas basin, Bhakra Nangal water is used for hydel power and irrigation. The Hirakud project in the Mahanadi basin combines water conservation with flood control." }
+        ]
+      },
+      {
+        "animation": "An animated outline map of India with rivers drawn in blue. Dam pins drop one at a time with labels: 'Salal (Chenab), J&K', 'Bhakra Nangal (Satluj)', 'Tehri (Bhagirathi), Uttarakhand', 'Rana Pratap Sagar (Chambal), Rajasthan', 'Sardar Sarovar (Narmada), Gujarat', 'Hirakud (Mahanadi), Odisha', 'Nagarjuna Sagar (Krishna)', 'Tungabhadra (Tungabhadra), Karnataka'. A 'Map Work' stamp lands.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Which dams do I need to know for the map?" },
+          { "speaker": "NEO", "text": "Board tip: CBSE map work lists eight dams. Salal, Bhakra Nangal, Tehri, Rana Pratap Sagar, Sardar Sarovar, Hirakud, Nagarjuna Sagar and Tungabhadra." },
+          { "speaker": "NEO", "text": "Learn each one with its river and state. Start in the north with Salal and move south to Tungabhadra." }
+        ]
+      },
+      {
+        "animation": "Recap board with a dam icon. Points appear: '1. Dams: ancient tradition to modern projects', '2. Multi-purpose: irrigation, power, flood control and more', '3. Eight dams for map work'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: India has built dams, lakes and canals since ancient times." },
+          { "speaker": "NEO", "text": "Two: multi-purpose projects combine irrigation, power, water supply, flood control and more, like Bhakra Nangal and Hirakud." },
+          { "speaker": "NEO", "text": "Three: learn the eight dams on the map with their rivers." },
+          { "speaker": "ZIPPY", "text": "Zippy Sagar will be the ninth. Someday." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Geography: Water Resources",
+    "topic_no": 3,
+    "name": "Why Dams Face Opposition",
+    "scenes": [
+      {
+        "animation": "A fish with a tiny backpack swims upstream, heading to its spawning ground, and bonks into a giant dam wall. It holds up a sign: 'Route blocked'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Poor fish! Isn't a dam supposed to be good for everyone?" },
+          { "speaker": "NEO", "text": "In recent years, multi-purpose projects and large dams have come under great scrutiny and opposition. Let's see why." }
+        ]
+      },
+      {
+        "animation": "A river cross-section animates: sediment piles up at the bottom of the reservoir, the stream bed downstream turns rocky, a fish's migration route is cut off, and trees and soil sink under the rising reservoir and slowly decompose.",
+        "lines": [
+          { "speaker": "NEO", "text": "Damming affects a river's natural flow. It causes poor sediment flow and excessive sedimentation at the bottom of the reservoir, leading to rockier stream beds and poorer habitats for aquatic life." },
+          { "speaker": "NEO", "text": "Dams fragment rivers, making it hard for aquatic fauna to migrate, especially for spawning. Reservoirs also submerge vegetation and soil." }
+        ]
+      },
+      {
+        "animation": "Ironic sequence: a dam labelled 'Flood control' fills with sediment and overflows during heavy rain. The flood plain downstream turns pale, labelled 'Deprived of silt, a natural fertiliser'. Small warning icons follow: earthquake cracks, mosquitoes, and a field glittering with salt.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ironically, dams built to control floods have triggered floods due to sedimentation in the reservoir. Flood plains were also deprived of silt, a natural fertiliser." },
+          { "speaker": "NEO", "text": "Multi-purpose projects were also seen to induce earthquakes, cause water-borne diseases and pests, and pollution from excessive use of water." },
+          { "speaker": "NEO", "text": "Irrigation shifted farmers to water intensive and commercial crops, leading to salinisation of the soil." }
+        ]
+      },
+      {
+        "animation": "A map shows the Narmada flowing west to the Sardar Sarovar Dam in Gujarat, with four states highlighted: Maharashtra, Madhya Pradesh, Gujarat and Rajasthan. Counters roll up: '18.45 lakh hectares', '3112 villages', '15 districts of Gujarat'. Then a tug-of-war rope over a river labelled 'Inter-state water disputes: Krishna-Godavari'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sardar Sarovar Dam on the Narmada in Gujarat is one of India's largest water resource projects, covering Maharashtra, Madhya Pradesh, Gujarat and Rajasthan." },
+          { "speaker": "NEO", "text": "It will provide irrigation to 18.45 lakh hectares, covering 3112 villages in 15 districts of Gujarat, mostly in drought-prone areas." },
+          { "speaker": "NEO", "text": "Dams can also cause disputes. The Krishna-Godavari dispute began when Karnataka and Andhra Pradesh objected to Maharashtra diverting more water at Koyna." }
+        ]
+      },
+      {
+        "animation": "A 'Board Tip' sticker appears beside a checklist titled 'Disadvantages of dams' with ticks on sedimentation, fragmentation, submergence, floods, salinisation.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "That's a long list of problems." },
+          { "speaker": "NEO", "text": "Board tip: in long answers, split the problems into ecological ones, like sedimentation and salinisation, and flood-related ones. Examiners like organised points." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cracked dam icon. Points appear: '1. Sedimentation, fragmentation, submergence', '2. Floods, loss of silt, earthquakes, salinisation', '3. Sardar Sarovar; inter-state disputes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: dams disturb a river's flow, block fish migration and submerge land." },
+          { "speaker": "NEO", "text": "Two: they can trigger floods, rob flood plains of silt and cause salinisation." },
+          { "speaker": "NEO", "text": "Three: big projects like Sardar Sarovar bring benefits, but also inter-state disputes." },
+          { "speaker": "ZIPPY", "text": "I'm adding a fish ladder to Zippy Sagar." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Geography: Water Resources",
+    "topic_no": 4,
+    "name": "Traditional Rainwater Harvesting",
+    "scenes": [
+      {
+        "animation": "In a hot Rajasthani courtyard, Zippy sweats and fans himself. Neo lifts a stone lid in the floor, revealing a cool underground tank full of water. Zippy's eyes sparkle.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Water, under the floor? In the desert?" },
+          { "speaker": "NEO", "text": "That's a tanka. Given the problems with big dams, many people see water harvesting as a viable alternative, socio-economically and environmentally." }
+        ]
+      },
+      {
+        "animation": "An animated India map shows local systems appearing region by region: 'Guls or kuls: Western Himalayas' with diversion channels on a hillside; 'Rooftop harvesting: Rajasthan'; 'Inundation channels: flood plains of Bengal'; 'Khadins: Jaisalmer' and 'Johads: other parts of Rajasthan' as fields holding standing water.",
+        "lines": [
+          { "speaker": "NEO", "text": "In ancient India, people knew their rainfall and soils well, and built local harvesting systems." },
+          { "speaker": "NEO", "text": "In the Western Himalayas, people built diversion channels called guls or kuls for agriculture. In the flood plains of Bengal, they built inundation channels to irrigate fields." },
+          { "speaker": "NEO", "text": "In arid and semi-arid regions, fields became rain fed storage structures, like the khadins in Jaisalmer and johads in other parts of Rajasthan." }
+        ]
+      },
+      {
+        "animation": "A cutaway of a Rajasthani house: rain hits a sloping roof, the first spell washes the roof and is let go, then later showers run down a pipe into an underground tanka. Map pins mark Bikaner, Phalodi and Barmer. A room beside the tanka shows a family relaxing in the cool.",
+        "lines": [
+          { "speaker": "NEO", "text": "In Bikaner, Phalodi and Barmer, almost all houses traditionally had underground tanks, or tankas, for storing drinking water." },
+          { "speaker": "NEO", "text": "They were connected to sloping roofs through a pipe. The first spell of rain was not collected, because it cleaned the roofs and pipes." },
+          { "speaker": "NEO", "text": "This rainwater, called palar pani, is considered the purest form of natural water. Some houses even built underground rooms next to the tanka to beat the summer heat." }
+        ]
+      },
+      {
+        "animation": "A canal labelled 'Indira Gandhi Canal' flows across western Rajasthan. Some tankas are covered and dusty, but one old man still fills his cup from his tanka, frowning at a tap.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Do people still use tankas?" },
+          { "speaker": "NEO", "text": "Rooftop harvesting is declining in western Rajasthan, because the perennial Indira Gandhi Canal now supplies plenty of water. Some houses still keep tankas, as they don't like the taste of tap water." },
+          { "speaker": "NEO", "text": "Board tip: match each system to its region. Guls and kuls with the Western Himalayas, khadins with Jaisalmer, tankas with Rajasthan." }
+        ]
+      },
+      {
+        "animation": "Recap board with a raindrop-and-roof icon. Points appear: '1. Guls/kuls, inundation channels, khadins, johads', '2. Tankas and palar pani in Rajasthan', '3. Indira Gandhi Canal has reduced tanka use'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: each region developed its own system, like guls, inundation channels, khadins and johads." },
+          { "speaker": "NEO", "text": "Two: rooftop tankas in Rajasthan stored palar pani for drinking." },
+          { "speaker": "NEO", "text": "Three: the Indira Gandhi Canal has reduced tanka use in western Rajasthan." },
+          { "speaker": "ZIPPY", "text": "I want a cool room next to a tanka. For exam season." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Geography: Water Resources",
+    "topic_no": 5,
+    "name": "Rooftop Rainwater Harvesting Today and Bamboo Drip Irrigation",
+    "scenes": [
+      {
+        "animation": "A map pin drops on Cherrapunji and Mawsynram with torrential rain, 55 km away from Shillong, where Zippy stands holding an empty bucket under a clear sky.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The wettest places on earth are right next door, and Shillong is short of water?" },
+          { "speaker": "NEO", "text": "Yes. Cherrapunjee and Mawsynram, 55 kilometres from Shillong, get the highest rainfall in the world, yet Shillong faces acute water shortage." }
+        ]
+      },
+      {
+        "animation": "Shillong rooftops each sprout a pipe and tank. A gauge on one house shows '15-25% of household water from rooftop harvesting'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So nearly every household in Shillong has a rooftop rainwater harvesting structure. It supplies nearly 15 to 25 per cent of a household's total water needs." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds on a house cutaway: 'Rooftop rainwater collected in a PVC pipe' leads to 'Filtered through sand and bricks', 'Underground pipe to sump for immediate use', 'Excess water to the well', 'Well recharges groundwater'. Then a map pin drops on Gendathur, Mysuru, Karnataka with '200 houses'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In a modern system, rooftop rainwater goes through a PVC pipe, is filtered using sand and bricks, and flows to a sump. Excess water goes to a well and recharges the groundwater." },
+          { "speaker": "NEO", "text": "In Gendathur, a remote village in Mysuru, Karnataka, nearly 200 households have installed rooftop harvesting. The village is now known as rich in rainwater." },
+          { "speaker": "NEO", "text": "And Tamil Nadu is the first state in India to make rooftop rainwater harvesting compulsory for all houses, with legal provisions to punish defaulters." }
+        ]
+      },
+      {
+        "animation": "A Meghalaya hillside: bamboo pipes carry spring water downhill by gravity, branching and passing high over a road. A counter shows '18-20 litres enter' at the top, and at a plant's roots, a single pipe drips '20-80 drops per minute'. A badge reads '200-year-old system'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is there a traditional drip irrigation too?" },
+          { "speaker": "NEO", "text": "Yes. In Meghalaya, a 200-year-old system taps stream and spring water using bamboo pipes." },
+          { "speaker": "NEO", "text": "About 18 to 20 litres of water enter the bamboo pipes, travel hundreds of metres, and finally reduce to 20 to 80 drops per minute at the plant." },
+          { "speaker": "NEO", "text": "The flow is controlled by changing the pipe positions, and the last section drops water near the roots." }
+        ]
+      },
+      {
+        "animation": "A 'Board Tip' sticker lands on two cards: 'Tamil Nadu: first state, compulsory rooftop harvesting' and 'Meghalaya: bamboo drip irrigation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: Tamil Nadu as the first state with compulsory rooftop harvesting, and bamboo drip irrigation in Meghalaya, are frequent one-mark questions." }
+        ]
+      },
+      {
+        "animation": "Recap board with a bamboo pipe icon. Points appear: '1. Shillong: 15-25% water from rooftops', '2. Gendathur and Tamil Nadu lead in rooftop harvesting', '3. Meghalaya bamboo drip: 20-80 drops per minute'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: Shillong gets 15 to 25 per cent of household water from rooftops." },
+          { "speaker": "NEO", "text": "Two: Gendathur village and Tamil Nadu show rooftop harvesting at work." },
+          { "speaker": "NEO", "text": "Three: Meghalaya's bamboo drip system delivers 20 to 80 drops per minute to each plant." },
+          { "speaker": "ZIPPY", "text": "Bamboo pipes. Nature's own plumbing!" }
+        ]
+      }
+    ]
+  }
+]

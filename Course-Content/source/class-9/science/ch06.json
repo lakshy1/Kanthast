@@ -1,0 +1,429 @@
+[
+  {
+    "chapter_no": 6,
+    "chapter": "Tissues",
+    "topic_no": 1,
+    "name": "What Is a Tissue? Plant vs Animal Tissues",
+    "scenes": [
+      {
+        "animation": "A school cricket team in the field. Each player is a cartoon cell: bowlers bowl, fielders field, the wicketkeeper keeps. Zippy, as coach, blows a whistle and they all cluster into specialist groups.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why don't all players do everything? Wouldn't that be simpler?" },
+          { "speaker": "NEO", "text": "Specialists do the job better. Cells in multicellular organisms work the same way, in groups called tissues." }
+        ]
+      },
+      {
+        "animation": "A single Amoeba does everything alone: eating, moving, breathing, all in one cell. Then a human body zooms into groups of similar cells: muscle cells pulling together, blood cells flowing together. Label: 'Tissue: a group of cells similar in structure and/or working together to achieve a particular function'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In a unicellular organism, a single cell performs all the basic functions, like movement, intake of food and respiration." },
+          { "speaker": "NEO", "text": "In multicellular organisms, there is division of labour. Cells specialised for one function are grouped together in the body." },
+          { "speaker": "NEO", "text": "A group of cells that are similar in structure and, or, work together to achieve a particular function forms a tissue." }
+        ]
+      },
+      {
+        "animation": "Examples appear: blood flowing through a vessel carrying oxygen, food and hormones; muscle cells contracting to move an arm; nerve cells carrying a message. Each gets a 'Tissue' badge.",
+        "lines": [
+          { "speaker": "NEO", "text": "Blood is a tissue. It flows and carries gases, food, hormones and waste materials." },
+          { "speaker": "NEO", "text": "Muscle cells contract and relax to cause movement. Nerve cells carry messages." }
+        ]
+      },
+      {
+        "animation": "Split screen builds row by row. Left: a neem tree standing still, with many dead supportive cells shown in grey, and growth only at the tips. Right: a deer running, with living cells shown in pink and growth all over. Labels: 'Plants: stationary, much supportive dead tissue, growth limited to certain regions' and 'Animals: move, mostly living tissue, growth more uniform'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So plants and animals have the same tissues?" },
+          { "speaker": "NEO", "text": "No. Plants are stationary. They need support to stand upright, so many of their tissues are supportive and made of dead cells." },
+          { "speaker": "NEO", "text": "Animals move around in search of food, mates and shelter. They use more energy, and most of their tissues are living." },
+          { "speaker": "NEO", "text": "Also, growth in plants is limited to certain regions, while cell growth in animals is more uniform." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card: 'Why do plants have more dead tissue? Because they are stationary and need mechanical support'. A tree trunk with grey dead cells lights up.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: a common question asks why plants have more dead tissue than animals. Link it to being stationary and needing mechanical strength." }
+        ]
+      },
+      {
+        "animation": "Recap board with the cricket team icon. Points appear: '1. Tissue: group of similar cells doing a particular function', '2. Multicellular organisms show division of labour', '3. Plants: more dead supportive tissue; animals: mostly living tissue'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a tissue is a group of similar cells that work together for a particular function." },
+          { "speaker": "NEO", "text": "Two: multicellular organisms divide labour among tissues." },
+          { "speaker": "NEO", "text": "Three: plants have more dead supportive tissue, while animals have mostly living tissue." },
+          { "speaker": "ZIPPY", "text": "Team Tissue, ready to play!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Tissues",
+    "topic_no": 2,
+    "name": "Meristematic Tissue",
+    "scenes": [
+      {
+        "animation": "A glass jar of water with two onion bulbs growing roots. Neo snips 1 cm off the root tips of one onion. Days later, the uncut onion's roots keep growing, while the cut ones stop. Zippy measures both with a ruler.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The onion with snipped tips stopped growing! Did we hurt its feelings?" },
+          { "speaker": "NEO", "text": "We removed its growing region, the meristematic tissue at the tips." }
+        ]
+      },
+      {
+        "animation": "A plant diagram builds step by step. Green glowing zones appear at the stem tip and root tip labelled 'Apical meristem: increases length'; then a ring inside the stem labelled 'Lateral meristem (cambium): increases girth'; then zones at the base of leaves and internodes labelled 'Intercalary meristem'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The growth of plants occurs only in certain specific regions, because the dividing tissue, called meristematic tissue, is located only there." },
+          { "speaker": "NEO", "text": "Apical meristem is present at the growing tips of stems and roots. It increases the length of the stem and the root." },
+          { "speaker": "NEO", "text": "Lateral meristem, or cambium, increases the girth of the stem or root. Intercalary meristem is found at the base of the leaves or internodes, on either side of the node." }
+        ]
+      },
+      {
+        "animation": "A zoom into a meristem shows the cells built one by one: small, packed, with 'dense cytoplasm', 'thin cellulose walls', 'prominent nuclei' and 'no vacuoles'. The cells keep splitting, like popcorn popping.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cells of meristematic tissue are very active. They have dense cytoplasm, thin cellulose walls and prominent nuclei." },
+          { "speaker": "ZIPPY", "text": "Do they have vacuoles?" },
+          { "speaker": "NEO", "text": "They lack vacuoles. Vacuoles are full of cell sap and give turgidity and rigidity, which dividing cells don't need." }
+        ]
+      },
+      {
+        "animation": "A cell leaves the meristem, grows larger, and changes shape, labelled 'Differentiation → permanent tissue'. A caption: 'Cells formed by meristems take up a specific role and lose the ability to divide'.",
+        "lines": [
+          { "speaker": "NEO", "text": "New cells produced by meristems are at first like the meristem cells. As they grow and mature, their characteristics slowly change, and they become part of other tissues." },
+          { "speaker": "NEO", "text": "This process of taking up a permanent shape, size and function is called differentiation. The cells form permanent tissue." }
+        ]
+      },
+      {
+        "animation": "A bamboo shoot grows rapidly from the internode regions. A yellow 'EXAM TIP' card: 'Apical → length; lateral → girth; intercalary → base of leaves or internodes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: a favourite question gives you a location and asks for the meristem. Tips mean apical, girth means lateral, and base of leaves or internodes means intercalary." }
+        ]
+      },
+      {
+        "animation": "Recap board with the onion jar icon. Points appear: '1. Meristematic tissue: dividing tissue at specific regions', '2. Apical (length), lateral (girth), intercalary (base of leaves/internodes)', '3. Cells: dense cytoplasm, thin walls, prominent nuclei, no vacuoles'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: meristematic tissue is the dividing tissue found only in certain regions of a plant." },
+          { "speaker": "NEO", "text": "Two: apical meristem increases length, lateral meristem increases girth, and intercalary meristem sits at the base of leaves or internodes." },
+          { "speaker": "NEO", "text": "Three: meristem cells have dense cytoplasm, thin walls and prominent nuclei, and they lack vacuoles." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Tissues",
+    "topic_no": 3,
+    "name": "Simple Permanent Tissue",
+    "scenes": [
+      {
+        "animation": "A kitchen. Zippy bends a spinach stalk, then a lotus stem floats in a water tank, and finally Zippy bites a coconut husk and winces. Three question marks pop above each.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Spinach stalks bend, lotus stems float, and coconut husk nearly broke my teeth. Why so different?" },
+          { "speaker": "NEO", "text": "Different simple permanent tissues. Parenchyma, collenchyma and sclerenchyma." }
+        ]
+      },
+      {
+        "animation": "Parenchyma is drawn step by step: round, thin-walled, loosely arranged living cells with large intercellular spaces. Variants appear: green cells labelled 'Chlorenchyma: chlorophyll, photosynthesis' and a lotus stem cross-section with big air cavities labelled 'Aerenchyma: helps aquatic plants float'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Parenchyma consists of relatively unspecialised cells with thin cell walls. They are living, loosely arranged, with large spaces between cells." },
+          { "speaker": "NEO", "text": "It provides support and often stores food. When it contains chlorophyll, it is chlorenchyma and performs photosynthesis." },
+          { "speaker": "NEO", "text": "In aquatic plants, large air cavities are present in parenchyma to help them float. This type is called aerenchyma." }
+        ]
+      },
+      {
+        "animation": "Collenchyma is drawn: elongated living cells with walls thickened only at the corners, little intercellular space. A leaf stalk and a climbing tendril bend without breaking. Label: 'Collenchyma: flexibility, mechanical support'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Collenchyma allows easy bending in various parts of a plant, like leaf stalks and tendrils, without breaking. It also provides mechanical support." },
+          { "speaker": "NEO", "text": "Its cells are living, elongated and irregularly thickened at the corners, with very little intercellular space. It is found below the epidermis in leaf stalks." }
+        ]
+      },
+      {
+        "animation": "Sclerenchyma is drawn: long, narrow dead cells with very thick walls stained with 'Lignin', leaving almost no space inside. It appears in a coconut husk, around vascular bundles and in the hard seed coat of a nut. Label: 'Sclerenchyma: hard and stiff'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sclerenchyma makes the plant hard and stiff. The husk of a coconut is made of it." },
+          { "speaker": "NEO", "text": "Its cells are dead. They are long and narrow, and their walls are thickened due to lignin, a chemical substance that acts like cement. Often the walls are so thick that there is no internal space." },
+          { "speaker": "NEO", "text": "It is present in stems, around vascular bundles, in the veins of leaves, and in the hard covering of seeds and nuts." }
+        ]
+      },
+      {
+        "animation": "A comparison table builds: 'Parenchyma: living, thin walls, loosely packed', 'Collenchyma: living, thickened at corners, flexible', 'Sclerenchyma: dead, lignin-thickened walls, hard'. A yellow 'EXAM TIP' sticker points at 'dead'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So only sclerenchyma is dead?" },
+          { "speaker": "NEO", "text": "Among these three, yes. Exam tip: the living or dead status and the type of wall thickening are the most asked differences. Draw a table." }
+        ]
+      },
+      {
+        "animation": "Recap board with the three plant parts: spinach stalk, lotus stem, coconut husk. Points appear: '1. Parenchyma: living, thin-walled; stores food; chlorenchyma and aerenchyma', '2. Collenchyma: living, corners thickened, flexibility', '3. Sclerenchyma: dead, lignified walls, hardness'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: parenchyma is living and thin-walled; it stores food, and forms chlorenchyma and aerenchyma." },
+          { "speaker": "NEO", "text": "Two: collenchyma is living, thickened at the corners, and gives flexibility." },
+          { "speaker": "NEO", "text": "Three: sclerenchyma is dead, with lignin-thickened walls, and gives hardness." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Tissues",
+    "topic_no": 4,
+    "name": "Protective Tissues: Epidermis and Cork",
+    "scenes": [
+      {
+        "animation": "A desert scene. A cactus stands in the blazing sun, wearing a shiny waxy coat. Zippy, sweating beside it, fans itself. The cactus looks cool and relaxed.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How does this cactus not dry up in the desert heat?" },
+          { "speaker": "NEO", "text": "Its epidermis has a thick waxy coating. Protective tissues are the plant's armour." }
+        ]
+      },
+      {
+        "animation": "A leaf cross-section is drawn layer by layer. The outermost single layer of cells is highlighted as 'Epidermis', then a thin shiny film on top labelled 'Cutin: waxy, water-resistant'. A desert plant version shows a thicker cuticle.",
+        "lines": [
+          { "speaker": "NEO", "text": "The outermost layer of cells is called the epidermis. It is usually made of a single layer of cells." },
+          { "speaker": "NEO", "text": "In some plants living in very dry habitats, the epidermis may be thicker, since protection against water loss is critical." },
+          { "speaker": "NEO", "text": "Epidermal cells on aerial parts often secrete a waxy, water-resistant layer called cutin. It protects against loss of water, mechanical injury and invasion by parasitic fungi." }
+        ]
+      },
+      {
+        "animation": "A leaf peel under the microscope shows small pores. One pore is drawn step by step: two kidney-shaped 'Guard cells' enclosing an opening labelled 'Stoma'. Arrows show 'CO2 in, O2 out' and 'water vapour out: transpiration'. Then a root with long hair-like extensions labelled 'Root hairs: increase absorption'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Small pores called stomata are present in the epidermis of the leaf. Each stoma is enclosed by two kidney-shaped cells called guard cells." },
+          { "speaker": "NEO", "text": "Stomata are needed for exchanging gases with the atmosphere. Transpiration, the loss of water as water vapour, also takes place through them." },
+          { "speaker": "NEO", "text": "Epidermal cells of roots have long hair-like parts that increase the total absorptive surface area." }
+        ]
+      },
+      {
+        "animation": "An old neem tree trunk. A strip of cells under the bark labelled 'Secondary meristem' forms layers of dead, tightly packed cells; the outer bark is labelled 'Cork'. A zoom shows no intercellular spaces and a label 'Suberin: impervious to gases and water'. A bottle cork pops in as a fun reference.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Does the old neem tree still have a thin epidermis?" },
+          { "speaker": "NEO", "text": "No. As plants grow older, a strip of secondary meristem replaces the epidermis of the stem, forming several layers of thick cork, the bark." },
+          { "speaker": "NEO", "text": "Cork cells are dead and compactly arranged, with no intercellular spaces. Their walls contain a chemical called suberin, which makes them impervious to gases and water." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card: 'Draw stomata: two kidney-shaped guard cells, stoma pore, epidermal cells around'. The labelled diagram draws itself neatly.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: the labelled diagram of stomata with guard cells is frequently asked. Label the guard cells, the stomatal pore and the epidermal cells." }
+        ]
+      },
+      {
+        "animation": "Recap board with the cactus icon. Points appear: '1. Epidermis: outer layer; cutin prevents water loss', '2. Stomata with guard cells: gas exchange and transpiration', '3. Cork: dead, compact cells with suberin'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the epidermis is the protective outer layer, and its waxy cutin prevents water loss." },
+          { "speaker": "NEO", "text": "Two: stomata, enclosed by guard cells, allow gas exchange and transpiration." },
+          { "speaker": "NEO", "text": "Three: in older stems, cork made of dead cells with suberin replaces the epidermis." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Tissues",
+    "topic_no": 5,
+    "name": "Complex Permanent Tissue: Xylem and Phloem",
+    "scenes": [
+      {
+        "animation": "A tall coconut tree. Zippy stands at the bottom holding a water pipe, wondering how to reach the leaves 20 metres up. Inside the trunk, two transparent pipelines light up: blue going up, orange going both ways.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How does water climb all the way to the top of a coconut tree without a pump?" },
+          { "speaker": "NEO", "text": "Through xylem. And food travels through phloem. Together they are complex tissues." }
+        ]
+      },
+      {
+        "animation": "A card: 'Complex tissue: made of more than one type of cell, all working together'. The trunk opens to show a 'Vascular bundle' with xylem and phloem side by side.",
+        "lines": [
+          { "speaker": "NEO", "text": "Simple tissues are made of one type of cell. Complex tissues are made of more than one type of cell, and they all coordinate to perform a common function." },
+          { "speaker": "NEO", "text": "Xylem and phloem are both conducting tissues, and together they make up a vascular bundle." }
+        ]
+      },
+      {
+        "animation": "Xylem builds element by element: 'Tracheids' and 'Vessels' drawn as tubes with thick walls, blue water moving up them; 'Xylem parenchyma' as storage cells beside them; 'Xylem fibres' as long supportive cells. Label: 'Xylem: water and minerals, upward from roots'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Xylem consists of tracheids, vessels, xylem parenchyma and xylem fibres." },
+          { "speaker": "NEO", "text": "Tracheids and vessels have thick walls, and many are dead cells when mature. They are tubular and transport water and minerals vertically." },
+          { "speaker": "NEO", "text": "Xylem parenchyma stores food, and xylem fibres are mainly supportive." }
+        ]
+      },
+      {
+        "animation": "Phloem builds element by element: 'Sieve tubes' drawn as tubes with perforated end walls; 'Companion cells' beside them; 'Phloem parenchyma'; and 'Phloem fibres' shaded grey with a tag 'dead'. Orange food particles move from a leaf to roots and fruits. Label: 'Phloem: food from leaves to other parts'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Phloem is made of four types of elements: sieve tubes, companion cells, phloem fibres and phloem parenchyma." },
+          { "speaker": "NEO", "text": "Sieve tubes are tubular cells with perforated walls. Phloem transports food from the leaves to other parts of the plant." },
+          { "speaker": "ZIPPY", "text": "Are the phloem cells dead, like the xylem vessels?" },
+          { "speaker": "NEO", "text": "Except for phloem fibres, phloem cells are living cells." }
+        ]
+      },
+      {
+        "animation": "A comparison table builds: 'Xylem | Phloem': 'Carries water and minerals | carries food', 'Movement: upward from roots | from leaves to other parts', 'Elements: tracheids, vessels, parenchyma, fibres | sieve tubes, companion cells, parenchyma, fibres', 'Mostly dead conducting cells | mostly living cells (fibres dead)'. A yellow 'EXAM TIP' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: list the four elements of xylem and the four of phloem in order. Remember that phloem fibres are the only dead cells in phloem." }
+        ]
+      },
+      {
+        "animation": "Recap board with the coconut tree icon. Points appear: '1. Complex tissue: more than one type of cell', '2. Xylem: tracheids, vessels, xylem parenchyma, xylem fibres; carries water and minerals', '3. Phloem: sieve tubes, companion cells, phloem fibres, phloem parenchyma; carries food'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: complex tissues have more than one type of cell working together." },
+          { "speaker": "NEO", "text": "Two: xylem is made of tracheids, vessels, xylem parenchyma and xylem fibres, and it carries water and minerals." },
+          { "speaker": "NEO", "text": "Three: phloem is made of sieve tubes, companion cells, phloem fibres and phloem parenchyma, and it carries food." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Tissues",
+    "topic_no": 6,
+    "name": "Epithelial Tissue",
+    "scenes": [
+      {
+        "animation": "Zippy rubs its hand along a rough wall and gets a tiny scrape, then looks at the inside of its cheek in a mirror. Both surfaces glow, labelled 'covering tissue'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My skin scrapes, but it's tough. My cheek lining is soft. Are both the same tissue?" },
+          { "speaker": "NEO", "text": "Both are epithelial tissue, but of different kinds. It's the covering and protective tissue of the body." }
+        ]
+      },
+      {
+        "animation": "A sheet of tightly packed cells is drawn step by step, like tiles on a floor, with almost no gaps. Below it, a thin line labelled 'Basement membrane'. Labels: 'Tightly packed, continuous sheet', 'Little cementing material'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Epithelial tissue covers most organs and cavities in the body. It keeps different body systems separate." },
+          { "speaker": "NEO", "text": "Its cells are tightly packed and form a continuous sheet, with only a small amount of cementing material and almost no intercellular spaces. It is separated from the underlying tissue by a basement membrane." },
+          { "speaker": "NEO", "text": "Epithelium also regulates the exchange of materials between the body and the external environment." }
+        ]
+      },
+      {
+        "animation": "Types build one by one with location icons: 'Simple squamous: extremely thin, flat; lines blood vessels, lung alveoli, mouth, oesophagus'; 'Stratified squamous: many layers; skin'. The skin version stacks cells in layers as Zippy scrapes it again, and only the top layer wears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Squamous epithelium has extremely thin and flat cells. It lines blood vessels, the lung alveoli, the mouth and the oesophagus, where materials pass through a selectively permeable surface." },
+          { "speaker": "NEO", "text": "In the skin, these cells are arranged in many layers to prevent wear and tear. This is stratified squamous epithelium." }
+        ]
+      },
+      {
+        "animation": "More types build: 'Columnar: tall, pillar-like; inner lining of intestine'; 'Ciliated columnar: with cilia; respiratory tract, pushes mucus'; 'Cuboidal: cube-shaped; kidney tubules, ducts of salivary glands'; 'Glandular: folds inward, secretes substances'. Cilia wave like a Mexican wave in a stadium.",
+        "lines": [
+          { "speaker": "NEO", "text": "Columnar epithelium has tall, pillar-like cells. It lines the intestine, where absorption and secretion occur." },
+          { "speaker": "NEO", "text": "In the respiratory tract, columnar cells have hair-like cilia. Their movement pushes the mucus forward to clear it. This is ciliated columnar epithelium." },
+          { "speaker": "ZIPPY", "text": "Like a stadium wave pushing a ball along!" },
+          { "speaker": "NEO", "text": "Nice. Cuboidal epithelium lines kidney tubules and ducts of salivary glands, giving mechanical support. When some epithelium folds inward to form a gland that secretes, it is glandular epithelium." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card with a matching game: 'Skin → stratified squamous', 'Intestine → columnar', 'Respiratory tract → ciliated columnar', 'Kidney tubules → cuboidal', 'Lung alveoli → squamous'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: questions often give a location and ask for the type of epithelium. Learn this match table well." }
+        ]
+      },
+      {
+        "animation": "Recap board with a skin tile icon. Points appear: '1. Epithelium: covering tissue; cells tightly packed; basement membrane', '2. Squamous (thin, flat), stratified in skin', '3. Columnar (intestine), ciliated (respiratory tract), cuboidal (kidney tubules), glandular'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: epithelial tissue covers organs, with tightly packed cells on a basement membrane." },
+          { "speaker": "NEO", "text": "Two: squamous epithelium is thin and flat, and stratified squamous protects the skin." },
+          { "speaker": "NEO", "text": "Three: columnar lines the intestine, ciliated columnar lines the respiratory tract, and cuboidal lines kidney tubules." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Tissues",
+    "topic_no": 7,
+    "name": "Connective Tissue",
+    "scenes": [
+      {
+        "animation": "A cartoon skeleton does a dance at a school function. Its joints glow: bones in white, ligaments as stretchy bands between bones, tendons connecting muscles to bones, and red blood flowing past. Zippy tries to dance along and trips.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What holds this skeleton together while it dances?" },
+          { "speaker": "NEO", "text": "Connective tissues. Blood, bone, ligaments, tendons and more." }
+        ]
+      },
+      {
+        "animation": "A card: 'Connective tissue: cells loosely spaced, embedded in an intercellular matrix'. The matrix changes appearance: jelly-like, fluid, dense and rigid, depending on the tissue.",
+        "lines": [
+          { "speaker": "NEO", "text": "In connective tissue, the cells are loosely spaced and embedded in an intercellular matrix. The matrix may be jelly-like, fluid, dense or rigid." },
+          { "speaker": "NEO", "text": "The nature of the matrix differs according to the function of the tissue." }
+        ]
+      },
+      {
+        "animation": "Blood is drawn step by step: yellow fluid 'Plasma' with 'proteins, salts, hormones', then floating 'RBCs', 'WBCs' and 'Platelets'. Arrows show it carrying gases and digested food. Then bone is drawn: cells embedded in a hard 'matrix of calcium and phosphorus compounds'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Blood has a fluid matrix called plasma, in which red blood cells, white blood cells and platelets are suspended. Plasma contains proteins, salts and hormones." },
+          { "speaker": "NEO", "text": "Blood flows and transports gases, digested food, hormones and waste materials." },
+          { "speaker": "NEO", "text": "Bone is a strong and non-flexible tissue that forms the framework of the body. Its cells are embedded in a hard matrix of calcium and phosphorus compounds." }
+        ]
+      },
+      {
+        "animation": "A knee joint is drawn: 'Ligament: bone to bone, very elastic, considerable strength'; 'Tendon: muscle to bone, great strength, limited flexibility'; smooth 'Cartilage' at the bone ends. Small icons of the nose, ear, trachea and larynx glow for cartilage.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two bones are connected by a ligament. It is very elastic and has considerable strength." },
+          { "speaker": "NEO", "text": "Tendons connect muscles to bones. They are fibrous tissue with great strength but limited flexibility." },
+          { "speaker": "NEO", "text": "Cartilage has widely spaced cells in a solid matrix of proteins and sugars. It smoothens bone surfaces at joints, and is present in the nose, ear, trachea and larynx." },
+          { "speaker": "ZIPPY", "text": "So I can fold my ear because of cartilage!" }
+        ]
+      },
+      {
+        "animation": "Areolar tissue appears as a loose web between skin and muscle, around blood vessels and nerves. Adipose tissue appears as cells filled with yellow fat globules below the skin, with a thermometer showing 'insulator'. A yellow 'EXAM TIP' sticker: 'Ligament = bone to bone; tendon = muscle to bone'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Areolar tissue is found between the skin and muscles, around blood vessels and nerves, and in the bone marrow. It fills space inside organs, supports internal organs and helps in the repair of tissues." },
+          { "speaker": "NEO", "text": "Adipose tissue stores fat below the skin and between internal organs. It also acts as an insulator." },
+          { "speaker": "NEO", "text": "Exam tip: ligament joins bone to bone, and tendon joins muscle to bone. Don't swap them." }
+        ]
+      },
+      {
+        "animation": "Recap board with the dancing skeleton. Points appear: '1. Connective tissue: loose cells in a matrix', '2. Blood (fluid matrix), bone (hard matrix), cartilage', '3. Ligament bone–bone; tendon muscle–bone; areolar and adipose fill and store'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: connective tissue has loosely spaced cells in a matrix." },
+          { "speaker": "NEO", "text": "Two: blood has a fluid matrix, bone a hard matrix, and cartilage a solid but smoother matrix." },
+          { "speaker": "NEO", "text": "Three: ligaments join bones, tendons join muscles to bones, and areolar and adipose tissues fill spaces and store fat." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Tissues",
+    "topic_no": 8,
+    "name": "Muscular and Nervous Tissue",
+    "scenes": [
+      {
+        "animation": "A school sports day. Zippy's hand touches a hot rod on the track and jerks back instantly. The scene freezes: a lightning bolt message races along a nerve to the brain and back to an arm muscle that contracts.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Ouch! My hand moved before I even decided to move it!" },
+          { "speaker": "NEO", "text": "Your nervous tissue sent a message, and your muscular tissue obeyed. Let's meet both." }
+        ]
+      },
+      {
+        "animation": "A card: 'Muscular tissue: elongated cells called muscle fibres; contractile proteins'. Skeletal muscle is drawn step by step: long, cylindrical, unbranched, multinucleate cells with light and dark bands. Labels: 'Striated / voluntary / skeletal muscle; attached to bones'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Muscular tissue consists of elongated cells called muscle fibres. They contain special contractile proteins that contract and relax to cause movement." },
+          { "speaker": "NEO", "text": "Muscles we can move by conscious will are voluntary muscles. They are mostly attached to bones, so they are also called skeletal muscles." },
+          { "speaker": "NEO", "text": "Under a microscope they show alternate light and dark bands, or striations, so they are striated muscles. Their cells are long, cylindrical, unbranched and multinucleate." }
+        ]
+      },
+      {
+        "animation": "Smooth muscle is drawn: spindle-shaped, uninucleate cells without bands; location icons for 'alimentary canal', 'iris of the eye', 'ureters', 'bronchi of lungs'. Then cardiac muscle: cylindrical, branched, uninucleate cells in a beating heart. Labels: 'Smooth / involuntary / unstriated' and 'Cardiac: rhythmic contraction throughout life'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Movement of food in the alimentary canal, or contraction of blood vessels, is involuntary. It is done by smooth, or unstriated, muscles. They are spindle-shaped and uninucleate, and are found in the iris of the eye, ureters and bronchi of the lungs." },
+          { "speaker": "NEO", "text": "Heart muscles show rhythmic contraction and relaxation throughout life. These cardiac muscle cells are cylindrical, branched and uninucleate." }
+        ]
+      },
+      {
+        "animation": "A neuron is drawn step by step: a 'Cell body' with a 'Nucleus' and 'Cytoplasm', many short branched 'Dendrites', one long 'Axon' ending in 'Nerve endings'. A spark travels along it. A caption: 'A single nerve cell can be up to a metre long'. Many axons bundle together into a 'Nerve'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Nervous tissue makes up the brain, spinal cord and nerves. Its cells, called neurons, are highly specialised for being stimulated and then transmitting the stimulus very rapidly." },
+          { "speaker": "NEO", "text": "A neuron has a cell body with a nucleus and cytoplasm. Long, thin hair-like parts arise from it: usually one long part called the axon, and many short, branched parts called dendrites." },
+          { "speaker": "ZIPPY", "text": "How long can one neuron be?" },
+          { "speaker": "NEO", "text": "Up to a metre! Many nerve fibres bound together by connective tissue make up a nerve." }
+        ]
+      },
+      {
+        "animation": "A table builds: 'Striated | Smooth | Cardiac': 'Shape: long, cylindrical, unbranched | spindle | cylindrical, branched', 'Nuclei: many | one | one', 'Control: voluntary | involuntary | involuntary'. A yellow 'EXAM TIP' sticker points to the neuron diagram: 'Label cell body, nucleus, dendrites, axon, nerve ending'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: the three muscle types table and the labelled neuron diagram are both frequent questions. Label the cell body, nucleus, dendrites, axon and nerve ending." }
+        ]
+      },
+      {
+        "animation": "Recap board with a lightning bolt icon. Points appear: '1. Striated: voluntary, multinucleate, attached to bones', '2. Smooth: involuntary, spindle-shaped; cardiac: branched, rhythmic', '3. Neuron: cell body, dendrites, axon; nerves carry messages'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: striated muscles are voluntary, multinucleate and attached to bones." },
+          { "speaker": "NEO", "text": "Two: smooth muscles are involuntary and spindle-shaped, while cardiac muscles are branched and contract rhythmically for life." },
+          { "speaker": "NEO", "text": "Three: a neuron has a cell body, dendrites and an axon, and nerves carry messages rapidly." },
+          { "speaker": "ZIPPY", "text": "Next time, I'll let my neurons warn me before I touch the hot rod." }
+        ]
+      }
+    ]
+  }
+]

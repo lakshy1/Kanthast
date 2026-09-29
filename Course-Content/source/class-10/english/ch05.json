@@ -1,0 +1,501 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "Footprints Without Feet",
+    "topic_no": 1,
+    "name": "A Triumph of Surgery",
+    "scenes": [
+      {
+        "animation": "A plush drawing room. A tiny Pekinese, Tricki Woo, lies on a velvet cushion like a stuffed sausage, surrounded by cream cakes and chocolate boxes. Zippy tries to lift him and sags under the weight.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is this a dog or a sofa cushion with ears?" },
+          { "speaker": "NEO", "text": "That is Tricki Woo, and his owner is loving him to death. Meet the vet who saves him." }
+        ]
+      },
+      {
+        "animation": "Mrs Pumphrey, an elderly wealthy lady, spoons malt and cod-liver oil into Tricki's mouth, then slips him Horlicks and a cake. Close-up of Tricki: bloodshot eyes, tongue lolling. Vet James Herriot frowns from the doorway.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mrs Pumphrey is rich and devoted, but she overfeeds Tricki with cream cakes, chocolates, malt and cod-liver oil." },
+          { "speaker": "NEO", "text": "Tricki grows so fat that he is listless, his eyes are bloodshot and his tongue lolls out." },
+          { "speaker": "HERRIOT", "text": "Madam, he needs less food and more exercise." }
+        ]
+      },
+      {
+        "animation": "Herriot wraps Tricki in a blanket and carries him to his car while Mrs Pumphrey weeps and servants load cushions, toys and bowls. The car speeds to a sign reading 'Surgery'.",
+        "lines": [
+          { "speaker": "NEO", "text": "She cannot say no to Tricki, so he gets worse. Herriot finally takes him to his own surgery, the vet's hospital, for about two weeks." },
+          { "speaker": "ZIPPY", "text": "So they cut him open?" },
+          { "speaker": "NEO", "text": "No operation at all! For two days he gets no food, only water. Then he runs and plays with the other dogs and fights for his share at mealtimes." }
+        ]
+      },
+      {
+        "animation": "Crates of fresh eggs and bottles of wine and brandy arrive at the surgery labelled 'For Tricki's strength'. Herriot and his colleagues raise glasses at dinner; Tricki races about with a pack of dogs, getting slimmer with every lap.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mrs Pumphrey keeps sending eggs, wine and brandy to build up Tricki's strength. The vets enjoy them instead." },
+          { "speaker": "NEO", "text": "When she comes to collect him, a lean, lively Tricki leaps into her arms. With tears in her eyes, she calls it a triumph of surgery." }
+        ]
+      },
+      {
+        "animation": "An exam slip: 'Q. Do you think Mrs Pumphrey was right to call it a triumph of surgery?' Neo ticks points: no surgery was done, diet and exercise cured him, her pampering caused the illness. Side cards: 'Mrs Pumphrey: loving but foolish' and 'Herriot: sensible, humorous, caring'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely board question: why is the title ironic?" },
+          { "speaker": "NEO", "text": "Answer approach: no surgery was performed. Tricki was cured by a simple diet and exercise, and his illness came from his owner's foolish pampering." },
+          { "speaker": "NEO", "text": "Board tip: for character sketches, call Mrs Pumphrey affectionate but unwise, and Herriot practical, kind and gently humorous." }
+        ]
+      },
+      {
+        "animation": "Recap board with a paw-print icon: '1. Overfeeding makes Tricki ill', '2. Herriot's cure: no food, then exercise', '3. Irony: \"triumph of surgery\" with no surgery'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: too much love and food make Tricki ill." },
+          { "speaker": "NEO", "text": "Two: Herriot cures him with a strict diet and play with other dogs." },
+          { "speaker": "NEO", "text": "Three: the title is ironic, because no surgery happened. The message: pets, and children, need sensible love, not pampering." },
+          { "speaker": "ZIPPY", "text": "I am hiding my samosas from my mom right now." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Footprints Without Feet",
+    "topic_no": 2,
+    "name": "The Thief's Story",
+    "scenes": [
+      {
+        "animation": "Night, a small room. A teenage boy tiptoes towards a sleeping man, hand reaching under a mattress. A spotlight snaps on and a caption reads 'Thief. Age 15. Very experienced.' Zippy gasps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A fifteen-year-old professional thief? Is this a crime thriller?" },
+          { "speaker": "NEO", "text": "It is Ruskin Bond, so it is really a story about trust. Watch who wins in the end." }
+        ]
+      },
+      {
+        "animation": "A wrestling match crowd. The boy, calling himself Hari Singh, flatters a relaxed young man, Anil. Scene switches to Anil's room: Hari burns a meal and the stray dog refuses it; Anil laughs and holds up a slate with letters.",
+        "lines": [
+          { "speaker": "NEO", "text": "The narrator, calling himself Hari Singh, picks Anil as his next target. Anil, a writer, lets him work as his cook." },
+          { "speaker": "NEO", "text": "Anil cannot pay him, but he feeds him and teaches him to write his name and add numbers." },
+          { "speaker": "HARI", "text": "Anil was the easiest man to rob, because he trusted everyone." }
+        ]
+      },
+      {
+        "animation": "Anil tucks a bundle of notes under his mattress. Late at night Hari slips it out and runs to a railway platform; the train pulls out as he stands frozen. Rain pours; he sits in the maidan clutching the wet notes.",
+        "lines": [
+          { "speaker": "NEO", "text": "One night Anil comes home with a bundle of notes from a book he sold, and puts it under his mattress." },
+          { "speaker": "NEO", "text": "Hari steals it and runs to catch the train to Lucknow, but somehow he cannot get on." },
+          { "speaker": "NEO", "text": "Sitting in the rain, he realises that stealing the money would cost him his chance to become an educated man." }
+        ]
+      },
+      {
+        "animation": "Dawn. Hari slides the damp notes back under the mattress. Later Anil hands him a fifty-rupee note; a water drop falls from it. Hari's eyes widen; a thought bubble reads 'He knows.'",
+        "lines": [
+          { "speaker": "NEO", "text": "He returns and puts the money back. In the morning Anil gives him a fifty-rupee note, promising regular pay." },
+          { "speaker": "NEO", "text": "The note is still wet from the rain. Anil knows, yet says nothing, and simply offers to teach him to write whole sentences." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why did Hari Singh return the money?' Three points slide in: conscience, value of education, Anil's trust. Side cards: 'Hari: clever, but with a conscience' and 'Anil: kind, trusting, forgiving'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely board question: why does Hari return the money, and what does Anil's silence show?" },
+          { "speaker": "NEO", "text": "Answer approach: his conscience wakes up, he values the education Anil offers, and he cannot betray Anil's trust. Anil's silence shows kindness and forgiveness." },
+          { "speaker": "NEO", "text": "Board tip: quote the idea that education and trust changed him, not punishment." }
+        ]
+      },
+      {
+        "animation": "Recap board with a pencil icon: '1. A young thief works for trusting Anil', '2. Steals the money, then returns it', '3. Trust and education reform him'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a young thief becomes cook to the trusting writer Anil." },
+          { "speaker": "NEO", "text": "Two: he steals Anil's money but returns it the same night." },
+          { "speaker": "NEO", "text": "Three: kindness and the hope of education reform him." },
+          { "speaker": "ZIPPY", "text": "Moral: a wet fifty-rupee note can teach more than a lecture." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Footprints Without Feet",
+    "topic_no": 3,
+    "name": "The Midnight Visitor",
+    "scenes": [
+      {
+        "animation": "A dim hotel corridor in France. A stout, puffing man, Ausable, waddles along with a thin young writer, Fowler, who looks bored. A poster of a movie spy with a trench coat fades out behind them.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "He is a secret agent? He looks like he runs a sweet shop." },
+          { "speaker": "NEO", "text": "Fowler thought the same. Ausable is fat and plain, but his brain is his real weapon." }
+        ]
+      },
+      {
+        "animation": "Ausable switches on the light. Inside the room a man named Max stands holding a small pistol. A paper labelled 'Report: new missiles' glows on the table.",
+        "lines": [
+          { "speaker": "NEO", "text": "Fowler has come hoping for mystery and pistols. He gets it: a rival agent, Max, is waiting in the room with a gun." },
+          { "speaker": "MAX", "text": "I have come for that report about the new missiles." },
+          { "speaker": "NEO", "text": "Ausable stays calm and sits down as if nothing is wrong." }
+        ]
+      },
+      {
+        "animation": "Ausable grumbles about 'that balcony'; a dotted imaginary balcony appears outside the window with a question mark. Then a loud knock shakes the door; Max's eyes dart to the window.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ausable complains about a balcony under the window, saying this is the second time someone used it to get in." },
+          { "speaker": "NEO", "text": "Then there is a knock. Ausable says it must be the police, whom he had asked to check on him." },
+          { "speaker": "ZIPPY", "text": "Uh oh. Max is heading for the window!" }
+        ]
+      },
+      {
+        "animation": "Max swings over the window sill and drops; the imaginary balcony vanishes and a yell echoes. The door opens: a waiter with a tray of drinks. Fowler's jaw drops; Ausable smiles.",
+        "lines": [
+          { "speaker": "NEO", "text": "Max hides on the balcony, but there is no balcony. He falls with a scream." },
+          { "speaker": "NEO", "text": "At the door is only a waiter with the drinks Ausable had ordered. The balcony and the police were both made up." }
+        ]
+      },
+      {
+        "animation": "Exam card: 'Q. How did Ausable get rid of Max?' Neo builds a flowchart: invented balcony, story about the police, Max escapes through window, falls. Side cards: 'Ausable: calm, quick-witted' and 'Max: armed but gullible'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely board question: how did Ausable outwit Max?" },
+          { "speaker": "NEO", "text": "Answer approach: explain the invented balcony, then the knock he passed off as the police, and how panic drove Max out of the window." },
+          { "speaker": "NEO", "text": "Board tip: name his qualities, presence of mind and imagination, and link them to the message that brains beat force." }
+        ]
+      },
+      {
+        "animation": "Recap board with a keyhole icon: '1. Max waits with a pistol', '2. Ausable invents a balcony and police', '3. Presence of mind beats a gun'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Max waits in Ausable's room with a pistol, after the report." },
+          { "speaker": "NEO", "text": "Two: Ausable invents a balcony and a police visit." },
+          { "speaker": "NEO", "text": "Three: presence of mind beats a gun, and looks can deceive." },
+          { "speaker": "ZIPPY", "text": "Always check the balcony is real before you jump on it." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Footprints Without Feet",
+    "topic_no": 4,
+    "name": "A Question of Trust",
+    "scenes": [
+      {
+        "animation": "A neat, middle-aged man, Horace Danby, sits in a library surrounded by rare books, polishing his spectacles. A calendar flips: one page reads 'Rob one safe'. Zippy does a double take.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "He looks like a librarian. Why does his calendar say rob a safe?" },
+          { "speaker": "NEO", "text": "Horace Danby is a respectable locksmith with a secret. Once a year he robs a safe to buy rare books." }
+        ]
+      },
+      {
+        "animation": "Horace, gloved, slips into the grand house Shotover Grange while the family is away. He sneezes at a vase of flowers. A young woman in red appears at the door, smiling.",
+        "lines": [
+          { "speaker": "NEO", "text": "He plans his robbery at Shotover Grange for weeks, knowing the family is away in London." },
+          { "speaker": "NEO", "text": "He has hay fever, and the flowers make him sneeze. Then a charming young woman walks in." },
+          { "speaker": "LADY", "text": "Please open the safe for me. I have forgotten the combination." }
+        ]
+      },
+      {
+        "animation": "Horace, sweating, takes off his gloves and works at the safe with his tools while the lady watches. The door swings open; she scoops the jewels into her hands, thanks him sweetly and leaves.",
+        "lines": [
+          { "speaker": "NEO", "text": "She behaves like the lady of the house, and Horace, afraid of being handed to the police, obeys." },
+          { "speaker": "NEO", "text": "He opens the safe without his gloves. She takes the jewels and walks away." }
+        ]
+      },
+      {
+        "animation": "Police arrive at Horace's door holding a card of fingerprints. Horace behind bars, shaking his head, while a thought bubble shows the woman in red laughing. A big 'IRONY' stamp thumps down.",
+        "lines": [
+          { "speaker": "NEO", "text": "Days later, the police arrest Horace because his fingerprints are on the safe. The woman was a thief too, and she had tricked him." },
+          { "speaker": "ZIPPY", "text": "So the thief got robbed by a better thief!" },
+          { "speaker": "NEO", "text": "Exactly. And Horace is bitter that someone who seemed so nice could not be trusted." }
+        ]
+      },
+      {
+        "animation": "Exam card: 'Q. What is ironic about Horace's complaint?' Neo ticks: he himself was a thief, he trusted a stranger, he was punished for what she stole. Side card: 'Horace: clever, careful, but gullible'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely board question: explain the irony in the title, a question of trust." },
+          { "speaker": "NEO", "text": "Answer approach: a thief expects honesty from another thief. His trust is betrayed, and he is jailed for a theft someone else completed." },
+          { "speaker": "NEO", "text": "Board tip: end with the message that crime does not pay, however carefully it is planned." }
+        ]
+      },
+      {
+        "animation": "Recap board with a safe icon: '1. Respectable Horace robs one safe a year', '2. Woman in red tricks him into opening it', '3. Crime does not pay'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Horace robs one safe a year to buy rare books." },
+          { "speaker": "NEO", "text": "Two: a woman in red tricks him into opening the safe and takes the jewels." },
+          { "speaker": "NEO", "text": "Three: he is caught by his fingerprints. Crime does not pay." },
+          { "speaker": "ZIPPY", "text": "Lesson learned: keep your gloves on, and your nose away from flowers." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Footprints Without Feet",
+    "topic_no": 5,
+    "name": "Footprints Without Feet",
+    "scenes": [
+      {
+        "animation": "A London street in winter. Two boys stare at fresh muddy footprints appearing one by one on the pavement, with nobody making them. Zippy follows the prints, bumps into thin air and bounces back.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Footprints, but no feet! Is this a ghost?" },
+          { "speaker": "NEO", "text": "No ghost. It is Griffin, a brilliant scientist who has made himself invisible." }
+        ]
+      },
+      {
+        "animation": "A lab flashback: Griffin swallows rare drugs and fades out from the feet up. Then he shivers, invisible, on a cold street; a house behind him bursts into flames.",
+        "lines": [
+          { "speaker": "NEO", "text": "Griffin discovered that certain rare drugs could make the human body transparent. He swallowed them and became invisible." },
+          { "speaker": "NEO", "text": "But he is also lawless. He set fire to his landlord's house in revenge and walked away unseen, without clothes, in the bitter cold." }
+        ]
+      },
+      {
+        "animation": "Inside a large London store after closing, a floating blanket snuggles on a bed. Next, a theatre costume shop: floating bandages, dark glasses, a false nose, whiskers and a large hat come together into a strange figure who knocks the shopkeeper down and empties the till.",
+        "lines": [
+          { "speaker": "NEO", "text": "He hides in a big store for warmth and food, but has to flee when staff arrive in the morning." },
+          { "speaker": "NEO", "text": "At a theatrical costume shop he takes bandages, dark glasses, a false nose and a hat, attacks the shopkeeper and steals his money." }
+        ]
+      },
+      {
+        "animation": "A snowy village inn at Iping. The bandaged stranger snaps at Mrs Hall. Later she finds his room empty; a hat leaps at her face and a chair pushes her out of the door.",
+        "lines": [
+          { "speaker": "NEO", "text": "Dressed like this, he takes a room at the inn in Iping village. He is rude to Mrs Hall, the landlord's wife." },
+          { "speaker": "NEO", "text": "When the vicar's money is stolen, the Halls find the stranger's room empty. Then the furniture seems to attack Mrs Hall." }
+        ]
+      },
+      {
+        "animation": "The stranger pulls off his bandages and nose in the crowded inn: there is no head. Villagers scream. A constable grabs at a headless shirt, which is pulled off, and the constable topples to the floor.",
+        "lines": [
+          { "speaker": "NEO", "text": "Confronted, Griffin unwraps his bandages. The villagers see a man with no head." },
+          { "speaker": "NEO", "text": "The constable tries to arrest him, but Griffin throws off his clothes, knocks the constable unconscious and escapes." }
+        ]
+      },
+      {
+        "animation": "Exam card: 'Q. Griffin was a brilliant scientist but a lawless person. Justify.' Neo lists: arson, robbery, violence. Side card: 'Science without ethics = danger'. Board Tip sticker glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely board question: justify that Griffin was a brilliant scientist but a lawless person." },
+          { "speaker": "NEO", "text": "Answer approach: praise his discovery, then give his crimes, the fire, the thefts and the attacks." },
+          { "speaker": "NEO", "text": "Board tip: conclude that science without ethics becomes a danger to society." }
+        ]
+      },
+      {
+        "animation": "Recap board with a footprint icon: '1. Griffin becomes invisible with rare drugs', '2. Arson, theft and attacks in London and Iping', '3. Genius needs a conscience'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Griffin makes himself invisible with rare drugs." },
+          { "speaker": "NEO", "text": "Two: he uses his power for arson, theft and violence." },
+          { "speaker": "NEO", "text": "Three: brilliance without a conscience is dangerous." },
+          { "speaker": "ZIPPY", "text": "If I were invisible, I would just skip the dentist." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Footprints Without Feet",
+    "topic_no": 6,
+    "name": "The Making of a Scientist",
+    "scenes": [
+      {
+        "animation": "A little boy runs through a meadow with a butterfly net; hundreds of butterfly jars fill the shelves of his room. A caption: 'Future scientist, age 6'. Zippy peeks into a jar.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This kid has more butterflies than friends!" },
+          { "speaker": "NEO", "text": "That kid is Richard Ebright. Those butterflies started him on the road to becoming a scientist." }
+        ]
+      },
+      {
+        "animation": "Ebright's mother hands him a book titled 'The Travels of Monarch X'. A map shows a monarch butterfly with a tiny tag flying from North America to Central America; the tag data flies to a scientist's desk.",
+        "lines": [
+          { "speaker": "NEO", "text": "Richard grew up in Reading, Pennsylvania, and his mother encouraged every interest, buying him books and microscopes." },
+          { "speaker": "NEO", "text": "A book she gave him, The Travels of Monarch X, showed how monarch butterflies migrate. Soon he was tagging butterflies for a scientist, Dr Urquhart." }
+        ]
+      },
+      {
+        "animation": "A science fair hall: a display on frog tissues gets no ribbon. Next frame: Ebright, older, studies a monarch and a look-alike viceroy, then a monarch pupa with tiny gold spots glowing, and a trophy appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "In seventh grade he lost a science fair. He learned that winners do real experiments, not just neat displays." },
+          { "speaker": "NEO", "text": "So he tested why viceroy butterflies copy monarchs, and later found that gold spots on the monarch pupa produce a hormone needed for its full development." },
+          { "speaker": "NEO", "text": "That project won prizes and took him to the International Science Fair." }
+        ]
+      },
+      {
+        "animation": "A college lab: Ebright and a roommate sketch a DNA double helix on a board, with an arrow labelled 'How does a cell read its blueprint?'. Around him float icons of a debating podium, a canoe and a camera.",
+        "lines": [
+          { "speaker": "NEO", "text": "Later, with his college roommate, he proposed a new theory about how a cell reads the blueprint of its DNA." },
+          { "speaker": "NEO", "text": "He was also a debater, public speaker, canoeist and photographer. A scientist does not have to be a bookworm." }
+        ]
+      },
+      {
+        "animation": "Exam card: 'Q. What qualities make a scientist, according to the lesson?' Three tiles light up: 'First-rate mind', 'Curiosity', 'Will to win for the right reasons'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely board question: what qualities helped Ebright become a scientist?" },
+          { "speaker": "NEO", "text": "Answer approach: a first-rate mind, curiosity, and the will to win for the right reasons, plus his mother's and teachers' support." },
+          { "speaker": "NEO", "text": "Board tip: these three qualities are named in the lesson, so use them exactly." }
+        ]
+      },
+      {
+        "animation": "Recap board with a butterfly icon: '1. Curiosity began with butterflies', '2. Real experiments won science fairs', '3. Mind, curiosity, will to win'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Ebright's curiosity began with butterflies and his mother's support." },
+          { "speaker": "NEO", "text": "Two: a lost science fair taught him to do real experiments." },
+          { "speaker": "NEO", "text": "Three: a scientist needs a first-rate mind, curiosity and the will to win for the right reasons." },
+          { "speaker": "ZIPPY", "text": "Losing a science fair is just step one. Noted!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Footprints Without Feet",
+    "topic_no": 7,
+    "name": "The Necklace",
+    "scenes": [
+      {
+        "animation": "A sparkling diamond necklace spins under a spotlight. A price tag flips from '36,000 francs' to '500 francs'. Zippy's eyes spin in circles.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, is it worth thirty-six thousand or five hundred?" },
+          { "speaker": "NEO", "text": "That question ruined ten years of Matilda Loisel's life. Let's see how." }
+        ]
+      },
+      {
+        "animation": "A modest Paris flat. Matilda, pretty but unhappy, stares at worn walls and dreams of grand halls. Her husband, a clerk, proudly waves an invitation to a ball; she bursts into tears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Matilda is married to a humble clerk, Monsieur Loisel, but she dreams of luxury." },
+          { "speaker": "NEO", "text": "When they are invited to a grand ball, she cries because she has no fine dress. Her husband gives her four hundred francs he had saved for a gun." },
+          { "speaker": "MATILDA", "text": "And I have no jewels. I will look poor among the rich women." }
+        ]
+      },
+      {
+        "animation": "Matilda chooses a diamond necklace from her friend Madame Forestier's jewel box. At the ball she dances, admired by all. At home, she touches her neck: the necklace is gone. Frantic search montage.",
+        "lines": [
+          { "speaker": "NEO", "text": "She borrows a diamond necklace from her rich friend, Madame Forestier, and is the star of the ball." },
+          { "speaker": "NEO", "text": "Back home, she finds the necklace is gone. They search everywhere, but cannot find it." }
+        ]
+      },
+      {
+        "animation": "A jeweller's shop: Loisel signs loan papers. Then a ten-year time-lapse: Matilda scrubs floors and haggles at the market, her hands rough and hair untidy; a calendar races past ten years.",
+        "lines": [
+          { "speaker": "NEO", "text": "They buy a similar necklace for thirty-six thousand francs, borrowing much of the money, and return it without a word." },
+          { "speaker": "NEO", "text": "For ten years they live in poverty to repay the debt. Matilda does the hard housework herself and grows old and coarse." }
+        ]
+      },
+      {
+        "animation": "The Champs-Elysees. A worn Matilda meets an elegant Madame Forestier, who gasps and says the original was paste. A giant 'IRONY' stamp lands; the necklace cracks like glass.",
+        "lines": [
+          { "speaker": "NEO", "text": "Years later she meets Madame Forestier and finally tells her the truth." },
+          { "speaker": "FORESTIER", "text": "Oh, my poor Matilda! Mine was false. It was worth at most five hundred francs." },
+          { "speaker": "NEO", "text": "Board question: what led to Matilda's ruin? Answer approach: her vanity and discontent, and not telling her friend the truth. Mention the ironic ending." }
+        ]
+      },
+      {
+        "animation": "Recap board with a necklace icon: '1. Vain Matilda borrows a necklace', '2. Loses it; ten years of debt', '3. Irony: it was fake; honesty and contentment matter'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: discontented Matilda borrows a diamond necklace for a ball." },
+          { "speaker": "NEO", "text": "Two: she loses it, replaces it, and spends ten years repaying the debt." },
+          { "speaker": "NEO", "text": "Three: the original was fake. Vanity and hiding the truth cost her everything." },
+          { "speaker": "ZIPPY", "text": "One honest sentence would have saved ten years. Wow." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Footprints Without Feet",
+    "topic_no": 8,
+    "name": "Bholi",
+    "scenes": [
+      {
+        "animation": "A village wedding pandal lit with lamps. The bride suddenly throws off her garland; the crowd freezes, the band stops mid-note. Zippy's jaw drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The bride just threw away the garland! In front of everyone!" },
+          { "speaker": "NEO", "text": "That bride is Bholi, a girl the whole village thought was too simple to speak. Let's see how she found her voice." }
+        ]
+      },
+      {
+        "animation": "Flashback: a baby falls from a cot; a little girl with a pockmarked face hides behind a wall as other children laugh. She stammers; speech bubbles break into pieces.",
+        "lines": [
+          { "speaker": "NEO", "text": "Her real name is Sulekha, daughter of Ramlal, the village numberdar. Everyone calls her Bholi, the simpleton." },
+          { "speaker": "NEO", "text": "As a baby she fell off a cot, and smallpox left her face pockmarked. She stammers, so she hardly speaks." }
+        ]
+      },
+      {
+        "animation": "A new girls' school opens. Bholi, scared, enters a bright classroom. A kind teacher smiles and places a picture book in her hands; Bholi slowly says 'My name is Bholi.'",
+        "lines": [
+          { "speaker": "NEO", "text": "When a girls' school opens, Ramlal sends Bholi, thinking no one will marry her anyway." },
+          { "speaker": "NEO", "text": "Her teacher is gentle. She encourages Bholi to speak without fear and promises that learning will earn her respect." },
+          { "speaker": "BHOLI", "text": "My name is Bholi." }
+        ]
+      },
+      {
+        "animation": "Years later: the groom, Bishamber Nath, an elderly lame grocer, lifts Bholi's veil, sees the marks and holds up five fingers: 'Rs 5000'. Ramlal places his turban at his feet, then counts out the money.",
+        "lines": [
+          { "speaker": "NEO", "text": "Her marriage is fixed with Bishamber, an elderly lame grocer with children from his first wife." },
+          { "speaker": "NEO", "text": "At the wedding he sees her pockmarks and demands five thousand rupees as dowry. Ramlal pleads, then pays." },
+          { "speaker": "BHOLI", "text": "I will not marry this mean, greedy and contemptible coward." }
+        ]
+      },
+      {
+        "animation": "Bholi, garland on the ground, stands tall beside her father. The groom leaves in shame. The school building glows behind her with a sign 'Teacher: Sulekha'.",
+        "lines": [
+          { "speaker": "NEO", "text": "She tells her father she will look after him and her mother in their old age, and teach in the same school." },
+          { "speaker": "NEO", "text": "Board question: how did education change Bholi? Answer approach: from a frightened, stammering girl to a confident woman who rejects dowry. Credit the teacher." },
+          { "speaker": "NEO", "text": "Board tip: include the social message on dowry and girls' education." }
+        ]
+      },
+      {
+        "animation": "Recap board with a book icon: '1. Neglected, stammering Bholi', '2. A kind teacher gives her confidence', '3. She rejects a greedy groom'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Bholi is neglected because of her looks and stammer." },
+          { "speaker": "NEO", "text": "Two: school and a kind teacher give her confidence." },
+          { "speaker": "NEO", "text": "Three: she refuses a greedy groom and chooses dignity." },
+          { "speaker": "ZIPPY", "text": "From Bholi to boss. Education level: maximum." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Footprints Without Feet",
+    "topic_no": 9,
+    "name": "The Book That Saved the Earth",
+    "scenes": [
+      {
+        "animation": "A futuristic museum. A Historian stands beside a glass case holding a small, battered book of nursery rhymes. A label reads 'This book saved the Earth'. Zippy squints at it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A nursery rhyme book saved the planet? Did it throw itself at the aliens?" },
+          { "speaker": "NEO", "text": "Almost. This play shows how Mother Goose stopped a Martian invasion." }
+        ]
+      },
+      {
+        "animation": "Mars headquarters. Think-Tank, with an enormous, egg-shaped head, sits on a throne, bossing his timid assistant Noodle. A screen shows a Martian space probe landing at a public library in a small town.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Historian takes us back to the twenty-first century. Think-Tank, the proud ruler of Mars, plans to invade Earth." },
+          { "speaker": "NEO", "text": "His space crew, Captain Omega, Lieutenant Iota and Sergeant Oop, land in an Earth library." },
+          { "speaker": "THINK-TANK", "text": "Call me Great and Mighty Think-Tank!" }
+        ]
+      },
+      {
+        "animation": "The Martians sniff and nibble books. Oop holds a book to his ear. Then they read aloud from Mother Goose: an egg on a wall, a cow jumping over the moon. Think-Tank's head sweats on the screen.",
+        "lines": [
+          { "speaker": "NEO", "text": "The crew have never seen books. Think-Tank decides they are sandwiches, and later a communication device." },
+          { "speaker": "NEO", "text": "They read nursery rhymes, and Think-Tank takes them literally. A cow jumping over the moon means Earthlings are far more advanced." }
+        ]
+      },
+      {
+        "animation": "Noodle timidly points out Humpty Dumpty looks like Think-Tank. Think-Tank shrieks, imagining himself falling off a wall, and orders everyone to flee. Rockets zoom away from Mars.",
+        "lines": [
+          { "speaker": "NEO", "text": "Then Humpty Dumpty. Noodle points out that the egg in the picture looks just like Think-Tank's head." },
+          { "speaker": "NEO", "text": "Think-Tank panics, believing Earth is planning to capture him, and orders the Martians to evacuate. The invasion is cancelled." },
+          { "speaker": "ZIPPY", "text": "So the mighty ruler of Mars was beaten by a rhyme that every toddler on Earth knows by heart?" },
+          { "speaker": "NEO", "text": "Exactly. His vanity and his refusal to listen to Noodle made him believe the silliest ideas." }
+        ]
+      },
+      {
+        "animation": "Exam card: 'Q. How did a book save the Earth?' Neo ticks: misreading of rhymes, Think-Tank's vanity and fear, Noodle's hint. Side cards: 'Think-Tank: arrogant, ignorant, cowardly' and 'Noodle: humble, smart'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely board question: how did Mother Goose save the Earth?" },
+          { "speaker": "NEO", "text": "Answer approach: Think-Tank misread the rhymes literally, feared Earth's power, and after Humpty Dumpty ordered a retreat." },
+          { "speaker": "NEO", "text": "Board tip: contrast arrogant, ignorant Think-Tank with humble, sensible Noodle." }
+        ]
+      },
+      {
+        "animation": "Recap board with a book-and-rocket icon: '1. Think-Tank plans to invade Earth', '2. Martians misread Mother Goose', '3. Arrogance is defeated by a nursery rhyme'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Think-Tank sends a probe to invade Earth." },
+          { "speaker": "NEO", "text": "Two: the crew misread Mother Goose, and Think-Tank takes it literally." },
+          { "speaker": "NEO", "text": "Three: his arrogance and ignorance lead to retreat. The book saves the Earth." },
+          { "speaker": "ZIPPY", "text": "Humpty Dumpty: defender of planet Earth!" }
+        ]
+      }
+    ]
+  }
+]

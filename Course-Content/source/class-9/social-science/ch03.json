@@ -1,0 +1,215 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "History: Nazism and the Rise of Hitler",
+    "topic_no": 1,
+    "name": "The Birth of the Weimar Republic",
+    "scenes": [
+      {
+        "animation": "1923 Germany: a man pushes a wheelbarrow overflowing with banknotes into a bakery and walks out with a single loaf. Zippy tries to pay with a whole suitcase of notes and the baker shakes his head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A wheelbarrow of money for one loaf of bread? Is this a prank show?" },
+          { "speaker": "NEO", "text": "No, it's Germany in 1923. To understand how it got here, we start at the end of the First World War." }
+        ]
+      },
+      {
+        "animation": "A German imperial eagle crumbles and the words 'November 1918: Emperor abdicates' appear. A small town hall labelled 'Weimar' hosts a National Assembly. A ballot box opens for men and women alike, labelled 'Reichstag: equal and universal votes by all adults including women'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Germany fought the First World War alongside the Austrian empire, against the Allies. Defeated imperial Germany and the abdication of the emperor gave parliamentary parties a chance to recast German polity." },
+          { "speaker": "NEO", "text": "A National Assembly met at Weimar and established a democratic constitution with a federal structure. Deputies were elected to the German Parliament, the Reichstag, by equal and universal votes cast by all adults, including women." }
+        ]
+      },
+      {
+        "animation": "A contract titled 'Treaty of Versailles' unrolls, and items are cut away from a map of Germany with scissors: 'Overseas colonies', 'A tenth of its population', '13% of territory', '75% of iron', '26% of coal'. A stamp reads 'War Guilt Clause: compensation £6 billion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The peace treaty at Versailles was harsh and humiliating. Germany lost its overseas colonies, a tenth of its population, thirteen per cent of its territories, seventy-five per cent of its iron and twenty-six per cent of its coal." },
+          { "speaker": "NEO", "text": "Under the War Guilt Clause, Germany was held responsible for the war and forced to pay compensation amounting to six billion pounds. The Allied armies also occupied the resource-rich Rhineland in the 1920s." },
+          { "speaker": "NEO", "text": "Many Germans blamed the new Weimar Republic and mockingly called its supporters the November criminals." }
+        ]
+      },
+      {
+        "animation": "A price board for one US dollar flips like a railway timetable: 'April 1923: 24,000 marks', 'July: 353,000 marks', 'August: 4,621,000 marks', 'December: 98,860,000 marks', then zeros overflow off the board. The word 'Hyperinflation' stamps across.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1923, Germany refused to pay, and the French occupied its leading industrial area, the Ruhr, to claim their coal. Germany printed paper currency recklessly." },
+          { "speaker": "NEO", "text": "In April, one US dollar was equal to twenty-four thousand marks. By December, it was ninety-eight million, eight hundred and sixty thousand marks, and soon the figure reached trillions. This situation is called hyperinflation." }
+        ]
+      },
+      {
+        "animation": "A stock-market ticker crashes: 'Wall Street Exchange, 1929'. A bar chart shrinks to '1932: industrial production 40% of 1929 level'; a counter of jobless men climbs to '6 million'. A book opens on 'Article 48: emergency powers'. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Then came the Great Depression, after the Wall Street Exchange crashed in 1929. By 1932, German industrial production was reduced to forty per cent of the 1929 level, and unemployment touched six million." },
+          { "speaker": "NEO", "text": "The Weimar constitution was also weak. Article 48 gave the President the power to impose emergency and rule by decree." },
+          { "speaker": "NEO", "text": "Exam tip: a common question asks why the Weimar Republic failed. Remember: Versailles, hyperinflation, the Depression, and constitutional defects." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cracked Weimar building: '1. Weimar: democratic constitution, votes for all adults', '2. Versailles: losses and £6 billion compensation', '3. 1923 hyperinflation and 1929 Depression'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Weimar Republic gave Germany a democratic constitution with votes for all adults." },
+          { "speaker": "NEO", "text": "Two: the Treaty of Versailles humiliated Germany and made it pay six billion pounds." },
+          { "speaker": "NEO", "text": "Three: hyperinflation in 1923 and the Depression from 1929 left the republic fragile." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "History: Nazism and the Rise of Hitler",
+    "topic_no": 2,
+    "name": "Hitler's Rise to Power and the Destruction of Democracy",
+    "scenes": [
+      {
+        "animation": "A packed hall with flags and floodlights; a man at a podium gestures wildly while the crowd roars. Zippy is carried away by the noise and starts clapping, then stops and looks worried.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why are people cheering so wildly? I don't even know what he's promising!" },
+          { "speaker": "NEO", "text": "That was his power. In desperate times, Adolf Hitler promised Germans everything they wanted to hear." }
+        ]
+      },
+      {
+        "animation": "A profile card: 'Adolf Hitler, born 1889 in Austria'. A small party badge morphs from 'German Workers' Party' into 'National Socialist German Workers' Party: Nazi Party'. A vote bar grows from '1928: 2.6%' to '1932: 37%, largest party'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Hitler was born in 1889 in Austria. After the war, he joined a small group called the German Workers' Party and took it over, renaming it the National Socialist German Workers' Party. This is the Nazi Party." },
+          { "speaker": "NEO", "text": "In 1928, the Nazis got no more than 2.6 per cent of the votes in the Reichstag. But during the Depression, their support grew. By 1932, they had become the largest party, with thirty-seven per cent of the votes." }
+        ]
+      },
+      {
+        "animation": "Timeline builds: '30 January 1933: Hindenburg makes Hitler Chancellor', '28 February 1933: Fire Decree suspends civic rights', '3 March 1933: Enabling Act, dictatorship'. Doors lock on newspapers and trade unions; the Reichstag chairs empty out.",
+        "lines": [
+          { "speaker": "NEO", "text": "On 30 January 1933, President Hindenburg offered Hitler the Chancellorship, the highest position in the cabinet of ministers." },
+          { "speaker": "NEO", "text": "The Fire Decree of 28 February 1933 indefinitely suspended civic rights like freedom of speech, press and assembly. On 3 March 1933, the Enabling Act established dictatorship in Germany." },
+          { "speaker": "NEO", "text": "All political parties and trade unions were banned, except the Nazi Party. Communists were packed off to concentration camps." }
+        ]
+      },
+      {
+        "animation": "Four shadowy badges appear with labels: 'Gestapo: secret state police', 'SS: protection squads', 'Criminal police', 'Security Service (SD)'. Then a construction scene: new motorways labelled 'Autobahn' and a small car labelled 'Volkswagen'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Special surveillance and security forces were created to control and order society. These included the Gestapo, the SS, the criminal police and the Security Service." },
+          { "speaker": "NEO", "text": "For economic recovery, the economist Hjalmar Schacht aimed at full production and full employment through state-funded work programmes. This produced the famous German superhighways and the people's car, the Volkswagen." }
+        ]
+      },
+      {
+        "animation": "Map work: a world outline map appears and countries are shaded one by one: 'Axis Powers: Germany, Italy, Japan' in one colour; 'Allied Powers: UK, France, former USSR, USA' in another. A timeline runs below: '1933 leaves League of Nations', '1936 Rhineland', '1938 Austria', 'September 1939 invades Poland', 'June 1941 attacks USSR', 'May 1945 defeat'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In foreign policy, Hitler pulled out of the League of Nations in 1933, reoccupied the Rhineland in 1936 and integrated Austria with Germany in 1938." },
+          { "speaker": "NEO", "text": "In September 1939, Germany invaded Poland, which started a war with France and England. Germany, Italy and Japan formed the Axis Powers. In June 1941, Hitler attacked the Soviet Union. The USA entered the war after Japan attacked Pearl Harbor." },
+          { "speaker": "NEO", "text": "Map tip: on the world map, locate the Axis Powers, Germany, Italy and Japan, and the Allied Powers, the UK, France, the former USSR and the USA." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Nazis: 2.6% (1928) → 37% (1932)', '2. 1933: Chancellor, Fire Decree, Enabling Act', '3. War from 1939; Axis versus Allies'. Zippy stops clapping and folds his arms.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Depression helped the Nazis grow from 2.6 per cent to thirty-seven per cent of the vote." },
+          { "speaker": "NEO", "text": "Two: in 1933, the Fire Decree and the Enabling Act destroyed democracy." },
+          { "speaker": "NEO", "text": "Three: Hitler's aggressive foreign policy led to the Second World War." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "History: Nazism and the Rise of Hitler",
+    "topic_no": 3,
+    "name": "The Nazi Worldview and the Racial State",
+    "scenes": [
+      {
+        "animation": "A cartoon Nazi official stands beside a staircase labelled 'Racial hierarchy', placing people on steps by their appearance. Zippy, bright blue with no hair, gets stopped at the first step, and scowls.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "He's ranking people by how they look? That's ridiculous!" },
+          { "speaker": "NEO", "text": "It was ridiculous, and it was also deadly. This idea was at the heart of Nazi ideology." }
+        ]
+      },
+      {
+        "animation": "The staircase is labelled: top step 'Blond, blue-eyed, Nordic German Aryans', bottom step 'Jews', middle steps 'All other coloured people'. Above it, a caption reads 'Borrowed from Darwin and Herbert Spencer, then distorted'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Nazi ideology said there was no equality between people, only a racial hierarchy. Blond, blue-eyed, Nordic German Aryans were at the top, while Jews were located at the lowest rung." },
+          { "speaker": "NEO", "text": "Hitler's racism borrowed from thinkers like Charles Darwin and Herbert Spencer. The Nazis argued that the strongest race would survive and the weak ones would perish." }
+        ]
+      },
+      {
+        "animation": "A map of Germany stretches eastward as arrows push into Poland, labelled 'Lebensraum: living space'. Settlers carry suitcases into newly occupied areas.",
+        "lines": [
+          { "speaker": "NEO", "text": "The second idea was Lebensraum, or living space. Hitler believed new territories had to be acquired for settlement." },
+          { "speaker": "NEO", "text": "This would increase the area of the mother country and enhance the material resources and power of the German nation. Poland became the laboratory for this experimentation." }
+        ]
+      },
+      {
+        "animation": "A law book stamps shut: 'Nuremberg Laws of Citizenship, September 1935'. Two rules appear: 'Only persons of German or kindred blood are citizens', 'Marriage between Jews and Germans forbidden'. Then shattered glass sweeps across a street, labelled 'Kristallnacht, November 1938'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Once in power, the Nazis began creating an exclusive racial community of pure Germans. Anyone they saw as undesirable was to be eliminated." },
+          { "speaker": "NEO", "text": "The Nuremberg Laws of Citizenship of September 1935 said that only persons of German or kindred blood would be German citizens. Marriages between Jews and Germans were forbidden." },
+          { "speaker": "NEO", "text": "Jews were boycotted, expelled from government services and forced to sell their businesses. In November 1938, a pogrom called the Night of Broken Glass destroyed their homes and synagogues." }
+        ]
+      },
+      {
+        "animation": "A dark, muted sequence: trains move towards a camp gate labelled 'Auschwitz'. Words appear as grey text: 'Ghettos', 'Concentration camps', 'Gas chambers'. A single candle is lit. An 'EXAM TIP' card fades in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Jews were first forced into ghettos, then deported to camps. Millions were killed in gas chambers at extermination centres like Auschwitz. This genocide is known as the Holocaust." },
+          { "speaker": "ZIPPY", "text": "That's horrifying. How could ordinary people let it happen?" },
+          { "speaker": "NEO", "text": "Propaganda and fear played a huge role. Exam tip: link the racial hierarchy and Lebensraum to the Nuremberg Laws and the Holocaust in your answers." }
+        ]
+      },
+      {
+        "animation": "Recap board with a broken staircase: '1. Racial hierarchy: Aryans top, Jews lowest', '2. Lebensraum: living space in the east', '3. Nuremberg Laws 1935 → Holocaust'. The candle keeps burning in the corner.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Nazis believed in a racial hierarchy with Aryans at the top and Jews at the bottom." },
+          { "speaker": "NEO", "text": "Two: Lebensraum meant conquering new living space." },
+          { "speaker": "NEO", "text": "Three: the Nuremberg Laws of 1935 began the persecution that ended in the Holocaust." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "History: Nazism and the Rise of Hitler",
+    "topic_no": 4,
+    "name": "Youth, Women and Propaganda in Nazi Germany",
+    "scenes": [
+      {
+        "animation": "A 1930s German classroom. A teacher tears pages out of textbooks while a portrait of Hitler is hung on the wall. Zippy, sitting at a desk, raises his hand to ask a question and is told to be silent.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why can't I ask questions in class?" },
+          { "speaker": "NEO", "text": "Because Hitler believed a strong Nazi society needed children who obeyed, not children who questioned." }
+        ]
+      },
+      {
+        "animation": "A ladder labelled by age builds step by step: '10 years: Jungvolk', '14 years: Hitler Youth', '18 years: Labour Service', 'Then: armed forces'. Children march in uniform up the ladder.",
+        "lines": [
+          { "speaker": "NEO", "text": "All schools were cleansed and purified. Teachers who were Jews or seen as politically unreliable were dismissed, and textbooks were rewritten." },
+          { "speaker": "NEO", "text": "Ten-year-olds had to enter Jungvolk. At fourteen, all boys had to join the Nazi youth organisation, Hitler Youth. After that, they went through labour service, usually at the age of eighteen, and then served in the armed forces." },
+          { "speaker": "NEO", "text": "The aim was to teach them to worship war, glorify aggression and violence, and hate Jews and communists." }
+        ]
+      },
+      {
+        "animation": "A podium displays three medals: 'Bronze cross: 4 children', 'Silver cross: 6 children', 'Gold cross: 8 or more children'. A caption: 'Honour Crosses for Aryan mothers'. A shadow crosses out women who broke the code.",
+        "lines": [
+          { "speaker": "NEO", "text": "Nazi Germany taught that women were radically different from men. Boys were taught to be aggressive; girls were told to become good mothers and rear pure-blooded Aryan children." },
+          { "speaker": "NEO", "text": "Women who produced racially desirable children were rewarded with Honour Crosses: bronze for four children, silver for six, and gold for eight or more." },
+          { "speaker": "ZIPPY", "text": "A medal for eight kids? My mum would say she deserves one for me alone." }
+        ]
+      },
+      {
+        "animation": "A dictionary flips open to a 'Nazi vocabulary' page. Terms appear on the left, 'Final solution', 'Special treatment', 'Disinfection areas', and on the right a red highlight reveals what they hid. Posters and a film reel labelled 'The Eternal Jew' spin past.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Nazi regime used language and media with care. They never used the words kill or murder in official communication." },
+          { "speaker": "NEO", "text": "Mass killings were called special treatment, final solution for the Jews, and evacuation. Gas chambers were labelled disinfection areas." },
+          { "speaker": "NEO", "text": "Posters, radio and films like The Eternal Jew spread hatred and presented Jews through stereotypes." }
+        ]
+      },
+      {
+        "animation": "Split screen: some ordinary people cheer at a rally, some look away silently, and a few quietly help a Jewish family escape. A 'BOARD TIP' card appears with 'Honour Cross' and 'Hitler Youth' highlighted.",
+        "lines": [
+          { "speaker": "NEO", "text": "Many ordinary Germans came to see the world through Nazi eyes. Others remained silent out of fear, and only a few resisted." },
+          { "speaker": "NEO", "text": "Board tip: questions on Nazi schooling and the role of women are very common. Quote the age ladder and the Honour Crosses." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Youth: Jungvolk at 10, Hitler Youth at 14, labour service at 18', '2. Women: mothers of Aryan children; Honour Crosses', '3. Propaganda: euphemisms, posters, films'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: children were trained through Jungvolk and Hitler Youth to worship war." },
+          { "speaker": "NEO", "text": "Two: women were honoured only as mothers of Aryan children." },
+          { "speaker": "NEO", "text": "Three: propaganda used gentle words to hide terrible crimes." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,283 @@
+[
+  {
+    "chapter_no": 8,
+    "chapter": "Fractions in Disguise",
+    "topic_no": 1,
+    "name": "Fractions as Percentages",
+    "scenes": [
+      {
+        "animation": "A busy market with banners: 'MEGA SALE, UP TO 50% OFF!'. A fraction '1/2' wearing sunglasses and a fake moustache sneaks behind a '50%' sign. Zippy points, 'I see you!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, that fraction is wearing a disguise!" },
+          { "speaker": "NEO", "text": "Good catch. Every percentage is just a fraction in disguise, a fraction with denominator 100." }
+        ]
+      },
+      {
+        "animation": "The word 'per cent' splits into Latin 'per centum', with a caption 'by the hundred'. A 10 × 10 grid shades 25 squares: '25% = 25/100 = 1/4'. Then '20% = 20/100 = 1/5'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Per cent comes from the Latin per centum, meaning by the hundred." },
+          { "speaker": "NEO", "text": "So 25 per cent means 25 out of every 100, which is the fraction one quarter." },
+          { "speaker": "NEO", "text": "And 20 per cent is 20 by 100, or one fifth." }
+        ]
+      },
+      {
+        "animation": "Surya mixes paint for a sunset: red makes up 3/4 of the mix. Equivalent fractions build line by line: '3/4 = 6/8 = 30/40 = 75/100 = 75%'. A second method: '3/4 × 100 = 75'. Then '2/5 = 40/100 = 40%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Surya's sunset paint is three-quarters red. What percentage is that?" },
+          { "speaker": "NEO", "text": "Find an equivalent fraction with 100 below. Three-quarters is 75 by 100. So it's 75 per cent." },
+          { "speaker": "NEO", "text": "Or simply multiply the fraction by 100. Two-fifths times 100 is 40, so two-fifths is 40 per cent." }
+        ]
+      },
+      {
+        "animation": "Two biscuit packets: 'Variety 1: sugar 9/34' and 'Variety 2: sugar 13/45'. Zippy squints, confused. The labels flip to '≈ 26.5%' and '≈ 28.9%', and Variety 2 lights up as 'more sugary'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Which biscuit is more sugary: 9 out of 34, or 13 out of 45? My brain hurts." },
+          { "speaker": "NEO", "text": "Turn them into percentages. 9 by 34 is about 26.5 per cent. 13 by 45 is about 28.9 per cent." },
+          { "speaker": "NEO", "text": "Now it's obvious: Variety 2 is sweeter. Percentages give everything the same denominator, 100." }
+        ]
+      },
+      {
+        "animation": "A palm-leaf manuscript: 'Kautilya's Arthashastra, 4th century BCE', with the phrase 'per month per cent' glowing. Then a card: '24% = 24/100 = 6/25'. An 'Exam Tip' sticker: 'Fraction → percentage: multiply by 100'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The idea of per hundred is old. Kautilya's Arthashastra, from the fourth century BCE, gives interest rates per cent per month." },
+          { "speaker": "NEO", "text": "Going back is easy too. 24 per cent is 24 by 100, which simplifies to 6 by 25." },
+          { "speaker": "NEO", "text": "Exam tip: to turn a fraction into a percentage, multiply by 100. To turn a percentage into a fraction, divide by 100." }
+        ]
+      },
+      {
+        "animation": "Recap board with the unmasked fraction waving. Points: '1. Per cent = per hundred', '2. Fraction × 100 = percentage', '3. Percentages make comparison easy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: per cent means per hundred, so a percentage is a fraction out of 100." },
+          { "speaker": "NEO", "text": "Two: multiply a fraction by 100 to get a percentage." },
+          { "speaker": "NEO", "text": "Three: percentages make it easy to compare different fractions." },
+          { "speaker": "ZIPPY", "text": "No more disguises. I see right through you, 50 per cent!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Fractions in Disguise",
+    "topic_no": 2,
+    "name": "Finding a Percentage of a Quantity",
+    "scenes": [
+      {
+        "animation": "Madhu and Madhav munch biscuits. Madhu's pack says '25% sugar', Madhav's says '35% sugar'. Zippy declares Madhav the winner of sugar, then sees their plates: Madhu 120 g, Madhav 95 g.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "35 per cent beats 25 per cent. Madhav ate more sugar!" },
+          { "speaker": "NEO", "text": "Not so fast. Percentages are parts of different wholes. We need the actual grams." }
+        ]
+      },
+      {
+        "animation": "A bar model 0 to 120 g split into quarters: '25% of 120 = 1/4 × 120 = 30 g'. A second bar for 95 g: '35/100 × 95 = 33.25 g'. The Madhav bar edges ahead with a tiny margin.",
+        "lines": [
+          { "speaker": "NEO", "text": "25 per cent is one quarter. A quarter of 120 grams is 30 grams." },
+          { "speaker": "NEO", "text": "For Madhav, 35 by 100 times 95 is 33.25 grams." },
+          { "speaker": "NEO", "text": "So Madhav still ate more sugar, but only by 3.25 grams. We had to check." }
+        ]
+      },
+      {
+        "animation": "A mental-maths table for 80: '10% = 8', '20% = 16', '5% = 4', '25% = 20 + ... = 16 + 4 = 20', '15% = 8 + 4 = 12'. Each value pops out of a cartoon brain.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mental tricks help. 10 per cent of 80 is 8. Double it: 20 per cent is 16." },
+          { "speaker": "NEO", "text": "Half of 10 per cent gives 5 per cent, which is 4." },
+          { "speaker": "NEO", "text": "Add them up: 20 per cent plus 5 per cent gives 25 per cent, which is 20." }
+        ]
+      },
+      {
+        "animation": "A cyclist rides from Delhi towards Agra. A bar shows '40% = 92 km' and a question mark over the remaining 60%. Steps: '20% = 92 ÷ 2 = 46 km', '60% = 92 + 46 = 138 km'. A check: 'total = 92 × 100/40 = 230 km; 230 − 92 = 138 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puzzle. A cyclist has covered 40 per cent of the way from Delhi to Agra. That's 92 kilometres. How much is left?" },
+          { "speaker": "NEO", "text": "If 40 per cent is 92, then 20 per cent is 46. The remaining 60 per cent is 92 plus 46, which is 138 kilometres." },
+          { "speaker": "NEO", "text": "Check: the total is 92 times 100 by 40, which is 230. 230 minus 92 is 138." }
+        ]
+      },
+      {
+        "animation": "Test paper with '75 marks max'. The A-grade line '80%' is computed three ways side by side: '80/100 × 75 = 60', '0.8 × 75 = 60', '4/5 × 75 = 60'. An 'Exam Tip' sticker: 'Draw a bar model before calculating'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The test is out of 75. For an A, I need 80 per cent. How many marks?" },
+          { "speaker": "NEO", "text": "80 per cent is 0.8, or four-fifths. Four-fifths of 75 is 60 marks." },
+          { "speaker": "NEO", "text": "Exam tip: estimate or sketch a bar model first. It catches silly answers before they happen." }
+        ]
+      },
+      {
+        "animation": "Recap board with a bar model. Points: '1. y% of z = y/100 × z', '2. 10%, 5%, 20% combine for quick mental maths', '3. Compare real amounts, not just percentages'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: y per cent of a quantity is y by 100 times that quantity." },
+          { "speaker": "NEO", "text": "Two: build any percentage mentally from 10, 5 and 20 per cent." },
+          { "speaker": "NEO", "text": "Three: percentages of different wholes can't be compared directly. Find the real amounts." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Fractions in Disguise",
+    "topic_no": 3,
+    "name": "More Than 100% and Percentage Change",
+    "scenes": [
+      {
+        "animation": "Kishanlal's new garment shop with a whiteboard: 'Daily target ₹5000'. Day 4's sales counter rolls to ₹6000. Zippy protests, 'You can't do more than 100 per cent!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Kishanlal says he hit 120 per cent of his target. That's impossible!" },
+          { "speaker": "NEO", "text": "It's perfectly possible. Percentages can be more than 100." }
+        ]
+      },
+      {
+        "animation": "A number line from 0 to ₹10,000 marked 0%, 100%, 200%. Day 1 ₹2000 lands at 40%, Day 2 ₹3500 at 70%, Day 3 ₹5000 at 100%, Day 4 ₹6000 at 120%. Steps: '6000/5000 × 100 = 120%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "On Day 1, he sold 2000 rupees. 2000 by 5000, times 100, is 40 per cent." },
+          { "speaker": "NEO", "text": "On Day 4, he sold 6000. 6000 by 5000, times 100, is 120 per cent. That's 20 per cent above target." },
+          { "speaker": "NEO", "text": "A farmer who grew 260 kilograms last year and 650 this year got 250 per cent, which is 2.5 times as much." }
+        ]
+      },
+      {
+        "animation": "A vegetable stall: 'Tomatoes 3 years ago ₹30/kg, now ₹42/kg'. Steps line by line: 'increase = 42 − 30 = 12', '12 ÷ 30 × 100 = 40%'. The formula card: 'Percentage change = change ÷ original × 100'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now percentage change. Tomatoes rose from 30 to 42 rupees a kilo. The increase is 12." },
+          { "speaker": "NEO", "text": "Divide by the original price: 12 by 30, times 100, is 40 per cent." },
+          { "speaker": "NEO", "text": "So the price rose by 40 per cent." }
+        ]
+      },
+      {
+        "animation": "A cinema hall: 'before: 160 people, now: 100'. Steps: 'decrease = 60', '60 ÷ 160 × 100 = 37.5%'. Zippy writes '60 ÷ 100' and a red cross appears. An 'Exam Tip' sticker: 'Always divide by the ORIGINAL amount'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A theatre's average footfall fell from 160 to 100. The decrease is 60." },
+          { "speaker": "ZIPPY", "text": "60 by 100 is 60 per cent!" },
+          { "speaker": "NEO", "text": "No. Divide by the original, 160. 60 by 160, times 100, is 37.5 per cent." },
+          { "speaker": "NEO", "text": "Exam tip: the base for percentage change is always the original amount." }
+        ]
+      },
+      {
+        "animation": "Two statements float: 'Population in 1991 is 165% of 1961' and 'Population increased by 65%'. Both reduce to 'q = 1.65p' and snap together with an '=' sign.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puzzle. Is 165 per cent of the 1961 population the same as an increase of 65 per cent?" },
+          { "speaker": "NEO", "text": "Yes. 165 per cent of p is 1.65 p. And p plus 65 per cent of p is also 1.65 p." }
+        ]
+      },
+      {
+        "animation": "Recap board with the sales number line. Points: '1. More than 100% means more than the whole', '2. % change = change ÷ original × 100', '3. 165% of p = increase of 65% = 1.65p'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a percentage above 100 means more than the whole." },
+          { "speaker": "NEO", "text": "Two: percentage change is the change divided by the original, times 100." },
+          { "speaker": "NEO", "text": "Three: 165 per cent of a value is the same as a 65 per cent increase." },
+          { "speaker": "ZIPPY", "text": "120 per cent effort from me today, then." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Fractions in Disguise",
+    "topic_no": 4,
+    "name": "Profit, Loss, Discount and Tax",
+    "scenes": [
+      {
+        "animation": "A sweater travels on a conveyor: manufacturer → wholesaler → Kishanlal's shop → a customer bargaining. Price tags flip at each stop: 'Cost price ₹300', 'Marked price ₹480', 'Selling price ₹430'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This sweater has three prices! Which one is real?" },
+          { "speaker": "NEO", "text": "All of them. Cost price is what the shop paid, marked price is the tag, and selling price is what the customer pays." }
+        ]
+      },
+      {
+        "animation": "A bar model: '0 to 300 = 100% (cost price)', with an extra '130' block to reach 430. Steps: 'profit = 430 − 300 = 130', '130 ÷ 300 × 100 ≈ 43.3%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Kishanlal bought the sweater for 300 and sold it for 430. His profit is 130 rupees." },
+          { "speaker": "NEO", "text": "Profit percentage is measured on the cost price. 130 by 300, times 100, is about 43.3 per cent." }
+        ]
+      },
+      {
+        "animation": "Raghu's store: '10 kg rice bought at ₹35/kg = ₹350', sold for ₹300. Steps: 'loss = 50', '50 ÷ 350 × 100 ≈ 14.28%'. Then Shyamala's cracked vase: 'cost ₹2650, loss 18%', 'sell at 82%', '0.82 × 2650 = 2173'. A check line: '18% of 2650 = 477; 2650 − 477 = 2173 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Raghu bought 10 kilograms of rice for 350 and sold it for 300. His loss is 50, about 14.28 per cent." },
+          { "speaker": "NEO", "text": "Shyamala sells a damaged vase costing 2650 at an 18 per cent loss. She gets 82 per cent of 2650." },
+          { "speaker": "NEO", "text": "0.82 times 2650 is 2173 rupees. Check: 18 per cent of 2650 is 477, and 2650 minus 477 is 2173." }
+        ]
+      },
+      {
+        "animation": "A utensil shop: 'Cooker MRP ₹1800, 35% off'. Steps: 'pay 65% of 1800 = 0.65 × 1800 = 1170'. 'Cost price ₹900 → profit 270 → 270 ÷ 900 × 100 = 30%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Discounts are taken off the marked price. A cooker marked 1800 at 35 per cent off costs 65 per cent of 1800." },
+          { "speaker": "NEO", "text": "That's 1170 rupees. If the shop paid 900, its profit is 270, which is 30 per cent of cost." }
+        ]
+      },
+      {
+        "animation": "A phone bill: 'Price ₹8250, GST 18%'. Options scroll: '8250 + 18' crossed, '8250 + 1800' crossed, '8250 × 1.18' ticked. Steps: '18% of 8250 = 1485', '8250 + 1485 = 9735'. An 'Exam Tip' sticker: 'Profit/loss % on cost price; discount % on marked price'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A phone costs 8250, plus 18 per cent GST. So 8250 plus 18?" },
+          { "speaker": "NEO", "text": "18 per cent of 8250 is 1485. So the total is 9735, which is the same as 8250 times 1.18." },
+          { "speaker": "NEO", "text": "Exam tip: profit and loss percentages use the cost price. Discount percentage uses the marked price." }
+        ]
+      },
+      {
+        "animation": "Recap board with the sweater, vase, cooker and phone. Points: '1. Profit or loss % = amount ÷ CP × 100', '2. Discount is taken off the marked price', '3. With tax: price × (1 + rate)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: profit or loss percentage is the amount divided by the cost price, times 100." },
+          { "speaker": "NEO", "text": "Two: a discount is a percentage of the marked price." },
+          { "speaker": "NEO", "text": "Three: with 18 per cent GST, multiply the price by 1.18." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Fractions in Disguise",
+    "topic_no": 5,
+    "name": "Compounding, Depreciation and Tricky Percentages",
+    "scenes": [
+      {
+        "animation": "Two bakeries face each other. 'Cakely: 30% + 20% off!' and 'Cakify: 50% off!'. Zippy stands between them holding ₹200 and a birthday candle.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "30 plus 20 is 50. Both bakeries give the same discount, right?" },
+          { "speaker": "NEO", "text": "Let's test it with a 200 rupee cake. But first, a bank story." }
+        ]
+      },
+      {
+        "animation": "A bank counter: '₹6000 fixed deposit at 10% p.a. for 3 years'. Two columns build year by year. 'Interest paid out': '600, 600, 600 → 6000 + 1800 = 7800'. 'Compounded': '6000 × 1.1 = 6600', '6600 × 1.1 = 7260', '7260 × 1.1 = 7986'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Deposit 6000 rupees at 10 per cent per year. If the interest is paid out yearly, you get 600 each year. After 3 years, 6000 plus 1800 is 7800." },
+          { "speaker": "NEO", "text": "If the interest is added back, that's compounding. 6000 becomes 6600, then 7260, then 7986." },
+          { "speaker": "NEO", "text": "In general, compounding gives p times 1 plus r, to the power t." }
+        ]
+      },
+      {
+        "animation": "A shiny TV worth ₹21,000 slowly dulls. Steps: 'value after 1 year = 95% of 21,000 = 0.95 × 21,000 = 19,950'. A check: '5% of 21,000 = 1050; 21,000 − 1050 = 19,950 ✓'. The word 'depreciation' appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Values can shrink too. A TV worth 21,000 loses 5 per cent in a year. This is called depreciation." },
+          { "speaker": "NEO", "text": "Its new value is 95 per cent of 21,000, which is 19,950. Check: 5 per cent is 1050, and 21,000 minus 1050 is 19,950." }
+        ]
+      },
+      {
+        "animation": "Back to the bakeries. Cakely: '200 − 30% (60) = 140', then '140 − 20% (28) = 112'. Cakify: '200 − 50% (100) = 100'. Cakify's cake glows as cheaper.",
+        "lines": [
+          { "speaker": "NEO", "text": "At Cakely, 30 per cent off 200 leaves 140. Then 20 per cent off 140 is 28, leaving 112." },
+          { "speaker": "NEO", "text": "At Cakify, 50 per cent off 200 leaves 100. So Cakify is cheaper." },
+          { "speaker": "NEO", "text": "The second discount is taken on a smaller amount. Discounts compound, they don't simply add." }
+        ]
+      },
+      {
+        "animation": "Surbhi's cookware shop: 'Bought for x', 'Marked up 50% → 1.5x', 'Then 50% off → 0.75x'. A red banner: '25% LOSS'. Steps: '0.75x = 12,000 → x = 16,000 → loss ₹4000'. An 'Exam Tip' sticker: '+50% then −50% is not zero'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puzzle. Surbhi marks goods 50 per cent above cost, then offers 50 per cent off. Does she break even?" },
+          { "speaker": "NEO", "text": "Cost x becomes 1.5 x, then half of that is 0.75 x. She loses 25 per cent!" },
+          { "speaker": "NEO", "text": "If she sold them for 12,000, then 0.75 x is 12,000, so x is 16,000. She lost 4000 rupees." },
+          { "speaker": "NEO", "text": "Exam tip: a 50 per cent rise followed by a 50 per cent fall is a loss, because the bases are different." }
+        ]
+      },
+      {
+        "animation": "Recap board with the bank, TV and cakes. Points: '1. Compounding: p(1 + r)ᵗ', '2. Depreciation: multiply by (1 − r)', '3. Successive percentages multiply, not add'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: with compounding, the amount after t years is p times 1 plus r, to the power t." },
+          { "speaker": "NEO", "text": "Two: for depreciation, multiply by 1 minus the rate each year." },
+          { "speaker": "NEO", "text": "Three: successive percentage changes multiply. They don't simply add." },
+          { "speaker": "ZIPPY", "text": "Cakify, here I come!" }
+        ]
+      }
+    ]
+  }
+]

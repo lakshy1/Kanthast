@@ -1,0 +1,386 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "Metals and Non-Metals",
+    "topic_no": 1,
+    "name": "Physical Properties of Metals and Non-Metals",
+    "scenes": [
+      {
+        "animation": "A temple courtyard. Zippy bangs a brass bell and it rings 'DONNNG' with visible sound waves. Then he bangs a lump of coal with the same stick; it goes 'thud' and crumbles. The coal glares at him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The bell sings, but the coal just sulks and breaks! Why?" },
+          { "speaker": "NEO", "text": "The bell is made of metal, and coal is mostly carbon, a non-metal. Their physical properties are very different." }
+        ]
+      },
+      {
+        "animation": "Four quick panels: a freshly cut metal surface shining ('Lustre'); a gold piece hammered into a thin foil ('Malleable'); gold pulled into a long wire with the tag '1 g gold → 2 km wire' ('Ductile'); a steel plate ringing when dropped ('Sonorous').",
+        "lines": [
+          { "speaker": "NEO", "text": "Metals in their pure state have a shining surface, called metallic lustre." },
+          { "speaker": "NEO", "text": "They can be beaten into thin sheets; that's malleability. Gold and silver are the most malleable metals." },
+          { "speaker": "NEO", "text": "They can be drawn into wires; that's ductility. A single gram of gold can be drawn into a wire about two kilometres long! And metals that ring when struck are sonorous." }
+        ]
+      },
+      {
+        "animation": "An aluminium wire clamped to a stand with pins stuck on by wax; a burner heats one end and the pins drop one by one. Then a bulb lights up through a metal wire in a circuit. Tags: 'Best conductors of heat: silver, copper', 'Poor: lead, mercury'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Metals are good conductors of heat and electricity. Silver and copper are the best conductors of heat; lead and mercury are comparatively poor." },
+          { "speaker": "ZIPPY", "text": "That's why electric wires have a plastic coating, so the current stays inside!" },
+          { "speaker": "NEO", "text": "Right. And most metals have high melting points." }
+        ]
+      },
+      {
+        "animation": "A 'Rule-breakers' gallery: sodium being sliced with a butter knife ('Soft: Na, K'); a blob of gallium melting on Neo's palm ('Ga and Cs melt on the palm'); mercury droplets rolling on a tile ('Liquid at room temperature').",
+        "lines": [
+          { "speaker": "NEO", "text": "But metals have rule-breakers. Sodium and potassium are so soft they can be cut with a knife." },
+          { "speaker": "NEO", "text": "Gallium and caesium have such low melting points that they melt on your palm. And mercury is a liquid at room temperature." }
+        ]
+      },
+      {
+        "animation": "A line-up of non-metals: yellow sulphur powder, a lump of carbon, shiny violet-black iodine crystals, a bottle of red-brown liquid bromine, and oxygen and hydrogen balloons. Labels 'Dull', 'Brittle', 'Poor conductors'. Spotlights pick out exceptions: iodine glints, a diamond sparkles ('Hardest natural substance'), and graphite in a circuit lights a bulb. A yellow 'BOARD TIP' note appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Non-metals, like carbon, sulphur, iodine, oxygen and hydrogen, are usually dull, brittle and poor conductors. They are solids or gases, except bromine, which is a liquid." },
+          { "speaker": "NEO", "text": "Their rule-breakers: iodine is lustrous. Diamond, a form of carbon, is the hardest natural substance, with a very high melting point. Graphite, another form of carbon, conducts electricity." },
+          { "speaker": "NEO", "text": "Board tip: 'give one exception' questions are very common. Learn this whole rule-breakers gallery." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Metals: lustrous, malleable, ductile, sonorous, good conductors', '2. Non-metals: usually dull, brittle, poor conductors', '3. Exceptions: Na, K soft; Hg liquid; iodine lustrous; diamond hard; graphite conducts'. The temple bell rings once more.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: metals are lustrous, malleable, ductile, sonorous, and good conductors of heat and electricity." },
+          { "speaker": "NEO", "text": "Two: non-metals are usually dull, brittle and poor conductors." },
+          { "speaker": "NEO", "text": "Three: know the exceptions, like soft sodium, liquid mercury, lustrous iodine, hard diamond and conducting graphite." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Metals and Non-Metals",
+    "topic_no": 2,
+    "name": "Chemical Properties of Metals",
+    "scenes": [
+      {
+        "animation": "Neo drops a tiny piece of sodium into a trough of water; it darts around fizzing and bursts into a small flame. Zippy, sipping a glass of water, spits it out in shock.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A metal that sets water on fire?!" },
+          { "speaker": "NEO", "text": "Not quite. Sodium reacts so fast that the hydrogen it releases catches fire. Metals react with oxygen, water and acids, each in its own style." }
+        ]
+      },
+      {
+        "animation": "Card: 'Metal + Oxygen → Metal oxide'. Copper turns black in a flame ('2Cu + O2 → 2CuO'); aluminium gets a dull coat ('4Al + 3O2 → 2Al2O3'). Then a sodium bottle labelled 'Stored in kerosene', and a gold ring that stays gleaming inside a flame.",
+        "lines": [
+          { "speaker": "NEO", "text": "Almost all metals combine with oxygen to form metal oxides. Copper forms black copper oxide; aluminium forms aluminium oxide." },
+          { "speaker": "NEO", "text": "Sodium and potassium react so vigorously that they catch fire if kept in the open, so they're stored in kerosene. Silver and gold don't react with oxygen even at high temperatures." }
+        ]
+      },
+      {
+        "animation": "An 'Al2O3' character and a 'ZnO' character each shake hands with both an 'Acid' and a 'Base' character. Equations: 'Al2O3 + 6HCl → 2AlCl3 + 3H2O' and 'Al2O3 + 2NaOH → 2NaAlO2 + H2O' with 'Sodium aluminate' tagged. Then 'Na2O + H2O → 2NaOH' drips into a beaker labelled 'Alkali'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Metal oxides are basic. But aluminium oxide and zinc oxide react with both acids and bases to give salt and water. Such oxides are amphoteric." },
+          { "speaker": "ZIPPY", "text": "Amphoteric: friends with everyone!" },
+          { "speaker": "NEO", "text": "Most metal oxides don't dissolve in water. But sodium oxide and potassium oxide dissolve to form alkalis." }
+        ]
+      },
+      {
+        "animation": "A race on a water track. K and Na explode off the start line in cold water ('2Na + 2H2O → 2NaOH + H2 + heat'); Ca and Mg float with bubbles clinging to them, Mg only in a hot-water lane; Al, Fe and Zn move only when blasted by a steam jet ('3Fe + 4H2O → Fe3O4 + 4H2'); Pb, Cu, Ag and Au relax in deckchairs.",
+        "lines": [
+          { "speaker": "NEO", "text": "With water, metals form a metal oxide or hydroxide and hydrogen. Potassium and sodium react violently with cold water." },
+          { "speaker": "NEO", "text": "Calcium reacts less violently and starts floating, because bubbles of hydrogen stick to it. Magnesium reacts with hot water." },
+          { "speaker": "NEO", "text": "Aluminium, iron and zinc react only with steam. Lead, copper, silver and gold don't react with water at all." }
+        ]
+      },
+      {
+        "animation": "Test tubes of Mg, Al, Zn, Fe and Cu in dilute HCl: Mg fizzes wildly, Al and Zn fizz, Fe fizzes slowly, Cu does nothing. Card: 'Metal + Dilute acid → Salt + H2'. A nitric acid bottle in a villain mask grabs the H2 and turns it into water; a note reads 'Except Mg, Mn with very dilute HNO3'. A yellow 'BOARD TIP' note flashes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Metals react with dilute acids to give a salt and hydrogen. Magnesium reacts most vigorously, and copper doesn't react at all." },
+          { "speaker": "NEO", "text": "Board tip: hydrogen gas is not evolved when a metal reacts with nitric acid. Nitric acid is a strong oxidising agent, so it oxidises the hydrogen to water. Only magnesium and manganese give hydrogen with very dilute nitric acid." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Metal oxides are basic; Al2O3 and ZnO are amphoteric', '2. With water: K, Na violent → Pb, Cu, Ag, Au no reaction', '3. Metal + dilute acid → salt + H2 (not with HNO3)'. The sodium piece bows from its kerosene bottle.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: metals form basic oxides, but aluminium oxide and zinc oxide are amphoteric." },
+          { "speaker": "NEO", "text": "Two: reactivity with water ranges from violent for sodium and potassium to none for lead, copper, silver and gold." },
+          { "speaker": "NEO", "text": "Three: metal plus dilute acid gives salt plus hydrogen, except with nitric acid." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Metals and Non-Metals",
+    "topic_no": 3,
+    "name": "The Reactivity Series",
+    "scenes": [
+      {
+        "animation": "A TV talent-show stage with a glittering sign 'India's Most Reactive Metal'. Thirteen metal contestants in sashes line up nervously. Zippy is the host with a mic; Neo is the judge with a gavel.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Welcome to India's Most Reactive! Tonight we rank every metal. Judge Neo, how do we decide?" },
+          { "speaker": "NEO", "text": "Simple. We make them compete in displacement reactions." }
+        ]
+      },
+      {
+        "animation": "Two test tubes side by side: an iron nail in blue copper sulphate solution (nail turns brown, blue fades, green tick) and a clean copper wire in pale green iron sulphate solution (nothing happens, a cricket chirps). Card: 'Metal A + Salt solution of B → Salt solution of A + Metal B'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Round one. An iron nail in copper sulphate solution: iron displaces copper. A copper wire in iron sulphate solution: nothing happens." },
+          { "speaker": "ZIPPY", "text": "So iron beats copper!" },
+          { "speaker": "NEO", "text": "Yes. If metal A displaces metal B from its salt solution, then A is more reactive than B." }
+        ]
+      },
+      {
+        "animation": "The contestants climb a tall ladder in order, top to bottom: K, Na, Ca, Mg, Al, Zn, Fe, Pb, a dashed rung for H, then Cu, Hg, Ag, Au. A side arrow reads 'Reactivity decreases'. K at the top wears a crown of flames; Au at the bottom sips chai calmly.",
+        "lines": [
+          { "speaker": "NEO", "text": "Many such contests give us the reactivity series, or activity series." },
+          { "speaker": "NEO", "text": "Potassium, sodium, calcium, magnesium, aluminium, zinc, iron, lead, then hydrogen, then copper, mercury, silver and gold." },
+          { "speaker": "NEO", "text": "Potassium is the most reactive. Gold is the least reactive." },
+          { "speaker": "ZIPPY", "text": "That's a long list to remember!" },
+          { "speaker": "NEO", "text": "Learn it in order, top to bottom. You'll use it again and again, especially when we extract metals." }
+        ]
+      },
+      {
+        "animation": "The dashed H rung glows. Metals above it dive into a pool labelled 'Dilute HCl' and release H2 bubbles; Cu, Hg, Ag and Au dip their toes in and nothing happens. Card: 'Metals above H displace hydrogen from dilute acids'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is hydrogen, a non-metal, on the ladder?" },
+          { "speaker": "NEO", "text": "It's a reference point. Metals above hydrogen can displace hydrogen from dilute acids. Copper, mercury, silver and gold are below hydrogen, so they can't." }
+        ]
+      },
+      {
+        "animation": "Quiz buzzer round. Card 1: 'Zn + FeSO4 → ?' Zippy slams the buzzer; the answer flips to 'ZnSO4 + Fe'. Card 2: 'Cu + ZnSO4 → ?' flips to 'No reaction'. A yellow 'BOARD TIP' banner drops.",
+        "lines": [
+          { "speaker": "NEO", "text": "Lightning round. Zinc added to iron sulphate solution?" },
+          { "speaker": "ZIPPY", "text": "Zinc is above iron, so it displaces iron. Zinc sulphate plus iron!" },
+          { "speaker": "NEO", "text": "Copper added to zinc sulphate solution?" },
+          { "speaker": "ZIPPY", "text": "Copper is below zinc. No reaction!" },
+          { "speaker": "NEO", "text": "Board tip: always check positions in the series before writing a displacement equation. If the free metal is lower, write 'no reaction'." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. More reactive metal displaces less reactive metal from its salt solution', '2. K > Na > Ca > Mg > Al > Zn > Fe > Pb > H > Cu > Hg > Ag > Au', '3. Metals above H displace H2 from dilute acids'. Potassium lifts the trophy; gold claps politely.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a more reactive metal displaces a less reactive metal from its salt solution." },
+          { "speaker": "NEO", "text": "Two: the reactivity series runs from potassium, the most reactive, down to gold, the least." },
+          { "speaker": "NEO", "text": "Three: metals above hydrogen displace hydrogen from dilute acids; those below cannot." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Metals and Non-Metals",
+    "topic_no": 4,
+    "name": "How Metals and Non-Metals React: Ionic Compounds",
+    "scenes": [
+      {
+        "animation": "A school fete. A cartoon sodium atom with one lonely outer electron and a chlorine atom with seven outer electrons stand apart. Zippy, dressed as an electron, is lobbed from sodium to chlorine like a cricket ball; both atoms cheer.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hey! Why am I being thrown around?" },
+          { "speaker": "NEO", "text": "Today you're an electron, Zippy. And both atoms are happier after that throw." }
+        ]
+      },
+      {
+        "animation": "A VIP lounge labelled 'Noble Gases' where helium, neon and argon relax, their full outer shells glowing gold. Sodium and chlorine press their faces against the glass door.",
+        "lines": [
+          { "speaker": "NEO", "text": "Noble gases have a completely filled outermost shell, so they show little chemical activity." },
+          { "speaker": "NEO", "text": "Other atoms try to reach that stable arrangement by losing or gaining electrons." }
+        ]
+      },
+      {
+        "animation": "Shell diagrams build step by step: 'Na 2,8,1' loses one electron to become 'Na+ 2,8'; 'Cl 2,8,7' gains it to become 'Cl− 2,8,8'. The electron-dot structure draws in: a single dot on Na, seven crosses around Cl, an arrow, then '[Na]+ [Cl]−' with eight electrons around Cl. The two ions snap together with a magnetic 'clack'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sodium has the electronic configuration two, eight, one. It loses its one outer electron and becomes a positively charged sodium ion." },
+          { "speaker": "NEO", "text": "Chlorine has two, eight, seven. It gains that electron and becomes a negatively charged chloride ion. The opposite charges attract strongly, forming sodium chloride." },
+          { "speaker": "NEO", "text": "Compounds formed by the transfer of electrons from a metal to a non-metal are called ionic, or electrovalent, compounds." }
+        ]
+      },
+      {
+        "animation": "Magnesium '2,8,2' hands one electron each to two chlorine atoms; the result is 'Mg2+' flanked by two 'Cl−' ions, labelled 'MgCl2'. The electron-dot diagram builds alongside.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if a metal has two electrons to give away?" },
+          { "speaker": "NEO", "text": "Magnesium, two, eight, two, gives one electron each to two chlorine atoms. We get one magnesium ion and two chloride ions: magnesium chloride." }
+        ]
+      },
+      {
+        "animation": "Property cards flip: a hammer shatters a salt crystal ('Hard but brittle'); a thermometer reads 'NaCl: m.p. 1074 K, b.p. 1686 K'; salt dissolves in a beaker of water but sits undissolved in kerosene; a circuit bulb stays dark with solid salt and glows with salt solution and with molten salt. A yellow 'BOARD TIP' note appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ionic compounds are solids, somewhat hard because of the strong force between ions, but brittle. They have high melting and boiling points, because a lot of energy is needed to break that strong attraction." },
+          { "speaker": "NEO", "text": "They dissolve in water but not in kerosene or petrol. They conduct electricity in solution and when molten, but not as solids, because ions can't move in the rigid solid structure." },
+          { "speaker": "NEO", "text": "Board tip: electron-dot structures of sodium chloride and magnesium chloride are asked often. Show the electron transfer arrows and the charges on the ions clearly." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Metals lose e−, non-metals gain e− → noble gas configuration', '2. Opposite ions attract → ionic compounds (NaCl, MgCl2)', '3. High m.p., soluble in water, conduct when molten or dissolved'. Zippy the electron takes a bow.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: metals lose electrons and non-metals gain them to reach a noble gas configuration." },
+          { "speaker": "NEO", "text": "Two: the oppositely charged ions attract each other, forming ionic compounds like sodium chloride and magnesium chloride." },
+          { "speaker": "NEO", "text": "Three: ionic compounds have high melting points, dissolve in water, and conduct electricity when molten or in solution." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Metals and Non-Metals",
+    "topic_no": 5,
+    "name": "Occurrence and Extraction of Metals",
+    "scenes": [
+      {
+        "animation": "Zippy digs in the school garden with a toy spade, hoping for gold coins, and finds only a reddish rock. The rock opens one eye, twirls a stony moustache and clears its throat.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I wanted gold. I got a rock." },
+          { "speaker": "ORE ROCK", "text": "Rude! I'm an ore. There's metal inside me. You just have to get it out." },
+          { "speaker": "NEO", "text": "He's right. The Earth's crust is the major source of metals, mostly locked inside compounds." }
+        ]
+      },
+      {
+        "animation": "A cutaway of the Earth's crust with glowing pockets. Labels: 'Mineral = naturally occurring element or compound', 'Ore = mineral from which a metal can be profitably extracted'. A giant sieve shakes the ore and soil and sand labelled 'Gangue' fall away.",
+        "lines": [
+          { "speaker": "NEO", "text": "Elements or compounds that occur naturally in the Earth's crust are minerals. Minerals from which a metal can be profitably extracted are ores." },
+          { "speaker": "NEO", "text": "Ores contain impurities like soil and sand, called gangue. These are removed first." }
+        ]
+      },
+      {
+        "animation": "The reactivity ladder splits into three coloured bands: red top band 'K, Na, Ca, Mg, Al – never found free', orange middle band 'Zn, Fe, Pb – oxides, sulphides, carbonates', green bottom band 'Au, Ag, Pt, Cu – may be found free'.",
+        "lines": [
+          { "speaker": "NEO", "text": "How we extract a metal depends on its reactivity. Metals at the bottom, like gold, silver, platinum and copper, can be found free. Metals at the top are never found free." }
+        ]
+      },
+      {
+        "animation": "Green band: cinnabar ore 'HgS' heated in air: '2HgS + 3O2 → 2HgO + 2SO2', then '2HgO → 2Hg + O2' as silvery mercury droplets form. Orange band: two furnaces, 'ROASTING: sulphide ore + excess air – 2ZnS + 3O2 → 2ZnO + 2SO2' and 'CALCINATION: carbonate ore + limited air – ZnCO3 → ZnO + CO2', followed by 'ZnO + C → Zn + CO'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Low-reactivity metals can be obtained by heating alone. Cinnabar, mercury sulphide, is heated in air to give mercury oxide, which on further heating gives mercury." },
+          { "speaker": "NEO", "text": "Middle metals like zinc, iron and lead are first converted to oxides. Sulphide ores are heated strongly in excess air; that's roasting. Carbonate ores are heated strongly in limited air; that's calcination." },
+          { "speaker": "NEO", "text": "The metal oxide is then reduced to the metal using carbon." },
+          { "speaker": "ZIPPY", "text": "Roasting: excess air. Calcination: limited air. Got it!" }
+        ]
+      },
+      {
+        "animation": "Night-time railway track: a crucible pours glowing molten iron into a gap between two rails, sparks flying; label 'Thermit reaction: Fe2O3 + 2Al → 2Fe + Al2O3 + heat'. Then an electrolysis cell of molten NaCl: 'Cathode: Na+ + e− → Na', 'Anode: 2Cl− → Cl2 + 2e−'. A yellow 'BOARD TIP' note appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Highly reactive metals like aluminium can also displace metals from their oxides. Iron oxide with aluminium releases so much heat that the iron formed is molten. This thermit reaction is used to join railway tracks." },
+          { "speaker": "NEO", "text": "Top metals have more affinity for oxygen than carbon, so carbon can't reduce their oxides. They are obtained by electrolytic reduction. Molten sodium chloride gives sodium at the cathode and chlorine at the anode." },
+          { "speaker": "NEO", "text": "Board tip: learn roasting and calcination with one equation each. It's a favourite short-answer question." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Ore = mineral with profitable metal; remove gangue', '2. Low: heat alone. Middle: roast/calcine → reduce with carbon', '3. High: electrolytic reduction of molten compounds'. The ore rock tips an imaginary hat.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: ores are minerals from which metals are profitably extracted, after removing the gangue." },
+          { "speaker": "NEO", "text": "Two: low-reactivity metals come from heating alone; middle metals are roasted or calcined, then reduced with carbon." },
+          { "speaker": "NEO", "text": "Three: highly reactive metals are obtained by electrolytic reduction of their molten compounds." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Metals and Non-Metals",
+    "topic_no": 6,
+    "name": "Refining of Metals",
+    "scenes": [
+      {
+        "animation": "Zippy proudly holds up a lumpy, dull slab of copper fresh from the furnace, wearing a medal that reads 'Metal Extracted!'. Neo looks at it through a magnifying glass, revealing tiny grumpy impurity specks waving back.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Extraction done! Time to make wires." },
+          { "speaker": "NEO", "text": "Not so fast. Metals produced by reduction still contain impurities. They need refining." },
+          { "speaker": "ZIPPY", "text": "Refining? Like sieving atta?" },
+          { "speaker": "NEO", "text": "Cleverer. We use electricity. It's called electrolytic refining." }
+        ]
+      },
+      {
+        "animation": "A banner titled 'Refined electrolytically' with badges for Cu, Zn, Sn, Ni, Ag and Au popping in one by one.",
+        "lines": [
+          { "speaker": "NEO", "text": "The most widely used method is electrolytic refining. Metals like copper, zinc, tin, nickel, silver and gold are refined this way." }
+        ]
+      },
+      {
+        "animation": "The NCERT diagram builds step by step: a tank; 'Acidified copper sulphate solution' poured in as the electrolyte; a thick 'Impure copper' block lowered as the anode (+); a thin 'Pure copper strip' lowered as the cathode (−); wires to a battery. Each label slides in with a click.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here's the setup for copper. The impure metal is made the anode. A thin strip of pure metal is made the cathode." },
+          { "speaker": "NEO", "text": "The electrolyte is a solution of the metal salt. For copper, we use acidified copper sulphate solution." },
+          { "speaker": "ZIPPY", "text": "Anode impure, cathode pure. But which one is positive?" },
+          { "speaker": "NEO", "text": "The anode is connected to the positive terminal, and the cathode to the negative terminal." }
+        ]
+      },
+      {
+        "animation": "Current switches on: copper ions 'Cu2+' peel off the anode, swim through the blue solution and stick to the cathode, which grows thicker and shinier while the anode shrinks. Grey sludge drifts down beneath the anode, labelled 'Anode mud'; some specks dissolve and float, labelled 'Soluble impurities'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When current flows, pure metal from the anode dissolves into the electrolyte. An equal amount of pure metal from the electrolyte is deposited on the cathode." },
+          { "speaker": "NEO", "text": "Soluble impurities go into the solution. Insoluble impurities settle down at the bottom of the anode. This is called anode mud." },
+          { "speaker": "ZIPPY", "text": "So the anode gets thinner and the cathode gets fatter!" },
+          { "speaker": "NEO", "text": "Exactly. The cathode ends up as a thick slab of pure copper." }
+        ]
+      },
+      {
+        "animation": "A student's answer sheet shows the diagram with red-pen circles around missing labels. Neo adds them one by one: 'Anode (impure copper)', 'Cathode (pure copper)', 'Acidified CuSO4 solution', 'Anode mud'. A '3/3' stamp slams down.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: this diagram is asked often, and the marks are for the labels. Always label the anode, cathode, electrolyte and anode mud." },
+          { "speaker": "NEO", "text": "And remember: impure metal at the anode, pure metal at the cathode. Swapping them is the most common mistake." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Electrolytic refining: Cu, Zn, Sn, Ni, Ag, Au', '2. Anode = impure metal; cathode = pure metal strip; electrolyte = metal salt solution', '3. Pure metal on cathode; insoluble impurities → anode mud'. Zippy's medal now reads 'Metal Refined!'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: electrolytic refining purifies metals like copper, zinc, tin, nickel, silver and gold." },
+          { "speaker": "NEO", "text": "Two: the impure metal is the anode, a thin strip of pure metal is the cathode, and a solution of the metal salt is the electrolyte." },
+          { "speaker": "NEO", "text": "Three: pure metal deposits on the cathode, while insoluble impurities settle as anode mud." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Metals and Non-Metals",
+    "topic_no": 7,
+    "name": "Corrosion and Its Prevention",
+    "scenes": [
+      {
+        "animation": "The grumpy rust flake from Chapter 1 returns, now leading a gang: a black flake riding a silver anklet and a green flake on a copper kalash. They march toward a shiny new iron gate.",
+        "lines": [
+          { "speaker": "RUST FLAKE", "text": "We're back, and this gate is ours!" },
+          { "speaker": "ZIPPY", "text": "Neo, stop them!" },
+          { "speaker": "NEO", "text": "First, let's understand them. Then we'll stop them." }
+        ]
+      },
+      {
+        "animation": "Three close-ups: a silver anklet with 'Silver sulphide (black)', a copper kalash with 'Basic copper carbonate (green)', and an iron nail with 'Rust (reddish-brown)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Silver reacts with sulphur in the air and gets a black coating of silver sulphide. Copper reacts with moist carbon dioxide in the air and gets a green coating of basic copper carbonate." },
+          { "speaker": "NEO", "text": "Iron, in moist air, gets a reddish-brown coating called rust." }
+        ]
+      },
+      {
+        "animation": "Three test tubes, each with a clean iron nail, build step by step. A: nail in water, open to air. B: nail in boiled distilled water with a layer of oil on top, corked. C: nail with anhydrous calcium chloride, corked. A calendar flips a few days; only nail A is rusty. Labels: 'Air + water', 'No air', 'No water'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Which nail rusts? Tube A has both air and water. Tube B has boiled distilled water with oil on top, so no air. Tube C has anhydrous calcium chloride, which absorbs moisture, so no water." },
+          { "speaker": "ZIPPY", "text": "Only nail A rusted!" },
+          { "speaker": "NEO", "text": "So iron needs both air and water to rust. Board tip: know why the water in tube B is boiled and why oil is added. Both keep air out." }
+        ]
+      },
+      {
+        "animation": "Shields fly up around the gate: a paint brush ('Painting'), an oil can ('Oiling, greasing'), a zinc coat spraying on ('Galvanising'), a chrome shine on a cycle handle ('Chrome plating'), an aluminium pressure cooker ('Anodising'), and an 'Alloys' shield. The rust gang bounces off.",
+        "lines": [
+          { "speaker": "NEO", "text": "We prevent rusting by painting, oiling, greasing, galvanising, chrome plating, anodising, or making alloys." },
+          { "speaker": "NEO", "text": "Galvanising means coating iron or steel with a thin layer of zinc. Even if the zinc coating breaks, the iron stays protected." }
+        ]
+      },
+      {
+        "animation": "An 'Alloy Kitchen' where Neo mixes ingredients: 'Iron + a little carbon = steel', 'Iron + nickel + chromium = stainless steel', 'Copper + zinc = brass', 'Copper + tin = bronze', 'Lead + tin = solder'. A gold bangle shows '24 carat: too soft', then '22 carat: 22 parts gold + 2 parts silver or copper'. A fun-fact card shows the iron pillar near Qutub Minar.",
+        "lines": [
+          { "speaker": "NEO", "text": "An alloy is a homogeneous mixture of two or more metals, or a metal and a non-metal. Iron with a small amount of carbon becomes hard and strong. With nickel and chromium, it becomes stainless steel, which does not rust." },
+          { "speaker": "NEO", "text": "Pure gold, twenty-four carat, is very soft, so jewellery is made of twenty-two carat gold, alloyed with silver or copper. Brass is copper and zinc; bronze is copper and tin." },
+          { "speaker": "NEO", "text": "Solder, lead and tin, has a low melting point, so it's used for welding electrical wires together." },
+          { "speaker": "ZIPPY", "text": "Fun fact! The iron pillar near the Qutub Minar was built over sixteen hundred years ago, and it still hasn't rusted." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Silver → black, copper → green, iron → rust', '2. Rusting needs air AND water', '3. Prevent: paint, oil, grease, galvanise, chrome plate, anodise, alloy'. The rust gang slinks away past the gleaming gate.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: silver turns black, copper turns green, and iron rusts in moist air." },
+          { "speaker": "NEO", "text": "Two: rusting needs both air and water." },
+          { "speaker": "NEO", "text": "Three: we prevent it by painting, oiling, greasing, galvanising, chrome plating, anodising and making alloys." },
+          { "speaker": "RUST FLAKE", "text": "Fine. We'll go bother someone else's cycle." }
+        ]
+      }
+    ]
+  }
+]

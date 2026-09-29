@@ -1,0 +1,299 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "Employability Skills",
+    "topic_no": 1,
+    "name": "Communication Skills-I",
+    "scenes": [
+      {
+        "animation": "Zippy types 'ok.' on a phone and hits send. Across town, his friend Rohan reads it; a tiny storm cloud forms over Rohan's head and he replies with an angry-face emoji. Zippy's sparks droop.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I typed 'ok' with one full stop, and now Rohan thinks I'm angry with him!" },
+          { "speaker": "NEO", "text": "One tiny dot changed your whole message, Zippy. Let's see how communication really works." }
+        ]
+      },
+      {
+        "animation": "A circular diagram builds step by step with arrows: 'Sender' (Zippy) → 'Message' (speech bubble 'ok.') → 'Channel' (a phone) → 'Receiver' (Rohan) → 'Feedback' (an arrow looping back with the angry emoji). Each label pops in as Neo names it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Communication means sharing information, ideas and feelings. It works as a cycle." },
+          { "speaker": "NEO", "text": "The sender starts it with a message. The message travels through a channel, such as speech, a letter or a phone." },
+          { "speaker": "NEO", "text": "The receiver gets the message and responds with feedback. Feedback tells the sender whether the message was understood." },
+          { "speaker": "ZIPPY", "text": "So Rohan's angry emoji was feedback. Very clear feedback." }
+        ]
+      },
+      {
+        "animation": "Three doors open one by one. 'Verbal': a mouth speaking and a hand writing a letter. 'Non-verbal': Neo smiling, nodding, thumbs-up, arms crossed, eye contact. 'Visual': a traffic signal, a no-smoking sign and a bar chart.",
+        "lines": [
+          { "speaker": "NEO", "text": "There are three methods of communication. Verbal communication uses words, spoken or written." },
+          { "speaker": "NEO", "text": "Non-verbal communication uses facial expressions, gestures, posture and eye contact. A smile or a nod says a lot." },
+          { "speaker": "NEO", "text": "Visual communication uses signs, symbols and pictures, like a traffic signal or a no-smoking sign." },
+          { "speaker": "ZIPPY", "text": "So when our teacher raises one eyebrow, that's non-verbal. And scary." }
+        ]
+      },
+      {
+        "animation": "The 'ok.' message floats between Zippy and Rohan. Coloured lenses slide over Rohan's eyes labelled 'Language', 'Past experience', 'Feelings', 'Prejudices', 'Environment'. Then walls pop up between them: a loud DJ speaker 'Noise', a jargon word 'Unfamiliar language', a grumpy face 'Bad mood'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The same message can be understood differently. Our perspective depends on language, past experience, feelings, prejudices and even our environment." },
+          { "speaker": "NEO", "text": "Noise, unfamiliar words or a bad mood can block a message. These are barriers to communication." },
+          { "speaker": "ZIPPY", "text": "So my full stop became a barrier?" },
+          { "speaker": "NEO", "text": "In a way, yes. That is why basic writing skills matter." }
+        ]
+      },
+      {
+        "animation": "The sentence 'Rohan plays cricket.' appears; 'Rohan' glows blue with the tag 'Subject', 'plays' glows green with 'Verb'. Word cards drop into bins: 'Noun', 'Pronoun', 'Verb', 'Adjective', 'Adverb'. Then 'where is my bag' fixes itself into 'Where is my bag?' as a capital W and a question mark pop in. A yellow 'EXAM TIP' card slides in: 'Sender → Message → Channel → Receiver → Feedback'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A sentence is a group of words that expresses a complete thought. It usually has a subject and a verb." },
+          { "speaker": "NEO", "text": "In 'Rohan plays cricket', Rohan is the subject and plays is the verb." },
+          { "speaker": "NEO", "text": "Words belong to parts of speech, such as nouns, pronouns, verbs, adjectives and adverbs." },
+          { "speaker": "NEO", "text": "Punctuation gives meaning. Begin with a capital letter, and end with a full stop, a question mark or an exclamation mark." },
+          { "speaker": "NEO", "text": "Mini practical: punctuate 'where is my bag'. It needs a capital W and a question mark." },
+          { "speaker": "NEO", "text": "Exam tip: you may be asked to arrange the communication cycle in order. Feedback always comes last." }
+        ]
+      },
+      {
+        "animation": "Recap board with a phone showing a friendly 'Okay! See you soon :)'. Points appear: '1. Sender → Message → Channel → Receiver → Feedback', '2. Methods: verbal, non-verbal, visual', '3. Perspectives and barriers change meaning; write clear sentences with correct punctuation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the communication cycle is sender, message, channel, receiver and feedback." },
+          { "speaker": "NEO", "text": "Two: we communicate in three ways: verbal, non-verbal and visual." },
+          { "speaker": "NEO", "text": "Three: perspectives and barriers can change meaning, so write clear sentences with correct punctuation." },
+          { "speaker": "ZIPPY", "text": "New message to Rohan: 'Okay! See you soon!' Two exclamation marks. Maximum friendship." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Employability Skills",
+    "topic_no": 2,
+    "name": "Self-Management Skills-I",
+    "scenes": [
+      {
+        "animation": "Morning chaos in Zippy's room: the alarm is snoozed for the fifth time, his school tie is lost under the bed, his hair sparks in every direction, and a note on the wall reads 'Assembly speech TODAY'. Zippy flickers in panic.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Late, messy, and I have to give a speech in assembly. My life is out of control!" },
+          { "speaker": "NEO", "text": "Then it's time to take control, Zippy. That is called self-management." }
+        ]
+      },
+      {
+        "animation": "Zippy stands at the centre of a steering wheel. Spokes light up labelled 'Self-awareness', 'Self-control', 'Self-confidence', 'Positive thinking', 'Time management', 'Personal hygiene'. The car of his day stops swerving.",
+        "lines": [
+          { "speaker": "NEO", "text": "Self-management means taking charge of your own thoughts, feelings and actions." },
+          { "speaker": "NEO", "text": "It includes skills like self-awareness, self-control, self-confidence, positive thinking, time management and personal hygiene." },
+          { "speaker": "ZIPPY", "text": "So I'm the driver, not the passenger. Got it." }
+        ]
+      },
+      {
+        "animation": "A notebook page with two columns: 'My Strengths' (green) and 'My Weaknesses' (orange). Zippy writes 'Fast, friendly, good at drawing' and 'Impatient, forget homework, stage fear'. Speech bubbles from a teacher, a parent and a friend add their opinions.",
+        "lines": [
+          { "speaker": "NEO", "text": "Self-management begins with knowing yourself. Strengths are things you do well; weaknesses are areas you need to improve." },
+          { "speaker": "NEO", "text": "Think about what you enjoy and what you find difficult. Also ask family, friends and teachers for honest opinions." },
+          { "speaker": "NEO", "text": "Mini practical: draw two columns and write three strengths and three weaknesses of your own." },
+          { "speaker": "ZIPPY", "text": "Strength: speed. Weakness: patience. Wait, is this done yet?" }
+        ]
+      },
+      {
+        "animation": "Zippy practises his speech in front of a mirror; a confidence bar fills up as he ticks small goals: 'Read speech once', 'Say it to Neo', 'Say it to the class'. A thought bubble reading 'I can't' cracks and becomes 'I will try'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Self-confidence is believing in yourself and your abilities." },
+          { "speaker": "NEO", "text": "Build it step by step. Set small goals and achieve them, prepare well, stay with positive people, and learn from your mistakes." },
+          { "speaker": "NEO", "text": "Positive thinking means expecting good results and looking for solutions instead of problems. Replace 'I can't' with 'I will try'." }
+        ]
+      },
+      {
+        "animation": "Three big buttons light up: 'CARE' (toothbrush, comb, nail clipper), 'WASH' (soap, hands under a tap, clean clothes), 'AVOID' (crossed-out cigarette and tobacco packet). Zippy walks through a mirror and comes out groomed: combed hair, ironed uniform, polished shoes. A yellow 'EXAM TIP' card: 'Personal hygiene = Care, Wash, Avoid'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Personal hygiene means keeping your body clean to stay healthy. Follow three steps: care, wash and avoid." },
+          { "speaker": "NEO", "text": "Care for your teeth, hair, nails and skin. Wash your hands, body and clothes regularly. Avoid harmful habits like smoking and chewing tobacco." },
+          { "speaker": "NEO", "text": "Grooming means looking neat and presentable: combed hair, clean ironed clothes and polished shoes." },
+          { "speaker": "NEO", "text": "Exam tip: the three steps of personal hygiene, care, wash and avoid, are asked often. Learn them in order." }
+        ]
+      },
+      {
+        "animation": "Recap board with a neatly groomed Zippy at the assembly mic, the crowd clapping. Points appear: '1. Know your strengths and weaknesses', '2. Build self-confidence and think positively', '3. Personal hygiene: Care, Wash, Avoid + good grooming'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: self-management starts with knowing your strengths and weaknesses." },
+          { "speaker": "NEO", "text": "Two: build self-confidence with small goals, and think positively." },
+          { "speaker": "NEO", "text": "Three: keep good personal hygiene with care, wash and avoid, and stay well groomed." },
+          { "speaker": "ZIPPY", "text": "Speech done, tie found, hair tamed. Mostly." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Employability Skills",
+    "topic_no": 3,
+    "name": "ICT Skills-I",
+    "scenes": [
+      {
+        "animation": "The night before a project deadline. Zippy stares at a desktop full of files named 'asdf', 'New Folder (7)' and 'final_final_REAL'. He clicks each one frantically; none is his project.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My project is somewhere on this computer. I just don't know where!" },
+          { "speaker": "NEO", "text": "Then let's learn the basics of ICT, and how to keep your files where you can find them." }
+        ]
+      },
+      {
+        "animation": "The letters I-C-T expand into 'Information and Communication Technology'. Around them, quick scenes: a train ticket booked on a laptop, a QR code scanned at a kirana shop, an online class on a tablet.",
+        "lines": [
+          { "speaker": "NEO", "text": "ICT stands for Information and Communication Technology. It means using computers, smartphones, the internet and other digital tools to create, store and share information." },
+          { "speaker": "NEO", "text": "Booking a train ticket, paying by scanning a QR code, and attending an online class all use ICT." },
+          { "speaker": "ZIPPY", "text": "So ICT is basically everywhere." }
+        ]
+      },
+      {
+        "animation": "A giant smartphone stands up. Labels point to the power button, volume buttons, touchscreen, home screen with app icons, and the notification bar with battery and network signal. A finger taps an icon, swipes a page and pinches a photo to zoom.",
+        "lines": [
+          { "speaker": "NEO", "text": "Smartphones and tablets are small computers with touchscreens. The home screen shows app icons, and the notification bar shows alerts, battery and network." },
+          { "speaker": "NEO", "text": "Tap to open an app, swipe to scroll, and pinch to zoom. The Settings app controls Wi-Fi, brightness and sound." }
+        ]
+      },
+      {
+        "animation": "A desktop computer splits into labelled groups: 'Input' (keyboard, mouse, microphone), 'Processing' (CPU box glowing), 'Output' (monitor, printer, speakers), 'Storage' (hard disk, pen drive). A printer, scanner and webcam plugged in from outside get the tag 'Peripherals'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A computer takes input through devices like the keyboard and mouse. The CPU processes the data." },
+          { "speaker": "NEO", "text": "Output devices like the monitor, printer and speakers show the result, and storage devices like a hard disk or pen drive save it." },
+          { "speaker": "NEO", "text": "Devices connected to a computer from outside, such as a printer, scanner or webcam, are called peripherals." },
+          { "speaker": "ZIPPY", "text": "And a touchscreen? Input or output?" },
+          { "speaker": "NEO", "text": "Both. You touch it to give input, and it displays output." }
+        ]
+      },
+      {
+        "animation": "The computer boots up with a loading circle, then a login screen. Zippy creates a folder 'Class 9', inside it a folder 'IT', saves a file 'IT_Project.docx', renames, copies and moves it; each action label flashes: 'Create, Open, Save, Rename, Copy, Move, Delete'. Finally he clicks Start, then Shut down.",
+        "lines": [
+          { "speaker": "NEO", "text": "When you switch on a computer, it boots up and loads the operating system. Log in, and always shut down properly from the Start menu." },
+          { "speaker": "NEO", "text": "Files store your work, and folders organise files. You can create, open, save, rename, copy, move and delete them." },
+          { "speaker": "NEO", "text": "Mini practical: make a folder called Class 9, a folder called IT inside it, and save a file there with a meaningful name." }
+        ]
+      },
+      {
+        "animation": "A globe wrapped in glowing network lines labelled 'Internet'. A browser window opens a website. Then an email form fills in: 'To: teacher', 'Cc: Neo', 'Subject: IT Project', a short body, and a paperclip 'Attachment'. A yellow 'EXAM TIP' card: 'CC = Carbon Copy, BCC = Blind Carbon Copy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The internet is a worldwide network of computers. A web browser lets you open websites." },
+          { "speaker": "NEO", "text": "Email sends messages over the internet. Fill in the receiver's address, a clear subject and the message, and attach files if needed." },
+          { "speaker": "NEO", "text": "Exam tip: CC means carbon copy. BCC means blind carbon copy, and BCC addresses are hidden from other receivers." }
+        ]
+      },
+      {
+        "animation": "Recap board with a tidy folder tree glowing on screen. Points appear: '1. ICT = using digital tools to create, store and share information', '2. Input → CPU → Output, plus storage and peripherals', '3. Organise files in folders; email: To, Subject, Attachment'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: ICT means using digital tools to create, store and share information." },
+          { "speaker": "NEO", "text": "Two: a computer has input, processing, output and storage, plus peripherals." },
+          { "speaker": "NEO", "text": "Three: organise files in folders, and use email correctly with a subject and attachments." },
+          { "speaker": "ZIPPY", "text": "Project found. It was in 'New Folder 7', obviously." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Employability Skills",
+    "topic_no": 4,
+    "name": "Entrepreneurial Skills-I",
+    "scenes": [
+      {
+        "animation": "A school fete before Raksha Bandhan. A Class 9 girl, Meera, sells handmade rakhis from a small table, and a queue of students forms. Zippy hovers beside her with a notebook.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Meera made rakhis at home and now there's a queue. Is she a businesswoman already?" },
+          { "speaker": "NEO", "text": "She's showing entrepreneurial skills, Zippy. Let's see what that means." }
+        ]
+      },
+      {
+        "animation": "A light bulb labelled 'Idea' turns into a shop. Arrows flow outward from it: 'Meets customer needs', 'Uses local materials', 'Creates jobs', 'Helps the economy grow'. Coins travel to a local thread seller and two helpers.",
+        "lines": [
+          { "speaker": "NEO", "text": "An entrepreneur is a person who starts a business with an idea, takes the risk, and works to make it grow. This process is entrepreneurship." },
+          { "speaker": "NEO", "text": "Entrepreneurs help society. They meet customer needs, use local materials, create jobs and help the economy grow." },
+          { "speaker": "ZIPPY", "text": "Meera buys thread from the local shop, so she's helping him too!" }
+        ]
+      },
+      {
+        "animation": "Three shop fronts light up: 'Product' (a bakery selling bread), 'Service' (a tailor stitching and a salon), 'Hybrid' (a restaurant that cooks food and serves it). Zippy places Meera's rakhi stall under 'Product'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Business activities are of three types. A product business makes or sells goods, like a bakery." },
+          { "speaker": "NEO", "text": "A service business does work for customers, like a tailor or a salon. A hybrid business does both, like a restaurant." }
+        ]
+      },
+      {
+        "animation": "Meera's portrait gets badges: 'Confident', 'Patient', 'Creative', 'Hard-working', 'Takes responsibility'. Then a wheel spins with functions: 'Make decisions', 'Manage the business', 'Divide income', 'Take risk', 'Create a new method, idea or product'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Good entrepreneurs are confident, patient, creative and hard-working, and they take responsibility for their decisions." },
+          { "speaker": "NEO", "text": "Their functions are making decisions, managing the business, dividing income, taking risks, and creating new methods, ideas or products." },
+          { "speaker": "ZIPPY", "text": "So when Meera pays her helpers from her earnings, that's dividing income." }
+        ]
+      },
+      {
+        "animation": "Myth balloons float up and Zippy pops each: 'Entrepreneurs are born, not made', 'You need a lot of money', 'The idea must be totally unique'. Then a career signboard shows two roads: 'Job' and 'Own business', with notes 'Be your own boss' and 'Risk, hard work'. A yellow 'EXAM TIP' card: 'Restaurant = Hybrid business'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's bust some myths. Entrepreneurs are made, not born. You can start small, without much money. And your idea need not be unique, just better." },
+          { "speaker": "NEO", "text": "Entrepreneurship is also a career option. You become your own boss, but you must handle risk and work hard." },
+          { "speaker": "NEO", "text": "Exam tip: questions often ask you to classify a business. Selling goods is product, doing work is service, and both together is hybrid." }
+        ]
+      },
+      {
+        "animation": "Recap board with Meera's rakhi stall, now with a small signboard. Points appear: '1. Entrepreneurs meet needs, create jobs, help the economy', '2. Product, service and hybrid businesses', '3. Qualities + functions; myths busted; a career option'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: entrepreneurs meet needs, create jobs and help society grow." },
+          { "speaker": "NEO", "text": "Two: business activities can be product, service or hybrid." },
+          { "speaker": "NEO", "text": "Three: entrepreneurs are made, not born, and entrepreneurship is a real career option." },
+          { "speaker": "ZIPPY", "text": "Meera, I'd like to be your first employee. I work for rakhis." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Employability Skills",
+    "topic_no": 5,
+    "name": "Green Skills-I",
+    "scenes": [
+      {
+        "animation": "Zippy brushes his teeth with the tap running full blast while the fan and lights whirr in an empty room behind him. A water drop and a light bulb glare at him with folded arms.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What? The tap is running, the fan is on. That's normal!" },
+          { "speaker": "NEO", "text": "Normal, but wasteful. Today we learn how society and the environment depend on each other." }
+        ]
+      },
+      {
+        "animation": "A village scene with a river, trees, fields, cattle and people. Arrows show people taking water, food, wood and air from nature. Then smoke from factories, garbage in the river and tree stumps appear, and the picture turns grey.",
+        "lines": [
+          { "speaker": "NEO", "text": "The environment is everything around us: air, water, soil, plants and animals. Living and non-living things together form an ecosystem." },
+          { "speaker": "NEO", "text": "Society depends on it for food, water and fuel. But cutting forests, burning fuels and dumping waste harm it." }
+        ]
+      },
+      {
+        "animation": "Two shelves: 'Renewable' (sun, wind, water) and 'Non-renewable' (coal, petroleum). Conservation icons pop in: rainwater harvesting tank, fixed leaking tap, LED bulb, solar panel, empty plate, planted sapling, and the 3 Rs arrows 'Reduce, Reuse, Recycle'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Natural resources are materials from nature that we use. Renewable resources like sunlight and wind can be replaced naturally. Non-renewable ones like coal and petroleum will run out." },
+          { "speaker": "NEO", "text": "We can conserve them: harvest rainwater, fix leaks, switch off lights, use solar energy, avoid wasting food, and plant trees." },
+          { "speaker": "NEO", "text": "Follow the three Rs: reduce, reuse and recycle." },
+          { "speaker": "NEO", "text": "Mini practical: for one day, list every place where water or electricity is wasted in your home." }
+        ]
+      },
+      {
+        "animation": "A balance scale: on one side a child of today, on the other a child of the future; the scale stays level. The definition types itself on screen, word by word.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sustainable development is development that meets the needs of the present without compromising the ability of future generations to meet their own needs." },
+          { "speaker": "ZIPPY", "text": "So I shouldn't use up all the water my grandchildren will need." },
+          { "speaker": "NEO", "text": "Exactly. Use what you need, and leave enough for others." }
+        ]
+      },
+      {
+        "animation": "A city turns green: solar panels on rooftops, electric buses, a recycling plant. Three tags hang over it: 'Low carbon', 'Resource efficient', 'Socially inclusive'. Workers pop up with name tags: 'Solar technician', 'Organic farmer', 'Waste recycler', 'Rainwater harvesting expert'. A yellow 'EXAM TIP' card: 'Green economy = low carbon + resource efficient + socially inclusive'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A green economy is low carbon, resource efficient and socially inclusive. It improves people's well-being while reducing harm to the environment." },
+          { "speaker": "NEO", "text": "Green jobs help to protect or restore the environment. They exist in agriculture, manufacturing, construction and services." },
+          { "speaker": "NEO", "text": "Solar technicians, organic farmers and waste recyclers all do green jobs." },
+          { "speaker": "NEO", "text": "Exam tip: remember the three features of a green economy: low carbon, resource efficient and socially inclusive." }
+        ]
+      },
+      {
+        "animation": "Recap board with Zippy brushing with the tap off and a green sapling beside him. Points appear: '1. Society depends on the environment', '2. Conserve resources; Reduce, Reuse, Recycle', '3. Sustainable development, green economy and green jobs'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: society depends on the environment for food, water and fuel." },
+          { "speaker": "NEO", "text": "Two: conserve natural resources, and follow reduce, reuse and recycle." },
+          { "speaker": "NEO", "text": "Three: sustainable development, a green economy and green jobs protect our future." },
+          { "speaker": "ZIPPY", "text": "Tap off. Fan off. Green Zippy on." }
+        ]
+      }
+    ]
+  }
+]

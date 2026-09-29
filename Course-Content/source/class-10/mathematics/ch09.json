@@ -1,0 +1,112 @@
+[
+  {
+    "chapter_no": 9,
+    "chapter": "Some Applications of Trigonometry",
+    "topic_no": 1,
+    "name": "Angles of Elevation and Depression",
+    "scenes": [
+      {
+        "animation": "Zippy stands at the foot of the Qutub Minar holding a very long measuring tape, trying to throw it to the top. The tape flops back onto his head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I need the height of this tower, but my tape won't go up!" },
+          { "speaker": "NEO", "text": "Keep your feet on the ground. One distance and one angle are enough." }
+        ]
+      },
+      {
+        "animation": "A student's eye at point P looks up at the top of the minar. A dotted green 'horizontal level' line runs from the eye; a red 'line of sight' runs from the eye to the top. The angle between them opens like a fan, labelled 'angle of elevation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The line of sight is the line drawn from the eye of the observer to the point being viewed." },
+          { "speaker": "NEO", "text": "When you look up at an object, the angle between the line of sight and the horizontal is the angle of elevation." }
+        ]
+      },
+      {
+        "animation": "Cut to a girl on a balcony looking down at a flower pot on the ground. The dotted horizontal line runs from her eye; the line of sight slopes down to the pot. The angle between them glows blue, labelled 'angle of depression'. Then a second horizontal at the pot appears and the equal alternate angle glows too.",
+        "lines": [
+          { "speaker": "NEO", "text": "When you look down at an object, the angle between the line of sight and the horizontal is the angle of depression." },
+          { "speaker": "ZIPPY", "text": "So is it measured from the wall of the building?" },
+          { "speaker": "NEO", "text": "No. Always from the horizontal at the observer's eye. And since the two horizontals are parallel, the angle of depression from the balcony equals the angle of elevation from the pot." }
+        ]
+      },
+      {
+        "animation": "Worked example built step by step: vertical tower AB, point C on the ground, 'BC = 15 m', '∠ACB = 60°', right angle at B. Then: 'tan 60° = AB/BC', '√3 = AB/15', 'AB = 15√3 m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a tower stands vertically on the ground. From a point 15 metres from its foot, the angle of elevation of the top is 60 degrees. Find the height." },
+          { "speaker": "NEO", "text": "Draw tower AB and point C, with BC equal to 15 metres. Triangle ABC is right-angled at B." },
+          { "speaker": "NEO", "text": "We know the adjacent side and want the opposite side, so we use tan. Tan 60 equals AB by BC." },
+          { "speaker": "NEO", "text": "Root three equals AB by 15, so AB is 15 root three metres." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card with a mini checklist: '1. Draw the figure', '2. Mark the right angle', '3. Mark the given angle from the horizontal', '4. Pick the ratio linking known and unknown sides'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: always draw a neat labelled figure first. The figure itself carries marks." },
+          { "speaker": "NEO", "text": "Then choose the ratio that links the side you know with the side you want. Known adjacent, unknown opposite? Use tan." }
+        ]
+      },
+      {
+        "animation": "Recap board with an eye icon looking up and down: '1. Elevation: looking up, from the horizontal', '2. Depression: looking down, from the horizontal', '3. Angle of depression = angle of elevation (alternate angles)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the angle of elevation is measured up from the horizontal when you look up." },
+          { "speaker": "NEO", "text": "Two: the angle of depression is measured down from the horizontal when you look down." },
+          { "speaker": "NEO", "text": "Three: the angle of depression from above equals the angle of elevation from below, since they are alternate angles." },
+          { "speaker": "ZIPPY", "text": "Tape retired. Protractor hired." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Some Applications of Trigonometry",
+    "topic_no": 2,
+    "name": "Solving Heights and Distances Problems",
+    "scenes": [
+      {
+        "animation": "Independence Day at school. A flag flutters on a flagstaff on top of a building. Zippy squints from the ground with a protractor: 'Building top: 30°. Flag top: 45°.'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Two angles, one building, one flagstaff. My brain has two tabs open and both are loading." },
+          { "speaker": "NEO", "text": "Then we close one tab at a time. Two angles simply means two right triangles." }
+        ]
+      },
+      {
+        "animation": "A quick side example: a student of height 1.5 m stands 28.5 m from a chimney; angle of elevation 45°. Build: 'tan 45° = AE/DE', '1 = AE/28.5', 'AE = 28.5 m', 'Height = 28.5 + 1.5 = 30 m'. The '+1.5' flashes yellow.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, a common trap. A student 1.5 metres tall stands 28.5 metres from a chimney and sees its top at 45 degrees." },
+          { "speaker": "NEO", "text": "Tan 45 is one, so the part of the chimney above his eye level is 28.5 metres." },
+          { "speaker": "NEO", "text": "But his eyes are 1.5 metres above the ground, so the chimney is 28.5 plus 1.5, which is 30 metres." }
+        ]
+      },
+      {
+        "animation": "Main figure drawn step by step: building AB = 10 m, flagstaff BD on top, point P on the ground. '∠APB = 30°' in orange, '∠DPA = 45°' in blue. Triangle PAB is shaded first.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now the flag. From point P on the ground, the top of a 10 metre building is at 30 degrees, and the top of the flagstaff on it is at 45 degrees." },
+          { "speaker": "NEO", "text": "Find the length of the flagstaff and the distance of the building from P." }
+        ]
+      },
+      {
+        "animation": "Working written line by line beside triangle PAB: 'tan 30° = AB/AP', '1/√3 = 10/AP', 'AP = 10√3 m ≈ 17.32 m'. Then triangle PAD is shaded: 'tan 45° = AD/AP', '1 = (10 + x)/(10√3)', '10 + x = 10√3', 'x = 10(√3 − 1) = 10 × 0.732 = 7.32 m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In triangle PAB, tan 30 equals AB by AP. So one by root three equals 10 by AP, giving AP equals 10 root three, about 17.32 metres." },
+          { "speaker": "NEO", "text": "Let the flagstaff be x metres, so AD is 10 plus x. In triangle PAD, tan 45 equals AD by AP." },
+          { "speaker": "NEO", "text": "One equals 10 plus x, over 10 root three. So 10 plus x equals 10 root three." },
+          { "speaker": "NEO", "text": "x equals 10 into root three minus one, which is 10 into 0.732, that is 7.32 metres." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Find the common side first (here AP). Keep answers in surd form unless asked; use √3 = 1.732 only at the end.'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the trick was finding AP first?" },
+          { "speaker": "NEO", "text": "Exactly. Board tip: in two-triangle problems, find the side the triangles share first. Keep root three as it is until the last line, then use 1.732 if asked." }
+        ]
+      },
+      {
+        "animation": "Recap board with the flag icon: '1. Add the observer's height when the angle is measured from the eye', '2. Two angles → two right triangles sharing a side', '3. Keep surds till the end; √3 ≈ 1.732'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: if the angle is measured from the observer's eye, add the observer's height at the end." },
+          { "speaker": "NEO", "text": "Two: two angles mean two right triangles, joined by a common side. Find it first." },
+          { "speaker": "NEO", "text": "Three: keep root three as a surd until the final step." },
+          { "speaker": "ZIPPY", "text": "Both tabs loaded. Flag saluted!" }
+        ]
+      }
+    ]
+  }
+]

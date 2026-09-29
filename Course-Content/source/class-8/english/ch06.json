@@ -1,0 +1,394 @@
+[
+  {
+    "chapter_no": 6,
+    "chapter": "Grammar and Writing",
+    "topic_no": 1,
+    "name": "Conditional Sentences",
+    "scenes": [
+      {
+        "animation": "Zippy stands under a grey sky holding a cricket bat, shouting 'If it rain, match cancel!' A giant 'IF' sign drops from the sky and bonks him gently on the head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If it rain, match cancel! Why does that sound wrong?" },
+          { "speaker": "NEO", "text": "Because if-sentences follow patterns. They are called conditionals. Let's learn the three main ones." }
+        ]
+      },
+      {
+        "animation": "A sentence splits into two coloured blocks: a blue 'if-clause (condition)' and an orange 'main clause (result)'. They swap places, and a comma appears only when the if-clause comes first.",
+        "lines": [
+          { "speaker": "NEO", "text": "A conditional has two parts. The if-clause gives the condition. The main clause gives the result." },
+          { "speaker": "NEO", "text": "When the if-clause comes first, put a comma after it. If it rains, we will stay home. We will stay home if it rains." }
+        ]
+      },
+      {
+        "animation": "Card 1 labelled 'First conditional: real, likely future'. The formula builds: 'If + simple present, will + verb'. Example: 'If it rains, the match will be cancelled.' Dark clouds gather on screen.",
+        "lines": [
+          { "speaker": "NEO", "text": "The first conditional is for real, likely situations in the future. If plus simple present, then will plus verb." },
+          { "speaker": "NEO", "text": "If it rains, the match will be cancelled." },
+          { "speaker": "ZIPPY", "text": "So no will in the if-part. Got it!" }
+        ]
+      },
+      {
+        "animation": "Card 2 labelled 'Second conditional: imaginary present'. Formula: 'If + simple past, would + verb'. Zippy imagines himself with a crown. Card 3 labelled 'Third conditional: imaginary past'. Formula: 'If + had + past participle, would have + past participle'. A missed bus drives away.",
+        "lines": [
+          { "speaker": "NEO", "text": "The second conditional is for imaginary situations now. If plus simple past, then would plus verb. If I were a king, I would build a giant library." },
+          { "speaker": "NEO", "text": "The third conditional is for the past that cannot change. If plus had and past participle, then would have and past participle." },
+          { "speaker": "NEO", "text": "If I had left earlier, I would have caught the bus." }
+        ]
+      },
+      {
+        "animation": "A connection card links to The Wit that Won Hearts: Tenali asks 'If the sower yawns, what will happen to the seeds?' The first conditional pattern is highlighted in colour.",
+        "lines": [
+          { "speaker": "NEO", "text": "Remember Tenali Rama's trick in Unit 1? His whole argument was a conditional. If the sower yawns, the seeds will scatter." },
+          { "speaker": "NEO", "text": "Conditionals help us argue, imagine and regret, all in one tidy pattern." }
+        ]
+      },
+      {
+        "animation": "A practice card: 'If I ___ (know) the answer, I would tell you.' Options flip: 'know', 'knew', 'had known'. 'knew' glows green. An 'Exam Tip' sticker shows: 'Match the verb in the main clause first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try this. If I blank, know, the answer, I would tell you." },
+          { "speaker": "ZIPPY", "text": "Would in the main part means second conditional. So, knew!" },
+          { "speaker": "NEO", "text": "Correct. Exam tip: look at the main clause first. Will, would or would have tells you which conditional it is." }
+        ]
+      },
+      {
+        "animation": "Recap board with three stacked cards: '1. First: If + present, will', '2. Second: If + past, would', '3. Third: If + had + V3, would have + V3'. Zippy, under a clear sky, bats happily.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: first conditional, if plus present, then will, for likely futures." },
+          { "speaker": "NEO", "text": "Two: second conditional, if plus past, then would, for imaginary situations." },
+          { "speaker": "NEO", "text": "Three: third conditional, if plus had, then would have, for past regrets." },
+          { "speaker": "ZIPPY", "text": "If I had learned this earlier, I would have sounded smarter!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Grammar and Writing",
+    "topic_no": 2,
+    "name": "Modal Verbs",
+    "scenes": [
+      {
+        "animation": "A school canteen. Zippy marches to the counter and demands 'I must get two samosas!' The canteen uncle raises an eyebrow. A thought bubble offers softer options: 'Could I...?', 'May I...?'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I must get two samosas! Why is the canteen uncle frowning?" },
+          { "speaker": "NEO", "text": "Because must sounds like an order. Words like must, could and may are modals, and each one changes the meaning." }
+        ]
+      },
+      {
+        "animation": "A toolbox opens. Each tool is a modal with a label: 'can / could: ability', 'may / might: possibility, permission', 'must: necessity', 'should / ought to: advice', 'will / shall: future, promise', 'would: polite request'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Modals are helping verbs that show mood or attitude." },
+          { "speaker": "NEO", "text": "Can and could show ability. May and might show possibility or permission. Must shows necessity. Should and ought to give advice." },
+          { "speaker": "NEO", "text": "Will and shall talk about the future or a promise, and would makes requests polite." }
+        ]
+      },
+      {
+        "animation": "A rule card: 'Modal + base verb'. Wrong examples crumble with a buzzer: 'She can sings', 'He must to go'. Correct ones glow: 'She can sing', 'He must go'. Note: 'ought to' keeps its 'to'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The big rule: a modal is followed by the base form of the verb. She can sing, not she can sings." },
+          { "speaker": "NEO", "text": "And no to after most modals. He must go, not he must to go. Ought to is the exception." },
+          { "speaker": "ZIPPY", "text": "So modals are bossy. They don't let the verb change at all!" }
+        ]
+      },
+      {
+        "animation": "Politeness ladder: 'Give me water' at the bottom, then 'Can you give me water?', 'Could you give me water?', 'Would you please give me some water?' at the top. A smiley meter rises with each step.",
+        "lines": [
+          { "speaker": "NEO", "text": "Modals also control politeness. Could you and would you are more polite than can you." },
+          { "speaker": "NEO", "text": "In Wisdom Paves the Way, the friends speak respectfully to the king. Modals help make that respect sound natural." },
+          { "speaker": "ZIPPY", "text": "So would you please is the VIP version of can you. Noted!" }
+        ]
+      },
+      {
+        "animation": "A practice card: 'You ___ wear a helmet while riding a bike. It is the law.' Options: 'might', 'must', 'could'. 'must' glows green. An 'Exam Tip' sticker: 'Read the clue words: law, rule, advice, perhaps'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try this. You blank wear a helmet while riding. It is the law." },
+          { "speaker": "ZIPPY", "text": "Law means necessity. So, must!" },
+          { "speaker": "NEO", "text": "Right. Exam tip: look for clue words. Law or rule suggests must. Advice suggests should. Perhaps suggests may or might." }
+        ]
+      },
+      {
+        "animation": "Recap board with three toolbox icons: '1. Modals show ability, permission, necessity, advice', '2. Modal + base verb, no -s, no to', '3. Could and would sound polite'. Zippy politely receives two samosas.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: modals show ability, permission, possibility, necessity and advice." },
+          { "speaker": "NEO", "text": "Two: always use modal plus base verb, with no s and no to." },
+          { "speaker": "NEO", "text": "Three: could and would make requests polite." },
+          { "speaker": "ZIPPY", "text": "Could I please have two samosas? See, it worked!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Grammar and Writing",
+    "topic_no": 3,
+    "name": "Subject-Verb Agreement",
+    "scenes": [
+      {
+        "animation": "A marching band where one drummer walks out of step, bumping into everyone. The drummer's shirt says 'VERB', and the band leader's flag says 'SUBJECT'. Zippy blows a whistle.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "That drummer is totally out of step! Who is he?" },
+          { "speaker": "NEO", "text": "A verb that doesn't agree with its subject. Today, we fix subject-verb agreement." }
+        ]
+      },
+      {
+        "animation": "Two scales: 'Singular subject → singular verb: The soldier fights' and 'Plural subject → plural verb: The soldiers fight'. The '-s' jumps from noun to verb and back like a see-saw.",
+        "lines": [
+          { "speaker": "NEO", "text": "The basic rule: a singular subject takes a singular verb, and a plural subject takes a plural verb." },
+          { "speaker": "NEO", "text": "The soldier fights. The soldiers fight. Notice the s moves. It is on the verb for singular, and on the noun for plural." }
+        ]
+      },
+      {
+        "animation": "A long sentence appears: 'The box of sweets ___ on the table.' The words 'of sweets' fade to grey, leaving 'The box ... is'. A magnifier highlights the real subject.",
+        "lines": [
+          { "speaker": "NEO", "text": "Trap one: words between the subject and verb. The box of sweets is on the table." },
+          { "speaker": "NEO", "text": "The subject is box, not sweets. So we use is." },
+          { "speaker": "ZIPPY", "text": "So I ignore the sweets? That's painful, but okay." }
+        ]
+      },
+      {
+        "animation": "Three more rule cards flip: 'Each / Every / Everyone → singular: Everyone is here.', 'Collective noun as one group → singular: The battalion was ready.', 'Neither... nor → verb agrees with the nearer subject: Neither the boys nor the teacher is late.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Trap two: each, every and everyone take singular verbs. Everyone is here." },
+          { "speaker": "NEO", "text": "Trap three: a collective noun seen as one group is usually singular. The battalion was ready, just like Major Sharma's company in Unit 2." },
+          { "speaker": "NEO", "text": "Trap four: with either or and neither nor, the verb agrees with the nearer subject. Neither the boys nor the teacher is late." }
+        ]
+      },
+      {
+        "animation": "A practice card: 'One of my friends ___ a drummer. (is / are)'. The words 'of my friends' fade; 'One ... is' glows green. An 'Exam Tip' sticker: 'Find the head noun first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try this. One of my friends blank a drummer. Is or are?" },
+          { "speaker": "ZIPPY", "text": "Friends is plural, so are! Oh wait... the subject is one. So, is!" },
+          { "speaker": "NEO", "text": "Well caught. Exam tip: in editing questions, find the head noun first, then check the verb." }
+        ]
+      },
+      {
+        "animation": "Recap board with the band now marching in step: '1. Singular with singular, plural with plural', '2. Ignore words between subject and verb', '3. Each, every, collective nouns, neither-nor rules'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: singular subjects take singular verbs, plural subjects take plural verbs." },
+          { "speaker": "NEO", "text": "Two: ignore the words in between and find the real subject." },
+          { "speaker": "NEO", "text": "Three: remember the special rules for each, every, collective nouns and neither nor." },
+          { "speaker": "ZIPPY", "text": "The band is in step. The band are happy? No, is! I'm learning!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Grammar and Writing",
+    "topic_no": 4,
+    "name": "Talking About the Future",
+    "scenes": [
+      {
+        "animation": "Zippy peers into a crystal ball that shows a train timetable, a rain cloud and a birthday cake. He looks confused as five different future phrases swirl around it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, why does English have so many ways to talk about tomorrow?" },
+          { "speaker": "NEO", "text": "Because each way carries a different meaning. Let's sort them out." }
+        ]
+      },
+      {
+        "animation": "Card 1: 'will + verb: decisions now, predictions, promises'. Zippy hears a phone ring and says 'I'll get it!' Card 2: 'going to + verb: plans and clear signs'. Dark clouds appear: 'It's going to rain.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Use will for quick decisions, promises and predictions. The phone is ringing, I will get it." },
+          { "speaker": "NEO", "text": "Use going to for plans already made, or when you can see something coming. Look at those clouds. It is going to rain." }
+        ]
+      },
+      {
+        "animation": "Card 3: 'present continuous: fixed arrangements' with a diary showing 'Meeting Riya at 5 pm'. Card 4: 'simple present: timetables' with a train board showing 'Train leaves at 6:10'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Use the present continuous for fixed arrangements. I am meeting Riya at five." },
+          { "speaker": "NEO", "text": "Use the simple present for timetables and schedules. The train leaves at six ten." },
+          { "speaker": "ZIPPY", "text": "Present tense for the future? English is sneaky!" }
+        ]
+      },
+      {
+        "animation": "A timeline with a flag marked 'Tomorrow, 8 am'. Card 5: 'future continuous: in progress then', a cartoon of 'I will be travelling'. Card 6: 'future perfect: finished before then', a tick mark: 'I will have finished my homework by 8.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Use the future continuous for an action in progress at a future time. This time tomorrow, I will be travelling." },
+          { "speaker": "NEO", "text": "Use the future perfect for an action completed before a future time. By eight, I will have finished my homework." },
+          { "speaker": "NEO", "text": "In Feathered Friend, a space crew would use these all day. By tonight, we will have repaired the purifier." }
+        ]
+      },
+      {
+        "animation": "A practice card: 'Look at that ball! It ___ break the window!' Options: 'will', 'is going to', 'breaks'. 'is going to' glows green. An 'Exam Tip' sticker: 'Evidence now = going to'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try this. Look at that ball! It blank break the window." },
+          { "speaker": "ZIPPY", "text": "I can see it coming, so, is going to!" },
+          { "speaker": "NEO", "text": "Perfect. Exam tip: if there is present evidence, prefer going to. For a sudden decision, use will." }
+        ]
+      },
+      {
+        "animation": "Recap board with a calendar and a clock: '1. will: decisions, promises; going to: plans, evidence', '2. present continuous: arrangements; simple present: timetables', '3. future continuous and future perfect'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: will for decisions and promises, going to for plans and clear signs." },
+          { "speaker": "NEO", "text": "Two: present continuous for arrangements, simple present for timetables." },
+          { "speaker": "NEO", "text": "Three: future continuous for actions in progress, future perfect for actions completed by a certain time." },
+          { "speaker": "ZIPPY", "text": "By next week, I will have mastered all of these. Probably." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Grammar and Writing",
+    "topic_no": 5,
+    "name": "Active and Passive Voice",
+    "scenes": [
+      {
+        "animation": "A newspaper headline flashes: 'Window Broken!' Zippy, holding a cricket ball behind his back, whistles innocently. Neo raises an eyebrow.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The window was broken. See? No one's name in that sentence!" },
+          { "speaker": "NEO", "text": "Clever. You used the passive voice to hide the doer. Let's learn how it works." }
+        ]
+      },
+      {
+        "animation": "An active sentence builds: 'Zippy (subject/doer) broke (verb) the window (object).' Then the blocks swap: 'The window (subject) was broken (be + past participle) by Zippy.' Arrows show the object moving to the front.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the active voice, the subject does the action. Zippy broke the window." },
+          { "speaker": "NEO", "text": "In the passive voice, the object moves to the front and becomes the subject. The window was broken by Zippy." },
+          { "speaker": "NEO", "text": "The formula is a form of be plus the past participle." }
+        ]
+      },
+      {
+        "animation": "A tense ladder: 'Simple present: is / are + V3 → Tea is grown in Assam.' 'Simple past: was / were + V3 → The report was written.' 'Future: will be + V3 → The prize will be given.' Each 'be' form glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "The tense stays the same. Only the form of be changes." },
+          { "speaker": "NEO", "text": "Present: tea is grown in Assam. Past: the report was written. Future: the prize will be given." },
+          { "speaker": "ZIPPY", "text": "So be does all the time-travelling, and the verb just stays as V3." }
+        ]
+      },
+      {
+        "animation": "A science lab. A report card reads: 'The solution was heated. The results were recorded.' A label: 'Passive is common in science and reports'. A small photo of Bibha Chowdhuri's lab from Unit 5 appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "We use the passive when the action matters more than the doer, or when the doer is unknown." },
+          { "speaker": "NEO", "text": "That's why science reports love it. The samples were collected. The results were recorded. Unit 5's report on a science exhibition uses exactly this." },
+          { "speaker": "ZIPPY", "text": "And when the doer is obvious, like the police, we can even drop the by-phrase. The thief was caught!" }
+        ]
+      },
+      {
+        "animation": "A practice card: 'Change to passive: The students planted trees.' The answer builds step by step: 'Trees' → 'were planted' → 'by the students.' An 'Exam Tip' sticker: 'Keep the tense; match be with the new subject'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try this. The students planted trees. Change it to passive." },
+          { "speaker": "ZIPPY", "text": "Trees were planted by the students. Were, because trees is plural!" },
+          { "speaker": "NEO", "text": "Exactly. Exam tip: keep the same tense, and make be agree with the new subject." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Active: doer first. Passive: object first', '2. Passive = be + past participle, same tense', '3. Use passive when the action matters more'. The window is shown repaired; Zippy holds a sign 'Window was fixed by me.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in active voice the doer comes first. In passive voice the object comes first." },
+          { "speaker": "NEO", "text": "Two: passive is be plus past participle, in the same tense." },
+          { "speaker": "NEO", "text": "Three: use it when the action matters more than the doer." },
+          { "speaker": "ZIPPY", "text": "The window was fixed by me. That one I'm happy to sign!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Grammar and Writing",
+    "topic_no": 6,
+    "name": "Formal Letters: Enquiry and Complaint",
+    "scenes": [
+      {
+        "animation": "A road full of potholes; Zippy bounces from one hole to the next on a bicycle. He angrily scribbles 'Fix the road NOW!!!' on a scrap of paper and throws it at the municipal office. It bounces off the door.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Nobody is reading my angry note! Why?" },
+          { "speaker": "NEO", "text": "Because officials respond to formal letters. Poorvi asks you to write two kinds, the letter of enquiry and the letter of complaint." }
+        ]
+      },
+      {
+        "animation": "A letter template builds from top to bottom with labels: 'Sender's address', 'Date', 'Receiver's designation and address', 'Subject', 'Salutation: Sir/Madam', 'Body: 3 paragraphs', 'Complimentary close: Yours faithfully', 'Name'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Every formal letter has a fixed format. The sender's address, the date, then the receiver's designation and address." },
+          { "speaker": "NEO", "text": "Next, a clear subject line, the salutation Sir or Madam, the body, and the closing, Yours faithfully, with your name." }
+        ]
+      },
+      {
+        "animation": "An enquiry letter appears addressed to a war memorial office. Highlighted phrases: 'I would like to know...', 'Kindly inform me about...', 'visiting hours, entry fee, guided tours'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A letter of enquiry asks for information. For example, after reading about Major Somnath Sharma, you might ask a war memorial about visiting details." },
+          { "speaker": "NEO", "text": "Ask clear questions politely. I would like to know the visiting hours. Kindly inform me whether guided tours are available." }
+        ]
+      },
+      {
+        "animation": "A complaint letter to the municipal commissioner builds paragraph by paragraph: 'Para 1: the problem and location', 'Para 2: effects and dangers', 'Para 3: request for action'. Polite phrases glow in green; angry words like 'NOW!!!' are crossed out in red.",
+        "lines": [
+          { "speaker": "NEO", "text": "A letter of complaint reports a problem. Paragraph one states the problem and the place." },
+          { "speaker": "NEO", "text": "Paragraph two explains its effects, like accidents and traffic jams. Paragraph three requests action." },
+          { "speaker": "ZIPPY", "text": "So I can be firm, but not rude. No capital letters shouting!" }
+        ]
+      },
+      {
+        "animation": "An exam card showing a marking scheme: 'Format', 'Content', 'Expression'. A checklist ticks off: 'subject line', 'polite tone', 'Yours faithfully'. An 'Exam Tip' sticker flashes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: marks are given for format, content and expression. A missing subject line or wrong closing loses easy marks." },
+          { "speaker": "NEO", "text": "Use Yours faithfully for formal letters, and Yours sincerely or Yours lovingly for letters to people you know." },
+          { "speaker": "NEO", "text": "And keep the subject line short and specific. For example, complaint about potholes on Station Road." }
+        ]
+      },
+      {
+        "animation": "Recap board styled as an envelope: '1. Fixed format with subject line', '2. Enquiry: ask polite, clear questions', '3. Complaint: problem, effects, request'. Zippy mails a neatly folded letter; a road roller appears in the distance.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: formal letters follow a fixed format, with a clear subject line." },
+          { "speaker": "NEO", "text": "Two: an enquiry letter asks polite, clear questions." },
+          { "speaker": "NEO", "text": "Three: a complaint letter states the problem, its effects, and the action needed." },
+          { "speaker": "ZIPPY", "text": "Look, a road roller! Politeness really works!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Grammar and Writing",
+    "topic_no": 7,
+    "name": "Notice and Report Writing",
+    "scenes": [
+      {
+        "animation": "A school corridor. Zippy pins a huge, messy poster covered in doodles: 'THING HAPPENING!! COME!!' Students walk past, confused. Neo sighs and holds up a neat boxed notice.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I made a notice for the science fair. Why is nobody coming?" },
+          { "speaker": "NEO", "text": "Because it doesn't say what, when or where. Let's learn notice writing, and then report writing." }
+        ]
+      },
+      {
+        "animation": "A notice builds inside a box: 'Name of school', 'NOTICE', 'Date', 'Heading: SCIENCE EXHIBITION', 'Body: what, when, where, who, contact', 'Name and designation'. A '50 words' badge appears in the corner.",
+        "lines": [
+          { "speaker": "NEO", "text": "A notice is short and formal. It goes inside a box." },
+          { "speaker": "NEO", "text": "Write the school's name, the word notice, the date and a clear heading. The body answers what, when, where and who can take part." },
+          { "speaker": "NEO", "text": "End with your name and designation, like Secretary, Science Club. Keep it brief, usually about fifty words." }
+        ]
+      },
+      {
+        "animation": "The science exhibition happens: stalls, models, a chief guest cutting a ribbon. Then a reporter's notebook opens with the heading 'Report'. Labels appear: 'Heading', 'By-line: by Zippy, Class 8', 'Place and date'.",
+        "lines": [
+          { "speaker": "NEO", "text": "After the event, you may write a report. A notice announces, but a report describes what already happened." },
+          { "speaker": "NEO", "text": "Start with a heading and a by-line, which is your name. Then add the place and date." },
+          { "speaker": "ZIPPY", "text": "A by-line! I feel like a real journalist." }
+        ]
+      },
+      {
+        "animation": "The report body builds in three blocks: 'Intro: what, when, where, who', 'Details: main events, highlights, chief guest', 'Conclusion: result, winners, feedback'. Verbs glow in past tense and passive: 'was inaugurated', 'were displayed'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The body has three parts. An introduction with the key facts, then the main events, then a conclusion with results." },
+          { "speaker": "NEO", "text": "Use the past tense, and often the passive voice. The exhibition was inaugurated by the principal. Over fifty models were displayed." }
+        ]
+      },
+      {
+        "animation": "An exam card comparing two columns: 'Notice: future event, boxed, short' vs 'Report: past event, by-line, detailed, past tense'. An 'Exam Tip' sticker flashes: 'Don't mix them up!'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: don't mix them up. A notice is about a future event and sits in a box. A report is about a past event and has a by-line." },
+          { "speaker": "NEO", "text": "Also, stay within the word limit. Extra words don't earn extra marks." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Notice: boxed, date, heading, what-when-where', '2. Report: heading, by-line, three-part body', '3. Report uses past tense and passive voice'. Zippy's new neat notice draws a crowd.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a notice is boxed and short, with the date, heading and key details." },
+          { "speaker": "NEO", "text": "Two: a report has a heading, a by-line and a three-part body." },
+          { "speaker": "NEO", "text": "Three: reports use the past tense and often the passive voice." },
+          { "speaker": "ZIPPY", "text": "Notice: Zippy's crowd is huge. Report: Zippy was celebrated by everyone!" }
+        ]
+      }
+    ]
+  }
+]

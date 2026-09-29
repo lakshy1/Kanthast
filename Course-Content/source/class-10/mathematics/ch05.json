@@ -1,0 +1,221 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "Arithmetic Progressions",
+    "topic_no": 1,
+    "name": "What Is an Arithmetic Progression?",
+    "scenes": [
+      {
+        "animation": "A Diwali night. Zippy lines up diyas on steps: 5 on the first step, 8 on the second, 11 on the third, 14 on the fourth. Each new step lights up with a '+3' spark floating above it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "5, 8, 11, 14. I keep adding three diyas per step without even thinking!" },
+          { "speaker": "NEO", "text": "Then you've built an arithmetic progression. Let's see what makes it special." }
+        ]
+      },
+      {
+        "animation": "The diya counts become a number line: 'a₁ = 5, a₂ = 8, a₃ = 11, a₄ = 14'. Curved arrows labelled '+3' jump between terms. A definition card: 'AP: each term (except the first) = previous term + fixed number d'. Then: 'a, a + d, a + 2d, a + 3d, …'.",
+        "lines": [
+          { "speaker": "NEO", "text": "An arithmetic progression is a list of numbers in which each term is obtained by adding a fixed number to the preceding term, except the first term." },
+          { "speaker": "NEO", "text": "That fixed number is the common difference, d. It can be positive, negative or zero." },
+          { "speaker": "NEO", "text": "So the general form is a, a plus d, a plus 2d, a plus 3d, and so on, where a is the first term." }
+        ]
+      },
+      {
+        "animation": "Three example strips slide in: '−10, −6, −2, 2 → d = 4', '3, 3, 3, 3 → d = 0', '3/2, 1/2, −1/2, −3/2 → d = −1'. Differences are computed line by line under each strip: '1/2 − 3/2 = −1', '−1/2 − 1/2 = −1', '−3/2 − (−1/2) = −1 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Minus 10, minus 6, minus 2, 2 is an AP with d equal to 4. And 3, 3, 3, 3 is an AP with d equal to 0." },
+          { "speaker": "NEO", "text": "Check three-halves, one-half, minus one-half, minus three-halves. One-half minus three-halves is minus 1. Minus one-half minus one-half is minus 1. Minus three-halves minus minus one-half is also minus 1." },
+          { "speaker": "NEO", "text": "The difference is always minus 1, so it's an AP with d equal to minus 1." }
+        ]
+      },
+      {
+        "animation": "A square-number strip '1, 4, 9, 16' appears with differences '3, 5, 7' shown in red, and a big 'NOT an AP' stamp. Then a card: 'Write the AP: a = 4, d = −3' and the terms build: '4, 1, −2, −5'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is 1, 4, 9, 16 an AP? The numbers go up nicely." },
+          { "speaker": "NEO", "text": "The differences are 3, 5 and 7. They aren't equal, so it's not an AP." },
+          { "speaker": "NEO", "text": "Going the other way: with first term 4 and d equal to minus 3, the AP is 4, 1, minus 2, minus 5." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'd = a₂ − a₁ (later term minus earlier term)'. Zippy's wrong 'd = 5 − 8 = −3' is corrected to '8 − 5 = 3'. A side note: 'Check at least two differences'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: the common difference is a later term minus the one before it, never the other way round. And check at least two differences before you call it an AP." }
+        ]
+      },
+      {
+        "animation": "Recap board with glowing diya steps. Points appear: '1. AP: add a fixed d to get each next term', '2. General form: a, a + d, a + 2d, …', '3. d = aₖ₊₁ − aₖ; can be +, − or 0'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in an AP, each term is got by adding a fixed number d to the previous one." },
+          { "speaker": "NEO", "text": "Two: the general form is a, a plus d, a plus 2d, and so on." },
+          { "speaker": "NEO", "text": "Three: d is any term minus the one before it, and it can be positive, negative or zero." },
+          { "speaker": "ZIPPY", "text": "Plus three diyas each step. Diwali, but make it maths." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Arithmetic Progressions",
+    "topic_no": 2,
+    "name": "The nth Term of an AP",
+    "scenes": [
+      {
+        "animation": "A giant staircase of numbers disappears into the clouds: 2, 7, 12, 17, … Zippy starts climbing, counting each step aloud, and collapses, panting, at step 6.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I need the tenth step, but I'm exhausted at the sixth!" },
+          { "speaker": "NEO", "text": "No climbing needed. One formula jumps straight to any step." }
+        ]
+      },
+      {
+        "animation": "Terms build in a column: 'a₁ = a', 'a₂ = a + 1d', 'a₃ = a + 2d', 'a₄ = a + 3d'. The pattern highlights that the multiplier of d is one less than the term number, and a golden card forms: 'aₙ = a + (n − 1)d'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The second term is a plus d. The third is a plus 2d. The fourth is a plus 3d." },
+          { "speaker": "NEO", "text": "Notice the number of d's is always one less than the term number." },
+          { "speaker": "NEO", "text": "So the nth term, called the general term, is a n equals a plus n minus 1, into d." }
+        ]
+      },
+      {
+        "animation": "Worked lines: '2, 7, 12, …: a = 2, d = 7 − 2 = 5', 'a₁₀ = 2 + (10 − 1) × 5', '= 2 + 45 = 47'. The staircase zooms to step 10, which glows '47'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For 2, 7, 12, the first term is 2 and d is 5." },
+          { "speaker": "NEO", "text": "The tenth term is 2 plus 9 into 5. That's 2 plus 45, which is 47." }
+        ]
+      },
+      {
+        "animation": "A second card: 'Which term of 21, 18, 15, … is −81?', 'a = 21, d = −3', '−81 = 21 + (n − 1)(−3)', '−102 = (n − 1)(−3)', 'n − 1 = 34 ⇒ n = 35'. A check: '21 + 34 × (−3) = 21 − 102 = −81 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Which term of 21, 18, 15 is minus 81? Here a is 21 and d is minus 3." },
+          { "speaker": "NEO", "text": "Minus 81 equals 21 plus n minus 1, into minus 3. Subtract 21: minus 102 equals n minus 1, into minus 3." },
+          { "speaker": "NEO", "text": "Divide by minus 3: n minus 1 is 34, so n is 35. The 35th term is minus 81." }
+        ]
+      },
+      {
+        "animation": "A third card: 'Is 301 a term of 5, 11, 17, 23, …?', '301 = 5 + (n − 1)6', '296 = 6(n − 1)', 'n − 1 = 296/6 = 148/3', 'Not a natural number ⇒ 301 is NOT a term'. A 'BOARD TIP' sticker lands on 'natural number'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is 301 in the AP 5, 11, 17, 23?" },
+          { "speaker": "NEO", "text": "Set 301 equal to 5 plus n minus 1, into 6. Then 296 equals 6 into n minus 1, so n minus 1 is 148 by 3." },
+          { "speaker": "NEO", "text": "That's not a whole number, so 301 is not a term. Board tip: n must be a natural number. A fraction or negative n means the number isn't in the AP." }
+        ]
+      },
+      {
+        "animation": "Recap board with the staircase. Points appear: '1. aₙ = a + (n − 1)d', '2. Solve for n to find the position of a term', '3. n must be a natural number'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the nth term is a plus n minus 1, into d." },
+          { "speaker": "NEO", "text": "Two: to find which term a number is, solve the formula for n." },
+          { "speaker": "NEO", "text": "Three: if n isn't a natural number, the number isn't a term of the AP." },
+          { "speaker": "ZIPPY", "text": "Formula: one. Stairs: zero." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Arithmetic Progressions",
+    "topic_no": 3,
+    "name": "Sum of First n Terms of an AP",
+    "scenes": [
+      {
+        "animation": "A sepia classroom in 18th-century Germany. A strict teacher asks the class to add 1 to 100. Young Gauss scribbles for a moment and raises a slate reading '5050' while everyone else is still on 23.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How did that kid add a hundred numbers so fast?" },
+          { "speaker": "NEO", "text": "That was Gauss. He paired the numbers smartly. Let's copy his trick." }
+        ]
+      },
+      {
+        "animation": "Two rows: 'S = 1 + 2 + 3 + … + 99 + 100' and below it reversed 'S = 100 + 99 + 98 + … + 2 + 1'. Vertical pairs light up, each labelled '101'. Then: '2S = 100 × 101', 'S = 5050'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Write the sum forwards, then backwards underneath. Each vertical pair adds to 101." },
+          { "speaker": "NEO", "text": "There are 100 pairs, so twice the sum is 100 into 101. Halve it: the sum is 5050." }
+        ]
+      },
+      {
+        "animation": "The same idea generalises on a golden card: 'Sₙ = n/2 [2a + (n − 1)d]', and, with last term l = aₙ, 'Sₙ = n/2 (a + l)'. A side card: '1 + 2 + … + n = n(n + 1)/2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The same pairing works for any AP. The sum of the first n terms is n by 2, into 2a plus n minus 1, into d." },
+          { "speaker": "NEO", "text": "If you know the last term l, it's simply n by 2, into a plus l." },
+          { "speaker": "NEO", "text": "And the sum of the first n positive integers is n into n plus 1, by 2." }
+        ]
+      },
+      {
+        "animation": "Worked lines appear: 'Sum of first 22 terms of 8, 3, −2, …', 'a = 8, d = 3 − 8 = −5, n = 22', 'S₂₂ = 22/2 [2(8) + 21(−5)]', '= 11 [16 − 105]', '= 11 × (−89) = −979'. A check line: '11 × 89 = 979 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Find the sum of the first 22 terms of 8, 3, minus 2. Here a is 8 and d is minus 5." },
+          { "speaker": "NEO", "text": "S 22 equals 11, into 16 plus 21 into minus 5. That's 11 into 16 minus 105, which is 11 into minus 89." },
+          { "speaker": "NEO", "text": "11 into 89 is 979, so the sum is minus 979." },
+          { "speaker": "ZIPPY", "text": "A negative sum? The terms go negative fast, so it makes sense." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'aₙ = Sₙ − Sₙ₋₁'. Example: 'Sₙ = n² ⇒ a₃ = S₃ − S₂ = 9 − 4 = 5'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: if the sum of n terms is given, the nth term is S n minus S n minus 1. For example, if S n is n squared, the third term is 9 minus 4, which is 5." }
+        ]
+      },
+      {
+        "animation": "Recap board with Gauss's slate. Points appear: '1. Sₙ = n/2 [2a + (n − 1)d]', '2. Sₙ = n/2 (a + l)', '3. aₙ = Sₙ − Sₙ₋₁'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the sum of n terms is n by 2, into 2a plus n minus 1, into d." },
+          { "speaker": "NEO", "text": "Two: if you know the last term, use n by 2 into a plus l." },
+          { "speaker": "NEO", "text": "Three: the nth term equals S n minus S n minus 1." },
+          { "speaker": "ZIPPY", "text": "Gauss, you legend." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Arithmetic Progressions",
+    "topic_no": 4,
+    "name": "Word Problems on APs",
+    "scenes": [
+      {
+        "animation": "A cartoon TV factory. A worried manager, a talking ledger, has smudged records showing only 'Year 3: 600 sets' and 'Year 7: 700 sets'. Zippy peeks at the ledger with a magnifying glass.",
+        "lines": [
+          { "speaker": "LEDGER", "text": "Production rises by the same number every year, but I've lost the rest of my pages!" },
+          { "speaker": "NEO", "text": "Two entries are enough. A fixed yearly increase means an AP." }
+        ]
+      },
+      {
+        "animation": "Worked lines: 'a₃ = a + 2d = 600 … (1)', 'a₇ = a + 6d = 700 … (2)', '(2) − (1): 4d = 100 ⇒ d = 25', 'a + 2(25) = 600 ⇒ a = 550'. The ledger's first page fills in: 'Year 1: 550'. A check line: 'a₇ = 550 + 6 × 25 = 550 + 150 = 700 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let the first year's production be a and the yearly increase be d. The third term is a plus 2d equals 600." },
+          { "speaker": "NEO", "text": "The seventh term is a plus 6d equals 700. Subtract: 4d equals 100, so d equals 25." },
+          { "speaker": "NEO", "text": "Then a plus 50 equals 600, so a equals 550. The first year produced 550 sets." },
+          { "speaker": "ZIPPY", "text": "Let me check year seven: 550 plus 6 into 25 is 550 plus 150. That's 700. It matches the ledger!" },
+          { "speaker": "NEO", "text": "Good habit. Always test your a and d against both given terms before moving on." }
+        ]
+      },
+      {
+        "animation": "The ledger's pages keep filling: 'a₁₀ = 550 + 9 × 25 = 550 + 225 = 775'. A factory counter ticks up to '775'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What about year ten?" },
+          { "speaker": "NEO", "text": "The tenth term is 550 plus 9 into 25. That's 550 plus 225, which is 775 sets." }
+        ]
+      },
+      {
+        "animation": "A bar chart of seven rising bars builds, then the total computes: 'S₇ = 7/2 [2(550) + 6(25)]', '= 7/2 [1100 + 150]', '= 7/2 × 1250 = 7 × 625 = 4375'. A check line: 'a₇ = 700, S₇ = 7/2 (550 + 700) = 7/2 × 1250 = 4375 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Total production in the first seven years: 7 by 2, into 1100 plus 6 into 25." },
+          { "speaker": "NEO", "text": "That's 7 by 2 into 1250, which is 7 into 625, or 4375 sets." },
+          { "speaker": "NEO", "text": "Check with the other formula: 7 by 2, into 550 plus 700, is again 7 by 2 into 1250. Same answer, 4375." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Identify: nth term question → aₙ; total question → Sₙ'. Two icons: a single TV for 'in the 10th year' and a stack of TVs for 'in first 7 years'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: read the question carefully. 'In the tenth year' asks for a term. 'In the first seven years' asks for a sum." },
+          { "speaker": "ZIPPY", "text": "One TV versus a whole warehouse. Got it." }
+        ]
+      },
+      {
+        "animation": "Recap board with the ledger, now complete. Points appear: '1. Fixed increase each step ⇒ AP', '2. Use given terms to form equations in a and d', '3. \"In\" year n → aₙ; \"in first n\" → Sₙ'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a fixed increase or decrease each time means an AP." },
+          { "speaker": "NEO", "text": "Two: use the given terms to form equations in a and d, then solve." },
+          { "speaker": "NEO", "text": "Three: a single year needs the nth term; a total needs the sum." },
+          { "speaker": "LEDGER", "text": "My pages are back. Thank you!" }
+        ]
+      }
+    ]
+  }
+]

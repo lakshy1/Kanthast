@@ -1,0 +1,278 @@
+[
+  {
+    "chapter_no": 19,
+    "chapter": "Economics: Sectors of the Indian Economy",
+    "topic_no": 1,
+    "name": "Primary, Secondary and Tertiary Sectors",
+    "scenes": [
+      {
+        "animation": "Zippy sips a cup of chai at a roadside stall. The cup freezes and rewinds: the chai travels back to a truck, then to a packaging factory, then to a tea garden in Assam where a worker plucks leaves. Labels pop up over each stage.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "It's just chai. How many people could possibly be involved?" },
+          { "speaker": "NEO", "text": "More than you think. Your chai passes through all three sectors of the economy." }
+        ]
+      },
+      {
+        "animation": "A three-storey building builds floor by floor. Ground floor 'Primary sector' shows a farmer, a fisherman, a miner and a dairy cow. The ground floor gets a subtitle 'also called agriculture and related sector'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When we produce a good by exploiting natural resources, it is an activity of the primary sector. Cotton farming, dairy, fishing and mining are examples." },
+          { "speaker": "NEO", "text": "It is called primary because it forms the base for all other products. Since most natural products come from agriculture, dairy, fishing and forestry, it is also called the agriculture and related sector." }
+        ]
+      },
+      {
+        "animation": "The first floor 'Secondary sector' lights up: sugarcane enters a machine and comes out as sugar and gur; cotton fibre becomes yarn and then cloth; bricks stack into a house. Subtitle: 'industrial sector'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The secondary sector covers activities in which natural products are changed into other forms through ways of manufacturing." },
+          { "speaker": "NEO", "text": "Using sugarcane as raw material, we make sugar or gur. We convert earth into bricks and bricks into houses. Since this sector is associated with industries, it is also called the industrial sector." }
+        ]
+      },
+      {
+        "animation": "The top floor 'Tertiary sector' lights up with icons: a truck, a bank, a warehouse, a telephone, a small shop, a teacher, a doctor, a call centre worker, a software engineer. Subtitle: 'service sector'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The tertiary sector includes activities that help the development of the primary and secondary sectors. These activities do not produce a good by themselves. They aid or support production." },
+          { "speaker": "NEO", "text": "Transport, storage, communication, banking and trade are examples. Since these generate services rather than goods, it is also called the service sector." },
+          { "speaker": "ZIPPY", "text": "So a teacher and a doctor are tertiary too?" },
+          { "speaker": "NEO", "text": "Yes. And new services based on information technology, like internet cafes, ATM booths, call centres and software companies, have become important too." }
+        ]
+      },
+      {
+        "animation": "The chai rewind replays with sector labels: tea garden 'Primary', packaging factory 'Secondary', truck and chai stall 'Tertiary'. Arrows show dependence: without the truck, the factory stops. A board-tip card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "The sectors are interdependent. The factory needs tea leaves from the farm, and trucks to carry the packets." },
+          { "speaker": "NEO", "text": "Board tip: when asked to classify an activity, ask one question. Is it extracting from nature, manufacturing, or giving a service?" }
+        ]
+      },
+      {
+        "animation": "Recap board with the three-storey building. Points appear: '1. Primary: exploiting natural resources', '2. Secondary: manufacturing, industrial', '3. Tertiary: services that support production'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the primary sector exploits natural resources, like farming and mining." },
+          { "speaker": "NEO", "text": "Two: the secondary sector changes natural products into other forms through manufacturing." },
+          { "speaker": "NEO", "text": "Three: the tertiary sector provides services that support production, like transport, banking and trade." },
+          { "speaker": "ZIPPY", "text": "I'm tipping the chai-wala. Tertiary sector deserves respect." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 19,
+    "chapter": "Economics: Sectors of the Indian Economy",
+    "topic_no": 2,
+    "name": "Comparing the Three Sectors: GDP and the Rising Tertiary Sector",
+    "scenes": [
+      {
+        "animation": "Zippy adds up the price of wheat, flour and a biscuit packet on a giant calculator and proudly shows a huge total. The calculator starts smoking. Neo pulls out the batteries.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "To measure production, I just add up the value of everything sold. Wheat, flour, biscuits, all of it!" },
+          { "speaker": "NEO", "text": "Careful. You'd be counting the same wheat three times." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds left to right: 'Farmer sells wheat to flour mill: Rs 8 per kg' → 'Mill sells flour to biscuit company: Rs 10 per kg' → 'Biscuit company sells 4 packets: Rs 60 (Rs 15 each)'. The first two boxes are tagged 'Intermediate goods'; the last box glows gold with 'Final goods'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A farmer sells wheat to a flour mill for eight rupees per kilo. The mill sells flour to a biscuit company for ten rupees per kilo. The biscuit company makes four packets and sells them for sixty rupees, fifteen rupees each." },
+          { "speaker": "NEO", "text": "Wheat and flour are intermediate goods. They are used up in making the final good, biscuits. The value of the final good already includes the value of all intermediate goods." },
+          { "speaker": "NEO", "text": "So only the value of final goods and services is counted." }
+        ]
+      },
+      {
+        "animation": "A big jar labelled 'GDP' fills with coloured layers from three taps: 'Primary', 'Secondary', 'Tertiary'. A stamp appears: 'Measured by a central government ministry, with state and union territory departments'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The value of final goods and services produced in each sector during a particular year gives the total production of the sector for that year." },
+          { "speaker": "NEO", "text": "The sum of production in the three sectors gives the Gross Domestic Product, or GDP, of a country. In India, this is measured by a central government ministry, with help from state and union territory departments." }
+        ]
+      },
+      {
+        "animation": "A timeline scrolls: early civilisation with farmers labelled 'Primary most important'; a steam factory labelled 'Secondary rises'; a modern city skyline with offices and phones labelled 'Tertiary most important'. Then a bar chart of India's GDP shares for 1977-78 and 2017-18 grows, with the tertiary bar overtaking the primary bar.",
+        "lines": [
+          { "speaker": "NEO", "text": "Historically, in the early stages of development, the primary sector was the most important. Later, as new methods of manufacturing came in, the secondary sector grew. In developed countries today, the tertiary sector has become the most important." },
+          { "speaker": "NEO", "text": "In India too, over the years, the tertiary sector has emerged as the largest producing sector, replacing the primary sector." }
+        ]
+      },
+      {
+        "animation": "Four icons pop up with reasons: a hospital and police station 'Basic services', a truck and storage 'Development of agriculture and industry', a restaurant and tourist 'Rising income', a laptop and phone 'Information and communication technology'. A board-tip card flashes.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is the service sector growing so fast?" },
+          { "speaker": "NEO", "text": "Basic services like hospitals, schools and police are the government's responsibility. Growth of agriculture and industry needs transport, trade and storage. Rising incomes create demand for eating out, tourism and private schools. And information and communication technology has grown rapidly." },
+          { "speaker": "NEO", "text": "Board tip: the final goods example and reasons for the rise of the tertiary sector are frequently asked." }
+        ]
+      },
+      {
+        "animation": "Recap board with the GDP jar. Points appear: '1. Count only final goods and services', '2. GDP = production of all three sectors', '3. Tertiary is now India's largest producing sector'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: only final goods and services are counted, to avoid counting twice." },
+          { "speaker": "NEO", "text": "Two: GDP is the value of all final goods and services produced within a country during a year." },
+          { "speaker": "NEO", "text": "Three: the tertiary sector is now India's largest producing sector." },
+          { "speaker": "ZIPPY", "text": "Calculator repaired. Double counting cancelled." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 19,
+    "chapter": "Economics: Sectors of the Indian Economy",
+    "topic_no": 3,
+    "name": "Where Are Most People Employed? Underemployment and New Jobs",
+    "scenes": [
+      {
+        "animation": "A tiny farm plot. Five members of a family, all with hoes, try to fit on it and keep bumping into each other. A thought bubble above one of them shows a factory in a nearby town.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Five people working on one small farm. They look busy!" },
+          { "speaker": "NEO", "text": "They look busy. But are all of them really needed? That's the puzzle of this chapter." }
+        ]
+      },
+      {
+        "animation": "Two side-by-side bar charts build, 'Share in GDP' and 'Share in employment'. In the GDP chart, the tertiary bar is tallest. In the employment chart, the primary bar is tallest. A red arrow points at the mismatch.",
+        "lines": [
+          { "speaker": "NEO", "text": "Even though the tertiary sector produces the most, the primary sector continues to be the largest employer in India." },
+          { "speaker": "NEO", "text": "More than half of the workers in the country work in the primary sector, mainly agriculture. Yet its share of production is far smaller." },
+          { "speaker": "NEO", "text": "Why? Because not enough jobs were created in the secondary and tertiary sectors." }
+        ]
+      },
+      {
+        "animation": "The farm family again. Two members quietly leave for the town. The crop on the plot keeps growing unchanged. A label appears: 'Disguised unemployment = underemployment'.",
+        "lines": [
+          { "speaker": "NEO", "text": "This means there are more people in agriculture than necessary. Even if some move out, production will not be affected." },
+          { "speaker": "NEO", "text": "This is underemployment, where people are apparently working, but all are made to work less than their potential. It is also called disguised unemployment, because it is hidden." },
+          { "speaker": "NEO", "text": "It can happen in services too. Thousands of casual workers in cities, like painters and street vendors, may not find work every day." }
+        ]
+      },
+      {
+        "animation": "A toolbox opens with job-creating tools: a dam and canal 'Irrigation', a road and truck 'Transport', a bank 'Loans at reasonable rates', a cold storage 'Storage', a dal mill 'Small-scale industry in semi-rural areas', a school and health centre 'Education and health'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So how do we create more jobs?" },
+          { "speaker": "NEO", "text": "Build dams and canals for irrigation, so farmers can grow a second crop. Build roads and transport in rural areas. Provide cheap bank loans to farmers." },
+          { "speaker": "NEO", "text": "Set up industries that process vegetables and pulses in semi-rural areas. And expand education and health, which also need teachers and health workers." }
+        ]
+      },
+      {
+        "animation": "A document unrolls: 'Mahatma Gandhi National Rural Employment Guarantee Act 2005 (MGNREGA 2005)'. A calendar flips to show '100 days of employment in a year'. A cartoon labourer receives an envelope labelled 'Unemployment allowance' when no job is given.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Central Government made a law implementing the Right to Work in many districts of India. It is called the Mahatma Gandhi National Rural Employment Guarantee Act, 2005." },
+          { "speaker": "NEO", "text": "All those who are able to, and are in need of, work in rural areas are guaranteed one hundred days of employment in a year. If the government fails, it gives unemployment allowances." },
+          { "speaker": "NEO", "text": "Board tip: remember the full form, the year 2005 and the one hundred days." }
+        ]
+      },
+      {
+        "animation": "Recap board with a farm and a factory icon. Points appear: '1. Primary sector is still the largest employer', '2. Disguised unemployment = more workers than needed', '3. MGNREGA 2005: 100 days of work guaranteed'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the primary sector is still the largest employer in India." },
+          { "speaker": "NEO", "text": "Two: disguised unemployment means more people work than needed, and removing some does not reduce production." },
+          { "speaker": "NEO", "text": "Three: MGNREGA 2005 guarantees one hundred days of work in rural areas." },
+          { "speaker": "ZIPPY", "text": "The farm has more space now. The two cousins got jobs at the dal mill." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 19,
+    "chapter": "Economics: Sectors of the Indian Economy",
+    "topic_no": 4,
+    "name": "Organised and Unorganised Sectors",
+    "scenes": [
+      {
+        "animation": "Split screen. Left: Kanta at an office desk with a calendar showing 'Paid leave' and a pay slip on the 1st of the month. Right: Kamal, a daily wage labourer, waits at a street corner at dawn with other workers; a contractor picks only two of them.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Kanta gets paid leave and a salary every month. Kamal doesn't even know if he'll work tomorrow. Why so different?" },
+          { "speaker": "NEO", "text": "Because Kanta works in the organised sector, and Kamal works in the unorganised sector." }
+        ]
+      },
+      {
+        "animation": "A big building labelled 'Organised sector' with a government stamp 'Registered'. Scrolls fly out labelled 'Factories Act', 'Minimum Wages Act', 'Payment of Gratuity Act', 'Shops and Establishments Act'. Perks pop up: 'Paid leave', 'Payment during holidays', 'Provident fund', 'Medical benefits', 'Fixed working hours'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The organised sector covers enterprises or places of work where the terms of employment are regular, and people have assured work." },
+          { "speaker": "NEO", "text": "They are registered by the government and have to follow its rules, given in laws such as the Factories Act, Minimum Wages Act, Payment of Gratuity Act and Shops and Establishments Act." },
+          { "speaker": "NEO", "text": "Workers enjoy job security, paid leave, payment during holidays, provident fund and medical benefits." }
+        ]
+      },
+      {
+        "animation": "Scattered small units appear: a roadside tailor, a small workshop, a construction site, a farm labourer, a street vendor. They float outside a dotted government circle. Warning labels appear: 'Low pay', 'No overtime', 'No paid leave', 'Can be asked to leave anytime'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The unorganised sector is made up of small and scattered units which are largely outside the control of the government." },
+          { "speaker": "NEO", "text": "There are rules and regulations, but these are not followed. Jobs are low-paid and often not regular. There is no provision for overtime, paid leave, holidays or leave due to sickness. Employment is not secure." }
+        ]
+      },
+      {
+        "animation": "A group portrait forms of people who need protection: landless agricultural labourers, small and marginal farmers, sharecroppers, artisans, casual workers, street vendors, head-load workers, garment makers, rag pickers. Some wear badges 'SC', 'ST', 'Backward communities'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In rural areas, the unorganised sector mostly includes landless agricultural labourers, small and marginal farmers, sharecroppers and artisans. In urban areas, it includes workers in small-scale industry, casual workers in construction, trade and transport, and street vendors." },
+          { "speaker": "NEO", "text": "Majority of workers from scheduled castes, tribes and backward communities find themselves in the unorganised sector. They also face social discrimination." }
+        ]
+      },
+      {
+        "animation": "A shield labelled 'Government support' covers the unorganised workers. Icons appear under it: 'Fair wages', 'Cheap inputs for farmers', 'Loans and marketing support for small-scale industries'. A board-tip card flashes.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can the government protect Kamal?" },
+          { "speaker": "NEO", "text": "The unorganised sector workers need protection on wages, safety and health. Small farmers need support for timely seeds, fertilisers, credit and storage. Small-scale industries need government support for procuring raw material and marketing output." },
+          { "speaker": "NEO", "text": "Board tip: compare the two sectors on registration, laws, job security and benefits. A table-style answer scores well." }
+        ]
+      },
+      {
+        "animation": "Recap board split in two colours. Points appear: '1. Organised: registered, follows laws, job security', '2. Unorganised: small, scattered, outside government control', '3. Unorganised workers need protection and support'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the organised sector is registered and follows laws, giving workers security and benefits." },
+          { "speaker": "NEO", "text": "Two: the unorganised sector has small, scattered units, largely outside government control." },
+          { "speaker": "NEO", "text": "Three: unorganised sector workers need government protection and support." },
+          { "speaker": "ZIPPY", "text": "Kamal deserves a pay slip too." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 19,
+    "chapter": "Economics: Sectors of the Indian Economy",
+    "topic_no": 5,
+    "name": "Public and Private Sectors",
+    "scenes": [
+      {
+        "animation": "Zippy sits on a train, sending a letter by post, then buying steel for a school project. At each step, a label pops up asking 'Who owns this?'. Zippy scratches his head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The train, the post office, the steel company. Who owns all these?" },
+          { "speaker": "NEO", "text": "That depends on another way of classifying the economy: by who owns the assets and who is responsible for delivering the services." }
+        ]
+      },
+      {
+        "animation": "A flowchart splits 'Ownership' into two boxes. 'Public sector: government owns most of the assets and provides all the services' with a train and a post office icon. 'Private sector: ownership of assets and delivery of services in the hands of private individuals or companies' with factory and shop icons.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the public sector, the government owns most of the assets and provides all the services. Railways and post office are examples." },
+          { "speaker": "NEO", "text": "In the private sector, ownership of assets and delivery of services is in the hands of private individuals or companies. Tata Iron and Steel Company Limited and Reliance Industries Limited are privately owned." }
+        ]
+      },
+      {
+        "animation": "Two target boards. The private sector board has one target: 'Profit'. The public sector board has a target: 'Welfare'. Money coins fly from a 'Taxes' pot towards the public sector.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activities in the private sector are guided by the motive to earn profits. To get their services, we have to pay money to these individuals and companies." },
+          { "speaker": "NEO", "text": "The purpose of the public sector is not just to earn profits. Governments raise money through taxes and other ways to meet expenses on the services rendered by it." }
+        ]
+      },
+      {
+        "animation": "A highway, a bridge, a railway line, a harbour and an irrigation dam build themselves with a banner 'Too expensive for private sector'. Next, a farmer sells wheat at a government counter labelled 'Fair price', and a ration shop sells cheaper grain labelled 'Supported by government'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why doesn't a private company just build all the roads?" },
+          { "speaker": "NEO", "text": "Some things need spending of large sums of money, which is beyond the capacity of the private sector. Also, collecting money from thousands of road users is difficult. So the government builds roads, bridges, railways, harbours, electricity and irrigation." },
+          { "speaker": "NEO", "text": "The government also buys wheat and rice from farmers at a fair price, stores them and sells at a lower price to consumers through ration shops. It even supports some industries by selling electricity at low rates." }
+        ]
+      },
+      {
+        "animation": "A school and a health centre appear in a village with the caption 'Government's primary duty'. A board-tip card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Running proper schools and providing quality education and health care is a primary duty of the government. Nutrition and housing for the poor are also its responsibility." },
+          { "speaker": "NEO", "text": "Board tip: do not confuse public and private with organised and unorganised. One is about ownership, the other is about conditions of employment." }
+        ]
+      },
+      {
+        "animation": "Recap board with a train and a factory icon. Points appear: '1. Public sector: government owns assets', '2. Private sector: profit motive', '3. Government provides costly infrastructure, health and education'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: in the public sector, the government owns most assets, like the railways and post office." },
+          { "speaker": "NEO", "text": "Two: the private sector is guided by the profit motive." },
+          { "speaker": "NEO", "text": "Three: the government provides costly infrastructure and basic health and education for public welfare." },
+          { "speaker": "ZIPPY", "text": "So my train ticket is public, but my samosa on the platform is private." }
+        ]
+      }
+    ]
+  }
+]

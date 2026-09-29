@@ -1,4 +1,6 @@
 const DEFAULT_API_BASE_URLS = [
+  // Same-origin path served by the Vite dev proxy (vite.config.js).
+  import.meta.env.DEV ? "/api/v1" : null,
   import.meta.env.VITE_API_BASE_URLS,
   import.meta.env.VITE_API_BASE_URL,
   import.meta.env.VITE_API_FALLBACK_API_BASE_URL,

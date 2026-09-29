@@ -1,0 +1,380 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "Atoms and Molecules",
+    "topic_no": 1,
+    "name": "Law of Conservation of Mass",
+    "scenes": [
+      {
+        "animation": "A school lab. Zippy mixes baking soda and vinegar in an open beaker on a weighing balance; it fizzes and the reading drops. Zippy gasps and points: 'Mass is disappearing!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo! The reaction ate some mass! The balance reading went down!" },
+          { "speaker": "NEO", "text": "Nothing was eaten. A gas escaped into the air. Close the flask and weigh again." }
+        ]
+      },
+      {
+        "animation": "Sepia portraits appear: 'Antoine L. Lavoisier' and 'Joseph L. Proust'. Title: 'Laws of Chemical Combination'. Then the law writes itself: 'Mass can neither be created nor destroyed in a chemical reaction'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Antoine Lavoisier laid the foundation of chemical sciences by establishing two important laws of chemical combination." },
+          { "speaker": "NEO", "text": "The first is the law of conservation of mass. It states that mass can neither be created nor destroyed in a chemical reaction." }
+        ]
+      },
+      {
+        "animation": "Activity built step by step: a conical flask holds sodium sulphate solution, and a small ignition tube of barium chloride solution hangs inside by a thread. The cork is fitted and the flask is weighed. The flask is tilted so the solutions mix and a white precipitate forms; the balance reading stays the same.",
+        "lines": [
+          { "speaker": "NEO", "text": "Take sodium sulphate solution in a conical flask. Hang a small tube of barium chloride solution inside it, and cork the flask. Weigh it." },
+          { "speaker": "NEO", "text": "Now tilt the flask so the two mix. A white precipitate forms, so a reaction has taken place. Weigh it again." },
+          { "speaker": "ZIPPY", "text": "Same reading! Nothing escaped this time." }
+        ]
+      },
+      {
+        "animation": "Worked example on a blackboard, line by line: 'Q: 5.3 g sodium carbonate + 6 g ethanoic acid → 2.2 g CO2 + 0.9 g water + 8.2 g sodium ethanoate', 'Reactants: 5.3 + 6.0 = 11.3 g', 'Products: 2.2 + 0.9 + 8.2 = 11.3 g', '11.3 g = 11.3 g ✓ Law verified'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A textbook numerical. 5.3 grams of sodium carbonate reacts with 6 grams of ethanoic acid. The products are 2.2 grams of carbon dioxide, 0.9 grams of water and 8.2 grams of sodium ethanoate." },
+          { "speaker": "NEO", "text": "Mass of reactants is 5.3 plus 6, which is 11.3 grams." },
+          { "speaker": "NEO", "text": "Mass of products is 2.2 plus 0.9 plus 8.2. That is 3.1 plus 8.2, also 11.3 grams." },
+          { "speaker": "NEO", "text": "Both are equal, so the observations agree with the law of conservation of mass." }
+        ]
+      },
+      {
+        "animation": "Back to Zippy's first experiment: now in a closed bottle with a balloon on top. The balloon inflates with gas and the balance reading stays constant. A yellow 'EXAM TIP' sticker: 'Show total mass of reactants and products separately, then compare'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In your open beaker, carbon dioxide escaped. Trap it with a balloon, and the mass stays constant." },
+          { "speaker": "NEO", "text": "Exam tip: in these numericals, write the reactant total and product total on separate lines, then state the conclusion in words. That earns full marks." }
+        ]
+      },
+      {
+        "animation": "Recap board with a weighing balance icon. Points appear: '1. Mass can neither be created nor destroyed in a chemical reaction', '2. Verify with a closed flask', '3. Mass of reactants = mass of products (11.3 g = 11.3 g)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: mass can neither be created nor destroyed in a chemical reaction." },
+          { "speaker": "NEO", "text": "Two: verify it in a closed flask, so no gas escapes." },
+          { "speaker": "NEO", "text": "Three: total mass of reactants always equals total mass of products." },
+          { "speaker": "ZIPPY", "text": "Mass is like my pocket money. It never disappears, it just goes somewhere else." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Atoms and Molecules",
+    "topic_no": 2,
+    "name": "Law of Constant Proportions",
+    "scenes": [
+      {
+        "animation": "Two glasses of water: one from a Himalayan spring, the other from a tap in Chennai. Zippy holds them up like trophies, sure they must be different.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Mountain water and Chennai tap water must have different recipes, right?" },
+          { "speaker": "NEO", "text": "Pure water from anywhere has the same recipe. Hydrogen and oxygen, always in the same ratio by mass." }
+        ]
+      },
+      {
+        "animation": "The law appears: 'In a chemical substance, the elements are always present in definite proportions by mass' with 'Law of constant proportions / law of definite proportions, stated by Proust'. A glass of water splits into two stacks: '1 g hydrogen : 8 g oxygen' from '9 g water'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Proust stated the law of constant proportions. In a chemical substance, the elements are always present in definite proportions by mass." },
+          { "speaker": "NEO", "text": "In water, the ratio of the mass of hydrogen to the mass of oxygen is always one is to eight, whatever the source." },
+          { "speaker": "NEO", "text": "So if nine grams of water is decomposed, one gram of hydrogen and eight grams of oxygen are always obtained." }
+        ]
+      },
+      {
+        "animation": "A second card: ammonia, 'NH3', splitting into 'Nitrogen 14 : Hydrogen 3' by mass. A balance tilts with fourteen blue blocks on one side and three white blocks on the other.",
+        "lines": [
+          { "speaker": "NEO", "text": "Similarly, in ammonia, nitrogen and hydrogen are always present in the ratio fourteen is to three by mass, whatever the method or source." }
+        ]
+      },
+      {
+        "animation": "Worked example on a blackboard, line by line: 'Q: H : O = 1 : 8 by mass. Mass of O2 needed to react completely with 3 g H2 = ?', '1 g H reacts with 8 g O', '3 g H reacts with 3 × 8 = 24 g O', 'Answer: 24 g oxygen'. A calculator character double-checks: '24 ÷ 3 = 8 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try this. Hydrogen and oxygen combine in the ratio one is to eight by mass to form water. What mass of oxygen will react completely with three grams of hydrogen?" },
+          { "speaker": "ZIPPY", "text": "One gram of hydrogen needs eight grams of oxygen, so three grams needs three times as much!" },
+          { "speaker": "NEO", "text": "Right. Three into eight is twenty-four grams of oxygen. Check it: twenty-four by three is eight, so the ratio is still one is to eight." }
+        ]
+      },
+      {
+        "animation": "Big question mark: 'Why do these laws work?'. A sepia portrait of John Dalton appears with a speech bubble 'Atoms!'. A yellow 'EXAM TIP' sticker: 'Name the law: conservation of mass (Lavoisier), constant proportions (Proust)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "These laws made scientists ask why elements combine this way. John Dalton answered with his atomic theory, which is our next topic." },
+          { "speaker": "NEO", "text": "Exam tip: remember which law goes with whom. Conservation of mass with Lavoisier, and constant proportions with Proust." }
+        ]
+      },
+      {
+        "animation": "Recap board with a water droplet icon. Points appear: '1. Elements in a compound are always in definite proportions by mass', '2. Water H : O = 1 : 8; ammonia N : H = 14 : 3', '3. 3 g H needs 24 g O'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in a chemical substance, the elements are always present in definite proportions by mass." },
+          { "speaker": "NEO", "text": "Two: in water, hydrogen to oxygen is one is to eight, and in ammonia, nitrogen to hydrogen is fourteen is to three." },
+          { "speaker": "NEO", "text": "Three: use the ratio to scale up, like three grams of hydrogen needing twenty-four grams of oxygen." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Atoms and Molecules",
+    "topic_no": 3,
+    "name": "Dalton's Atomic Theory",
+    "scenes": [
+      {
+        "animation": "An old English schoolroom, 1808. A cartoon John Dalton, with a wooden ball in each hand, builds towers of coloured balls on his desk. Zippy peeks in through a time portal.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Who's this gentleman playing with marbles?" },
+          { "speaker": "NEO", "text": "That's John Dalton. Those balls are his idea of atoms, and they explained both laws of chemical combination." }
+        ]
+      },
+      {
+        "animation": "Postulates appear on scrolls one after another with matching visuals: '1. All matter is made of very tiny particles called atoms, which participate in chemical reactions' (a sand pile zooming into balls); '2. Atoms are indivisible particles, which cannot be created or destroyed in a chemical reaction' (a hammer bouncing off a ball).",
+        "lines": [
+          { "speaker": "NEO", "text": "Dalton's atomic theory says that all matter is made of very tiny particles called atoms, which participate in chemical reactions." },
+          { "speaker": "NEO", "text": "Atoms are indivisible particles, which cannot be created or destroyed in a chemical reaction." },
+          { "speaker": "ZIPPY", "text": "So when wood burns in a Lohri bonfire, its atoms don't vanish?" },
+          { "speaker": "NEO", "text": "Not one of them. They only rearrange into new substances, like carbon dioxide and water vapour, which float away into the air." }
+        ]
+      },
+      {
+        "animation": "More scrolls: '3. Atoms of a given element are identical in mass and chemical properties' (identical red balls); '4. Atoms of different elements have different masses and chemical properties' (red and blue balls of different sizes).",
+        "lines": [
+          { "speaker": "NEO", "text": "Atoms of a given element are identical in mass and chemical properties." },
+          { "speaker": "NEO", "text": "Atoms of different elements have different masses and chemical properties." },
+          { "speaker": "NEO", "text": "So every oxygen atom is like every other oxygen atom, but an oxygen atom is different from a hydrogen atom." }
+        ]
+      },
+      {
+        "animation": "Final scrolls: '5. Atoms combine in the ratio of small whole numbers to form compounds' (two white balls snapping onto one red ball); '6. The relative number and kinds of atoms are constant in a given compound' (identical water molecules marching out of a factory).",
+        "lines": [
+          { "speaker": "NEO", "text": "Atoms combine in the ratio of small whole numbers to form compounds." },
+          { "speaker": "NEO", "text": "The relative number and kinds of atoms are constant in a given compound." },
+          { "speaker": "ZIPPY", "text": "So which postulate explains which law?" }
+        ]
+      },
+      {
+        "animation": "Two arrows connect postulates to laws: 'Atoms cannot be created or destroyed' → 'Conservation of mass'; 'Relative number and kinds of atoms constant' → 'Constant proportions'. A yellow 'EXAM TIP' sticker appears. A small 'Fun fact' tag notes that atoms were later found to have smaller particles, covered in the next chapter.",
+        "lines": [
+          { "speaker": "NEO", "text": "Atoms cannot be created or destroyed. That explains the law of conservation of mass." },
+          { "speaker": "NEO", "text": "The relative number and kinds of atoms are constant in a compound. That explains the law of constant proportions." },
+          { "speaker": "NEO", "text": "Exam tip: this link between postulates and laws is asked very often. Quote the exact postulate." }
+        ]
+      },
+      {
+        "animation": "Recap board with Dalton's wooden balls. Points appear: '1. Matter is made of tiny, indivisible atoms', '2. Atoms of an element are identical; different elements differ', '3. Atoms combine in small whole-number ratios'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: all matter is made of tiny atoms that cannot be created or destroyed in a chemical reaction." },
+          { "speaker": "NEO", "text": "Two: atoms of the same element are identical, and atoms of different elements differ in mass and properties." },
+          { "speaker": "NEO", "text": "Three: atoms combine in small whole-number ratios, and these ratios are fixed in a compound." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Atoms and Molecules",
+    "topic_no": 4,
+    "name": "Atoms, Symbols and Atomic Mass",
+    "scenes": [
+      {
+        "animation": "Zippy builds a brick wall at a construction site near the school. Each brick is labelled 'atom' and the finished wall is labelled 'matter'. Zippy then tries to see a single atom with a magnifying glass and fails.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If atoms are the bricks of matter, why can't I see even one?" },
+          { "speaker": "NEO", "text": "Because atoms are very small. Their radius is measured in nanometres." }
+        ]
+      },
+      {
+        "animation": "A size ladder scales down: 'Watermelon', 'Grain of sand', 'Ant', then zooming to 'Hydrogen atom ~10⁻¹⁰ m'. A card: '1 nm = 10⁻⁹ m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "One nanometre is ten to the power minus nine metre. A hydrogen atom has a radius of about ten to the power minus ten metre." },
+          { "speaker": "NEO", "text": "Even if we can't see atoms directly, modern techniques can produce magnified images of the surfaces of elements showing atoms." }
+        ]
+      },
+      {
+        "animation": "Dalton's round symbols flash by (a circle with a dot for hydrogen), then Berzelius replaces them with letters. Symbol cards flip: 'H Hydrogen', 'O Oxygen', 'C Carbon', 'Al Aluminium', 'Co Cobalt', 'Ar Argon', 'Fe Iron (Ferrum)', 'Na Sodium (Natrium)', 'K Potassium (Kalium)'. An 'IUPAC' stamp approves them.",
+        "lines": [
+          { "speaker": "NEO", "text": "Dalton was the first to use symbols for elements. Berzelius later suggested symbols made from one or two letters of the name." },
+          { "speaker": "NEO", "text": "Today, IUPAC approves the names and symbols. The first letter is always capital and the second is small, like aluminium, A l, and cobalt, C o." },
+          { "speaker": "NEO", "text": "Some come from Latin names. Iron is F e from ferrum, sodium is N a from natrium, and potassium is K from kalium." }
+        ]
+      },
+      {
+        "animation": "An EXAM TIP card: 'Co = cobalt (element); CO = carbon monoxide (compound)'. The two stand side by side, the CO one splitting into C and O balls.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So Co and CO are the same thing, just shouting?" },
+          { "speaker": "NEO", "text": "No! Co with a small o is cobalt, an element. CO with both capitals is carbon monoxide, a compound. Exam tip: capitalisation carries marks." }
+        ]
+      },
+      {
+        "animation": "A see-saw balance: a carbon-12 atom is sliced into 12 equal pieces; one piece is tagged '1 u = 1/12 of mass of a C-12 atom'. A table builds: 'H 1 u, C 12 u, N 14 u, O 16 u, Na 23 u, Mg 24 u, S 32 u, Cl 35.5 u, Ca 40 u'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Atoms are too light to weigh individually, so we use relative atomic mass. In 1961, carbon-12 was chosen as the standard." },
+          { "speaker": "NEO", "text": "One atomic mass unit is a mass unit equal to exactly one-twelfth the mass of one atom of carbon-12. It is written as u." },
+          { "speaker": "NEO", "text": "So hydrogen is 1 u, carbon 12 u, nitrogen 14 u, oxygen 16 u, sodium 23 u, and chlorine 35.5 u." }
+        ]
+      },
+      {
+        "animation": "Recap board with a brick icon. Points appear: '1. Atoms are tiny: radius in nanometres', '2. IUPAC symbols: first letter capital, some from Latin (Fe, Na, K)', '3. 1 u = 1/12 of the mass of a carbon-12 atom'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: atoms are tiny, with radii measured in nanometres." },
+          { "speaker": "NEO", "text": "Two: IUPAC symbols start with a capital letter, and some come from Latin names like ferrum and natrium." },
+          { "speaker": "NEO", "text": "Three: one atomic mass unit is one-twelfth the mass of a carbon-12 atom." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Atoms and Molecules",
+    "topic_no": 5,
+    "name": "Molecules and Ions",
+    "scenes": [
+      {
+        "animation": "A dance floor at a school fest. Some cartoon atoms dance alone (helium, argon), some pair up (O2, H2), and one group of eight sulphur atoms forms a ring. Zippy stands confused in the middle.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Some atoms dance alone and some in groups. Who decides?" },
+          { "speaker": "NEO", "text": "Each element does. Atoms of most elements can't exist independently, so they form molecules or ions." }
+        ]
+      },
+      {
+        "animation": "A definition card: 'Molecule: smallest particle of an element or compound that can exist independently and shows all its properties; two or more atoms chemically bonded'. Atoms click together with glowing bonds.",
+        "lines": [
+          { "speaker": "NEO", "text": "A molecule is a group of two or more atoms chemically bonded together, held by attractive forces." },
+          { "speaker": "NEO", "text": "It is the smallest particle of an element or a compound that is capable of independent existence and shows all the properties of that substance." }
+        ]
+      },
+      {
+        "animation": "An atomicity table builds: 'Monoatomic: He, Ar', 'Diatomic: H2, O2, N2, Cl2', 'Triatomic: O3 (ozone)', 'Tetra-atomic: P4', 'Polyatomic: S8'. Then compounds: 'H2O: H 1 : O 8 by mass', 'NH3: N 14 : H 3', 'CO2: C 3 : O 8'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The number of atoms in a molecule is its atomicity. Noble gases like helium and argon are monoatomic. Hydrogen, oxygen, nitrogen and chlorine are diatomic." },
+          { "speaker": "NEO", "text": "Ozone is triatomic, phosphorus is tetra-atomic, and sulphur exists as S8, which is polyatomic." },
+          { "speaker": "NEO", "text": "Molecules of compounds join atoms of different elements in a fixed ratio. In carbon dioxide, carbon and oxygen are in the mass ratio three is to eight." }
+        ]
+      },
+      {
+        "animation": "A sodium atom hands one electron to a chlorine atom; the sodium turns into 'Na⁺ cation' and chlorine into 'Cl⁻ anion'. They snap together into a sodium chloride crystal lattice. Label: 'Ion: charged species; cation positive, anion negative'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Compounds made of metals and non-metals contain charged species called ions." },
+          { "speaker": "NEO", "text": "A negatively charged ion is an anion, and a positively charged ion is a cation. Sodium chloride is made of sodium cations and chloride anions." },
+          { "speaker": "ZIPPY", "text": "So table salt is just a big hug between plus and minus!" }
+        ]
+      },
+      {
+        "animation": "Polyatomic ion cards float in: 'NH4⁺ ammonium', 'OH⁻ hydroxide', 'NO3⁻ nitrate', 'HCO3⁻ hydrogen carbonate', 'CO3²⁻ carbonate', 'SO3²⁻ sulphite', 'SO4²⁻ sulphate', 'PO4³⁻ phosphate'. A yellow 'EXAM TIP' sticker: 'A polyatomic ion acts as one unit with a net charge'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A group of atoms carrying a charge is a polyatomic ion, like ammonium, hydroxide, nitrate, carbonate and sulphate." },
+          { "speaker": "NEO", "text": "Exam tip: memorise these polyatomic ions with their charges. You will need them in the very next topic for writing formulae." }
+        ]
+      },
+      {
+        "animation": "Recap board with a dancing molecule icon. Points appear: '1. Molecule: smallest independent particle, atoms chemically bonded', '2. Atomicity: mono, di, tri, tetra, poly', '3. Ions: cation (+), anion (−), polyatomic ions'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a molecule is the smallest particle of a substance that can exist independently." },
+          { "speaker": "NEO", "text": "Two: atomicity is the number of atoms in a molecule, from monoatomic to polyatomic." },
+          { "speaker": "NEO", "text": "Three: ions are charged species; cations are positive, anions are negative, and some ions are groups of atoms." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Atoms and Molecules",
+    "topic_no": 6,
+    "name": "Valency and Writing Chemical Formulae",
+    "scenes": [
+      {
+        "animation": "A cricket ground. Zippy writes 'Al O' on a scoreboard as the formula for aluminium oxide; a cartoon umpire raises a finger: 'OUT!'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Aluminium plus oxygen, so A l O. Why am I out?" },
+          { "speaker": "NEO", "text": "Because you ignored valency. A formula must balance the combining capacities of both elements." }
+        ]
+      },
+      {
+        "animation": "Atoms with little hands: hydrogen and chlorine with one hand each, oxygen with two, aluminium with three. A card: 'Valency = combining capacity of an element'. A table of ions builds: 'Na⁺, K⁺, Ag⁺ (1); Mg²⁺, Ca²⁺, Zn²⁺ (2); Al³⁺ (3); Cl⁻, Br⁻ (1); O²⁻, S²⁻ (2); N³⁻ (3)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The combining power, or capacity, of an element is its valency. Think of valency as the number of hands an atom can hold with." },
+          { "speaker": "NEO", "text": "Rule one: the valencies or charges on the ions must balance. Rule two: with a metal and a non-metal, write the metal first. Rule three: if a polyatomic ion appears more than once, put it in brackets." }
+        ]
+      },
+      {
+        "animation": "Criss-cross method builds step by step for aluminium oxide: 'Al O' with valencies '3' and '2' written below; arrows cross over; subscripts drop in to give 'Al2O3'. Check line: 'Al: 2 × 3 = 6, O: 3 × 2 = 6 ✓'. Zippy's scoreboard updates to 'Al2O3'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Use the criss-cross method. Write aluminium and oxygen, with valencies three and two below them. Cross them over." },
+          { "speaker": "NEO", "text": "Aluminium gets two, and oxygen gets three. So aluminium oxide is A l two O three." },
+          { "speaker": "NEO", "text": "Check it. Two aluminium atoms give two into three, six. Three oxygen atoms give three into two, six. Balanced!" }
+        ]
+      },
+      {
+        "animation": "More examples build one by one: 'Hydrogen chloride: H(1) Cl(1) → HCl', 'Hydrogen sulphide: H(1) S(2) → H2S', 'Magnesium chloride: Mg(2) Cl(1) → MgCl2', 'Calcium oxide: Ca(2) O(2) → Ca2O2 → CaO (simplify)'. The Ca2O2 line is crossed out in orange and simplified.",
+        "lines": [
+          { "speaker": "NEO", "text": "Hydrogen chloride is H C l. Hydrogen sulphide is H two S. Magnesium chloride is M g C l two." },
+          { "speaker": "ZIPPY", "text": "Calcium oxide: both valencies are two, so C a two O two!" },
+          { "speaker": "NEO", "text": "Almost. When the valencies are equal, the formula simplifies to C a O." }
+        ]
+      },
+      {
+        "animation": "Polyatomic ions join: 'Calcium hydroxide: Ca(2) OH(1) → Ca(OH)2', 'Sodium carbonate: Na(1) CO3(2) → Na2CO3', 'Ammonium sulphate: NH4(1) SO4(2) → (NH4)2SO4'. Brackets glow when they appear. A yellow 'EXAM TIP' sticker: 'No brackets for a single polyatomic ion: NaNO3, not Na(NO3)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Calcium hydroxide is C a O H in brackets, two. Sodium carbonate is N a two C O three. Ammonium sulphate is N H four in brackets, two, S O four." },
+          { "speaker": "NEO", "text": "Exam tip: use brackets only when there are two or more of the same polyatomic ion. Sodium nitrate is simply N a N O three." }
+        ]
+      },
+      {
+        "animation": "Recap board with the cricket scoreboard now showing 'Al2O3 ✓'. Points appear: '1. Valency = combining capacity', '2. Balance valencies with the criss-cross method; metal first', '3. Brackets for repeated polyatomic ions; simplify if possible'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: valency is the combining capacity of an element." },
+          { "speaker": "NEO", "text": "Two: balance the valencies using the criss-cross method, writing the metal first." },
+          { "speaker": "NEO", "text": "Three: bracket repeated polyatomic ions, and simplify the formula when you can." },
+          { "speaker": "ZIPPY", "text": "Not out this time, umpire!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Atoms and Molecules",
+    "topic_no": 7,
+    "name": "Molecular Mass and Formula Unit Mass",
+    "scenes": [
+      {
+        "animation": "A kirana shop. The shopkeeper weighs a water molecule on a tiny balance; a cartoon receipt prints '2 H + 1 O = ?'. Zippy reaches for a calculator.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If I know each atom's mass, can I get the bill for a whole molecule?" },
+          { "speaker": "NEO", "text": "Yes. Just add up the atomic masses of all the atoms in it." }
+        ]
+      },
+      {
+        "animation": "A definition card: 'Molecular mass = sum of atomic masses of all atoms in a molecule (in u)'. Worked lines build on a blackboard: 'H2O = 2 × 1 + 1 × 16', '= 2 + 16 = 18 u'. Then 'HNO3 = 1 + 14 + 3 × 16', '= 1 + 14 + 48 = 63 u'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The molecular mass of a substance is the sum of the atomic masses of all the atoms in a molecule. It is expressed in atomic mass units." },
+          { "speaker": "NEO", "text": "Water, H two O. Two hydrogens give two into one, which is two. One oxygen is sixteen. Two plus sixteen is eighteen u." },
+          { "speaker": "NEO", "text": "Nitric acid, H N O three. One plus fourteen plus three into sixteen. That is one plus fourteen plus forty-eight, which is sixty-three u." }
+        ]
+      },
+      {
+        "animation": "More molecules build on the board: 'C2H6 = 2 × 12 + 6 × 1 = 24 + 6 = 30 u', 'NH3 = 14 + 3 × 1 = 17 u', 'CH3OH = 12 + 3 × 1 + 16 + 1 = 32 u'. Each total gets a green check.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Let me try ethane, C two H six! Two into twelve is twenty-four, six into one is six. Thirty u!" },
+          { "speaker": "NEO", "text": "Correct. Now methanol, C H three O H. Twelve, plus three, plus sixteen, plus one." },
+          { "speaker": "ZIPPY", "text": "Twelve plus three is fifteen, plus sixteen is thirty-one, plus one is thirty-two u!" }
+        ]
+      },
+      {
+        "animation": "A sodium chloride crystal lattice appears with no separate molecules. Card: 'Formula unit mass: for ionic compounds, sum of atomic masses of all atoms in a formula unit'. Worked lines: 'NaCl = 23 + 35.5 = 58.5 u', 'CaCl2 = 40 + 2 × 35.5 = 40 + 71 = 111 u'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ionic compounds like sodium chloride have no separate molecules, so we use formula unit mass. We calculate it in the same way." },
+          { "speaker": "NEO", "text": "Sodium chloride is twenty-three plus thirty-five point five, which is fifty-eight point five u." },
+          { "speaker": "NEO", "text": "Calcium chloride is forty plus two into thirty-five point five. That is forty plus seventy-one, which is one hundred and eleven u." }
+        ]
+      },
+      {
+        "animation": "Board-exam style card: 'Given Zn = 65 u, Na = 23 u, K = 39 u, C = 12 u, O = 16 u'. Lines build: 'ZnO = 65 + 16 = 81 u', 'Na2O = 2 × 23 + 16 = 46 + 16 = 62 u', 'K2CO3 = 2 × 39 + 12 + 3 × 16 = 78 + 12 + 48 = 138 u'. A yellow 'EXAM TIP' sticker: 'Multiply subscripts first, then add'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A textbook exercise. Zinc oxide is sixty-five plus sixteen, eighty-one u. Sodium oxide is two into twenty-three, forty-six, plus sixteen, sixty-two u." },
+          { "speaker": "NEO", "text": "Potassium carbonate is two into thirty-nine, seventy-eight, plus twelve, plus three into sixteen, forty-eight. Total one hundred and thirty-eight u." },
+          { "speaker": "NEO", "text": "Exam tip: multiply each atomic mass by its subscript first, then add. And always write the unit u." }
+        ]
+      },
+      {
+        "animation": "Recap board with the kirana receipt now reading 'H2O = 18 u'. Points appear: '1. Molecular mass = sum of atomic masses in a molecule', '2. Formula unit mass for ionic compounds (NaCl = 58.5 u)', '3. Multiply by subscripts, add, write u'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: molecular mass is the sum of the atomic masses of all atoms in a molecule." },
+          { "speaker": "NEO", "text": "Two: for ionic compounds, we calculate formula unit mass the same way." },
+          { "speaker": "NEO", "text": "Three: multiply by subscripts, add carefully, and always write the unit u." }
+        ]
+      }
+    ]
+  }
+]

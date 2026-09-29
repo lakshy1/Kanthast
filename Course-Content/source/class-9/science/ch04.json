@@ -1,0 +1,431 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "Structure of the Atom",
+    "topic_no": 1,
+    "name": "Charged Particles in Matter",
+    "scenes": [
+      {
+        "animation": "A dry winter morning. Zippy combs its spiky hair with a plastic comb, then holds the comb near tiny bits of paper; they leap up and stick to it. Zippy stares, wide-eyed.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My comb just became a paper magnet! How?" },
+          { "speaker": "NEO", "text": "Rubbing made it electrically charged. And that tells us atoms themselves contain charged particles." }
+        ]
+      },
+      {
+        "animation": "Dalton's solid wooden ball from the last chapter appears with a label 'Indivisible?'. A crack runs across it, and a question mark pops out. Caption: 'End of the 19th century: atom is divisible'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Dalton said atoms were indivisible. But by the end of the nineteenth century, scientists found that an atom is not a simple, indivisible particle." },
+          { "speaker": "NEO", "text": "It contains at least one sub-atomic particle, the electron, identified by J. J. Thomson." }
+        ]
+      },
+      {
+        "animation": "A glass discharge tube glows. From the cathode side, a beam labelled 'Electrons (−)' streams out. Then from the other side, faint rays labelled 'Canal rays (+), E. Goldstein, 1886' appear. The particle behind them is named 'Proton'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Even before the electron was identified, in 1886, E. Goldstein discovered new radiations in a gas discharge. He called them canal rays." },
+          { "speaker": "NEO", "text": "These rays were positively charged radiations. They led to the discovery of another sub-atomic particle, the proton." }
+        ]
+      },
+      {
+        "animation": "A comparison card builds: 'Electron: charge −1, mass negligible' and 'Proton: charge +1, mass 1 u, about 2000 times that of an electron'. A tiny electron and a hefty proton sit on a see-saw that tilts heavily towards the proton.",
+        "lines": [
+          { "speaker": "NEO", "text": "A proton has a charge equal in magnitude but opposite in sign to that of an electron. So we give the electron a charge of minus one and the proton plus one." },
+          { "speaker": "NEO", "text": "The proton has a mass of approximately one atomic mass unit. Its mass is about two thousand times that of an electron. So the mass of an electron is considered negligible." },
+          { "speaker": "ZIPPY", "text": "So the electron is the featherweight, and the proton is the heavyweight!" }
+        ]
+      },
+      {
+        "animation": "An atom drawn as a question-mark box with electrons inside on one side and protons on the other. The text 'How are they arranged?' fades in. A yellow 'EXAM TIP' sticker: 'Canal rays → Goldstein → protons; electron → J. J. Thomson'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So an atom contains protons and electrons, and their charges balance each other. But how are they arranged? That puzzle gave us atomic models." },
+          { "speaker": "NEO", "text": "Exam tip: match each discovery to its scientist. Canal rays with Goldstein, and the electron with J. J. Thomson." }
+        ]
+      },
+      {
+        "animation": "Recap board with a charged comb icon. Points appear: '1. Atoms are divisible; contain charged particles', '2. Electron: −1 charge, negligible mass', '3. Proton: +1 charge, mass ~1 u (from canal rays)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: atoms are divisible and contain charged sub-atomic particles." },
+          { "speaker": "NEO", "text": "Two: the electron carries a charge of minus one and has negligible mass." },
+          { "speaker": "NEO", "text": "Three: the proton, discovered through canal rays, carries plus one charge and has a mass of about one u." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Structure of the Atom",
+    "topic_no": 2,
+    "name": "Thomson's Model of an Atom",
+    "scenes": [
+      {
+        "animation": "A summer fruit stall. Neo slices a watermelon in half; the red flesh is dotted with black seeds. Zippy reaches for a slice, but Neo holds it up like a model in a science exhibition.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, why are you staring at a watermelon like it's a textbook?" },
+          { "speaker": "NEO", "text": "Because J. J. Thomson's model of the atom looks just like this." }
+        ]
+      },
+      {
+        "animation": "The watermelon morphs into an atom model built step by step: first a red sphere labelled 'positive charge spread throughout'; then small blue dots labelled 'electrons (−)' are placed inside it one by one. A second label: 'Christmas pudding / watermelon model'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Thomson proposed that the model of an atom is similar to a Christmas pudding. The electrons are like currants in a spherical pudding." },
+          { "speaker": "NEO", "text": "We can also think of a watermelon. The positive charge is spread all over like the red edible part. The electrons are studded in it like the seeds." }
+        ]
+      },
+      {
+        "animation": "Two postulate cards: '(i) An atom consists of a positively charged sphere with electrons embedded in it' and '(ii) The negative and positive charges are equal in magnitude, so the atom as a whole is electrically neutral'. A balance scale with '+' and '−' weights stays level.",
+        "lines": [
+          { "speaker": "NEO", "text": "Thomson proposed two things. First, an atom consists of a positively charged sphere, and the electrons are embedded in it." },
+          { "speaker": "NEO", "text": "Second, the negative and positive charges are equal in magnitude, so the atom as a whole is electrically neutral." },
+          { "speaker": "ZIPPY", "text": "Neutral, like a cricket umpire!" }
+        ]
+      },
+      {
+        "animation": "A red stamp 'LIMITATION' lands on the watermelon model. Later experiments by other scientists (shown as silhouettes with a gold foil) make a crack appear across the model. Caption: 'Could not explain later experiments'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Thomson's model explained that atoms are electrically neutral. But results of experiments carried out by other scientists could not be explained by this model." },
+          { "speaker": "ZIPPY", "text": "So the watermelon was wrong from the start?" },
+          { "speaker": "NEO", "text": "Not entirely. It was an important step. It correctly said that atoms contain electrons and are neutral overall." },
+          { "speaker": "NEO", "text": "But scientists had to rethink where the positive charge really sits." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card: 'Draw a circle, shade it lightly (+), add electrons as small − signs spread inside'. The diagram draws itself neatly, labels 'positive sphere' and 'electron' appearing with arrows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: when drawing Thomson's model, show plus signs spread throughout the sphere and minus signs for the electrons embedded inside. Label both." }
+        ]
+      },
+      {
+        "animation": "Recap board with a watermelon slice. Points appear: '1. Positive sphere with electrons embedded (Christmas pudding / watermelon)', '2. Positive and negative charges equal: atom neutral', '3. Could not explain later experiments'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Thomson's atom is a positively charged sphere with electrons embedded in it, like seeds in a watermelon." },
+          { "speaker": "NEO", "text": "Two: the positive and negative charges are equal, so the atom is neutral." },
+          { "speaker": "NEO", "text": "Three: the model could not explain the results of later experiments." },
+          { "speaker": "ZIPPY", "text": "Great model. Even better snack." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Structure of the Atom",
+    "topic_no": 3,
+    "name": "Rutherford's Model of an Atom",
+    "scenes": [
+      {
+        "animation": "A lab in 1911 style. Zippy fires paper balls at a sheet of tissue paper; they all go straight through. Suddenly one bounces straight back and hits Zippy on the nose.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Ouch! How did a paper ball bounce off tissue paper?" },
+          { "speaker": "NEO", "text": "That's exactly what surprised Ernest Rutherford. Only his bullets were alpha particles." }
+        ]
+      },
+      {
+        "animation": "The experiment builds step by step: a source shoots a beam of 'α-particles (He²⁺, mass 4 u)' at a 'thin gold foil, about 1000 atoms thick'; a circular fluorescent screen surrounds the foil. Flashes appear mostly straight ahead, a few at small angles, and one rarely bounces back.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rutherford made fast-moving alpha particles fall on a thin gold foil, about one thousand atoms thick. Alpha particles are doubly charged helium ions with a mass of 4 u." },
+          { "speaker": "NEO", "text": "He expected them to be deflected only slightly, if Thomson's model were right. But what he saw was quite different." }
+        ]
+      },
+      {
+        "animation": "Three observation cards appear in sync with the flashes: '1. Most α-particles passed straight through', '2. Some were deflected by small angles', '3. One out of every 12000 rebounded'. Next to each, a matching conclusion slides in: 'Most space empty', 'Positive charge occupies very little space', 'All positive charge and mass concentrated in a very small volume'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Most alpha particles passed straight through. So most of the space inside the atom is empty." },
+          { "speaker": "NEO", "text": "Some were deflected by small angles. So the positive charge occupies very little space." },
+          { "speaker": "NEO", "text": "Very few, one out of every twelve thousand, bounced back. So all the positive charge and mass of the atom is concentrated in a very small volume." }
+        ]
+      },
+      {
+        "animation": "The nuclear model builds: a tiny dense red dot 'Nucleus (+)', then electrons zipping around it in circular paths. A zoom-out shows the atom as a stadium and the nucleus as a cricket ball at the centre. Label: 'Radius of nucleus ≈ 10⁵ times smaller than radius of atom'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rutherford's nuclear model says: there is a positively charged centre called the nucleus, where nearly all the mass of the atom resides." },
+          { "speaker": "NEO", "text": "The electrons revolve around the nucleus in circular paths. And the nucleus is very small; its radius is about ten to the power five times less than that of the atom." },
+          { "speaker": "ZIPPY", "text": "So if the atom were a stadium, the nucleus would be a cricket ball in the middle?" },
+          { "speaker": "NEO", "text": "Roughly, yes. Mostly empty seats." }
+        ]
+      },
+      {
+        "animation": "An electron spirals inward, radiating wavy energy lines, and crashes into the nucleus with a small 'poof'. A red 'DRAWBACK' stamp and the caption 'Revolving electron would lose energy → atom unstable'. A yellow 'EXAM TIP' sticker: 'Observation → conclusion pairs'.",
+        "lines": [
+          { "speaker": "NEO", "text": "But there was a problem. A charged particle moving in a circle would radiate energy, lose energy and finally fall into the nucleus. Then the atom would be highly unstable." },
+          { "speaker": "NEO", "text": "We know atoms are quite stable. Exam tip: learn the three observations with their three conclusions, and the drawback, as pairs." }
+        ]
+      },
+      {
+        "animation": "Recap board with a gold foil icon. Points appear: '1. Most of the atom is empty space', '2. Positive charge and mass concentrated in a tiny nucleus', '3. Drawback: could not explain stability of the atom'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the alpha scattering experiment showed most of the atom is empty space." },
+          { "speaker": "NEO", "text": "Two: all the positive charge and mass sit in a tiny nucleus, with electrons revolving around it." },
+          { "speaker": "NEO", "text": "Three: the model could not explain why atoms are stable." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Structure of the Atom",
+    "topic_no": 4,
+    "name": "Bohr's Model and the Neutron",
+    "scenes": [
+      {
+        "animation": "A multi-storey parking tower. Cartoon electrons park only on specific floors labelled K, L, M, N; none can hover between floors. Zippy tries to park between floors and a guard whistles.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why can't I park between floors?" },
+          { "speaker": "NEO", "text": "Because in an atom, electrons can only stay in certain allowed orbits. That's Neils Bohr's big idea." }
+        ]
+      },
+      {
+        "animation": "Bohr's postulates appear on cards: '(i) Only certain special orbits, called discrete orbits of electrons, are allowed inside the atom' and '(ii) While revolving in discrete orbits, electrons do not radiate energy'. An electron circles calmly on a ring with no energy waves coming off it.",
+        "lines": [
+          { "speaker": "NEO", "text": "To fix Rutherford's problem, Neils Bohr put forward two postulates." },
+          { "speaker": "NEO", "text": "First, only certain special orbits, known as discrete orbits of electrons, are allowed inside the atom." },
+          { "speaker": "NEO", "text": "Second, while revolving in discrete orbits, the electrons do not radiate energy. So they don't spiral into the nucleus." }
+        ]
+      },
+      {
+        "animation": "A Bohr diagram builds step by step: a central nucleus, then concentric rings drawn one at a time labelled 'K (n = 1)', 'L (n = 2)', 'M (n = 3)', 'N (n = 4)'. Caption: 'Orbits = shells = energy levels'.",
+        "lines": [
+          { "speaker": "NEO", "text": "These orbits or shells are called energy levels. They are represented by the letters K, L, M, N, and so on, or by the numbers n equals one, two, three, four." },
+          { "speaker": "ZIPPY", "text": "K is the closest to the nucleus?" },
+          { "speaker": "NEO", "text": "Yes, K is the first shell." }
+        ]
+      },
+      {
+        "animation": "A sepia portrait card: 'J. Chadwick, 1932'. A new neutral grey ball labelled 'Neutron (n): no charge, mass ≈ proton' drops into the nucleus beside red protons. A small note: 'Present in all atoms except hydrogen'.",
+        "lines": [
+          { "speaker": "NEO", "text": "There was still one particle missing. In 1932, J. Chadwick discovered the neutron." },
+          { "speaker": "NEO", "text": "Neutrons have no charge and a mass nearly equal to that of a proton. They are present in the nucleus of all atoms, except hydrogen." },
+          { "speaker": "NEO", "text": "So the mass of an atom is the sum of the masses of protons and neutrons in its nucleus." }
+        ]
+      },
+      {
+        "animation": "A summary table builds: 'Electron: e⁻, −1, negligible mass, in shells', 'Proton: p⁺, +1, 1 u, in nucleus', 'Neutron: n, 0, 1 u, in nucleus'. A yellow 'EXAM TIP' sticker: 'Hydrogen (protium) has no neutron'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So an atom has three sub-atomic particles: electrons in the shells, and protons and neutrons in the nucleus." },
+          { "speaker": "NEO", "text": "Exam tip: a favourite one-mark question asks which atom has no neutron. The answer is ordinary hydrogen." }
+        ]
+      },
+      {
+        "animation": "Recap board with the parking tower icon. Points appear: '1. Electrons revolve in discrete orbits without radiating energy', '2. Shells K, L, M, N (n = 1, 2, 3, 4)', '3. Neutron: Chadwick 1932, no charge, mass ≈ proton'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in Bohr's model, electrons revolve in discrete orbits and do not radiate energy." },
+          { "speaker": "NEO", "text": "Two: these shells are named K, L, M, N, or n equals one to four." },
+          { "speaker": "NEO", "text": "Three: Chadwick discovered the neutron in 1932; it has no charge and about the same mass as a proton." },
+          { "speaker": "ZIPPY", "text": "Parking rules understood, guard sir!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Structure of the Atom",
+    "topic_no": 5,
+    "name": "Distribution of Electrons in Shells",
+    "scenes": [
+      {
+        "animation": "A school bus with rows labelled K, L, M. Zippy, as the conductor, tries to squeeze ten electrons into the first row, which has only two seats. The electrons complain loudly.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why won't these electrons all sit in the front row?" },
+          { "speaker": "NEO", "text": "Because every shell has a seat limit. Bohr and Bury gave the rules." }
+        ]
+      },
+      {
+        "animation": "Rule cards build: 'Rule 1: Maximum electrons in a shell = 2n²'. A table fills line by line: 'K: n = 1 → 2 × 1² = 2', 'L: n = 2 → 2 × 2² = 8', 'M: n = 3 → 2 × 3² = 18', 'N: n = 4 → 2 × 4² = 32'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rule one: the maximum number of electrons in a shell is given by two n squared, where n is the shell number." },
+          { "speaker": "NEO", "text": "For K, n is one, so two into one is two. For L, two into four is eight. For M, two into nine is eighteen. For N, two into sixteen is thirty-two." }
+        ]
+      },
+      {
+        "animation": "Rule 2 card: 'The outermost shell can hold a maximum of 8 electrons'. Rule 3 card: 'Electrons fill shells in a step-wise manner; an outer shell gets electrons only after inner shells are filled'. Seats in the bus fill row by row.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rule two: the maximum number of electrons that can be accommodated in the outermost orbit is eight." },
+          { "speaker": "NEO", "text": "Rule three: electrons are not accommodated in a given shell unless the inner shells are filled. Shells are filled in a step-wise manner." }
+        ]
+      },
+      {
+        "animation": "Bohr diagrams are drawn step by step with electron dots: 'Oxygen, 8 → K 2, L 6 → 2, 6'; 'Sodium, 11 → 2, 8, 1'; 'Chlorine, 17 → 2, 8, 7'; 'Argon, 18 → 2, 8, 8'. Each shell's dots appear in sequence as Neo speaks.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's fill some. Oxygen has eight electrons. Two go in K, six in L. So two, six." },
+          { "speaker": "NEO", "text": "Sodium has eleven. Two in K, eight in L, one in M. So two, eight, one." },
+          { "speaker": "ZIPPY", "text": "My turn! Chlorine has seventeen. Two, eight, seven!" },
+          { "speaker": "NEO", "text": "Perfect. And argon, with eighteen, is two, eight, eight." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card shows: 'Check: sum of electrons in shells = atomic number. Na: 2 + 8 + 1 = 11 ✓'. The Bohr diagram of sodium is shown fully labelled.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait. Chlorine's M shell can hold eighteen. Why did we stop at seven?" },
+          { "speaker": "NEO", "text": "Because chlorine has only seventeen electrons in total. We simply ran out of electrons to place." },
+          { "speaker": "NEO", "text": "Exam tip: always add up the electrons in all shells to check that the sum equals the atomic number. For sodium, two plus eight plus one is eleven." }
+        ]
+      },
+      {
+        "animation": "Recap board with the school bus icon. Points appear: '1. Maximum in a shell = 2n² (K 2, L 8, M 18, N 32)', '2. Outermost shell holds at most 8', '3. Fill shells step-wise, inner first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a shell holds at most two n squared electrons: two, eight, eighteen, thirty-two." },
+          { "speaker": "NEO", "text": "Two: the outermost shell can hold at most eight electrons." },
+          { "speaker": "NEO", "text": "Three: shells fill step by step, inner shells first." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Structure of the Atom",
+    "topic_no": 6,
+    "name": "Valency from Electronic Configuration",
+    "scenes": [
+      {
+        "animation": "A schoolyard. Helium, neon and argon atoms sit calmly under a tree with complete outer shells, refusing to play. Sodium and chlorine run around restlessly trying to swap electrons.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why are those three atoms so relaxed, while sodium and chlorine are so restless?" },
+          { "speaker": "NEO", "text": "The relaxed ones already have full outer shells. The others want to reach a stable eight." }
+        ]
+      },
+      {
+        "animation": "A neon Bohr diagram with 2, 8 glows gold, labelled 'Octet: 8 electrons in outermost shell = stable'. Helium, 2, glows too, labelled 'K shell full with 2'. Label: 'Valence electrons = electrons in outermost shell'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The electrons in the outermost shell are called valence electrons." },
+          { "speaker": "NEO", "text": "Atoms with a completely filled outermost shell show little chemical activity. Their combining capacity, or valency, is zero." },
+          { "speaker": "NEO", "text": "An outermost shell with eight electrons is said to have an octet. Atoms react to achieve an octet." }
+        ]
+      },
+      {
+        "animation": "Sodium's diagram, 2, 8, 1: the lone outer electron waves goodbye and leaves; label 'Loses 1 → valency 1'. Magnesium, 2, 8, 2: two electrons leave; 'valency 2'. Hydrogen, lithium and sodium line up under a banner 'one valence electron each → valency 1'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Atoms with one, two or three outer electrons usually lose them. Sodium, two, eight, one, loses one electron, so its valency is one." },
+          { "speaker": "NEO", "text": "Magnesium, two, eight, two, loses two, so its valency is two. So valency equals the number of valence electrons when the outer shell has four or fewer." }
+        ]
+      },
+      {
+        "animation": "Chlorine's diagram, 2, 8, 7: one electron flies in to complete eight; a calculation writes itself: 'Valency = 8 − 7 = 1'. Oxygen, 2, 6: 'Valency = 8 − 6 = 2'. A cartoon Zippy tries to make chlorine lose seven electrons and is stopped by a big 'EASIER TO GAIN 1!' sign.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Chlorine has seven outer electrons. So its valency is seven, right?" },
+          { "speaker": "NEO", "text": "Losing seven is much harder than gaining one. So chlorine gains one electron. Its valency is eight minus seven, which is one." },
+          { "speaker": "NEO", "text": "Oxygen, two, six, gains two electrons. Its valency is eight minus six, which is two." }
+        ]
+      },
+      {
+        "animation": "A table builds: 'Element | Configuration | Valency': 'H 1 | 1', 'He 2 | 0', 'C 2, 4 | 4', 'N 2, 5 | 3', 'O 2, 6 | 2', 'Ne 2, 8 | 0', 'Na 2, 8, 1 | 1', 'Mg 2, 8, 2 | 2', 'Cl 2, 8, 7 | 1'. A yellow 'EXAM TIP' sticker: 'If valence electrons > 4, valency = 8 − valence electrons'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: if there are four or fewer valence electrons, valency equals that number. If more than four, valency is eight minus that number. So nitrogen, two, five, has valency three." }
+        ]
+      },
+      {
+        "animation": "Recap board with the schoolyard icon. Points appear: '1. Valence electrons: in the outermost shell', '2. Atoms react to achieve an octet', '3. Valency = valence electrons (≤ 4) or 8 − valence electrons (> 4)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: valence electrons are the electrons in the outermost shell." },
+          { "speaker": "NEO", "text": "Two: atoms lose, gain or share electrons to achieve an octet." },
+          { "speaker": "NEO", "text": "Three: valency is the number of valence electrons, or eight minus that number when it is more than four." },
+          { "speaker": "ZIPPY", "text": "So chlorine is just one electron away from happiness." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Structure of the Atom",
+    "topic_no": 7,
+    "name": "Atomic Number and Mass Number",
+    "scenes": [
+      {
+        "animation": "An atom ID-card office. Each atom walks up to a counter and gets a card with two numbers printed on it, one at the bottom-left and one at the top-left of its symbol. Zippy reads a card: '14 over 7 N'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Every atom gets two numbers on its ID card? What do they mean?" },
+          { "speaker": "NEO", "text": "The bottom one is the atomic number, and the top one is the mass number. Let's decode them." }
+        ]
+      },
+      {
+        "animation": "A nucleus opens like a box to show red protons. Label: 'Atomic number (Z) = number of protons'. Examples pop up: 'H: Z = 1', 'C: Z = 6', 'O: Z = 8'. Caption: 'All atoms of an element have the same Z'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The atomic number is the total number of protons in the nucleus. It is denoted by Z." },
+          { "speaker": "NEO", "text": "All atoms of an element have the same atomic number. In fact, elements are defined by the number of protons they have. Hydrogen has one, and carbon has six." }
+        ]
+      },
+      {
+        "animation": "Now protons and grey neutrons together glow, labelled 'Nucleons'. Formula builds: 'Mass number (A) = protons + neutrons'. Carbon example: '6 p + 6 n = 12 u'. Aluminium: '13 p + 14 n = 27 u'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Protons and neutrons together are called nucleons. The mass of an atom is practically due to them." },
+          { "speaker": "NEO", "text": "The mass number is the sum of the total number of protons and neutrons in the nucleus of an atom." },
+          { "speaker": "NEO", "text": "Carbon has six protons and six neutrons, so its mass number is twelve. Aluminium has thirteen protons and fourteen neutrons, so its mass number is twenty-seven." }
+        ]
+      },
+      {
+        "animation": "Notation card: the symbol 'N' with '14' at top-left and '7' at bottom-left; arrows label 'A = mass number' and 'Z = atomic number'. Then a worked example builds line by line: 'Na: A = 23, Z = 11', 'Protons = 11', 'Electrons = 11 (neutral atom)', 'Neutrons = A − Z = 23 − 11 = 12'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In notation, the mass number is written at the top-left of the symbol, and the atomic number at the bottom-left, like fourteen over seven N for nitrogen." },
+          { "speaker": "NEO", "text": "Now a numerical. Sodium has mass number twenty-three and atomic number eleven. It has eleven protons and, being neutral, eleven electrons." },
+          { "speaker": "ZIPPY", "text": "And neutrons? Twenty-three plus eleven?" },
+          { "speaker": "NEO", "text": "Minus, not plus. Neutrons equal mass number minus atomic number. Twenty-three minus eleven is twelve." }
+        ]
+      },
+      {
+        "animation": "A second quick example flashes: 'Sulphur: A = 32, Z = 16 → neutrons = 32 − 16 = 16'. A yellow 'EXAM TIP' sticker: 'Neutrons = A − Z; electrons = Z only for a neutral atom'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sulphur has mass number thirty-two and atomic number sixteen, so it has sixteen neutrons." },
+          { "speaker": "NEO", "text": "Exam tip: the number of electrons equals Z only for a neutral atom. For ions, adjust for the charge." }
+        ]
+      },
+      {
+        "animation": "Recap board with an atom ID card icon. Points appear: '1. Atomic number Z = number of protons', '2. Mass number A = protons + neutrons', '3. Neutrons = A − Z'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the atomic number is the number of protons." },
+          { "speaker": "NEO", "text": "Two: the mass number is the number of protons plus neutrons." },
+          { "speaker": "NEO", "text": "Three: to find neutrons, subtract the atomic number from the mass number." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Structure of the Atom",
+    "topic_no": 8,
+    "name": "Isotopes and Isobars",
+    "scenes": [
+      {
+        "animation": "A family photo of three hydrogen atoms that look alike from outside. Zoom in: one nucleus has just a proton, one a proton and a neutron, one a proton and two neutrons. Zippy calls them 'triplets with different weights'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Three hydrogen atoms, but different weights? Are they even the same element?" },
+          { "speaker": "NEO", "text": "Yes. Same number of protons means same element. They're isotopes." }
+        ]
+      },
+      {
+        "animation": "Definition card: 'Isotopes: atoms of the same element with the same atomic number but different mass numbers'. Hydrogen notation cards: '¹H protium', '²H deuterium', '³H tritium'. Then '¹²C and ¹⁴C', '³⁵Cl and ³⁷Cl'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Isotopes are atoms of the same element, which have the same atomic number but different mass numbers." },
+          { "speaker": "NEO", "text": "Hydrogen has three: protium, deuterium and tritium, with mass numbers one, two and three. Carbon has carbon-twelve and carbon-fourteen. Chlorine has chlorine-thirty-five and chlorine-thirty-seven." },
+          { "speaker": "NEO", "text": "Their chemical properties are similar, but physical properties are different." }
+        ]
+      },
+      {
+        "animation": "Worked example on a blackboard, line by line: 'Cl-35 : Cl-37 = 3 : 1 (75% : 25%)', 'Average mass = 35 × 75/100 + 37 × 25/100', '= 26.25 + 9.25', '= 35.50 u'. Next: '¹⁶X 90.2%, ¹⁸X 9.8%', '16 × 0.902 = 14.432', '18 × 0.098 = 1.764', 'Sum = 16.196 ≈ 16.2 u'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Natural chlorine has its two isotopes in the ratio three is to one, which is seventy-five percent and twenty-five percent." },
+          { "speaker": "NEO", "text": "Average atomic mass equals thirty-five into seventy-five by hundred, plus thirty-seven into twenty-five by hundred. That's 26.25 plus 9.25, which is 35.5 u." },
+          { "speaker": "NEO", "text": "A textbook question: an element X has isotopes of mass sixteen at 90.2 percent and mass eighteen at 9.8 percent. Sixteen into 0.902 is 14.432. Eighteen into 0.098 is 1.764. The sum is 16.196, about 16.2 u." }
+        ]
+      },
+      {
+        "animation": "Application cards flip in: a nuclear reactor labelled 'Uranium isotope: fuel', a hospital machine 'Cobalt isotope: cancer treatment', a thyroid gland 'Iodine isotope: goitre treatment'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Isotopes are useful. An isotope of uranium is used as fuel in nuclear reactors. An isotope of cobalt is used in the treatment of cancer. An isotope of iodine is used in the treatment of goitre." }
+        ]
+      },
+      {
+        "animation": "Two different atoms stand on a weighing scale that balances: 'Calcium ⁴⁰₂₀Ca' and 'Argon ⁴⁰₁₈Ar'. Label: 'Isobars: same mass number, different atomic numbers'. A comparison card appears with a yellow 'EXAM TIP' sticker.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Now calcium and argon weigh the same. Are they isotopes too?" },
+          { "speaker": "NEO", "text": "No. Calcium has atomic number twenty, and argon eighteen, but both have mass number forty. Atoms of different elements with the same mass number are isobars." },
+          { "speaker": "NEO", "text": "Exam tip: isotopes share atomic number, isobars share mass number. Swapping these is the most common mistake." }
+        ]
+      },
+      {
+        "animation": "Recap board with the hydrogen triplets. Points appear: '1. Isotopes: same Z, different A (protium, deuterium, tritium)', '2. Average atomic mass: Cl = 35.5 u', '3. Isobars: same A, different Z (⁴⁰Ca and ⁴⁰Ar)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: isotopes have the same atomic number but different mass numbers." },
+          { "speaker": "NEO", "text": "Two: average atomic mass uses the percentage of each isotope, which gives 35.5 u for chlorine." },
+          { "speaker": "NEO", "text": "Three: isobars have the same mass number but different atomic numbers." }
+        ]
+      }
+    ]
+  }
+]

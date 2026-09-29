@@ -1,0 +1,340 @@
+[
+  {
+    "chapter_no": 6,
+    "chapter": "Pressure, Winds, Storms, and Cyclones",
+    "topic_no": 1,
+    "name": "Pressure: Force per Unit Area",
+    "scenes": [
+      {
+        "animation": "A picnic trail. Megha walks happily with a broad-strapped bag; her brother Pawan winces and keeps adjusting his narrow-strapped bag. A weighing tag on each bag shows they are equally heavy. Zippy rides on Pawan's shoulder, squashed by the thin strap.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Both bags weigh the same. So why is Pawan's bag biting into his shoulder?" },
+          { "speaker": "NEO", "text": "Same force, different area. That difference has a name: pressure." }
+        ]
+      },
+      {
+        "animation": "Close-up of the two shoulders: the narrow strap's weight arrows crowd onto a thin strip glowing red; the broad strap's arrows spread over a wide patch glowing soft green. The formula 'Pressure = Force ÷ Area' writes itself in the middle.",
+        "lines": [
+          { "speaker": "NEO", "text": "The weight of the narrow-strap bag acts on a smaller area of the shoulder. The broad strap spreads the same weight over a larger area." },
+          { "speaker": "NEO", "text": "So we define pressure as the force per unit area. Pressure equals force divided by area." },
+          { "speaker": "NEO", "text": "For now, we only consider forces acting perpendicular to the surface." }
+        ]
+      },
+      {
+        "animation": "Quick clips: a bucket with a broad handle lifted easily, a vegetable seller with a round cloth pad under a basket on her head. Then a unit card: 'SI unit: N/m² = pascal (Pa)'. A worked example builds: 'Force = 100 N, Area = 2 m²', 'Pressure = 100 ÷ 2 = 50 N/m²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A broad bucket handle and a cloth pad under a head load both reduce pressure by increasing the area." },
+          { "speaker": "NEO", "text": "Force is in newton and area in metre square, so the SI unit of pressure is newton per metre square, also called a pascal, written Pa." },
+          { "speaker": "NEO", "text": "Example: a force of 100 newton on a cardboard of area 2 metre square gives a pressure of 100 divided by 2, which is 50 newton per metre square." }
+        ]
+      },
+      {
+        "animation": "Table 6.1 comes alive with a 'Safety first: adult supervision' badge. An adult drives an iron nail into wood, pointed end first (goes in easily), then head first (won't go in). A knife cuts an apple with the sharp edge easily, then fails with the blunt edge.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try the activities in Table 6.1, only under the supervision of an adult." },
+          { "speaker": "NEO", "text": "A nail goes in easily by its pointed end, not by its head. An apple is cut easily with the sharp edge of a knife, not the blunt one." },
+          { "speaker": "NEO", "text": "When the area is smaller, the pressure is higher, which makes such tasks easier." }
+        ]
+      },
+      {
+        "animation": "An elephant stands on four feet, each footprint labelled '0.25 m²'. The working appears line by line: 'Total area = 4 × 0.25 = 1 m²', 'Pressure = 20000 N ÷ 1 m² = 20000 N/m²'. An 'Exam Tip' sticker flashes on '4 ×'.",
+        "lines": [
+          { "speaker": "NEO", "text": "An elephant weighing 20000 newton stands on four feet, each covering 0.25 metre square." },
+          { "speaker": "NEO", "text": "Total area is 4 into 0.25, which is 1 metre square. So pressure is 20000 divided by 1, which is 20000 newton per metre square." },
+          { "speaker": "NEO", "text": "Exam tip: add up the area of all the feet first. Using only one foot is the most common mistake." }
+        ]
+      },
+      {
+        "animation": "Recap board with a broad-strapped bag icon. Points appear: '1. Pressure = Force ÷ Area', '2. SI unit: N/m² = pascal (Pa)', '3. Smaller area → higher pressure; larger area → lower pressure'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: pressure is force per unit area." },
+          { "speaker": "NEO", "text": "Two: its SI unit is newton per metre square, called pascal." },
+          { "speaker": "NEO", "text": "Three: a smaller area gives higher pressure, so nails and knives are sharp, and straps are broad." },
+          { "speaker": "ZIPPY", "text": "Pawan, buy a new bag. Science says so." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Pressure, Winds, Storms, and Cyclones",
+    "topic_no": 2,
+    "name": "Pressure Exerted by Liquids",
+    "scenes": [
+      {
+        "animation": "A colony rooftop with a big black overhead water tank. Zippy tries to drag the tank down to the ground, grunting, because 'it's easier to fill down here'. The tap below slows to a dribble as it descends.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why do people put water tanks way up on the roof? It's so much work!" },
+          { "speaker": "NEO", "text": "Bring it down and your tap will sulk. The reason is liquid pressure." }
+        ]
+      },
+      {
+        "animation": "Activity 6.1 step by step: two transparent pipes of about 25 cm, one narrow and one broad, each with a rubber balloon tied at the bottom, are clamped on a stand. Water is poured into both to the same level, about halfway. Both balloons bulge by exactly the same amount; a tag 'different weights of water' hovers over the pipes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 6.1. Take two transparent pipes of the same length, about 25 centimetres, but different diameters. Tie a good-quality balloon to one end of each and clamp them on a stand." },
+          { "speaker": "NEO", "text": "Fill both with water to the same level, about halfway. Both balloons bulge to the same extent." },
+          { "speaker": "NEO", "text": "The broad pipe holds more water, so weight is not the reason. The pressure of the water column causes the bulge." }
+        ]
+      },
+      {
+        "animation": "More water is poured into one pipe in stages; the water column rises and the balloon bulges bigger each time. A graph beside it rises: 'Height of column up → pressure up'. Cut to the rooftop tank sending a strong stream to a ground-floor tap.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now pour more water into one pipe, again and again. The bulge grows as the water column gets taller." },
+          { "speaker": "NEO", "text": "So the pressure exerted by a liquid depends on the height of its column." },
+          { "speaker": "NEO", "text": "That is why overhead tanks are placed at a height, to increase the pressure in the taps and give a good stream of water." }
+        ]
+      },
+      {
+        "animation": "Activity 6.2: an adult makes four small holes near the bottom of a used plastic bottle, all at the same height, with a slightly heated needle. The holes are taped, the bottle filled, and all tapes pulled at once; four equal jets shoot out sideways. Then a leaking pipe joint sprays like a fountain.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 6.2. Make four small holes near the bottom of a used plastic bottle, all at the same height. If it is hard, slightly heat the needle, with an adult's help." },
+          { "speaker": "NEO", "text": "Seal the holes with tape, fill the bottle with water, and remove all the tapes at the same time. Water spurts out of every hole." },
+          { "speaker": "NEO", "text": "So liquids exert pressure not only at the bottom but also on the sides. In fact, liquids exert pressure in all directions." }
+        ]
+      },
+      {
+        "animation": "Cross-section of a dam: a narrow top and a very broad base. Horizontal pressure arrows on the wall grow longer towards the bottom. An 'Exam Tip' sticker appears next to two vessels of different widths filled to the same level.",
+        "lines": [
+          { "speaker": "NEO", "text": "The base of a dam is much broader than the top. The horizontal water pressure is very large near the bottom, and a broad base withstands it." },
+          { "speaker": "NEO", "text": "Exam tip: liquid pressure depends on the height of the column, not on the shape or width of the vessel. Same height means same pressure at the bottom." }
+        ]
+      },
+      {
+        "animation": "Recap board with a tank icon. Points appear: '1. Taller liquid column → more pressure', '2. Liquids exert pressure in all directions, including on walls', '3. Tanks placed high; dams have broad bases'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: liquid pressure increases as the height of the liquid column increases." },
+          { "speaker": "NEO", "text": "Two: liquids exert pressure in all directions, including on the walls of the container." },
+          { "speaker": "NEO", "text": "Three: that is why tanks are placed high and dams are built with broad bases." },
+          { "speaker": "ZIPPY", "text": "Okay, okay. Tank goes back on the roof." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Pressure, Winds, Storms, and Cyclones",
+    "topic_no": 3,
+    "name": "Air Pressure and Atmospheric Pressure",
+    "scenes": [
+      {
+        "animation": "Zippy tries to lift an inverted paper plate by a stick, but it is covered by a huge chart paper sheet and refuses to budge. He strains, sparks flying, while an invisible crowd of air particles sits on the sheet, grinning.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "It's just paper! Why can't I lift it?" },
+          { "speaker": "NEO", "text": "Because the air is pressing down on it. You're lifting the atmosphere too." }
+        ]
+      },
+      {
+        "animation": "The Earth wrapped in a glowing blue envelope labelled 'Atmosphere'. Gas labels float in it: nitrogen, oxygen, argon, carbon dioxide. An arrow shows it extending many kilometres up.",
+        "lines": [
+          { "speaker": "NEO", "text": "The envelope of air around the Earth is called the atmosphere. It contains nitrogen, oxygen, argon, carbon dioxide and other gases, and extends many kilometres above the surface." }
+        ]
+      },
+      {
+        "animation": "Activity 6.3 step by step: an inverted paper plate with a stick attached; a chart paper sheet of 70 cm × 56 cm folded twice with a hole for the stick is placed on it and lifted easily. Then an unfolded sheet with a centre hole replaces it, and lifting takes much more effort. Air arrows press down on the larger area.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 6.3. Attach a stick to an inverted paper plate. Take two identical chart paper sheets, about 70 by 56 centimetres." },
+          { "speaker": "NEO", "text": "Fold one sheet twice, make a hole in the centre for the stick, place it on the plate and lift. Easy." },
+          { "speaker": "NEO", "text": "Now use the unfolded sheet instead. Lifting needs more effort, though the sheet's weight has not changed." },
+          { "speaker": "NEO", "text": "Air exerts a force that grows with the area, so air exerts pressure. The pressure exerted by the air around us is called atmospheric pressure." }
+        ]
+      },
+      {
+        "animation": "A girl blows up a balloon and it swells evenly in all directions with arrows pushing outward. Then Activity 6.4: a rubber sucker is pressed on a smooth tile; air is squeezed out of its cup; big outside-pressure arrows hold it tight while a hand struggles to pull it off.",
+        "lines": [
+          { "speaker": "NEO", "text": "A balloon expands in all directions, so air exerts pressure in all directions." },
+          { "speaker": "NEO", "text": "Activity 6.4. Press a good-quality rubber sucker firmly on a smooth, flat surface, then try to pull it off. It's hard!" },
+          { "speaker": "NEO", "text": "Pressing pushes out most of the air inside, so the pressure inside drops. The higher air pressure outside holds the sucker in place." }
+        ]
+      },
+      {
+        "animation": "A 15 cm × 15 cm square on a boy's palm has a tall air column above it; a tag reads 'about 225 kg (2250 N)'. Balancing arrows inside his body push outward equally. A unit card follows: '1 millibar (mb) = 100 Pa', '1 hectopascal (hPa) = 100 Pa'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The force of the air column over an area of 15 by 15 centimetres is nearly equal to the force of gravity on 225 kilograms, that is 2250 newton." },
+          { "speaker": "ZIPPY", "text": "Then why aren't we all flattened like papad?" },
+          { "speaker": "NEO", "text": "Because the pressure inside our bodies is equal to atmospheric pressure, and it balances the pressure from outside." },
+          { "speaker": "NEO", "text": "Exam tip: the practical unit of air pressure is the millibar, equal to 100 pascal. The hectopascal is also 100 pascal." }
+        ]
+      },
+      {
+        "animation": "Recap board with a sucker icon. Points appear: '1. Air exerts pressure in all directions', '2. Atmospheric pressure = pressure of air around us', '3. Inside body pressure balances it; 1 mb = 100 Pa'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: air exerts pressure on all objects, in all directions." },
+          { "speaker": "NEO", "text": "Two: the pressure of the air around us is called atmospheric pressure, and it is very large." },
+          { "speaker": "NEO", "text": "Three: the pressure inside our bodies balances it, and air pressure is often measured in millibar." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Pressure, Winds, Storms, and Cyclones",
+    "topic_no": 4,
+    "name": "How Winds Form and Why Fast Winds Lift Roofs",
+    "scenes": [
+      {
+        "animation": "A windy evening on a rooftop in a coastal town. Laundry flutters, a tin roof rattles, and Zippy is blown sideways off a water tank, clinging to a clothesline.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Yesterday it was calm. Today the wind is trying to steal me. Where does wind even come from?" },
+          { "speaker": "NEO", "text": "From differences in air pressure. Let's build some wind with two balloons." }
+        ]
+      },
+      {
+        "animation": "Activity 6.5 step by step: a straw is tied into an uninflated balloon; a second balloon is inflated and pinched shut; the straw's free end is tied into its neck without leaks. Released, air arrows flow from the big balloon to the small one until both are almost the same size, then the arrows stop. Labels: 'High pressure' to 'Low pressure'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 6.5. Tie one end of a straw into an uninflated balloon. Inflate a second balloon, hold its mouth shut, and tie the straw's other end into its neck, with no leaks." },
+          { "speaker": "NEO", "text": "Air flows from the inflated balloon to the other one. After some time, both are almost the same size and the flow stops." },
+          { "speaker": "NEO", "text": "The flow continues only while the pressures differ. So air moves from a region of high pressure to a region of low pressure. The bigger the difference, the faster it flows." }
+        ]
+      },
+      {
+        "animation": "A beach split into day and night. Day: a sun heats the land, warm air rises above it forming 'Low', and arrows flow from sea to land, labelled 'Sea breeze'. Night: the sea is warmer, 'Low' forms over the sea, and arrows flow from land to sea, labelled 'Land breeze'.",
+        "lines": [
+          { "speaker": "NEO", "text": "By day, land heats faster than water. Warm air over land rises, creating low pressure, and air from the sea blows in. That is a sea breeze." },
+          { "speaker": "NEO", "text": "At night, the water is warmer, so low pressure forms over the sea, and wind blows from land to sea. That is a land breeze." }
+        ]
+      },
+      {
+        "animation": "Activity 6.6: two inflated balloons hang on strings from a stick, 6 to 10 cm apart. Zippy blows between them and they swing towards each other; he blows harder and they close in faster. Arrows: 'Low pressure' in the gap, 'Higher pressure' pushing from outside.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 6.6. Hang two inflated balloons from a stick, 6 to 10 centimetres apart, and blow into the gap." },
+          { "speaker": "ZIPPY", "text": "They should fly apart, right?" },
+          { "speaker": "NEO", "text": "They move towards each other! Blowing creates low pressure between them, and the higher pressure outside pushes them together. Blow harder, and they come together faster." },
+          { "speaker": "NEO", "text": "So high-speed winds are accompanied by reduced air pressure." }
+        ]
+      },
+      {
+        "animation": "Two houses in a storm. House A has closed doors and windows; fast wind over its roof creates 'Low' above and 'High' inside, and the weak roof lifts off. House B has open doors and windows; wind flows through it, the pressure difference shrinks, and the roof stays put. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "When high-speed winds blow over a house, the pressure above the roof becomes lower than below it. If the difference is large and the roof is weak, it may be blown away." },
+          { "speaker": "NEO", "text": "That is why it is safer to keep doors and windows open during such storms. Wind passing through reduces the pressure difference." },
+          { "speaker": "NEO", "text": "Exam tip: always name the direction. Wind blows from high pressure to low pressure." }
+        ]
+      },
+      {
+        "animation": "Recap board with a wind swirl icon. Points appear: '1. Air moves from high to low pressure', '2. Sea breeze by day, land breeze by night', '3. High-speed wind → low pressure; keep windows open in storms'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: wind is air moving from a region of high pressure to a region of low pressure." },
+          { "speaker": "NEO", "text": "Two: sea breeze blows by day and land breeze by night, because of pressure differences over land and sea." },
+          { "speaker": "NEO", "text": "Three: high-speed winds bring low pressure, which can lift weak roofs, so keep doors and windows open." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Pressure, Winds, Storms, and Cyclones",
+    "topic_no": 5,
+    "name": "Storms, Thunderstorms, and Lightning",
+    "scenes": [
+      {
+        "animation": "A pre-monsoon evening. Dark clouds roll in over a field; a jagged flash lights the sky and a huge BOOM shakes the screen. Zippy, a spark himself, stares at the lightning in awe.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Whoa! Is that my big cousin?" },
+          { "speaker": "NEO", "text": "In a way, yes. Lightning is a giant flow of charges. Let's see how a cloud builds it." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds over hot land: 'Land heats → warm, moist air rises (low pressure)' → 'Cool air flows in, heats, rises' → 'Rising air expands and cools → droplets form clouds' → 'Droplets merge → rain, hail or snow'. Label: 'Strong winds + rain = storm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When land gets heated, warm and moist air rises, creating low pressure. Cooler air flows in, heats up and rises too, so the wind keeps circulating." },
+          { "speaker": "NEO", "text": "The rising air expands and cools. Its moisture condenses into water droplets, forming clouds. The droplets merge into heavier drops and fall as rain, hail or snow." },
+          { "speaker": "NEO", "text": "Strong winds with rain are called a storm. In hot, humid, tropical regions like India, storms are more frequent." }
+        ]
+      },
+      {
+        "animation": "Inside a tall cloud: strong winds zoom up and down, rubbing ice particles against water droplets. Light ice particles with '+' float to the top; heavy droplets with '−' sink to the bottom. The ground and a tree below turn '+'. The air gap crackles, then a bolt jumps across.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sometimes warm air rises so high that droplets turn into ice. Strong upward and downward winds rub droplets and ice particles, and static charges develop in the cloud." },
+          { "speaker": "NEO", "text": "Lighter, positively charged ice particles go to the top. Heavier, negatively charged droplets stay at the bottom. The ground below becomes positively charged." },
+          { "speaker": "NEO", "text": "Air is normally an insulator. But when charges build up hugely, it breaks down, and a sudden flow of charges makes a bright flash called lightning." }
+        ]
+      },
+      {
+        "animation": "Lightning strikes within a cloud, between two clouds, and from cloud to ground. Air around a bolt puffs outward with a shockwave labelled 'Thunder'. A map of India lights up: Kalboishakhi (West Bengal, Bihar, Jharkhand), Bordoisila (Assam), mango showers (Kerala, Karnataka, Tamil Nadu).",
+        "lines": [
+          { "speaker": "NEO", "text": "Lightning can occur within a cloud, between clouds, or between clouds and the ground. It heats the air so quickly that the air expands with a loud sound: thunder." },
+          { "speaker": "NEO", "text": "A storm with lightning and thunder is a thunderstorm. In West Bengal, Bihar and Jharkhand they are called Kalboishakhi, in Assam Bordoisila, and in the south, mango showers." }
+        ]
+      },
+      {
+        "animation": "A safety checklist with icons: stay away from tall trees; crouch low in an open low-lying area with minimal ground contact, without lying flat; no umbrella with a metal rod; get out of water; a car or bus is comparatively safer. Then a building with a pointed lightning conductor rod above its top, its other end buried deep in the ground, carrying charges down.",
+        "lines": [
+          { "speaker": "NEO", "text": "Lightning can start fires, damage buildings, and cause severe burns or death. During lightning, stay away from tall objects. Crouch down in a low-lying open area, and minimise contact with the ground. Do not lie down flat." },
+          { "speaker": "NEO", "text": "Avoid umbrellas with metallic rods, get out of water, and remember a bus or car is comparatively safer." },
+          { "speaker": "NEO", "text": "Buildings use a lightning conductor, a metal rod with a pointed end above the highest point and the other end buried deep in the ground. It gives charges an easy path into the ground." },
+          { "speaker": "NEO", "text": "Exam tip: learn the order. Rubbing, charge separation, insulation breaks down, lightning, then thunder." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cloud and bolt icon. Points appear: '1. Storm = strong winds with rain', '2. Rubbing in clouds separates charges → lightning; heated air → thunder', '3. Crouch low, avoid tall objects; lightning conductors protect buildings'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: strong winds with rain make a storm, and storms are frequent in hot, humid India." },
+          { "speaker": "NEO", "text": "Two: rubbing in clouds separates charges; when air's insulation breaks down, we get lightning, and heated air gives thunder." },
+          { "speaker": "NEO", "text": "Three: stay low and away from tall objects, and let lightning conductors guard buildings." },
+          { "speaker": "ZIPPY", "text": "Cousin Lightning, please stay in the sky." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Pressure, Winds, Storms, and Cyclones",
+    "topic_no": 6,
+    "name": "Cyclones",
+    "scenes": [
+      {
+        "animation": "A satellite view over the Bay of Bengal: a giant white spiral of clouds spins with a calm, clear hole at its centre. Zippy, on a tiny satellite, points at the hole.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Look, the storm has a hole in the middle! Is that where it's broken?" },
+          { "speaker": "NEO", "text": "That's its eye, Zippy, and it's the calmest spot. Let's see how this monster is born." }
+        ]
+      },
+      {
+        "animation": "A step-by-step cycle over warm ocean water: warm moist air rises; vapour condenses into raindrops and releases heat (glowing orange arrows); the air warms and rises further; pressure drops; surrounding air rushes in; the Earth rotates and the inflowing air begins to spin. Pressure labels around the centre: 994 mb, 996 mb, 998 mb, 1008 mb.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cyclones are large storms that form over warm ocean waters. Warm, moist air rises and its water vapour condenses into raindrops." },
+          { "speaker": "NEO", "text": "Water took up heat to evaporate, so condensing releases that heat back. This warms the rising air further, so it rises higher and the pressure drops even lower." },
+          { "speaker": "NEO", "text": "Air rushes in from around and also rises. Earth's rotation makes this moving air spin. The cycle repeats, creating a very low-pressure area with high-speed winds around it." }
+        ]
+      },
+      {
+        "animation": "Close-up of a cyclone: the centre labelled 'Eye: lowest pressure, calm winds', surrounded by a dark ring of heavy rain and strong winds. The cyclone moves onto land, its moist-air supply cut off, and the spiral slowly shrinks.",
+        "lines": [
+          { "speaker": "NEO", "text": "This spinning system of clouds, winds and rain is called a cyclone. The region of lowest pressure is at the centre, called the eye. At the eye, the wind is calm." },
+          { "speaker": "NEO", "text": "Around it, there are strong winds and heavy rainfall. Once a cyclone reaches land, its source of moist air is cut off, and it gradually loses strength." },
+          { "speaker": "NEO", "text": "Exam tip: the statement 'weather is stormy at the eye of a cyclone' is false. The eye is calm." }
+        ]
+      },
+      {
+        "animation": "A coastal village: a wall of water 3 to 12 metres high rolls towards the shore; rivers overflow; salt water spreads on farms and into wells; fallen trees block roads; power lines go dark. A tag reads 'Amphan, 2020: peak winds 270 km/h'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cyclones can be extremely destructive. The Amphan cyclone in 2020 had peak wind speeds of 270 kilometres per hour." },
+          { "speaker": "NEO", "text": "Strong winds push sea water to the shore as a wall of water 3 to 12 metres high. It floods coasts, and heavy rain can overflow rivers and trigger landslides." },
+          { "speaker": "NEO", "text": "Seawater contaminates drinking water and makes soil less fertile. Roads get blocked, and power outages can last for days." }
+        ]
+      },
+      {
+        "animation": "A family watches an IMD weather alert on TV while a satellite tracks the cyclone's path on a map. They pack an emergency kit and walk to a building marked 'Cyclone Shelter'.",
+        "lines": [
+          { "speaker": "NEO", "text": "To stay safe, follow weather reports, alerts and warnings from the India Meteorological Department, IMD. Weather satellites now help us track cyclones and predict their path." },
+          { "speaker": "NEO", "text": "In a cyclone-prone area, keep an emergency kit ready, and during a cyclone, quickly move to a nearby designated cyclone shelter." }
+        ]
+      },
+      {
+        "animation": "Recap board with a spiral icon. Points appear: '1. Cyclone: very low pressure over warm ocean; Earth's rotation makes air spin', '2. Eye = lowest pressure, calm; weakens over land', '3. Follow IMD alerts; go to cyclone shelters'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: cyclones form over warm oceans, where rising moist air and released heat create very low pressure, and Earth's rotation spins the winds." },
+          { "speaker": "NEO", "text": "Two: the eye has the lowest pressure and calm winds, and a cyclone weakens after reaching land." },
+          { "speaker": "NEO", "text": "Three: follow IMD alerts, keep a kit ready, and move to a cyclone shelter." },
+          { "speaker": "ZIPPY", "text": "So the calmest seat in a cyclone is right in the middle. Still, I'll take the shelter." }
+        ]
+      }
+    ]
+  }
+]

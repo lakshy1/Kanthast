@@ -14,7 +14,6 @@ import {
   FaHome,
   FaBookOpen,
   FaStar,
-  FaInfoCircle,
   FaEnvelope,
 } from "react-icons/fa";
 
@@ -27,27 +26,20 @@ const trackOptions = [
 const dockItems = [
   { to: "/", label: "Home", icon: FaHome, exact: true },
   { to: "/dashboard", label: "Dashboard", icon: FaTachometerAlt, exact: false },
-  { to: "/lists", label: "Lists", icon: FaList, exact: false },
-  { to: "/chatbot", label: "Chatbot", icon: FaRobot, exact: false },
+  { to: "/lists", label: "Library", icon: FaList, exact: false },
+  { to: "/chatbot", label: "Assistant", icon: FaRobot, exact: false },
 ];
 
 const publicDockItems = [
   { to: "/", label: "Home", icon: FaHome, exact: true },
   { to: "/courses", label: "Courses", icon: FaBookOpen, exact: false },
+  { to: "/lists", label: "Library", icon: FaList, exact: false },
   { to: "/subscription", label: "Plans", icon: FaStar, exact: false },
-  { to: "/about", label: "About", icon: FaInfoCircle, exact: false },
   { to: "/contact", label: "Contact", icon: FaEnvelope, exact: false },
 ];
 
-const NAVBAR_H = "calc(4rem + env(safe-area-inset-top, 0px))";
-// Caveat is loaded from Google Fonts in index.html. The previous stack led
-// with "Brush Script MT" — a Windows-only system face — so the brand accent
-// silently fell back to a generic cursive on macOS, iOS and Android, i.e. on
-// most of the install base.
-const brandAccentStyle = {
-  fontFamily: '"Caveat", "Segoe Script", cursive',
-};
-
+const TRACK_SWITCHER_SEEN_KEY = "kanthastTrackSwitcherSeen";
+const NAVBAR_H = "calc(var(--nav-bar-h, 4rem) + env(safe-area-inset-top, 0px))";
 const Navbar = () => {
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
   const [isDesktopUserOpen, setIsDesktopUserOpen] = useState(false);
@@ -59,6 +51,19 @@ const Navbar = () => {
       return localStorage.getItem(TRACK_STORAGE_KEY) || "medical";
     } catch {
       return "medical";
+    }
+  });
+  // A visitor who has never touched the track switcher has had no chance to
+  // learn Kanthast serves two tracks (Medical and School) — the switcher is
+  // deliberately small and quiet so it doesn't compete with the wordmark,
+  // which means a first-timer can miss it entirely. A few pulses on that
+  // first visit only (never again once acknowledged) close that gap without
+  // adding any new UI chrome or permanently louder chrome for everyone else.
+  const [showFirstVisitPulse, setShowFirstVisitPulse] = useState(() => {
+    try {
+      return !localStorage.getItem(TRACK_SWITCHER_SEEN_KEY);
+    } catch {
+      return false;
     }
   });
 
@@ -81,18 +86,28 @@ const Navbar = () => {
   const isLoggedIn = Boolean(token && user);
   const hasSubscription = Boolean(user?.subscriptionPurchased);
 
-  // The route is the source of truth for the track, so derive it rather than
-  // mirroring it into state. The old effect read AND wrote `selectedTrack`
-  // with it in the deps, so it re-ran and rewrote localStorage on every pass.
+  // The route is the source of truth for the track on public pages, so
+  // derive it rather than mirroring it into state. The old effect read AND
+  // wrote `selectedTrack` with it in the deps, so it re-ran and rewrote
+  // localStorage on every pass.
   const routeTrack = location.pathname.startsWith("/school")
     ? "school"
     : location.pathname === "/"
       ? "medical"
       : null;
-  const effectiveTrack = routeTrack || selectedTrack;
+  // Shared authenticated routes (/dashboard, /lists, /settings, ...) have no
+  // /school prefix to read a route track from, so routeTrack is null there —
+  // without this, the badge fell back to the ambient `selectedTrack` flag
+  // (whichever public page was visited last in this browser) and could show
+  // "Medical" for a School-track account deep in their own authenticated
+  // pages. A logged-in user's own track is a fixed account fact and takes
+  // priority over both.
+  const effectiveTrack = routeTrack || user?.track || selectedTrack;
 
   const isSchoolTrack = effectiveTrack === "school";
   const homePath = isSchoolTrack ? "/school" : "/";
+  const loginPath = isSchoolTrack ? "/school/login" : "/login";
+  const signupPath = isSchoolTrack ? "/school/signup" : "/signup";
   const displayTrack = isSchoolTrack ? "School" : "Medical";
 
   const initials =
@@ -104,30 +119,54 @@ const Navbar = () => {
   const dockHomeItems = dockItems.map((item) =>
     item.to === "/" ? { ...item, to: homePath } : item
   );
-  const dockPublicItems = publicDockItems.map((item) =>
-    item.to === "/" ? { ...item, to: homePath } : item
-  );
+  // Guests have no subscription page (it is behind login): Medical guests get
+  // the /pricing page, School guests the pricing section of their landing page.
+  const pricingPath = isSchoolTrack ? `${homePath}#pricing` : "/pricing";
+  const coursesPath = isSchoolTrack ? "/school/courses" : "/courses";
+  const dockPublicItems = publicDockItems.map((item) => {
+    if (item.to === "/") return { ...item, to: homePath };
+    if (item.to === "/courses") return { ...item, to: coursesPath };
+    if (item.to === "/subscription") return { ...item, to: pricingPath };
+    return item;
+  });
 
   useEffect(() => {
-    const THRESHOLD = 10;
+    const HIDE_THRESHOLD = 10;
+    // Re-showing needs a more deliberate upward scroll than hiding does.
+    // At the old symmetric ±10px threshold, ordinary scroll jitter (trackpad
+    // momentum, mouse-wheel micro-reversals) flickered the nav back on top
+    // of whatever full-bleed image happened to be mid-viewport at the time.
+    const SHOW_THRESHOLD = 80;
+    // Hide-on-scroll is a phone affordance (it frees vertical space for the
+    // content). On laptops and desktops the nav stays pinned.
+    const desktopQuery = window.matchMedia("(min-width: 768px)");
     const onScroll = () => {
       const y = window.scrollY;
+      if (desktopQuery.matches) {
+        setNavVisible(true);
+        lastScrollY.current = y;
+        return;
+      }
       if (y < 60) {
         setNavVisible(true);
-      } else if (y > lastScrollY.current + THRESHOLD) {
+      } else if (y > lastScrollY.current + HIDE_THRESHOLD) {
         setNavVisible(false);
         setIsCoursesOpen(false);
         setIsDesktopUserOpen(false);
         setIsMobileProfileOpen(false);
         setIsTrackMenuOpen(false);
-      } else if (y < lastScrollY.current - THRESHOLD) {
+      } else if (y < lastScrollY.current - SHOW_THRESHOLD) {
         setNavVisible(true);
       }
       lastScrollY.current = y;
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    desktopQuery.addEventListener("change", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      desktopQuery.removeEventListener("change", onScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -179,6 +218,22 @@ const Navbar = () => {
     }
   }, [routeTrack]);
 
+  // Stop the first-visit pulse on its own after a few cycles even if the
+  // visitor never opens the menu — it's a one-time nudge, not a persistent
+  // "you haven't noticed this" indicator.
+  useEffect(() => {
+    if (!showFirstVisitPulse) return;
+    const timer = setTimeout(() => {
+      setShowFirstVisitPulse(false);
+      try {
+        localStorage.setItem(TRACK_SWITCHER_SEEN_KEY, "true");
+      } catch {
+        // ignore storage write failures
+      }
+    }, 6000);
+    return () => clearTimeout(timer);
+  }, [showFirstVisitPulse]);
+
   const handleLogout = () => {
     localStorage.removeItem("kanthastToken");
     localStorage.removeItem("kanthastUser");
@@ -200,48 +255,63 @@ const Navbar = () => {
     navigate(nextPath);
   };
 
-  const activeClass = "text-cyan-400 font-semibold";
-  const normalClass = "text-white/60 hover:text-white transition duration-200";
+  const activeClass = "nav-link nav-link-active relative font-medium text-mint after:absolute after:inset-x-0 after:-bottom-[16px] after:h-0.5 after:rounded-full after:bg-mint";
+  const normalClass = "nav-link font-medium text-softwhite/75 hover:text-softwhite transition duration-200";
 
   return (
     <>
       <nav
-        className="fixed left-0 right-0 top-0 z-50 w-full border-b border-white/8 bg-gradient-to-r from-[#060c16] via-[#0a1530] to-[#07101e] will-change-transform"
+        className="fixed left-0 right-0 top-0 z-50 w-full border-b border-hairline/70 kb-bar will-change-transform"
         style={{
           paddingTop: "env(safe-area-inset-top, 0px)",
           transform: navVisible ? "translateY(0)" : "translateY(-100%)",
           transition: "transform 0.3s cubic-bezier(0.4,0,0.2,1)",
         }}
       >
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-16">
+        <div className="nav-shell mx-auto flex w-full items-center justify-between px-5 md:px-16 lg:w-[calc(var(--u)*85)] lg:max-w-none lg:px-0">
           <div className="flex min-w-0 items-center gap-3">
-            <div className="relative pr-6">
-              <Link to={homePath} className="flex items-center h-full focus-visible:outline-none">
-                <span className="block text-2xl font-black tracking-tight text-white md:text-[1.8rem]">
+            <div className="nav-brand relative flex items-end gap-1.5">
+              <Link to={homePath} className="flex items-center focus-visible:outline-none">
+                <span className="nav-logo block font-display text-2xl font-extrabold leading-none tracking-tight text-softwhite md:text-[1.8rem]">
                   Kanthast
                 </span>
               </Link>
-              <div ref={trackMenuRef} className="absolute -bottom-4 -right-5 flex items-center gap-1.5">
-                <span
-                  className="text-mini text-cyan-300 md:text-sm"
-                  style={brandAccentStyle}
-                >
-                  {displayTrack}
-                </span>
+              <div ref={trackMenuRef} className="relative flex translate-y-[0.3em] items-center">
                 <button
                   type="button"
-                  onClick={() => setIsTrackMenuOpen((prev) => !prev)}
-                  aria-label="Open learning track menu"
+                  onClick={() => {
+                    setIsTrackMenuOpen((prev) => !prev);
+                    if (showFirstVisitPulse) {
+                      setShowFirstVisitPulse(false);
+                      try {
+                        localStorage.setItem(TRACK_SWITCHER_SEEN_KEY, "true");
+                      } catch {
+                        // ignore storage write failures
+                      }
+                    }
+                  }}
+                  aria-label={`Learning track: ${displayTrack}. Switch track`}
                   aria-expanded={isTrackMenuOpen}
-                  // 44px hit area, 20px visual. The dot itself is the inner
-                  // span; the button just carries the target size.
-                  className="group relative grid h-touch w-touch place-items-center"
+                  // The track name reads like a subscript to the wordmark (small,
+                  // bottom-aligned, dropped slightly below the baseline), in flow
+                  // so it never overlaps it. Its tap area grows up and down, not
+                  // left over the logo link.
+                  className="nav-track group relative inline-flex items-center gap-1.5 rounded-full py-0.5 before:absolute before:-bottom-3 before:-left-0.5 before:-right-2 before:-top-3 before:content-['']"
                 >
-                  <span className="relative grid h-5 w-5 place-items-center rounded-full border border-white/10 bg-white/6 backdrop-blur-md transition group-hover:border-cyan-300/45 group-hover:bg-cyan-400/10">
-                    <span
+                  <span
+                    className={`nav-medical text-xs font-semibold leading-none tracking-[0.02em] ${isSchoolTrack ? "text-amber-300" : "text-[#69ACE9]"}`}
+                  >
+                    {displayTrack}
+                  </span>
+                  {showFirstVisitPulse && (
+                    <Motion.span
                       aria-hidden="true"
-                      className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(34,211,238,0.35),transparent_60%),radial-gradient(circle_at_75%_70%,rgba(244,114,182,0.22),transparent_55%)] opacity-80 blur-[2px]"
+                      className="absolute h-5 w-5 rounded-full bg-mint/50"
+                      animate={{ scale: [1, 2.1, 1], opacity: [0.6, 0, 0.6] }}
+                      transition={{ duration: 1.8, repeat: 3, ease: "easeInOut" }}
                     />
+                  )}
+                  <span className="nav-chev relative grid h-4 w-4 place-items-center rounded-full border border-hairline bg-slatenavy transition group-hover:border-mint/50">
                     <FaChevronDown
                       aria-hidden="true"
                       className={`relative z-10 text-micro text-white/75 transition-transform duration-200 ${
@@ -258,7 +328,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.96 }}
                       transition={{ duration: 0.16 }}
-                      className="absolute right-0 top-7 z-50 w-48 overflow-hidden rounded-2xl border border-cyan-200/40 bg-slate-950/92 p-1.5 shadow-e4 backdrop-blur-xl"
+                      className="absolute left-0 top-full z-50 w-48 overflow-hidden rounded-2xl border border-cyan-200/40 bg-slate-950/92 p-1.5 shadow-e4 backdrop-blur-xl"
                     >
                       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.18),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(244,114,182,0.16),transparent_34%)]" />
                       <div className="relative z-10">
@@ -283,7 +353,7 @@ const Navbar = () => {
                               <span className="font-semibold tracking-[0.01em]">{option.label}</span>
                               <span
                                 className={`h-2 w-2 rounded-full ${
-                                  active ? "bg-cyan-300 shadow-glow-brand" : "bg-white/35"
+                                  active ? "bg-brand shadow-glow-brand" : "bg-white/35"
                                 }`}
                               />
                             </button>
@@ -297,13 +367,13 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center gap-7 text-lg">
+          <div className="nav-links hidden lg:flex items-center">
             <NavLink to={homePath} end className={({ isActive }) => (isActive ? activeClass : normalClass)}>
               Home
             </NavLink>
 
             {!isLoggedIn && isSchoolTrack && (
-              <NavLink to="/courses" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+              <NavLink to="/school/courses" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
                 Courses
               </NavLink>
             )}
@@ -340,7 +410,7 @@ const Navbar = () => {
                     aria-label="Show course tracks"
                     animate={{ rotate: isCoursesOpen ? 180 : 0 }}
                     transition={{ duration: 0.2 }}
-                    className="grid h-8 w-8 place-items-center text-micro text-white/60 hover:text-white"
+                    className="nav-courses-chev grid h-8 w-8 place-items-center text-micro text-softwhite/75 hover:text-softwhite"
                   >
                     <FaChevronDown aria-hidden="true" />
                   </Motion.button>
@@ -374,7 +444,7 @@ const Navbar = () => {
             )}
 
             <NavLink to="/lists" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
-              Lists
+              Library
             </NavLink>
             {isLoggedIn && (
               <NavLink
@@ -384,7 +454,18 @@ const Navbar = () => {
                 Dashboard
               </NavLink>
             )}
-            {(!isLoggedIn || !hasSubscription) && (
+            {!isLoggedIn && (
+              isSchoolTrack ? (
+                <HashLink smooth to={pricingPath} className={normalClass}>
+                  Pricing
+                </HashLink>
+              ) : (
+                <NavLink to="/pricing" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+                  Pricing
+                </NavLink>
+              )
+            )}
+            {isLoggedIn && !hasSubscription && (
               <NavLink
                 to="/subscription"
                 className={({ isActive }) => (isActive ? activeClass : normalClass)}
@@ -404,18 +485,18 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="nav-actions hidden lg:flex items-center">
             {!isLoggedIn ? (
               <>
                 <Link
-                  to="/login"
-                  className="rounded-xl border border-white/10 bg-white/8 px-4 py-2 text-lg text-white/70 transition hover:bg-white/14"
+                  to={loginPath}
+                  className="nav-login inline-flex items-center justify-center border bg-[#0d1829] text-softwhite transition duration-200 hover:bg-slatenavy"
                 >
                   Log In
                 </Link>
                 <Link
-                  to="/signup"
-                  className="rounded-xl bg-cyan-500 px-4 py-2 text-lg font-semibold text-white transition hover:bg-cyan-400"
+                  to={signupPath}
+                  className="nav-signup inline-flex items-center justify-center bg-mint text-midnight transition duration-200 hover:brightness-95"
                 >
                   Sign Up
                 </Link>
@@ -424,8 +505,8 @@ const Navbar = () => {
               <>
                 <button
                   onClick={() => navigate("/chatbot")}
-                  className="flex h-touch w-touch items-center justify-center rounded-full border border-cyan-500/30 bg-cyan-500/15 text-cyan-400 transition hover:bg-cyan-500/25"
-                  aria-label="Chatbot"
+                  className="flex h-touch w-touch items-center justify-center rounded-full border border-mint/30 bg-mint/15 text-mint transition hover:bg-mint/25"
+                  aria-label="Assistant"
                 >
                   <FaRobot className="text-sm" />
                 </button>
@@ -541,7 +622,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             {isLoggedIn ? (
               <div className="flex items-center gap-2">
                 <div ref={mobileProfileRef} className="relative">
@@ -647,14 +728,14 @@ const Navbar = () => {
             ) : (
               <div className="flex items-center gap-2">
                 <Link
-                  to="/login"
-                  className="inline-flex min-h-touch items-center rounded-xl border border-white/10 bg-white/8 px-4 text-sm text-white/70 transition hover:bg-white/14"
+                  to={loginPath}
+                  className="inline-flex min-h-touch items-center whitespace-nowrap rounded-xl border border-hairline px-3 text-sm max-[379px]:hidden text-softwhite transition hover:bg-slatenavy"
                 >
                   Log In
                 </Link>
                 <Link
-                  to="/signup"
-                  className="inline-flex min-h-touch items-center rounded-xl bg-brand px-4 text-sm font-semibold text-brand-fg transition hover:bg-brand-hover"
+                  to={signupPath}
+                  className="inline-flex min-h-touch items-center whitespace-nowrap rounded-xl bg-mint px-3 text-sm font-semibold text-midnight transition hover:brightness-95"
                 >
                   Sign Up
                 </Link>
@@ -665,18 +746,27 @@ const Navbar = () => {
       </nav>
 
       <div
-        className="fixed bottom-0 left-0 right-0 z-40 border-t border-white/10 bg-[#07101e]/95 backdrop-blur-xl md:hidden"
+        className="fixed bottom-0 left-0 right-0 z-40 lg:hidden"
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
-        <div className={`grid h-16 ${isLoggedIn ? "grid-cols-4" : "grid-cols-5"}`}>
+        {/* Fades whatever's scrolled underneath before the opaque bar starts,
+            so the dock reads as a deliberate overlay instead of clipping the
+            last row of content flush against its top edge. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-full h-6 bg-gradient-to-t from-[#0b1220]/70 to-transparent"
+        />
+        <div className="border-t border-hairline/70 bg-[#0b1220]/95 backdrop-blur-xl">
+          <div className={`grid h-16 ${isLoggedIn ? "grid-cols-4" : "grid-cols-5"}`}>
           {(isLoggedIn ? dockHomeItems : dockPublicItems).map(({ to, label, icon: Icon, exact }) => {
             const isActive = exact ? location.pathname === to : location.pathname.startsWith(to);
             return (
-              <Link
+              <HashLink
+                smooth
                 key={to}
                 to={to}
                 className={`relative flex flex-col items-center justify-center gap-1 transition-colors ${
-                  isActive ? "text-cyan-400" : "text-white/60 hover:text-white"
+                  isActive ? "text-mint" : "text-softwhite/60 hover:text-softwhite"
                 }`}
               >
                 <Motion.div
@@ -691,7 +781,7 @@ const Navbar = () => {
                 </Motion.div>
                 <span
                   className={`text-micro font-medium tracking-wide ${
-                    isActive ? "text-cyan-400" : "text-white/60"
+                    isActive ? "text-mint" : "text-softwhite/60"
                   }`}
                 >
                   {label}
@@ -699,12 +789,13 @@ const Navbar = () => {
                 {isActive && (
                   <Motion.div
                     layoutId="dockIndicator"
-                    className="absolute top-0 h-0.5 w-8 rounded-full bg-cyan-400"
+                    className="absolute top-0 h-0.5 w-8 rounded-full bg-mint"
                   />
                 )}
-              </Link>
+              </HashLink>
             );
           })}
+          </div>
         </div>
       </div>
     </>

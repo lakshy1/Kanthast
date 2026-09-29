@@ -1,0 +1,385 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 1,
+    "name": "कबीर: साखियाँ एवं सबद",
+    "scenes": [
+      {
+        "animation": "A crowded bazaar in old Kashi. Two groups argue loudly outside a temple and a mosque, pointing at each other. A calm weaver sits at a handloom between them, smiling. Zippy zips in holding a placard 'Who is right?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "नियो, ये दोनों लोग झगड़ क्यों रहे हैं? और वो बुनकर इतने आराम से क्यों मुस्कुरा रहे हैं?" },
+          { "speaker": "NEO", "text": "क्योंकि वो बुनकर हैं कबीर। वे छह सौ साल पहले ही कह गए थे कि ईश्वर न मंदिर में बंद है, न मस्जिद में।" }
+        ]
+      },
+      {
+        "animation": "A portrait card of Kabir at a loom builds with labels: 'कबीर (1398-1518)', 'जन्म: काशी', 'मृत्यु: मगहर', 'गुरु: रामानंद', 'रचनाएँ: बीजक (साखी, सबद, रमैनी)'. The word 'साखी' glows and splits into 'साक्षी'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कबीर का जन्म सन 1398 में काशी में माना जाता है और मृत्यु 1518 में मगहर में हुई। उनके गुरु रामानंद थे।" },
+          { "speaker": "NEO", "text": "उनकी रचनाएँ बीजक में साखी, सबद और रमैनी के रूप में मिलती हैं। साखी शब्द साक्षी से बना है, यानी आँखों देखा सच।" }
+        ]
+      },
+      {
+        "animation": "A shining lake labelled 'मानसरोवर' with white swans picking pearls. Then an elephant labelled 'ज्ञान' walks calmly with a small rug 'सहज' on its back while cartoon dogs labelled 'संसार' bark at it. Last, a golden pot labelled 'सुबरन कलस' is revealed to be full of liquor, and a sage frowns.",
+        "lines": [
+          { "speaker": "NEO", "text": "पहली साखी में मन मानसरोवर है और हंस हैं जीवात्माएँ। वे मुक्ति रूपी मोती चुग रहे हैं, इसलिए अब कहीं और नहीं उड़ना चाहते।" },
+          { "speaker": "NEO", "text": "एक साखी कहती है, ज्ञान रूपी हाथी पर सहज साधना का गलीचा डालकर चलो। संसार कुत्ते की तरह भौंकता है, भौंकने दो।" },
+          { "speaker": "ZIPPY", "text": "यानी ट्रोल्स को इग्नोर करो!" },
+          { "speaker": "NEO", "text": "बिल्कुल। और ऊँचे कुल में जन्म लेने से कोई बड़ा नहीं होता। सोने का कलश भी अगर शराब से भरा हो, तो साधु उसकी निंदा ही करते हैं।" }
+        ]
+      },
+      {
+        "animation": "Kabir points at a temple, a mosque, the Kaaba and Mount Kailash, each crossed out. The arrow turns back to a glowing heart inside a person, with the line 'सब स्वाँसों की स्वाँस में'. Then a storm labelled 'ज्ञान की आँधी' blows away a hut: its screen 'भ्रम की टाटी', pillars 'हिति-चित्त', beam 'मोह', and a pot 'कुबुधि' crack apart. Rain labelled 'प्रेम' falls and a sun rises.",
+        "lines": [
+          { "speaker": "NEO", "text": "पहले सबद में ईश्वर कहते हैं, मोकों कहाँ ढूँढ़े बंदे, मैं तो तेरे पास में। मैं न मंदिर में हूँ, न मस्जिद में, न काबे में, न कैलास में। मैं हर साँस में हूँ।" },
+          { "speaker": "NEO", "text": "दूसरे सबद में ज्ञान की आँधी आती है। भ्रम की टाटी उड़ जाती है, मोह का बलिंडा टूट जाता है और कुबुद्धि का भाँडा फूट जाता है।" },
+          { "speaker": "NEO", "text": "आँधी के बाद प्रेम की वर्षा होती है, और ज्ञान का सूरज निकलते ही अज्ञान का अँधेरा मिट जाता है।" }
+        ]
+      },
+      {
+        "animation": "A notebook page titled 'Exam Question' fills in: 'ज्ञान की आँधी का भक्त के जीवन पर क्या प्रभाव पड़ता है?' Three ticks appear. A yellow 'EXAM TIP' sticker lands on the word 'प्रतीक'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Exam में यहाँ से क्या आता है?" },
+          { "speaker": "NEO", "text": "अक्सर पूछते हैं कि ज्ञान की आँधी का भक्त पर क्या असर होता है। उत्तर में लिखो: भ्रम और मोह मिट जाते हैं, मन निर्मल होता है, और प्रेम से भक्त भीग जाता है।" },
+          { "speaker": "NEO", "text": "Exam tip: कबीर प्रतीकों में बात करते हैं। हंस, हाथी, टाटी, थूनी, हर प्रतीक का अर्थ साफ़ लिखो, तभी पूरे अंक मिलेंगे।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a loom border. Points appear: '1. कबीर: काशी, गुरु रामानंद, बीजक', '2. साखियाँ: सच्चा प्रेम, सहज ज्ञान, कर्म से बड़प्पन', '3. सबद: ईश्वर भीतर है; ज्ञान की आँधी से भ्रम दूर'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: कबीर काशी के संत कवि थे, गुरु रामानंद के शिष्य, और उनकी वाणी बीजक में है।" },
+          { "speaker": "NEO", "text": "दो: साखियाँ सिखाती हैं कि सच्चा प्रेम, सहज ज्ञान और अच्छे कर्म ही इंसान को बड़ा बनाते हैं, कुल नहीं।" },
+          { "speaker": "NEO", "text": "तीन: सबद कहते हैं कि ईश्वर हमारे भीतर है, और ज्ञान की आँधी हर भ्रम को उड़ा देती है।" },
+          { "speaker": "ZIPPY", "text": "आज से मेरा हाथी भी ज्ञान वाला, और भौंकने वालों को बाय-बाय!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 2,
+    "name": "ललद्यद: वाख",
+    "scenes": [
+      {
+        "animation": "A misty Kashmir lake at dawn. A woman in a pheran pulls a wooden boat with a very thin thread; the thread stretches and trembles. Zippy sits in the boat, looking nervous.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "कच्चे धागे से नाव खींच रही हैं? ये तो कभी किनारे नहीं पहुँचेगी!" },
+          { "speaker": "NEO", "text": "यही तो कवयित्री कहना चाहती हैं, ज़िप्पी। जीवन की नाव और कमज़ोर साँसों का धागा। आज मिलते हैं कश्मीर की ललद्यद से।" }
+        ]
+      },
+      {
+        "animation": "A portrait card builds with labels: 'ललद्यद (लगभग 1320-1391)', 'जन्म: पाम्पोर, सिमपुरा गाँव (कश्मीर)', 'नाम: लल्लेश्वरी, लला, ललयोगेश्वरी', 'विधा: वाख', 'अनुवाद: मीरा कांत'. A map pin drops on Kashmir.",
+        "lines": [
+          { "speaker": "NEO", "text": "ललद्यद कश्मीरी भाषा की लोकप्रिय संत कवयित्री थीं। उनका जन्म लगभग 1320 में पाम्पोर के सिमपुरा गाँव में हुआ और देहांत लगभग 1391 में।" },
+          { "speaker": "NEO", "text": "लोग उन्हें लल्लेश्वरी, लला और ललयोगेश्वरी भी कहते हैं। उनकी काव्य शैली को वाख कहा जाता है। हमारी किताब में इनका हिंदी अनुवाद मीरा कांत ने किया है।" }
+        ]
+      },
+      {
+        "animation": "The thin rope snaps into view labelled 'कच्चा धागा = कमज़ोर साँसें'. An unbaked clay bowl labelled 'कच्चा सकोरा' leaks water drop by drop. Then a plate of food on a see-saw: one side 'खाना-पीना' (overeating), other side 'त्याग' (fasting); it balances at the centre labelled 'सम'. A locked door labelled 'बंद द्वार' clicks open.",
+        "lines": [
+          { "speaker": "NEO", "text": "पहले वाख में वे कहती हैं कि मैं कच्चे धागे की रस्सी से नाव खींच रही हूँ। मेरे प्रयास कच्चे सकोरे की तरह हैं, जिनसे पानी टपक जाता है। मन में प्रभु के पास जाने की हूक उठती है।" },
+          { "speaker": "NEO", "text": "दूसरे वाख में संदेश है संतुलन का। केवल भोग करने से कुछ नहीं मिलेगा, और सब कुछ त्याग देने से अहंकार आ जाएगा।" },
+          { "speaker": "NEO", "text": "सम खाओ, यानी बीच का रास्ता अपनाओ। तभी मन समभावी होगा और बंद द्वार की साँकल खुलेगी।" },
+          { "speaker": "ZIPPY", "text": "मतलब आधी प्लेट पकौड़े, आधी प्लेट सलाद?" }
+        ]
+      },
+      {
+        "animation": "The woman stands on a glowing bridge labelled 'सुषुम-सेतु' as the sun sets fast. She checks an empty pocket; a boatman waits with an open palm labelled 'उतराई?'. Then the word 'शिव' appears glowing in every stone, tree and house, while labels 'हिंदू' and 'मुसलमाँ' fade and merge.",
+        "lines": [
+          { "speaker": "NEO", "text": "तीसरे वाख में वे पछताती हैं। मैं सीधी राह से आई थी, पर सीधी राह से नहीं गई। सुषुम-सेतु पर खड़े-खड़े दिन बीत गया।" },
+          { "speaker": "NEO", "text": "जेब टटोली तो एक कौड़ी भी नहीं मिली। अब माँझी को उतराई क्या दूँ? यानी जीवन में कोई अच्छा कर्म नहीं कमाया।" },
+          { "speaker": "NEO", "text": "चौथे वाख में वे कहती हैं कि शिव हर जगह बसते हैं। हिंदू और मुसलमान में भेद मत करो। खुद को जानना ही ईश्वर को पहचानना है।" }
+        ]
+      },
+      {
+        "animation": "An exam card: 'बंद द्वार की साँकल खोलने के लिए ललद्यद ने क्या उपाय सुझाया है?' Keyword 'समभाव' circles in yellow. An 'EXAM TIP' sticker lands.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam में पूछा जाता है कि बंद द्वार की साँकल कैसे खुलेगी। उत्तर है: भोग और त्याग के बीच संतुलन रखने से, यानी समभाव से।" },
+          { "speaker": "NEO", "text": "Exam tip: कच्चा धागा, कच्चा सकोरा, माँझी और उतराई, इन प्रतीकों के अर्थ ज़रूर याद रखो। यही से छोटे प्रश्न बनते हैं।" }
+        ]
+      },
+      {
+        "animation": "Recap board framed with chinar leaves. Points appear: '1. ललद्यद: कश्मीरी संत कवयित्री, वाख', '2. कच्चा धागा = नश्वर जीवन; सम = संतुलन', '3. ईश्वर सर्वत्र; आत्मज्ञान ही ईश्वर की पहचान'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: ललद्यद चौदहवीं सदी की कश्मीरी संत कवयित्री थीं, और उनकी रचनाएँ वाख कहलाती हैं।" },
+          { "speaker": "NEO", "text": "दो: कच्चा धागा और कच्चा सकोरा नश्वर जीवन और व्यर्थ प्रयास हैं, और सम यानी संतुलन से ही मुक्ति का द्वार खुलता है।" },
+          { "speaker": "NEO", "text": "तीन: शिव हर जगह हैं, भेदभाव छोड़ो, और खुद को पहचानो।" },
+          { "speaker": "ZIPPY", "text": "मैं अपनी जेब में अभी से अच्छे कर्मों की कौड़ियाँ जमा करता हूँ!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 3,
+    "name": "रसखान: सवैये",
+    "scenes": [
+      {
+        "animation": "Zippy fills a form titled 'Next Life Wish List' with options 'Human / Animal / Stone / Bird'. A poet in Mughal-era clothes leans over and ticks all four boxes, writing 'ब्रज' next to each.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "अगले जन्म में मैं रॉकेट बनूँगा! और ये कवि जी हर बॉक्स में ब्रज क्यों लिख रहे हैं?" },
+          { "speaker": "NEO", "text": "ये हैं रसखान। वे कहते हैं, इंसान बनूँ, पशु बनूँ, पत्थर बनूँ या पक्षी, बस रहूँ कृष्ण के ब्रज में।" }
+        ]
+      },
+      {
+        "animation": "A portrait card builds: 'रसखान (जन्म लगभग 1548)', 'मूल नाम: सैयद इब्राहिम', 'दिल्ली के आस-पास', 'रचनाएँ: प्रेमवाटिका, सुजान रसखान', 'भाषा: ब्रजभाषा', 'छंद: सवैया'.",
+        "lines": [
+          { "speaker": "NEO", "text": "रसखान का जन्म सन 1548 के आसपास माना जाता है। उनका मूल नाम सैयद इब्राहिम था और वे दिल्ली के आस-पास के रहने वाले थे।" },
+          { "speaker": "NEO", "text": "कृष्ण भक्ति ने उन्हें ब्रज पहुँचा दिया। उनकी रचनाएँ हैं प्रेमवाटिका और सुजान रसखान। भाषा है सरस ब्रजभाषा और छंद है सवैया।" }
+        ]
+      },
+      {
+        "animation": "Four panels light up in turn: a cowherd boy in Gokul; a cow grazing among Nand's herd; the Govardhan hill held up like an umbrella over villagers; a bird on a kadamb branch by the Yamuna. Then a stick and a black blanket ('लकुटी', 'कामरिया') sit on one side of a scale, outweighing three worlds, eight siddhis, nine treasures and golden palaces on the other.",
+        "lines": [
+          { "speaker": "NEO", "text": "पहले सवैये में कवि कहते हैं: मनुष्य बनूँ तो गोकुल के ग्वालों के बीच, पशु बनूँ तो नंद की गायों के बीच। पत्थर बनूँ तो उसी गोवर्धन पर्वत का, जिसे कृष्ण ने छतरी की तरह उठाया था।" },
+          { "speaker": "NEO", "text": "और पक्षी बनूँ तो यमुना किनारे कदंब की डाल पर बसेरा करूँ।" },
+          { "speaker": "NEO", "text": "दूसरे सवैये में कृष्ण की लाठी और कंबल के लिए वे तीनों लोकों का राज छोड़ने को तैयार हैं। आठों सिद्धियाँ और नवों निधियाँ भी नंद की गाय चराने के सुख के आगे कुछ नहीं। करील की झाड़ियों पर वे सोने के करोड़ों महल न्योछावर कर दें।" }
+        ]
+      },
+      {
+        "animation": "A gopi dresses up as Krishna: peacock feather crown, gunja necklace, yellow pitambar, a stick. She refuses a flute, pushing it away. On screen: 'अधरान धरी अधरा न धरौंगी' with 'अधरान' and 'अधरा न' highlighted in two colours. Then she covers her ears with her fingers while music notes float, but she still melts at a smile.",
+        "lines": [
+          { "speaker": "NEO", "text": "तीसरे सवैये में एक गोपी कृष्ण का पूरा रूप धारण करने को तैयार है। मोरपंख, गुंजा की माला, पीतांबर, सब कुछ।" },
+          { "speaker": "NEO", "text": "पर एक शर्त है। कृष्ण के होठों पर रखी मुरली को वह अपने होठों पर नहीं रखेगी। उसे मुरली से सौतन जैसी जलन है।" },
+          { "speaker": "ZIPPY", "text": "बाँसुरी से जलन? कमाल है!" },
+          { "speaker": "NEO", "text": "चौथे सवैये में गोपी कानों में उँगली डाल लेती है ताकि मुरली की धुन न सुने। पर कहती है, उस मुख की मुस्कान सँभाली नहीं जाएगी, नहीं जाएगी, नहीं जाएगी।" }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card: 'या मुरली मुरलीधर की अधरान धरी अधरा न धरौंगी' with the word pair underlined and the label 'यमक अलंकार'. A second line 'कोटिक ए कलधौत के धाम करील के कुंजन ऊपर वारौं' shows 'क' sounds glowing, labelled 'अनुप्रास'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: अधरान और अधरा न, एक जैसे दिखते हैं पर अर्थ अलग हैं, होठों पर और होठों पर नहीं। यहाँ यमक अलंकार है।" },
+          { "speaker": "NEO", "text": "और कोटिक ए कलधौत के धाम करील के कुंजन ऊपर वारौं, इसमें क वर्ण बार-बार आता है, यानी अनुप्रास। अलंकार पहचानने के सवाल यहीं से बनते हैं।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a peacock feather and flute icon. Points appear: '1. रसखान: ब्रजभाषा, सवैया, कृष्ण भक्ति', '2. ब्रज के प्रति अनन्य प्रेम: हर जन्म में ब्रज', '3. गोपी का प्रेम; अधरान/अधरा न = यमक'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: रसखान कृष्ण भक्त कवि थे, जिन्होंने ब्रजभाषा में सवैये लिखे।" },
+          { "speaker": "NEO", "text": "दो: पहले दो सवैयों में ब्रज और कृष्ण से जुड़ी हर चीज़ के लिए कवि का अनन्य प्रेम है।" },
+          { "speaker": "NEO", "text": "तीन: बाकी दो सवैयों में गोपी का प्रेम और मुरली का जादू है, और अधरान, अधरा न में यमक अलंकार है।" },
+          { "speaker": "ZIPPY", "text": "फ़ॉर्म अपडेट: अगले जन्म में रॉकेट, पर ब्रज में ही लैंड करेगा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 4,
+    "name": "कैदी और कोकिला",
+    "scenes": [
+      {
+        "animation": "Midnight inside a dark colonial jail cell. Chains, a tiny barred window. Suddenly a koel's call echoes. A prisoner in freedom-fighter khadi looks up. Zippy peeks through the bars, whispering.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "आधी रात को कोयल? ये तो सुबह गाती है ना?" },
+          { "speaker": "NEO", "text": "यही सवाल जेल में बंद एक स्वतंत्रता सेनानी ने भी पूछा था। कोकिल, बोलो तो, इस आधी रात में क्या गाती हो?" }
+        ]
+      },
+      {
+        "animation": "A portrait card builds: 'माखनलाल चतुर्वेदी (1889-1968)', 'जन्म: बावई, मध्य प्रदेश', 'उपनाम: एक भारतीय आत्मा', 'पत्रिकाएँ: प्रभा, कर्मवीर', 'रचनाएँ: हिमकिरीटिनी, साहित्य देवता, हिमतरंगिनी, वेणु लो गूँजे धरा'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि हैं माखनलाल चतुर्वेदी। उनका जन्म 1889 में मध्य प्रदेश के बावई गाँव में हुआ और निधन 1968 में।" },
+          { "speaker": "NEO", "text": "उन्हें एक भारतीय आत्मा कहा जाता है। वे स्वतंत्रता सेनानी थे और प्रभा तथा कर्मवीर पत्रिकाओं के संपादक भी। उनकी रचनाएँ हैं हिमकिरीटिनी, हिमतरंगिनी, साहित्य देवता।" }
+        ]
+      },
+      {
+        "animation": "Tall black walls labelled 'ऊँची काली दीवारें' close in; shadowy figures labelled 'डाकू, चोर, बटमार'. A half-empty bowl of food. Then the prisoner is yoked like an ox to a 'मोट' (leather bucket) pulling water from a well labelled 'ब्रिटिश अकड़ का कुआँ'. Handcuffs glow with a label 'ब्रिटिश राज का गहना'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कैदी अपनी हालत बताता है। ऊँची काली दीवारें, आसपास डाकू, चोर और बटमार। पेट भर खाना नहीं मिलता, और मरने भी नहीं दिया जाता।" },
+          { "speaker": "NEO", "text": "वह व्यंग्य से कहता है कि हथकड़ियाँ ब्रिटिश राज का गहना हैं। कोल्हू की चर्रक चूँ उसके जीवन की तान है।" },
+          { "speaker": "NEO", "text": "पेट पर जूआ बाँधकर वह मोट खींचता है, पर मन में सोचता है कि वह ब्रिटिश अकड़ का कुआँ खाली कर रहा है।" },
+          { "speaker": "ZIPPY", "text": "इतनी तकलीफ़ में भी हिम्मत! सलाम है।" }
+        ]
+      },
+      {
+        "animation": "Split screen: left, the koel flies free across the sky on a green branch; right, the prisoner in a dark cell measuring 'दस फुट'. Captions: 'तेरा नभ-भर में संचार' vs 'मेरा दस फुट का संसार'. The koel's call turns into glowing red sparks labelled 'विद्रोह'.",
+        "lines": [
+          { "speaker": "NEO", "text": "फिर कैदी कोयल से अपनी तुलना करता है। तुझे हरी डाली मिली, मुझे काली कोठरी। तेरा पूरे आसमान में संचार है, मेरा दस फुट का संसार।" },
+          { "speaker": "NEO", "text": "कैदी को लगता है कि कोयल ने देश की पीड़ा देख ली है और वह क्रांति का संदेश सुनाने आई है। उसकी कूक में वेदना भी है और विद्रोह का आह्वान भी।" }
+        ]
+      },
+      {
+        "animation": "An exam card: 'कोयल की कूक सुनकर कैदी की क्या प्रतिक्रिया थी?' Three bullet points tick in: 'वेदना का अनुभव', 'कोयल से तुलना', 'क्रांति का संदेश'. An 'EXAM TIP' sticker lands on 'ब्रिटिश राज का गहना'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam में अक्सर पूछते हैं कि कवि ने हथकड़ियों को गहना क्यों कहा। उत्तर: यह व्यंग्य है। देश के लिए जेल जाना सम्मान की बात है, इसलिए हथकड़ियाँ गहने जैसी हैं।" },
+          { "speaker": "NEO", "text": "Exam tip: कविता का संदर्भ ज़रूर लिखो, यानी ब्रिटिश जेलों में स्वतंत्रता सेनानियों पर हुए अत्याचार।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a koel silhouette on a barred window. Points appear: '1. माखनलाल चतुर्वेदी: एक भारतीय आत्मा', '2. जेल की यातनाएँ और ब्रिटिश राज पर व्यंग्य', '3. कोयल = वेदना और क्रांति का संदेश'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: कैदी और कोकिला के कवि माखनलाल चतुर्वेदी हैं, जिन्हें एक भारतीय आत्मा कहा जाता है।" },
+          { "speaker": "NEO", "text": "दो: कविता में जेल की यातनाएँ हैं और हथकड़ियों को गहना कहकर ब्रिटिश राज पर तीखा व्यंग्य है।" },
+          { "speaker": "NEO", "text": "तीन: आधी रात की कोयल देश की वेदना और क्रांति का संदेश लेकर आती है।" },
+          { "speaker": "ZIPPY", "text": "अब कोयल की कूक सुनकर मुझे भी जोश आ जाएगा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 5,
+    "name": "ग्राम श्री",
+    "scenes": [
+      {
+        "animation": "Zippy scrolls a phone full of grey city buildings, bored. Neo taps the screen and it unfolds into a bright winter village: velvet-green fields, silver sunlight, yellow mustard flowers swaying.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "वॉलपेपर बदलना है, पर सब कुछ बोरिंग है!" },
+          { "speaker": "NEO", "text": "तो पंत जी की कविता खोलो। ग्राम श्री में गाँव इतना सुंदर है कि किसी भी वॉलपेपर को मात दे दे।" }
+        ]
+      },
+      {
+        "animation": "A portrait card builds: 'सुमित्रानंदन पंत (1900-1977)', 'जन्म: कौसानी, अल्मोड़ा (उत्तराखंड)', 'प्रकृति के सुकुमार कवि', 'छायावाद', 'रचनाएँ: वीणा, पल्लव, ग्राम्या, चिदंबरा', 'ज्ञानपीठ पुरस्कार: चिदंबरा'. Snowy Himalayan peaks rise behind.",
+        "lines": [
+          { "speaker": "NEO", "text": "सुमित्रानंदन पंत का जन्म 1900 में उत्तराखंड के कौसानी में हुआ और निधन 1977 में। वे छायावाद के प्रमुख कवि हैं।" },
+          { "speaker": "NEO", "text": "उन्हें प्रकृति का सुकुमार कवि कहा जाता है। उनकी रचनाएँ हैं वीणा, पल्लव, ग्राम्या और चिदंबरा। चिदंबरा पर उन्हें ज्ञानपीठ पुरस्कार मिला।" }
+        ]
+      },
+      {
+        "animation": "Fields stretch out like green velvet with a silver net of sunlight labelled 'चाँदी की सी उजली जाली'. Barley and wheat ears pop up. Pigeon-pea and sunn-hemp pods jingle like golden anklet bells labelled 'सोने की किंकिणियाँ'. Mustard flowers release a yellow scent trail. Guavas show red spots; golden ber fruits ripen.",
+        "lines": [
+          { "speaker": "NEO", "text": "कविता की शुरुआत खेतों से होती है। दूर तक मखमल जैसी कोमल हरियाली फैली है, और उस पर सूरज की किरणें चाँदी की उजली जाली जैसी लिपटी हैं।" },
+          { "speaker": "NEO", "text": "जौ और गेहूँ में बालियाँ आ गई हैं। अरहर और सनई की फलियाँ सोने की करधनी की घंटियों जैसी लगती हैं। फूली हुई पीली सरसों से तेल की भीनी गंध उड़ रही है।" },
+          { "speaker": "NEO", "text": "पेड़ों पर पीले मीठे अमरूदों में लाल चित्तियाँ पड़ गई हैं और सुनहरे बेर पक गए हैं।" },
+          { "speaker": "ZIPPY", "text": "रुको, मुझे भूख लग गई!" }
+        ]
+      },
+      {
+        "animation": "A riverbank: sand ripples shaped like snake tracks, labelled 'बालू के साँपों से अंकित गंगा की सतरंगी रेती'. Watermelon patches beside it. A heron combs its crest with its claw like a comb. Finally the whole village closes like an emerald box, labelled 'मरकत डिब्बे सा खुला ग्राम'.",
+        "lines": [
+          { "speaker": "NEO", "text": "गंगा के किनारे की सतरंगी रेत पर लहरों के निशान ऐसे लगते हैं, जैसे बालू पर साँप चले हों। तट पर तरबूज़ों की खेती है।" },
+          { "speaker": "NEO", "text": "एक बगुला उँगलियों की कंघी से अपनी कलगी सँवार रहा है। और पूरा गाँव कवि को हरे पन्ने, यानी मरकत के खुले डिब्बे जैसा लगता है।" },
+          { "speaker": "NEO", "text": "यह सर्दियों का मौसम है। धूप और ठंड के बीच हरियाली सुख से अलसाई-सी सोई है।" }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card lists: 'मखमल की कोमल हरियाली = उपमा', 'मरकत डिब्बे सा खुला ग्राम = उपमा', 'रोमांचित-सी लगती वसुधा = उत्प्रेक्षा (fun fact)', 'हँसमुख हरियाली = मानवीकरण'. Each term highlights in a different colour.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam में पूछा जाता है कि कवि ने गाँव को मरकत डिब्बे सा खुला क्यों कहा। उत्तर: हरियाली से भरा गाँव पन्ने के चमकते खुले डिब्बे जैसा लगता है।" },
+          { "speaker": "NEO", "text": "Exam tip: कविता की भाषा का सौंदर्य लिखते समय बताओ कि पंत जी ने प्रकृति का मानवीकरण किया है। धरती रोमांचित है, हरियाली हँसमुख है।" }
+        ]
+      },
+      {
+        "animation": "Recap board framed with mustard flowers. Points appear: '1. पंत: प्रकृति के सुकुमार कवि', '2. सर्दी का गाँव: खेत, फल, गंगा तट', '3. उपमा, मानवीकरण; मरकत डिब्बे सा ग्राम'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: ग्राम श्री के कवि सुमित्रानंदन पंत हैं, प्रकृति के सुकुमार कवि।" },
+          { "speaker": "NEO", "text": "दो: कविता में सर्दियों के गाँव की सुंदरता है, हरे खेत, पकते फल और गंगा का तट।" },
+          { "speaker": "NEO", "text": "तीन: उपमा और मानवीकरण से गाँव जीवित हो उठता है, जैसे हरे पन्ने का खुला डिब्बा।" },
+          { "speaker": "ZIPPY", "text": "मेरा नया वॉलपेपर तय: मरकत डिब्बा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 6,
+    "name": "मेघ आए",
+    "scenes": [
+      {
+        "animation": "A dusty summer village. Suddenly the whole village rushes to doors and windows, as if a VIP is arriving. A big dark cloud in a smart kurta and turban walks in on the horizon. Zippy wears a 'Welcome' sash.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "नियो, पूरा गाँव खिड़कियों पर क्यों खड़ा है? कोई फ़िल्म स्टार आ रहा है?" },
+          { "speaker": "NEO", "text": "उससे भी बड़ा मेहमान। शहर से दामाद आए हैं, यानी बादल! मेघ आए बड़े बन-ठन के, सँवर के।" }
+        ]
+      },
+      {
+        "animation": "A portrait card builds: 'सर्वेश्वर दयाल सक्सेना (1927-1983)', 'जन्म: बस्ती, उत्तर प्रदेश', 'संपादन: दिनमान, पराग', 'रचनाएँ: काठ की घंटियाँ, कुआनो नदी, जंगल का दर्द, खूँटियों पर टँगे लोग'. A label 'मानवीकरण' glows on the cloud.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि हैं सर्वेश्वर दयाल सक्सेना। उनका जन्म 1927 में उत्तर प्रदेश के बस्ती में हुआ और निधन 1983 में।" },
+          { "speaker": "NEO", "text": "वे दिनमान और बच्चों की पत्रिका पराग के संपादक रहे। उनकी रचनाएँ हैं काठ की घंटियाँ, कुआनो नदी, जंगल का दर्द और खूँटियों पर टँगे लोग।" }
+        ]
+      },
+      {
+        "animation": "A breeze character dances ahead of the cloud; doors and windows fly open lane by lane. Trees stretch their necks to peek. A dust storm lifts its skirt and runs. A river stops mid-flow and pulls a veil, glancing sideways.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि ने बादल को शहर से आए मेहमान, यानी पाहुन के रूप में दिखाया है। आगे-आगे हवा नाचती-गाती चलती है, और गली-गली दरवाज़े-खिड़कियाँ खुलने लगते हैं।" },
+          { "speaker": "NEO", "text": "पेड़ गरदन उचकाकर झाँकते हैं। आँधी चलती है तो धूल घाघरा उठाकर भागती है। नदी ठिठककर तिरछी नज़र से देखती है और घूँघट सरका लेती है।" },
+          { "speaker": "ZIPPY", "text": "पूरा गाँव शादी वाले घर जैसा लग रहा है!" }
+        ]
+      },
+      {
+        "animation": "An old peepal tree bows in greeting. A creeper hides behind a door, sulking: speech bubble 'बरस बाद सुधि लीन्हीं'. A pond brings water in a big plate ('परात') for the guest's feet. Lightning flashes on the horizon 'क्षितिज अटारी', and rain pours down labelled 'मिलन के अश्रु'.",
+        "lines": [
+          { "speaker": "NEO", "text": "बूढ़ा पीपल आगे बढ़कर जुहार करता है, जैसे घर का बुज़ुर्ग स्वागत करे। लता दरवाज़े की ओट में खड़ी शिकायत करती है, पूरे एक बरस बाद याद आई।" },
+          { "speaker": "NEO", "text": "तालाब खुश होकर परात भर पानी लाता है, मेहमान के पैर धोने के लिए।" },
+          { "speaker": "NEO", "text": "फिर बिजली चमकती है, लता का भ्रम टूटता है कि मेघ नहीं आएँगे, और मिलन के आँसू बारिश बनकर झर-झर बरसते हैं।" }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'मेघ = पाहुन/दामाद, लता = नायिका, पीपल = बुज़ुर्ग, ताल = परिवार का सदस्य'. The word 'मानवीकरण अलंकार' stamps across it. Below: 'बाँध टूटा झर-झर मिलन के अश्रु ढरके'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam में पूछते हैं कि कविता में किन-किन का मानवीकरण हुआ है। मेघ, हवा, पेड़, धूल, नदी, पीपल, लता और ताल, सब इंसानों की तरह व्यवहार करते हैं।" },
+          { "speaker": "NEO", "text": "Exam tip: मानवीकरण बताते समय दो-तीन उदाहरण पंक्ति के साथ लिखो। और याद रखो, कविता में गाँव की स्वागत परंपरा झलकती है।" }
+        ]
+      },
+      {
+        "animation": "Recap board with rain clouds and a garland. Points appear: '1. सर्वेश्वर दयाल सक्सेना: मेघ आए', '2. मेघ = शहर से आया पाहुन', '3. प्रकृति का मानवीकरण और ग्रामीण स्वागत'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: मेघ आए कविता सर्वेश्वर दयाल सक्सेना की है।" },
+          { "speaker": "NEO", "text": "दो: बादल को शहर से आए सजे-धजे मेहमान के रूप में दिखाया गया है।" },
+          { "speaker": "NEO", "text": "तीन: पूरी कविता में प्रकृति का मानवीकरण है, और गाँव के स्वागत का सुंदर चित्र है।" },
+          { "speaker": "ZIPPY", "text": "अगली बार बारिश आई तो मैं भी परात लेकर दौड़ूँगा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 7,
+    "name": "बच्चे काम पर जा रहे हैं",
+    "scenes": [
+      {
+        "animation": "A foggy winter morning road. Zippy, with a school bag and lunchbox, skips along. Beside him, small children walk the other way carrying sacks, tea kettles and tool bags. Zippy stops, confused. The colours drain to grey.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "नियो, मैं स्कूल जा रहा हूँ, पर ये बच्चे बैग की जगह बोरे लेकर कहाँ जा रहे हैं?" },
+          { "speaker": "NEO", "text": "काम पर, ज़िप्पी। और यही इस कविता का सबसे चुभने वाला सवाल है।" }
+        ]
+      },
+      {
+        "animation": "A portrait card builds: 'राजेश जोशी (जन्म 1946)', 'जन्म: नरसिंहगढ़, मध्य प्रदेश', 'रचनाएँ: एक दिन बोलेंगे पेड़, मिट्टी का चेहरा, नेपथ्य में हँसी, दो पंक्तियों के बीच', 'साहित्य अकादमी पुरस्कार'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि हैं राजेश जोशी। उनका जन्म 1946 में मध्य प्रदेश के नरसिंहगढ़ में हुआ।" },
+          { "speaker": "NEO", "text": "उनकी रचनाएँ हैं एक दिन बोलेंगे पेड़, मिट्टी का चेहरा, नेपथ्य में हँसी और दो पंक्तियों के बीच। उन्हें साहित्य अकादमी पुरस्कार मिला है।" }
+        ]
+      },
+      {
+        "animation": "The line 'बच्चे काम पर जा रहे हैं' appears as a plain news ticker. Then it transforms: the full stop turns into a big red question mark, and the text rearranges into 'काम पर क्यों जा रहे हैं बच्चे?'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि कहते हैं, कोहरे से ढँकी सड़क पर बच्चे सुबह-सुबह काम पर जा रहे हैं। यह हमारे समय की सबसे भयानक पंक्ति है।" },
+          { "speaker": "NEO", "text": "और भयानक है इसे एक सामान्य विवरण की तरह लिखना। इसे सवाल की तरह लिखा जाना चाहिए, काम पर क्यों जा रहे हैं बच्चे?" },
+          { "speaker": "ZIPPY", "text": "यानी हमें इसे आम खबर मानकर आगे नहीं बढ़ जाना चाहिए।" }
+        ]
+      },
+      {
+        "animation": "Quick panels, each with a question mark: balls floating away into outer space; termites eating colourful books; toys crushed under a black mountain; a school building collapsing in an earthquake; empty playgrounds and courtyards vanishing. Then everything snaps back to normal, intact, while children still walk to work.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि पूछते हैं, क्या सारी गेंदें अंतरिक्ष में गिर गई हैं? क्या दीमकों ने सारी रंग-बिरंगी किताबें खा ली हैं?" },
+          { "speaker": "NEO", "text": "क्या सारे खिलौने काले पहाड़ के नीचे दब गए हैं? क्या भूकंप में सारे मदरसों की इमारतें ढह गई हैं? क्या सारे मैदान, बगीचे और आँगन खत्म हो गए हैं?" },
+          { "speaker": "NEO", "text": "अगर ऐसा होता तो भयानक होता। पर इससे भी भयानक यह है कि सब चीज़ें अपनी जगह हैं, हस्बमामूल, और फिर भी हज़ारों सड़कों से छोटे-छोटे बच्चे काम पर जा रहे हैं।" }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'कविता की पहली पंक्तियों को सवाल की तरह क्यों लिखा जाना चाहिए?' Keywords glow: 'बाल श्रम', 'समाज की संवेदनहीनता', 'शिक्षा और खेल का अधिकार'. A fun-fact badge: 'Child labour is a punishable offence in India'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam में पूछा जाता है कि कवि इस पंक्ति को विवरण नहीं, सवाल क्यों बनाना चाहते हैं। उत्तर: ताकि समाज जागे और बाल श्रम के कारणों पर सोचे।" },
+          { "speaker": "NEO", "text": "Exam tip: उत्तर में बाल श्रम, समाज की संवेदनहीनता, और बच्चों के पढ़ने-खेलने के अधिकार, ये तीनों शब्द ज़रूर लाओ।" }
+        ]
+      },
+      {
+        "animation": "Recap board where the fog clears and children run into a school with balls and books. Points appear: '1. राजेश जोशी: बाल श्रम पर कविता', '2. विवरण नहीं, सवाल: काम पर क्यों?', '3. सब कुछ है, फिर भी बच्चे काम पर: सबसे भयानक सच'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: बच्चे काम पर जा रहे हैं, राजेश जोशी की बाल श्रम पर लिखी कविता है।" },
+          { "speaker": "NEO", "text": "दो: कवि चाहते हैं कि यह पंक्ति सवाल की तरह पूछी जाए, कि बच्चे काम पर क्यों जा रहे हैं।" },
+          { "speaker": "NEO", "text": "तीन: गेंदें, किताबें, स्कूल सब मौजूद हैं, फिर भी बच्चे काम पर जा रहे हैं, यही सबसे भयानक सच है।" },
+          { "speaker": "ZIPPY", "text": "हर बच्चे के हाथ में बोरा नहीं, बस्ता होना चाहिए!" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,211 @@
+[
+  {
+    "chapter_no": 18,
+    "chapter": "Economics: People as Resource",
+    "topic_no": 1,
+    "name": "People as Resource: Human Capital Formation",
+    "scenes": [
+      {
+        "animation": "A crowded railway platform during Diwali rush. Zippy groans at the crowd, then Neo taps his goggles and the crowd transforms: every person glows with a small icon, a doctor's stethoscope, a teacher's chalk, a farmer's plough, a coder's laptop.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "India has too many people. Isn't that a problem?" },
+          { "speaker": "NEO", "text": "Not necessarily. Look again. Each person can be an asset for the economy, not a liability." }
+        ]
+      },
+      {
+        "animation": "A large label writes itself: 'People as Resource: the working people in terms of their existing productive skills and abilities'. Money bags labelled 'Education', 'Training', 'Medical care' are invested into a person, who then grows taller, labelled 'Human capital'.",
+        "lines": [
+          { "speaker": "NEO", "text": "People as resource is a way of referring to a country's working people in terms of their existing productive skills and abilities." },
+          { "speaker": "NEO", "text": "When the existing human resource is further developed by becoming more educated and healthy, we call it human capital formation. Investment in education, training and medical care makes people more productive." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: 'Sakal', age 12, goes to school, then does a computer course and works at a private firm, with his income graph rising. Right: 'Vilas', age 11, whose father, a fisherman, died when he was two; he does not go to school, falls sick often, and sells fish with his mother, his income line flat.",
+        "lines": [
+          { "speaker": "NEO", "text": "Meet two boys from the same village. Sakal went to school, completed a computer course, and got a job in a private firm. He even designed new software." },
+          { "speaker": "NEO", "text": "Vilas lost his father when he was two. He never went to school, suffered from poor health, and sold fish with his mother, earning very little." },
+          { "speaker": "ZIPPY", "text": "Same village, totally different futures. The difference is investment in them." }
+        ]
+      },
+      {
+        "animation": "An outline of Japan appears with an empty 'Natural resources' box beside it. Arrows labelled 'Investment in people: education and health' fill a box labelled 'Rich and developed', with icons of Japan importing raw materials and exporting technology.",
+        "lines": [
+          { "speaker": "NEO", "text": "Take Japan. Countries like Japan have invested in human resource. They did not have much natural resource." },
+          { "speaker": "NEO", "text": "They import the natural resources they need. Yet they became rich and developed, because educated, healthy people used those resources efficiently and developed new technology." }
+        ]
+      },
+      {
+        "animation": "A cycle diagram builds: 'Educated, healthy parents' → 'Invest in children's education and health' → 'Productive children earn more' → back to start. A 'BOARD TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Educated parents invest heavily in their children's education and health. This creates a virtuous cycle. The opposite, a vicious cycle, traps disadvantaged families." },
+          { "speaker": "NEO", "text": "Board tip: when asked why human capital is superior to other resources, say that it can make use of land and capital. Land and capital cannot become useful on their own." }
+        ]
+      },
+      {
+        "animation": "Recap board with a growing person icon: '1. People as resource: productive skills and abilities', '2. Human capital formation: investment in education, training, health', '3. Sakal vs Vilas; Japan grew by investing in people'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: people are a resource because of their productive skills and abilities." },
+          { "speaker": "NEO", "text": "Two: investing in education, training and medical care creates human capital." },
+          { "speaker": "NEO", "text": "Three: Sakal's story and Japan's growth show how people become assets." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 18,
+    "chapter": "Economics: People as Resource",
+    "topic_no": 2,
+    "name": "Economic Activities by Men and Women",
+    "scenes": [
+      {
+        "animation": "Zippy's mother, drawn as a larger spark, cooks, cleans, helps with homework and waters plants, all at once. Zippy asks her salary and a pay slip reads '₹0'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My mum works harder than anyone. Why doesn't she get paid?" },
+          { "speaker": "NEO", "text": "Great question. To answer it, we need to classify economic activities first." }
+        ]
+      },
+      {
+        "animation": "Three stacked shelves appear. 'Primary sector': agriculture, forestry, animal husbandry, fishing, poultry farming, mining, quarrying. 'Secondary sector': a factory labelled 'Manufacturing'. 'Tertiary sector': trade, transport, communication, banking, education, health, tourism, insurance.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activities are classified into three sectors. The primary sector includes agriculture, forestry, animal husbandry, fishing, poultry farming, mining and quarrying." },
+          { "speaker": "NEO", "text": "Manufacturing is included in the secondary sector. Trade, transport, communication, banking, education, health, tourism, services and insurance are in the tertiary sector." }
+        ]
+      },
+      {
+        "animation": "A two-column table builds: 'Market activities: for pay or profit; production of goods or services, including government service' and 'Non-market activities: production for self-consumption'. A farmer's family eats grain from their own field, placed under 'Non-market'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activities that add value to the national income are called economic activities. They are of two parts." },
+          { "speaker": "NEO", "text": "Market activities involve remuneration to anyone who performs them, that is, activities performed for pay or profit." },
+          { "speaker": "NEO", "text": "Non-market activities are production for self-consumption, like consumption and processing of primary products, or own-account production of fixed assets." }
+        ]
+      },
+      {
+        "animation": "Back in Zippy's kitchen: a label 'Household work: not recorded in national income' appears over the mother. Then a bar compares 'Wages: men' and 'Wages: women', with the women's bar shorter. A caption: 'Women with high education and skills are paid on par with men'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Due to the historical and cultural division of labour, women generally look after domestic chores and men work in the field. Women's household services are not paid for, and are not accounted for in the national income." },
+          { "speaker": "NEO", "text": "Women are often paid less than men, and many work where job security is low. But women with high education and skill formation are paid on par with men." },
+          { "speaker": "ZIPPY", "text": "So education helps close the gap. Mum, I'm studying, I promise!" }
+        ]
+      },
+      {
+        "animation": "A sorting game: cards 'Fisherman', 'Car factory worker', 'Bank clerk', 'Farmer eating own produce' fly into the right bins. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: questions often ask you to classify an activity into a sector, or as market or non-market. Look for two clues: what is produced, and whether it is for pay." }
+        ]
+      },
+      {
+        "animation": "Recap board with three shelves and a kitchen icon: '1. Primary, secondary, tertiary sectors', '2. Market (for pay or profit) vs non-market (self-consumption)', '3. Women's household work unpaid; education raises women's earnings'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: economic activities fall into primary, secondary and tertiary sectors." },
+          { "speaker": "NEO", "text": "Two: market activities are for pay or profit; non-market activities are for self-consumption." },
+          { "speaker": "NEO", "text": "Three: women's household work is unpaid, but education and skills help women earn on par with men." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 18,
+    "chapter": "Economics: People as Resource",
+    "topic_no": 3,
+    "name": "Quality of Population: Education and Health",
+    "scenes": [
+      {
+        "animation": "Two cricket teams line up. One team is fit and trained; the other is tired and untrained. The trained team wins easily. Zippy, the scorer, flips the board to read 'Quality beats quantity'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Same number of players, but one team won by a mile!" },
+          { "speaker": "NEO", "text": "Just like countries. The quality of a population decides the growth of a country." }
+        ]
+      },
+      {
+        "animation": "A three-part gauge labelled 'Quality of population' fills in: 'Literacy rate', 'Health (life expectancy)', 'Skill formation'. A data table builds row by row: 'Literacy rate: 1951, about 18%', '2010-11, about 74%'. Kerala glows at the top and Bihar at the bottom on an India map.",
+        "lines": [
+          { "speaker": "NEO", "text": "Quality of population depends upon the literacy rate, the health of a person indicated by life expectancy, and the skills acquired by the people." },
+          { "speaker": "NEO", "text": "Literacy rates in India have increased from eighteen per cent in 1951 to seventy-four per cent in 2010 and 2011. But literacy is not the same everywhere. In 2011, Kerala had the highest literacy rate and Bihar the lowest." },
+          { "speaker": "NEO", "text": "Literacy is also higher among males than females, and in urban areas than in rural areas." }
+        ]
+      },
+      {
+        "animation": "A school building with three banners: 'Sarva Shiksha Abhiyan: elementary education for all children aged 6 to 14', 'Bridge courses and back-to-school camps', 'Mid-day meal scheme'. Children walk in carrying plates and books.",
+        "lines": [
+          { "speaker": "NEO", "text": "The government has taken steps to improve education. Sarva Shiksha Abhiyan is a significant step towards providing elementary education to all children in the age group of six to fourteen years." },
+          { "speaker": "NEO", "text": "Bridge courses and back-to-school camps have been started to increase enrolment. The mid-day meal scheme encourages attendance and retention of children and improves their nutritional status." }
+        ]
+      },
+      {
+        "animation": "A healthy worker lifts crates easily while an unhealthy worker struggles. Then a health map fills with icons: primary health centres, hospitals, medical colleges. A label shows 'Infant mortality rate: deaths of children under one year per 1,000 live births'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The health of a person helps them realise their potential and fight illness. An unhealthy person becomes a liability for an organisation." },
+          { "speaker": "NEO", "text": "India has built a vast health infrastructure over the years, with primary health centres and hospitals. This has helped raise life expectancy and reduce the infant mortality rate." },
+          { "speaker": "NEO", "text": "Infant mortality rate is the death of a child under one year of age, counted per thousand live births." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card shows the IMR definition with 'under one year' and 'per 1,000 live births' circled in red. Zippy tries to erase the circles and gets tangled in the red ink.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Under one year, per thousand live births. Got it." },
+          { "speaker": "NEO", "text": "Exam tip: many students miss one part of the definition. Write both parts to get the full mark." }
+        ]
+      },
+      {
+        "animation": "Recap board with a book and a stethoscope: '1. Quality = literacy + health + skills', '2. Literacy: 18% (1951) → 74% (2010-11); Sarva Shiksha Abhiyan, mid-day meals', '3. Health infrastructure raises life expectancy, lowers IMR'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: quality of population depends on literacy, health and skills." },
+          { "speaker": "NEO", "text": "Two: literacy rose from about eighteen to seventy-four per cent, helped by schemes like Sarva Shiksha Abhiyan and mid-day meals." },
+          { "speaker": "NEO", "text": "Three: better health infrastructure raises life expectancy and lowers infant mortality." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 18,
+    "chapter": "Economics: People as Resource",
+    "topic_no": 4,
+    "name": "Unemployment",
+    "scenes": [
+      {
+        "animation": "A small farm plot where five family members all hoe the same row, bumping into each other. Neo removes two of them with a gentle tap; the remaining three finish the work just as fast. Zippy's jaw drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, two people left and nothing changed? Were they even working?" },
+          { "speaker": "NEO", "text": "They were working, but not adding anything. That is a hidden kind of unemployment." }
+        ]
+      },
+      {
+        "animation": "A definition card: 'Unemployment: people willing to work at the going wages cannot find jobs'. An age band highlights 'Workforce: 15 to 59 years'. Children and elderly people sit outside the band.",
+        "lines": [
+          { "speaker": "NEO", "text": "Unemployment exists when people who are willing to work at the going wages cannot find jobs." },
+          { "speaker": "NEO", "text": "The workforce population includes people from fifteen years to fifty-nine years. Children in school, and old people, are not counted as unemployed." }
+        ]
+      },
+      {
+        "animation": "A rural calendar: busy months of sowing, harvesting, weeding and threshing are coloured bright; other months are grey with farmers sitting idle. Caption: 'Seasonal unemployment'. Then the five-person plot returns: 'Disguised unemployment: more people than needed'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In rural areas, there are two types. Seasonal unemployment happens when people cannot find jobs during some months of the year. Farm work is busy at sowing, harvesting, weeding and threshing, but not in between." },
+          { "speaker": "NEO", "text": "In disguised unemployment, people appear to be employed, but more people work than are needed. If a plot needs three people but five work on it, the extra two are disguisedly unemployed." }
+        ]
+      },
+      {
+        "animation": "A city street: a graduate holding a degree scroll joins a long queue outside a job office. A second board reads 'Educated unemployment: matriculates, graduates, post-graduates'. A small gear labelled 'Wasted resource' falls off the economy machine.",
+        "lines": [
+          { "speaker": "NEO", "text": "In urban areas, there is educated unemployment. Many youth with matriculation, graduation and post-graduation degrees are not able to find jobs." },
+          { "speaker": "NEO", "text": "Unemployment is a wastage of manpower. People who are an asset turn into a liability, and it has a detrimental impact on the overall growth of an economy." },
+          { "speaker": "NEO", "text": "It also tends to increase economic overload, as dependence of the unemployed on the working population rises, and it leads to a feeling of hopelessness and despair among the youth." }
+        ]
+      },
+      {
+        "animation": "A three-column table builds: 'Seasonal: rural, some months', 'Disguised: rural, more people than needed', 'Educated: urban, degree holders'. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Three types, easy. Seasonal, disguised, educated." },
+          { "speaker": "NEO", "text": "Exam tip: always say where each type is found and give an example. Disguised unemployment is the most frequently asked." }
+        ]
+      },
+      {
+        "animation": "Recap board with a calendar, a crowded field and a degree scroll: '1. Unemployment: willing to work, no job; workforce 15 to 59 years', '2. Rural: seasonal and disguised', '3. Urban: educated unemployment; wastage of manpower'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: unemployment means people willing to work at going wages cannot find jobs." },
+          { "speaker": "NEO", "text": "Two: rural areas have seasonal and disguised unemployment." },
+          { "speaker": "NEO", "text": "Three: urban areas have educated unemployment, and all unemployment wastes human resource." }
+        ]
+      }
+    ]
+  }
+]

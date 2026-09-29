@@ -166,57 +166,73 @@ const SCHOOL_CURRICULUM = {
     {
       name: "Mathematics",
       chapters: [
-        "Rational Numbers",
-        "Linear Equations in One Variable",
-        "Understanding Quadrilaterals",
-        "Practical Geometry",
-        "Data Handling",
-        "Squares and Square Roots",
-        "Cubes and Cube Roots",
-        "Comparing Quantities",
-        "Algebraic Expressions and Identities",
-        "Mensuration",
+        "A Square and A Cube",
+        "Power Play",
+        "A Story of Numbers",
+        "Quadrilaterals",
+        "Number Play",
+        "We Distribute, Yet Things Multiply",
+        "Proportional Reasoning-1",
+        "Fractions in Disguise",
+        "The Baudhayana-Pythagoras Theorem",
+        "Proportional Reasoning-2",
+        "Exploring Some Geometric Themes",
+        "Tales by Dots and Lines",
+        "Algebra Play",
+        "Area",
       ],
     },
     {
       name: "Science",
       chapters: [
-        "Crop Production and Management",
-        "Microorganisms Friend and Foe",
-        "Synthetic Fibres and Plastics",
-        "Materials Metals and Non-Metals",
-        "Coal and Petroleum",
-        "Combustion and Flame",
-        "Conservation of Plants and Animals",
-        "Cell Structure and Functions",
-        "Reproduction in Animals",
-        "Force and Pressure",
+        "Exploring the Investigative World of Science",
+        "The Invisible Living World: Beyond Our Naked Eye",
+        "Health: The Ultimate Treasure",
+        "Electricity: Magnetic and Heating Effects",
+        "Exploring Forces",
+        "Pressure, Winds, Storms, and Cyclones",
+        "Particulate Nature of Matter",
+        "Nature of Matter: Elements, Compounds, and Mixtures",
+        "The Amazing World of Solutes, Solvents, and Solutions",
+        "Light: Mirrors and Lenses",
+        "Keeping Time with the Skies",
+        "How Nature Works in Harmony",
+        "Our Home: Earth, a Unique Life Sustaining Planet",
       ],
     },
     {
       name: "English",
       chapters: [
-        "Reading and Inference",
-        "Grammar in Context",
-        "Descriptive Writing",
-        "Diary and Letter Writing",
-        "Poetry Response",
-        "Listening and Speaking",
+        "Unit 1: Wit and Wisdom",
+        "Unit 2: Values and Dispositions",
+        "Unit 3: Mystery and Magic",
+        "Unit 4: Environment",
+        "Unit 5: Science and Curiosity",
+        "Grammar and Writing",
       ],
     },
     {
       name: "Social Science",
       chapters: [
-        "How When and Where",
-        "From Trade to Territory",
-        "Ruling the Countryside",
-        "Resources",
-        "Land Soil Water and Natural Vegetation",
-        "The Indian Constitution",
+        "Natural Resources and Their Use",
+        "Reshaping India's Political Map",
+        "The Rise of the Marathas",
+        "The Colonial Era in India",
+        "Universal Franchise and India's Electoral System",
+        "The Parliamentary System: Legislature and Executive",
+        "Factors of Production",
+        "World Geography: Some Glimpses",
+        "India's Long Road to Independence",
+        "A Journey Through Indian Architecture",
+        "The Role of the Judiciary in Our Society",
+        "Citizenship: Rights and Duties",
+        "Dynamics of Population",
+        "India's Urban Landscape",
+        "Cultural Currents: 13th to 17th Centuries",
       ],
     },
-    { name: "Hindi", chapters: ["Bodh Prashn", "Vakya Shuddhi", "Anuchhed aur Samvad", "Kavya Rasgrahan", "Patra Lekhan", "Lekhan Kaushal"] },
-    { name: "Sanskrit", chapters: ["Subhashitani", "Avyaya", "Vibhakti", "Anuvad", "Saral Gadyansh"] },
+    { name: "Hindi", chapters: ["मल्हार: पाठ", "व्याकरण और लेखन"] },
+    { name: "Sanskrit", chapters: ["दीपकम्: पाठ", "दीपकम्: पाठ (भाग 2)"] },
   ],
   "9": [
     {
@@ -230,8 +246,10 @@ const SCHOOL_CURRICULUM = {
         "Lines and Angles",
         "Triangles",
         "Quadrilaterals",
-        "Areas of Parallelograms and Triangles",
         "Circles",
+        "Heron's Formula",
+        "Surface Areas and Volumes",
+        "Statistics",
       ],
     },
     {
@@ -247,17 +265,40 @@ const SCHOOL_CURRICULUM = {
         "Force and Laws of Motion",
         "Gravitation",
         "Work and Energy",
+        "Sound",
+        "Improvement in Food Resources",
       ],
     },
     {
       name: "English",
       chapters: [
-        "Reading for Theme",
-        "Literary Devices",
-        "Grammar and Editing",
-        "Descriptive and Narrative Writing",
-        "Speech and Debate",
-        "Poetry Study",
+        "Grammar",
+        "Writing Skills",
+        "The Fun They Had",
+        "The Sound of Music",
+        "The Little Girl",
+        "A Truly Beautiful Mind",
+        "The Snake and the Mirror",
+        "My Childhood",
+        "Reach for the Top",
+        "Kathmandu",
+        "If I Were You",
+        "The Road Not Taken by Robert Frost",
+        "Wind by Subramania Bharati",
+        "Rain on the Roof by Coates Kinney",
+        "The Lake Isle of Innisfree by W. B. Yeats",
+        "A Legend of the Northland by Phoebe Cary",
+        "No Men Are Foreign by James Kirkup",
+        "On Killing a Tree by Gieve Patel",
+        "A Slumber Did My Spirit Seal by William Wordsworth",
+        "The Lost Child",
+        "The Adventures of Toto",
+        "Iswaran the Storyteller",
+        "In the Kingdom of Fools",
+        "The Happy Prince",
+        "The Last Leaf",
+        "A House Is Not a Home",
+        "The Beggar",
       ],
     },
     {
@@ -265,14 +306,60 @@ const SCHOOL_CURRICULUM = {
       chapters: [
         "The French Revolution",
         "Socialism in Europe and the Russian Revolution",
+        "Nazism and the Rise of Hitler",
+        "Forest Society and Colonialism",
+        "Pastoralists in the Modern World",
         "India Size and Location",
         "Physical Features of India",
+        "Drainage",
+        "Climate",
+        "Natural Vegetation and Wildlife",
+        "Population",
         "What is Democracy Why Democracy",
+        "Constitutional Design",
+        "Electoral Politics",
+        "Working of Institutions",
+        "Democratic Rights",
         "The Story of Village Palampur",
+        "People as Resource",
+        "Poverty as a Challenge",
+        "Food Security in India",
       ],
     },
-    { name: "Hindi", chapters: ["Gadya aur Kavya", "Vyakaran", "Srijanatmak Lekhan", "Patra aur Vigyapan", "Apathit Bodh", "Prashnottari Abhyas"] },
-    { name: "Information Technology", chapters: ["Communication Skills", "Self Management Skills", "ICT Basics", "Digital Documentation", "Cyber Safety"] },
+    {
+      name: "Hindi",
+      chapters: [
+        "कबीर: साखियाँ एवं सबद",
+        "ललद्यद: वाख",
+        "रसखान: सवैये",
+        "कैदी और कोकिला",
+        "ग्राम श्री",
+        "मेघ आए",
+        "बच्चे काम पर जा रहे हैं",
+        "दो बैलों की कथा",
+        "ल्हासा की ओर",
+        "उपभोक्तावाद की संस्कृति",
+        "साँवले सपनों की याद",
+        "प्रेमचंद के फटे जूते",
+        "मेरे बचपन के दिन",
+        "इस जल प्रलय में",
+        "मेरे संग की औरतें",
+        "रीढ़ की हड्डी",
+        "व्याकरण",
+        "लेखन",
+      ],
+    },
+    {
+      name: "Information Technology",
+      chapters: [
+        "Employability Skills",
+        "Introduction to IT-ITeS Industry",
+        "Data Entry and Keyboarding Skills",
+        "Digital Documentation",
+        "Electronic Spreadsheet",
+        "Digital Presentation",
+      ],
+    },
   ],
   "10": [
     {
@@ -288,6 +375,10 @@ const SCHOOL_CURRICULUM = {
         "Introduction to Trigonometry",
         "Applications of Trigonometry",
         "Circles",
+        "Areas Related to Circles",
+        "Surface Areas and Volumes",
+        "Statistics",
+        "Probability",
       ],
     },
     {
@@ -300,20 +391,47 @@ const SCHOOL_CURRICULUM = {
         "Life Processes",
         "Control and Coordination",
         "How do Organisms Reproduce",
-        "Heredity and Evolution",
+        "Heredity",
         "Light Reflection and Refraction",
         "Human Eye and the Colourful World",
+        "Electricity",
+        "Magnetic Effects of Electric Current",
+        "Our Environment",
       ],
     },
     {
       name: "English",
       chapters: [
-        "Analytical Reading",
-        "Grammar and Editing Skills",
-        "Formal Letter Writing",
-        "Analytical Paragraph Writing",
-        "Drama and Prose Study",
-        "Poetry Interpretation",
+        "Grammar",
+        "Writing Skills",
+        "A Letter to God",
+        "Nelson Mandela: Long Walk to Freedom",
+        "Two Stories about Flying",
+        "From the Diary of Anne Frank",
+        "Glimpses of India",
+        "Mijbil the Otter",
+        "Madam Rides the Bus",
+        "The Sermon at Benares",
+        "The Proposal",
+        "Dust of Snow by Robert Frost",
+        "Fire and Ice by Robert Frost",
+        "A Tiger in the Zoo by Leslie Norris",
+        "How to Tell Wild Animals by Carolyn Wells",
+        "The Ball Poem by John Berryman",
+        "Amanda! by Robin Klein",
+        "The Trees by Adrienne Rich",
+        "Fog by Carl Sandburg",
+        "The Tale of Custard the Dragon by Ogden Nash",
+        "For Anne Gregory by W.B. Yeats",
+        "A Triumph of Surgery",
+        "The Thief's Story",
+        "The Midnight Visitor",
+        "A Question of Trust",
+        "Footprints Without Feet",
+        "The Making of a Scientist",
+        "The Necklace",
+        "Bholi",
+        "The Book That Saved the Earth",
       ],
     },
     {
@@ -321,14 +439,53 @@ const SCHOOL_CURRICULUM = {
       chapters: [
         "The Rise of Nationalism in Europe",
         "Nationalism in India",
+        "The Making of a Global World",
+        "The Age of Industrialisation",
+        "Print Culture and the Modern World",
         "Resources and Development",
         "Forest and Wildlife Resources",
+        "Water Resources",
+        "Agriculture",
+        "Minerals and Energy Resources",
+        "Manufacturing Industries",
+        "Lifelines of National Economy",
         "Power Sharing",
+        "Federalism",
+        "Gender Religion and Caste",
+        "Political Parties",
+        "Outcomes of Democracy",
         "Development",
+        "Sectors of the Indian Economy",
+        "Money and Credit",
+        "Globalisation and the Indian Economy",
+        "Consumer Rights",
       ],
     },
-    { name: "Hindi", chapters: ["Padya aur Gadya", "Bhasha Gyan", "Nibandh aur Patra", "Suchna aur Vigyapan", "Alochana aur Saransh", "Anuchhed Lekhan"] },
-    { name: "Information Technology", chapters: ["Employability Skills", "Digital Documentation Advanced", "Electronic Spreadsheet", "Database Management", "Web Applications and Security"] },
+    {
+      name: "Hindi",
+      chapters: [
+        "सूरदास के पद",
+        "राम-लक्ष्मण-परशुराम संवाद",
+        "आत्मकथ्य",
+        "उत्साह",
+        "अट नहीं रही है",
+        "यह दंतुरित मुसकान",
+        "फसल",
+        "संगतकार",
+        "नेताजी का चश्मा",
+        "बालगोबिन भगत",
+        "लखनवी अंदाज़",
+        "एक कहानी यह भी",
+        "नौबतखाने में इबादत",
+        "संस्कृति",
+        "माता का अँचल",
+        "साना-साना हाथ जोड़ि",
+        "मैं क्यों लिखता हूँ?",
+        "व्याकरण",
+        "लेखन",
+      ],
+    },
+    { name: "Information Technology", chapters: ["Employability Skills", "Digital Documentation Advanced", "Electronic Spreadsheet", "Database Management", "Maintain Healthy, Safe and Secure Working Environment"] },
   ],
 };
 
@@ -455,6 +612,24 @@ const SUBJECT_TOPIC_PATTERNS = {
   ],
 };
 
+// Class IX-X Hindi chapters are the NCERT lesson names in Devanagari; the
+// transliterated Hindi patterns above would give mixed-script titles
+// ("सूरदास के पद ka parichay"), so those chapters use these instead.
+const DEVANAGARI_TOPIC_PATTERNS = [
+  "{chapter}: परिचय",
+  "{chapter}: मुख्य शब्द",
+  "{chapter}: भावार्थ",
+  "{chapter}: व्याकरण बिंदु",
+  "{chapter}: प्रश्नोत्तर",
+  "{chapter}: लेखन अभ्यास",
+  "{chapter}: पुनरावृत्ति",
+  "{chapter}: महत्वपूर्ण बिंदु",
+  "{chapter}: अभ्यास प्रश्न",
+  "{chapter}: परीक्षा तैयारी",
+];
+
+const DEVANAGARI = /[ऀ-ॿ]/;
+
 const DEFAULT_TOPIC_PATTERNS = [
   "Introduction to {chapter}",
   "Important ideas in {chapter}",
@@ -467,6 +642,34 @@ const DEFAULT_TOPIC_PATTERNS = [
   "Revision notes for {chapter}",
   "Assessment prep for {chapter}",
 ];
+
+// Per-subject visual identity for School-track course cards. The Dashboard's
+// card art was five stock Medical-track photos (hearts, IV drips, clinical
+// case studies) reused for every subject regardless of track — a Class X
+// "Real Numbers" card showed a cardiology illustration. There's no School-
+// specific photography to swap in, so each subject gets a distinct gradient
+// and icon instead of a mismatched photo; `icon` is a react-icons/fa export
+// name, resolved to a component where this is consumed (keeps this data
+// file free of a UI-framework import).
+export const SCHOOL_SUBJECT_VISUALS = {
+  Mathematics: { icon: "FaCalculator", from: "#1d4ed8", to: "#0891b2" },
+  Science: { icon: "FaFlask", from: "#059669", to: "#0d9488" },
+  English: { icon: "FaBookOpen", from: "#7c3aed", to: "#6366f1" },
+  Hindi: { icon: "FaLanguage", from: "#ea580c", to: "#d97706" },
+  Sanskrit: { icon: "FaOm", from: "#b45309", to: "#92400e" },
+  EVS: { icon: "FaLeaf", from: "#16a34a", to: "#65a30d" },
+  "Social Studies": { icon: "FaLandmark", from: "#be185d", to: "#9d174d" },
+  "Social Science": { icon: "FaLandmark", from: "#be185d", to: "#9d174d" },
+  "General Knowledge": { icon: "FaGlobeAsia", from: "#0369a1", to: "#0284c7" },
+  "Computer Basics": { icon: "FaDesktop", from: "#4338ca", to: "#3730a3" },
+  "Information Technology": { icon: "FaLaptopCode", from: "#4338ca", to: "#3730a3" },
+};
+
+export const DEFAULT_SUBJECT_VISUAL = { icon: "FaGraduationCap", from: "#334155", to: "#1e293b" };
+
+export function getSubjectVisual(subjectName) {
+  return SCHOOL_SUBJECT_VISUALS[subjectName] || DEFAULT_SUBJECT_VISUAL;
+}
 
 const validSchoolClassValues = new Set(schoolClassOptions.map((item) => item.value));
 
@@ -485,16 +688,23 @@ export function getSelectedTrack() {
   }
 }
 
-export function isSchoolTrack() {
-  return getSelectedTrack() === "school";
-}
-
 export function getStoredUser() {
   try {
     return JSON.parse(localStorage.getItem("kanthastUser") || "null");
   } catch {
     return null;
   }
+}
+
+// A logged-in user's track is a fixed backend fact tied to their account,
+// not something that should follow whichever track page this browser
+// happened to visit most recently. Prefer it once it exists; the ambient
+// `kanthastTrack` flag only decides the track for a signed-out visitor
+// browsing the public marketing pages.
+export function isSchoolTrack() {
+  const user = getStoredUser();
+  if (user?.track) return user.track === "school";
+  return getSelectedTrack() === "school";
 }
 
 export function getSchoolClassLabel(value) {
@@ -544,7 +754,9 @@ export function mergeSchoolClassIntoUser(classValue) {
 }
 
 function buildChapterTopics({ classValue, subjectName, chapter, subjectIndex, chapterIndex }) {
-  const patterns = SUBJECT_TOPIC_PATTERNS[subjectName] || DEFAULT_TOPIC_PATTERNS;
+  const patterns = DEVANAGARI.test(chapter)
+    ? DEVANAGARI_TOPIC_PATTERNS
+    : SUBJECT_TOPIC_PATTERNS[subjectName] || DEFAULT_TOPIC_PATTERNS;
   const classNumber = Number(classValue) || 1;
   return patterns.map((pattern, topicIndex) => ({
     title: pattern.replaceAll("{chapter}", chapter),
@@ -572,7 +784,11 @@ export function buildSchoolModules(classValue = getSelectedSchoolClass()) {
         sections: subject.chapters.map((chapter, chapterIndex) => ({
           title: chapter,
           total: `${1 + (chapterIndex % 3)}h ${15 + chapterIndex * 4}m`,
-          id: slugify(`${subject.name}-${classValue}-${chapter}`) || `chapter-${chapterIndex + 1}`,
+          // slugify drops Devanagari, so a Hindi chapter name contributes nothing and every
+          // chapter would share "hindi-10"; fall back to the index to keep ids unique.
+          id: slugify(chapter)
+            ? slugify(`${subject.name}-${classValue}-${chapter}`)
+            : `${slugify(subject.name)}-${classValue}-chapter-${chapterIndex + 1}`,
           lectures: buildChapterTopics({
             classValue,
             subjectName: subject.name,

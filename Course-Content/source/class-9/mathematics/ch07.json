@@ -1,0 +1,233 @@
+[
+  {
+    "chapter_no": 7,
+    "chapter": "Triangles",
+    "topic_no": 1,
+    "name": "Congruence of Triangles",
+    "scenes": [
+      {
+        "animation": "A school photo studio: two passport-size prints of Zippy slide out of the printer. Zippy lifts one and drops it exactly on the other; the edges match perfectly and a green 'PERFECT FIT' stamp thumps down.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, these two photos are twins! One sits exactly on top of the other." },
+          { "speaker": "NEO", "text": "In maths, we call them congruent. Same shape and same size." }
+        ]
+      },
+      {
+        "animation": "Pairs of objects pop up: two identical one-rupee coins, two ice-tray cubes, two equal circles of radius 3 cm. Each pair slides together and overlaps exactly, with the label 'Congruent = equal in all respects'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two figures are congruent if they are of the same shape and the same size." },
+          { "speaker": "NEO", "text": "Two circles of the same radius are congruent. Two squares of the same side are congruent." },
+          { "speaker": "NEO", "text": "The test is simple: one covers the other exactly." }
+        ]
+      },
+      {
+        "animation": "Triangle ABC in blue and triangle PQR in orange. Triangle ABC glides over PQR; as it lands, arrows link A to P, B to Q and C to R. The statement '△ABC ≅ △PQR' writes itself, with the matching letters glowing in the same colours.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two triangles are congruent if the sides and angles of one are equal to the corresponding sides and angles of the other." },
+          { "speaker": "NEO", "text": "Here A falls on P, B on Q and C on R. So we write triangle ABC is congruent to triangle PQR." },
+          { "speaker": "ZIPPY", "text": "Can I also write triangle ABC is congruent to triangle QRP? Same triangle, right?" },
+          { "speaker": "NEO", "text": "No. The order of letters shows which vertex matches which. Writing QRP would pair A with Q, which is wrong." }
+        ]
+      },
+      {
+        "animation": "A stamp labelled 'CPCT' presses onto the screen and expands to 'Corresponding Parts of Congruent Triangles'. Matching sides of the two triangles flash in pairs: AB with PQ, BC with QR, CA with RP.",
+        "lines": [
+          { "speaker": "NEO", "text": "Once two triangles are congruent, all their corresponding parts are equal." },
+          { "speaker": "NEO", "text": "We write this as CPCT, short for corresponding parts of congruent triangles." }
+        ]
+      },
+      {
+        "animation": "A worked example builds line by line on a chalkboard: 'Given: △ABC ≅ △PQR, AB = 5 cm, BC = 6 cm, ∠B = 40°', then 'A ↔ P, B ↔ Q, C ↔ R', then 'PQ = AB = 5 cm', 'QR = BC = 6 cm', '∠Q = ∠B = 40° (CPCT)'. A yellow 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: triangle ABC is congruent to triangle PQR. AB is 5 centimetres, BC is 6 centimetres and angle B is 40 degrees." },
+          { "speaker": "NEO", "text": "First read the correspondence: A matches P, B matches Q, C matches R." },
+          { "speaker": "NEO", "text": "So PQ equals AB, which is 5 centimetres. QR equals BC, which is 6 centimetres. And angle Q equals angle B, which is 40 degrees, by CPCT." },
+          { "speaker": "NEO", "text": "Exam tip: always write the congruence with vertices in matching order. Examiners check the order." }
+        ]
+      },
+      {
+        "animation": "Recap board with two overlapping triangles as the icon. Points appear: '1. Congruent = same shape and same size', '2. △ABC ≅ △PQR means A ↔ P, B ↔ Q, C ↔ R', '3. CPCT: corresponding parts are equal'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: congruent figures have the same shape and the same size." },
+          { "speaker": "NEO", "text": "Two: in a congruence statement, the order of letters tells you which vertex matches which." },
+          { "speaker": "NEO", "text": "Three: corresponding parts of congruent triangles are equal, or CPCT." },
+          { "speaker": "ZIPPY", "text": "So my photo twins are officially congruent. Framing both!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Triangles",
+    "topic_no": 2,
+    "name": "SAS and ASA Congruence Rules",
+    "scenes": [
+      {
+        "animation": "Zippy tries to prove two triangles congruent by measuring all six parts with a giant ruler and protractor, getting tangled in measuring tape while a clock spins fast.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Three sides, three angles, two triangles. That's twelve measurements. I'll be here till Diwali!" },
+          { "speaker": "NEO", "text": "Relax. You only need three well-chosen parts. Let's meet the shortcuts." }
+        ]
+      },
+      {
+        "animation": "Two triangles ABC and DEF. Side AB and side DE glow red, the angle at B and the angle at E glow yellow, sides BC and EF glow red. A banner reads 'SAS: Side – included Angle – Side'. The yellow angle sits between the red sides, marked 'included'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The SAS congruence rule: two triangles are congruent if two sides and the included angle of one are equal to two sides and the included angle of the other." },
+          { "speaker": "NEO", "text": "Included means the angle lies between those two sides." },
+          { "speaker": "NEO", "text": "This rule is taken as an axiom. We accept it without proof." }
+        ]
+      },
+      {
+        "animation": "A talking protractor named PRO waves a warning flag. It shows two triangles with two equal sides and an equal angle that is NOT between them; they fail to overlap and a red cross appears.",
+        "lines": [
+          { "speaker": "PRO", "text": "Careful! If the equal angle is not between the equal sides, the triangles need not be congruent." },
+          { "speaker": "ZIPPY", "text": "So side, side, then some random angle doesn't work?" },
+          { "speaker": "NEO", "text": "Exactly. The angle must be included." }
+        ]
+      },
+      {
+        "animation": "Two triangles light up: angle B and angle E in yellow, side BC and side EF in red, angle C and angle F in yellow. Banner 'ASA: Angle – included Side – Angle'. Then a small card flips: 'Two angles known → third angle known (sum = 180°) → AAS works too'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The ASA congruence rule: two triangles are congruent if two angles and the included side of one are equal to two angles and the included side of the other." },
+          { "speaker": "NEO", "text": "Since the angles of a triangle add up to 180 degrees, two equal angles make the third angle equal too." },
+          { "speaker": "NEO", "text": "So two angles and any one corresponding side are enough. That is the AAS rule." }
+        ]
+      },
+      {
+        "animation": "Figure: segments AB and CD cross at O, with A and D on one side. The proof builds line by line: 'OA = OB (given)', 'OD = OC (given)', '∠AOD = ∠BOC (vertically opposite)', '∴ △AOD ≅ △BOC (SAS)', '∠OAD = ∠OBC (CPCT)', 'Alternate angles equal ⇒ AD ∥ BC'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: lines AB and CD cross at O, with OA equal to OB and OD equal to OC. Show that triangle AOD is congruent to triangle BOC, and AD is parallel to BC." },
+          { "speaker": "NEO", "text": "OA equals OB, given. OD equals OC, given. Angle AOD equals angle BOC, because they are vertically opposite." },
+          { "speaker": "NEO", "text": "The angle lies between the two sides, so triangle AOD is congruent to triangle BOC by SAS." },
+          { "speaker": "NEO", "text": "By CPCT, angle OAD equals angle OBC. These are alternate angles for AD and BC with transversal AB, so AD is parallel to BC." },
+          { "speaker": "NEO", "text": "Exam tip: write a reason in brackets after every step. Each reason carries marks." }
+        ]
+      },
+      {
+        "animation": "Recap board with three stickers: '1. SAS: two sides + included angle (axiom)', '2. ASA: two angles + included side', '3. AAS: two angles + any corresponding side'. Zippy rolls up the tangled measuring tape.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: SAS needs two sides and the angle between them." },
+          { "speaker": "NEO", "text": "Two: ASA needs two angles and the side between them." },
+          { "speaker": "NEO", "text": "Three: AAS works because the third angle is fixed by the angle sum." },
+          { "speaker": "ZIPPY", "text": "Three parts instead of six. Diwali is saved!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Triangles",
+    "topic_no": 3,
+    "name": "Properties of an Isosceles Triangle",
+    "scenes": [
+      {
+        "animation": "A samosa on a canteen plate turns into a triangle with two equal sides marked with single ticks. Zippy tilts his head so the samosa looks balanced, like a see-saw.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This samosa has two equal sides. And it looks perfectly balanced. Coincidence?" },
+          { "speaker": "NEO", "text": "Not at all. Equal sides force equal angles. Let's prove it." }
+        ]
+      },
+      {
+        "animation": "Triangle ABC with AB = AC marked by ticks and the label 'Isosceles'. Then the theorem appears in a box: 'Angles opposite to equal sides of an isosceles triangle are equal', with ∠B and ∠C highlighted.",
+        "lines": [
+          { "speaker": "NEO", "text": "A triangle with two sides equal is called an isosceles triangle." },
+          { "speaker": "NEO", "text": "Theorem: angles opposite to equal sides of an isosceles triangle are equal." },
+          { "speaker": "NEO", "text": "Here AB equals AC, so we must show angle B equals angle C." }
+        ]
+      },
+      {
+        "animation": "The proof is built step by step: the bisector AD of ∠A is drawn down to BC, splitting the triangle into △BAD and △CAD. Lines appear: 'AB = AC (given)', '∠BAD = ∠CAD (AD bisects ∠A)', 'AD = AD (common)', '∴ △BAD ≅ △CAD (SAS)', '∴ ∠ABD = ∠ACD (CPCT)', i.e. '∠B = ∠C'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Draw AD, the bisector of angle A, meeting BC at D." },
+          { "speaker": "NEO", "text": "In triangles BAD and CAD: AB equals AC, given. Angle BAD equals angle CAD, since AD bisects angle A. And AD is common." },
+          { "speaker": "NEO", "text": "So triangle BAD is congruent to triangle CAD by SAS." },
+          { "speaker": "NEO", "text": "Therefore angle ABD equals angle ACD by CPCT. That is, angle B equals angle C." }
+        ]
+      },
+      {
+        "animation": "The theorem box flips over to show its converse: 'Sides opposite to equal angles of a triangle are equal'. Then an equilateral triangle appears, all three sides ticked, and each angle fills with '60°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The converse is also true: the sides opposite to equal angles of a triangle are equal. It can be proved using ASA." },
+          { "speaker": "ZIPPY", "text": "What if all three sides are equal?" },
+          { "speaker": "NEO", "text": "Then all three angles are equal. They add up to 180 degrees, so each angle of an equilateral triangle is 60 degrees." }
+        ]
+      },
+      {
+        "animation": "Worked example on a chalkboard, line by line: 'AB = AC, ∠A = 50°', '∠B = ∠C (angles opposite equal sides)', '∠B + ∠C = 180° − 50° = 130°', '∠B = ∠C = 130° ÷ 2 = 65°', 'Check: 50° + 65° + 65° = 180° ✓'. An 'EXAM TIP' card highlights 'opposite'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: in triangle ABC, AB equals AC and angle A is 50 degrees. Find angles B and C." },
+          { "speaker": "NEO", "text": "Angle B equals angle C, because they are opposite the equal sides." },
+          { "speaker": "NEO", "text": "Together they make 180 minus 50, which is 130 degrees. So each is 130 divided by 2, which is 65 degrees." },
+          { "speaker": "NEO", "text": "Check: 50 plus 65 plus 65 is 180. Correct." },
+          { "speaker": "NEO", "text": "Exam tip: the equal angles are opposite the equal sides, not next to the vertex where the equal sides meet." }
+        ]
+      },
+      {
+        "animation": "Recap board with the balanced samosa icon: '1. Angles opposite equal sides are equal (proof: angle bisector + SAS)', '2. Sides opposite equal angles are equal', '3. Equilateral triangle: each angle = 60°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: angles opposite to equal sides are equal, proved by drawing the angle bisector and using SAS." },
+          { "speaker": "NEO", "text": "Two: sides opposite to equal angles are equal." },
+          { "speaker": "NEO", "text": "Three: each angle of an equilateral triangle is 60 degrees." },
+          { "speaker": "ZIPPY", "text": "Proof complete. Samosa consumed." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Triangles",
+    "topic_no": 4,
+    "name": "SSS and RHS Congruence Rules",
+    "scenes": [
+      {
+        "animation": "Zippy builds a triangle from three straws joined with thread and tries to squash it into another shape; it refuses to bend. A square of four straws beside it flops into a rhombus instantly.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My square went floppy, but my triangle won't budge. Is it stubborn?" },
+          { "speaker": "NEO", "text": "Three fixed sides fix the whole triangle. That idea gives us the SSS rule." }
+        ]
+      },
+      {
+        "animation": "Two triangles ABC and DEF with all three pairs of sides glowing in matching colours: AB = DE, BC = EF, CA = FD. Banner 'SSS congruence rule'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The SSS congruence rule: if three sides of one triangle are equal to the three sides of another, the two triangles are congruent." },
+          { "speaker": "NEO", "text": "No angle needs to be measured at all." }
+        ]
+      },
+      {
+        "animation": "Kite ABCD drawn with AB = AD and CB = CD marked with ticks, diagonal AC in green. Proof lines appear one by one: 'AB = AD (given)', 'CB = CD (given)', 'AC = AC (common)', '∴ △ABC ≅ △ADC (SSS)', '∴ ∠BAC = ∠DAC (CPCT)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: in quadrilateral ABCD, AB equals AD and CB equals CD. Show that AC bisects angle A." },
+          { "speaker": "NEO", "text": "In triangles ABC and ADC: AB equals AD, CB equals CD, and AC is common." },
+          { "speaker": "NEO", "text": "So triangle ABC is congruent to triangle ADC by SSS. By CPCT, angle BAC equals angle DAC. So AC bisects angle A." }
+        ]
+      },
+      {
+        "animation": "A right triangle with a small square at the right angle; the hypotenuse glows orange. Banner 'RHS: Right angle – Hypotenuse – Side'. A second right triangle slides over it and matches exactly.",
+        "lines": [
+          { "speaker": "NEO", "text": "The RHS congruence rule is for right triangles." },
+          { "speaker": "NEO", "text": "If, in two right triangles, the hypotenuse and one side of one triangle are equal to the hypotenuse and one side of the other, the triangles are congruent." },
+          { "speaker": "ZIPPY", "text": "Which side is the hypotenuse again?" },
+          { "speaker": "NEO", "text": "The side opposite the right angle. It is always the longest side." }
+        ]
+      },
+      {
+        "animation": "Triangle ABC with AB = AC and AD ⊥ BC. Proof lines: '∠ADB = ∠ADC = 90°', 'AB = AC (hypotenuse, given)', 'AD = AD (common)', '∴ △ABD ≅ △ACD (RHS)', '∴ BD = CD (CPCT)'. An 'EXAM TIP' card: 'RHS only for right triangles; write R, H and S separately'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: in triangle ABC, AB equals AC and AD is perpendicular to BC. Show that D is the mid-point of BC." },
+          { "speaker": "NEO", "text": "Angle ADB and angle ADC are both 90 degrees. Hypotenuse AB equals hypotenuse AC. AD is common." },
+          { "speaker": "NEO", "text": "So triangle ABD is congruent to triangle ACD by RHS. By CPCT, BD equals CD." },
+          { "speaker": "NEO", "text": "Exam tip: before using RHS, first state the right angles. Without them, the rule does not apply." }
+        ]
+      },
+      {
+        "animation": "Recap board with the rigid straw triangle: '1. SSS: three sides equal', '2. RHS: right angle, hypotenuse, one side', '3. Five rules: SAS, ASA, AAS, SSS, RHS'. Zippy stamps 'AAA ✗' with a note 'same shape, different size'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: SSS says three equal sides make two triangles congruent." },
+          { "speaker": "NEO", "text": "Two: RHS works for right triangles with equal hypotenuses and one equal side." },
+          { "speaker": "NEO", "text": "Three: our five rules are SAS, ASA, AAS, SSS and RHS. Three equal angles alone are not enough, since the sizes can differ." },
+          { "speaker": "ZIPPY", "text": "No AAA. Noted, stubborn triangle." }
+        ]
+      }
+    ]
+  }
+]

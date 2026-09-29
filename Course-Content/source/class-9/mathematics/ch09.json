@@ -1,0 +1,284 @@
+[
+  {
+    "chapter_no": 9,
+    "chapter": "Circles",
+    "topic_no": 1,
+    "name": "Equal Chords and Angles at the Centre",
+    "scenes": [
+      {
+        "animation": "A round pizza with centre O. Zippy cuts two straight chords of the same length at different places; two 'slice angles' at the centre glow and a protractor pops up showing both are equal.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I cut two equal chords in different places, and the angles at the centre came out the same. Magic?" },
+          { "speaker": "NEO", "text": "Geometry. Equal chords always subtend equal angles at the centre." }
+        ]
+      },
+      {
+        "animation": "Circle with centre O and chord PQ. Radii OP and OQ are drawn, forming ∠POQ, labelled 'angle subtended by chord PQ at the centre'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A chord is a line segment joining two points on a circle." },
+          { "speaker": "NEO", "text": "Join its ends to the centre O. The angle POQ is the angle subtended by the chord at the centre." }
+        ]
+      },
+      {
+        "animation": "Circle with centre O and equal chords AB and CD, ticked. Radii drawn to all four ends. Proof lines appear one by one: 'OA = OC (radii)', 'OB = OD (radii)', 'AB = CD (given)', '∴ △AOB ≅ △COD (SSS)', '∴ ∠AOB = ∠COD (CPCT)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Theorem: equal chords of a circle subtend equal angles at the centre." },
+          { "speaker": "NEO", "text": "Let AB and CD be equal chords. In triangles AOB and COD, OA equals OC and OB equals OD, because all radii are equal. And AB equals CD, given." },
+          { "speaker": "NEO", "text": "So the triangles are congruent by SSS, and angle AOB equals angle COD by CPCT." }
+        ]
+      },
+      {
+        "animation": "The theorem card flips to its converse: 'If the angles subtended by two chords at the centre are equal, the chords are equal'. Two equal angles at O glow and their chords stretch to identical lengths.",
+        "lines": [
+          { "speaker": "NEO", "text": "The converse is also true. If the angles subtended by two chords at the centre are equal, then the chords are equal." },
+          { "speaker": "ZIPPY", "text": "So equal chords give equal angles, and equal angles give equal chords. A two-way street!" }
+        ]
+      },
+      {
+        "animation": "Worked example on a chalkboard: circle radius 5 cm, chord AB subtends ∠AOB = 60°. Lines build: 'OA = OB = 5 cm (radii)', '∠OAB = ∠OBA (angles opposite equal sides)', '∠OAB + ∠OBA = 180° − 60° = 120°', 'each = 60°', '△AOB is equilateral ⇒ AB = 5 cm'. An 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: in a circle of radius 5 centimetres, chord AB subtends 60 degrees at the centre. Find AB." },
+          { "speaker": "NEO", "text": "OA and OB are radii, so both are 5 centimetres. The base angles of triangle AOB are equal." },
+          { "speaker": "NEO", "text": "Together they make 180 minus 60, which is 120 degrees. So each is 60 degrees." },
+          { "speaker": "NEO", "text": "All angles are 60 degrees, so the triangle is equilateral and AB is 5 centimetres." },
+          { "speaker": "NEO", "text": "Exam tip: in circle proofs, always look for radii first. They give you free equal sides." }
+        ]
+      },
+      {
+        "animation": "Recap board with the pizza icon: '1. Angle subtended at centre: join chord ends to O', '2. Equal chords ⇒ equal angles at centre (SSS)', '3. Equal angles at centre ⇒ equal chords'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: join the ends of a chord to the centre to get the angle it subtends." },
+          { "speaker": "NEO", "text": "Two: equal chords subtend equal angles at the centre, proved by SSS." },
+          { "speaker": "NEO", "text": "Three: chords that subtend equal angles at the centre are equal." },
+          { "speaker": "ZIPPY", "text": "Equal slices for everyone. Geometry is fair!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Circles",
+    "topic_no": 2,
+    "name": "Perpendicular from the Centre to a Chord",
+    "scenes": [
+      {
+        "animation": "A round well in a village. A bucket rope hangs from the centre of a wooden beam laid across the well like a chord; Zippy notices the rope hits the beam exactly at its middle.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The rope from the centre drops straight down and lands exactly at the middle of the beam. Always?" },
+          { "speaker": "NEO", "text": "Always, if the line from the centre is perpendicular to the chord. Let's prove it." }
+        ]
+      },
+      {
+        "animation": "Circle with centre O and chord AB. OM is drawn perpendicular to AB with a right-angle box at M. Proof lines: '∠OMA = ∠OMB = 90°', 'OA = OB (radii)', 'OM = OM (common)', '∴ △OMA ≅ △OMB (RHS)', '∴ AM = BM (CPCT)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Theorem: the perpendicular from the centre of a circle to a chord bisects the chord." },
+          { "speaker": "NEO", "text": "Draw OM perpendicular to chord AB, and join OA and OB." },
+          { "speaker": "NEO", "text": "In triangles OMA and OMB, both angles at M are 90 degrees. OA equals OB, as radii. OM is common." },
+          { "speaker": "NEO", "text": "So the triangles are congruent by RHS, and AM equals BM by CPCT." }
+        ]
+      },
+      {
+        "animation": "The theorem card flips to the converse: 'The line drawn through the centre to bisect a chord is perpendicular to the chord'. A line from O hits the midpoint M and a right-angle box snaps into place.",
+        "lines": [
+          { "speaker": "NEO", "text": "The converse: the line drawn through the centre of a circle to bisect a chord is perpendicular to the chord." },
+          { "speaker": "ZIPPY", "text": "So centre plus midpoint means right angle, and centre plus right angle means midpoint." },
+          { "speaker": "NEO", "text": "Exactly right." }
+        ]
+      },
+      {
+        "animation": "Worked example: circle radius 5 cm, chord AB = 8 cm. Lines build: 'AM = 8 ÷ 2 = 4 cm (perpendicular bisects chord)', 'OM² = OA² − AM²', 'OM² = 5² − 4² = 25 − 16 = 9', 'OM = 3 cm'. The right triangle OMA glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a chord of length 8 centimetres is drawn in a circle of radius 5 centimetres. How far is it from the centre?" },
+          { "speaker": "NEO", "text": "The perpendicular OM bisects the chord, so AM is 4 centimetres." },
+          { "speaker": "NEO", "text": "In right triangle OMA, OM squared is 5 squared minus 4 squared, which is 25 minus 16, or 9. So OM is 3 centimetres." }
+        ]
+      },
+      {
+        "animation": "A second quick example flashes: 'r = 13 cm, distance = 5 cm', 'half-chord² = 169 − 25 = 144', 'half-chord = 12 cm', 'chord = 24 cm'. An 'EXAM TIP' card reads 'Don't forget to double the half-chord'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Reverse it. Radius 13 centimetres, chord 5 centimetres from the centre." },
+          { "speaker": "NEO", "text": "Half the chord squared is 169 minus 25, which is 144. So half the chord is 12, and the chord is 24 centimetres." },
+          { "speaker": "NEO", "text": "Exam tip: Pythagoras gives you half the chord. Students often forget to double it." }
+        ]
+      },
+      {
+        "animation": "Recap board with the well icon: '1. Perpendicular from centre bisects the chord (RHS)', '2. Line from centre to mid-point of chord is perpendicular to it', '3. radius² = (half-chord)² + distance²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the perpendicular from the centre to a chord bisects it." },
+          { "speaker": "NEO", "text": "Two: the line from the centre that bisects a chord is perpendicular to it." },
+          { "speaker": "NEO", "text": "Three: radius squared equals half-chord squared plus distance squared." },
+          { "speaker": "ZIPPY", "text": "The well rope knew this all along." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Circles",
+    "topic_no": 3,
+    "name": "Equal Chords and Their Distances from the Centre",
+    "scenes": [
+      {
+        "animation": "A round chapati on a tawa. Zippy places two equal-length breadsticks across it at different spots; tiny measuring tapes shoot from the centre to each breadstick and show the same reading.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Two equal breadsticks, placed anywhere, and both are the same distance from the centre. Suspicious!" },
+          { "speaker": "NEO", "text": "Not suspicious. It's a theorem. First, let's define distance properly." }
+        ]
+      },
+      {
+        "animation": "From a point P, several slanted segments reach a line; the perpendicular one glows green and is labelled 'shortest = distance'. Then in a circle, OM ⊥ chord AB is labelled 'distance of chord from centre'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The distance of a point from a line is the length of the perpendicular from the point to the line. It is the shortest of all segments." },
+          { "speaker": "NEO", "text": "So the distance of a chord from the centre is the length of the perpendicular from the centre to the chord." }
+        ]
+      },
+      {
+        "animation": "Circle with equal chords AB and CD, perpendiculars OM and ON drawn. Proof builds line by line: 'AM = ½ AB, CN = ½ CD (perpendicular bisects chord)', 'AB = CD ⇒ AM = CN', 'OA = OC (radii)', '∠OMA = ∠ONC = 90°', '∴ △OMA ≅ △ONC (RHS)', '∴ OM = ON (CPCT)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Theorem: equal chords of a circle are equidistant from the centre." },
+          { "speaker": "NEO", "text": "Draw OM perpendicular to AB and ON perpendicular to CD. These perpendiculars bisect the chords, so AM equals CN." },
+          { "speaker": "NEO", "text": "OA equals OC, as radii, and both angles at M and N are 90 degrees." },
+          { "speaker": "NEO", "text": "So triangles OMA and ONC are congruent by RHS, and OM equals ON by CPCT." }
+        ]
+      },
+      {
+        "animation": "The card flips to the converse: 'Chords equidistant from the centre are equal in length'. Then a longer chord slides closer to the centre while a shorter chord drifts outward, as a fun visual.",
+        "lines": [
+          { "speaker": "NEO", "text": "The converse is also true: chords equidistant from the centre of a circle are equal in length." },
+          { "speaker": "ZIPPY", "text": "And I notice longer chords sit closer to the centre." },
+          { "speaker": "NEO", "text": "Good observation. The longest chord, the diameter, passes through the centre itself." }
+        ]
+      },
+      {
+        "animation": "Worked example: circle radius 10 cm with two chords of 16 cm each. Lines build: 'half-chord = 16 ÷ 2 = 8 cm', 'distance² = 10² − 8² = 100 − 64 = 36', 'distance = 6 cm', 'Both chords are 6 cm from O ✓'. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a circle has radius 10 centimetres. Two chords are each 16 centimetres long. How far is each from the centre?" },
+          { "speaker": "NEO", "text": "Half of each chord is 8 centimetres. Distance squared is 10 squared minus 8 squared, which is 100 minus 64, or 36." },
+          { "speaker": "NEO", "text": "So the distance is 6 centimetres, the same for both chords, just as the theorem says." },
+          { "speaker": "NEO", "text": "Exam tip: always draw the perpendicular from the centre before you calculate. It earns the figure mark." }
+        ]
+      },
+      {
+        "animation": "Recap board with the chapati icon: '1. Distance of chord = perpendicular from centre', '2. Equal chords are equidistant from the centre', '3. Equidistant chords are equal'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the distance of a chord from the centre is measured along the perpendicular." },
+          { "speaker": "NEO", "text": "Two: equal chords are equidistant from the centre." },
+          { "speaker": "NEO", "text": "Three: chords equidistant from the centre are equal." },
+          { "speaker": "ZIPPY", "text": "Breadsticks: equal, equidistant, and delicious." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Circles",
+    "topic_no": 4,
+    "name": "Angle Subtended by an Arc",
+    "scenes": [
+      {
+        "animation": "A circular cricket ground. The two stumps at one end are points B and C on the boundary. Neo stands at the centre O, Zippy stands on the boundary at A; each holds a protractor aimed at the stumps. Neo's reads 80°, Zippy's reads 40°.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "We are looking at the same two stumps, but your angle is double mine!" },
+          { "speaker": "NEO", "text": "Because I'm at the centre. The angle at the centre is always double." }
+        ]
+      },
+      {
+        "animation": "Circle with arc BC highlighted in orange, ∠BOC at the centre and ∠BAC at point A on the remaining part of the circle. Theorem box: '∠BOC = 2 ∠BAC'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Theorem: the angle subtended by an arc at the centre is double the angle subtended by it at any point on the remaining part of the circle." }
+        ]
+      },
+      {
+        "animation": "Proof builds step by step: AO is joined and extended to D. Lines: 'OA = OB (radii) ⇒ ∠OAB = ∠OBA', '∠BOD = ∠OAB + ∠OBA = 2∠OAB (exterior angle)', 'Similarly ∠DOC = 2∠OAC', 'Adding: ∠BOC = 2(∠OAB + ∠OAC) = 2∠BAC'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Join AO and extend it to a point D." },
+          { "speaker": "NEO", "text": "In triangle OAB, OA equals OB, so angle OAB equals angle OBA. The exterior angle BOD equals their sum, which is twice angle OAB." },
+          { "speaker": "NEO", "text": "In the same way, angle DOC is twice angle OAC." },
+          { "speaker": "NEO", "text": "Adding, angle BOC is twice angle BAC. Proved." }
+        ]
+      },
+      {
+        "animation": "Several points A, D, E on the same arc all look at chord BC; their angles glow the same colour. Card: 'Angles in the same segment are equal'. Then BC becomes a diameter and every angle turns into a right-angle box: 'Angle in a semicircle = 90°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Every point on the remaining arc gets half of the same central angle. So angles in the same segment of a circle are equal." },
+          { "speaker": "ZIPPY", "text": "What if the chord is a diameter?" },
+          { "speaker": "NEO", "text": "Then the central angle is 180 degrees, so the angle in a semicircle is 90 degrees." }
+        ]
+      },
+      {
+        "animation": "Worked example: circle with points A, B, C, D; ∠ABC = 69°, ∠ACB = 31°, find ∠BDC. Lines build: '∠BAC = 180° − 69° − 31° = 80°', '∠BDC = ∠BAC (same segment)', '∠BDC = 80°'. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: A, B, C and D lie on a circle. Angle ABC is 69 degrees and angle ACB is 31 degrees. Find angle BDC." },
+          { "speaker": "NEO", "text": "In triangle ABC, angle BAC is 180 minus 69 minus 31, which is 80 degrees." },
+          { "speaker": "NEO", "text": "Angles BAC and BDC are in the same segment, so angle BDC is also 80 degrees." },
+          { "speaker": "NEO", "text": "Exam tip: check that both angles stand on the same chord and lie on the same side of it before calling them equal." }
+        ]
+      },
+      {
+        "animation": "Recap board with the cricket ground: '1. Angle at centre = 2 × angle at remaining circle', '2. Angles in the same segment are equal', '3. Angle in a semicircle = 90°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the angle at the centre is double the angle at any point on the remaining part of the circle." },
+          { "speaker": "NEO", "text": "Two: angles in the same segment are equal." },
+          { "speaker": "NEO", "text": "Three: the angle in a semicircle is a right angle." },
+          { "speaker": "ZIPPY", "text": "Next match, I'm fielding at the centre." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Circles",
+    "topic_no": 5,
+    "name": "Cyclic Quadrilaterals",
+    "scenes": [
+      {
+        "animation": "Four children stand on a circular rangoli border holding a rope stretched into a quadrilateral. Zippy measures two opposite corners: 70° and 110°, then two others: 95° and 85°. A '180!' sparkles each time.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Opposite corners of our rope keep adding up to 180. Every single time!" },
+          { "speaker": "NEO", "text": "Because all four corners are on a circle. That makes it a cyclic quadrilateral." }
+        ]
+      },
+      {
+        "animation": "Circle with quadrilateral ABCD, all four vertices glowing on the circle. Label 'Cyclic quadrilateral: all four vertices lie on a circle'. Theorem box: '∠A + ∠C = 180°, ∠B + ∠D = 180°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A quadrilateral is cyclic if all four of its vertices lie on a circle." },
+          { "speaker": "NEO", "text": "Theorem: the sum of either pair of opposite angles of a cyclic quadrilateral is 180 degrees." }
+        ]
+      },
+      {
+        "animation": "Proof builds step by step: centre O is joined to B and D. The minor angle BOD and the reflex angle BOD glow in two colours. Lines: '∠BOD = 2∠A (arc BCD)', 'reflex ∠BOD = 2∠C (arc BAD)', '2∠A + 2∠C = 360°', '∠A + ∠C = 180°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Join the centre O to B and D." },
+          { "speaker": "NEO", "text": "Arc BCD subtends angle BOD at the centre and angle A on the circle. So angle BOD is twice angle A." },
+          { "speaker": "NEO", "text": "Arc BAD subtends the reflex angle BOD at the centre and angle C on the circle. So the reflex angle is twice angle C." },
+          { "speaker": "NEO", "text": "The two angles at O make 360 degrees. So twice A plus twice C is 360, and A plus C is 180." }
+        ]
+      },
+      {
+        "animation": "The theorem card flips to the converse: 'If a pair of opposite angles of a quadrilateral sums to 180°, it is cyclic'. A wobbly quadrilateral with opposite angles 100° and 80° snaps onto a circle.",
+        "lines": [
+          { "speaker": "NEO", "text": "The converse is also true. If the sum of a pair of opposite angles of a quadrilateral is 180 degrees, the quadrilateral is cyclic." }
+        ]
+      },
+      {
+        "animation": "Worked example: cyclic ABCD with diagonals; ∠DBC = 55°, ∠BAC = 45°. Lines build: '∠CAD = ∠DBC = 55° (same segment)', '∠BAD = ∠BAC + ∠CAD = 45° + 55° = 100°', '∠BCD = 180° − 100° = 80° (opposite angles)'. An 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: ABCD is a cyclic quadrilateral. Angle DBC is 55 degrees and angle BAC is 45 degrees. Find angle BCD." },
+          { "speaker": "NEO", "text": "Angles CAD and DBC stand on chord CD in the same segment, so angle CAD is 55 degrees." },
+          { "speaker": "NEO", "text": "So angle BAD is 45 plus 55, which is 100 degrees." },
+          { "speaker": "NEO", "text": "Angle BCD is opposite angle BAD, so it is 180 minus 100, which is 80 degrees." },
+          { "speaker": "ZIPPY", "text": "Two theorems in one question. Sneaky!" },
+          { "speaker": "NEO", "text": "Exam tip: exam questions often combine same-segment angles with the cyclic quadrilateral rule. Look for both." }
+        ]
+      },
+      {
+        "animation": "Recap board with the rangoli rope: '1. Cyclic quadrilateral: all vertices on a circle', '2. Opposite angles add to 180°', '3. Converse: opposite angles sum 180° ⇒ cyclic'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a cyclic quadrilateral has all four vertices on a circle." },
+          { "speaker": "NEO", "text": "Two: each pair of its opposite angles adds up to 180 degrees." },
+          { "speaker": "NEO", "text": "Three: if a pair of opposite angles adds up to 180 degrees, the quadrilateral is cyclic." }
+        ]
+      }
+    ]
+  }
+]

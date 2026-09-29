@@ -1,0 +1,276 @@
+[
+  {
+    "chapter_no": 13,
+    "chapter": "Dynamics of Population",
+    "topic_no": 1,
+    "name": "What Is Demography? Population at a Glance",
+    "scenes": [
+      {
+        "animation": "A packed railway platform during festival rush. Zippy tries to count heads with a tiny clicker, which overheats and pops. Neo lands beside him holding a clipboard labelled 'Census'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Four hundred and twelve, four hundred and thirteen... Neo, how does anyone count a whole country?" },
+          { "speaker": "NEO", "text": "Not with a clicker! Countries study their people carefully. That study has a name: demography." }
+        ]
+      },
+      {
+        "animation": "The crowd turns into icons that sort themselves by age, gender, education, occupation and religion. Three labelled boxes build step by step: 'Size', 'Pattern and Trend', 'Structure and Composition' (Fig. 6.2).",
+        "lines": [
+          { "speaker": "NEO", "text": "Demography is the study of the human population: its size, its structure, and how it changes over time." },
+          { "speaker": "NEO", "text": "People differ in age, gender, education, occupation and religion. These features change because of births, deaths and people moving from place to place." }
+        ]
+      },
+      {
+        "animation": "A town map: many child icons make a new school pop up; many elderly icons make a hospital appear; a crowd of young adults makes factories and offices light up. A shopkeeper walk-on checks a chart of customers by age.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Okay, but why should the government care who is young or old?" },
+          { "speaker": "NEO", "text": "To plan! Many young children means more schools are needed. More elderly people means more healthcare." },
+          { "speaker": "NEO", "text": "A large young working-age population means more jobs must be created. Even businesses use this data to design products people need." }
+        ]
+      },
+      {
+        "animation": "A census worker with a register knocks on a door in a village, then a city flat. Questions float up as icons: age, gender, education, language, religion, occupation, income. A calendar flips '10 years'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In India, the census is generally held every ten years. It is the official count of the people living in a country at a particular time." },
+          { "speaker": "NEO", "text": "Census workers collect details like age, gender, marital status, education, languages spoken, religion, family size, occupation and income." }
+        ]
+      },
+      {
+        "animation": "A bar graph of the most populous countries (2024) builds bar by bar; India's bar rises just above China's with a flag and a '2023' badge. Then a world line graph climbs from '2.5 billion (1950)' to '8.2 billion (2025)', a dotted part to '9.7 billion (2050)', peaking at '10.3 billion, mid-2080s'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 2023, India overtook China to become the world's most populous country. Indians are around 17 per cent of the world's people." },
+          { "speaker": "NEO", "text": "The world's population grew from 2.5 billion in 1950 to 8.2 billion in 2025. It is expected to reach 9.7 billion by 2050." },
+          { "speaker": "ZIPPY", "text": "Why did it shoot up after 1950?" },
+          { "speaker": "NEO", "text": "Antibiotics, vaccines, oral rehydration solution, and better water and sanitation. Fewer children died, and people lived longer." },
+          { "speaker": "NEO", "text": "But growth is slowing. The United Nations projects a peak of 10.3 billion by the mid-2080s, then a slow decline." }
+        ]
+      },
+      {
+        "animation": "A world map lights up region by region with labels: 'Asia 4.8 billion', 'Africa 1.5 billion', 'Europe 744.3 million', 'Northern America 387.5 million'. Asia glows brightest. An 'Exam Tip' sticker slaps onto the word 'Census'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Asia holds the biggest share, about 4.8 billion people, followed by Africa." },
+          { "speaker": "NEO", "text": "Exam tip: learn the definitions of demography and census word for word. Short-answer questions often ask for them." }
+        ]
+      },
+      {
+        "animation": "Neo stands beside a chalkboard where three recap points appear one by one with ticks.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: demography studies a population's size, structure and how it changes. Two: governments use it to plan schools, hospitals, jobs and services. Three: India became the most populous country in 2023, and world population, now 8.2 billion, is growing more slowly." },
+          { "speaker": "ZIPPY", "text": "So my clicker was never going to make it. Noted!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Dynamics of Population",
+    "topic_no": 2,
+    "name": "What Determines the Population of a Country?",
+    "scenes": [
+      {
+        "animation": "A giant water tank labelled 'Population'. A tap marked 'Births' pours in, a drain marked 'Deaths' lets water out, and two side pipes marked 'Migration in' and 'Migration out' gurgle. Zippy tries to plug all of them at once.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This tank keeps changing level! Who is controlling it?" },
+          { "speaker": "NEO", "text": "Three things: babies born, people who die, and people moving in or out. Together they decide a country's population." }
+        ]
+      },
+      {
+        "animation": "Four numbered cards flip over (Fig. 6.7): '01 Birth rate: live births per 1,000 people in a year', '02 Fertility rate: average children per woman in her lifetime', '03 Death rate: deaths per 1,000 people in a year', '04 Migration: movement of people within or outside the country'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Birth rate is the number of live births per 1,000 people in a year." },
+          { "speaker": "NEO", "text": "Fertility rate is the average number of children a woman would have in her lifetime." },
+          { "speaker": "NEO", "text": "Death rate, or mortality rate, is the number of deaths per 1,000 people in a year. Migration is the movement of people from one place to another." }
+        ]
+      },
+      {
+        "animation": "A family portrait: two parents step out of the frame and two children step in, with a small '0.1' glowing beside them. A number line shows 'below 2.1: may shrink', '2.1: stable', 'above 2.1: grows'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Two parents, two kids. So replacement should be exactly two, right?" },
+          { "speaker": "NEO", "text": "Close! The replacement level fertility rate is 2.1. That is the number of children needed to replace the parents." },
+          { "speaker": "NEO", "text": "Above 2.1, the population is likely to grow. Below 2.1, it might shrink over time." }
+        ]
+      },
+      {
+        "animation": "A split screen. Left: a 1979 poster reading 'One-Child Policy' over China, with a fertility counter dropping from 7.5 to 1. Right: India's 'Hum do humare do' campaign stamp from 1989, with a counter dropping from 5.7 in 1950 to 1.9 in 2025.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1979, China brought in the One-Child Policy. Its fertility rate fell from 7.5 in 1963 to 1 in 2025, and many children grew up without siblings." },
+          { "speaker": "NEO", "text": "India ran campaigns like 'Hum do humare do'. Our fertility rate fell from 5.7 in 1950 to 1.9 in 2025." },
+          { "speaker": "NEO", "text": "Education, especially for girls, women working in formal jobs, and the high cost of living in cities have all led to smaller families." }
+        ]
+      },
+      {
+        "animation": "A timeline builds: a baby icon with '271 per 1,000 (1950)' shrinking to '28 (2023)'; a candle labelled 'Life expectancy' grows from '30 years' at independence to '70 years (2024)'. Then migrant arrows stream from villages into Delhi, Mumbai and Bengaluru on a map of India.",
+        "lines": [
+          { "speaker": "NEO", "text": "India cut child mortality from 271 per 1,000 in 1950 to 28 in 2023. Life expectancy rose from 30 years at independence to 70 years in 2024." },
+          { "speaker": "NEO", "text": "People migrate for jobs and education, or because of disasters and political instability. Cities like Delhi, Mumbai and Bengaluru have grown a lot through migration." },
+          { "speaker": "NEO", "text": "Exam tip: life expectancy of 70 does not mean everyone lives exactly 70 years. It is an average." }
+        ]
+      },
+      {
+        "animation": "Neo taps the tank; three recap points rise out of it as bubbles and stick on screen.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: births, deaths and migration decide a country's population. Two: a fertility rate of 2.1 is the replacement level, and India is now below it at 1.9. Three: better healthcare lowered child mortality and raised life expectancy to 70 years." },
+          { "speaker": "ZIPPY", "text": "Point one of a child. I will never unsee that." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Dynamics of Population",
+    "topic_no": 3,
+    "name": "How Do Countries Experience Population Change?",
+    "scenes": [
+      {
+        "animation": "A photo album flips: a baby, a school kid, an adult with a briefcase, a grandparent with a walking stick. Then the photos morph into the outline of a country wearing the same outfits.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "People grow up and grow old. Do countries grow old too?" },
+          { "speaker": "NEO", "text": "In a way, yes! As birth and death rates change, a country moves through stages. We call this demographic transition." }
+        ]
+      },
+      {
+        "animation": "An empty graph with a 'Time' axis appears. A red 'Birth rate' line and a black 'Death rate' line are drawn across Stage 1, both high and close together, with a flat green 'Population growth' line beneath. Label: 'Stage 1: High birth rate, high death rate'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Stage 1: both birth and death rates are high. Many babies are born, but many people also die, so the population grows very slowly." },
+          { "speaker": "NEO", "text": "India was in this stage from 1901 to 1921, because of poor healthcare and low literacy." }
+        ]
+      },
+      {
+        "animation": "The graph continues into Stage 2: the black death-rate line drops sharply while the red birth-rate line stays high. The gap between them fills with orange and the green growth line shoots up. Label: 'Stage 2: Fall in death rate but high birth rate'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Stage 2: as a nation progresses, better healthcare brings the death rate down. But the birth rate stays high." },
+          { "speaker": "ZIPPY", "text": "So more babies arrive and fewer people leave. The tank overflows!" },
+          { "speaker": "NEO", "text": "Exactly. That means rapid population growth. In India, the population grew rapidly after 1951." }
+        ]
+      },
+      {
+        "animation": "Stage 3 is drawn: the red birth-rate line bends down towards the low death-rate line and the green growth line flattens. Icons of a graduation cap, a city skyline, a wallet and a working woman pop up above the curve. Label: 'Stage 3: Death rate low, birth rate falls'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Stage 3: death rates stay low and birth rates begin to fall. Urbanisation, higher incomes, education and more women in the workforce lead to smaller families." },
+          { "speaker": "NEO", "text": "In India, fertility began declining after the mid-1980s and is now below replacement level." }
+        ]
+      },
+      {
+        "animation": "A globe spins to Italy, Japan and South Korea; their population counters tick slowly downward. A notebook page labelled 'Exam Tip' shows the three stages in a neat table: Stage, Birth rate, Death rate, Growth.",
+        "lines": [
+          { "speaker": "NEO", "text": "If fertility drops very low, the population can even shrink, as in Italy, Japan and South Korea." },
+          { "speaker": "NEO", "text": "Exam tip: make a small table of the three stages with birth rate, death rate and growth. It is the easiest way to answer a stages question." }
+        ]
+      },
+      {
+        "animation": "The completed three-stage graph shrinks into a corner while Neo reads three recap points that appear beside it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Stage 1 has high birth and death rates, so growth is slow. Two: Stage 2 has falling death rates but high birth rates, so growth is rapid, as in India after 1951. Three: Stage 3 has low death rates and falling birth rates, and India's fertility is now below replacement level." },
+          { "speaker": "ZIPPY", "text": "Stage 1, 2, 3. Countries have birthdays too!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Dynamics of Population",
+    "topic_no": 4,
+    "name": "India's Population: Composition and Trends",
+    "scenes": [
+      {
+        "animation": "Zippy tries to stack people-shaped blocks into a neat pyramid at a school fair, but the blocks keep rearranging into a bell. A signboard reads 'Population Pyramid Challenge'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I built a pyramid of people and it turned into a bell. Is it broken?" },
+          { "speaker": "NEO", "text": "No, that is actually India's story! Let's see how our population is made up." }
+        ]
+      },
+      {
+        "animation": "A map of India fills state by state with shades by share of population (Fig. 6.13): Uttar Pradesh darkest with '16%', then Maharashtra and Bihar with '9%' each, West Bengal '8%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India's population is spread unevenly across states. Uttar Pradesh has the largest share, about 16 per cent, followed by Maharashtra and Bihar." },
+          { "speaker": "NEO", "text": "Features like age, gender, occupation and education make up the structure, or composition, of a population." }
+        ]
+      },
+      {
+        "animation": "A balance scale with a '1,000 males' weight on one side. On the other, female icons add up: a counter reads '933 (2001)' then ticks up to '943 (2011)'. A small tag reads 'Women: 48.5% of population'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sex ratio is the number of females per 1,000 males. It measures gender balance." },
+          { "speaker": "NEO", "text": "India's sex ratio was 933 in the 2001 Census and improved to 943 in 2011." },
+          { "speaker": "ZIPPY", "text": "Still under 1,000 though." },
+          { "speaker": "NEO", "text": "True. States like Kerala, Tamil Nadu and Puducherry were at or near 1,000." }
+        ]
+      },
+      {
+        "animation": "A population structure diagram builds bar by bar: male bars to the left, female bars to the right, ages 0 at the bottom up to 100 at the top. Three zones highlight: 'Young' at the base, 'Adults' in the middle, 'Elderly' at the top.",
+        "lines": [
+          { "speaker": "NEO", "text": "A population pyramid shows people by age group and gender. Males on one side, females on the other." },
+          { "speaker": "NEO", "text": "A wide base means many children, a young and growing population, like India or Nigeria. A wide top means an ageing population, like Japan." }
+        ]
+      },
+      {
+        "animation": "Four pyramids appear in a row labelled 1950, 1990, 2020 and 2030 (Fig. 6.16). The narrow triangle of 1950 morphs step by step into a bell, with the base shrinking and the middle bulging. The middle band glows with the label 'Working-age: demographic dividend'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the 1950s, India's pyramid was a narrow triangle. Many children, few old people, and life expectancy of only around 30 to 35 years." },
+          { "speaker": "NEO", "text": "Today it is more bell-shaped. The base is narrower because families have fewer children. The middle is much wider, full of working-age people." },
+          { "speaker": "NEO", "text": "The top is slowly widening too, as people live longer." },
+          { "speaker": "NEO", "text": "Exam tip: when reading a pyramid, look at the base, middle and top, and say what each tells you." }
+        ]
+      },
+      {
+        "animation": "The bell-shaped pyramid rotates gently while three recap points appear beside Neo.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: population composition means features like age, gender, occupation and education. Two: India's sex ratio improved from 933 in 2001 to 943 in 2011. Three: India's pyramid has changed from a narrow triangle to a bell shape." },
+          { "speaker": "ZIPPY", "text": "So my bell was right all along. Ding ding!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Dynamics of Population",
+    "topic_no": 5,
+    "name": "India's Demographic Dividend: A Limited Window",
+    "scenes": [
+      {
+        "animation": "A shop window with a big sign 'SALE: Limited Time Only!' and a countdown clock ticking towards '2050'. Zippy presses his face to the glass. The shop's name reads 'Demographic Dividend'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A limited-time offer for a whole country? What is on sale?" },
+          { "speaker": "NEO", "text": "Young workers! India has a huge young population right now. But this chance will not last forever." }
+        ]
+      },
+      {
+        "animation": "A bar chart of median age builds bar by bar (Fig. 6.17): India 28, USA 39, China 40, Germany 47, Italy 48, Japan 50. India's short bar glows green. A pie shows 'Under 15: about 27%' and 'Working age 15-59: nearly 65%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Around 27 per cent of Indians are under 15, and nearly 65 per cent are of working age." },
+          { "speaker": "NEO", "text": "India's median age is 28. Japan's is 50 and Italy's is 48." },
+          { "speaker": "NEO", "text": "A large young population, aged about 16 to 30, is called a youth bulge." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds: 'Young people work in farms, factories, offices, start-ups' then 'They earn and pay taxes' then 'Government builds schools, hospitals, roads, parks' then 'Country grows'. The final box glows 'Demographic dividend'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Young people work in farms, factories and offices, or start businesses. They earn and pay taxes." },
+          { "speaker": "NEO", "text": "The government uses taxes to build schools, hospitals and roads. This growth potential from a young, productive population is called the demographic dividend." }
+        ]
+      },
+      {
+        "animation": "A line graph of India's population by age groups (Fig. 6.18) draws itself from 1950 to 2100; the blue young-population curve rises and turns downward after 2050. Pins mark 'Under-5 peaked: 2007' and 'Under-15 peaked: 2011'. A map of India highlights Kerala and Tamil Nadu in deeper shades than Bihar and Uttar Pradesh for elderly share.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does the window close?" },
+          { "speaker": "NEO", "text": "The number of children under five peaked in 2007, and those under 15 peaked in 2011. After 2050, India will start moving towards an older population." },
+          { "speaker": "NEO", "text": "Kerala and Tamil Nadu are already ageing more than Bihar and Uttar Pradesh." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: Japan with robots and AI helpers assisting elderly people, a sign 'Retirement age raised'. Right: India with classrooms, skill centres, clinics and a daycare centre where a working mother drops off her child.",
+        "lines": [
+          { "speaker": "NEO", "text": "An ageing population needs more healthcare and pensions, with fewer young taxpayers. Japan has raised its retirement age and uses technology and robots." },
+          { "speaker": "NEO", "text": "India must invest in education, skilling and healthcare. Childcare like daycare centres helps women, who often face a double burden of job and housework." },
+          { "speaker": "NEO", "text": "And our elders still matter. They pass on knowledge, stories and traditions." },
+          { "speaker": "NEO", "text": "Exam tip: when asked about the demographic dividend, always mention that the window is limited, beyond 2050." }
+        ]
+      },
+      {
+        "animation": "The countdown clock pauses as three recap points appear on the shop window.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: nearly 65 per cent of Indians are of working age, and our median age is 28. Two: this young workforce can boost growth, which is the demographic dividend. Three: the window is limited, so India must invest in education, skills and healthcare now." },
+          { "speaker": "ZIPPY", "text": "Sale ends 2050. Shop smart, India!" }
+        ]
+      }
+    ]
+  }
+]

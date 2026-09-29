@@ -1,0 +1,165 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "कृतिका",
+    "topic_no": 1,
+    "name": "इस जल प्रलय में",
+    "scenes": [
+      {
+        "animation": "A busy Patna street in 1975: people buy candles, matches and potatoes in a hurry while a radio crackles 'पानी आ रहा है!'. Zippy wears a rubber tube around his waist and flippers on his feet, ready for anything.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "नियो, सब लोग मोमबत्ती और आलू क्यों ख़रीद रहे हैं? कोई त्योहार है?" },
+          { "speaker": "NEO", "text": "त्योहार नहीं, बाढ़ आ रही है! सन 1975 में पटना में भयंकर बाढ़ आई थी। लेखक फणीश्वरनाथ रेणु ने उसे अपनी आँखों से देखा।" }
+        ]
+      },
+      {
+        "animation": "A portrait card builds: 'फणीश्वरनाथ रेणु (1921-1977)', 'जन्म: औराही हिंगना, पूर्णिया (अब अररिया), बिहार', 'आंचलिक कथाकार', 'उपन्यास: मैला आँचल, परती परिकथा', 'कहानी संग्रह: ठुमरी, आदिम रात्रि की महक', 'रिपोर्ताज: ऋणजल धनजल'.",
+        "lines": [
+          { "speaker": "NEO", "text": "रेणु का जन्म 1921 में बिहार के पूर्णिया ज़िले के औराही हिंगना गाँव में हुआ और निधन 1977 में। उन्हें आंचलिक कथाकार कहा जाता है। उनका प्रसिद्ध उपन्यास है मैला आँचल।" },
+          { "speaker": "NEO", "text": "यह पाठ एक रिपोर्ताज है, यानी आँखों देखी घटना का जीवंत वर्णन। रेणु जी का बचपन बाढ़ वाले इलाक़े में बीता था, पर पटना में बाढ़ का पानी घर में घुसते उन्होंने पहली बार देखा।" }
+        ]
+      },
+      {
+        "animation": "Evening at a Patna neighbourhood: crowds gather to watch the water creep in; a coffee house closes early; shopkeepers pile goods on high shelves. At night the writer sits awake on the roof as water silently fills the streets, glowing under a pale moon.",
+        "lines": [
+          { "speaker": "NEO", "text": "पानी आने की ख़बर सुनकर शहर में हलचल मच गई। लोग पानी देखने निकल पड़े, दुकानदार सामान ऊपर रखने लगे। लेखक ने भी ईंधन, आलू, मोमबत्ती, दियासलाई और पीने का पानी जमा कर लिया।" },
+          { "speaker": "NEO", "text": "रात भर वे जागते रहे। सुबह होते-होते पानी मोहल्ले में घुस आया। सड़कें, पार्क, दुकानें, सब पानी में डूब गए।" },
+          { "speaker": "ZIPPY", "text": "मतलब पूरा शहर एक बड़ा तालाब बन गया!" }
+        ]
+      },
+      {
+        "animation": "Flashback in sepia: a younger writer on a relief boat, handing out supplies to villagers standing on rooftops and trees. Labels appear: 'राहत कार्य', 'बाढ़ पीड़ितों की सेवा'. On one roof, villagers still sing and dance to lift their spirits.",
+        "lines": [
+          { "speaker": "NEO", "text": "लेखक पुरानी यादों में खो जाते हैं। पहले भी वे बाढ़ पीड़ितों के बीच राहत कार्य कर चुके थे। उन्होंने देखा था कि मुसीबत में भी गाँव के लोग गाना-बजाना करके अपना हौसला बनाए रखते हैं।" },
+          { "speaker": "NEO", "text": "उन्होंने यह भी देखा कि बाढ़ में सबसे ज़्यादा तकलीफ़ गरीबों को होती है। खाना, पीने का पानी और दवाइयाँ सबसे बड़ी ज़रूरत बन जाती हैं।" },
+          { "speaker": "NEO", "text": "पूरे पाठ में डर भी है और हिम्मत भी। बाढ़ विनाश लाती है, पर इंसान की जिजीविषा और एक-दूसरे की मदद करने की भावना नहीं डूबती।" }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'बाढ़ से पहले और बाढ़ के दौरान लोगों का व्यवहार' with two columns: 'पहले: तैयारी, उत्सुकता' and 'दौरान: डर, सहयोग, हिम्मत'. A label 'विधा: रिपोर्ताज' stamps on top.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam में पूछते हैं कि बाढ़ आने से पहले लोग क्या-क्या तैयारी करते हैं। उत्तर: ज़रूरी सामान जमा करना, ईंधन, मोमबत्ती, दवाइयाँ और पीने का पानी रखना, सामान ऊँची जगह पर रखना।" },
+          { "speaker": "NEO", "text": "Exam tip: पाठ की विधा ज़रूर लिखो, रिपोर्ताज। और उत्तर में बाढ़ के समय की मानवीय संवेदना और सहयोग की बात जोड़ो।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a small boat on calm water. Points appear: '1. रेणु: आंचलिक कथाकार; विधा: रिपोर्ताज', '2. 1975 पटना बाढ़: तैयारी, डर, रात भर जागना', '3. विपदा में भी हौसला और सहयोग'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: इस जल प्रलय में फणीश्वरनाथ रेणु का रिपोर्ताज है।" },
+          { "speaker": "NEO", "text": "दो: इसमें 1975 की पटना बाढ़ का आँखों देखा वर्णन है, लोगों की तैयारी, डर और रात भर का इंतज़ार।" },
+          { "speaker": "NEO", "text": "तीन: पाठ सिखाता है कि विपदा में भी इंसान का हौसला और आपसी सहयोग बना रहता है।" },
+          { "speaker": "ZIPPY", "text": "मैं अपना रबर ट्यूब तैयार रखूँगा, और पड़ोसियों के लिए भी एक!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "कृतिका",
+    "topic_no": 2,
+    "name": "मेरे संग की औरतें",
+    "scenes": [
+      {
+        "animation": "A thief tiptoes into an old courtyard at night. An elderly great-grandmother wakes up, calmly asks him for water, drinks from his lota, and hands it back saying 'अब तुम मेरे बेटे हुए'. The thief stands stunned. Zippy hides behind a pillar, shocked.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "चोर को पकड़ने की जगह उससे पानी माँग लिया? और बेटा भी बना लिया?" },
+          { "speaker": "NEO", "text": "हाँ, यही थीं लेखिका की परदादी। और ऐसी ही अनोखी औरतों की कहानी है, मेरे संग की औरतें।" }
+        ]
+      },
+      {
+        "animation": "A portrait card builds: 'मृदुला गर्ग (जन्म 1938)', 'जन्म: कोलकाता', 'उपन्यास: उसके हिस्से की धूप, चितकोबरा, कठगुलाब, मिलजुल मन', 'विधा: संस्मरण'. A family photo frame shows: 'नानी', 'माँ', 'परदादी', 'बहनें'.",
+        "lines": [
+          { "speaker": "NEO", "text": "लेखिका हैं मृदुला गर्ग। उनका जन्म 1938 में कोलकाता में हुआ। उनकी रचनाएँ हैं उसके हिस्से की धूप, चितकोबरा, कठगुलाब और मिलजुल मन।" },
+          { "speaker": "NEO", "text": "इस संस्मरण में वे अपने परिवार की औरतों को याद करती हैं, जो अपने समय से आगे सोचती थीं और अपनी शर्तों पर जीती थीं।" }
+        ]
+      },
+      {
+        "animation": "A veiled grandmother (nani) lies ill. She secretly calls freedom fighter Pyarelal Sharma and whispers her last wish; a speech bubble shows: 'बेटी की शादी किसी आज़ादी के सिपाही से करना'. Then the writer's mother reads books in khadi, humming music, while the kitchen stays untouched.",
+        "lines": [
+          { "speaker": "NEO", "text": "लेखिका की नानी परदा करती थीं और घर से बाहर कम निकलती थीं। पर मृत्यु से पहले उन्होंने स्वतंत्रता सेनानी प्यारेलाल शर्मा को बुलाया और कहा, मेरी बेटी की शादी किसी आज़ादी के सिपाही से करवाना।" },
+          { "speaker": "NEO", "text": "लेखिका की माँ बहुत सुंदर, नाज़ुक और ईमानदार थीं। वे खादी पहनतीं, किताबें पढ़तीं और संगीत सुनतीं। वे कभी झूठ नहीं बोलती थीं और किसी की गोपनीय बात दूसरे को नहीं बताती थीं।" },
+          { "speaker": "ZIPPY", "text": "यानी घर का सबसे भरोसेमंद लॉकर!" }
+        ]
+      },
+      {
+        "animation": "The great-grandmother prays at a temple with folded hands; a thought bubble shows a baby girl. Later the reformed thief works in a field with a plough. Then a young girl walks home alone through heavy rain with a school bag, determined. Finally the writer teaches small children in a new school in Bagalkot, Karnataka.",
+        "lines": [
+          { "speaker": "NEO", "text": "परदादी ने मंदिर में मन्नत माँगी थी कि उनकी पतोहू की पहली संतान लड़की हो। उस ज़माने में यह बहुत अलग सोच थी। और उस चोर ने चोरी छोड़कर खेती करना शुरू कर दिया।" },
+          { "speaker": "NEO", "text": "लेखिका की छोटी बहन रेणु भी ज़िद्दी और अलग थी। एक बार तेज़ बारिश में स्कूल बस नहीं आई, तब भी वह अकेली पैदल चलकर स्कूल गई, जबकि स्कूल बंद था।" },
+          { "speaker": "NEO", "text": "लेखिका ने ख़ुद कर्नाटक के बागलकोट में बच्चों के लिए स्कूल खुलवाया। यानी हर पीढ़ी की औरत ने अपने ढंग से लीक से हटकर काम किया।" }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'लेखिका की नानी की आज़ादी के आंदोलन में क्या भागीदारी थी?' Keywords glow: 'प्यारेलाल शर्मा', 'आज़ादी का सिपाही', 'परंपरा से अलग सोच'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam में पूछा जाता है कि परदा करने वाली नानी की आज़ादी के आंदोलन में क्या भूमिका थी। उत्तर: उन्होंने अपनी बेटी की शादी किसी स्वतंत्रता सेनानी से करवाने की इच्छा जताई, यही उनका देशप्रेम था।" },
+          { "speaker": "NEO", "text": "Exam tip: हर पात्र की एक विशेषता याद रखो। नानी का देशप्रेम, माँ की ईमानदारी, परदादी का साहस, और बहन रेणु की ज़िद।" }
+        ]
+      },
+      {
+        "animation": "Recap board shaped like a family photo album. Points appear: '1. मृदुला गर्ग: संस्मरण', '2. नानी: देशप्रेम; माँ: ईमानदारी; परदादी: साहस', '3. लीक से हटकर जीने वाली औरतें'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: मेरे संग की औरतें मृदुला गर्ग का संस्मरण है।" },
+          { "speaker": "NEO", "text": "दो: नानी का देशप्रेम, माँ की ईमानदारी, और परदादी का साहस और उदार सोच इस पाठ की जान हैं।" },
+          { "speaker": "NEO", "text": "तीन: ये सभी औरतें परंपरा में रहकर भी अपने ढंग से, लीक से हटकर जीती थीं।" },
+          { "speaker": "ZIPPY", "text": "मेरे परिवार में भी एक परदादी जैसी हीरो होनी चाहिए!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "कृतिका",
+    "topic_no": 3,
+    "name": "रीढ़ की हड्डी",
+    "scenes": [
+      {
+        "animation": "A middle-class living room is being hurriedly decorated: a servant drags in a borrowed sofa, a tablecloth is spread, a father hides a stack of college books under the bed. Zippy balances a tray of snacks, confused.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "नियो, ये अंकल अपनी बेटी की किताबें क्यों छिपा रहे हैं? पढ़ाई तो अच्छी बात है!" },
+          { "speaker": "NEO", "text": "क्योंकि लड़के वाले कम पढ़ी-लिखी बहू चाहते हैं। यही है एकांकी रीढ़ की हड्डी, जो समाज की इस सोच पर चोट करती है।" }
+        ]
+      },
+      {
+        "animation": "A portrait card builds: 'जगदीश चंद्र माथुर (1917-1978)', 'जन्म: खुर्जा, बुलंदशहर (उत्तर प्रदेश)', 'नाटक: कोणार्क, शारदीया, पहला राजा, दशरथ नंदन', 'एकांकी संग्रह: भोर का तारा, ओ मेरे सपने'. A cast list slides in: 'रामस्वरूप, प्रेमा, उमा, रतन, गोपाल प्रसाद, शंकर'.",
+        "lines": [
+          { "speaker": "NEO", "text": "लेखक हैं जगदीश चंद्र माथुर। उनका जन्म 1917 में उत्तर प्रदेश के खुर्जा में हुआ और निधन 1978 में। उनके प्रसिद्ध नाटक हैं कोणार्क, शारदीया और पहला राजा।" },
+          { "speaker": "NEO", "text": "पात्र हैं: लड़की के पिता रामस्वरूप, माँ प्रेमा, बेटी उमा, नौकर रतन, लड़के के पिता गोपाल प्रसाद, और लड़का शंकर।" }
+        ]
+      },
+      {
+        "animation": "Gopal Prasad, a lawyer, sits stiffly asking questions and ticking a checklist like an inspector: 'गाना?', 'पेंटिंग?', 'पढ़ाई: सिर्फ़ मैट्रिक?'. Beside him, Shankar sits hunched with a bent back, giggling nervously. A label on his spine blinks: 'रीढ़ की हड्डी?'.",
+        "lines": [
+          { "speaker": "NEO", "text": "उमा बी.ए. पास है, पर पिता रामस्वरूप कहते हैं कि वह सिर्फ़ मैट्रिक तक पढ़ी है। क्योंकि गोपाल प्रसाद को ज़्यादा पढ़ी-लिखी बहू नहीं चाहिए।" },
+          { "speaker": "NEO", "text": "गोपाल प्रसाद ख़ुद वकील हैं और बेटा शंकर मेडिकल की पढ़ाई कर रहा है। पर वे उमा को ऐसे परखते हैं, जैसे कोई सामान ख़रीद रहे हों।" },
+          { "speaker": "NEO", "text": "शंकर झुककर बैठता है, हर बात में पिता की हाँ में हाँ मिलाता है। उसकी अपनी कोई राय नहीं।" },
+          { "speaker": "ZIPPY", "text": "मतलब कमर भी झुकी और आत्मसम्मान भी!" }
+        ]
+      },
+      {
+        "animation": "Uma, wearing glasses, puts down her sitar and stands up. Her words appear in bold: 'क्या लड़कियाँ भेड़-बकरियाँ हैं?'. She reveals Shankar was chased from the girls' hostel. Gopal Prasad jumps up angrily, shocked to learn she is a B.A.; Shankar looks for his back. The father sinks into a chair, relieved but worried.",
+        "lines": [
+          { "speaker": "NEO", "text": "आख़िर उमा चुप नहीं रहती। वह पूछती है, क्या लड़कियाँ भेड़-बकरियाँ हैं, जिन्हें कसाई की तरह ठोक-बजाकर देखा जाए?" },
+          { "speaker": "NEO", "text": "वह बताती है कि शंकर को लड़कियों के होस्टल के पास से भगाया गया था। वह यह भी बताती है कि वह बी.ए. पास है।" },
+          { "speaker": "NEO", "text": "गोपाल प्रसाद ग़ुस्से में उठकर चल देते हैं। उमा कहती है, जाकर पता लगाइए कि आपके लाड़ले बेटे की रीढ़ की हड्डी भी है या नहीं।" }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'एकांकी का शीर्षक रीढ़ की हड्डी क्यों सार्थक है?' Two arrows: 'शंकर: शारीरिक और चारित्रिक रूप से रीढ़हीन' and 'उमा: आत्मसम्मान वाली, साहसी'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam में अक्सर पूछा जाता है कि शीर्षक क्यों सार्थक है। उत्तर: रीढ़ की हड्डी यानी आत्मसम्मान और साहस। शंकर में यह नहीं है, जबकि उमा में भरपूर है।" },
+          { "speaker": "NEO", "text": "Exam tip: पात्रों की तुलना करो, और एकांकी के संदेश में लिखो कि लड़कियों की शिक्षा और सम्मान ज़रूरी है, और लड़की को सामान समझना गलत है।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a straight spine icon glowing. Points appear: '1. जगदीश चंद्र माथुर: एकांकी', '2. उमा: शिक्षित, साहसी; शंकर: रीढ़हीन', '3. संदेश: स्त्री शिक्षा और सम्मान'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: रीढ़ की हड्डी जगदीश चंद्र माथुर का एकांकी है।" },
+          { "speaker": "NEO", "text": "दो: उमा शिक्षित और साहसी है, जबकि शंकर की न सीधी कमर है, न अपनी राय।" },
+          { "speaker": "NEO", "text": "तीन: एकांकी का संदेश है कि लड़कियों की शिक्षा और सम्मान से समझौता नहीं होना चाहिए।" },
+          { "speaker": "ZIPPY", "text": "मैं अभी से सीधा बैठता हूँ, कमर भी और सोच भी!" }
+        ]
+      }
+    ]
+  }
+]

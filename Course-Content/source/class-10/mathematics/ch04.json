@@ -1,0 +1,277 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "Quadratic Equations",
+    "topic_no": 1,
+    "name": "What Is a Quadratic Equation?",
+    "scenes": [
+      {
+        "animation": "A charity trust's prayer hall under construction. A carpet roll labelled '300 m²' waits outside. The builder, a talking measuring tape, says the length is one more than twice the breadth, then shrugs because he forgot the breadth.",
+        "lines": [
+          { "speaker": "MEASURING TAPE", "text": "Area 300 square metres. Length is one more than twice the breadth. But what's the breadth?" },
+          { "speaker": "ZIPPY", "text": "Let's just guess until the carpet fits!" },
+          { "speaker": "NEO", "text": "Or we can write an equation. It turns out to be a quadratic." }
+        ]
+      },
+      {
+        "animation": "The hall floor becomes a rectangle labelled 'breadth = x m' and 'length = (2x + 1) m'. Lines appear: 'x(2x + 1) = 300', '2x² + x = 300', '2x² + x − 300 = 0'. The 'x²' term glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let the breadth be x metres. Then the length is 2x plus 1 metres." },
+          { "speaker": "NEO", "text": "Area is length into breadth, so x into 2x plus 1 equals 300. That gives 2x squared plus x minus 300 equals 0." }
+        ]
+      },
+      {
+        "animation": "A golden definition card: 'Quadratic equation: ax² + bx + c = 0, a, b, c real, a ≠ 0'. The 'a ≠ 0' blinks. When a slider sets a = 0, the x² term vanishes and the card falls over, re-labelled 'linear'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A quadratic equation in x is of the form a x squared plus b x plus c equals 0, where a, b and c are real numbers and a is not zero." },
+          { "speaker": "ZIPPY", "text": "What if a is zero?" },
+          { "speaker": "NEO", "text": "Then the x squared term disappears, and the equation becomes linear." }
+        ]
+      },
+      {
+        "animation": "Two test cards simplify line by line. Card 1: '(x − 2)² + 1 = 2x − 3', 'x² − 4x + 4 + 1 = 2x − 3', 'x² − 6x + 8 = 0 ✓ Quadratic'. Card 2: 'x(x + 1) + 8 = (x + 2)(x − 2)', 'x² + x + 8 = x² − 4', 'x + 12 = 0 ✗ Not quadratic'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Always simplify before deciding. Take x minus 2 whole squared, plus 1, equals 2x minus 3." },
+          { "speaker": "NEO", "text": "The left side is x squared minus 4x plus 5. Bring everything to one side: x squared minus 6x plus 8 equals 0. Quadratic." },
+          { "speaker": "NEO", "text": "Now, x into x plus 1, plus 8, equals x plus 2 into x minus 2. The left is x squared plus x plus 8, the right is x squared minus 4." },
+          { "speaker": "NEO", "text": "The x squared terms cancel, leaving x plus 12 equals 0. That's linear, not quadratic." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Roots: α is a root if aα² + bα + c = 0'. A check shows '2x² − 3x + 1 = 0, x = 1: 2 − 3 + 1 = 0 ✓'. Beside it: 'A quadratic has at most 2 roots'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A real number alpha is a root if it satisfies the equation. For 2x squared minus 3x plus 1 equals 0, try x equals 1: 2 minus 3 plus 1 is 0. So 1 is a root." },
+          { "speaker": "NEO", "text": "Board tip: in 'check whether quadratic' questions, never judge by looks. Expand fully, since x squared terms may cancel." }
+        ]
+      },
+      {
+        "animation": "Recap board with the prayer hall carpet. Points appear: '1. ax² + bx + c = 0, a ≠ 0', '2. Simplify fully before deciding', '3. Root: value that makes the equation true'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a quadratic equation is a x squared plus b x plus c equals 0, with a not zero." },
+          { "speaker": "NEO", "text": "Two: simplify completely before deciding whether an equation is quadratic." },
+          { "speaker": "NEO", "text": "Three: a root is a value of x that satisfies the equation." },
+          { "speaker": "ZIPPY", "text": "Next time: finding the breadth before the carpet gets bored." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Quadratic Equations",
+    "topic_no": 2,
+    "name": "Solving by Factorisation",
+    "scenes": [
+      {
+        "animation": "The measuring tape from the prayer hall returns, tapping its foot beside the carpet roll. The equation '2x² + x − 300 = 0' hovers above the empty hall floor.",
+        "lines": [
+          { "speaker": "MEASURING TAPE", "text": "Still waiting for that breadth!" },
+          { "speaker": "NEO", "text": "Coming up. We'll split the middle term and factorise." }
+        ]
+      },
+      {
+        "animation": "A method card: 'ax² + bx + c: find two numbers with product a × c and sum b'. Then: 'Product = 2 × (−300) = −600', 'Sum = 1', a number-pair search slides past '(24, −25)', '(−24, 25) ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "To split the middle term, find two numbers whose product is a into c, and whose sum is b." },
+          { "speaker": "NEO", "text": "Here a into c is 2 into minus 300, which is minus 600. The sum must be 1." },
+          { "speaker": "ZIPPY", "text": "25 and minus 24! Their product is minus 600 and their sum is 1." }
+        ]
+      },
+      {
+        "animation": "Worked lines build one by one: '2x² − 24x + 25x − 300 = 0', '2x(x − 12) + 25(x − 12) = 0', '(x − 12)(2x + 25) = 0', 'x = 12 or x = −25/2'. The negative root is crossed out with a note 'breadth can't be negative'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Write 2x squared minus 24x plus 25x minus 300 equals 0." },
+          { "speaker": "NEO", "text": "Group: 2x into x minus 12, plus 25 into x minus 12. That's x minus 12 into 2x plus 25 equals 0." },
+          { "speaker": "NEO", "text": "So x equals 12, or x equals minus 25 by 2. A breadth can't be negative, so the breadth is 12 metres." }
+        ]
+      },
+      {
+        "animation": "The hall floor fills in: 'breadth 12 m', 'length 2(12) + 1 = 25 m'. A check stamp: '12 × 25 = 300 m² ✓'. The carpet unrolls and fits perfectly.",
+        "lines": [
+          { "speaker": "NEO", "text": "The length is 2 into 12, plus 1, which is 25 metres. Check: 12 into 25 is 300 square metres." },
+          { "speaker": "MEASURING TAPE", "text": "A perfect fit! Finally." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: Zippy solves 'x² = 3x' by dividing both sides by x and writes 'x = 3'. A red stamp shouts 'LOST ROOT!'. The correct lines appear: 'x² − 3x = 0', 'x(x − 3) = 0', 'x = 0 or x = 3'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "For x squared equals 3x, I just divide by x and get 3. Quick!" },
+          { "speaker": "NEO", "text": "Too quick. You lost a root. Write x squared minus 3x equals 0, so x into x minus 3 equals 0. The roots are 0 and 3." },
+          { "speaker": "NEO", "text": "Board tip: never divide by the variable. Bring all terms to one side and factorise." }
+        ]
+      },
+      {
+        "animation": "Recap board with the rolled-out carpet. Points appear: '1. Split b into two numbers: product ac, sum b', '2. Factorise, set each factor = 0', '3. Reject roots that don't fit the context; never divide by x'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: split the middle term using two numbers with product a c and sum b." },
+          { "speaker": "NEO", "text": "Two: factorise, and set each factor equal to zero." },
+          { "speaker": "NEO", "text": "Three: reject roots that don't make sense, and never divide by the variable." },
+          { "speaker": "ZIPPY", "text": "Twelve by twenty-five. Carpet happy, tape happy." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Quadratic Equations",
+    "topic_no": 3,
+    "name": "The Quadratic Formula",
+    "scenes": [
+      {
+        "animation": "Zippy wrestles the equation 'x² − 4x + 1 = 0', trying number pairs on cards that all burst into smoke. Neo rolls in a shiny machine labelled 'QUADRATIC FORMULA' with three input slots: a, b, c.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I can't find two numbers for this one. Nothing factorises!" },
+          { "speaker": "NEO", "text": "Then use the machine that works every time: the quadratic formula." }
+        ]
+      },
+      {
+        "animation": "A golden formula card: 'ax² + bx + c = 0: x = [−b ± √(b² − 4ac)] / 2a, provided b² − 4ac ≥ 0'. The '±' splits into two arrows, 'root 1' and 'root 2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For a x squared plus b x plus c equals 0, x equals minus b, plus or minus root of b squared minus 4ac, all over 2a." },
+          { "speaker": "NEO", "text": "This works when b squared minus 4ac is greater than or equal to zero." },
+          { "speaker": "NEO", "text": "The plus sign gives one root, and the minus sign gives the other." }
+        ]
+      },
+      {
+        "animation": "Worked lines build: '2x² − 7x + 3 = 0: a = 2, b = −7, c = 3', 'b² − 4ac = 49 − 24 = 25', 'x = [7 ± √25] / 4 = (7 ± 5)/4', 'x = 12/4 = 3 or x = 2/4 = 1/2'. A check: '2(9) − 21 + 3 = 0 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Solve 2x squared minus 7x plus 3 equals 0. Here a is 2, b is minus 7, and c is 3." },
+          { "speaker": "NEO", "text": "b squared minus 4ac is 49 minus 24, which is 25. Its square root is 5." },
+          { "speaker": "NEO", "text": "So x equals 7 plus or minus 5, over 4. That's 12 by 4, which is 3, or 2 by 4, which is one-half." },
+          { "speaker": "ZIPPY", "text": "Check x equals 3: 18 minus 21 plus 3. Zero!" }
+        ]
+      },
+      {
+        "animation": "Back to Zippy's stubborn equation: 'x² − 4x + 1 = 0: a = 1, b = −4, c = 1', 'b² − 4ac = 16 − 4 = 12', '√12 = 2√3', 'x = (4 ± 2√3)/2 = 2 ± √3'. The machine dings.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now Zippy's equation, x squared minus 4x plus 1 equals 0. b squared minus 4ac is 16 minus 4, which is 12." },
+          { "speaker": "NEO", "text": "Root 12 is 2 root 3. So x equals 4 plus or minus 2 root 3, over 2, which is 2 plus or minus root 3." },
+          { "speaker": "ZIPPY", "text": "Irrational roots! No wonder I couldn't factorise it." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Write a, b, c with signs first'. The 'b = −7' is circled, and a wrong line '−b = −7' is crossed out beside the correct '−b = 7'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: write a, b and c with their signs before substituting. When b is negative, minus b becomes positive. This is the most common sign error." }
+        ]
+      },
+      {
+        "animation": "Recap board with the formula machine. Points appear: '1. x = [−b ± √(b² − 4ac)] / 2a', '2. Works when b² − 4ac ≥ 0', '3. Write a, b, c with signs first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: x equals minus b, plus or minus root of b squared minus 4ac, over 2a." },
+          { "speaker": "NEO", "text": "Two: it gives real roots when b squared minus 4ac is at least zero." },
+          { "speaker": "NEO", "text": "Three: list a, b and c with their signs before you substitute." },
+          { "speaker": "ZIPPY", "text": "One formula to rule them all." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Quadratic Equations",
+    "topic_no": 4,
+    "name": "Nature of Roots and the Discriminant",
+    "scenes": [
+      {
+        "animation": "A cartoon fortune-teller's tent. Neo, in a turban, gazes into a crystal ball showing 'b² − 4ac'. Zippy sits across, amazed as Neo predicts the roots without solving.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "You can tell what kind of roots an equation has without solving it?" },
+          { "speaker": "NEO", "text": "Yes. One small expression reveals everything. It's called the discriminant." }
+        ]
+      },
+      {
+        "animation": "The expression 'D = b² − 4ac' glows inside the formula 'x = (−b ± √D)/2a'. Three doors open one by one: 'D > 0 → two distinct real roots', 'D = 0 → two equal real roots, x = −b/2a', 'D < 0 → no real roots'. Behind each, a matching parabola touches the x-axis twice, once, or not at all.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the quadratic formula, b squared minus 4ac sits under the root. It is called the discriminant." },
+          { "speaker": "NEO", "text": "If it is greater than zero, there are two distinct real roots." },
+          { "speaker": "NEO", "text": "If it is zero, there are two equal real roots, each equal to minus b by 2a." },
+          { "speaker": "NEO", "text": "If it is less than zero, there are no real roots, because no real number squares to a negative." }
+        ]
+      },
+      {
+        "animation": "Two worked cards build. Card 1: '2x² − 4x + 3 = 0', 'D = (−4)² − 4(2)(3) = 16 − 24 = −8 < 0', 'No real roots'. Card 2: '3x² − 2x + 1/3 = 0', 'D = 4 − 4(3)(1/3) = 4 − 4 = 0', 'Equal roots: x = 2/6 = 1/3'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For 2x squared minus 4x plus 3 equals 0, the discriminant is 16 minus 24, which is minus 8. Negative, so no real roots." },
+          { "speaker": "NEO", "text": "For 3x squared minus 2x plus one-third equals 0, it is 4 minus 4 into 3 into one-third, which is 4 minus 4, zero." },
+          { "speaker": "NEO", "text": "So the roots are equal, each minus b by 2a, which is 2 by 6, or one-third." }
+        ]
+      },
+      {
+        "animation": "A 'find k' card builds: '2x² + kx + 3 = 0 has equal roots', 'D = 0 ⇒ k² − 4(2)(3) = 0', 'k² = 24', 'k = ±√24 = ±2√6'. Both signs glow.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if the equation has a missing number, like k?" },
+          { "speaker": "NEO", "text": "Say 2x squared plus k x plus 3 equals 0 has equal roots. Then the discriminant is zero: k squared minus 24 equals 0." },
+          { "speaker": "NEO", "text": "So k squared is 24, and k equals plus or minus root 24, which is plus or minus 2 root 6." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Equal roots ⇒ D = 0; real roots ⇒ D ≥ 0'. A student's answer 'k = 2√6' is marked incomplete with '±' added in red.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: find-k questions are very common. Don't forget both signs when you take a square root. Also note, 'real roots' means D is greater than or equal to zero." }
+        ]
+      },
+      {
+        "animation": "Recap board with the crystal ball. Points appear: '1. D = b² − 4ac', '2. D > 0: two distinct; D = 0: two equal; D < 0: no real roots', '3. Equal roots ⇒ set D = 0 to find k'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the discriminant is b squared minus 4ac." },
+          { "speaker": "NEO", "text": "Two: positive means two distinct real roots, zero means two equal roots, negative means no real roots." },
+          { "speaker": "NEO", "text": "Three: for equal roots, set the discriminant to zero and solve for k." },
+          { "speaker": "ZIPPY", "text": "The crystal ball is just algebra. I'm a little disappointed." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Quadratic Equations",
+    "topic_no": 5,
+    "name": "Word Problems on Quadratic Equations",
+    "scenes": [
+      {
+        "animation": "A kite festival on a rooftop. Zippy's kite string is tangled on a right-angled wooden frame. A tag on it reads: 'Hypotenuse 13 cm. Altitude is 7 cm less than base.' Zippy stares at the tag in confusion.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The frame maker left a riddle instead of measurements!" },
+          { "speaker": "NEO", "text": "Riddles like this turn into quadratic equations. Let's decode it." }
+        ]
+      },
+      {
+        "animation": "A right triangle draws itself: base labelled 'x cm', altitude '(x − 7) cm', hypotenuse '13 cm'. A Pythagoras bubble appears: 'base² + altitude² = hypotenuse²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let the base be x centimetres. Then the altitude is x minus 7 centimetres." },
+          { "speaker": "NEO", "text": "In a right triangle, base squared plus altitude squared equals hypotenuse squared." }
+        ]
+      },
+      {
+        "animation": "Worked lines appear: 'x² + (x − 7)² = 13²', 'x² + x² − 14x + 49 = 169', '2x² − 14x − 120 = 0', 'x² − 7x − 60 = 0', '(x − 12)(x + 5) = 0', 'x = 12 or x = −5'. The '−5' gets a red cross: 'length can't be negative'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So x squared plus x minus 7 whole squared equals 169. Expanding, x squared plus x squared minus 14x plus 49 equals 169." },
+          { "speaker": "NEO", "text": "That's 2x squared minus 14x minus 120 equals 0. Divide by 2: x squared minus 7x minus 60 equals 0." },
+          { "speaker": "NEO", "text": "We need numbers with product minus 60 and sum minus 7: minus 12 and 5. So x minus 12 into x plus 5 equals 0." },
+          { "speaker": "NEO", "text": "x is 12 or minus 5. A length can't be negative, so the base is 12 centimetres, and the altitude is 5 centimetres." }
+        ]
+      },
+      {
+        "animation": "Check stamp on the frame: '12² + 5² = 144 + 25 = 169 = 13² ✓'. Zippy untangles the kite, which soars into a blue sky.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Check: 144 plus 25 is 169, which is 13 squared. The frame is right-angled!" }
+        ]
+      },
+      {
+        "animation": "A quick second example card: 'Two consecutive positive integers, product 306', 'x(x + 1) = 306', 'x² + x − 306 = 0', '(x + 18)(x − 17) = 0', 'x = 17 (x = −18 rejected, not positive)', 'Integers: 17, 18; 17 × 18 = 306 ✓'. A 'BOARD TIP' sticker lands on the word 'rejected'.",
+        "lines": [
+          { "speaker": "NEO", "text": "One more. Two consecutive positive integers have product 306. Let them be x and x plus 1, so x squared plus x minus 306 equals 0." },
+          { "speaker": "NEO", "text": "This factorises as x plus 18 into x minus 17. Since the integers are positive, x is 17, and the numbers are 17 and 18." },
+          { "speaker": "NEO", "text": "Board tip: always write why you reject a root. A line like 'x cannot be negative' earns you the final mark." }
+        ]
+      },
+      {
+        "animation": "Recap board with a kite icon. Points appear: '1. Let the unknown be x; express others in x', '2. Form the equation, write in standard form, solve', '3. Reject impossible roots with a reason and verify'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: let the unknown be x, and express the other quantities in terms of x." },
+          { "speaker": "NEO", "text": "Two: form the equation, bring it to standard form, and solve." },
+          { "speaker": "NEO", "text": "Three: reject impossible roots with a reason, then verify in the original problem." },
+          { "speaker": "ZIPPY", "text": "Riddle solved. Kite flying." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,391 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "Matter in Our Surroundings",
+    "topic_no": 1,
+    "name": "Physical Nature of Matter",
+    "scenes": [
+      {
+        "animation": "A school canteen at lunch break. Zippy drops a spoonful of sugar into a glass of water and stirs; the sugar vanishes. Zippy peers into the glass with a magnifying glass, puzzled, as a big question mark floats above.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, the sugar just disappeared! Did the water eat it?" },
+          { "speaker": "NEO", "text": "Taste the water, Zippy. The sugar is still there. It has only broken into pieces far too small to see." }
+        ]
+      },
+      {
+        "animation": "Title card 'Matter = anything that has mass and occupies space'. Icons pop in one by one: a stone, a glass of water, a balloon of air, a cup of chai, a cricket ball, each getting a green tick. A thought bubble of 'happiness' gets a red cross.",
+        "lines": [
+          { "speaker": "NEO", "text": "Everything around us, from the stone to the air, is made of matter." },
+          { "speaker": "NEO", "text": "Matter is anything that occupies space and has mass. Air and water, chai and cricket balls, all of it." },
+          { "speaker": "ZIPPY", "text": "And my feelings? Are they matter too?" },
+          { "speaker": "NEO", "text": "No. Feelings take up no space and have no mass." }
+        ]
+      },
+      {
+        "animation": "A zoom-in on the sugar solution: the liquid breaks up into tiny cartoon water particles, and sugar particles slip into the gaps between them. Label: 'Matter is made up of particles'. The water level line stays almost unchanged.",
+        "lines": [
+          { "speaker": "NEO", "text": "When sugar dissolves, its particles spread into the spaces between the particles of water." },
+          { "speaker": "NEO", "text": "This shows that matter is not continuous like a solid block. It is made up of particles." }
+        ]
+      },
+      {
+        "animation": "Activity built step by step: two to three crystals of potassium permanganate go into 100 mL of water, turning it deep purple. Ten mL is poured into 90 mL of clear water, then again, five to eight times; each new beaker is paler, but the last one is still faintly pink. A counter labels each beaker 'Dilution 1, 2, 3...'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now watch this. Dissolve two or three crystals of potassium permanganate in a hundred millilitres of water." },
+          { "speaker": "NEO", "text": "Take ten millilitres of it and add ninety millilitres of clear water. Repeat this five to eight times." },
+          { "speaker": "ZIPPY", "text": "The last beaker is still pink! How many pieces is one crystal hiding?" },
+          { "speaker": "NEO", "text": "Millions of tiny particles. They keep dividing themselves into smaller and smaller particles, yet the colour survives." }
+        ]
+      },
+      {
+        "animation": "A Dettol bottle; two drops go into a 2 L water jug and a cartoon nose sniffs, smiling at the smell. A yellow 'EXAM TIP' sticky note slaps onto the screen: 'Question: Why does KMnO4 colour stay after dilution? Answer: particles of matter are extremely small.'",
+        "lines": [
+          { "speaker": "NEO", "text": "The same thing happens with two millilitres of Dettol in a large jug of water. You can still smell it after many dilutions." },
+          { "speaker": "NEO", "text": "Exam tip: if asked what the potassium permanganate activity proves, write that particles of matter are very, very small, small beyond our imagination." }
+        ]
+      },
+      {
+        "animation": "Recap board with a sugar cube icon. Three points slide in: '1. Matter has mass and occupies space', '2. Matter is made of particles', '3. These particles are extremely small (KMnO4 and Dettol activities)'. Zippy juggles a sugar cube in the corner.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: matter is anything that has mass and occupies space." },
+          { "speaker": "NEO", "text": "Two: matter is made up of particles, not one continuous block." },
+          { "speaker": "NEO", "text": "Three: these particles are extremely small, as the potassium permanganate and Dettol activities show." },
+          { "speaker": "ZIPPY", "text": "So my chai has more particles than cricket fans in a stadium. Got it!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Matter in Our Surroundings",
+    "topic_no": 2,
+    "name": "Characteristics of Particles of Matter",
+    "scenes": [
+      {
+        "animation": "Evening at home. Mom lights an agarbatti in the pooja room; a curl of fragrant smoke drifts, and Zippy, sitting in the far bedroom, suddenly sniffs and sits up.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I'm three rooms away, and I can smell the agarbatti! How did the smell find me?" },
+          { "speaker": "NEO", "text": "The particles of matter did the travelling. Let's learn their three big habits." }
+        ]
+      },
+      {
+        "animation": "Card 1: 'Particles have space between them'. A glass of water is shown zoomed-in with gaps between particles; salt particles slide into the gaps. The scene mirrors a crowded kirana shop where a small kid slips between customers.",
+        "lines": [
+          { "speaker": "NEO", "text": "Habit one: particles of matter have space between them." },
+          { "speaker": "NEO", "text": "When we make chai or lemonade, particles of one kind of matter get into the spaces between particles of the other." }
+        ]
+      },
+      {
+        "animation": "Card 2: 'Particles are continuously moving'. Particles jiggle; a thermometer rises and they jiggle faster, a speedometer needle moving to 'Kinetic energy ↑'. The agarbatti particles zigzag across the house towards Zippy.",
+        "lines": [
+          { "speaker": "NEO", "text": "Habit two: particles of matter are continuously moving. They possess kinetic energy." },
+          { "speaker": "NEO", "text": "As temperature rises, particles move faster. So the kinetic energy of particles increases with temperature." },
+          { "speaker": "NEO", "text": "That's why the smell of the agarbatti reaches you without any wind carrying it." }
+        ]
+      },
+      {
+        "animation": "Split screen: a crystal of copper sulphate dropped in cold water (left) and hot water (right). Blue colour spreads, faster on the hot side. A label builds: 'Diffusion = intermixing of particles of two different types of matter on their own'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is there a name for particles mixing all by themselves?" },
+          { "speaker": "NEO", "text": "Yes, diffusion. Particles of matter intermix on their own with each other by getting into the spaces between the particles." },
+          { "speaker": "NEO", "text": "Put a copper sulphate crystal in hot water and in cold water. It diffuses faster in hot water, because on heating, diffusion becomes faster." }
+        ]
+      },
+      {
+        "animation": "Card 3: 'Particles attract each other'. Zippy tries to break an iron nail, then a piece of chalk, then a stream of water with a karate chop. The nail doesn't budge, chalk snaps easily, and water parts and rejoins. Attraction bars rank: 'Iron nail > Chalk > Water'. An 'EXAM TIP' sticker: 'Force of attraction varies from one kind of matter to another'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Habit three: particles of matter attract each other. This force holds them together." },
+          { "speaker": "ZIPPY", "text": "The iron nail beat me, the chalk broke, and the water just laughed!" },
+          { "speaker": "NEO", "text": "Because the strength of this force differs from one kind of matter to another. It is strongest in the iron nail here." },
+          { "speaker": "NEO", "text": "Exam tip: learn the three characteristics with one example each. Examiners love the agarbatti and copper sulphate examples." }
+        ]
+      },
+      {
+        "animation": "Recap board with three cartoon particles holding hands. Points appear: '1. Particles have space between them', '2. Particles keep moving; faster when hotter (diffusion)', '3. Particles attract each other'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: particles of matter have space between them." },
+          { "speaker": "NEO", "text": "Two: they are continuously moving, and they move faster when heated, which speeds up diffusion." },
+          { "speaker": "NEO", "text": "Three: they attract each other, with a force that varies from one kind of matter to another." },
+          { "speaker": "ZIPPY", "text": "Space, speed and stickiness. My three new rules!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Matter in Our Surroundings",
+    "topic_no": 3,
+    "name": "States of Matter: Solid, Liquid and Gas",
+    "scenes": [
+      {
+        "animation": "A monsoon evening. An ice cube, a glass of water and a steaming kettle sit on a kitchen shelf, each with a cartoon face: the ice cube stands stiff like a soldier, the water lounges, and the steam floats around the room.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Ice, water and steam are all the same stuff. Why do they act so differently?" },
+          { "speaker": "NEO", "text": "Because the arrangement of their particles is different. Matter exists in three states: solid, liquid and gas." }
+        ]
+      },
+      {
+        "animation": "Solid panel: particles packed in neat rows, vibrating in place. Objects appear: pen, book, stone, rubber band, sponge. The rubber band stretches and snaps back; the sponge is squeezed and bubbles of air escape. Labels: 'Definite shape', 'Fixed volume', 'Negligible compressibility', 'Rigid'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Solids have a definite shape, distinct boundaries and fixed volumes. They have negligible compressibility and are rigid." },
+          { "speaker": "ZIPPY", "text": "But a rubber band stretches, and a sponge squashes!" },
+          { "speaker": "NEO", "text": "A rubber band changes shape under force but regains it when the force is removed. A sponge has tiny holes with trapped air. Squeeze it and the air comes out, but the sponge is still a solid." }
+        ]
+      },
+      {
+        "animation": "Liquid panel: particles close together but sliding past one another. Water is poured into a tumbler, a bottle and a bowl, taking each shape while a measuring line reads '100 mL' every time. A fish in an aquarium breathes bubbles labelled 'dissolved O2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Liquids have no fixed shape but have a fixed volume. They take the shape of the container they are kept in." },
+          { "speaker": "NEO", "text": "Liquids flow, so they are called fluids. Solids, liquids and gases can diffuse into liquids. That is how fish breathe the oxygen dissolved in water." }
+        ]
+      },
+      {
+        "animation": "Gas panel: particles far apart, zooming randomly and bouncing off the walls. A syringe filled with air is pushed and the piston moves a lot; with water it barely moves; with chalk, not at all. Then an LPG cylinder in a kitchen and a CNG bus appear with the label 'Gas compressed into small volume'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Gases are highly compressible compared to solids and liquids. That's why large volumes of LPG fill a kitchen cylinder, and CNG runs our buses." },
+          { "speaker": "NEO", "text": "Gas particles move randomly at high speed and hit the walls of the container. This pressure is exerted by the gas." },
+          { "speaker": "NEO", "text": "They also diffuse very fast, so the smell of hot sizzling food reaches you from the kitchen." }
+        ]
+      },
+      {
+        "animation": "A comparison table builds column by column: 'Solid | Liquid | Gas' against rows 'Shape', 'Volume', 'Space between particles', 'Force of attraction', 'Compressibility'. Arrows show spaces increasing and attraction decreasing from solid to gas. An 'EXAM TIP' sticker flags the arrow rows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Going from solid to liquid to gas, the space between particles increases, and the force of attraction decreases." },
+          { "speaker": "NEO", "text": "Exam tip: questions often ask why gases are compressible. Always answer using the large space between gas particles." }
+        ]
+      },
+      {
+        "animation": "Recap board with the three kitchen characters waving. Points appear: '1. Solid: fixed shape and volume, rigid', '2. Liquid: fixed volume, takes shape of container, flows', '3. Gas: no fixed shape or volume, highly compressible'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: solids have a fixed shape and volume and are rigid." },
+          { "speaker": "NEO", "text": "Two: liquids have a fixed volume but take the shape of their container, and they flow." },
+          { "speaker": "NEO", "text": "Three: gases have neither fixed shape nor volume, and they are highly compressible." },
+          { "speaker": "ZIPPY", "text": "So steam is the party animal of the family!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Matter in Our Surroundings",
+    "topic_no": 4,
+    "name": "Change of State: Effect of Temperature",
+    "scenes": [
+      {
+        "animation": "A summer afternoon. Zippy holds a kulfi that starts dripping. A thermometer with a face stands beside it, sweating, reading a rising temperature.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My kulfi is turning into a puddle! Who ordered this?" },
+          { "speaker": "NEO", "text": "The heat did. When temperature rises, matter can change its state. Let's see how." }
+        ]
+      },
+      {
+        "animation": "Experiment built step by step: a beaker of ice with a thermometer on a burner. A graph plots temperature against time: a rising line, then a flat plateau at '0 °C = 273.15 K' labelled 'Melting', then rising again. Particles in the ice break out of their rows during the plateau.",
+        "lines": [
+          { "speaker": "NEO", "text": "Heat ice slowly with a thermometer in it. The temperature stays at zero degrees Celsius until all the ice melts." },
+          { "speaker": "NEO", "text": "The temperature at which a solid melts to become a liquid at atmospheric pressure is its melting point. For ice, it is 273.15 kelvin." },
+          { "speaker": "ZIPPY", "text": "But the burner was on the whole time. Where did the heat go?" },
+          { "speaker": "NEO", "text": "It was used to overcome the forces of attraction between the particles. This hidden heat is called latent heat." }
+        ]
+      },
+      {
+        "animation": "Two definition cards flip in: 'Latent heat of fusion: heat needed to change 1 kg of solid into liquid at atmospheric pressure at its melting point' and 'Latent heat of vaporisation: heat needed to change 1 kg of liquid into gas at atmospheric pressure at its boiling point'. The graph continues to a second plateau at '100 °C = 373 K' labelled 'Boiling'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The heat energy required to change one kilogram of a solid into liquid at atmospheric pressure at its melting point is the latent heat of fusion." },
+          { "speaker": "NEO", "text": "Keep heating. Water boils at 373 kelvin. Boiling point is the temperature at which a liquid starts boiling at atmospheric pressure." },
+          { "speaker": "NEO", "text": "The heat needed to change one kilogram of a liquid into gas at its boiling point is the latent heat of vaporisation." },
+          { "speaker": "NEO", "text": "So particles in steam at 373 kelvin have more energy than water at the same temperature." }
+        ]
+      },
+      {
+        "animation": "A conversion machine with a lever: 'K = °C + 273' and '°C = K − 273'. Worked lines appear one by one: '25 °C = 25 + 273 = 298 K', '300 K = 300 − 273 = 27 °C', '573 K = 573 − 273 = 300 °C'. A 'BOARD TIP' note reads 'Kelvin has no degree sign'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Kelvin is the SI unit of temperature. For convenience, we take zero degrees Celsius as 273 kelvin." },
+          { "speaker": "NEO", "text": "To convert Celsius to kelvin, add 273. So 25 degrees Celsius is 25 plus 273, which is 298 kelvin." },
+          { "speaker": "NEO", "text": "To go back, subtract 273. 300 kelvin is 27 degrees Celsius, and 573 kelvin is 300 degrees Celsius." },
+          { "speaker": "NEO", "text": "Exam tip: write kelvin as K, never as degree K." }
+        ]
+      },
+      {
+        "animation": "A cycle diagram builds with arrows: 'Solid → (melting/fusion) → Liquid → (vaporisation) → Gas', then reverse arrows 'Gas → (condensation) → Liquid → (solidification) → Solid', with heating arrows red and cooling arrows blue.",
+        "lines": [
+          { "speaker": "NEO", "text": "Heat a solid and it melts. Heat the liquid and it vaporises. Cool the gas and it condenses. Cool the liquid and it solidifies." },
+          { "speaker": "ZIPPY", "text": "So if I put the kulfi puddle in the freezer, I get my kulfi back?" },
+          { "speaker": "NEO", "text": "The shape may be sad, but yes, it will be solid again." }
+        ]
+      },
+      {
+        "animation": "Recap board with a thermometer icon. Points appear: '1. Melting point of ice = 273.15 K; boiling point of water = 373 K', '2. Latent heat breaks attraction without raising temperature', '3. K = °C + 273'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: ice melts at 273.15 kelvin and water boils at 373 kelvin." },
+          { "speaker": "NEO", "text": "Two: latent heat is used to overcome the attraction between particles, so the temperature stays constant during a change of state." },
+          { "speaker": "NEO", "text": "Three: to convert Celsius to kelvin, add 273." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Matter in Our Surroundings",
+    "topic_no": 5,
+    "name": "Change of State: Sublimation and Effect of Pressure",
+    "scenes": [
+      {
+        "animation": "Diwali cleaning. Zippy opens an old cupboard and finds the naphthalene balls placed last year have almost vanished, but no wet patch is anywhere. Zippy looks under the shelf with a torch.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The naphthalene balls shrank, but there's no puddle! Did someone steal them?" },
+          { "speaker": "NEO", "text": "No thief, Zippy. They turned straight from solid into vapour without becoming liquid." }
+        ]
+      },
+      {
+        "animation": "Activity built step by step: camphor is placed in a china dish with an inverted funnel on top, its stem plugged with cotton; the dish is heated gently. White vapours rise and deposit as solid crystals inside the funnel. Labels: 'Solid → Gas: Sublimation' and 'Gas → Solid: Deposition'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Heat some camphor in a china dish, covered with an inverted funnel. Camphor vapour rises and turns back into solid on the cool funnel walls." },
+          { "speaker": "NEO", "text": "A change of state directly from solid to gas without changing into liquid is called sublimation." },
+          { "speaker": "NEO", "text": "The direct change of gas to solid without changing into liquid is called deposition." },
+          { "speaker": "NEO", "text": "Camphor, naphthalene and ammonium chloride sublime." }
+        ]
+      },
+      {
+        "animation": "A cylinder of gas with a piston. As the piston is pushed down, the particles crowd closer; a cooling fan also blows on it, and the gas turns into liquid droplets. Caption: 'Pressure ↑ + Temperature ↓ → Gas can liquefy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Temperature is not the only thing that changes state. Pressure matters too." },
+          { "speaker": "NEO", "text": "If we apply pressure to a gas in a cylinder, its particles come closer. Applying pressure and reducing temperature can liquefy gases." },
+          { "speaker": "ZIPPY", "text": "Like squeezing a crowd into a Mumbai local train!" }
+        ]
+      },
+      {
+        "animation": "A cartoon block of solid carbon dioxide labelled 'Dry ice' sits in a cylinder under high pressure. The pressure gauge drops to '1 atm' and the block turns straight into swirling gas. A card shows '1 atm = 1.01 × 10⁵ Pa' and 'Atmospheric pressure at sea level = 1 atm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Solid carbon dioxide is stored under high pressure. When the pressure is decreased to one atmosphere, it changes directly into gas without becoming liquid." },
+          { "speaker": "NEO", "text": "That's why solid carbon dioxide is called dry ice." },
+          { "speaker": "NEO", "text": "Atmosphere is a unit of pressure. The SI unit is the pascal, and one atmosphere equals 1.01 into ten to the power five pascals. Atmospheric pressure at sea level is one atmosphere." }
+        ]
+      },
+      {
+        "animation": "A summary triangle builds: 'Solid', 'Liquid' and 'Gas' at the corners, with a new diagonal arrow between Solid and Gas labelled 'Sublimation' and 'Deposition'. A yellow 'EXAM TIP' reads: 'States of matter are interconvertible by changing temperature or pressure'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So states of matter are interconvertible. We can change the state of matter by changing temperature or pressure." },
+          { "speaker": "NEO", "text": "Exam tip: in a question on dry ice, mention both high pressure and the direct change from solid to gas. Many students forget the pressure part." }
+        ]
+      },
+      {
+        "animation": "Recap board with a naphthalene ball icon. Points appear: '1. Sublimation: solid → gas directly; deposition: gas → solid', '2. Pressure + cooling can liquefy gases', '3. Dry ice: solid CO2 turns to gas at 1 atm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: sublimation is solid to gas directly, and deposition is gas to solid directly." },
+          { "speaker": "NEO", "text": "Two: applying pressure and reducing temperature can liquefy gases." },
+          { "speaker": "NEO", "text": "Three: dry ice is solid carbon dioxide that changes directly into gas when pressure drops to one atmosphere." },
+          { "speaker": "ZIPPY", "text": "Case closed. The naphthalene thief was sublimation!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Matter in Our Surroundings",
+    "topic_no": 6,
+    "name": "Evaporation and Factors Affecting It",
+    "scenes": [
+      {
+        "animation": "A rooftop in the morning. Zippy spreads a school uniform on the clothesline, then wanders off. By afternoon the uniform is dry; no pan, no stove, no boiling anywhere. Zippy scratches its head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Nobody boiled my uniform. How did the water leave?" },
+          { "speaker": "NEO", "text": "It evaporated. Water can change into vapour well below its boiling point." }
+        ]
+      },
+      {
+        "animation": "Zoom into the wet cloth: water particles at the surface jiggle; a few with extra-glowing energy break free and float into the air, while those deeper inside stay. Label: 'Evaporation: liquid → vapour below boiling point; a surface phenomenon'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Particles of a liquid have different amounts of kinetic energy. At the surface, some particles have enough energy to break away from the attraction of other particles." },
+          { "speaker": "NEO", "text": "This change of a liquid into vapour at any temperature below its boiling point is called evaporation." },
+          { "speaker": "NEO", "text": "It is a surface phenomenon, because only the surface particles escape." }
+        ]
+      },
+      {
+        "animation": "Factor 1, surface area: 5 mL of water in a test tube, a china dish and a wide plate. After an hour the plate is nearly dry. Factor 2, temperature: the same plate in sunlight dries faster than in shade. Icons of a spread-out saree drying quickly appear.",
+        "lines": [
+          { "speaker": "NEO", "text": "Four factors change the rate of evaporation. One: surface area. Evaporation increases with an increase in surface area. That's why we spread clothes out to dry." },
+          { "speaker": "NEO", "text": "Two: temperature. With an increase in temperature, more particles get enough kinetic energy to escape." }
+        ]
+      },
+      {
+        "animation": "Factor 3, humidity: a muggy monsoon day with a humidity meter reading high, and clothes drip slowly. Factor 4, wind speed: a ceiling fan turns and the clothes flap and dry quickly. Labels: 'Humidity ↑ → Evaporation ↓', 'Wind speed ↑ → Evaporation ↑'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Three: humidity, the amount of water vapour present in air. When air already holds a lot of water vapour, the rate of evaporation decreases." },
+          { "speaker": "ZIPPY", "text": "So that's why my clothes never dry in the monsoon!" },
+          { "speaker": "NEO", "text": "Exactly. Four: wind speed. Wind carries water vapour away, so evaporation increases with wind speed." }
+        ]
+      },
+      {
+        "animation": "A comparison card builds: 'Evaporation: below boiling point, surface only, slow' versus 'Boiling: at boiling point, whole liquid (bulk), fast'. A 'BOARD TIP' sticker points to 'surface phenomenon' vs 'bulk phenomenon'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Remember the difference. Boiling is a bulk phenomenon that happens at a fixed temperature. Evaporation happens at the surface, at any temperature below the boiling point." },
+          { "speaker": "NEO", "text": "Exam tip: when asked to list factors affecting evaporation, write all four with an arrow showing increase or decrease. Humidity is the one that works in reverse." }
+        ]
+      },
+      {
+        "animation": "Recap board with a drying uniform icon. Points appear: '1. Evaporation: liquid → vapour below boiling point', '2. It is a surface phenomenon', '3. Factors: surface area ↑, temperature ↑, wind ↑ increase it; humidity ↑ decreases it'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: evaporation is the change of liquid into vapour below its boiling point." },
+          { "speaker": "NEO", "text": "Two: it is a surface phenomenon." },
+          { "speaker": "NEO", "text": "Three: larger surface area, higher temperature and faster wind increase evaporation, while higher humidity decreases it." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Matter in Our Surroundings",
+    "topic_no": 7,
+    "name": "How Evaporation Causes Cooling",
+    "scenes": [
+      {
+        "animation": "A hot May afternoon in a village courtyard. A clay matka sits in the shade, sweating tiny drops. Zippy pours water from it into a steel glass, gulps it and shivers happily.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "No fridge, no ice, and this matka water is cold! Is the pot magic?" },
+          { "speaker": "NEO", "text": "No magic. The matka uses evaporation to cool the water." }
+        ]
+      },
+      {
+        "animation": "Zoom into the matka wall: tiny pores let water seep to the outer surface. Energetic particles take heat from the pot and escape as vapour; the remaining water inside turns bluer and a thermometer drops. Label: 'Evaporating particles take away latent heat of vaporisation from surroundings'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In an open vessel, a liquid keeps evaporating. The particles absorb energy from the surroundings to regain the energy lost during evaporation." },
+          { "speaker": "NEO", "text": "This absorption of energy from the surroundings makes them cold." },
+          { "speaker": "NEO", "text": "Water seeps through the pores of the earthen pot and evaporates, taking heat from the water inside. So evaporation causes cooling." }
+        ]
+      },
+      {
+        "animation": "Zippy puts a drop of acetone (nail polish remover) on its palm; a cold blue ring glows on the hand as the drop disappears. Label: 'Acetone takes energy from palm → palm feels cool'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Put some acetone, or nail polish remover, on your palm." },
+          { "speaker": "ZIPPY", "text": "Ooh, my hand feels cold!" },
+          { "speaker": "NEO", "text": "The acetone particles gain energy from your palm and evaporate, so your palm feels cool." }
+        ]
+      },
+      {
+        "animation": "Montage: people sprinkle water on a hot rooftop in summer; a boy in a cotton T-shirt sweats and the sweat dries in a breeze, while a friend in a synthetic shirt looks uncomfortable. Labels: 'Sprinkling water on roof' and 'Cotton absorbs sweat → more evaporation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "After a hot sunny day, people sprinkle water on the roof or open ground. The large latent heat of vaporisation of water helps cool the hot surface." },
+          { "speaker": "NEO", "text": "In summer we wear cotton clothes. Cotton is a good absorber of water, so it absorbs our sweat and exposes it to the atmosphere for easy evaporation." },
+          { "speaker": "NEO", "text": "Our body loses heat as sweat evaporates, and we feel cool." }
+        ]
+      },
+      {
+        "animation": "A glass of ice-cold water on a table; drops form on its outer surface. Zippy wipes them and they return. Arrows show water vapour from the air hitting the cold glass and condensing. An 'EXAM TIP' sticker: 'Drops come from air, not from inside the glass'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "And why does a glass of ice water get wet on the outside? Is it leaking?" },
+          { "speaker": "NEO", "text": "No. Water vapour in the air loses energy on the cold glass and condenses into liquid drops." },
+          { "speaker": "NEO", "text": "Exam tip: in this question, write clearly that the water comes from the air around the glass, not from inside it." }
+        ]
+      },
+      {
+        "animation": "Recap board with a matka icon. Points appear: '1. Evaporation takes energy from surroundings → cooling', '2. Examples: matka, acetone on palm, sprinkling water on roof', '3. Cotton clothes absorb sweat and help evaporation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: evaporating particles take energy from the surroundings, which causes cooling." },
+          { "speaker": "NEO", "text": "Two: the earthen matka, acetone on the palm and water sprinkled on a hot roof all use this." },
+          { "speaker": "NEO", "text": "Three: cotton clothes absorb sweat and let it evaporate, keeping us cool in summer." },
+          { "speaker": "ZIPPY", "text": "Matka, one. Fridge, zero!" }
+        ]
+      }
+    ]
+  }
+]

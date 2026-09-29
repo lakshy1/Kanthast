@@ -1,0 +1,442 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "Grammar",
+    "topic_no": 1,
+    "name": "Determiners",
+    "scenes": [
+      {
+        "animation": "A kirana shop counter. Zippy bounces up and shouts 'Give me biscuit packet!' The shopkeeper holds up one packet, then a whole carton, then an empty hand, with a giant question mark above his head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Give me biscuit packet! Why is he just staring at me?" },
+          { "speaker": "NEO", "text": "Because he doesn't know which packet, or how many. You forgot your determiner." }
+        ]
+      },
+      {
+        "animation": "The noun 'packet' sits on a shelf. Word-badges hop in front of it one by one: 'a', 'the', 'this', 'my', 'two', 'some'. Each time, a spotlight narrows onto the matching packet. Title: 'Determiner = a word before a noun that fixes its meaning'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A determiner comes before a noun and tells us which one, whose, or how much." },
+          { "speaker": "NEO", "text": "There are articles like a, an and the. Demonstratives like this, that, these and those. Possessives like my, your and their. And numbers and quantifiers like two, some, any, many and much." }
+        ]
+      },
+      {
+        "animation": "Two items glow: 'an hour' with a clock and 'a university' with a campus gate. Sound-waves come out of the words, highlighting the first SOUND, not the first letter: 'aw-' (vowel sound) and 'yoo-' (consonant sound).",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Easy. A before consonants, an before vowels. So, an university!" },
+          { "speaker": "NEO", "text": "Careful. The rule follows the sound, not the spelling. University begins with a yoo sound, so it is a university." },
+          { "speaker": "NEO", "text": "Hour begins with a vowel sound because the h is silent, so it is an hour." }
+        ]
+      },
+      {
+        "animation": "Two jars: one of countable marbles labelled 'many / few / a few', one of chai pouring from a kettle labelled 'much / little / a little'. Zippy tries to count the chai drop by drop and gets splashed.",
+        "lines": [
+          { "speaker": "NEO", "text": "Many and few go with things you can count, like marbles. Much and little go with things you cannot count, like chai." },
+          { "speaker": "NEO", "text": "And watch the tiny word a. A few and a little mean some, so they sound hopeful. Few and little mean hardly any, so they sound negative." },
+          { "speaker": "ZIPPY", "text": "So, I have a little money means I can still buy biscuits!" }
+        ]
+      },
+      {
+        "animation": "A practice card slides in: 'There are ____ students in the library today; it is almost empty. (a) a few (b) few (c) little (d) much'. Option '(b) few' glows green. A sticker reads 'EXAM TIP: countable or uncountable? positive or negative?'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try this. There are blank students in the library today; it is almost empty." },
+          { "speaker": "ZIPPY", "text": "Students can be counted, and almost empty is negative. So, few!" },
+          { "speaker": "NEO", "text": "Right. Exam tip: in a gap-filling question, first ask whether the noun is countable, then whether the sense is positive or negative." }
+        ]
+      },
+      {
+        "animation": "Recap board with a biscuit-packet mascot. Points pop up: '1. Determiners fix a noun: which, whose, how much', '2. a / an depend on the first sound', '3. a few / a little = some; few / little = hardly any'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: determiners come before a noun and tell which, whose or how much." },
+          { "speaker": "NEO", "text": "Two: choose a or an by the first sound, not the first letter." },
+          { "speaker": "NEO", "text": "Three: a few and a little are positive; few and little mean hardly any." },
+          { "speaker": "ZIPPY", "text": "Uncle, two packets of biscuits and a little patience, please!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Grammar",
+    "topic_no": 2,
+    "name": "Tenses",
+    "scenes": [
+      {
+        "animation": "Zippy stands in front of three doors labelled PAST, PRESENT and FUTURE, each with a clock above it. He runs into the wrong door and bounces back with a cartoon 'boing'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Yesterday I will play cricket. Why is everyone laughing?" },
+          { "speaker": "NEO", "text": "Because your verb is in the future and your time word is in the past. Let's fix your tenses." }
+        ]
+      },
+      {
+        "animation": "A 3 by 4 grid builds up tile by tile: rows Past, Present, Future; columns Simple, Continuous, Perfect, Perfect Continuous. Each tile shows a verb form of 'play', for example 'plays', 'is playing', 'has played', 'has been playing'.",
+        "lines": [
+          { "speaker": "NEO", "text": "English has three times: past, present and future. Each has four forms: simple, continuous, perfect and perfect continuous." },
+          { "speaker": "NEO", "text": "That gives twelve tenses. For example: she plays, she is playing, she has played, she has been playing." }
+        ]
+      },
+      {
+        "animation": "A monsoon street. A timeline arrow runs across; a dot marks a finished action with a tick ('I lost my umbrella yesterday'), and a bracket reaches up to 'now' for 'I have lost my umbrella'. Zippy stands soaked under the 'now' marker.",
+        "lines": [
+          { "speaker": "NEO", "text": "The trickiest pair is simple past and present perfect. Simple past is for a finished time: I lost my umbrella yesterday." },
+          { "speaker": "NEO", "text": "Present perfect links the past to now: I have lost my umbrella, so I am wet." },
+          { "speaker": "ZIPPY", "text": "So I can't say I have lost it yesterday?" },
+          { "speaker": "NEO", "text": "Correct. A finished time word like yesterday or last year needs the simple past." }
+        ]
+      },
+      {
+        "animation": "A 'sequence of tenses' see-saw: a main clause in the past ('He said that...') pushes the reporting side down, and the second clause slides into the past too ('...he was tired'). Labels: 'Past main verb, past in the clause'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Also remember the sequence of tenses. If the main verb is in the past, the verb in the clause usually goes into the past too." },
+          { "speaker": "NEO", "text": "She knew that the train was late. Not, she knew that the train is late." },
+          { "speaker": "NEO", "text": "One exception: universal truths stay in the present. The teacher said that the earth goes round the sun." }
+        ]
+      },
+      {
+        "animation": "An editing strip slides in: 'Mohan has visited Shimla last summer.' The word 'has visited' flashes red and is swapped for 'visited'. A sticker: 'EXAM TIP: look for time markers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Spot the error. Mohan has visited Shimla last summer." },
+          { "speaker": "ZIPPY", "text": "Last summer is finished time, so, Mohan visited Shimla last summer!" },
+          { "speaker": "NEO", "text": "Exactly. Exam tip: underline time markers like since, for, already, yesterday and tomorrow. They tell you which tense the blank needs." }
+        ]
+      },
+      {
+        "animation": "Recap board with the three clock doors. Points appear: '1. 3 times x 4 forms = 12 tenses', '2. Finished time: simple past; link to now: present perfect', '3. Past main verb: past in the clause (except universal truths)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: three times and four forms make twelve tenses." },
+          { "speaker": "NEO", "text": "Two: use the simple past with a finished time, and the present perfect when the past connects to now." },
+          { "speaker": "NEO", "text": "Three: a past main verb usually pulls the next clause into the past, except for universal truths." },
+          { "speaker": "ZIPPY", "text": "Yesterday I played cricket. Tomorrow I will play again!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Grammar",
+    "topic_no": 3,
+    "name": "Modals",
+    "scenes": [
+      {
+        "animation": "A school corridor. Zippy barges into the staffroom shouting 'I will go to the canteen!' A teacher's eyebrow rises like a drawbridge. Neo gently pulls Zippy back by his spark tail.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I told the teacher, I will go to the canteen. Why did she look so shocked?" },
+          { "speaker": "NEO", "text": "Because you announced it instead of asking. One small modal would have saved you: may I go to the canteen?" }
+        ]
+      },
+      {
+        "animation": "A toolbox opens; each tool is a modal with a label: 'can / could = ability', 'may / might = permission, possibility', 'must = necessity', 'should / ought to = advice, duty', 'will / would = future, requests'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Modals are helping verbs that add a mood to the main verb. Ability, permission, possibility, duty or advice." },
+          { "speaker": "NEO", "text": "Can and could show ability. May and might show permission or possibility. Must shows necessity. Should and ought to give advice or duty. Will and would talk about the future and polite requests." }
+        ]
+      },
+      {
+        "animation": "Three weather clouds with rising certainty bars: 'It might rain' (low), 'It may rain' (medium), 'It must be raining, everyone has umbrellas' (high). Drops fall harder with each.",
+        "lines": [
+          { "speaker": "NEO", "text": "Modals also show how sure we are. It might rain is a small chance. It may rain is a fair chance." },
+          { "speaker": "NEO", "text": "It must be raining, because everyone has umbrellas, is a strong guess based on evidence." },
+          { "speaker": "ZIPPY", "text": "So must is not always an order?" },
+          { "speaker": "NEO", "text": "Right. It can be a strong conclusion too." }
+        ]
+      },
+      {
+        "animation": "A rule card flips: 'Modal + base form of verb'. Wrong versions 'He can swims' and 'She must to go' are struck out with a red pen; the right forms 'He can swim', 'She must go' glow green.",
+        "lines": [
+          { "speaker": "NEO", "text": "Grammar rule: a modal is always followed by the base form of the verb. He can swim, not he can swims." },
+          { "speaker": "NEO", "text": "And no to after most modals. She must go, not she must to go. Ought to is the special one that keeps its to." }
+        ]
+      },
+      {
+        "animation": "A practice card: 'You ____ wear a helmet while riding a scooter. It is the law. (a) might (b) could (c) must (d) may'. '(c) must' glows. A sticker: 'EXAM TIP: read the clue sentence'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try one. You blank wear a helmet while riding a scooter. It is the law." },
+          { "speaker": "ZIPPY", "text": "It is the law, so it's necessary. Must!" },
+          { "speaker": "NEO", "text": "Correct. Exam tip: the sentence after the blank usually hints at the mood. Law means necessity; a suggestion means should." }
+        ]
+      },
+      {
+        "animation": "Recap board with the modal toolbox. Points appear: '1. Modals add ability, permission, possibility, duty, advice', '2. might < may < must for certainty', '3. Modal + base verb (ought to keeps to)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: modals add a mood like ability, permission, possibility, duty or advice." },
+          { "speaker": "NEO", "text": "Two: might, may and must show rising certainty." },
+          { "speaker": "NEO", "text": "Three: a modal takes the base form of the verb, and only ought to keeps its to." },
+          { "speaker": "ZIPPY", "text": "Ma'am, may I go to the canteen? I must have a samosa." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Grammar",
+    "topic_no": 4,
+    "name": "Subject-Verb Concord",
+    "scenes": [
+      {
+        "animation": "A dance stage. A subject character and a verb character try to dance together but keep stepping on each other's feet; a banner reads 'The boys plays football'. The audience winces.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The boys plays football. Why does that sound so wrong?" },
+          { "speaker": "NEO", "text": "Because your subject and verb are out of step. They must agree in number." }
+        ]
+      },
+      {
+        "animation": "Two dance pairs: 'The boy' with 'plays' (singular badge), 'The boys' with 'play' (plural badge). They waltz in perfect rhythm. A rule banner: 'Singular subject + singular verb; plural subject + plural verb'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The basic rule: a singular subject takes a singular verb, and a plural subject takes a plural verb." },
+          { "speaker": "NEO", "text": "The boy plays. The boys play. Notice the funny part: in the present tense, the singular verb often ends in s." }
+        ]
+      },
+      {
+        "animation": "A long sentence train: 'The box' (engine) then 'of mangoes' (carriage) then 'is / are ?'. A spotlight skips over the carriage and lands on the engine 'box', and 'is' snaps into place.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now the traps. The box of mangoes is on the table. The verb agrees with box, not with mangoes." },
+          { "speaker": "NEO", "text": "Ignore the phrase in the middle. Find the real subject first." },
+          { "speaker": "ZIPPY", "text": "So the phrase with of is just a passenger?" },
+          { "speaker": "NEO", "text": "Exactly. Same with along with and as well as. The teacher, along with her students, is coming." }
+        ]
+      },
+      {
+        "animation": "Quick-fire cards flip: 'Each / Every / Everyone + singular verb', 'Neither Ram nor his friends ARE (verb agrees with nearer subject)', 'Mathematics IS my favourite subject'. Each card lands with a ding.",
+        "lines": [
+          { "speaker": "NEO", "text": "Words like each, every, everyone and nobody take a singular verb. Each of the girls has a bag." },
+          { "speaker": "NEO", "text": "With either or and neither nor, the verb agrees with the nearer subject. Neither Ram nor his friends are here." },
+          { "speaker": "NEO", "text": "And subjects like mathematics or news look plural but take a singular verb." }
+        ]
+      },
+      {
+        "animation": "An editing strip: 'One of my friends live in Pune.' The word 'live' blinks red and flips to 'lives'. A sticker: 'EXAM TIP: One of + plural noun + singular verb'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Spot the error. One of my friends live in Pune." },
+          { "speaker": "ZIPPY", "text": "The real subject is one, so it's one of my friends lives in Pune!" },
+          { "speaker": "NEO", "text": "Correct. Exam tip: this one of pattern appears in editing tasks again and again." }
+        ]
+      },
+      {
+        "animation": "Recap board with the dancing pair taking a bow. Points appear: '1. Subject and verb agree in number', '2. Skip middle phrases (of, along with, as well as)', '3. each/every: singular; either-or, neither-nor: nearer subject'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the subject and verb must agree in number." },
+          { "speaker": "NEO", "text": "Two: skip the phrases in the middle and find the real subject." },
+          { "speaker": "NEO", "text": "Three: each and every take singular verbs, and with neither nor the verb follows the nearer subject." },
+          { "speaker": "ZIPPY", "text": "The boys play football. And now the dancers finally agree!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Grammar",
+    "topic_no": 5,
+    "name": "Reported Speech: Commands and Requests",
+    "scenes": [
+      {
+        "animation": "Zippy's mother, a big warm spark, points at a messy room with the speech bubble 'Clean your room!'. Later, Zippy relays it to Neo; the speech bubble flies over to become a report card reading 'Mom told me to clean my room.'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Mom said, clean your room! How do I tell you that without shouting?" },
+          { "speaker": "NEO", "text": "You report it. In reported speech, commands and requests turn into to plus a verb." }
+        ]
+      },
+      {
+        "animation": "A conversion machine. Input: 'The teacher said to us, \"Sit down.\"' Gears turn; 'said to' changes to 'ordered', the quotation marks vanish, and 'to sit' appears. Output: 'The teacher ordered us to sit down.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Step one: change said to into a reporting verb that shows the mood, like ordered, told, advised, requested or begged." },
+          { "speaker": "NEO", "text": "Step two: remove the quotation marks and put to before the verb. The teacher said to us, sit down, becomes the teacher ordered us to sit down." }
+        ]
+      },
+      {
+        "animation": "A 'please' flower pops out of a sentence: 'Riya said to her brother, \"Please help me.\"' The flower is plucked and turns into the verb 'requested'. Output: 'Riya requested her brother to help her.'",
+        "lines": [
+          { "speaker": "NEO", "text": "For requests, the word please disappears, and the reporting verb requested carries the politeness." },
+          { "speaker": "NEO", "text": "Riya said to her brother, please help me, becomes Riya requested her brother to help her." },
+          { "speaker": "ZIPPY", "text": "And me turns into her, because Riya is not the one talking now." }
+        ]
+      },
+      {
+        "animation": "A red 'Don't' sign on a door: 'The guard said, \"Don't touch the painting.\"' The 'Don't' block slides and splits into 'not to'. Output: 'The guard told us not to touch the painting.'",
+        "lines": [
+          { "speaker": "NEO", "text": "For negative commands, do not becomes not to. The guard said, don't touch the painting, becomes the guard told us not to touch the painting." },
+          { "speaker": "ZIPPY", "text": "Can I write to not touch?" },
+          { "speaker": "NEO", "text": "No. It is always not to, in that order." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'The doctor said to the patient, \"Take rest for two days.\"' Answer builds: 'The doctor advised the patient to take rest for two days.' Sticker: 'EXAM TIP: choose a reporting verb that matches the tone'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try this. The doctor said to the patient, take rest for two days." },
+          { "speaker": "ZIPPY", "text": "A doctor gives advice. So, the doctor advised the patient to take rest for two days." },
+          { "speaker": "NEO", "text": "Perfect. Exam tip: marks often go for choosing the right reporting verb, so match the tone of the speaker." }
+        ]
+      },
+      {
+        "animation": "Recap board with Zippy's tidy room. Points appear: '1. said to becomes ordered / requested / advised', '2. Command: to + verb; negative: not to + verb', '3. Drop please; change pronouns'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: replace said to with a reporting verb like ordered, requested or advised." },
+          { "speaker": "NEO", "text": "Two: use to plus verb, or not to plus verb for negatives." },
+          { "speaker": "NEO", "text": "Three: drop please, and change the pronouns to fit the new speaker." },
+          { "speaker": "ZIPPY", "text": "Mom requested me to clean my room. I requested her to wait until tomorrow." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Grammar",
+    "topic_no": 6,
+    "name": "Reported Speech: Statements",
+    "scenes": [
+      {
+        "animation": "A cricket commentary box. The captain says into a mic 'I am feeling confident today.' Next day, a newspaper headline reads 'The captain said that he was feeling confident that day.' Zippy squints at the changes.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The captain said I am confident today. The newspaper changed half the words! Is that fake news?" },
+          { "speaker": "NEO", "text": "No, that is reported speech. Statements change their tense, pronouns and time words when we report them later." }
+        ]
+      },
+      {
+        "animation": "A tense ladder: each rung steps one step back into the past: 'is / am / are -> was / were', 'play -> played', 'is playing -> was playing', 'has played -> had played', 'will -> would', 'can -> could'.",
+        "lines": [
+          { "speaker": "NEO", "text": "If the reporting verb is in the past, like said, the tense moves one step back." },
+          { "speaker": "NEO", "text": "Is becomes was. Plays becomes played. Is playing becomes was playing. Has played becomes had played. Will becomes would, and can becomes could." }
+        ]
+      },
+      {
+        "animation": "Time and place words swap on flip cards: 'now -> then', 'today -> that day', 'tomorrow -> the next day', 'yesterday -> the previous day', 'here -> there', 'this -> that'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Time and place words shift too. Now becomes then. Today becomes that day. Tomorrow becomes the next day. Here becomes there." },
+          { "speaker": "ZIPPY", "text": "Because by the time we report it, today is already over?" },
+          { "speaker": "NEO", "text": "Exactly. We are standing at a different time and place." }
+        ]
+      },
+      {
+        "animation": "Two conversion belts. Belt one: 'Aman says, \"I like mangoes.\"' -> 'Aman says that he likes mangoes.' (tense stays; label 'present reporting verb'). Belt two: 'The teacher said, \"The sun rises in the east.\"' -> tense stays; label 'universal truth'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two exceptions. If the reporting verb is in the present, like says, the tense does not change. Aman says that he likes mangoes." },
+          { "speaker": "NEO", "text": "And universal truths keep their present tense. The teacher said that the sun rises in the east." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Priya said, \"I will finish my project tomorrow.\"' The answer builds word by word: 'Priya said that she would finish her project the next day.' A sticker: 'EXAM TIP: check all three changes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try one. Priya said, I will finish my project tomorrow." },
+          { "speaker": "ZIPPY", "text": "Priya said that she would finish her project the next day!" },
+          { "speaker": "NEO", "text": "Excellent. Exam tip: check three things every time: the pronoun, the tense and the time word. Students often fix two and forget one." }
+        ]
+      },
+      {
+        "animation": "Recap board with the commentary mic. Points appear: '1. Past reporting verb: tense steps back', '2. Change pronouns, time and place words', '3. No change for says or universal truths'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: with a past reporting verb, the tense steps one stage back." },
+          { "speaker": "NEO", "text": "Two: change the pronouns, and the time and place words." },
+          { "speaker": "NEO", "text": "Three: with says, or with a universal truth, the tense stays the same." },
+          { "speaker": "ZIPPY", "text": "Zippy said that he had finally understood reported speech." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Grammar",
+    "topic_no": 7,
+    "name": "Reported Speech: Questions",
+    "scenes": [
+      {
+        "animation": "A railway enquiry counter. A passenger asks 'When does the Rajdhani leave?' The clerk writes in a notebook 'He asked when the Rajdhani left.' The question mark on the page wobbles and falls off.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Where did the question mark go? Did the clerk lose it?" },
+          { "speaker": "NEO", "text": "No. A reported question is no longer a question. It becomes a statement, so the question mark goes away." }
+        ]
+      },
+      {
+        "animation": "A sorting hat splits questions into two bins: 'Yes / No questions' (Are you ready? Did you eat?) and 'Wh- questions' (Where, What, Why, How). The first bin gets a big 'if / whether' label.",
+        "lines": [
+          { "speaker": "NEO", "text": "There are two kinds of questions. Yes or no questions start with a helping verb, like are, is, did or can." },
+          { "speaker": "NEO", "text": "Wh questions start with words like what, where, why and how." },
+          { "speaker": "NEO", "text": "For yes or no questions, we join with if or whether. For wh questions, the wh word itself is the joiner." }
+        ]
+      },
+      {
+        "animation": "A conversion machine: 'Rahul said to me, \"Are you coming to the match?\"' Gears turn: 'said to' becomes 'asked', 'if' drops in, the word order flips from 'are you' to 'I was'. Output: 'Rahul asked me if I was coming to the match.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Rahul said to me, are you coming to the match? Change said to into asked, add if, and flip the word order to a statement." },
+          { "speaker": "NEO", "text": "Rahul asked me if I was coming to the match." },
+          { "speaker": "ZIPPY", "text": "Are you became I was. Pronoun, tense and word order all changed!" }
+        ]
+      },
+      {
+        "animation": "A second machine: 'The teacher said to Anu, \"Why are you late?\"' The word order unscrambles: 'why you were late'. Output: 'The teacher asked Anu why she was late.' The wrong version 'why was she late' is crossed out.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now a wh question. The teacher said to Anu, why are you late?" },
+          { "speaker": "NEO", "text": "The teacher asked Anu why she was late. Not, why was she late. The subject comes before the verb." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Mother said, \"Did you eat your lunch?\"' Zippy's answer 'Mother asked if did I eat...' flashes red; the correct answer builds: 'Mother asked me if I had eaten my lunch.' Sticker: 'EXAM TIP: did disappears'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Mother asked me if did I eat my lunch?" },
+          { "speaker": "NEO", "text": "Close, but the helping verb did disappears, and the past moves one step back. Mother asked me if I had eaten my lunch." },
+          { "speaker": "NEO", "text": "Exam tip: never keep the question word order in reported speech. That is the most common mistake in this topic." }
+        ]
+      },
+      {
+        "animation": "Recap board with the railway clerk's notebook. Points appear: '1. said to -> asked / enquired; no question mark', '2. Yes/No: if or whether; Wh-: keep the wh-word', '3. Statement word order: subject before verb'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: said to becomes asked, and the question mark disappears." },
+          { "speaker": "NEO", "text": "Two: yes or no questions use if or whether; wh questions keep the wh word." },
+          { "speaker": "NEO", "text": "Three: use statement word order, with the subject before the verb." },
+          { "speaker": "ZIPPY", "text": "I asked Neo whether we could take a break. He said no." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Grammar",
+    "topic_no": 8,
+    "name": "Gap Filling, Editing and Transformation",
+    "scenes": [
+      {
+        "animation": "An exam hall. A question paper flips open to 'Section B: Grammar'. Three doors light up: 'Gap Filling', 'Editing', 'Transformation'. Zippy panics and tries to run through all three at once.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Three different question types? I only learnt the rules!" },
+          { "speaker": "NEO", "text": "Relax. The rules are the same. Only the way they test you changes. Your syllabus asks you to attempt ten questions out of twelve." }
+        ]
+      },
+      {
+        "animation": "A sentence with a hole: 'She ____ (write) a letter when the lights went out.' A magnifying glass highlights 'went out' (past). The gap fills with 'was writing'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Gap filling first. Read the whole sentence before you fill the blank. The clue is usually somewhere else in the sentence." },
+          { "speaker": "NEO", "text": "Here, went out is past and the action was in progress, so the answer is was writing." }
+        ]
+      },
+      {
+        "animation": "A line of text with a red pen hovering: 'Each of the players have a new bat.' The pen circles 'have', and a two-column answer table appears: 'Error: have | Correction: has'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Editing next. There is one error in a line, and you must write the error and its correction." },
+          { "speaker": "ZIPPY", "text": "Each of the players have a new bat. Each takes a singular verb, so have becomes has!" },
+          { "speaker": "NEO", "text": "Right. Look for the usual suspects: agreement, tense, determiners, modals and prepositions." }
+        ]
+      },
+      {
+        "animation": "A transformation press. A direct speech sentence goes in: 'He said, \"I am tired.\"' The press squeezes it and out comes 'He said that he was tired.' A label: 'Same meaning, new form'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Transformation means rewriting a sentence in another form while keeping its meaning. Often it is direct to reported speech." },
+          { "speaker": "NEO", "text": "He said, I am tired, becomes he said that he was tired. The meaning stays; the form changes." }
+        ]
+      },
+      {
+        "animation": "A checklist board ticks off one by one: 'Read the full sentence', 'Find the clue word', 'Write only the answer asked', 'Check spelling and punctuation'. A 'EXAM TIP' stamp thumps down.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: CBSE checks accurate spelling, punctuation and grammar. A correct word with a spelling mistake can lose the mark." },
+          { "speaker": "NEO", "text": "And write only what is asked. In editing, give the error and the correction, not the whole paragraph." },
+          { "speaker": "ZIPPY", "text": "So neat answers are happy answers." }
+        ]
+      },
+      {
+        "animation": "Recap board with the three doors now wide open. Points appear: '1. Gap filling: find the clue first', '2. Editing: write error + correction', '3. Transformation: new form, same meaning'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in gap filling, read the full sentence and find the clue first." },
+          { "speaker": "NEO", "text": "Two: in editing, write the error and its correction." },
+          { "speaker": "NEO", "text": "Three: in transformation, change the form but keep the meaning." },
+          { "speaker": "ZIPPY", "text": "Three doors, one set of rules. I've got the master key!" }
+        ]
+      }
+    ]
+  }
+]

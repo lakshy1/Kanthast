@@ -1,0 +1,207 @@
+[
+  {
+    "chapter_no": 12,
+    "chapter": "Political Science: What is Democracy? Why Democracy?",
+    "topic_no": 1,
+    "name": "What Is Democracy? Who Takes the Final Decisions?",
+    "scenes": [
+      {
+        "animation": "A school class election. Zippy wins the vote for class monitor and gets a shiny badge. Then the principal walks in, takes the badge, and says every decision will still be made by the principal's office. Zippy's badge droops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I won the election! But I can't decide anything? Then what was the vote for?" },
+          { "speaker": "NEO", "text": "Great question. That's exactly how we test whether a country is really a democracy." }
+        ]
+      },
+      {
+        "animation": "A dictionary page opens; the word 'Democracy' glows, with its Greek roots 'Demos = people' and 'Kratia = rule'. A simple definition box appears: 'A form of government in which the rulers are elected by the people'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The word democracy comes from a Greek word, demokratia. Demos means people, and kratia means rule. So democracy is rule by the people." },
+          { "speaker": "NEO", "text": "We start with a simple definition. Democracy is a form of government in which the rulers are elected by the people." },
+          { "speaker": "NEO", "text": "But this simple definition isn't enough. Many governments hold elections. We need to look closer." }
+        ]
+      },
+      {
+        "animation": "A timeline card: 'Pakistan, October 1999'. Tanks roll up; a general with a cap labelled 'General Pervez Musharraf' takes the chair and changes his name tag to 'Chief Executive', then 'President'. A ballot box labelled '2002 referendum' stretches his term by '5 years'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In October 1999, General Pervez Musharraf led a military coup in Pakistan. He overthrew a democratically elected government and declared himself the Chief Executive of the country." },
+          { "speaker": "NEO", "text": "Later he changed his designation to President, and in 2002 held a referendum that granted him a five-year extension." },
+          { "speaker": "NEO", "text": "Through a Legal Framework Order, he could dismiss the national and provincial assemblies. Elections were held, but the final powers rested with military officers and the General himself." }
+        ]
+      },
+      {
+        "animation": "A puppet show: elected representatives on stage move their mouths, but strings above them lead up to a hand in a military glove. A red stamp: 'NOT A DEMOCRACY'. Then a new rule card appears: 'Feature 1: Major decisions by elected leaders'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But Pakistan had elections. Why isn't that democracy?" },
+          { "speaker": "NEO", "text": "Because the elected representatives were not really the rulers. The final decision-making power was with the army." },
+          { "speaker": "NEO", "text": "So the first feature of a democracy is that the final decision-making power must rest with those elected by the people." },
+          { "speaker": "NEO", "text": "Exam tip: when an example country is given, always ask who takes the final decisions. That one question solves many case-based answers." }
+        ]
+      },
+      {
+        "animation": "Recap board with a ballot box and a question mark. Points appear: '1. Democracy: Demos (people) + Kratia (rule)', '2. Pakistan under Musharraf: elections held, but final power with the army', '3. Feature 1: major decisions by elected leaders'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: democracy means rule by the people, and at its simplest, rulers are elected by the people." },
+          { "speaker": "NEO", "text": "Two: in Pakistan under General Musharraf, elections were held, but real power stayed with the military." },
+          { "speaker": "NEO", "text": "Three: in a democracy, the final decisions must be taken by those elected by the people." },
+          { "speaker": "ZIPPY", "text": "So I want my badge back, with real powers." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Political Science: What is Democracy? Why Democracy?",
+    "topic_no": 2,
+    "name": "Free and Fair Elections and One Person, One Vote",
+    "scenes": [
+      {
+        "animation": "A canteen election for 'Best Samosa'. The ballot has only one option: 'Samosa by the Canteen Uncle'. Zippy looks for a second option and flips the paper over and over.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "There's only one choice on this ballot. How is this a vote?" },
+          { "speaker": "NEO", "text": "It isn't a real one. An election needs real choice. Let's see two countries where that was missing." }
+        ]
+      },
+      {
+        "animation": "A map card 'China': a ballot box labelled 'National People's Congress — every 5 years'. The candidates' list shows only red badges: 'Chinese Communist Party' and 'eight smaller parties allied to it'. Then a card 'Mexico': a ballot box labelled 'President — every 6 years', with the same party logo 'PRI' winning every time until '2000'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In China, elections are regularly held every five years for electing the country's parliament, the National People's Congress. But only members of the Chinese Communist Party, or eight smaller parties allied to it, are allowed to contest. The government is always formed by the Communist Party." },
+          { "speaker": "NEO", "text": "Mexico holds elections every six years to elect its President. But until 2000, every election was won by a party called the PRI, or Institutional Revolutionary Party." },
+          { "speaker": "NEO", "text": "The PRI used many dirty tricks to win elections. Opposition parties did contest, but never stood a chance." }
+        ]
+      },
+      {
+        "animation": "A new rule card appears: 'Feature 2: Free and fair electoral competition'. A see-saw shows ruling party and opposition balanced, with a label 'Real chance for rulers to lose'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So the second feature is that a democracy must be based on a free and fair election, where those currently in power have a fair chance of losing." },
+          { "speaker": "ZIPPY", "text": "So elections must be scary for the ruling party!" },
+          { "speaker": "NEO", "text": "In a way, yes. Rulers must know that the people can replace them." }
+        ]
+      },
+      {
+        "animation": "Three scales show unequal votes: 'Saudi Arabia — women could not vote until 2015', 'Estonia — rules made it hard for the Russian minority to get the right to vote', 'Fiji — a vote of an indigenous Fijian has more value than that of an Indian-Fijian'. A rule card: 'Feature 3: One person, one vote, one value'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Next, look at equality in voting. Until 2015, women in Saudi Arabia did not have the right to vote." },
+          { "speaker": "NEO", "text": "Estonia made its citizenship rules in such a way that people belonging to the Russian minority find it difficult to get the right to vote." },
+          { "speaker": "NEO", "text": "In Fiji, the electoral system is such that the vote of an indigenous Fijian has more value than that of an Indian-Fijian." },
+          { "speaker": "NEO", "text": "So the third feature of democracy is one person, one vote, one value. Each adult citizen must have one vote, and each vote must have equal value." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Match the country to the missing feature: China, Mexico → no free and fair competition | Saudi Arabia, Estonia, Fiji → no equal vote'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: examiners love matching examples to features. Learn which country breaks which rule." }
+        ]
+      },
+      {
+        "animation": "Recap board with a ballot box and a balance scale. Points appear: '1. China and Mexico: elections without real choice', '2. Feature 2: free and fair competition — rulers can lose', '3. Feature 3: one person, one vote, one value'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: China and Mexico held elections, but without a real, fair choice." },
+          { "speaker": "NEO", "text": "Two: democracy needs free and fair electoral competition, where rulers can lose power." },
+          { "speaker": "NEO", "text": "Three: it also needs one person, one vote, one value, unlike old Saudi Arabia, Estonia or Fiji." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Political Science: What is Democracy? Why Democracy?",
+    "topic_no": 3,
+    "name": "Rule of Law, Respect for Rights and a Full Definition",
+    "scenes": [
+      {
+        "animation": "A cricket match where the captain of one team is also the umpire. Every appeal against his team is 'Not out!', every appeal by his team is 'Out!'. Zippy, batting, throws his bat in frustration.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This isn't fair! The captain is also the umpire!" },
+          { "speaker": "NEO", "text": "Now imagine a government that wins elections but plays by no rules. Let's go to Zimbabwe." }
+        ]
+      },
+      {
+        "animation": "A timeline card 'Zimbabwe, 1980': chains labelled 'White minority rule' break. A party banner 'ZANU-PF' rises, and a leader labelled 'Robert Mugabe' sits on the chair. A calendar flips year after year, with his portrait staying until '2017'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Zimbabwe attained independence from White minority rule in 1980. Since then, the country has been ruled by ZANU-PF, the party that led the freedom struggle." },
+          { "speaker": "NEO", "text": "Its leader, Robert Mugabe, ruled the country from independence until 2017." },
+          { "speaker": "NEO", "text": "Elections were held regularly and always won by ZANU-PF. But the government used unfair practices. Opposition workers were harassed, public protests were declared illegal, and the constitution was changed to increase the powers of the President." }
+        ]
+      },
+      {
+        "animation": "A newspaper with a big 'CENSORED' stamp; a court gavel pushed aside. Then a rule card: 'Feature 4: Rule of law and respect for rights'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Television and radio were controlled by the government. Court judgments that went against the government were disregarded." },
+          { "speaker": "NEO", "text": "So popular governments can be undemocratic too. The fourth feature: a democratic government rules within limits set by constitutional law and citizens' rights." }
+        ]
+      },
+      {
+        "animation": "A four-block tower builds itself, one block for each feature: 'Major decisions by elected leaders', 'Free and fair electoral competition', 'One person, one vote, one value', 'Rule of law and respect for rights'. The full definition appears above the tower.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now we can put it together. Democracy is a form of government in which rulers elected by the people take all the major decisions." },
+          { "speaker": "NEO", "text": "Elections offer a choice and fair opportunity to the people to change the current rulers. This choice and opportunity is available to all the people on an equal basis." },
+          { "speaker": "NEO", "text": "And the exercise of this choice leads to a government limited by the basic rules of the constitution and citizens' rights." }
+        ]
+      },
+      {
+        "animation": "Zippy tries to pull out one block from the tower; it wobbles and collapses. A 'BOARD TIP' card: 'Write all four features in the definition — examiners check each one'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if I remove just one block?" },
+          { "speaker": "NEO", "text": "Then it isn't a full democracy. Board tip: when asked to define democracy, include all four features. Missing one costs marks." }
+        ]
+      },
+      {
+        "animation": "Recap board with the four-block tower. Points appear: '1. Zimbabwe: elections won, but rights and courts ignored', '2. Feature 4: rule of law and respect for rights', '3. Full definition = elected rulers + fair choice + equal vote + limited government'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Zimbabwe's government kept winning elections but ignored rights, the media and the courts." },
+          { "speaker": "NEO", "text": "Two: a democracy must rule within the limits of constitutional law and citizens' rights." },
+          { "speaker": "NEO", "text": "Three: the full definition combines elected rulers, fair choice, equal votes and limited government." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Political Science: What is Democracy? Why Democracy?",
+    "topic_no": 4,
+    "name": "Why Democracy? Arguments For and Against",
+    "scenes": [
+      {
+        "animation": "A school debate stage. On the left podium, Zippy in a blazer shouts 'Democracy is too slow!'. On the right podium, Neo calmly adjusts his goggles. A buzzer clock begins to tick.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Democracy is too slow and too noisy. One wise king would do a better job!" },
+          { "speaker": "NEO", "text": "Let's hear both sides properly, then decide." }
+        ]
+      },
+      {
+        "animation": "A board titled 'Arguments against democracy' fills with icons: rotating leader chairs ('instability'), a tug-of-war ('power play, no morality'), a queue of people talking ('delays'), a confused leader ('don't know people's best interest'), a money bag ('corruption'), and a voter scratching his head ('people don't know what is good').",
+        "lines": [
+          { "speaker": "NEO", "text": "Critics say that leaders keep changing in a democracy, and this leads to instability." },
+          { "speaker": "NEO", "text": "Democracy is all about political competition and power play. There is no scope for morality. So many people have to be consulted that it leads to delays." },
+          { "speaker": "NEO", "text": "Elected leaders do not know the best interest of the people, which leads to bad decisions. Democracy leads to corruption, as it is based on electoral competition. And ordinary people don't know what is good for them." }
+        ]
+      },
+      {
+        "animation": "A historical card: 'China, 1958–1961'. Empty rice bowls and a grim number '≈ 3 crore people died'. Beside it, 'India' with a newspaper reporting on food shortage and a government responding. Label: 'Worst recorded famine in world history'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now the other side. In China's famine of 1958 to 1961, nearly three crore people died. It is the worst recorded famine in world history." },
+          { "speaker": "NEO", "text": "India's economic condition in those days was not much better than China's. Yet India did not have a famine of that kind. Economists think this was because the government in India responded to food scarcity in a way the Chinese government did not." }
+        ]
+      },
+      {
+        "animation": "A board titled 'Arguments for democracy' fills with five green ticks: 'More accountable government', 'Better quality decisions', 'Deals with differences and conflicts', 'Enhances dignity of citizens', 'Allows us to correct mistakes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A democratic government is a better government, because it is a more accountable form of government." },
+          { "speaker": "NEO", "text": "Democracy improves the quality of decision making, because it is based on consultation and discussion. It provides a method to deal with differences and conflicts." },
+          { "speaker": "NEO", "text": "Democracy enhances the dignity of citizens, since it is based on political equality. And it allows us to correct our own mistakes." },
+          { "speaker": "ZIPPY", "text": "Wait, a king can't be corrected, but a democracy can?" },
+          { "speaker": "NEO", "text": "Exactly. In a democracy, mistakes can be publicly discussed and corrected. Board tip: learn these five arguments; they come as a five-mark question." }
+        ]
+      },
+      {
+        "animation": "Recap board with the debate stage. Points appear: '1. Against: instability, delays, corruption, bad decisions', '2. China famine 1958–61 vs India: accountability matters', '3. For: accountable, better decisions, handles conflict, dignity, corrects mistakes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: critics say democracy brings instability, delays and corruption." },
+          { "speaker": "NEO", "text": "Two: the Chinese famine shows why an accountable, responsive government matters." },
+          { "speaker": "NEO", "text": "Three: democracy is more accountable, improves decisions, handles conflicts, enhances dignity, and lets us correct mistakes." },
+          { "speaker": "ZIPPY", "text": "Fine. I withdraw my king. Motion defeated." }
+        ]
+      }
+    ]
+  }
+]

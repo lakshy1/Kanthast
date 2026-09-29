@@ -1,0 +1,249 @@
+[
+  {
+    "chapter_no": 9,
+    "chapter": "Geography: Agriculture",
+    "topic_no": 1,
+    "name": "Types of Farming",
+    "scenes": [
+      {
+        "animation": "Zippy wears a farmer's turban and tries to plough a field with a toothpick. Neo appears on a tractor. A title card reads 'India: an agriculturally important country'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Farming is easy. Seed goes in, food comes out!" },
+          { "speaker": "NEO", "text": "India is an agriculturally important country. Two-thirds of its population is engaged in agricultural activities. But farming is not one single thing. Let's meet the three types." }
+        ]
+      },
+      {
+        "animation": "A forest patch in the north-eastern hills is cleared and burnt; smoke rises; a family plants seeds with a digging stick. When the soil tires, they move to a new patch. Floating labels: 'Slash and burn', 'Jhumming: Assam, Meghalaya, Mizoram, Nagaland', 'Pamlou: Manipur', 'Dipa: Bastar (Chhattisgarh) and Andaman and Nicobar Islands'.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, primitive subsistence farming. It is practised on small patches of land with primitive tools like the hoe, dao and digging sticks, and family or community labour." },
+          { "speaker": "NEO", "text": "It depends on monsoon, natural fertility of the soil and environmental conditions. It is slash and burn agriculture. Farmers clear a patch of land, grow crops, and when the soil loses its fertility, they move to a fresh patch." },
+          { "speaker": "NEO", "text": "In the north-eastern states like Assam, Meghalaya, Mizoram and Nagaland it is called jhumming. In Manipur it is called pamlou, and in Bastar in Chhattisgarh and in the Andaman and Nicobar Islands it is called dipa." }
+        ]
+      },
+      {
+        "animation": "A tiny crowded plot in a densely populated plain; a farmer adds fertiliser bags, a pump runs irrigation, and the plot is split again and again among sons. Label: 'Intensive subsistence farming: high inputs, small holdings'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Second, intensive subsistence farming. It is practised in areas of high population pressure on land. It is labour intensive, and high doses of biochemical inputs and irrigation are used for obtaining higher production." },
+          { "speaker": "NEO", "text": "Because land passes from generation to generation, landholdings keep getting smaller, and farmers have to keep taking maximum output from limited land." }
+        ]
+      },
+      {
+        "animation": "A huge farm with high yielding variety seeds, fertiliser, insecticide and pesticide icons. A split screen compares a rice field in Punjab tagged 'Commercial' with one in Odisha tagged 'Subsistence'. Then a hill plantation of tea bushes with a processing factory and a road to the market.",
+        "lines": [
+          { "speaker": "NEO", "text": "Third, commercial farming. Its main feature is the use of higher doses of modern inputs, like high yielding variety seeds, chemical fertilisers, insecticides and pesticides, to obtain higher productivity." },
+          { "speaker": "NEO", "text": "The degree of commercialisation varies. Rice is a commercial crop in Haryana and Punjab, but in Odisha it is a subsistence crop." },
+          { "speaker": "ZIPPY", "text": "Same rice, different job!" },
+          { "speaker": "NEO", "text": "Plantation is also a type of commercial farming, where a single crop is grown on a large area. Important plantation crops are tea, coffee, rubber, sugarcane and banana. Tea in Assam and North Bengal, and coffee in Karnataka are examples." },
+          { "speaker": "NEO", "text": "Board tip: plantations need a well-developed network of transport and communication connecting them to processing industries and markets. That link often earns a mark." }
+        ]
+      },
+      {
+        "animation": "Recap board with three field icons: '1. Primitive subsistence: slash and burn; jhumming, pamlou, dipa', '2. Intensive subsistence: high population pressure, high inputs', '3. Commercial: modern inputs; plantations like tea and coffee'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: primitive subsistence farming is slash and burn agriculture, known by different local names." },
+          { "speaker": "NEO", "text": "Two: intensive subsistence farming is found where population pressure on land is high." },
+          { "speaker": "NEO", "text": "Three: commercial farming uses modern inputs, and plantations grow a single crop on a large area." },
+          { "speaker": "ZIPPY", "text": "Returning the toothpick. Borrowing the tractor." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Geography: Agriculture",
+    "topic_no": 2,
+    "name": "Cropping Pattern: Rabi, Kharif and Zaid",
+    "scenes": [
+      {
+        "animation": "Zippy stands in a field holding a calendar, baffled, as crops pop up and vanish with the seasons. Three signboards spin: 'RABI', 'KHARIF', 'ZAID'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why do farmers grow wheat in winter and rice in the monsoon? Can't they just pick one?" },
+          { "speaker": "NEO", "text": "India has three cropping seasons: rabi, kharif and zaid. Each suits different crops." }
+        ]
+      },
+      {
+        "animation": "A winter field. A calendar wheel highlights 'Sown: October to December' and 'Harvested: April to June'. Wheat, barley, peas, gram and mustard grow. A map of India shades Punjab, Haryana, Himachal Pradesh, Jammu and Kashmir, Uttarakhand and Uttar Pradesh; a small cloud labelled 'western temperate cyclones' drifts in from the west.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rabi crops are sown in winter from October to December and harvested in summer from April to June. Important rabi crops are wheat, barley, peas, gram and mustard." },
+          { "speaker": "NEO", "text": "They are grown in the states from the north and north-western parts, such as Punjab, Haryana, Himachal Pradesh, Jammu and Kashmir, Uttarakhand and Uttar Pradesh." },
+          { "speaker": "NEO", "text": "Precipitation during winter from western temperate cyclones helps in the success of these crops. The success of the green revolution in Punjab, Haryana, western Uttar Pradesh and parts of Rajasthan has also been an important factor." }
+        ]
+      },
+      {
+        "animation": "Monsoon clouds burst over a green field. The calendar wheel shows 'Sown: onset of monsoon' and 'Harvested: September-October'. Crops sprout: paddy, maize, jowar, bajra, tur (arhar), moong, urad, cotton, jute, groundnut, soyabean. A map zooms onto Assam, West Bengal and coastal Odisha, where three paddy stalks are labelled 'Aus', 'Aman', 'Boro'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Kharif crops are grown with the onset of monsoon in different parts of the country, and harvested in September and October." },
+          { "speaker": "NEO", "text": "Important kharif crops are paddy, maize, jowar, bajra, tur, moong, urad, cotton, jute, groundnut and soyabean." },
+          { "speaker": "NEO", "text": "In states like Assam, West Bengal and Odisha, three crops of paddy are grown in a year. These are Aus, Aman and Boro." },
+          { "speaker": "ZIPPY", "text": "Three rice harvests a year? That's a biryani festival." }
+        ]
+      },
+      {
+        "animation": "A short summer window opens between the rabi and kharif segments on the calendar wheel, labelled 'Zaid'. Watermelons, muskmelons, cucumbers, vegetables and fodder crops bounce in. A sugarcane stalk grows slowly beside a clock, labelled 'about a year'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In between the rabi and kharif seasons, there is a short season during the summer months known as the zaid season." },
+          { "speaker": "NEO", "text": "Watermelon, muskmelon, cucumber, vegetables and fodder crops are grown during this season. Sugarcane takes almost a year to grow." },
+          { "speaker": "NEO", "text": "Board tip: examiners love asking you to classify crops into rabi and kharif. Wheat and mustard are rabi; rice, cotton and jute are kharif. Don't mix them up." }
+        ]
+      },
+      {
+        "animation": "Recap board with the full calendar wheel coloured in three bands: '1. Rabi: sown Oct-Dec, harvested Apr-Jun; wheat, gram, mustard', '2. Kharif: sown with monsoon, harvested Sep-Oct; paddy, cotton, jute', '3. Zaid: short summer season; melons, cucumber, fodder'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: rabi crops are sown in winter and harvested in summer, helped by western temperate cyclones." },
+          { "speaker": "NEO", "text": "Two: kharif crops come with the monsoon and are harvested in September and October." },
+          { "speaker": "NEO", "text": "Three: zaid is a short summer season between the two." },
+          { "speaker": "ZIPPY", "text": "I'm a zaid crop. Short, sweet, and full of water." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Geography: Agriculture",
+    "topic_no": 3,
+    "name": "Major Food Crops: Rice, Wheat, Millets, Maize and Pulses",
+    "scenes": [
+      {
+        "animation": "A school canteen thali lands in front of Zippy: rice, roti, bajra roti, corn, and dal. Each item sprouts a tiny flag. Neo holds up a pointer and a blank map of India.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This thali is a map test in disguise, isn't it?" },
+          { "speaker": "NEO", "text": "Exactly. Every item on it grows under particular conditions in particular parts of India." }
+        ]
+      },
+      {
+        "animation": "A rice card flips open: 'Kharif crop; above 25 degrees C; high humidity; annual rainfall above 100 cm'. On the map of India, green shading fills the plains of north and north-eastern India, coastal areas and deltaic regions, and an irrigation canal network glows across Punjab, Haryana, western Uttar Pradesh and parts of Rajasthan.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rice is the staple food crop of a majority of the people in India. Our country is the second largest producer of rice in the world after China." },
+          { "speaker": "NEO", "text": "It is a kharif crop which requires high temperature, above 25 degrees Celsius, high humidity, and annual rainfall above 100 centimetres. In areas of less rainfall, it grows with the help of irrigation." },
+          { "speaker": "NEO", "text": "Rice is grown in the plains of north and north-eastern India, coastal areas and the deltaic regions. Canal irrigation and tubewells have made it possible to grow rice in Punjab, Haryana, western Uttar Pradesh and parts of Rajasthan." }
+        ]
+      },
+      {
+        "animation": "A wheat card flips: 'Rabi crop; cool growing season, bright sunshine at ripening; 50-75 cm rainfall'. Golden shading fills 'Ganga-Satluj plains in the north-west' and 'black soil region of the Deccan'. State labels pop up: Punjab, Haryana, Uttar Pradesh, Madhya Pradesh, Bihar, Rajasthan.",
+        "lines": [
+          { "speaker": "NEO", "text": "Wheat is the second most important cereal crop and the main food crop in the north and north-western part of the country. This rabi crop needs a cool growing season, bright sunshine at the time of ripening, and 50 to 75 centimetres of annual rainfall evenly distributed over the growing season." },
+          { "speaker": "NEO", "text": "The two important wheat-growing zones are the Ganga-Satluj plains in the north-west and the black soil region of the Deccan." }
+        ]
+      },
+      {
+        "animation": "Three millet characters with tiny capes line up: 'Jowar', 'Bajra', 'Ragi'. Ragi flexes, and labels 'iron, calcium, roughage' appear. Then a maize cob rolls in with '21-27 degrees C, old alluvial soil', and a pulses bowl shows 'tur, urad, moong, masur, peas, gram' with a note 'leguminous crops fix nitrogen'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Jowar, bajra and ragi are the important millets grown in India. They are known as coarse grains, but they have very high nutritional value. Ragi, for example, is very rich in iron, calcium, other micro nutrients and roughage." },
+          { "speaker": "NEO", "text": "Maize is used both as food and fodder. It is a kharif crop which requires temperature between 21 and 27 degrees Celsius, and grows well in old alluvial soil." },
+          { "speaker": "NEO", "text": "India is the largest producer as well as consumer of pulses in the world. Tur, urad, moong, masur, peas and gram are the major pulses. Being leguminous crops, most pulses help restore soil fertility by fixing nitrogen from the air, so they are grown in rotation with other crops." },
+          { "speaker": "NEO", "text": "Board tip: map work asks you to mark the major areas of rice and wheat. Practise both shadings." }
+        ]
+      },
+      {
+        "animation": "Recap board with the thali back in view, each dish ticked: '1. Rice: above 25 degrees C, above 100 cm rain; India second after China', '2. Wheat: cool season, 50-75 cm; Ganga-Satluj plains and Deccan black soil', '3. Millets rich in nutrition; India largest producer and consumer of pulses'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: rice needs heat, humidity and heavy rainfall, and India is second only to China." },
+          { "speaker": "NEO", "text": "Two: wheat needs a cool season and grows in the Ganga-Satluj plains and the black soil of the Deccan." },
+          { "speaker": "NEO", "text": "Three: millets are highly nutritious, and India is the largest producer and consumer of pulses." },
+          { "speaker": "ZIPPY", "text": "Map test passed. Thali test starting now." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Geography: Agriculture",
+    "topic_no": 4,
+    "name": "Non-Food Crops: Sugarcane, Oilseeds, Beverages, Horticulture, Rubber and Fibres",
+    "scenes": [
+      {
+        "animation": "Zippy sips chai from a cutting glass, wearing a cotton T-shirt and holding a jute bag and a rubber ball. Neo points at each item, and each one sprouts a tiny plant.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I'm not even eating, and I'm still full of crops?" },
+          { "speaker": "NEO", "text": "Your chai, your shirt, your bag and your ball all come from India's farms." }
+        ]
+      },
+      {
+        "animation": "A sugarcane stalk grows tall beside a label 'Tropical and subtropical; 21-27 degrees C; 75-100 cm rainfall'. A globe ranks 'Brazil 1, India 2'. Sugarcane chunks fly into jars labelled 'sugar', 'gur', 'khandsari' and 'molasses'. An oilseed row follows: groundnut, mustard, coconut, sesamum, soyabean, castor seeds, cotton seeds, linseed and sunflower.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sugarcane is a tropical as well as a subtropical crop. It grows well in hot and humid climate with a temperature of 21 to 27 degrees Celsius and annual rainfall between 75 and 100 centimetres. India is the second largest producer of sugarcane after Brazil." },
+          { "speaker": "NEO", "text": "It is the main source of sugar, gur, khandsari and molasses. India also grows many oilseeds, such as groundnut, mustard, coconut, sesamum, soyabean, castor seeds, linseed and sunflower. Groundnut is a kharif crop." }
+        ]
+      },
+      {
+        "animation": "A misty hill slope covered with tea bushes, labelled 'Tea: introduced by the British; deep, fertile, well-drained soil rich in humus'. Map pins: Assam, Darjeeling and Jalpaiguri (West Bengal), Tamil Nadu, Kerala. Then a coffee bush on the Baba Budan Hills with a tag 'Arabica, originally from Yemen'; pins on Karnataka, Kerala and Tamil Nadu.",
+        "lines": [
+          { "speaker": "NEO", "text": "Tea is an important beverage crop introduced in India by the British. It grows well in tropical and subtropical climates with deep, fertile, well-drained soil rich in humus. Major tea producing areas are Assam, the hills of Darjeeling and Jalpaiguri in West Bengal, Tamil Nadu and Kerala." },
+          { "speaker": "NEO", "text": "Indian coffee is known in the world for its good quality. The Arabica variety, initially brought from Yemen, was first grown on the Baba Budan Hills. Today coffee is confined to the Nilgiri in Karnataka, Kerala and Tamil Nadu." }
+        ]
+      },
+      {
+        "animation": "A fruit basket bounces across the map: mangoes, oranges of Nagpur and Cherrapunjee, bananas, lichi and guava, pineapples of Meghalaya, grapes, and apples of Jammu and Kashmir and Himachal Pradesh. Then a rubber tree drips latex with a tag 'moist and humid; rainfall above 200 cm; temperature above 25 degrees C'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India produces tropical as well as temperate fruits. Think of the oranges of Nagpur and Cherrapunjee, the pineapples of Meghalaya, and the apples, pears, apricots and walnuts of Jammu and Kashmir and Himachal Pradesh." },
+          { "speaker": "NEO", "text": "Rubber is an equatorial crop, but it is also grown in tropical and subtropical areas. It needs moist and humid climate with rainfall of more than 200 centimetres and temperature above 25 degrees Celsius. It is mainly grown in Kerala, Tamil Nadu, Karnataka, the Andaman and Nicobar Islands and the Garo hills of Meghalaya." }
+        ]
+      },
+      {
+        "animation": "Two fibre characters arrive: a fluffy cotton boll standing on dark soil, tagged 'Black soil of the Deccan plateau; 210 frost-free days; kharif', and a shiny jute bundle tagged 'Golden fibre; flood plains'. The map highlights cotton states Maharashtra, Gujarat, Madhya Pradesh and others, and jute states West Bengal, Bihar, Assam, Odisha and Meghalaya.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cotton grows well in the drier parts of the black cotton soil of the Deccan plateau. It needs high temperature, light rainfall, 210 frost-free days and bright sunshine. It is a kharif crop that takes six to eight months to mature." },
+          { "speaker": "NEO", "text": "Jute is known as the golden fibre. It grows well on well-drained fertile soils in the flood plains, where soils are renewed every year. West Bengal, Bihar, Assam, Odisha and Meghalaya are the major jute producing states." },
+          { "speaker": "NEO", "text": "Board tip: map work asks for the largest or major producing states of sugarcane, tea, coffee, rubber, cotton and jute. Make a one-line list for each." }
+        ]
+      },
+      {
+        "animation": "Recap board with the chai glass, T-shirt, jute bag and ball: '1. Sugarcane: India second after Brazil; oilseeds like groundnut', '2. Tea and coffee: hill slopes; Arabica on Baba Budan Hills', '3. Rubber needs over 200 cm rain; cotton on black soil; jute the golden fibre'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: India is the second largest producer of sugarcane after Brazil." },
+          { "speaker": "NEO", "text": "Two: tea grows in Assam and the Darjeeling hills, and coffee in the Nilgiri of the south." },
+          { "speaker": "NEO", "text": "Three: rubber loves heavy rain, cotton loves black soil, and jute is the golden fibre." },
+          { "speaker": "ZIPPY", "text": "My chai is basically a geography lesson with sugar." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Geography: Agriculture",
+    "topic_no": 5,
+    "name": "Technological and Institutional Reforms; Bhoodan-Gramdan",
+    "scenes": [
+      {
+        "animation": "A farmer tugs an old wooden plough behind a bullock under a grey sky, while a huge crowd waits for grain. A caption flashes: 'After 1947: how do we feed everyone?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, if farming is so important, why were farmers still struggling after Independence?" },
+          { "speaker": "NEO", "text": "Because agriculture had been practised for thousands of years without enough use of technology and institutional change. So the government started reforms." }
+        ]
+      },
+      {
+        "animation": "A checklist builds on a village noticeboard: 'Collectivisation', 'Consolidation of holdings', 'Cooperation', 'Abolition of zamindari'. Scattered little plots slide together into one larger field.",
+        "lines": [
+          { "speaker": "NEO", "text": "After Independence, institutional reform was given priority. Collectivisation, consolidation of holdings, cooperation and abolition of zamindari were given priority to bring about institutional reforms in the country's First Five Year Plan." }
+        ]
+      },
+      {
+        "animation": "A green wave washes over wheat fields labelled 'Green Revolution: package technology'. A white wave of milk cans follows, labelled 'White Revolution: Operation Flood'. Then a toolbox opens: 'Crop insurance', 'Grameen banks', 'Cooperative societies and banks', 'Kisan Credit Card', 'Personal Accident Insurance Scheme', 'Weather bulletins on radio and TV', 'Minimum support price'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Green Revolution, based on the use of package technology, and the White Revolution, or Operation Flood, were some of the strategies initiated to improve Indian agriculture." },
+          { "speaker": "NEO", "text": "In the 1980s and 1990s, a comprehensive land development programme was started. It included provision for crop insurance against drought, flood, cyclone, fire and disease, and the setting up of Grameen banks, cooperative societies and banks for loans at lower rates of interest." },
+          { "speaker": "NEO", "text": "Kisan Credit Cards and the Personal Accident Insurance Scheme were introduced. Special weather bulletins and agricultural programmes for farmers were introduced on radio and television. The government also announces minimum support prices for important crops." },
+          { "speaker": "ZIPPY", "text": "So a farmer can check the weather on TV before sowing? Smart." }
+        ]
+      },
+      {
+        "animation": "A gentle elderly man walks village to village with a stick: 'Vinoba Bhave'. At Pochampalli, a landlord hands over land deeds to landless villagers; the words 'Bhoodan' and 'Gramdan' glow, and a banner reads 'Blood-less Revolution'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Vinoba Bhave was considered the spiritual heir of Mahatma Gandhi. He undertook padyatra across the country to spread Gandhiji's message." },
+          { "speaker": "NEO", "text": "At Pochampalli, some landless villagers asked for land. Shri Ram Chandra Reddy offered to give 80 acres of land to 80 landless villagers. This act was known as Bhoodan. Some zamindars even offered to distribute whole villages among the landless. This was Gramdan." },
+          { "speaker": "NEO", "text": "The Bhoodan-Gramdan movement is also known as the Blood-less Revolution." },
+          { "speaker": "NEO", "text": "Board tip: a common question asks you to list the institutional and technological reforms. Name at least four schemes, such as crop insurance, Grameen banks, Kisan Credit Card and minimum support price." }
+        ]
+      },
+      {
+        "animation": "Recap board with a sprouting seedling: '1. Institutional reforms: consolidation of holdings, abolition of zamindari', '2. Green and White Revolutions; KCC, crop insurance, MSP, Grameen banks', '3. Vinoba Bhave: Bhoodan-Gramdan, the Blood-less Revolution'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: after Independence, reforms like consolidation of holdings and abolition of zamindari were given priority." },
+          { "speaker": "NEO", "text": "Two: the Green and White Revolutions, and schemes like crop insurance and Kisan Credit Cards, supported farmers." },
+          { "speaker": "NEO", "text": "Three: Vinoba Bhave's Bhoodan-Gramdan was a blood-less revolution." },
+          { "speaker": "ZIPPY", "text": "Blood-less, fuss-less, and full of land. I like it." }
+        ]
+      }
+    ]
+  }
+]

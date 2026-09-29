@@ -1,0 +1,264 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "History: The Making of a Global World",
+    "topic_no": 1,
+    "name": "The Pre-modern World",
+    "scenes": [
+      {
+        "animation": "A school canteen: Zippy slurps a plate of chilli-potato noodles. The noodles, potato and chilli each sprout tiny passports and wave flags: China, the Americas, the Americas.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is my lunch holding passports?" },
+          { "speaker": "NEO", "text": "Because the food on your plate travelled across the world long before you did. Globalisation has a very long history." }
+        ]
+      },
+      {
+        "animation": "An animated timeline: '3000 BCE: Indus valley coastal trade with West Asia', 'cowries from the Maldives to China and East Africa', 'seventh century: germs travel', 'thirteenth century: an unmistakable link'. Travellers, traders, priests and pilgrims walk along it carrying bundles.",
+        "lines": [
+          { "speaker": "NEO", "text": "Travellers, traders, priests and pilgrims carried goods, money, ideas and even germs across vast distances." },
+          { "speaker": "NEO", "text": "As early as 3000 BCE, an active coastal trade linked the Indus valley civilisations with present-day West Asia. Cowries from the Maldives reached China and East Africa." }
+        ]
+      },
+      {
+        "animation": "A map of Asia, Europe and North Africa: land and sea routes draw themselves as glowing threads. Silk bales move west from China; pottery, Indian textiles and spices follow; gold and silver coins flow east from Europe. A small monk icon walks the route labelled 'Buddhism spreads from eastern India'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The silk routes are a good example. The name points to the importance of west-bound Chinese silk. They existed since before the Christian Era and thrived almost till the fifteenth century." },
+          { "speaker": "NEO", "text": "Chinese pottery, and textiles and spices from India and Southeast Asia travelled too. In return, gold and silver flowed from Europe to Asia. Buddhism spread along the same routes." }
+        ]
+      },
+      {
+        "animation": "A plate of noodles morphs into spaghetti as it moves west; an Arab trader's boat lands pasta in Sicily. Then Columbus's ship reaches the Americas and returns with potatoes, soya, groundnuts, maize, tomatoes, chillies and sweet potatoes. Finally, a black blight spreads over an Irish potato field, captioned '1845–1849'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Noodles may have travelled west from China to become spaghetti, or Arab traders may have taken pasta to fifth-century Sicily." },
+          { "speaker": "NEO", "text": "Potatoes, maize, tomatoes, chillies and groundnuts came from the Americas only about five centuries ago." },
+          { "speaker": "NEO", "text": "Ireland's poorest peasants depended so heavily on potatoes that when disease destroyed the crop in the mid-1840s, hundreds of thousands died of starvation." }
+        ]
+      },
+      {
+        "animation": "Spanish ships land in America. Soldiers carry guns, but a much bigger cloud of green germ cartoons labelled 'smallpox' races ahead of them deep into the continent. Silver bars from Peru and Mexico sail back to Europe. A 'BOARD TIP' card appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So Europe won America with better guns?" },
+          { "speaker": "NEO", "text": "Not mainly. The most powerful weapon of the Spanish conquerors was germs, like smallpox. America's original inhabitants had no immunity, and smallpox spread ahead of the Europeans, paving the way for conquest." },
+          { "speaker": "NEO", "text": "Silver from Peru and Mexico financed Europe's trade with Asia. Board tip: the pre-modern world, sections 1 to 1.3, is what the board exam tests from this chapter. Know the silk routes, food travels and smallpox well." }
+        ]
+      },
+      {
+        "animation": "Recap board with a globe icon: '1. Silk routes: silk, spices, religions, precious metals', '2. Food travels: noodles, potatoes; Irish famine', '3. Smallpox helped the conquest of America'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the silk routes carried silk, spices, pottery and religions, and precious metals came from Europe." },
+          { "speaker": "NEO", "text": "Two: foods like potatoes and chillies came from the Americas, and potato disease caused famine in Ireland." },
+          { "speaker": "NEO", "text": "Three: germs like smallpox helped Europeans conquer America." },
+          { "speaker": "ZIPPY", "text": "My noodles are officially world travellers." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "History: The Making of a Global World",
+    "topic_no": 2,
+    "name": "The Nineteenth Century: A World Economy Takes Shape",
+    "scenes": [
+      {
+        "animation": "A Victorian London dining table: a loaf of bread, a steak and butter each wear shipping tags from America, Australia and New Zealand. Zippy reads the tags one by one.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Did the British grow nothing themselves?" },
+          { "speaker": "NEO", "text": "By the late nineteenth century, much of their food came from thousands of miles away. Let's see how." }
+        ]
+      },
+      {
+        "animation": "Three pipes labelled 'Trade (goods)', 'Labour (migration)', 'Capital (investment)' twist together into one thick cable labelled 'The world economy, 1815–1914'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Economists identify three flows in international exchange: the flow of trade in goods, the flow of labour, and the movement of capital. In the nineteenth century, all three were closely interwoven." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds box by box: 'Population grows → grain prices rise → Corn Laws restrict imports → industrialists force abolition → cheap food imports → British farmland left uncultivated → people migrate'. On a world map, farmlands light up in Eastern Europe, Russia, America and Australia, connected by railways and ports.",
+        "lines": [
+          { "speaker": "NEO", "text": "Britain's government, under pressure from landed groups, restricted corn imports through the Corn Laws. Unhappy with high food prices, industrialists and urban dwellers forced their abolition." },
+          { "speaker": "NEO", "text": "Cheap imported food meant British farms could not compete. Thousands lost work and migrated. Meanwhile, lands were cleared in Eastern Europe, Russia, America and Australia, with railways, ports and capital from London." },
+          { "speaker": "NEO", "text": "Nearly 50 million people emigrated from Europe to America and Australia. Worldwide, some 150 million left their homes." }
+        ]
+      },
+      {
+        "animation": "A ship deck crowded with live cattle, some looking seasick. It dissolves into a sleek ship with frosty windows labelled 'Refrigerated ship'; frozen meat is loaded in America, Australia and New Zealand. A price tag on meat in a European shop drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How did meat survive such long voyages?" },
+          { "speaker": "NEO", "text": "Till the 1870s, animals were shipped live and many fell ill or died. Refrigerated ships changed this. Animals were slaughtered in America, Australia or New Zealand and sent to Europe as frozen meat." },
+          { "speaker": "NEO", "text": "Shipping costs fell, meat became cheaper, and the European poor could add meat, butter and eggs to bread and potatoes." }
+        ]
+      },
+      {
+        "animation": "West Punjab map: canals draw across a semi-desert and it turns green, labelled 'Canal Colonies: wheat and cotton for export'. A counter reads 'World trade 1820–1914: × 25 to 40; 60% primary products'. A 'BOARD TIP' card: 'Flowchart: Corn Laws → migration'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Closer home, canals in west Punjab created Canal Colonies growing wheat and cotton for export. Between 1820 and 1914, world trade multiplied 25 to 40 times, and nearly 60 per cent of it was primary products." },
+          { "speaker": "NEO", "text": "Board tip: practise the flowchart from the abolition of the Corn Laws to migration to America and Australia." }
+        ]
+      },
+      {
+        "animation": "Recap board with a ship icon: '1. Three flows: trade, labour, capital', '2. Corn Laws abolished → food imports → migration', '3. Refrigerated ships made meat cheaper'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the nineteenth-century economy ran on three flows: trade, labour and capital." },
+          { "speaker": "NEO", "text": "Two: abolishing the Corn Laws led to food imports, new farmlands abroad and mass migration." },
+          { "speaker": "NEO", "text": "Three: technology like railways and refrigerated ships made food cheaper and faster to move." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "History: The Making of a Global World",
+    "topic_no": 3,
+    "name": "Colonialism, Rinderpest and Indentured Labour",
+    "scenes": [
+      {
+        "animation": "A map of Africa where European officials with giant rulers draw straight borders, arguing over who gets which piece. A sign reads 'Berlin, 1885'. Zippy holds up a school geometry set, horrified.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "They drew country borders with a ruler? Like a geometry homework?" },
+          { "speaker": "NEO", "text": "Almost. In 1885, the big European powers met in Berlin to complete the carving up of Africa between them." }
+        ]
+      },
+      {
+        "animation": "An Africa map: a red wave labelled 'Rinderpest' enters from the east near Eritrea in the late 1880s, sweeps west to the Atlantic coast by '1892', then south to the Cape five years later. Cattle icons vanish; a counter reads '90% cattle killed'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Africa had abundant land and livestock, so Africans had little reason to work for wages. Europeans imposed heavy taxes and changed inheritance laws to push them into the labour market." },
+          { "speaker": "NEO", "text": "Then came rinderpest, a cattle plague, in the late 1880s. It moved west like forest fire, reached the Atlantic coast in 1892, and killed 90 per cent of the cattle. Colonisers monopolised the remaining cattle and forced Africans into wage labour." }
+        ]
+      },
+      {
+        "animation": "A map of India with source regions glowing: eastern Uttar Pradesh, Bihar, central India, dry districts of Tamil Nadu. Arrows sail to Trinidad, Guyana, Surinam, Mauritius, Fiji, Ceylon and Malaya. A contract paper reads 'Indenture: 5 years'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In India, indentured labourers were hired under contracts promising return travel after five years of work. Most came from eastern Uttar Pradesh, Bihar, central India and the dry districts of Tamil Nadu." },
+          { "speaker": "NEO", "text": "They went mainly to the Caribbean islands, Trinidad, Guyana and Surinam, and to Mauritius and Fiji. Agents often gave false information, and conditions were so harsh it was called a 'new system of slavery'." }
+        ]
+      },
+      {
+        "animation": "A colourful Trinidad street: a Muharram procession becomes the 'Hosay' carnival; chutney music plays from a radio. Cameos appear: a book by V.S. Naipaul, and cricketers labelled Shivnarine Chanderpaul and Ramnaresh Sarwan. A stamp: 'Indenture abolished 1921'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, the West Indies cricketers with Indian names?" },
+          { "speaker": "NEO", "text": "Yes! Chanderpaul and Sarwan descend from indentured migrants, as does the writer V. S. Naipaul. In Trinidad, the Muharram procession became the carnival called Hosay, and chutney music grew in Trinidad and Guyana." },
+          { "speaker": "NEO", "text": "Nationalist leaders opposed the system from the 1900s, and it was abolished in 1921." }
+        ]
+      },
+      {
+        "animation": "Bar chart animates: 'Cotton textiles' share of India's exports: ~30% (1800) → 15% (1815) → below 3% (1870s)' and 'Raw cotton exports: 5% (1812) → 35% (1871)'. Coins then flow from India to Britain and on to other countries, labelled 'Britain's trade surplus with India'. A 'BOARD TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "India's share of cotton textile exports fell from some 30 per cent around 1800 to below 3 per cent by the 1870s, while raw cotton exports rose from 5 to 35 per cent between 1812 and 1871." },
+          { "speaker": "NEO", "text": "Britain's trade surplus with India helped balance its deficits with other countries and pay the home charges. Board tip: know the effects of rinderpest; it is a common short-answer question." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cow icon: '1. Berlin 1885: Africa carved up', '2. Rinderpest killed 90% of cattle → forced wage labour', '3. Indentured labour: 5-year contracts; abolished 1921'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: European powers carved up Africa at Berlin in 1885." },
+          { "speaker": "NEO", "text": "Two: rinderpest killed 90 per cent of cattle and pushed Africans into wage labour." },
+          { "speaker": "NEO", "text": "Three: Indian indentured labourers went abroad on five-year contracts, until the system was abolished in 1921." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "History: The Making of a Global World",
+    "topic_no": 4,
+    "name": "The Inter-war Economy and the Great Depression",
+    "scenes": [
+      {
+        "animation": "A factory in Detroit: identical black T-Model cars roll off a conveyor belt; a clock on the wall ticks '3 minutes' between each car. Zippy tries to fit a wheel and gets carried along by the belt.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Help! This belt won't let me take a break!" },
+          { "speaker": "NEO", "text": "That's the assembly line, Zippy. It changed the world economy in the 1920s, before everything crashed." }
+        ]
+      },
+      {
+        "animation": "A timeline: 'August 1914–1918: First World War'. Icons of machine guns, tanks, aircraft and chemical weapons appear under 'first modern industrial war'. A counter: '9 million dead, 20 million injured'. Money bags fly from US banks to Britain, and a label on the US flips from 'Debtor' to 'Creditor'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The First World War was the first modern industrial war. It left 9 million dead and 20 million injured, reducing Europe's workforce." },
+          { "speaker": "NEO", "text": "Britain borrowed heavily from the US, so the US turned from an international debtor into a creditor. In 1921, one in every five British workers was out of work." }
+        ]
+      },
+      {
+        "animation": "Henry Ford adapts a Chicago slaughterhouse conveyor for his Detroit plant. A wage sign changes to '$5 a day, January 1914'. A bar chart grows: 'US car production: 2 million (1919) → 5 million+ (1929)'. Fridges, radios and washing machines arrive with tags 'hire purchase'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Henry Ford adapted the assembly line of a Chicago slaughterhouse to his Detroit car plant. The T-Model Ford was the world's first mass-produced car." },
+          { "speaker": "NEO", "text": "Workers quit under the stress, so Ford doubled the daily wage to 5 dollars in January 1914. US car production rose from 2 million in 1919 to more than 5 million in 1929, and people bought goods on hire purchase." }
+        ]
+      },
+      {
+        "animation": "A cause-and-effect diagram builds: 'Agricultural overproduction → falling prices', 'US overseas loans: over $1 billion (early 1928) → one quarter a year later', 'US doubles import duties'. Then US banks topple like dominoes: 'By 1933: over 4,000 banks closed; 1929–1932: about 110,000 companies collapsed'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So what caused the Great Depression?" },
+          { "speaker": "NEO", "text": "It began around 1929 and lasted till the mid-1930s. First, agricultural overproduction pushed prices down. Second, US overseas loans fell from over 1 billion dollars in the first half of 1928 to one quarter of that a year later." },
+          { "speaker": "NEO", "text": "In the US, by 1933 over 4,000 banks had closed, and between 1929 and 1932 about 110,000 companies collapsed." }
+        ]
+      },
+      {
+        "animation": "India panel: a bar chart shows 'Exports and imports nearly halved, 1928–1934' and 'Wheat prices −50%'. A Bengal jute farmer watches the jute price fall more than 60%. Gold jewellery flows out of Indian villages. A 'BOARD TIP' card appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "In India, exports and imports nearly halved between 1928 and 1934, and wheat prices fell by 50 per cent. The price of Bengal's raw jute crashed more than 60 per cent." },
+          { "speaker": "NEO", "text": "The government refused to reduce revenue, so peasants sold gold and fell into debt. Urban people with fixed incomes were better off. Board tip: split the impact on India into peasants versus urban India." }
+        ]
+      },
+      {
+        "animation": "Recap board with a falling graph icon: '1. WWI made the US a creditor; Britain in crisis', '2. Mass production: Ford, $5 a day, hire purchase', '3. Great Depression 1929: overproduction + US loans withdrawn; India's trade halved'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the First World War made the US a creditor and left Britain in crisis." },
+          { "speaker": "NEO", "text": "Two: Ford's assembly line brought mass production and mass consumption in the 1920s." },
+          { "speaker": "NEO", "text": "Three: the Great Depression came from overproduction and withdrawn US loans, and it hit India's peasants hard." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "History: The Making of a Global World",
+    "topic_no": 5,
+    "name": "Rebuilding a World Economy: The Post-war Era",
+    "scenes": [
+      {
+        "animation": "Zippy flips over his toy car, mobile phone and TV remote; each says 'Made in China'. He looks at Neo with suspicion.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is everything in my room made in China?" },
+          { "speaker": "NEO", "text": "The answer starts after the Second World War, when the world economy had to be rebuilt." }
+        ]
+      },
+      {
+        "animation": "A counter: 'Second World War: at least 60 million dead, about 3% of the world's 1939 population'. Two giants rise: 'US' and 'Soviet Union'. Two notebook pages write lesson one: 'Mass production needs mass consumption → stable incomes → full employment' and lesson two: 'Governments must control flows of goods, capital and labour'.",
+        "lines": [
+          { "speaker": "NEO", "text": "At least 60 million people died in the Second World War. Afterwards, economists drew two lessons." },
+          { "speaker": "NEO", "text": "First, mass production needs mass consumption, which needs stable incomes and full employment, with governments stepping in. Second, governments must be able to control flows of goods, capital and labour." }
+        ]
+      },
+      {
+        "animation": "The Mount Washington Hotel, 'Bretton Woods, New Hampshire, USA, July 1944'. Two twin buildings rise: 'IMF: external surpluses and deficits' and 'World Bank (IBRD): post-war reconstruction', both stamped 'Operations from 1947'. A rupee coin is chained to a dollar, which is chained to a gold bar labelled '$35 per ounce'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The framework was agreed at the United Nations Monetary and Financial Conference in July 1944, at Bretton Woods in New Hampshire, USA." },
+          { "speaker": "NEO", "text": "It set up the International Monetary Fund to deal with external surpluses and deficits, and the World Bank to finance reconstruction. These Bretton Woods twins began operations in 1947." },
+          { "speaker": "NEO", "text": "The system used fixed exchange rates. Currencies like the rupee were pegged to the dollar, and the dollar to gold at 35 dollars an ounce." }
+        ]
+      },
+      {
+        "animation": "A world map where colonies in Asia and Africa turn into new independent nations. They join hands under a banner 'G-77' holding a placard 'NIEO: control over natural resources, fairer raw material prices, better market access'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Did the new countries get rich too?" },
+          { "speaker": "NEO", "text": "Most did not benefit from the fast Western growth. So they formed the Group of 77, or G-77, to demand a new international economic order, the NIEO: real control over their resources, more aid, fairer raw material prices and better market access." }
+        ]
+      },
+      {
+        "animation": "The chain between the dollar and gold snaps, and exchange rates start floating like balloons. Factory icons hop from Western countries to low-wage Asian countries. A 'BOARD TIP' card: 'Bretton Woods = IMF + World Bank + fixed exchange rates'.",
+        "lines": [
+          { "speaker": "NEO", "text": "From the 1960s, the dollar lost confidence, and fixed exchange rates gave way to floating rates. From the late 1970s, MNCs shifted production to low-wage Asian countries like China. That's your 'Made in China'." },
+          { "speaker": "NEO", "text": "Board tip: for 'What is the Bretton Woods Agreement', write the 1944 conference, the IMF and World Bank, and fixed exchange rates." }
+        ]
+      },
+      {
+        "animation": "Recap board with twin-tower icons: '1. Bretton Woods, July 1944: IMF + World Bank', '2. Fixed exchange rates; dollar anchored to gold', '3. G-77 demanded NIEO; later MNCs moved to low-wage Asia'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Bretton Woods conference of July 1944 created the IMF and the World Bank." },
+          { "speaker": "NEO", "text": "Two: the system used fixed exchange rates, with the dollar anchored to gold." },
+          { "speaker": "NEO", "text": "Three: developing countries formed the G-77 to demand a new international economic order, and later MNCs moved production to low-wage Asia." }
+        ]
+      }
+    ]
+  }
+]

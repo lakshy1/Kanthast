@@ -1,0 +1,426 @@
+[
+  {
+    "chapter_no": 11,
+    "chapter": "Sound",
+    "topic_no": 1,
+    "name": "Production of Sound",
+    "scenes": [
+      {
+        "animation": "In the music room, Zippy strikes a tuning fork against a rubber pad. It hums, and he presses it against his cheek; his whole spark body shivers and buzzes comically.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "It's tickling my face! Is the sound attacking me?" },
+          { "speaker": "NEO", "text": "No, the fork is vibrating. Every sound you hear comes from something vibrating." }
+        ]
+      },
+      {
+        "animation": "A table-tennis ball hangs from a thread. The vibrating tuning fork touches it and the ball is repeatedly kicked away. Then the fork is dipped into a bowl of water and tiny splashes fly out. Label: 'Vibration = rapid to and fro motion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Touch a sounding tuning fork to a suspended table-tennis ball, and the ball gets pushed away again and again." },
+          { "speaker": "NEO", "text": "Dip it in water, and the water splashes. The prongs are vibrating, which means they move rapidly to and fro." },
+          { "speaker": "NEO", "text": "The vibrations are too fast for your eyes to follow, but the ball and the water give them away." }
+        ]
+      },
+      {
+        "animation": "Sound is shown as a glowing energy packet leaving the fork. The line 'Sound is a form of energy which produces a sensation of hearing in our ears' appears. A hand strikes the fork: an arrow labelled 'energy supplied' goes in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sound is a form of energy which produces the sensation of hearing in our ears." },
+          { "speaker": "NEO", "text": "We can't create energy from nothing, so we must supply energy to make an object vibrate. You did that by striking the fork." }
+        ]
+      },
+      {
+        "animation": "A mini concert: a sitar string is plucked (label 'stretched string'), a tabla is struck ('stretched membrane'), a flute is blown ('air column'), and a stretched rubber band is plucked. Each vibrating part glows. Finally, a cut-away of a singer's throat shows 'vocal cords' vibrating.",
+        "lines": [
+          { "speaker": "NEO", "text": "In a sitar, a stretched string vibrates. In a tabla, a stretched membrane vibrates. In a flute, a column of air vibrates." },
+          { "speaker": "NEO", "text": "Even when you speak, your vocal cords vibrate. Put your fingers on your throat and hum. You'll feel it." },
+          { "speaker": "ZIPPY", "text": "Hmmm. Whoa, my throat is buzzing too!" }
+        ]
+      },
+      {
+        "animation": "A school bell is struck and then gently held by a hand; the sound fades with the vibration lines. An 'EXAM TIP' card: 'Name the vibrating part: string, membrane, air column, vocal cords'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Stop the vibration, and the sound stops too. Grab a ringing bell, and it goes silent." },
+          { "speaker": "NEO", "text": "Exam tip: when asked how a musical instrument produces sound, always name the vibrating part, like the string, the membrane or the air column." }
+        ]
+      },
+      {
+        "animation": "Recap board with the humming tuning fork. Points: '1. Sound is produced by vibrating objects', '2. Sound is a form of energy; energy is needed to make objects vibrate', '3. Strings, membranes, air columns and vocal cords vibrate to make sound'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: sound is produced by vibrating objects." },
+          { "speaker": "NEO", "text": "Two: sound is a form of energy, and energy is needed to make an object vibrate." },
+          { "speaker": "NEO", "text": "Three: strings, membranes, air columns and our vocal cords all vibrate to make sound." },
+          { "speaker": "ZIPPY", "text": "I'm a spark. I vibrate all the time. That explains a lot." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Sound",
+    "topic_no": 2,
+    "name": "Propagation of Sound: Longitudinal Waves",
+    "scenes": [
+      {
+        "animation": "At a crowded stadium, fans do a 'Mexican wave'. The wave sweeps around the stands, but every fan stays in their own seat, just standing up and sitting down. Zippy, in the crowd, gets excited.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The wave went all around the stadium, but nobody left their seat!" },
+          { "speaker": "NEO", "text": "That's how sound travels too. The disturbance moves, but the particles stay near their places." }
+        ]
+      },
+      {
+        "animation": "Zoom into air as rows of tiny cartoon dots. A vibrating tuning fork prong moves forward and squeezes the dots together, labelled 'C: compression (high pressure)'. It moves back and the dots spread out, labelled 'R: rarefaction (low pressure)'. A pattern 'C R C R' travels outward.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sound travels through a medium, which can be a solid, a liquid or a gas." },
+          { "speaker": "NEO", "text": "When a vibrating object moves forward, it pushes the air particles close together. This region of high pressure is a compression." },
+          { "speaker": "NEO", "text": "When it moves back, it creates a region of low pressure called a rarefaction. Sound travels as a series of compressions and rarefactions." }
+        ]
+      },
+      {
+        "animation": "A single highlighted dot oscillates back and forth around a fixed mean position while the compression pattern races past it. Labels: 'Particles oscillate', 'Disturbance travels'. The term 'Mechanical wave' appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "The particles of the medium don't travel all the way from the source to your ear. Each one just oscillates about its position and passes the disturbance on." },
+          { "speaker": "NEO", "text": "Since sound needs the motion of particles of a medium, sound waves are called mechanical waves." }
+        ]
+      },
+      {
+        "animation": "A long slinky on a table. Pushed and pulled along its length, compressions travel along it, labelled 'Longitudinal: particles move parallel to wave direction'. Then it's shaken side to side, making crests and troughs, labelled 'Transverse: particles move perpendicular to wave direction'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Push and pull a slinky along its length, and compressions travel along it. The coils move back and forth in the same direction as the wave." },
+          { "speaker": "NEO", "text": "Waves like this, where particles move parallel to the direction of propagation, are longitudinal waves. Sound is a longitudinal wave." },
+          { "speaker": "NEO", "text": "Shake the slinky sideways instead, and the coils move perpendicular to the wave. That's a transverse wave." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card with two arrows: 'Longitudinal: particle motion ∥ wave (sound)' and 'Transverse: particle motion ⟂ wave'. Zippy tries to act out both and gets tangled in the slinky.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Parallel for longitudinal, perpendicular for transverse. I've got it... mostly." },
+          { "speaker": "NEO", "text": "Exam tip: when defining these waves, mention the direction of particle motion compared to the direction of the wave. That's the key point." }
+        ]
+      },
+      {
+        "animation": "Recap board with the Mexican wave. Points: '1. Sound needs a medium; it is a mechanical wave', '2. Travels as compressions (high pressure) and rarefactions (low pressure)', '3. Sound is longitudinal: particles move parallel to the direction of propagation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: sound travels through a medium, and is a mechanical wave." },
+          { "speaker": "NEO", "text": "Two: it travels as compressions of high pressure and rarefactions of low pressure." },
+          { "speaker": "NEO", "text": "Three: sound is a longitudinal wave, as particles move parallel to the direction of the wave." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Sound",
+    "topic_no": 3,
+    "name": "Wavelength, Frequency, Time Period and Speed",
+    "scenes": [
+      {
+        "animation": "Zippy tries to measure a sound wave with a tailor's tape, chasing it around the room. The wave keeps slipping away like a mischievous snake.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How do I measure something that won't sit still?" },
+          { "speaker": "NEO", "text": "We draw it as a graph, and then measure its features." }
+        ]
+      },
+      {
+        "animation": "The compressions and rarefactions of a sound wave transform into a smooth curve of 'density/pressure' against 'distance'. Compressions become crests (peaks), rarefactions become troughs (valleys). A double arrow between two crests is labelled 'Wavelength λ'.",
+        "lines": [
+          { "speaker": "NEO", "text": "On a graph of density against distance, compressions appear as crests, the peaks, and rarefactions appear as troughs, the valleys." },
+          { "speaker": "NEO", "text": "The distance between two consecutive compressions, or two consecutive rarefactions, is the wavelength. It's written as lambda, and measured in metres." }
+        ]
+      },
+      {
+        "animation": "A counter clicks each time a crest passes a fixed flag: '1, 2, 3... per second'. Label 'Frequency ν = number of oscillations per unit time; unit hertz (Hz)'. Then 'Time period T = time for one complete oscillation', and 'ν = 1/T'. A mini card: '1 kHz = 1000 Hz'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The number of oscillations per unit time is the frequency, written as nu. Its unit is the hertz. One kilohertz is one thousand hertz." },
+          { "speaker": "NEO", "text": "The time taken for one complete oscillation is the time period, T. Frequency and time period are related: nu equals one by T." }
+        ]
+      },
+      {
+        "animation": "A crest travels exactly one wavelength in one time period, with a stopwatch showing T. The equation builds: 'speed = distance/time = λ/T', 'v = λν'. A 'wave equation' banner appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "In one time period, the wave moves forward by one wavelength. So speed equals wavelength by time period." },
+          { "speaker": "NEO", "text": "Since one by T is the frequency, we get v equals lambda into nu. Speed equals wavelength into frequency." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'ν = 2 kHz = 2000 Hz, λ = 35 cm = 0.35 m', 'v = λν = 0.35 × 2000 = 700 m s⁻¹', 'Time for 1.5 km: t = 1500 / 700 ≈ 2.1 s'. An 'EXAM TIP' tag sits on 'kHz → Hz, cm → m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A sound wave has a frequency of two kilohertz and a wavelength of thirty-five centimetres. How long will it take to travel one point five kilometres?" },
+          { "speaker": "NEO", "text": "Speed is zero point three five into two thousand, which is seven hundred metres per second." },
+          { "speaker": "NEO", "text": "Time is one thousand five hundred by seven hundred, about two point one seconds." },
+          { "speaker": "NEO", "text": "Exam tip: convert kilohertz to hertz and centimetres to metres before substituting." }
+        ]
+      },
+      {
+        "animation": "Recap board with a wave graph. Points: '1. Wavelength λ: distance between two consecutive compressions (m)', '2. Frequency ν in hertz; ν = 1/T', '3. v = λν'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: wavelength is the distance between two consecutive compressions or rarefactions." },
+          { "speaker": "NEO", "text": "Two: frequency is oscillations per unit time, in hertz, and it's one by the time period." },
+          { "speaker": "NEO", "text": "Three: speed equals wavelength into frequency." },
+          { "speaker": "ZIPPY", "text": "Tape measure retired. Graph paper hired." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Sound",
+    "topic_no": 4,
+    "name": "Amplitude, Pitch, Loudness and Quality",
+    "scenes": [
+      {
+        "animation": "At a Diwali mela, a tiny whistle shrieks high while a big dhol booms low. Then a loudspeaker blares an announcement, and Zippy covers his ears. His own quiet whisper barely shows on a sound meter.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The whistle is shrill, the dhol is deep, the speaker is loud. What makes each sound different?" },
+          { "speaker": "NEO", "text": "Three things: pitch, loudness and quality. Each depends on a different feature of the wave." }
+        ]
+      },
+      {
+        "animation": "Two wave graphs stack up: one with tightly packed crests labelled 'high frequency → high pitch (whistle)', the other with widely spaced crests labelled 'low frequency → low pitch (dhol)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Pitch is how our brain interprets the frequency of a sound. The faster the vibration, the higher the frequency, and the higher the pitch." },
+          { "speaker": "NEO", "text": "A whistle has a high pitch. A dhol has a low pitch. On a wave graph, a high-pitched sound has more compressions and rarefactions packed into the same time." }
+        ]
+      },
+      {
+        "animation": "A wave graph with a vertical arrow from the mean line to the crest, labelled 'Amplitude A: magnitude of the maximum disturbance'. A slider raises the amplitude and a loudness bar rises, labelled 'Larger amplitude → louder → more energy'. The unit 'decibel (dB)' appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Amplitude is the magnitude of the maximum disturbance in the medium on either side of the mean value." },
+          { "speaker": "NEO", "text": "Loudness depends on amplitude. Strike a table hard, and you get a loud sound with a large amplitude and more energy. Loudness is expressed in decibels." },
+          { "speaker": "NEO", "text": "Loudness is the measure of our ear's response to sound. Intensity is the amount of sound energy passing each second through unit area." }
+        ]
+      },
+      {
+        "animation": "A sitar and a flute play the same note at the same loudness; their wave shapes look different but have the same spacing and height. Label 'Quality (timbre): distinguishes sounds of the same pitch and loudness'. Small cards: 'Tone: single frequency', 'Note: mixture of frequencies'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But a sitar and a flute playing the same note at the same loudness still sound different!" },
+          { "speaker": "NEO", "text": "That's quality, or timbre. It helps us tell apart two sounds with the same pitch and loudness." },
+          { "speaker": "NEO", "text": "A sound of single frequency is a tone. A sound made of several frequencies is a note." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' matching table fills in: 'Pitch ↔ frequency', 'Loudness ↔ amplitude', 'Quality ↔ wave shape'. A red cross strikes the wrong pair 'pitch ↔ loudness'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: pitch depends on frequency, and loudness depends on amplitude. Students often mix these up, so learn the pairs carefully." }
+        ]
+      },
+      {
+        "animation": "Recap board with the whistle, dhol and sitar. Points: '1. Pitch depends on frequency', '2. Loudness depends on amplitude; measured in decibels', '3. Quality (timbre) distinguishes sounds of same pitch and loudness'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: pitch depends on frequency; higher frequency means higher pitch." },
+          { "speaker": "NEO", "text": "Two: loudness depends on amplitude, and it's measured in decibels." },
+          { "speaker": "NEO", "text": "Three: quality helps us tell apart sounds of the same pitch and loudness." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Sound",
+    "topic_no": 5,
+    "name": "Speed of Sound in Different Media",
+    "scenes": [
+      {
+        "animation": "A monsoon night. Lightning flashes over the city; Zippy counts '1... 2... 3...' on his fingers before a loud thunderclap rattles the windows.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why do I always see the lightning first and hear the thunder later? They happen together!" },
+          { "speaker": "NEO", "text": "Because light is far faster than sound. Light travels at three into ten to the eight metres per second. Sound is much slower." }
+        ]
+      },
+      {
+        "animation": "A race track with three lanes: 'Solid (steel)', 'Liquid (sea water)', 'Gas (air)'. Sound runners race; the steel lane runner wins by miles. Speed labels appear: 'Steel: 5960 m s⁻¹', 'Sea water: 1531 m s⁻¹', 'Air: 346 m s⁻¹ (at 25 °C)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The speed of sound depends on the medium. It decreases as we go from solids to liquids to gases." },
+          { "speaker": "NEO", "text": "At twenty-five degrees Celsius, sound travels at about three hundred and forty-six metres per second in air, fifteen hundred and thirty-one in sea water, and five thousand nine hundred and sixty in steel." }
+        ]
+      },
+      {
+        "animation": "Zippy puts his ear to a long steel railing while Neo taps the far end; a 'tap' reaches Zippy through the railing before a fainter one arrives through the air. Label 'Sound is faster in solids'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Put your ear to a long metal railing while someone taps the other end. You hear the tap through the metal before you hear it through the air." },
+          { "speaker": "ZIPPY", "text": "Solids are the express lane for sound!" }
+        ]
+      },
+      {
+        "animation": "A thermometer rises beside an air column; the sound runner in the air lane speeds up. Labels: 'Air at 0 °C: 331 m s⁻¹', 'Air at 22 °C: 344 m s⁻¹', 'Higher temperature → higher speed'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The speed of sound also increases as temperature rises. In air, it's about three hundred and thirty-one metres per second at zero degrees, and three hundred and forty-four metres per second at twenty-two degrees Celsius." }
+        ]
+      },
+      {
+        "animation": "Back to the storm. Working appears: 'Gap between flash and thunder = 3 s', 'Distance = speed × time = 346 × 3 = 1038 m ≈ 1 km'. An 'EXAM TIP' card: 'Light takes almost no time; use the speed of sound only'.",
+        "lines": [
+          { "speaker": "NEO", "text": "You counted three seconds. Taking the speed of sound as three hundred and forty-six metres per second, the lightning struck about three forty-six into three, one thousand and thirty-eight metres away. That's roughly one kilometre." },
+          { "speaker": "NEO", "text": "Exam tip: in such problems, light's travel time is negligible, so use only the speed of sound, and state the temperature if given." }
+        ]
+      },
+      {
+        "animation": "Recap board with a lightning bolt. Points: '1. Speed of sound: solids > liquids > gases', '2. Speed increases with temperature (air at 22 °C: 344 m s⁻¹)', '3. Light (3 × 10⁸ m s⁻¹) is much faster, so we see lightning first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: sound travels fastest in solids, slower in liquids, and slowest in gases." },
+          { "speaker": "NEO", "text": "Two: its speed increases with temperature; in air at twenty-two degrees, it's three hundred and forty-four metres per second." },
+          { "speaker": "NEO", "text": "Three: light is much faster than sound, so lightning is seen before thunder is heard." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Sound",
+    "topic_no": 6,
+    "name": "Reflection of Sound and Echo",
+    "scenes": [
+      {
+        "animation": "On a hill trek, Zippy shouts 'NEO IS THE BEST!' towards a cliff. After a pause, the cliff shouts back exactly the same words. Neo looks flattered.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The mountain agrees with me! Wait, did it just copy me?" },
+          { "speaker": "NEO", "text": "It reflected your sound. That repeated sound is called an echo." }
+        ]
+      },
+      {
+        "animation": "Two tubes point at a hard wall: a ticking clock at one tube's end, an ear at the other. A normal line is drawn at the wall. Angles are marked equal: 'angle of incidence = angle of reflection'. Label: 'Incident sound, reflected sound and the normal lie in the same plane'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sound bounces off a solid or liquid surface, just like a ball off a wall. It follows the same laws of reflection as light." },
+          { "speaker": "NEO", "text": "The angle of incidence equals the angle of reflection, and the incident sound, the reflected sound and the normal lie in the same plane." }
+        ]
+      },
+      {
+        "animation": "A brain icon holds the word 'HELLO' glowing for a timer '0.1 s'. The minimum distance calculation builds: 'Total distance = speed × time = 344 × 0.1 = 34.4 m', 'Distance to obstacle = 34.4 / 2 = 17.2 m (at 22 °C)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The sensation of a sound persists in our brain for about zero point one second. To hear a distinct echo, the reflected sound must arrive at least that much later." },
+          { "speaker": "NEO", "text": "At twenty-two degrees, sound covers three forty-four into zero point one, thirty-four point four metres, in that time. That's the trip there and back." },
+          { "speaker": "NEO", "text": "So the obstacle must be at least half of that, seventeen point two metres away." }
+        ]
+      },
+      {
+        "animation": "Worked example: a person claps near a cliff; the echo returns after 2 s. 'v = 346 m s⁻¹, t = 2 s', 'Total distance = 346 × 2 = 692 m', 'Distance to cliff d = 692 / 2 = 346 m'. An 'EXAM TIP' card circles 'divide by 2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A person claps near a cliff and hears the echo after two seconds. Take the speed of sound as three hundred and forty-six metres per second." },
+          { "speaker": "NEO", "text": "Sound travels three forty-six into two, six hundred and ninety-two metres. But that's to the cliff and back, so the cliff is three hundred and forty-six metres away." },
+          { "speaker": "NEO", "text": "Exam tip: in echo problems, always divide the total distance by two." }
+        ]
+      },
+      {
+        "animation": "A storm cloud: a thunderclap bounces between clouds and the ground in several zig-zag paths, producing a long 'rumble' sound effect. Label 'Rolling of thunder: successive reflections'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is that why thunder rumbles on and on?" },
+          { "speaker": "NEO", "text": "Yes. Multiple echoes can happen due to repeated reflections. The rolling of thunder is caused by successive reflections from clouds and the land." }
+        ]
+      },
+      {
+        "animation": "Recap board with the echoing cliff. Points: '1. Sound reflects: angle of incidence = angle of reflection', '2. Echo needs at least 0.1 s gap → obstacle ≥ 17.2 m (22 °C)', '3. Distance = speed × time / 2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: sound reflects with the angle of incidence equal to the angle of reflection." },
+          { "speaker": "NEO", "text": "Two: to hear an echo, the obstacle must be at least seventeen point two metres away at twenty-two degrees." },
+          { "speaker": "NEO", "text": "Three: distance to the obstacle equals speed into time, divided by two." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Sound",
+    "topic_no": 7,
+    "name": "Reverberation and Uses of Multiple Reflection",
+    "scenes": [
+      {
+        "animation": "In an empty school hall with bare walls, the principal says 'Good morning'. The words bounce around and overlap into a muddled 'Good-good-morn-morning-ing', and the students look confused.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Was that 'good morning' or 'good mourning'? I can't make out anything!" },
+          { "speaker": "NEO", "text": "That's reverberation. The sound keeps bouncing off the walls and lingers." }
+        ]
+      },
+      {
+        "animation": "Sound rays bounce repeatedly between walls, ceiling and floor of the hall, gradually fading. Label: 'Reverberation: persistence of sound due to repeated reflection'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A sound created in a big hall persists by repeated reflection until it becomes too faint to be heard. This repeated reflection that causes persistence of sound is called reverberation." },
+          { "speaker": "NEO", "text": "In an auditorium, excessive reverberation is highly undesirable." }
+        ]
+      },
+      {
+        "animation": "The hall gets a makeover: panels of compressed fibreboard slide onto the walls, rough plaster is sprayed, heavy curtains drop down, and cushioned seats appear. The sound rays now fade quickly, and the principal's words come out clear.",
+        "lines": [
+          { "speaker": "NEO", "text": "To reduce reverberation, the roof and walls are covered with sound-absorbent materials like compressed fibreboard, rough plaster or draperies." },
+          { "speaker": "NEO", "text": "The seats are also chosen for their sound-absorbing properties." },
+          { "speaker": "ZIPPY", "text": "So the curtains in our hall aren't just for decoration?" },
+          { "speaker": "NEO", "text": "Not at all. They soak up sound so every word reaches you clearly, only once." }
+        ]
+      },
+      {
+        "animation": "A cone-shaped megaphone sends sound rays in one direction by reflecting them off its walls. Quick cuts show a car horn, a trumpet and a shehnai, each with rays funnelling forward. Then a doctor's stethoscope: sound from a heartbeat bounces along the tube to the ears.",
+        "lines": [
+          { "speaker": "NEO", "text": "But multiple reflection can also be useful. Megaphones, horns, trumpets and shehnais are shaped so that sound reflects and travels forward in one direction, without spreading out." },
+          { "speaker": "NEO", "text": "A doctor's stethoscope carries the sound of your heartbeat to the doctor's ears by multiple reflections inside the tube." }
+        ]
+      },
+      {
+        "animation": "A concert hall with a curved ceiling reflects sound evenly to every seat. Behind the stage, a curved soundboard reflects the singer's voice towards the audience. An 'EXAM TIP' card: 'Curved ceiling and soundboard: sound reaches all corners evenly'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Concert halls and cinema halls often have curved ceilings, so the reflected sound reaches every corner. A curved soundboard behind the stage does the same job." },
+          { "speaker": "ZIPPY", "text": "So the ceiling is secretly a speaker!" },
+          { "speaker": "NEO", "text": "Kind of. Exam tip: when asked for uses of multiple reflection, name the device and explain how the reflection helps." }
+        ]
+      },
+      {
+        "animation": "Recap board with the renovated hall. Points: '1. Reverberation: persistence of sound by repeated reflection', '2. Reduced by fibreboard, rough plaster, draperies, absorbent seats', '3. Uses: megaphone, horns, stethoscope, curved ceilings, soundboards'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: reverberation is the persistence of sound due to repeated reflection." },
+          { "speaker": "NEO", "text": "Two: it's reduced using sound-absorbent materials like fibreboard, rough plaster and draperies." },
+          { "speaker": "NEO", "text": "Three: megaphones, horns, stethoscopes, curved ceilings and soundboards all use multiple reflection." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Sound",
+    "topic_no": 8,
+    "name": "Range of Hearing and Applications of Ultrasound",
+    "scenes": [
+      {
+        "animation": "A man blows a silent dog whistle. Zippy hears nothing and shrugs, but a street dog's ears shoot up and it comes running happily.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "That whistle is broken. It makes no sound at all!" },
+          { "speaker": "NEO", "text": "It does make sound. It's just too high for your ears, but not for the dog's." }
+        ]
+      },
+      {
+        "animation": "A long frequency ruler: a green band from '20 Hz' to '20 kHz' labelled 'Audible range (humans)'. Left of it: 'Infrasonic (below 20 Hz)', with a rhinoceros, a whale and an elephant. Right: 'Ultrasonic (above 20 kHz)', with a bat, a dolphin and a porpoise. A small tag: 'Children under 5 and dogs: up to 25 kHz'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Humans can hear sounds from about twenty hertz to twenty thousand hertz. Children under five and some animals, like dogs, can hear up to twenty-five kilohertz." },
+          { "speaker": "NEO", "text": "Sounds below twenty hertz are infrasonic. Rhinoceroses communicate using infrasound as low as five hertz, and whales and elephants produce it too." },
+          { "speaker": "NEO", "text": "Sounds above twenty kilohertz are ultrasonic. Dolphins, bats and porpoises produce ultrasound." }
+        ]
+      },
+      {
+        "animation": "The ground cracks slightly; faint infrasound rings spread out before the main earthquake shock. Animals in a village look alarmed before humans notice anything. Label: 'Earthquakes produce infrasound before the main shock'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can animals sense earthquakes early?" },
+          { "speaker": "NEO", "text": "Possibly. Earthquakes produce low-frequency infrasound before the main shock waves begin, which may alert some animals." }
+        ]
+      },
+      {
+        "animation": "Three application panels: (1) odd-shaped electronic parts and spiral tubes in a cleaning solution bath, dirt jiggling off; (2) an ultrasound beam passing through a metal block, with a crack reflecting part of it back; (3) a hospital scanner showing a heart (labelled 'echocardiography') and a baby in the womb (labelled 'ultrasonography').",
+        "lines": [
+          { "speaker": "NEO", "text": "Ultrasound is very useful. It cleans parts located in hard-to-reach places, like spiral tubes and electronic components, by shaking off dust and grease in a cleaning solution." },
+          { "speaker": "NEO", "text": "It detects cracks and flaws in metal blocks, because the ultrasound is reflected back by the defect." },
+          { "speaker": "NEO", "text": "In hospitals, echocardiography uses ultrasound to form an image of the heart. Ultrasonography gives images of organs like the liver, gall bladder, uterus and kidney, and is used to examine the foetus." }
+        ]
+      },
+      {
+        "animation": "An ultrasound beam targets a kidney stone, which crumbles into fine grains that are flushed away. An 'EXAM TIP' card lists: 'Cleaning, cracks in metals, echocardiography, ultrasonography, breaking kidney stones'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ultrasound can even break small kidney stones into fine grains that get flushed out with urine." },
+          { "speaker": "NEO", "text": "Exam tip: learn at least three applications of ultrasound with a one-line explanation each. It's a common three-mark question." }
+        ]
+      },
+      {
+        "animation": "Recap board with the bat, the dog and the scanner. Points: '1. Human audible range: 20 Hz to 20 kHz', '2. Infrasound < 20 Hz (rhino, whale, elephant); ultrasound > 20 kHz (bat, dolphin, porpoise)', '3. Ultrasound: cleaning, detecting cracks, echocardiography, ultrasonography, breaking kidney stones'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: humans hear from twenty hertz to twenty kilohertz." },
+          { "speaker": "NEO", "text": "Two: below that is infrasound, and above that is ultrasound." },
+          { "speaker": "NEO", "text": "Three: ultrasound cleans parts, detects cracks, and helps doctors image organs and break kidney stones." },
+          { "speaker": "ZIPPY", "text": "Sorry, dog whistle. You weren't broken. I was." }
+        ]
+      }
+    ]
+  }
+]

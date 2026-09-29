@@ -1,0 +1,255 @@
+[
+  {
+    "chapter_no": 9,
+    "chapter": "Geography: Climate",
+    "topic_no": 1,
+    "name": "Weather, Climate and India's Extremes",
+    "scenes": [
+      {
+        "animation": "A video call on a split screen: Zippy's cousin in the Rajasthan desert fans himself beside a thermometer at '50°C'; another cousin in Drass shivers inside a blanket beside a thermometer at '−45°C'. Zippy sits in the middle holding two cups of chai, one iced and one steaming.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Same country, same season, and one cousin is melting while the other is frozen!" },
+          { "speaker": "NEO", "text": "That's India's climate for you. Full of contrasts. First, let's separate weather from climate." }
+        ]
+      },
+      {
+        "animation": "Two boxes appear. 'WEATHER': a sun icon changing to clouds and rain within a single day. 'CLIMATE': a calendar flipping through 30+ years with a label 'large area, long period (more than 30 years)'. Four element icons pop up: 'temperature', 'atmospheric pressure', 'wind', 'humidity and precipitation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Climate refers to the sum total of weather conditions and variations over a large area for a long period of time, more than thirty years." },
+          { "speaker": "NEO", "text": "Weather refers to the state of the atmosphere over an area at any point of time." },
+          { "speaker": "NEO", "text": "The elements of weather and climate are the same: temperature, atmospheric pressure, wind, humidity and precipitation." }
+        ]
+      },
+      {
+        "animation": "A weather reporter's map of India with thermometers popping up: 'Rajasthan desert, summer: 50°C', 'Pahalgam, summer: around 20°C', 'Drass, winter night: minus 45°C', 'Thiruvananthapuram, winter night: 22°C'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India's climate is described as the monsoon type. But there are regional variations in temperature and precipitation." },
+          { "speaker": "NEO", "text": "In summer, the mercury sometimes touches 50 degrees Celsius in some parts of the Rajasthan desert, whereas it may be around 20 degrees Celsius in Pahalgam in Jammu and Kashmir." },
+          { "speaker": "NEO", "text": "On a winter night, temperature at Drass in Jammu and Kashmir may be as low as minus 45 degrees Celsius. Thiruvananthapuram, on the other hand, may have a temperature of 22 degrees Celsius." }
+        ]
+      },
+      {
+        "animation": "Rain gauges rise on the map: a tall overflowing one in 'Meghalaya: over 400 cm' and a nearly empty one in 'Ladakh and western Rajasthan: less than 10 cm'. Snowflakes fall over the upper Himalayas.",
+        "lines": [
+          { "speaker": "NEO", "text": "Precipitation varies too, in form and amount. The upper parts of the Himalayas get snowfall, while the rest of the country gets rain." },
+          { "speaker": "NEO", "text": "The annual precipitation varies from over 400 centimetres in Meghalaya to less than 10 centimetres in Ladakh and western Rajasthan." },
+          { "speaker": "ZIPPY", "text": "So one place is a bathtub, and another is a biscuit tin." },
+          { "speaker": "NEO", "text": "Exactly. Exam tip: remember these extreme values; they're asked as examples of variation in India's climate." }
+        ]
+      },
+      {
+        "animation": "Recap board with a thermometer and a rain gauge. Points appear: '1. Climate = weather over a large area for 30+ years', '2. Temperature: 50°C Rajasthan vs −45°C Drass', '3. Rainfall: over 400 cm Meghalaya vs less than 10 cm Ladakh, western Rajasthan'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: climate is the sum of weather conditions over a large area for more than thirty years; weather is the state of the atmosphere at a point of time." },
+          { "speaker": "NEO", "text": "Two: temperatures range from about 50 degrees in the Rajasthan desert to minus 45 degrees at Drass." },
+          { "speaker": "NEO", "text": "Three: rainfall ranges from over 400 centimetres in Meghalaya to less than 10 centimetres in Ladakh and western Rajasthan." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Geography: Climate",
+    "topic_no": 2,
+    "name": "Climatic Controls and Factors Affecting India's Climate",
+    "scenes": [
+      {
+        "animation": "A big control panel labelled 'CLIMATE' with six knobs. Zippy twists them randomly and the sky above flashes sun, snow, rain and storm.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Ooh, knobs! What does each one do?" },
+          { "speaker": "NEO", "text": "Careful! These are the climatic controls. Each one changes the climate of a place." }
+        ]
+      },
+      {
+        "animation": "The six knobs light up in order with labels and icons: 'Latitude', 'Altitude', 'Pressure and wind system', 'Distance from the sea (continentality)', 'Ocean currents', 'Relief features'.",
+        "lines": [
+          { "speaker": "NEO", "text": "There are six major controls of the climate of any place: latitude, altitude, pressure and wind system, distance from the sea, ocean currents and relief features." },
+          { "speaker": "NEO", "text": "Due to the curvature of the earth, the amount of solar energy received varies with latitude. Air temperature generally decreases from the equator towards the poles." },
+          { "speaker": "NEO", "text": "As one goes up towards the higher altitudes, the atmosphere becomes less dense and temperature decreases. The hills are therefore cooler in summer." },
+          { "speaker": "NEO", "text": "As the distance from the sea increases, its moderating influence decreases, and people experience extreme weather. This is called continentality." }
+        ]
+      },
+      {
+        "animation": "An outline map of India: the Tropic of Cancer glows through the middle; the south half is labelled 'tropical', the north half 'sub-tropical'. The Himalayas rise as a wall, blocking icy winds from Central Asia shown as blue arrows bouncing off.",
+        "lines": [
+          { "speaker": "NEO", "text": "In India, the Tropic of Cancer passes through the middle of the country. The part south of it is in the tropical area, and the part north of it is in the sub-tropical area. So India's climate has characteristics of both." },
+          { "speaker": "NEO", "text": "India has mountains to the north, with an average height of about 6,000 metres. The Himalayas prevent the cold winds from Central Asia from entering the subcontinent." },
+          { "speaker": "NEO", "text": "India also has a vast coastal area, where the maximum elevation is about 30 metres." }
+        ]
+      },
+      {
+        "animation": "A globe with wind belts. Arrows from the northern subtropical high-pressure belt blow towards the equator, curving to the right: 'North-easterly winds'. A small spinning Earth shows 'Coriolis force' deflecting the arrow. Then the arrow reverses over India in summer, labelled 'reversal of winds'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India lies in the region of north easterly winds. These winds originate from the subtropical high-pressure belt of the northern hemisphere. They blow south, get deflected to the right due to the Coriolis force, and move towards the equatorial low-pressure area." },
+          { "speaker": "ZIPPY", "text": "So our winds are always north-easterly?" },
+          { "speaker": "NEO", "text": "Not always. Generally these winds carry very little moisture. But the peculiar pressure and wind conditions over India reverse the winds seasonally. That's why India has a monsoon climate." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card slides in: 'Himalayas: block cold Central Asian winds → subcontinent warmer in winter'. The six-knob panel reappears as the recap board.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: questions often ask how the Himalayas influence India's climate. Mention that they block the cold winds of Central Asia." },
+          { "speaker": "NEO", "text": "Recap. One: the six climatic controls are latitude, altitude, pressure and winds, distance from the sea, ocean currents and relief." },
+          { "speaker": "NEO", "text": "Two: the Tropic of Cancer gives India both tropical and sub-tropical climate, and the Himalayas block cold winds." },
+          { "speaker": "NEO", "text": "Three: India lies in the north easterly wind region, but its winds reverse with the seasons." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Geography: Climate",
+    "topic_no": 3,
+    "name": "The Indian Monsoon: Mechanism, Onset and Withdrawal",
+    "scenes": [
+      {
+        "animation": "A Kerala beach on a hot day in early June. Crowds wait with umbrellas. Suddenly, black clouds burst open and rain pours down; everyone cheers. Zippy, without an umbrella, gets drenched.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does everyone cheer when they get soaked?" },
+          { "speaker": "NEO", "text": "Because the monsoon has arrived! It decides crops, water and even our festivals." }
+        ]
+      },
+      {
+        "animation": "A word card: Arabic script morphs into 'mausim = seasons'. A map of India heats up in red, creating a big 'L' (low pressure) over the land, while the surrounding oceans stay blue with 'H'. Winds from the southern Indian Ocean cross the equator and turn towards India as south-west monsoon winds.",
+        "lines": [
+          { "speaker": "NEO", "text": "The word monsoon comes from the Arabic word 'mausim', which literally means season. It refers to the seasonal reversal in the wind direction during a year." },
+          { "speaker": "NEO", "text": "In summer, the land heats up much more than the sea, creating low pressure over the Indian landmass. The seas around have comparatively high pressure." },
+          { "speaker": "NEO", "text": "The south-east trade winds cross the equator, get deflected towards the right, and blow towards India as the south-west monsoon, bringing moisture from the ocean." },
+          { "speaker": "NEO", "text": "The Indian landmass comes under the influence of these winds for a duration of 100 to 120 days, from early June to mid-September." }
+        ]
+      },
+      {
+        "animation": "Onset map animation with date stamps: 'First week of June: southern tip of Kerala'. Two arrows split: 'Arabian Sea branch' up the west coast and 'Bay of Bengal branch' into the northeast. They meet over the northwestern Ganga plains. Stamps: 'Delhi: end of June', 'mid-July: rest of the country'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The monsoon arrives at the southern tip of the Indian peninsula, in Kerala, generally by the first week of June." },
+          { "speaker": "NEO", "text": "It splits into two branches, the Arabian Sea branch and the Bay of Bengal branch. Both merge over the northwestern part of the Ganga plains." },
+          { "speaker": "NEO", "text": "Delhi generally receives the monsoon showers from the Bay of Bengal branch by the end of June. By mid-July, the monsoon reaches Himachal Pradesh and the rest of the country." }
+        ]
+      },
+      {
+        "animation": "A rainfall bar for July shows dense bars, then several empty days labelled 'Break in the monsoon'. Then a withdrawal animation: the rain curtain pulls back from the northwest in 'early September', from the northern Peninsula by 'mid-October', and from the rest by 'early December'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The monsoon does not bring rain every day. It has wet and dry spells, called breaks in the monsoon." },
+          { "speaker": "NEO", "text": "Withdrawal is gradual. It begins in the northwestern states of India by early September. By mid-October, it withdraws completely from the northern half of the peninsula, and from the rest of the country by early December." },
+          { "speaker": "ZIPPY", "text": "So the monsoon arrives in a hurry but leaves slowly, like guests at a wedding." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Onset — Kerala, 1st week of June; Withdrawal — northwest, early September'. A 'MAP WORK' tag: 'Arrows for Arabian Sea and Bay of Bengal branches'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: on a map, practise drawing the two branches of the monsoon with arrows. Know the onset and withdrawal dates." }
+        ]
+      },
+      {
+        "animation": "Recap board with an umbrella icon. Points appear: '1. Monsoon = seasonal reversal of winds (Arabic mausim)', '2. Onset: Kerala, 1st week of June; covers India by mid-July; Arabian Sea and Bay of Bengal branches', '3. Breaks in monsoon; withdrawal from early September to early December'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the monsoon is the seasonal reversal of winds, from the Arabic word mausim." },
+          { "speaker": "NEO", "text": "Two: it reaches Kerala in the first week of June through two branches, and covers the country by mid-July." },
+          { "speaker": "NEO", "text": "Three: it has breaks, and withdraws gradually from early September to early December." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Geography: Climate",
+    "topic_no": 4,
+    "name": "The Four Seasons of India",
+    "scenes": [
+      {
+        "animation": "Zippy stands in front of four wardrobe doors labelled with months. He opens one and gets hit by a woollen shawl, another and gets blasted by hot air, a third and gets drenched with rain.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does my wardrobe need four doors?" },
+          { "speaker": "NEO", "text": "Because India has four main seasons. Let's open them in order." }
+        ]
+      },
+      {
+        "animation": "Season 1 card: 'Cold weather season: mid-November to February; coldest months December and January'. The map shows 'Chennai 24°–25°C' and 'Northern plains 10°–15°C'. Snowflakes fall on the hills; a small cloud from the Mediterranean drifts in labelled 'Western disturbances → mahawat'. The Tamil Nadu coast gets rain from north-east winds.",
+        "lines": [
+          { "speaker": "NEO", "text": "The cold weather season begins from mid-November in northern India and stays till February. December and January are the coldest months." },
+          { "speaker": "NEO", "text": "The average temperature of Chennai, on the eastern coast, is between 24 and 25 degrees Celsius, while in the northern plains it ranges between 10 and 15 degrees Celsius." },
+          { "speaker": "NEO", "text": "Western cyclonic disturbances bring a little winter rain to the plains, locally known as mahawat. The Tamil Nadu coast gets winter rain from the north-east winds." }
+        ]
+      },
+      {
+        "animation": "Season 2 card: 'Hot weather season: March to May'. Temperature flags move north: 'March: 38°C Deccan', 'April: 42°C Gujarat & MP', 'May: 45°C north-west'. A hot dusty wind swirls: 'Loo'. Mango trees in Kerala and Karnataka get sprinkled: 'Mango showers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The hot weather season lasts from March to May. The heat belt shifts northwards, from about 38 degrees Celsius on the Deccan plateau in March, to 42 in Gujarat and Madhya Pradesh in April, and 45 in the north-western parts in May." },
+          { "speaker": "NEO", "text": "A striking feature is the loo. These are strong, gusty, hot, dry winds blowing during the day over north and north-western India." },
+          { "speaker": "NEO", "text": "Towards the end of summer, pre-monsoon showers in Kerala and Karnataka help early ripening of mangoes. They are called mango showers." }
+        ]
+      },
+      {
+        "animation": "Season 3 card: 'Advancing monsoon (rainy season): June to September'. Thunder claps; the map turns green with rain from south to north. Season 4 card: 'Retreating monsoon: October–November'. Sun comes out over wet fields, steam rises, labelled 'October heat'. Cyclone swirls hit the east coast deltas.",
+        "lines": [
+          { "speaker": "NEO", "text": "By early June, the low-pressure condition over the northern plains intensifies. It attracts the trade winds of the southern hemisphere, which bring abundant moisture. The monsoon arrives suddenly, with thunder, which is often called the burst of the monsoon." },
+          { "speaker": "NEO", "text": "During October and November, the monsoon retreats. Skies are clear, but high temperature and humidity make the weather oppressive. This is known as October heat." },
+          { "speaker": "NEO", "text": "By early November, low pressure shifts to the Bay of Bengal, creating cyclonic depressions. These often cause heavy rain on the eastern coast, and strike the deltas of the Godavari, Krishna and Kaveri." }
+        ]
+      },
+      {
+        "animation": "Recap board with four wardrobe doors, each opening to show its season. Points appear: '1. Cold weather: mid-Nov–Feb; mahawat from western disturbances', '2. Hot weather: March–May; loo; mango showers', '3. Advancing monsoon June–Sept; retreating monsoon Oct–Nov; October heat'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the cold weather season runs from mid-November to February, with mahawat rain from western disturbances." },
+          { "speaker": "NEO", "text": "Two: the hot weather season runs from March to May, with the loo and mango showers." },
+          { "speaker": "NEO", "text": "Three: the monsoon advances from June, then retreats in October and November, bringing October heat and cyclones. Exam tip: learn one local term for each season." },
+          { "speaker": "ZIPPY", "text": "Four doors, four outfits. My wardrobe finally makes sense." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Geography: Climate",
+    "topic_no": 5,
+    "name": "Distribution of Rainfall and the Monsoon as a Unifying Bond",
+    "scenes": [
+      {
+        "animation": "Mawsynram, Meghalaya: Zippy stands under an enormous umbrella while waterfalls pour off its edges. A signboard reads 'Highest average rainfall in the world'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Does it ever stop raining here?" },
+          { "speaker": "NEO", "text": "Rarely! Mawsynram, in the southern ranges of the Khasi hills, receives the highest average rainfall in the world." }
+        ]
+      },
+      {
+        "animation": "An outline map of India fills in with rainfall colours, step by step: dark blue on the western coast and the northeast labelled 'over 400 cm'; light yellow in western Rajasthan and adjoining Gujarat, Haryana and Punjab labelled 'less than 60 cm'; pale colours in the interior of the Deccan plateau and east of the Sahyadris; low rainfall near Leh.",
+        "lines": [
+          { "speaker": "NEO", "text": "Parts of the western coast and northeast India receive over about 400 centimetres of rainfall annually." },
+          { "speaker": "NEO", "text": "It is less than 60 centimetres in western Rajasthan and the adjoining parts of Gujarat, Haryana and Punjab." },
+          { "speaker": "NEO", "text": "Rainfall is equally low in the interior of the Deccan plateau and east of the Sahyadris. Leh in Jammu and Kashmir also receives very low rainfall." },
+          { "speaker": "NEO", "text": "The rest of the country receives moderate rainfall. Snowfall is restricted to the Himalayan region." }
+        ]
+      },
+      {
+        "animation": "A farmer watches the sky anxiously; a calendar shows 'Monsoon late?'. One region floods while another cracks with drought, illustrating 'variable from year to year'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Owing to the nature of the monsoons, the annual rainfall is highly variable from year to year." },
+          { "speaker": "NEO", "text": "Areas of low rainfall, such as parts of Rajasthan, Gujarat and the leeward side of the Western Ghats, are drought-prone. Areas of high rainfall are liable to be affected by floods." }
+        ]
+      },
+      {
+        "animation": "A map of India with people from different states — a Punjabi farmer, a Tamil fisherwoman, an Assamese tea picker — all looking up as the same rain cloud passes over them. Festival icons (harvest festivals) light up across the country. Caption: 'Monsoon — a unifying bond'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So different places get different rain. How can the monsoon unite anyone?" },
+          { "speaker": "NEO", "text": "The Himalayas protect the whole subcontinent from extremely cold winds. The peninsular plateau, under the influence of the sea, has moderate temperatures." },
+          { "speaker": "NEO", "text": "The seasonal alteration of the wind systems and the associated weather conditions provide a rhythmic cycle of seasons. Even the uncertainties of rain are uniquely Indian." },
+          { "speaker": "NEO", "text": "The entire life of agriculture, and the festivals around it, revolve around this phenomenon. People across India eagerly await the monsoon every year. That's why it is a unifying bond." }
+        ]
+      },
+      {
+        "animation": "A 'MAP WORK' outline: the student shades 'areas above 400 cm' and 'below 20 cm', and marks 'Mawsynram'. A 'BOARD TIP' card: 'Monsoon as unifying bond — 3 to 5 marks'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: on the outline map, mark areas of highest and lowest rainfall, and write at least three points on the monsoon as a unifying bond." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cloud icon. Points appear: '1. Over 400 cm: western coast, northeast; Mawsynram highest average rainfall', '2. Less than 60 cm: western Rajasthan and nearby; variable, drought and floods', '3. Monsoon unites India through a rhythmic cycle of seasons'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the western coast and northeast get over 400 centimetres, and Mawsynram has the highest average rainfall in the world." },
+          { "speaker": "NEO", "text": "Two: western Rajasthan and nearby areas get less than 60 centimetres, and rainfall varies year to year." },
+          { "speaker": "NEO", "text": "Three: the monsoon unites India through a shared rhythm of seasons, farming and festivals." }
+        ]
+      }
+    ]
+  }
+]

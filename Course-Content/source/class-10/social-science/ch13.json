@@ -1,0 +1,220 @@
+[
+  {
+    "chapter_no": 13,
+    "chapter": "Political Science: Power Sharing",
+    "topic_no": 1,
+    "name": "Belgium: A Story of Accommodation",
+    "scenes": [
+      {
+        "animation": "Zippy stands in a school canteen trying to cut one samosa into three unequal pieces for three friends who are glaring at each other. Neo lands beside him with a map of Europe; a small country glows, labelled 'Belgium'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Three friends, one samosa, and nobody is happy with their piece!" },
+          { "speaker": "NEO", "text": "Then let's visit a country that solved a much bigger sharing problem. Welcome to Belgium, a small country in Europe with a very complex society." }
+        ]
+      },
+      {
+        "animation": "A map of Belgium splits into regions. Flemish region in orange with '59% Dutch', Wallonia in blue with '40% French', a tiny strip in green with '1% German'. Brussels is circled; a small pie chart inside shows '80% French, 20% Dutch'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Of the country's total population, 59 per cent live in the Flemish region and speak Dutch. Another 40 per cent live in the Wallonia region and speak French. The remaining one per cent speak German." },
+          { "speaker": "NEO", "text": "But in the capital city, Brussels, 80 per cent speak French and 20 per cent speak Dutch." },
+          { "speaker": "ZIPPY", "text": "So the majority in the country is a minority in the capital. Tricky!" }
+        ]
+      },
+      {
+        "animation": "Two cartoon groups argue across a line. The French-speaking side holds a sack labelled 'Rich and powerful'; the Dutch-speaking side holds a banner 'Economic development came later'. A timeline strip slides in: '1950s and 1960s: tension'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The French-speaking minority was relatively rich and powerful. The Dutch-speaking community, who got the benefit of economic development and education much later, resented this." },
+          { "speaker": "NEO", "text": "This led to tensions between the two communities during the 1950s and 1960s. The tension was more acute in Brussels." }
+        ]
+      },
+      {
+        "animation": "A calendar flips from 1970 to 1993 with a stamp 'Constitution amended four times'. Four cards build one by one: 'Equal Dutch and French ministers in central government', 'State governments not subordinate to Centre', 'Brussels: separate government, equal representation', 'Community government for each language group'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Between 1970 and 1993, Belgian leaders amended their constitution four times to work out an arrangement where everyone could live together." },
+          { "speaker": "NEO", "text": "The number of Dutch and French-speaking ministers in the central government shall be equal. Many powers were given to state governments, which are not subordinate to the Central Government." },
+          { "speaker": "NEO", "text": "Brussels has a separate government in which both communities have equal representation. And there is a third kind of government, the community government, elected by people of one language community, with power over cultural, educational and language-related issues." }
+        ]
+      },
+      {
+        "animation": "A bright map shows Brussels with a flag of the European Union rising over a building. A 'Board Tip' sticker flashes over the phrase 'community government'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The arrangement worked. It avoided civic strife and a possible division of the country on linguistic lines. That is why Brussels was chosen as the headquarters of the European Union." },
+          { "speaker": "NEO", "text": "Board tip: community government is unique to Belgium. Describe its powers clearly in a three-mark answer." }
+        ]
+      },
+      {
+        "animation": "Recap board with a Belgian map icon. Points appear: '1. Dutch 59%, French 40%, German 1%', '2. Four amendments, 1970 to 1993', '3. Equal ministers, Brussels government, community government'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: Belgium is 59 per cent Dutch-speaking, 40 per cent French-speaking and one per cent German-speaking." },
+          { "speaker": "NEO", "text": "Two: its constitution was amended four times between 1970 and 1993." },
+          { "speaker": "NEO", "text": "Three: equal ministers, a shared Brussels government and community governments kept the country united." },
+          { "speaker": "ZIPPY", "text": "Samosa community government, now in session." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Political Science: Power Sharing",
+    "topic_no": 2,
+    "name": "Sri Lanka: Majoritarianism",
+    "scenes": [
+      {
+        "animation": "In a cricket match, one team's captain grabs the rulebook and writes 'Only my team may bat'. The other team walks off the field. Neo freezes the frame and a map of Sri Lanka, just south of India, zooms in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "That captain just changed the rules to suit his own team!" },
+          { "speaker": "NEO", "text": "That is majoritarianism. Sri Lanka, an island nation just a few kilometres off the southern coast of Tamil Nadu, shows where it can lead." }
+        ]
+      },
+      {
+        "animation": "A pie chart builds over the Sri Lankan map: 'Sinhala speakers 74%' in large orange, 'Tamil speakers 18%' in green. The green slice splits into 'Sri Lankan Tamils 13%' in the north and east, and 'Indian Tamils' making up the rest. Small icons show 'Sinhala: mostly Buddhist', 'Tamils: Hindus or Muslims', 'Christians: about 7%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The major social groups are the Sinhala speakers, who are 74 per cent, and the Tamil speakers, who are 18 per cent." },
+          { "speaker": "NEO", "text": "Tamils native to the country are Sri Lankan Tamils, 13 per cent, concentrated in the north and east. The rest are Indian Tamils, whose forefathers came from India as plantation workers during the colonial period." },
+          { "speaker": "NEO", "text": "Most Sinhala speakers are Buddhists, while most Tamils are Hindus or Muslims. There are about 7 per cent Christians, who are both Tamil and Sinhala." }
+        ]
+      },
+      {
+        "animation": "A timeline builds: '1948: Independence', then '1956: Act recognises Sinhala as the only official language'. Three stamps land on a government file: 'Sinhala preferred for university positions', 'Sinhala preferred for government jobs', 'State shall protect and foster Buddhism'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sri Lanka became independent in 1948. The democratically elected government adopted a series of majoritarian measures to establish Sinhala supremacy." },
+          { "speaker": "NEO", "text": "In 1956, an Act was passed to recognise Sinhala as the only official language, disregarding Tamil." },
+          { "speaker": "NEO", "text": "Governments followed preferential policies favouring Sinhala applicants for university positions and government jobs. A new constitution said the state shall protect and foster Buddhism." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds downward: 'Majoritarian measures' leads to 'Tamils feel alienated', then 'Demands: Tamil as official language, regional autonomy, equal opportunity', then 'Demands denied', then '1980s: demand for Tamil Eelam', then 'Civil war'. The final box cracks red.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How did the Tamils react?" },
+          { "speaker": "NEO", "text": "They felt that the Constitution and government policies denied them equal political rights and discriminated against them in jobs and other opportunities." },
+          { "speaker": "NEO", "text": "They demanded recognition of Tamil as an official language, regional autonomy and equality of opportunity in education and jobs. These demands were repeatedly denied." },
+          { "speaker": "NEO", "text": "By the 1980s, political organisations were demanding an independent Tamil Eelam in the north and east. The distrust turned into a civil war. The civil war ended in 2009." }
+        ]
+      },
+      {
+        "animation": "A split screen: Belgium on the left glowing green with 'Accommodation', Sri Lanka on the right in grey with 'Majoritarianism'. A 'Board Tip' sticker lands in the middle.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: a favourite question asks you to compare Belgium and Sri Lanka. Belgium shared power and stayed united. Sri Lanka's majority imposed its will and undermined the unity of the country." }
+        ]
+      },
+      {
+        "animation": "Recap board with a Sri Lanka map icon. Points appear: '1. Sinhala 74%, Tamil 18%', '2. 1956 Act: Sinhala only official language', '3. Majoritarianism led to civil war'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: Sri Lanka has 74 per cent Sinhala speakers and 18 per cent Tamil speakers." },
+          { "speaker": "NEO", "text": "Two: the 1956 Act made Sinhala the only official language, and Sinhala applicants were favoured." },
+          { "speaker": "NEO", "text": "Three: majoritarian measures alienated the Tamils and led to civil war." },
+          { "speaker": "ZIPPY", "text": "Lesson learned. Everybody bats." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Political Science: Power Sharing",
+    "topic_no": 3,
+    "name": "Why Is Power Sharing Desirable?",
+    "scenes": [
+      {
+        "animation": "Zippy is class monitor and makes every decision alone: the picnic spot, the class song, the seating plan. Classmates sulk in a corner. A thought bubble shows a crack spreading across the classroom floor.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I'm the monitor. I decide everything. Much faster!" },
+          { "speaker": "NEO", "text": "Faster, maybe. But look at the class. When people are left out, conflict grows. That's the first reason for power sharing." }
+        ]
+      },
+      {
+        "animation": "A large scale labelled 'Why share power?' sits on screen. On the left pan a coin labelled 'Prudential reasons' drops; on the right pan a coin labelled 'Moral reasons' drops. The scale balances.",
+        "lines": [
+          { "speaker": "NEO", "text": "There are two sets of reasons why power sharing is desirable: prudential reasons and moral reasons." }
+        ]
+      },
+      {
+        "animation": "The 'Prudential' coin opens into a flowchart: 'Power sharing' leads to 'Reduces conflict between social groups' leads to 'Political stability'. A side arrow shows 'Tyranny of majority' leading to 'Ruins the majority too', with a small Sri Lanka map beside it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Prudential reasons stress that power sharing brings better outcomes." },
+          { "speaker": "NEO", "text": "It helps to reduce the possibility of conflict between social groups. Since social conflict often leads to violence and political instability, power sharing is a good way to ensure the stability of political order." },
+          { "speaker": "NEO", "text": "Imposing the will of the majority community over others may look attractive in the short run, but in the long run it undermines the unity of the nation. Tyranny of the majority is oppressive for the minority, and often brings ruin to the majority as well." }
+        ]
+      },
+      {
+        "animation": "The 'Moral' coin opens into a glowing card: 'Power sharing = the very spirit of democracy'. Citizens of all shapes and colours step up to a round table, each getting a chair labelled 'A right to be consulted'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The moral reason emphasises the very act of power sharing as valuable." },
+          { "speaker": "NEO", "text": "A democratic rule involves sharing power with those affected by its exercise. People have a right to be consulted on how they are to be governed. A legitimate government is one where citizens, through participation, acquire a stake in the system." },
+          { "speaker": "ZIPPY", "text": "So even if my way is faster, sharing power is what makes it a democracy." },
+          { "speaker": "NEO", "text": "Exactly." }
+        ]
+      },
+      {
+        "animation": "An exam paper floats up: 'Give prudential and moral reasons for power sharing.' A 'Board Tip' sticker lands with two columns, 'Prudential: better outcomes' and 'Moral: intrinsic value'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: prudential reasons are about outcomes, moral reasons are about the value of power sharing itself. Keep the two columns separate in your answer." }
+        ]
+      },
+      {
+        "animation": "Recap board with a balanced scale icon. Points appear: '1. Prudential: reduces conflict, ensures stability', '2. Majoritarianism harms minority and majority', '3. Moral: the spirit of democracy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: prudentially, power sharing reduces conflict and ensures political stability." },
+          { "speaker": "NEO", "text": "Two: tyranny of the majority harms the minority and ruins the majority too." },
+          { "speaker": "NEO", "text": "Three: morally, power sharing is the very spirit of democracy." },
+          { "speaker": "ZIPPY", "text": "Picnic spot vote, everyone. Show of hands." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Political Science: Power Sharing",
+    "topic_no": 4,
+    "name": "Forms of Power Sharing",
+    "scenes": [
+      {
+        "animation": "Zippy tries to hold a giant cake labelled 'POWER' by himself and wobbles. Neo slices it into four pieces, and four labelled plates slide under them.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Power is one big cake. Why cut it at all?" },
+          { "speaker": "NEO", "text": "Old thinking said power must stay undivided in one person or group. Modern democracies share it in four main ways." }
+        ]
+      },
+      {
+        "animation": "Plate one: three pillars stand side by side, 'Legislature', 'Executive', 'Judiciary', with arrows looping between them and a label 'Checks and balances'. A judge checks a minister; a minister answers to Parliament.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, power is shared among different organs of government: the legislature, executive and judiciary. This is horizontal distribution of power, because all organs are placed at the same level." },
+          { "speaker": "NEO", "text": "Each organ checks the others. Ministers are responsible to Parliament, and judges can check the executive and laws. This is called a system of checks and balances." }
+        ]
+      },
+      {
+        "animation": "Plate two: a stacked pyramid builds from top to bottom, 'Union or federal government', 'State or provincial governments', 'Municipalities and panchayats'. A label 'Vertical division' runs down the side.",
+        "lines": [
+          { "speaker": "NEO", "text": "Second, power is shared among governments at different levels: a general government for the entire country and governments at the provincial or regional level. In India, we call them the Central or Union Government and the State Governments." },
+          { "speaker": "NEO", "text": "Power can go further down to municipalities and panchayats. This is vertical division of power." }
+        ]
+      },
+      {
+        "animation": "Plate three: a Belgian community government icon sits beside an Indian ballot paper marked 'Reserved constituency'. Plate four: party symbols join hands in a circle marked 'Coalition government', with pressure group placards of traders, farmers and workers around it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Third, power may be shared among different social groups, such as religious and linguistic groups. Community government in Belgium is an example. Reserved constituencies in India give space to weaker sections and women." },
+          { "speaker": "NEO", "text": "Fourth, power is shared among political parties, pressure groups and movements. Competition among parties ensures power does not stay in one hand. Sometimes parties form an alliance and a coalition government shares power." },
+          { "speaker": "NEO", "text": "Interest groups of traders, businessmen, industrialists, farmers and industrial workers also get a share through participation and influence." }
+        ]
+      },
+      {
+        "animation": "A four-box flowchart titled 'Forms of power sharing' builds: 'Horizontal: organs', 'Vertical: levels', 'Social groups', 'Parties, pressure groups, movements'. A 'Board Tip' sticker stamps 'horizontal vs vertical'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: the difference between horizontal and vertical division of power is asked very often. Horizontal means organs at the same level; vertical means levels of government." }
+        ]
+      },
+      {
+        "animation": "Recap board with the four-slice cake icon. Points appear: '1. Horizontal: legislature, executive, judiciary', '2. Vertical: Union, state, local', '3. Social groups; parties and pressure groups'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: horizontal distribution shares power among organs, with checks and balances." },
+          { "speaker": "NEO", "text": "Two: vertical division shares power among levels of government." },
+          { "speaker": "NEO", "text": "Three: power is also shared among social groups, and among parties, pressure groups and movements." },
+          { "speaker": "ZIPPY", "text": "Four slices of power. I'll take the pressure group slice." }
+        ]
+      }
+    ]
+  }
+]

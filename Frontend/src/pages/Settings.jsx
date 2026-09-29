@@ -540,7 +540,7 @@ export default function Settings() {
   if (loading) {
     return (
       <div className="min-h-screen bg-surface-sunken px-4 py-10">
-        <div className="mx-auto max-w-6xl space-y-4">
+        <div className="page-frame space-y-4">
           <div className="h-40 rounded-3xl border border-line bg-surface animate-pulse" />
           <div className="grid gap-4 lg:grid-cols-2">
             <div className="h-64 rounded-3xl border border-line bg-surface animate-pulse" />
@@ -554,7 +554,7 @@ export default function Settings() {
   return (
     <div className="min-h-screen bg-surface-sunken px-4 py-8 md:px-8">
       <LiveRegion message={statusMessage} />
-      <div className="mx-auto max-w-7xl">
+      <div className="page-frame">
         <section className="overflow-hidden rounded-3xl border border-cyan-100 bg-gradient-to-br from-surface via-surface-sunken to-cyan-50/40 p-6 shadow-e3 md:p-8">
           <div className="flex flex-wrap items-center justify-between gap-5">
             <div className="flex items-center gap-4">
@@ -592,7 +592,7 @@ export default function Settings() {
                 className="inline-flex min-h-touch items-center gap-2 rounded-xl border border-line bg-surface-sunken px-4 py-2.5 text-sm text-ink-muted transition-colors duration-fast ease-brand hover:bg-surface"
               >
                 <FaRobot />
-                Chatbot
+                Assistant
               </Link>
             </div>
           </div>

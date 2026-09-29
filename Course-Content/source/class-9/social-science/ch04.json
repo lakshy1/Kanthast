@@ -1,0 +1,269 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "History: Forest Society and Colonialism",
+    "topic_no": 1,
+    "name": "Why Deforestation?",
+    "scenes": [
+      {
+        "animation": "Zippy sits at a desk with a school notebook, a wooden pencil and a cup of chai. One by one each object glows green and sprouts a tiny leaf with the label 'From the forest'. Zippy jumps up in surprise and knocks over the chai.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, my notebook, my pencil, even the spices in my chai came from forests?" },
+          { "speaker": "NEO", "text": "They did. Now imagine what happened when forests began disappearing on a massive scale." }
+        ]
+      },
+      {
+        "animation": "A world map where green patches shrink as a counter runs: '1700 to 1995: 13.9 million sq km cleared, 9.3% of the world's total area'. Then an India map fills with farmland: 'About 1600: one-sixth of land under cultivation' → 'Now: about half'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The disappearance of forests is called deforestation. Between 1700 and 1995, 13.9 million square kilometres of forest, or 9.3 per cent of the world's total area, was cleared." },
+          { "speaker": "NEO", "text": "In India, about one-sixth of the land was under cultivation around 1600. Now that figure has risen to about half." }
+        ]
+      },
+      {
+        "animation": "Reason 1 card: 'Land to be improved'. British officials point at forests labelled 'unproductive' and wave in farmers who plant jute, sugar, wheat and cotton. A counter reads '1880 to 1920: cultivated area rose by 6.7 million hectares'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The first reason was expanding cultivation. As population grew, more food was needed. The colonial state also encouraged commercial crops like jute, sugar, wheat and cotton, needed to feed Europe's growing towns and supply raw materials to industry." },
+          { "speaker": "NEO", "text": "The British saw forests as unproductive. Between 1880 and 1920, cultivated area rose by 6.7 million hectares." }
+        ]
+      },
+      {
+        "animation": "Reason 2 card: 'Sleepers on the tracks'. English oak trees vanish on a map of England, labelled 'By the 1820s'. Ships sail to India. A railway line builds tie by tie with the caption 'Each mile of track: 1,760 to 2,000 sleepers' and '1890: about 25,500 km of track'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Second, timber for ships and railways. By the early nineteenth century, oak forests in England were disappearing, creating a problem of timber supply for the Royal Navy. By the 1820s, search parties were sent to explore the forests of India." },
+          { "speaker": "NEO", "text": "From the 1850s, railways spread quickly. Wood was needed as fuel for locomotives and for sleepers to hold the tracks together. Each mile of railway track required between 1,760 and 2,000 sleepers. By 1890, about 25,500 kilometres of track had been laid." }
+        ]
+      },
+      {
+        "animation": "Reason 3 card: 'Plantations'. Natural forest is cleared in a wipe and replaced by neat rows labelled 'Tea', 'Coffee', 'Rubber'. The land is handed to a European planter on a cheap-rate lease document. An 'EXAM TIP' card slides in listing the three reasons.",
+        "lines": [
+          { "speaker": "NEO", "text": "Third, plantations. Large areas of natural forest were cleared for tea, coffee and rubber plantations, to meet Europe's growing need for these commodities." },
+          { "speaker": "NEO", "text": "The colonial government took over the forests and gave vast areas to European planters at cheap rates." },
+          { "speaker": "NEO", "text": "Exam tip: when asked why deforestation happened under colonial rule, write all three reasons with one example each." }
+        ]
+      },
+      {
+        "animation": "Recap board shaped like three tree stumps: '1. Expanding cultivation: +6.7 million hectares (1880 to 1920)', '2. Railways and ships: 1,760 to 2,000 sleepers per mile', '3. Tea, coffee and rubber plantations'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: forests were cleared to expand cultivation of food and commercial crops." },
+          { "speaker": "NEO", "text": "Two: ships and railways needed huge amounts of timber, including sleepers." },
+          { "speaker": "NEO", "text": "Three: natural forests were replaced by tea, coffee and rubber plantations." },
+          { "speaker": "ZIPPY", "text": "I'm going to use both sides of every page from now on." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "History: Forest Society and Colonialism",
+    "topic_no": 2,
+    "name": "The Rise of Commercial Forestry",
+    "scenes": [
+      {
+        "animation": "A forest in a straight grid, every tree identical, like soldiers on parade. Zippy walks through confused, looking for fruit, flowers or herbs, and finds nothing but tall sal trees.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This forest is so neat. But where are the fruits, the herbs, the bamboo?" },
+          { "speaker": "NEO", "text": "Gone. This is scientific forestry, the colonial way of managing forests for timber." }
+        ]
+      },
+      {
+        "animation": "A profile card: 'Dietrich Brandis, German expert, first Inspector General of Forests in India'. A timeline builds: '1864: Indian Forest Service', '1865: Indian Forest Act', '1906: Imperial Forest Research Institute, Dehradun'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The British invited a German expert, Dietrich Brandis, for advice. He became the first Inspector General of Forests in India." },
+          { "speaker": "NEO", "text": "Brandis felt a proper system was needed to manage forests, with trained people and legal rules. So the Indian Forest Service was set up in 1864, and the Indian Forest Act was passed in 1865." },
+          { "speaker": "NEO", "text": "The Imperial Forest Research Institute was set up at Dehradun in 1906. The system taught there was called scientific forestry." }
+        ]
+      },
+      {
+        "animation": "A cutaway: a mixed natural forest is felled, and saplings of one species are planted in straight rows, labelled 'Plantation'. Forest officials with clipboards mark areas to cut each year and replant.",
+        "lines": [
+          { "speaker": "NEO", "text": "In scientific forestry, natural forests with many types of trees were cut down. In their place, one type of tree was planted in straight rows. This is called a plantation." },
+          { "speaker": "NEO", "text": "Forest officials surveyed the forests, estimated the area under different trees and planned how much to cut and replant each year." }
+        ]
+      },
+      {
+        "animation": "The Forest Act document updates: 'Amended 1878 and 1927'. A forest map is divided into three coloured zones: 'Reserved forests: best, no villager access', 'Protected forests', 'Village forests'. A villager with a basket is stopped at the 'Reserved' boundary.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Forest Act was amended twice, in 1878 and then in 1927. The 1878 Act divided forests into three categories: reserved, protected and village forests." },
+          { "speaker": "NEO", "text": "The best forests were called reserved forests. Villagers could not take anything from them, even for their own use." },
+          { "speaker": "ZIPPY", "text": "So the forest people were locked out of their own forest?" }
+        ]
+      },
+      {
+        "animation": "Split screen: a forest officer dreams of teak and sal logs for ships and railways; a villager dreams of fruits, tubers, herbs, bamboo, fuelwood and mahua oil for cooking and lamps. A red line labelled 'Conflict' zigzags between them. An 'EXAM TIP' card flips.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exactly. Foresters wanted trees suitable for ships and railways, like teak and sal. Villagers wanted forests with a mix of species for fuel, fodder, leaves, fruits, roots, herbs and medicines." },
+          { "speaker": "NEO", "text": "Under the new laws, everyday practices such as cutting wood, grazing cattle and collecting fruits became illegal. People were forced to steal wood, and forest guards harassed them." },
+          { "speaker": "NEO", "text": "Exam tip: remember the three forest categories of the 1878 Act. It is a frequent one-mark question." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Brandis: first Inspector General of Forests', '2. 1864 Forest Service, 1865 Forest Act, 1906 Dehradun institute', '3. 1878 Act: reserved, protected, village forests'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Dietrich Brandis became the first Inspector General of Forests in India." },
+          { "speaker": "NEO", "text": "Two: scientific forestry replaced mixed forests with plantations of one species." },
+          { "speaker": "NEO", "text": "Three: the 1878 Act created reserved, protected and village forests, cutting villagers off from their resources." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "History: Forest Society and Colonialism",
+    "topic_no": 3,
+    "name": "Forest Rules, Shifting Cultivation and Hunting",
+    "scenes": [
+      {
+        "animation": "A hillside patch of forest is cut and burnt; ash settles and a farmer sows seeds in it. A British official runs in waving a notice 'BANNED!'. Zippy, holding a seed packet, freezes mid-sowing.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is this farmer in trouble? He's just growing food." },
+          { "speaker": "NEO", "text": "He is practising shifting cultivation. The colonial government banned it." }
+        ]
+      },
+      {
+        "animation": "A cycle diagram builds step by step: 'Cut and burn parts of forest in rotation' → 'Sow seeds in ashes after first monsoon rains' → 'Harvest by October–November' → 'Cultivate 2 to 3 years' → 'Leave fallow 12 to 18 years'. Around the cycle, name tags appear: 'Lading, Milpa, Chitemene, Tavy, Chena' and for India 'Dhya, Penda, Bewar, Nevad, Jhum, Podu, Khandad, Kumri'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In shifting, or swidden, cultivation, parts of the forest are cut and burnt in rotation. Seeds are sown in the ashes after the first monsoon rains, and the crop is harvested by October or November." },
+          { "speaker": "NEO", "text": "The plots are cultivated for a couple of years and then left fallow for twelve to eighteen years, so the forest can grow back." },
+          { "speaker": "NEO", "text": "It has many local names. In India, it is called dhya, penda, bewar, nevad, jhum, podu, khandad and kumri." }
+        ]
+      },
+      {
+        "animation": "A forester points at the burning plot with two thought bubbles: 'Harmful for timber' and 'Fire may spread', plus 'Hard to calculate taxes'. Villagers are pushed out; some are allowed to stay in 'forest villages' on the condition 'Work free for the forest department'.",
+        "lines": [
+          { "speaker": "NEO", "text": "European foresters felt shifting cultivation was harmful for the forests. Land used this way could not grow trees for railway timber, burning could spread flames, and it made taxes harder to calculate." },
+          { "speaker": "NEO", "text": "So the government banned it. Many communities were forcibly displaced. Some were allowed to stay in reserved forests only if they worked free for the forest department, cutting and transporting trees and protecting the forest from fires." }
+        ]
+      },
+      {
+        "animation": "A royal hunting party on elephants aims rifles as a tally board runs: '1875 to 1925: over 80,000 tigers, 150,000 leopards, 200,000 wolves killed for reward'. A side note: 'Maharaja of Sarguja: 1,157 tigers, 2,000 leopards up to 1957', 'George Yule: 400 tigers'. A villager holding a small bird trap is arrested.",
+        "lines": [
+          { "speaker": "NEO", "text": "Forest laws also took away villagers' customary right to hunt. Yet hunting big game became a sport for the rich." },
+          { "speaker": "NEO", "text": "The British saw large animals as wild and savage. They gave rewards for killing tigers, wolves and other large animals. Over eighty thousand tigers, one lakh fifty thousand leopards and two lakh wolves were killed for reward between 1875 and 1925." },
+          { "speaker": "ZIPPY", "text": "So hunting was a crime for villagers but a game for rulers? That's double standards!" }
+        ]
+      },
+      {
+        "animation": "A tea garden in Assam fills with workers labelled 'Santhals and Oraons from Jharkhand, Gonds from Chhattisgarh'. Their wages are shown as tiny coins with a lock labelled 'Could not return home easily'. A 'BOARD TIP' card flips over.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some people found new work. In Assam, men and women from forest communities like Santhals and Oraons from Jharkhand, and Gonds from Chhattisgarh, were recruited to work on tea plantations." },
+          { "speaker": "NEO", "text": "Their wages were low, conditions were very bad, and they could not return easily to their home villages." },
+          { "speaker": "NEO", "text": "Board tip: in answers on how forest rules affected people, cover shifting cultivators, hunters, nomadic groups and firms trading in forest produce." }
+        ]
+      },
+      {
+        "animation": "Recap board with a burnt-field icon, a tiger and a tea leaf: '1. Shifting cultivation banned', '2. Villagers barred from hunting; rewards for killing big animals', '3. Forest people recruited to Assam tea plantations'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: shifting cultivation was banned and communities were displaced." },
+          { "speaker": "NEO", "text": "Two: villagers lost hunting rights, while big game hunting became a sport." },
+          { "speaker": "NEO", "text": "Three: many forest people were recruited to work on plantations at low wages." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "History: Forest Society and Colonialism",
+    "topic_no": 4,
+    "name": "Rebellion in the Forest: Bastar, 1910",
+    "scenes": [
+      {
+        "animation": "A forest village at dusk. A runner arrives with a bundle: a mango bough, a lump of earth, chillies and arrows. He passes it to the next village, and it travels on, glowing, from village to village.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Mangoes, mud and chillies? Is someone making a strange chutney?" },
+          { "speaker": "NEO", "text": "No. These objects were a secret message. They were an invitation to rebel against the British." }
+        ]
+      },
+      {
+        "animation": "Map of India zooms into Chhattisgarh; Bastar is highlighted at its southern tip with neighbours labelled 'Andhra Pradesh', 'Odisha', 'Maharashtra'. The river 'Indrawati' draws itself east to west. Community names float over the land: 'Maria and Muria Gonds, Dhurwas, Bhatras, Halbas'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Bastar is located in the southernmost part of Chhattisgarh and borders Andhra Pradesh, Odisha and Maharashtra. The river Indrawati winds across Bastar from east to west." },
+          { "speaker": "NEO", "text": "Many communities live here, such as the Maria and Muria Gonds, the Dhurwas, the Bhatras and the Halbas. They believed each village was given its land by the Earth, and they looked after the forest with care." },
+          { "speaker": "NEO", "text": "If people wanted wood from a neighbouring village's forest, they paid a small fee called devsari, dand or man." }
+        ]
+      },
+      {
+        "animation": "A colonial order unrolls: '1905: Reserve two-thirds of the forest; stop shifting cultivation, hunting and collection of forest produce'. Villagers are shown working free in forest villages, then famine years flash: '1899 to 1900' and '1907 to 1908'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1905, the colonial government proposed to reserve two-thirds of the forest and to stop shifting cultivation, hunting and collection of forest produce." },
+          { "speaker": "NEO", "text": "Some villages were allowed to stay in the reserved forests only if they worked free for the forest department. People also suffered from increased land rents, frequent demands for free labour, and terrible famines." }
+        ]
+      },
+      {
+        "animation": "A figure labelled 'Gunda Dhur, village Nethanar' rallies villagers. A timeline pins '1910: Rebellion begins with the Dhurwas of the Kanger forest'. Bazaars are looted, and houses of officials and traders, schools and police stations burn. British troops arrive; a clock ticks for three months.",
+        "lines": [
+          { "speaker": "NEO", "text": "People began discussing these issues in village councils, in bazaars and at festivals. The initiative was taken by the Dhurwas of the Kanger forest, where reservation first took place." },
+          { "speaker": "NEO", "text": "In 1910, the rebellion broke out. Gunda Dhur of Nethanar village was an important leader. Bazaars were looted, and the houses of officials and traders, schools and police stations were burnt and robbed." },
+          { "speaker": "NEO", "text": "The British sent troops to suppress the rebellion. It took them three months to regain control, but they never managed to capture Gunda Dhur." }
+        ]
+      },
+      {
+        "animation": "A forest map shows the planned reserve area shrinking to half, labelled 'Reservation suspended temporarily; area reduced to roughly half'. The villagers celebrate. An 'EXAM TIP' card highlights 'Gunda Dhur' and 'Bastar 1910'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The rebels still won a major victory. Work on reservation was temporarily suspended, and the area to be reserved was reduced to roughly half of that planned before 1910." },
+          { "speaker": "NEO", "text": "Exam tip: learn the causes of the Bastar rebellion as a list, and never forget the name Gunda Dhur." }
+        ]
+      },
+      {
+        "animation": "Recap board with a mango bough icon: '1. Bastar: southern Chhattisgarh, river Indrawati', '2. 1905 proposal: reserve two-thirds of forests', '3. 1910 rebellion led by Gunda Dhur; reserved area halved'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Bastar lies in southern Chhattisgarh, and its people saw the forest as a gift of the Earth." },
+          { "speaker": "NEO", "text": "Two: in 1905, the British planned to reserve two-thirds of its forests." },
+          { "speaker": "NEO", "text": "Three: the 1910 rebellion, with Gunda Dhur as a key leader, forced the British to halve the reserved area." },
+          { "speaker": "ZIPPY", "text": "So the chutney message worked!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "History: Forest Society and Colonialism",
+    "topic_no": 5,
+    "name": "Forest Transformations in Java",
+    "scenes": [
+      {
+        "animation": "A villager lies flat on the ground in a teak forest as Dutch surveyors arrive with measuring chains. He refuses to move; Zippy lies down beside him, copying him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is he lying down in front of the surveyors?" },
+          { "speaker": "NEO", "text": "It's a protest. Welcome to Java, where forest people fought the Dutch in their own way." }
+        ]
+      },
+      {
+        "animation": "A world map zooms from the Netherlands to Indonesia; the island of Java glows, with a rice field on its surface and a faded forest behind it. Labels: 'Dutch colony', 'Now famous for rice, once covered with forests'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Java in Indonesia is famous today as a rice-producing island. But once it was covered mostly with forests." },
+          { "speaker": "NEO", "text": "Indonesia was a Dutch colony. Like the British in India, the Dutch wanted timber from Java to build ships, and they started forest management here." }
+        ]
+      },
+      {
+        "animation": "A community of axe-wielding workers is labelled 'Kalangs: skilled forest cutters and shifting cultivators'. A fort labelled 'Joana' is attacked with the caption '1770: Kalangs resist, uprising suppressed'. Then a Dutch law book: 'Blandongdiensten system'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Kalangs of Java were a community of skilled forest cutters and shifting cultivators. When the Dutch tried to force them to work under them, the Kalangs resisted by attacking a Dutch fort at Joana in 1770, but the uprising was suppressed." },
+          { "speaker": "NEO", "text": "In the nineteenth century, the Dutch enacted forest laws that restricted villagers' access. Under the blandongdiensten system, some villages were exempted from rents if they provided free labour and buffaloes for cutting and transporting timber." }
+        ]
+      },
+      {
+        "animation": "A portrait card: 'Surontiko Samin, Randublatung village, around 1890'. His words appear as a scroll: 'The State did not create the wind, water, earth and wood'. A counter climbs: '1907: 3,000 families'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Around 1890, Surontiko Samin of Randublatung, a teak forest village, began questioning state ownership of the forest. He argued that the state had not created the wind, water, earth and wood, so it could not own it." },
+          { "speaker": "NEO", "text": "By 1907, three thousand families were following his ideas. Samins lay down on their land when the Dutch came to survey it, and refused to pay taxes, fines or perform labour." }
+        ]
+      },
+      {
+        "animation": "1942: Japanese flags approach Indonesia. Before they arrive, Dutch officials set fire to sawmills and huge piles of teak logs, labelled 'Scorched earth policy'. Then Japanese officials order villagers to cut trees recklessly. A 'BOARD TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "The world wars also hit forests hard. In Java, just before the Japanese occupied the region, the Dutch followed a scorched earth policy. They destroyed sawmills and burnt huge piles of giant teak logs so the Japanese could not use them." },
+          { "speaker": "NEO", "text": "The Japanese then exploited the forests recklessly for their own war needs." },
+          { "speaker": "NEO", "text": "Board tip: compare the Samin movement in Java with the Bastar rebellion. Both challenged the state's claim over forests." }
+        ]
+      },
+      {
+        "animation": "Recap board with a teak leaf icon: '1. Java: Dutch colony; Kalangs resisted in 1770', '2. Samin movement, around 1890; 3,000 families by 1907', '3. Scorched earth policy during the war'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Dutch controlled Java's forests, and the Kalangs resisted them in 1770." },
+          { "speaker": "NEO", "text": "Two: Surontiko Samin challenged state ownership of the forest." },
+          { "speaker": "NEO", "text": "Three: the Dutch scorched earth policy and Japanese exploitation devastated Java's forests during the war." }
+        ]
+      }
+    ]
+  }
+]

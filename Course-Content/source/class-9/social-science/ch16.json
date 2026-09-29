@@ -1,0 +1,253 @@
+[
+  {
+    "chapter_no": 16,
+    "chapter": "Political Science: Democratic Rights",
+    "topic_no": 1,
+    "name": "Life Without Rights",
+    "scenes": [
+      {
+        "animation": "A dark screen. A cell door slams. A prisoner in an orange jumpsuit sits alone; a sign outside reads 'No lawyer. No trial. No family.' Zippy peeks through the bars, shocked.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "No trial, no lawyer, and no one can visit? Where is this place?" },
+          { "speaker": "NEO", "text": "This is what life looks like when rights are missing. Let's look at three real examples." }
+        ]
+      },
+      {
+        "animation": "A world map: arrows from many countries converge on a small area near Cuba labelled 'Guantanamo Bay — controlled by the American Navy'. A counter reads 'about 600 people'. A report stamped 'Amnesty International' lands on the table.",
+        "lines": [
+          { "speaker": "NEO", "text": "About 600 people were secretly picked up by the US forces from all over the world and put in a prison in Guantanamo Bay, an area near Cuba controlled by the American Navy." },
+          { "speaker": "NEO", "text": "Their families were not informed. They were not tried before any magistrate in the US, and they could not approach courts in their own country." },
+          { "speaker": "NEO", "text": "Amnesty International, an international human rights organisation, collected information that the prisoners were being tortured. The UN Secretary General said the prison should be closed down." }
+        ]
+      },
+      {
+        "animation": "A palace with a crowned figure labelled 'Saudi Arabia — hereditary king'. The king himself picks the legislature, the executive and the judges. A row of placards is crossed out: 'No political parties', 'No freedom of religion for non-Muslims', 'Restrictions on women'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Saudi Arabia is ruled by a hereditary king. People have no role in electing or changing their rulers. The king selects the legislature and the executive, and appoints the judges." },
+          { "speaker": "NEO", "text": "Citizens cannot form political parties. There is no freedom of religion for non-Muslims. Women are subjected to many public restrictions, though they got the right to vote in local body elections in 2015." }
+        ]
+      },
+      {
+        "animation": "A map of old Yugoslavia with the province 'Kosovo' highlighted: 'ethnic Albanians — majority in Kosovo'. A leader labelled 'Milosevic' stands with a Serb nationalist flag. The scene darkens to show a massacre in silhouette, then a courtroom: 'International Court of Justice — crimes against humanity'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Kosovo was a province of old Yugoslavia, where the population was overwhelmingly ethnic Albanian. In the entire country, Serbs were in the majority." },
+          { "speaker": "NEO", "text": "A narrow-minded Serb nationalist, Milosevic, won the election. His government was very hostile to the Kosovo Albanians, and many of them were massacred by the army of their own country." },
+          { "speaker": "NEO", "text": "This was stopped after several countries intervened. Milosevic lost power and was tried by the International Court of Justice for crimes against humanity." }
+        ]
+      },
+      {
+        "animation": "Zippy stands with a sign: 'Elected government = rights guaranteed?'. The sign flips to 'NO!'. A 'BOARD TIP' card: 'Kosovo — an elected leader can still violate rights'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But Milosevic was elected! How could he do that?" },
+          { "speaker": "NEO", "text": "That's the lesson. Even an elected government may attack the rights of its own people. Board tip: use these three examples to explain why rights need protection." }
+        ]
+      },
+      {
+        "animation": "Recap board with a broken shield icon. Points appear: '1. Guantanamo Bay: about 600 held without trial', '2. Saudi Arabia: hereditary king, no parties, restrictions on women and religion', '3. Kosovo: elected leader massacred a minority'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: at Guantanamo Bay, about 600 prisoners were held without trial or legal help." },
+          { "speaker": "NEO", "text": "Two: in Saudi Arabia, citizens cannot choose their rulers or form parties, and face religious and gender restrictions." },
+          { "speaker": "NEO", "text": "Three: in Kosovo, an elected leader attacked the ethnic Albanian people. Rights protect us from such abuse." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 16,
+    "chapter": "Political Science: Democratic Rights",
+    "topic_no": 2,
+    "name": "What Are Rights and Why Do We Need Them in a Democracy?",
+    "scenes": [
+      {
+        "animation": "Zippy stands on a street corner with a placard: 'I have the right to eat everyone's lunch!'. Classmates glare at him, holding their tiffin boxes tightly.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I have a right to everything I want! Right?" },
+          { "speaker": "NEO", "text": "Not quite. A right is more than a wish. Let's see what makes a claim a right." }
+        ]
+      },
+      {
+        "animation": "A definition card: 'Rights = claims of a person over other fellow beings, over society and over the government'. Three filters stand in a row: 'Reasonable', 'Recognised by society', 'Sanctioned by law'. Zippy's lunch-eating claim bounces off the first filter.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rights are claims of a person over other fellow beings, over the society, and over the government." },
+          { "speaker": "NEO", "text": "The claims should be reasonable. They should be such that they can be made available to others in an equal measure. So a right comes with an obligation to respect others' rights." },
+          { "speaker": "NEO", "text": "Rights are claims that are recognised by society and sanctioned by law. When such claims are written into law, they have real force." }
+        ]
+      },
+      {
+        "animation": "A ballot box sits on a table with arrows leading to 'Right to express views', 'Right to form parties', 'Right to take part in political activities'. Without these arrows, the ballot box cracks.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does a democracy need rights? Isn't voting enough?" },
+          { "speaker": "NEO", "text": "Rights are necessary for the very sustenance of a democracy. In a democracy, every citizen has to have the right to vote and the right to be elected." },
+          { "speaker": "NEO", "text": "For democratic elections to take place, citizens need the right to express their opinion, to form political parties and to take part in political activities." }
+        ]
+      },
+      {
+        "animation": "A big crowd labelled 'Majority' leans towards a small group labelled 'Minority'. A shield labelled 'Rights in the Constitution' drops between them. Label: 'Rights are placed higher than the government'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rights also protect minorities from the oppression of the majority. They ensure that the majority cannot do whatever it likes." },
+          { "speaker": "NEO", "text": "Even a government elected by the people may not protect citizens' rights, or may attack them. That's why some rights are placed higher than the government, so that it cannot violate them." },
+          { "speaker": "NEO", "text": "In most democracies, the basic rights of the citizen are written down in the constitution." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Rights = reasonable claims, recognised by society, sanctioned by law'. Zippy returns everyone's tiffin boxes with a guilty grin.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: when asked to define rights, write all three parts: reasonable claims, recognised by society and sanctioned by law." }
+        ]
+      },
+      {
+        "animation": "Recap board with a shield icon. Points appear: '1. Rights = reasonable claims recognised by society and sanctioned by law', '2. Needed for voting, expression, parties: democracy survives on them', '3. Protect minorities; placed higher than the government'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: rights are reasonable claims, recognised by society and sanctioned by law." },
+          { "speaker": "NEO", "text": "Two: democracy needs rights like voting, expression and forming parties to survive." },
+          { "speaker": "NEO", "text": "Three: rights protect minorities and are placed above the government, in the constitution." },
+          { "speaker": "ZIPPY", "text": "Fine. My right to lunch is only my own lunch." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 16,
+    "chapter": "Political Science: Democratic Rights",
+    "topic_no": 3,
+    "name": "Right to Equality and Right to Freedom",
+    "scenes": [
+      {
+        "animation": "A cricket selection trial. A coach turns away a boy because of his surname. Instantly, a giant book labelled 'Constitution of India' drops from the sky and blocks the coach's clipboard.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can someone be rejected just because of his surname?" },
+          { "speaker": "NEO", "text": "Not by the government or in public places. That's the Right to Equality." }
+        ]
+      },
+      {
+        "animation": "The Constitution opens to a page titled 'Fundamental Rights', and six tabs slide out: 'Equality', 'Freedom', 'Against Exploitation', 'Freedom of Religion', 'Cultural and Educational', 'Constitutional Remedies'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Constitution lists the Fundamental Rights, which form an important basic feature of India's Constitution. There are six of them." },
+          { "speaker": "NEO", "text": "They are the Right to Equality, Right to Freedom, Right against Exploitation, Right to Freedom of Religion, Cultural and Educational Rights, and the Right to Constitutional Remedies." }
+        ]
+      },
+      {
+        "animation": "The 'Equality' tab opens. A prime minister, a farmer and a shopkeeper stand in the same line before a judge: 'Rule of law'. Then signs at a shop, a well, a bathing ghat and a restaurant say 'Open to all'. A signboard 'Untouchability' is crossed out: 'Abolished'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The government shall not deny to any person in India equality before the law or equal protection of the laws. This is called the rule of law. A Prime Minister or a poor farmer is subject to the same laws." },
+          { "speaker": "NEO", "text": "The government shall not discriminate against any citizen on the grounds of religion, caste, ethnic group, sex or place of birth. Every citizen has access to public places like shops, restaurants, wells and bathing ghats. The same applies to opportunity in public employment." },
+          { "speaker": "NEO", "text": "The Constitution also abolishes untouchability in any form." }
+        ]
+      },
+      {
+        "animation": "The 'Freedom' tab opens: six icons appear in a grid: a speech bubble, a peaceful gathering, a union flag, a road map across India, a house, and a toolbox. Then a police officer arresting a man is stopped by a checklist: 'Inform reasons', 'Produce before magistrate within 24 hours', 'Right to consult a lawyer'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Under the Right to Freedom, all citizens have the freedom of speech and expression, to assemble in a peaceful manner, to form associations and unions, to move freely throughout the country, to reside in any part of the country, and to practise any profession or carry on any occupation, trade or business." },
+          { "speaker": "NEO", "text": "No person can be deprived of life or personal liberty except according to procedure established by law. A person who is arrested must be informed of the reasons, produced before the nearest magistrate within 24 hours, and has the right to consult a lawyer." },
+          { "speaker": "ZIPPY", "text": "So I can say anything, anywhere, anytime?" },
+          { "speaker": "NEO", "text": "Freedom has reasonable limits. You can't use it to incite violence or defame others. Board tip: list the six freedoms and the three rights of an arrested person." }
+        ]
+      },
+      {
+        "animation": "Recap board with the Constitution book. Points appear: '1. Six Fundamental Rights', '2. Equality: rule of law, no discrimination, untouchability abolished', '3. Freedom: six freedoms + protection of life and personal liberty'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Indian Constitution gives six Fundamental Rights." },
+          { "speaker": "NEO", "text": "Two: the Right to Equality means rule of law, no discrimination, and the abolition of untouchability." },
+          { "speaker": "NEO", "text": "Three: the Right to Freedom gives six freedoms and protects life and personal liberty." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 16,
+    "chapter": "Political Science: Democratic Rights",
+    "topic_no": 4,
+    "name": "Rights Against Exploitation, to Freedom of Religion, and Cultural and Educational Rights",
+    "scenes": [
+      {
+        "animation": "A dhaba at night: a small boy of about ten washes a mountain of dishes. Zippy notices and looks at Neo. A rights inspector character with a clipboard walks in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "That boy should be in school, not washing dishes all night!" },
+          { "speaker": "NEO", "text": "You're right. The Constitution has a right just for this: the Right against Exploitation." }
+        ]
+      },
+      {
+        "animation": "Three chains break one after another, each with a label: 'Traffic in human beings — prohibited', 'Forced labour or begar — prohibited', 'Child labour — no child below 14 in factories, mines or hazardous work'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Constitution mentions three specific evils and declares them illegal. First, it prohibits traffic in human beings, meaning the selling and buying of human beings, usually women, for immoral purposes." },
+          { "speaker": "NEO", "text": "Second, it prohibits forced labour, or begar, in any form. Begar is a practice where the worker is forced to render service to the master free of charge or at a nominal remuneration." },
+          { "speaker": "NEO", "text": "Third, it prohibits child labour. No one can employ a child below the age of fourteen to work in any factory or mine, or in any other hazardous work." }
+        ]
+      },
+      {
+        "animation": "A street with a temple, a mosque, a church and a gurdwara side by side. A banner reads 'India is a secular state'. A tax collector trying to collect 'tax for promoting a religion' is stopped. A government school classroom shows a sign 'No religious instruction here'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Under the Right to Freedom of Religion, every person has the right to profess, practise and propagate the religion he or she believes in." },
+          { "speaker": "NEO", "text": "India is a secular state. There is no official religion. The government cannot compel any person to pay taxes for the promotion or maintenance of any particular religion." },
+          { "speaker": "NEO", "text": "There shall be no religious instruction in government educational institutions." }
+        ]
+      },
+      {
+        "animation": "Three children speaking different languages each hold a book in their own script. A small school building with a sign 'Run by a minority community' opens its doors. Labels: 'Right to conserve language and culture', 'Right to establish and administer educational institutions'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Under Cultural and Educational Rights, any section of citizens with a distinct language or culture has a right to conserve it." },
+          { "speaker": "NEO", "text": "Admission to any educational institution maintained by the government cannot be denied on the ground of religion or language." },
+          { "speaker": "NEO", "text": "All minorities have the right to establish and administer educational institutions of their choice." },
+          { "speaker": "ZIPPY", "text": "So minorities here means only religious minorities?" },
+          { "speaker": "NEO", "text": "No. It includes linguistic minorities too. Board tip: that's a common misconception in exams." }
+        ]
+      },
+      {
+        "animation": "Recap board with three icons: a broken chain, a row of places of worship, a book. Points appear: '1. Against exploitation: no trafficking, no begar, no child labour below 14 in hazardous work', '2. Freedom of religion; secular state; no religious tax or instruction in govt institutions', '3. Minorities can conserve culture and run their own institutions'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Right against Exploitation bans human trafficking, begar and child labour in hazardous work." },
+          { "speaker": "NEO", "text": "Two: India is a secular state, and everyone may follow and spread their own religion." },
+          { "speaker": "NEO", "text": "Three: minorities can conserve their culture and run their own educational institutions." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 16,
+    "chapter": "Political Science: Democratic Rights",
+    "topic_no": 5,
+    "name": "Right to Constitutional Remedies and the Expanding Scope of Rights",
+    "scenes": [
+      {
+        "animation": "Zippy holds a shiny sword labelled 'Fundamental Rights'. A bully snatches his lunch, and Zippy waves the sword, but it's made of cardboard. Neo hands him a real key labelled 'Constitutional Remedies'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I have all these rights, but what if someone just ignores them?" },
+          { "speaker": "NEO", "text": "Then you use the right that makes all the others work." }
+        ]
+      },
+      {
+        "animation": "A citizen walks directly up the steps of a building labelled 'Supreme Court / High Court', skipping the lower courts. The judges issue scrolls labelled 'Writs'. A portrait of Dr B.R. Ambedkar appears with a quote box: 'the heart and soul of our Constitution'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Right to Constitutional Remedies makes the other rights effective. When any of our rights are violated, we can seek remedy through the courts." },
+          { "speaker": "NEO", "text": "If it is a Fundamental Right, we can directly approach the Supreme Court or the High Court of a state. The courts can issue directions, orders or writs to enforce Fundamental Rights." },
+          { "speaker": "NEO", "text": "That's why Dr Ambedkar called the Right to Constitutional Remedies the heart and soul of our Constitution." }
+        ]
+      },
+      {
+        "animation": "A 'Rights' tree grows new branches over time, each with a leaf: 'Right to Information', 'Right to Education (free and compulsory)', 'Right to Life includes Right to Food'. One old branch 'Right to property' moves from the 'Fundamental Rights' trunk to a side trunk labelled 'Constitutional right'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The scope of rights has been expanding. Courts and laws have expanded them over time." },
+          { "speaker": "NEO", "text": "Parliament enacted a law on the Right to Information, which gives citizens the right to seek information from government offices. The Right to Education has made free and compulsory education a right for children." },
+          { "speaker": "NEO", "text": "The Supreme Court has expanded the meaning of the right to life to include the right to food. The right to property is not a Fundamental Right, but it is a constitutional right." }
+        ]
+      },
+      {
+        "animation": "A globe turns to South Africa, where new rights appear on its constitution as icons: 'privacy', 'adequate housing', 'health care', 'sufficient food and water'. A 'BOARD TIP' card: 'Right to property = constitutional right, not a Fundamental Right'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Many countries go further. The constitution of South Africa guarantees its citizens rights such as the right to privacy, and access to adequate housing, health care, and sufficient food and water." },
+          { "speaker": "ZIPPY", "text": "Wait, isn't the right to property a Fundamental Right?" },
+          { "speaker": "NEO", "text": "Not anymore. Board tip: that's a common trick question. It is now a constitutional right, not a Fundamental Right." }
+        ]
+      },
+      {
+        "animation": "Recap board with the key icon. Points appear: '1. Constitutional Remedies: approach Supreme Court or High Court directly', '2. Dr Ambedkar: heart and soul of the Constitution', '3. Rights expanding: information, education, food; property now a constitutional right'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: under the Right to Constitutional Remedies, we can directly approach the Supreme Court or a High Court." },
+          { "speaker": "NEO", "text": "Two: Dr Ambedkar called it the heart and soul of our Constitution." },
+          { "speaker": "NEO", "text": "Three: the scope of rights keeps expanding, with the rights to information, education and food." },
+          { "speaker": "ZIPPY", "text": "Cardboard sword gone. Real key unlocked!" }
+        ]
+      }
+    ]
+  }
+]

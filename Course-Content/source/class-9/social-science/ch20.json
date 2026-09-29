@@ -1,0 +1,207 @@
+[
+  {
+    "chapter_no": 20,
+    "chapter": "Economics: Food Security in India",
+    "topic_no": 1,
+    "name": "What Is Food Security and Why Is It Needed?",
+    "scenes": [
+      {
+        "animation": "A kirana shop shelf is fully stocked with rice, wheat and dal. A labourer walks in, counts a few coins, and walks out with only a tiny packet. Zippy looks from the full shelf to the tiny packet, confused.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The shop is full of food, but he couldn't buy enough. So is there food, or isn't there?" },
+          { "speaker": "NEO", "text": "That's exactly why food security has more than one part. Having food in the country isn't enough." }
+        ]
+      },
+      {
+        "animation": "Three pillars rise under a roof labelled 'Food Security'. Pillar 1: 'Availability: production, imports, stock in government granaries'. Pillar 2: 'Accessibility: food within reach of every person'. Pillar 3: 'Affordability: enough money to buy sufficient, safe and nutritious food'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Food security means availability, accessibility and affordability of food to all people at all times." },
+          { "speaker": "NEO", "text": "Availability means food production within the country, food imports, and the previous years' stock stored in government granaries." },
+          { "speaker": "NEO", "text": "Accessibility means food is within reach of every person. Affordability means an individual has enough money to buy sufficient, safe and nutritious food to meet dietary needs." }
+        ]
+      },
+      {
+        "animation": "A drought cracks a field; a cyclone sweeps a coast. Food shelves empty and a price tag balloons upwards. Arrows lead to a grim label 'Famine: widespread deaths due to starvation and epidemics'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Why is it needed? The poorest are food insecure most of the time. But during a calamity like drought, earthquake or tsunami, even people above the poverty line can become food insecure." },
+          { "speaker": "NEO", "text": "Production falls, prices rise, and some people cannot afford food. If the calamity lasts, it can lead to starvation. A massive situation of starvation might turn into a famine." }
+        ]
+      },
+      {
+        "animation": "A sepia map of undivided Bengal with the label '1943: The Great Bengal Famine'. A counter rises to '30 lakh deaths'. Silhouettes appear with labels 'Agricultural labourers', 'Fishermen', 'Transport workers', 'Casual labourers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The most devastating famine in India was the Famine of Bengal in 1943. It killed thirty lakh people in the province of Bengal." },
+          { "speaker": "NEO", "text": "The most affected were agricultural labourers, fishermen, transport workers and other casual labourers." },
+          { "speaker": "ZIPPY", "text": "Thirty lakh. That's a whole city's worth of people." }
+        ]
+      },
+      {
+        "animation": "A timeline rolls forward from 1943 to today with the caption 'No famine since then'. But a small warning icon remains: 'Hunger still exists'. An 'EXAM TIP' card highlights 'Availability, Accessibility, Affordability'.",
+        "lines": [
+          { "speaker": "NEO", "text": "No famine of that scale has occurred in India since then. But hunger and food insecurity still exist in some areas." },
+          { "speaker": "NEO", "text": "Exam tip: always define food security with its three dimensions. Missing even one costs you marks." }
+        ]
+      },
+      {
+        "animation": "Recap board with three pillars: '1. Food security = availability + accessibility + affordability', '2. Calamities can make even non-poor food insecure', '3. Bengal Famine, 1943: 30 lakh deaths'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: food security means availability, accessibility and affordability of food for all, at all times." },
+          { "speaker": "NEO", "text": "Two: natural calamities can push even the non-poor into food insecurity." },
+          { "speaker": "NEO", "text": "Three: the Bengal Famine of 1943 killed thirty lakh people." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 20,
+    "chapter": "Economics: Food Security in India",
+    "topic_no": 2,
+    "name": "Who Are Food Insecure? Chronic and Seasonal Hunger",
+    "scenes": [
+      {
+        "animation": "Monsoon clouds over an empty village field. A farm labourer sits idle outside his hut, counting days on a calendar. Zippy sits beside him with an empty tiffin box.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "He works hard during the harvest. Why is his family hungry now?" },
+          { "speaker": "NEO", "text": "Because farm work is seasonal. No work means no wages, and no wages means not enough food." }
+        ]
+      },
+      {
+        "animation": "A panel of rural and urban groups lights up. Rural: 'Landless people with little or no land', 'Traditional artisans', 'Providers of traditional services', 'Petty self-employed workers', 'Destitutes, including beggars'. Urban: 'Families in ill-paid occupations and casual labour'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Worst affected in rural areas are landless people, traditional artisans, providers of traditional services, petty self-employed workers and destitutes, including beggars." },
+          { "speaker": "NEO", "text": "In urban areas, the food insecure are families whose working members are generally employed in ill-paid occupations and the casual labour market." }
+        ]
+      },
+      {
+        "animation": "More groups appear: 'SC, ST and some OBC with poor land base', 'People affected by natural disasters', 'Pregnant and nursing mothers', 'Children under 5'. Then a map of India shades the most food-insecure regions: 'Uttar Pradesh (eastern and south-eastern parts), Bihar, Jharkhand, Odisha, West Bengal, Chhattisgarh, parts of Madhya Pradesh and Maharashtra'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Scheduled castes, scheduled tribes and some sections of the other backward classes with poor land base are also prone to food insecurity. So are people affected by natural disasters." },
+          { "speaker": "NEO", "text": "Pregnant and nursing mothers and children under the age of five form an important segment of the food insecure population." },
+          { "speaker": "NEO", "text": "Food insecure people are mostly found in Uttar Pradesh, Bihar, Jharkhand, Odisha, West Bengal, Chhattisgarh, and parts of Madhya Pradesh and Maharashtra." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: 'Chronic hunger': a plate stays half-empty on every day of the calendar. Right: 'Seasonal hunger': the plate is full in harvest months and empty in lean months, with a farm calendar and an urban casual worker waiting at a labour chowk.",
+        "lines": [
+          { "speaker": "NEO", "text": "Hunger has two dimensions. Chronic hunger is a consequence of diets persistently inadequate in quantity or quality. Poor people suffer from it because of their very low income." },
+          { "speaker": "NEO", "text": "Seasonal hunger is related to cycles of food growing and harvesting. It is prevalent in rural areas because farm work is seasonal, and in urban areas because of casual labour." },
+          { "speaker": "ZIPPY", "text": "So chronic is always, seasonal is sometimes." }
+        ]
+      },
+      {
+        "animation": "A table with two columns, 'Chronic' and 'Seasonal', fills with one example each. An 'EXAM TIP' card flips over.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: when asked to distinguish chronic and seasonal hunger, give the cause of each: persistent low income versus seasonal lack of work." }
+        ]
+      },
+      {
+        "animation": "Recap board with a half-plate icon: '1. Rural landless, artisans, destitutes; urban casual labour', '2. SC, ST, some OBC; disaster victims; mothers and children under 5', '3. Chronic hunger (persistent) vs seasonal hunger (cycles of work)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: landless labourers, artisans, destitutes and urban casual workers are most food insecure." },
+          { "speaker": "NEO", "text": "Two: socially disadvantaged groups, disaster victims, and mothers and young children are also at risk." },
+          { "speaker": "NEO", "text": "Three: chronic hunger is persistent, while seasonal hunger follows the cycles of work." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 20,
+    "chapter": "Economics: Food Security in India",
+    "topic_no": 3,
+    "name": "Self-Sufficiency in Foodgrains and the Buffer Stock",
+    "scenes": [
+      {
+        "animation": "A giant warehouse labelled 'FCI' with tall stacks of wheat and rice sacks. Zippy peeks in, his eyes widening, and shouts 'Hello!'; the echo bounces around.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Who keeps so much grain, and why?" },
+          { "speaker": "NEO", "text": "The government does. It's India's safety net against hunger. But first, let's see how India became self-sufficient in foodgrains." }
+        ]
+      },
+      {
+        "animation": "A sepia 1960s field transforms into a golden wheat field with HYV seed packets. A postage stamp is animated being printed: 'Wheat Revolution, July 1968', with a caption 'Released by Indira Gandhi'. Punjab and Haryana glow brightest on the map.",
+        "lines": [
+          { "speaker": "NEO", "text": "After Independence, India adopted a new strategy in agriculture, which resulted in the Green Revolution, especially in the production of wheat and rice." },
+          { "speaker": "NEO", "text": "Indira Gandhi, then Prime Minister, officially recorded the impressive strides of the Green Revolution by releasing a special stamp, entitled Wheat Revolution, in July 1968." },
+          { "speaker": "NEO", "text": "The highest growth was seen in Punjab and Haryana. Since then, India has become self-sufficient in foodgrains." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds step by step: 'Farmers in surplus states' → 'FCI procures wheat and rice at Minimum Support Price (announced before sowing)' → 'Stored in granaries = Buffer stock' → 'Distributed in deficit areas and among the poor at Issue Price'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Buffer stock is the stock of foodgrains, namely wheat and rice, procured by the government through the Food Corporation of India." },
+          { "speaker": "NEO", "text": "The FCI purchases wheat and rice from farmers in states where there is surplus production. Farmers are paid a pre-announced price called the Minimum Support Price. It is declared by the government every year before the sowing season to encourage production." },
+          { "speaker": "NEO", "text": "The grain is stored in granaries and distributed in deficit areas and among the poorer strata at a price lower than the market price, called the Issue Price." }
+        ]
+      },
+      {
+        "animation": "A see-saw: drought pushes one side down, and a crane lifts sacks from the FCI warehouse to balance it. A label reads 'Buffer stock solves shortage during adverse weather or calamity'. An 'EXAM TIP' card appears with 'MSP' and 'Issue Price' side by side.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the buffer stock is like my emergency snack drawer?" },
+          { "speaker": "NEO", "text": "Exactly. It helps resolve the problem of food shortage during adverse weather conditions or times of calamity." },
+          { "speaker": "NEO", "text": "Exam tip: MSP is paid to farmers; Issue Price is charged to buyers. Students often mix them up." }
+        ]
+      },
+      {
+        "animation": "Recap board with a wheat stamp and warehouse icon: '1. Green Revolution: 'Wheat Revolution' stamp, July 1968', '2. FCI procures at MSP → buffer stock', '3. Distributed at Issue Price in deficit areas'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Green Revolution made India self-sufficient in foodgrains." },
+          { "speaker": "NEO", "text": "Two: the FCI buys wheat and rice at the Minimum Support Price to create a buffer stock." },
+          { "speaker": "NEO", "text": "Three: this grain reaches deficit areas and the poor at the lower Issue Price." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 20,
+    "chapter": "Economics: Food Security in India",
+    "topic_no": 4,
+    "name": "The Public Distribution System and the Role of Cooperatives",
+    "scenes": [
+      {
+        "animation": "A queue outside a small shop labelled 'Fair Price Shop / Ration Shop'. A mother shows a ration card and receives rice, wheat and sugar at low prices. Zippy holds a school ID card and gets politely turned away.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why doesn't my card work here?" },
+          { "speaker": "NEO", "text": "Because this shop needs a ration card. Welcome to the Public Distribution System." }
+        ]
+      },
+      {
+        "animation": "A network map spreads from FCI godowns to thousands of small shop icons across India. Labels: 'PDS: food procured by FCI distributed through ration shops', 'Items: foodgrains, sugar, kerosene for cooking'. Three cards fan out: 'Antyodaya card: poorest of the poor', 'BPL card: below poverty line', 'APL card: all others'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The food procured by the FCI is distributed among the poorer sections through government-regulated ration shops. This is called the Public Distribution System, or PDS." },
+          { "speaker": "NEO", "text": "Ration shops, also known as fair price shops, keep stock of foodgrains, sugar and kerosene for cooking, sold at a price lower than the market price." },
+          { "speaker": "NEO", "text": "There are three kinds of ration cards: Antyodaya cards for the poorest of the poor, BPL cards for those below the poverty line, and APL cards for all others." }
+        ]
+      },
+      {
+        "animation": "A timeline builds: '1992: Revamped PDS in 1,700 blocks', '1997: Targeted PDS', 'December 2000: Antyodaya Anna Yojana, one crore poorest BPL families, 25 kg per family, wheat ₹2/kg, rice ₹3/kg; later raised to 35 kg', '2013: National Food Security Act'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In 1992, the Revamped Public Distribution System was introduced in one thousand seven hundred blocks. In 1997, the Targeted PDS followed, with different prices for poor and non-poor." },
+          { "speaker": "NEO", "text": "The Antyodaya Anna Yojana was launched in December 2000 for one crore of the poorest BPL families. Each family got twenty-five kilograms of foodgrains at two rupees a kilo for wheat and three rupees for rice. The quantity was later raised to thirty-five kilograms." },
+          { "speaker": "NEO", "text": "The National Food Security Act, 2013, provides food and nutritional security, and covers seventy-five per cent of the rural and fifty per cent of the urban population." }
+        ]
+      },
+      {
+        "animation": "Three cooperative badges appear on a map: 'Tamil Nadu: about 94% of fair price shops run by cooperatives', 'Delhi: Mother Dairy, milk and vegetables at controlled rates', 'Gujarat: Amul, White Revolution'. A fourth badge in Maharashtra: 'ADS: network of NGOs setting up grain banks'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cooperatives also play an important role, especially in southern and western India. In Tamil Nadu, around ninety-four per cent of fair price shops are run by cooperatives." },
+          { "speaker": "NEO", "text": "In Delhi, Mother Dairy provides milk and vegetables at controlled rates. Amul in Gujarat brought about the White Revolution in the country. In Maharashtra, the Academy of Development Science helped a network of NGOs set up grain banks." }
+        ]
+      },
+      {
+        "animation": "A PDS report card shows some complaints: 'Poor quality grain', 'Irregular opening of shops', 'Dealers diverting grain'. An 'EXAM TIP' card highlights 'AAY: December 2000'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is the PDS perfect then?" },
+          { "speaker": "NEO", "text": "Not always. Ration dealers sometimes divert grain to the open market, sell poor quality grain or open shops irregularly. Exam tip: the functioning of PDS and the role of cooperatives are frequent long-answer questions." }
+        ]
+      },
+      {
+        "animation": "Recap board with a ration card icon: '1. PDS: ration shops; Antyodaya, BPL, APL cards', '2. RPDS 1992, TPDS 1997, AAY 2000, NFSA 2013', '3. Cooperatives: Tamil Nadu shops, Mother Dairy, Amul, ADS grain banks'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the PDS supplies subsidised food through ration shops using three kinds of cards." },
+          { "speaker": "NEO", "text": "Two: schemes evolved from RPDS in 1992 to TPDS, Antyodaya Anna Yojana, and the Food Security Act of 2013." },
+          { "speaker": "NEO", "text": "Three: cooperatives like Mother Dairy, Amul and grain banks strengthen food security." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,379 @@
+[
+  {
+    "chapter_no": 9,
+    "chapter": "Gravitation",
+    "topic_no": 1,
+    "name": "The Universal Law of Gravitation",
+    "scenes": [
+      {
+        "animation": "Night on a terrace. Zippy tosses a mango up; it falls back and bonks him. He looks at the full moon hanging in the sky and shakes his fist at it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The mango falls down, but the moon just floats up there. Unfair!" },
+          { "speaker": "NEO", "text": "Actually, the same force pulls both of them. The moon is falling too, in its own way." }
+        ]
+      },
+      {
+        "animation": "A stone tied to a thread whirls in a circle; the thread glows as an arrow pointing to the centre, labelled 'Centripetal force'. The scene zooms out: the stone becomes the moon, the hand becomes the earth, and the thread becomes a glowing beam labelled 'Gravitational force'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Whirl a stone on a thread. The thread pulls it towards the centre, so it keeps moving in a circle. Cut the thread, and the stone flies off in a straight line." },
+          { "speaker": "NEO", "text": "The moon moves around the earth because the earth pulls it towards itself. This force of attraction is gravitation." }
+        ]
+      },
+      {
+        "animation": "Two spheres labelled 'M' and 'm' sit a distance 'd' apart with arrows pulling towards each other. The law builds step by step: 'F ∝ M × m', 'F ∝ 1/d²', 'F = G Mm / d²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Newton's universal law of gravitation says: every object in the universe attracts every other object with a force." },
+          { "speaker": "NEO", "text": "This force is proportional to the product of their masses, and inversely proportional to the square of the distance between them. The force acts along the line joining their centres." },
+          { "speaker": "NEO", "text": "So F equals G M m by d squared." }
+        ]
+      },
+      {
+        "animation": "A slider doubles d; the force arrow shrinks to a quarter, labelled '2 × distance → ¼ force'. Then a card: 'G = 6.673 × 10⁻¹¹ N m² kg⁻²', with a small portrait labelled 'Henry Cavendish measured G using a sensitive balance'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So if I double the distance, the force becomes half?" },
+          { "speaker": "NEO", "text": "No, a quarter. The distance is squared, so doubling it makes the force one-fourth." },
+          { "speaker": "NEO", "text": "G is the universal gravitation constant. Its value, six point six seven three into ten to the power minus eleven newton metre squared per kilogram squared, was found by Henry Cavendish." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'M = 6 × 10²⁴ kg (earth), m = 7.4 × 10²² kg (moon), d = 3.84 × 10⁵ km = 3.84 × 10⁸ m', 'F = (6.7 × 10⁻¹¹ × 6 × 10²⁴ × 7.4 × 10²²) / (3.84 × 10⁸)²', '= 2.97 × 10³⁷ / 1.47 × 10¹⁷ ≈ 2.0 × 10²⁰ N'. An 'EXAM TIP' tag sits on 'km → m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's find the force between the earth and the moon. The earth's mass is six into ten to the twenty-four kilograms, and the moon's is seven point four into ten to the twenty-two kilograms." },
+          { "speaker": "NEO", "text": "The distance is three point eight four into ten to the five kilometres, which is three point eight four into ten to the eight metres." },
+          { "speaker": "NEO", "text": "Substituting, the force comes to about two into ten to the twenty newtons. That is a huge force! Exam tip: convert kilometres to metres before squaring." }
+        ]
+      },
+      {
+        "animation": "Recap board with the moon on a glowing thread. Points: '1. Every object attracts every other object', '2. F = G Mm/d²; double d → ¼ F', '3. G = 6.673 × 10⁻¹¹ N m² kg⁻² (universal constant)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: every object in the universe attracts every other object." },
+          { "speaker": "NEO", "text": "Two: F equals G M m by d squared, so doubling the distance makes the force one-fourth." },
+          { "speaker": "NEO", "text": "Three: G is a universal constant, six point six seven three into ten to the minus eleven, in newton metre squared per kilogram squared." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Gravitation",
+    "topic_no": 2,
+    "name": "Importance of the Universal Law of Gravitation",
+    "scenes": [
+      {
+        "animation": "An apple drops from a tree towards the earth. Zippy stands on the earth with a magnifying glass, searching for the earth moving up towards the apple, and finds nothing.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If the apple pulls the earth with an equal force, why doesn't the earth jump up to meet it?" },
+          { "speaker": "NEO", "text": "Great question. The force is equal, but the masses are wildly different." }
+        ]
+      },
+      {
+        "animation": "Two equal and opposite force arrows between the apple and the earth. Beside each, 'a = F/m' is written: the apple's acceleration arrow is long; the earth's is so tiny it needs a microscope, labelled 'nearly zero'.",
+        "lines": [
+          { "speaker": "NEO", "text": "By the third law, the apple pulls the earth with a force equal to the earth's pull on the apple." },
+          { "speaker": "NEO", "text": "But from the second law, acceleration is force divided by mass. The earth's mass is enormous, so its acceleration is negligible." },
+          { "speaker": "NEO", "text": "The apple's mass is tiny, so it gets a noticeable acceleration and falls." }
+        ]
+      },
+      {
+        "animation": "Four panels build up one by one, each with an icon: 'Binds us to the earth' (a kid standing on a globe), 'Moon around the earth', 'Planets around the sun' (orbit lines), 'Tides due to the moon and the sun' (sea level rising on a beach).",
+        "lines": [
+          { "speaker": "NEO", "text": "This one law successfully explained many things that were thought to be unconnected." },
+          { "speaker": "NEO", "text": "It is the force that binds us to the earth. It explains the motion of the moon around the earth, and the motion of planets around the sun." },
+          { "speaker": "NEO", "text": "It also explains the tides, the rise and fall of sea water, caused by the pull of the moon and the sun." }
+        ]
+      },
+      {
+        "animation": "A cartoon beach at Puri with waves rising up the sand as the moon glides overhead. Zippy builds a sandcastle that gets washed away, grumbling at the moon.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the moon is responsible for flooding my sandcastle?" },
+          { "speaker": "NEO", "text": "Partly, yes. Along with the sun, the moon's gravitational pull raises the level of the sea at high tide." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'The force is equal on both. The ACCELERATION is different, because a = F/m.' A red cross hovers over the wrong answer 'the earth pulls harder'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: never write that the earth pulls the apple harder than the apple pulls the earth. The forces are equal; only the accelerations differ, because the masses differ." }
+        ]
+      },
+      {
+        "animation": "Recap board with the apple, a small earth and a moon. Points: '1. Equal forces, but earth's acceleration is negligible (huge mass)', '2. Gravitation binds us to earth, moves the moon and planets', '3. Tides are due to the moon and the sun'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the apple and the earth pull each other equally, but the earth's acceleration is negligible due to its huge mass." },
+          { "speaker": "NEO", "text": "Two: gravitation binds us to the earth and keeps the moon and planets in their orbits." },
+          { "speaker": "NEO", "text": "Three: tides are caused by the pull of the moon and the sun." },
+          { "speaker": "ZIPPY", "text": "Next sandcastle, I'm building above the tide line." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Gravitation",
+    "topic_no": 3,
+    "name": "Free Fall and Acceleration Due to Gravity",
+    "scenes": [
+      {
+        "animation": "From a balcony, Zippy drops a cricket ball and a paper sheet together. The ball thuds down first; the paper floats slowly. Zippy declares, 'Heavy things fall faster!' Neo crumples the paper into a tight ball and drops both again; they land almost together.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "See? Heavy things fall faster. Case closed." },
+          { "speaker": "NEO", "text": "Not quite. Crumple the paper and try again. It was air resistance slowing the flat sheet, not its lightness." }
+        ]
+      },
+      {
+        "animation": "A stone falls towards the earth with velocity arrows growing longer at each second mark. Label 'Free fall: only the earth's gravity acts'. The symbol 'g' glows beside the stone.",
+        "lines": [
+          { "speaker": "NEO", "text": "When an object falls towards the earth under the earth's gravitational force alone, we say it is in free fall." },
+          { "speaker": "NEO", "text": "Its direction doesn't change, but its velocity keeps increasing, so it has an acceleration. This is the acceleration due to gravity, written as g." },
+          { "speaker": "NEO", "text": "Its unit is the same as any acceleration, metre per second squared." }
+        ]
+      },
+      {
+        "animation": "A derivation builds: 'F = mg (second law)', 'F = GMm/R² (gravitation)', 'mg = GMm/R²', 'g = GM/R²'. The m cancels with a little puff of smoke, labelled 'g does not depend on the falling object's mass'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The force on the object is m g. It is also G M m by R squared, where M is the earth's mass and R its radius." },
+          { "speaker": "NEO", "text": "Equating them, the m cancels out, and g equals G M by R squared." },
+          { "speaker": "NEO", "text": "So g doesn't depend on the mass of the falling object. In the absence of air, a feather and a stone fall together." }
+        ]
+      },
+      {
+        "animation": "Worked calculation: 'G = 6.7 × 10⁻¹¹ N m² kg⁻², M = 6 × 10²⁴ kg, R = 6.4 × 10⁶ m', 'g = (6.7 × 10⁻¹¹ × 6 × 10²⁴) / (6.4 × 10⁶)²', '= 4.02 × 10¹⁴ / 4.096 × 10¹³ ≈ 9.8 m s⁻²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's calculate g. G is six point seven into ten to the minus eleven, the earth's mass is six into ten to the twenty-four kilograms, and its radius is six point four into ten to the six metres." },
+          { "speaker": "NEO", "text": "The numerator is four point zero two into ten to the fourteen. The denominator is four point zero nine six into ten to the thirteen. Dividing, g is about nine point eight metres per second squared." }
+        ]
+      },
+      {
+        "animation": "The earth is drawn slightly flattened at the poles, with 'R' shorter at the poles and longer at the equator. Labels: 'Poles: smaller R → greater g', 'Equator: larger R → smaller g'. An 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is g the same everywhere on the earth?" },
+          { "speaker": "NEO", "text": "Not exactly. The earth's radius increases from the poles to the equator, so g is greater at the poles than at the equator." },
+          { "speaker": "NEO", "text": "Exam tip: remember that g is inversely proportional to R squared. Larger radius means smaller g." }
+        ]
+      },
+      {
+        "animation": "Recap board with the crumpled paper and the cricket ball landing together. Points: '1. Free fall: falling under gravity alone', '2. g = GM/R² ≈ 9.8 m s⁻², independent of the object's mass', '3. g is greater at the poles than at the equator'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: free fall means falling under the earth's gravity alone." },
+          { "speaker": "NEO", "text": "Two: g equals G M by R squared, about nine point eight metres per second squared, and it doesn't depend on the object's mass." },
+          { "speaker": "NEO", "text": "Three: g is greater at the poles than at the equator." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Gravitation",
+    "topic_no": 4,
+    "name": "Motion of Objects Under the Influence of Gravity",
+    "scenes": [
+      {
+        "animation": "A toy car rolls off the edge of a table ledge and drops to the floor. Zippy holds a stopwatch reading '0.5 s' and a ruler that's far too short, looking confused.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I timed the fall but forgot to measure the height. Can I still find it?" },
+          { "speaker": "NEO", "text": "Yes. Just use the equations of motion with a replaced by g." }
+        ]
+      },
+      {
+        "animation": "The three equations of motion appear, then the letter 'a' in each slides out and 'g' slides in: 'v = u + gt', 's = ut + ½gt²', 'v² = u² + 2gs'. A note: 'g positive when falling, negative when going up'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Since g is nearly constant near the earth, the equations of motion hold. Just write g in place of a." },
+          { "speaker": "NEO", "text": "Take g as positive when the object is speeding up downwards, and negative when it moves upwards against gravity." }
+        ]
+      },
+      {
+        "animation": "Example 1 builds line by line: 'u = 0, t = 0.5 s, g = 10 m s⁻²', '(i) v = u + gt = 0 + 10 × 0.5 = 5 m s⁻¹', '(ii) average speed = (0 + 5)/2 = 2.5 m s⁻¹', '(iii) h = ½gt² = ½ × 10 × 0.5² = ½ × 10 × 0.25 = 1.25 m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The car starts from rest and falls for half a second. Take g as ten metres per second squared." },
+          { "speaker": "NEO", "text": "Its speed on hitting the floor is zero plus ten into zero point five, which is five metres per second." },
+          { "speaker": "NEO", "text": "Its average speed is zero plus five, by two, which is two point five metres per second." },
+          { "speaker": "NEO", "text": "The height is half into ten into zero point five squared. That's half into ten into zero point two five, which is one point two five metres." }
+        ]
+      },
+      {
+        "animation": "Example 2: a ball is thrown straight up and reaches a height of 10 m, where its velocity arrow shrinks to a dot. Working: 'v = 0, s = 10 m, g = −9.8 m s⁻²', 'v² = u² + 2gs → 0 = u² − 2 × 9.8 × 10 → u² = 196 → u = 14 m s⁻¹', 't = (v − u)/g = (0 − 14)/(−9.8) ≈ 1.43 s'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Next, a ball thrown straight up rises to ten metres. With what velocity was it thrown, and how long did it take to reach the top?" },
+          { "speaker": "NEO", "text": "At the top, velocity is zero, and g is minus nine point eight. So zero equals u squared minus two into nine point eight into ten, giving u squared as one ninety-six. So u is fourteen metres per second." },
+          { "speaker": "NEO", "text": "Time taken is fourteen divided by nine point eight, which is about one point four three seconds." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'At the highest point: v = 0 (not a = 0!). Acceleration is still g, pointing down.' Zippy, frozen mid-air at the top of a jump, points at the arrow.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "At the top, the ball stops. So there's no acceleration there, right?" },
+          { "speaker": "NEO", "text": "Wrong, and it's a favourite trap. Exam tip: at the highest point, velocity is zero, but the acceleration is still g, acting downwards." }
+        ]
+      },
+      {
+        "animation": "Recap board with the falling toy car and the rising ball. Points: '1. Replace a with g in the equations of motion', '2. g positive downwards, negative for upward motion', '3. At the top: v = 0, but acceleration = g'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: for free fall, use the equations of motion with g in place of a." },
+          { "speaker": "NEO", "text": "Two: take g positive for falling and negative for upward motion." },
+          { "speaker": "NEO", "text": "Three: at the highest point, velocity is zero but acceleration is still g." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Gravitation",
+    "topic_no": 5,
+    "name": "Mass and Weight",
+    "scenes": [
+      {
+        "animation": "Zippy stands on a bathroom scale on earth, frowning at the number. A rocket whooshes him to the moon; he steps on the same scale there, and the reading drops. He dances in joy in slow-motion, low-gravity hops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I lost weight on the moon without skipping a single samosa!" },
+          { "speaker": "NEO", "text": "Your weight dropped, yes. But your mass didn't change one bit." }
+        ]
+      },
+      {
+        "animation": "A two-column card builds: 'MASS: measure of inertia; same everywhere; unit kg' and 'WEIGHT: force of attraction of the earth; changes with place; unit N; acts vertically downward'. The formula 'W = m × g' drops in between.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mass is the measure of an object's inertia. It stays the same whether the object is on the earth, the moon or in outer space." },
+          { "speaker": "NEO", "text": "Weight is the force with which the earth attracts the object. Since force equals mass into acceleration, weight W equals m into g." },
+          { "speaker": "NEO", "text": "Weight is a force, so its SI unit is the newton. It acts vertically downwards." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'm = 10 kg, g = 9.8 m s⁻²', 'W = m × g = 10 × 9.8 = 98 N'. A cartoon sack labelled '10 kg atta' hangs from a spring balance reading '98 N'.",
+        "lines": [
+          { "speaker": "NEO", "text": "What is the weight of a ten-kilogram bag of atta on the earth?" },
+          { "speaker": "NEO", "text": "W equals m g, which is ten into nine point eight, or ninety-eight newtons." },
+          { "speaker": "ZIPPY", "text": "So when I say I weigh forty kilos, I'm actually telling my mass?" },
+          { "speaker": "NEO", "text": "Exactly. In everyday speech we mix them up, but in science, kilogram is for mass and newton is for weight." }
+        ]
+      },
+      {
+        "animation": "The earth and the moon side by side with their masses and radii labelled: 'Moon: mass 7.36 × 10²² kg, radius 1.74 × 10⁶ m'. A ratio card: 'Weight on moon = 1/6 × weight on earth'. Then: 'W_earth = 10 N → W_moon = 10/6 ≈ 1.67 N'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The moon has much less mass than the earth, so it pulls objects with a smaller force." },
+          { "speaker": "NEO", "text": "The weight of an object on the moon is about one-sixth of its weight on the earth." },
+          { "speaker": "NEO", "text": "So an object weighing ten newtons on the earth would weigh ten by six, about one point six seven newtons, on the moon." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Mass on moon = same as on earth. Only weight becomes 1/6.' A trick question 'A 60 kg astronaut on the moon has mass ___?' fills in '60 kg'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: when asked about an astronaut's mass on the moon, don't divide by six. Mass stays the same; only weight becomes one-sixth." }
+        ]
+      },
+      {
+        "animation": "Recap board with Zippy hovering over the moon's surface. Points: '1. Mass: measure of inertia, constant, kg', '2. Weight: W = mg, a force in N, acts downward', '3. Weight on moon ≈ 1/6 of weight on earth'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: mass is the measure of inertia and stays constant everywhere, measured in kilograms." },
+          { "speaker": "NEO", "text": "Two: weight is a force, W equals m g, measured in newtons." },
+          { "speaker": "NEO", "text": "Three: on the moon, weight is about one-sixth of the weight on the earth." },
+          { "speaker": "ZIPPY", "text": "Moon diet cancelled. My mass didn't budge." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Gravitation",
+    "topic_no": 6,
+    "name": "Thrust and Pressure",
+    "scenes": [
+      {
+        "animation": "On a sandy beach, Zippy (now with tiny cartoon legs) stands up and sinks deep into the loose sand. Next to him Neo lies flat on his back and barely sinks at all, sunbathing with sunglasses.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Help! I'm sinking, and you're just lying there relaxing!" },
+          { "speaker": "NEO", "text": "Same weight, bigger area. Lying down spreads the force, so the pressure is less." }
+        ]
+      },
+      {
+        "animation": "A downward arrow perpendicular to a surface is labelled 'Thrust: force acting on an object perpendicular to the surface'. A grid on the surface lights up square by square, and 'Pressure = Thrust / Area' appears, followed by 'SI unit: N m⁻² = pascal (Pa)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The net force in a particular direction, acting perpendicular to a surface, is called thrust." },
+          { "speaker": "NEO", "text": "The thrust on unit area is called pressure. So pressure equals thrust divided by area." },
+          { "speaker": "NEO", "text": "Its SI unit is newton per square metre, also called the pascal, after the scientist Blaise Pascal." }
+        ]
+      },
+      {
+        "animation": "A wooden block of 5 kg, measuring 40 cm × 20 cm × 10 cm, lies on a table. Working appears: 'Thrust = mg = 5 × 9.8 = 49 N'. The block stands on its smallest face: 'Area = 0.2 m × 0.1 m = 0.02 m², P = 49/0.02 = 2450 Pa'. It flops onto its largest face: 'Area = 0.4 m × 0.2 m = 0.08 m², P = 49/0.08 = 612.5 Pa'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A wooden block of mass five kilograms measures forty by twenty by ten centimetres. Its weight, the thrust, is five into nine point eight, which is forty-nine newtons." },
+          { "speaker": "NEO", "text": "Standing on its twenty by ten face, the area is zero point zero two square metres. Pressure is forty-nine by zero point zero two, which is two thousand four hundred and fifty pascals." },
+          { "speaker": "NEO", "text": "Lying on its forty by twenty face, the area is zero point zero eight square metres, so the pressure is only six hundred and twelve point five pascals." }
+        ]
+      },
+      {
+        "animation": "Quick examples flash with 'small area → large pressure' or 'large area → small pressure' tags: a sharp kitchen knife slicing a tomato, a nail's pointed tip, wide straps on a school bag, and a wide building foundation.",
+        "lines": [
+          { "speaker": "NEO", "text": "The same force produces a larger pressure on a smaller area. That's why knives are sharp and nails are pointed." },
+          { "speaker": "NEO", "text": "And a larger area reduces pressure. That's why school bags have wide straps and buildings have wide foundations." },
+          { "speaker": "ZIPPY", "text": "So my school bag straps are secretly physics!" }
+        ]
+      },
+      {
+        "animation": "A plastic bottle filled with water has holes at different heights; water spurts out in all directions. Label 'Fluids exert pressure in all directions'. An 'EXAM TIP' card: 'Always convert cm² to m² before calculating pressure'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Liquids and gases also have weight and exert pressure on the base and walls of their container, in all directions." },
+          { "speaker": "NEO", "text": "Exam tip: convert centimetres into metres before finding the area. Twenty centimetres is zero point two metres." }
+        ]
+      },
+      {
+        "animation": "Recap board with the sunbathing Neo. Points: '1. Thrust: force perpendicular to a surface', '2. Pressure = thrust/area; unit pascal (N m⁻²)', '3. Smaller area → larger pressure; fluids press in all directions'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: thrust is the force acting perpendicular to a surface." },
+          { "speaker": "NEO", "text": "Two: pressure is thrust per unit area, measured in pascals." },
+          { "speaker": "NEO", "text": "Three: the same force on a smaller area gives more pressure, and fluids exert pressure in all directions." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "Gravitation",
+    "topic_no": 7,
+    "name": "Buoyancy and Archimedes' Principle",
+    "scenes": [
+      {
+        "animation": "In a bucket of water, Zippy tries to push an empty plastic bottle down. It keeps shoving back up; when he lets go, it shoots out and hits his nose with a 'boing'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This bottle is fighting me! Why won't it stay down?" },
+          { "speaker": "NEO", "text": "The water is pushing it up. That upward push is called buoyant force, or upthrust." }
+        ]
+      },
+      {
+        "animation": "Force arrows on the bottle: a down arrow 'Weight + your push' and an up arrow 'Upthrust' growing larger as more of the bottle goes underwater. Label 'Buoyancy: upward force exerted by a fluid'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Every object in a fluid experiences an upward force. This is buoyancy." },
+          { "speaker": "NEO", "text": "The more of the bottle you push under, the greater the upthrust. When you release it, the upthrust is greater than its weight, so it pops up." }
+        ]
+      },
+      {
+        "animation": "A beaker of water: a cork dropped in floats; an iron nail of the same mass sinks. Density labels appear: 'Cork: less dense than water → floats', 'Iron: more dense than water → sinks'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Then why does an iron nail sink but a cork float, even if they have the same mass?" },
+          { "speaker": "NEO", "text": "It depends on density, the mass per unit volume. Cork is less dense than water, so the upthrust on it is enough to hold it up." },
+          { "speaker": "NEO", "text": "Iron is denser than water. The upthrust on the nail is less than its weight, so it sinks." }
+        ]
+      },
+      {
+        "animation": "A stone hangs from a spring balance; its reading drops as the stone is lowered into water, and the overflow collects in a small beaker. The statement builds: 'When a body is immersed fully or partially in a fluid, it experiences an upward force that is equal to the weight of the fluid displaced by it.' A cartoon Archimedes runs past shouting 'Eureka!'",
+        "lines": [
+          { "speaker": "NEO", "text": "Hang a stone from a spring balance and lower it into water. The reading decreases, because the water pushes it up." },
+          { "speaker": "NEO", "text": "Archimedes' principle states: when a body is immersed fully or partially in a fluid, it experiences an upward force that is equal to the weight of the fluid displaced by it." }
+        ]
+      },
+      {
+        "animation": "Three application cards flip in: a ship sailing, a submarine diving, and a lactometer bobbing in a glass of milk beside a hydrometer in a liquid. An 'EXAM TIP' tag reads 'Upthrust = weight of fluid displaced'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Archimedes' principle is used in designing ships and submarines. Lactometers use it to check the purity of milk, and hydrometers to find the density of liquids." },
+          { "speaker": "NEO", "text": "Exam tip: learn the statement word for word, especially 'weight of the fluid displaced'. That phrase carries the mark." }
+        ]
+      },
+      {
+        "animation": "Recap board with the bobbing bottle. Points: '1. Buoyant force (upthrust): upward force by a fluid', '2. Less dense than the liquid → floats; denser → sinks', '3. Archimedes: upthrust = weight of fluid displaced; ships, lactometers, hydrometers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a fluid exerts an upward force called buoyant force, or upthrust." },
+          { "speaker": "NEO", "text": "Two: objects less dense than a liquid float on it, and denser ones sink." },
+          { "speaker": "NEO", "text": "Three: by Archimedes' principle, the upthrust equals the weight of the fluid displaced, and it's used in ships, lactometers and hydrometers." },
+          { "speaker": "ZIPPY", "text": "Truce, bottle. You win." }
+        ]
+      }
+    ]
+  }
+]

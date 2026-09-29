@@ -1,0 +1,166 @@
+[
+  {
+    "chapter_no": 6,
+    "chapter": "Triangles",
+    "topic_no": 1,
+    "name": "Similar Figures",
+    "scenes": [
+      {
+        "animation": "Zippy takes a selfie and zooms in on his phone; the photo grows bigger but his face keeps exactly the same shape. Then he stretches it sideways by accident and his face becomes a wide pancake, and he shrieks.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Zooming is fine, but stretching turns me into a pancake. Why?" },
+          { "speaker": "NEO", "text": "Zooming keeps the shape. Stretching changes it. That's the difference between similar and not similar." }
+        ]
+      },
+      {
+        "animation": "Pairs pop in: two circles of different radii, two squares, two equilateral triangles, each pair joined by a green '~' sign. A banner: 'Similar figures: same shape, not necessarily same size'. A small note: 'Congruent ⇒ similar, but similar ⇏ congruent'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two figures with the same shape, but not necessarily the same size, are called similar figures." },
+          { "speaker": "NEO", "text": "All circles are similar. So are all squares, and all equilateral triangles." },
+          { "speaker": "NEO", "text": "Congruent figures are always similar, but similar figures need not be congruent." }
+        ]
+      },
+      {
+        "animation": "Two quadrilaterals ABCD and PQRS appear, with matching angle arcs in the same colours. A rule card writes: 'Two polygons with the same number of sides are similar if (i) corresponding angles are equal AND (ii) corresponding sides are in the same ratio'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two polygons with the same number of sides are similar if two conditions hold." },
+          { "speaker": "NEO", "text": "One: their corresponding angles are equal. Two: their corresponding sides are in the same ratio, or proportion." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'ABCD: AB = 2, BC = 3, CD = 4, DA = 5 (cm)', 'PQRS: PQ = 4, QR = 6, RS = 8, SP = 10 (cm)', corresponding angles marked equal. Ratios compute line by line: '2/4 = 1/2', '3/6 = 1/2', '4/8 = 1/2', '5/10 = 1/2', '∴ ABCD ~ PQRS, scale factor 2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Suppose quadrilateral ABCD has sides 2, 3, 4 and 5 centimetres, and PQRS has sides 4, 6, 8 and 10, with corresponding angles equal." },
+          { "speaker": "NEO", "text": "Check the ratios: 2 by 4, 3 by 6, 4 by 8 and 5 by 10. Every one is one-half." },
+          { "speaker": "NEO", "text": "Both conditions hold, so ABCD is similar to PQRS. PQRS is ABCD enlarged two times." }
+        ]
+      },
+      {
+        "animation": "Two counter-examples. A square and a rectangle: all angles 90° (green tick) but sides 3, 3 vs 3, 6 not proportional (red cross). A square and a rhombus: sides 4, 4 vs 2, 2 proportional (green tick) but angles 90° vs 60° and 120° (red cross). A 'BOARD TIP' banner: 'Both conditions needed for polygons'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A square and a rectangle both have right angles. So they're similar, right?" },
+          { "speaker": "NEO", "text": "No. The angles match, but the sides aren't in the same ratio. And a square and a rhombus have proportional sides, but different angles." },
+          { "speaker": "NEO", "text": "Board tip: for polygons, one condition alone is not enough. This is a favourite one-mark question." }
+        ]
+      },
+      {
+        "animation": "Recap board with Zippy's un-stretched selfie. Points appear: '1. Similar = same shape, not necessarily same size', '2. Polygons: equal angles AND proportional sides', '3. Square vs rectangle, square vs rhombus: not similar'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: similar figures have the same shape but not necessarily the same size." },
+          { "speaker": "NEO", "text": "Two: polygons are similar when corresponding angles are equal and corresponding sides are proportional." },
+          { "speaker": "NEO", "text": "Three: one condition alone is not enough, as the square and rectangle show." },
+          { "speaker": "ZIPPY", "text": "Zoom, don't stretch." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Triangles",
+    "topic_no": 2,
+    "name": "The Basic Proportionality Theorem",
+    "scenes": [
+      {
+        "animation": "A triangular samosa lies on a plate. Zippy slices it with a knife held perfectly parallel to its base. The two cut sides glow, and tiny rulers pop up showing the pieces on each side in the same ratio.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I cut parallel to the base, and both sides got split in the same ratio. Coincidence?" },
+          { "speaker": "NEO", "text": "Not at all. That's a theorem, first given by the Greek mathematician Thales. We call it the Basic Proportionality Theorem." }
+        ]
+      },
+      {
+        "animation": "A triangle ABC is drawn, then a line DE parallel to BC, with D on AB and E on AC. A statement card writes: 'If DE ∥ BC, then AD/DB = AE/EC'.",
+        "lines": [
+          { "speaker": "NEO", "text": "If a line is drawn parallel to one side of a triangle, cutting the other two sides at distinct points, then the other two sides are divided in the same ratio." },
+          { "speaker": "NEO", "text": "So if DE is parallel to BC, then AD by DB equals AE by EC." }
+        ]
+      },
+      {
+        "animation": "Proof builds step by step. Construction lines draw: 'Join BE and CD; draw DM ⊥ AC and EN ⊥ AB'. Then: 'ar(ADE) = ½ × AD × EN', 'ar(BDE) = ½ × DB × EN', '⇒ ar(ADE)/ar(BDE) = AD/DB … (1)'. The two triangles sharing height EN shade in blue and green.",
+        "lines": [
+          { "speaker": "NEO", "text": "Proof. Join BE and CD. Draw DM perpendicular to AC, and EN perpendicular to AB." },
+          { "speaker": "NEO", "text": "Area of triangle ADE is half into AD into EN. Area of triangle BDE is half into DB into EN." },
+          { "speaker": "NEO", "text": "They share the height EN, so their ratio is AD by DB." }
+        ]
+      },
+      {
+        "animation": "Proof continues: 'ar(ADE) = ½ × AE × DM', 'ar(DEC) = ½ × EC × DM', '⇒ ar(ADE)/ar(DEC) = AE/EC … (2)'. Then triangles BDE and DEC flash on the same base DE between parallels DE and BC: 'ar(BDE) = ar(DEC) … (3)'. Finally: 'From (1), (2), (3): AD/DB = AE/EC ∎'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Similarly, with height DM, area of ADE by area of DEC equals AE by EC." },
+          { "speaker": "NEO", "text": "Now, triangles BDE and DEC are on the same base DE and between the same parallels, DE and BC. So their areas are equal." },
+          { "speaker": "NEO", "text": "Since the denominators are equal, AD by DB equals AE by EC. Proved." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'DE ∥ BC, AD = 1.5 cm, DB = 3 cm, AE = 1 cm, EC = ?', '1.5/3 = 1/EC', '1/2 = 1/EC', 'EC = 2 cm'. A check: '1.5/3 = 0.5, 1/2 = 0.5 ✓'. A converse card follows: 'If AD/DB = AE/EC, then DE ∥ BC (Converse of BPT)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: DE is parallel to BC, AD is 1.5 centimetres, DB is 3, and AE is 1. By BPT, 1.5 by 3 equals 1 by EC." },
+          { "speaker": "NEO", "text": "1.5 by 3 is one-half, so EC is 2 centimetres." },
+          { "speaker": "NEO", "text": "The converse is also true. If a line divides two sides in the same ratio, it is parallel to the third side. Board tip: the BPT proof is a regular three-mark question, so practise the construction." }
+        ]
+      },
+      {
+        "animation": "Recap board with the sliced samosa. Points appear: '1. DE ∥ BC ⇒ AD/DB = AE/EC', '2. Proof: compare areas with equal heights; ar(BDE) = ar(DEC)', '3. Converse: equal ratios ⇒ parallel'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a line parallel to one side divides the other two sides in the same ratio." },
+          { "speaker": "NEO", "text": "Two: the proof compares areas of triangles with equal heights, and uses triangles on the same base between the same parallels." },
+          { "speaker": "NEO", "text": "Three: the converse says equal ratios mean the line is parallel." },
+          { "speaker": "ZIPPY", "text": "Thales would have been great at cutting samosas." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Triangles",
+    "topic_no": 3,
+    "name": "Criteria for Similarity of Triangles",
+    "scenes": [
+      {
+        "animation": "A sunny school ground. Zippy tries to climb the tall school water tower with a tape measure and slides back down. Neo points calmly at the shadows on the ground.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How do I measure the tower's height without climbing it?" },
+          { "speaker": "NEO", "text": "Use its shadow and similar triangles. First, let's learn how to tell when two triangles are similar." }
+        ]
+      },
+      {
+        "animation": "Two triangles ABC and DEF. Three criteria cards flip one by one: 'AAA: corresponding angles equal ⇒ similar (AA is enough)', 'SSS: AB/DE = BC/EF = CA/FD ⇒ similar', 'SAS: one angle equal and including sides proportional ⇒ similar'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For triangles, AAA criterion: if corresponding angles are equal, the triangles are similar. Since the angles add to 180 degrees, two equal pairs are enough. That's AA." },
+          { "speaker": "NEO", "text": "SSS criterion: if corresponding sides are in the same ratio, the triangles are similar." },
+          { "speaker": "NEO", "text": "SAS criterion: if one angle is equal and the sides including it are proportional, the triangles are similar." }
+        ]
+      },
+      {
+        "animation": "An SSS check: 'ΔABC: 3, 4, 5 cm; ΔPQR: 6, 8, 10 cm', '3/6 = 4/8 = 5/10 = 1/2', '∴ ΔABC ~ ΔPQR (SSS)'. Vertex correspondence arrows 'A→P, B→Q, C→R' glow.",
+        "lines": [
+          { "speaker": "NEO", "text": "Triangle ABC has sides 3, 4 and 5 centimetres. Triangle PQR has sides 6, 8 and 10." },
+          { "speaker": "NEO", "text": "3 by 6, 4 by 8, 5 by 10, each is one-half. So by SSS, ABC is similar to PQR." }
+        ]
+      },
+      {
+        "animation": "The shadow problem builds: a 6 m pole with a 4 m shadow, and a tower of height h with a 28 m shadow, sun rays drawn parallel. Angles at the ground are marked equal and '90°' marked at the bases: 'AA ⇒ triangles similar'. Lines: '6/4 = h/28', 'h = (6 × 28)/4 = 168/4 = 42 m'. A check: '42/28 = 1.5 = 6/4 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now the tower. A 6 metre pole casts a 4 metre shadow. At the same time, the tower casts a 28 metre shadow." },
+          { "speaker": "NEO", "text": "Both stand at right angles to the ground, and the sun's rays make the same angle with it. So by AA, the triangles are similar." },
+          { "speaker": "NEO", "text": "So 6 by 4 equals h by 28. h is 6 into 28, by 4, which is 168 by 4, or 42 metres." },
+          { "speaker": "ZIPPY", "text": "Check: 42 by 28 is 1.5, and 6 by 4 is 1.5. No climbing needed!" }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'ΔABC ~ ΔPQR ⇒ A↔P, B↔Q, C↔R. Order matters!'. A wrong statement 'ΔABC ~ ΔQRP' is crossed out in red.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: write the vertices in matching order. Triangle ABC similar to PQR means A matches P, B matches Q, and C matches R. A jumbled order loses marks." }
+        ]
+      },
+      {
+        "animation": "Recap board with the tower and its shadow. Points appear: '1. AAA (AA): angles equal', '2. SSS: all sides proportional; SAS: one angle equal, including sides proportional', '3. Write vertices in corresponding order'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: by AA, two pairs of equal angles make triangles similar." },
+          { "speaker": "NEO", "text": "Two: SSS needs all sides proportional; SAS needs one equal angle with proportional including sides." },
+          { "speaker": "NEO", "text": "Three: always write corresponding vertices in the same order." },
+          { "speaker": "ZIPPY", "text": "Forty-two metres, measured from the ground. Genius." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,654 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "Maintain Healthy, Safe and Secure Working Environment",
+    "topic_no": 1,
+    "name": "Health, Safety and Security at the Workplace",
+    "scenes": [
+      {
+        "animation": "A busy data-entry office. Cables snake across the floor, a fire exit is blocked by cartons, and an unknown visitor strolls in without an ID card. Zippy zips in as a new intern with a 'Day 1' badge and trips over a cable.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Day one at my first office, and I've already tripped. Is this normal?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "It shouldn't be. A good workplace looks after your health, your safety and your security."
+          }
+        ]
+      },
+      {
+        "animation": "Three pillars rise holding up the office roof: 'Health' (a heart: clean air, water, ergonomic chairs), 'Safety' (a hard hat: protection from accidents and injury), 'Security' (a lock: protection of people, property and data from theft or unauthorised entry).",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Health means keeping workers physically and mentally well. Safety means protecting them from accidents and injuries."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Security means protecting people, property and information from theft, damage or unauthorised access."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So the stranger walking in without an ID card is a security problem?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Exactly. And the blocked fire exit is a safety problem."
+          }
+        ]
+      },
+      {
+        "animation": "A rulebook titled 'Health, Safety and Security Policy' opens. Pages flip: 'Emergency exits and assembly point', 'Fire drills', 'First-aid kit and trained first-aider', 'ID cards and visitor register', 'Report hazards to supervisor'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Every organisation needs written policies and procedures. They tell everyone what to do and who is responsible."
+          },
+          {
+            "speaker": "NEO",
+            "text": "They cover emergency exits, fire drills, first aid, ID cards, visitor records and how to report hazards."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So someone should have reported that cable before I found it with my face."
+          }
+        ]
+      },
+      {
+        "animation": "A balance chart shows reasons for safety programs rising as icons: 'Fewer accidents and injuries', 'Lower costs of treatment and repairs', 'Following the law', 'Better productivity', 'Higher morale'. Workers in the background smile and type faster.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Why have these programs? They prevent accidents and injuries, and reduce the cost of treatment and repairs."
+          },
+          {
+            "speaker": "NEO",
+            "text": "They help the organisation follow the law, and workers who feel safe are more productive and motivated."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So safety actually saves money too."
+          }
+        ]
+      },
+      {
+        "animation": "The office transforms: cables are taped along walls, cartons move away from the fire exit, and the visitor signs a register and gets a badge. A yellow 'BOARD TIP' card: 'Health = well-being; Safety = no accidents; Security = protection from theft and unauthorised access'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Safety is everyone's job. As an employee, follow the rules, use equipment properly and report anything unsafe."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: short-answer questions often ask for reasons for safety policies. Give at least three, like fewer accidents, lower costs and legal compliance."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a hard hat, a heart and a lock. Points appear: '1. Health, safety, security: three pillars', '2. Policies: exits, drills, first aid, IDs, reporting', '3. Reasons: fewer accidents, lower cost, law, productivity'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: a good workplace protects health, safety and security."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: written policies cover exits, drills, first aid, IDs and reporting hazards."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: these programs reduce accidents and costs, follow the law and raise productivity."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Day one: survived. Cable: taped down."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Maintain Healthy, Safe and Secure Working Environment",
+    "topic_no": 2,
+    "name": "Workplace Hazards and Their Sources",
+    "scenes": [
+      {
+        "animation": "Zippy plays a 'Spot the Hazard' game in a cartoon office. A timer ticks. He finds a wet floor, an overloaded plug point with six adaptors, a stack of files on a high shelf, a frayed wire and a stressed worker surrounded by deadlines.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Spot the hazard? I found five in ten seconds. This office is a video game!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Good eyes. A hazard is anything that can cause harm. Let's sort them."
+          }
+        ]
+      },
+      {
+        "animation": "Labelled cards drop onto each hazard. 'Physical: falling from heights, slipping and tripping' over a ladder and wet floor; 'Electrical' over the frayed wire; 'Fire' over the overloaded plug point; 'Health' over dust, noise and stress.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Physical hazards include falling from heights, slipping on wet floors and tripping over objects."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Electrical hazards come from faulty wiring and damaged cables. Fire hazards come from overloaded sockets and flammable material."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Health hazards include dust, poor air, noise and stress."
+          }
+        ]
+      },
+      {
+        "animation": "A map of the office marks sources of hazards with red pins: 'Computers' (long hours, wires), 'Office equipment' (printer, shredder, paper cutter), 'Handling objects' (lifting heavy boxes), 'Stress at work', 'Working environment' (poor light, bad ventilation). A worker bends his knees and keeps his back straight while lifting a carton.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "In an office, hazards come from computers, office equipment like shredders and paper cutters, and handling heavy objects."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Stress and a poor working environment, such as bad lighting or ventilation, are sources too."
+          },
+          {
+            "speaker": "NEO",
+            "text": "When lifting a heavy box, bend your knees and keep your back straight."
+          }
+        ]
+      },
+      {
+        "animation": "A 'Hazard Control' ladder appears: 'Remove the hazard', 'Replace with something safer', 'Guard or isolate it', 'Safe work rules and training', 'Protective equipment'. Then a safety checklist clipboard ticks: 'Clear walkways', 'Cables secured', 'No overloaded sockets', 'Exits unblocked', 'First-aid kit stocked'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Hazard control means reducing the risk. The best way is to remove the hazard; if you can't, replace it, guard it, train people or use protective equipment."
+          },
+          {
+            "speaker": "NEO",
+            "text": "A safety checklist helps too: clear walkways, secure cables, no overloaded sockets, exits unblocked and a stocked first-aid kit."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So the six adaptors in one plug go straight to jail."
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: 'Walk around your classroom or computer lab and list three hazards and one control for each.' Then a yellow 'BOARD TIP' card: 'Name the hazard type + one way to prevent it'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: walk around your computer lab, list three hazards, and write one control for each."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: when a case describes a situation, name the type of hazard first, then give a way to prevent it. That's usually how marks are split."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a warning-triangle icon. Points appear: '1. Hazards: physical, electrical, fire, health', '2. Sources: computers, equipment, handling objects, stress, environment', '3. Control hazards and use a safety checklist'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: hazards can be physical, electrical, fire or health hazards."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: sources include computers, equipment, handling objects, stress and the working environment."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: control hazards and use a safety checklist."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Final score: five hazards found, zero trips taken."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Maintain Healthy, Safe and Secure Working Environment",
+    "topic_no": 3,
+    "name": "Workplace Quality: Clean Air, Water and Ergonomics",
+    "scenes": [
+      {
+        "animation": "A stuffy office in summer: windows shut, dusty AC filter, an old water cooler with green algae. Workers yawn and rub their eyes. Zippy's spark turns dim and sleepy.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Why does everyone here look like they need a nap at eleven in the morning?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Bad air, unsafe water and poor seating. Quality at the workplace is about the environment itself."
+          }
+        ]
+      },
+      {
+        "animation": "A technician measures with cartoon meters: 'Air: dust, humidity, temperature, ventilation' and 'Water: tested for germs and impurities'. Readings turn from red to green as filters are cleaned, windows opened and the cooler serviced.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Organisations should monitor air and water quality regularly."
+          },
+          {
+            "speaker": "NEO",
+            "text": "For clean air: good ventilation, clean AC filters, no smoking, and plants where possible."
+          },
+          {
+            "speaker": "NEO",
+            "text": "For clean water: test it, service coolers and purifiers, and keep storage tanks covered and clean."
+          }
+        ]
+      },
+      {
+        "animation": "A cleanliness montage: desks wiped, dustbins emptied, washrooms cleaned, pantry spotless. Icons show 'Fewer infections', 'Fewer accidents', 'Better mood'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Cleanliness matters too. A clean workplace reduces infections and accidents and makes people feel better at work."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So the green water cooler was not a new flavour."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Definitely not. Dirty water can spread diseases like diarrhoea and typhoid."
+          }
+        ]
+      },
+      {
+        "animation": "The word 'Ergonomics' appears, then a worker at a desk is adjusted step by step with labels: 'Top of monitor at or slightly below eye level', 'Screen about an arm's length away', 'Back supported by chair', 'Elbows near 90 degrees', 'Wrists straight', 'Feet flat on floor or footrest'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Ergonomics means designing the workplace to fit the worker, so the body is not strained."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Keep the top of the monitor at or slightly below eye level, about an arm's length away."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Sit with your back supported, wrists straight and feet flat on the floor."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "I'm a spark. My feet don't reach the floor."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Then use a footrest, like anyone else whose feet don't reach."
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: 'Check your own study desk: monitor height, distance, chair back, feet. Fix one thing today.' Then a yellow 'BOARD TIP' card: 'Define ergonomics + give two correct-posture points'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: check your own study desk for monitor height, distance, back support and foot position, and fix one thing today."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: a common question asks you to define ergonomics and give correct posture tips. Always give at least two clear points."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a fresh plant and a well-adjusted chair. Points appear: '1. Monitor air and water quality', '2. Cleanliness reduces infection and accidents', '3. Ergonomics: fit the workplace to the worker'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: monitor air and water quality regularly."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: cleanliness reduces infections and accidents."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: ergonomics fits the workplace to the worker, with correct monitor, chair and posture."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Eleven a.m. and everyone's awake. Magic."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Maintain Healthy, Safe and Secure Working Environment",
+    "topic_no": 4,
+    "name": "Computer Health and Safety",
+    "scenes": [
+      {
+        "animation": "Zippy after a six-hour gaming marathon: hunched like a question mark, red eyes, a laptop balanced on his lap in bed at 2 a.m. A cartoon clock yawns.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "My neck hurts, my eyes burn, and I can't sleep. But I did reach level ninety!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Long hours on a computer have real health effects. Data entry operators face them every day."
+          }
+        ]
+      },
+      {
+        "animation": "A body outline lights up at problem areas with labels: wrists and arms 'Occupational Overuse Syndrome', legs 'Strain in legs and feet', eyes 'Eye strain', head 'Headaches', belly 'Obesity', brain 'Stress disorders', lap 'Injuries from laptop use', moon icon 'Sleeping problems'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Repeating the same movements for hours can cause pain in the hands, arms and shoulders. This is called occupational overuse syndrome."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Sitting too long strains the legs and feet. Staring at screens causes eye strain and headaches."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Other problems include obesity, stress, injuries from laptop use and sleeping problems."
+          }
+        ]
+      },
+      {
+        "animation": "Fixes appear beside each problem: short breaks and stretching, walking around, blinking and looking away, reducing screen glare, proper lighting, laptop on a table instead of the lap, no screens before bed.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Take short breaks, stretch, and walk around regularly."
+          },
+          {
+            "speaker": "NEO",
+            "text": "To reduce eye strain, blink often, look away from the screen, and avoid glare with proper lighting."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Use the laptop on a table, not your lap, and avoid screens just before sleeping."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Fun fact I read: every twenty minutes, look at something twenty feet away for twenty seconds."
+          },
+          {
+            "speaker": "NEO",
+            "text": "A popular and useful habit, Zippy."
+          }
+        ]
+      },
+      {
+        "animation": "A safety checklist for a computer workstation ticks: 'Adjustable chair and desk', 'Proper lighting, no glare', 'Cables tidied', 'Sockets not overloaded', 'Enough space and ventilation'. Then a caution card: 'Don't eat or drink at the computer', 'Switch off before cleaning', 'Don't open the CPU yourself'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "A safe computer workplace needs adjustable furniture, good lighting, tidy cables, safe sockets and ventilation."
+          },
+          {
+            "speaker": "NEO",
+            "text": "While working, don't eat or drink at the computer, switch off before cleaning, and never open the CPU yourself."
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: 'Set a 30-minute timer while studying on screen. When it rings, stand, stretch and look away.' Then a yellow 'BOARD TIP' card: 'Problem + cause + prevention'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: set a timer while studying on screen, and when it rings, stand, stretch and look away."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: for health questions, write the problem, its cause and one prevention. That three-part answer scores well."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a stretching Zippy. Points appear: '1. Risks: overuse syndrome, eye strain, leg strain, stress, sleep problems', '2. Prevent: breaks, stretching, good lighting, laptop on table', '3. Safe workstation and cautions'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: long computer use can cause overuse syndrome, eye and leg strain, stress and sleep problems."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: prevent them with breaks, stretching, good lighting and correct laptop use."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: keep the workstation safe and follow basic cautions."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Level ninety-one can wait till tomorrow."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Maintain Healthy, Safe and Secure Working Environment",
+    "topic_no": 5,
+    "name": "Handling Accidents and Emergencies",
+    "scenes": [
+      {
+        "animation": "An office corridor. A colleague slips on a spilled cup of chai and falls, holding his ankle. Everyone freezes. Zippy panics, zooming in circles and shouting random advice.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Ice! No, heat! No, call his mother! What do we do?"
+          },
+          {
+            "speaker": "NEO",
+            "text": "Stay calm. There is a clear way to handle accidents and emergencies."
+          }
+        ]
+      },
+      {
+        "animation": "Definitions appear: 'Accident: an unplanned event causing injury or damage', 'Emergency: a serious situation needing immediate action'. Then types of accidents pop up as icons: 'Trip and fall', 'Slip and fall', 'Escalator or lift injuries', 'Falling goods', 'Moving objects'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "An accident is an unplanned event that causes injury or damage. An emergency is a serious situation that needs immediate action."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Common workplace accidents are trips and falls, slips and falls, injuries from escalators or lifts, falling goods and moving objects."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "So spilled chai in a corridor is a slip and fall waiting to happen."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Right. Many accidents are easy to prevent if hazards are removed early."
+          }
+        ]
+      },
+      {
+        "animation": "A four-step flowchart builds: '1. Notice and correctly identify the accident or emergency', '2. Get help promptly in the most suitable way', '3. Follow company procedures to prevent further injury while waiting', '4. Act within the limits of your responsibility and follow instructions of senior staff and emergency services'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "First, notice and correctly identify what has happened. Then get help promptly, in the most suitable way."
+          },
+          {
+            "speaker": "NEO",
+            "text": "While waiting, follow company procedures to prevent further injury."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Act only within the limits of your responsibility, and follow instructions from senior staff and the emergency services."
+          }
+        ]
+      },
+      {
+        "animation": "The colleague is helped: someone places a 'Wet floor' sign, the trained first-aider checks the ankle, Zippy informs the supervisor, and the supervisor calls for help. Labels: 'Attend to the injured immediately', 'Inform your supervisor', 'Assist your supervisor'. A first-aid kit opens showing bandages and antiseptic.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "When handling an accident, attend to the injured person immediately, inform your supervisor, and assist your supervisor as asked."
+          },
+          {
+            "speaker": "NEO",
+            "text": "First aid is the immediate care given before medical help arrives. Only a trained person should give it."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "And someone should put a wet floor sign before the next person slips."
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: 'Role-play in groups: one is injured, one informs the supervisor, one secures the area.' Then a yellow 'BOARD TIP' card: 'Attend → Inform → Assist'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: in groups, role-play an accident. One student is injured, one secures the area, and one informs the supervisor."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: remember the three actions for handling accidents: attend to the injured, inform the supervisor, and assist the supervisor."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a first-aid box. Points appear: '1. Types: trip, slip, lifts/escalators, falling goods, moving objects', '2. Identify → get help → prevent further injury → act within limits', '3. Attend, inform, assist'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: know the common types of workplace accidents."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: identify the emergency, get help, prevent further injury, and act within your limits."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: attend to the injured, inform the supervisor, and assist."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "And no more chai in corridors."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Maintain Healthy, Safe and Secure Working Environment",
+    "topic_no": 6,
+    "name": "Fire, Electrical Emergencies and Evacuation",
+    "scenes": [
+      {
+        "animation": "The fire alarm rings during a mock drill. Zippy grabs his laptop, charger and lunchbox and heads for the lift. Neo, in a fire-warden vest, blocks the lift door with a wing.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "Fire alarm! Let me just take my stuff and the lift down."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Stop. Never use the lift, and leave your things behind. Let's learn how to evacuate."
+          }
+        ]
+      },
+      {
+        "animation": "A fire triangle draws itself: 'Fuel' (paper, cartons), 'Heat' (overloaded plug, heater), 'Oxygen' (air). Removing any one side makes the flame vanish. Around it, prevention icons: 'No overloaded sockets', 'Store flammables safely', 'Switch off equipment after use', 'Keep extinguishers ready'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Fire needs three things: fuel, heat and oxygen. Remove any one and the fire goes out."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Prevent fires by identifying flammable materials and ignition sources. Avoid overloading sockets, store flammables safely and switch off equipment after use."
+          }
+        ]
+      },
+      {
+        "animation": "An evacuation map animates with green arrows: 'Stay calm', 'Stop work and leave immediately', 'Use stairs, not lifts', 'Follow exit signs', 'Help others who need it', 'Go to the assembly point', 'Do not return until told it is safe'. Zippy follows the arrows to a flag labelled 'Assembly Point'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "In an evacuation, stay calm, stop work and leave immediately. Use the stairs, never the lift, and follow the exit signs."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Help anyone who needs it, go to the assembly point, and don't go back inside until you're told it's safe."
+          }
+        ]
+      },
+      {
+        "animation": "A worker is stuck to a sparking wire. Zippy reaches out; a big red 'DON'T TOUCH' stops him. Steps appear: '1. Switch off the power at the main switch', '2. If not possible, push the person away with a dry wooden stick or other non-conducting object', '3. Call for medical help (112)', '4. Give first aid if trained'.",
+        "lines": [
+          {
+            "speaker": "ZIPPY",
+            "text": "He's getting a shock! I'll pull him away!"
+          },
+          {
+            "speaker": "NEO",
+            "text": "No! If you touch him, the current can pass through you too."
+          },
+          {
+            "speaker": "NEO",
+            "text": "First switch off the power at the main switch. If you can't, move the person away with a dry, non-conducting object, like a wooden stick."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Then call for medical help, and give first aid only if you are trained."
+          }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: 'Find your school's exit route and assembly point. Walk it once with your class.' Then a yellow 'BOARD TIP' card: 'Electric shock: switch off power first; never touch the victim directly'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Try it: find your school's exit route and assembly point, and walk it once with your class."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Board tip: in electrical rescue questions, the first step is always to switch off the power. Never touch the victim directly."
+          }
+        ]
+      },
+      {
+        "animation": "Recap board with a fire extinguisher and an exit sign. Points appear: '1. Fire triangle: fuel, heat, oxygen; prevent ignition', '2. Evacuate: stairs, exit signs, assembly point', '3. Electric shock: power off, non-conducting object, get help'.",
+        "lines": [
+          {
+            "speaker": "NEO",
+            "text": "Recap. One: fire needs fuel, heat and oxygen, so control these to prevent fires."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Two: evacuate by the stairs, follow exit signs and gather at the assembly point."
+          },
+          {
+            "speaker": "NEO",
+            "text": "Three: in an electric shock, switch off the power, use a non-conducting object, and get help."
+          },
+          {
+            "speaker": "ZIPPY",
+            "text": "Lunchbox stays behind. Zippy gets out."
+          }
+        ]
+      }
+    ]
+  }
+]

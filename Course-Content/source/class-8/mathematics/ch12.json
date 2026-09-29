@@ -1,0 +1,284 @@
+[
+  {
+    "chapter_no": 12,
+    "chapter": "Tales by Dots and Lines",
+    "topic_no": 1,
+    "name": "The Mean as a Balancing Point",
+    "scenes": [
+      {
+        "animation": "A see-saw made of a number line from 8 to 18. Dots drop onto it at 10, 10, 11 and 17. The plank tips wildly until Zippy places a triangle-shaped support under 12, and it balances perfectly.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I put the support in the middle, at 13.5, and it fell over! Why does 12 work?" },
+          { "speaker": "NEO", "text": "Because 12 is the mean. The mean is the balancing point of the data." }
+        ]
+      },
+      {
+        "animation": "Mean calculation writes itself: '10 + 10 + 11 + 17 = 48', '48 ÷ 4 = 12'. Then arrows measure distances from 12: left side '2 + 2 + 1 = 5', right side '5'. Both sides glow equally.",
+        "lines": [
+          { "speaker": "NEO", "text": "10 plus 10 plus 11 plus 17 is 48. Divide by 4, and the mean is 12." },
+          { "speaker": "NEO", "text": "Now measure distances from 12. On the left, 2 plus 2 plus 1 is 5. On the right, 17 is 5 away." },
+          { "speaker": "NEO", "text": "The total distances on both sides are equal. That's why the mean balances the data." }
+        ]
+      },
+      {
+        "animation": "Zippy slides the support to 13: left distances grow to '3 + 3 + 2 = 8', right shrinks to '4'. The plank tips left. He slides it to 11: left '1 + 1 + 0 = 2', right '6', and it tips right.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if I use 13 as the centre?" },
+          { "speaker": "NEO", "text": "Then the left distances grow to 8 and the right shrinks to 4. It's no longer balanced." },
+          { "speaker": "NEO", "text": "Move anywhere else and it tips. So there's only one balancing point: the mean." }
+        ]
+      },
+      {
+        "animation": "A new dot, 20, drops onto the right side; the support slides right to keep balance. Then a dot at 6 drops on the left; the support slides left. A dot at exactly the mean drops, and the support doesn't move.",
+        "lines": [
+          { "speaker": "NEO", "text": "Add a value bigger than the mean, and the mean moves up to keep the balance." },
+          { "speaker": "NEO", "text": "Add a value smaller than the mean, and the mean moves down." },
+          { "speaker": "NEO", "text": "Add a value equal to the mean, and it stays exactly where it was." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Data with mean 12. Add two values without changing the mean.' Zippy tries '15 and 9': distances '+3' and '−3' cancel. A check: '(48 + 15 + 9) ÷ 6 = 72 ÷ 6 = 12 ✓'. An 'Exam Tip' sticker: 'The mean is not always halfway between the extremes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puzzle. Add two values without changing the mean of 12." },
+          { "speaker": "ZIPPY", "text": "15 and 9! One is 3 above and one is 3 below, so they balance." },
+          { "speaker": "NEO", "text": "Check: 48 plus 15 plus 9 is 72, and 72 divided by 6 is 12. Perfect." },
+          { "speaker": "NEO", "text": "Exam tip: the mean is not the midpoint of the smallest and largest values. Here the midpoint is 13.5, but the mean is 12." }
+        ]
+      },
+      {
+        "animation": "Recap board with the balanced see-saw. Points: '1. Mean = sum ÷ number of values', '2. Distances on both sides of the mean are equal', '3. Adding a larger value raises the mean; a smaller one lowers it'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the mean is the sum of the values divided by how many there are." },
+          { "speaker": "NEO", "text": "Two: total distances on both sides of the mean are equal, so it's the balancing point." },
+          { "speaker": "NEO", "text": "Three: adding a value above the mean raises it, and below the mean lowers it." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Tales by Dots and Lines",
+    "topic_no": 2,
+    "name": "Shifting, Scaling and Tinkering with Median",
+    "scenes": [
+      {
+        "animation": "A school corridor. Teacher Sudhakar reads a report: 'Average height of 24 students: 150.2 cm'. Then he notices everyone wore uniform shoes adding 1 cm. Zippy rushes in with a measuring tape, 'Let's re-measure everyone!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Everyone wore shoes! Measure all 24 again!" },
+          { "speaker": "NEO", "text": "No need. If every value changes by the same amount, the mean changes by that amount too." }
+        ]
+      },
+      {
+        "animation": "A dot plot of 3, 7, 8 with mean 6 marked. Every dot slides 10 to the right to 13, 17, 18, and the mean marker slides with them to 16. Algebra appears: '(x₁ + 3) + ... + (xₙ + 3) = sum + 3n', '÷ n → a + 3'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Take 3, 7 and 8. Their mean is 18 divided by 3, which is 6." },
+          { "speaker": "NEO", "text": "Add 10 to each: 13, 17 and 18. The sum is 48, and the mean is 16. It went up by exactly 10." },
+          { "speaker": "NEO", "text": "In algebra, adding 3 to n values adds 3n to the sum. Dividing by n adds exactly 3 to the mean." }
+        ]
+      },
+      {
+        "animation": "Heights shift down by 1 cm: '150.2 − 1 = 149.2 cm'. Then a scaling example: '2, 4, 9 → mean 5' doubles to '4, 8, 18 → mean 10'. A caption: 'Multiply every value by k → mean × k'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So Sudhakar's class average is simply 150.2 minus 1, which is 149.2 centimetres." },
+          { "speaker": "NEO", "text": "Multiplying works too. 2, 4 and 9 have mean 5. Double them to 4, 8 and 18, and the mean is 10." }
+        ]
+      },
+      {
+        "animation": "Sorted data '5, 7, 8, 12, 14' with the median 8 circled. A new value 11 slides in: '5, 7, 8, 11, 12, 14'. The middle pair '8' and '11' glow: '(8 + 11) ÷ 2 = 9.5'.",
+        "lines": [
+          { "speaker": "NEO", "text": "What about the median, the middle value? In 5, 7, 8, 12, 14, the median is 8." },
+          { "speaker": "NEO", "text": "Add 11, which is bigger than 8. Now there are six values, and the middle two are 8 and 11." },
+          { "speaker": "NEO", "text": "Their average is 9.5. Adding a value above the median pushes the median up." }
+        ]
+      },
+      {
+        "animation": "Puzzle: 'Add one value without changing the median 8?' Zippy tries 20 and the median moves; then tries 8 and the median stays. An 'Exam Tip' sticker: 'Always sort the data before finding the median'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can I add one value and keep the median at 8?" },
+          { "speaker": "NEO", "text": "Add 8 itself. Then the list is 5, 7, 8, 8, 12, 14. The middle two are both 8." },
+          { "speaker": "NEO", "text": "Exam tip: always arrange the data in order before finding the median." }
+        ]
+      },
+      {
+        "animation": "Recap board with the shoe-wearing students. Points: '1. Add c to every value → mean + c', '2. Multiply every value by k → mean × k', '3. Adding above the median raises it; below lowers it'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: adding the same number to every value adds it to the mean." },
+          { "speaker": "NEO", "text": "Two: multiplying every value by k multiplies the mean by k." },
+          { "speaker": "NEO", "text": "Three: adding a value above the median raises it, and a value below lowers it." },
+          { "speaker": "ZIPPY", "text": "Shoes off. Maths on." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Tales by Dots and Lines",
+    "topic_no": 3,
+    "name": "Finding the Unknown and Using Frequencies",
+    "scenes": [
+      {
+        "animation": "Coach Balwan's kushti notebook: weights '42, 40, 39, 33, 48, 38, 42, 35, 32' and one smudged entry. Below: 'Mean = 39.2 kg (10 wrestlers)'. A wrestler flexes and asks, 'What's my weight?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Tea spilled on the coach's notebook. One wrestler's weight is gone!" },
+          { "speaker": "NEO", "text": "We know the mean. That's enough to find it." }
+        ]
+      },
+      {
+        "animation": "Steps write line by line: 'known sum = 349', '(349 + w) ÷ 10 = 39.2', '349 + w = 392', 'w = 392 − 349 = 43 kg'. The smudge clears to reveal '43'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The nine known weights add up to 349. With the missing weight w, the mean is 349 plus w, over 10." },
+          { "speaker": "NEO", "text": "That equals 39.2, so 349 plus w is 392." },
+          { "speaker": "NEO", "text": "So w is 392 minus 349, which is 43 kilograms." }
+        ]
+      },
+      {
+        "animation": "Venkayya's coconut farm: 15 trees, 'average 25.6'. His son finds one count was 3 too many. Steps: 'total = 25.6 × 15 = 384', 'correct total = 384 − 3 = 381', 'correct mean = 381 ÷ 15 = 25.4'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Venkayya's 15 coconut trees averaged 25.6. But one count was 3 too high." },
+          { "speaker": "NEO", "text": "Total coconuts is 25.6 times 15, which is 384. Correct it to 381." },
+          { "speaker": "NEO", "text": "381 divided by 15 is 25.4. That's the true average." }
+        ]
+      },
+      {
+        "animation": "A frequency table of family sizes: '3→3, 4→11, 5→9, 6→7, 7→3, 8→1, 9→1, 10→1'. Zippy writes '(3 + 4 + ... + 10) ÷ 8 = 6.5' and it gets a red cross. Correct steps: 'sum = 9 + 44 + 45 + 42 + 21 + 8 + 9 + 10 = 188', 'students = 36', 'mean = 188 ÷ 36 ≈ 5.22'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Family sizes from 3 to 10. Add them and divide by 8. The mean is 6.5!" },
+          { "speaker": "NEO", "text": "That ignores how often each size appears. Eleven students have a family of 4, so count 4 eleven times." },
+          { "speaker": "NEO", "text": "Multiply each size by its frequency: the total is 188. There are 36 students, so the mean is about 5.22." }
+        ]
+      },
+      {
+        "animation": "Running totals build along the table: '3', '3 + 11 = 14', '14 + 9 = 23'. Positions 18 and 19 are highlighted inside the range 15–23, which all have value 5. 'Median = 5'. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "For the median of 36 values, we need the 18th and 19th values." },
+          { "speaker": "NEO", "text": "Keep adding frequencies: 3, then 14, then 23. Positions 15 to 23 are all 5. So the median is 5." },
+          { "speaker": "NEO", "text": "Exam tip: with a frequency table, multiply values by frequencies for the mean, and use running totals for the median." }
+        ]
+      },
+      {
+        "animation": "Recap board with the notebook and coconut tree. Points: '1. Sum = mean × number of values', '2. Mean from a table = Σ(value × frequency) ÷ Σ frequency', '3. Median from running totals'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the total equals the mean times the number of values. Use it to find missing or wrong entries." },
+          { "speaker": "NEO", "text": "Two: from a frequency table, the mean is the sum of value times frequency, divided by the total frequency." },
+          { "speaker": "NEO", "text": "Three: find the median by adding frequencies until you reach the middle position." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Tales by Dots and Lines",
+    "topic_no": 4,
+    "name": "Spreadsheets: A Digital Notebook for Data",
+    "scenes": [
+      {
+        "animation": "Teacher Sudhakar's desk is buried under marksheets for six subjects: Odia, Telugu, English, Maths, Science and Social Science. He punches a calculator; papers fly everywhere.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Twenty students, six subjects. He'll be adding marks till Diwali!" },
+          { "speaker": "NEO", "text": "A spreadsheet can do it in seconds." }
+        ]
+      },
+      {
+        "animation": "A spreadsheet grid appears: columns labelled A, B, C, ... and rows 1, 2, 3, .... Column A holds names, B to G hold subjects. A cursor clicks cell E5 on Farooq's row under Maths: '39'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A spreadsheet is a digital notebook of rows and columns. Each box is a cell." },
+          { "speaker": "NEO", "text": "Cells are named by column letter and row number. Farooq's Maths marks are in cell E5." },
+          { "speaker": "ZIPPY", "text": "Like seats in a cinema: row and column!" },
+          { "speaker": "NEO", "text": "Exactly. Column E is Maths and row 5 is Farooq, so E5 is where they meet. Each cell can hold text, a number or a formula." }
+        ]
+      },
+      {
+        "animation": "A row of Nagesh's marks is highlighted from B3 to G3, labelled 'B3:G3'. A column range 'D2:D6' highlights English marks for the first five students.",
+        "lines": [
+          { "speaker": "NEO", "text": "A range is written as start colon end. Nagesh's marks in all subjects are B3 to G3." },
+          { "speaker": "NEO", "text": "D2 to D6 is a column: English marks for the first five students." }
+        ]
+      },
+      {
+        "animation": "In cell H3, typing '=SUM(B3:G3)' makes Nagesh's total appear instantly. In another cell, '=AVERAGE(B7:D7)' shows Gowri's average in three languages. A formula dragged down fills every student's total in a flash.",
+        "lines": [
+          { "speaker": "NEO", "text": "Type equals SUM, with B3 to G3 in brackets, and Nagesh's total appears." },
+          { "speaker": "NEO", "text": "Equals AVERAGE, with B7 to D7 in brackets, gives Gowri's average in Odia, Telugu and English." },
+          { "speaker": "NEO", "text": "Copy the formula down, and every student's total fills in at once." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Class average in Science?' Zippy types '=AVERAGE(F2:F21)' into the bottom cell. An 'Exam Tip' sticker: 'Formulas start with =; ranges use a colon'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Let me try. For the Science average, I type equals AVERAGE, F2 to F21." },
+          { "speaker": "NEO", "text": "Yes, if Science is column F and the students are in rows 2 to 21." },
+          { "speaker": "NEO", "text": "Exam tip: every formula begins with an equals sign, and a range uses a colon between the first and last cells." }
+        ]
+      },
+      {
+        "animation": "Recap board with a neat spreadsheet. Points: '1. Cells named by column letter + row number (E5)', '2. Ranges like B3:G3', '3. =SUM() and =AVERAGE() do the arithmetic'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: every cell has a name made of its column letter and row number." },
+          { "speaker": "NEO", "text": "Two: a range like B3 to G3 describes a row or column of cells." },
+          { "speaker": "NEO", "text": "Three: SUM and AVERAGE formulas calculate totals and means instantly." },
+          { "speaker": "ZIPPY", "text": "Sudhakar sir can celebrate Diwali after all." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Tales by Dots and Lines",
+    "topic_no": 5,
+    "name": "Line Graphs and Data Stories",
+    "scenes": [
+      {
+        "animation": "Zippy wears a sweater in Punjab in January and shorts in Kerala in January. He looks confused at both, then at a calendar.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "January in Punjab: freezing. January in Kerala: warm. Is the calendar broken?" },
+          { "speaker": "NEO", "text": "Let's read a line graph of their temperatures across the year." }
+        ]
+      },
+      {
+        "animation": "A line graph builds: months on the horizontal axis, temperature in °C on the vertical. A red line for Punjab climbs from about 19 °C in January to 38 °C in June, then falls to about 23 °C in December. A blue line with circle markers for Kerala stays almost flat between about 29 °C and 33 °C.",
+        "lines": [
+          { "speaker": "NEO", "text": "Step one: identify what's given. Months run along the bottom, and monthly maximum temperature runs up the side." },
+          { "speaker": "NEO", "text": "Step two: interpret. Punjab rises from about 19 degrees in January to 38 in June, then falls again." },
+          { "speaker": "NEO", "text": "Kerala's line stays nearly flat, between about 29 and 33 degrees. Punjab's temperature varies much more." }
+        ]
+      },
+      {
+        "animation": "A second line graph of objects launched into space, 2012–2024. The worldwide line shoots up to about 2900 in 2023 and 2800 in 2024. The USA line's steep segment from 2022 to 2023 glows: 'steeper = faster increase'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Line graphs are best for showing change over time. Here are objects launched into space each year." },
+          { "speaker": "NEO", "text": "The worldwide count peaked around 2900 in 2023. The steeper a segment, the faster the change." },
+          { "speaker": "NEO", "text": "As a column graph, 13 years with 4 bars each would need 52 bars. The lines are much easier to read." }
+        ]
+      },
+      {
+        "animation": "An India map with six rain clouds: Kovalam, Udupi and Mumbai on the west coast pour in June to August; Chennai and Rameswaram pour in October to December; Puri pours in July to September. Then Manoj's day strip of 48 half-hour boxes appears, coloured by activity.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rainfall graphs tell a story too. West coast cities like Mumbai and Udupi get most rain from June to August." },
+          { "speaker": "NEO", "text": "Chennai and Rameswaram get theirs mostly from October to December." },
+          { "speaker": "NEO", "text": "Even a strip of 48 half-hour boxes can show how Manoj spends his day: sleeping, school, travel and play." }
+        ]
+      },
+      {
+        "animation": "A smooth sleep curve by age: about 9.5 hours at age 6, dipping to about 8 hours between 30 and 50, rising to about 8.5 later. An 'Exam Tip' sticker: 'State only what the graph shows; check scales and legends first'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This graph says six-year-olds sleep about 9.5 hours. I want to be six again." },
+          { "speaker": "NEO", "text": "And adults between 30 and 50 sleep about 8 hours." },
+          { "speaker": "NEO", "text": "Exam tip: read the axes, scale and legend first, and only claim what the data actually shows." }
+        ]
+      },
+      {
+        "animation": "Recap board with the two-coloured temperature graph. Points: '1. Line graphs show change over time', '2. Step 1: identify what is given; Step 2: interpret', '3. Steeper line = faster change'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: line graphs are ideal for showing how something changes over time." },
+          { "speaker": "NEO", "text": "Two: first identify what is given, then infer and interpret." },
+          { "speaker": "NEO", "text": "Three: a steeper line means a faster change." }
+        ]
+      }
+    ]
+  }
+]

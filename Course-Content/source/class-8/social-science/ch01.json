@@ -1,0 +1,294 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "Natural Resources and Their Use",
+    "topic_no": 1,
+    "name": "When Does Nature Become a Resource?",
+    "scenes": [
+      {
+        "animation": "Zippy proudly holds up a plastic shirt button. A dotted trail zooms backwards from the button to a factory, then to an oil rig in the sea, and finally into rock layers deep underground, where it lands with a 'ping!' on the label 'NATURE'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This button came from a shop. Nature has nothing to do with it!" },
+          { "speaker": "NEO", "text": "Follow its trail backwards. Plastic comes from petroleum, and petroleum comes from deep inside the Earth." },
+          { "speaker": "NEO", "text": "Almost everything around you leads back to Nature at some point." }
+        ]
+      },
+      {
+        "animation": "A tall tree stands in a forest with the label 'Nature'. A carpenter saws it and a wooden chair pops out; the tag above the tree flips from 'Nature' to 'Resource'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Nature is the total of all life and non-life forms around us that humans did not create." },
+          { "speaker": "NEO", "text": "When we use these for our needs, or make new things from them, they become resources." },
+          { "speaker": "NEO", "text": "A tree simply exists in the forest. When we turn its wood into furniture, we see the tree as a resource." }
+        ]
+      },
+      {
+        "animation": "A checklist board builds up with three ticks beside icons: a drill ('Technologically accessible'), a rupee bag ('Economically feasible') and a sacred grove with a small shrine ('Culturally acceptable'). Petroleum deep under the ocean floor gets a red cross because no drill reaches it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So everything in Nature is a resource?" },
+          { "speaker": "NEO", "text": "Not quite. Some petroleum lies so deep under the ocean that we lack the technology to reach it, or it costs too much to extract." },
+          { "speaker": "NEO", "text": "And cutting trees in a sacred grove may not be culturally acceptable." },
+          { "speaker": "NEO", "text": "So a resource must be technologically accessible, economically feasible and culturally acceptable." }
+        ]
+      },
+      {
+        "animation": "Three labelled baskets slide in. Air, water and a food plate drop into 'Essential for life'; wood, marble and gold drop into 'Materials'; coal, a river, sunlight and a wind turbine drop into 'Energy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "One way to group natural resources is by how we use them." },
+          { "speaker": "NEO", "text": "First, resources essential for life: the air we breathe, the water we drink and the food we grow. We cannot make any of them ourselves." },
+          { "speaker": "NEO", "text": "Second, resources for materials. A piece of wood can become a chair or a carved statuette." },
+          { "speaker": "NEO", "text": "Third, resources for energy, like coal, water, petroleum, natural gas, sunlight and wind." }
+        ]
+      },
+      {
+        "animation": "An exam paper with the word 'exploitation' circled. A thought bubble shows a pickaxe, a factory and a shopping bag, captioned 'Extraction, utilisation, consumption'. A yellow 'Exam Tip' sticker slaps onto the corner.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The book says we exploit resources. Isn't exploiting a bad thing?" },
+          { "speaker": "NEO", "text": "Usually yes, but here it simply means the extraction, use and consumption of natural resources." },
+          { "speaker": "NEO", "text": "Exam tip: when asked what makes something a resource, write all three conditions, not just usefulness." }
+        ]
+      },
+      {
+        "animation": "Recap board with a leaf icon. Three points appear one by one: '1. Natural resources = materials in Nature valuable to humans', '2. Accessible + feasible + acceptable', '3. Uses: life, materials, energy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: natural resources are materials and substances that occur in Nature and are valuable to humans." },
+          { "speaker": "NEO", "text": "Two: to be a resource, something must be technologically accessible, economically feasible and culturally acceptable." },
+          { "speaker": "NEO", "text": "Three: by use, resources are essential for life, sources of materials, or sources of energy." },
+          { "speaker": "ZIPPY", "text": "I will never look at a shirt button the same way again!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Natural Resources and Their Use",
+    "topic_no": 2,
+    "name": "Renewable and Non-renewable Resources",
+    "scenes": [
+      {
+        "animation": "Zippy has a small cut on his arm with a plaster. Time-lapse: the cut fades away. Beside him, a blackened forest after a wildfire slowly turns green again.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My cut healed all by itself. Am I a superhero?" },
+          { "speaker": "NEO", "text": "No, you are part of Nature. Nature heals and renews itself. A forest also recovers after a wildfire." }
+        ]
+      },
+      {
+        "animation": "A circular loop is drawn step by step around a forest: 'Tree falls' arrow to 'Bacteria, fungi, insects decompose it' arrow to 'Richer soil' arrow to 'New trees grow', and back to the start. A big label reads 'No waste in Nature'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Restoration means returning something to its original healthy state after damage." },
+          { "speaker": "NEO", "text": "Regeneration goes further. It is Nature's ability to create new life and the conditions to thrive." },
+          { "speaker": "NEO", "text": "Nature works in cycles with no waste. A fallen tree decomposes, enriches the soil, and new trees grow from seeds." }
+        ]
+      },
+      {
+        "animation": "A green 'Renewable' shelf fills with icons: the sun, a wind turbine, a flowing river fed by rain and glaciers, and a forest. A small padlock labelled 'Condition: do not disturb Nature's rhythm' clicks onto the shelf.",
+        "lines": [
+          { "speaker": "NEO", "text": "Renewable resources renew themselves over time. Solar energy, wind energy, flowing water and timber are examples." },
+          { "speaker": "NEO", "text": "But there is a condition. The natural rhythm of restoration and regeneration must not be disturbed." },
+          { "speaker": "ZIPPY", "text": "So if we cut trees faster than the forest can grow them?" },
+          { "speaker": "NEO", "text": "Then the forest gets used up. A renewable resource can become depleted." }
+        ]
+      },
+      {
+        "animation": "A Himalayan glacier labelled 'Water tower' shrinks as a thermometer beside it rises. Arrows show rivers below carrying less water to farms and towns on the plains.",
+        "lines": [
+          { "speaker": "NEO", "text": "Fossil fuel-driven industries and cutting forests are among the factors behind rising temperatures." },
+          { "speaker": "NEO", "text": "As a result, some Himalayan glaciers are melting faster than snowfall can replace them." },
+          { "speaker": "NEO", "text": "That is a worry for water security in the plains, which depend on this water tower." }
+        ]
+      },
+      {
+        "animation": "A grey 'Non-renewable' shelf holds coal, a petroleum barrel, and iron, copper and gold bars. An hourglass labelled 'Indian coal: about 50 more years' drains slowly while a power line glows brighter.",
+        "lines": [
+          { "speaker": "NEO", "text": "Non-renewable resources take very long periods to form, so they cannot be replenished at the rate we use them." },
+          { "speaker": "NEO", "text": "Fossil fuels like coal and petroleum, and minerals and metals like iron, copper and gold, are non-renewable." },
+          { "speaker": "NEO", "text": "India has large coal reserves, but it is estimated they may last only about another 50 years. So we must use coal judiciously." },
+          { "speaker": "NEO", "text": "Exam tip: a common question asks what can turn a renewable resource into a non-renewable one. Answer: using it faster than it can regenerate." }
+        ]
+      },
+      {
+        "animation": "Recap board split in green and grey halves. Points appear: '1. Nature restores and regenerates in cycles', '2. Renewables stay renewable only if used sustainably', '3. Non-renewables: fossil fuels and minerals, use judiciously'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: Nature restores and regenerates itself in cycles that create no waste." },
+          { "speaker": "NEO", "text": "Two: renewable resources stay renewable only if we do not disturb that natural rhythm." },
+          { "speaker": "NEO", "text": "Three: non-renewable resources like coal, petroleum and metals form very slowly, so we must use them wisely." },
+          { "speaker": "ZIPPY", "text": "Note to self: do not out-run the forest!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Natural Resources and Their Use",
+    "topic_no": 3,
+    "name": "Distribution of Resources and the Paradox of Plenty",
+    "scenes": [
+      {
+        "animation": "Zippy stands at a kirana shop counter demanding 'one kilo of iron ore'. The shopkeeper points to a giant map of India on the wall with a big question mark.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why can't every town have its own coal, oil and iron?" },
+          { "speaker": "NEO", "text": "Because natural resources are not evenly spread, across the planet or even inside one country." }
+        ]
+      },
+      {
+        "animation": "A blank outline map of India builds up with a legend. Black dots for coal appear at Jharia, Raniganj, Korba and Neyveli; oil drops appear at Digboi in Assam, Ankleshwar in Gujarat and Mumbai High offshore; red dots for iron ore appear at Bailadila, Kudremukh and Ballari.",
+        "lines": [
+          { "speaker": "NEO", "text": "Look at this map of important minerals. Coal is found at places like Jharia, Raniganj and Korba." },
+          { "speaker": "NEO", "text": "Oil comes from Digboi in Assam, Ankleshwar in Gujarat, and Mumbai High in the sea." },
+          { "speaker": "NEO", "text": "Iron ore is found at places like Bailadila, Kudremukh and Ballari." },
+          { "speaker": "NEO", "text": "This uneven spread shapes where people settle, how they trade, and even conflicts between nations." }
+        ]
+      },
+      {
+        "animation": "Around a mine, a small township grows: houses, a school, a hospital. Then a split screen shows a family with bundles leaving their village, and a sacred grove fenced off.",
+        "lines": [
+          { "speaker": "NEO", "text": "Industries near resources create jobs, and townships grow around them with better facilities." },
+          { "speaker": "NEO", "text": "But there are costs too. People in resource-rich areas have sometimes been displaced, and their sacred places threatened." },
+          { "speaker": "NEO", "text": "Resources plus human skill also create unique products, like the famous Wootz steel." }
+        ]
+      },
+      {
+        "animation": "A map of south India draws the Kaveri river flowing east, with the Mettur dam marked. Karnataka, Kerala, Tamil Nadu and Puducherry light up one by one, each holding a water pot, around a negotiation table.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Does a river care about state borders?" },
+          { "speaker": "NEO", "text": "Not at all. Nature ignores political boundaries, which can cause tensions." },
+          { "speaker": "NEO", "text": "The Kaveri waters are shared by Karnataka, Tamil Nadu, Kerala and Puducherry. Careful negotiation was needed for fair sharing and peace." }
+        ]
+      },
+      {
+        "animation": "A treasure chest overflowing with minerals sits beside an empty wallet; the words 'Paradox of Plenty' and 'Natural resource curse' flash above. Then a factory converts raw ore into shiny products, and the wallet fills up with an Indian flag beside it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here is a puzzle. Some regions rich in resources grow slowly. Economists call this the natural resource curse, or the paradox of plenty." },
+          { "speaker": "NEO", "text": "Often, such economies fail to build industries that turn resources into higher-value products." },
+          { "speaker": "NEO", "text": "India has generally avoided this curse by investing in such industries." },
+          { "speaker": "NEO", "text": "Exam tip: practise marking coal, oil and iron ore sites on the outline map of India." }
+        ]
+      },
+      {
+        "animation": "Recap board with a small India map icon. Points appear: '1. Resources are unevenly distributed', '2. Benefits: jobs, trade; costs: displacement, disputes', '3. Paradox of plenty: overcome with industry, skills, governance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: natural resources are unevenly distributed, and this shapes settlements, trade and relations between regions." },
+          { "speaker": "NEO", "text": "Two: using them brings jobs and growth, but also costs like displacement and disputes over shared rivers." },
+          { "speaker": "NEO", "text": "Three: plenty of resources does not guarantee prosperity. Knowledge, good governance and planning make the difference." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Natural Resources and Their Use",
+    "topic_no": 4,
+    "name": "Stewardship: Restoring Renewable Resources",
+    "scenes": [
+      {
+        "animation": "Zippy lowers a bucket into a village well; the rope keeps going down and down while he peers in, echoing 'Hellooo?'. A depth gauge beside the well sinks lower and lower.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, the water keeps running away from my bucket!" },
+          { "speaker": "NEO", "text": "That is what happens when we pump groundwater faster than rain can refill it." }
+        ]
+      },
+      {
+        "animation": "A timeline strip builds: '1960s: High-yielding wheat and paddy' with thirsty crops, then 'Free power: over-pumping' with a humming pump, then 'Chemical fertilisers and pesticides' with drums. A map of Punjab then fills with dark colours, labelled 'Depth to water level, June 2022' and 'About 80% overexploited'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Punjab was home to the Green Revolution, which helped India become self-sufficient in food." },
+          { "speaker": "NEO", "text": "In the 1960s, farmers shifted to high-yielding wheat and paddy, which needed more water. Free power led to over-pumping." },
+          { "speaker": "NEO", "text": "Now, in a large part of Punjab, groundwater is inaccessible down to about 30 metres, and almost 80 percent of the area is classified as overexploited." },
+          { "speaker": "NEO", "text": "Food security was ensured in the short term, but healing the damage will take time. And many other states face this too." }
+        ]
+      },
+      {
+        "animation": "Split screen: cracked soil with failing crops beside chemical sacks, versus a healthy field with cow dung compost, mulch and several crops growing together. A village pond refills as people desilt it.",
+        "lines": [
+          { "speaker": "NEO", "text": "Improper use of chemical fertilisers and pesticides has also degraded our soil." },
+          { "speaker": "NEO", "text": "Traditional practices like cow dung manure, mulching and multi-cropping looked after soil as a whole." },
+          { "speaker": "NEO", "text": "For water, we can harvest rain, revive ponds and tanks, cut waste and reuse water." }
+        ]
+      },
+      {
+        "animation": "A dusty cement factory coughs grey clouds onto leaves and lungs. The camera then glides to Jaisalmer fort and a mud building at Auroville, with a label 'Stone, mud, plant-based and recycled materials'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Cement too? We need it for everything!" },
+          { "speaker": "NEO", "text": "Yes, but cement making is one of the most polluting industries. Its fine dust harms lungs, plants, soil and water." },
+          { "speaker": "NEO", "text": "The Central Pollution Control Board has guidelines to reduce this, and builders are exploring mud, stone, plant-based and recycled materials." }
+        ]
+      },
+      {
+        "animation": "An old palm-leaf manuscript unrolls with the title 'Vrikshayurveda' and pictures of seeds, ploughs and neem. It fades into terraced green fields in Sikkim where a farmer, Pema, holds up cardamom and ginger; a banner reads '2016: 100% organic state'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Vrikshayurveda, an ancient Indian science of plant care, was formalised in texts like Surapala's Vrikshayurveda around the 10th century CE. It describes crop rotation, mixed cropping and natural pest control." },
+          { "speaker": "NEO", "text": "In Sikkim, farmers like Pema's family switched to compost and neem-garlic sprays. Yields dropped at first, but recovered." },
+          { "speaker": "NEO", "text": "In 2016, Sikkim became a 100 percent organic state. Birds returned, tourism grew, and incomes rose by about 20 percent on average." },
+          { "speaker": "NEO", "text": "Exam tip: learn one case each of overuse and recovery, like Punjab and Sikkim, to quote in long answers." }
+        ]
+      },
+      {
+        "animation": "Recap board with a watering-can icon. Points appear: '1. Punjab: groundwater overexploited', '2. Soil and cement: learn from tradition, use alternatives', '3. Sikkim: 100% organic in 2016'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: in Punjab, groundwater has been pumped faster than it can be restored." },
+          { "speaker": "NEO", "text": "Two: traditional practices and new materials can help heal soil and reduce pollution." },
+          { "speaker": "NEO", "text": "Three: Sikkim shows that a whole state can shift to sustainable farming and still prosper." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Natural Resources and Their Use",
+    "topic_no": 5,
+    "name": "Responsible and Judicious Use of Resources",
+    "scenes": [
+      {
+        "animation": "Zippy tries to charge his phone by holding it up to the blazing Rajasthan sun. The camera pulls back to a satellite view of a huge solar park glittering in the desert.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If I hold my phone up to the sun, will it charge?" },
+          { "speaker": "NEO", "text": "Not like that! But a whole solar park can power a big share of a state." }
+        ]
+      },
+      {
+        "animation": "A dwindling coal pile has a sign 'Make it last'. Beside it, a switchboard flips switches from a coal plant icon to solar panels and wind turbines one by one.",
+        "lines": [
+          { "speaker": "NEO", "text": "For non-renewable resources, the goal is to make them last until humanity finds sustainable alternatives." },
+          { "speaker": "NEO", "text": "That means switching to renewable energy for as many purposes as we can." }
+        ]
+      },
+      {
+        "animation": "A map of India highlights Rajasthan with the Bhadla Solar Park and Karnataka with a solar farm near Raichur. A caption shows 'One of the largest solar parks in the world: can meet about 15% of Rajasthan's current needs'.",
+        "lines": [
+          { "speaker": "NEO", "text": "One of the largest solar parks in the world is in Rajasthan. It can generate enough electricity for about 15 percent of Rajasthan's current needs." },
+          { "speaker": "NEO", "text": "The Bhadla Solar Park is a symbol of India's solar ambitions. There are also solar farms near Raichur in Karnataka." }
+        ]
+      },
+      {
+        "animation": "A globe spins; sunny countries glow gold. India and France shake hands under the banner 'Solar alliance, 2015', and golden lines connect India to developing nations carrying tiny solar panels and coins.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can other countries join the sunshine club?" },
+          { "speaker": "NEO", "text": "Yes! In 2015, India and France launched a solar alliance of sunshine-rich countries to harness solar power." },
+          { "speaker": "NEO", "text": "India shares technical expertise and helps channel funds into solar projects in developing nations." },
+          { "speaker": "NEO", "text": "For Indians, it means both environmental responsibility and economic opportunity." }
+        ]
+      },
+      {
+        "animation": "A city street: one lane has a water tanker and a queue with buckets, while a factory chimney blows smoke towards a roadside tea stall. Then the scene softens into a circle of people of all ages holding hands around a tree, captioned 'Lokasangraha: wellbeing of all'.",
+        "lines": [
+          { "speaker": "NEO", "text": "We must also remember that access to resources is often unfair. Many city areas lack a regular supply of drinking water." },
+          { "speaker": "NEO", "text": "Air pollution hurts most those who cannot protect themselves from it." },
+          { "speaker": "NEO", "text": "The Bhagavad Gita speaks of lokasangraha, acting for the wellbeing of all beyond personal desires. We should act as stewards of Nature." },
+          { "speaker": "NEO", "text": "Exam tip: when asked how to use resources wisely, give one step for renewables and one for non-renewables." }
+        ]
+      },
+      {
+        "animation": "Recap board with a sun icon. Points appear: '1. Make non-renewables last; switch to renewables', '2. India leads in solar: Bhadla, 2015 solar alliance', '3. Fair access and lokasangraha: stewardship for all'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: use non-renewables judiciously and switch to renewables wherever possible." },
+          { "speaker": "NEO", "text": "Two: India is leading in solar energy, from Bhadla to the solar alliance launched with France in 2015." },
+          { "speaker": "NEO", "text": "Three: resources must be shared fairly, and we must act as stewards for the wellbeing of all." },
+          { "speaker": "ZIPPY", "text": "Proud steward of the sun, reporting for duty!" }
+        ]
+      }
+    ]
+  }
+]

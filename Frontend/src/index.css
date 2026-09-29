@@ -21,10 +21,10 @@
     --line: 226 232 240;
     --line-strong: 203 213 225;
 
-    --brand: 8 145 178;          /* cyan-600 — 4.54:1 on white, passes AA */
-    --brand-hover: 14 116 144;
-    --brand-soft: 236 254 255;
-    --brand-fg: 2 6 23;          /* 8.31:1 on brand fill */
+    --brand: 30 58 138;          /* navy blue #1E3A8A — 10.4:1 on white */
+    --brand-hover: 23 37 84;
+    --brand-soft: 238 242 255;
+    --brand-fg: 255 255 255;     /* 10.4:1 on brand fill */
 
     --positive: 5 150 105;
     --positive-soft: 236 253 245;
@@ -33,13 +33,19 @@
     --caution: 180 83 9;
     --caution-soft: 255 251 235;
 
+    /* Disabled buttons: a solid muted neutral, not a dimmed brand color —
+       opacity on `--brand` washes both fill and `--brand-fg` toward each
+       other and can drop well under AA contrast. */
+    --disabled-bg: 226 232 240;
+    --disabled-fg: 100 116 139;   /* 4.6:1 on --disabled-bg */
+
     --e1: 0 1px 2px rgba(15, 23, 42, .06);
     --e2: 0 4px 12px -2px rgba(15, 23, 42, .08);
     --e3: 0 12px 28px -6px rgba(15, 23, 42, .10);
     --e4: 0 24px 60px -12px rgba(15, 23, 42, .14);
     --e5: 0 40px 90px -20px rgba(15, 23, 42, .20);
 
-    --glow-brand: 0 14px 34px -10px rgba(8, 145, 178, .45);
+    --glow-brand: 0 14px 34px -10px rgba(30, 58, 138, .40);
     --glow-positive: 0 14px 34px -10px rgba(5, 150, 105, .40);
     --glow-caution: 0 14px 34px -10px rgba(180, 83, 9, .38);
   }
@@ -58,10 +64,10 @@
     --line: 41 49 63;
     --line-strong: 60 70 88;
 
-    --brand: 34 211 238;         /* lifted for dark grounds — 9.8:1 */
-    --brand-hover: 103 232 249;
-    --brand-soft: 16 48 58;
-    --brand-fg: 2 6 23;
+    --brand: 147 197 253;        /* blue-300, lifted for dark grounds — 10.1:1 */
+    --brand-hover: 191 219 254;
+    --brand-soft: 23 37 84;
+    --brand-fg: 2 6 23;          /* 8.0:1 on brand fill */
 
     --positive: 71 205 137;
     --positive-soft: 12 43 30;
@@ -70,13 +76,16 @@
     --caution: 243 135 68;
     --caution-soft: 46 26 12;
 
+    --disabled-bg: 41 49 63;
+    --disabled-fg: 148 163 184;   /* 7.2:1 on --disabled-bg */
+
     --e1: 0 1px 2px rgba(0, 0, 0, .40);
     --e2: 0 4px 12px -2px rgba(0, 0, 0, .50);
     --e3: 0 12px 28px -6px rgba(0, 0, 0, .55);
     --e4: 0 24px 60px -12px rgba(0, 0, 0, .60);
     --e5: 0 40px 90px -20px rgba(0, 0, 0, .70);
 
-    --glow-brand: 0 14px 34px -10px rgba(34, 211, 238, .40);
+    --glow-brand: 0 14px 34px -10px rgba(147, 197, 253, .35);
     --glow-positive: 0 14px 34px -10px rgba(71, 205, 137, .35);
     --glow-caution: 0 14px 34px -10px rgba(243, 135, 68, .35);
   }
@@ -96,9 +105,9 @@
       --line: 41 49 63;
       --line-strong: 60 70 88;
 
-      --brand: 34 211 238;
-      --brand-hover: 103 232 249;
-      --brand-soft: 16 48 58;
+      --brand: 147 197 253;
+      --brand-hover: 191 219 254;
+      --brand-soft: 23 37 84;
       --brand-fg: 2 6 23;
 
       --positive: 71 205 137;
@@ -108,24 +117,35 @@
       --caution: 243 135 68;
       --caution-soft: 46 26 12;
 
+      --disabled-bg: 41 49 63;
+      --disabled-fg: 148 163 184;
+
       --e1: 0 1px 2px rgba(0, 0, 0, .40);
       --e2: 0 4px 12px -2px rgba(0, 0, 0, .50);
       --e3: 0 12px 28px -6px rgba(0, 0, 0, .55);
       --e4: 0 24px 60px -12px rgba(0, 0, 0, .60);
       --e5: 0 40px 90px -20px rgba(0, 0, 0, .70);
 
-      --glow-brand: 0 14px 34px -10px rgba(34, 211, 238, .40);
+      --glow-brand: 0 14px 34px -10px rgba(147, 197, 253, .35);
       --glow-positive: 0 14px 34px -10px rgba(71, 205, 137, .35);
       --glow-caution: 0 14px 34px -10px rgba(243, 135, 68, .35);
     }
   }
 
+  /* clip, not hidden: `hidden` turns <body> into a scroll container that never
+     scrolls, which silently breaks every position: sticky element on the site. */
   html, body {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   body {
     font-family: theme("fontFamily.sans");
+  }
+
+  /* Display face for headings: Bricolage Grotesque, one brand across tracks. */
+  h1, h2, h3 {
+    font-family: theme("fontFamily.display");
+    font-optical-sizing: auto;
   }
 
   /* ── Global focus ring ────────────────────────────────────────────────
@@ -180,7 +200,8 @@
     @apply inline-flex items-center justify-center gap-2 rounded-control
            font-semibold min-h-touch px-5 py-3 text-sm
            transition-colors duration-fast ease-brand
-           disabled:opacity-60 disabled:cursor-not-allowed;
+           disabled:cursor-not-allowed disabled:bg-disabled disabled:text-disabled-fg
+           disabled:shadow-none disabled:hover:bg-disabled;
   }
   .btn-primary {
     @apply btn bg-brand text-brand-fg shadow-e2 hover:bg-brand-hover;
@@ -200,7 +221,7 @@
     @apply inline-flex items-center justify-center rounded-full
            h-touch w-touch shrink-0
            transition-colors duration-fast ease-brand
-           disabled:opacity-60 disabled:cursor-not-allowed;
+           disabled:cursor-not-allowed disabled:bg-disabled disabled:text-disabled-fg;
   }
 
   .field {
@@ -217,7 +238,567 @@
     @apply rounded-card border border-line bg-surface shadow-e2;
   }
 
+  /* ── Kanthast navy: the brand stage ────────────────────────────────────
+     Deep navy lit by soft white light, opening to white toward the bottom.
+     Text sits in the dark upper region (white on #0B1638 is 16:1). Used by
+     the navbar, footer and the homepage bands. */
+  .kb-stage {
+    background-color: #0b1638;
+    background-image:
+      radial-gradient(ellipse 55% 45% at 85% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(226, 232, 240, 0.08) 45%, transparent 75%),
+      radial-gradient(ellipse 40% 35% at 0% 0%, rgba(148, 163, 184, 0.16) 0%, transparent 70%),
+      radial-gradient(ellipse 95% 50% at 55% 120%, rgba(255, 255, 255, 0.95) 0%, rgba(226, 232, 240, 0.55) 38%, transparent 72%),
+      linear-gradient(172deg, #060b1c 0%, #0b1638 48%, #1a2650 80%, #cfd8ea 100%);
+  }
+  .kb-deep {
+    background-color: #0a1330;
+    background-image:
+      radial-gradient(ellipse 50% 40% at 92% 10%, rgba(255, 255, 255, 0.10) 0%, transparent 70%),
+      radial-gradient(ellipse 45% 45% at 0% 90%, rgba(148, 163, 184, 0.12) 0%, transparent 70%),
+      linear-gradient(180deg, #0b1638 0%, #080f28 60%, #060b1c 100%);
+  }
+  .kb-bar {
+    background-color: #091322;
+  }
+  .kb-footer {
+    background-color: #060b1c;
+    background-image:
+      radial-gradient(ellipse 45% 60% at 100% 0%, rgba(255, 255, 255, 0.07) 0%, transparent 70%),
+      linear-gradient(160deg, #0b1638 0%, #060b1c 70%);
+  }
+  /* White pill on the navy stage, with navy as ink. */
+  .btn-onblue {
+    @apply btn bg-white text-[#0b1638] shadow-e3 hover:bg-slate-100;
+  }
+
+
   .label {
     @apply mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted;
   }
+}
+
+/* ── Homepage header + hero ──────────────────────────────────────────────
+   Unlayered so these win over Tailwind utilities on the same elements.
+   Desktop sizes are the approved mockup's pixels at a 1672px viewport,
+   expressed in --u (1u = 1vw, capped at 19.2px ≈ a 1920px viewport), so the
+   composition scales as one piece. Small text keeps a readable floor. */
+:root {
+  --u: min(1vw, 19.2px);
+  --nav-bar-h: 4rem;
+}
+
+.nav-shell {
+  height: var(--nav-bar-h);
+}
+
+/* Header colours live here, not only in Tailwind classes, so a dev server
+   that hasn't reloaded tailwind.config.js still paints them correctly. */
+.kb-bar .nav-logo {
+  color: #f4f7fb;
+}
+.kb-bar .nav-link {
+  color: #dce6f2;
+}
+.kb-bar .nav-link-active {
+  color: #6fe9c7;
+}
+.kb-bar .nav-link-active::after {
+  background-color: #6fe9c7;
+}
+.kb-bar .nav-login {
+  border-color: #2f4869;
+  color: #f4f7fb;
+}
+.kb-bar .nav-signup {
+  background-color: #6becc9;
+  color: #06111f;
+}
+.hero-accent {
+  color: #6becc9;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-color: #091322;
+  color: #f4f7fb;
+}
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.75rem 1.25rem 4rem;
+}
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+.hero-title {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2.5rem, 9vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.07;
+  letter-spacing: -0.04em;
+}
+.hero-sub {
+  margin-top: 1.25rem;
+  font-size: clamp(1.2rem, 3.6vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #e7edf5;
+}
+.hero-desc {
+  margin-top: 1rem;
+  max-width: 36rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #b3bfcf;
+}
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3.25rem;
+  padding: 0 1.75rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 180ms ease, filter 180ms ease, border-color 180ms ease;
+}
+.hero-btn-primary {
+  background-color: #6becc9;
+  color: #06111f;
+}
+.hero-btn-primary:hover {
+  filter: brightness(0.94);
+}
+.hero-btn-secondary {
+  border: 1px solid #334f73;
+  color: #f4f7fb;
+  font-weight: 400;
+}
+.hero-btn-secondary:hover {
+  background-color: #111d30;
+  border-color: #3f5f88;
+}
+.hero-btn-icon {
+  font-size: 0.85em;
+}
+.hero-exams {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.75rem;
+}
+.hero-exam {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #f4f7fb;
+  text-underline-offset: 4px;
+  transition: color 180ms ease;
+}
+.hero-exam:hover {
+  color: #6becc9;
+}
+.hero-exam-icon {
+  font-size: 0.8em;
+}
+.hero-devices {
+  position: relative;
+  min-width: 0;
+  padding-bottom: 9%;
+}
+.hero-devices > .relative {
+  width: 95%;
+}
+.hero-glow {
+  pointer-events: none;
+  position: absolute;
+  left: 0%;
+  top: -30%;
+  width: 90%;
+  height: 90%;
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, rgba(34, 98, 150, 0.5), rgba(22, 64, 108, 0.22) 55%, transparent 100%);
+  filter: blur(24px);
+}
+.hero-caption {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  font-size: 0.875rem;
+  color: #aabfda;
+}
+.hero-caption-icons {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.2rem;
+  color: #a0b3d5;
+  font-size: 1.35rem;
+}
+.hero-caption-icons > svg:last-child {
+  font-size: 0.8em;
+}
+
+@media (min-width: 640px) {
+  .hero-inner {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .hero-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nav-bar-h: calc(var(--u) * 4.904);
+  }
+  .kb-bar .nav-logo {
+    font-size: calc(var(--u) * 2.12);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .kb-bar .nav-medical {
+    margin-left: 0;
+    font-size: max(13px, calc(var(--u) * 0.93));
+    font-weight: 500;
+  }
+  .kb-bar .nav-chev {
+    width: max(16px, calc(var(--u) * 1.15));
+    height: max(16px, calc(var(--u) * 1.15));
+    border: 0;
+    background-color: #1a2d47;
+  }
+  .kb-bar .nav-links {
+    column-gap: calc(var(--u) * 2.25);
+    font-size: max(14px, calc(var(--u) * 1.13));
+  }
+  .kb-bar .nav-link {
+    font-weight: 400;
+    color: #dce6f2;
+  }
+  .kb-bar .nav-link:hover {
+    color: #ffffff;
+  }
+  .kb-bar .nav-link-active,
+  .kb-bar .nav-link-active:hover {
+    color: #6fe9c7;
+  }
+  .kb-bar .nav-link-active::after {
+    bottom: calc(var(--u) * -0.96);
+    background-color: #6fe9c7;
+  }
+  .kb-bar .nav-courses-chev {
+    margin-left: calc(var(--u) * 0.3);
+    color: #dce6f2;
+  }
+  .kb-bar .nav-actions {
+    column-gap: calc(var(--u) * 1.02);
+  }
+  .kb-bar .nav-login,
+  .kb-bar .nav-signup {
+    height: calc(var(--u) * 2.95);
+    min-height: 36px;
+    border-radius: calc(var(--u) * 0.6);
+    font-size: max(14px, calc(var(--u) * 1.06));
+  }
+  .kb-bar .nav-login {
+    padding: 0 calc(var(--u) * 1.55);
+    border-color: #2f4869;
+    font-weight: 500;
+  }
+  .kb-bar .nav-signup {
+    padding: 0 calc(var(--u) * 1.6);
+    background-color: #6becc9;
+    color: #06111f;
+    font-size: max(15px, calc(var(--u) * 1.18));
+    font-weight: 600;
+  }
+
+  .hero {
+    --u: calc(min(1vw, 19.2px) * 85 / 90);
+    min-height: calc(var(--u) * 47.22);
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: calc(var(--u) * 38.72) calc(var(--u) * 52.12);
+    gap: 0;
+    /* 90 hero units = 85% of the viewport (the hero unit is scaled by 85/90). */
+    width: calc(var(--u) * 90);
+    margin: 0 auto;
+    padding: 0;
+  }
+  .hero-copy {
+    padding-top: calc(var(--u) * 6.3);
+  }
+  .hero-title {
+    font-size: calc(var(--u) * 4.49);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+  }
+  .hero-title > span:last-child {
+    font-size: 1.108em;
+    line-height: 1.06;
+  }
+  .hero-sub {
+    margin-top: calc(var(--u) * 0.95);
+    font-size: calc(var(--u) * 2.135);
+  }
+  .hero-desc {
+    margin-top: calc(var(--u) * 1.62);
+    max-width: max(calc(var(--u) * 38.9), 27rem);
+    font-size: max(15px, calc(var(--u) * 1.39));
+    line-height: 1.55;
+  }
+  .hero-actions {
+    margin-top: calc(var(--u) * 2.64);
+    gap: calc(var(--u) * 0.96);
+  }
+  .hero-btn {
+    height: calc(var(--u) * 3.95);
+    min-height: 44px;
+    padding: 0 calc(var(--u) * 2.6);
+    border-radius: calc(var(--u) * 0.6);
+    font-size: max(15px, calc(var(--u) * 1.196));
+    gap: calc(var(--u) * 0.75);
+  }
+  .hero-btn-primary {
+    padding: 0 calc(var(--u) * 2.12);
+    font-size: max(16px, calc(var(--u) * 1.345));
+  }
+  .hero-btn-secondary {
+    padding: 0 calc(var(--u) * 2.3);
+  }
+  .hero-btn-icon {
+    font-size: 1.05em;
+  }
+  .hero-exams {
+    margin-top: calc(var(--u) * 3.06);
+    column-gap: calc(var(--u) * 2.75);
+  }
+  .hero-exam {
+    gap: calc(var(--u) * 0.9);
+    font-size: max(14px, calc(var(--u) * 0.99));
+  }
+  .hero-devices {
+    margin-top: calc(var(--u) * 0.39);
+    padding-bottom: 0;
+  }
+  .hero-devices > .relative {
+    width: 100%;
+  }
+  .hero-glow {
+    left: 8%;
+    top: -34%;
+    width: 78%;
+    height: 82%;
+  }
+  .hero-caption {
+    position: absolute;
+    top: calc(var(--u) * 39.95);
+    left: 47.9%;
+    transform: translateX(-50%);
+    margin: 0;
+    gap: calc(var(--u) * 1.45);
+    white-space: nowrap;
+    font-size: max(13px, calc(var(--u) * 0.95));
+  }
+  .hero-caption-icons {
+    font-size: calc(var(--u) * 1.6);
+  }
+}
+
+/* ── Whole homepage on the navy + mint identity ───────────────────────────
+   Remapping the semantic tokens on the page wrapper recolours every section
+   (and the live product screens in the tour) without per-class edits. */
+.home-page {
+  --surface: 9 19 34;          /* #091322 */
+  --surface-sunken: 12 24 41;  /* #0C1829 */
+  --surface-raised: 17 29 48;  /* #111D30 */
+  --ink: 244 247 251;
+  --ink-muted: 182 194 210;    /* #B6C2D2 */
+  --ink-subtle: 143 160 184;
+  --ink-inverse: 9 19 34;
+  --line: 29 50 73;            /* #1D3249 */
+  --line-strong: 51 79 115;    /* #334F73 */
+  --brand: 107 236 201;        /* mint #6BECC9 */
+  --brand-hover: 92 222 187;
+  --brand-soft: 16 52 56;
+  --brand-fg: 6 17 31;
+  --e1: 0 1px 2px rgba(0, 0, 0, .4);
+  --e2: 0 6px 16px -4px rgba(0, 0, 0, .5);
+  --e3: 0 14px 32px -8px rgba(0, 0, 0, .55);
+  --e4: 0 24px 60px -12px rgba(0, 0, 0, .6);
+  --e5: 0 40px 90px -20px rgba(0, 0, 0, .7);
+  --glow-brand: 0 14px 34px -10px rgba(107, 236, 201, .35);
+}
+.home-page h2 {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+.home-page h3 {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.site-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+@media (min-width: 640px) {
+  .site-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .site-container {
+    width: calc(var(--u) * 85);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.kb-footer {
+  background-color: #060e1b;
+  background-image: none;
+  border-top: 1px solid #1d3249;
+}
+
+/* Flare glows: a blue bloom behind device art, with a faint mint lift. */
+.hero-glow {
+  left: -10%;
+  top: -35%;
+  width: 115%;
+  height: 120%;
+  background:
+    radial-gradient(closest-side at 45% 42%, rgba(56, 142, 214, 0.75), rgba(34, 98, 168, 0.34) 48%, transparent 100%),
+    radial-gradient(closest-side at 88% 78%, rgba(107, 236, 201, 0.22), transparent 100%);
+  filter: blur(40px);
+}
+@media (min-width: 1024px) {
+  .hero-glow {
+    left: -8%;
+    top: -38%;
+    width: 112%;
+    height: 125%;
+  }
+}
+.home-glow {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  left: -12%;
+  top: -22%;
+  width: 124%;
+  height: 130%;
+  border-radius: 9999px;
+  background:
+    radial-gradient(closest-side at 50% 42%, rgba(56, 142, 214, 0.6), rgba(34, 98, 168, 0.26) 50%, transparent 100%),
+    radial-gradient(closest-side at 82% 80%, rgba(107, 236, 201, 0.16), transparent 100%);
+  filter: blur(44px);
+}
+.home-glow + * {
+  position: relative;
+  z-index: 1;
+}
+.home-glow-close {
+  left: auto;
+  right: -10%;
+  top: -60%;
+  width: 60%;
+  height: 220%;
+}
+
+.pricing-glow {
+  left: 20%;
+  top: -20%;
+  width: 80%;
+  height: 120%;
+}
+
+.page-hero-glow {
+  left: auto;
+  right: -18%;
+  top: -45%;
+  width: 75%;
+  height: 170%;
+}
+
+/* FAQ student: small idle loops, stopped by the global reduced-motion rule
+   and only attached while the section is on screen. */
+.faq-student text,
+.faq-student g {
+  transform-box: fill-box;
+}
+.faq-mark {
+  transform-origin: center;
+  animation: faq-mark 3.3s ease-in-out infinite;
+}
+@keyframes faq-mark {
+  0% { opacity: 0; transform: translateY(10px) rotate(-8deg); }
+  25% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-16px) rotate(6deg); }
+}
+.faq-blink {
+  transform-origin: center;
+  animation: faq-blink 5s infinite;
+}
+@keyframes faq-blink {
+  0%, 94%, 100% { transform: scaleY(1); }
+  97% { transform: scaleY(0.12); }
+}
+.faq-steam {
+  animation: faq-steam 2.8s ease-in-out infinite;
+}
+@keyframes faq-steam {
+  0% { opacity: 0; transform: translateY(6px); }
+  40% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* App pages: the same 85% frame as the navbar and marketing pages on wide
+   screens; a comfortable cap below that. */
+.page-frame {
+  width: 100%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1024px) {
+  .page-frame {
+    max-width: none;
+    width: calc(var(--u) * 85);
+  }
+}
+
+/* Pricing: soft pulse on the free lectures' play buttons. */
+.free-ping {
+  animation: free-ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes free-ping {
+  0% { transform: scale(1); opacity: 0.45; }
+  70%, 100% { transform: scale(1.7); opacity: 0; }
 }

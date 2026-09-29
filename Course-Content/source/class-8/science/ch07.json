@@ -1,0 +1,287 @@
+[
+  {
+    "chapter_no": 7,
+    "chapter": "Particulate Nature of Matter",
+    "topic_no": 1,
+    "name": "What Is Matter Composed Of?",
+    "scenes": [
+      {
+        "animation": "A riverbank with pebbles and sand. Zippy holds a single sand grain up to his giant eyes and tries to snap it in half with his tiny hands, grunting.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Rivers break rocks into pebbles, then sand. Is this sand grain the smallest bit of rock there is?" },
+          { "speaker": "NEO", "text": "Not even close. Let's keep breaking things and see where it ends." }
+        ]
+      },
+      {
+        "animation": "Activity 7.1 step by step: a chalk stick snaps into two, then smaller and smaller bits by hand; the bits are ground in a mortar and pestle into fine powder; a magnifying glass shows tiny grains, each labelled 'still chalk'. A tag reads 'Physical change: only size reduces'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 7.1. Break a stick of chalk into two, and keep breaking it until you can't by hand." },
+          { "speaker": "NEO", "text": "Grind the small pieces in a mortar and pestle, and look at the powder through a magnifying glass. Each tiny grain is still a speck of chalk." },
+          { "speaker": "NEO", "text": "Grinding is a physical change. The chalk does not become a new substance; only the size of each speck reduces." }
+        ]
+      },
+      {
+        "animation": "An imaginary zoom keeps grinding the speck smaller until it stops at tiny identical spheres labelled 'Constituent particles'. The same zoom on a sand grain shows it is also built from such particles.",
+        "lines": [
+          { "speaker": "NEO", "text": "Imagine grinding forever. Eventually, you'd reach units of chalk that cannot be broken down further. These are its constituent particles." },
+          { "speaker": "NEO", "text": "A constituent particle is the basic unit that makes up a larger piece of a substance or material. Sand and clay grains are also made of such particles." }
+        ]
+      },
+      {
+        "animation": "Activity 7.2 with a 'Safety first: teacher or adult supervision; never eat or drink anything unless asked to' badge. Two teaspoons of sugar sit at the bottom of a tumbler of drinking water; a spoonful from the top tastes plain. After stirring, the sugar vanishes and the top spoonful gets a sweet sparkle. Zoom-in: sugar particles slip into gaps between water particles, labelled 'Interparticle spaces'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 7.2, under an adult's supervision. Put two teaspoons of sugar in a tumbler of drinking water. Don't stir, and taste the top layer. Not sweet." },
+          { "speaker": "NEO", "text": "Now stir until the sugar dissolves and taste again. Sweet! The sugar is present, though you cannot see it." },
+          { "speaker": "NEO", "text": "Sugar breaks into its constituent particles, which occupy the spaces between water particles. These spaces are called interparticle spaces." },
+          { "speaker": "NEO", "text": "These particles are so small that they cannot be seen even through an ordinary microscope." }
+        ]
+      },
+      {
+        "animation": "A scroll unrolls showing Acharya Kanad, an ancient Indian philosopher, writing the 'Vaisheshika Sutras'. A glowing tiny dot is labelled 'Parmanu'. An 'Exam Tip' sticker then appears on a chalk-grinding icon.",
+        "lines": [
+          { "speaker": "NEO", "text": "This idea is ancient. Acharya Kanad, an Indian philosopher, believed matter is made of tiny, indivisible, eternal particles called Parmanu. He wrote this in the Vaisheshika Sutras." },
+          { "speaker": "NEO", "text": "Exam tip: when asked if grinding chalk is a chemical change, say no. It is a physical change; only size reduces." }
+        ]
+      },
+      {
+        "animation": "Recap board with a chalk and sugar icon. Points appear: '1. Matter is made of extremely small constituent particles', '2. Dissolved sugar particles occupy interparticle spaces', '3. Kanad called them Parmanu'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: matter is made of a very large number of extremely small constituent particles." },
+          { "speaker": "NEO", "text": "Two: when sugar dissolves, its particles occupy the interparticle spaces between water particles." },
+          { "speaker": "NEO", "text": "Three: Acharya Kanad first spoke of such particles, calling them Parmanu." },
+          { "speaker": "ZIPPY", "text": "So my sand grain is a whole crowd. Hello, everyone!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Particulate Nature of Matter",
+    "topic_no": 2,
+    "name": "Interparticle Attractions and the Solid State",
+    "scenes": [
+      {
+        "animation": "Zippy hammers an iron nail on an anvil with a toy hammer. The nail doesn't budge; the hammer bounces off and Zippy spins like a top.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If this nail is just tiny particles, why can't I knock them apart?" },
+          { "speaker": "NEO", "text": "Because its particles are holding hands very, very tightly. Let's meet the glue." }
+        ]
+      },
+      {
+        "animation": "Particles connected by springy glowing links labelled 'Interparticle attractions'. The particles are pulled slightly apart and the links fade dramatically. Caption: 'Strength depends on the substance and interparticle distance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The constituent particles are held together by attractive forces called interparticle attractions." },
+          { "speaker": "NEO", "text": "Their strength depends on the nature of the substance and the distance between particles. Even a slight increase in distance weakens them drastically." },
+          { "speaker": "NEO", "text": "The strength of these forces ultimately decides the physical state of a substance." }
+        ]
+      },
+      {
+        "animation": "Activity 7.3: six objects line up: an iron nail, rock salt, a stone, a wooden block, a key and a piece of aluminium. Each keeps its shape when tapped with a hammer. A zoom into the nail shows tightly packed particles jiggling in fixed spots.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 7.3. Collect an iron nail, rock salt, a stone, a piece of wood, a key and a piece of aluminium. Observe their shapes and try hammering them." },
+          { "speaker": "NEO", "text": "All are solids with a definite shape and volume. In solids, particles are tightly packed and the attractions are very strong." },
+          { "speaker": "NEO", "text": "The particles stay in fixed positions. They can only vibrate to and fro, but cannot move past each other." }
+        ]
+      },
+      {
+        "animation": "Three-panel animation of melting: (a) a neat solid grid vibrating gently; (b) heat arrows added and vibrations grow wild; (c) particles leave their positions and slide around as a liquid. A thermometer marks 'Melting point'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When a solid is heated, its particles vibrate more vigorously. At some stage, they start leaving their positions and the attractions weaken. The solid becomes a liquid." },
+          { "speaker": "NEO", "text": "The minimum temperature at which a solid melts to become a liquid at atmospheric pressure is called its melting point." },
+          { "speaker": "ZIPPY", "text": "So liquid particles are always farther apart than solid ones?" },
+          { "speaker": "NEO", "text": "Generally, yes. But ice is an exception. Its particles are farther apart than those in water." }
+        ]
+      },
+      {
+        "animation": "Table 7.1 builds with three thermometers rising to different heights: 'Ice 0 °C', 'Urea 133 °C', 'Iron 1538 °C'. Arrow: 'Weak attractions → low melting point; strong attractions → high melting point'. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Solids with weak attractions melt at low temperatures, and those with strong attractions at high temperatures." },
+          { "speaker": "NEO", "text": "Ice melts at 0 degree Celsius, urea at 133 degree Celsius, and iron at 1538 degree Celsius." },
+          { "speaker": "NEO", "text": "Exam tip: melting involves a decrease in interparticle attractions. Link a high melting point to strong attractions." }
+        ]
+      },
+      {
+        "animation": "Recap board with a nail and thermometer icon. Points appear: '1. Interparticle attractions hold particles together', '2. Solids: tightly packed, fixed positions, only vibrate', '3. Melting point: solid → liquid; iron 1538 °C'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: interparticle attractions hold particles together, and their strength decides the state." },
+          { "speaker": "NEO", "text": "Two: in solids, particles are tightly packed in fixed positions and can only vibrate, so solids have a definite shape and volume." },
+          { "speaker": "NEO", "text": "Three: at the melting point, a solid turns into a liquid." },
+          { "speaker": "ZIPPY", "text": "Iron needs 1538 degrees. My hammer never stood a chance." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Particulate Nature of Matter",
+    "topic_no": 3,
+    "name": "The Liquid and Gaseous States",
+    "scenes": [
+      {
+        "animation": "Zippy pours water into cupped hands shaped like a bowl; it holds the shape. He opens his hands and the water splashes everywhere, drenching him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The water was a perfect bowl a second ago! Why can't it keep its shape?" },
+          { "speaker": "NEO", "text": "Because liquid particles are free to move. Let's measure what changes and what doesn't." }
+        ]
+      },
+      {
+        "animation": "Activity 7.4 step by step: three clean, dry containers of different shapes, labelled A, B and C, each with a 200 mL mark. Water fills A to the mark, is poured into B, then into C. The water changes shape each time but the level stays at 200 mL, with a green tick.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 7.4. Take three clean, dry containers of different shapes, A, B and C, and mark 200 millilitres on each." },
+          { "speaker": "NEO", "text": "Fill A to the mark, pour it into B, then into C. The water takes each container's shape, but stays at 200 millilitres." },
+          { "speaker": "NEO", "text": "So liquids have no fixed shape, but a definite volume. Their particles move freely, but only within a limited space." }
+        ]
+      },
+      {
+        "animation": "A finger slides through water in a shallow dish; the water parts and closes back behind it. Then a pot boils with bubbles forming inside, labelled 'Boiling point', beside a puddle on a floor slowly shrinking, labelled 'Evaporation: any temperature, only at surface'.",
+        "lines": [
+          { "speaker": "NEO", "text": "You can move your finger through water and it closes back. So attractions in liquids are slightly weaker than in solids, but strong enough to keep particles close." },
+          { "speaker": "NEO", "text": "The temperature at which a liquid boils and turns into vapour at atmospheric pressure is its boiling point. Vapour forms fast, even inside the liquid, as bubbles." },
+          { "speaker": "NEO", "text": "But vapour also forms slowly at all temperatures, only at the surface. That is evaporation." }
+        ]
+      },
+      {
+        "animation": "Activity 7.5 with a 'Safety first: be careful with a burning incense stick' badge. Gas Jar A is held upside down over incense smoke, turned over and covered with a glass plate; Gas Jar B is placed upside down on top; the plate slides out and smoke spreads to fill both jars completely.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 7.5. Carefully burn an incense stick and trap its smoke in upside-down Gas Jar A. Turn it over and cover it with a glass plate." },
+          { "speaker": "NEO", "text": "Place Gas Jar B upside down on the plate, then slowly remove the plate with no gap. The smoke fills the entire space in Jar B." },
+          { "speaker": "NEO", "text": "So gases have no fixed volume or shape. Their particles move freely in all directions, and their attractions are negligible." }
+        ]
+      },
+      {
+        "animation": "A jar with solid iodine slowly fills with violet vapour, with a caution icon 'Iodine vapour can irritate'. Then water and smoke both pour and swirl under a banner 'Fluids: liquids + gases'. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "You can also use iodine vapour, but carefully, because it can cause irritation." },
+          { "speaker": "NEO", "text": "Liquids and gases both flow and do not keep a fixed shape, so they are called fluids." },
+          { "speaker": "NEO", "text": "Exam tip: evaporation happens at all temperatures, only at the surface. Boiling happens at the boiling point, throughout the liquid." }
+        ]
+      },
+      {
+        "animation": "Recap board with a jug and smoke icon. Points appear: '1. Liquids: fixed volume, no fixed shape', '2. Gases: no fixed volume or shape; attractions negligible', '3. Liquids and gases are fluids'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: liquids have a fixed volume but no fixed shape, since their particles move within a limited space." },
+          { "speaker": "NEO", "text": "Two: gases have no fixed shape or volume, since their attractions are negligible." },
+          { "speaker": "NEO", "text": "Three: liquids and gases both flow, so they are called fluids." },
+          { "speaker": "ZIPPY", "text": "Next time, I'll keep the water in a glass." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Particulate Nature of Matter",
+    "topic_no": 4,
+    "name": "Interparticle Spacing in the Three States",
+    "scenes": [
+      {
+        "animation": "Zippy adds sugar to a glass of water filled nearly to the top, bracing for an overflow. The level creeps up, but after stirring it even dips a little. He checks under the glass for a secret drain.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Where did the sugar go? There's no room in here!" },
+          { "speaker": "NEO", "text": "There is room, between the particles. Let's measure those gaps." }
+        ]
+      },
+      {
+        "animation": "Activity 7.6 step by step: a syringe without a needle, plunger pulled fully out; a thumb seals the open end; the plunger is pushed in slowly and the air particles inside crowd closer. The thumb stays on, the push stops, and the plunger springs back. A second syringe with water barely moves: 'Practically incompressible'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 7.6. Take a syringe without a needle and pull the plunger fully out. Seal the open end with your thumb and push the plunger in slowly." },
+          { "speaker": "NEO", "text": "The volume of air decreases. Gas particles are forced closer, so they must have a lot of space between them." },
+          { "speaker": "NEO", "text": "Stop pushing, and the particles spread out and the plunger moves back. Repeat with water, and you will find water is practically incompressible." }
+        ]
+      },
+      {
+        "animation": "Activity 7.7 step by step: a glass vessel half-filled with water, level marked A. Two teaspoons of sugar are added, and the new level is marked B. It is stirred with a glass rod; the final level is marked C, slightly below B. Zoom-in: sugar particles tucked between water particles.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 7.7. Half fill a glass vessel with water and mark the level A. Add two teaspoons of sugar and mark the new level B." },
+          { "speaker": "NEO", "text": "Stir with a glass rod to dissolve the sugar and mark the level C. Adding sugar raised the level, but after dissolving, it may fall a little." },
+          { "speaker": "NEO", "text": "The solution's volume is less than the volumes of water and sugar added together. So there is space between water particles, and sugar particles fill it." }
+        ]
+      },
+      {
+        "animation": "The same test with sand: sand grains sink to the bottom and the water level rises and stays up. Then Fig. 7.12 builds as three magnified boxes: solid (closely packed, tiny gaps), liquid (a little looser), gas (widely spaced). A label on a solid's gap reads 'Nothing at all, not air'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it with salt or glucose, and then with sand. Sand does not dissolve. Its particles settle down and occupy space, so the total volume increases." },
+          { "speaker": "NEO", "text": "Even solids have some space between closely packed particles. And that space is not filled with air. It contains nothing at all." },
+          { "speaker": "NEO", "text": "Exam tip: interparticle spacing is minimum in solids, a little more in liquids, and maximum in gases." }
+        ]
+      },
+      {
+        "animation": "A smoggy Delhi street with a sign 'SPM' pointing to floating dust specks. One speck is zoomed into and turns out to be a huge crowd of far tinier constituent particles. A 'Particle ≠ particle' banner appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the dust particles in polluted air are these constituent particles?" },
+          { "speaker": "NEO", "text": "No. Suspended Particulate Matter means tiny dust particles. Even one dust particle is made of a very large number of constituent particles, atoms and molecules." }
+        ]
+      },
+      {
+        "animation": "Recap board with a syringe icon. Points appear: '1. Gases compress easily: large interparticle spaces', '2. Dissolving sugar fills spaces in water', '3. Spacing: solid < liquid < gas; spaces contain nothing'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: gases compress easily because their particles have lots of space between them, while water is practically incompressible." },
+          { "speaker": "NEO", "text": "Two: dissolved sugar particles fill the spaces between water particles, so the level may even fall." },
+          { "speaker": "NEO", "text": "Three: interparticle spacing is least in solids, more in liquids, and most in gases." },
+          { "speaker": "ZIPPY", "text": "Hidden parking spots for sugar. Genius." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Particulate Nature of Matter",
+    "topic_no": 5,
+    "name": "How Particles Move in Different States",
+    "scenes": [
+      {
+        "animation": "Diwali morning. Someone lights an agarbatti in a far corner of a room. Zippy, at the opposite end, sniffs; a moment later a fragrance cloud reaches him and hearts pop above his head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Nobody carried that smell to me. How did it cross the whole room?" },
+          { "speaker": "NEO", "text": "Air particles delivered it. They never sit still. Let's catch particles moving." }
+        ]
+      },
+      {
+        "animation": "Activity 7.8 with a 'Safety first: never touch potassium permanganate; use a spoon or spatula' badge. A few purple grains drop into a tumbler of water; pink streaks spread out, and with time the whole glass turns uniformly pink. Zoom-in: water particles tug particles out of the grain and bump them around.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 7.8. Using a spoon or spatula, never your hands, put a few grains of potassium permanganate into a tumbler of water." },
+          { "speaker": "NEO", "text": "Pink streaks spread from the grain, and with time the whole water turns uniformly pink." },
+          { "speaker": "NEO", "text": "Water particles are in constant motion. They pull out the particles of potassium permanganate and hit them so they spread throughout." },
+          { "speaker": "NEO", "text": "In substances like sand, the particles are held so strongly that water cannot pull them out. So sand is insoluble." }
+        ]
+      },
+      {
+        "animation": "Three glasses side by side: hot water (steam, red tag), room temperature (neutral), ice-cold (blue, with ice). A grain drops into each; the colour spreads fastest in hot water, slower in room temperature, slowest in ice-cold. Speed arrows on the particles match.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it yourself with hot water, room-temperature water and ice-cold water." },
+          { "speaker": "NEO", "text": "Potassium permanganate spreads fastest in hot water, less quickly at room temperature, and slowest in ice-cold water." },
+          { "speaker": "NEO", "text": "Water particles move faster when hot. So the movement of particles increases when heat is provided." }
+        ]
+      },
+      {
+        "animation": "Activity 7.9: an incense stick burns in one corner; fragrance particles are hit by bouncing air particles and drift across the room until they fill it. Side panel: soap particles surround an oil stain on a shirt, one end gripping oil and the other in water, lifting it away.",
+        "lines": [
+          { "speaker": "NEO", "text": "Activity 7.9. Light an incense stick in one corner and wait. Soon you smell it across the room." },
+          { "speaker": "NEO", "text": "Air particles are moving constantly. They hit the fragrance particles and spread them throughout the room." },
+          { "speaker": "NEO", "text": "Particles even help us clean. Soap particles surround oil on fabric. One end attaches to the oil, the other mixes with water, lifting the oil away." }
+        ]
+      },
+      {
+        "animation": "A thermal-energy slider moves from low to high across three panels: solid (particles vibrating in place), liquid (moving within a limited space), gas (flying freely). The 'Let us wrap up' chart builds beside it: spacing minimum to maximum, attraction maximum to negligible. An 'Exam Tip' sticker appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "The thermal energy of particles decides the state. In solids, it is low, so particles stay close and only vibrate." },
+          { "speaker": "NEO", "text": "At the melting point, thermal energy overcomes the attractions, and particles move within a limited space as a liquid. In gases, particles have enough energy to move freely in all directions." },
+          { "speaker": "NEO", "text": "Exam tip: heating camphor does not turn energy into smell. Its particles spread, and moving air particles carry them around." }
+        ]
+      },
+      {
+        "animation": "Recap board with a spreading pink swirl icon. Points appear: '1. Particles of matter are always moving', '2. Heat makes particles move faster', '3. Thermal energy decides the state: solid, liquid or gas'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: particles of liquids and gases are in constant motion, which spreads colour in water and fragrance in air." },
+          { "speaker": "NEO", "text": "Two: particles move faster when heat is provided." },
+          { "speaker": "NEO", "text": "Three: the thermal energy of particles decides whether matter is a solid, a liquid or a gas." },
+          { "speaker": "ZIPPY", "text": "So my agarbatti smell had millions of tiny delivery boys. Nice." }
+        ]
+      }
+    ]
+  }
+]

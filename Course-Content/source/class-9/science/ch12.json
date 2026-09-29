@@ -1,0 +1,433 @@
+[
+  {
+    "chapter_no": 12,
+    "chapter": "Improvement in Food Resources",
+    "topic_no": 1,
+    "name": "Why Improve Food Resources? Crops and Seasons",
+    "scenes": [
+      {
+        "animation": "A packed school canteen at lunch break: an endless queue of hungry students stretches out of the door, past the gate and across a map of India. Zippy, at the counter, stares at a single tiny roti.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "One roti for all these people? We need more food, fast!" },
+          { "speaker": "NEO", "text": "That's exactly India's challenge. With more than a billion people, we need to grow more food from the same land." }
+        ]
+      },
+      {
+        "animation": "A timeline shows two waves sweeping across fields: a green wave labelled 'Green revolution: more food-grain' and a white wave of milk cans labelled 'White revolution: more milk'. A banner reads 'Sustainable practices: improve production without degrading the environment'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The green revolution increased food-grain production, and the white revolution led to better and more efficient use and availability of milk." },
+          { "speaker": "NEO", "text": "But farming land is limited, so we must raise production using sustainable practices that don't harm the environment." }
+        ]
+      },
+      {
+        "animation": "A food plate assembles: 'Cereals (wheat, rice, maize, millets, sorghum) → carbohydrates', 'Pulses (gram, pea, black gram, green gram, pigeon pea, lentil) → protein', 'Oil seeds (soyabean, groundnut, sesame, castor, mustard, linseed, sunflower) → fats'. Side items: vegetables, spices, fruits, and 'Fodder crops: berseem, oats, sudan grass → for livestock'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cereals like wheat, rice, maize, millets and sorghum give us carbohydrates for energy." },
+          { "speaker": "NEO", "text": "Pulses like gram, pea, black gram, green gram, pigeon pea and lentil give us protein. Oil seeds like soyabean, groundnut, mustard and sunflower give us fats." },
+          { "speaker": "NEO", "text": "Vegetables, spices and fruits give vitamins and minerals, and fodder crops like berseem, oats and sudan grass feed our livestock." }
+        ]
+      },
+      {
+        "animation": "A calendar splits into two coloured halves. Monsoon clouds over 'KHARIF: rainy season, June to October' with paddy, soyabean, pigeon pea, maize, cotton, green gram and black gram. A winter sun over 'RABI: winter season, November to April' with wheat, gram, peas, mustard and linseed.",
+        "lines": [
+          { "speaker": "NEO", "text": "Different crops need different climate, temperature and photoperiods, which means the duration of sunlight." },
+          { "speaker": "NEO", "text": "Kharif crops grow in the rainy season, from June to October. Paddy, soyabean, pigeon pea, maize, cotton, green gram and black gram are kharif crops." },
+          { "speaker": "NEO", "text": "Rabi crops grow in winter, from November to April. Wheat, gram, peas, mustard and linseed are rabi crops." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' sorting game: crop cards fly into two baskets, 'Kharif' and 'Rabi'. Zippy throws wheat into the kharif basket, and a buzzer sounds; he moves it to rabi and gets a ding.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wheat goes with the monsoon, right?" },
+          { "speaker": "NEO", "text": "No, wheat is a rabi crop. Exam tip: classifying crops as kharif or rabi is a very common question. Remember paddy for kharif and wheat for rabi as anchors." }
+        ]
+      },
+      {
+        "animation": "Recap board with a thali. Points: '1. Need: large population, limited land → sustainable increase in production', '2. Cereals: carbohydrates; pulses: protein; oil seeds: fats', '3. Kharif (June–Oct): paddy, maize, cotton; Rabi (Nov–Apr): wheat, gram, mustard'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: we must increase food production sustainably, because land is limited." },
+          { "speaker": "NEO", "text": "Two: cereals give carbohydrates, pulses give protein, and oil seeds give fats." },
+          { "speaker": "NEO", "text": "Three: kharif crops grow from June to October, and rabi crops from November to April." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Improvement in Food Resources",
+    "topic_no": 2,
+    "name": "Crop Variety Improvement",
+    "scenes": [
+      {
+        "animation": "A cartoon dating show for plants: a tall, high-yielding wheat plant and a short, disease-resistant wheat plant meet on stage. Their 'baby' plant appears with both badges, 'high yield' and 'disease resistant'. Zippy hosts with a mic.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "And tonight's match: Mr High Yield meets Miss Disease Resistant!" },
+          { "speaker": "NEO", "text": "That's plant breeding. Crossing plants to combine the best traits in one variety." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds: 'Increase crop yield' splits into three boxes: 'Crop variety improvement', 'Crop production improvement', 'Crop protection management'. The first box glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "To increase crop yields, farmers need good seeds, good nurturing and good protection. So we work on crop variety improvement, crop production improvement and crop protection management." },
+          { "speaker": "NEO", "text": "Let's start with variety improvement, which means finding or making better types of crop plants." }
+        ]
+      },
+      {
+        "animation": "Three crossing diagrams animate one below another: 'Intervarietal: between different varieties', 'Interspecific: between two different species of the same genus', 'Intergeneric: between different genera'. Then a gene icon slides into a seed, labelled 'Genetically modified crop'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Varieties can be improved by hybridisation, which is crossing between genetically dissimilar plants." },
+          { "speaker": "NEO", "text": "The cross may be intervarietal, between different varieties; interspecific, between two species of the same genus; or intergeneric, between different genera." },
+          { "speaker": "NEO", "text": "Another way is to introduce a gene that gives the desired character. The result is a genetically modified crop." }
+        ]
+      },
+      {
+        "animation": "A checklist board fills, each item with an icon: 'Higher yield', 'Improved quality (baking quality in wheat, protein in pulses, oil in oilseeds, preserving quality in fruits and vegetables)', 'Biotic and abiotic resistance', 'Change in maturity duration', 'Wider adaptability', 'Desirable agronomic characteristics (tallness and branching in fodder crops, dwarfness in cereals)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Breeders look for higher yield and improved quality, like baking quality in wheat, protein in pulses and oil in oilseeds." },
+          { "speaker": "NEO", "text": "They want resistance to biotic stresses like diseases, insects and nematodes, and to abiotic stresses like drought, salinity, waterlogging, heat, cold and frost." },
+          { "speaker": "NEO", "text": "Shorter maturity duration, wider adaptability, and desirable agronomic traits, like tallness in fodder crops and dwarfness in cereals, are also useful." }
+        ]
+      },
+      {
+        "animation": "A farmer holds up two handfuls of seeds: one uniform and one mixed. An 'EXAM TIP' card: 'Biotic = living (disease, insects, nematodes); Abiotic = non-living (drought, salinity, waterlogging, heat, cold, frost)'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why do farmers want seeds of just one variety?" },
+          { "speaker": "NEO", "text": "So that all the seeds germinate under the same conditions and grow evenly. Exam tip: learn the difference between biotic and abiotic factors with examples. It's frequently asked." }
+        ]
+      },
+      {
+        "animation": "Recap board with the proud hybrid plant. Points: '1. Hybridisation: intervarietal, interspecific, intergeneric', '2. GM crops: a gene introduced for a desired trait', '3. Aims: yield, quality, resistance, maturity duration, adaptability, agronomic traits'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: hybridisation can be intervarietal, interspecific or intergeneric." },
+          { "speaker": "NEO", "text": "Two: genetically modified crops get a new gene for a desired character." },
+          { "speaker": "NEO", "text": "Three: breeders aim for yield, quality, resistance, shorter maturity, wider adaptability and useful agronomic traits." },
+          { "speaker": "ZIPPY", "text": "Best match of the season!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Improvement in Food Resources",
+    "topic_no": 3,
+    "name": "Nutrient Management: Manure and Fertilisers",
+    "scenes": [
+      {
+        "animation": "A droopy, pale spinach plant in a farm field holds up a 'HUNGRY' sign. Zippy offers it a samosa; the plant shakes its leaves 'no'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This plant is hungry, but it won't eat my samosa!" },
+          { "speaker": "NEO", "text": "Plants need nutrients, not snacks. Sixteen of them, to be exact." }
+        ]
+      },
+      {
+        "animation": "A plant diagram with three sources: from air 'Carbon, Oxygen', from water 'Hydrogen, Oxygen', from soil '13 nutrients'. The soil box splits: 'Macronutrients (6): nitrogen, phosphorus, potassium, calcium, magnesium, sulphur' and 'Micronutrients (7): iron, manganese, boron, zinc, copper, molybdenum, chlorine'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Plants get carbon and oxygen from air, hydrogen and oxygen from water, and thirteen nutrients from the soil." },
+          { "speaker": "NEO", "text": "Six are needed in large quantities, the macronutrients: nitrogen, phosphorus, potassium, calcium, magnesium and sulphur." },
+          { "speaker": "NEO", "text": "Seven are needed in small quantities, the micronutrients: iron, manganese, boron, zinc, copper, molybdenum and chlorine." }
+        ]
+      },
+      {
+        "animation": "A compost pit fills with cow dung and vegetable peels that break down into dark, rich manure. Earthworms wriggle through a second pit labelled 'Vermicompost'. A third field shows sun hemp plants ploughed into the soil, labelled 'Green manure'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Manure is made by decomposing animal excreta and plant waste. It adds organic matter and improves soil structure." },
+          { "speaker": "NEO", "text": "It helps sandy soil hold more water, and helps clayey soil drain better." },
+          { "speaker": "NEO", "text": "In compost, farm waste decomposes in pits. Vermicompost uses earthworms to speed up the process. For green manure, plants like sun hemp or guar are grown and ploughed back into the soil." }
+        ]
+      },
+      {
+        "animation": "A factory produces fertiliser bags labelled 'N', 'P', 'K'. A crop shoots up green, but then a warning scene: excess fertiliser runs off into a pond, turning it murky, and soil microbes look sick. Labels: 'Quick results' and 'Overuse: water pollution, loss of soil fertility'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Fertilisers are commercially produced plant nutrients. They supply nitrogen, phosphorus and potassium and give good vegetative growth." },
+          { "speaker": "NEO", "text": "But excessive use can cause water pollution, and their continuous use can destroy soil fertility, because organic matter isn't replenished and soil microorganisms are harmed." }
+        ]
+      },
+      {
+        "animation": "A neat organic farm: straw and livestock waste recycled, a bottle of blue-green algae culture labelled 'bio-fertiliser', and neem leaves in a grain bin labelled 'bio-pesticide'. An 'EXAM TIP' card: 'Manure vs fertiliser: compare source, nutrients, effect on soil'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Organic farming uses minimal or no chemicals, relying on organic manure, recycled farm waste, blue-green algae as bio-fertilisers, and neem or turmeric as bio-pesticides in grain storage." },
+          { "speaker": "NEO", "text": "Exam tip: a favourite question asks you to compare manure and fertilisers. Mention the source, the nutrients supplied and the effect on soil." }
+        ]
+      },
+      {
+        "animation": "Recap board with the now-healthy spinach plant. Points: '1. 16 nutrients: 6 macro and 7 micro from soil', '2. Manure: organic, improves soil structure (compost, vermicompost, green manure)', '3. Fertilisers: N, P, K; overuse harms soil and water; organic farming avoids chemicals'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: plants need sixteen nutrients, with six macronutrients and seven micronutrients from the soil." },
+          { "speaker": "NEO", "text": "Two: manure adds organic matter and improves soil structure." },
+          { "speaker": "NEO", "text": "Three: fertilisers give quick nutrients, but overuse harms soil and water." },
+          { "speaker": "ZIPPY", "text": "No samosa, then. More compost." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Improvement in Food Resources",
+    "topic_no": 4,
+    "name": "Irrigation and Cropping Patterns",
+    "scenes": [
+      {
+        "animation": "A farmer stares up at a cloudless sky, holding an umbrella upside down to catch rain that never comes. Cracks spread across his field. Zippy fans the crops with a leaf.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The monsoon is late. Is his whole crop doomed?" },
+          { "speaker": "NEO", "text": "Not if he has irrigation. Most farming in India is rain-fed, so we need other water sources too." }
+        ]
+      },
+      {
+        "animation": "A map-style landscape builds one element at a time: a dug well tapping a shallow water layer, a tube well reaching deeper with a pump, a canal flowing from a reservoir, a river lift pump drawing water straight from a river, and a small tank storing runoff.",
+        "lines": [
+          { "speaker": "NEO", "text": "Wells can be dug wells, which collect water from shallow water-bearing layers, or tube wells, which tap deeper layers using pumps." },
+          { "speaker": "NEO", "text": "Canals carry water from reservoirs or rivers. River lift systems draw water directly from rivers where canal flow is insufficient. Tanks are small reservoirs that store runoff." }
+        ]
+      },
+      {
+        "animation": "Rain falls into a hill village. Small check-dams made of stones catch the runoff; blue groundwater levels beneath rise. Label: 'Rainwater harvesting and watershed management: raise groundwater, reduce soil erosion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "New initiatives include rainwater harvesting and watershed management. Small check-dams store rainwater, increase groundwater levels, and reduce soil erosion." },
+          { "speaker": "ZIPPY", "text": "So the rain from one monsoon can help the farmer even after the clouds are gone?" },
+          { "speaker": "NEO", "text": "Yes. Stored water keeps the wells full in the dry months." }
+        ]
+      },
+      {
+        "animation": "Three fields animate in turn. Field 1: wheat and gram plants scattered together, labelled 'Mixed cropping'. Field 2: neat alternating rows of soyabean and maize, labelled 'Intercropping'. Field 3: a calendar flips seasons as the same field grows a cereal, then a legume, then a cereal again, labelled 'Crop rotation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cropping patterns also help. Mixed cropping means growing two or more crops together on the same land, like wheat and gram, or groundnut and sunflower. It reduces risk and gives insurance against crop failure." },
+          { "speaker": "NEO", "text": "Intercropping means growing two or more crops in a definite row pattern, like soyabean and maize, or finger millet and cowpea." },
+          { "speaker": "NEO", "text": "Crop rotation means growing different crops on the same land one after another, in a pre-planned succession." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card compares side by side: 'Mixed cropping: seeds mixed, no set pattern' vs 'Intercropping: definite rows, each crop gets its own nutrients'. Zippy tries to plant seeds in rows, and they come out crooked.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Mixed and intercropping sound the same to me." },
+          { "speaker": "NEO", "text": "The key difference is the pattern. Exam tip: intercropping uses definite rows, and crops are chosen so their nutrient needs differ. That ensures full use of the nutrients supplied." }
+        ]
+      },
+      {
+        "animation": "Recap board with a well and three field patterns. Points: '1. Irrigation: wells, canals, river lift systems, tanks', '2. Rainwater harvesting and check-dams raise groundwater', '3. Mixed cropping, intercropping (rows), crop rotation (succession)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: irrigation sources include wells, canals, river lift systems and tanks." },
+          { "speaker": "NEO", "text": "Two: rainwater harvesting and check-dams raise groundwater and reduce soil erosion." },
+          { "speaker": "NEO", "text": "Three: mixed cropping, intercropping and crop rotation are patterns that improve yield." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Improvement in Food Resources",
+    "topic_no": 5,
+    "name": "Crop Protection Management and Grain Storage",
+    "scenes": [
+      {
+        "animation": "A crop field at night: sneaky weeds elbow the wheat for sunlight, caterpillars munch leaves, and a mouse carries off grains from a storage sack. Zippy, as a security guard with a torch, blows a whistle.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Intruders everywhere! Who invited all of them?" },
+          { "speaker": "NEO", "text": "Nobody. Weeds, pests and diseases attack crops in the field, and more enemies wait in storage." }
+        ]
+      },
+      {
+        "animation": "Three weeds pop up with name tags: 'Xanthium (gokhroo)', 'Parthenium (gajar ghas)', 'Cyperinus rotundus (motha)'. They push crop plants aside, labelled 'compete for food, space and light'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Weeds are unwanted plants in a crop field, like Xanthium, called gokhroo, Parthenium, called gajar ghas, and Cyperinus rotundus, called motha." },
+          { "speaker": "NEO", "text": "They compete with crops for food, space and light, and reduce growth. It's best to remove them early, before they flower and set seeds." }
+        ]
+      },
+      {
+        "animation": "Three insect attacks animate: a pest cutting a root and leaf, an aphid sucking cell sap from a stem, and a borer tunnelling into a stem and fruit. Then fungi and bacteria spread on leaves through soil, water and air.",
+        "lines": [
+          { "speaker": "NEO", "text": "Insect pests attack plants in three ways. They cut the root, stem and leaf; they suck cell sap from various parts; or they bore into stems and fruits." },
+          { "speaker": "NEO", "text": "Diseases are caused by pathogens like bacteria, fungi and viruses, which can be spread through soil, water and air." }
+        ]
+      },
+      {
+        "animation": "A control toolkit opens: spray cans labelled 'herbicides', 'insecticides', 'fungicides'; seed packets labelled 'resistant varieties'; a tractor doing 'summer ploughing' in hot sun, turning up weeds and pests to dry out. A warning icon shows pesticides must be used carefully.",
+        "lines": [
+          { "speaker": "NEO", "text": "Weeds, pests and diseases are controlled with pesticides, which include herbicides, insecticides and fungicides. These must be used carefully, because excess can harm the environment." },
+          { "speaker": "NEO", "text": "Preventive methods include using resistant varieties and summer ploughing, where fields are ploughed deep in summer to destroy weeds and pests." }
+        ]
+      },
+      {
+        "animation": "A grain warehouse: biotic villains (insects, rodents, fungi, mites, bacteria) and abiotic villains (a leaky roof for moisture, a thermometer for high temperature) spoil the grain. Then solutions appear: cleaning, drying in sun then shade, and fumigation. An 'EXAM TIP' card: 'Losses: quality, weight, germinability, discolouration'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Stored grain is spoilt by biotic factors like insects, rodents, fungi, mites and bacteria, and abiotic factors like wrong moisture and temperature. They reduce quality and weight, and cause poor germination and discolouration." },
+          { "speaker": "NEO", "text": "Grain is protected by strict cleaning, proper drying in sunlight and then in shade, and fumigation using chemicals that can kill pests." },
+          { "speaker": "NEO", "text": "Exam tip: when asked about storage losses, list both biotic and abiotic factors with examples." }
+        ]
+      },
+      {
+        "animation": "Recap board with Zippy's security badge. Points: '1. Weeds (Xanthium, Parthenium, Cyperinus) compete for food, space, light', '2. Pests cut, suck or bore; pathogens cause disease; control with pesticides, resistant varieties, summer ploughing', '3. Storage: clean, dry, fumigate'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: weeds compete with crops for food, space and light." },
+          { "speaker": "NEO", "text": "Two: pests and pathogens are controlled with pesticides, resistant varieties and summer ploughing." },
+          { "speaker": "NEO", "text": "Three: stored grain is protected by cleaning, drying and fumigation." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Improvement in Food Resources",
+    "topic_no": 6,
+    "name": "Animal Husbandry: Cattle Farming",
+    "scenes": [
+      {
+        "animation": "Morning at a dairy: Zippy tries to milk a bullock, and the bullock gives him a long, unimpressed stare. A cow next to it moos, and a milk can fills beside her.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why won't this one give milk?" },
+          { "speaker": "NEO", "text": "Because that's a draught animal, used for farm work. You want a milch animal." }
+        ]
+      },
+      {
+        "animation": "A title card: 'Animal husbandry: scientific management of animal livestock, including feeding, breeding and disease control'. Two cattle species appear with name tags: 'Bos indicus (cows)' and 'Bubalus bubalis (buffaloes)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Animal husbandry is the scientific management of animal livestock. It includes feeding, breeding and disease control." },
+          { "speaker": "NEO", "text": "Cattle farming is done for two purposes: milk, and draught labour for farming work like tilling, irrigation and carting." },
+          { "speaker": "NEO", "text": "Indian cattle belong to two species: Bos indicus, the cows, and Bubalus bubalis, the buffaloes." }
+        ]
+      },
+      {
+        "animation": "Two groups: 'Milch animals: milk-producing females' with milk cans, and 'Draught animals: used for farm labour' pulling a plough. A graph line below shows 'Lactation period: time of milk production after the birth of a calf'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Milk-producing females are called milch animals. Animals used for farm labour are called draught animals." },
+          { "speaker": "NEO", "text": "The period of milk production after the birth of a calf is called the lactation period." }
+        ]
+      },
+      {
+        "animation": "A breeding chart: 'Exotic breeds (Jersey, Brown Swiss): long lactation' crosses with 'Local breeds (Red Sindhi, Sahiwal): excellent disease resistance'. The cross-bred calf gets both badges.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exotic breeds like Jersey and Brown Swiss have long lactation periods. Local breeds like Red Sindhi and Sahiwal show excellent resistance to diseases." },
+          { "speaker": "NEO", "text": "The two are cross-bred to get animals with both qualities." }
+        ]
+      },
+      {
+        "animation": "A clean cattle shed builds up: roof, ventilation, sloping floor for easy cleaning; a farmer brushes a cow. Feed troughs show 'Roughage: largely fibre' and 'Concentrates: low fibre, high protein'. A vet gives a vaccination, with small icons for external parasites (skin), internal worms (stomach, intestines) and liver flukes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cattle need a clean, well-ventilated, roofed shelter with a sloping floor that stays dry. Regular brushing removes dirt and loose hair." },
+          { "speaker": "NEO", "text": "Their food includes roughage, which is largely fibre, and concentrates, which are low in fibre and high in proteins and other nutrients." },
+          { "speaker": "NEO", "text": "They can suffer from external parasites on the skin, internal parasites like worms and liver flukes, and infections by bacteria and viruses. Vaccinations protect them." },
+          { "speaker": "NEO", "text": "Exam tip: learn one exotic and one local breed, with the quality each is valued for." }
+        ]
+      },
+      {
+        "animation": "Recap board with the happy cow and the bullock. Points: '1. Animal husbandry: feeding, breeding, disease control', '2. Milch vs draught; cows Bos indicus, buffaloes Bubalus bubalis', '3. Cross-breed exotic (Jersey, Brown Swiss) with local (Red Sindhi, Sahiwal)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: animal husbandry is the scientific management of livestock through feeding, breeding and disease control." },
+          { "speaker": "NEO", "text": "Two: milch animals give milk, and draught animals do farm labour." },
+          { "speaker": "NEO", "text": "Three: exotic breeds with long lactation are crossed with disease-resistant local breeds." },
+          { "speaker": "ZIPPY", "text": "Sorry, Mr Bullock. My mistake." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Improvement in Food Resources",
+    "topic_no": 7,
+    "name": "Poultry Farming",
+    "scenes": [
+      {
+        "animation": "In a poultry farm, Zippy walks into a shed full of hens sitting on eggs, then into another shed full of plump chickens eating from feeders. He looks at both signboards: 'LAYERS' and 'BROILERS'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Two sheds, two signboards. Aren't they all just chickens?" },
+          { "speaker": "NEO", "text": "They are, but raised for different purposes. That's the heart of poultry farming." }
+        ]
+      },
+      {
+        "animation": "A definition card: 'Poultry farming: raising domestic fowl for egg production and chicken meat'. The two sheds are labelled 'Layers: egg-laying birds' and 'Broilers: raised for meat'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Poultry farming is done to raise domestic fowl for egg production and chicken meat." },
+          { "speaker": "NEO", "text": "Egg-laying birds are called layers. Birds raised for meat are called broilers." },
+          { "speaker": "ZIPPY", "text": "So the anda at the canteen comes from a layer, and the chicken roll comes from a broiler?" },
+          { "speaker": "NEO", "text": "Exactly. And to get more of both, farmers improve the breeds themselves." }
+        ]
+      },
+      {
+        "animation": "A breeding chart: 'Indian (indigenous) breed, e.g. Aseel' crosses with 'Foreign (exotic) breed, e.g. Leghorn'. The resulting chick unlocks badges one by one: 'number and quality of chicks', 'dwarf broiler parent', 'summer adaptation', 'low maintenance', 'smaller layer on cheaper fibrous diet'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Improved breeds are developed by cross-breeding Indian breeds, like Aseel, with foreign breeds, like Leghorn." },
+          { "speaker": "NEO", "text": "The aim is more and better chicks, dwarf broiler parents for commercial chick production, and birds that tolerate high summer temperatures." },
+          { "speaker": "NEO", "text": "Breeders also want low maintenance, and smaller egg-laying birds that can use more fibrous, cheaper diets." }
+        ]
+      },
+      {
+        "animation": "A broiler feed bag shows its label: 'Protein-rich, adequate fat, high vitamin A and K'. Around the shed, icons show 'proper temperature', 'hygiene', 'housing', 'feed'. A vet gives vaccination drops to a chick while small icons show 'virus, bacteria, fungi, parasites, nutritional deficiency'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Broilers need a protein-rich diet with adequate fat, and the levels of vitamins A and K are kept high in their feed." },
+          { "speaker": "NEO", "text": "Good management needs proper temperature, hygiene, housing and feed." },
+          { "speaker": "NEO", "text": "Poultry can get diseases from viruses, bacteria, fungi and parasites, and from nutritional deficiencies. Cleaning, sanitation and vaccination prevent losses." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Layers → eggs; Broilers → meat. Indigenous: Aseel; exotic: Leghorn'. Zippy waves two flags labelled with the pairs.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Layers lay, broilers for the broiler pan. Easy to remember!" },
+          { "speaker": "NEO", "text": "Exactly. Exam tip: also remember one indigenous breed, Aseel, and one exotic breed, Leghorn, for poultry questions." }
+        ]
+      },
+      {
+        "animation": "Recap board with a hen and a chick. Points: '1. Poultry: domestic fowl for eggs and meat', '2. Layers for eggs; broilers for meat', '3. Cross-breeding Aseel × Leghorn for better, hardier, low-maintenance birds'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: poultry farming raises domestic fowl for eggs and meat." },
+          { "speaker": "NEO", "text": "Two: layers are raised for eggs, and broilers for meat." },
+          { "speaker": "NEO", "text": "Three: Indian and foreign breeds, like Aseel and Leghorn, are crossed to get better, hardier birds." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Improvement in Food Resources",
+    "topic_no": 8,
+    "name": "Fish Production and Bee-keeping",
+    "scenes": [
+      {
+        "animation": "On a Kochi harbour, fishing boats return with nets full of fish; nearby, a beekeeper in a net hat lifts a frame dripping with honey. Zippy, holding a fish in one hand and a honey jar in the other, looks thrilled.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Fish curry and honey! Are these farmed too?" },
+          { "speaker": "NEO", "text": "Both can be. Let's look at fish production first, then bee-keeping." }
+        ]
+      },
+      {
+        "animation": "Two big categories: 'Capture fishing: from natural resources' (a trawler net) and 'Culture fishery: fish farming' (a pond). Marine fish swim by with tags: 'pomphret, mackerel, tuna, sardines, Bombay duck', while a satellite and an echo-sounder locate a school of fish. Below: 'Mariculture: mullets, bhetki, pearl spots, prawns, mussels, oysters, seaweed'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Fish production includes finned true fish and shellfish, like prawns and molluscs. Fish are obtained by capture fishing from natural resources, or by culture fishery, which is fish farming." },
+          { "speaker": "NEO", "text": "Popular marine fish include pomphret, mackerel, tuna, sardines and Bombay duck. Large schools of fish are located using satellites and echo-sounders." },
+          { "speaker": "NEO", "text": "Some marine fish like mullets, bhetki and pearl spots, and shellfish like prawns, mussels and oysters, are farmed in seawater. This is mariculture." }
+        ]
+      },
+      {
+        "animation": "A cross-section of a pond with zones: surface, middle, bottom, and weeds. Fish slot into their zones: 'Catla: surface feeder', 'Rohu: middle zone', 'Mrigal and common carp: bottom feeders', 'Grass carp: feeds on weeds'. Label: 'Composite fish culture'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Inland fish come from fresh water like canals, ponds, reservoirs and rivers, and brackish water like estuaries and lagoons." },
+          { "speaker": "NEO", "text": "In composite fish culture, five or six species share one pond, each feeding in a different zone. Catlas feed at the surface, rohus in the middle zone, mrigals and common carps at the bottom, and grass carps feed on weeds." },
+          { "speaker": "NEO", "text": "So they don't compete for food, and the yield increases. One problem is that many of these fish breed only during the monsoon, so hormonal stimulation is used to get pure fish seed." }
+        ]
+      },
+      {
+        "animation": "A cheerful apiary with rows of beehive boxes. Bee cards flip in: 'Apis cerana indica (Indian bee)', 'Apis dorsata (rock bee)', 'Apis florae (little bee)', and 'Apis mellifera (Italian bee)' with badges 'high honey collection', 'stings less', 'stays long in hive', 'breeds well'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Bee-keeping needs low investment, so farmers use it for extra income. Beehives also give wax, used in medicinal preparations." },
+          { "speaker": "NEO", "text": "Local bees include Apis cerana indica, the Indian bee, Apis dorsata, the rock bee, and Apis florae, the little bee." },
+          { "speaker": "NEO", "text": "The Italian bee, Apis mellifera, is popular because it collects lots of honey, stings less, stays in a hive for long periods and breeds very well." }
+        ]
+      },
+      {
+        "animation": "Bees fly over a field of mustard and sunflower flowers. Label 'Pasturage: flowers available for nectar and pollen'. A honey jar changes colour and flavour as the flowers change. An 'EXAM TIP' card shows the pond zones table.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Does honey taste different depending on the flowers?" },
+          { "speaker": "NEO", "text": "Yes. The flowers available to bees are called pasturage. Its kind and amount decide the taste and quantity of honey. Exam tip: draw the composite fish culture zones in your answer." }
+        ]
+      },
+      {
+        "animation": "Recap board with a fish and a bee. Points: '1. Capture fishing vs culture fishery; marine, inland and mariculture', '2. Composite fish culture: catla, rohu, mrigal, common carp, grass carp in different zones', '3. Bee-keeping: Italian bee Apis mellifera; pasturage decides honey quality'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: fish are obtained by capture fishing and by culture fishery, from marine and inland waters." },
+          { "speaker": "NEO", "text": "Two: composite fish culture puts species that feed in different zones into one pond." },
+          { "speaker": "NEO", "text": "Three: the Italian bee is preferred for bee-keeping, and pasturage decides the honey's taste." },
+          { "speaker": "ZIPPY", "text": "Honey-glazed fish for dinner, then!" }
+        ]
+      }
+    ]
+  }
+]

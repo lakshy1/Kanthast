@@ -3,11 +3,11 @@ import { useLocation, Link, useNavigate } from "react-router-dom";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   FaArrowLeft,
-  FaBookOpen,
   FaClock,
-  FaLayerGroup,
   FaPlay,
   FaCheckCircle,
+  FaExclamationTriangle,
+  FaLock,
   FaRobot,
   FaTimes,
 } from "react-icons/fa";
@@ -24,18 +24,29 @@ import {
   getResumeSeconds,
   saveProgress,
   shouldPersist,
-  formatRemaining,
 } from "../utils/progress";
 
 // ─── watch tracking ────────────────────────────────────────────────────────
 
+const WATCHED_KEY = "kanthastWatched";
+const SHORTCUT_HINT_KEY = "kanthastShortcutHintDismissed";
+
+function readWatchedMap() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(WATCHED_KEY) || "{}");
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
 function markWatched(videoId) {
   if (!videoId) return;
   try {
-    const watched = JSON.parse(localStorage.getItem("kanthastWatched") || "{}");
+    const watched = readWatchedMap();
     if (watched[videoId]) return;
     watched[videoId] = true;
-    localStorage.setItem("kanthastWatched", JSON.stringify(watched));
+    localStorage.setItem(WATCHED_KEY, JSON.stringify(watched));
 
     const today = new Date().toISOString().slice(0, 10);
     const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
@@ -47,6 +58,29 @@ function markWatched(videoId) {
     }
   } catch {
     return;
+  }
+}
+
+// Undo for "Mark as Watched". The streak is left alone: it records that the
+// student studied today, which stays true even if they un-tick one lecture.
+function unmarkWatched(videoId) {
+  if (!videoId) return;
+  try {
+    const watched = readWatchedMap();
+    if (!watched[videoId]) return;
+    delete watched[videoId];
+    localStorage.setItem(WATCHED_KEY, JSON.stringify(watched));
+  } catch {
+    return;
+  }
+}
+
+function readHasSubscription() {
+  try {
+    const user = JSON.parse(localStorage.getItem("kanthastUser") || "null");
+    return Boolean(user?.subscriptionPurchased);
+  } catch {
+    return false;
   }
 }
 
@@ -73,50 +107,110 @@ function resetYtApiPromise() { ytApiPromise = null; }
 
 // ─── helpers ───────────────────────────────────────────────────────────────
 
+// Speed steps for the native player, shared by the buttons and the
+// Shift+< / Shift+> shortcuts.
+const SPEED_STEPS = [0.75, 1, 1.25, 1.5, 1.75, 2];
+
 function useLectureQuery() {
   const { search } = useLocation();
   const query = new URLSearchParams(search);
   return {
-    module: query.get("module") || "Module",
-    section: query.get("section") || "Section",
+    module: query.get("module") || "",
+    section: query.get("section") || "",
     title: query.get("title") || "Lecture",
-    duration: query.get("duration") || "--:--",
+    duration: query.get("duration") || "",
     subjectId: query.get("subjectId") || "",
     chapterId: query.get("chapterId") || "",
     videoId: query.get("videoId") || "",
   };
 }
 
-function parseVideoUrl(rawUrl) {
-  if (!rawUrl) return { type: "none" };
-  const url = rawUrl.trim();
-  const lower = url.toLowerCase();
+const MEDIA_FILE_RE = /\.(mp4|webm|ogg|m3u8)$/i;
 
-  if (/\.(mp4|webm|ogg|m3u8)(\?.*)?$/.test(lower)) return { type: "file", url };
-
+function toUrl(value) {
   try {
-    const parsed = new URL(url);
-    const host = parsed.hostname.replace("www.", "").toLowerCase();
-
-    if (host.includes("youtube.com") || host.includes("youtu.be")) {
-      let ytId = "";
-      if (host.includes("youtu.be")) ytId = parsed.pathname.slice(1);
-      else if (parsed.pathname === "/watch") ytId = parsed.searchParams.get("v") || "";
-      else if (parsed.pathname.startsWith("/shorts/")) ytId = parsed.pathname.split("/shorts/")[1];
-      else if (parsed.pathname.startsWith("/embed/")) ytId = parsed.pathname.split("/embed/")[1];
-      if (ytId) return { type: "youtube", ytId };
-    }
-
-    if (host.includes("vimeo.com")) {
-      const segments = parsed.pathname.split("/").filter(Boolean);
-      const vimeoId = segments[segments.length - 1];
-      if (vimeoId && /^\d+$/.test(vimeoId)) return { type: "vimeo", vimeoId };
-    }
+    return new URL(value);
   } catch {
-    return;
+    return null;
+  }
+}
+
+/**
+ * Classify a lecture's video link. Always returns an object with a `type`
+ * ("file" | "youtube" | "vimeo" | "unknown" | "none"), so callers can read
+ * `parsed.type` without guarding: a malformed admin-entered link used to make
+ * this return undefined and crash the page on render.
+ */
+function parseVideoUrl(rawUrl) {
+  if (typeof rawUrl !== "string") return { type: "none" };
+  const url = rawUrl.trim();
+  if (!url) return { type: "none" };
+
+  // Same-origin path to a self-hosted file ("/media/lecture.mp4").
+  if (url.startsWith("/") && !url.startsWith("//")) {
+    const path = url.split(/[?#]/)[0];
+    return MEDIA_FILE_RE.test(path) ? { type: "file", url } : { type: "none" };
   }
 
-  return { type: "unknown", url };
+  // Admins often paste links without a scheme ("youtube.com/watch?v=…").
+  const hasScheme = /^[a-z][a-z0-9+.-]*:/i.test(url);
+  const parsed = toUrl(url) || (!hasScheme ? toUrl(`https://${url.replace(/^\/\//, "")}`) : null);
+  if (!parsed) return { type: "none" };
+
+  // Only web links are embedded or linked; anything else (javascript:, data:,
+  // mailto:) is treated as no video at all.
+  if (parsed.protocol !== "https:" && parsed.protocol !== "http:") return { type: "none" };
+  if (!parsed.hostname) return { type: "none" };
+
+  const href = parsed.href;
+  const host = parsed.hostname.replace(/^www\./, "").replace(/^m\./, "").toLowerCase();
+
+  if (MEDIA_FILE_RE.test(parsed.pathname)) return { type: "file", url: href };
+
+  if (host === "youtube.com" || host.endsWith(".youtube.com") || host === "youtu.be" || host === "youtube-nocookie.com") {
+    let ytId = "";
+    if (host === "youtu.be") ytId = parsed.pathname.slice(1).split("/")[0];
+    else if (parsed.pathname === "/watch") ytId = parsed.searchParams.get("v") || "";
+    else if (parsed.pathname.startsWith("/shorts/")) ytId = parsed.pathname.split("/shorts/")[1].split("/")[0];
+    else if (parsed.pathname.startsWith("/embed/")) ytId = parsed.pathname.split("/embed/")[1].split("/")[0];
+    else if (parsed.pathname.startsWith("/live/")) ytId = parsed.pathname.split("/live/")[1].split("/")[0];
+    if (/^[\w-]{6,}$/.test(ytId)) return { type: "youtube", ytId };
+  }
+
+  if (host === "vimeo.com" || host.endsWith(".vimeo.com")) {
+    const segments = parsed.pathname.split("/").filter(Boolean);
+    const vimeoId = segments.find((segment) => /^\d+$/.test(segment));
+    if (vimeoId) return { type: "vimeo", vimeoId };
+  }
+
+  return { type: "unknown", url: href };
+}
+
+function hasPlayableLink(video) {
+  return parseVideoUrl(video?.videoLink).type !== "none";
+}
+
+/** Subject, chapter and lecture position for the current ids, from the catalog. */
+function locateLecture(content, subjectId, chapterId, videoId) {
+  const subjects = content?.subjects || [];
+  const subject = subjects.find((item) => String(item._id) === String(subjectId)) || null;
+  const chapter = subject?.chapters?.find((item) => String(item._id) === String(chapterId)) || null;
+  const videos = chapter?.videos || [];
+  const index = videos.findIndex((item) => String(item._id) === String(videoId));
+  return { subject, chapter, videos, index };
+}
+
+function buildLectureHref(lecture) {
+  const params = new URLSearchParams({
+    module: lecture.module || "",
+    section: lecture.section || "",
+    title: lecture.title || "Lecture",
+    duration: lecture.duration || "",
+    subjectId: lecture.subjectId || "",
+    chapterId: lecture.chapterId || "",
+    videoId: lecture.videoId || "",
+  });
+  return `/video?${params.toString()}`;
 }
 
 function findNextLecture(content, subjectId, chapterId, videoId) {
@@ -182,6 +276,17 @@ function findNextLecture(content, subjectId, chapterId, videoId) {
   return null;
 }
 
+function formatClock(totalSeconds) {
+  const s = Math.max(0, Math.floor(totalSeconds || 0));
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+}
+
+function isTypingTarget(target) {
+  if (!(target instanceof HTMLElement)) return false;
+  if (target.isContentEditable) return true;
+  return /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName);
+}
+
 const AI_VIDEO_TOPICS = [
   "Photosynthesis",
   "Chlorophyll",
@@ -197,46 +302,41 @@ function getStudentFirstName() {
 }
 
 function isSchoolVideoCreatorEnabled() {
-  const user = getStoredUser();
-  return isSchoolTrack() || user?.track === "school";
+  return isSchoolTrack();
 }
 
 function buildVideoGreeting(name) {
   return `Hey ${name}, I am your AI assistant and I can help you create a video related to any topic you find difficult understanding.`;
 }
 
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 function AiLectureLoader({ progress = 0, topic = "" }) {
   const storyStep = progress >= 75 ? 3 : progress >= 35 ? 2 : 1;
+  const clamped = Math.max(0, Math.min(progress, 100));
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-cyan-100 bg-[radial-gradient(circle_at_top_left,_#eff6ff,_#ffffff_46%,_#f0f9ff_100%)] p-6 text-slate-900 shadow-e5">
-      <FloatingSparkles />
+    <div className="rounded-card border border-line bg-surface p-6 text-ink shadow-e2">
       <div className="flex items-center gap-3">
         <CartoonAssistantAvatar />
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-700">Creating lecture</p>
-          <h3 className="mt-1 text-xl font-black text-slate-950">Please wait</h3>
+          <p className="text-sm font-semibold text-brand">Creating lecture</p>
+          <h3 className="mt-1 text-xl font-bold tracking-tight text-ink">Please wait</h3>
         </div>
       </div>
-      <p className="mt-4 text-sm leading-relaxed text-slate-700">
-        We are creating your AI lecture for <span className="font-semibold text-slate-950">{topic || "this topic"}</span>.
+      <p className="mt-4 text-sm leading-relaxed text-ink-muted">
+        We are creating your AI lecture for <span className="font-semibold text-ink">{topic || "this topic"}</span>.
       </p>
-      <div className="mt-5 h-3 overflow-hidden rounded-full bg-slate-200">
+      <div className="mt-5 h-3 overflow-hidden rounded-full bg-surface-sunken">
         <motion.div
-          className="h-full rounded-full bg-gradient-to-r from-cyan-300 via-sky-300 to-blue-500"
+          className="h-full rounded-full bg-brand"
           initial={{ width: "12%" }}
-          animate={{ width: `${Math.max(12, Math.min(progress, 100))}%` }}
+          animate={{ width: `${Math.max(12, clamped)}%` }}
           transition={{ duration: 0.35, ease: "easeOut" }}
         />
       </div>
-      <div className="mt-4 flex items-center gap-2 text-xs font-medium text-slate-600">
+      <div className="mt-4 flex items-center gap-2 text-xs font-medium text-ink-muted">
         <TypingDotsSmall />
         <span>Building your mini lesson</span>
       </div>
-      <p className="mt-2 text-xs text-cyan-700">{Math.max(0, Math.min(progress, 100))}% complete</p>
+      <p className="mt-2 text-xs tabular-nums text-ink-subtle">{clamped}% complete</p>
       <div className="mt-5">
         <LectureStoryPanel step={storyStep} />
       </div>
@@ -244,40 +344,17 @@ function AiLectureLoader({ progress = 0, topic = "" }) {
   );
 }
 
-function FloatingSparkles() {
-  const sparkles = [
-    { className: "left-5 top-5 h-2.5 w-2.5 bg-amber-300", delay: 0 },
-    { className: "right-8 top-10 h-2 w-2 bg-cyan-300", delay: 0.15 },
-    { className: "left-10 bottom-10 h-3 w-3 bg-blue-300", delay: 0.3 },
-    { className: "right-16 bottom-14 h-2.5 w-2.5 bg-emerald-300", delay: 0.45 },
-  ];
-
-  return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {sparkles.map((item, index) => (
-        <motion.span
-          key={`${item.className}-${index}`}
-          className={`absolute rounded-full shadow-sm ${item.className}`}
-          animate={{ y: [0, -8, 0], scale: [1, 1.25, 1], opacity: [0.5, 1, 0.6] }}
-          transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut", delay: item.delay }}
-        />
-      ))}
-    </div>
-  );
-}
-
 function CartoonAssistantAvatar() {
   return (
-    <div className="relative flex h-16 w-16 items-center justify-center rounded-[1.25rem] bg-gradient-to-br from-cyan-200 via-sky-200 to-blue-200 shadow-inner shadow-white/70">
-      <span className="absolute inset-0 rounded-[1.25rem] border border-white/70" />
-      <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm">
-        <div className="absolute left-3 top-4 h-1.5 w-1.5 rounded-full bg-slate-900" />
-        <div className="absolute right-3 top-4 h-1.5 w-1.5 rounded-full bg-slate-900" />
-        <div className="absolute top-6 h-2.5 w-5 rounded-b-full border-b-2 border-slate-900" />
-        <div className="absolute -top-2 h-4 w-6 rounded-full bg-cyan-500 shadow-glow-brand" />
+    <div className="relative flex h-16 w-16 items-center justify-center rounded-card bg-brand-soft">
+      <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-surface shadow-e1">
+        <div className="absolute left-3 top-4 h-1.5 w-1.5 rounded-full bg-ink" />
+        <div className="absolute right-3 top-4 h-1.5 w-1.5 rounded-full bg-ink" />
+        <div className="absolute top-6 h-2.5 w-5 rounded-b-full border-b-2 border-ink" />
+        <div className="absolute -top-2 h-4 w-6 rounded-full bg-brand" />
       </div>
       <motion.span
-        className="absolute -right-1 -bottom-1 flex h-5 w-5 items-center justify-center rounded-full bg-amber-300 text-micro font-black text-slate-900 shadow-md"
+        className="absolute -right-1 -bottom-1 flex h-5 w-5 items-center justify-center rounded-full bg-brand text-micro font-bold text-brand-fg shadow-e1"
         animate={{ y: [0, -4, 0], rotate: [0, 8, 0] }}
         transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
       >
@@ -290,70 +367,68 @@ function CartoonAssistantAvatar() {
 function LectureStoryPanel({ step = 1 }) {
   const items = [
     {
-      number: "1",
+      key: "topic",
       title: "Topic chosen",
       detail: "We understand the idea you want explained.",
     },
     {
-      number: "2",
+      key: "shape",
       title: "Lecture is being shaped",
       detail: "Simple language, visuals, and kid-friendly storytelling.",
     },
     {
-      number: "3",
+      key: "ready",
       title: "Video is ready to watch",
       detail: "The finished lesson will appear in your chat thread.",
     },
   ];
 
   return (
-    <div className="rounded-3xl border border-cyan-100 bg-white/95 p-4 shadow-sm">
-      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700">Lecture story</p>
-      <div className="mt-3 space-y-3">
+    <div className="rounded-card border border-line bg-surface-sunken p-4">
+      <p className="text-sm font-semibold text-ink">Lecture story</p>
+      <ol className="mt-3 space-y-2">
         {items.map((item, index) => {
           const active = step === index + 1;
           const done = step > index + 1;
           return (
-            <div
-              key={item.number}
-              className={`flex gap-3 rounded-2xl border px-3 py-3 transition ${
+            <li
+              key={item.key}
+              aria-current={active ? "step" : undefined}
+              className={`flex gap-3 rounded-control border px-3 py-3 transition-colors duration-fast ease-brand ${
                 active
-                  ? "border-cyan-200 bg-cyan-50 shadow-sm"
+                  ? "border-brand bg-brand-soft"
                   : done
-                  ? "border-emerald-100 bg-emerald-50/70"
-                  : "border-slate-200 bg-slate-50"
+                  ? "border-line bg-positive-soft"
+                  : "border-line bg-surface"
               }`}
             >
-              <div
-                className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-xs font-black ${
-                  active
-                    ? "bg-cyan-500 text-white"
-                    : done
-                    ? "bg-emerald-500 text-white"
-                    : "bg-slate-200 text-slate-600"
+              <span
+                aria-hidden="true"
+                className={`mt-0.5 flex-shrink-0 text-sm ${
+                  active ? "text-brand" : done ? "text-positive" : "text-ink-subtle"
                 }`}
               >
-                {item.number}
-              </div>
+                {done ? <FaCheckCircle /> : active ? <FaPlay /> : <FaClock />}
+              </span>
               <div className="min-w-0">
-                <p className="text-sm font-bold text-slate-900">{item.title}</p>
-                <p className="mt-0.5 text-xs leading-relaxed text-slate-600">{item.detail}</p>
+                <p className="text-sm font-semibold text-ink">{item.title}</p>
+                <p className="mt-0.5 text-xs leading-relaxed text-ink-muted">{item.detail}</p>
               </div>
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ol>
     </div>
   );
 }
 
 function TypingDotsSmall() {
   return (
-    <div className="flex items-center gap-1.5">
+    <div className="flex items-center gap-1.5" aria-hidden="true">
       {[0, 140, 280].map((delay) => (
         <span
           key={delay}
-          className="h-2 w-2 rounded-full bg-cyan-500 animate-bounce"
+          className="h-2 w-2 rounded-full bg-brand animate-pulse motion-reduce:animate-none"
           style={{ animationDelay: `${delay}ms`, animationDuration: "0.9s" }}
         />
       ))}
@@ -366,7 +441,7 @@ function QuickTopicChip({ label, onClick }) {
     <button
       type="button"
       onClick={onClick}
-      className="rounded-full border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-50 hover:text-slate-900"
+      className="min-h-touch rounded-full border border-line-strong bg-surface px-3 text-sm font-medium text-ink-muted transition-colors duration-fast ease-brand hover:border-brand hover:bg-brand-soft hover:text-ink"
     >
       {label}
     </button>
@@ -436,7 +511,7 @@ function YouTubePlayer({ ytId, onEnded, title, playbackRate }) {
   }, [ytId, onEnded, playbackRate]);
 
   return (
-    <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black aspect-video relative" title={title}>
+    <div className="relative aspect-video overflow-hidden rounded-card border border-line bg-black" title={title}>
       <div ref={wrapperRef} className="absolute inset-0" />
     </div>
   );
@@ -471,7 +546,7 @@ function VimeoPlayer({ vimeoId, onEnded, title }) {
   }, [vimeoId, onEnded]);
 
   return (
-    <div className="rounded-2xl overflow-hidden border border-slate-200 bg-black">
+    <div className="overflow-hidden rounded-card border border-line bg-black">
       <iframe
         ref={iframeRef}
         src={`https://player.vimeo.com/video/${vimeoId}?api=1`}
@@ -484,32 +559,226 @@ function VimeoPlayer({ vimeoId, onEnded, title }) {
   );
 }
 
+// ─── status panels (no video / failed load) ───────────────────────────────
+// Flow layout, not an absolutely positioned overlay inside aspect-video: at
+// 390px the 16:9 box is ~200px tall, which clipped the old overlay's own
+// "Back to lectures" button. The box keeps the player's 16:9 shape from `sm`
+// up and simply grows on phones.
+
+function PlayerStatusPanel({ tone = "neutral", icon, heading, children, actions }) {
+  const iconClass =
+    tone === "critical"
+      ? "border-critical/35 bg-critical-soft text-critical"
+      : "border-line bg-surface text-ink-subtle";
+  return (
+    <div
+      className="flex min-h-[240px] flex-col items-center justify-center gap-4 rounded-card border border-line bg-surface-sunken px-5 py-8 text-center sm:aspect-video sm:min-h-0"
+      role={tone === "critical" ? "alert" : undefined}
+    >
+      <span
+        aria-hidden="true"
+        className={`grid h-12 w-12 place-items-center rounded-full border text-lg ${iconClass}`}
+      >
+        {icon}
+      </span>
+      <div>
+        <p className="text-base font-semibold text-ink">{heading}</p>
+        <div className="mx-auto mt-1 max-w-sm text-sm leading-relaxed text-ink-muted">{children}</div>
+      </div>
+      {actions && <div className="flex flex-wrap items-center justify-center gap-3">{actions}</div>}
+    </div>
+  );
+}
+
+// ─── chapter rail ("In this chapter") ─────────────────────────────────────
+
+function ChapterRail({
+  subject,
+  chapter,
+  videos,
+  currentIndex,
+  watchedMap,
+  hasSubscription,
+  onNavigate,
+}) {
+  const listRef = useRef(null);
+  const currentRef = useRef(null);
+
+  // Keep the current lecture in view inside the scrolling list without
+  // scrolling the page itself.
+  useEffect(() => {
+    const list = listRef.current;
+    const current = currentRef.current;
+    if (!list || !current) return;
+    const top = current.offsetTop - list.offsetTop;
+    if (top + current.offsetHeight > list.clientHeight) {
+      list.scrollTop = Math.max(0, top - list.clientHeight / 3);
+    }
+  }, [currentIndex]);
+
+  const watchedCount = videos.filter((video) => watchedMap[video._id]).length;
+
+  return (
+    <aside className="card p-4 md:p-5" aria-labelledby="chapter-rail-heading">
+      <div className="flex items-baseline justify-between gap-3">
+        <h2 id="chapter-rail-heading" className="text-lg font-bold tracking-tight text-ink">
+          In this chapter
+        </h2>
+        <p className="shrink-0 text-sm tabular-nums text-ink-subtle">
+          {watchedCount}/{videos.length} watched
+        </p>
+      </div>
+      <p className="mt-0.5 text-sm text-ink-muted">{chapter.name}</p>
+
+      <ol
+        ref={listRef}
+        className="mt-3 max-h-[28rem] space-y-1 overflow-y-auto overscroll-contain border-t border-line pt-3 lg:max-h-[calc(100vh-14rem)]"
+      >
+        {videos.map((video, index) => {
+          const isCurrent = index === currentIndex;
+          const isWatched = Boolean(watchedMap[video._id]);
+          // Mirrors the library's rule for the medical track: without a
+          // subscription only the first two lectures of a chapter open.
+          const isLocked = !hasSubscription && index >= 2 && !isCurrent;
+          const playable = hasPlayableLink(video);
+          const lecture = {
+            module: subject.name || "Module",
+            section: chapter.name || "Section",
+            title: video.name || "Lecture",
+            duration: video.duration || "--:--",
+            subjectId: subject._id,
+            chapterId: chapter._id,
+            videoId: video._id,
+          };
+
+          const status = isCurrent
+            ? "Now playing"
+            : isLocked
+            ? "Locked, subscribe to unlock"
+            : isWatched
+            ? "Watched"
+            : "";
+
+          const body = (
+            <>
+              <span
+                aria-hidden="true"
+                className={`mt-0.5 w-5 shrink-0 text-center text-sm tabular-nums ${
+                  isCurrent
+                    ? "text-brand"
+                    : isLocked
+                    ? "text-caution"
+                    : isWatched
+                    ? "text-positive"
+                    : "text-ink-subtle"
+                }`}
+              >
+                {isCurrent ? (
+                  <FaPlay className="mx-auto text-xs" />
+                ) : isLocked ? (
+                  <FaLock className="mx-auto text-xs" />
+                ) : isWatched ? (
+                  <FaCheckCircle className="mx-auto" />
+                ) : (
+                  index + 1
+                )}
+              </span>
+              <span className="min-w-0 flex-1">
+                <span
+                  className={`block text-sm leading-snug ${
+                    isCurrent ? "font-semibold text-ink" : "text-ink-muted group-hover:text-ink"
+                  }`}
+                >
+                  {video.name || "Lecture"}
+                </span>
+                {(!playable || isLocked) && (
+                  <span className="mt-0.5 block text-micro text-ink-subtle">
+                    {isLocked ? "Subscribe to unlock" : "In production"}
+                  </span>
+                )}
+                {status && <span className="sr-only">, {status}</span>}
+              </span>
+              {video.duration && (
+                <span className="mt-0.5 shrink-0 text-xs tabular-nums text-ink-subtle">{video.duration}</span>
+              )}
+            </>
+          );
+
+          const rowClass = `group flex min-h-touch items-start gap-3 rounded-control px-3 py-2.5 transition-colors duration-fast ease-brand ${
+            isCurrent ? "bg-brand-soft" : "hover:bg-surface-sunken"
+          }`;
+
+          return (
+            <li key={video._id || index} ref={isCurrent ? currentRef : undefined}>
+              {isCurrent ? (
+                <div className={rowClass} aria-current="true">
+                  {body}
+                </div>
+              ) : isLocked ? (
+                <Link to="/subscription" className={rowClass}>
+                  {body}
+                </Link>
+              ) : (
+                <Link
+                  to={buildLectureHref(lecture)}
+                  onClick={onNavigate}
+                  className={rowClass}
+                >
+                  {body}
+                </Link>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+    </aside>
+  );
+}
+
 // ─── page ──────────────────────────────────────────────────────────────────
 
+// Keyed on the lecture id: moving to another lecture (autoplay, the chapter
+// rail) keeps the same route element mounted, which used to carry the old
+// lecture's watched state, resume notice and player errors across.
 export default function VideoPage() {
+  const { search } = useLocation();
+  const videoId = new URLSearchParams(search).get("videoId") || "";
+  return <LecturePage key={videoId} />;
+}
+
+function LecturePage() {
   const settings = useAppSettings();
   const navigate = useNavigate();
   const data = useLectureQuery();
   const videoRef = useRef(null);
   const pollTimerRef = useRef(null);
+  const mountedRef = useRef(true);
+  const flashTimerRef = useRef(null);
   const [videoLink, setVideoLink] = useState("");
   const [dbTitle, setDbTitle] = useState("");
   const [courseContent, setCourseContent] = useState(null);
   const [loading, setLoading] = useState(Boolean(data.subjectId && data.chapterId && data.videoId));
+  const [loadError, setLoadError] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
   // Player feedback state: buffering spinner, load failure, resume notice.
   // Seeded from the Settings default, then overridable per-lecture in-player.
   const [activeRate, setActiveRate] = useState(() =>
     getPlaybackRate(settings.defaultPlaybackSpeed)
   );
+  const activeRateRef = useRef(activeRate);
   const [buffering, setBuffering] = useState(false);
   const [mediaError, setMediaError] = useState("");
   const [resumedFrom, setResumedFrom] = useState(0);
-  const [isWatched, setIsWatched] = useState(() => {
+  const [shortcutFlash, setShortcutFlash] = useState("");
+  const [hintDismissed, setHintDismissed] = useState(() => {
     try {
-      const w = JSON.parse(localStorage.getItem("kanthastWatched") || "{}");
-      return Boolean(data.videoId && w[data.videoId]);
-    } catch { return false; }
+      return localStorage.getItem(SHORTCUT_HINT_KEY) === "true";
+    } catch {
+      return false;
+    }
   });
+  const [watchedMap, setWatchedMap] = useState(readWatchedMap);
+  const [hasSubscription] = useState(readHasSubscription);
   const [lectureOpen, setLectureOpen] = useState(false);
   const [lectureTopic, setLectureTopic] = useState("");
   const [lectureState, setLectureState] = useState("idle");
@@ -525,11 +794,26 @@ export default function VideoPage() {
   const nextLecture = courseContent
     ? findNextLecture(courseContent, data.subjectId, data.chapterId, data.videoId)
     : null;
+  const located = locateLecture(courseContent, data.subjectId, data.chapterId, data.videoId);
   const schoolVideoCreatorEnabled = isSchoolVideoCreatorEnabled();
+  const isWatched = Boolean(data.videoId && watchedMap[data.videoId]);
+
+  const subjectName = located.subject?.name || data.module;
+  const chapterName = located.chapter?.name || data.section;
+  const catalogVideo = located.index >= 0 ? located.videos[located.index] : null;
+  const displayTitle = dbTitle || catalogVideo?.name || data.title;
+  const displayDuration = catalogVideo?.duration || data.duration;
+  const otherLecturesReady = located.videos.some(
+    (video, index) => index !== located.index && hasPlayableLink(video)
+  );
 
   useEffect(() => {
+    mountedRef.current = true;
     return () => {
+      mountedRef.current = false;
       if (pollTimerRef.current) clearTimeout(pollTimerRef.current);
+      pollTimerRef.current = null;
+      if (flashTimerRef.current) clearTimeout(flashTimerRef.current);
     };
   }, []);
 
@@ -545,6 +829,9 @@ export default function VideoPage() {
       const poll = async () => {
         try {
           const data = await getAiVideoLectureStatus(token, jobId);
+          // Unmounted while the request was in flight: do not touch state
+          // and, above all, do not schedule another poll.
+          if (!mountedRef.current) return;
           const job = data.job || null;
           if (!job) {
             setLectureState("error");
@@ -571,6 +858,7 @@ export default function VideoPage() {
 
           pollTimerRef.current = setTimeout(poll, 1800);
         } catch (error) {
+          if (!mountedRef.current) return;
           setLectureState("error");
           setLectureError(error.message || "Failed to check lecture progress.");
         }
@@ -581,6 +869,7 @@ export default function VideoPage() {
     [clearLecturePolling]
   );
 
+  const lectureSessionId = lectureJob?.sessionId || "";
   const startAiLecture = useCallback(async () => {
     if (!schoolVideoCreatorEnabled) {
       setLectureError("AI Video Creator is available only in Kanthast School.");
@@ -609,8 +898,9 @@ export default function VideoPage() {
     try {
       const result = await createAiVideoLecture(token, {
         topic,
-        sessionId: lectureJob?.sessionId || "",
+        sessionId: lectureSessionId,
       });
+      if (!mountedRef.current) return;
       const job = {
         jobId: result.jobId,
         sessionId: result.sessionId,
@@ -622,10 +912,11 @@ export default function VideoPage() {
       setLectureProgress(result.progress || 0);
       scheduleLectureStatusPoll(token, result.jobId);
     } catch (error) {
+      if (!mountedRef.current) return;
       setLectureState("error");
       setLectureError(error.message || "Failed to start the AI lecture.");
     }
-  }, [lectureTopic, lectureJob?.sessionId, scheduleLectureStatusPoll, schoolVideoCreatorEnabled]);
+  }, [lectureTopic, lectureSessionId, scheduleLectureStatusPoll, schoolVideoCreatorEnabled]);
 
   const openLectureCreator = useCallback(() => {
     if (!schoolVideoCreatorEnabled) return;
@@ -651,8 +942,18 @@ export default function VideoPage() {
 
   const handleWatched = useCallback(() => {
     markWatched(data.videoId);
-    setIsWatched(true);
+    setWatchedMap(readWatchedMap());
     trackAnalyticsEvent("video_watched", {
+      videoId: data.videoId,
+      chapterId: data.chapterId,
+      subjectId: data.subjectId,
+    });
+  }, [data.videoId, data.chapterId, data.subjectId]);
+
+  const handleUnwatched = useCallback(() => {
+    unmarkWatched(data.videoId);
+    setWatchedMap(readWatchedMap());
+    trackAnalyticsEvent("video_unwatched", {
       videoId: data.videoId,
       chapterId: data.chapterId,
       subjectId: data.subjectId,
@@ -662,230 +963,393 @@ export default function VideoPage() {
   const handleEnded = useCallback(() => {
     handleWatched();
     if (settings.autoplayNextLecture && nextLecture) {
-      const params = new URLSearchParams({
-        module: nextLecture.module,
-        section: nextLecture.section,
-        title: nextLecture.title,
-        duration: nextLecture.duration,
-        subjectId: nextLecture.subjectId,
-        chapterId: nextLecture.chapterId,
-        videoId: nextLecture.videoId,
-      });
       sessionStorage.setItem("kanthastSkipNextLoader", "true");
-      navigate(`/video?${params.toString()}`, { replace: true });
+      navigate(buildLectureHref(nextLecture), { replace: true });
     }
   }, [handleWatched, nextLecture, settings.autoplayNextLecture, navigate]);
 
+  // Chapter-rail clicks navigate like autoplay-next: same URL shape, and no
+  // full-page loader between lectures.
+  const handleRailNavigate = useCallback(() => {
+    sessionStorage.setItem("kanthastSkipNextLoader", "true");
+  }, []);
+
   useEffect(() => {
     let mounted = true;
-    if (!data.subjectId || !data.chapterId || !data.videoId) {
-      setLoading(false);
-      return undefined;
-    }
+    // Without ids there is nothing to fetch; `loading` starts false then.
+    if (!data.subjectId || !data.chapterId || !data.videoId) return undefined;
     (async () => {
+      // The catalog only feeds the chapter rail and next-lecture lookup, so
+      // its failure must never block the lecture itself.
+      const catalogPromise = getMedicineUsmleContent().catch(() => null);
       try {
-        setLoading(true);
-        const [response, catalog] = await Promise.all([
-          getMedicineUsmleVideoDetails({
-            subjectId: data.subjectId,
-            chapterId: data.chapterId,
-            videoId: data.videoId,
-          }),
-          getMedicineUsmleContent().catch(() => null),
-        ]);
+        const response = await getMedicineUsmleVideoDetails({
+          subjectId: data.subjectId,
+          chapterId: data.chapterId,
+          videoId: data.videoId,
+        });
         if (!mounted) return;
-        setCourseContent(catalog?.content || null);
         setVideoLink(response.video?.videoLink || "");
         setDbTitle(response.video?.name || "");
       } catch {
+        // A failed request (offline, server down) is not the same as a
+        // lecture with no video: say so and offer a retry.
         if (!mounted) return;
         setVideoLink("");
         setDbTitle("");
-        setCourseContent(null);
-      } finally {
-        if (mounted) setLoading(false);
+        setLoadError(true);
       }
+      const catalog = await catalogPromise;
+      if (!mounted) return;
+      setCourseContent(catalog?.content || null);
+      setLoading(false);
     })();
     return () => { mounted = false; };
-  }, [data.subjectId, data.chapterId, data.videoId]);
+  }, [data.subjectId, data.chapterId, data.videoId, reloadKey]);
 
+  // One source of truth for the native player's speed: the buttons and the
+  // keyboard shortcuts both only set state.
   useEffect(() => {
+    activeRateRef.current = activeRate;
     if (parsed.type !== "file" || !videoRef.current) return;
-    videoRef.current.playbackRate = playbackRate;
-  }, [parsed.type, playbackRate, videoLink]);
+    videoRef.current.playbackRate = activeRate;
+  }, [parsed.type, activeRate, videoLink]);
 
-  const displayTitle = dbTitle || data.title;
+  const flash = useCallback((message) => {
+    setShortcutFlash(message);
+    if (flashTimerRef.current) clearTimeout(flashTimerRef.current);
+    flashTimerRef.current = setTimeout(() => setShortcutFlash(""), 900);
+  }, []);
+
+  // Keyboard shortcuts for the self-hosted player only. YouTube and Vimeo run
+  // in cross-origin iframes with their own shortcuts, so nothing is bound for
+  // them.
+  useEffect(() => {
+    if (parsed.type !== "file" || lectureOpen) return undefined;
+
+    const onKeyDown = (event) => {
+      if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey) return;
+      if (isTypingTarget(event.target)) return;
+      const el = videoRef.current;
+      if (!el) return;
+
+      const target = event.target instanceof HTMLElement ? event.target : null;
+      const onOtherControl =
+        target && target !== el && target.closest("button, a, summary, [role='button']");
+
+      const seekBy = (delta) => {
+        const end = Number.isFinite(el.duration) ? el.duration : Infinity;
+        el.currentTime = Math.min(Math.max(0, el.currentTime + delta), end);
+        flash(`${delta > 0 ? "+" : "−"}${Math.abs(delta)}s`);
+      };
+      const stepSpeed = (direction) => {
+        const current = activeRateRef.current;
+        let index = SPEED_STEPS.indexOf(current);
+        if (index < 0) index = SPEED_STEPS.findIndex((step) => step >= current);
+        if (index < 0) index = SPEED_STEPS.length - 1;
+        const next = SPEED_STEPS[Math.min(Math.max(index + direction, 0), SPEED_STEPS.length - 1)];
+        activeRateRef.current = next;
+        setActiveRate(next);
+        flash(`${next}×`);
+      };
+
+      const key = event.key;
+      if (key === " " || key === "Spacebar" || key === "k" || key === "K") {
+        // Space on a focused button or link should press that control.
+        if (key !== "k" && key !== "K" && onOtherControl) return;
+        event.preventDefault();
+        if (el.paused) {
+          el.play().catch(() => {});
+          flash("Play");
+        } else {
+          el.pause();
+          flash("Pause");
+        }
+      } else if (key === "j" || key === "J") {
+        event.preventDefault();
+        seekBy(-10);
+      } else if (key === "l" || key === "L") {
+        event.preventDefault();
+        seekBy(10);
+      } else if (key === "ArrowLeft") {
+        event.preventDefault();
+        seekBy(-5);
+      } else if (key === "ArrowRight") {
+        event.preventDefault();
+        seekBy(5);
+      } else if (key === ">" || (event.shiftKey && key === ".")) {
+        event.preventDefault();
+        stepSpeed(1);
+      } else if (key === "<" || (event.shiftKey && key === ",")) {
+        event.preventDefault();
+        stepSpeed(-1);
+      } else if (key === "m" || key === "M") {
+        event.preventDefault();
+        el.muted = !el.muted;
+        flash(el.muted ? "Muted" : "Sound on");
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [parsed.type, lectureOpen, flash]);
+
+  const dismissHint = () => {
+    setHintDismissed(true);
+    try {
+      localStorage.setItem(SHORTCUT_HINT_KEY, "true");
+    } catch {
+      /* per-device convenience only */
+    }
+  };
+
   const lectureResult = lectureJob?.status === "completed" ? lectureJob : null;
   const lectureActive = lectureState === "starting" || lectureState === "processing";
+  const breadcrumb = [subjectName, chapterName].filter(Boolean);
+  const showRail = Boolean(located.chapter && located.videos.length > 0);
+
+  let player;
+  if (loadError) {
+    player = (
+      <PlayerStatusPanel
+        tone="critical"
+        icon={<FaExclamationTriangle />}
+        heading="We couldn't load this lecture"
+        actions={
+          <>
+            <button type="button" onClick={() => {
+              setLoadError(false);
+              setLoading(true);
+              setReloadKey((key) => key + 1);
+            }} className="btn-primary">
+              Retry
+            </button>
+            <Link to="/lists" className="btn-ghost">
+              Back to lectures
+            </Link>
+          </>
+        }
+      >
+        <p>Check your connection and try again. Your progress is saved on this device.</p>
+      </PlayerStatusPanel>
+    );
+  } else if (parsed.type === "file") {
+    player = (
+      <div className="relative overflow-hidden rounded-card border border-line bg-black">
+        <video
+          controls
+          playsInline
+          preload="metadata"
+          className="w-full aspect-video"
+          src={parsed.url}
+          ref={videoRef}
+          aria-label={displayTitle}
+          onLoadedMetadata={() => {
+            const el = videoRef.current;
+            if (!el) return;
+            el.playbackRate = activeRate;
+            // Resume where the student left off.
+            const resumeAt = getResumeSeconds(data.videoId);
+            if (resumeAt > 0 && resumeAt < el.duration) {
+              el.currentTime = resumeAt;
+              setResumedFrom(resumeAt);
+            }
+            setMediaError("");
+          }}
+          onTimeUpdate={() => {
+            const el = videoRef.current;
+            if (!el || !el.duration) return;
+            if (shouldPersist(el.currentTime)) {
+              saveProgress(data.videoId, el.currentTime, el.duration, {
+                title: displayTitle,
+                module: subjectName,
+                section: chapterName,
+                subjectId: data.subjectId,
+                chapterId: data.chapterId,
+                // Display label only. Must not be named `duration`: the meta is spread
+                // over the pointer and would replace the numeric seconds saveProgress
+                // stores, leaving getLastWatched() with NaN percent/remaining.
+                durationLabel: displayDuration,
+              });
+            }
+          }}
+          onWaiting={() => setBuffering(true)}
+          onPlaying={() => setBuffering(false)}
+          onCanPlay={() => setBuffering(false)}
+          onError={() =>
+            setMediaError(
+              "This lecture could not be loaded. Check your connection and try again."
+            )
+          }
+          onEnded={handleEnded}
+        >
+          Your browser does not support video playback.
+        </video>
+
+        {buffering && !mediaError && (
+          <div
+            className="pointer-events-none absolute inset-0 grid place-items-center bg-black/30"
+            role="status"
+            aria-live="polite"
+          >
+            <span className="sr-only">Buffering</span>
+            <span
+              aria-hidden="true"
+              className="h-10 w-10 animate-spin rounded-full border-[3px] border-white/40 border-t-white"
+            />
+          </div>
+        )}
+
+        <div
+          className="pointer-events-none absolute inset-x-0 top-4 flex justify-center"
+          role="status"
+          aria-live="polite"
+        >
+          {shortcutFlash && (
+            <span className="rounded-full bg-black/65 px-3 py-1 text-sm font-semibold tabular-nums text-white">
+              {shortcutFlash}
+            </span>
+          )}
+        </div>
+
+        {mediaError && (
+          <div
+            className="absolute inset-0 grid place-items-center bg-black/85 px-6 text-center"
+            role="alert"
+          >
+            <div>
+              <p className="text-sm font-semibold text-white">{mediaError}</p>
+              <button
+                type="button"
+                onClick={() => {
+                  setMediaError("");
+                  videoRef.current?.load();
+                }}
+                className="btn-secondary mt-4"
+              >
+                Try again
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  } else if (parsed.type === "youtube") {
+    player = (
+      <YouTubePlayer ytId={parsed.ytId} onEnded={handleEnded} title={displayTitle} playbackRate={playbackRate} />
+    );
+  } else if (parsed.type === "vimeo") {
+    player = <VimeoPlayer vimeoId={parsed.vimeoId} onEnded={handleEnded} title={displayTitle} />;
+  } else if (parsed.type === "unknown") {
+    player = (
+      <PlayerStatusPanel
+        icon={<FaPlay />}
+        heading="This video opens on another site"
+        actions={
+          <a href={parsed.url} target="_blank" rel="noreferrer" className="btn-secondary">
+            Open video
+          </a>
+        }
+      >
+        <p className="break-all">{parsed.url}</p>
+      </PlayerStatusPanel>
+    );
+  } else {
+    // No video link. Only point at other lectures when the chapter really
+    // has one with a video; most of the catalog is still in production.
+    player = (
+      <PlayerStatusPanel
+        icon={<FaClock />}
+        heading="This lecture isn't available yet"
+        actions={
+          <Link to="/lists" className="btn-secondary">
+            Back to lectures
+          </Link>
+        }
+      >
+        <p>
+          {otherLecturesReady
+            ? "The video is still being prepared. Other lectures in this chapter are ready to watch."
+            : "This lecture is still being produced."}
+        </p>
+      </PlayerStatusPanel>
+    );
+  }
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top_right,_#dbeafe,_#f8fafc_35%,_#eef2ff_85%)] px-4 md:px-8 py-8">
+    <div className="min-h-screen bg-surface-sunken px-4 py-6 md:px-8 md:py-8">
       {schoolVideoCreatorEnabled && (
         <motion.button
           type="button"
           onClick={openLectureCreator}
           whileHover={{ y: -3, scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="fixed bottom-6 right-4 z-40 flex items-center gap-3 rounded-full border border-cyan-300/60 bg-slate-950 px-4 py-3 text-white shadow-glow-brand md:bottom-8 md:right-8"
+          className="fixed bottom-6 right-4 z-40 flex items-center gap-3 rounded-full border border-line bg-surface-raised px-4 py-3 text-ink shadow-e4 md:bottom-8 md:right-8"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-400 text-slate-950">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand text-brand-fg">
             <FaRobot />
           </span>
           <span className="text-left">
-            <span className="block text-micro uppercase tracking-[0.2em] text-cyan-200">AI Video Creator</span>
+            <span className="block text-micro font-semibold text-brand">AI Video Creator</span>
             <span className="block text-sm font-semibold">{studentName ? `Hey ${studentName}` : "Create a lecture"}</span>
           </span>
         </motion.button>
       )}
 
-      <div className="max-w-7xl mx-auto">
+      <div className="page-frame">
         <Link
           to="/lists"
-          className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 font-medium"
+          className="-ml-2 inline-flex min-h-touch items-center gap-2 rounded-control px-2 text-sm font-medium text-ink-muted transition-colors duration-fast ease-brand hover:text-ink"
         >
-          <FaArrowLeft /> Back to Lists
+          <FaArrowLeft aria-hidden="true" /> Back to lectures
         </Link>
+
+        <header className="mt-2">
+          {breadcrumb.length > 0 && (
+            <p className="text-sm text-ink-subtle">
+              {breadcrumb.map((part, index) => (
+                <span key={`${part}-${index}`}>
+                  {index > 0 && <span aria-hidden="true" className="mx-1.5">›</span>}
+                  {part}
+                </span>
+              ))}
+            </p>
+          )}
+          <h1 className="mt-1 text-2xl font-bold tracking-tight text-ink text-balance md:text-3xl">
+            {displayTitle}
+          </h1>
+          {(displayDuration || located.index >= 0) && (
+            <p className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm tabular-nums text-ink-muted">
+              {displayDuration && (
+                <span className="inline-flex items-center gap-1.5">
+                  <FaClock aria-hidden="true" className="text-xs text-ink-subtle" />
+                  <span className="sr-only">Duration</span>
+                  {displayDuration}
+                </span>
+              )}
+              {located.index >= 0 && (
+                <span>
+                  Lecture {located.index + 1} of {located.videos.length}
+                </span>
+              )}
+            </p>
+          )}
+        </header>
 
         <MotionDiv
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
-          className="mt-4 grid lg:grid-cols-[1.4fr_0.8fr] gap-6"
+          className={`mt-5 grid items-start gap-6 ${
+            loading || showRail ? "lg:grid-cols-[minmax(0,1fr)_360px]" : "max-w-5xl"
+          }`}
         >
           {loading ? (
             <VideoPageSkeleton />
           ) : (
-          <section className="rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-e4">
-              {parsed.type === "file" ? (
-                <div className="relative rounded-card overflow-hidden border border-line bg-black">
-                  <video
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full aspect-video"
-                    src={parsed.url}
-                    ref={videoRef}
-                    onLoadedMetadata={() => {
-                      const el = videoRef.current;
-                      if (!el) return;
-                      el.playbackRate = activeRate;
-                      // Resume where the student left off.
-                      const resumeAt = getResumeSeconds(data.videoId);
-                      if (resumeAt > 0 && resumeAt < el.duration) {
-                        el.currentTime = resumeAt;
-                        setResumedFrom(resumeAt);
-                      }
-                      setMediaError("");
-                    }}
-                    onTimeUpdate={() => {
-                      const el = videoRef.current;
-                      if (!el || !el.duration) return;
-                      if (shouldPersist(el.currentTime)) {
-                        saveProgress(data.videoId, el.currentTime, el.duration, {
-                          title: displayTitle,
-                          module: data.module,
-                          section: data.section,
-                          subjectId: data.subjectId,
-                          chapterId: data.chapterId,
-                          duration: data.duration,
-                        });
-                      }
-                    }}
-                    onWaiting={() => setBuffering(true)}
-                    onPlaying={() => setBuffering(false)}
-                    onCanPlay={() => setBuffering(false)}
-                    onError={() =>
-                      setMediaError(
-                        "This lecture could not be loaded. Check your connection and try again."
-                      )
-                    }
-                    onEnded={handleEnded}
-                  >
-                    Your browser does not support video playback.
-                  </video>
+            <section className="card min-w-0 p-3 md:p-5" aria-label="Lecture player">
+              {player}
 
-                  {buffering && !mediaError && (
-                    <div
-                      className="pointer-events-none absolute inset-0 grid place-items-center bg-black/30"
-                      role="status"
-                      aria-live="polite"
-                    >
-                      <span className="sr-only">Buffering</span>
-                      <span
-                        aria-hidden="true"
-                        className="h-10 w-10 animate-spin rounded-full border-[3px] border-white/40 border-t-white"
-                      />
-                    </div>
-                  )}
-
-                  {mediaError && (
-                    <div
-                      className="absolute inset-0 grid place-items-center bg-black/80 px-6 text-center"
-                      role="alert"
-                    >
-                      <div>
-                        <p className="text-sm font-semibold text-white">{mediaError}</p>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setMediaError("");
-                            videoRef.current?.load();
-                          }}
-                          className="btn-secondary mt-4"
-                        >
-                          Try again
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : parsed.type === "youtube" ? (
-                <YouTubePlayer ytId={parsed.ytId} onEnded={handleEnded} title={displayTitle} playbackRate={playbackRate} />
-              ) : parsed.type === "vimeo" ? (
-                <VimeoPlayer vimeoId={parsed.vimeoId} onEnded={handleEnded} title={displayTitle} />
-              ) : parsed.type === "unknown" ? (
-                <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 p-6">
-                  <p className="text-slate-700">This link type cannot be embedded. Open directly:</p>
-                  <a href={parsed.url} target="_blank" rel="noreferrer" className="text-blue-700 underline break-all">
-                    {parsed.url}
-                  </a>
-                </div>
-              ) : (
-                // No video link resolved. Previously this showed a decorative
-                // play button that hover-scaled but had no onClick, so it read
-                // as live. It is now an honest, explanatory state.
-                <div className="rounded-card overflow-hidden border border-line bg-gradient-to-br from-[#0b1324] via-[#10214b] to-[#12395f] aspect-video relative">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(125,211,252,0.18),transparent_40%)]" />
-                  <div className="absolute inset-0 flex flex-col justify-between p-4 md:p-6">
-                    <div className="text-white">
-                      <p className="text-sm text-cyan-100">{data.module} — {data.section}</p>
-                      <h1 className="mt-1 text-xl md:text-3xl font-bold">{displayTitle}</h1>
-                    </div>
-
-                    <div className="text-center">
-                      <span
-                        aria-hidden="true"
-                        className="mx-auto grid h-14 w-14 place-items-center rounded-full border border-white/25 bg-white/10 text-lg text-white/70"
-                      >
-                        <FaClock />
-                      </span>
-                      <p className="mt-3 text-base font-semibold text-white">
-                        This lecture isn&apos;t available yet
-                      </p>
-                      <p className="mx-auto mt-1 max-w-sm text-sm text-white/70">
-                        The video is still being prepared. Other lectures in this
-                        chapter are ready to watch.
-                      </p>
-                    </div>
-
-                    <div className="flex justify-center">
-                      <Link to="/lists" className="btn-secondary">
-                        Back to lectures
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
               {resumedFrom > 0 && (
                 <div
                   className="mt-3 flex flex-wrap items-center gap-3 rounded-control bg-brand-soft px-4 py-2.5 text-sm text-ink"
@@ -893,10 +1357,7 @@ export default function VideoPage() {
                 >
                   <span>
                     Resumed from{" "}
-                    <strong className="font-semibold">
-                      {Math.floor(resumedFrom / 60)}:
-                      {String(Math.floor(resumedFrom % 60)).padStart(2, "0")}
-                    </strong>
+                    <strong className="font-semibold tabular-nums">{formatClock(resumedFrom)}</strong>
                   </span>
                   <button
                     type="button"
@@ -904,93 +1365,113 @@ export default function VideoPage() {
                       if (videoRef.current) videoRef.current.currentTime = 0;
                       setResumedFrom(0);
                     }}
-                    className="font-semibold text-brand underline underline-offset-2"
+                    className="min-h-touch font-semibold text-brand underline underline-offset-2"
                   >
                     Start from beginning
                   </button>
                 </div>
               )}
-              {/* In-player speed control. Playback speed used to live only in
-                  /settings, so changing it meant leaving the lecture — while
-                  the tip card below advised "Watch in 1.25x" with no way to
-                  do it. Only shown for the native player, which is the branch
-                  we control; YouTube and Vimeo expose their own. */}
-              <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
-                <div className="text-sm text-ink-subtle">Duration: {data.duration}</div>
 
-                {parsed.type === "file" && (
-                  <div className="flex items-center gap-2">
-                    <span id="speed-label" className="text-sm text-ink-subtle">
-                      Speed
-                    </span>
-                    <div
-                      role="group"
-                      aria-labelledby="speed-label"
-                      className="inline-flex overflow-hidden rounded-control border border-line"
-                    >
-                      {[1, 1.25, 1.5, 2].map((rate) => {
-                        const isActive = activeRate === rate;
-                        return (
-                          <button
-                            key={rate}
-                            type="button"
-                            aria-pressed={isActive}
-                            onClick={() => {
-                              setActiveRate(rate);
-                              if (videoRef.current) videoRef.current.playbackRate = rate;
-                            }}
-                            className={`min-h-touch px-3 text-sm font-semibold transition-colors duration-fast ease-brand ${
-                              isActive
-                                ? "bg-brand text-brand-fg"
-                                : "bg-surface text-ink-muted hover:bg-surface-sunken"
-                            }`}
-                          >
-                            {rate}&times;
-                          </button>
-                        );
-                      })}
+              {/* Nothing to mark or tune when there is no video to watch. */}
+              {!loadError && parsed.type !== "none" && (
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+                  {data.videoId ? (
+                    isWatched ? (
+                      <div
+                        className="inline-flex min-h-touch items-center gap-1 rounded-control bg-positive-soft pl-4 pr-1 text-sm font-semibold text-ink"
+                        role="status"
+                      >
+                        <FaCheckCircle aria-hidden="true" className="text-positive" />
+                        <span className="ml-1">Watched</span>
+                        <span aria-hidden="true" className="mx-1 text-ink-subtle">·</span>
+                        <button
+                          type="button"
+                          onClick={handleUnwatched}
+                          className="min-h-touch rounded-control px-3 font-semibold text-ink-muted underline underline-offset-2 transition-colors duration-fast ease-brand hover:text-ink"
+                        >
+                          Undo
+                        </button>
+                      </div>
+                    ) : (
+                      <button type="button" onClick={handleWatched} className="btn-secondary">
+                        <FaCheckCircle aria-hidden="true" className="text-ink-subtle" />
+                        Mark as watched
+                      </button>
+                    )
+                  ) : (
+                    <span />
+                  )}
+
+                  {/* In-player speed control, native player only; YouTube
+                      and Vimeo expose their own. */}
+                  {parsed.type === "file" && (
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span id="speed-label" className="text-sm text-ink-subtle">
+                        Speed
+                      </span>
+                      <div
+                        role="group"
+                        aria-labelledby="speed-label"
+                        className="inline-flex overflow-hidden rounded-control border border-line"
+                      >
+                        {SPEED_STEPS.map((rate) => {
+                          const isActive = activeRate === rate;
+                          return (
+                            <button
+                              key={rate}
+                              type="button"
+                              aria-pressed={isActive}
+                              onClick={() => setActiveRate(rate)}
+                              className={`min-h-touch px-2.5 text-sm font-semibold tabular-nums transition-colors duration-fast ease-brand sm:px-3 ${
+                                isActive
+                                  ? "bg-brand text-brand-fg"
+                                  : "bg-surface text-ink-muted hover:bg-surface-sunken"
+                              }`}
+                            >
+                              {rate}&times;
+                            </button>
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
+                  )}
+                </div>
+              )}
+
+              {parsed.type === "file" && !loadError && !hintDismissed && (
+                <div className="mt-3 hidden items-center justify-between gap-3 border-t border-line pt-3 md:flex">
+                  <p className="text-mini text-ink-subtle">
+                    <span className="font-semibold text-ink-muted">Keyboard:</span>{" "}
+                    <Kbd>Space</Kbd> or <Kbd>K</Kbd> play/pause · <Kbd>J</Kbd> <Kbd>L</Kbd> back/forward 10s ·{" "}
+                    <Kbd>←</Kbd> <Kbd>→</Kbd> 5s · <Kbd>Shift</Kbd>+<Kbd>&lt;</Kbd> <Kbd>&gt;</Kbd> slower/faster ·{" "}
+                    <Kbd>M</Kbd> mute
+                  </p>
+                  <button
+                    type="button"
+                    onClick={dismissHint}
+                    className="btn-icon text-ink-subtle hover:bg-surface-sunken hover:text-ink"
+                    aria-label="Hide keyboard shortcuts"
+                  >
+                    <FaTimes aria-hidden="true" />
+                  </button>
+                </div>
+              )}
             </section>
           )}
 
           {loading ? (
             <VideoMetaSkeleton />
-          ) : (
-            <aside className="rounded-3xl border border-slate-200 bg-white p-5 shadow-e4">
-              <h2 className="text-xl font-bold text-slate-900">Lecture Context</h2>
-              <div className="mt-4 space-y-3">
-                <MetaCard icon={<FaLayerGroup />} label="Module" value={data.module} />
-                <MetaCard icon={<FaBookOpen />} label="Section" value={data.section} />
-                <MetaCard icon={<FaClock />} label="Duration" value={data.duration} />
-              </div>
-
-              {data.videoId && (
-                <button
-                  onClick={handleWatched}
-                  disabled={isWatched}
-                  className={`mt-5 w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border font-semibold text-sm transition ${
-                    isWatched
-                      ? "bg-green-50 border-green-200 text-green-700 cursor-default"
-                      : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
-                  }`}
-                >
-                  <FaCheckCircle className={isWatched ? "text-green-500" : "text-ink-subtle"} />
-                  {isWatched ? "Marked as Watched" : "Mark as Watched"}
-                </button>
-              )}
-
-              <div className="mt-5 rounded-card border border-line border-l-4 border-l-brand bg-brand-soft p-4">
-                <h3 className="font-semibold text-ink">Focus Mode Tip</h3>
-                <p className="mt-2 text-sm text-ink-muted">
-                  Try 1.25&times; using the speed control under the player, pause at
-                  transitions, and summarize each segment in one line.
-                </p>
-              </div>
-            </aside>
-          )}
+          ) : showRail ? (
+            <ChapterRail
+              subject={located.subject}
+              chapter={located.chapter}
+              videos={located.videos}
+              currentIndex={located.index}
+              watchedMap={watchedMap}
+              hasSubscription={hasSubscription}
+              onNavigate={handleRailNavigate}
+            />
+          ) : null}
         </MotionDiv>
       </div>
 
@@ -1000,7 +1481,7 @@ export default function VideoPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-end justify-center bg-slate-950/65 px-4 py-4 backdrop-blur-sm md:items-center md:py-8"
+            className="fixed inset-0 z-50 flex items-end justify-center bg-black/65 px-4 py-4 backdrop-blur-sm md:items-center md:py-8"
             onClick={closeLectureCreator}
           >
             <motion.div
@@ -1008,33 +1489,36 @@ export default function VideoPage() {
               animate={{ y: 0, opacity: 1, scale: 1 }}
               exit={{ y: 24, opacity: 0, scale: 0.98 }}
               transition={{ type: "spring", stiffness: 260, damping: 24 }}
-              className="w-full max-w-3xl overflow-hidden rounded-[2rem] border border-white/15 bg-white shadow-e5"
+              className="max-h-full w-full max-w-3xl overflow-y-auto rounded-sheet border border-line bg-surface-raised shadow-e5"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="ai-creator-heading"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="grid gap-0 md:grid-cols-[1.1fr_0.9fr]">
-                <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_#fef3c7,_#ffffff_35%,_#eff6ff_80%)] p-5 md:p-7 text-slate-900">
-                  <div className="pointer-events-none absolute -top-8 -right-8 h-24 w-24 rounded-full bg-cyan-200/50 blur-2xl" />
-                  <div className="pointer-events-none absolute bottom-10 -left-10 h-28 w-28 rounded-full bg-amber-200/60 blur-2xl" />
+                <div className="p-5 text-ink md:p-7">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-700">AI Video Creator</p>
-                      <h2 className="mt-2 text-3xl font-black leading-tight text-slate-950">Hey {studentName}</h2>
-                      <p className="mt-3 max-w-md text-sm leading-relaxed text-slate-600">
+                      <p className="text-sm font-semibold text-brand">AI Video Creator</p>
+                      <h2 id="ai-creator-heading" className="mt-2 text-3xl font-bold leading-tight tracking-tight text-ink">
+                        Hey {studentName}
+                      </h2>
+                      <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-muted">
                         {lectureGreeting}
                       </p>
                     </div>
                     <button
                       type="button"
                       onClick={closeLectureCreator}
-                      className="rounded-full border border-slate-200 bg-white p-2 text-slate-600 transition hover:bg-slate-50"
+                      className="btn-icon border border-line bg-surface text-ink-muted hover:bg-surface-sunken hover:text-ink"
                       aria-label="Close video creator"
                     >
                       <FaTimes />
                     </button>
                   </div>
 
-                  <div className="mt-6 rounded-3xl border border-slate-200 bg-white/90 p-4 shadow-sm">
-                    <label htmlFor="ai-lecture-topic" className="block text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700">
+                  <div className="mt-6 rounded-card border border-line bg-surface p-4">
+                    <label htmlFor="ai-lecture-topic" className="label">
                       Topic
                     </label>
                     <input
@@ -1042,7 +1526,7 @@ export default function VideoPage() {
                       value={lectureTopic}
                       onChange={(e) => setLectureTopic(e.target.value)}
                       placeholder="Type a topic like photosynthesis"
-                      className="field mt-3"
+                      className="field mt-2"
                     />
 
                     <div className="mt-4 flex flex-wrap gap-2">
@@ -1055,32 +1539,32 @@ export default function VideoPage() {
                       type="button"
                       onClick={startAiLecture}
                       disabled={lectureActive}
-                      className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-cyan-400 px-4 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-60"
+                      className="btn-primary mt-5 w-full"
                     >
-                      <FaRobot />
+                      <FaRobot aria-hidden="true" />
                       {lectureActive ? "Creating your lecture..." : "Create AI Lecture"}
                     </button>
 
                     {lectureError && (
-                      <p className="mt-3 rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
+                      <p className="mt-3 rounded-control border border-critical/35 bg-critical-soft px-4 py-3 text-sm text-critical" role="alert">
                         {lectureError}
                       </p>
                     )}
                   </div>
                 </div>
 
-                <div className="bg-[linear-gradient(180deg,#f8fbff_0%,#f0f9ff_100%)] p-5 md:p-7">
+                <div className="border-t border-line bg-surface-sunken p-5 md:border-l md:border-t-0 md:p-7">
                   {lectureActive ? (
                     <AiLectureLoader progress={lectureProgress} topic={lectureTopic} />
                   ) : lectureResult ? (
-                    <div className="rounded-3xl border border-cyan-100 bg-white p-4 shadow-sm">
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">Delivered to chat</p>
-                      <h3 className="mt-2 text-2xl font-black text-slate-900">{lectureResult.title || lectureTopic}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    <div className="rounded-card border border-line bg-surface p-4 shadow-e2">
+                      <p className="text-sm font-semibold text-positive">Delivered to chat</p>
+                      <h3 className="mt-2 text-2xl font-bold tracking-tight text-ink">{lectureResult.title || lectureTopic}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-ink-muted">
                         Your AI lecture is now saved in the chat thread and can be replayed anytime.
                       </p>
                       <video
-                        className="mt-4 w-full rounded-2xl border border-slate-200 bg-black aspect-video"
+                        className="mt-4 w-full rounded-control border border-line bg-black aspect-video"
                         controls
                         playsInline
                         poster={lectureResult.thumbnailUrl || ""}
@@ -1092,7 +1576,7 @@ export default function VideoPage() {
                         <button
                           type="button"
                           onClick={() => navigate(`/chatbot?sessionId=${encodeURIComponent(lectureResult.sessionId || lectureJob?.sessionId || "")}`)}
-                          className="rounded-full bg-slate-950 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800"
+                          className="btn-primary"
                         >
                           Open chat thread
                         </button>
@@ -1104,33 +1588,31 @@ export default function VideoPage() {
                             setLectureProgress(0);
                             setLectureTopic("");
                           }}
-                          className="rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                          className="btn-secondary"
                         >
                           Create another
                         </button>
                       </div>
                     </div>
                   ) : (
-                    <div className="flex h-full min-h-[360px] flex-col justify-between rounded-3xl border border-dashed border-cyan-200 bg-white p-5 shadow-sm">
+                    <div className="flex h-full min-h-[360px] flex-col justify-between gap-6 rounded-card border border-dashed border-line-strong bg-surface p-5">
                       <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                          Ready when you are
-                        </p>
-                        <h3 className="mt-2 text-2xl font-black text-slate-900">
+                        <p className="text-sm font-semibold text-ink-subtle">Ready when you are</p>
+                        <h3 className="mt-2 text-2xl font-bold tracking-tight text-ink">
                           Type a topic and I will build a mini lecture video
                         </h3>
-                        <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                        <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                           Try topics like photosynthesis, chlorophyll, bacteria, digestion, or the human heart.
                         </p>
                       </div>
 
-                      <div className="rounded-3xl bg-gradient-to-br from-cyan-50 via-white to-blue-50 p-4">
-                        <p className="text-sm font-semibold text-slate-900">What happens next?</p>
-                        <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                          <li>1. I turn your topic into a kid-friendly AI lecture.</li>
-                          <li>2. You see a progress animation while the video is prepared.</li>
-                          <li>3. The finished video is sent to your chat thread.</li>
-                        </ul>
+                      <div className="rounded-control bg-surface-sunken p-4">
+                        <p className="text-sm font-semibold text-ink">What happens next?</p>
+                        <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm text-ink-muted">
+                          <li>I turn your topic into a kid-friendly AI lecture.</li>
+                          <li>You see a progress animation while the video is prepared.</li>
+                          <li>The finished video is sent to your chat thread.</li>
+                        </ol>
                       </div>
                     </div>
                   )}
@@ -1144,13 +1626,10 @@ export default function VideoPage() {
   );
 }
 
-function MetaCard({ icon, label, value }) {
+function Kbd({ children }) {
   return (
-    <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-      <p className="text-xs uppercase tracking-wider text-slate-500 flex items-center gap-2">
-        {icon} {label}
-      </p>
-      <p className="text-slate-900 font-semibold mt-1">{value}</p>
-    </div>
+    <kbd className="rounded-control border border-line bg-surface-sunken px-1 font-sans text-micro font-semibold text-ink-muted">
+      {children}
+    </kbd>
   );
 }

@@ -1,0 +1,263 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "History: Nationalism in India",
+    "topic_no": 1,
+    "name": "The First World War, Satyagraha and the Rowlatt Act",
+    "scenes": [
+      {
+        "animation": "A 1918 village chai stall: the price board on the wall keeps flipping upwards until the numbers double, while a British recruiting officer drags a young farmer away. Zippy, holding a tiny cup, stares at the bill in shock.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Prices doubled? And they're taking the farmers into the army? What's going on?" },
+          { "speaker": "NEO", "text": "This is the First World War. It created a new economic and political situation in India." }
+        ]
+      },
+      {
+        "animation": "A three-panel strip builds one panel at a time: 'Defence expenditure ↑: war loans, customs duties raised, income tax introduced', 'Prices doubled 1913–1918', 'Forced recruitment in villages'. A fourth panel: failed crops of 1918-19 and 1920-21 plus an influenza cloud, stamped 'Census 1921: 12 to 13 million perished'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Defence expenditure rose sharply. It was financed by war loans and increased taxes; customs duties were raised and income tax was introduced." },
+          { "speaker": "NEO", "text": "Prices doubled between 1913 and 1918, and forced recruitment in villages caused widespread anger." },
+          { "speaker": "NEO", "text": "Crops failed in 1918-19 and 1920-21, and an influenza epidemic followed. According to the census of 1921, 12 to 13 million people perished." }
+        ]
+      },
+      {
+        "animation": "Gandhiji steps off a ship, 'January 1915'. The word SATYAGRAHA glows; beside it a scale tips from a fist labelled 'Physical force' to a heart labelled 'Truth and non-violence'. A map of India then plots three pins with dates: 'Champaran, Bihar 1917', 'Kheda, Gujarat 1918', 'Ahmedabad, Gujarat 1918'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mahatma Gandhi returned from South Africa in January 1915 with a new method: satyagraha. It stressed the power of truth. If the cause was true, physical force was not needed; the satyagrahi appealed to the conscience of the oppressor." },
+          { "speaker": "NEO", "text": "In 1917 he went to Champaran in Bihar, against the oppressive plantation system. In 1918, he supported the peasants of Kheda in Gujarat and the cotton mill workers of Ahmedabad." }
+        ]
+      },
+      {
+        "animation": "A thick law book 'Rowlatt Act 1919' thumps onto a desk; a stamp reads 'Detention without trial for two years'. A timeline marks '6 April hartal', '10 April Amritsar firing', '13 April Jallianwalla Bagh'. The Bagh is shown as an enclosed ground with a Baisakhi fair; soldiers block the exits, and the screen fades to grey without showing violence.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What was the Rowlatt Act?" },
+          { "speaker": "NEO", "text": "It was passed in 1919 despite the united opposition of Indian members. It allowed detention of political prisoners without trial for two years. Gandhiji called a hartal on 6 April." },
+          { "speaker": "NEO", "text": "On 13 April, a crowd gathered in the enclosed ground of Jallianwalla Bagh in Amritsar, many for the Baisakhi fair. General Dyer blocked the exit points and opened fire, killing hundreds." }
+        ]
+      },
+      {
+        "animation": "An outline map of India: pins drop on Champaran, Kheda, Ahmedabad and Amritsar with labels. A 'BOARD TIP: MAP WORK' stamp flashes over the map.",
+        "lines": [
+          { "speaker": "NEO", "text": "As violence spread, Gandhiji called off the movement." },
+          { "speaker": "NEO", "text": "Board tip: map work asks you to locate Champaran, Kheda, Ahmedabad and Amritsar. Learn each place with its movement." }
+        ]
+      },
+      {
+        "animation": "Recap board with a spinning-wheel icon: '1. War: taxes, prices doubled, forced recruitment', '2. Satyagraha: Champaran 1917, Kheda and Ahmedabad 1918', '3. Rowlatt Act 1919 → Jallianwalla Bagh, 13 April'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the First World War brought higher taxes, doubled prices and forced recruitment." },
+          { "speaker": "NEO", "text": "Two: Gandhiji's satyagraha began at Champaran in 1917, and Kheda and Ahmedabad in 1918." },
+          { "speaker": "NEO", "text": "Three: the Rowlatt Act of 1919 led to protests and the Jallianwalla Bagh massacre on 13 April 1919." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "History: Nationalism in India",
+    "topic_no": 2,
+    "name": "Khilafat, Non-Cooperation and the Differing Strands",
+    "scenes": [
+      {
+        "animation": "A school classroom in 1921: one by one the benches empty as students walk out; the headmaster takes off his cap and follows them. Zippy, left alone, raises his hand to an empty room.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Where did everyone go? Is it a holiday?" },
+          { "speaker": "NEO", "text": "No, it's non-cooperation. Thousands of students left government schools. But why did it start?" }
+        ]
+      },
+      {
+        "animation": "An animated timeline: 'March 1919: Khilafat Committee, Bombay' with the Ali brothers; 'September 1920: Calcutta session'; 'December 1920: Nagpur session, programme adopted'; 'January 1921: movement begins'. An open copy of 'Hind Swaraj (1909)' shows a British pillar held up by Indian hands.",
+        "lines": [
+          { "speaker": "NEO", "text": "Gandhiji wanted a broad movement uniting Hindus and Muslims. He took up the Khilafat issue. A Khilafat Committee was formed in Bombay in March 1919, and young leaders like the brothers Muhammad Ali and Shaukat Ali discussed united mass action with him." },
+          { "speaker": "NEO", "text": "In Hind Swaraj, he wrote that British rule survived only because Indians cooperated. At the Calcutta session in September 1920 he won support, and at Nagpur in December 1920 the programme was adopted." }
+        ]
+      },
+      {
+        "animation": "Towns: lawyers put down their gowns, foreign cloth burns in bonfires, liquor shops are picketed. A bar chart animates 'Import of foreign cloth: Rs 102 crore → Rs 57 crore (1921 to 1922)'. Then a khadi price tag grows bigger than a mill-cloth tag and students trickle back to school.",
+        "lines": [
+          { "speaker": "NEO", "text": "In towns, the middle class led. Foreign cloth was burnt, and its import halved between 1921 and 1922, from 102 crore rupees to 57 crore." },
+          { "speaker": "NEO", "text": "But the movement slowed. Khadi was often more expensive than mill cloth, and alternative Indian institutions were slow to come up." }
+        ]
+      },
+      {
+        "animation": "Split into three rural panels. Awadh: Baba Ramchandra and Jawaharlal Nehru with peasants under a banner 'Oudh Kisan Sabha, October 1920'. Gudem Hills: Alluri Sitaram Raju leads hill people past closed forest gates. Assam: plantation workers walk out of tea gardens past a sign 'Inland Emigration Act 1859'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Did swaraj mean the same thing to everyone?" },
+          { "speaker": "NEO", "text": "Not at all. In Awadh, peasants led by Baba Ramchandra fought talukdars over high rents and begar. By October 1920, the Oudh Kisan Sabha was set up, headed by Jawaharlal Nehru, Baba Ramchandra and others." },
+          { "speaker": "NEO", "text": "In the Gudem Hills of Andhra Pradesh, Alluri Sitaram Raju led a guerrilla movement, believing India could be liberated only by force." },
+          { "speaker": "NEO", "text": "For Assam's plantation workers, freedom meant leaving the tea gardens, which the Inland Emigration Act of 1859 did not allow without permission." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card lists three columns: 'Group | Meaning of swaraj', filling in 'Towns: boycott', 'Peasants: end of begar and high rents', 'Tribals: forest rights', 'Plantation workers: freedom to go home'. Map pins pop at Calcutta and Nagpur.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: the question 'why different groups joined the Non-Cooperation Movement' needs a group-wise answer. Also mark the Calcutta and Nagpur Congress sessions of 1920 on the map." }
+        ]
+      },
+      {
+        "animation": "Recap board with a burning-cloth icon: '1. Khilafat + Non-Cooperation; adopted at Nagpur, Dec 1920', '2. Towns: boycott, foreign cloth imports halved', '3. Awadh, Gudem Hills, Assam: swaraj meant different things'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Gandhiji joined the Khilafat issue with swaraj, and Non-Cooperation was adopted at Nagpur in December 1920." },
+          { "speaker": "NEO", "text": "Two: in towns, boycott halved foreign cloth imports, but the movement slowed down." },
+          { "speaker": "NEO", "text": "Three: peasants, tribals and plantation workers each had their own idea of swaraj." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "History: Nationalism in India",
+    "topic_no": 3,
+    "name": "Towards Civil Disobedience: The Salt March",
+    "scenes": [
+      {
+        "animation": "Zippy sprinkles salt on a plate of pakoras; a cartoon British tax collector pops out of the salt shaker holding a bill. Zippy shrieks.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Tax on salt? Even the poorest person needs salt!" },
+          { "speaker": "NEO", "text": "Exactly. That is why Gandhiji chose salt as the symbol that could unite the nation." }
+        ]
+      },
+      {
+        "animation": "A timeline draws itself: 'Feb 1922: Chauri Chaura, movement withdrawn', 'Swaraj Party: C.R. Das and Motilal Nehru', '1928: Simon Commission, Go back Simon!', 'Oct 1929: Irwin's vague dominion status', 'Dec 1929: Lahore Congress, Purna Swaraj', '26 Jan 1930: Independence Day'.",
+        "lines": [
+          { "speaker": "NEO", "text": "After Chauri Chaura, Gandhiji withdrew Non-Cooperation in February 1922. C. R. Das and Motilal Nehru formed the Swaraj Party to return to council politics." },
+          { "speaker": "NEO", "text": "In 1928, the Simon Commission arrived without a single Indian member and was greeted with 'Go back Simon'. In December 1929, the Lahore Congress under Jawaharlal Nehru demanded Purna Swaraj, and 26 January 1930 was celebrated as Independence Day." }
+        ]
+      },
+      {
+        "animation": "A letter labelled '31 January 1930, to Viceroy Irwin: 11 demands' flies across the screen with 'Deadline: 11 March'. A map of Gujarat: a dotted line draws from Sabarmati to Dandi with a counter '78 volunteers · 240 miles · 24 days · about 10 miles a day'. On '6 April', Gandhiji boils sea water in a pot and salt crystals sparkle.",
+        "lines": [
+          { "speaker": "NEO", "text": "On 31 January 1930, Gandhiji sent Viceroy Irwin a letter with eleven demands. The most stirring was to abolish the salt tax." },
+          { "speaker": "NEO", "text": "Irwin refused. So Gandhiji marched with 78 volunteers for over 240 miles, from Sabarmati to Dandi, walking 24 days. On 6 April he made salt by boiling sea water." }
+        ]
+      },
+      {
+        "animation": "A comparison table builds row by row: 'Non-Cooperation: refuse cooperation' versus 'Civil Disobedience: break colonial laws'. Scenes flash of people making salt, forest people entering Reserved Forests, peasants refusing chaukidari tax. Then two handshake icons: 'Gandhi-Irwin Pact, 5 March 1931' and 'December 1931: Round Table Conference, London'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Isn't that just Non-Cooperation again?" },
+          { "speaker": "NEO", "text": "No. People were now asked not only to refuse cooperation but also to break colonial laws. They broke the salt law, refused revenue and violated forest laws." },
+          { "speaker": "NEO", "text": "After brutal repression and about 100,000 arrests, Gandhiji signed the Gandhi-Irwin Pact on 5 March 1931. He went to the Round Table Conference in London in December 1931, but returned disappointed. By 1934 the movement lost momentum." }
+        ]
+      },
+      {
+        "animation": "Outline map of India: pins drop at Chauri Chaura (Uttar Pradesh), Dandi (Gujarat) and Madras with '1927 Congress session'. A 'BOARD TIP' card: 'NCM = refuse cooperation; CDM = break laws'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: the difference between Non-Cooperation and Civil Disobedience is a classic question. And locate Chauri Chaura, Dandi and the 1927 Madras Congress session on the map." }
+        ]
+      },
+      {
+        "animation": "Recap board with a salt-crystal icon: '1. Simon Commission 1928; Purna Swaraj, Lahore, Dec 1929', '2. Salt March: Sabarmati to Dandi, 6 April 1930', '3. CDM = breaking laws; Gandhi-Irwin Pact, 5 March 1931'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the all-British Simon Commission of 1928 and the Lahore demand for Purna Swaraj in 1929 set the stage." },
+          { "speaker": "NEO", "text": "Two: the Salt March from Sabarmati to Dandi ended on 6 April 1930." },
+          { "speaker": "NEO", "text": "Three: Civil Disobedience meant breaking colonial laws, and it was paused by the Gandhi-Irwin Pact of 5 March 1931." },
+          { "speaker": "ZIPPY", "text": "I'll never look at a salt shaker the same way again." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "History: Nationalism in India",
+    "topic_no": 4,
+    "name": "How Participants Saw the Movement and Its Limits",
+    "scenes": [
+      {
+        "animation": "Zippy holds a microphone and interviews a line of 1930s characters: a rich farmer, a small tenant, an industrialist in a suit, a mill worker, a woman in a khadi sari. Each has a speech bubble reading 'Swaraj means...' with a different picture.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Quick question, everyone. What does swaraj mean to you?" },
+          { "speaker": "NEO", "text": "Ha. You'll get a different answer from each. Let's hear them." }
+        ]
+      },
+      {
+        "animation": "A table builds row by row with icons: 'Rich peasants (Patidars of Gujarat, Jats of UP): lower revenue', 'Poor peasants: remission of rent', 'Business classes (FICCI 1927; Purshottamdas Thakurdas, G.D. Birla): no restrictions on trade', 'Workers: mostly aloof, except Nagpur region'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rich peasants like the Patidars of Gujarat and the Jats of Uttar Pradesh were hit by falling prices. For them swaraj meant a struggle against high revenue." },
+          { "speaker": "NEO", "text": "Poor tenants wanted their unpaid rent remitted, but the Congress would not back 'no rent' campaigns." },
+          { "speaker": "NEO", "text": "Business groups formed FICCI in 1927, led by Purshottamdas Thakurdas and G. D. Birla. They wanted freedom from colonial restrictions. Industrial workers mostly stayed away, except in the Nagpur region." }
+        ]
+      },
+      {
+        "animation": "Women step out of doorways into a procession, making salt and picketing cloth shops. A small caption reads 'Service to the nation: a sacred duty'. Then the Congress office door shows a sign 'Positions of authority' with the door only half open.",
+        "lines": [
+          { "speaker": "NEO", "text": "Women took part on a large scale. They marched, made salt and picketed foreign cloth and liquor shops. Many went to jail." },
+          { "speaker": "NEO", "text": "Yet the Congress was reluctant to let women hold positions of authority. It wanted only their symbolic presence." }
+        ]
+      },
+      {
+        "animation": "A timeline: '1930: Depressed Classes Association, Dr B.R. Ambedkar', 'Second Round Table Conference: separate electorates demanded', 'Gandhiji's fast unto death', 'September 1932: Poona Pact'. A ballot box splits into 'reserved seats' but is fed by one 'general electorate' pipe.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Did everyone join the movement then?" },
+          { "speaker": "NEO", "text": "No. Dr B. R. Ambedkar organised the dalits into the Depressed Classes Association in 1930 and demanded separate electorates. Gandhiji began a fast unto death against it." },
+          { "speaker": "NEO", "text": "The Poona Pact of September 1932 gave the Depressed Classes reserved seats, but they were to be voted in by the general electorate." },
+          { "speaker": "NEO", "text": "Many Muslims also felt alienated from the Congress. In 1930, Sir Muhammad Iqbal, as president of the Muslim League, reiterated the demand for separate electorates." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Poona Pact = reserved seats + general electorate'. A small scale shows 'separate electorate' crossed out.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: students often write that the Poona Pact gave separate electorates. It did not. It gave reserved seats within the general electorate." }
+        ]
+      },
+      {
+        "animation": "Recap board with a microphone icon: '1. Each group saw swaraj through its own needs', '2. Women joined in large numbers but got little authority', '3. Dalits and many Muslims kept away; Poona Pact 1932'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: peasants, businessmen and workers each saw swaraj through their own needs." },
+          { "speaker": "NEO", "text": "Two: women joined in large numbers, but the Congress gave them little authority." },
+          { "speaker": "NEO", "text": "Three: dalits and many Muslims were lukewarm, and the Poona Pact of 1932 gave dalits reserved seats." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "History: Nationalism in India",
+    "topic_no": 5,
+    "name": "The Sense of Collective Belonging",
+    "scenes": [
+      {
+        "animation": "A packed stadium during an India cricket match: fans wave the tricolour and sing 'Vande Mataram'. Zippy, face painted, turns to Neo with a puzzled look.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why does a song make a whole stadium of strangers feel like family?" },
+          { "speaker": "NEO", "text": "That is the sense of collective belonging. In India, it grew through struggles and through culture: songs, images, folklore and history." }
+        ]
+      },
+      {
+        "animation": "A quill writes 'Vande Mataram, 1870s, Bankim Chandra Chattopadhyay', which slides into a book 'Anandamath'. Then Abanindranath Tagore's calm, ascetic Bharat Mata fades in holding learning, food, clothing and a mala; a second popular Bharat Mata with a trishul, lion and elephant appears beside her.",
+        "lines": [
+          { "speaker": "NEO", "text": "India's identity came to be associated with the image of Bharat Mata. The image was first created by Bankim Chandra Chattopadhyay. In the 1870s he wrote 'Vande Mataram' as a hymn to the motherland, later included in his novel Anandamath." },
+          { "speaker": "NEO", "text": "Moved by the Swadeshi movement, Abanindranath Tagore painted Bharat Mata as an ascetic figure: calm, composed, divine and spiritual." }
+        ]
+      },
+      {
+        "animation": "Rabindranath Tagore collects ballads and nursery rhymes in a village; in Madras, Natesa Sastri stacks four volumes titled 'The Folklore of Southern India'. Then two flags build stripe by stripe: 'Swadeshi flag: red, green, yellow, eight lotuses, crescent moon' and '1921 Swaraj flag: red, green, white, spinning wheel'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Nationalists revived folklore. Rabindranath Tagore collected ballads and myths, and Natesa Sastri published a four-volume collection, The Folklore of Southern India." },
+          { "speaker": "NEO", "text": "During the Swadeshi movement, a red, green and yellow flag had eight lotuses for eight provinces and a crescent moon. By 1921, Gandhiji's Swaraj flag was red, green and white with a spinning wheel for self-help." }
+        ]
+      },
+      {
+        "animation": "A history book opens to golden pages of ancient art, science and mathematics, then turns grey. A few figures from other communities stand outside the book looking left out, labelled 'When only Hindu iconography was used'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Did these symbols unite everyone?" },
+          { "speaker": "NEO", "text": "Not always. Nationalists reinterpreted history to instil pride in India's past. But when the past glorified was Hindu and the images came from Hindu iconography, other communities felt left out." }
+        ]
+      },
+      {
+        "animation": "A caption '8 August 1942, Bombay: Quit India' appears as crowds march; a banner reads 'Do or Die'. Small portraits pop up: Jayprakash Narayan, Aruna Asaf Ali, Ram Manohar Lohia, Matangini Hazra, Kanaklata Barua, Rama Devi. A 'BOARD TIP' card: 'Compare Bharat Mata with Germania'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The struggle continued. On 8 August 1942 in Bombay, the Quit India resolution was endorsed, and Gandhiji gave his famous 'Do or Die' speech." },
+          { "speaker": "NEO", "text": "Board tip: be ready to compare the image of Bharat Mata with Germania from the first chapter. Both are female allegories of the nation." }
+        ]
+      },
+      {
+        "animation": "Recap board with a small Bharat Mata icon: '1. Bharat Mata: Bankim, Abanindranath Tagore', '2. Folklore and flags: Swadeshi flag, Swaraj flag 1921', '3. History reinterpreted, but some communities felt left out'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Bharat Mata, created by Bankim and painted by Abanindranath Tagore, became India's image." },
+          { "speaker": "NEO", "text": "Two: folklore and flags, from the Swadeshi flag to the Swaraj flag of 1921, united people." },
+          { "speaker": "NEO", "text": "Three: history was reinterpreted to build pride, though Hindu imagery left some communities out." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,227 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "Introduction to IT–ITeS Industry",
+    "topic_no": 1,
+    "name": "IT, ITeS and BPO Services",
+    "scenes": [
+      {
+        "animation": "Zippy calls a phone company's helpline about his cracked screen. A split screen shows the helpline agent, Priya, wearing a headset in an office in another city, typing into a computer. The phone company's logo is on a tall building far away.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I called the phone company, but Priya says she works for a completely different company. What's going on?" },
+          { "speaker": "NEO", "text": "You've just met the IT-ITeS industry, Zippy. Let's unpack it." }
+        ]
+      },
+      {
+        "animation": "The letters 'IT' expand into 'Information Technology'. Icons circle around it: a computer, a server, a network cable, lines of code. Arrows show data being stored, processed, retrieved and sent.",
+        "lines": [
+          { "speaker": "NEO", "text": "Information Technology, or IT, is the use of computers and communication devices to store, process, retrieve and send information." },
+          { "speaker": "NEO", "text": "IT companies build software, set up networks and maintain computer systems for their clients." }
+        ]
+      },
+      {
+        "animation": "A second label 'ITeS' appears: 'IT enabled Services'. Service cards fan out: 'Call centre', 'Medical transcription', 'Data entry', 'Back-office accounting', 'Content writing'. Each card has a small computer icon powering it.",
+        "lines": [
+          { "speaker": "NEO", "text": "ITeS means IT enabled services. These are services delivered with the help of IT, often from a distance." },
+          { "speaker": "NEO", "text": "Examples are call centres, medical transcription, data entry, back-office accounting and content writing." },
+          { "speaker": "NEO", "text": "ITeS is also called web-enabled services or remote services." },
+          { "speaker": "ZIPPY", "text": "So IT builds the tools, and ITeS uses those tools to serve customers." }
+        ]
+      },
+      {
+        "animation": "The phone company hands a box labelled 'Customer support' to Priya's company. The letters 'BPO' expand into 'Business Process Outsourcing'. A building splits into two halves: 'Front office' (headsets, customer chats) and 'Back office' (billing, payroll, accounts, data entry). Two phone arrows show 'Inbound: customers call in' and 'Outbound: agents call out'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Business Process Outsourcing, or BPO, is when a company gives some of its business tasks to another company, called a service provider." },
+          { "speaker": "NEO", "text": "This saves cost and lets the company focus on its main work." },
+          { "speaker": "NEO", "text": "Front-office BPO deals with customers, like customer support. Back-office BPO handles internal work, like billing, payroll and accounts." },
+          { "speaker": "NEO", "text": "In an inbound call centre, customers call in. In an outbound call centre, agents call customers, for sales or surveys." }
+        ]
+      },
+      {
+        "animation": "A notebook titled 'ITeS I used this week' fills up as Zippy ticks items: 'Helpline call', 'Online food order support chat', 'Bank SMS alert', 'Online ticket booking'. A yellow 'EXAM TIP' card slides in: 'IT = builds technology | ITeS = delivers services using IT'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mini practical: list the IT enabled services you or your family used this week, like a helpline call or an online booking." },
+          { "speaker": "ZIPPY", "text": "Helpline, food delivery chat, ticket booking. I'm a regular customer of ITeS!" },
+          { "speaker": "NEO", "text": "Exam tip: learn the difference clearly. IT creates and manages technology. ITeS uses that technology to deliver services." }
+        ]
+      },
+      {
+        "animation": "Recap board with Priya giving a thumbs-up through the headset. Points appear: '1. IT: store, process, retrieve, send information', '2. ITeS: services delivered using IT', '3. BPO: outsourcing tasks; front office and back office, inbound and outbound'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: IT uses computers and communication devices to store, process, retrieve and send information." },
+          { "speaker": "NEO", "text": "Two: ITeS are services delivered with the help of IT, like call centres and data entry." },
+          { "speaker": "NEO", "text": "Three: BPO means outsourcing business tasks, with front-office and back-office work." },
+          { "speaker": "ZIPPY", "text": "And my screen? Priya says it's a back-office problem now." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Introduction to IT–ITeS Industry",
+    "topic_no": 2,
+    "name": "The BPM Industry in India and Its Structure",
+    "scenes": [
+      {
+        "animation": "Zippy stands in front of a gleaming tech park, arms crossed. A thought bubble shows only rows of people with headsets. Neo flips the bubble over to reveal coders, designers, analysts and engineers.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Isn't India's IT industry just call centres?" },
+          { "speaker": "NEO", "text": "That's a big myth, Zippy. Call centres are only one small part. Let's look at the full picture." }
+        ]
+      },
+      {
+        "animation": "Two conveyor belts. On the 'BPO' belt, a worker simply completes a task, stamping forms. On the 'BPM' belt, a worker studies the whole process, removes an extra step, adds a computer, and the forms move faster. The label 'Business Process Management' glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "BPM stands for Business Process Management. It goes beyond outsourcing." },
+          { "speaker": "NEO", "text": "A BPO company mainly performs a task for its client. A BPM company also studies, manages and improves the whole process, so it becomes faster and better." },
+          { "speaker": "ZIPPY", "text": "So BPO does the job, and BPM makes the job smarter." }
+        ]
+      },
+      {
+        "animation": "A map of India lights up with glowing pins at Bengaluru, Hyderabad, Chennai, Pune, Mumbai, Delhi NCR and Kolkata. Beside it, three reason cards flip: 'Skilled, English-speaking workforce', 'Lower costs', 'Time-zone advantage' with a clock showing daytime in India and night in the USA.",
+        "lines": [
+          { "speaker": "NEO", "text": "India is one of the world's leading destinations for IT and BPM services." },
+          { "speaker": "NEO", "text": "Why? A large, skilled, English-speaking workforce, lower costs, and a time-zone difference that lets Indian teams work while clients abroad are asleep." },
+          { "speaker": "NEO", "text": "Major hubs include Bengaluru, Hyderabad, Chennai, Pune, Mumbai and the Delhi NCR region." },
+          { "speaker": "NEO", "text": "The industry is a major employer and earns a large share of India's export income." }
+        ]
+      },
+      {
+        "animation": "A building with four floors builds up, each floor labelled: 'IT Services' (software development, network maintenance), 'BPM' (customer support, finance and accounts, HR), 'Software Products and Engineering Services' (apps, car parts designed on computers), 'Hardware' (computers, servers). Zippy rides a lift between floors.",
+        "lines": [
+          { "speaker": "NEO", "text": "The IT-BPM industry has four main segments." },
+          { "speaker": "NEO", "text": "IT services build and maintain software and networks for clients. BPM handles business processes like customer support, accounts and human resources." },
+          { "speaker": "NEO", "text": "Software products and engineering services create ready-made software and design products using computers. Hardware makes computers and related equipment." }
+        ]
+      },
+      {
+        "animation": "Job-role cards shuffle: 'Customer care executive', 'Data entry operator', 'Technical support', 'Software developer'. Skill badges appear under them: 'Communication', 'Typing', 'Computer basics', 'Teamwork'. A yellow 'EXAM TIP' card: 'BPO = does the task | BPM = manages and improves the process'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mini practical: look at job advertisements in a newspaper or online, and list the IT-BPM job roles you find." },
+          { "speaker": "NEO", "text": "Most of them need good communication, computer basics and teamwork." },
+          { "speaker": "NEO", "text": "Exam tip: a common question asks the difference between BPO and BPM. BPO performs the task; BPM manages and improves the whole process." }
+        ]
+      },
+      {
+        "animation": "Recap board with the four-floor building glowing on a map of India. Points appear: '1. BPM = manage and improve business processes', '2. India: skilled workforce, low cost, time-zone advantage', '3. Segments: IT services, BPM, software products and engineering, hardware'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: BPM goes beyond BPO by managing and improving business processes." },
+          { "speaker": "NEO", "text": "Two: India leads because of its skilled workforce, lower costs and time-zone advantage." },
+          { "speaker": "NEO", "text": "Three: the industry has four segments: IT services, BPM, software products and engineering services, and hardware." },
+          { "speaker": "ZIPPY", "text": "Myth busted. I'll take the lift to the software floor, please." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Introduction to IT–ITeS Industry",
+    "topic_no": 3,
+    "name": "IT in Home, Everyday Life, Library, Workplace, Education and Entertainment",
+    "scenes": [
+      {
+        "animation": "Zippy snaps his fingers and every screen in the city goes dark: the kirana shop's QR code fades, the ATM shuts, the smart class board goes blank, and a movie stops mid-song. Everyone turns to stare at Zippy.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I just wanted one day without computers. Now nobody can pay, study or watch anything!" },
+          { "speaker": "NEO", "text": "That shows how much we depend on IT. Switch it back on, and let's go on a tour." }
+        ]
+      },
+      {
+        "animation": "Inside a home: a laptop pays the electricity bill, a tablet shows a homework site, a phone video-calls Nani, and a shopping cart fills online. Then outside: an ATM, a map app guiding a scooter, a weather app showing rain clouds, and a railway ticket booked on a phone.",
+        "lines": [
+          { "speaker": "NEO", "text": "At home, we use computers to pay bills, shop online, do homework, manage budgets and video-call relatives." },
+          { "speaker": "NEO", "text": "In everyday life, IT runs ATMs, digital payments, maps, weather updates and online ticket booking." },
+          { "speaker": "ZIPPY", "text": "Even Nani's evening video call is IT!" }
+        ]
+      },
+      {
+        "animation": "A school library. A librarian scans the barcode on a book and the issue date appears on a computer. A student searches an online catalogue by typing 'Premchand'; the book's shelf number lights up. A tablet opens an e-book from a digital library.",
+        "lines": [
+          { "speaker": "NEO", "text": "In a library, computers keep records of all books, members, issues and returns." },
+          { "speaker": "NEO", "text": "Barcodes make issuing quick, an online catalogue helps you find any book, and digital libraries let you read e-books from anywhere." }
+        ]
+      },
+      {
+        "animation": "An office floor: a word processor typing a letter, a spreadsheet adding sales, a presentation on a projector, emails flying between desks, and a video meeting with colleagues in three cities. A biometric machine marks attendance with a thumbprint.",
+        "lines": [
+          { "speaker": "NEO", "text": "At the workplace, people use word processors, spreadsheets and presentations to prepare documents and reports." },
+          { "speaker": "NEO", "text": "Email and video conferencing connect teams in different cities, and biometric machines record attendance." }
+        ]
+      },
+      {
+        "animation": "A smart classroom with an interactive board showing the solar system. A student takes an online test on a tablet and gets instant results. Then a living room: music streaming, a movie, an online game and a cartoon being animated on a computer. An observation chart titled 'IT around me' fills in. A yellow 'EXAM TIP' card: 'Give one example for each area'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In education, IT brings smart classes, e-learning, educational videos and online tests." },
+          { "speaker": "NEO", "text": "In entertainment, it gives us music and movie streaming, games, and animation, just like the cartoons you're watching now." },
+          { "speaker": "NEO", "text": "Mini practical: make a chart called IT around me, and list one use of IT at home, in school, in a library and at a workplace." },
+          { "speaker": "NEO", "text": "Exam tip: questions often ask for applications of IT in a given area. Give one clear example for each area." }
+        ]
+      },
+      {
+        "animation": "Recap board with six icons in a row: house, city street, library, office, classroom, film reel. Points appear: '1. Home and everyday life: bills, shopping, payments, maps', '2. Library and workplace: records, barcodes, documents, video meetings', '3. Education and entertainment: smart classes, online tests, streaming, games'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: at home and in everyday life, IT helps with bills, shopping, payments and travel." },
+          { "speaker": "NEO", "text": "Two: libraries and workplaces use IT for records, documents and communication." },
+          { "speaker": "NEO", "text": "Three: education and entertainment use IT for smart classes, online tests, streaming and games." },
+          { "speaker": "ZIPPY", "text": "Lesson learnt. I am never snapping my fingers again." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Introduction to IT–ITeS Industry",
+    "topic_no": 4,
+    "name": "IT in Communication, Business, Banking, Insurance, Marketing, Health Care, Science and Government",
+    "scenes": [
+      {
+        "animation": "Zippy follows his aunt, Sunita Bua, through one busy morning: she video-calls a client, pays a supplier on her phone, gets an SMS about her insurance renewal, books a doctor's appointment online and downloads a certificate from a government website. Zippy counts on his sparks and runs out.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Bua did five different jobs before breakfast, all on her phone!" },
+          { "speaker": "NEO", "text": "Each one used IT in a different field. Let's visit them one by one." }
+        ]
+      },
+      {
+        "animation": "Chat bubbles, emails and video tiles fly across a globe labelled 'Communication'. Then a shop labelled 'Business': a billing screen, a stock list auto-updating 'Rice: 20 bags left', and an online store taking orders.",
+        "lines": [
+          { "speaker": "NEO", "text": "In communication, IT gives us email, chat, video calls and social media, connecting people instantly across the world." },
+          { "speaker": "NEO", "text": "In business, computers handle billing, accounts and stock records. E-commerce lets shops sell online." }
+        ]
+      },
+      {
+        "animation": "A bank: an ATM dispensing cash, a phone showing net banking and a mobile banking app, and a customer served at a branch in another city with the label 'Core banking: any branch, one account'. Then an insurance office: a policy bought online, a premium reminder SMS, and a claim status bar moving to 'Approved'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Banks use IT for ATMs, net banking and mobile banking. Core banking lets you use your account from any branch." },
+          { "speaker": "NEO", "text": "Insurance companies use IT to sell and renew policies online, send premium reminders and track claims." },
+          { "speaker": "ZIPPY", "text": "So Bua's renewal SMS was sent by a computer, not a person?" },
+          { "speaker": "NEO", "text": "Yes. The system checks the due date and sends it automatically." }
+        ]
+      },
+      {
+        "animation": "A marketing screen shows online ads, a social media post and a chart of what customers buy most. Then a hospital: a doctor opens a patient's record on a computer, a CT scanner displays an image on screen, and a village patient consults a city doctor through a video call labelled 'Telemedicine'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In marketing, companies use online ads, social media and customer data to understand what people want to buy." },
+          { "speaker": "NEO", "text": "In health care, computers store patient records and run machines like CT scanners. Through telemedicine, a patient can consult a doctor far away." }
+        ]
+      },
+      {
+        "animation": "An engineer rotates a 3D bridge design on a computer labelled 'CAD', and a supercomputer maps monsoon clouds for a weather forecast. Then a government website: 'Apply for certificate', 'File income tax', 'Check exam result'. The label 'e-Governance' glows. A yellow 'EXAM TIP' card: 'e-Governance = government services delivered online'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In science and engineering, computers help design products, run experiments and forecast the weather." },
+          { "speaker": "NEO", "text": "Governments use IT to deliver services online, like applying for certificates, filing taxes and checking results. This is called e-governance." },
+          { "speaker": "NEO", "text": "Mini practical: visit a bank, clinic or post office with an adult, and note how computers are used there." },
+          { "speaker": "NEO", "text": "Exam tip: when asked about IT in government, write e-governance and give one example of an online public service." }
+        ]
+      },
+      {
+        "animation": "Recap board with Sunita Bua relaxing with a cup of chai. Points appear: '1. Communication and business: email, video calls, billing, e-commerce', '2. Banking, insurance and marketing: net banking, online policies, customer data', '3. Health care, science and government: patient records, telemedicine, CAD, e-governance'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: IT powers communication and business, from video calls to online shops." },
+          { "speaker": "NEO", "text": "Two: banking, insurance and marketing use IT for online services and customer data." },
+          { "speaker": "NEO", "text": "Three: health care, science and government use IT for records, research and e-governance." },
+          { "speaker": "ZIPPY", "text": "Bua, next time, let me do the online jobs. You drink the chai." }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,280 @@
+[
+  {
+    "chapter_no": 13,
+    "chapter": "Algebra Play",
+    "topic_no": 1,
+    "name": "Think of a Number: Tricks Explained",
+    "scenes": [
+      {
+        "animation": "A school stage with a velvet curtain. Shubham in a magician's cape waves a wand at Mukta: 'Think of a date!' A crystal ball flickers. Zippy watches from the front row with popcorn.",
+        "lines": [
+          { "speaker": "SHUBHAM", "text": "Think of any date. Do a few steps, tell me the answer, and I'll read your mind!" },
+          { "speaker": "ZIPPY", "text": "Real magic? Or maths wearing a cape?" }
+        ]
+      },
+      {
+        "animation": "A warm-up trick card: 'Think of a number → double it → add 4 → divide by 2 → subtract your number'. Zippy tries 7: '14, 18, 9, 2'. Then algebra writes alongside: 'x → 2x → 2x + 4 → x + 2 → 2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Start simple. Think of a number, double it, add 4, divide by 2, then subtract your number. You always get 2." },
+          { "speaker": "NEO", "text": "Call the number x. Doubling gives 2x. Adding 4 gives 2x plus 4. Halving gives x plus 2." },
+          { "speaker": "NEO", "text": "Subtract x, and only 2 is left. Your number disappears!" },
+          { "speaker": "ZIPPY", "text": "So to make the answer 3, I just add 6 instead of 4?" },
+          { "speaker": "NEO", "text": "Right. 2x plus 6, halved, is x plus 3." }
+        ]
+      },
+      {
+        "animation": "The date trick with Republic Day, 26/01, runs step by step: 'month × 5 = 5', '+ 6 = 11', '× 4 = 44', '+ 9 = 53', '× 5 = 265', '+ day 26 = 291'. Mukta says '291!' and Shubham announces '26 January!'",
+        "lines": [
+          { "speaker": "NEO", "text": "Now Shubham's date trick. Mukta picks 26 January." },
+          { "speaker": "NEO", "text": "Month times 5 is 5. Add 6 to get 11. Times 4 is 44. Add 9 to get 53. Times 5 is 265. Add the day, 26, to get 291." }
+        ]
+      },
+      {
+        "animation": "Algebra version builds line by line: 'M × 5 = 5M', '+ 6 = 5M + 6', '× 4 = 20M + 24', '+ 9 = 20M + 33', '× 5 = 100M + 165', '+ D = 100M + 165 + D'. Then '291 − 165 = 126 → M = 1, D = 26'.",
+        "lines": [
+          { "speaker": "NEO", "text": "With letters: month M and day D. The steps give 100 M plus 165 plus D." },
+          { "speaker": "NEO", "text": "So Shubham subtracts 165. 291 minus 165 is 126. The last two digits are the day, 26, and the rest is the month, 1." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Mukta says 1390. Which date?' Steps: '1390 − 165 = 1225', 'M = 12, D = 25', '25 December'. A Christmas star twinkles. An 'Exam Tip' sticker: 'Write each step as an expression to see why a trick works'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Mukta tries again and says 1390. My turn to be the magician!" },
+          { "speaker": "NEO", "text": "Subtract 165: that's 1225. Month 12, day 25." },
+          { "speaker": "ZIPPY", "text": "25 December!" },
+          { "speaker": "NEO", "text": "Exam tip: to explain a trick, write an algebraic expression after every step. The pattern shows itself." }
+        ]
+      },
+      {
+        "animation": "Recap board with the magician's hat. Points: '1. Use a letter for the unknown number', '2. Track each step as an expression', '3. The trick works because terms cancel or separate'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: let a letter stand for the secret number." },
+          { "speaker": "NEO", "text": "Two: write each step as an algebraic expression." },
+          { "speaker": "NEO", "text": "Three: the trick works because the unknown cancels out, or separates neatly, like 100 M plus D." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Algebra Play",
+    "topic_no": 2,
+    "name": "Number Pyramids",
+    "scenes": [
+      {
+        "animation": "Stacked stone blocks form a pyramid in a desert. The bottom row reads '19' and '4', and the top block glows '23'. Zippy climbs to the top, holding a sign: 'Each block = sum of the two below'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "In a number pyramid, each block is the sum of the two blocks below. 19 plus 4 is 23!" },
+          { "speaker": "NEO", "text": "Easy going up. But what if the middle blocks are missing?" }
+        ]
+      },
+      {
+        "animation": "A three-row pyramid: top '60', middle 'a' and 'b', bottom '12', 'c', '8'. Equations write line by line: 'a + b = 60', 'a = 12 + c', 'b = c + 8', '(12 + c) + (c + 8) = 60', '20 + 2c = 60', '2c = 40', 'c = 20'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The top is 60 and the bottom row is 12, c and 8. Call the middle blocks a and b." },
+          { "speaker": "NEO", "text": "a is 12 plus c, and b is c plus 8. Together they make 60." },
+          { "speaker": "NEO", "text": "So 20 plus 2c is 60. 2c is 40, and c is 20." }
+        ]
+      },
+      {
+        "animation": "The pyramid fills: bottom '12, 20, 8', middle '32, 28', top '60'. A check line: '32 + 28 = 60 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now a is 12 plus 20, which is 32. b is 20 plus 8, which is 28." },
+          { "speaker": "NEO", "text": "Check: 32 plus 28 is 60." }
+        ]
+      },
+      {
+        "animation": "A general pyramid with bottom 'a, b, c', middle 'a + b, b + c', top 'a + 2b + c'. The middle 'b' glows as it gets counted twice. Then an example: 'bottom 4, 13, 8 → top = 4 + 26 + 8 = 38'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here's a shortcut. With bottom row a, b, c, the middle is a plus b and b plus c." },
+          { "speaker": "NEO", "text": "So the top is a plus 2b plus c. The middle number counts twice!" },
+          { "speaker": "NEO", "text": "For 4, 13 and 8, the top is 4 plus 26 plus 8, which is 38, without building anything." }
+        ]
+      },
+      {
+        "animation": "A pyramid with Virahanka-Fibonacci numbers '1, 2, 3' at the bottom fills: '3, 5', then '8'. Every block glows gold as a Virahanka-Fibonacci number. An 'Exam Tip' sticker: 'Write missing blocks as letters and form equations'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if the bottom row is 1, 2, 3, the start of the Virahanka-Fibonacci sequence?" },
+          { "speaker": "NEO", "text": "The middle becomes 3 and 5, and the top is 8. Every number is a Virahanka-Fibonacci number!" },
+          { "speaker": "NEO", "text": "Exam tip: when blocks are missing, name them with letters and write one equation for each block." }
+        ]
+      },
+      {
+        "animation": "Recap board with the stone pyramid. Points: '1. Each block = sum of the two below', '2. Missing blocks → letters → equations', '3. Three-row pyramid: top = a + 2b + c'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: each block is the sum of the two directly below it." },
+          { "speaker": "NEO", "text": "Two: for missing blocks, use letters and solve the equations." },
+          { "speaker": "NEO", "text": "Three: in a three-row pyramid, the top is a plus 2b plus c." },
+          { "speaker": "ZIPPY", "text": "I'm the king of the pyramid!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Algebra Play",
+    "topic_no": 3,
+    "name": "Fun with Grids: Calendar Magic",
+    "scenes": [
+      {
+        "animation": "A wall calendar for August 2025. A friend secretly draws a 2 × 2 box around four dates and whispers the sum, '40'. Zippy covers his eyes and pretends to meditate.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My friend picked four dates in a square and says they add to 40. Which dates?" },
+          { "speaker": "NEO", "text": "Algebra can find them. Look at how calendar numbers are arranged." }
+        ]
+      },
+      {
+        "animation": "A 2 × 2 box on the calendar with the top-left labelled 'a'. The others fill in: 'a + 1' to the right, 'a + 7' below, 'a + 8' diagonally. The sum writes: 'a + (a + 1) + (a + 7) + (a + 8) = 4a + 16'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Call the top-left date a. The next day is a plus 1." },
+          { "speaker": "NEO", "text": "A week later is a plus 7, and the one beside it is a plus 8." },
+          { "speaker": "NEO", "text": "Add all four: 4a plus 16." }
+        ]
+      },
+      {
+        "animation": "Steps line by line: '4a + 16 = 40', '4a = 24', 'a = 6'. The box lights up on '6, 7, 13, 14'. Check: '6 + 7 + 13 + 14 = 40 ✓'. A second example: 'sum 36 → 4a = 20 → a = 5 → 5, 6, 12, 13'.",
+        "lines": [
+          { "speaker": "NEO", "text": "So 4a plus 16 is 40. Subtract 16 to get 24, and divide by 4. a is 6." },
+          { "speaker": "NEO", "text": "The dates are 6, 7, 13 and 14. Check: they add up to 40." },
+          { "speaker": "NEO", "text": "If the sum were 36, then a would be 5, giving 5, 6, 12 and 13." }
+        ]
+      },
+      {
+        "animation": "An algebra grid: row 1 has three identical triangles summing to 27; row 2 has two circles and a triangle summing to 19. Steps: '3 × triangle = 27 → triangle = 9', '2 × circle + 9 = 19', '2 × circle = 10', 'circle = 5'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Another grid puzzle. Shapes stand for numbers, and each row adds up to the number at the end." },
+          { "speaker": "NEO", "text": "Three triangles make 27, so a triangle is 9." },
+          { "speaker": "NEO", "text": "Two circles and a triangle make 19. So two circles are 10, and a circle is 5." }
+        ]
+      },
+      {
+        "animation": "Zippy designs his own trick with an L-shaped block of dates on the calendar, writing 'a, a + 7, a + 14, a + 15'. An 'Exam Tip' sticker: 'Express every cell using one letter'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I'll invent my own trick, with an L-shape of dates!" },
+          { "speaker": "NEO", "text": "Good. Write every date in terms of the first one, add them, and you can reverse it." },
+          { "speaker": "NEO", "text": "Exam tip: in grid problems, express every cell using a single letter, then form one equation." }
+        ]
+      },
+      {
+        "animation": "Recap board with the calendar. Points: '1. 2 × 2 calendar box: a, a + 1, a + 7, a + 8', '2. Sum = 4a + 16; solve for a', '3. In shape grids, solve the easiest row first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: in a 2 by 2 calendar box, the dates are a, a plus 1, a plus 7 and a plus 8." },
+          { "speaker": "NEO", "text": "Two: their sum is 4a plus 16, so the sum reveals a." },
+          { "speaker": "NEO", "text": "Three: in shape grids, start with the row that has only one kind of shape." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Algebra Play",
+    "topic_no": 4,
+    "name": "The Largest Product",
+    "scenes": [
+      {
+        "animation": "A game-show board with three digit tiles '2', '3', '5' and a template '[ ][ ] × [ ]'. Zippy slams '53 × 2' onto the board, confident. The buzzer sounds.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Use 2, 3 and 5 to make the biggest product. Biggest number first: 53 times 2!" },
+          { "speaker": "NEO", "text": "That's only 106. Let's be systematic." }
+        ]
+      },
+      {
+        "animation": "All six arrangements list out: '23 × 5, 32 × 5, 25 × 3, 52 × 3, 35 × 2, 53 × 2'. They pair by multiplier; the smaller of each pair fades, leaving '32 × 5', '52 × 3', '53 × 2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "There are six ways to place the digits. Pair them by the multiplier." },
+          { "speaker": "NEO", "text": "In each pair, the bigger two-digit number wins. That leaves 32 times 5, 52 times 3, and 53 times 2." }
+        ]
+      },
+      {
+        "animation": "Expansions line up: '32 × 5 = (3 × 10 × 5) + (2 × 5) = 150 + 10 = 160', '52 × 3 = (5 × 10 × 3) + (2 × 3) = 150 + 6 = 156'. The first parts match in yellow; the difference is in the second part. '53 × 2 = 106' fades.",
+        "lines": [
+          { "speaker": "NEO", "text": "53 times 2 is clearly smaller. Now compare 32 times 5 and 52 times 3." },
+          { "speaker": "NEO", "text": "32 times 5 is 3 times 10 times 5, plus 2 times 5. That's 150 plus 10, or 160." },
+          { "speaker": "NEO", "text": "52 times 3 is 5 times 10 times 3, plus 2 times 3. That's 150 plus 6, or 156. So 32 times 5 wins." }
+        ]
+      },
+      {
+        "animation": "General proof card: digits 'p < q < r'. Three candidates: 'rq × p', 'rp × q', 'qp × r'. Expansions: 'qp × r = 10qr + pr', 'rp × q = 10rq + pq'. Since 'r > q', 'pr > pq'. Winner: 'qp × r'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Does this always work? Take digits p, q and r, with p the smallest and r the largest." },
+          { "speaker": "NEO", "text": "Comparing q p times r with r p times q, the first parts are both 10 q r. The second parts are p r and p q." },
+          { "speaker": "NEO", "text": "Since r is bigger than q, p r wins. So the largest digit should be the multiplier." }
+        ]
+      },
+      {
+        "animation": "Puzzle card: 'Digits 3, 5, 9'. Zippy places '53 × 9'. Steps: '53 × 9 = 477', check against '93 × 5 = 465' and '95 × 3 = 285'. An 'Exam Tip' sticker: 'Largest digit as multiplier; other two in decreasing order'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My turn. Digits 3, 5 and 9. Largest digit, 9, as the multiplier, and 53 in front: 53 times 9!" },
+          { "speaker": "NEO", "text": "53 times 9 is 477. Compare 93 times 5, which is 465. Yours is bigger." },
+          { "speaker": "NEO", "text": "Exam tip: put the largest digit as the multiplier, and the other two in decreasing order." }
+        ]
+      },
+      {
+        "animation": "Recap board with the game-show trophy. Points: '1. List cases systematically', '2. Expand using place value to compare', '3. Rule: qp × r with p < q < r'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: list all the cases systematically and remove the obvious losers." },
+          { "speaker": "NEO", "text": "Two: expand using place value to compare what's left." },
+          { "speaker": "NEO", "text": "Three: algebra proves the rule works for any three different digits." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 13,
+    "chapter": "Algebra Play",
+    "topic_no": 5,
+    "name": "Decoding Divisibility Tricks and Puzzles",
+    "scenes": [
+      {
+        "animation": "Karim naps under a banyan tree. A genie pops out of a lamp: 'Walk around the tree and your coins double! Just pay me 8 coins each round.' Karim grins and starts walking.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Doubling money for just 8 coins a round? Sign me up!" },
+          { "speaker": "NEO", "text": "Hold on. Genies and tricksters use algebra too. Let's decode some tricks first." }
+        ]
+      },
+      {
+        "animation": "Mukta's trick: '47 → reverse 74 → 74 − 47 = 27 → 27 ÷ 9 = 3'. Algebra: 'ab = 10a + b, ba = 10b + a', '(10b + a) − (10a + b) = 9b − 9a = 9(b − a)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mukta's trick: pick a two-digit number like 47, reverse it to 74, and subtract. 74 minus 47 is 27, which divides by 9." },
+          { "speaker": "NEO", "text": "Why always? The number is 10a plus b, and the reverse is 10b plus a." },
+          { "speaker": "NEO", "text": "Their difference is 9b minus 9a, which is 9 times b minus a. Always a multiple of 9." }
+        ]
+      },
+      {
+        "animation": "A second trick: '31 + 13 = 44', '28 + 82 = 110', then '(10a + b) + (10b + a) = 11a + 11b = 11(a + b)'. Then a six-digit card: 'abc abc = abc × 1001', '1001 = 7 × 11 × 13'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Adding a number and its reverse gives 11a plus 11b, so it's always a multiple of 11." },
+          { "speaker": "NEO", "text": "And repeating a three-digit number, like 254254, is the same as 254 times 1001. Since 1001 is 7 times 11 times 13, it divides by all three." }
+        ]
+      },
+      {
+        "animation": "Back to Karim. Algebra builds round by round: 'start x', 'round 1: 2x − 8', 'round 2: 2(2x − 8) − 8 = 4x − 24', 'round 3: 2(4x − 24) = 8x − 48 = 8', '8x = 56', 'x = 7'. A check trail: '7 → 14 − 8 = 6 → 12 − 8 = 4 → 8 → 8 − 8 = 0'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Karim starts with x coins. After one round, he has 2x minus 8." },
+          { "speaker": "NEO", "text": "After two rounds, 4x minus 24. After the third doubling, 8x minus 48, and that equals the 8 coins he owes." },
+          { "speaker": "NEO", "text": "So 8x is 56, and x is 7. Check: 7 becomes 6, then 4, then 8, and he pays all 8. Nothing left!" }
+        ]
+      },
+      {
+        "animation": "Zippy stops walking around the tree and waves the genie away. An 'Exam Tip' sticker: 'Write the general number as 10a + b (or 100a + 10b + c) to explain divisibility tricks'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the genie knew Karim had exactly 7 coins. Deal cancelled!" },
+          { "speaker": "NEO", "text": "Exam tip: to explain digit tricks, write a two-digit number as 10a plus b, and a three-digit number as 100a plus 10b plus c." }
+        ]
+      },
+      {
+        "animation": "Recap board with the banyan tree and lamp. Points: '1. Number minus its reverse = 9(b − a)', '2. Number plus its reverse = 11(a + b); abcabc = abc × 7 × 11 × 13', '3. Model each step to solve puzzles'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a two-digit number minus its reverse is always a multiple of 9." },
+          { "speaker": "NEO", "text": "Two: their sum is a multiple of 11, and abcabc is always divisible by 7, 11 and 13." },
+          { "speaker": "NEO", "text": "Three: model each step with algebra, and tricky puzzles become simple equations." }
+        ]
+      }
+    ]
+  }
+]

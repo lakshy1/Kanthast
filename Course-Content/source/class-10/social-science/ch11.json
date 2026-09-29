@@ -1,0 +1,242 @@
+[
+  {
+    "chapter_no": 11,
+    "chapter": "Geography: Manufacturing Industries",
+    "topic_no": 1,
+    "name": "Importance of Manufacturing and Industrial Location",
+    "scenes": [
+      {
+        "animation": "Zippy holds a raw cotton boll in one hand and a crisp shirt in the other, puzzled. A magic conveyor belt runs between them, with a sign 'MANUFACTURING: raw material into more valuable products'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How does this fluffy ball become my school shirt?" },
+          { "speaker": "NEO", "text": "Through manufacturing. Production of goods in large quantities after processing raw materials into more valuable products is called manufacturing." }
+        ]
+      },
+      {
+        "animation": "Four pillars rise with icons: 'Modernises agriculture', 'Reduces heavy dependence on agriculture by providing jobs', 'Removes unemployment and poverty; reduces regional disparities', 'Export of manufactured goods earns foreign exchange'. A caption at the top: 'Manufacturing = backbone of development'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Manufacturing is considered the backbone of development. It helps modernise agriculture and reduces heavy dependence of people on agricultural income by providing them jobs in secondary and tertiary sectors." },
+          { "speaker": "NEO", "text": "It helps remove unemployment and poverty, and reduce regional disparities by setting up industries in tribal and backward areas. Export of manufactured goods expands trade and brings in much needed foreign exchange." },
+          { "speaker": "NEO", "text": "Agriculture and industry are not exclusive of each other. They move hand in hand. Agro-industries have boosted agriculture by raising its productivity." }
+        ]
+      },
+      {
+        "animation": "A pie chart labelled 'Share of manufacturing in GDP' freezes at a small slice with a question mark; an arrow points up to a target labelled 'Desired growth: 12% per annum'. A banner rolls down: 'National Manufacturing Competitiveness Council (NMCC)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Over the last two decades, the share of the manufacturing sector in GDP has stagnated. The desired growth rate over the next decade is 12 per cent. The government set up the National Manufacturing Competitiveness Council, or NMCC, with this objective." }
+        ]
+      },
+      {
+        "animation": "A map of an empty region. Factors drop in one by one as icons: 'Raw material', 'Labour', 'Capital', 'Power', 'Market', 'Government policies'. A factory pops up where they overlap, and other businesses cluster around it: bankers, insurers, transporters, labelled 'Agglomeration economies'. Arrows form a cycle: 'Raw material to factory to market'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Industrial locations are complex. They are influenced by the availability of raw material, labour, capital, power and market. It is rarely possible to find all these factors at one place." },
+          { "speaker": "NEO", "text": "Many industries tend to come together to make use of the advantages offered by urban centres, like banking, insurance, transport, labour, consultants and financial advice. These are known as agglomeration economies." },
+          { "speaker": "ZIPPY", "text": "So factories like to hang out in groups, like students in a canteen." },
+          { "speaker": "NEO", "text": "Exactly. The ultimate aim is to produce goods at the least cost." },
+          { "speaker": "NEO", "text": "Board tip: when asked about industrial location, list the physical and human factors and mention agglomeration economies by name." }
+        ]
+      },
+      {
+        "animation": "Recap board with a small factory icon: '1. Manufacturing: raw materials into more valuable products', '2. Backbone of development; target 12% growth; NMCC', '3. Location: raw material, labour, capital, power, market; agglomeration economies'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: manufacturing turns raw materials into more valuable products." },
+          { "speaker": "NEO", "text": "Two: it is the backbone of development, and agriculture and industry move hand in hand." },
+          { "speaker": "NEO", "text": "Three: industries locate where raw material, labour, capital, power and markets come together at the least cost." },
+          { "speaker": "ZIPPY", "text": "My shirt now feels very important." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Geography: Manufacturing Industries",
+    "topic_no": 2,
+    "name": "Classification of Industries",
+    "scenes": [
+      {
+        "animation": "Zippy is buried in a heap of factory ID cards, trying to sort them. Neo brings in a sorting machine with five slots: 'Raw material', 'Main role', 'Capital', 'Ownership', 'Bulk and weight'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, there are too many industries. How do I sort them all?" },
+          { "speaker": "NEO", "text": "Industries can be classified in five different ways. Let's run them through the machine." }
+        ]
+      },
+      {
+        "animation": "Slot 1 lights up: 'On the basis of source of raw materials'. Cards drop into 'Agro based: cotton, woollen, jute, silk textiles, rubber, sugar, tea, coffee, edible oil' and 'Mineral based: iron and steel, cement, aluminium, machine tools, petrochemicals'.",
+        "lines": [
+          { "speaker": "NEO", "text": "On the basis of source of raw materials used, industries are agro based or mineral based. Cotton, woollen, jute, silk textile, rubber, sugar, tea, coffee and edible oil are agro based. Iron and steel, cement, aluminium, machine tools and petrochemicals are mineral based." }
+        ]
+      },
+      {
+        "animation": "Slot 2 lights up: 'According to their main role'. A giant steel girder labelled 'Basic or key industries: supply products to other industries' feeds a toy factory labelled 'Consumer industries: sugar, toothpaste, paper, sewing machines, fans'. Slot 3: 'On the basis of capital investment' splits cards into 'Small scale' and 'Large scale', with a note 'based on maximum investment allowed'.",
+        "lines": [
+          { "speaker": "NEO", "text": "According to their main role, there are basic or key industries, which supply their products or raw materials to manufacture other goods, like iron and steel, copper smelting and aluminium smelting." },
+          { "speaker": "NEO", "text": "Consumer industries produce goods for direct use by consumers, like sugar, toothpaste, paper, sewing machines and fans." },
+          { "speaker": "NEO", "text": "On the basis of capital investment, an industry is small scale or large scale, depending on the maximum investment allowed on the assets of a unit." }
+        ]
+      },
+      {
+        "animation": "Slot 4: 'On the basis of ownership'. Four doors open: 'Public sector: BHEL, SAIL', 'Private sector: TISCO, Bajaj Auto Ltd, Dabur Industries', 'Joint sector: Oil India Ltd', 'Cooperative sector: sugar in Maharashtra, coir in Kerala'. Slot 5: 'Bulk and weight' shows a heavy iron ingot next to a light electronics chip.",
+        "lines": [
+          { "speaker": "NEO", "text": "On the basis of ownership, public sector industries are owned and operated by government agencies, like BHEL and SAIL. Private sector industries are owned by individuals or groups, like TISCO, Bajaj Auto Limited and Dabur Industries." },
+          { "speaker": "NEO", "text": "Joint sector industries are jointly run by the state and individuals, like Oil India Limited. Cooperative sector industries are owned and operated by the producers or suppliers of raw materials, or workers, or both, like the sugar industry in Maharashtra and the coir industry in Kerala." },
+          { "speaker": "NEO", "text": "Finally, based on the bulk and weight of raw materials and finished goods, industries are heavy, like iron and steel, or light, which use light raw materials and produce light goods, like electrical industries." },
+          { "speaker": "ZIPPY", "text": "So a sugar mill in Maharashtra can be agro based, consumer, and cooperative, all at once?" },
+          { "speaker": "NEO", "text": "Correct. Board tip: one industry can fall in several classes, so always say which basis you are using." }
+        ]
+      },
+      {
+        "animation": "Recap board with the sorting machine now tidy: '1. Raw material: agro based vs mineral based', '2. Role: basic or key vs consumer; capital: small vs large scale', '3. Ownership: public, private, joint, cooperative; bulk: heavy vs light'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: by raw material, industries are agro based or mineral based." },
+          { "speaker": "NEO", "text": "Two: by role, they are basic or consumer industries, and by capital, small or large scale." },
+          { "speaker": "NEO", "text": "Three: by ownership, they are public, private, joint or cooperative, and by bulk, heavy or light." },
+          { "speaker": "ZIPPY", "text": "Sorted. Finally." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Geography: Manufacturing Industries",
+    "topic_no": 3,
+    "name": "Agro-Based Industries: Textiles, Jute and Sugar",
+    "scenes": [
+      {
+        "animation": "Mahatma Gandhi sits calmly at a spinning wheel; Zippy tries a second charkha and ends up wrapped in thread like a cocoon. Caption: 'Textile industry: self-reliant and complete in the value chain'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Help! The thread won." },
+          { "speaker": "NEO", "text": "The textile industry has a unique position in the Indian economy. It is the only industry in the country which is self-reliant and complete in the value chain, from raw material to the highest value added products." }
+        ]
+      },
+      {
+        "animation": "A timeline strip: 'Ancient India: cotton spun by hand spinning and handloom weaving', 'After the 18th century: power looms', '1854: first successful textile mill, Mumbai'. The map of India shows cotton mills clustering in Maharashtra and Gujarat, with pins for the map-work cities 'Mumbai, Indore, Surat, Kanpur, Coimbatore'. Arrows show yarn exported to Japan and other countries.",
+        "lines": [
+          { "speaker": "NEO", "text": "In ancient India, cotton textiles were produced with hand spinning and handloom weaving techniques. The first successful textile mill was established in Mumbai in 1854." },
+          { "speaker": "NEO", "text": "In the early years, the cotton textile industry was concentrated in the cotton growing belt of Maharashtra and Gujarat. Availability of raw cotton, market, transport, ports, labour and moist climate helped its localisation." },
+          { "speaker": "NEO", "text": "Mahatma Gandhi laid emphasis on spinning yarn and weaving khadi. Board tip: map work asks you to locate the cotton textile centres of Mumbai, Indore, Surat, Kanpur and Coimbatore." }
+        ]
+      },
+      {
+        "animation": "A shimmering golden jute bundle; a mill rises on the banks of the Hugli river labelled 'Rishra, near Kolkata, 1859'. Factory chimneys line a narrow strip along the river. Floating reasons: 'Jute growing areas', 'Cheap water transport', 'Railways and roadways', 'Water for processing', 'Cheap labour', 'Kolkata: banking, insurance, port'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India is the largest producer of raw jute and jute goods, and stands second as an exporter after Bangladesh. The first jute mill was set up near Kolkata in 1859 at Rishra." },
+          { "speaker": "NEO", "text": "Most mills are located along the banks of the Hugli river in a narrow belt. Proximity to jute producing areas, inexpensive water transport, a good network of railways and roadways, abundant water for processing, cheap labour, and Kolkata as a large urban centre with banking, insurance and port facilities explain this." },
+          { "speaker": "NEO", "text": "In 2005, the National Jute Policy was formulated to increase productivity, improve quality and ensure good prices to jute farmers." }
+        ]
+      },
+      {
+        "animation": "A sugarcane stalk walks into a mill and comes out as sugar crystals, gur and khandsari. A map shows sugar mill icons sliding from Uttar Pradesh and Bihar towards Maharashtra, Karnataka and Tamil Nadu, labelled 'Mills shifting south and west'. Tags pop up: 'Cooler climate, longer crushing season', 'Higher sucrose content', 'Cooperatives more successful'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India stands second as a world producer of sugar, but occupies the first place in the production of gur and khandsari. The raw material used is bulky, and sucrose content reduces in haulage, so mills are located close to sugarcane fields." },
+          { "speaker": "NEO", "text": "In recent years, mills have been shifting and concentrating in the southern and western states, especially Maharashtra. The cane produced here has higher sucrose content, the cooler climate ensures a longer crushing season, and cooperatives are more successful in these states." },
+          { "speaker": "ZIPPY", "text": "Sweet mills go where the sweetest cane grows. Makes sense." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cotton boll, a jute bundle and a sugar cube: '1. Textiles: self-reliant, complete value chain; first mill Mumbai 1854', '2. Jute: first mill at Rishra 1859; Hugli belt; National Jute Policy 2005', '3. Sugar: second largest producer; first in gur and khandsari; mills shifting south and west'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: textiles are self-reliant and complete in the value chain, and the first successful mill opened in Mumbai in 1854." },
+          { "speaker": "NEO", "text": "Two: jute mills crowd along the Hugli, starting with Rishra in 1859." },
+          { "speaker": "NEO", "text": "Three: sugar mills are shifting to the south and west." },
+          { "speaker": "ZIPPY", "text": "And I'm finally unwrapped from the thread." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Geography: Manufacturing Industries",
+    "topic_no": 4,
+    "name": "Mineral-Based Industries: Iron and Steel, Aluminium, Chemicals, Cement, Automobiles and IT",
+    "scenes": [
+      {
+        "animation": "A heavy-industry parade marches past: a steel girder, an aluminium sheet, a chemical flask, a cement bag, a car and a laptop, each holding a flag. Zippy salutes them from a podium.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Who's leading this parade?" },
+          { "speaker": "NEO", "text": "Iron and steel. It is the basic industry, since all other industries, heavy, medium and light, depend on it for their machinery." }
+        ]
+      },
+      {
+        "animation": "A steel plant diagram builds in steps: iron ore, coking coal and limestone go into a blast furnace in the ratio '4 : 2 : 1', with some manganese added. Then the map of Chhotanagpur plateau glows, labelled 'Maximum concentration of iron and steel industries'. Map-work pins appear: 'Durgapur, Bokaro, Jamshedpur, Bhilai, Vijaynagar, Salem'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Iron and steel is a heavy industry, because all the raw materials as well as finished goods are heavy and bulky. Iron ore, coking coal and limestone are required in the ratio of approximately 4 to 2 to 1. Some quantities of manganese are also needed to harden the steel." },
+          { "speaker": "NEO", "text": "Most public sector steel undertakings market their steel through the Steel Authority of India Limited, SAIL, while TISCO markets its products through Tata Steel." },
+          { "speaker": "NEO", "text": "The Chhotanagpur plateau region has the maximum concentration of iron and steel industries, thanks to low cost of iron ore, high grade raw materials in proximity, cheap labour and vast growth potential in the home market." },
+          { "speaker": "NEO", "text": "Board tip: map work asks you to locate the iron and steel plants at Durgapur, Bokaro, Jamshedpur, Bhilai, Vijaynagar and Salem." }
+        ]
+      },
+      {
+        "animation": "An aluminium plane, a utensil and a wire glow, with a tag 'Aluminium smelting: second most important metallurgical industry'. Bauxite goes in and aluminium comes out, with a tag 'regular supply of electricity at minimum cost'. Then a chemical flask bubbles into two bottles: 'Inorganic: sulphuric acid, nitric acid, alkalies, soda ash, caustic soda' and 'Organic: petrochemicals'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Aluminium smelting is the second most important metallurgical industry in India. It is light, resistant to corrosion, a good conductor of heat and malleable. Bauxite is the raw material, and regular supply of electricity at minimum cost is essential." },
+          { "speaker": "NEO", "text": "The chemical industry comprises both large and small scale units. Inorganic chemicals include sulphuric acid, nitric acid, alkalies, soda ash and caustic soda. Organic chemicals include petrochemicals, used for manufacturing synthetic fibres, synthetic rubber, plastics, dye-stuffs, drugs and pharmaceuticals." }
+        ]
+      },
+      {
+        "animation": "A cement bag with the tag 'Bulky raw materials: limestone, silica, gypsum'. A car rolls off an assembly line near Delhi, Gurugram, Mumbai, Pune and Chennai. Then an electronic circuit board forms the skyline of Bengaluru, labelled 'Electronic capital of India'. Map-work pins for Software Technology Parks appear: 'Noida, Gandhinagar, Mumbai, Pune, Hyderabad, Bengaluru, Chennai, Thiruvananthapuram'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Cement is essential for construction activity. It requires bulky and heavy raw materials like limestone, silica and gypsum." },
+          { "speaker": "NEO", "text": "Automobiles provide vehicles for quick transport of goods and passengers. The industry is located around Delhi, Gurugram, Mumbai, Pune, Chennai, Kolkata, Lucknow, Indore, Hyderabad, Jamshedpur and Bengaluru." },
+          { "speaker": "NEO", "text": "The information technology and electronics industry covers products from transistor sets to television, telephones, computers and more. Bengaluru has emerged as the electronic capital of India." },
+          { "speaker": "ZIPPY", "text": "I'm an electronic spark. So Bengaluru is basically my hometown." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Iron and steel: basic industry; ore, coal, limestone about 4:2:1; Chhotanagpur plateau', '2. Aluminium: second most important metallurgical industry; chemicals: inorganic and organic', '3. Cement, automobiles, IT; Bengaluru the electronic capital'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: iron and steel is the basic industry, concentrated in the Chhotanagpur plateau." },
+          { "speaker": "NEO", "text": "Two: aluminium smelting is the second most important metallurgical industry, and chemicals are both inorganic and organic." },
+          { "speaker": "NEO", "text": "Three: cement, automobiles and IT complete the picture, with Bengaluru as India's electronic capital." },
+          { "speaker": "ZIPPY", "text": "Parade dismissed!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Geography: Manufacturing Industries",
+    "topic_no": 5,
+    "name": "Industrial Pollution and Environmental Degradation; Control Measures",
+    "scenes": [
+      {
+        "animation": "A river beside a factory turns grey; a fish holds a tiny sign 'Help!'. Black smoke rises over a city; Zippy coughs and his glow dims. A loudspeaker blares nonstop noise.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Industries give us jobs and goods. So why is this fish holding a protest sign?" },
+          { "speaker": "NEO", "text": "Because industries have also contributed to environmental degradation. They cause four types of pollution: air, water, thermal and noise." }
+        ]
+      },
+      {
+        "animation": "Four panels fill in one by one. Air: chimneys release sulphur dioxide, carbon monoxide and smoke. Water: pipes pour dyes, detergents, acids, salts and heavy metals like lead and mercury into a river. Thermal: hot water from a power plant flows into a pond and fish float. Noise: a factory siren and generators shake windows, labelled 'hearing impairment, stress'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Air pollution is caused by the presence of a high proportion of undesirable gases, such as sulphur dioxide and carbon monoxide. Smoke from chemical and paper factories, brick kilns, refineries and smelting plants pollutes the air." },
+          { "speaker": "NEO", "text": "Water pollution is caused by organic and inorganic industrial effluents discharged into rivers, like dyes, detergents, acids, salts and heavy metals like lead and mercury." },
+          { "speaker": "NEO", "text": "Thermal pollution of water occurs when hot water from factories and thermal plants is drained into rivers and ponds before cooling. Noise pollution results in irritation and anger, and can cause hearing impairment, increased heart rate and blood pressure." }
+        ]
+      },
+      {
+        "animation": "A control-measures toolkit opens: 'Minimise use of water by reusing and recycling', 'Rainwater harvesting', 'Treat hot water and effluents before release: primary, secondary, tertiary', 'Electrostatic precipitators, fabric filters, scrubbers, inertial separators', 'Smoke: oil or gas instead of coal', 'Silencers and ear protectors'.",
+        "lines": [
+          { "speaker": "NEO", "text": "We can minimise the use of water for processing by reusing and recycling it in two or more successive stages. Rainwater harvesting can meet water requirements. Hot water and effluents should be treated before releasing them into rivers and ponds." },
+          { "speaker": "NEO", "text": "Treatment of industrial effluents is done in three phases: primary treatment by mechanical means, secondary treatment by biological process, and tertiary treatment by biological, chemical and physical processes." },
+          { "speaker": "NEO", "text": "Particulate matter in the air can be reduced by fitting smoke stacks with electrostatic precipitators, fabric filters, scrubbers and inertial separators. Machinery can be fitted with silencers." }
+        ]
+      },
+      {
+        "animation": "A clean power plant surrounded by trees, labelled 'NTPC shows the way'. Checklist appears: 'Optimum use of equipment', 'Minimising waste generation', 'Green belts', 'Ash ponds and ash water recycling', 'Ecological monitoring'.",
+        "lines": [
+          { "speaker": "NEO", "text": "NTPC is a major power providing corporation in India. It has a proactive approach for preserving the natural environment, through optimum utilisation of equipment, minimising waste generation, providing green belts, reducing environmental pollution through ash pond management and ash water recycling, and ecological monitoring." },
+          { "speaker": "NEO", "text": "Board tip: a common question asks for ways to control industrial pollution. Mention the three phases of effluent treatment and at least two devices for air." }
+        ]
+      },
+      {
+        "animation": "Recap board with the fish now smiling in clear water: '1. Four types: air, water, thermal, noise', '2. Control: reuse water, treat effluents in three phases, electrostatic precipitators', '3. NTPC: green belts, ash ponds, ecological monitoring'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: industries cause air, water, thermal and noise pollution." },
+          { "speaker": "NEO", "text": "Two: we can reuse water, treat effluents in three phases and clean smoke with devices like electrostatic precipitators." },
+          { "speaker": "NEO", "text": "Three: NTPC shows how industry can protect the environment." },
+          { "speaker": "ZIPPY", "text": "The fish has withdrawn its protest." }
+        ]
+      }
+    ]
+  }
+]

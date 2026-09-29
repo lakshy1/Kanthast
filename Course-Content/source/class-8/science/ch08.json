@@ -1,0 +1,342 @@
+[
+  {
+    "chapter_no": 8,
+    "chapter": "Nature of Matter: Elements, Compounds, and Mixtures",
+    "topic_no": 1,
+    "name": "What Are Mixtures?",
+    "scenes": [
+      {
+        "animation": "A school canteen at lunch. Zippy stares at a steaming plate of poha and a bowl of sprout salad, then tries to pick out a single peanut with tiny tongs. Neo lands beside him holding a glass of lemonade.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, poha and sprout salad look nothing alike. Why do I feel they belong to the same club?" },
+          { "speaker": "NEO", "text": "Good instinct. Both are made by mixing several ingredients. So are soups, lemonade and sugar dissolved in water." },
+          { "speaker": "NEO", "text": "In science, we call them mixtures." }
+        ]
+      },
+      {
+        "animation": "A bowl of sprout salad zooms up. Labels pop onto green gram, chickpeas, onion and tomato, each keeping its own colour. A banner writes itself: 'Mixture: two or more substances mixed, each keeps its properties'. The word 'Components' tags each ingredient.",
+        "lines": [
+          { "speaker": "NEO", "text": "When two or more substances are mixed, and each substance retains its properties, it is called a mixture." },
+          { "speaker": "NEO", "text": "The individual substances that make up a mixture are called its components." },
+          { "speaker": "NEO", "text": "The components of a mixture do not react chemically with each other. The onion stays onion, and the chickpea stays chickpea." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: the sprout salad under a magnifying glass, every piece clearly visible, tagged 'Non-uniform'. Right: a glass of sugar water under a microscope, showing nothing but clear liquid, tagged 'Uniform'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the sprout salad, you can see the components with your naked eye or with a magnifying device. Such mixtures are non-uniform." },
+          { "speaker": "ZIPPY", "text": "And sugar water? I can't see the sugar at all." },
+          { "speaker": "NEO", "text": "Right. Its components are evenly distributed and cannot be seen separately, even with a microscope. Such mixtures are uniform." }
+        ]
+      },
+      {
+        "animation": "A kitchen shelf with a stainless steel tiffin, a brass lota and a bronze plate. Each object splits into coloured labels: 'Stainless steel = iron + nickel + chromium + a little carbon', 'Brass = copper + zinc', 'Bronze = copper + tin'. The word 'ALLOYS' stamps across the shelf.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "At least my steel tiffin is one pure thing." },
+          { "speaker": "NEO", "text": "Sorry, Zippy. Stainless steel is also a mixture of iron, nickel, chromium and a small amount of carbon." },
+          { "speaker": "NEO", "text": "They are mixed so uniformly that the whole thing looks the same throughout. Such mixtures are called alloys." },
+          { "speaker": "NEO", "text": "Brass is a mixture of copper and zinc. Bronze is a mixture of copper and tin." }
+        ]
+      },
+      {
+        "animation": "A palm-leaf manuscript unrolls with the word 'Mishraloha'. A balance shows 'Tamra (Copper) 4 parts' and 'Vanga (Tin) 1 part' melting together into a bronze bowl labelled 'Kamsya'. A yellow 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ancient India knew this too. A mixture of two or more metals with new properties was called Mishraloha." },
+          { "speaker": "NEO", "text": "Bronze, or Kamsya, was made from four parts copper, called Tamra, and one part tin, called Vanga. Texts like the Charaka Samhita mention alloys for medicinal use." },
+          { "speaker": "NEO", "text": "Exam tip: an alloy is a mixture, not a compound. Students often lose marks by calling brass a compound." }
+        ]
+      },
+      {
+        "animation": "Recap board with the poha plate as a mascot. Three points tick in: '1. Mixture: components keep their properties, no chemical reaction', '2. Non-uniform: components visible; Uniform: evenly spread, not visible', '3. Alloys like steel, brass, bronze are uniform mixtures'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in a mixture, the components keep their own properties and do not react chemically." },
+          { "speaker": "NEO", "text": "Two: in non-uniform mixtures, you can see the components. In uniform mixtures, they are evenly spread and cannot be told apart." },
+          { "speaker": "NEO", "text": "Three: alloys like stainless steel, brass and bronze are uniform mixtures of metals." },
+          { "speaker": "ZIPPY", "text": "So my lunch plate is a science lab. Noted!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Nature of Matter: Elements, Compounds, and Mixtures",
+    "topic_no": 2,
+    "name": "Is Air a Mixture? Types of Mixtures",
+    "scenes": [
+      {
+        "animation": "A dark room with a sunbeam streaming through a small window gap. Tiny shining specks dance in the beam. Zippy tries to catch them and ends up sneezing.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, the air is full of glitter! Is air made of sparkles?" },
+          { "speaker": "NEO", "text": "Those are dust particles. Today we find out what air really contains, and whether it is a mixture." }
+        ]
+      },
+      {
+        "animation": "A glass bubble of air opens up to show coloured particles labelled 'Nitrogen (about 78%)', 'Oxygen', 'Argon', 'Carbon dioxide', 'Water vapour'. Beside it, a cold glass of nimbu paani grows droplets on its outside.",
+        "lines": [
+          { "speaker": "NEO", "text": "Air is a uniform mixture of mainly nitrogen, oxygen, argon, carbon dioxide and water vapour." },
+          { "speaker": "NEO", "text": "Oxygen is needed by most living beings and helps in combustion. Nitrogen makes up about 78 percent of air and does not take part in combustion." },
+          { "speaker": "NEO", "text": "When warm air touches a cool surface, water vapour turns into tiny droplets. That is why a cold glass sweats." }
+        ]
+      },
+      {
+        "animation": "Activity 8.1 builds step by step: a tumbler half-filled with water; a spoon slowly adds 'Calcium oxide (quick lime)' with a red 'Safety first: add slowly' tag; heat waves rise. Stirring, filtering, then a clear liquid labelled 'Lime water' sits in a petri dish. A clock spins a few hours and the liquid turns milky white.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let us test for carbon dioxide. Half fill a tumbler with water and add a small amount of calcium oxide, or quick lime, slowly and carefully." },
+          { "speaker": "NEO", "text": "It reacts vigorously with water to form calcium hydroxide and releases heat. Stir, filter, and you get a colourless solution called lime water." },
+          { "speaker": "NEO", "text": "Leave it in a petri dish for a few hours, stirring now and then. It turns milky." },
+          { "speaker": "NEO", "text": "Carbon dioxide from the air reacts with calcium hydroxide to form calcium carbonate, tiny white insoluble particles, and water. So air contains carbon dioxide." }
+        ]
+      },
+      {
+        "animation": "Activity 8.2: a clean black sheet is placed near an open window; a time-lapse clock spins. Dust specks settle on it and a magnifying glass reveals them. A small tag reads 'Pollutant, not a part of air'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now place a clean black sheet of paper near an open window for a few hours. Tiny particles settle on it." },
+          { "speaker": "NEO", "text": "This shows dust particles are suspended in air. They are not an integral part of air. They are pollutants, and their amount varies from place to place and time to time." }
+        ]
+      },
+      {
+        "animation": "Table 8.1 builds row by row: 'Gas + gas: Air - Uniform', 'Gas + liquid: Soda water - Uniform', 'Solid + gas: Carbon particles in air - Non-uniform', 'Liquid + liquid: Vinegar - Uniform; Oil and water - Non-uniform', 'Solid + liquid: Sand and water - Non-uniform', 'Solid + solid: Alloys - Uniform'. An 'EXAM TIP' card flashes at the end.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mixtures can be sorted by the states of their components. Air is gas with gas. Soda water is gas in liquid." },
+          { "speaker": "NEO", "text": "Vinegar is acetic acid in water, a liquid with a liquid. Oil and water is also liquid with liquid, but non-uniform. Sand and water is solid with liquid. Alloys are solid with solid." },
+          { "speaker": "NEO", "text": "Exam tip: in science, every component of a mixture must be a pure substance. And separating a mixture in science aims to get pure substances." }
+        ]
+      },
+      {
+        "animation": "Recap board with a milky petri dish, a dusty black sheet and a mini table. Three points appear: '1. Air: uniform mixture, nitrogen about 78%', '2. Lime water turns milky: CO2 in air', '3. Mixtures classified by the states of their components'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: air is a uniform mixture of mainly nitrogen, oxygen, argon, carbon dioxide and water vapour." },
+          { "speaker": "NEO", "text": "Two: lime water turning milky proves carbon dioxide is in the air, while dust settling on a sheet shows suspended pollutants." },
+          { "speaker": "NEO", "text": "Three: mixtures are classified by the physical states of their components, and each can be uniform or non-uniform." },
+          { "speaker": "ZIPPY", "text": "So I sneezed at a pollutant. Very scientific sneeze." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Nature of Matter: Elements, Compounds, and Mixtures",
+    "topic_no": 3,
+    "name": "Pure Substances and Elements",
+    "scenes": [
+      {
+        "animation": "A kirana shop shelf with packets shouting 'PURE GHEE', 'PURE MILK', 'PURE SPICES'. Zippy salutes them. Neo holds up a lab flask with a question mark floating over the word 'PURE'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Every packet here says pure. So they are all pure substances, right?" },
+          { "speaker": "NEO", "text": "In the shop, pure means unadulterated. In science, pure means something much stricter." }
+        ]
+      },
+      {
+        "animation": "A cartoon trader sneaks cheap powder into a spice jar; a red 'Adulteration: illegal' stamp lands on him. Then a microscope view shows a jar of identical particles glowing, labelled 'Pure substance: same type of particles'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Adulteration is the illegal addition of cheaper or poor-quality substances to a product. It lowers quality and can harm health." },
+          { "speaker": "NEO", "text": "In science, a pure substance has no other substance in it. It consists of the same type of particles and cannot be separated into other kinds of matter by any physical process." },
+          { "speaker": "ZIPPY", "text": "So pure milk is still a mixture for a scientist?" },
+          { "speaker": "NEO", "text": "Exactly. It is made of more than one substance." }
+        ]
+      },
+      {
+        "animation": "Activity 8.3 builds step by step with a red 'Teacher demonstration. Careful with sulfuric acid. No lithium-ion battery' banner: a beaker two-thirds full of water gets a few drops of dilute sulfuric acid; a 9 V battery sits inside; two water-filled test tubes are inverted over its terminals. Bubbles rise and one tube collects more gas than the other.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let us pass electricity through water. This is a teacher demonstration, so be careful with sulfuric acid, and never use a lithium-ion battery." },
+          { "speaker": "NEO", "text": "Fill a beaker two-thirds with water and add a few drops of dilute sulfuric acid. Place a 9 volt battery inside it, and carefully put a water-filled test tube over each terminal." },
+          { "speaker": "NEO", "text": "In a few minutes, gas bubbles form at both terminals. Wait ten to fifteen minutes and compare the volumes. They are not the same." }
+        ]
+      },
+      {
+        "animation": "Keeping a safe distance, a burning candle nears the first tube: 'POP!' with a label 'Hydrogen'. At the second tube, the flame glows brighter: 'Oxygen'. The word equation 'Water → Hydrogen + Oxygen' writes itself.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Is it just water vapour?" },
+          { "speaker": "NEO", "text": "No. Water vapour would have condensed back into water." },
+          { "speaker": "NEO", "text": "Bring a burning candle near each tube from a safe distance. One gives a pop sound, so it is hydrogen. In the other, the flame glows brighter, so it is oxygen." },
+          { "speaker": "NEO", "text": "So water is made of two different constituents, hydrogen and oxygen." }
+        ]
+      },
+      {
+        "animation": "Hydrogen and oxygen particles line up as identical balls labelled 'Atoms'; pairs join into 'H2 molecule' and 'O2 molecule'. A sorting board splits into 'Metals: gold, silver, magnesium, iron, aluminium', 'Non-metals: carbon, sulfur, hydrogen, oxygen' and 'Metalloids: silicon, boron'. A counter reads '118 elements'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Hydrogen and oxygen are elements. Elements cannot be broken down into simpler substances. They are the building blocks of all matter." },
+          { "speaker": "NEO", "text": "Each element is made of identical particles called atoms. Most atoms combine to form molecules; for example, two hydrogen atoms form one hydrogen molecule." },
+          { "speaker": "NEO", "text": "Elements are metals or non-metals. Silicon and boron are in between, called metalloids. 118 elements are known today." },
+          { "speaker": "NEO", "text": "Exam tip: only two elements are liquid at room temperature: mercury, a metal, and bromine, a non-metal." }
+        ]
+      },
+      {
+        "animation": "Recap board with a 'PURE' tag, a popping test tube and a mini periodic grid. Points appear: '1. Pure substance: same type of particles', '2. Electricity splits water into hydrogen and oxygen', '3. Element: cannot be broken down; made of atoms'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in science, a pure substance has only one type of particle and cannot be separated by physical processes." },
+          { "speaker": "NEO", "text": "Two: passing electricity through water gives hydrogen, which burns with a pop, and oxygen, which makes a flame glow brighter." },
+          { "speaker": "NEO", "text": "Three: elements cannot be broken into simpler substances, and are made of identical atoms." },
+          { "speaker": "ZIPPY", "text": "Pure ghee just got demoted." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Nature of Matter: Elements, Compounds, and Mixtures",
+    "topic_no": 4,
+    "name": "Compounds: Water, Salt, and Sugar",
+    "scenes": [
+      {
+        "animation": "A fire scene: a hydrogen balloon bursts into flame, an oxygen cylinder makes a candle blaze, and then a bucket of water puts the fire out. Zippy looks from one to the other, totally confused.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hydrogen burns. Oxygen helps burning. Put them together, and the result puts out fire? That's rude." },
+          { "speaker": "NEO", "text": "That's the magic of a compound. It is something entirely new." }
+        ]
+      },
+      {
+        "animation": "A water molecule forms: two white hydrogen balls snap tightly onto one red oxygen ball. A ratio badge shows 'H : O = 2 : 1'. A pair of cartoon tweezers tries to pull them apart and bends.",
+        "lines": [
+          { "speaker": "NEO", "text": "In water, hydrogen and oxygen are held so tightly that you cannot separate them by physical methods. That is why water is a compound." },
+          { "speaker": "NEO", "text": "Compounds form when different elements combine in fixed ratios. In water, the ratio of hydrogen atoms to oxygen atoms is 2 is to 1." },
+          { "speaker": "NEO", "text": "A compound's properties are different from those of the elements that form it." }
+        ]
+      },
+      {
+        "animation": "A shiny soft metal 'Sodium' and a greenish gas cloud with a hazard sign 'Chlorine' collide and turn into a salt shaker on a dining table. Ratio badge: 'Na : Cl = 1 : 1'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here is another one. Sodium is a soft metal, and chlorine is a hazardous gas." },
+          { "speaker": "NEO", "text": "Together they form sodium chloride, harmless common salt that we need in our food. Its particles of sodium and chlorine are in a 1 is to 1 ratio." },
+          { "speaker": "ZIPPY", "text": "But we can get salt out of water by evaporation." },
+          { "speaker": "NEO", "text": "Yes, that separates salt from water. But no physical process can split salt into sodium and chlorine." }
+        ]
+      },
+      {
+        "animation": "Activity 8.4 builds step by step with a 'Safety first: teacher present' tag: a teaspoon of sugar in a boiling tube held by a test tube holder over a spirit lamp. The sugar turns brown, then black; water droplets appear near the open end. The black charcoal is scooped onto a watch glass labelled 'Carbon'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now sugar. In the presence of a teacher, put a teaspoon of sugar in a boiling tube and heat it gently." },
+          { "speaker": "NEO", "text": "It turns brown, then begins to char and turns blackish. Small water droplets appear near the open end of the tube." },
+          { "speaker": "ZIPPY", "text": "That water came from the air, right?" },
+          { "speaker": "NEO", "text": "No. The tube is being heated, so the water must come from the dry sugar itself. The black stuff left behind is charcoal, which is carbon." }
+        ]
+      },
+      {
+        "animation": "A sugar cube splits into 'Carbon' and 'Water', and water splits again into 'Hydrogen' and 'Oxygen'. The sugar cube is stamped 'COMPOUND: C, H, O'. A yellow 'EXAM TIP' card: 'Compound = fixed ratio + new properties + no physical separation'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sugar decomposes on heating into carbon and water, and water contains hydrogen and oxygen. So sugar is not an element." },
+          { "speaker": "NEO", "text": "Sugar is a compound of carbon, hydrogen and oxygen." },
+          { "speaker": "NEO", "text": "Exam tip: when asked to define a compound, write all three points: elements combined chemically in a fixed ratio, new properties, and no separation by physical methods." }
+        ]
+      },
+      {
+        "animation": "Recap board with a water drop, a salt shaker and a charred sugar tube. Points appear: '1. Compound: elements in a fixed ratio', '2. Water H:O = 2:1; salt Na:Cl = 1:1', '3. Sugar = carbon + hydrogen + oxygen'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a compound forms when different elements combine chemically in a fixed ratio, and it has new properties." },
+          { "speaker": "NEO", "text": "Two: water has hydrogen and oxygen atoms in a 2 is to 1 ratio, and sodium chloride has sodium and chlorine in a 1 is to 1 ratio." },
+          { "speaker": "NEO", "text": "Three: heating sugar gives carbon and water, so sugar is a compound of carbon, hydrogen and oxygen." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Nature of Matter: Elements, Compounds, and Mixtures",
+    "topic_no": 5,
+    "name": "Mixture or Compound? The Iron and Sulfur Test",
+    "scenes": [
+      {
+        "animation": "A game-show stage titled 'MIXTURE OR COMPOUND?'. Two watch glasses sit on podiums, 'Sample A' and 'Sample B'. Zippy presses a buzzer too early and it honks at him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Both samples are made from iron and sulfur. So they are the same. Final answer!" },
+          { "speaker": "NEO", "text": "Too fast, Zippy. Let's test them properly, like real scientists." }
+        ]
+      },
+      {
+        "animation": "Activity 8.5 builds step by step with a red banner 'Teacher demonstration. Fume hood or well-ventilated area. Do not inhale gases'. Balances show '5.6 g iron filings' and '3.2 g sulfur powder'; they are mixed into grey-and-yellow Sample A. Half goes into a china dish on wire gauze over a burner, stirred until a black mass forms, cooled, ground in a mortar and pestle, and labelled Sample B.",
+        "lines": [
+          { "speaker": "NEO", "text": "This is a teacher demonstration, done in a well-ventilated area. Do not inhale the gases." },
+          { "speaker": "NEO", "text": "Mix 5.6 grams of iron filings with 3.2 grams of sulfur powder. This is Sample A." },
+          { "speaker": "NEO", "text": "Heat half of it gently in a china dish, stirring, until a black mass forms. Cool it, grind it with a pestle, and call it Sample B." }
+        ]
+      },
+      {
+        "animation": "Step 1 and Step 2 side by side. Sample A shows black and yellow specks; Sample B is uniform black. A horseshoe magnet sweeps over each: iron filings leap from Sample A, but Sample B does not move.",
+        "lines": [
+          { "speaker": "NEO", "text": "Step one, appearance. In Sample A, you can see black and yellow particles. Sample B has the same colour and texture throughout." },
+          { "speaker": "NEO", "text": "Step two, the magnet test. The magnet pulls iron filings out of Sample A. Sample B is not attracted at all." }
+        ]
+      },
+      {
+        "animation": "Step 3 with a 'Careful with hydrochloric acid' tag: dilute acid drips into both test tubes. A hand demonstrates wafting the gas towards the nose, with 'Never smell directly' in red. A burning splinter at tube A goes 'POP'; tube B releases a greenish cartoon stink cloud with a rotten egg icon.",
+        "lines": [
+          { "speaker": "NEO", "text": "Step three, the gas test. Add a few drops of dilute hydrochloric acid to each. Waft the gas gently towards your nose, and never smell anything directly." },
+          { "speaker": "NEO", "text": "Sample A gives a colourless gas with no smell that burns with a pop. That is hydrogen, from iron reacting with the acid to form iron chloride. The sulfur stays as a yellow solid at the bottom." },
+          { "speaker": "NEO", "text": "Sample B gives hydrogen sulfide, a colourless gas that smells like rotten eggs." }
+        ]
+      },
+      {
+        "animation": "Verdict cards flip over: 'Sample A = MIXTURE of iron and sulfur' and 'Sample B = COMPOUND: iron sulfide'. The two word equations appear: 'Iron + Dilute hydrochloric acid → Iron chloride + Hydrogen gas' and 'Iron sulfide + Dilute hydrochloric acid → Iron chloride + Hydrogen sulfide'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Verdict. Sample A is a mixture. Its components keep their properties, and a magnet can separate them." },
+          { "speaker": "NEO", "text": "Sample B is iron sulfide, a compound. It has completely new properties, and iron and sulfur can no longer be separated." },
+          { "speaker": "NEO", "text": "Exam tip: learn both word equations. The gas from Sample A burns with a pop; the gas from Sample B smells like rotten eggs." }
+        ]
+      },
+      {
+        "animation": "Recap board with the two podiums. Points appear: '1. Sample A: mixture, magnet separates iron', '2. Sample B: iron sulfide, a compound, not magnetic', '3. With dilute HCl: A gives hydrogen, B gives hydrogen sulfide'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a mixture of iron and sulfur keeps both properties, so a magnet can pull out the iron." },
+          { "speaker": "NEO", "text": "Two: on heating, they form iron sulfide, a compound with new properties that a magnet does not attract." },
+          { "speaker": "NEO", "text": "Three: with dilute hydrochloric acid, the mixture gives hydrogen, and the compound gives rotten-egg smelling hydrogen sulfide." },
+          { "speaker": "ZIPPY", "text": "Okay, I take back my final answer." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 8,
+    "chapter": "Nature of Matter: Elements, Compounds, and Mixtures",
+    "topic_no": 6,
+    "name": "Using Elements, Compounds, and Mixtures; Minerals",
+    "scenes": [
+      {
+        "animation": "Zippy opens a mobile phone like a treasure chest; tiny element tiles fly out: 'Aluminium', 'Copper', 'Silicon', 'Cobalt', 'Lithium', 'Gold', 'Silver'. A counter spins up to 'More than 45 elements'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My phone has gold in it? I'm rich!" },
+          { "speaker": "NEO", "text": "A tiny bit. More than 45 different elements are used to make a mobile phone, its screen and its battery. Elements, compounds and mixtures are everywhere." }
+        ]
+      },
+      {
+        "animation": "A city montage: a steel bridge tagged 'Iron', a car tagged 'Aluminium', a medicine strip and vaccine vial tagged 'Compounds', a fertiliser sack in a green field, and a construction site with 'Wood, steel, concrete = mixtures'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Iron and aluminium are used to build bridges, buildings and vehicles." },
+          { "speaker": "NEO", "text": "Chemists study how elements combine to make medicines, vaccines and fertilisers that help feed a growing world." },
+          { "speaker": "NEO", "text": "Engineers design alloys like stainless steel, which is stronger and more durable than pure iron. Wood, steel and concrete are all mixtures." }
+        ]
+      },
+      {
+        "animation": "A block of graphene aerogel rests on blades of grass without bending them. It then soaks up a black oil spill on the sea like a sponge.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is that block floating on the grass?" },
+          { "speaker": "NEO", "text": "That's graphene aerogel, made from carbon. It is said to be the lightest material on earth. It is highly porous, so it could help clean up oil spills." }
+        ]
+      },
+      {
+        "animation": "A rock cracks open under a magnifying glass, revealing coloured crystals labelled 'Quartz', 'Calcite', 'Mica', 'Pyroxene', 'Olivine'. Side panel: 'Native minerals: gold, silver, copper, sulfur, carbon'. Arrows lead from 'Calcite, quartz, alumina, iron oxide' to a cement bag, and from 'Talc' to a talcum powder tin.",
+        "lines": [
+          { "speaker": "NEO", "text": "Most rocks are a mixture of minerals. Minerals are natural solid substances with a fixed chemical composition." },
+          { "speaker": "NEO", "text": "Most minerals are compounds, like quartz, calcite, mica, pyroxene and olivine. Some, called native minerals, are pure elements, like gold, silver, copper, sulfur and carbon." },
+          { "speaker": "NEO", "text": "Cement is made from calcite, quartz, alumina and iron oxide. Talcum powder comes from the mineral talc." },
+          { "speaker": "NEO", "text": "Exam tip: gold can be both a mineral and a metal, because it occurs naturally as a native mineral that is a pure element." }
+        ]
+      },
+      {
+        "animation": "A Dhokra craft sequence: a beeswax elephant is shaped, coated in clay, heated so wax drips out, then molten brass is poured in; the mould breaks to reveal a shiny golden elephant. Then light, heat, a lightning bolt and a thought bubble float by, stamped 'Not matter'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Dhokra art from Bihar and Odisha uses this science. A beeswax model is covered with clay, the wax is melted out, and molten brass or bronze fills the space." },
+          { "speaker": "NEO", "text": "Matter is anything that has mass and takes up space. Light, heat, electricity, thoughts and emotions are not matter." }
+        ]
+      },
+      {
+        "animation": "Recap board with a phone, a rock and a Dhokra elephant. Points appear: '1. Elements, compounds, mixtures are used everywhere', '2. Minerals: fixed composition; mostly compounds, some native elements', '3. Light, heat, thoughts are not matter'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: elements, compounds and mixtures are used everywhere, from bridges and alloys to medicines and fertilisers." },
+          { "speaker": "NEO", "text": "Two: minerals have a fixed composition. Most are compounds, but native minerals like gold and sulfur are pure elements." },
+          { "speaker": "NEO", "text": "Three: matter has mass and takes up space, so light, heat and thoughts are not matter." },
+          { "speaker": "ZIPPY", "text": "So my thoughts weigh nothing. That explains a lot." }
+        ]
+      }
+    ]
+  }
+]

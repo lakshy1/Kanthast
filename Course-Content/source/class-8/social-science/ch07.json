@@ -1,0 +1,291 @@
+[
+  {
+    "chapter_no": 7,
+    "chapter": "Factors of Production",
+    "topic_no": 1,
+    "name": "What Are Factors of Production? Starting with Land",
+    "scenes": [
+      {
+        "animation": "Zippy holds up his school bag, and it 'rewinds': the bag unstitches into cloth, thread and zips, which fly back to a factory, a cotton field and a worker at a sewing machine. Neo watches, sipping chai.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My school bag just appeared in the shop, right?" },
+          { "speaker": "NEO", "text": "Not at all! Every product goes through a production process before it reaches you." }
+        ]
+      },
+      {
+        "animation": "A roadside restaurant with a signboard 'Pause Point' appears on a highway. Ratna, in an apron, ticks items on a checklist: 'Location', 'Money for rent and equipment', 'Hire staff', 'Buy ingredients', 'Plan'. Seven helpers wave from the kitchen.",
+        "lines": [
+          { "speaker": "NEO", "text": "Meet Ratna. She runs a small restaurant called Pause Point on the city outskirts, with a team of seven people." },
+          { "speaker": "RATNA", "text": "When I started five years ago, I had to choose a location, arrange money, hire staff, buy ingredients and plan everything." },
+          { "speaker": "NEO", "text": "A business or enterprise, like a shop, firm or factory, combines such inputs to make goods and services." }
+        ]
+      },
+      {
+        "animation": "Four jigsaw pieces slide in and lock together around a plate of food: 'Land', 'Labour', 'Capital', 'Entrepreneurship'. A glowing gear labelled 'Technology' spins above them, making the puzzle glow brighter.",
+        "lines": [
+          { "speaker": "NEO", "text": "The resources or inputs used to produce goods and services are called factors of production." },
+          { "speaker": "NEO", "text": "Economists classify them into four types: land, labour, capital and entrepreneurship." },
+          { "speaker": "NEO", "text": "Technology is a facilitator. It helps enterprises produce more with the same or fewer inputs." },
+          { "speaker": "ZIPPY", "text": "Four pieces and a power-up. Like a video game!" }
+        ]
+      },
+      {
+        "animation": "The word 'LAND' expands like a treasure chest opening: out come soil, forests, water, air, sunlight, minerals, oil and natural gas, each with a small label. Ratna hands a rent envelope to a landlord for her plot.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Land means just the ground, right?" },
+          { "speaker": "NEO", "text": "In economics, land means much more. It includes all natural resources: soil, forests, water, air, sunlight, minerals, oil and natural gas." },
+          { "speaker": "NEO", "text": "Businesses either buy the land they need or pay rent to use it for a period of time, just like Ratna." },
+          { "speaker": "NEO", "text": "Exam tip: if asked to classify inputs, remember that water, sunlight and minerals all count as 'land' in economics." }
+        ]
+      },
+      {
+        "animation": "A neighbourhood survey table builds row by row, like a student report: 'Grocery shops: storage space', 'Vegetable vendors: fresh produce, cart', 'Mobile repair: tools, skills', 'Salons: water, electricity'. Items that count as land glow green.",
+        "lines": [
+          { "speaker": "NEO", "text": "Look around your locality. A vegetable vendor needs fresh produce and a cart. A mobile repair shop needs tools and skills." },
+          { "speaker": "NEO", "text": "Every shop, from a kirana store to a salon, is combining different factors of production." }
+        ]
+      },
+      {
+        "animation": "Recap board with the four jigsaw pieces and the technology gear. Points appear: '1. Factors of production = inputs to make goods and services', '2. Four types: land, labour, capital, entrepreneurship; technology facilitates', '3. Land = all natural resources'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: factors of production are the inputs used to make goods and services." },
+          { "speaker": "NEO", "text": "Two: the four factors are land, labour, capital and entrepreneurship, with technology as a facilitator." },
+          { "speaker": "NEO", "text": "Three: in economics, land means all natural resources, not just the ground." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Factors of Production",
+    "topic_no": 2,
+    "name": "Labour and Human Capital",
+    "scenes": [
+      {
+        "animation": "Two cartoon cooks get the same ingredients. One burns the dal; the other makes a perfect meal in half the time. Zippy scratches his head at the scoreboard: 'Same effort? Different result!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Both worked equally hard. Why is one meal so much better?" },
+          { "speaker": "NEO", "text": "Because skill matters, not just effort. That's the difference between labour and human capital." }
+        ]
+      },
+      {
+        "animation": "A gallery of workers appears one by one: a tea plantation worker, a carpenter, a chemical engineer and a software developer. Two meters rise beside each: 'Physical effort' and 'Mental effort'. Then a label 'Human capital = skills + knowledge + expertise' stamps across the screen.",
+        "lines": [
+          { "speaker": "NEO", "text": "Labour is the physical and mental effort used in production. Farmers, carpenters, teachers and doctors all contribute labour." },
+          { "speaker": "NEO", "text": "Human capital is the specialised skills, knowledge, abilities and expertise needed to do that labour." },
+          { "speaker": "NEO", "text": "So human capital is about the quality and efficiency of labour." }
+        ]
+      },
+      {
+        "animation": "Three pillars rise under a banner 'Facilitators of human capital': 'Education and training' with a civil engineering student at a bridge site, 'Healthcare' with a clinic, and 'Social and cultural influences' with a Japanese signboard reading 'Kaizen = continuous improvement' and a German factory clock.",
+        "lines": [
+          { "speaker": "NEO", "text": "Human capital grows through education and training. A civil engineering student learns design in class and then trains at real construction sites." },
+          { "speaker": "NEO", "text": "Good health helps children learn better and workers give their best." },
+          { "speaker": "NEO", "text": "Culture matters too. Japan's idea of kaizen means continuous improvement, and Germany is known for punctuality and quality." }
+        ]
+      },
+      {
+        "animation": "A bar chart builds: 'Adult literacy 2023: Males 85%, Females 70%'. Then a crowd of young people fills the screen with the label '65% below age 35' and the words 'Demographic dividend' glowing above them.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has progressed, but challenges remain. In 2023, adult literacy was 85 per cent for males and 70 per cent for females." },
+          { "speaker": "NEO", "text": "About 65 per cent of Indians are below 35 years of age. This young population can give a demographic dividend." },
+          { "speaker": "ZIPPY", "text": "A dividend? Like a bonus prize?" },
+          { "speaker": "NEO", "text": "Sort of. It's the benefit a country gets from having many young working people. But they need quality education, health and skills." },
+          { "speaker": "NEO", "text": "Exam tip: learn the difference between labour, which is effort, and human capital, which is skill and knowledge. It is a common question." }
+        ]
+      },
+      {
+        "animation": "A sepia scroll unrolls titled 'Shilpa Shastras', showing sculpture proportions being drawn. Then a wooden ship is built plank by plank, with cords stitching the planks together instead of nails, and it sails across the Indian Ocean.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has a rich skill heritage. Work was done with devotion, blending art and knowledge." },
+          { "speaker": "NEO", "text": "The Shilpa Shastras gave detailed design guidelines for sculptures, buildings and jewellery." },
+          { "speaker": "NEO", "text": "Over 2000 years ago, Indians built ships by stitching planks together with cords instead of nails." }
+        ]
+      },
+      {
+        "animation": "Recap board with a toolbox and a graduation cap. Points appear: '1. Labour = physical and mental effort', '2. Human capital = skills and knowledge; built by education, health and culture', '3. Young population can give a demographic dividend'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: labour is the physical and mental effort used in production." },
+          { "speaker": "NEO", "text": "Two: human capital is skill and knowledge, built by education, training, health and culture." },
+          { "speaker": "NEO", "text": "Three: India's young population can give a demographic dividend, if it is skilled and healthy." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Factors of Production",
+    "topic_no": 3,
+    "name": "Capital and Entrepreneurship",
+    "scenes": [
+      {
+        "animation": "Zippy sets up a lemonade stall with a big idea bubble, but has no table, no jug and an empty piggy bank. A gust of wind blows his sign away.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I have the best lemonade idea ever! But nothing to make it with." },
+          { "speaker": "NEO", "text": "Then you need two more factors: capital, and the spirit of an entrepreneur." }
+        ]
+      },
+      {
+        "animation": "A glossary card: 'Capital = any asset, physical or financial, used to produce goods and services'. Icons drop into a box labelled 'Capital': money, machinery, tools, vehicles, a vending cart, computers, a shop and a factory.",
+        "lines": [
+          { "speaker": "NEO", "text": "In economics, capital is any asset, physical or financial, used to produce goods and services." },
+          { "speaker": "NEO", "text": "It includes money plus human-made resources like machinery, tools, vehicles, vending carts, computers and factories." },
+          { "speaker": "NEO", "text": "Ratna needed capital to lease land and buy furniture and kitchen equipment." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds: 'Personal savings, family and friends' then 'Bank loan (repay with interest)' then 'Stock market (large companies sell shares, pay dividends)'. Ratna walks from her piggy bank to a bank counter, while a big company tower raises coins from a crowd of shareholders.",
+        "lines": [
+          { "speaker": "NEO", "text": "Where does capital come from? Usually first from personal savings, family and friends." },
+          { "speaker": "NEO", "text": "Ratna's savings weren't enough, so she took a bank loan and repaid it with interest." },
+          { "speaker": "NEO", "text": "Large companies raise money from the public through the stock market, where shares are bought and sold. Shareholders get a share of profits called a dividend." },
+          { "speaker": "NEO", "text": "Exam tip: interest is paid on a loan, while a dividend is paid to shareholders from profits. Don't mix them up." }
+        ]
+      },
+      {
+        "animation": "A central figure labelled 'Entrepreneur' is surrounded by five task bubbles that pop in one by one: 'Identifies a problem', 'Takes risks with money and time', 'Combines factors of production', 'Makes key decisions', 'Contributes to society'. Small images of bamboo products, pottery and food processing float around.",
+        "lines": [
+          { "speaker": "NEO", "text": "Entrepreneurship means starting your own enterprise or creating something new to solve a problem." },
+          { "speaker": "NEO", "text": "An entrepreneur identifies a problem, takes risks, combines the other factors and makes key decisions." },
+          { "speaker": "NEO", "text": "Entrepreneurs also create jobs and bring new products that benefit society." }
+        ]
+      },
+      {
+        "animation": "A vintage portrait card of J.R.D. Tata appears. A timeline builds: '1904: born', '1932: starts Tata Airlines, later Air India', 'Group expands into steel, cars, power, chemicals', '1992: Bharat Ratna'. A small plane loops across the frame.",
+        "lines": [
+          { "speaker": "NEO", "text": "J.R.D. Tata was one of India's greatest entrepreneurs. He was born in 1904 and led the Tata Group." },
+          { "speaker": "NEO", "text": "In 1932, he started India's first airline, Tata Airlines, which later became Air India." },
+          { "speaker": "NEO", "text": "He cared for his workers and believed business should help society. In 1992, he received the Bharat Ratna." },
+          { "speaker": "ZIPPY", "text": "So profit isn't the only goal. Noted!" }
+        ]
+      },
+      {
+        "animation": "Recap board with a piggy bank, a bank and a lightbulb. Points appear: '1. Capital = money + human-made assets', '2. Sources: savings, bank loans, stock market', '3. Entrepreneur takes risks and combines all factors'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: capital is money plus human-made assets used in production." },
+          { "speaker": "NEO", "text": "Two: capital comes from savings, bank loans and, for big companies, the stock market." },
+          { "speaker": "NEO", "text": "Three: an entrepreneur takes risks and combines all the factors to solve a problem." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Factors of Production",
+    "topic_no": 4,
+    "name": "Technology and How the Factors Are Connected",
+    "scenes": [
+      {
+        "animation": "At a kirana shop, Zippy scans a QR code and a UPI payment whooshes through in a second. A drone sprays a green field, and a GPS map draws the shortest route for a delivery truck.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Beep! Paid in one second. Technology is magic!" },
+          { "speaker": "NEO", "text": "Not magic. Technology means applying scientific knowledge, and every production activity uses some form of it." }
+        ]
+      },
+      {
+        "animation": "A split scene: a letter in a post box morphs into an email icon, labelled 'Faster and cheaper'. Next to it, a wheelbarrow at a construction site and a pulley on a boat stay unchanged, with the label 'Still useful!'. Then laptop screens show 'SWAYAM' courses and a 'National Career Service' job board.",
+        "lines": [
+          { "speaker": "NEO", "text": "Old technology often gets replaced by better ones. Email has replaced many letters sent by post." },
+          { "speaker": "NEO", "text": "But progress doesn't always mean replacing. Pulleys and wheelbarrows are still in use." },
+          { "speaker": "NEO", "text": "Platforms like SWAYAM offer free online courses, and the National Career Service helps people find jobs." }
+        ]
+      },
+      {
+        "animation": "A seesaw balances two products: on one side, a farmer, a construction worker and a handicraft maker, labelled 'Labour-intensive'; on the other, a semiconductor chip and a satellite beside large machines, labelled 'Capital-intensive'.",
+        "lines": [
+          { "speaker": "NEO", "text": "All the factors combine to produce goods, but the proportion depends on the product." },
+          { "speaker": "NEO", "text": "Agriculture, construction and handicrafts rely more on labour, so they are labour-intensive." },
+          { "speaker": "NEO", "text": "Semiconductor chips and satellites need more capital and special machinery, so they are capital-intensive." },
+          { "speaker": "ZIPPY", "text": "And if one factor goes missing?" },
+          { "speaker": "NEO", "text": "Production can become inefficient, or even stop." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds step by step from START: 'R&D team conceptualises new features' then 'Acquire land and set up factory' then 'Acquire raw materials' then 'Assemble components and install software' then 'Test phone' then 'Mass production and packaging' then 'Distribution to retail stores' then END. A badge reads 'India: 2nd-largest mobile maker after China, 2025'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India is the world's second-largest mobile phone manufacturer after China. Let's follow a phone." },
+          { "speaker": "NEO", "text": "Engineers design features, land and a factory are acquired, raw materials arrive, and parts are assembled and tested." },
+          { "speaker": "NEO", "text": "Then phones are mass-produced, packed and sent to shops. Every factor fits like a puzzle piece." }
+        ]
+      },
+      {
+        "animation": "A world map shows arrows bringing parts from far-off places to a factory. One arrow snaps with a 'COVID-19' warning sign, and the assembly line freezes. The label 'Supply chain disruption' flashes. An 'Exam Tip' sticker appears beside 'Labour-intensive vs Capital-intensive'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A supply chain is the network of people, organisations, resources and technology involved in making and selling goods." },
+          { "speaker": "NEO", "text": "When inputs come from far away and the chain breaks, production halts, as happened during the COVID-19 pandemic." },
+          { "speaker": "NEO", "text": "Exam tip: give one example each of labour-intensive and capital-intensive production. It is a favourite short-answer question." }
+        ]
+      },
+      {
+        "animation": "Recap board with a phone, a gear and a chain. Points appear: '1. Technology = application of scientific knowledge', '2. Labour-intensive vs capital-intensive production', '3. Supply chains connect factors; disruptions halt production'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: technology is the application of scientific knowledge, and it boosts production." },
+          { "speaker": "NEO", "text": "Two: some products are labour-intensive, others capital-intensive." },
+          { "speaker": "NEO", "text": "Three: supply chains connect all the factors, and a break can halt production." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 7,
+    "chapter": "Factors of Production",
+    "topic_no": 5,
+    "name": "Responsibilities towards Factors of Production",
+    "scenes": [
+      {
+        "animation": "Zippy tosses an old smartphone into a dustbin. The phone sinks underground, and grey drops labelled 'lead' and 'mercury' seep into a stream where cartoon fish look worried.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "It's just an old phone. What's the harm?" },
+          { "speaker": "NEO", "text": "When phones aren't recycled properly, harmful substances like lead and mercury leak into the ground and water." }
+        ]
+      },
+      {
+        "animation": "A leather factory in Tamil Nadu: happy workers collect wages on one side, while a pipe on the other side pours dark waste into a river and onto fields. A balance scale tips between 'Jobs' and 'Pollution'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Natural resources like land, water and minerals are limited, and they can be degraded." },
+          { "speaker": "NEO", "text": "In Tamil Nadu, leather factories give many people jobs. But their waste can pollute rivers and soil." },
+          { "speaker": "NEO", "text": "Producers must use resources responsibly, so that we meet today's needs without harming future generations." }
+        ]
+      },
+      {
+        "animation": "The dark pipe gets a filter labelled 'Recycling wastewater', and clean water flows out. Recycled bottles roll back into the factory as inputs. A green banner reads 'Sustainable practices'.",
+        "lines": [
+          { "speaker": "NEO", "text": "That's why producers should reduce waste, avoid pollution and adopt sustainable practices." },
+          { "speaker": "NEO", "text": "Factories can recycle wastewater before releasing it, and use recycled products as inputs." },
+          { "speaker": "ZIPPY", "text": "So waste can come back as a resource. Nice loop!" }
+        ]
+      },
+      {
+        "animation": "A checklist board titled 'Responsibilities towards workers' fills in with ticks: 'Fair pay and safe working conditions', 'Skill development and training', 'Workplace rights: fair treatment, no discrimination, health care, paid leave'. Ratna's staff smile in the background.",
+        "lines": [
+          { "speaker": "NEO", "text": "Businesses also have responsibilities towards their workers." },
+          { "speaker": "NEO", "text": "They must pay fairly and provide a safe workplace." },
+          { "speaker": "NEO", "text": "They should invest in skill development and training." },
+          { "speaker": "NEO", "text": "And they must follow laws on fair treatment, no discrimination, and benefits like health care or paid leave." }
+        ]
+      },
+      {
+        "animation": "A calendar flips to '2014' with an India flag pin and a label 'First nation with a CSR law'. A company's profit pie shows a 2% slice moving into community icons: a school, a tree and a clinic. An 'Exam Tip' sticker lands on the 2% slice.",
+        "lines": [
+          { "speaker": "NEO", "text": "Through Corporate Social Responsibility, or CSR, businesses address social and environmental concerns." },
+          { "speaker": "NEO", "text": "In 2014, India became the first nation in the world to bring a CSR law. Companies must spend 2 per cent of their average profits of the last three years on CSR." },
+          { "speaker": "NEO", "text": "Exam tip: remember the CSR facts: India, 2014, and 2 per cent of average profits of the last three years." }
+        ]
+      },
+      {
+        "animation": "Recap board with a leaf, a hard hat and a heart. Points appear: '1. Use natural resources responsibly and sustainably', '2. Treat workers fairly: pay, safety, training, rights', '3. CSR law in 2014: 2% of average profits'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: producers must use natural resources responsibly and sustainably." },
+          { "speaker": "NEO", "text": "Two: businesses owe workers fair pay, safety, training and rights." },
+          { "speaker": "NEO", "text": "Three: India's 2014 CSR law requires companies to spend 2 per cent of average profits on social good." },
+          { "speaker": "ZIPPY", "text": "Okay, okay. I'm taking my old phone to the e-waste bin!" }
+        ]
+      }
+    ]
+  }
+]

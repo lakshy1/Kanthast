@@ -1,0 +1,215 @@
+[
+  {
+    "chapter_no": 17,
+    "chapter": "Economics: The Story of Village Palampur",
+    "topic_no": 1,
+    "name": "Palampur and the Organisation of Production",
+    "scenes": [
+      {
+        "animation": "Zippy stands at a village bus stop with a plate of hot aloo paratha. The camera pulls back: potato fields, a wheat field, a tubewell, a bullock cart and a small shop. A signboard reads 'Welcome to Palampur'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This paratha took a potato, some wheat, a farmer and a cook. Is making food really that complicated?" },
+          { "speaker": "NEO", "text": "Every product needs a few basic ingredients of production. A small imaginary village, Palampur, will show us how they work." }
+        ]
+      },
+      {
+        "animation": "A map builds step by step: 'Palampur' in the centre, an all-weather road running 3 km to 'Raiganj', a big village, and on to the town 'Shahpur'. Icons pop up in the village: two primary schools, a high school, a primary health centre, a private dispensary, electricity poles.",
+        "lines": [
+          { "speaker": "NEO", "text": "Palampur is well connected. An all-weather road links it to Raiganj, a big village three kilometres away, and on to the nearest small town, Shahpur." },
+          { "speaker": "NEO", "text": "The village has about four hundred and fifty families. About eighty upper caste families own the majority of the land. Dalits make up about one-third of the population and live in smaller houses in one corner of the village." },
+          { "speaker": "NEO", "text": "Palampur also has electricity, two primary schools, one high school, a primary health centre and a private dispensary." }
+        ]
+      },
+      {
+        "animation": "Four big jars fill up one at a time on a kitchen shelf, labelled 'Land', 'Labour', 'Physical capital', 'Human capital'. As all four fill, a factory-style arrow outputs 'Goods and services'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The aim of production is to produce the goods and services that we want. It needs four requirements." },
+          { "speaker": "NEO", "text": "First, land and other natural resources such as water, forests and minerals. Second, labour, the people who do the work." },
+          { "speaker": "NEO", "text": "Third, physical capital. And fourth, human capital, the knowledge and enterprise to put land, labour and physical capital together." }
+        ]
+      },
+      {
+        "animation": "The 'Physical capital' jar splits into two. Left: 'Fixed capital' with a plough, tractor, tubewell and a shed that stay year after year. Right: 'Working capital' with seeds, fertiliser, raw materials and cash that get used up. A 'BOARD TIP' card appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Physical capital means money, right?" },
+          { "speaker": "NEO", "text": "Only partly. Tools, machines and buildings can be used over many years. They are called fixed capital." },
+          { "speaker": "NEO", "text": "Raw materials and money in hand are used up in production. They are called working capital." },
+          { "speaker": "NEO", "text": "Board tip: examiners love asking students to classify items. A tractor is fixed capital; seeds and fertiliser are working capital." }
+        ]
+      },
+      {
+        "animation": "A pie chart shows most of Palampur's workers in fields and a small slice in shops, dairy and transport. Label: 'Farming = main production activity'. The village map zooms out.",
+        "lines": [
+          { "speaker": "NEO", "text": "In Palampur, farming is the main production activity. Other activities like small-scale manufacturing, dairy, transport and shops exist on a limited scale." }
+        ]
+      },
+      {
+        "animation": "Recap board with four jar icons: '1. Palampur: 450 families, linked by road to Raiganj and Shahpur', '2. Four factors: land, labour, physical capital, human capital', '3. Fixed capital vs working capital'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Palampur is a well-connected village of about four hundred and fifty families, where farming is the main activity." },
+          { "speaker": "NEO", "text": "Two: production needs land, labour, physical capital and human capital." },
+          { "speaker": "NEO", "text": "Three: tools and machines are fixed capital; raw materials and money in hand are working capital." },
+          { "speaker": "ZIPPY", "text": "And my paratha needed all four. Respect." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 17,
+    "chapter": "Economics: The Story of Village Palampur",
+    "topic_no": 2,
+    "name": "Farming in Palampur: Multiple Cropping and Modern Methods",
+    "scenes": [
+      {
+        "animation": "A farmer measures his field with a measuring tape; Zippy tries to stretch the field wider by pulling its corners like a bedsheet. The field snaps back. A caption: 'Land is fixed'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If a farmer wants more crops, why not just make the field bigger?" },
+          { "speaker": "NEO", "text": "Because land area is fixed. Since 1960 in Palampur, there has been no expansion in land under cultivation. The only way is to grow more from the same land." }
+        ]
+      },
+      {
+        "animation": "A square field with each side labelled '100 m' and a caption '1 hectare'. Then a year-wheel spins over the same field: 'Kharif (rainy season): jowar and bajra, cattle feed' → 'October to December: potato' → 'Rabi (winter): wheat'. A separate strip shows 'Sugarcane: harvested once a year'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Land is measured in hectares. One hectare is the area of a square with one side of one hundred metres." },
+          { "speaker": "NEO", "text": "In the rainy season, farmers of Palampur grow jowar and bajra, used as cattle feed. From October to December, they grow potato. In winter, they sow wheat, keep some for the family and sell the rest at Raiganj." },
+          { "speaker": "NEO", "text": "Growing more than one crop on a piece of land during the year is called multiple cropping. It is the most common way of increasing production on a given piece of land." }
+        ]
+      },
+      {
+        "animation": "Electric poles arrive in Palampur; old Persian wheels are replaced by electric-run tubewells, and blue water flows to every plot. A label reads 'Well-developed irrigation makes three crops possible'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Palampur can grow three crops because of a well-developed system of irrigation. Electricity came early, and electric-run tubewells replaced the Persian wheel, irrigating much larger areas." }
+        ]
+      },
+      {
+        "animation": "A data table builds row by row: 'Wheat yield per hectare: traditional seeds 1,300 kg; HYV seeds 3,200 kg'. A bar chart grows alongside. Tags float around the HYV bar: 'Plenty of water', 'Chemical fertilisers', 'Pesticides', 'Late 1960s: Green Revolution; Punjab, Haryana, western UP first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The second way is modern farming methods. In the late 1960s, the Green Revolution introduced Indian farmers to high yielding variety seeds, or HYV seeds, for wheat and rice." },
+          { "speaker": "NEO", "text": "With traditional seeds, the yield of wheat was about 1,300 kilograms per hectare. With HYV seeds, it went up to 3,200 kilograms per hectare." },
+          { "speaker": "NEO", "text": "But HYV seeds need plenty of water, chemical fertilisers and pesticides. Farmers of Punjab, Haryana and western Uttar Pradesh were the first to try them." }
+        ]
+      },
+      {
+        "animation": "A cracked soil cross-section loses its colour and tiny soil microbes pack their bags. A falling groundwater level line is shown in a well. An 'EXAM TIP' card reads 'Sustainability of land'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So more fertiliser means more crops forever?" },
+          { "speaker": "NEO", "text": "No. Chemical fertilisers can kill bacteria and micro-organisms useful for the soil, and too much use has led to a loss of soil fertility. Continuous use of tubewells has reduced the water-table." },
+          { "speaker": "NEO", "text": "Exam tip: land is a natural resource, so it must be used carefully. Always add this point when asked about the Green Revolution." }
+        ]
+      },
+      {
+        "animation": "Recap board with a wheat stalk icon: '1. Land is fixed; 1 hectare = 100 m × 100 m', '2. Multiple cropping: jowar and bajra → potato → wheat', '3. HYV seeds: 1,300 → 3,200 kg per hectare, but soil and water suffer'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: land is fixed, so farmers must grow more from the same land." },
+          { "speaker": "NEO", "text": "Two: multiple cropping and irrigation let Palampur grow three crops a year." },
+          { "speaker": "NEO", "text": "Three: HYV seeds raised yields sharply, but overuse of fertilisers and groundwater harms the land." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 17,
+    "chapter": "Economics: The Story of Village Palampur",
+    "topic_no": 3,
+    "name": "Land, Labour and Capital in Palampur",
+    "scenes": [
+      {
+        "animation": "A landless labourer named Dala waits at dawn outside a big farmer's gate with a crowd of other labourers. The farmer points at only two of them; the rest walk away. Zippy stands in the crowd with a tiny hoe.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why doesn't everyone just farm their own land?" },
+          { "speaker": "NEO", "text": "Because in Palampur, many families have no land at all. Look at how the land is shared." }
+        ]
+      },
+      {
+        "animation": "A data table and pictogram build row by row: '150 families (one-third): landless, mostly dalits', '240 families: less than 2 hectares', '60 families: medium and large farmers, more than 2 hectares; a few over 10 hectares'. A village map is shaded: the 60 families' plots cover more than half the village.",
+        "lines": [
+          { "speaker": "NEO", "text": "About one-third of the four hundred and fifty families, that is one hundred and fifty families, are landless. Most of them are dalits." },
+          { "speaker": "NEO", "text": "Two hundred and forty families cultivate small plots of less than two hectares. Sixty families of medium and large farmers cultivate more than two hectares, and a few have over ten hectares." },
+          { "speaker": "NEO", "text": "So the sixty larger farmers hold more than half of the village's land." }
+        ]
+      },
+      {
+        "animation": "A wage board shows 'Government minimum wage for farm labour: ₹300 per day (March 2019)' and beside it 'Dala gets: ₹160'. A crowd of labourers competes for a few jobs, pushing the wage arrow down.",
+        "lines": [
+          { "speaker": "NEO", "text": "Small farmers and their families work on their own fields. Medium and large farmers hire farm labourers, who come from landless or very small farming families." },
+          { "speaker": "NEO", "text": "Dala is a landless farm labourer. The minimum wage set by the government for a farm labourer is three hundred rupees a day, but Dala gets only one hundred and sixty. There is heavy competition for work, so people agree to lower wages." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left: small farmer 'Savita' borrows '₹3,000 at 24% interest for 4 months' from large farmer 'Tejpal Singh', and must work on his field for '₹100 per day' at harvest. Right: large farmers buy tractors and threshers from their own savings and surplus.",
+        "lines": [
+          { "speaker": "NEO", "text": "Farming also needs capital. Most small farmers borrow money. Savita, a small farmer, borrows three thousand rupees from a large farmer, Tejpal Singh, at twenty-four per cent interest for four months." },
+          { "speaker": "NEO", "text": "She also has to work on his field at harvest for only one hundred rupees a day. Medium and large farmers, instead, use their own savings from farming to arrange capital." }
+        ]
+      },
+      {
+        "animation": "Wheat sacks move from a large farmer's granary in a tractor-trolley to the market at 'Raiganj'. Coins flow back and turn into a new tractor and a loan to others. A 'BOARD TIP' card appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So the big farmer earns more, then lends to small farmers, and earns even more?" },
+          { "speaker": "NEO", "text": "Right. Large farmers sell their surplus wheat at Raiganj, and use the earnings to buy capital or lend money. Small farmers have little surplus, because most of their produce is for their own family." },
+          { "speaker": "NEO", "text": "Board tip: a common question asks why Dala's wages are low or how small farmers arrange capital. Quote Dala and Savita." }
+        ]
+      },
+      {
+        "animation": "Recap board with three icons, a field, a labourer and a coin: '1. 150 landless, 240 small, 60 medium and large families', '2. Farm labour: wages below the minimum due to competition', '3. Small farmers borrow at high interest; large farmers sell surplus'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: land in Palampur is unequally distributed, and one-third of families are landless." },
+          { "speaker": "NEO", "text": "Two: farm labourers like Dala earn less than the minimum wage." },
+          { "speaker": "NEO", "text": "Three: small farmers borrow at high interest, while large farmers sell their surplus and build more capital." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 17,
+    "chapter": "Economics: The Story of Village Palampur",
+    "topic_no": 4,
+    "name": "Non-Farm Activities in Palampur",
+    "scenes": [
+      {
+        "animation": "Zippy takes a village tour on a buffalo cart. The cart passes a jaggery unit steaming away, a computer class, a shop and a man selling milk, while fields are shown only in the distance.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I thought villages were only about farming. What's a computer class doing here?" },
+          { "speaker": "NEO", "text": "Palampur also has non-farm activities. They are small, but they matter for jobs and income." }
+        ]
+      },
+      {
+        "animation": "A counter: 'Rural India: 24 out of every 100 workers in non-farm activities'. Then a dairy scene: buffaloes eat jowar and bajra; milk cans are loaded onto a cart to 'Raiganj', where two traders from Shahpur run 'Collection-cum-chilling centres'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In rural India, only twenty-four out of every hundred workers are engaged in non-farm activities." },
+          { "speaker": "NEO", "text": "Dairy is common in Palampur. Buffaloes are fed on grass and on jowar and bajra. Milk is sold in Raiganj, where two traders from Shahpur have set up collection-cum-chilling centres." }
+        ]
+      },
+      {
+        "animation": "A small unit labelled 'Mishrilal' crushes sugarcane with an electric machine and turns the juice into golden blocks of gur, which are loaded for 'Shahpur traders'. Then a small shop row: general stores sell rice, wheat, sugar, tea, oil, biscuits, soap, toothpaste, batteries and candles.",
+        "lines": [
+          { "speaker": "NEO", "text": "Manufacturing here is small-scale, using simple methods and family labour. Mishrilal has bought a mechanical sugarcane crushing machine run on electricity. He crushes sugarcane and makes jaggery, which he sells to traders in Shahpur." },
+          { "speaker": "NEO", "text": "Traders in Palampur buy goods from wholesale markets in the cities and sell them in the village. Their small general stores sell rice, wheat, sugar, tea, oil, biscuits and soap." }
+        ]
+      },
+      {
+        "animation": "A room with computers labelled 'Kareem's computer class'; two women with degrees in computer applications teach students. Then 'Kishora' takes a bank loan under a government programme, buys a buffalo, and attaches a wooden cart to it, carrying jaggery and goods to Shahpur.",
+        "lines": [
+          { "speaker": "NEO", "text": "Kareem has opened a computer class centre, with two women who hold degrees in computer applications as teachers. Many students from Palampur, who attend college in Shahpur, also learn there." },
+          { "speaker": "NEO", "text": "Kishora was a farm labourer. He took a loan from the bank under a government programme and bought a buffalo. He now sells its milk and uses it to pull a wooden cart that carries goods from Palampur to Raiganj and Shahpur." },
+          { "speaker": "ZIPPY", "text": "Milk in the morning, transport in the afternoon. Kishora is a startup founder!" }
+        ]
+      },
+      {
+        "animation": "A road-and-bank icon appears with the caption 'More non-farm jobs need: loans at low interest, roads, markets'. An 'EXAM TIP' card flips over listing 'Dairy, small-scale manufacturing, shopkeeping, transport'.",
+        "lines": [
+          { "speaker": "NEO", "text": "To start non-farm activities, people need capital, preferably loans at low interest. They also need markets, and good roads connecting villages to towns and cities." },
+          { "speaker": "NEO", "text": "Exam tip: learn the four non-farm activities with one Palampur example each." }
+        ]
+      },
+      {
+        "animation": "Recap board with milk can, jaggery block and cart icons: '1. Only 24 of every 100 rural workers in non-farm work', '2. Dairy, small-scale manufacturing, shops, transport', '3. Needs: cheap credit, roads, markets'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: only twenty-four of every hundred rural workers are in non-farm activities." },
+          { "speaker": "NEO", "text": "Two: Palampur's non-farm activities include dairy, small-scale manufacturing, shopkeeping and transport." },
+          { "speaker": "NEO", "text": "Three: to expand them, villages need cheap loans, good roads and markets." }
+        ]
+      }
+    ]
+  }
+]

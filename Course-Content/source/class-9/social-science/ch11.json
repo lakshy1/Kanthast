@@ -1,0 +1,204 @@
+[
+  {
+    "chapter_no": 11,
+    "chapter": "Geography: Population",
+    "topic_no": 1,
+    "name": "Population Size and Distribution",
+    "scenes": [
+      {
+        "animation": "A packed local train at rush hour in Mumbai: Zippy tries to squeeze in, gets pushed out, squeezes in again. A thought bubble shows a nearly empty road in the hills of Arunachal Pradesh.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is this train so crowded when some places in India feel almost empty?" },
+          { "speaker": "NEO", "text": "Because India's people are unevenly spread. Let's start with how many of us there are." }
+        ]
+      },
+      {
+        "animation": "A Census register opens with the year '2011'. A counter races to '1,210.6 million'. A world pie chart shows India's slice '17.5% of world population' beside a thin slice '2.4% of world area'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The census of India is the most complete source of population data, and it is held every ten years." },
+          { "speaker": "NEO", "text": "India's population as on March 2011 stood at 1,210.6 million, which accounts for 17.5 per cent of the world's population." },
+          { "speaker": "ZIPPY", "text": "But our area is only 2.4 per cent of the world!" },
+          { "speaker": "NEO", "text": "Exactly. So 17.5 per cent of the world's people live on just 2.4 per cent of its land." }
+        ]
+      },
+      {
+        "animation": "An outline map of India with states rising as 3D bars by population. Uttar Pradesh towers highest with a label '199 million = about 16%'. Sikkim and Lakshadweep are tiny stubs labelled '0.6 million' and '64,429'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Uttar Pradesh, with a population size of 199 million, is the most populous state of India. It accounts for about 16 per cent of the country's population." },
+          { "speaker": "NEO", "text": "On the other hand, the Himalayan state of Sikkim has a population of just about 0.6 million, and Lakshadweep has only 64,429 people." }
+        ]
+      },
+      {
+        "animation": "Five states glow together: Uttar Pradesh, Maharashtra, Bihar, West Bengal and Andhra Pradesh, with a label 'almost half of India's population'. Then Rajasthan lights up as the biggest state by area, with a small label '5.5% of population'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Almost half of India's population lives in just five states: Uttar Pradesh, Maharashtra, Bihar, West Bengal and Andhra Pradesh." },
+          { "speaker": "NEO", "text": "Rajasthan, the biggest state in terms of area, has only 5.5 per cent of the total population of India." },
+          { "speaker": "ZIPPY", "text": "So the biggest state isn't the most crowded one." },
+          { "speaker": "NEO", "text": "Right. Area and population don't go together. Board tip: remember the Census year and India's share, 17.5 per cent of people on 2.4 per cent of land." }
+        ]
+      },
+      {
+        "animation": "Recap board with a census register icon. Points appear: '1. Census 2011: 1,210.6 million = 17.5% of world population', '2. UP most populous (199 million, ~16%); Sikkim ~0.6 million; Lakshadweep 64,429', '3. Almost half in five states; Rajasthan, largest in area, has only 5.5%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in 2011, India had 1,210.6 million people, 17.5 per cent of the world's population." },
+          { "speaker": "NEO", "text": "Two: Uttar Pradesh is the most populous state, while Sikkim and Lakshadweep have very small populations." },
+          { "speaker": "NEO", "text": "Three: almost half of Indians live in just five states, while Rajasthan, the largest by area, has only 5.5 per cent." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Geography: Population",
+    "topic_no": 2,
+    "name": "Population Density",
+    "scenes": [
+      {
+        "animation": "Two identical playgrounds. In one, three kids play cricket with lots of space; in the other, thirty kids try to play in the same space and keep bumping into each other. Zippy counts heads with a clicker.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Same playground size, but one feels so crowded!" },
+          { "speaker": "NEO", "text": "You've just discovered population density." }
+        ]
+      },
+      {
+        "animation": "An equation writes itself: 'Population density = number of persons ÷ area (per sq km)'. A square kilometre grid appears on India's map, and the counter shows '382 persons per sq km (2011)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Population density is calculated as the number of persons per unit area. It is a better measure of uneven distribution." },
+          { "speaker": "NEO", "text": "India is one of the most densely populated countries of the world. The population density of India in the year 2011 was 382 persons per square kilometre." }
+        ]
+      },
+      {
+        "animation": "A density map fills in state by state. Bihar turns darkest with a label '1,102 per sq km'. Arunachal Pradesh turns palest with '17 per sq km'. A slider stretches between the two numbers.",
+        "lines": [
+          { "speaker": "NEO", "text": "Densities vary from 1,102 persons per square kilometre in Bihar, to only 17 persons per square kilometre in Arunachal Pradesh." },
+          { "speaker": "ZIPPY", "text": "That's more than sixty times the difference!" },
+          { "speaker": "NEO", "text": "Correct. 1,102 divided by 17 is about 65. So in Bihar, about sixty-five people share the space that one person has in Arunachal." }
+        ]
+      },
+      {
+        "animation": "The map divides into density zones. Rugged hills and dry land glow in pale shades with icons for 'hilly, dissected, rocky terrain', 'low rainfall', 'less fertile soils'. Assam and most of the peninsula are medium. The Northern Plains and Kerala glow dark, with icons for 'flat plains', 'fertile soils', 'abundant rainfall'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Hilly, dissected and rocky terrain, moderate to low rainfall, and shallow, less fertile soils have influenced population densities in some areas." },
+          { "speaker": "NEO", "text": "Assam and most of the peninsular states have moderate population densities." },
+          { "speaker": "NEO", "text": "The Northern Plains and Kerala in the south have high to very high population densities, because of flat plains with fertile soils and abundant rainfall." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Density = persons per sq km. Highest: Bihar 1,102 | Lowest: Arunachal 17 | India 382 (2011)'. A 'MAP WORK' stamp: 'Shade highest and lowest density states'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: in map work, you may be asked to locate the state with the highest and the lowest population density. That's Bihar and Arunachal Pradesh." }
+        ]
+      },
+      {
+        "animation": "Recap board with a crowded square icon. Points appear: '1. Density = persons per unit area; India 382 per sq km (2011)', '2. Highest: Bihar 1,102; Lowest: Arunachal Pradesh 17', '3. Plains and Kerala dense; hills, dry and rocky areas sparse'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: population density is the number of persons per unit area, and India's was 382 per square kilometre in 2011." },
+          { "speaker": "NEO", "text": "Two: Bihar has the highest density at 1,102, and Arunachal Pradesh the lowest at 17." },
+          { "speaker": "NEO", "text": "Three: fertile plains and Kerala are densely populated, while hilly, rocky and dry areas are sparse." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Geography: Population",
+    "topic_no": 3,
+    "name": "Population Growth",
+    "scenes": [
+      {
+        "animation": "A balloon labelled 'India's population' is inflated by a pump. At first each pump makes it grow faster; later the pumping slows, but the balloon still keeps getting bigger. Zippy watches with his fingers in his ears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The pumping is slowing down, but the balloon is still growing. How?" },
+          { "speaker": "NEO", "text": "That's the difference between the growth rate and the absolute increase. Let's decode it." }
+        ]
+      },
+      {
+        "animation": "Two definition cards flip over: 'Absolute increase = later population − earlier population' and 'Annual growth rate = % increase per year'. A simple example: 'Town: 1,000 → 1,020 in a year = +20 people = 2% per annum'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Growth of population refers to the change in the number of inhabitants of a country during a specific period of time, say, the last ten years." },
+          { "speaker": "NEO", "text": "The absolute increase is found by simply subtracting the earlier population from the later population." },
+          { "speaker": "NEO", "text": "The rate of growth is studied in per cent per annum. For example, if a town of 1,000 people grows by 20 in a year, the growth rate is 2 per cent per annum." }
+        ]
+      },
+      {
+        "animation": "A bar chart builds decade by decade: '1951: 361.1 million', '1961: 439.2', '1971: 548.2', '1981: 683.3', '1991: 846.4', '2001: 1,028.7', '2011: 1,210.6'. A line graph for annual growth rate draws above it: '1.25, 1.96, 2.20, 2.22, 2.14, 1.97, 1.64', peaking at 1981.",
+        "lines": [
+          { "speaker": "NEO", "text": "India's population has grown steadily, from 361.1 million in 1951 to 1,210.6 million in 2011." },
+          { "speaker": "NEO", "text": "From 1951 to 1981, the annual rate of growth of population was steadily increasing. It rose from 1.25 per cent to 2.22 per cent." },
+          { "speaker": "NEO", "text": "Since 1981, the rate of growth has started declining gradually. In 2011, it was 1.64 per cent per annum." }
+        ]
+      },
+      {
+        "animation": "Bars for absolute increase grow each decade: '1991: 163.09 million', '2001: 182.32', '2011: 181.46'. The balloon from scene 1 reappears beside it, still growing.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So if the growth rate is falling, the population must be shrinking!" },
+          { "speaker": "NEO", "text": "No. A lower rate on a huge base still adds a very large number. In the decade before 2011, India added 181.46 million people." },
+          { "speaker": "NEO", "text": "Board tip: never confuse a declining growth rate with a declining population. It is a favourite trick question." }
+        ]
+      },
+      {
+        "animation": "Recap board with the growth-rate graph. Points appear: '1. Absolute increase = later − earlier population; growth rate in % per annum', '2. 1951: 361.1 million → 2011: 1,210.6 million', '3. Growth rate rose till 1981 (2.22%), then declined to 1.64% (2011)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: absolute increase is the later population minus the earlier one, while growth rate is measured in per cent per annum." },
+          { "speaker": "NEO", "text": "Two: India's population grew from 361.1 million in 1951 to 1,210.6 million in 2011." },
+          { "speaker": "NEO", "text": "Three: the growth rate rose until 1981, and has been declining since, to 1.64 per cent in 2011." },
+          { "speaker": "ZIPPY", "text": "Slower pumping, still a bigger balloon. Got it!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "Geography: Population",
+    "topic_no": 4,
+    "name": "Processes of Population Change: Births, Deaths and Migration",
+    "scenes": [
+      {
+        "animation": "A town's population board has three doors: a cradle door where babies arrive, an exit door with a gentle angel icon, and a railway platform where people come and go with suitcases. Zippy stands at the counter trying to keep score.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "People are arriving and leaving from three doors. How do I keep count?" },
+          { "speaker": "NEO", "text": "Those three doors are the three processes of population change: birth rates, death rates and migration." }
+        ]
+      },
+      {
+        "animation": "Two definition cards: 'Birth rate = number of live births per thousand persons in a year' and 'Death rate = number of deaths per thousand persons in a year'. An equation builds: 'Natural growth = Birth rate − Death rate'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Birth rate is the number of live births per thousand persons in a year. It is a major component of growth, because in India birth rates have always been higher than death rates." },
+          { "speaker": "NEO", "text": "Death rate is the number of deaths per thousand persons in a year." },
+          { "speaker": "NEO", "text": "The difference between the birth rate and the death rate is called the natural increase." }
+        ]
+      },
+      {
+        "animation": "Two lines on a graph: the death rate line drops steeply over time, while the birth rate line stays high and only begins to fall gently after 1981. The widening gap between them is shaded and labelled 'rapid growth'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The main cause of India's growth was the rapid decline in death rates. Till 1980, high birth rates and declining death rates led to a large difference, and so a high rate of population growth." },
+          { "speaker": "NEO", "text": "Since 1981, birth rates have also started declining gradually, resulting in a gradual decline in the rate of population growth." }
+        ]
+      },
+      {
+        "animation": "A map of India with arrows moving from villages to cities, labelled 'rural to urban'. Push icons in villages: 'poverty', 'unemployment'. Pull icons in cities: 'jobs', 'better living conditions'. A bar grows: 'Urban population: 17.29% (1951) → 31.80% (2011)'. City dots multiply: 'Million-plus cities: 35 (2001) → 53 (2011)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Migration is the movement of people across regions and territories. It can be internal, within the country, or international, between countries." },
+          { "speaker": "NEO", "text": "Internal migration does not change the size of the population, but it influences the distribution of population within the nation." },
+          { "speaker": "NEO", "text": "In India, most migration has been from rural to urban areas, because of the push factor of poverty and unemployment in villages, and the pull factor of more jobs and better living conditions in cities." },
+          { "speaker": "NEO", "text": "As a result, the urban population rose from 17.29 per cent in 1951 to 31.80 per cent in 2011. The number of million plus cities increased from 35 to 53 in just one decade, from 2001 to 2011." }
+        ]
+      },
+      {
+        "animation": "Zippy wears a sign: 'Migration makes India's population bigger!' A 'BOARD TIP' card corrects: 'Internal migration → changes distribution, NOT size'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So migration adds people to India?" },
+          { "speaker": "NEO", "text": "Internal migration only moves people around. Board tip: write push and pull factors separately when explaining rural to urban migration." }
+        ]
+      },
+      {
+        "animation": "Recap board with three doors icon. Points appear: '1. Birth rate & death rate: per thousand persons per year; difference = natural increase', '2. Death rates fell fast; birth rates began to fall after 1981', '3. Migration: rural → urban; urban share 17.29% (1951) → 31.80% (2011)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: birth and death rates are counted per thousand persons per year, and their difference is the natural increase." },
+          { "speaker": "NEO", "text": "Two: death rates fell rapidly, and birth rates began to decline gradually after 1981." },
+          { "speaker": "NEO", "text": "Three: rural to urban migration raised India's urban population from 17.29 per cent to 31.80 per cent." }
+        ]
+      }
+    ]
+  }
+]

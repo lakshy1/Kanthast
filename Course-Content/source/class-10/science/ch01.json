@@ -1,0 +1,399 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "Chemical Reactions and Equations",
+    "topic_no": 1,
+    "name": "Spotting a Chemical Reaction",
+    "scenes": [
+      {
+        "animation": "A kitchen on a hot summer morning. Zippy opens a steel dabba of milk left out overnight, sniffs, and his spark flickers green with disgust; Neo sips chai beside an iron tawa with reddish-brown rust patches.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Eww! Yesterday's milk has gone sour. And who let this tawa rust?" },
+          { "speaker": "NEO", "text": "Nobody did. Both are chemical reactions, Zippy. New substances formed that were not there before." },
+          { "speaker": "ZIPPY", "text": "So how do I catch a reaction happening? Does it leave clues?" },
+          { "speaker": "NEO", "text": "It does. Let's go to the lab and collect the evidence." }
+        ]
+      },
+      {
+        "animation": "School lab. Neo rubs a 3–4 cm magnesium ribbon with sandpaper, holds it with tongs over a burner, and it bursts into a dazzling white flame, leaving white powder in a watch glass. Label 'Magnesium + Oxygen → Magnesium oxide' slides in; a 'Don't stare at the flame!' sign pops up in front of Zippy's eyes.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, I clean this magnesium ribbon with sandpaper to remove the protective layer on its surface." },
+          { "speaker": "NEO", "text": "Now I hold it in the flame with tongs, well away from my eyes." },
+          { "speaker": "ZIPPY", "text": "Whoa, it's burning like a Diwali phuljhadi!" },
+          { "speaker": "NEO", "text": "It burns with a dazzling white flame and turns into a white powder. That powder is magnesium oxide, a brand-new substance." }
+        ]
+      },
+      {
+        "animation": "Two test tubes of colourless solutions labelled 'Lead nitrate' and 'Potassium iodide'. Neo pours one into the other and a bright yellow solid swirls down and settles; the tag 'Lead iodide – yellow precipitate' drops in with a bounce.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "These two look like plain water. Nothing's going to happen." },
+          { "speaker": "NEO", "text": "Watch. Lead nitrate solution, meet potassium iodide solution." },
+          { "speaker": "ZIPPY", "text": "Yellow! Where did yellow come from?" },
+          { "speaker": "NEO", "text": "A yellow solid called lead iodide formed. An insoluble solid that separates out of a solution like this is called a precipitate." }
+        ]
+      },
+      {
+        "animation": "A conical flask with zinc granules; Neo adds dilute sulphuric acid and bubbles stream up. A cartoon thermometer walks on, hugs the flask, and its red column climbs; Zippy fans himself.",
+        "lines": [
+          { "speaker": "NEO", "text": "Last test. Zinc granules with dilute sulphuric acid." },
+          { "speaker": "ZIPPY", "text": "Bubbles! And the flask feels warm!" },
+          { "speaker": "NEO", "text": "The bubbles are hydrogen gas, and the warmth means the temperature changed. Two more clues." }
+        ]
+      },
+      {
+        "animation": "A detective evidence board. Five clue cards pin up one by one with red string between them: 'Change in state', 'Change in colour', 'Evolution of a gas', 'Change in temperature', 'Formation of a precipitate'. A yellow 'BOARD TIP' sticky note flashes in the corner.",
+        "lines": [
+          { "speaker": "NEO", "text": "So here's your clue list: a change in state, a change in colour, evolution of a gas, a change in temperature, or formation of a precipitate." },
+          { "speaker": "ZIPPY", "text": "Any one of these means a reaction happened?" },
+          { "speaker": "NEO", "text": "They help us tell that a chemical reaction has taken place. Board tip: examiners often ask why the magnesium ribbon is cleaned before burning. Answer: to remove the protective layer so the magnesium can react with oxygen." }
+        ]
+      },
+      {
+        "animation": "Neo at a chalkboard; three recap points tick in with puffs of chalk dust: '1. Chemical reaction = new substances form', '2. Clues: state, colour, gas, temperature, precipitate', '3. Mg burns → white MgO; Pb(NO3)2 + KI → yellow PbI2'. Zippy puts on a detective hat.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in a chemical reaction, new substances with new properties are formed." },
+          { "speaker": "NEO", "text": "Two: look for a change in state, colour or temperature, a gas given off, or a precipitate." },
+          { "speaker": "NEO", "text": "Three: magnesium burns to form white magnesium oxide, and lead nitrate with potassium iodide gives yellow lead iodide." },
+          { "speaker": "ZIPPY", "text": "Case closed, Detective Neo!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Chemical Reactions and Equations",
+    "topic_no": 2,
+    "name": "Writing and Balancing Chemical Equations",
+    "scenes": [
+      {
+        "animation": "Zippy proudly chalks 'Mg + O2 → MgO' on a board. A tiny cartoon oxygen atom tumbles off the right-hand side and lands on the floor, arms spread in protest.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Done! Magnesium plus oxygen gives magnesium oxide. Easy." },
+          { "speaker": "OXYGEN ATOM", "text": "Excuse me? Two of us went in. Only one of us came out!" },
+          { "speaker": "NEO", "text": "He has a point, Zippy. Your equation isn't balanced yet." }
+        ]
+      },
+      {
+        "animation": "The word equation 'Magnesium + Oxygen → Magnesium oxide' morphs letter by letter into 'Mg + O2 → MgO'. The left side is tinted blue and labelled 'Reactants', the right side green and labelled 'Products'; the arrow glows with the word 'gives'.",
+        "lines": [
+          { "speaker": "NEO", "text": "We start with a word equation. Reactants go on the left, products on the right, and the arrow means 'gives'." },
+          { "speaker": "NEO", "text": "Replace the names with formulae and you get a skeletal equation. It shows who takes part, but not how many." }
+        ]
+      },
+      {
+        "animation": "A cartoon weighing scale: reactant atoms in the left pan, product atoms in the right. The stamp 'Law of Conservation of Mass: mass can neither be created nor destroyed' thumps across the top. A '2' pops in front of Mg and MgO, giving '2Mg + O2 → 2MgO', and the scale levels out with a ding.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why count atoms? The flame doesn't care." },
+          { "speaker": "NEO", "text": "Nature does. Mass can neither be created nor destroyed in a chemical reaction. So every atom on the left must appear on the right." },
+          { "speaker": "NEO", "text": "Put a two before magnesium and a two before magnesium oxide. Now there are two magnesium and two oxygen atoms on each side. Balanced." }
+        ]
+      },
+      {
+        "animation": "The board shows 'Fe + H2O → Fe3O4 + H2' with an atom-count table beside it. Step by step: a '4' pops in before H2O and the oxygen row turns green; a '4' before H2 turns the hydrogen row green; a '3' before Fe turns the iron row green.",
+        "lines": [
+          { "speaker": "NEO", "text": "A tougher one: iron reacts with steam to form iron oxide and hydrogen." },
+          { "speaker": "NEO", "text": "Start with the formula that has the most atoms, Fe three O four. It has four oxygen atoms, so write four before water." },
+          { "speaker": "ZIPPY", "text": "Now there are eight hydrogen atoms on the left!" },
+          { "speaker": "NEO", "text": "So write four before hydrogen gas. Finally, three iron atoms on the right means three before iron. This is the hit-and-trial method, using the smallest whole numbers." }
+        ]
+      },
+      {
+        "animation": "The final equation '3Fe(s) + 4H2O(g) → Fe3O4(s) + 4H2(g)' glows. Tiny icons hover over each state symbol: an iron block for (s), a steam cloud for (g); a legend adds a water drop for (l) and a beaker for (aq). Then 'CO(g) + 2H2(g) → CH3OH(l)' appears with '340 atm' written above the arrow.",
+        "lines": [
+          { "speaker": "NEO", "text": "To make it more informative, add state symbols: s for solid, l for liquid, g for gas, and aq for aqueous solution." },
+          { "speaker": "NEO", "text": "Water is marked g here because it reacts as steam. Conditions like temperature or pressure are written above or below the arrow." },
+          { "speaker": "ZIPPY", "text": "Like 340 atmospheres for making methanol!" },
+          { "speaker": "NEO", "text": "Exactly. Board tip: never balance by changing a formula. Turning H two O into H two O two makes a different substance. Only change the numbers in front." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap with three ticks: '1. Word → skeletal → balanced equation', '2. Atoms in = atoms out (conservation of mass)', '3. Add (s), (l), (g), (aq) and conditions'. The oxygen atom from scene 1 hugs Zippy.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: we go from a word equation to a skeletal equation to a balanced equation." },
+          { "speaker": "NEO", "text": "Two: balancing follows the law of conservation of mass, so the number of atoms of each element is the same on both sides." },
+          { "speaker": "NEO", "text": "Three: add state symbols and reaction conditions to make the equation complete." },
+          { "speaker": "OXYGEN ATOM", "text": "Finally, nobody gets left behind!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Chemical Reactions and Equations",
+    "topic_no": 3,
+    "name": "Combination Reactions",
+    "scenes": [
+      {
+        "animation": "A house before Diwali. A painter drops lumps of quick lime into a bucket of water; the water hisses, bubbles and steams. Zippy jumps back, sparks flying off him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The bucket is boiling! Nobody even lit the stove!" },
+          { "speaker": "NEO", "text": "That's quick lime meeting water, Zippy. It's a combination reaction, and it releases a lot of heat." }
+        ]
+      },
+      {
+        "animation": "The equation assembles: 'CaO(s) + H2O(l) → Ca(OH)2(aq) + Heat'. Tags drop under CaO ('Quick lime') and Ca(OH)2 ('Slaked lime'). Two puzzle pieces labelled CaO and H2O snap together into one piece.",
+        "lines": [
+          { "speaker": "NEO", "text": "Calcium oxide, called quick lime, reacts vigorously with water to form calcium hydroxide, called slaked lime." },
+          { "speaker": "NEO", "text": "Two reactants, one single product. When two or more substances combine to form a single product, it's a combination reaction." },
+          { "speaker": "ZIPPY", "text": "Like two puzzle pieces snapping into one!" }
+        ]
+      },
+      {
+        "animation": "Time-lapse: the painter brushes slaked lime on a wall; a clock spins through two to three days while CO2 molecules drift in from the air. The wall gains a shiny glaze and 'CaCO3' sparkles on it; a marble statue in the corner winks.",
+        "lines": [
+          { "speaker": "NEO", "text": "The painter uses this slaked lime for whitewashing. It reacts slowly with carbon dioxide in the air." },
+          { "speaker": "NEO", "text": "After two to three days, a thin layer of calcium carbonate forms and gives the wall a shiny finish. Interestingly, marble has the same formula, C a C O three." }
+        ]
+      },
+      {
+        "animation": "Two cards flip in: 'C(s) + O2(g) → CO2(g)' beside a glowing coal sigri, and '2H2(g) + O2(g) → 2H2O(l)' with water droplets forming. Each card ends with a single product highlighted in gold.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Any more combos?" },
+          { "speaker": "NEO", "text": "Burning coal: carbon combines with oxygen to give carbon dioxide. And hydrogen combines with oxygen to give water. Each time, a single product." }
+        ]
+      },
+      {
+        "animation": "A thermometer mascot labelled 'EXOTHERMIC' glows red as three scenes flash: a gas-stove flame with 'CH4 + 2O2 → CO2 + 2H2O', a student jogging with 'C6H12O6 + 6O2 → 6CO2 + 6H2O + energy', and a steaming compost pit.",
+        "lines": [
+          { "speaker": "NEO", "text": "Reactions that release heat are exothermic. The quick lime reaction is one." },
+          { "speaker": "NEO", "text": "Burning natural gas is exothermic. So is respiration, where glucose from food combines with oxygen in our cells and gives energy. Even vegetable matter turning into compost releases heat." },
+          { "speaker": "ZIPPY", "text": "Wait, respiration gives two products. So it's not a combination reaction, right?" },
+          { "speaker": "NEO", "text": "Sharp catch! Exothermic only means heat is released. Board tip: for quick lime and water, name both types: combination and exothermic." }
+        ]
+      },
+      {
+        "animation": "Recap board with three chalk ticks: '1. Combination: two or more reactants → single product', '2. CaO + H2O → Ca(OH)2 + heat; whitewash → CaCO3', '3. Exothermic = heat released'. The painter gives a thumbs-up from his ladder.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in a combination reaction, two or more reactants form a single product." },
+          { "speaker": "NEO", "text": "Two: quick lime and water give slaked lime and heat; slaked lime whitewashes walls by forming calcium carbonate." },
+          { "speaker": "NEO", "text": "Three: reactions that release heat are exothermic, like burning natural gas and respiration." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Chemical Reactions and Equations",
+    "topic_no": 4,
+    "name": "Decomposition Reactions",
+    "scenes": [
+      {
+        "animation": "Zippy heats a boiling tube of pale green crystals over a burner. Water droplets appear on the cooler upper walls, then the solid turns reddish-brown and a smelly cloud curls out; Zippy pinches his nose.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My green crystals turned brown, and they smell like burning sulphur! Did I break them?" },
+          { "speaker": "NEO", "text": "You did, literally. You broke one substance into simpler ones. That's a decomposition reaction." }
+        ]
+      },
+      {
+        "animation": "The equation builds: '2FeSO4(s) → Fe2O3(s) + SO2(g) + SO3(g)' with 'Heat' over the arrow. A single block labelled 'FeSO4' cracks into three smaller blocks, the reverse of the snapping puzzle pieces from combination.",
+        "lines": [
+          { "speaker": "NEO", "text": "Ferrous sulphate crystals first lose their water. Then, on heating, ferrous sulphate breaks into ferric oxide, sulphur dioxide and sulphur trioxide." },
+          { "speaker": "NEO", "text": "When a single reactant breaks down into simpler products, it's decomposition. It's the opposite of combination." }
+        ]
+      },
+      {
+        "animation": "A lime kiln with glowing limestone lumps: 'CaCO3(s) → CaO(s) + CO2(g)', 'Heat' over the arrow; the CaO slides onto a cement bag. Next, a test tube of white lead nitrate powder gives off brown fumes labelled 'NO2', with '2Pb(NO3)2(s) → 2PbO(s) + 4NO2(g) + O2(g)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When heat causes decomposition, it's thermal decomposition. Heating limestone, calcium carbonate, gives quick lime and carbon dioxide. Quick lime is used to make cement." },
+          { "speaker": "NEO", "text": "Heating lead nitrate gives lead oxide, oxygen, and brown fumes of nitrogen dioxide." }
+        ]
+      },
+      {
+        "animation": "An electrolysis setup builds step by step and is labelled: plastic mug, two carbon electrodes, water with a few drops of dilute sulphuric acid, two water-filled test tubes inverted over the electrodes, a 6 V battery. Bubbles collect; the tube over the negative electrode fills twice as fast. Labels: 'H2 (double volume)', 'O2', and '2H2O(l) → 2H2(g) + O2(g)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Electricity can decompose substances too. Pass current through water and it splits into hydrogen and oxygen." },
+          { "speaker": "ZIPPY", "text": "One tube is filling twice as fast!" },
+          { "speaker": "NEO", "text": "That's hydrogen. Two molecules of water give two molecules of hydrogen and one of oxygen, so the volume of hydrogen is double." }
+        ]
+      },
+      {
+        "animation": "A china dish of white silver chloride in sunlight slowly turns grey: '2AgCl(s) → 2Ag(s) + Cl2(g)', 'Sunlight' over the arrow. Beside it, '2AgBr(s) → 2Ag(s) + Br2(g)' next to an old black-and-white photo of Neo's grandparents.",
+        "lines": [
+          { "speaker": "NEO", "text": "Light works as well. White silver chloride turns grey in sunlight as it decomposes into silver and chlorine." },
+          { "speaker": "NEO", "text": "Silver bromide behaves the same way, which is why these reactions are used in black and white photography." }
+        ]
+      },
+      {
+        "animation": "A thermometer mascot labelled 'ENDOTHERMIC' shivers blue, holding three energy tokens: a flame, a lightning bolt and a sun. A yellow 'BOARD TIP' card flips over.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So decomposition always needs something: heat, electricity or light?" },
+          { "speaker": "NEO", "text": "Yes. These reactions absorb energy, so they are endothermic. Board tip: the electrolysis of water diagram is a favourite. Label everything, and remember hydrogen collects at the negative electrode, in double the volume of oxygen." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Decomposition: one reactant → simpler products', '2. Energy from heat, electricity or light', '3. Decomposition reactions are endothermic'. Icons of limestone, a water drop and a silver chloride dish sit beside point 2.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in decomposition, a single reactant breaks down into simpler products." },
+          { "speaker": "NEO", "text": "Two: the energy can come from heat, electricity or light, as with limestone, water and silver chloride." },
+          { "speaker": "NEO", "text": "Three: decomposition reactions absorb energy, so they are endothermic." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Chemical Reactions and Equations",
+    "topic_no": 5,
+    "name": "Displacement and Double Displacement Reactions",
+    "scenes": [
+      {
+        "animation": "Zippy drops two clean iron nails into a test tube of bright blue copper sulphate solution and yawns. A clock spins through 20 minutes; the nail comes out with a brown coat, and the blue colour of the solution has faded.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Someone painted my nail brown and stole the blue colour!" },
+          { "speaker": "NEO", "text": "That's iron pushing copper out of its compound. Welcome to displacement." }
+        ]
+      },
+      {
+        "animation": "A cricket ground: a burly player in an 'Fe' jersey walks up to Team 'CuSO4', taps the 'Cu' player on the shoulder and takes his place; Cu trudges to the boundary, looking brown. Equation: 'Fe(s) + CuSO4(aq) → FeSO4(aq) + Cu(s)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Iron is more reactive than copper. So iron displaces copper from copper sulphate solution." },
+          { "speaker": "NEO", "text": "The brown coat on the nail is copper, and the solution now contains iron sulphate." },
+          { "speaker": "ZIPPY", "text": "So the stronger player takes the other one's place in the team!" }
+        ]
+      },
+      {
+        "animation": "Two scoreboards flip: 'Zn(s) + CuSO4(aq) → ZnSO4(aq) + Cu(s)' and 'Pb(s) + CuCl2(aq) → PbCl2(aq) + Cu(s)'. A banner unrolls: 'More reactive metal displaces less reactive metal'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Zinc and lead can also displace copper from its compounds, because they are more reactive than copper." },
+          { "speaker": "NEO", "text": "The rule: a more reactive element displaces a less reactive one from its compound." },
+          { "speaker": "ZIPPY", "text": "So can copper push iron out of iron sulphate?" },
+          { "speaker": "NEO", "text": "No. Copper is less reactive than iron, so nothing happens. The weaker player can't replace the stronger one." }
+        ]
+      },
+      {
+        "animation": "Two beakers of colourless sodium sulphate and barium chloride solutions are poured together; a white cloud forms and settles. Cartoon ions swap dance partners: Ba2+ pairs with SO4 2−, Na+ pairs with Cl−. Equation: 'Na2SO4(aq) + BaCl2(aq) → BaSO4(s) + 2NaCl(aq)'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if both teams swap players?" },
+          { "speaker": "NEO", "text": "Then it's double displacement. Mix sodium sulphate and barium chloride solutions and a white solid appears." },
+          { "speaker": "NEO", "text": "The reactants exchange ions. The white, insoluble barium sulphate is a precipitate, and sodium chloride stays in solution." }
+        ]
+      },
+      {
+        "animation": "A 'Precipitation Reaction' stamp lands on the beaker. A thought bubble replays the yellow lead iodide from the earlier lab. A yellow 'BOARD TIP' note appears with two columns: 'Displacement: element + compound' and 'Double displacement: compound + compound'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Any reaction that produces a precipitate is a precipitation reaction. Remember lead nitrate and potassium iodide giving yellow lead iodide? That was double displacement too." },
+          { "speaker": "NEO", "text": "Board tip: to tell the two apart, look at the reactants. A free element plus a compound means displacement. Two compounds exchanging ions means double displacement." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Fe + CuSO4 → FeSO4 + Cu (more reactive displaces less reactive)', '2. Double displacement = exchange of ions', '3. Insoluble product = precipitation reaction'. The Fe player and the Cu player shake hands.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a more reactive metal displaces a less reactive one, like iron displacing copper from copper sulphate." },
+          { "speaker": "NEO", "text": "Two: in double displacement, two compounds exchange ions." },
+          { "speaker": "NEO", "text": "Three: a reaction that forms an insoluble solid is a precipitation reaction, like the white barium sulphate." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Chemical Reactions and Equations",
+    "topic_no": 6,
+    "name": "Oxidation and Reduction",
+    "scenes": [
+      {
+        "animation": "Zippy heats a china dish of reddish-brown copper powder, hoping to make it shinier. The powder's surface turns black; Zippy's reflection in it goes dark and he gasps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I heated copper to make it shine. Now it's black!" },
+          { "speaker": "NEO", "text": "You fed it oxygen, Zippy. The surface turned into copper oxide." }
+        ]
+      },
+      {
+        "animation": "'2Cu + O2 → 2CuO' appears with 'Heat' over the arrow; cartoon oxygen atoms fly in and latch onto copper atoms. A big green stamp: 'OXIDATION = gain of oxygen'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Copper combines with oxygen from the air to form black copper oxide." },
+          { "speaker": "NEO", "text": "When a substance gains oxygen during a reaction, we say it is oxidised." }
+        ]
+      },
+      {
+        "animation": "Hydrogen gas flows over the heated black coating; it turns brown again and droplets of water form. Equation: 'CuO + H2 → Cu + H2O' with 'Heat'. A red arrow under CuO: 'loses O → reduced'; a green arrow under H2: 'gains O → oxidised'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can I get my brown copper back?" },
+          { "speaker": "NEO", "text": "Pass hydrogen gas over the heated copper oxide. The black coating turns brown as copper forms again." },
+          { "speaker": "NEO", "text": "Copper oxide loses oxygen, so it's reduced. Hydrogen gains oxygen and becomes water, so it's oxidised." }
+        ]
+      },
+      {
+        "animation": "A seesaw with 'OXIDATION' on one end and 'REDUCTION' on the other; when one rises the other dips. 'REDOX' lights up at the pivot. Definition cards pop up: 'Oxidation: gain of O or loss of H', 'Reduction: loss of O or gain of H'.",
+        "lines": [
+          { "speaker": "NEO", "text": "One substance is oxidised and another is reduced in the same reaction. These are redox reactions." },
+          { "speaker": "NEO", "text": "Oxidation is gain of oxygen or loss of hydrogen. Reduction is loss of oxygen or gain of hydrogen." },
+          { "speaker": "ZIPPY", "text": "Like a seesaw. One can't go up unless the other comes down." },
+          { "speaker": "NEO", "text": "Exactly. In our copper reaction, the oxygen that copper oxide loses is the same oxygen that hydrogen gains." }
+        ]
+      },
+      {
+        "animation": "Two practice cards: 'ZnO + C → Zn + CO' and 'MnO2 + 4HCl → MnCl2 + 2H2O + Cl2'. Zippy circles reactants with a highlighter: green for oxidised (C, HCl), red for reduced (ZnO, MnO2). A 'BOARD TIP' note sticks to the second card.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try this. Zinc oxide plus carbon gives zinc and carbon monoxide." },
+          { "speaker": "ZIPPY", "text": "Zinc oxide lost oxygen, so it's reduced. Carbon gained oxygen, so it's oxidised!" },
+          { "speaker": "NEO", "text": "Now manganese dioxide plus hydrochloric acid gives manganese chloride, water and chlorine." },
+          { "speaker": "ZIPPY", "text": "Manganese dioxide lost oxygen, so it's reduced. Hydrochloric acid lost hydrogen, so it's oxidised." },
+          { "speaker": "NEO", "text": "Perfect. Board tip: this exact question is common. Track oxygen first; if a substance has no oxygen, track hydrogen." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Oxidation = gain of O / loss of H', '2. Reduction = loss of O / gain of H', '3. Both together = REDOX'. The copper dish in the corner glows brown again.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: oxidation is gain of oxygen or loss of hydrogen." },
+          { "speaker": "NEO", "text": "Two: reduction is loss of oxygen or gain of hydrogen." },
+          { "speaker": "NEO", "text": "Three: when one substance is oxidised and another is reduced in the same reaction, it's a redox reaction." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "Chemical Reactions and Equations",
+    "topic_no": 7,
+    "name": "Corrosion and Rancidity",
+    "scenes": [
+      {
+        "animation": "Monsoon week. Zippy finds his bicycle chain covered in reddish-brown flakes, then opens a half-open packet of namkeen and a green stink cloud rises. A grumpy rust flake pops off the chain and folds its arms.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My cycle is rusting and my namkeen tastes weird. Worst week ever." },
+          { "speaker": "RUST FLAKE", "text": "Don't blame me. Blame oxygen." },
+          { "speaker": "NEO", "text": "He's right. Both are effects of oxidation in everyday life." }
+        ]
+      },
+      {
+        "animation": "Three panels side by side: an iron gate with reddish-brown rust, a silver anklet turning black, a copper pot with a green coating. A banner below: 'Corrosion: metal attacked by moisture, acids, etc.'",
+        "lines": [
+          { "speaker": "NEO", "text": "When a metal is attacked by substances around it, such as moisture and acids, it corrodes." },
+          { "speaker": "NEO", "text": "Iron gets a reddish-brown coating called rust. Silver turns black, and copper gets a green coating." }
+        ]
+      },
+      {
+        "animation": "Montage: a rusted car body, an old iron railing, a bridge girder and a ship's hull, each with an orange rust meter filling up while rupee coins drain from a piggy bank.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Rust just looks ugly, right? Who cares?" },
+          { "speaker": "NEO", "text": "It's much worse than ugly. Corrosion damages car bodies, bridges, iron railings and ships. An enormous amount of money is spent every year to replace damaged iron." },
+          { "speaker": "NEO", "text": "We'll learn how to prevent it in the Metals and Non-metals chapter." }
+        ]
+      },
+      {
+        "animation": "A plate of pakoras left out for days; cartoon oxygen molecules latch onto glistening oil droplets and the smell cloud above turns sour-green. Label: 'Rancidity: fats and oils oxidised → smell and taste change'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now your namkeen. When fats and oils in food are oxidised, they become rancid. Their smell and taste change." }
+        ]
+      },
+      {
+        "animation": "Three shields pop up around a chips packet: an 'Antioxidants' bottle, an airtight steel dabba, and a nitrogen cylinder puffing N2 into the packet until it inflates like a pillow. Zippy bounces on the pillow-packet. A yellow 'BOARD TIP' note appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So how do chips stay crunchy for months?" },
+          { "speaker": "NEO", "text": "Three tricks. Antioxidants are added to foods containing fats and oil. Keeping food in airtight containers slows oxidation. And chip packets are flushed with nitrogen to stop the chips from getting oxidised." },
+          { "speaker": "ZIPPY", "text": "So that puffy packet is full of nitrogen, not just air!" },
+          { "speaker": "NEO", "text": "Right. Board tip: if asked why chip packets are filled with nitrogen, say it prevents oxidation of the fats and oils, so the chips don't turn rancid." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Corrosion: metals attacked by moisture, acids (rust)', '2. Rancidity: oxidation of fats and oils', '3. Prevent rancidity: antioxidants, airtight containers, N2 flushing'. The rust flake sulks in a corner.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: corrosion is a metal being attacked by moisture, acids and other substances, like iron rusting." },
+          { "speaker": "NEO", "text": "Two: rancidity is the oxidation of fats and oils, which spoils smell and taste." },
+          { "speaker": "NEO", "text": "Three: antioxidants, airtight containers and nitrogen flushing slow down rancidity." }
+        ]
+      }
+    ]
+  }
+]

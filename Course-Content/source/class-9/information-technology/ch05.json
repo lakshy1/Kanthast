@@ -1,0 +1,334 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "Electronic Spreadsheet",
+    "topic_no": 1,
+    "name": "Starting LibreOffice Calc: Rows, Columns, Cells and Ranges",
+    "scenes": [
+      {
+        "animation": "A school canteen. Zippy holds a crumpled notebook of chai and samosa sales with crossed-out totals everywhere. A giant eraser chases him around the counter.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Every time one price changes, I rub out the whole page and add everything again!" },
+          { "speaker": "NEO", "text": "Then it is time for an electronic spreadsheet. It stores data in a grid and recalculates by itself." }
+        ]
+      },
+      {
+        "animation": "Animated UI: the LibreOffice Start Center appears and 'Calc Spreadsheet' is clicked. A blank Calc window opens and labels pop onto each part in turn: 'Title bar', 'Menu bar', 'Toolbars', 'Name Box', 'Formula bar', 'Worksheet', 'Sheet tabs', 'Status bar'.",
+        "lines": [
+          { "speaker": "NEO", "text": "An electronic spreadsheet arranges data in rows and columns and does calculations for you. LibreOffice Calc is a free one." },
+          { "speaker": "NEO", "text": "Open it from the Start Center by clicking Calc Spreadsheet. At the top are the title bar, menu bar and toolbars." },
+          { "speaker": "NEO", "text": "Below them is the formula bar with the Name Box. The big grid is the worksheet, and the sheet tabs and status bar sit at the bottom." }
+        ]
+      },
+      {
+        "animation": "The grid zooms in. Column headings A, B, C glow blue across the top; row numbers 1, 2, 3 glow orange down the side. Column B and row 3 slide together and cell B3 lights up; the Name Box shows 'B3'. The view scrolls to show columns after Z becoming AA, AB.",
+        "lines": [
+          { "speaker": "NEO", "text": "Columns are named by letters and rows by numbers. After column Z come AA, AB and so on. A sheet has 1,048,576 rows." },
+          { "speaker": "NEO", "text": "A cell is where a row and a column meet. Its address is the column letter followed by the row number, like B3." },
+          { "speaker": "ZIPPY", "text": "So can I call it 3B?" },
+          { "speaker": "NEO", "text": "No. Column letter first, always. The Name Box shows the address of the active cell." }
+        ]
+      },
+      {
+        "animation": "Three ranges are dragged out one by one in different colours: B1:B5 in green, labelled 'Column range'; A3:E3 in purple, labelled 'Row range'; A1:C5 in yellow, labelled 'Row and column range', with '3 columns × 5 rows = 15 cells' appearing beside it.",
+        "lines": [
+          { "speaker": "NEO", "text": "A range is a group of neighbouring cells, written as first cell, colon, last cell." },
+          { "speaker": "NEO", "text": "B1 colon B5 is a column range, cells in one column. A3 colon E3 is a row range, cells in one row." },
+          { "speaker": "NEO", "text": "A1 colon C5 covers several rows and columns. That is three columns into five rows, so fifteen cells." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Open Calc. 2. Click D7 and read the Name Box. 3. Drag to select A1:C5. 4. Count the cells.' Then a yellow 'BOARD TIP' card: 'Cell address = Column letter + Row number (B3, not 3B)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: open Calc, click D7 and check the Name Box, then select A1 colon C5 and count the cells." },
+          { "speaker": "NEO", "text": "Board tip: questions often ask you to name the type of range or count its cells. Multiply the number of columns by the number of rows." }
+        ]
+      },
+      {
+        "animation": "Recap board with a glowing grid icon. Points appear: '1. Calc window: menu bar, toolbars, formula bar, sheet tabs, status bar', '2. Cell address = column + row, e.g. B3', '3. Ranges: column (B1:B5), row (A3:E3), row and column (A1:C5)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Calc has a menu bar, toolbars, a formula bar with the Name Box, the worksheet, sheet tabs and a status bar." },
+          { "speaker": "NEO", "text": "Two: a cell address is the column letter then the row number." },
+          { "speaker": "NEO", "text": "Three: a range can be a column range, a row range, or a row and column range." },
+          { "speaker": "ZIPPY", "text": "Eraser, you are officially fired." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Electronic Spreadsheet",
+    "topic_no": 2,
+    "name": "Entering Data and Writing Formulas",
+    "scenes": [
+      {
+        "animation": "Zippy types '5+3*2' into cell A1 and proudly waits. The cell just shows the text '5+3*2'. A tiny calculator on the desk faceplants.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I asked Calc to do maths and it just copied me like a parrot!" },
+          { "speaker": "NEO", "text": "Because you forgot the magic sign. Every formula must start with an equals sign." }
+        ]
+      },
+      {
+        "animation": "Three coloured cards drop onto cells: A1 'Name' tagged 'LABEL (text)', B1 '45' tagged 'VALUE (number)', C1 '=B1*2' tagged 'FORMULA' showing result 90. Labels align left and numbers align right by default.",
+        "lines": [
+          { "speaker": "NEO", "text": "A cell can hold three kinds of data. A label is text, like a name or a heading." },
+          { "speaker": "NEO", "text": "A value is a number you can calculate with. A formula is a calculation that starts with equals." },
+          { "speaker": "NEO", "text": "Notice that text lines up on the left and numbers line up on the right, by default." }
+        ]
+      },
+      {
+        "animation": "An operator ladder builds from top to bottom: '( ) Brackets', '^ Exponent', '* / Multiply, Divide', '+ - Add, Subtract'. Then '=5+3*2' solves step by step to 11, '=(5+3)*2' solves to 16, and '=2^3' shows 8.",
+        "lines": [
+          { "speaker": "NEO", "text": "The operators are plus, minus, star for multiply, slash for divide, and caret for power." },
+          { "speaker": "NEO", "text": "Calc follows an order: brackets first, then power, then multiply and divide, then add and subtract." },
+          { "speaker": "ZIPPY", "text": "So equals five plus three star two is sixteen?" },
+          { "speaker": "NEO", "text": "No. Three into two is done first, giving six, and five plus six is eleven. Put brackets round five plus three to get sixteen." }
+        ]
+      },
+      {
+        "animation": "Cells A1 = 40 and B1 = 35. C1 first shows '=40+35' = 75. Then C1 is changed to '=A1+B1' = 75. Zippy changes A1 to 50; with the cell-address formula, C1 flips to 85 with a sparkle, while the typed-values version stays stuck at 75.",
+        "lines": [
+          { "speaker": "NEO", "text": "You can write a formula with values, like equals forty plus thirty-five. Or with cell addresses, like equals A1 plus B1." },
+          { "speaker": "NEO", "text": "Both give seventy-five. But change A1 to fifty and only the address formula updates, to eighty-five." },
+          { "speaker": "NEO", "text": "That is why we prefer cell addresses. The formula follows the data." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Enter 40 in A1 and 35 in B1. 2. Type =A1+B1 in C1. 3. Change A1 to 50. 4. Try =5+3*2 and =(5+3)*2.' Then a yellow 'BOARD TIP' card: 'No = sign, no formula. BODMAS applies'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: build this little sheet, change A1, and compare the two bracket formulas." },
+          { "speaker": "NEO", "text": "Board tip: when asked for the output of a formula, apply the order of operations carefully. Most wrong answers ignore it." }
+        ]
+      },
+      {
+        "animation": "Recap board with an equals-sign mascot. Points appear: '1. Data types: label, value, formula', '2. Order: ( ) → ^ → * / → + -', '3. Use cell addresses so results update'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: cells hold labels, values or formulas, and every formula starts with equals." },
+          { "speaker": "NEO", "text": "Two: brackets, power, multiply and divide, then add and subtract." },
+          { "speaker": "NEO", "text": "Three: formulas with cell addresses update automatically when data changes." },
+          { "speaker": "ZIPPY", "text": "Equals sign: the key to the maths kingdom." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Electronic Spreadsheet",
+    "topic_no": 3,
+    "name": "Basic Functions: SUM, AVERAGE, MAX, MIN and COUNT",
+    "scenes": [
+      {
+        "animation": "A gully cricket match. Zippy keeps the scorebook for five batters and types a very long formula '=B2+B3+B4+B5+B6', which stretches off the screen and wraps around a lamppost.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If our team had fifty batters, my formula would reach the next street!" },
+          { "speaker": "NEO", "text": "Use a function instead. One short word does the whole job." }
+        ]
+      },
+      {
+        "animation": "A Calc sheet: A1 'Batter', B1 'Runs'. A2:A6 'Aman, Riya, Kabir, Sana, Dev'; B2:B6 '45, 30, 72, 18, 55'. A card shows the syntax '=FUNCTION(range)' with 'name' and 'argument' labels.",
+        "lines": [
+          { "speaker": "NEO", "text": "A function is a ready-made formula. You write equals, the function name, and the range in brackets." },
+          { "speaker": "NEO", "text": "Here, five batters' runs are in B2 to B6." }
+        ]
+      },
+      {
+        "animation": "Each function types itself into column D and its answer pops out with working: '=SUM(B2:B6) → 45+30+72+18+55 = 220', '=AVERAGE(B2:B6) → 220 ÷ 5 = 44', '=MAX(B2:B6) → 72', '=MIN(B2:B6) → 18', '=COUNT(B2:B6) → 5'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Equals SUM of B2 colon B6 adds them. Forty-five, thirty, seventy-two, eighteen and fifty-five make two hundred and twenty." },
+          { "speaker": "NEO", "text": "AVERAGE divides the total by how many numbers there are. Two hundred and twenty divided by five is forty-four." },
+          { "speaker": "NEO", "text": "MAX gives the largest, seventy-two. MIN gives the smallest, eighteen." },
+          { "speaker": "NEO", "text": "COUNT tells how many cells contain numbers. Here, five." }
+        ]
+      },
+      {
+        "animation": "Cell B7 gets the text 'absent'. COUNT(B2:B7) still shows 5 while a speech bubble from the word 'absent' says 'Not a number!'. Then the Sum button (Σ) beside the formula bar is clicked, showing a dropdown: Sum, Average, Min, Max, Count. 'Insert > Function' with key caps 'Ctrl+F2' opens the Function Wizard.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If I write absent in B7, will COUNT say six?" },
+          { "speaker": "NEO", "text": "No. COUNT counts only numbers, so it stays five. Text and blank cells are skipped." },
+          { "speaker": "NEO", "text": "Shortcut: the Sum button next to the formula bar has a small menu with these same five functions. Insert, Function, or Control F2, opens the Function Wizard for many more." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Enter the five scores. 2. Find SUM, AVERAGE, MAX, MIN, COUNT. 3. Change 18 to 28 and watch them update.' Then a yellow 'BOARD TIP' card: 'COUNT counts numeric cells only'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: enter these scores, use all five functions, then change eighteen to twenty-eight and see the sum become two hundred and thirty." },
+          { "speaker": "NEO", "text": "Board tip: write the function with its range, like equals AVERAGE of B2 colon B6, and remember COUNT ignores text." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cricket-bat icon. Points appear: '1. =FUNCTION(range)', '2. SUM total, AVERAGE mean, MAX largest, MIN smallest', '3. COUNT = number of cells with numbers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a function is written as equals, name, and range in brackets." },
+          { "speaker": "NEO", "text": "Two: SUM adds, AVERAGE finds the mean, MAX and MIN find the largest and smallest." },
+          { "speaker": "NEO", "text": "Three: COUNT counts only cells that hold numbers." },
+          { "speaker": "ZIPPY", "text": "Short formula, long sixes. Perfect." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Electronic Spreadsheet",
+    "topic_no": 4,
+    "name": "Formatting Cells and the Fill Handle",
+    "scenes": [
+      {
+        "animation": "Zippy types roll number '007' into a cell and presses Enter. It shrinks to '7'. A tiny spy in dark glasses marked '007' tumbles out of the cell, offended.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My roll number is double-oh-seven, but Calc keeps deleting my zeros!" },
+          { "speaker": "NEO", "text": "Calc thinks it is a number. Formatting tells Calc how to show your data." }
+        ]
+      },
+      {
+        "animation": "Animated UI: the Formatting toolbar is highlighted button by button: font name, font size, Bold, Italic, Underline, alignment buttons, Merge and Center, Currency, Percent, Add Decimal Place, Delete Decimal Place. Then 'Format > Cells' with key caps 'Ctrl+1' opens the Format Cells dialog showing tabs: Numbers, Font, Font Effects, Alignment, Borders, Background.",
+        "lines": [
+          { "speaker": "NEO", "text": "Quick changes are on the Formatting toolbar: font, size, bold, italic, alignment, currency, percent and decimal places." },
+          { "speaker": "NEO", "text": "For full control, choose Format, Cells, or press Control 1. The Numbers tab decides how numbers appear." }
+        ]
+      },
+      {
+        "animation": "In the Numbers tab, categories are clicked one at a time with a live preview: 'Number, 2 decimal places: 3.14159 → 3.14'; 'Text: 007 stays 007'; 'Scientific: 1234500 → 1.23E+06'; 'Time: 13:30 → 01:30:00 PM'. Then the Alignment tab shows Horizontal, Vertical, text orientation dial and 'Wrap text automatically'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Choose Number with two decimal places, and 3.14159 shows as 3.14." },
+          { "speaker": "NEO", "text": "Choose Text before typing, and double-oh-seven keeps its zeros. Typing an apostrophe first also works." },
+          { "speaker": "NEO", "text": "Scientific shows big numbers in short form, so 1234500 becomes 1.23 E plus 06. Time shows a time format, like one thirty PM." },
+          { "speaker": "NEO", "text": "The Alignment tab sets horizontal and vertical alignment, rotates text, and wraps long text." }
+        ]
+      },
+      {
+        "animation": "A cell is selected and the tiny square at its bottom-right corner glows, labelled 'Fill handle'. 'Monday' is dragged down to fill 'Tuesday, Wednesday, Thursday'. Then 5 and 10 are selected together and dragged to fill 15, 20, 25. Finally D2 '=B2+C2' showing 85 (40 + 45) is dragged to D3, which becomes '=B3+C3' showing 80 (38 + 42).",
+        "lines": [
+          { "speaker": "NEO", "text": "See the tiny square at the corner of the selected cell? That is the fill handle." },
+          { "speaker": "NEO", "text": "Drag Monday down, and the days fill in. Select five and ten, drag, and you get fifteen, twenty, twenty-five." },
+          { "speaker": "ZIPPY", "text": "And if I drag a formula?" },
+          { "speaker": "NEO", "text": "It copies the formula and adjusts it for each row. Equals B2 plus C2 becomes equals B3 plus C3." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Format a cell as Text and type 007. 2. Show 3.14159 with 2 decimals. 3. Fill Monday to Sunday. 4. Drag a formula down.' Then a yellow 'BOARD TIP' card: 'Format > Cells (Ctrl+1) · Fill handle = bottom-right square'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: save your roll number with its zeros, set two decimal places, and fill the days of the week." },
+          { "speaker": "NEO", "text": "Board tip: know the shortcut Control 1 for Format Cells, and describe the fill handle as the small square at the bottom-right of the selection." }
+        ]
+      },
+      {
+        "animation": "Recap board with a paint-roller icon. Points appear: '1. Formatting toolbar for quick changes', '2. Format > Cells: Numbers (decimal, text, scientific, time), Alignment', '3. Fill handle: series and copied formulas'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: use the Formatting toolbar for quick styling." },
+          { "speaker": "NEO", "text": "Two: Format Cells controls decimals, text, scientific and time formats, and alignment." },
+          { "speaker": "NEO", "text": "Three: the fill handle fills series and copies formulas." },
+          { "speaker": "ZIPPY", "text": "Double-oh-seven is back on the mission." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Electronic Spreadsheet",
+    "topic_no": 5,
+    "name": "Relative, Absolute and Mixed Referencing",
+    "scenes": [
+      {
+        "animation": "A stationery shop sale. Prices in B2:B4: Pen 20, Notebook 50, Bag 400. Cell E1 holds 'Discount 10%'. Zippy writes '=B2*E1' in C2, drags it down, and C3 and C4 show 0. Price tags droop sadly.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The pen got its discount, but the notebook and bag got zero. Calc is being stingy!" },
+          { "speaker": "NEO", "text": "Not stingy. Your formula moved when you copied it. Let's lock the right part." }
+        ]
+      },
+      {
+        "animation": "C3's formula is shown as '=B3*E2' and C4 as '=B4*E3'; arrows show both addresses sliding down one row each time, with E2 and E3 flashing 'empty'. A label reads 'Relative reference'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A normal address like B2 is a relative reference. When you copy the formula down, it changes row by row." },
+          { "speaker": "NEO", "text": "That is good for B2, which should become B3 and B4. But E1 also slid to E2 and E3, which are empty. So the answer is zero." }
+        ]
+      },
+      {
+        "animation": "A padlock clicks onto E1 as '$' signs appear: '=B2*$E$1'. Dragged down, results fill: '20 × 10% = 2', '50 × 10% = 5', '400 × 10% = 40'. Key caps 'Shift+F4' flash, cycling E1 → $E$1 → E$1 → $E1.",
+        "lines": [
+          { "speaker": "NEO", "text": "Put a dollar sign before the column and the row: dollar E dollar 1. That is an absolute reference. It never changes when copied." },
+          { "speaker": "NEO", "text": "Now the discounts are two, five and forty rupees." },
+          { "speaker": "NEO", "text": "Fun fact: in Calc, Shift F4 cycles through the dollar-sign options for you." }
+        ]
+      },
+      {
+        "animation": "A multiplication table: B1:F1 hold 1 to 5, A2:A6 hold 1 to 5. B2 gets '=$A2*B$1'; the '$A' glows (column locked) and '$1' glows (row locked). It is dragged across and down, filling the grid; D4 is highlighted showing '=$A4*D$1 = 3 × 3 = 9', and F6 shows 25.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can I lock only half an address?" },
+          { "speaker": "NEO", "text": "Yes, that is a mixed reference. Dollar A1 locks the column. A dollar 1 locks the row." },
+          { "speaker": "NEO", "text": "For a times table, write equals dollar A2 into B dollar 1, and copy it across and down. D4 becomes three into three, which is nine." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Build the discount sheet with $E$1. 2. Build the 5×5 table with =$A2*B$1.' Then a yellow 'BOARD TIP' card: 'A1 relative · $A$1 absolute · $A1 / A$1 mixed'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: fix the discount sheet with an absolute reference, then build the five by five table with one mixed formula." },
+          { "speaker": "NEO", "text": "Board tip: you may be asked what a formula becomes after copying. Change only the parts without a dollar sign." }
+        ]
+      },
+      {
+        "animation": "Recap board with three padlock icons: open, fully closed, half closed. Points appear: '1. Relative (A1) changes when copied', '2. Absolute ($A$1) never changes', '3. Mixed ($A1 or A$1) locks column or row'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: relative references change when a formula is copied." },
+          { "speaker": "NEO", "text": "Two: absolute references with two dollar signs stay fixed." },
+          { "speaker": "NEO", "text": "Three: mixed references lock only the column or only the row." },
+          { "speaker": "ZIPPY", "text": "The bag is forty rupees cheaper. Now that's a real deal." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Electronic Spreadsheet",
+    "topic_no": 6,
+    "name": "Charts in Calc",
+    "scenes": [
+      {
+        "animation": "A class assembly. Zippy reads out a long list of numbers from a sheet about the class's favourite sports, and the audience of students slowly falls asleep, one by one.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Cricket eighteen, football nine, kabaddi six... why is everyone snoring?" },
+          { "speaker": "NEO", "text": "Numbers are hard to compare by ear. Show them as a chart, and everyone gets it in a second." }
+        ]
+      },
+      {
+        "animation": "A sheet: A1 'Sport', B1 'Votes'; Cricket 18, Football 9, Kabaddi 6, Badminton 7; a total cell shows '=SUM(B2:B5) = 40'. The numbers morph into bars of different heights.",
+        "lines": [
+          { "speaker": "NEO", "text": "A chart is a picture of data. It makes comparisons, patterns and trends easy to see." },
+          { "speaker": "NEO", "text": "Forty students voted. The tallest bar shows at once that cricket won." }
+        ]
+      },
+      {
+        "animation": "Four mini-charts appear in a two-by-two grid, each labelled: 'Column: vertical bars to compare', 'Bar: horizontal bars', 'Pie: parts of a whole — Cricket 45%, Football 22.5%, Kabaddi 15%, Badminton 17.5%', 'Line: change over time — monsoon rainfall June to September'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A column chart uses upright bars to compare values. A bar chart does the same with sideways bars." },
+          { "speaker": "NEO", "text": "A pie chart shows parts of a whole. Eighteen out of forty is forty-five percent, so cricket gets almost half the pie." },
+          { "speaker": "NEO", "text": "A line chart shows change over time, like rainfall month by month. Calc also offers area, XY scatter and other types." }
+        ]
+      },
+      {
+        "animation": "Animated UI: A1:B5 is selected, then 'Insert > Chart' is clicked. The Chart Wizard's step list glows in order: '1. Chart Type', '2. Data Range', '3. Data Series', '4. Chart Elements'. In step 4 the title 'Favourite Sports' is typed and 'Display legend' is ticked. Finish is clicked and the chart lands on the sheet.",
+        "lines": [
+          { "speaker": "NEO", "text": "Select the data with its headings, then choose Insert, Chart. The Chart Wizard opens." },
+          { "speaker": "NEO", "text": "Pick the chart type, check the data range and series, then add a title and legend under chart elements. Click Finish." },
+          { "speaker": "ZIPPY", "text": "Can I change it later?" },
+          { "speaker": "NEO", "text": "Yes. Double-click the chart to edit it, and the chart updates when the data changes." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Enter the sports votes. 2. Insert > Chart, choose Column. 3. Add a title. 4. Change type to Pie.' Then a yellow 'BOARD TIP' card: 'Pie = parts of a whole · Line = trend over time'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: make a column chart of these votes, add a title, then switch it to a pie chart." },
+          { "speaker": "NEO", "text": "Board tip: you may be asked which chart suits some data. Pie for parts of a whole, line for trends over time, column or bar for comparing." }
+        ]
+      },
+      {
+        "animation": "Recap board with a mini pie-chart icon. Points appear: '1. Charts make data easy to understand', '2. Column, Bar, Pie, Line and more', '3. Select data > Insert > Chart > Finish'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: charts turn numbers into pictures that are easy to compare." },
+          { "speaker": "NEO", "text": "Two: choose column, bar, pie or line depending on what you want to show." },
+          { "speaker": "NEO", "text": "Three: select the data and use Insert, Chart to run the wizard." },
+          { "speaker": "ZIPPY", "text": "Assembly is awake. And cricket still wins." }
+        ]
+      }
+    ]
+  }
+]

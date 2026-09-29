@@ -1,0 +1,223 @@
+[
+  {
+    "chapter_no": 12,
+    "chapter": "Statistics",
+    "topic_no": 1,
+    "name": "Bar Graphs",
+    "scenes": [
+      {
+        "animation": "A class notice board is buried under a long list of 40 names with favourite sports scribbled beside each. Zippy tries to count 'Cricket' with his finger and loses his place, spinning dizzily.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Which sport does our class like most? I've counted this list three times and got three answers!" },
+          { "speaker": "NEO", "text": "Lists hide patterns. A picture shows them at a glance. Let's draw a bar graph." }
+        ]
+      },
+      {
+        "animation": "The messy list collapses into a neat table: 'Cricket 18, Badminton 10, Football 8, Kabaddi 4, Total 40'. The number 40 is checked with a tick: '18 + 10 + 8 + 4 = 40 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, organise the data into a table. Cricket 18, badminton 10, football 8 and kabaddi 4." },
+          { "speaker": "NEO", "text": "Check the total: 18 plus 10 plus 8 plus 4 is 40. Every student is counted." }
+        ]
+      },
+      {
+        "animation": "A graph is built step by step: the x-axis gets the four sport names spaced equally; the y-axis gets a scale '1 unit = 2 students' marked 0, 2, 4, … 20. Bars rise one at a time: cricket to 18, badminton to 10, football to 8, kabaddi to 4, all the same width with equal gaps.",
+        "lines": [
+          { "speaker": "NEO", "text": "A bar graph shows data using bars of uniform width, drawn with equal spacing between them." },
+          { "speaker": "NEO", "text": "The sports go on the horizontal axis. The number of students goes on the vertical axis." },
+          { "speaker": "NEO", "text": "Choose a scale, say one unit for 2 students. Then the cricket bar is 18 divided by 2, which is 9 units tall." },
+          { "speaker": "NEO", "text": "The height of each bar shows its value. The width has no meaning." }
+        ]
+      },
+      {
+        "animation": "Worked reading example: arrows compare the cricket and badminton bars. Lines appear: 'Most popular: Cricket (18)', 'Cricket − Badminton = 18 − 10 = 8 students', 'Kabaddi as fraction of class = 4/40 = 1/10'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Tallest bar is cricket. Obviously." },
+          { "speaker": "NEO", "text": "Right. Now, how many more students prefer cricket than badminton? 18 minus 10, which is 8." },
+          { "speaker": "NEO", "text": "And what fraction of the class likes kabaddi? 4 out of 40, which is one tenth." }
+        ]
+      },
+      {
+        "animation": "A graph with bars of uneven widths and a missing scale gets a red cross. A corrected graph slides in with a title, axis labels and 'Scale: 1 unit = 2 students' in the corner, earning a green tick. 'EXAM TIP' card appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can I make the cricket bar extra wide, since it's my favourite?" },
+          { "speaker": "NEO", "text": "No favourites in a bar graph. Exam tip: always write the scale, label both axes, and keep bar widths and gaps equal. Each of these can cost a mark." }
+        ]
+      },
+      {
+        "animation": "Recap board with a mini bar graph icon: '1. Bars of uniform width, equal gaps', '2. Height ∝ value; choose and state a scale', '3. Label both axes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a bar graph uses bars of equal width with equal gaps between them." },
+          { "speaker": "NEO", "text": "Two: the height of a bar shows the value, according to the scale you choose." },
+          { "speaker": "NEO", "text": "Three: always label both axes and state the scale." },
+          { "speaker": "ZIPPY", "text": "Cricket wins. The graph has spoken." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Statistics",
+    "topic_no": 2,
+    "name": "Histograms",
+    "scenes": [
+      {
+        "animation": "A school health check-up: students line up on a weighing machine, and a nurse writes weights in a register. Zippy tries to make a bar graph with one bar for every single weight; the graph stretches off the screen.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Thirty-six students, thirty-six different weights. My bar graph won't fit!" },
+          { "speaker": "NEO", "text": "For continuous data like weight, we group it into classes and draw a histogram." }
+        ]
+      },
+      {
+        "animation": "A grouped frequency table appears row by row: '30.5–35.5: 9', '35.5–40.5: 6', '40.5–45.5: 15', '45.5–50.5: 3', '50.5–55.5: 1', '55.5–60.5: 2', 'Total: 36'. A check line: '9 + 6 + 15 + 3 + 1 + 2 = 36 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Group the weights, in kilograms, into class intervals: 30.5 to 35.5, 35.5 to 40.5, and so on." },
+          { "speaker": "NEO", "text": "The number of students in each class is its frequency. The frequencies add up to 36." }
+        ]
+      },
+      {
+        "animation": "The histogram builds step by step: the x-axis shows class limits 30.5, 35.5 … 60.5 with a zig-zag kink '⌇' near the origin; the y-axis shows frequency 0 to 16. Rectangles rise one by one with no gaps: 9, 6, 15, 3, 1, 2.",
+        "lines": [
+          { "speaker": "NEO", "text": "A histogram is a graph of rectangles drawn side by side, with no gaps between them." },
+          { "speaker": "NEO", "text": "Each rectangle's base is the class interval, and its height is the frequency." },
+          { "speaker": "NEO", "text": "Since our scale starts at 30.5, not zero, we draw a small kink on the horizontal axis to show the break." },
+          { "speaker": "ZIPPY", "text": "Why no gaps? Bar graphs had gaps." },
+          { "speaker": "NEO", "text": "Because the classes are continuous. Where one class ends, the next one begins, so the rectangles touch." }
+        ]
+      },
+      {
+        "animation": "Reading the histogram: the tallest bar 40.5–45.5 glows with '15'. Then bars above 45.5 glow: '3 + 1 + 2 = 6 students'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Which weight group has the most students?" },
+          { "speaker": "NEO", "text": "The tallest rectangle, 40.5 to 45.5 kilograms, with 15 students." },
+          { "speaker": "NEO", "text": "How many weigh more than 45.5 kilograms? 3 plus 1 plus 2, which is 6 students." }
+        ]
+      },
+      {
+        "animation": "A table with classes '1–10, 11–20, 21–30' appears with visible gaps between them. Arrows subtract 0.5 from each lower limit and add 0.5 to each upper limit: '0.5–10.5, 10.5–20.5, 20.5–30.5'. An 'EXAM TIP' card: 'Make classes continuous first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: if classes are like 1 to 10, 11 to 20, there are gaps. Make them continuous first: 0.5 to 10.5, 10.5 to 20.5, and so on." },
+          { "speaker": "ZIPPY", "text": "So no gaps in the table, and no gaps in the graph." }
+        ]
+      },
+      {
+        "animation": "Recap board with the histogram icon: '1. For grouped, continuous data', '2. Rectangles with no gaps; base = class interval, height = frequency', '3. Use a kink ⌇ if the axis doesn't start at 0'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a histogram shows grouped, continuous data." },
+          { "speaker": "NEO", "text": "Two: its rectangles touch each other, with base as the class interval and height as the frequency." },
+          { "speaker": "NEO", "text": "Three: draw a kink on the axis when the scale doesn't start from zero." },
+          { "speaker": "ZIPPY", "text": "Graph fits on the screen now. Phew!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Statistics",
+    "topic_no": 3,
+    "name": "Histograms with Varying Widths",
+    "scenes": [
+      {
+        "animation": "A histogram of marks where the 0–20 bar is twice as wide as the others and looks like a giant block. A cartoon teacher gasps: 'So many students failed?!' Zippy hides behind the bar.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Our teacher thinks half the class failed because of this fat bar!" },
+          { "speaker": "NEO", "text": "The bar is misleading. When class widths differ, the heights must be adjusted." }
+        ]
+      },
+      {
+        "animation": "A table appears row by row: marks '0–20: 7', '20–30: 10', '30–40: 10', '40–50: 20', '50–60: 20', '60–70: 15', '70–100: 8', 'Total: 90'. The widths 20 and 30 flash red; the width 10 flashes green.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here are the marks of 90 students. Most classes have width 10, but 0 to 20 has width 20, and 70 to 100 has width 30." },
+          { "speaker": "NEO", "text": "In a histogram, the area of a rectangle should be proportional to the frequency. Wider classes would look too big." }
+        ]
+      },
+      {
+        "animation": "The formula builds: 'Adjusted frequency = (minimum class size ÷ class size) × frequency'. The minimum class size '10' is circled.",
+        "lines": [
+          { "speaker": "NEO", "text": "So we find the adjusted frequency. It is the minimum class size divided by the class size, into the frequency." },
+          { "speaker": "NEO", "text": "Here the minimum class size is 10." },
+          { "speaker": "ZIPPY", "text": "So we squeeze every class down to the size of the smallest one?" },
+          { "speaker": "NEO", "text": "Exactly. We ask how many students there would be in a stretch of just 10 marks." }
+        ]
+      },
+      {
+        "animation": "Worked example line by line: '0–20: (10 ÷ 20) × 7 = 3.5', '70–100: (10 ÷ 30) × 8 = 80 ÷ 30 ≈ 2.67', 'Other classes: width 10 → unchanged'. The fat bar shrinks in height to 3.5 and the last bar to 2.67; the teacher sighs in relief.",
+        "lines": [
+          { "speaker": "NEO", "text": "For 0 to 20: 10 divided by 20, into 7, which is 3.5." },
+          { "speaker": "NEO", "text": "For 70 to 100: 10 divided by 30, into 8, which is 80 by 30, or about 2.67." },
+          { "speaker": "NEO", "text": "The other classes already have width 10, so their heights stay the same." },
+          { "speaker": "ZIPPY", "text": "Now the fat bar is short. Nobody failed that badly!" }
+        ]
+      },
+      {
+        "animation": "The corrected histogram with its y-axis relabelled 'Proportion of students per 10 marks interval'. An 'EXAM TIP' card: 'Varying widths? Adjust first, and label the y-axis correctly'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The vertical axis now shows the proportion of students per 10 marks interval." },
+          { "speaker": "NEO", "text": "Exam tip: always check class widths before drawing. If they differ, write the adjusted frequency column first." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Unequal widths distort a histogram', '2. Adjusted frequency = (min class size ÷ class size) × frequency', '3. Area of rectangle ∝ frequency'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: unequal class widths make a histogram misleading." },
+          { "speaker": "NEO", "text": "Two: the adjusted frequency is the minimum class size by the class size, into the frequency." },
+          { "speaker": "NEO", "text": "Three: in a correct histogram, the areas of the rectangles are proportional to the frequencies." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Statistics",
+    "topic_no": 4,
+    "name": "Frequency Polygons",
+    "scenes": [
+      {
+        "animation": "Two histograms, Section A and Section B, are stacked on top of each other; the bars overlap into a confusing mess of colours. Zippy's eyes go cross-eyed.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I tried to compare two sections' scores on one histogram. Now it's colourful chaos!" },
+          { "speaker": "NEO", "text": "Use frequency polygons. Lines compare better than stacked bars." }
+        ]
+      },
+      {
+        "animation": "A table: scores '20–30: 4', '30–40: 8', '40–50: 12', '50–60: 6'. Its histogram draws. A dot appears at the mid-point of the top of each rectangle.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here are some test scores: 20 to 30 has 4 students, 30 to 40 has 8, 40 to 50 has 12, and 50 to 60 has 6." },
+          { "speaker": "NEO", "text": "Draw the histogram. Then mark the mid-point of the top of each rectangle." }
+        ]
+      },
+      {
+        "animation": "The dots are joined by straight line segments. Then imaginary classes '10–20' and '60–70' with frequency 0 appear as dashed boxes, and the polygon extends down to the points (15, 0) and (65, 0) on the axis, closing the shape.",
+        "lines": [
+          { "speaker": "NEO", "text": "Join these mid-points with line segments." },
+          { "speaker": "NEO", "text": "Now imagine a class before the first one, 10 to 20, and a class after the last one, 60 to 70, both with frequency zero." },
+          { "speaker": "NEO", "text": "Join the ends to their mid-points on the axis. The closed shape is the frequency polygon." }
+        ]
+      },
+      {
+        "animation": "Without a histogram: class marks are computed line by line: '(20 + 30) ÷ 2 = 25', '35', '45', '55'. Points (25, 4), (35, 8), (45, 12), (55, 6) are plotted, plus (15, 0) and (65, 0), and joined.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Do I always have to draw the histogram first?" },
+          { "speaker": "NEO", "text": "No. Find the class mark of each class: upper limit plus lower limit, divided by 2." },
+          { "speaker": "NEO", "text": "For 20 to 30, it is 50 divided by 2, which is 25. The others are 35, 45 and 55." },
+          { "speaker": "NEO", "text": "Plot 25 with 4, 35 with 8, 45 with 12, and 55 with 6. Add 15 and 65 with zero, and join the points." }
+        ]
+      },
+      {
+        "animation": "Back to the two sections: now two clean polygons, blue for Section A and orange for Section B, on the same axes. An 'EXAM TIP' card: 'Don't forget the zero-frequency classes at both ends'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Two polygons on the same axes make comparison easy." },
+          { "speaker": "NEO", "text": "Exam tip: students often forget the imaginary classes at both ends. Without them, the polygon is not closed." }
+        ]
+      },
+      {
+        "animation": "Recap board with a polygon icon: '1. Join mid-points of tops of histogram rectangles', '2. Add zero-frequency classes at both ends', '3. Class mark = (upper limit + lower limit) ÷ 2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a frequency polygon joins the mid-points of the tops of histogram rectangles." },
+          { "speaker": "NEO", "text": "Two: add a zero-frequency class at each end to close it." },
+          { "speaker": "NEO", "text": "Three: you can draw it directly using class marks, which are the averages of the class limits." },
+          { "speaker": "ZIPPY", "text": "Chaos cleared. Section A, you're going down!" }
+        ]
+      }
+    ]
+  }
+]

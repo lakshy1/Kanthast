@@ -1,0 +1,280 @@
+[
+  {
+    "chapter_no": 11,
+    "chapter": "The Role of the Judiciary in Our Society",
+    "topic_no": 1,
+    "name": "Justice, Law and the Judiciary",
+    "scenes": [
+      {
+        "animation": "School canteen: Zippy's samosa vanishes from his plate and a crumb trail leads to a classmate. Zippy puffs up red, shouting 'Punish him!', while the classmate raises a hand saying 'Let me explain!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Someone took my samosa! He should be punished right now!" },
+          { "speaker": "NEO", "text": "Maybe. But shouldn't he get a chance to explain first? That question is at the heart of justice." }
+        ]
+      },
+      {
+        "animation": "The Preamble scroll unrolls; the words 'JUSTICE, social, economic and political' glow. Three pillars rise labelled 'Legislature', 'Executive', 'Judiciary', with the Judiciary pillar lighting up and a small 'Independent' badge on it.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Preamble to our Constitution promises all citizens social, economic and political justice." },
+          { "speaker": "NEO", "text": "Justice keeps peace and harmony, and lets people live with equality and dignity." },
+          { "speaker": "NEO", "text": "The judiciary is one of the three pillars of government, independent of the legislature and the executive. It ensures fair decisions on disputes according to the law. It also checks that laws stay within the framework of the Constitution, and that the executive does not overstep its role." }
+        ]
+      },
+      {
+        "animation": "A rulebook labelled 'LAWS' opens. Icons pop out for consequences: a fine receipt, a compensation envelope, and a prison door. A flowchart draws: 'Grievance -> Complaint -> Both sides heard -> Decision', titled 'Judicial system'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Laws are general rules made by the government to regulate people's activities, with consequences for not following them. These could be a fine, compensation to the affected party, or even imprisonment." },
+          { "speaker": "NEO", "text": "The system that lets people complain about a grievance, and lets each side put its view, is the judicial system." }
+        ]
+      },
+      {
+        "animation": "A stack of old colonial-era law books; stamps reading 'REPEALED' slam onto 'Criminal Tribes Act, 1871' and 'Vernacular Press Act, 1878', and a counter spins to 'over 1500 laws repealed'. A world map briefly highlights the USA ('Jim Crow laws, repealed 1960s') and South Africa ('apartheid laws, repealed 1991').",
+        "lines": [
+          { "speaker": "NEO", "text": "After independence, hundreds of colonial-era laws were found to be discriminatory. The government has repealed over 1500 laws made during British rule." },
+          { "speaker": "NEO", "text": "For example, the Criminal Tribes Act of 1871 labelled some communities criminal by birth, and the Vernacular Press Act of 1878 restricted press freedom." },
+          { "speaker": "NEO", "text": "Unjust laws existed elsewhere too, like the Jim Crow laws in parts of the United States and apartheid laws in South Africa." }
+        ]
+      },
+      {
+        "animation": "A balance scale appears. The left pan is labelled 'Substantive justice: Is the outcome fair?' and the right pan 'Procedural justice: Was everyone fully heard?'. Both pans settle level, and a banner below reads 'Innocent until proved guilty'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Justice has two important aspects. Substantive justice looks at the final result, asking whether the decision is fair, just and reasonable." },
+          { "speaker": "NEO", "text": "Procedural justice means every person involved gets a full opportunity of hearing before the court decides." },
+          { "speaker": "NEO", "text": "As a rule, every person is presumed innocent till proved guilty. Exam tip: students often swap these two terms. Substantive is about the outcome. Procedural is about a fair hearing." },
+          { "speaker": "ZIPPY", "text": "Okay, okay. My classmate gets to explain. Then we talk samosa." }
+        ]
+      },
+      {
+        "animation": "Recap board with a scale icon. Points appear: '1. Preamble promises social, economic, political justice', '2. Laws = general rules with consequences; unjust laws repealed', '3. Substantive (outcome) + procedural (fair hearing) justice'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the Preamble promises justice, and the independent judiciary ensures disputes are decided fairly under the law." },
+          { "speaker": "NEO", "text": "Two: laws are general rules with consequences, and over 1500 colonial-era laws have been repealed." },
+          { "speaker": "NEO", "text": "Three: justice needs both a fair outcome and a fair hearing, and everyone is innocent till proved guilty." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "The Role of the Judiciary in Our Society",
+    "topic_no": 2,
+    "name": "The Judicial System and the Supreme Court",
+    "scenes": [
+      {
+        "animation": "Zippy climbs a staircase of courts, huffing, and reaches the top step where a grand building with a dome appears, labelled 'Supreme Court of India, New Delhi'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Phew! How many courts are there, and which one is the boss?" },
+          { "speaker": "NEO", "text": "India's courts form one unified system, like a pyramid. Let's build it." }
+        ]
+      },
+      {
+        "animation": "A pyramid builds from the bottom up: base block 'District Courts (District level)', middle block 'High Courts (State level)', top block 'Supreme Court (apex)'. Title above: 'Courts in India: a unified hierarchy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Indian judicial system is unified. It is a hierarchy of courts." },
+          { "speaker": "NEO", "text": "The Supreme Court is at the apex. High Courts work at the State level. Subordinate Courts work at the District level." }
+        ]
+      },
+      {
+        "animation": "A calendar page flips to '26.01.1950', and the Constitution book opens to 'Article 124'. The Supreme Court logo appears with the motto 'yato dharmastato jayah' and its meaning: 'Where there is dharma, there is victory'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Supreme Court is the highest court of law in the country. It came into existence on 26 January 1950, the day the Constitution came into effect." },
+          { "speaker": "NEO", "text": "It is the final interpreter of the Constitution. Article 124 provides for its establishment, and it is seated in New Delhi." },
+          { "speaker": "NEO", "text": "Its motto is yato dharmastato jayah. Where there is dharma, there is victory." }
+        ]
+      },
+      {
+        "animation": "A bench of judges fills in: one chair labelled 'Chief Justice of India' plus a counter ticking up to '33 judges'; a banner reads '33 + 1'. The President of India figure hands out appointment scrolls under the tag 'Article 124'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Chief Justice of the Supreme Court is called the Chief Justice of India." },
+          { "speaker": "NEO", "text": "The current strength is thirty-three plus one: the Chief Justice of India and thirty-three judges." },
+          { "speaker": "NEO", "text": "Under Article 124, every Supreme Court judge is appointed by the President of India." },
+          { "speaker": "ZIPPY", "text": "Thirty-four judges. That's more than a cricket team and its reserves!" }
+        ]
+      },
+      {
+        "animation": "A checklist titled 'Who can become a Supreme Court judge?' ticks in turn: 'Citizen of India', then an 'OR' box with three options: 'High Court judge for 5 years', 'High Court advocate for 10 years', 'Distinguished jurist (in the President's opinion)'. A retirement clock stops at '65'.",
+        "lines": [
+          { "speaker": "NEO", "text": "To be a Supreme Court judge, a person must be a citizen of India. In addition, they must have been a High Court judge for five years, or a High Court advocate for ten years, or a distinguished jurist in the opinion of the President." },
+          { "speaker": "NEO", "text": "A Supreme Court judge retires at the age of sixty-five." },
+          { "speaker": "NEO", "text": "Exam tip: remember the numbers five and ten. Five years as a judge, or ten years as an advocate." }
+        ]
+      },
+      {
+        "animation": "Recap board with a three-level pyramid icon. Points appear: '1. Unified hierarchy: Supreme Court > High Courts > District Courts', '2. SC from 26.01.1950; Article 124; final interpreter of Constitution', '3. CJI + 33 judges; appointed by President; retire at 65'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: India has a unified hierarchy of courts, with the Supreme Court at the top, High Courts in the States and Subordinate Courts in the districts." },
+          { "speaker": "NEO", "text": "Two: the Supreme Court began on 26 January 1950 under Article 124, and is the final interpreter of the Constitution." },
+          { "speaker": "NEO", "text": "Three: it has the Chief Justice of India and thirty-three judges, appointed by the President, who retire at sixty-five." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "The Role of the Judiciary in Our Society",
+    "topic_no": 3,
+    "name": "Powers of the Supreme Court: Writs, PIL and Jurisdiction",
+    "scenes": [
+      {
+        "animation": "Zippy reads a newspaper headline about prisoners waiting in jail for years without a trial. He looks up, worried: 'Can one person really do something about this?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, can an ordinary person actually go to the Supreme Court about something like this?" },
+          { "speaker": "NEO", "text": "Yes. One lawyer did exactly that, and it changed things across India. First, let's see how." }
+        ]
+      },
+      {
+        "animation": "A document labelled 'Writ Petition' slides in with the heading 'Part III: Fundamental Rights'. Two arrows branch: one to the Supreme Court tagged 'Article 32: all-India issue', one to a High Court tagged 'Article 226: within the State'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Writ jurisdiction is given to the constitutional courts to enforce the Fundamental Rights in Part III of the Constitution, such as equality, liberty, the right to life and freedom of speech." },
+          { "speaker": "NEO", "text": "A citizen can file a writ petition directly in the Supreme Court under Article 32, where the issue has all-India impact, or in the High Court under Article 226, for violations within that State." },
+          { "speaker": "NEO", "text": "Exam tip: pair them correctly. Article 32 is the Supreme Court. Article 226 is the High Court." }
+        ]
+      },
+      {
+        "animation": "A lawyer, Mrs. Kapila Hingorani, reads a newspaper and writes a petition. Jail doors in Bihar swing open, then a map of India lights up as a counter rises to 'almost 40,000 under-trial prisoners'. Two cards follow: 'M.C. Mehta v. Union of India: Ganga, Taj Mahal' and 'Vishaka v. State of Rajasthan, 1997 -> Act of 2013'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Public Interest Litigation, or PIL, is an innovation of the Supreme Court to address public concerns and give meaning to the right to life under Article 21." },
+          { "speaker": "NEO", "text": "In the first reported PIL, lawyer Kapila Hingorani sought the release of under-trial prisoners in Bihar who had been jailed longer than their punishment would have been. The Court ordered their release and issued guidelines to release almost forty thousand such prisoners across India." },
+          { "speaker": "NEO", "text": "Other PILs include M.C. Mehta, on cleaning the Ganga and protecting the Taj Mahal, and Vishaka, where the Court laid down guidelines in 1997 against sexual harassment at the workplace." }
+        ]
+      },
+      {
+        "animation": "A flowchart grows with four branches from 'Supreme Court': 'Original (Art. 131): Centre vs State, State vs State, e.g. river water', 'Appellate: appeals from High Courts and tribunals like NGT, NCLAT', 'Advisory (Art. 143): opinion to the President, bench of at least 5 judges', 'Special Leave (Art. 136)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Under Article 131, the Supreme Court alone decides disputes between the Centre and States, or between States, such as river water disputes. This is original jurisdiction." },
+          { "speaker": "NEO", "text": "Under appellate jurisdiction, it hears appeals from High Courts and from tribunals like the NGT and NCLAT." },
+          { "speaker": "NEO", "text": "Under Article 143, the President can seek its opinion, heard by a Constitution Bench of at least five judges. And under Article 136, it can grant special leave to appeal." }
+        ]
+      },
+      {
+        "animation": "A stamp labelled 'Article 141' presses 'Binding on all courts in India' onto a judgment, and ripples spread across a map to every court. A second stamp 'Article 142: complete justice' follows.",
+        "lines": [
+          { "speaker": "NEO", "text": "The law declared by the Supreme Court is binding on all courts in India. It can also pass any order needed to do complete justice." },
+          { "speaker": "ZIPPY", "text": "So one judgment in Delhi guides a court in my district too. Neat." }
+        ]
+      },
+      {
+        "animation": "Recap board with a gavel icon. Points appear: '1. Writs: Art. 32 (SC), Art. 226 (HC)', '2. PIL: gives meaning to Art. 21; Hingorani, M.C. Mehta, Vishaka', '3. Original (131), Appellate, Advisory (143), Special Leave (136)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: to enforce Fundamental Rights, citizens can file writ petitions under Article 32 or Article 226." },
+          { "speaker": "NEO", "text": "Two: PIL lets public concerns reach the Court, as in the case of under-trial prisoners." },
+          { "speaker": "NEO", "text": "Three: the Supreme Court has original, appellate and advisory jurisdiction, and can grant special leave to appeal." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "The Role of the Judiciary in Our Society",
+    "topic_no": 4,
+    "name": "High Courts, Subordinate Courts and Tribunals",
+    "scenes": [
+      {
+        "animation": "Zippy stares at a map of India with 28 States and counts High Court icons, getting stuck at 25. 'Did three States forget to build one?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Twenty-eight States but only twenty-five High Courts? Someone's missing!" },
+          { "speaker": "NEO", "text": "No one is missing. Some States and Union Territories share a High Court." }
+        ]
+      },
+      {
+        "animation": "The map fills in High Court icons one by one; shared ones draw brackets across regions: 'Gauhati HC: Assam, Nagaland, Mizoram, Arunachal Pradesh', 'Bombay HC: Maharashtra, Goa, Dadra & Nagar Haveli and Daman & Diu', 'Punjab & Haryana HC: Punjab, Haryana, Chandigarh'. Tag: 'Article 214'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A High Court is the highest court at the State level. Article 214 says there shall be a High Court in each State." },
+          { "speaker": "NEO", "text": "India has 28 States but 25 High Courts, because some share one. The Gauhati High Court covers Assam, Nagaland, Mizoram and Arunachal Pradesh." }
+        ]
+      },
+      {
+        "animation": "The President of India figure consults three advisers labelled 'Chief Justice of India', 'Governor of the State' and 'Chief Justice of the High Court', then signs an appointment. A checklist ticks 'Citizen of India' and '10 years: judicial office or High Court advocate'; a clock stops at '62'.",
+        "lines": [
+          { "speaker": "NEO", "text": "High Court judges are appointed by the President, in consultation with the Chief Justice of India, the State's Governor and the Chief Justice of that High Court." },
+          { "speaker": "NEO", "text": "A judge must be a citizen of India who has held judicial office in India, or been a High Court advocate for ten years. They retire at sixty-two." },
+          { "speaker": "NEO", "text": "Exam tip: Supreme Court judges retire at sixty-five, High Court judges at sixty-two. Don't mix them up." }
+        ]
+      },
+      {
+        "animation": "From a High Court, arrows point upward from subordinate courts labelled 'appeals: civil and criminal', while a lens icon hovers over them labelled 'Article 227: superintendence'. The lower level expands into District Courts, Sessions Courts, Revenue Courts and Small Causes Courts, with a Governor appointing District Judges under 'Article 233'.",
+        "lines": [
+          { "speaker": "NEO", "text": "High Courts hear appeals from subordinate courts in civil and criminal matters, and from certain tribunals. Under Article 227, they supervise all courts and tribunals in their area. This power is to be used sparingly." },
+          { "speaker": "NEO", "text": "Subordinate courts include District, Sessions, Revenue and Small Causes Courts. Here the judiciary comes in closest contact with the people." },
+          { "speaker": "NEO", "text": "The Governor appoints District Judges in consultation with the High Court." }
+        ]
+      },
+      {
+        "animation": "A hub labelled 'Tribunals' sprouts six spokes: 'NCLT: company and insolvency', 'APTEL: electricity', 'Consumer Fora: consumer disputes', 'NGT: environment', 'Armed Forces Tribunal', 'Central Administrative Tribunal: government service matters'. A family then receives their flat advance back, with interest, from a Consumer Commission.",
+        "lines": [
+          { "speaker": "NEO", "text": "Tribunals are specialised, quasi-judicial bodies for specific kinds of disputes. The National Green Tribunal handles environmental issues, and consumer fora handle consumer disputes." },
+          { "speaker": "NEO", "text": "In one case, a builder had not even started a family's flat four years later. The National Consumer Commission heard both parties and ordered the builder to refund the money with interest, and pay the cost of the case." },
+          { "speaker": "ZIPPY", "text": "So you don't always need a regular court. There's a specialist for that!" }
+        ]
+      },
+      {
+        "animation": "Recap board with a map icon and a tribunal hub icon. Points appear: '1. 28 States, 25 High Courts (Art. 214); retire at 62', '2. HCs hear appeals and supervise lower courts (Art. 227)', '3. Subordinate courts + tribunals like NGT, Consumer Fora'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: India has 25 High Courts for 28 States, and High Court judges retire at sixty-two." },
+          { "speaker": "NEO", "text": "Two: High Courts hear appeals and supervise the subordinate courts and tribunals in their area." },
+          { "speaker": "NEO", "text": "Three: subordinate courts are closest to the people, and tribunals decide specialised disputes." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 11,
+    "chapter": "The Role of the Judiciary in Our Society",
+    "topic_no": 5,
+    "name": "New Laws, Digital Courts and Alternate Dispute Resolution",
+    "scenes": [
+      {
+        "animation": "Two neighbours argue over a mango tree on their shared wall. Zippy rushes in dragging a giant gavel toward the Supreme Court. Neo stops him with a wing.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Mango fight! Straight to the Supreme Court!" },
+          { "speaker": "NEO", "text": "Hold on. Not every dispute needs a full court case. There are other ways too." }
+        ]
+      },
+      {
+        "animation": "Three old law books slide out and three new ones slide in, each pair linked by an arrow: 'Indian Penal Code, 1860 -> Bharatiya Nyaya Sanhita, 2023', 'Code of Criminal Procedure, 1973 -> Bharatiya Nagarik Suraksha Sanhita, 2023', 'Indian Evidence Act, 1872 -> Bharatiya Sakshya Adhiniyam, 2023'.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, some new laws. The Indian Penal Code has been replaced by the Bharatiya Nyaya Sanhita, 2023." },
+          { "speaker": "NEO", "text": "The Code of Criminal Procedure has been replaced by the Bharatiya Nagarik Suraksha Sanhita, and the Indian Evidence Act by the Bharatiya Sakshya Adhiniyam, both of 2023." },
+          { "speaker": "NEO", "text": "They aim at faster justice, the use of digital evidence and better protection for victims." }
+        ]
+      },
+      {
+        "animation": "A phone screen shows a litigant checking a case status; icons pop up one by one: 'e-Filing', 'Hybrid hearings', 'Live streaming', 'Judgments in many Indian languages', 'National Judicial Data Grid'. A large screen at the Supreme Court gate lights up with 'Virtual Justice Clock'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Digital technology makes the judicial system more accessible and transparent. Litigants can check their own case details, and court orders are freely available in many languages." },
+          { "speaker": "NEO", "text": "Courts now use e-filing, hybrid hearings, live streaming and the National Judicial Data Grid. A Virtual Justice Clock at the Supreme Court's gates shows real-time data." }
+        ]
+      },
+      {
+        "animation": "A four-panel comparison builds: 'Arbitration: arbitrator decides, final and binding (Act of 1996)'; 'Mediation: mediator helps parties agree, cannot impose a decision (Act of 2023)'; 'Lok Adalat: people's court, amicable settlement (Act of 1987)'; 'Gram Nyayalaya: mobile village court (Act of 2008)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "To reduce the burden on courts, litigants are encouraged to use alternate modes of dispute resolution." },
+          { "speaker": "NEO", "text": "In arbitration, the parties refer the dispute to an independent arbitrator, such as a retired judge, lawyer or expert. The decision is final and legally binding." },
+          { "speaker": "NEO", "text": "In mediation, the most common form, a neutral mediator helps the parties reach a settlement, but cannot impose a decision." },
+          { "speaker": "NEO", "text": "Lok Adalats are people's courts that settle disputes amicably. Gram Nyayalayas are mobile village-level courts with simple procedures." },
+          { "speaker": "NEO", "text": "Exam tip: an arbitrator decides; a mediator only helps the parties decide." }
+        ]
+      },
+      {
+        "animation": "The two neighbours sit with a calm mediator under the mango tree and shake hands, splitting a basket of mangoes. Zippy happily puts the giant gavel away.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So mediation could fix our mango fight without a single court date!" },
+          { "speaker": "NEO", "text": "Exactly. And citizens can also help the judiciary by bringing social concerns affecting people, animals and nature to its notice." }
+        ]
+      },
+      {
+        "animation": "Recap board with a laptop icon and a handshake icon. Points appear: '1. New criminal laws of 2023: BNS, BNSS, BSA', '2. Digital courts: e-filing, live streaming, NJDG', '3. ADR: arbitration, mediation, Lok Adalat, Gram Nyayalaya'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: three new laws of 2023 replaced the old criminal laws, aiming at faster justice." },
+          { "speaker": "NEO", "text": "Two: digital initiatives make courts more open and easier to use." },
+          { "speaker": "NEO", "text": "Three: arbitration, mediation, Lok Adalats and Gram Nyayalayas help settle disputes outside regular courts." }
+        ]
+      }
+    ]
+  }
+]

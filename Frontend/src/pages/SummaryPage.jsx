@@ -75,7 +75,7 @@ export default function SummaryPage() {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_8%_12%,_#e0f2fe,_#f8fafc_40%,_#eef2ff_90%)] px-4 md:px-8 py-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="page-frame">
         <Link
           to="/lists"
           className="inline-flex items-center gap-2 text-ink-muted hover:text-ink font-medium"

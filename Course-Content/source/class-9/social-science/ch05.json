@@ -1,0 +1,212 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "History: Pastoralists in the Modern World",
+    "topic_no": 1,
+    "name": "Pastoral Nomads in the Mountains",
+    "scenes": [
+      {
+        "animation": "A long line of sheep and goats winds up a snowy Himalayan pass, herders walking beside them. Zippy rides on a sheep's back, wrapped in a blanket, and nearly slides off at a turn.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why are these people walking hundreds of kilometres with their animals every year?" },
+          { "speaker": "NEO", "text": "They are pastoral nomads. They move from place to place so their herds always find fresh pasture." }
+        ]
+      },
+      {
+        "animation": "A relief map of Jammu and Kashmir. A winter base glows on the 'Siwalik range, low hills'. At 'End of April', a caravan labelled 'Kafila' moves north, crosses the 'Pir Panjal passes' and reaches the 'Kashmir valley'. A calendar flips to 'September' and the caravan returns.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Gujjar Bakarwals of Jammu and Kashmir are great herders of goat and sheep. Many migrated to this region in the nineteenth century." },
+          { "speaker": "NEO", "text": "In winter, when the high mountains are covered with snow, they live with their herds in the low hills of the Siwalik range. By the end of April, they begin their northern march." },
+          { "speaker": "NEO", "text": "Several households travel together in a group called a kafila. They cross the Pir Panjal passes into the valley of Kashmir, and by September they start moving back down." }
+        ]
+      },
+      {
+        "animation": "A map of Himachal Pradesh: a flock grazes in scrub forests on the 'Siwalik hills' in winter, then walks north in 'April' to 'Lahul and Spiti'. On the way back in 'September', the herders stop to reap the summer harvest and sow the winter crop.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Gaddi shepherds of Himachal Pradesh have a similar cycle. They spend winter in the low hills of the Siwalik range, grazing their flocks in scrub forests." },
+          { "speaker": "NEO", "text": "By April they move north and spend the summer in Lahul and Spiti. By September they return, stopping in the villages of Lahul and Spiti to reap their summer harvest and sow their winter crop." }
+        ]
+      },
+      {
+        "animation": "Garhwal and Kumaon hills: cattle herders move down to dry forests labelled 'Bhabar' in winter, and up to green meadows labelled 'Bugyals' in summer. Name tags then pop up across the Himalaya: 'Bhotiyas', 'Sherpas', 'Kinnauris'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In Garhwal and Kumaon, the Gujjar cattle herders came down to the dry forests of the bhabar in winter, and went up to the high meadows, the bugyals, in summer." },
+          { "speaker": "NEO", "text": "The Bhotiyas, Sherpas and Kinnauris of the Himalayas follow similar cyclical movements between summer and winter pastures." }
+        ]
+      },
+      {
+        "animation": "A split view: a pasture being grazed down to stubble on one side, and the same pasture growing back lush on the other while the herd is away. A caption reads 'Movement = pastures recover'. An 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Couldn't they just stay in one nice meadow?" },
+          { "speaker": "NEO", "text": "That would exhaust it. By moving, they give the pastures time to recover, and they never overuse any one area." },
+          { "speaker": "NEO", "text": "Exam tip: in answers on mountain pastoralists, mention the seasons, the grazing grounds and the passes or regions they cross." }
+        ]
+      },
+      {
+        "animation": "Recap board with a mountain icon: '1. Gujjar Bakarwals: Siwaliks ↔ Kashmir valley via Pir Panjal; kafila', '2. Gaddis: Siwaliks ↔ Lahul and Spiti', '3. Garhwal and Kumaon Gujjars: bhabar ↔ bugyals'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Gujjar Bakarwals move between the Siwalik hills and the Kashmir valley in groups called kafilas." },
+          { "speaker": "NEO", "text": "Two: Gaddi shepherds move between the Siwaliks and Lahul and Spiti." },
+          { "speaker": "NEO", "text": "Three: Gujjar cattle herders of Garhwal and Kumaon move between the bhabar and the bugyals." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "History: Pastoralists in the Modern World",
+    "topic_no": 2,
+    "name": "Pastoralists of the Plateaus, Plains and Deserts",
+    "scenes": [
+      {
+        "animation": "A Konkan farmer waves happily as a flock of sheep walks into his harvested rice field. The sheep munch the stubble and leave droppings; the farmer hands the shepherd a sack of rice. Zippy holds his nose.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The farmer is paying them rice to let sheep poop on his field?" },
+          { "speaker": "NEO", "text": "Exactly. The droppings are free manure. Both sides win in this arrangement." }
+        ]
+      },
+      {
+        "animation": "A map of Maharashtra: the 'Central plateau' is shaded dry and yellow with thorny scrub and bajra. In 'October', after the bajra harvest, a flock arrow moves west to the green 'Konkan' coast. With monsoon clouds forming, the arrow returns to the plateau.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Dhangars are an important pastoral community of Maharashtra. During the monsoon, they stay in the central plateau, a semi-arid region with low rainfall and poor soil, where bajra is grown." },
+          { "speaker": "NEO", "text": "By October, they harvest their bajra and move west. After about a month's march, they reach the Konkan, where peasants welcome them. Their flocks manure the fields and feed on the stubble, and the peasants give them rice." },
+          { "speaker": "NEO", "text": "With the onset of the monsoon, they leave the Konkan, as sheep cannot tolerate the wet conditions." }
+        ]
+      },
+      {
+        "animation": "A map of Karnataka and Andhra Pradesh: cattle labelled 'Gollas: cattle herders', sheep and goats with blankets labelled 'Kurumas and Kurubas: sheep, goats, woven blankets'. Arrows move to the coast in the dry season and back when the rains come.",
+        "lines": [
+          { "speaker": "NEO", "text": "On the dry central plateau of Karnataka and Andhra Pradesh, the Gollas herded cattle, while the Kurumas and Kurubas reared sheep and goats and sold woven blankets." },
+          { "speaker": "NEO", "text": "Here movement was dictated by the alternation of the monsoon and dry seasons. In the dry season they moved to the coastal tracts, and left when the rains came." }
+        ]
+      },
+      {
+        "animation": "A caravan of bullocks labelled 'Banjaras' moves across a map through 'Uttar Pradesh, Punjab, Rajasthan, Madhya Pradesh, Maharashtra', trading plough cattle for grain and fodder. Then a desert map of Rajasthan: villages 'Barmer, Jaisalmer, Jodhpur, Bikaner'; camels labelled 'Maru Raikas' and sheep and goats with the other Raikas.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Banjaras were found in the villages of Uttar Pradesh, Punjab, Rajasthan, Madhya Pradesh and Maharashtra. They moved over long distances, selling plough cattle and other goods to villagers in exchange for grain and fodder." },
+          { "speaker": "NEO", "text": "In the deserts of Rajasthan lived the Raikas. Rainfall was meagre and uncertain, so they combined cultivation with pastoralism." },
+          { "speaker": "NEO", "text": "During the monsoon, the Raikas of Barmer, Jaisalmer, Jodhpur and Bikaner stayed in their home villages. By October, they moved out in search of pasture and water. One group, the Maru Raikas, herded camels." }
+        ]
+      },
+      {
+        "animation": "A matching game on screen: community names on the left, states on the right, lines connecting them as Zippy guesses. An 'EXAM TIP' card flips over.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So many names! Dhangars, Gollas, Raikas... I'll mix them up in the exam." },
+          { "speaker": "NEO", "text": "Exam tip: make a simple table of community, region and animal. Matching questions come straight from it." }
+        ]
+      },
+      {
+        "animation": "Recap board with plateau, coast and desert icons: '1. Dhangars: Maharashtra plateau ↔ Konkan', '2. Gollas, Kurumas, Kurubas: Karnataka and Andhra Pradesh', '3. Banjaras: traders; Raikas: Rajasthan desert, Maru Raikas herd camels'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the Dhangars move between the Maharashtra plateau and the Konkan." },
+          { "speaker": "NEO", "text": "Two: the Gollas, Kurumas and Kurubas move to the coast in the dry season." },
+          { "speaker": "NEO", "text": "Three: the Banjaras trade across north and central India, and the Raikas herd in the Rajasthan desert." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "History: Pastoralists in the Modern World",
+    "topic_no": 3,
+    "name": "Colonial Rule and Pastoral Life",
+    "scenes": [
+      {
+        "animation": "A herder arrives at a forest gate with his goats; a colonial guard demands 'Permit? Pass? Tax?' The herder pats his empty pockets. Zippy peeks from behind a goat.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "He's been grazing here for generations. Now he needs a permit?" },
+          { "speaker": "NEO", "text": "Under colonial rule, the lives of pastoralists changed dramatically. Their grazing grounds shrank and their movements were controlled." }
+        ]
+      },
+      {
+        "animation": "Law 1 card: 'Waste Land Rules, from mid-nineteenth century'. Open grazing lands are stamped 'Uncultivated = waste', then handed to select individuals and turned into farmland. Law 2 card: 'Forest Acts'. Forest zones become 'Reserved: no access' and 'Protected: limited grazing with permits'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The colonial state wanted to transform all grazing lands into cultivated farms. Under the Waste Land Rules from the mid-nineteenth century, uncultivated lands were taken over and given to select individuals." },
+          { "speaker": "NEO", "text": "Through various Forest Acts, some forests were declared reserved, where pastoralists were not allowed at all. In protected forests, some grazing rights were granted, but movements were severely restricted and permits were needed." }
+        ]
+      },
+      {
+        "animation": "Law 3 card: 'Criminal Tribes Act, 1871'. A stamp marks communities of craftsmen, traders and pastoralists as 'criminal'; they are fenced into 'Notified village settlements'. Law 4 card: 'Grazing tax'. A cow wears a price tag; a timeline shows '1850s to 1880s: right to collect auctioned to contractors' then '1880s: government collects directly; each pastoralist given a pass'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The British were suspicious of nomadic people. In 1871, the Criminal Tribes Act classified many communities of craftsmen, traders and pastoralists as criminal tribes. They had to live only in notified village settlements and could not move out without a permit." },
+          { "speaker": "NEO", "text": "A grazing tax was also introduced in the mid-nineteenth century, charged on each head of cattle. From the 1850s to the 1880s, the right to collect it was auctioned to contractors. By the 1880s, the government collected it directly, and each pastoralist got a pass." }
+        ]
+      },
+      {
+        "animation": "A pasture is overgrazed to bare dirt; animals grow thin and a counter of herd size falls. Then coping arrows branch out: 'Reduce the number of cattle', 'Find new pastures: Raikas after 1947 cannot go to Sindh, now go to Haryana', 'Buy land and settle', 'Become labourers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "These changes led to a serious shortage of pastures. Remaining pastures were continuously grazed, their quality declined, and animal stocks suffered." },
+          { "speaker": "NEO", "text": "Pastoralists adapted. Some reduced the number of cattle. Others found new pastures. After 1947, the camel and sheep herding Raikas could no longer move into Sindh. In recent years, they have been migrating to Haryana, where sheep graze on fields after harvest." },
+          { "speaker": "NEO", "text": "Some richer pastoralists bought land and settled down. Many poor pastoralists lost their animals and became labourers." }
+        ]
+      },
+      {
+        "animation": "The four laws line up as four blocks building a wall around a herder. A 'BOARD TIP' card appears with the four laws numbered.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Four laws, all against moving around. That's a lot of walls." },
+          { "speaker": "NEO", "text": "Board tip: when asked how colonial rule affected pastoralists, list all four: Waste Land Rules, Forest Acts, the Criminal Tribes Act and the grazing tax." }
+        ]
+      },
+      {
+        "animation": "Recap board with a padlocked gate icon: '1. Waste Land Rules and Forest Acts shrank grazing land', '2. Criminal Tribes Act 1871 and grazing tax controlled movement', '3. Pastoralists adapted: fewer animals, new pastures, settling down'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Waste Land Rules and Forest Acts took away grazing land." },
+          { "speaker": "NEO", "text": "Two: the Criminal Tribes Act of 1871 and the grazing tax controlled pastoralists' movement." },
+          { "speaker": "NEO", "text": "Three: pastoralists adapted by reducing herds, finding new pastures or settling down." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "History: Pastoralists in the Modern World",
+    "topic_no": 4,
+    "name": "Pastoralism in Africa: The Maasai",
+    "scenes": [
+      {
+        "animation": "An East African savannah: Maasai herders in red cloth lead cattle towards a lush plain, but a signboard reads 'National Park: No Grazing'. A lion lounges behind the sign. Zippy reads the sign and gulps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The lions can graze here, but the cattle can't?" },
+          { "speaker": "NEO", "text": "That was the Maasai's problem. Over half of the world's pastoral population lives in Africa, and the Maasai lost huge areas of grazing land." }
+        ]
+      },
+      {
+        "animation": "An Africa map zooms into the east: 'Maasai: about 300,000 in southern Kenya, 150,000 in Tanzania'. A word card shows 'Maasai' from 'Maa': 'Maa-sai means my people'. A red line slices the land: '1885: British Kenya | German Tanganyika'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Maasai cattle herders live mainly in East Africa, about three lakh in southern Kenya and another one and a half lakh in Tanzania. The word Maasai comes from Maa, and Maa-sai means my people." },
+          { "speaker": "NEO", "text": "In 1885, Maasailand was cut into half by an international boundary between British Kenya and German Tanganyika." }
+        ]
+      },
+      {
+        "animation": "A pie of Maasai land shrinks as slices are handed to white settlers' farms: '60% of pre-colonial lands lost'. Parks are stamped on the map: 'Maasai Mara', 'Samburu National Park' in Kenya and 'Serengeti' in Tanzania. The Serengeti label reads '14,760 km² of Maasai grazing land'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The best grazing lands were taken over for white settlement, and the Maasai were pushed into a small area in south Kenya and north Tanzania. They lost about sixty per cent of their pre-colonial lands." },
+          { "speaker": "NEO", "text": "Large areas were also turned into game reserves, like the Maasai Mara and Samburu National Park in Kenya and the Serengeti Park in Tanzania. The Serengeti National Park was created over 14,760 square kilometres of Maasai grazing land." }
+        ]
+      },
+      {
+        "animation": "A drought sun blazes; cattle skeletons dot a shrinking reserve. A caption: '1933 and 1934: over half the cattle in the Maasai Reserve died'. Then a village scene: 'Elders' and 'Warriors' step aside as a British-appointed 'Chief' takes the stage.",
+        "lines": [
+          { "speaker": "NEO", "text": "Confined to a fixed area, the Maasai could not move to better pastures in times of drought. In the drought years of 1933 and 1934, over half the cattle in the Maasai Reserve died." },
+          { "speaker": "NEO", "text": "Their social life changed too. Traditionally, elders made decisions and warriors protected the community. The British appointed chiefs to run Maasai affairs and restricted raiding and warfare, weakening the warriors' authority." }
+        ]
+      },
+      {
+        "animation": "A split scene: a rich chief invests in land and shops in town, while poor herders line up for relief food. An 'EXAM TIP' card compares 'India: Raikas, Gaddis' and 'Africa: Maasai' side by side.",
+        "lines": [
+          { "speaker": "NEO", "text": "Not all Maasai were affected equally. Chiefs had a regular income, bought animals and land, and survived droughts. Poor pastoralists lost their animals and had to work as labourers." },
+          { "speaker": "NEO", "text": "Exam tip: compare pastoralists in India and Africa. In both, colonial laws took grazing land and restricted movement." }
+        ]
+      },
+      {
+        "animation": "Recap board with a red Maasai cloth pattern: '1. 1885: Maasailand split between Kenya and Tanganyika', '2. 60% of land lost; game reserves like Serengeti', '3. Droughts of 1933 to 1934; new chiefs; rich and poor divided'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: in 1885, Maasailand was split between British Kenya and German Tanganyika." },
+          { "speaker": "NEO", "text": "Two: the Maasai lost about sixty per cent of their lands to settlers and game reserves." },
+          { "speaker": "NEO", "text": "Three: droughts and colonial chiefs deepened the gap between rich and poor Maasai." },
+          { "speaker": "ZIPPY", "text": "And the lions still don't pay rent." }
+        ]
+      }
+    ]
+  }
+]

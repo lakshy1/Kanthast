@@ -1,0 +1,286 @@
+[
+  {
+    "chapter_no": 6,
+    "chapter": "Geography: Resources and Development",
+    "topic_no": 1,
+    "name": "Resources, Sustainable Development and Resource Planning",
+    "scenes": [
+      {
+        "animation": "Zippy sits on a pile of coal, a bucket of water and a solar panel, wearing a crown labelled 'FREE GIFTS OF NATURE'. Neo taps the crown and it cracks. A triangle builds itself with corners 'Nature', 'Technology' and 'Institutions', arrows flowing between them.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Coal, water, sunshine! All free gifts of nature, and all mine!" },
+          { "speaker": "NEO", "text": "Not quite. Resources are a function of human activities. Humans turn things around them into resources through nature, technology and institutions." },
+          { "speaker": "NEO", "text": "Anything in our environment that satisfies our needs is a resource, provided it is technologically accessible, economically feasible and culturally acceptable." }
+        ]
+      },
+      {
+        "animation": "A flowchart grows from a box 'Resources' into four branches: 'Origin: biotic, abiotic', 'Exhaustibility: renewable, non-renewable', 'Ownership: individual, community, national, international', 'Status of development: potential, developed, stock, reserves'. Each branch lights up in turn.",
+        "lines": [
+          { "speaker": "NEO", "text": "Resources can be classified on four bases: origin, exhaustibility, ownership and status of development." }
+        ]
+      },
+      {
+        "animation": "Three warning signs drop onto a globe: 'Depletion for the greed of a few', 'Accumulation in few hands: haves and have-nots', 'Global ecological crises'. Under the third, icons pop up for global warming, a hole in the ozone layer, a smoking chimney and cracked land.",
+        "lines": [
+          { "speaker": "NEO", "text": "Because people believed resources were free gifts, they used them indiscriminately. This caused three big problems." },
+          { "speaker": "NEO", "text": "Depletion of resources for the greed of a few, accumulation of resources in few hands, and global ecological crises like global warming, ozone layer depletion, pollution and land degradation." },
+          { "speaker": "ZIPPY", "text": "Okay, so how do we fix it?" },
+          { "speaker": "NEO", "text": "Through sustainable development: development without damaging the environment, and without compromising the needs of future generations." }
+        ]
+      },
+      {
+        "animation": "A world map zooms to Rio de Janeiro, Brazil; a banner reads 'Earth Summit, June 1992'. Over 100 cartoon leaders sign a scroll labelled 'Agenda 21'. A small 'Local Agenda 21' scroll then drops into a town hall.",
+        "lines": [
+          { "speaker": "NEO", "text": "In June 1992, more than 100 heads of states met at Rio de Janeiro in Brazil for the first International Earth Summit." },
+          { "speaker": "NEO", "text": "They adopted Agenda 21 to achieve sustainable development in the 21st century. One major objective is that every local government should draw its own local Agenda 21." }
+        ]
+      },
+      {
+        "animation": "An animated outline map of India. Jharkhand, Chhattisgarh and Madhya Pradesh glow with coal and mineral icons; Arunachal Pradesh fills with water drops but shows a broken road; Rajasthan shows sun and windmill icons beside an empty pot; Ladakh appears as a cold desert. A three-step staircase then builds: '1. Identify and inventory', '2. Planning structure', '3. Match with national plans'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India has enormous diversity in resources. Jharkhand, Chhattisgarh and Madhya Pradesh are rich in minerals and coal. Arunachal Pradesh has abundant water but lacks infrastructure. Rajasthan has solar and wind energy but lacks water." },
+          { "speaker": "NEO", "text": "So resource planning has three steps: identify and make an inventory of resources, evolve a planning structure with the right technology, skill and institutions, and match these plans with overall national development plans." },
+          { "speaker": "NEO", "text": "Board tip: these three steps of resource planning are a favourite three-mark question." }
+        ]
+      },
+      {
+        "animation": "A timeline slides across a chalkboard: 'Gandhiji: enough for need, not greed', '1968 Club of Rome', '1974 Schumacher, Small is Beautiful', '1987 Brundtland Commission Report, Our Common Future', '1992 Rio Earth Summit'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Gandhiji said, there is enough for everybody's need and not for anybody's greed." },
+          { "speaker": "NEO", "text": "The Club of Rome advocated resource conservation in 1968. Schumacher wrote Small is Beautiful in 1974. The Brundtland Commission Report of 1987 introduced the concept of sustainable development." }
+        ]
+      },
+      {
+        "animation": "Recap board with a green globe icon. Points appear: '1. Resource = accessible, feasible, acceptable', '2. Sustainable development; Rio 1992; Agenda 21', '3. Resource planning: inventory, structure, match with national plans'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a resource must be technologically accessible, economically feasible and culturally acceptable." },
+          { "speaker": "NEO", "text": "Two: sustainable development protects the future, and the Rio Earth Summit of 1992 adopted Agenda 21." },
+          { "speaker": "NEO", "text": "Three: resource planning means inventory, a planning structure, and matching with national plans." },
+          { "speaker": "ZIPPY", "text": "Fine. I'll return the crown. And the sunshine." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Geography: Resources and Development",
+    "topic_no": 2,
+    "name": "Land Resources and Land Use Pattern",
+    "scenes": [
+      {
+        "animation": "Zippy tries to stretch a map of India like a chapati to make more room for a cricket ground. The map springs back. A caption appears: 'Land = finite'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "We need more land for a cricket ground. Can't we just stretch India a bit?" },
+          { "speaker": "NEO", "text": "Land is an asset of finite magnitude. That's exactly why we must plan how we use it." }
+        ]
+      },
+      {
+        "animation": "A relief map of India colours itself in three layers: plains in green with '43%', mountains in brown with '30%', plateaus in orange with '27%'. Small icons appear: a tractor on plains, a river and tourist on mountains, minerals and trees on plateaus.",
+        "lines": [
+          { "speaker": "NEO", "text": "About 43 per cent of India's land area is plain, which helps agriculture and industry." },
+          { "speaker": "NEO", "text": "Mountains account for 30 per cent. They ensure the perennial flow of some rivers and support tourism." },
+          { "speaker": "NEO", "text": "About 27 per cent is plateau, with rich reserves of minerals, fossil fuels and forests." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds box by box: 'Land use' branches into '1. Forests', '2. Land not available for cultivation', '3. Other uncultivated land', '4. Fallow lands', '5. Net sown area'. Fallow splits into 'Current fallow: 1 year or less' and 'Other than current fallow: 1 to 5 years'. 'Culturable waste land: more than 5 years' appears under box 3.",
+        "lines": [
+          { "speaker": "NEO", "text": "Land is used in five broad ways: forests, land not available for cultivation, other uncultivated land, fallow lands and net sown area." },
+          { "speaker": "NEO", "text": "Current fallow is left uncultivated for one agricultural year or less. Other than current fallow is left for one to five years. Culturable waste land is left for more than five years." },
+          { "speaker": "ZIPPY", "text": "And net sown area?" },
+          { "speaker": "NEO", "text": "The physical extent of land on which crops are sown and harvested. Add the area sown more than once in a year, and you get gross cropped area." }
+        ]
+      },
+      {
+        "animation": "A pie chart titled 'Land use 2019-20' spins in; the biggest slice 'Net sown area 45.64%' and the next 'Forests 23.41%' pop out. A caption notes: 'Total area 3.28 million sq km; data for 93% only'. A mini India map shades Punjab and Haryana dark green with 'over 80%' and Arunachal Pradesh, Mizoram, Manipur and Andaman and Nicobar pale with 'less than 10%'.",
+        "lines": [
+          { "speaker": "NEO", "text": "India's total geographical area is 3.28 million square kilometres, but land use data is available for only 93 per cent of it." },
+          { "speaker": "NEO", "text": "Net sown area is over 80 per cent of the total area in Punjab and Haryana, but less than 10 per cent in Arunachal Pradesh, Mizoram, Manipur and the Andaman and Nicobar Islands." }
+        ]
+      },
+      {
+        "animation": "A thermometer-style bar labelled 'Forest area' rises only to 23.41%, well below a dotted target line marked '33% - National Forest Policy 1952'. Zippy tries to push the bar up with both hands.",
+        "lines": [
+          { "speaker": "NEO", "text": "Forest area is far lower than the desired 33 per cent of geographical area outlined in the National Forest Policy of 1952." },
+          { "speaker": "NEO", "text": "That 33 per cent was considered essential for ecological balance, and millions of people living on forest fringes depend on it." },
+          { "speaker": "NEO", "text": "Board tip: learn the difference between net sown area and gross cropped area. It is asked often." }
+        ]
+      },
+      {
+        "animation": "Recap board with a map icon. Points appear: '1. Plains 43%, mountains 30%, plateaus 27%', '2. Fallow: current up to 1 year; other 1 to 5 years; culturable waste over 5 years', '3. Forests below the 33% target (1952 policy)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: India is 43 per cent plains, 30 per cent mountains and 27 per cent plateaus." },
+          { "speaker": "NEO", "text": "Two: fallow and waste land are defined by how many years land is left uncultivated." },
+          { "speaker": "NEO", "text": "Three: forest cover is still below the 33 per cent target of the National Forest Policy, 1952." },
+          { "speaker": "ZIPPY", "text": "So the cricket ground goes on the current fallow. Just for one season!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Geography: Resources and Development",
+    "topic_no": 3,
+    "name": "Land Degradation and Conservation Measures",
+    "scenes": [
+      {
+        "animation": "Zippy digs a huge hole for 'treasure' and walks away, leaving a scarred crater. The ground groans. A sign pops up: '95% of our basic needs come from land'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "No treasure here. Next spot!" },
+          { "speaker": "NEO", "text": "And you've just left a scar, like abandoned mines do. Ninety-five per cent of our basic needs for food, shelter and clothing come from land." }
+        ]
+      },
+      {
+        "animation": "An animated map of India lights up states by cause: Jharkhand, Chhattisgarh, Madhya Pradesh and Odisha in grey with a mining pick; Gujarat, Rajasthan, Madhya Pradesh and Maharashtra in yellow with grazing goats; Punjab, Haryana and western Uttar Pradesh in blue with water-logged fields and white salt crystals.",
+        "lines": [
+          { "speaker": "NEO", "text": "We share our land with past and future generations. Yet human activities have degraded it, and have even speeded up the damage done by natural forces." },
+          { "speaker": "NEO", "text": "Human activities like deforestation, overgrazing, mining and quarrying cause land degradation." },
+          { "speaker": "NEO", "text": "In Jharkhand, Chhattisgarh, Madhya Pradesh and Odisha, deforestation due to mining has caused severe land degradation." },
+          { "speaker": "NEO", "text": "In Gujarat, Rajasthan, Madhya Pradesh and Maharashtra, overgrazing is a main reason." },
+          { "speaker": "NEO", "text": "In Punjab, Haryana and western Uttar Pradesh, over irrigation causes water logging, which increases salinity and alkalinity in the soil." }
+        ]
+      },
+      {
+        "animation": "A cement factory grinds limestone; a dust cloud settles on a field like a lid, and raindrops bounce off instead of soaking in. A factory pipe then drips coloured effluent into soil and a stream.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What about factories?" },
+          { "speaker": "NEO", "text": "Grinding limestone for cement, and calcite and soapstone for ceramics, creates huge amounts of dust. When it settles, it slows the infiltration of water into the soil." },
+          { "speaker": "NEO", "text": "Industrial effluents have also become a major source of land and water pollution in many parts of the country." },
+          { "speaker": "ZIPPY", "text": "So even dust and dirty water can hurt land? Wow." }
+        ]
+      },
+      {
+        "animation": "A toolbox opens and solution cards fly out one by one onto a desert and a factory town: 'Afforestation', 'Proper management of grazing', 'Shelter belts', 'Thorny bushes to stabilise sand dunes', 'Control of mining', 'Treat effluents before disposal'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Afforestation and proper management of grazing help." },
+          { "speaker": "NEO", "text": "In arid areas, plant shelter belts, control overgrazing and stabilise sand dunes by growing thorny bushes." },
+          { "speaker": "NEO", "text": "In industrial areas, manage waste lands, control mining, and treat industrial effluents before disposal." },
+          { "speaker": "NEO", "text": "Board tip: when asked about Punjab, write over irrigation. It is a classic MCQ." }
+        ]
+      },
+      {
+        "animation": "Recap board with a healing-land icon. Points appear: '1. Causes: deforestation, overgrazing, mining, over irrigation', '2. Mining states, grazing states, irrigation states', '3. Fixes: afforestation, shelter belts, thorny bushes, treated effluents'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: deforestation, overgrazing, mining and over irrigation degrade land." },
+          { "speaker": "NEO", "text": "Two: link each cause to its states, like over irrigation in Punjab, Haryana and western Uttar Pradesh." },
+          { "speaker": "NEO", "text": "Three: afforestation, grazing control, shelter belts and treated effluents protect land." },
+          { "speaker": "ZIPPY", "text": "I'm filling my hole back in. And planting a thorny bush on it." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Geography: Resources and Development",
+    "topic_no": 4,
+    "name": "Soil as a Resource: Classification of Soils",
+    "scenes": [
+      {
+        "animation": "Zippy holds six jars of soil at a 'Soil Tasting Counter' like a chai stall. Neo slides a cross-section 'Soil Profile' beside him: top soil, subsoil, substratum, unweathered parent bed rock.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Six jars of soil. Isn't dirt just dirt?" },
+          { "speaker": "NEO", "text": "Soil is a living system. It takes millions of years to form soil up to a few centimetres deep. Relief, parent rock, climate, vegetation and time all shape it." }
+        ]
+      },
+      {
+        "animation": "An animated India map fills in green over the northern plains, labelled 'Alluvial', flowing from the Indus, Ganga and Brahmaputra, then along a narrow corridor into Rajasthan and Gujarat and into the eastern deltas of the Mahanadi, Godavari, Krishna and Kaveri. Two labels pop up: 'Bangar: old, more kankar' and 'Khadar: new, more fertile'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Alluvial soil is the most widely spread and important soil. The entire northern plains are made of it, deposited by the Indus, the Ganga and the Brahmaputra." },
+          { "speaker": "NEO", "text": "Old alluvium is bangar, with more kankar nodules. New alluvium is khadar, with finer particles, and it is more fertile." },
+          { "speaker": "NEO", "text": "It is rich in potash, phosphoric acid and lime, ideal for sugarcane, paddy and wheat." }
+        ]
+      },
+      {
+        "animation": "Black soil spreads over Maharashtra, Saurashtra, Malwa, Madhya Pradesh and Chhattisgarh, then down the Godavari and Krishna valleys. A cotton plant sprouts; the soil cracks in summer heat and air arrows flow into the cracks.",
+        "lines": [
+          { "speaker": "NEO", "text": "Black soil, or regur, is ideal for cotton. It forms from lava flows of the Deccan trap and covers the plateaus of Maharashtra, Saurashtra, Malwa, Madhya Pradesh and Chhattisgarh." },
+          { "speaker": "NEO", "text": "It holds moisture well and develops deep cracks in hot weather, which help aeration. But it is poor in phosphoric content." }
+        ]
+      },
+      {
+        "animation": "Split screen of four quick cards. 'Red and Yellow': iron particles glow red, then a water drop turns them yellow. 'Laterite': a brick with 'later = brick', rain leaching nutrients, tea and coffee bushes. 'Arid': sandy soil with salt crystals and a kankar layer blocking water. 'Forest': a mountain with loamy valleys and coarse upper slopes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Red soil develops on crystalline igneous rocks in low rainfall areas of the eastern and southern Deccan plateau. It is red due to diffusion of iron, and looks yellow when hydrated." },
+          { "speaker": "NEO", "text": "Laterite comes from the Latin word later, meaning brick. It results from intense leaching due to heavy rain. With conservation, it grows tea and coffee." },
+          { "speaker": "NEO", "text": "Arid soil is sandy and saline, and its kankar layer restricts infiltration. Forest soil is found in hilly, mountainous areas." }
+        ]
+      },
+      {
+        "animation": "The completed 'India: Major Soil Types' map glows with a colour legend. A 'Board Tip: map work' stamp lands on it as a pointer taps alluvial, black, red and yellow, laterite, arid and forest regions.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Six soils. Which one lands on the board paper?" },
+          { "speaker": "NEO", "text": "Board tip: major soil types are a CBSE map item. Practise identifying each soil region on the map." }
+        ]
+      },
+      {
+        "animation": "Recap board with six coloured soil jars. Points appear: '1. Alluvial: most widespread; bangar and khadar', '2. Black (regur): cotton; Deccan trap; deep cracks', '3. Red, laterite, arid and forest soils'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: alluvial soil is the most widespread, with old bangar and new khadar." },
+          { "speaker": "NEO", "text": "Two: black soil suits cotton, holds moisture and cracks in the heat." },
+          { "speaker": "NEO", "text": "Three: red soil gets its colour from iron, laterite forms by leaching, arid soil is sandy and saline." },
+          { "speaker": "ZIPPY", "text": "Soil tasting counter, now closed." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 6,
+    "chapter": "Geography: Resources and Development",
+    "topic_no": 5,
+    "name": "Soil Erosion and Soil Conservation",
+    "scenes": [
+      {
+        "animation": "Monsoon rain pours on a bare slope. Zippy surfs down on a sheet of muddy water, carrying away a thin layer of top soil like a carpet. Neo holds up a sign: 'Soil erosion'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wheee! Free water slide!" },
+          { "speaker": "NEO", "text": "That slide is carrying away our top soil. The denudation of the soil cover and its washing down is called soil erosion." }
+        ]
+      },
+      {
+        "animation": "A balance scale with 'Soil formation' on one side and 'Erosion' on the other. Human icons for deforestation, overgrazing, construction and mining drop onto the erosion side, while wind, glacier and water icons also push it down.",
+        "lines": [
+          { "speaker": "NEO", "text": "Soil formation and erosion usually go on together in balance." },
+          { "speaker": "NEO", "text": "Human activities like deforestation, overgrazing, construction and mining disturb this balance. Natural forces like wind, glaciers and water also erode soil." }
+        ]
+      },
+      {
+        "animation": "Three animated panels. Running water cuts deep channels into clay, labelled 'Gully erosion', and the land turns into 'Bad land'; a pin on the Chambal basin reads 'Ravines'. Water flows as a thin sheet down a slope, labelled 'Sheet erosion'. Wind blows loose soil off flat land, labelled 'Wind erosion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Running water cuts through clayey soils and makes deep channels called gullies. The land becomes unfit for cultivation, called bad land. In the Chambal basin, such lands are called ravines." },
+          { "speaker": "NEO", "text": "When water flows as a sheet over large areas and washes away top soil, it is sheet erosion. Wind blowing loose soil away is wind erosion." },
+          { "speaker": "NEO", "text": "Ploughing up and down a slope also forms channels for water to rush down." }
+        ]
+      },
+      {
+        "animation": "A hillside redraws itself step by step: plough lines curve along contours ('Contour ploughing'), steps are cut into slopes ('Terrace cultivation: western and central Himalayas'), a field splits into crop strips with grass strips between ('Strip cropping'), and rows of trees line a desert edge holding sand dunes still ('Shelter belts').",
+        "lines": [
+          { "speaker": "NEO", "text": "Ploughing along contour lines slows water down the slopes. This is contour ploughing." },
+          { "speaker": "NEO", "text": "Cutting steps on slopes makes terraces. Terrace farming is well developed in the western and central Himalayas." },
+          { "speaker": "NEO", "text": "Strips of grass between crops break the force of the wind. This is strip cropping." },
+          { "speaker": "NEO", "text": "Rows of trees called shelter belts have helped stabilise sand dunes and the desert in western India." }
+        ]
+      },
+      {
+        "animation": "A 'Board Tip' sticker flashes on an exam question: 'Steps to control soil erosion in hilly areas'. Arrows point to contour ploughing and terrace cultivation.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Which ones should I write for hilly areas?" },
+          { "speaker": "NEO", "text": "Board tip: for hills, write contour ploughing and terrace cultivation. Strip cropping and shelter belts suit windy, flat and desert areas." }
+        ]
+      },
+      {
+        "animation": "Recap board with a terraced hill icon. Points appear: '1. Erosion: human and natural causes', '2. Gully, sheet and wind erosion; ravines in Chambal', '3. Contour ploughing, terraces, strip cropping, shelter belts'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: soil erosion is caused by human activities and by wind, glaciers and water." },
+          { "speaker": "NEO", "text": "Two: gully erosion creates bad lands, called ravines in the Chambal basin." },
+          { "speaker": "NEO", "text": "Three: contour ploughing, terracing, strip cropping and shelter belts conserve soil." },
+          { "speaker": "ZIPPY", "text": "Water slide cancelled. Terrace steps instead." }
+        ]
+      }
+    ]
+  }
+]

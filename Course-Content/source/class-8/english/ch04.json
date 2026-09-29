@@ -1,0 +1,188 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "Unit 4: Environment",
+    "topic_no": 1,
+    "name": "The Cherry Tree",
+    "scenes": [
+      {
+        "animation": "A small boy on a hillside eats cherries from a paper bag and spits out the seeds. He stops, holds one seed up to the light, and looks at it thoughtfully. Zippy peers at the seed through a tiny telescope.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "It's just a seed. Why is he staring at it like it's treasure?" },
+          { "speaker": "NEO", "text": "Because it will become a tree. This is The Cherry Tree by Ruskin Bond." }
+        ]
+      },
+      {
+        "animation": "A cosy cottage at the edge of Mussoorie in the Himalayan foothills. Six-year-old Rakesh plants the seed in a corner of the garden while his kind grandfather watches, leaning on a stick.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rakesh is six. He lives with his grandfather in Mussoorie, while his parents farm in a village far away." },
+          { "speaker": "NEO", "text": "His grandfather tells him to put the seed to some use, so Rakesh plants it in the garden." },
+          { "speaker": "NEO", "text": "Months later, a tiny cherry sapling appears." }
+        ]
+      },
+      {
+        "animation": "Trouble arrives in quick panels: a goat munches the leaves; a woman cutting grass with a scythe slices the sapling in two; snow piles up in winter. Each time, a little green shoot pushes out again. A caption: 'It keeps coming back!'",
+        "lines": [
+          { "speaker": "NEO", "text": "Life is hard for the little tree. A goat eats its leaves. A woman cutting grass slices it in half. Winter is harsh." },
+          { "speaker": "ZIPPY", "text": "Poor tree. Anyone else would have given up!" },
+          { "speaker": "NEO", "text": "But it keeps sending out new leaves. With Rakesh's care and the monsoon rain, it grows stronger." }
+        ]
+      },
+      {
+        "animation": "Years pass on a calendar. The tree grows taller than Rakesh, now nine. Pale pink blossoms cover it; bees and birds buzz around. Rakesh lies under it at dusk, touching the bark in wonder.",
+        "lines": [
+          { "speaker": "NEO", "text": "By the time Rakesh is nine, the tree is taller than him. It covers itself in pale pink blossoms, and birds and bees visit." },
+          { "speaker": "NEO", "text": "Later it gives a few sour cherries. Rakesh lies beneath it, full of wonder that he helped create this life." }
+        ]
+      },
+      {
+        "animation": "A theme card showing a boy and a tree growing side by side on a timeline. Words appear: 'Patience', 'Care', 'Resilience', 'Bond with nature'. A small label: 'Rakesh and the tree grow up together'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The theme: patience, care and the wonder of nature. The tree survives every setback, just like a determined person." },
+          { "speaker": "NEO", "text": "Notice how the boy and the tree grow up together. That parallel is what makes the story so tender." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How did the cherry tree show resilience?' Answer points build: 'Goat ate leaves', 'Cut in half', 'Harsh winter', 'Still grew and blossomed'. An 'Exam Tip' sticker glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how did the cherry tree show that it was resilient?" },
+          { "speaker": "NEO", "text": "Answer approach: list the dangers it faced, then show how it recovered each time and finally blossomed." },
+          { "speaker": "NEO", "text": "Exam tip: resilience is a key word. Use it, and explain it as the power to recover after difficulty." }
+        ]
+      },
+      {
+        "animation": "Recap board framed by cherry blossoms: '1. Rakesh plants a cherry seed in Mussoorie', '2. The sapling survives goat, scythe and winter', '3. Patience and care create life'. Zippy plants a seed and waits, tapping his foot.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Rakesh plants a cherry seed at his grandfather's cottage." },
+          { "speaker": "NEO", "text": "Two: the sapling survives a goat, a scythe and hard winters." },
+          { "speaker": "NEO", "text": "Three: patience and care turn a seed into a blossoming tree." },
+          { "speaker": "ZIPPY", "text": "It's been ten seconds. Why no cherries yet?" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Unit 4: Environment",
+    "topic_no": 2,
+    "name": "Harvest Hymn by Sarojini Naidu",
+    "scenes": [
+      {
+        "animation": "Golden fields at sunrise. Farmers carry sheaves of grain while a village chorus gathers. Zippy tries to join in, singing loudly and off-key.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why is the whole village singing together in the field?" },
+          { "speaker": "NEO", "text": "To say thank you for the harvest. This is Harvest Hymn by Sarojini Naidu, the Nightingale of India." }
+        ]
+      },
+      {
+        "animation": "The poem is shown as a stage in three parts, each with a label: 'Men's Voices', 'Women's Voices', 'All Voices'. The men step forward first, facing a bright sun and dark rain clouds.",
+        "lines": [
+          { "speaker": "NEO", "text": "A hymn is a song of praise. This one is arranged in three parts, sung by the men, then the women, then everyone together." },
+          { "speaker": "NEO", "text": "The men praise the gods of the sun and the rain, who ripen and water the crops. They offer songs, garlands and grain in thanks." }
+        ]
+      },
+      {
+        "animation": "The women step forward, facing a gentle, glowing figure of Mother Earth with fields for a sari. They offer flowers and the first grain. Caption: 'Prithvi, the Earth'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The women sing to Mother Earth, who feeds everyone like a caring mother." },
+          { "speaker": "NEO", "text": "They thank her for the grain that fills their homes with joy." },
+          { "speaker": "ZIPPY", "text": "So the sun, rain and earth are the real farm team!" }
+        ]
+      },
+      {
+        "animation": "All the villagers sing together under a vast starry sky. A seed glows at one end of the screen and a scythe at the other, joined by a circle. Caption: 'Lord of the Universe: seed and scythe'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Finally, all voices together praise the Lord of the Universe, the power behind all life." },
+          { "speaker": "NEO", "text": "The poet calls this power both the seed and the scythe of the harvest. That means the beginning and the end of the crop." }
+        ]
+      },
+      {
+        "animation": "A devices board: 'Apostrophe: speaking directly to the Sun, Rain, Earth', 'Personification: Earth as a mother', 'Metaphor: seed and scythe', 'Old words: hither, yonder, morrow'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Devices to spot. The singers speak directly to nature and the divine. That is apostrophe." },
+          { "speaker": "NEO", "text": "The Earth is shown as a mother, which is personification. Seed and scythe is a metaphor." },
+          { "speaker": "NEO", "text": "The theme: gratitude to nature, and a community giving thanks together." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. Why is the hymn divided into three parts?' Three coloured blocks merge into one: 'Men' + 'Women' + 'All' = 'Unity'. An 'Exam Tip' sticker glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: why is the hymn sung in three parts?" },
+          { "speaker": "NEO", "text": "Answer approach: men and women each give thanks, and then all voices join, showing the whole community united in gratitude." },
+          { "speaker": "NEO", "text": "Exam tip: remember the silent letters. The n in hymn is silent, just like the k in knife." }
+        ]
+      },
+      {
+        "animation": "Recap board with sheaves of grain: '1. A song of thanks for the harvest', '2. Men, women, then all voices', '3. Gratitude to nature, unity of community'. Zippy finally sings in tune and looks shocked.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: Harvest Hymn is a song of thanks for the harvest." },
+          { "speaker": "NEO", "text": "Two: men, women and then all voices sing their praise." },
+          { "speaker": "NEO", "text": "Three: its message is gratitude to nature and unity." },
+          { "speaker": "ZIPPY", "text": "I sang one note in tune! Somebody write a hymn about that." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Unit 4: Environment",
+    "topic_no": 3,
+    "name": "Waiting for the Rain",
+    "scenes": [
+      {
+        "animation": "A farmer stares up at a burning, cloudless sky. The ground at his feet is cracked like a jigsaw puzzle. Zippy holds up a tiny umbrella hopefully, then lowers it.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Not even one cloud? My umbrella is getting bored." },
+          { "speaker": "NEO", "text": "So is Velu, the farmer in Waiting for the Rain by Kamakshi Balasubramanian." }
+        ]
+      },
+      {
+        "animation": "Velu wakes before dawn every day and checks the sky. A flashback shows his green fields over six years: jowar one season, dal the next. Then the green fades to brown dust.",
+        "lines": [
+          { "speaker": "NEO", "text": "Velu is a hardworking farmer. For six years his land has given him good crops, jowar one season and dal the next." },
+          { "speaker": "NEO", "text": "But this year the rain does not come. Every morning he looks at the sky, and every morning it is clear." }
+        ]
+      },
+      {
+        "animation": "Velu travels to a busy city office labelled 'Weather Office'. Officials shrug and shuffle papers. He walks out tired, and sits under a huge shady tree by the roadside.",
+        "lines": [
+          { "speaker": "NEO", "text": "Worried, Velu goes to the weather office in the city for answers. Nobody can really help him." },
+          { "speaker": "NEO", "text": "Tired and sad, he rests under a big tree on the way home." },
+          { "speaker": "ZIPPY", "text": "Even the experts didn't know? Now I'm worried too." }
+        ]
+      },
+      {
+        "animation": "An old woman sits beside Velu under the tree. As she speaks, the ground in the background transforms: a sleepy cartoon Earth tucks itself into a blanket, then wakes up fresh and stretching.",
+        "lines": [
+          { "speaker": "NEO", "text": "There he meets an old woman. She tells him the earth has been working for thousands of years." },
+          { "speaker": "NEO", "text": "Like people, the land also needs rest. After resting, it will spring back, fresh and ready for his crop." },
+          { "speaker": "NEO", "text": "Velu feels calmer. As he walks home, a cool breeze blows, clouds gather, and a drop falls on his shoulder. The rain has come." }
+        ]
+      },
+      {
+        "animation": "A theme card: a farmer and the Earth shaking hands. Words appear: 'Patience', 'Respect the land', 'Nature has its own rhythm'. A small note: 'Farmers rest land by changing crops or leaving it fallow'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The theme: nature has its own rhythm. We must be patient and respect the land instead of only taking from it." },
+          { "speaker": "NEO", "text": "The old woman's words also bring hope. The story moves from worry to calm to joy." }
+        ]
+      },
+      {
+        "animation": "An exam card: 'Q. How did the old woman change Velu's thinking?' Answer blocks: 'Earth needs rest', 'Patience, not panic', 'Hope returns'. An 'Exam Tip' sticker glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Likely question: how did the old woman change Velu's way of thinking?" },
+          { "speaker": "NEO", "text": "Answer approach: she explained that the land needs rest like people do, so he became patient and hopeful instead of anxious." },
+          { "speaker": "NEO", "text": "Exam tip: for a change in a character, describe him before and after, then name the cause." }
+        ]
+      },
+      {
+        "animation": "Recap board as rain begins to fall on the screen: '1. Drought troubles Velu the farmer', '2. An old woman says the land needs rest', '3. Patience, and the rain arrives'. Zippy finally opens his umbrella with joy.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a long drought worries Velu the farmer." },
+          { "speaker": "NEO", "text": "Two: an old woman teaches him that the land needs rest." },
+          { "speaker": "NEO", "text": "Three: he learns patience, and at last the rain arrives." },
+          { "speaker": "ZIPPY", "text": "Finally! My umbrella has a job again." }
+        ]
+      }
+    ]
+  }
+]

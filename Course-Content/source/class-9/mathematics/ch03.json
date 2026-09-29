@@ -1,0 +1,180 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "Coordinate Geometry",
+    "topic_no": 1,
+    "name": "Why We Need Two Numbers to Locate a Point",
+    "scenes": [
+      {
+        "animation": "A classroom seating chart. Zippy texts his friend 'I'm sitting in row 3' and the friend wanders along the whole of row 3, peering at every seat, lost and confused.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I told Riya I'm in row three. Why is she still searching?" },
+          { "speaker": "NEO", "text": "Because row three has eight seats. One number is not enough. You need two." }
+        ]
+      },
+      {
+        "animation": "The seating chart turns into a grid. Zippy's seat lights up with 'Row 3, Seat 5'. Riya walks straight to it. A second seat lights up at 'Row 5, Seat 3', clearly a different place.",
+        "lines": [
+          { "speaker": "NEO", "text": "Say row three, seat five, and Riya finds you instantly." },
+          { "speaker": "NEO", "text": "Notice the order matters. Row five, seat three is a completely different seat." }
+        ]
+      },
+      {
+        "animation": "A sheet of paper with a single dot on it. Two dashed arrows measure from the left edge and from the bottom edge, with ruler labels 'distance from left edge' and 'distance from bottom edge'. Text: 'Two references, two distances → one exact point'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now imagine a dot on a sheet of paper. How would you describe its exact position to a friend?" },
+          { "speaker": "NEO", "text": "Tell them how far it is from the left edge of the paper, and how far it is from the bottom edge." },
+          { "speaker": "NEO", "text": "Two fixed reference lines and two distances fix the point exactly." }
+        ]
+      },
+      {
+        "animation": "Worked example written line by line beside the paper: 'Dot A: 4 cm from left edge, 6 cm from bottom edge → (4, 6)', 'Dot B: 6 cm from left edge, 4 cm from bottom edge → (6, 4)', 'Same numbers, different order → different points'. Both dots appear with rulers measuring them, far apart.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's try it. Dot A is four centimetres from the left edge and six centimetres from the bottom edge." },
+          { "speaker": "NEO", "text": "If we always write the left-edge distance first, we can record dot A as four, six." },
+          { "speaker": "NEO", "text": "Dot B is six centimetres from the left edge and four from the bottom, so it is six, four." },
+          { "speaker": "ZIPPY", "text": "Same two numbers, but the dots are in totally different places!" },
+          { "speaker": "NEO", "text": "Exactly. So we must agree on which distance comes first." }
+        ]
+      },
+      {
+        "animation": "Sepia flashback: a cartoon René Descartes lies in bed watching a fly crawl on the ceiling tiles. Captions appear: 'René Descartes (1596–1650), French philosopher and mathematician'. Two perpendicular lines draw themselves across the ceiling.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Who first thought of using two lines like this?" },
+          { "speaker": "NEO", "text": "The French mathematician and philosopher René Descartes, who lived from 1596 to 1650." },
+          { "speaker": "NEO", "text": "He worked out this system of describing the position of a point using two perpendicular lines. It is named the Cartesian system in his honour." },
+          { "speaker": "NEO", "text": "Fun fact: a popular story says he got the idea by watching a fly on his ceiling, but nobody knows if it is true." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card pinned on a map of a town grid: 'Position needs TWO numbers, and their ORDER matters'. A delivery rider on a scooter uses 'Street 2, House 7' to reach a door.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: questions often ask why one reference is not enough. Always answer: a single line gives many possible points, so we need two reference lines and two measurements." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. One number is not enough to fix a position', '2. Two perpendicular reference lines + two distances = exact point', '3. Descartes (1596–1650) → Cartesian system'. Riya and Zippy sit side by side, waving.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a single number cannot fix a position on a flat surface." },
+          { "speaker": "NEO", "text": "Two: we need two perpendicular reference lines and a distance from each, in a fixed order." },
+          { "speaker": "NEO", "text": "Three: this idea came from René Descartes, so it is called the Cartesian system." },
+          { "speaker": "ZIPPY", "text": "Row three, seat five. Found!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Coordinate Geometry",
+    "topic_no": 2,
+    "name": "The Cartesian System: Axes and Quadrants",
+    "scenes": [
+      {
+        "animation": "Zippy lays two number lines on a playground like cricket stumps crossing each other, but tilted at a random angle. Neo gently rotates one until they form a perfect plus sign with a square corner marker.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I crossed two number lines. Is that a Cartesian system?" },
+          { "speaker": "NEO", "text": "Almost. They must cross at right angles, and meet at their zeroes." }
+        ]
+      },
+      {
+        "animation": "Step-by-step build: a horizontal number line labelled X′X appears, then a vertical one labelled Y′Y crossing it at 0. The crossing point is marked 'O — origin'. Labels 'x-axis' and 'y-axis' appear. Arrows show positives: right on OX and up on OY; negatives left on OX′ and down on OY′.",
+        "lines": [
+          { "speaker": "NEO", "text": "Draw a horizontal number line, X dash X, and a vertical one, Y dash Y, so that they cross at right angles at their zeroes." },
+          { "speaker": "NEO", "text": "The horizontal line is the x-axis and the vertical line is the y-axis." },
+          { "speaker": "NEO", "text": "The point where they meet is called the origin, O." },
+          { "speaker": "NEO", "text": "Positive numbers lie along O X to the right and O Y upward. Negative numbers lie along O X dash to the left and O Y dash downward." }
+        ]
+      },
+      {
+        "animation": "The four regions light up one at a time, counted anticlockwise: 'I' (top right), 'II' (top left), 'III' (bottom left), 'IV' (bottom right). A spinning arrow traces the anticlockwise order. Caption: 'The plane is now called the Cartesian plane (coordinate plane, xy-plane)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The two axes divide the plane into four parts called quadrants." },
+          { "speaker": "NEO", "text": "They are numbered one, two, three and four, going anticlockwise from O X." },
+          { "speaker": "ZIPPY", "text": "So quadrant two is bottom right?" },
+          { "speaker": "NEO", "text": "No. Start at the top right as one and go anticlockwise. Top left is two, bottom left is three, bottom right is four." },
+          { "speaker": "NEO", "text": "The whole plane is called the Cartesian plane, also the coordinate plane or the x y plane." }
+        ]
+      },
+      {
+        "animation": "Worked example: a list 'Which quadrant or axis? (a) right and up (b) left and up (c) left and down (d) on the vertical line'. Answers fill in line by line: '(a) Quadrant I', '(b) Quadrant II', '(c) Quadrant III', '(d) y-axis — not in any quadrant'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Quick practice. A point to the right of the y-axis and above the x-axis is in quadrant one." },
+          { "speaker": "NEO", "text": "Left and above is quadrant two. Left and below is quadrant three." },
+          { "speaker": "NEO", "text": "And a point sitting on the y-axis itself belongs to no quadrant at all." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Points on an axis do NOT lie in any quadrant'. A little dot sits nervously on the x-axis line while quadrant doors close on either side.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: points lying on either axis do not belong to any quadrant. This is a common one-mark trap." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. x-axis ⟂ y-axis, meeting at origin O', '2. Four quadrants, numbered anticlockwise from OX', '3. Points on the axes lie in no quadrant'. The playground plus sign glows.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the x-axis and y-axis are perpendicular number lines meeting at the origin." },
+          { "speaker": "NEO", "text": "Two: they split the plane into four quadrants, numbered anticlockwise starting from the top right." },
+          { "speaker": "NEO", "text": "Three: a point on an axis lies in no quadrant." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Coordinate Geometry",
+    "topic_no": 3,
+    "name": "Coordinates of a Point",
+    "scenes": [
+      {
+        "animation": "A treasure map drawn on a Cartesian plane. A parrot named PARROT squawks 'Treasure at (3, 4)!'. Zippy digs at (4, 3) and finds only an old chappal.",
+        "lines": [
+          { "speaker": "PARROT", "text": "I said three comma four, not four comma three!" },
+          { "speaker": "ZIPPY", "text": "Isn't that the same thing?" },
+          { "speaker": "NEO", "text": "Not at all. Let's learn how coordinates really work." }
+        ]
+      },
+      {
+        "animation": "From point P, a perpendicular drops to the x-axis at M and another goes to the y-axis at N. Labels appear: 'Distance from y-axis (along x-axis) = x-coordinate = abscissa', 'Distance from x-axis (along y-axis) = y-coordinate = ordinate'. Then 'P(x, y)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The x-coordinate of a point is its perpendicular distance from the y-axis, measured along the x-axis. It is also called the abscissa." },
+          { "speaker": "NEO", "text": "The y-coordinate is its perpendicular distance from the x-axis, measured along the y-axis. It is also called the ordinate." },
+          { "speaker": "NEO", "text": "We always write the x-coordinate first, like x comma y. That is why three comma four and four comma three are different points." }
+        ]
+      },
+      {
+        "animation": "The four quadrants fill with sign badges: 'I (+, +)', 'II (−, +)', 'III (−, −)', 'IV (+, −)'. The axes get labels: 'on x-axis: (x, 0)', 'on y-axis: (0, y)', 'origin: (0, 0)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In quadrant one, both coordinates are positive. In quadrant two, x is negative and y is positive." },
+          { "speaker": "NEO", "text": "In quadrant three, both are negative. In quadrant four, x is positive and y is negative." },
+          { "speaker": "NEO", "text": "A point on the x-axis has y equal to zero. A point on the y-axis has x equal to zero. The origin is zero comma zero." }
+        ]
+      },
+      {
+        "animation": "Worked example line by line: 'Point (−5, 3)', 'x = −5 → 5 units to the LEFT of the y-axis', 'y = 3 → 3 units ABOVE the x-axis', 'Signs (−, +) → Quadrant II'. Then 'Point (0, −4)' → 'x = 0 → on the y-axis, 4 units below O'. Each point pops onto the grid with a flag.",
+        "lines": [
+          { "speaker": "NEO", "text": "Take the point minus five comma three." },
+          { "speaker": "NEO", "text": "The x-coordinate is minus five, so it is five units to the left of the y-axis." },
+          { "speaker": "NEO", "text": "The y-coordinate is three, so it is three units above the x-axis." },
+          { "speaker": "NEO", "text": "Signs minus, plus mean quadrant two." },
+          { "speaker": "ZIPPY", "text": "And zero comma minus four?" },
+          { "speaker": "NEO", "text": "Its x-coordinate is zero, so it lies on the y-axis, four units below the origin. No quadrant." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'Distance from the x-axis = |y|, distance from the y-axis = |x|'. The x-axis and y-axis wear name tags to avoid mix-ups.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: the distance of a point from the x-axis is given by its y-coordinate, and from the y-axis by its x-coordinate. Students often swap these." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. (x, y): x = abscissa, y = ordinate; order matters', '2. Signs: I (+,+), II (−,+), III (−,−), IV (+,−)', '3. On x-axis (x, 0); on y-axis (0, y)'. Zippy digs at (3, 4) and pulls out a treasure chest.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: coordinates are written x comma y, abscissa first, ordinate second, and the order matters." },
+          { "speaker": "NEO", "text": "Two: the signs are plus plus, minus plus, minus minus, and plus minus in quadrants one to four." },
+          { "speaker": "NEO", "text": "Three: a point on the x-axis is x comma zero, and on the y-axis is zero comma y." },
+          { "speaker": "ZIPPY", "text": "Treasure found! Chappal returned." }
+        ]
+      }
+    ]
+  }
+]

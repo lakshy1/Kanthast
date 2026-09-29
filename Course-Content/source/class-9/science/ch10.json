@@ -1,0 +1,379 @@
+[
+  {
+    "chapter_no": 10,
+    "chapter": "Work and Energy",
+    "topic_no": 1,
+    "name": "Scientific Conception of Work",
+    "scenes": [
+      {
+        "animation": "Zippy pushes against a huge boulder for hours; sweat drops fly, and a sundial's shadow moves across the ground. The boulder doesn't move an inch. Neo walks by with a clipboard and writes '0 J'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Three hours of pushing! I'm exhausted. Give me full marks for work!" },
+          { "speaker": "NEO", "text": "In science, that's zero work. The rock didn't move." }
+        ]
+      },
+      {
+        "animation": "Two conditions appear as locks on a door labelled 'WORK': '1. A force acts on the object' and '2. The object is displaced'. Both locks click open only when a trolley is pushed and actually rolls forward.",
+        "lines": [
+          { "speaker": "NEO", "text": "In everyday life, reading or thinking is called work. But in science, work is done only when two conditions are met." },
+          { "speaker": "NEO", "text": "First, a force should act on an object. Second, the object must be displaced." },
+          { "speaker": "NEO", "text": "If either condition is missing, no work is done." }
+        ]
+      },
+      {
+        "animation": "A trolley is pulled by an arrow 'F' across a distance 's'. The formula builds: 'Work = Force × displacement', 'W = F × s'. Then 'SI unit: joule (J)', '1 J = 1 N × 1 m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Work done on an object is the magnitude of the force multiplied by the distance moved by the object in the direction of the applied force. So W equals F into s." },
+          { "speaker": "NEO", "text": "The unit of work is the joule. One joule is the work done when a force of one newton displaces an object by one metre along the line of the force." },
+          { "speaker": "NEO", "text": "Work has only magnitude and no direction." }
+        ]
+      },
+      {
+        "animation": "Example 1: 'F = 5 N, s = 2 m → W = 5 × 2 = 10 J'. Example 2: a railway porter lifts a 15 kg suitcase onto his head. Working: 'F = mg = 15 × 10 = 150 N', 's = 1.5 m', 'W = 150 × 1.5 = 225 J'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A force of five newtons moves an object two metres in its direction. Work done is five into two, which is ten joules." },
+          { "speaker": "NEO", "text": "A porter lifts a fifteen-kilogram suitcase one point five metres onto his head. Take g as ten. He applies a force equal to its weight, fifteen into ten, which is one hundred and fifty newtons." },
+          { "speaker": "NEO", "text": "So the work done is one fifty into one point five, which is two hundred and twenty-five joules." },
+          { "speaker": "ZIPPY", "text": "So the porter does real work. I just did real sweating." }
+        ]
+      },
+      {
+        "animation": "An 'EXAM TIP' card: 'For lifting: force = weight = mg, displacement = height. Write W = mgh with units.' A mini checklist ticks: force, displacement, unit J.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: when an object is lifted, the force needed equals its weight, m g, and the displacement is the height. Always write the final unit as joule." }
+        ]
+      },
+      {
+        "animation": "Recap board with the boulder and the porter. Points: '1. Work needs force + displacement', '2. W = F × s (along the force)', '3. Unit: joule; 1 J = 1 N × 1 m; work has no direction'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: work is done only when a force acts and the object is displaced." },
+          { "speaker": "NEO", "text": "Two: work equals force into displacement along the direction of the force." },
+          { "speaker": "NEO", "text": "Three: its unit is the joule, one newton into one metre, and work has magnitude only." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Work and Energy",
+    "topic_no": 2,
+    "name": "Positive, Negative and Zero Work",
+    "scenes": [
+      {
+        "animation": "A cricket ball rolls along the pitch after a defensive shot and slowly comes to a stop. Zippy chases it, shouting 'Who stopped it? Come out!' at the grass.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Nobody touched the ball, but it stopped. Is someone doing secret work on it?" },
+          { "speaker": "NEO", "text": "Yes, friction. And the work done by friction is negative." }
+        ]
+      },
+      {
+        "animation": "A baby pulls a toy car forward with a string; force arrow and displacement arrow point the same way. A green '+' badge and 'W = F × s (positive)' appear.",
+        "lines": [
+          { "speaker": "NEO", "text": "When the force acts in the direction of displacement, the work done is positive. Like a child pulling a toy car forward." },
+          { "speaker": "NEO", "text": "The force and the displacement point the same way, so W is simply F into s, and the toy gains energy." }
+        ]
+      },
+      {
+        "animation": "The rolling ball again: displacement arrow points forward, friction arrow points backward. A red '−' badge and 'W = −F × s (negative)' appear, the angle between arrows marked '180°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When the force acts opposite to the direction of displacement, the work done is negative. So W equals minus F into s." },
+          { "speaker": "NEO", "text": "Friction on the rolling ball acts backwards while the ball moves forward, so friction does negative work and slows it down." }
+        ]
+      },
+      {
+        "animation": "A man lifts a gas cylinder up: his upward force arrow matches the displacement (positive), while a gravity arrow points down (negative). Labels appear on each arrow.",
+        "lines": [
+          { "speaker": "NEO", "text": "When you lift an object, two forces are at work. Your force is upwards, along the displacement, so you do positive work." },
+          { "speaker": "NEO", "text": "Gravity pulls downwards, against the displacement, so the work done by gravity is negative." }
+        ]
+      },
+      {
+        "animation": "A delivery person walks horizontally with a basket of fruit on her head. A vertical force arrow 'support force / gravity' and a horizontal displacement arrow meet at a right angle marked '90°'. A grey '0' badge appears: 'Force ⟂ displacement → W = 0'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What about carrying a basket on your head while walking? That feels like work!" },
+          { "speaker": "NEO", "text": "Your muscles get tired, but the force of gravity on the basket acts downwards, while the basket moves horizontally. When force is perpendicular to displacement, no work is done by that force." },
+          { "speaker": "NEO", "text": "Exam tip: in such questions, always name which force you're talking about, and check the angle between force and displacement." }
+        ]
+      },
+      {
+        "animation": "Recap board with three badges: green '+', red '−', grey '0'. Points: '1. Force along displacement → positive work', '2. Force opposite to displacement → negative work (W = −F × s)', '3. Force perpendicular to displacement → zero work'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: force along the displacement gives positive work." },
+          { "speaker": "NEO", "text": "Two: force opposite to the displacement gives negative work, like friction or gravity on a lifted object." },
+          { "speaker": "NEO", "text": "Three: force perpendicular to the displacement does zero work." },
+          { "speaker": "ZIPPY", "text": "Friction, you're officially on my negative list." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Work and Energy",
+    "topic_no": 3,
+    "name": "Energy and Its Forms",
+    "scenes": [
+      {
+        "animation": "A fast cricket ball smashes into the stumps and they fly apart. In the next shot, a raised hammer falls onto a nail and drives it into a plank. Zippy stares in awe at both.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The ball knocked the stumps, the hammer pushed the nail. What gives them this power?" },
+          { "speaker": "NEO", "text": "Energy. An object that has energy can do work on another object." }
+        ]
+      },
+      {
+        "animation": "Two cartoon objects: the moving ball labelled 'loses energy' and the stumps labelled 'gains energy', with a glowing energy packet flying from one to the other. The definition 'Energy = capacity to do work' appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "When an object does work, it loses energy, and the object on which work is done gains energy." },
+          { "speaker": "NEO", "text": "So an object capable of doing work possesses energy. The energy of an object is measured by its capacity to do work." }
+        ]
+      },
+      {
+        "animation": "The unit card: 'Unit of energy = joule (J), same as work', '1 kJ = 1000 J'. A blinking note: '1 J = energy needed to do 1 joule of work'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The unit of energy is the same as that of work, the joule. One joule of energy is required to do one joule of work." },
+          { "speaker": "NEO", "text": "A larger unit is the kilojoule, which equals one thousand joules." },
+          { "speaker": "ZIPPY", "text": "So energy and work share the same unit because they're basically two sides of one coin?" },
+          { "speaker": "NEO", "text": "Nicely put. Work is how energy gets transferred." }
+        ]
+      },
+      {
+        "animation": "A big sun at the top radiates light onto a wheel of energy forms, each popping in with an icon: 'Potential energy', 'Kinetic energy', 'Heat energy', 'Chemical energy', 'Electrical energy', 'Light energy'. A bracket groups the first two as 'Mechanical energy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The sun is the biggest natural source of energy for us. Energy exists in many forms." },
+          { "speaker": "NEO", "text": "There's potential energy, kinetic energy, heat energy, chemical energy, electrical energy and light energy." },
+          { "speaker": "NEO", "text": "The sum of kinetic and potential energy is called mechanical energy." }
+        ]
+      },
+      {
+        "animation": "Quick-fire everyday examples labelled with their energy form: a chai stove flame 'heat', a phone battery 'chemical', a ceiling fan's wire 'electrical', a Diwali diya 'light', a speeding bike 'kinetic', a stretched catapult 'potential'. An 'EXAM TIP' card slides in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Wait, so my catapult has energy even when it's just stretched and not moving?" },
+          { "speaker": "NEO", "text": "Yes, it has potential energy, stored because of its changed shape. We'll see that soon." },
+          { "speaker": "NEO", "text": "Exam tip: for questions that ask you to name the form of energy, match the situation carefully. Motion means kinetic; position or shape means potential." }
+        ]
+      },
+      {
+        "animation": "Recap board with a sun and energy icons. Points: '1. Energy = capacity to do work; unit joule (1 kJ = 1000 J)', '2. Doing work transfers energy', '3. Forms: potential, kinetic, heat, chemical, electrical, light; KE + PE = mechanical energy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: energy is the capacity to do work, and its unit is the joule." },
+          { "speaker": "NEO", "text": "Two: an object doing work loses energy, and the object on which work is done gains energy." },
+          { "speaker": "NEO", "text": "Three: energy has many forms, and kinetic plus potential energy is mechanical energy." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Work and Energy",
+    "topic_no": 4,
+    "name": "Kinetic Energy",
+    "scenes": [
+      {
+        "animation": "A slow bicycle bumps into a cardboard box, nudging it slightly. Then a speeding bicycle hits an identical box and sends it flying. Zippy, the rider, flips a thumbs up.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Same bicycle, same box, but faster speed means a bigger crash. Why?" },
+          { "speaker": "NEO", "text": "Because a faster object carries more kinetic energy, the energy due to motion." }
+        ]
+      },
+      {
+        "animation": "The definition appears: 'Kinetic energy: energy possessed by an object due to its motion'. Then a derivation builds step by step: 'W = F × s', 'v² − u² = 2as → s = (v² − u²)/2a', 'F = ma', 'W = ma × (v² − u²)/2a = ½m(v² − u²)', 'If u = 0: Eₖ = ½mv²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The kinetic energy of an object equals the work done on it to make it move from rest to its current velocity." },
+          { "speaker": "NEO", "text": "Work is F into s. From the third equation of motion, s equals v squared minus u squared, by two a. And F equals m a." },
+          { "speaker": "NEO", "text": "Multiply them, and the a cancels. Work equals half m into v squared minus u squared. If it starts from rest, kinetic energy equals half m v squared." }
+        ]
+      },
+      {
+        "animation": "Example 1: 'm = 15 kg, v = 4 m s⁻¹', 'Eₖ = ½ × 15 × 4² = ½ × 15 × 16 = 120 J'. A cartoon kid on a skateboard glides by with '120 J' written on a flag.",
+        "lines": [
+          { "speaker": "NEO", "text": "An object of mass fifteen kilograms moves at four metres per second. Its kinetic energy is half into fifteen into four squared." },
+          { "speaker": "NEO", "text": "That's half into fifteen into sixteen, which is one hundred and twenty joules." }
+        ]
+      },
+      {
+        "animation": "Example 2: a car of 1500 kg speeds up. Working appears line by line: 'u = 30 km h⁻¹ = 25/3 m s⁻¹, v = 60 km h⁻¹ = 50/3 m s⁻¹', 'Initial Eₖ = ½ × 1500 × (25/3)² = 52083.3 J', 'Final Eₖ = ½ × 1500 × (50/3)² = 208333.3 J', 'Work = 208333.3 − 52083.3 = 156250 J'.",
+        "lines": [
+          { "speaker": "NEO", "text": "How much work is needed to speed up a fifteen-hundred-kilogram car from thirty to sixty kilometres per hour?" },
+          { "speaker": "NEO", "text": "Thirty kilometres per hour is twenty-five by three metres per second, and sixty is fifty by three." },
+          { "speaker": "NEO", "text": "The initial kinetic energy is about fifty-two thousand and eighty-three joules. The final is about two lakh eight thousand three hundred and thirty-three joules." },
+          { "speaker": "NEO", "text": "The work done equals the change in kinetic energy: one lakh fifty-six thousand two hundred and fifty joules." }
+        ]
+      },
+      {
+        "animation": "A speed slider doubles v from 10 to 20; the Eₖ bar jumps to four times its height. An 'EXAM TIP' card: 'Double the speed → 4 × kinetic energy (v is squared!)'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So if I double my speed, I double my kinetic energy?" },
+          { "speaker": "NEO", "text": "No, you make it four times, because velocity is squared. Exam tip: this doubling question is asked very often." }
+        ]
+      },
+      {
+        "animation": "Recap board with the flying box. Points: '1. Kinetic energy: energy due to motion', '2. Eₖ = ½mv²; work done = change in KE', '3. Double speed → 4 × KE'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: kinetic energy is the energy an object has due to its motion." },
+          { "speaker": "NEO", "text": "Two: kinetic energy equals half m v squared, and the work done equals the change in kinetic energy." },
+          { "speaker": "NEO", "text": "Three: doubling the speed makes the kinetic energy four times." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Work and Energy",
+    "topic_no": 5,
+    "name": "Potential Energy",
+    "scenes": [
+      {
+        "animation": "Zippy winds up a key-operated toy car, sets it on the floor and it zooms off. Then he stretches a rubber band and lets it go; it snaps across the room and hits a very surprised Neo.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Oops! But where did the energy come from? Neither was moving before." },
+          { "speaker": "NEO", "text": "From the work you did winding and stretching them. That energy was stored as potential energy." }
+        ]
+      },
+      {
+        "animation": "Three examples glow with a stored-energy meter: a wound toy-car spring, a stretched rubber band, and a bow pulled back with an arrow. The definition appears: 'Potential energy: energy possessed due to change in position or shape'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The energy possessed by an object because of its position or shape is called potential energy." },
+          { "speaker": "NEO", "text": "A stretched rubber band, a wound spring and a bent bow all store energy due to their changed shape. When released, this energy does work." }
+        ]
+      },
+      {
+        "animation": "A ball of mass m is lifted from the ground to height h against a downward 'mg' arrow. The working builds: 'Force = weight = mg', 'Work done = mg × h', 'Eₚ = mgh'.",
+        "lines": [
+          { "speaker": "NEO", "text": "When you raise an object, you do work against gravity. The force needed equals its weight, m g." },
+          { "speaker": "NEO", "text": "Lifting it through a height h, the work done is m g h. This is stored as gravitational potential energy. So E p equals m g h." }
+        ]
+      },
+      {
+        "animation": "Two paths from ground level to a shelf at height h: one straight up, one a winding staircase. Both end with the same 'Eₚ = mgh' badge. Label: 'Depends on height difference, not on the path'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "If I take the long winding stairs instead of the lift, do I store more energy?" },
+          { "speaker": "NEO", "text": "No. Gravitational potential energy depends only on the difference in height, not on the path taken." }
+        ]
+      },
+      {
+        "animation": "Example 1: 'm = 10 kg, h = 6 m, g = 9.8 m s⁻²', 'Eₚ = 10 × 9.8 × 6 = 588 J'. Example 2: 'Eₚ = 480 J, m = 12 kg, g = 10 m s⁻²', 'h = Eₚ / mg = 480 / (12 × 10) = 4 m'. An 'EXAM TIP' tag sits on 'height from reference level'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Find the energy of a ten-kilogram object at a height of six metres. E p equals ten into nine point eight into six, which is five hundred and eighty-eight joules." },
+          { "speaker": "NEO", "text": "Now reverse it. A twelve-kilogram object has four hundred and eighty joules of potential energy, with g as ten. Height equals four eighty by one twenty, which is four metres." },
+          { "speaker": "NEO", "text": "Exam tip: the height is always measured from a chosen zero level, usually the ground. Mention it in your answer." }
+        ]
+      },
+      {
+        "animation": "Recap board with the bow and arrow. Points: '1. Potential energy: due to position or shape', '2. Gravitational PE = mgh', '3. Depends only on height difference, not on path'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: potential energy is stored because of an object's position or shape." },
+          { "speaker": "NEO", "text": "Two: gravitational potential energy equals m g h." },
+          { "speaker": "NEO", "text": "Three: it depends only on the height difference, not on the path taken." },
+          { "speaker": "ZIPPY", "text": "Great. I'm taking the lift." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Work and Energy",
+    "topic_no": 6,
+    "name": "Law of Conservation of Energy",
+    "scenes": [
+      {
+        "animation": "Zippy holds a 'Lost and Found' sign next to a ball that has just fallen to the ground. 'Where did your height go?' he asks the ball. The ball shrugs.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This ball had potential energy up there. Now it's on the ground. Did the energy just vanish?" },
+          { "speaker": "NEO", "text": "Energy never vanishes. It only changes form." }
+        ]
+      },
+      {
+        "animation": "A chain of transformations animates in a loop: sunlight → a leaf making food (chemical) → a person eating a roti → the person cycling (kinetic); then water falling from a dam spinning a turbine (potential → kinetic → electrical) and lighting a bulb (light).",
+        "lines": [
+          { "speaker": "NEO", "text": "Energy keeps transforming. Green plants turn sunlight into chemical energy in food. We use that energy to move." },
+          { "speaker": "NEO", "text": "Water stored in a dam has potential energy. When it falls, it turns turbines, and we get electrical energy." }
+        ]
+      },
+      {
+        "animation": "A scroll unrolls: 'Energy can neither be created nor destroyed. It can only be converted from one form to another. The total energy before and after the transformation remains the same.'",
+        "lines": [
+          { "speaker": "NEO", "text": "The law of conservation of energy states that energy can only be converted from one form to another. It can neither be created nor destroyed." },
+          { "speaker": "NEO", "text": "The total energy before and after the transformation always remains the same." }
+        ]
+      },
+      {
+        "animation": "A 20 kg object falls from 4 m, freezing at three heights. A table fills row by row: 'h = 4 m: Eₚ = 20 × 10 × 4 = 800 J, Eₖ = 0, total = 800 J', 'h = 2 m: Eₚ = 400 J, Eₖ = 400 J, total = 800 J', 'h = 0: Eₚ = 0, Eₖ = 800 J, total = 800 J'. Bars shift from blue (PE) to orange (KE), total bar stays constant.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's check with numbers. A twenty-kilogram object is dropped from four metres. Take g as ten." },
+          { "speaker": "NEO", "text": "At the top, its potential energy is twenty into ten into four, eight hundred joules, and its kinetic energy is zero." },
+          { "speaker": "NEO", "text": "Halfway down, at two metres, potential energy is four hundred joules. It has lost four hundred joules, which has become kinetic energy." },
+          { "speaker": "NEO", "text": "Just before it hits the ground, potential energy is zero and kinetic energy is eight hundred joules. The total stays eight hundred joules throughout." }
+        ]
+      },
+      {
+        "animation": "The equation 'mgh + ½mv² = constant' glows on screen. An 'EXAM TIP' card: 'Show the table with PE, KE and total at each height for full marks'. Zippy checks the ball after it hits the ground: a small 'heat' and 'sound' puff appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "And when it hits the ground? Where does the eight hundred joules go?" },
+          { "speaker": "NEO", "text": "Into sound and heat, and a little into squashing the ground. Still conserved. Exam tip: always show that potential plus kinetic energy stays constant at each point." }
+        ]
+      },
+      {
+        "animation": "Recap board with the energy bars. Points: '1. Energy can neither be created nor destroyed, only transformed', '2. Total energy remains the same', '3. Free fall: mgh + ½mv² = constant'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: energy can neither be created nor destroyed; it only changes form." },
+          { "speaker": "NEO", "text": "Two: the total energy before and after any transformation remains the same." },
+          { "speaker": "NEO", "text": "Three: in free fall, potential plus kinetic energy stays constant." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Work and Energy",
+    "topic_no": 7,
+    "name": "Rate of Doing Work: Power",
+    "scenes": [
+      {
+        "animation": "Two girls, A and B, each weighing 400 N, race up gym ropes 8 m high. A reaches the top quickly and waves; B climbs slowly, stopping to chat. Zippy asks, 'Did they do the same work?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "They climbed the same height. But A was so much faster. Did she do more work?" },
+          { "speaker": "NEO", "text": "Same work, but A did it at a greater rate. The rate of doing work is called power." }
+        ]
+      },
+      {
+        "animation": "The formula builds: 'Power = Work / time', 'P = W / t'. Then 'SI unit: watt (W)', '1 W = 1 J s⁻¹', '1 kW = 1000 W'. A small portrait labelled 'James Watt' appears beside the unit.",
+        "lines": [
+          { "speaker": "NEO", "text": "Power is the rate of doing work or the rate of transfer of energy. So P equals W by t." },
+          { "speaker": "NEO", "text": "Its unit is the watt, in honour of James Watt. One watt is the power of an agent doing work at the rate of one joule per second." },
+          { "speaker": "NEO", "text": "A larger unit is the kilowatt, which is one thousand watts." }
+        ]
+      },
+      {
+        "animation": "Worked example for the rope climb: 'W = 400 N × 8 m = 3200 J (for each girl)', 'A: t = 20 s → P = 3200/20 = 160 W', 'B: t = 50 s → P = 3200/50 = 64 W'. A trophy lands on A.",
+        "lines": [
+          { "speaker": "NEO", "text": "Each girl weighs four hundred newtons and climbs eight metres. So each does four hundred into eight, three thousand two hundred joules of work." },
+          { "speaker": "NEO", "text": "Girl A takes twenty seconds, so her power is thirty-two hundred by twenty, one hundred and sixty watts." },
+          { "speaker": "NEO", "text": "Girl B takes fifty seconds, so her power is thirty-two hundred by fifty, sixty-four watts." }
+        ]
+      },
+      {
+        "animation": "A boy of 50 kg runs up a staircase of 45 steps, each 15 cm high, in 9 s. Working appears: 'h = 45 × 0.15 = 6.75 m', 'W = mgh = 50 × 10 × 6.75 = 3375 J', 'P = 3375/9 = 375 W'. An 'EXAM TIP' tag highlights '15 cm = 0.15 m'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A fifty-kilogram boy runs up forty-five steps in nine seconds. Each step is fifteen centimetres high. Take g as ten." },
+          { "speaker": "NEO", "text": "Total height is forty-five into zero point one five, six point seven five metres. Work done is fifty into ten into six point seven five, which is three thousand three hundred and seventy-five joules." },
+          { "speaker": "NEO", "text": "Power is that divided by nine, which is three hundred and seventy-five watts. Exam tip: convert centimetres to metres before multiplying." }
+        ]
+      },
+      {
+        "animation": "A bulb and a motor on a timeline; the energy used varies wildly each second. A card: 'Average power = total energy consumed / total time taken'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if the power keeps changing while I climb?" },
+          { "speaker": "NEO", "text": "Then we use average power, which is the total energy consumed divided by the total time taken." }
+        ]
+      },
+      {
+        "animation": "Recap board with the two rope-climbing girls. Points: '1. Power = rate of doing work: P = W/t', '2. Unit: watt; 1 W = 1 J s⁻¹; 1 kW = 1000 W', '3. Same work in less time = more power'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: power is the rate of doing work, P equals W by t." },
+          { "speaker": "NEO", "text": "Two: its unit is the watt, one joule per second, and one kilowatt is a thousand watts." },
+          { "speaker": "NEO", "text": "Three: doing the same work in less time means more power." },
+          { "speaker": "ZIPPY", "text": "Girl A, teach me your ways." }
+        ]
+      }
+    ]
+  }
+]

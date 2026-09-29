@@ -1,0 +1,163 @@
+[
+  {
+    "chapter_no": 10,
+    "chapter": "Circles",
+    "topic_no": 1,
+    "name": "Tangent to a Circle",
+    "scenes": [
+      {
+        "animation": "A cycle wheel rolls along a straight road. Zippy freezes the frame and zooms in: the tyre touches the road at exactly one glowing point.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The road touches the wheel at only one spot? The rest of the wheel is just floating?" },
+          { "speaker": "NEO", "text": "At any instant, yes. That road is acting as a tangent to the wheel." }
+        ]
+      },
+      {
+        "animation": "A circle is drawn with three lines PQ in turn: one far away that misses it, labelled 'non-intersecting'; one cutting it at two points A and B, labelled 'secant'; one touching it at a single point, labelled 'tangent'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A line and a circle in a plane can meet in three ways." },
+          { "speaker": "NEO", "text": "They may not meet at all. The line may cut the circle at two points, and then it is called a secant." },
+          { "speaker": "NEO", "text": "Or the line may touch the circle at exactly one point. That line is a tangent, and the common point is called the point of contact." }
+        ]
+      },
+      {
+        "animation": "A secant through a circle slowly rotates about point A; its second point B slides along the arc toward A. When B merges into A, the line turns into the tangent at A and a caption appears: 'Tangent = secant whose two end points coincide'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Watch this secant turn. As the two points of intersection come closer and finally coincide, the secant becomes the tangent." },
+          { "speaker": "ZIPPY", "text": "So how many tangents can I draw at one point?" },
+          { "speaker": "NEO", "text": "Exactly one tangent at a point of the circle. But a circle has infinitely many points, so it has infinitely many tangents." }
+        ]
+      },
+      {
+        "animation": "Worked example: circle with centre O, radius 5 cm. Three parallel lines slide in at distances 7 cm, 5 cm and 3 cm from O, coloured grey, green and red. Labels: 'd > r: no contact', 'd = r: tangent', 'd < r: secant'. On the red line: 'half-chord = √(5² − 3²) = √(25 − 9) = √16 = 4 cm', 'chord = 8 cm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: a circle has radius 5 centimetres. Lines are drawn at distances 7, 5 and 3 centimetres from the centre." },
+          { "speaker": "NEO", "text": "At 7 centimetres, more than the radius, the line misses the circle. At exactly 5, it touches, so it is a tangent." },
+          { "speaker": "NEO", "text": "At 3, it cuts the circle, so it is a secant. Using the perpendicular from the centre, which you learnt in Class 9, half the chord is root of 25 minus 9, that is root 16, which is 4. So the chord is 8 centimetres." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Q: How many tangents can a circle have? A: Infinitely many. Q: How many at one point? A: Exactly one.' A second chip: 'A tangent has only ONE common point with the circle.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: one-mark questions love this. A circle has infinitely many tangents, but only one tangent at a given point." },
+          { "speaker": "NEO", "text": "And a tangent and a circle share exactly one point, never two." }
+        ]
+      },
+      {
+        "animation": "Recap board with the rolling wheel: '1. Line & circle: no contact, secant (2 points), tangent (1 point)', '2. Tangent = secant with coinciding points', '3. One tangent at each point; infinitely many in all'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a line may miss a circle, cut it at two points as a secant, or touch it at one point as a tangent." },
+          { "speaker": "NEO", "text": "Two: a tangent is a secant whose two points of intersection have coincided." },
+          { "speaker": "NEO", "text": "Three: there is exactly one tangent at each point of a circle, and infinitely many tangents in all." },
+          { "speaker": "ZIPPY", "text": "My cycle has been doing geometry this whole time." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Circles",
+    "topic_no": 2,
+    "name": "The Tangent Is Perpendicular to the Radius",
+    "scenes": [
+      {
+        "animation": "A cartoon clock hand spins; a bead flies off its tip in a straight line. The path, the radius to the tip and a small square at the corner glow: 'radius ⟂ path'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The bead flew off straight, and it looks exactly square to the hand. Coincidence?" },
+          { "speaker": "NEO", "text": "No coincidence. It's Theorem 10.1: the tangent at any point of a circle is perpendicular to the radius through the point of contact." }
+        ]
+      },
+      {
+        "animation": "Proof built step by step. Circle centre O, tangent XY touching at P, radius OP drawn. 'Given: XY is tangent at P. To prove: OP ⟂ XY.' A point Q slides along XY and segment OQ is drawn; where OQ crosses the circle, point R is marked.",
+        "lines": [
+          { "speaker": "NEO", "text": "Given a circle with centre O and a tangent XY at point P. We must prove that OP is perpendicular to XY." },
+          { "speaker": "NEO", "text": "Take any point Q on XY other than P, and join OQ." }
+        ]
+      },
+      {
+        "animation": "Continue: Q is highlighted outside the circle. 'Q lies outside the circle', 'OQ = OR + RQ > OR', 'OR = OP (radii)', '∴ OQ > OP'. Then many points Q₁, Q₂, Q₃ on XY each show a longer OQ; OP glows as the shortest. Final lines: 'OP is the shortest distance from O to XY', '∴ OP ⟂ XY'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Q must lie outside the circle. If it were on the circle, XY would meet the circle twice and would be a secant, not a tangent." },
+          { "speaker": "NEO", "text": "So OQ is longer than the radius OR, which equals OP. That means OQ is greater than OP." },
+          { "speaker": "NEO", "text": "This is true for every point on XY except P. So OP is the shortest distance from O to the line." },
+          { "speaker": "NEO", "text": "And the shortest segment from a point to a line is the perpendicular. Hence OP is perpendicular to XY." }
+        ]
+      },
+      {
+        "animation": "Worked example line by line: tangent from point Q touches the circle at P; 'PQ = 24 cm, OQ = 25 cm', '∠OPQ = 90° (Theorem 10.1)', 'OP² = OQ² − PQ² = 625 − 576 = 49', 'OP = 7 cm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: from a point Q, the length of the tangent to a circle is 24 centimetres, and Q is 25 centimetres from the centre. Find the radius." },
+          { "speaker": "NEO", "text": "The radius OP is perpendicular to the tangent, so triangle OPQ is right-angled at P." },
+          { "speaker": "NEO", "text": "OP squared is 25 squared minus 24 squared, which is 625 minus 576, that is 49. So the radius is 7 centimetres." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Write the reason: ∠OPQ = 90° (tangent ⟂ radius at the point of contact).' A small note: 'The line through P perpendicular to the tangent passes through the centre.'",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: whenever you use the right angle, write the reason, tangent is perpendicular to radius. That reason earns the mark." },
+          { "speaker": "NEO", "text": "Also, the line through the point of contact, perpendicular to the tangent, always passes through the centre." }
+        ]
+      },
+      {
+        "animation": "Recap board: '1. Theorem 10.1: tangent ⟂ radius at the point of contact', '2. Proof: every other point of the tangent is outside, so OP is the shortest distance', '3. Use the right triangle and Pythagoras'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the tangent at any point is perpendicular to the radius through the point of contact." },
+          { "speaker": "NEO", "text": "Two: we proved it because every other point of the tangent lies outside, making OP the shortest distance." },
+          { "speaker": "NEO", "text": "Three: this gives a right triangle, so Pythagoras finishes the problem." },
+          { "speaker": "ZIPPY", "text": "Seven, twenty-four, twenty-five. Pythagoras's favourite family." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 10,
+    "chapter": "Circles",
+    "topic_no": 3,
+    "name": "Tangents from an External Point",
+    "scenes": [
+      {
+        "animation": "A rakhi thread is stretched from Zippy's hand around a round bangle, touching it on both sides. Both thread lengths glow and a measuring tape shows them equal.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I pulled the thread tight around the bangle from both sides, and both bits are the same length. Every single time!" },
+          { "speaker": "NEO", "text": "That's Theorem 10.2. Tangents drawn from an external point to a circle are equal." }
+        ]
+      },
+      {
+        "animation": "A dot moves: inside the circle, no tangent line appears ('0 tangents'); on the circle, one tangent ('1 tangent'); outside the circle, two tangents appear ('2 tangents'). Segment from the external point to a point of contact is labelled 'length of tangent'.",
+        "lines": [
+          { "speaker": "NEO", "text": "From a point inside the circle, no tangent can be drawn. From a point on the circle, exactly one." },
+          { "speaker": "NEO", "text": "From a point outside the circle, exactly two tangents can be drawn." },
+          { "speaker": "NEO", "text": "The segment from the external point to the point of contact is called the length of the tangent." }
+        ]
+      },
+      {
+        "animation": "Proof built step by step: circle centre O, external point P, tangents PQ and PR. OQ, OR and OP are joined. '∠OQP = ∠ORP = 90° (tangent ⟂ radius)', 'OQ = OR (radii)', 'OP = OP (common)', '∴ ΔOQP ≅ ΔORP (RHS)', '∴ PQ = PR (CPCT)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's prove it. P is an external point, and PQ and PR are tangents. Join OQ, OR and OP." },
+          { "speaker": "NEO", "text": "Angles OQP and ORP are right angles, because a tangent is perpendicular to the radius." },
+          { "speaker": "NEO", "text": "OQ equals OR, being radii, and OP is common. So the triangles OQP and ORP are congruent by RHS." },
+          { "speaker": "NEO", "text": "Therefore PQ equals PR, by CPCT. Also, angle OPQ equals angle OPR, so the centre lies on the bisector of the angle between the tangents." }
+        ]
+      },
+      {
+        "animation": "Worked example line by line: tangents PA and PB from P, '∠APB = 80°'. 'In quadrilateral OAPB: ∠OAP = ∠OBP = 90°', '∠AOB = 360° − 90° − 90° − 80° = 100°', 'OP bisects ∠AOB', '∠POA = 100° ÷ 2 = 50°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: tangents PA and PB from P are inclined to each other at 80 degrees. Find angle POA." },
+          { "speaker": "NEO", "text": "In quadrilateral OAPB, the angles at A and B are 90 degrees each. So angle AOB is 360 minus 90 minus 90 minus 80, which is 100 degrees." },
+          { "speaker": "NEO", "text": "The congruent triangles show OP bisects angle AOB. So angle POA is 50 degrees." },
+          { "speaker": "ZIPPY", "text": "So the angle at the centre and the angle between tangents add up to 180?" },
+          { "speaker": "NEO", "text": "Exactly. They are supplementary. Board tip: a quadrilateral circumscribing a circle also uses equal tangents, giving AB plus CD equals AD plus BC." }
+        ]
+      },
+      {
+        "animation": "Recap board with the bangle and thread: '1. Inside: 0, on: 1, outside: 2 tangents', '2. Theorem 10.2: tangents from an external point are equal (RHS, CPCT)', '3. Angle between tangents + angle at centre = 180°'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: zero tangents from inside, one from a point on the circle, and two from outside." },
+          { "speaker": "NEO", "text": "Two: the tangents from an external point are equal, proved by RHS congruence." },
+          { "speaker": "NEO", "text": "Three: the angle between the two tangents and the angle they subtend at the centre are supplementary." },
+          { "speaker": "ZIPPY", "text": "My bangle and thread deserve a gold medal." }
+        ]
+      }
+    ]
+  }
+]

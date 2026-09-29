@@ -1,0 +1,439 @@
+[
+  {
+    "chapter_no": 5,
+    "chapter": "Life Processes",
+    "topic_no": 1,
+    "name": "What Are Life Processes?",
+    "scenes": [
+      {
+        "animation": "A balcony in the afternoon: a puppy snores on a mat next to a still tulsi plant in a pot. Zippy pokes each one gently and big question marks labelled 'ALIVE?' pop up over both.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The puppy is asleep and the tulsi isn't moving at all. How do I know they're alive?" },
+          { "speaker": "NEO", "text": "Good question. We usually look for visible movement. But a lot of life happens at a level you cannot see." }
+        ]
+      },
+      {
+        "animation": "Zoom into a leaf and then into a cell: cartoon molecules zip around like workers, patching a cracked cell wall and carrying boxes. A slow 'wear and tear' storm outside keeps chipping at the structure.",
+        "lines": [
+          { "speaker": "NEO", "text": "Living things are highly organised, down to the molecules inside their cells." },
+          { "speaker": "NEO", "text": "The environment keeps breaking this order down, so living things must keep repairing and maintaining their structures. That needs molecules to move around all the time." },
+          { "speaker": "NEO", "text": "So molecular movement is essential for life, even in a sleeping puppy." },
+          { "speaker": "ZIPPY", "text": "What about viruses?" },
+          { "speaker": "NEO", "text": "Viruses show no molecular movement until they infect a cell. That is why there is controversy about whether they are truly alive." }
+        ]
+      },
+      {
+        "animation": "A dashboard labelled 'Life Processes' lights up four icons one by one: a thali for 'Nutrition', lungs for 'Respiration', a delivery truck for 'Transportation', and a dustbin for 'Excretion'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The maintenance functions must go on even when an organism is sleeping or sitting still. The processes that together perform this maintenance are called life processes." },
+          { "speaker": "NEO", "text": "The main ones are nutrition, respiration, transportation and excretion." }
+        ]
+      },
+      {
+        "animation": "A battery icon inside the puppy slowly drains; a roti and a bowl of dal float in and refill it. A small carbon atom waves from inside the roti, and an oxygen molecule helps crack the food open with a spark labelled 'Energy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Repair and maintenance need energy, and that energy comes from food. Taking in food is called nutrition." },
+          { "speaker": "NEO", "text": "Life on Earth depends on carbon-based molecules, so most food sources are also carbon-based." },
+          { "speaker": "NEO", "text": "The food is then broken down, usually using oxygen, to release energy. Getting oxygen from outside and using it to break down food is respiration." }
+        ]
+      },
+      {
+        "animation": "Split screen: a single-celled amoeba with its whole surface touching water, arrows diffusing in and out; versus a human body where a tiny cell deep inside is far from the air, until a network of pipes connects it. A 'Board tip' sticky note appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Amoeba has no lungs or heart. Why do we need them?" },
+          { "speaker": "NEO", "text": "In a single-celled organism, the entire surface is in contact with the environment, so it needs no special organs." },
+          { "speaker": "NEO", "text": "In large multicellular organisms, most cells are not in direct contact with the surroundings. Diffusion alone cannot meet their oxygen needs." },
+          { "speaker": "NEO", "text": "So they need specialised tissues to take in food and oxygen, a transportation system to carry them, and a way to remove wastes. Removing wastes is called excretion." },
+          { "speaker": "NEO", "text": "Board tip: 'Why is diffusion insufficient in multicellular organisms?' is a common question. Say that most cells are not in direct contact with the environment." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Molecular movement = sign of life', '2. Nutrition, respiration, transportation, excretion', '3. Multicellular organisms need specialised systems'. The puppy wakes, yawns and wags its tail.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: molecular movement is essential for life. Two: nutrition, respiration, transportation and excretion are the main life processes. Three: multicellular organisms need specialised systems because diffusion alone is not enough." },
+          { "speaker": "ZIPPY", "text": "Told you he was alive!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Life Processes",
+    "topic_no": 2,
+    "name": "Autotrophic Nutrition: Photosynthesis",
+    "scenes": [
+      {
+        "animation": "A school canteen at lunch break. Zippy holds a menu out to a mango tree beside the counter; the tree just points a branch at the sun, then at a water tap, then at the air.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hey tree, what will you have for lunch? I'm ordering samosas." },
+          { "speaker": "NEO", "text": "Trees don't order food, Zippy. They make their own. That is autotrophic nutrition." }
+        ]
+      },
+      {
+        "animation": "Sunbeams stream into a green leaf, and the balanced equation writes itself in glowing green: '6CO2 + 12H2O → C6H12O6 + 6O2 + 6H2O' with 'chlorophyll, sunlight' written over the arrow. Extra glucose stacks into grains labelled 'Starch'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Autotrophs take in carbon dioxide and water and convert them into carbohydrates in the presence of sunlight and chlorophyll. This is photosynthesis." },
+          { "speaker": "NEO", "text": "Six C O two plus twelve H two O gives one glucose, six O two and six H two O." },
+          { "speaker": "NEO", "text": "Carbohydrates not used immediately are stored as starch, an internal energy reserve." }
+        ]
+      },
+      {
+        "animation": "Inside a chloroplast, three numbered steps animate: (1) chlorophyll glows as it absorbs light; (2) a water molecule splits into H and O, with O2 bubbles escaping; (3) CO2 molecules get reduced and snap into a carbohydrate chain. Then a desert cactus opens its stomata under the moon.",
+        "lines": [
+          { "speaker": "NEO", "text": "Photosynthesis has three events. One: chlorophyll absorbs light energy." },
+          { "speaker": "NEO", "text": "Two: light energy is converted to chemical energy, and water splits into hydrogen and oxygen." },
+          { "speaker": "NEO", "text": "Three: carbon dioxide is reduced to carbohydrates." },
+          { "speaker": "ZIPPY", "text": "Do all three always happen one right after another?" },
+          { "speaker": "NEO", "text": "Not necessarily. Desert plants take in carbon dioxide at night and store an intermediate. During the day, they use it with the energy from light." }
+        ]
+      },
+      {
+        "animation": "Zoom into a leaf: green dots labelled 'Chloroplasts' glow in the cells. Then a stoma is drawn step by step on the leaf surface: two kidney-shaped 'Guard cells' around a 'Stomatal pore'. Water flows in, the guard cells swell and the pore opens; water flows out, they shrink and it closes.",
+        "lines": [
+          { "speaker": "NEO", "text": "Chlorophyll is found in green dots inside leaf cells called chloroplasts." },
+          { "speaker": "NEO", "text": "Gases are exchanged through tiny pores called stomata. When water flows into the guard cells, they swell and the pore opens. When they shrink, the pore closes." },
+          { "speaker": "NEO", "text": "A lot of water is lost through open stomata, so the plant closes them when it doesn't need carbon dioxide." }
+        ]
+      },
+      {
+        "animation": "School lab: a variegated croton leaf is boiled in alcohol to remove its colour, then dipped in iodine; only the parts that were green turn blue-black. Label: 'Chlorophyll is essential'. Roots are shown drawing up water and tiny mineral icons labelled 'N, P, Fe, Mg'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the variegated leaf activity, only the parts that were green turn blue-black with iodine. This shows that chlorophyll is essential for photosynthesis." },
+          { "speaker": "NEO", "text": "Plants take water from the soil through their roots, along with nitrogen, phosphorus, iron and magnesium. Nitrogen is taken up as nitrates or nitrites, or as organic compounds made by bacteria." },
+          { "speaker": "NEO", "text": "Board tip: the photosynthesis equation and the labelled stomata diagram are frequent questions. Never forget to label the guard cells." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. CO2 + H2O → carbohydrates (sunlight, chlorophyll)', '2. Light absorbed → water split → CO2 reduced', '3. Stomata, guard cells: gas exchange'. The mango tree waves a leaf at Zippy, who is munching a samosa.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: photosynthesis converts carbon dioxide and water into carbohydrates using sunlight and chlorophyll. Two: its three events are light absorption, splitting of water, and reduction of carbon dioxide. Three: stomata, opened and closed by guard cells, handle gas exchange." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Life Processes",
+    "topic_no": 3,
+    "name": "Heterotrophic Nutrition and Human Digestion",
+    "scenes": [
+      {
+        "animation": "Zippy chomps a crisp roti; the camera dives into his cartoon mouth, which turns into a theme-park tunnel ride with a sign 'Alimentary Canal Express: Mouth to Anus'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, where does my roti go after I swallow it?" },
+          { "speaker": "NEO", "text": "On a long ride, Zippy. But first, not every organism gets its food the way you do." }
+        ]
+      },
+      {
+        "animation": "Three quick panels: fuzzy bread mould spreading on stale pav; a yellow Cuscuta vine coiled around a host plant; an amoeba wrapping its pseudopodia around a food particle to form a food vacuole.",
+        "lines": [
+          { "speaker": "NEO", "text": "Organisms that cannot make their own food are heterotrophs. Some, like bread moulds, yeast and mushrooms, break down food outside their bodies and then absorb it." },
+          { "speaker": "NEO", "text": "Parasites like Cuscuta, ticks, lice, leeches and tapeworms take nutrition from other organisms without killing them." },
+          { "speaker": "NEO", "text": "Amoeba engulfs food with finger-like pseudopodia, forming a food vacuole." }
+        ]
+      },
+      {
+        "animation": "Back on the ride: teeth crush the roti and salivary glands spray it, with the label 'Salivary amylase: starch → sugar'. Muscle walls squeeze the food down the oesophagus in waves labelled 'Peristalsis'. In the stomach, three taps pour 'HCl', 'Pepsin' and 'Mucus'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the mouth, saliva contains the enzyme salivary amylase, which breaks down starch into sugar." },
+          { "speaker": "NEO", "text": "Rhythmic contractions of the gut muscles, called peristalsis, push the food along." },
+          { "speaker": "NEO", "text": "In the stomach, gastric glands release hydrochloric acid, pepsin and mucus. The acid creates an acidic medium for pepsin, which digests proteins. Mucus protects the stomach lining from the acid." }
+        ]
+      },
+      {
+        "animation": "A ring-shaped sphincter opens and lets food trickle into the coiled small intestine. A liver character pours green 'Bile', breaking a big fat blob into tiny droplets; a pancreas character pours 'Trypsin' and 'Lipase'. Final labels: 'Proteins → amino acids', 'Carbohydrates → glucose', 'Fats → fatty acids + glycerol'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A sphincter muscle releases food from the stomach into the small intestine, a little at a time." },
+          { "speaker": "NEO", "text": "The liver secretes bile, which makes the food alkaline and breaks large fat globules into smaller ones." },
+          { "speaker": "NEO", "text": "The pancreas adds trypsin for proteins and lipase for emulsified fats." },
+          { "speaker": "NEO", "text": "Intestinal juice finally converts proteins to amino acids, complex carbohydrates to glucose, and fats to fatty acids and glycerol." }
+        ]
+      },
+      {
+        "animation": "Close-up of finger-like villi waving like a cricket stadium crowd, passing nutrients into blood vessels. Then the large intestine squeezes water back into the body. A cow and a tiger stand beside intestines of different lengths.",
+        "lines": [
+          { "speaker": "NEO", "text": "The small intestine's inner lining has finger-like villi, which increase the surface area for absorption." },
+          { "speaker": "NEO", "text": "The large intestine absorbs more water, and the rest is removed through the anus, controlled by the anal sphincter." },
+          { "speaker": "ZIPPY", "text": "Is the small intestine the same length in every animal?" },
+          { "speaker": "NEO", "text": "No. Herbivores eating grass need a longer small intestine to digest cellulose. Carnivores like tigers have a shorter one." },
+          { "speaker": "NEO", "text": "Board tip: make a table of each enzyme, where it acts and what it digests. It earns easy marks." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Heterotrophs: saprophytes, parasites, amoeba', '2. Amylase → pepsin → bile, trypsin, lipase', '3. Villi absorb; large intestine absorbs water'. The ride car pulls into the station.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: heterotrophs may break food down outside the body, live as parasites, or engulf food like amoeba. Two: digestion runs from salivary amylase in the mouth, to pepsin in the stomach, to bile, trypsin and lipase in the small intestine. Three: villi absorb digested food, and the large intestine absorbs water." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Life Processes",
+    "topic_no": 4,
+    "name": "Respiration",
+    "scenes": [
+      {
+        "animation": "School sports day: Zippy sprints the 100-metre race, crosses the line, then flops down clutching a cramping leg. A tiny gremlin labelled 'Lactic acid' dances on his muscle.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Ow! My leg is cramping after that race!" },
+          { "speaker": "NEO", "text": "Your muscles ran short of oxygen. Let's see how cells release energy from food." }
+        ]
+      },
+      {
+        "animation": "A flowchart builds: 'Glucose (6-carbon) → in cytoplasm → Pyruvate (3-carbon) + energy', then splits into three branches: 'Absence of oxygen, in yeast → ethanol + CO2 + energy', 'Presence of oxygen, in mitochondria → CO2 + water + energy', 'Lack of oxygen, in muscle cells → lactic acid + energy'.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, glucose, a six-carbon molecule, is broken into pyruvate, a three-carbon molecule. This happens in the cytoplasm." },
+          { "speaker": "NEO", "text": "In yeast, without oxygen, pyruvate becomes ethanol and carbon dioxide. This is anaerobic respiration, used in fermentation." },
+          { "speaker": "NEO", "text": "In mitochondria, with oxygen, pyruvate breaks into carbon dioxide and water. This is aerobic respiration, and it releases much more energy." },
+          { "speaker": "NEO", "text": "When our muscles lack oxygen, pyruvate becomes lactic acid. Its build-up causes cramps." }
+        ]
+      },
+      {
+        "animation": "An ATP molecule appears as a charged phone battery with three phosphate beads; one bead snaps off with a spark labelled '30.5 kJ/mol', powering a flexing muscle and a glowing nerve.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Where is all that energy kept?" },
+          { "speaker": "NEO", "text": "In A T P, the energy currency of the cell. Breaking its terminal phosphate linkage using water releases thirty point five kilojoules per mole." },
+          { "speaker": "NEO", "text": "This energy powers muscle contraction, protein making and nerve impulses." }
+        ]
+      },
+      {
+        "animation": "A fish in a village pond gulps quickly with its gills flapping, a bubble reading 'Less dissolved O2'; beside it a cow on land breathes slowly and calmly.",
+        "lines": [
+          { "speaker": "NEO", "text": "Aquatic animals use oxygen dissolved in water. Since this is much less than the oxygen in air, their breathing rate is much faster." }
+        ]
+      },
+      {
+        "animation": "Air enters the nostrils past fine hairs and mucus, passes through a throat with cartilage rings, into the lungs; the tubes branch into smaller tubes and end in balloon-like 'Alveoli' wrapped in blood capillaries. The ribs lift and the diaphragm flattens as the chest expands.",
+        "lines": [
+          { "speaker": "NEO", "text": "In humans, air enters through the nostrils, where fine hairs and mucus filter it. Rings of cartilage keep the air passage from collapsing." },
+          { "speaker": "NEO", "text": "In the lungs, the passage divides into smaller tubes that end in balloon-like alveoli, giving a large surface for gas exchange." },
+          { "speaker": "NEO", "text": "When we breathe in, the ribs lift and the diaphragm flattens. The chest cavity becomes larger, and air is sucked in." },
+          { "speaker": "NEO", "text": "Haemoglobin in red blood cells carries oxygen. Carbon dioxide, being more soluble in water, is mostly carried dissolved in blood." },
+          { "speaker": "NEO", "text": "Board tip: the three-pathway flowchart is asked very often. Always mention where each step happens." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Glucose → pyruvate (cytoplasm)', '2. Yeast: ethanol + CO2 | Mitochondria: CO2 + H2O | Muscle: lactic acid', '3. Alveoli: large surface; haemoglobin carries O2'. Zippy stretches his leg, cramp gone.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: glucose becomes pyruvate in the cytoplasm. Two: pyruvate gives ethanol and carbon dioxide in yeast, carbon dioxide and water in mitochondria, and lactic acid in muscles short of oxygen. Three: alveoli give a large surface for gas exchange, and haemoglobin carries oxygen." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Life Processes",
+    "topic_no": 5,
+    "name": "Transportation in Human Beings",
+    "scenes": [
+      {
+        "animation": "A cartoon heart dressed as a Mumbai dabbawala pedals a cycle loaded with red tiffin boxes labelled 'O2' and 'Food', racing along a city map made of blood vessels.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Who's that super-fast delivery guy?" },
+          { "speaker": "NEO", "text": "That's your heart, Zippy. It pumps blood to deliver oxygen and food to every cell in your body." }
+        ]
+      },
+      {
+        "animation": "A test tube of blood separates into layers: a pale yellow 'Plasma' carrying tiny packets of food, CO2 and waste; red discs labelled 'RBCs: O2'; and small fragments labelled 'Platelets' rushing to plug a cut on a finger.",
+        "lines": [
+          { "speaker": "NEO", "text": "Blood has a fluid medium called plasma, which carries food, carbon dioxide and nitrogenous wastes in dissolved form." },
+          { "speaker": "NEO", "text": "Red blood cells carry oxygen. Platelets help blood to clot and plug leaks when we are injured." }
+        ]
+      },
+      {
+        "animation": "A four-chambered heart is drawn step by step and labelled: 'Left atrium', 'Left ventricle', 'Right atrium', 'Right ventricle', with valves. Red arrows: lungs → pulmonary vein → left atrium → left ventricle → aorta → body. Blue arrows: body → vena cava → right atrium → right ventricle → pulmonary artery → lungs.",
+        "lines": [
+          { "speaker": "NEO", "text": "The heart has four chambers. Oxygen-rich blood from the lungs enters the left atrium, moves to the left ventricle, and is pumped out to the body." },
+          { "speaker": "NEO", "text": "Deoxygenated blood from the body enters the right atrium through the vena cava. The right ventricle then pumps it to the lungs for oxygenation." },
+          { "speaker": "NEO", "text": "Valves make sure blood does not flow backwards when the chambers contract." },
+          { "speaker": "ZIPPY", "text": "Why are the ventricle walls so thick?" },
+          { "speaker": "NEO", "text": "Ventricles pump blood to various organs, so they have thicker muscular walls than the atria." }
+        ]
+      },
+      {
+        "animation": "A figure-of-eight loop shows blood passing through the heart twice: once to the lungs, once to the body. Side panels show a fish heart with two chambers and a single loop, and a frog heart with three chambers.",
+        "lines": [
+          { "speaker": "NEO", "text": "In each cycle, blood passes through the heart twice. This is called double circulation." },
+          { "speaker": "NEO", "text": "Keeping oxygenated and deoxygenated blood separate gives a highly efficient oxygen supply. Birds and mammals need this, because they constantly use energy to maintain body temperature." },
+          { "speaker": "NEO", "text": "Fish have only two chambers, and their blood goes through the heart only once in each cycle." }
+        ]
+      },
+      {
+        "animation": "Three pipes side by side: a thick elastic 'Artery', a thin-walled 'Vein' with flap valves, and a hair-thin 'Capillary: one cell thick'. A pale fluid labelled 'Lymph' seeps out and drains into lymphatic vessels. A sphygmomanometer cuff shows '120/80 mm Hg'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Arteries carry blood away from the heart under high pressure, so they have thick, elastic walls. Veins bring blood back to the heart and have valves." },
+          { "speaker": "NEO", "text": "Exchange with body cells happens across capillaries, whose walls are one cell thick." },
+          { "speaker": "NEO", "text": "Lymph is a colourless fluid that carries digested fat from the intestine and drains excess fluid back into the blood." },
+          { "speaker": "NEO", "text": "Normal blood pressure is about one twenty over eighty millimetres of mercury, measured with a sphygmomanometer." },
+          { "speaker": "NEO", "text": "Board tip: practise the labelled heart diagram with arrows. The arrows showing blood flow carry marks." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Blood: plasma, RBCs, platelets', '2. Four chambers → double circulation', '3. Arteries, veins, capillaries; lymph'. The dabbawala heart rings its cycle bell.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: blood has plasma, red blood cells and platelets. Two: the four-chambered heart keeps oxygenated and deoxygenated blood separate, giving double circulation. Three: arteries carry blood away, veins bring it back, capillaries exchange materials, and lymph returns extra fluid." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Life Processes",
+    "topic_no": 6,
+    "name": "Transportation in Plants",
+    "scenes": [
+      {
+        "animation": "A tall coconut tree on a Kerala beach; Zippy climbs to the top with an extra-long straw, tries to suck water up from the roots, and collapses gasping.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How does a tree lift water all the way up without a heart or a pump?" },
+          { "speaker": "NEO", "text": "Plants use two kinds of tubes and some clever physics. Meet xylem and phloem." }
+        ]
+      },
+      {
+        "animation": "A cut-away stem: blue tubes labelled 'Xylem: water and minerals from soil' with upward arrows, and orange tubes labelled 'Phloem: food from leaves' with arrows going up and down.",
+        "lines": [
+          { "speaker": "NEO", "text": "Xylem moves water and minerals obtained from the soil. Phloem transports the products of photosynthesis from the leaves to other parts." },
+          { "speaker": "NEO", "text": "Plants have many dead cells and don't move around, so their energy needs are low. Their transport systems can be relatively slow." }
+        ]
+      },
+      {
+        "animation": "Root cells pull in mineral ions from the soil; a concentration arrow appears, and water rushes into the root after them. A night-sky scene shows the water column being steadily pushed upwards.",
+        "lines": [
+          { "speaker": "NEO", "text": "Root cells in contact with the soil actively take up ions. This creates a difference in ion concentration between the root and the soil." },
+          { "speaker": "NEO", "text": "So water moves into the root from the soil. This steady movement creates a column of water that is pushed upwards." },
+          { "speaker": "NEO", "text": "This root pressure is especially important for moving water at night." }
+        ]
+      },
+      {
+        "animation": "A sunny afternoon: leaves release wavy water-vapour lines through their stomata. A suction arrow runs down the xylem to the roots, pulling a chain of water molecules upward like a rope in tug-of-war.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "But root pressure alone can't push water to the top of a tall tree!" },
+          { "speaker": "NEO", "text": "Right. Water evaporates from the leaves through stomata. This loss of water vapour from the aerial parts is transpiration." },
+          { "speaker": "NEO", "text": "It creates a suction that pulls water up from the xylem cells of the roots. During the day, transpiration is the major driving force." },
+          { "speaker": "NEO", "text": "Transpiration also helps in temperature regulation." }
+        ]
+      },
+      {
+        "animation": "Inside the phloem, a sieve tube sits beside a companion cell; an ATP battery loads sucrose into the tube, water rushes in, and the pressure pushes food both up to new buds and down to the roots.",
+        "lines": [
+          { "speaker": "NEO", "text": "Transport of soluble products of photosynthesis is called translocation. It happens in the phloem, through sieve tubes with the help of companion cells." },
+          { "speaker": "NEO", "text": "Sucrose is loaded into the phloem using energy from A T P. This raises the osmotic pressure, so water enters and pushes the material to tissues with lower pressure." },
+          { "speaker": "NEO", "text": "Phloem can carry food upwards or downwards. In spring, sugar stored in roots or stems is sent to the buds." },
+          { "speaker": "NEO", "text": "Board tip: xylem transport is driven by simple physical forces, but translocation in phloem uses energy. This difference is a favourite question." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Xylem: water and minerals; Phloem: food', '2. Root pressure at night; transpiration pull by day', '3. Translocation uses ATP, moves both ways'. The coconut tree waves a frond; Zippy drinks tender coconut water with a normal straw.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: xylem carries water and minerals, phloem carries food. Two: root pressure pushes water up at night, and transpiration pull drives it by day. Three: translocation in phloem uses energy from A T P and can move food both up and down." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Life Processes",
+    "topic_no": 7,
+    "name": "Excretion in Human Beings",
+    "scenes": [
+      {
+        "animation": "A kitchen water purifier drips clean water into a glass and sends dirty water out through a side pipe. The purifier morphs into a pair of bean-shaped kidneys wearing 'Filter' badges.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Our water purifier keeps the clean water and throws out the dirty stuff. Do we have one inside us?" },
+          { "speaker": "NEO", "text": "Two, actually. Your kidneys filter the blood and remove nitrogenous wastes like urea and uric acid." }
+        ]
+      },
+      {
+        "animation": "A labelled diagram builds step by step: two kidneys on either side of the backbone, a ureter running down from each, the urinary bladder, and the urethra. Yellow arrows trace the path of urine.",
+        "lines": [
+          { "speaker": "NEO", "text": "The human excretory system has a pair of kidneys, a pair of ureters, a urinary bladder and a urethra." },
+          { "speaker": "NEO", "text": "The kidneys lie in the abdomen, one on either side of the backbone. Urine formed in the kidneys passes through the ureters into the bladder." }
+        ]
+      },
+      {
+        "animation": "Zoom into a single nephron: a cup-shaped 'Bowman's capsule' holds a knot of capillaries labelled 'Glomerulus'. Blood is squeezed and fluid passes into a long tubule; glucose, amino acid, salt and water icons are pulled back into surrounding capillaries.",
+        "lines": [
+          { "speaker": "NEO", "text": "The basic filtration unit of the kidney is the nephron. Each kidney has large numbers of them, packed close together." },
+          { "speaker": "NEO", "text": "At its start is a cup-shaped Bowman's capsule, holding a cluster of thin-walled capillaries called the glomerulus. Here, blood is filtered." },
+          { "speaker": "ZIPPY", "text": "Wouldn't that throw away useful stuff too?" },
+          { "speaker": "NEO", "text": "It does at first. So as the filtrate flows along the tubule, glucose, amino acids, salts and a major amount of water are selectively reabsorbed." }
+        ]
+      },
+      {
+        "animation": "A giant tank labelled '180 L per day' shrinks down to a small bottle labelled '1–2 L urine' as reabsorption arrows pull water back into the blood.",
+        "lines": [
+          { "speaker": "NEO", "text": "The initial filtrate in the kidneys is about one hundred eighty litres a day. But only a litre or two is actually excreted as urine." },
+          { "speaker": "NEO", "text": "How much water is reabsorbed depends on how much excess water the body has, and how much dissolved waste must be removed." }
+        ]
+      },
+      {
+        "animation": "The bladder fills like a balloon and a nerve line lights up, signalling the urge to urinate. Then a hospital scene: a dialysis machine with tubes, labelled 'Artificial kidney: no reabsorption'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Urine is stored in the urinary bladder until the pressure of the expanded bladder leads to the urge to pass it out. The bladder is muscular and under nervous control." },
+          { "speaker": "NEO", "text": "If the kidneys fail, an artificial kidney removes nitrogenous wastes by dialysis. Unlike a real kidney, it does no reabsorption." },
+          { "speaker": "NEO", "text": "Board tip: draw the nephron with Bowman's capsule, glomerulus and tubule clearly labelled. It's a favourite diagram question." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Kidneys → ureters → bladder → urethra', '2. Nephron: glomerulus filters, tubule reabsorbs', '3. 180 L filtrate → 1–2 L urine'. The kidneys give Zippy a thumbs-up.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: urine flows from the kidneys through the ureters to the bladder and out through the urethra. Two: in the nephron, the glomerulus filters blood and the tubule reabsorbs useful substances. Three: about one hundred eighty litres of filtrate become just one or two litres of urine a day." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 5,
+    "chapter": "Life Processes",
+    "topic_no": 8,
+    "name": "Excretion in Plants",
+    "scenes": [
+      {
+        "animation": "Autumn in a park: a peepal tree drops a shower of yellow leaves onto Zippy. Each falling leaf wears a tiny tag reading 'waste'. Zippy looks up, offended.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Hey tree! Did you just throw your garbage on me?" },
+          { "speaker": "NEO", "text": "In a way, yes. Plants have no kidneys, so they use completely different strategies for excretion." }
+        ]
+      },
+      {
+        "animation": "A leaf in sunlight releases bubbles labelled 'O2' from photosynthesis and wavy vapour lines labelled 'Excess water: transpiration'. Zippy catches an oxygen bubble and takes a big happy breath.",
+        "lines": [
+          { "speaker": "NEO", "text": "Oxygen is produced during photosynthesis, and the plant releases it. So for plants, oxygen itself can be considered a waste product." },
+          { "speaker": "ZIPPY", "text": "Waste? Oxygen is life for me!" },
+          { "speaker": "NEO", "text": "One organism's waste is another's need. Plants also get rid of excess water by transpiration." }
+        ]
+      },
+      {
+        "animation": "A cut-away plant cell shows a large central vacuole collecting little waste crystals. Then a leaf fills with waste, turns yellow, and falls off. Many cells in a woody stem are shown in grey, labelled 'Dead cells'.",
+        "lines": [
+          { "speaker": "NEO", "text": "For other wastes, plants use the fact that many of their tissues consist of dead cells. They can even lose some parts, like leaves." },
+          { "speaker": "NEO", "text": "Many plant waste products are stored in cellular vacuoles." },
+          { "speaker": "NEO", "text": "Waste products may also be stored in leaves that later fall off, just like the ones that landed on you." }
+        ]
+      },
+      {
+        "animation": "An old tree trunk is sliced open: the inner old xylem glows amber with labels 'Resins' and 'Gums', and a drop of gum oozes out of a babool tree's bark. Then roots release tiny waste particles into the soil around them.",
+        "lines": [
+          { "speaker": "NEO", "text": "Other waste products are stored as resins and gums, especially in old xylem." },
+          { "speaker": "NEO", "text": "Plants also excrete some waste substances into the soil around them." },
+          { "speaker": "ZIPPY", "text": "So the tree is basically storing its trash in the attic and the basement!" },
+          { "speaker": "NEO", "text": "That's a fair way to remember it." }
+        ]
+      },
+      {
+        "animation": "Split screen: a human with kidneys on one side and a plant on the other; a checklist for the plant ticks off 'O2 released', 'Transpiration', 'Vacuoles', 'Falling leaves', 'Resins and gums in old xylem', 'Into soil'. A 'Board tip' card slides in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: 'How do plants get rid of their excretory products?' is a classic three-mark question." },
+          { "speaker": "NEO", "text": "List at least four methods: transpiration, storage in vacuoles, shedding leaves, and resins and gums in old xylem. Add excretion into the soil for a complete answer." }
+        ]
+      },
+      {
+        "animation": "Chalkboard recap: '1. Oxygen and excess water given out', '2. Wastes stored in vacuoles and falling leaves', '3. Resins, gums in old xylem; some into soil'. The peepal tree gently drops one last leaf into Zippy's hands.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: plants release oxygen and remove excess water by transpiration. Two: they store wastes in cell vacuoles and in leaves that fall off. Three: they store resins and gums in old xylem, and release some wastes into the soil." }
+        ]
+      }
+    ]
+  }
+]

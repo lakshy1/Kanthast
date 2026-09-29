@@ -1,0 +1,278 @@
+[
+  {
+    "chapter_no": 3,
+    "chapter": "Data Entry and Keyboarding Skills",
+    "topic_no": 1,
+    "name": "Types of Keys and the Numeric Keypad",
+    "scenes": [
+      {
+        "animation": "A school canteen cashier types bill amounts super fast on the side number pad, while Zippy hunts for the digits along the top row with one finger, bouncing from key to key. The queue behind him grows longer and longer.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How is the canteen uncle entering numbers ten times faster than me?" },
+          { "speaker": "NEO", "text": "He uses the numeric keypad. First, let's meet every family of keys on the keyboard." }
+        ]
+      },
+      {
+        "animation": "A full keyboard floats up and splits into colour-coded groups that light up one by one with labels: 'Alphanumeric / Typing Keys' (green), 'Function Keys F1-F12' (orange), 'Control Keys: Ctrl, Alt, Esc, Windows' (purple), 'Navigation Keys: arrows, Home, End, Page Up, Page Down' (blue), 'Numeric Keypad' (yellow).",
+        "lines": [
+          { "speaker": "NEO", "text": "Typing keys, also called alphanumeric keys, give you letters, numbers and punctuation marks." },
+          { "speaker": "NEO", "text": "Function keys, F1 to F12, sit on the top row. Their job depends on the program. F1 usually opens Help." },
+          { "speaker": "NEO", "text": "Control keys like Control, Alt, Escape and the Windows key work alone or together with other keys." },
+          { "speaker": "NEO", "text": "Navigation keys, the arrows, Home, End, Page Up and Page Down, move the cursor around a document." }
+        ]
+      },
+      {
+        "animation": "Close-up of keys with pop-up labels: 'Enter: ends a line / runs a command', 'Shift: capital letters and top symbols', 'Caps Lock: all capitals', 'Tab: jumps ahead', 'Space bar'. Then a word 'KITEE' is corrected: Backspace erases the letter left of the cursor, Delete erases the letter to its right.",
+        "lines": [
+          { "speaker": "NEO", "text": "Some special keys you will use all the time: Enter, Shift, Caps Lock, Tab and the space bar." },
+          { "speaker": "NEO", "text": "To delete text, Backspace removes the character to the left of the cursor. Delete removes the character to the right." },
+          { "speaker": "ZIPPY", "text": "So Backspace walks backwards, and Delete eats forwards!" }
+        ]
+      },
+      {
+        "animation": "Zoom into the numeric keypad. The 'Num Lock' key toggles and its indicator light glows. With the light off, keys 8, 2, 4, 6 show arrow icons. The 5 key sparkles to show its raised bump; keys 4, 5, 6 glow as the home row, with +, -, * and / shown on the side.",
+        "lines": [
+          { "speaker": "NEO", "text": "The numeric keypad on the right works like a calculator. It has digits, the decimal point and the operators plus, minus, star and slash." },
+          { "speaker": "NEO", "text": "It types numbers only when Num Lock is on. When Num Lock is off, many of these keys act as arrow and navigation keys." },
+          { "speaker": "NEO", "text": "Four, five and six are its home keys, and five has a small bump so your middle finger finds it without looking." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card slides in: '1. Turn Num Lock on. 2. Rest fingers on 4-5-6. 3. Type 7410 and 8520 without looking. 4. Turn Num Lock off and try again.' A yellow 'EXAM TIP' card follows: 'Backspace = left, Delete = right'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: switch Num Lock on, rest your fingers on four, five and six, and type a few numbers without looking. Then switch it off and see what changes." },
+          { "speaker": "NEO", "text": "Exam tip: a favourite question asks the difference between Backspace and Delete. Remember left and right." }
+        ]
+      },
+      {
+        "animation": "Recap board with a colour-coded keyboard. Points appear: '1. Typing, function, control, navigation keys + numeric keypad', '2. Backspace deletes left, Delete deletes right', '3. Numeric keypad: Num Lock, home keys 4-5-6, bump on 5'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a keyboard has typing, function, control and navigation keys, plus a numeric keypad." },
+          { "speaker": "NEO", "text": "Two: Backspace deletes to the left of the cursor, and Delete deletes to the right." },
+          { "speaker": "NEO", "text": "Three: the numeric keypad needs Num Lock on, and its home keys are four, five and six." },
+          { "speaker": "ZIPPY", "text": "Watch out, canteen uncle. There's a new cashier in town." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Data Entry and Keyboarding Skills",
+    "topic_no": 2,
+    "name": "Home Keys, Guide Keys and Finger Positions",
+    "scenes": [
+      {
+        "animation": "Zippy types with two fingers, head bobbing up and down between screen and keyboard like a pigeon. His neck creaks with a cartoon 'CRACK' sound and a crick-in-the-neck icon appears.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Look at key, look at screen, look at key. My neck is filing a complaint." },
+          { "speaker": "NEO", "text": "Your fingers need a home base. Then your eyes can stay on the screen." }
+        ]
+      },
+      {
+        "animation": "The middle letter row lights up: 'A S D F' for the left hand and 'J K L ;' for the right hand, labelled 'HOME KEYS'. The F and J keys zoom in to show small raised bars, labelled 'GUIDE KEYS'. Both thumbs rest on the space bar.",
+        "lines": [
+          { "speaker": "NEO", "text": "The home keys are A, S, D, F for the left hand, and J, K, L, semicolon for the right hand." },
+          { "speaker": "NEO", "text": "F and J have small raised bumps. These are the guide keys. Your index fingers feel them and settle in place without looking." },
+          { "speaker": "NEO", "text": "Both thumbs rest on the space bar. After every key, your finger returns to its home key." }
+        ]
+      },
+      {
+        "animation": "Each finger gets a colour, and its keys light up in that colour row by row across the four rows (number, top, home, bottom): left little: 1 Q A Z; left ring: 2 W S X; left middle: 3 E D C; left index: 4 5 R T F G V B; right index: 6 7 Y U H J N M; right middle: 8 I K comma; right ring: 9 O L full stop; right little: 0 P semicolon slash and keys to the right.",
+        "lines": [
+          { "speaker": "NEO", "text": "Each finger owns a slanting column of keys across the four rows." },
+          { "speaker": "NEO", "text": "The left little finger types one, Q, A and Z. The ring finger types two, W, S and X. The middle finger types three, E, D and C." },
+          { "speaker": "NEO", "text": "The index fingers work hardest. The left one covers four, five, R, T, F, G, V and B. The right one covers six, seven, Y, U, H, J, N and M." },
+          { "speaker": "NEO", "text": "On the right, middle takes eight, I, K and comma, ring takes nine, O, L and full stop, and the little finger takes zero, P, semicolon and the keys beyond." }
+        ]
+      },
+      {
+        "animation": "A side view of a student at a desk with green ticks appearing: 'Back straight', 'Feet flat on floor', 'Screen at eye level, arm's length away', 'Elbows at about 90 degrees', 'Wrists straight, not resting'. A slouching Zippy straightens up with a 'boing'.",
+        "lines": [
+          { "speaker": "NEO", "text": "This is typing ergonomics, the healthy way to sit. Keep your back straight and feet flat on the floor." },
+          { "speaker": "NEO", "text": "Keep the screen at eye level, elbows bent at about a right angle, and wrists straight. Take short breaks." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Find F and J by touch, eyes closed. 2. Type: asdf jkl; asdf jkl; 3. Type: fgf jhj ded kik.' Then a 'BOARD TIP' card: 'Home keys: ASDF JKL; Guide keys: F and J'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: close your eyes, find F and J by touch, then type the home row three times." },
+          { "speaker": "NEO", "text": "Board tip: don't confuse home keys and guide keys. Home keys are eight keys; guide keys are just F and J." }
+        ]
+      },
+      {
+        "animation": "Recap board with two glowing hands on the keyboard. Points appear: '1. Home keys ASDF JKL;', '2. Guide keys F and J have bumps', '3. Each finger owns a column across four rows; sit right'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the home keys are A S D F and J K L semicolon." },
+          { "speaker": "NEO", "text": "Two: F and J are guide keys with bumps to find home by touch." },
+          { "speaker": "NEO", "text": "Three: each finger owns its own keys across four rows, and good posture protects your body." },
+          { "speaker": "ZIPPY", "text": "My neck has withdrawn its complaint." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Data Entry and Keyboarding Skills",
+    "topic_no": 3,
+    "name": "Pointing Device: The Mouse",
+    "scenes": [
+      {
+        "animation": "Zippy chases a real grey mouse around the computer lab with a piece of cheese, while the computer mouse sits on its mouse pad, blinking a red light at him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, the mouse ran away! How will I use the computer now?" },
+          { "speaker": "NEO", "text": "Wrong mouse, Zippy. The one we need is sitting right there on the desk." }
+        ]
+      },
+      {
+        "animation": "A computer mouse rotates in 3D with labels: 'Left button', 'Right button', 'Scroll wheel', and an optical sensor light underneath. As it slides on the pad, an arrow pointer moves on the screen in the same direction.",
+        "lines": [
+          { "speaker": "NEO", "text": "A mouse is a pointing device. When you move it on a flat surface, the pointer on the screen moves the same way." },
+          { "speaker": "NEO", "text": "It usually has a left button, a right button and a scroll wheel in between. Rest your index finger on the left button and your middle finger on the right." }
+        ]
+      },
+      {
+        "animation": "Four quick split-screen demos with labels: 'Click' selects a folder icon (it turns blue); 'Double click' opens the folder; 'Right click' pops up a context menu with Open, Copy, Delete, Rename; 'Scroll' rolls the wheel and a long page slides up and down.",
+        "lines": [
+          { "speaker": "NEO", "text": "A click is one press of the left button. It selects an item or places the cursor." },
+          { "speaker": "NEO", "text": "A double click is two quick presses. It opens a file, folder or program." },
+          { "speaker": "NEO", "text": "A right click opens a context menu with options for that item." },
+          { "speaker": "NEO", "text": "Rolling the scroll wheel moves a long page up or down." }
+        ]
+      },
+      {
+        "animation": "A file named 'Holiday Homework' is pressed with the left button held down (a hand icon grips it), dragged across the screen, and released over a folder named 'Class 9'. Labels appear: 'Press and hold', 'Move', 'Release = Drop'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Drag and drop moves things. Point at an item, press and hold the left button, move the mouse, then release it where you want the item." },
+          { "speaker": "ZIPPY", "text": "Like carrying my tiffin to the table and dropping it there." },
+          { "speaker": "NEO", "text": "Exactly. Just don't let go halfway, or it lands in the wrong place." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Click a desktop icon. 2. Double click to open it. 3. Right click the desktop. 4. Drag a file into a folder. 5. Scroll a web page.' A yellow 'EXAM TIP' card follows: 'Open = double click; Context menu = right click'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: click an icon, double click to open it, right click the desktop, drag a file into a folder, and scroll a long page." },
+          { "speaker": "NEO", "text": "Exam tip: learn which operation does what. Questions often ask which action opens a context menu. The answer is right click." }
+        ]
+      },
+      {
+        "animation": "Recap board with the mouse at the centre. Points appear: '1. Mouse = pointing device', '2. Click selects, double click opens, right click shows menu', '3. Drag and drop moves; scroll wheel scrolls'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a mouse is a pointing device that moves the pointer on screen." },
+          { "speaker": "NEO", "text": "Two: click selects, double click opens, and right click shows the context menu." },
+          { "speaker": "NEO", "text": "Three: drag and drop moves items, and the scroll wheel moves the page." },
+          { "speaker": "ZIPPY", "text": "Fine. I'll give the cheese to the other mouse." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Data Entry and Keyboarding Skills",
+    "topic_no": 4,
+    "name": "Rapid Typing Tutor and Touch Typing",
+    "scenes": [
+      {
+        "animation": "A piano recital: a pianist plays with eyes closed while the audience claps. Split screen: Zippy at a keyboard with eyes glued to the keys, typing 'teh qiuck borwn'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Pianists don't look at the keys. Why can't I do that on a keyboard?" },
+          { "speaker": "NEO", "text": "You can. It's called touch typing, and there's free software to train you." }
+        ]
+      },
+      {
+        "animation": "A definition card: 'Touch typing = typing without looking at the keyboard, using all ten fingers and muscle memory.' Arrows show the eyes on the screen and fingers returning to the home row after each key.",
+        "lines": [
+          { "speaker": "NEO", "text": "Touch typing means typing without looking at the keyboard, using all ten fingers." },
+          { "speaker": "NEO", "text": "Each finger presses only its own keys and returns to the home row. With practice, your fingers remember the positions." },
+          { "speaker": "NEO", "text": "The result is faster typing with fewer mistakes, because your eyes stay on the text." }
+        ]
+      },
+      {
+        "animation": "The Rapid Typing Tutor window animates open with labelled parts: the lesson text area at the top, a highlighted next character, the on-screen keyboard emulator with the key to press glowing, finger zones in different colours, and toolbar buttons for Course, Lesson Editor, Statistics and Options.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rapid Typing Tutor is a free keyboard trainer. Its lessons start with the home row and slowly add new keys." },
+          { "speaker": "NEO", "text": "The lesson text appears at the top, and the next character is highlighted." },
+          { "speaker": "NEO", "text": "Below it is a keyboard emulator. The key you must press lights up, and colour zones show which finger should press it." },
+          { "speaker": "NEO", "text": "The toolbar lets you choose a course, open the lesson editor, see statistics and change options." }
+        ]
+      },
+      {
+        "animation": "Zippy types a lesson line. Correct letters turn green; a wrong key flashes red with a buzz and the correct key glows on the emulator. A progress bar fills, then a results screen pops up with speed and accuracy numbers.",
+        "lines": [
+          { "speaker": "NEO", "text": "As you type, correct characters are marked and mistakes are flagged at once, so you learn the right key immediately." },
+          { "speaker": "ZIPPY", "text": "It's like a video game that tells on me every time I cheat!" },
+          { "speaker": "NEO", "text": "When the lesson ends, it shows your speed and accuracy." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Open Rapid Typing Tutor. 2. Pick the beginner course. 3. Do the home-row lesson without looking down. 4. Note the keys that turned red.' Then an 'EXAM TIP' card: 'Touch typing = no looking + all ten fingers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: open Rapid Typing Tutor, start the first home row lesson, and keep your eyes on the screen. Note which keys you miss." },
+          { "speaker": "NEO", "text": "Exam tip: when defining touch typing, write both parts: without looking at the keys, and using all fingers." }
+        ]
+      },
+      {
+        "animation": "Recap board with a tiny piano keyboard morphing into a computer keyboard. Points appear: '1. Touch typing: no looking, all ten fingers', '2. Rapid Typing Tutor: lessons + keyboard emulator', '3. Instant error feedback; speed and accuracy results'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: touch typing means typing without looking, using all ten fingers." },
+          { "speaker": "NEO", "text": "Two: Rapid Typing Tutor gives lessons with a keyboard emulator that shows which key and finger to use." },
+          { "speaker": "NEO", "text": "Three: it flags errors instantly and shows speed and accuracy at the end." },
+          { "speaker": "ZIPPY", "text": "Next stop, a keyboard recital with my eyes closed." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 3,
+    "chapter": "Data Entry and Keyboarding Skills",
+    "topic_no": 5,
+    "name": "Lesson Editor, Results and Typing Speed",
+    "scenes": [
+      {
+        "animation": "A sports-style scoreboard flashes 'ZIPPY: 90 WPM!' while Zippy flexes. Neo taps the board and small print appears underneath: '45 errors'. The number crashes down with a cartoon thud.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Ninety words per minute! I'm the fastest typist in Class 9!" },
+          { "speaker": "NEO", "text": "Speed with forty-five mistakes is not speed, Zippy. Let's learn how typing speed is really measured." }
+        ]
+      },
+      {
+        "animation": "A Rapid Typing Tutor results screen with labelled boxes: 'Speed (WPM)', 'Accuracy (%)', 'Errors', 'Time'. A keyboard heat map shows problem keys in red. A statistics chart shows improvement across lessons.",
+        "lines": [
+          { "speaker": "NEO", "text": "After each lesson, Rapid Typing Tutor shows your results: speed, accuracy, number of errors and time taken." },
+          { "speaker": "NEO", "text": "The keys you get wrong most often are marked, so you know what to practise. Statistics show how you improve over time." }
+        ]
+      },
+      {
+        "animation": "A chalkboard builds the formulas step by step: 'Gross WPM = (Characters typed / 5) / Time in minutes'. Example: '1000 characters in 5 minutes: (1000 / 5) / 5 = 200 / 5 = 40 WPM'. Next: 'Net WPM = Gross WPM - (Uncorrected errors / Time)': '40 - (10 / 5) = 40 - 2 = 38 WPM'. Then 'Accuracy = (Correct characters / Total characters) x 100'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In typing, one word means five characters, including spaces and punctuation." },
+          { "speaker": "NEO", "text": "Gross words per minute equals characters typed, divided by five, divided by the time in minutes." },
+          { "speaker": "NEO", "text": "If you type one thousand characters in five minutes, that is two hundred words in five minutes, so forty gross words per minute." },
+          { "speaker": "NEO", "text": "Net speed subtracts errors. With ten uncorrected errors in five minutes, net speed is forty minus two, which is thirty-eight words per minute." }
+        ]
+      },
+      {
+        "animation": "The Lesson Editor button is clicked; the Lesson Editor window opens with a course tree on the left and a text box on the right. Zippy creates a new lesson named 'Cricket Words' and types 'Kohli hits a six over long on'. A metronome ticks steadily beside the keyboard, labelled 'Typing Rhythm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "With the Lesson Editor, you can create your own courses and lessons, or edit existing ones, and type in any practice text you like." },
+          { "speaker": "NEO", "text": "Finally, rhythm. Press every key with the same steady beat, like a ticking clock. Even rhythm builds speed without errors." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Create a lesson in the Lesson Editor. 2. Type it for 2 minutes. 3. Calculate gross WPM by hand. 4. Compare with the results screen.' Then a 'BOARD TIP' card: 'Always divide characters by 5 first'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: create a lesson, type it for two minutes, and calculate your gross speed by hand. Then check the results screen." },
+          { "speaker": "NEO", "text": "Board tip: in speed sums, divide characters by five first, then by the time in minutes. Show each step." }
+        ]
+      },
+      {
+        "animation": "Recap board with the scoreboard now reading 'Net 38 WPM, Accuracy 98%'. Points appear: '1. Results: speed, accuracy, errors, time', '2. Gross WPM = (chars / 5) / min; Net = Gross - errors / min', '3. Lesson Editor + steady rhythm'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: results show your speed, accuracy, errors and time." },
+          { "speaker": "NEO", "text": "Two: gross speed is characters divided by five, divided by minutes; net speed subtracts errors per minute." },
+          { "speaker": "NEO", "text": "Three: make custom lessons in the Lesson Editor, and type with a steady rhythm." },
+          { "speaker": "ZIPPY", "text": "Thirty-eight real words per minute. Still the fastest in my house." }
+        ]
+      }
+    ]
+  }
+]

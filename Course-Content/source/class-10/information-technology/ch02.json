@@ -1,0 +1,277 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "Digital Documentation (Advanced)",
+    "topic_no": 1,
+    "name": "Styles in LibreOffice Writer",
+    "scenes": [
+      {
+        "animation": "Zippy sits at a laptop in LibreOffice Writer with a 40-page project file. He changes each heading's font to bold blue by hand, one by one; a counter reads 'Heading 1 of 63' and his spark droops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Sixty-three headings, and my teacher wants them all green now. Help!" },
+          { "speaker": "NEO", "text": "Change one style, Zippy, and all sixty-three change together. Let me show you." }
+        ]
+      },
+      {
+        "animation": "Animated Writer window: the cursor clicks the menu 'Styles > Manage Styles' while a key cap 'F11' glows. The Styles deck opens in the sidebar; its top icons are highlighted one by one with labels: Paragraph, Character, Frame, Page, List, Table Styles.",
+        "lines": [
+          { "speaker": "NEO", "text": "A style is a set of formats you save with a name and apply in one click." },
+          { "speaker": "NEO", "text": "Press F11 to open the Styles window. Writer has six style categories: paragraph, character, frame, page, list and table styles." },
+          { "speaker": "NEO", "text": "Paragraph styles format whole paragraphs, like headings. Character styles format just a few selected words." }
+        ]
+      },
+      {
+        "animation": "In the Styles deck, the paint-bucket icon labelled 'Fill Format Mode' is clicked with 'Heading 2' selected. The cursor turns into a bucket and clicks three paragraphs; each instantly becomes Heading 2. Pressing Esc exits the mode.",
+        "lines": [
+          { "speaker": "NEO", "text": "To apply a style to many places quickly, use Fill Format mode." },
+          { "speaker": "NEO", "text": "Select the style, click the paint bucket icon, then click each paragraph. Press Escape when you are done." },
+          { "speaker": "ZIPPY", "text": "It's like a colouring book, but for headings!" }
+        ]
+      },
+      {
+        "animation": "Zippy formats a line in green, 20 point, bold. The 'Styles actions' dropdown in the deck opens: 'New Style from Selection' is clicked; a box asks for a name and he types 'ZippyTitle'. Next, a second method: the formatted text is dragged into the Styles deck and the Create Style box appears. Finally he changes the text to red and picks 'Update Selected Style'; every ZippyTitle heading turns red together.",
+        "lines": [
+          { "speaker": "NEO", "text": "To create a new style, format some text, then choose New Style from Selection and give it a name." },
+          { "speaker": "NEO", "text": "You can also drag the selected text into the Styles window. That is the drag and drop method." },
+          { "speaker": "NEO", "text": "To update a style, change one example, then choose Update Selected Style. Every paragraph using it changes." }
+        ]
+      },
+      {
+        "animation": "'Styles actions > Load Styles' opens a dialog listing templates, with checkboxes 'Text, Frame, Page, List, Overwrite' and a 'From File' button. A 'MINI PRACTICAL' card lists: '1. Type three headings. 2. Create style MyHead from selection. 3. Apply with Fill Format. 4. Change colour, Update Selected Style.' A 'BOARD TIP' card follows.",
+        "lines": [
+          { "speaker": "NEO", "text": "To reuse styles from another document or template, choose Load Styles, tick the categories you need, and click From File." },
+          { "speaker": "NEO", "text": "Try it: type three headings, make a style called MyHead from selection, fill it in, then update its colour." },
+          { "speaker": "NEO", "text": "Board tip: remember the shortcut F11 for the Styles window, and the two ways to create a style: from selection, and drag and drop." }
+        ]
+      },
+      {
+        "animation": "Recap board with the Styles deck icon. Points appear: '1. F11 opens Styles; 6 categories', '2. Fill Format applies a style quickly', '3. New Style from Selection / Drag and Drop; Update Selected Style; Load Styles'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: press F11 for the Styles window; there are six style categories." },
+          { "speaker": "NEO", "text": "Two: Fill Format mode applies a style to many places quickly." },
+          { "speaker": "NEO", "text": "Three: create styles from selection or by drag and drop, update them in one click, and load styles from other files." },
+          { "speaker": "ZIPPY", "text": "Sixty-three green headings in five seconds. Teacher, eat your heart out." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Digital Documentation (Advanced)",
+    "topic_no": 2,
+    "name": "Working with Images and Drawing Objects",
+    "scenes": [
+      {
+        "animation": "Zippy pastes a photo of the school cricket team into his report. The picture is huge, covers the text, and pushes paragraphs onto the next page. The text lines scream and scatter.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I added one photo and my whole report ran away!" },
+          { "speaker": "NEO", "text": "Images need to be inserted, sized and positioned properly. Let's tame that photo." }
+        ]
+      },
+      {
+        "animation": "Four panels animate the insert methods: 'Insert > Image' opening the Insert Image dialog with the 'Link' checkbox highlighted; dragging a file from a folder into the page; Ctrl+C in one document and Ctrl+V in another; a chain icon for a linked image.",
+        "lines": [
+          { "speaker": "NEO", "text": "Writer gives four ways to insert an image. Use Insert, then Image, and pick the file." },
+          { "speaker": "NEO", "text": "Or drag and drop the file into the page, or copy and paste it from another document." },
+          { "speaker": "NEO", "text": "If you tick the Link box, the image is linked, not embedded. The file stays smaller, but the image must stay in its original location." }
+        ]
+      },
+      {
+        "animation": "The photo is clicked; the Image toolbar appears at the bottom. Corner handles are dragged inward to resize. Right-click > Crop shows crop handles trimming the sky. Finally the image is selected and the Delete key removes a duplicate.",
+        "lines": [
+          { "speaker": "NEO", "text": "Click the image and the Image toolbar appears. Drag a corner handle to resize it." },
+          { "speaker": "NEO", "text": "Right-click and choose Crop to trim unwanted parts. To delete an image, select it and press Delete." }
+        ]
+      },
+      {
+        "animation": "'View > Toolbars > Drawing' opens the Drawing toolbar. Zippy draws a rectangle and an arrow. Right-click > Area changes the fill to yellow; right-click > Line makes the border thick. Shift+click selects both; right-click > Group > Group joins them, and they move as one.",
+        "lines": [
+          { "speaker": "NEO", "text": "For diagrams, open View, Toolbars, Drawing. Draw shapes like rectangles, lines and arrows." },
+          { "speaker": "NEO", "text": "Right-click a shape to change its area colour and line style." },
+          { "speaker": "NEO", "text": "Select several objects with Shift and click, then right-click, Group. Now they move and resize together." }
+        ]
+      },
+      {
+        "animation": "Right-click menu on the photo expands: 'Anchor: To Page / To Paragraph / To Character / As Character', 'Wrap: None / Parallel / Optimal / Before / After / Through', 'Arrange: Bring to Front / Forward One / Backward One / Send to Back', 'Align'. Choosing Wrap > Optimal makes text flow neatly around the photo. A 'MINI PRACTICAL' card then a 'BOARD TIP' card slide in.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now position it. Anchoring decides what the image is attached to: the page, a paragraph, a character, or as a character." },
+          { "speaker": "NEO", "text": "Text wrapping decides how text flows around it, and Arrange decides which object sits in front." },
+          { "speaker": "NEO", "text": "Try it: insert a photo, crop it, set Wrap to Optimal, and group two shapes into a caption box." },
+          { "speaker": "NEO", "text": "Board tip: know the difference between a linked image and an embedded one. It is a favourite short-answer question." }
+        ]
+      },
+      {
+        "animation": "Recap board with the cricket photo neatly wrapped by text. Points appear: '1. Insert: menu, drag-drop, copy-paste, link', '2. Image toolbar: resize, crop, delete; Drawing toolbar + Group', '3. Position: Anchor, Wrap, Arrange, Align'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: insert images from the menu, by drag and drop, by copy and paste, or by linking." },
+          { "speaker": "NEO", "text": "Two: resize and crop with the Image toolbar, and group drawing objects so they move together." },
+          { "speaker": "NEO", "text": "Three: position images using anchor, wrap, arrange and align." },
+          { "speaker": "ZIPPY", "text": "My report is back, and the team photo finally fits." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Digital Documentation (Advanced)",
+    "topic_no": 3,
+    "name": "Table of Contents",
+    "scenes": [
+      {
+        "animation": "Zippy types a table of contents by hand with dots and page numbers. He adds one paragraph on page 2, and every page number below turns red and wrong, blinking 'ERROR'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I added one paragraph and now every page number in my contents is wrong!" },
+          { "speaker": "NEO", "text": "Never type a table of contents by hand. Writer builds it for you from your headings." }
+        ]
+      },
+      {
+        "animation": "The document outline appears as a tree: 'Heading 1: Chapter', 'Heading 2: Section', 'Heading 3: Sub-section', each level indented. The Set Paragraph Style box on the toolbar shows 'Heading 1' being applied.",
+        "lines": [
+          { "speaker": "NEO", "text": "The secret is heading styles. Apply Heading 1 to chapter titles, Heading 2 to sections, and Heading 3 to sub-sections." },
+          { "speaker": "NEO", "text": "This hierarchy of headings tells Writer what goes into the contents, and at which level." }
+        ]
+      },
+      {
+        "animation": "Cursor clicks at the top of page 1, then the menu path animates: 'Insert > Table of Contents and Index > Table of Contents, Index or Bibliography'. The dialog opens on the Type tab: Title 'Table of Contents', Type 'Table of Contents', 'Evaluate up to level: 3', 'Protected against manual changes' ticked. OK is clicked and a neat ToC with dotted leaders appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Place the cursor where you want it. Go to Insert, Table of Contents and Index, then Table of Contents, Index or Bibliography." },
+          { "speaker": "NEO", "text": "On the Type tab, set the title and how many heading levels to include. Click OK." },
+          { "speaker": "ZIPPY", "text": "Dots, page numbers, everything. In one click!" }
+        ]
+      },
+      {
+        "animation": "The dialog's other tabs flash: 'Entries', 'Styles', 'Columns', 'Background'. On Entries, a hyperlink option 'LS' is noted. The Background tab colours the ToC light blue.",
+        "lines": [
+          { "speaker": "NEO", "text": "To customise it, use the other tabs. Entries changes what each line shows, Styles changes its formatting, and Columns and Background change its layout and colour." }
+        ]
+      },
+      {
+        "animation": "Zippy adds a new heading on page 5. Right-click on the ToC shows 'Update Index', 'Edit Index', 'Delete Index'. 'Update Index' is clicked and the page numbers turn green and correct. Then 'Tools > Update > Update All' is shown as the second way. A 'MINI PRACTICAL' card and a 'BOARD TIP' card follow.",
+        "lines": [
+          { "speaker": "NEO", "text": "The ToC does not update itself. After editing, right-click it and choose Update Index, or use Tools, Update, Update All." },
+          { "speaker": "NEO", "text": "To remove it, right-click and choose Delete Index." },
+          { "speaker": "NEO", "text": "Try it: make a three-page document with Heading 1 and Heading 2, insert a ToC, add a heading, then update it." },
+          { "speaker": "NEO", "text": "Board tip: a ToC is built from heading styles. If a heading is missing from your ToC, check its style first." }
+        ]
+      },
+      {
+        "animation": "Recap board with a tidy ToC page. Points appear: '1. Apply Heading 1, 2, 3 styles', '2. Insert > Table of Contents and Index > Table of Contents, Index or Bibliography', '3. Right-click: Update Index / Edit Index / Delete Index'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: apply heading styles to build the hierarchy." },
+          { "speaker": "NEO", "text": "Two: insert the ToC from the Insert menu and customise it with the dialog tabs." },
+          { "speaker": "NEO", "text": "Three: right-click to update, edit or delete it." },
+          { "speaker": "ZIPPY", "text": "No more red numbers. My contents page is finally content." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Digital Documentation (Advanced)",
+    "topic_no": 4,
+    "name": "Using Templates",
+    "scenes": [
+      {
+        "animation": "Monday morning at the school office. Zippy recreates the school letterhead from scratch: logo, address, border, font. He finishes just as the bell rings for the next letter. A pile of 'Letter 2, 3, 4...' waits.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Every letter needs the same letterhead, and I rebuild it every single time." },
+          { "speaker": "NEO", "text": "Build it once and save it as a template. Then every new letter starts ready-made." }
+        ]
+      },
+      {
+        "animation": "A cookie cutter labelled 'Template (.ott)' presses out identical cookies labelled 'Document 1, 2, 3 (.odt)'. The cutter itself stays unchanged.",
+        "lines": [
+          { "speaker": "NEO", "text": "A template is a model document used to create other documents. It stores the layout, styles and fixed text." },
+          { "speaker": "NEO", "text": "Writer templates have the extension dot o t t. The documents made from them are ordinary files, and the template stays unchanged." }
+        ]
+      },
+      {
+        "animation": "Menu path animates: 'File > Templates > Save as Template'. The Save as Template dialog shows 'Template Name: School Letterhead', category 'My Templates', and a 'Set as default template' checkbox. Save is clicked.",
+        "lines": [
+          { "speaker": "NEO", "text": "To create one, design the letterhead, then choose File, Templates, Save as Template." },
+          { "speaker": "NEO", "text": "Give it a name, choose a category, and click Save. Tick Set as default template if every new document should use it." }
+        ]
+      },
+      {
+        "animation": "'File > Templates > Manage Templates' (key caps 'Ctrl+Shift+N') opens the Templates window with thumbnails and filters. Double-click opens a new letter. A right-click on a template shows 'Open, Edit, Set as Default, Rename, Delete', and the Manage menu shows 'Move', 'Import', 'Export'.",
+        "lines": [
+          { "speaker": "NEO", "text": "To use a template, open File, Templates, Manage Templates, or press Control Shift N. Double-click a template to start a new document." },
+          { "speaker": "NEO", "text": "Right-click a template to edit it. Use Move to shift it to another category, Import to bring in a template file, and Export to save a copy outside." },
+          { "speaker": "NEO", "text": "You can also use in-built templates, or download more from the online LibreOffice templates site." }
+        ]
+      },
+      {
+        "animation": "A 'MINI PRACTICAL' card: '1. Design a letterhead. 2. Save as Template named MyLetter. 3. Open it from Manage Templates. 4. Export it to your pen drive.' Then a yellow 'BOARD TIP' card: 'Template = .ott; Document = .odt'. Zippy writes both on his palm.",
+        "lines": [
+          { "speaker": "NEO", "text": "Try it: design a letterhead, save it as a template called MyLetter, start a new letter from it, then export it to a pen drive." },
+          { "speaker": "NEO", "text": "Board tip: don't mix up extensions. A Writer template is dot o t t, and a Writer document is dot o d t." },
+          { "speaker": "ZIPPY", "text": "Writing it on my hand. Very sustainable, no paper." }
+        ]
+      },
+      {
+        "animation": "Recap board with the cookie cutter. Points appear: '1. Template = model document (.ott)', '2. File > Templates > Save as Template', '3. Manage Templates: open, edit, move, import, export, set default'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a template is a model document, saved as dot o t t." },
+          { "speaker": "NEO", "text": "Two: create one with File, Templates, Save as Template." },
+          { "speaker": "NEO", "text": "Three: in Manage Templates you can open, edit, move, import, export and set a default template." },
+          { "speaker": "ZIPPY", "text": "Letter four, done in ten seconds." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Digital Documentation (Advanced)",
+    "topic_no": 5,
+    "name": "Track Changes and Comparing Documents",
+    "scenes": [
+      {
+        "animation": "Zippy and his project partner Meera edit the same report on a pen drive. When Zippy opens it, whole sentences have silently changed. He squints at the screen like a detective with a magnifying glass.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Someone changed my report and I can't tell what they changed!" },
+          { "speaker": "NEO", "text": "That is why Writer can track changes. Every edit gets recorded, coloured and named." }
+        ]
+      },
+      {
+        "animation": "Menu path animates: 'Edit > Track Changes > Record Changes' with key caps 'Ctrl+Shift+C'. Meera types; new words appear underlined in colour, deleted words appear struck through, and a change bar appears in the left margin.",
+        "lines": [
+          { "speaker": "NEO", "text": "Before sending a document for review, turn on Edit, Track Changes, Record Changes. The shortcut is Control Shift C." },
+          { "speaker": "NEO", "text": "Now insertions appear underlined in colour, deletions appear struck through, and a bar in the margin marks each changed line." },
+          { "speaker": "NEO", "text": "Each reviewer gets a different colour, and hovering shows who made the change and when." }
+        ]
+      },
+      {
+        "animation": "'Insert > Comment' (key caps 'Ctrl+Alt+C') places a sticky note in the margin with Meera's name: 'Add a source here?'. The comment's dropdown shows 'Reply', 'Delete Comment', 'Delete All Comments by Meera'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Reviewers can also add comments with Insert, Comment, or Control Alt C. Comments appear in the margin with the author's name." },
+          { "speaker": "NEO", "text": "To remove one, open the comment's menu and choose Delete Comment." }
+        ]
+      },
+      {
+        "animation": "'Edit > Track Changes > Manage' opens the Manage Changes dialog with a list: author, date, action. Buttons 'Accept', 'Reject', 'Accept All', 'Reject All' glow. Zippy accepts two changes and rejects one; the text updates live.",
+        "lines": [
+          { "speaker": "NEO", "text": "As the author, open Edit, Track Changes, Manage. Select each change and click Accept or Reject, or accept or reject all at once." },
+          { "speaker": "ZIPPY", "text": "Accept, accept, and definitely reject, Meera. My title stays!" }
+        ]
+      },
+      {
+        "animation": "Two versions of the report sit side by side, 'Original' and 'Edited', with no tracking. In the edited file, 'Edit > Track Changes > Compare Document' is chosen and the original is selected. Differences appear as tracked changes. A 'MINI PRACTICAL' card and a 'BOARD TIP' card follow.",
+        "lines": [
+          { "speaker": "NEO", "text": "What if someone edited without tracking? Open the edited file, choose Edit, Track Changes, Compare Document, and pick the original." },
+          { "speaker": "NEO", "text": "Writer shows every difference as a tracked change, which you can then accept or reject." },
+          { "speaker": "NEO", "text": "Try it: record changes, edit two lines, add a comment, then accept one change and reject the other." },
+          { "speaker": "NEO", "text": "Board tip: recording changes and comparing documents are different. Recording tracks edits as they happen; comparing finds them afterwards." }
+        ]
+      },
+      {
+        "animation": "Recap board with a detective-hat Zippy. Points appear: '1. Edit > Track Changes > Record Changes (Ctrl+Shift+C)', '2. Insert > Comment; Manage: Accept / Reject', '3. Edit > Track Changes > Compare Document'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: record changes to track every edit with colour and author name." },
+          { "speaker": "NEO", "text": "Two: add comments, and use Manage to accept or reject changes." },
+          { "speaker": "NEO", "text": "Three: compare documents to find edits made without tracking." },
+          { "speaker": "ZIPPY", "text": "Case closed. The culprit was Meera, and she improved my grammar." }
+        ]
+      }
+    ]
+  }
+]

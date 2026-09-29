@@ -1,0 +1,333 @@
+[
+  {
+    "chapter_no": 9,
+    "chapter": "The Amazing World of Solutes, Solvents, and Solutions",
+    "topic_no": 1,
+    "name": "What Are Solute, Solvent, and Solution?",
+    "scenes": [
+      {
+        "animation": "Zippy, looking droopy after a hot cricket match, gulps a glass of homemade ORS. After each sip, a taste-meter above his head points to the same spot: 'same taste'. He squints at the glass suspiciously.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, every sip of my ORS tastes exactly the same. Why isn't one sip salty and the next one sweet?" },
+          { "speaker": "NEO", "text": "Because the sugar and salt are evenly spread through the water. You have made a uniform mixture." }
+        ]
+      },
+      {
+        "animation": "Two glasses side by side. Left: sugar and salt vanish into clear water, labelled 'Uniform'. Right: glasses of chalk powder, sand and sawdust in water, with bits visible, labelled 'Non-uniform'. The sand sinks and the sawdust floats.",
+        "lines": [
+          { "speaker": "NEO", "text": "Salt and sugar in water form a uniform mixture." },
+          { "speaker": "NEO", "text": "But chalk powder, sand or sawdust in water are not evenly distributed. Those are non-uniform mixtures." }
+        ]
+      },
+      {
+        "animation": "A magnified view inside the ORS glass: small coloured 'Solute' particles spread evenly among blue 'Solvent' particles. The equation 'Solute + Solvent → Solution' builds up piece by piece.",
+        "lines": [
+          { "speaker": "NEO", "text": "A uniform mixture, like salt or sugar in water, is called a solution." },
+          { "speaker": "NEO", "text": "When a solid is mixed with a liquid to form a solution, the solid is the solute, and the liquid is the solvent." },
+          { "speaker": "NEO", "text": "The solute dissolves in the solvent to form a solution. Solute plus solvent gives solution." }
+        ]
+      },
+      {
+        "animation": "Two liquids pour into one beaker: a small splash labelled 'Smaller amount = Solute' and a big stream labelled 'Larger amount = Solvent'. Then a plate of gulab jamuns in thick chashni appears, with a big pile of 'Sugar' and a small cup of 'Water'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if I mix two liquids? Who dissolves whom?" },
+          { "speaker": "NEO", "text": "Then the one present in the smaller amount is the solute, and the one in the larger amount is the solvent." },
+          { "speaker": "ZIPPY", "text": "So in gulab jamun chashni, there is more sugar than water. Sugar must be the solvent!" },
+          { "speaker": "NEO", "text": "Nice try, but no. Here a solid is dissolving in a liquid. So water is still the solvent and sugar is the solute." }
+        ]
+      },
+      {
+        "animation": "A yellow 'EXAM TIP' card flips: 'Solid + liquid: liquid is ALWAYS the solvent. Liquid + liquid: larger amount is the solvent.' The gulab jamun winks from the corner.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: remember two rules. For a solid in a liquid, the liquid is the solvent, even if there is more solid." },
+          { "speaker": "NEO", "text": "For two liquids, the one in the larger amount is the solvent. The chashni question is a favourite trap." }
+        ]
+      },
+      {
+        "animation": "Recap board with an ORS glass and a gulab jamun. Three points appear: '1. Solution = uniform mixture', '2. Solute + Solvent → Solution', '3. Two liquids: smaller amount = solute'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a solution is a uniform mixture, like salt or sugar in water, while sand in water is non-uniform." },
+          { "speaker": "NEO", "text": "Two: when a solid dissolves in a liquid, the solid is the solute, and the liquid is the solvent." },
+          { "speaker": "NEO", "text": "Three: when two liquids mix, the one in the smaller amount is the solute." },
+          { "speaker": "ZIPPY", "text": "And I'm the solute who dissolves into a nap after cricket." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "The Amazing World of Solutes, Solvents, and Solutions",
+    "topic_no": 2,
+    "name": "Saturated Solutions, Concentration, and Solubility",
+    "scenes": [
+      {
+        "animation": "Zippy keeps shovelling spoon after spoon of sugar into his chai. The last spoonfuls sink and pile up at the bottom of the cup, refusing to disappear. Zippy stirs furiously.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, my chai has stopped dissolving sugar. Is it broken?" },
+          { "speaker": "NEO", "text": "Not broken, just full. Every solvent has a limit. Let's find it with salt and water." }
+        ]
+      },
+      {
+        "animation": "Activity 9.1 builds step by step: a clean tumbler half-filled with water; one spoon of salt stirred in and it vanishes. A table 'Table 9.1' fills rows: 'One - dissolves', 'Two - dissolves', 'Three - dissolves', and then a later row shows 'does not dissolve' as white grains settle at the bottom.",
+        "lines": [
+          { "speaker": "NEO", "text": "Half fill a clean glass tumbler with water. Add one spoon of salt and stir till it dissolves completely." },
+          { "speaker": "NEO", "text": "Keep adding salt, one spoon at a time, and stir. Record in a table whether it dissolves." },
+          { "speaker": "NEO", "text": "At first, the salt dissolves completely. After a few more spoons, a stage comes when it stops dissolving and settles at the bottom." }
+        ]
+      },
+      {
+        "animation": "Two beakers labelled 'Unsaturated' (clear, a spoon of salt disappearing into it) and 'Saturated' (salt grains resting at the bottom). A thermometer stands beside both, reading the same temperature.",
+        "lines": [
+          { "speaker": "NEO", "text": "A solution in which more solute can be dissolved at a given temperature is an unsaturated solution." },
+          { "speaker": "NEO", "text": "When the solute stops dissolving and begins to settle at the bottom, it is a saturated solution at that particular temperature." }
+        ]
+      },
+      {
+        "animation": "Two glasses of lemonade: one pale with a few salt particles, labelled 'Dilute', one crowded with particles, labelled 'Concentrated'. Then a puzzle card: '2 spoons in 100 mL' versus '4 spoons in 50 mL'. The second glass glows as 'More concentrated'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The amount of solute present in a fixed quantity of solution or solvent is called its concentration." },
+          { "speaker": "NEO", "text": "Less solute makes a dilute solution. More solute makes a concentrated solution. These are relative terms." },
+          { "speaker": "ZIPPY", "text": "Which is more concentrated: two spoons of salt in 100 millilitres of water, or four spoons in 50 millilitres?" },
+          { "speaker": "NEO", "text": "Four spoons in 50 millilitres. That is like eight spoons in 100 millilitres, which is four times as much." }
+        ]
+      },
+      {
+        "animation": "A measuring beaker of solvent fills up with solute to a red line marked 'MAX'. The label 'Solubility' lights up beside it. A yellow 'EXAM TIP' card flips over: 'Saturated = no more solute can dissolve AT THAT TEMPERATURE'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The maximum amount of solute that dissolves in a fixed quantity of the solvent is called its solubility." },
+          { "speaker": "NEO", "text": "Exam tip: always write 'at that temperature' when defining a saturated solution or solubility. Leaving it out can cost you a mark." }
+        ]
+      },
+      {
+        "animation": "Recap board with Zippy's sugary chai cup. Points appear: '1. Unsaturated: more solute can dissolve; Saturated: no more can', '2. Concentration: solute in a fixed quantity; dilute vs concentrated', '3. Solubility: maximum solute in a fixed quantity of solvent'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: an unsaturated solution can dissolve more solute, while a saturated solution cannot, at that temperature." },
+          { "speaker": "NEO", "text": "Two: concentration is the amount of solute in a fixed quantity of solution, and dilute and concentrated are relative terms." },
+          { "speaker": "NEO", "text": "Three: solubility is the maximum amount of solute that dissolves in a fixed quantity of solvent." },
+          { "speaker": "ZIPPY", "text": "My chai was saturated. I'll call it science, not greed." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "The Amazing World of Solutes, Solvents, and Solutions",
+    "topic_no": 3,
+    "name": "Temperature and Solubility of Solids and Gases",
+    "scenes": [
+      {
+        "animation": "A beaker of saturated solution with undissolved powder at the bottom. Zippy blows hot air on it like a hair dryer, and the powder starts vanishing. Zippy gasps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Whoa! I thought a saturated solution could not dissolve any more." },
+          { "speaker": "NEO", "text": "At that temperature, yes. Change the temperature, and the rules change. Let's test it." }
+        ]
+      },
+      {
+        "animation": "Activity 9.2 builds step by step with a 'Teacher demonstration. Careful with the heating device' banner: a beaker with 50 mL of water on a wire gauze and tripod over a spirit lamp, a laboratory thermometer on a stand reading '20 °C', and a glass rod. Baking soda is added until some stays at the bottom.",
+        "lines": [
+          { "speaker": "NEO", "text": "This is a demonstration, so be careful with the heating device." },
+          { "speaker": "NEO", "text": "Take about 50 millilitres of water at, say, 20 degrees Celsius. Add baking soda, which is sodium hydrogen carbonate, while stirring, until some remains undissolved at the bottom." }
+        ]
+      },
+      {
+        "animation": "The thermometer rises to '50 °C' and the leftover powder dissolves. More baking soda is added until some remains again; the thermometer climbs to '70 °C' and it dissolves once more. A bar chart grows: 20 °C short, 50 °C taller, 70 °C tallest.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now heat it to 50 degrees while stirring. The undissolved baking soda dissolves." },
+          { "speaker": "NEO", "text": "Add more until some remains again, then heat to 70 degrees. It dissolves again." },
+          { "speaker": "NEO", "text": "So water at 70 degrees dissolves more baking soda than at 50 degrees, and at 20 degrees it dissolves even less." },
+          { "speaker": "NEO", "text": "For most substances, solubility increases with temperature. A saturated solution becomes unsaturated when heated." }
+        ]
+      },
+      {
+        "animation": "A cool pond with fish swimming happily among bubbles labelled 'Dissolved oxygen'. The sun heats the pond, bubbles escape from the surface, and a fish looks worried. A thermometer arrow goes up while an 'O2 solubility' arrow goes down.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Do gases dissolve in water too?" },
+          { "speaker": "NEO", "text": "Yes. Many gases, including oxygen, dissolve in water, but oxygen only to a small extent. That tiny amount sustains all aquatic life." },
+          { "speaker": "NEO", "text": "Gases dissolve evenly, so this is a uniform mixture. But the solubility of gases generally decreases as temperature increases." },
+          { "speaker": "NEO", "text": "Cold water holds more oxygen. When water warms up, less oxygen stays dissolved." }
+        ]
+      },
+      {
+        "animation": "A split card: left 'Solids in liquids: temperature up, solubility up' with a green arrow; right 'Gases in liquids: temperature up, solubility down' with a red arrow. Below, a small portrait card of Asima Chatterjee beside herbal plants and flasks.",
+        "lines": [
+          { "speaker": "NEO", "text": "Exam tip: solids and gases behave opposite ways. Examiners love the statement 'oxygen is more soluble in hot water'. It is false." },
+          { "speaker": "NEO", "text": "Solvents matter in medicine too. Asima Chatterjee used solvents and solutions to extract compounds from medicinal plants and developed anti-epileptic and anti-malarial drugs." }
+        ]
+      },
+      {
+        "animation": "Recap board with a thermometer, a beaker of baking soda and a fish. Points appear: '1. Solids: solubility rises with temperature', '2. Heating turns saturated into unsaturated', '3. Gases: solubility falls with temperature'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: for most solids, solubility increases as temperature increases." },
+          { "speaker": "NEO", "text": "Two: a saturated solution behaves as unsaturated when it is heated." },
+          { "speaker": "NEO", "text": "Three: gases like oxygen dissolve less as water gets warmer, which is why cold water supports aquatic life." },
+          { "speaker": "ZIPPY", "text": "Note to self: never serve fish hot tea." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "The Amazing World of Solutes, Solvents, and Solutions",
+    "topic_no": 4,
+    "name": "Floating, Sinking, and Density",
+    "scenes": [
+      {
+        "animation": "A kitchen sink as Zippy washes rice: husk floats to the top while the rice grains sink. A drop of oil floats as a golden disc. Zippy holds a wooden stick and an iron rod of the same size, and the iron rod drags his arm down.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Husk floats, rice sinks, oil floats. And this iron rod feels way heavier than the same-size stick!" },
+          { "speaker": "NEO", "text": "When we say iron is heavier than wood, we are really talking about a property called density." }
+        ]
+      },
+      {
+        "animation": "A crowded city bus packed with cartoon passengers labelled 'High density', then the same bus with three passengers labelled 'Low density'. Then a thick forest versus scattered trees. The formula 'Density = Mass / Volume' writes itself in gold.",
+        "lines": [
+          { "speaker": "NEO", "text": "Think of a crowded bus. It has high density. The same bus with only a few people has low density." },
+          { "speaker": "NEO", "text": "In science, density is the mass present in a unit volume of a substance. Density equals mass divided by volume." },
+          { "speaker": "NEO", "text": "Density does not depend on shape or size, but it does depend on temperature and pressure." }
+        ]
+      },
+      {
+        "animation": "A units board: 'SI unit: kg/m³', then 'For liquids: g/mL and g/cm³'. A measuring jug shows '10 mL water ≈ 10 g' and '100 mL ≈ 100 g'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The SI units of mass and volume are kilogram and cubic metre. So the SI unit of density is kilogram per cubic metre." },
+          { "speaker": "NEO", "text": "For liquids, we also use gram per millilitre and gram per cubic centimetre." },
+          { "speaker": "NEO", "text": "At room temperature, one millilitre of water has a mass close to one gram. So 100 millilitres of water is about 100 grams." }
+        ]
+      },
+      {
+        "animation": "An aluminium block sits on a balance reading '27 g', next to a label 'Volume = 10 cm³'. A worked example builds line by line: 'Density = 27 g ÷ 10 cm³ = 2.7 g/cm³'. Then 'Relative density = Density of substance ÷ Density of water = 2.7 (no unit)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Example: an aluminium block has a mass of 27 grams and a volume of 10 cubic centimetres. Density is 27 divided by 10, which is 2.7 grams per cubic centimetre." },
+          { "speaker": "NEO", "text": "So aluminium is 2.7 times denser than water. We say its relative density with respect to water is 2.7." },
+          { "speaker": "NEO", "text": "Relative density is the density of the substance divided by the density of water at that temperature." }
+        ]
+      },
+      {
+        "animation": "A packet of cooking oil with the label '1 litre' and a weight tag '910 g'. Zippy puts it next to a 1 litre water bottle weighing about 1000 g. A yellow 'EXAM TIP' card: 'Relative density has NO unit'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This oil packet says 1 litre, but only 910 grams. Is the shopkeeper cheating?" },
+          { "speaker": "NEO", "text": "No. One litre of water would be about 1000 grams. The oil is lighter for the same volume, so its density is less than that of water. That is why oil floats." },
+          { "speaker": "NEO", "text": "Exam tip: relative density is a number without any units. Never write grams per cubic centimetre after it." }
+        ]
+      },
+      {
+        "animation": "Recap board with a bus, an aluminium block and an oil packet. Points appear: '1. Density = Mass / Volume', '2. SI unit kg/m³; also g/mL, g/cm³', '3. Relative density = substance ÷ water, no unit'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: density is mass per unit volume, and it does not depend on shape or size." },
+          { "speaker": "NEO", "text": "Two: the SI unit of density is kilogram per cubic metre, and liquids often use grams per millilitre." },
+          { "speaker": "NEO", "text": "Three: relative density compares a substance with water. Aluminium's is 2.7, with no unit." },
+          { "speaker": "ZIPPY", "text": "So the shopkeeper is innocent. Case closed." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "The Amazing World of Solutes, Solvents, and Solutions",
+    "topic_no": 5,
+    "name": "Measuring Mass and Volume",
+    "scenes": [
+      {
+        "animation": "Zippy stares at a 200 mL tetra pack of chaach, then tries to measure it by pouring it into a wide cooking pot and guessing. Neo arrives holding a digital balance and a tall measuring cylinder.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "To find density I need mass and volume. I'll just eyeball them." },
+          { "speaker": "NEO", "text": "Scientists don't eyeball. We use a balance for mass and a measuring cylinder for volume." }
+        ]
+      },
+      {
+        "animation": "Activity 9.3 builds step by step: a digital weighing balance is switched ON and shows '0.000'. A watch glass is placed and the display shows its mass; a finger presses 'TARE' and the display returns to '0.000'. A stone is placed and the display reads '16.400 g'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mass is the quantity of matter in an object. Switch on the digital balance. It should read zero. If not, press the tare or reset button." },
+          { "speaker": "NEO", "text": "Place a clean, dry watch glass on the pan, then press tare again so it reads zero." },
+          { "speaker": "NEO", "text": "Now place the stone on the watch glass. The display gives its mass, say 16.400 grams." }
+        ]
+      },
+      {
+        "animation": "A cube of side one metre labelled '1 m³'. Conversion cards appear: '1 L = 1 dm³', '1 mL = 1 cm³ = 1 cc'. A 100 mL measuring cylinder zooms in: between the '10' and '20' marks, 10 small divisions light up one by one, and '10 mL ÷ 10 = 1 mL' appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Volume is the space occupied by an object. Its SI unit is the cubic metre. One litre equals one cubic decimetre, and one millilitre equals one cubic centimetre." },
+          { "speaker": "NEO", "text": "On this 100 millilitre cylinder, the gap between 10 and 20 is 10 millilitres, split into 10 divisions. So each division is 10 divided by 10, which is 1 millilitre." },
+          { "speaker": "NEO", "text": "To measure 70 millilitres, a 100 millilitre cylinder is best. A 50 millilitre one needs two steps, and bigger ones are less accurate." }
+        ]
+      },
+      {
+        "animation": "Activity 9.5: a cylinder on a flat table is filled slowly to near 50 mL; a dropper adds the last few drops. Close-up of the curved water surface labelled 'Meniscus'. A cartoon eye slides down to the level of the bottom of the meniscus with a green tick, while eyes above and below get red crosses.",
+        "lines": [
+          { "speaker": "NEO", "text": "To measure 50 millilitres, place the cylinder on a flat surface and pour water slowly. Use a dropper to adjust the level." },
+          { "speaker": "NEO", "text": "The water surface is curved. This is called the meniscus. Keep your eyes level with it, and read the bottom of the meniscus for water and other colourless liquids." },
+          { "speaker": "NEO", "text": "Exam tip: for coloured liquids, read the top of the meniscus instead." }
+        ]
+      },
+      {
+        "animation": "Activity 9.6: a notebook with a ruler measuring 'l = 25 cm', 'w = 18 cm', 'h = 2 cm'. The formula 'Volume = l × w × h' builds, then '25 × 18 × 2 = 900 cm³' appears with a check mark.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "And for solids like my notebook?" },
+          { "speaker": "NEO", "text": "For a cuboid, volume equals length times width times height. A notebook 25 centimetres long, 18 wide and 2 high has a volume of 900 cubic centimetres." }
+        ]
+      },
+      {
+        "animation": "Recap board with a balance, a measuring cylinder and a notebook. Points appear: '1. Balance: tare to zero before weighing', '2. Read bottom of meniscus at eye level', '3. Cuboid volume = l × w × h'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: measure mass with a balance, and always tare it to zero first." },
+          { "speaker": "NEO", "text": "Two: measure liquid volume with a measuring cylinder, eyes level with the bottom of the meniscus." },
+          { "speaker": "NEO", "text": "Three: for a regular cuboid, volume is length times width times height." },
+          { "speaker": "ZIPPY", "text": "No more eyeballing. Only meniscus-balling." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 9,
+    "chapter": "The Amazing World of Solutes, Solvents, and Solutions",
+    "topic_no": 6,
+    "name": "Finding Density, and How Temperature and Pressure Change It",
+    "scenes": [
+      {
+        "animation": "Zippy holds a lumpy stone and a ruler, trying to measure its length from every side while the stone keeps rolling away.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This stone has no length, no width, no height. How do I find its volume?" },
+          { "speaker": "NEO", "text": "Let the water measure it for you." }
+        ]
+      },
+      {
+        "animation": "Activity 9.7 builds step by step: a measuring cylinder filled to '50 mL' (A). A stone tied to a thread is lowered slowly; the water rises to '55 mL' (B). An equation shows 'B - A = 55 - 50 = 5 mL = 5 cm³'. Table 9.2 fills its stone row.",
+        "lines": [
+          { "speaker": "NEO", "text": "Fill a measuring cylinder with water up to, say, 50 millilitres. Tie the stone with a thread and lower it in slowly." },
+          { "speaker": "NEO", "text": "The level rises to, say, 55 millilitres. Final minus initial is 5 millilitres. That is the volume of the stone, 5 cubic centimetres." }
+        ]
+      },
+      {
+        "animation": "A worked example: 'Mass = 16.400 g' from the balance, 'Volume = 5 cm³' from the cylinder, then 'Density = 16.400 ÷ 5 = 3.28 g/cm³'. A yellow 'EXAM TIP' sticker lands on 'g/cm³'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Earlier, the stone's mass was 16.400 grams. Density equals 16.400 divided by 5, which is 3.28 grams per cubic centimetre." },
+          { "speaker": "NEO", "text": "Exam tip: always write the unit with the answer, and remember that millilitres for a solid can be written as cubic centimetres." }
+        ]
+      },
+      {
+        "animation": "Particles in a box spread apart when a flame heats it; the box grows bigger while a mass tag stays the same. The arrow 'Volume up → Density down' appears. Hot air balloons rise over a field.",
+        "lines": [
+          { "speaker": "NEO", "text": "Generally, density decreases on heating and increases on cooling." },
+          { "speaker": "NEO", "text": "On heating, particles move apart, so volume increases while mass stays the same. That lowers density." },
+          { "speaker": "NEO", "text": "That is why hot air rises. It is less dense than the cool air around it, and hot air balloons work this way." }
+        ]
+      },
+      {
+        "animation": "A piston presses down on three containers: gas particles squeeze close together with a big 'Density up' arrow; liquid barely changes; solid does not budge. Then ice cubes bob on top of a glass of water, with a label 'Water: highest density at 4 °C'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Pressure pushes gas particles closer, so the density of a gas increases. Liquids are nearly incompressible, and solids are affected even less." },
+          { "speaker": "ZIPPY", "text": "Then why does ice float? It's colder, so it should be denser!" },
+          { "speaker": "NEO", "text": "Water is special. Its density is highest at 4 degrees Celsius. When it freezes at 0 degrees, its particles take up more space, so ice is less dense and floats." }
+        ]
+      },
+      {
+        "animation": "Recap board with a stone in a cylinder, a hot air balloon and an ice cube. Points appear: '1. Irregular volume = final - initial water level', '2. Stone: 16.400 g ÷ 5 cm³ = 3.28 g/cm³', '3. Heating lowers density; pressure mainly affects gases'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the volume of an irregular solid is the rise in water level in a measuring cylinder." },
+          { "speaker": "NEO", "text": "Two: density is mass divided by volume, like 16.400 grams by 5 cubic centimetres, giving 3.28 grams per cubic centimetre." },
+          { "speaker": "NEO", "text": "Three: heating generally lowers density, and pressure mainly changes the density of gases." },
+          { "speaker": "ZIPPY", "text": "And ice floats because water is a rule-breaker." }
+        ]
+      }
+    ]
+  }
+]

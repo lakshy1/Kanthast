@@ -1,14 +1,16 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import Image from "../assets/images/Image-2.png";
+import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import PageHero from "../components/landing/PageHero";
+import SYLLABUS_SNAPSHOT from "../data/syllabusSnapshot";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 34 },
+  hidden: { opacity: 0, y: 24 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.68, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
@@ -16,17 +18,43 @@ const stagger = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.08,
+      staggerChildren: 0.1,
+      delayChildren: 0.05,
     },
   },
 };
 
-const sectionViewport = { once: true, amount: 0.22 };
+const sectionViewport = { once: true, amount: 0.2 };
+
+const PRINCIPLES = [
+  {
+    title: "Visual first",
+    desc: "Every lesson is animation-driven to create strong memory anchors.",
+  },
+  {
+    title: "Outcome focused",
+    desc: "Every learning experience is designed to improve clarity, confidence, and performance.",
+  },
+  {
+    title: "Understanding over rote",
+    desc: "Learners engage with ideas actively instead of relying on passive recall alone.",
+  },
+];
+
+// Counts from the real syllabus snapshot, not audience claims: Kanthast has
+// no verified learner numbers yet (see PRODUCT.md).
+const FACTS = [
+  { value: SYLLABUS_SNAPSHOT.subjects.length, label: "Medical subjects mapped" },
+  {
+    value: SYLLABUS_SNAPSHOT.subjects.reduce((sum, subject) => sum + subject.chapters, 0),
+    label: "Chapters laid out",
+  },
+  { value: 3, label: "Exams covered: NEET-PG, INI-CET and USMLE" },
+];
 
 export default function About() {
   return (
-    <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
+    <div className="home-page overflow-x-clip bg-surface text-ink">
       <Helmet>
         <title>About Kanthast | Visual Learning That Sticks</title>
         <meta name="description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, NEET PG, and INI CET students." />
@@ -35,168 +63,106 @@ export default function About() {
         <meta property="og:description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, NEET PG, and INI CET students." />
         <meta property="og:url" content="https://kanthast.in/about" />
       </Helmet>
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#081124] via-[#0f1d42] to-[#0d182f] py-24 text-white">
-        <motion.div
-          animate={{ y: [0, -10, 0], opacity: [0.5, 0.75, 0.5] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="pointer-events-none absolute -top-20 -left-16 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl"
-        />
-        <motion.div
-          animate={{ y: [0, 12, 0], opacity: [0.45, 0.7, 0.45] }}
-          transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
-          className="pointer-events-none absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-blue-300/20 blur-3xl"
-        />
 
-        <div className="relative mx-auto max-w-6xl px-6 md:px-16">
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            animate="show"
-            className="rounded-3xl border border-white/20 bg-white/10 px-6 py-10 text-center backdrop-blur-2xl shadow-e5 md:px-12"
-          >
-            <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-black leading-tight">
-              Rethinking How Complex Learning Is Understood
-            </motion.h1>
-            <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-cyan-100/90">
-              Kanthast turns difficult subjects into visual learning journeys that improve retention,
-              confidence, and real understanding across both medical and school education.
-            </motion.p>
+      <PageHero
+        kicker="About"
+        title="Rethinking how complex learning"
+        accent="is understood."
+        lead="Kanthast turns difficult subjects into visual learning journeys that improve retention, confidence, and real understanding across both medical and school education."
+        aside={
+          <motion.dl variants={stagger} initial="hidden" animate="show" className="grid gap-4">
+            {FACTS.map((fact) => (
+              <motion.div
+                key={fact.label}
+                variants={fadeUp}
+                className="flex items-baseline gap-5 rounded-card border border-line bg-surface-raised px-6 py-5"
+              >
+                <dt className="order-2 text-ink-muted">{fact.label}</dt>
+                <dd className="order-1 font-sans text-4xl font-extrabold tabular-nums tracking-[-0.03em] text-brand">
+                  {fact.value}
+                </dd>
+              </motion.div>
+            ))}
+          </motion.dl>
+        }
+      />
+
+      <section className="border-b border-line bg-surface-sunken py-20 md:py-28">
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          className="site-container grid gap-12 lg:grid-cols-2 lg:gap-20"
+        >
+          <motion.div variants={fadeUp}>
+            <h2 className="text-4xl text-ink md:text-5xl">Why we started Kanthast</h2>
+            <p className="mt-5 text-lg leading-relaxed text-ink-muted">
+              Too much learning still feels fragmented, overwhelming, and memorization-heavy. We built Kanthast to make
+              difficult topics feel structured, visual, and intuitive instead.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-ink-muted">
+              Our animation-first approach helps learners connect ideas faster, whether they are preparing for competitive
+              medical exams or building strong school fundamentals.
+            </p>
           </motion.div>
-        </div>
-      </section>
 
-      <section className="py-14">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={sectionViewport}
-          className="mx-auto max-w-7xl px-6 md:px-16"
-        >
-          <div className="grid items-center gap-10 rounded-card border border-line bg-surface/62 p-6 backdrop-blur-2xl shadow-e4 md:grid-cols-2 md:p-8">
-            <motion.div variants={fadeUp}>
-              <h2 className="text-3xl md:text-5xl font-black text-ink">Why We Started Kanthast</h2>
-              <p className="mt-4 text-ink-muted text-lg leading-relaxed">
-                Too much learning still feels fragmented, overwhelming, and memorization-heavy. We built Kanthast to make
-                difficult topics feel structured, visual, and intuitive instead.
-              </p>
-              <p className="mt-4 text-ink-muted text-lg leading-relaxed">
-                Our animation-first approach helps learners connect ideas faster, whether they are preparing for competitive
-                medical exams or building strong school fundamentals.
-              </p>
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              whileHover={{ y: -6, scale: 1.01 }}
-              transition={{ duration: 0.35 }}
-              className="overflow-hidden rounded-card border border-line shadow-xl"
-            >
-              <motion.img
-                src={Image}
-                alt="About Kanthast"
-                loading="lazy"
-                className="h-[380px] w-full object-cover"
-                whileHover={{ scale: 1.04 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              />
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
-
-      <section className="py-10 md:py-14">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={sectionViewport}
-          className="mx-auto max-w-7xl px-6 md:px-16"
-        >
-          <div className="rounded-3xl border border-white/20 bg-gradient-to-br from-[#081124]/95 via-[#0f1d42]/95 to-[#0d182f]/95 p-8 text-white backdrop-blur-2xl shadow-e5 md:p-10">
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-black text-center">
-              Our Learning Philosophy
-            </motion.h2>
-            <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-center text-lg text-cyan-100/90">
-              Build mental models first. Facts stick better when learners understand patterns, mechanisms, and context
-              before they try to memorise details.
-            </motion.p>
-
-            <motion.div variants={stagger} className="mt-10 grid gap-6 md:grid-cols-3">
-              {[
-                {
-                  title: "Visual First",
-                  desc: "Every lesson is animation-driven to create strong memory anchors.",
-                },
-                {
-                  title: "Outcome Focused",
-                  desc: "Every learning experience is designed to improve clarity, confidence, and performance.",
-                },
-                {
-                  title: "Understanding Over Rote",
-                  desc: "Learners engage with ideas actively instead of relying on passive recall alone.",
-                },
-              ].map((item) => (
-                <motion.div
-                  key={item.title}
-                  variants={fadeUp}
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  transition={{ duration: 0.28, ease: "easeOut" }}
-                  className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-xl"
-                >
-                  <h3 className="text-xl font-bold">{item.title}</h3>
-                  <p className="mt-3 text-cyan-100/90">{item.desc}</p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
-
-      <section className="py-10 md:py-14">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={sectionViewport}
-          className="mx-auto max-w-7xl px-6 md:px-16"
-        >
-          <div className="grid gap-6 rounded-card border border-line bg-surface/62 p-8 text-center backdrop-blur-2xl shadow-e4 md:grid-cols-3">
+          <motion.dl variants={fadeUp} className="divide-y divide-line self-center border-y border-line">
             {[
-              { number: "50K+", label: "Learners Reached" },
-              { number: "95%", label: "Reported Confidence Boost" },
-              { number: "1000+", label: "Visual Learning Moments" },
-            ].map((stat) => (
-              <motion.div key={stat.label} variants={fadeUp} whileHover={{ y: -6, scale: 1.02 }}>
-                <h3 className="text-4xl font-black text-ink">{stat.number}</h3>
-                <p className="mt-2 text-ink-muted">{stat.label}</p>
+              ["Exams", "NEET-PG, INI-CET and USMLE, plus School for Class I–X"],
+              ["Format", "Short animated lectures, organised subject by subject and chapter by chapter"],
+              ["Status", "The medical syllabus is mapped; lectures are releasing subject by subject"],
+            ].map(([term, detail]) => (
+              <div key={term} className="grid gap-1 py-5 sm:grid-cols-[7rem_1fr] sm:gap-6">
+                <dt className="font-semibold text-ink">{term}</dt>
+                <dd className="text-ink-muted">{detail}</dd>
+              </div>
+            ))}
+          </motion.dl>
+        </motion.div>
+      </section>
+
+      <section className="border-b border-line bg-surface py-20 md:py-28">
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          className="site-container"
+        >
+          <motion.h2 variants={fadeUp} className="text-4xl text-ink md:text-5xl">
+            Our learning philosophy
+          </motion.h2>
+          <motion.p variants={fadeUp} className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-muted">
+            Build mental models first. Facts stick better when learners understand patterns, mechanisms, and context
+            before they try to memorise details.
+          </motion.p>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {PRINCIPLES.map((item, index) => (
+              <motion.div
+                key={item.title}
+                variants={fadeUp}
+                className="rounded-card border border-line bg-surface-raised p-7 transition-colors duration-200 hover:border-brand/50"
+              >
+                <p className="font-sans text-sm font-bold tabular-nums text-brand">0{index + 1}</p>
+                <h3 className="mt-4 text-xl font-bold text-ink">{item.title}</h3>
+                <p className="mt-3 leading-relaxed text-ink-muted">{item.desc}</p>
               </motion.div>
             ))}
           </div>
         </motion.div>
       </section>
 
-      <section className="pb-20 pt-10">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={sectionViewport}
-          className="mx-auto max-w-5xl px-6 md:px-16"
-        >
-          <div className="rounded-card border border-line bg-surface/62 p-10 text-center backdrop-blur-2xl shadow-e4">
-            <h2 className="text-3xl md:text-4xl font-black text-ink">Ready to Learn with More Clarity?</h2>
-
-            <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-flex">
-              <Link
-                to="/signup"
-                className="btn-primary mt-7"
-              >
-                Start Learning
-              </Link>
-            </motion.div>
-          </div>
-        </motion.div>
+      <section className="relative overflow-hidden bg-surface">
+        <div aria-hidden="true" className="home-glow home-glow-close" />
+        <div className="site-container relative flex flex-col items-start justify-between gap-8 py-20 md:flex-row md:items-center">
+          <h2 className="max-w-2xl text-3xl md:text-5xl">Ready to learn with more clarity?</h2>
+          <Link to="/signup" className="btn-primary shrink-0 px-7 text-base">
+            Start learning
+            <FaArrowRight aria-hidden="true" />
+          </Link>
+        </div>
       </section>
     </div>
   );

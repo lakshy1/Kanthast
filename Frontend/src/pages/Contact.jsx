@@ -2,12 +2,13 @@ import { Helmet } from "react-helmet-async";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { Button, Field, LiveRegion } from "../components/ui";
 import { apiFetch } from "../utils/apiBase";
+import PageHero from "../components/landing/PageHero";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 34 },
+  hidden: { opacity: 0, y: 24 },
   show: {
     opacity: 1,
     y: 0,
@@ -25,7 +26,7 @@ const stagger = {
   },
 };
 
-const sectionViewport = { once: true, amount: 0.22 };
+const sectionViewport = { once: true, amount: 0.2 };
 
 export default function Contact() {
   const [status, setStatus] = useState("idle");
@@ -55,7 +56,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="overflow-x-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)]">
+    <div className="home-page overflow-x-clip bg-surface text-ink">
       <Helmet>
         <title>Contact Kanthast | Learning Support</title>
         <meta name="description" content="Get in touch with the Kanthast team for support, partnerships, or questions about our learning platforms for both medical and school education." />
@@ -64,90 +65,65 @@ export default function Contact() {
         <meta property="og:description" content="Get in touch with the Kanthast team for support, partnerships, or questions about our learning platforms for both medical and school education." />
         <meta property="og:url" content="https://kanthast.in/contact" />
       </Helmet>
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#081124] via-[#0f1d42] to-[#0d182f] py-24 text-white">
-        <motion.div
-          animate={{ y: [0, -10, 0], opacity: [0.5, 0.75, 0.5] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="pointer-events-none absolute -top-20 -left-16 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl"
-        />
-        <motion.div
-          animate={{ y: [0, 12, 0], opacity: [0.45, 0.7, 0.45] }}
-          transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
-          className="pointer-events-none absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-blue-300/20 blur-3xl"
-        />
 
-        <div className="relative mx-auto max-w-6xl px-6 md:px-16">
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            animate="show"
-            className="rounded-3xl border border-white/20 bg-white/10 px-6 py-10 text-center backdrop-blur-2xl shadow-e5 md:px-12"
-          >
-            <motion.h1 variants={fadeUp} className="text-3xl sm:text-4xl md:text-6xl font-black">
-              Let&apos;s Connect
-            </motion.h1>
-            <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-3xl text-base md:text-lg text-cyan-100/90">
-              Have questions about Kanthast Medical or Kanthast School? Share your requirements and our team will respond quickly.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        kicker="Contact"
+        title="Let's"
+        accent="connect."
+        lead="Have questions about Kanthast Medical or Kanthast School? Share your requirements and our team will respond quickly."
+        aside={
+          <motion.ul variants={stagger} initial="hidden" animate="show" className="grid gap-4">
+            {[
+              { icon: <FaEnvelope />, title: "Email us", desc: "support@kanthast.in", href: "mailto:support@kanthast.in" },
+              { icon: <FaMapMarkerAlt />, title: "Location", desc: "Mumbai, India" },
+            ].map((item) => {
+              const body = (
+                <>
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-control bg-brand-soft text-lg text-brand">
+                    {item.icon}
+                  </span>
+                  <span>
+                    <span className="block text-sm font-semibold uppercase tracking-[0.14em] text-ink-muted">{item.title}</span>
+                    <span className="mt-1 block text-lg font-semibold text-ink">{item.desc}</span>
+                  </span>
+                </>
+              );
+              const cls =
+                "flex items-center gap-5 rounded-card border border-line bg-surface-raised px-6 py-5 transition-colors duration-200";
+              return (
+                <motion.li key={item.title} variants={fadeUp}>
+                  {item.href ? (
+                    <a href={item.href} className={`${cls} hover:border-brand/60`}>
+                      {body}
+                    </a>
+                  ) : (
+                    <div className={cls}>{body}</div>
+                  )}
+                </motion.li>
+              );
+            })}
+          </motion.ul>
+        }
+      />
 
-      <section className="py-14">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={sectionViewport}
-          className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-3 md:px-16"
-        >
-          {[
-            { icon: <FaEnvelope />, title: "Email Us", desc: "support@kanthast.in" },
-            { icon: <FaPhoneAlt />, title: "Call Us", desc: "+91 98765 43210" },
-            { icon: <FaMapMarkerAlt />, title: "Location", desc: "Mumbai, India" },
-          ].map((item) => (
-            <motion.div
-              key={item.title}
-              variants={fadeUp}
-              whileHover={{ y: -8, scale: 1.02 }}
-              transition={{ duration: 0.28, ease: "easeOut" }}
-              className="rounded-2xl border border-white/60 bg-surface/55 p-7 backdrop-blur-2xl shadow-e3"
-            >
-              <motion.div whileHover={{ rotate: -6, scale: 1.12 }} className="text-2xl text-cyan-600">
-                {item.icon}
-              </motion.div>
-              <h3 className="mt-4 text-xl font-bold text-ink">{item.title}</h3>
-              <p className="mt-2 text-ink-muted">{item.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
-
-      <section className="pb-20 pt-10">
+      <section className="relative overflow-hidden bg-surface-sunken py-20 md:py-28">
+        <div aria-hidden="true" className="home-glow home-glow-close" />
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={sectionViewport}
-          className="mx-auto max-w-5xl px-6 md:px-16"
+          className="site-container relative grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20"
         >
-          <motion.div
-            whileHover={{ y: -4 }}
-            className="relative overflow-hidden rounded-3xl border border-white/60 bg-surface/62 p-8 backdrop-blur-2xl shadow-e4 md:p-10"
-          >
-            <motion.div
-              animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
-              transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
-              className="pointer-events-none absolute -top-16 -right-10 h-56 w-56 rounded-full bg-cyan-200/30 blur-3xl"
-            />
+          <div>
+            <h2 className="text-4xl text-ink md:text-5xl">Send us a message</h2>
+            <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-muted">
+              Tell us what you need, whether it is a plan, the library, school access or a partnership, and we will get back to you.
+            </p>
+          </div>
 
-            <h2 className="relative text-center text-3xl md:text-4xl font-black text-ink">Send Us a Message</h2>
-
-            <form
-              onSubmit={handleSubmit}
-              className="relative mt-8 space-y-5"
-            >
-
+          <div className="rounded-card border border-line bg-surface-raised p-7 shadow-e3 md:p-10">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid gap-5 md:grid-cols-2">
                 <Field
                   label="Your Name"
@@ -200,7 +176,7 @@ export default function Contact() {
                 Send Message
               </Button>
             </form>
-          </motion.div>
+          </div>
         </motion.div>
       </section>
 
@@ -222,7 +198,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.92 }}
             aria-hidden="true"
-            className="fixed bottom-6 right-6 z-50 rounded-xl bg-emerald-600 px-5 py-3 text-white shadow-e4"
+            className="fixed bottom-6 right-6 z-50 rounded-xl border border-brand/40 bg-surface-raised px-5 py-3 font-semibold text-brand shadow-e4"
           >
             Message sent successfully.
           </motion.div>

@@ -12,7 +12,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
-        display: ["Nunito", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Plus Jakarta Sans", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
 
       // ── Semantic color tokens ───────────────────────────────────────────
@@ -20,6 +20,12 @@ export default {
       // index.css, so `bg-surface` is correct in light AND dark with no
       // `dark:` variant at the call site.
       colors: {
+        mint: "#77E0C0",
+        midnight: "#0B1220",
+        slatenavy: "#111D30",
+        hairline: "#2A3A50",
+        softwhite: "#F4F7FB",
+        coolgrey: "#B6C2D2",
         surface: {
           DEFAULT: "rgb(var(--surface) / <alpha-value>)",
           sunken: "rgb(var(--surface-sunken) / <alpha-value>)",
@@ -54,6 +60,10 @@ export default {
         caution: {
           DEFAULT: "rgb(var(--caution) / <alpha-value>)",
           soft: "rgb(var(--caution-soft) / <alpha-value>)",
+        },
+        disabled: {
+          DEFAULT: "rgb(var(--disabled-bg) / <alpha-value>)",
+          fg: "rgb(var(--disabled-fg) / <alpha-value>)",
         },
       },
 

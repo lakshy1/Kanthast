@@ -1,0 +1,445 @@
+[
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 1,
+    "name": "सूरदास के पद",
+    "scenes": [
+      {
+        "animation": "A village lane in Braj. Uddhav, a stiff scholar with a thick scroll titled 'YOG', walks up to a group of gopis. Zippy pops out from behind a pot of butter, holding a sign 'Breaking News: Krishna sends a letter!'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "नियो, कृष्ण ने गोपियों को मैसेज भेजा है! तो सब खुश होंगी ना?" },
+          { "speaker": "NEO", "text": "उल्टा हुआ, ज़िप्पी। मैसेज में प्रेम नहीं, योग का लंबा लेक्चर था। और गोपियों ने उद्धव की ऐसी क्लास ली कि आज तक याद की जाती है।" }
+        ]
+      },
+      {
+        "animation": "A glowing portrait card of Surdas with a tanpura builds up with labels: 'सूरदास (1478-1583)', 'वल्लभाचार्य के शिष्य', 'अष्टछाप', 'भाषा: ब्रजभाषा', 'सूरसागर, साहित्य लहरी, सूर सारावली'. A small arrow points from 'सूरसागर' to 'भ्रमरगीत'.",
+        "lines": [
+          { "speaker": "NEO", "text": "पहले कवि से मिलो। सूरदास का जन्म सन 1478 में माना जाता है और मृत्यु 1583 में पारसौली में हुई।" },
+          { "speaker": "NEO", "text": "वे वल्लभाचार्य के शिष्य थे और अष्टछाप के कवियों में सबसे प्रसिद्ध। उनकी रचनाएँ हैं सूरसागर, साहित्य लहरी और सूर सारावली।" },
+          { "speaker": "NEO", "text": "हमारे चार पद सूरसागर के भ्रमरगीत से लिए गए हैं, और भाषा है मीठी ब्रजभाषा।" }
+        ]
+      },
+      {
+        "animation": "Split screen: a lotus leaf floats on water with water drops sliding off it untouched; next to it an oil-coated pot dipped in water stays dry. Caption: 'पुरइनि पात' and 'तेल की गागर'. A gopi winks at Uddhav.",
+        "lines": [
+          { "speaker": "NEO", "text": "पहले पद में गोपियाँ उद्धव को 'अति बड़भागी' कहती हैं। पर यह तारीफ़ नहीं, व्यंग्य है।" },
+          { "speaker": "NEO", "text": "वे कहती हैं कि तुम कृष्ण के इतने पास रहकर भी प्रेम से अछूते रहे, जैसे कमल का पत्ता पानी में रहकर भी गीला नहीं होता, और तेल लगी गागर पर पानी की एक बूँद नहीं टिकती।" },
+          { "speaker": "ZIPPY", "text": "ओह, यानी उद्धव जी ऑफ़लाइन मोड में थे!" }
+        ]
+      },
+      {
+        "animation": "A small haril bird clutches a twig tightly while flying; the twig morphs into a heart labelled 'हरि'. Then Uddhav offers a bitter gourd labelled 'योग = करुई ककड़ी' and the gopis make a sour face. Last, a crown appears with the text 'राजधरम: प्रजा न जाहिं सताए'.",
+        "lines": [
+          { "speaker": "NEO", "text": "दूसरे पद में गोपियाँ कहती हैं कि मन की बात मन में ही रह गई। उन्हें लौटने की आशा थी, पर योग का संदेश सुनकर विरह की आग और भड़क उठी।" },
+          { "speaker": "NEO", "text": "तीसरे पद में वे कहती हैं कि कृष्ण हमारे लिए हारिल पक्षी की लकड़ी हैं। हारिल जैसे लकड़ी कभी नहीं छोड़ता, हम भी कृष्ण को नहीं छोड़ सकतीं। और तुम्हारा योग हमें कड़वी ककड़ी जैसा लगता है।" },
+          { "speaker": "NEO", "text": "चौथे पद में ताना है कि हरि अब राजनीति पढ़ आए हैं। अंत में गोपियाँ याद दिलाती हैं कि सच्चा राजधर्म यही है कि प्रजा को सताया न जाए।" }
+        ]
+      },
+      {
+        "animation": "A notebook page titled 'Board Question' fills in: 'गोपियों ने उद्धव को भाग्यवान क्यों कहा? उसमें कौन-सा व्यंग्य है?' Three bullet points tick in one by one. A yellow 'BOARD TIP' sticker lands on the word 'व्यंग्य'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Exam में इन पदों से क्या पूछते हैं?" },
+          { "speaker": "NEO", "text": "एक पक्का सवाल है: गोपियों ने उद्धव को भाग्यवान क्यों कहा और इसमें क्या व्यंग्य छिपा है?" },
+          { "speaker": "NEO", "text": "उत्तर में तीन बातें लिखो: उद्धव कृष्ण के पास रहकर भी प्रेम से दूर रहे, कमल-पत्ते और तेल की गागर का उदाहरण, और असल में वे उन्हें अभागा कह रही हैं।" },
+          { "speaker": "NEO", "text": "Board tip: पद की पंक्ति का छोटा-सा उदाहरण जोड़ दो, उत्तर तुरंत मज़बूत दिखता है।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a peacock feather border. Points appear: '1. सूरदास: अष्टछाप, सूरसागर, ब्रजभाषा', '2. गोपियों का व्यंग्य: योग नहीं, प्रेम चाहिए', '3. हारिल की लकड़ी = अटूट प्रेम; राजधर्म = प्रजा को न सताना'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: सूरदास अष्टछाप के कवि हैं, और ये पद सूरसागर के भ्रमरगीत से ब्रजभाषा में हैं।" },
+          { "speaker": "NEO", "text": "दो: गोपियाँ उद्धव के योग-संदेश को ठुकराकर प्रेम को ऊँचा बताती हैं, और उनकी वाणी में तीखा व्यंग्य है।" },
+          { "speaker": "NEO", "text": "तीन: हारिल की लकड़ी अटूट प्रेम का प्रतीक है, और राजधर्म है प्रजा को न सताना।" },
+          { "speaker": "ZIPPY", "text": "मैं भी चॉकलेट को हारिल की लकड़ी की तरह पकड़कर रखूँगा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 2,
+    "name": "राम-लक्ष्मण-परशुराम संवाद",
+    "scenes": [
+      {
+        "animation": "A royal hall in Janakpur. A giant bow lies snapped in two on the floor. The doors blast open, and Parshuram storms in with an axe (farsa), sparks of anger flying. Zippy hides behind a pillar.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "किसने तोड़ा ये धनुष? ये गुस्से वाले बाबा तो पूरा हॉल उड़ा देंगे!" },
+          { "speaker": "NEO", "text": "ये परशुराम हैं, और यह शिवजी का धनुष था। अब शुरू होगा हिंदी साहित्य का सबसे मज़ेदार वाद-विवाद।" }
+        ]
+      },
+      {
+        "animation": "A scroll unrolls with Tulsidas's portrait and labels: 'तुलसीदास (1532-1623)', 'जन्म: राजापुर, बाँदा (उ.प्र.)', 'रामचरितमानस, कवितावली, गीतावली, दोहावली, कृष्णगीतावली, विनयपत्रिका', 'भाषा: अवधी'. A tag slides in: 'यह अंश: रामचरितमानस, बालकांड'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि हैं तुलसीदास। उनका जन्म सन 1532 में बाँदा ज़िले के राजापुर गाँव में माना जाता है, और मृत्यु 1623 में काशी में हुई।" },
+          { "speaker": "NEO", "text": "उनकी प्रसिद्ध रचनाएँ हैं रामचरितमानस, कवितावली, गीतावली, दोहावली, कृष्णगीतावली और विनयपत्रिका।" },
+          { "speaker": "NEO", "text": "यह अंश रामचरितमानस के बालकांड से है, और भाषा अवधी है, दोहा-चौपाई छंद में।" }
+        ]
+      },
+      {
+        "animation": "Ram steps forward calmly with folded hands, a soft blue glow around him. Lakshman stands beside him with a mischievous grin and a small toy bow. Floating text: 'नाथ संभुधनु भंजनिहारा, होइहि केउ एक दास तुम्हारा'.",
+        "lines": [
+          { "speaker": "NEO", "text": "राम बहुत विनम्रता से कहते हैं कि शिव-धनुष तोड़ने वाला आपका ही कोई दास होगा।" },
+          { "speaker": "NEO", "text": "पर लक्ष्मण चुप नहीं रहते। वे मुस्कुराकर कहते हैं कि बचपन में हमने ऐसी बहुत-सी धनुहियाँ तोड़ी हैं, तब तो आप कभी नाराज़ नहीं हुए।" },
+          { "speaker": "ZIPPY", "text": "हा हा! लक्ष्मण तो पूरे रोस्ट मास्टर निकले!" }
+        ]
+      },
+      {
+        "animation": "Parshuram swings his axe and lists his deeds on a big scoreboard: 'बाल ब्रह्मचारी', 'क्षत्रिय कुल द्रोही', 'सहस्रबाहु की भुजाएँ काटीं'. Lakshman replies by pointing to a tiny pumpkin flower (kumhadbatiya) that doesn't wilt at a raised finger. Vishwamitra smiles in a thought bubble: 'अयमय खाँड न ऊखमय'.",
+        "lines": [
+          { "speaker": "NEO", "text": "परशुराम अपनी वीरता गिनाते हैं: वे बाल ब्रह्मचारी हैं, उन्होंने कई बार धरती को क्षत्रियों से खाली किया और सहस्रबाहु की भुजाएँ काट दीं।" },
+          { "speaker": "NEO", "text": "लक्ष्मण कहते हैं कि यहाँ कोई कुम्हड़बतिया नहीं है जो तर्जनी देखते ही मुरझा जाए। वे यह भी कहते हैं कि सच्चे शूरवीर युद्ध में वीरता दिखाते हैं, अपनी बड़ाई खुद नहीं करते।" },
+          { "speaker": "NEO", "text": "विश्वामित्र मन ही मन हँसते हैं कि मुनि को सब हरा-हरा सूझ रहा है। यह फौलाद की तलवार है, गन्ने की खाँड़ नहीं।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'लक्ष्मण और परशुराम के स्वभाव की तुलना कीजिए।' A two-column table builds: left 'परशुराम: क्रोधी, आत्मप्रशंसा', right 'लक्ष्मण: निडर, व्यंग्यपूर्ण, वाक्पटु'. A third mini-column 'राम: शांत, विनम्र' appears. 'BOARD TIP' sticker on the word 'व्यंग्य'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Exam में कैरेक्टर वाला सवाल आएगा क्या?" },
+          { "speaker": "NEO", "text": "बिल्कुल। अक्सर पूछा जाता है कि लक्ष्मण और परशुराम के स्वभाव में क्या अंतर है, या राम और लक्ष्मण के स्वभाव की तुलना करो।" },
+          { "speaker": "NEO", "text": "उत्तर में लिखो: परशुराम क्रोधी हैं और अपनी प्रशंसा करते हैं। लक्ष्मण निडर हैं और व्यंग्य से बात करते हैं। राम शांत और विनम्र हैं।" },
+          { "speaker": "NEO", "text": "Board tip: हर गुण के साथ संवाद से एक उदाहरण दो, जैसे धनुहियाँ तोड़ने वाली बात।" }
+        ]
+      },
+      {
+        "animation": "Recap board shaped like a broken bow. Three points light up: '1. तुलसीदास, रामचरितमानस, बालकांड, अवधी', '2. राम विनम्र, लक्ष्मण व्यंग्यपूर्ण, परशुराम क्रोधी', '3. वीर अपनी बड़ाई नहीं करते'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: यह अंश तुलसीदास के रामचरितमानस के बालकांड से है, अवधी भाषा में।" },
+          { "speaker": "NEO", "text": "दो: राम विनम्र हैं, लक्ष्मण व्यंग्य करते हैं, और परशुराम क्रोध से भरे हैं।" },
+          { "speaker": "NEO", "text": "तीन: संदेश यह है कि सच्चा वीर अपनी बड़ाई नहीं करता, और क्रोध पर विनम्रता भारी पड़ती है।" },
+          { "speaker": "ZIPPY", "text": "नोट किया। अब से मैं अपनी बड़ाई सिर्फ़ मन में करूँगा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 3,
+    "name": "आत्मकथ्य",
+    "scenes": [
+      {
+        "animation": "A 1930s editor's desk. A telegram flies in: 'कृपया अपनी आत्मकथा भेजें। - हंस पत्रिका'. A poet sits at a window, smiles gently, and shakes his head. Zippy peeks at the telegram.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "मैगज़ीन आत्मकथा माँग रही है और कवि मना कर रहे हैं? मैं होता तो दस पेज लिख देता!" },
+          { "speaker": "NEO", "text": "यही तो मज़ेदार बात है। कवि ने मना करने के लिए भी एक सुंदर कविता लिख दी। उसका नाम है आत्मकथ्य।" }
+        ]
+      },
+      {
+        "animation": "Portrait card of Jaishankar Prasad with labels: 'जयशंकर प्रसाद (1889-1937)', 'जन्म: वाराणसी', 'छायावाद के प्रमुख कवि', 'कामायनी, आँसू, झरना, लहर', 'नाटक: चंद्रगुप्त, स्कंदगुप्त, ध्रुवस्वामिनी'. A tag: 'आत्मकथ्य: 1932, हंस का आत्मकथा विशेषांक'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि हैं जयशंकर प्रसाद। उनका जन्म सन 1889 में वाराणसी में हुआ और निधन 1937 में।" },
+          { "speaker": "NEO", "text": "वे छायावाद के प्रमुख कवि हैं। कामायनी, आँसू, झरना और लहर उनकी काव्य रचनाएँ हैं, और चंद्रगुप्त, स्कंदगुप्त, ध्रुवस्वामिनी उनके नाटक।" },
+          { "speaker": "NEO", "text": "प्रेमचंद के संपादन में निकलने वाली पत्रिका हंस के आत्मकथा विशेषांक के लिए मित्रों ने उनसे आत्मकथा माँगी। जवाब में 1932 में यह कविता छपी।" }
+        ]
+      },
+      {
+        "animation": "A humming bee circles withered leaves falling from a tree, each leaf showing a tiny sad memory. Then a moonlit night scene glows softly and fades, like a dream from which the poet wakes up. On-screen text: 'मधुप गुन-गुना कर कह जाता कौन कहानी यह अपनी'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कविता शुरू होती है एक भौंरे से, जो गुनगुनाकर अपनी कहानी कह रहा है। चारों ओर मुरझाकर गिरती पत्तियाँ हैं, यानी जीवन की निराशाएँ।" },
+          { "speaker": "NEO", "text": "कवि पूछते हैं: मेरी भोली आत्मकथा सुनकर तुम क्या करोगे? मेरे जीवन में तो कमियाँ ही कमियाँ हैं।" },
+          { "speaker": "NEO", "text": "वे कहते हैं कि मधुर चाँदनी रातों की उज्ज्वल गाथा कैसे गाऊँ? जिस सुख का सपना देखा, वह कभी मिला ही नहीं। अब उसकी यादें ही थके पथिक का सहारा हैं।" }
+        ]
+      },
+      {
+        "animation": "The poet closes a diary gently and places it on a shelf labelled 'मौन व्यथा'. Beside it, a big stage shows other people's stories with a spotlight, while the poet sits quietly in the audience. Text: 'छोटे से जीवन की कैसे बड़ी कथाएँ आज कहूँ?'",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "तो क्या कवि बहुत दुखी थे? या बस शर्मीले?" },
+          { "speaker": "NEO", "text": "दोनों बातें हैं, और एक तीसरी भी। कवि विनम्र हैं। वे कहते हैं कि छोटे-से जीवन की बड़ी कथाएँ कैसे कहूँ? अच्छा है कि मैं मौन रहकर औरों की सुनूँ।" },
+          { "speaker": "NEO", "text": "अंत में वे कहते हैं कि अभी समय भी नहीं है, मेरी मौन व्यथा थककर सोई है। उसे जगाना ठीक नहीं।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'कवि आत्मकथा लिखने से क्यों बचना चाहते हैं?' Three reasons stack like books: 'जीवन साधारण और दुखभरा', 'सुख के क्षण निजी हैं', 'विनम्रता: औरों की सुनना बेहतर'. 'BOARD TIP' sticker on 'छायावाद'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board में अक्सर पूछा जाता है: कवि आत्मकथा लिखने से क्यों बचना चाहते हैं?" },
+          { "speaker": "NEO", "text": "उत्तर: उनका जीवन साधारण और दुखभरा रहा, सुख के मधुर पल बहुत निजी हैं जिन्हें वे सबके सामने नहीं लाना चाहते, और वे विनम्र हैं, इसलिए औरों की कथा सुनना बेहतर मानते हैं।" },
+          { "speaker": "NEO", "text": "Board tip: भाषा वाले सवाल में लिखो कि कविता में छायावादी शैली है, यानी तत्सम शब्द, प्रतीक और कोमल भावनाएँ।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a falling-leaf motif. Points appear: '1. जयशंकर प्रसाद, छायावाद, हंस 1932', '2. जीवन की निराशा और निजी सुख-स्मृतियाँ', '3. विनम्रता: आत्मकथा से इनकार'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: आत्मकथ्य जयशंकर प्रसाद की कविता है, जो 1932 में हंस के आत्मकथा विशेषांक में छपी।" },
+          { "speaker": "NEO", "text": "दो: कवि अपने जीवन को साधारण और निराशाभरा बताते हैं, और सुख की यादें निजी रखना चाहते हैं।" },
+          { "speaker": "NEO", "text": "तीन: कविता का मूल भाव है विनम्रता, यानी अपनी बड़ी कथा कहने के बजाय मौन रहना।" },
+          { "speaker": "ZIPPY", "text": "ठीक है, मेरी आत्मकथा भी अभी थककर सोई है!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 4,
+    "name": "उत्साह",
+    "scenes": [
+      {
+        "animation": "A scorching summer afternoon in a small town; people fan themselves, a dog lies flat, the thermometer reads 45°C. Suddenly dark clouds roll in with a drumroll. Zippy shouts into the sky with a megaphone.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "ओ बादल! जल्दी आओ, वरना मैं यहीं पिघल जाऊँगा!" },
+          { "speaker": "NEO", "text": "तुमने तो वही किया जो निराला ने कविता में किया। उन्होंने बादलों को पुकारा, पर सिर्फ़ बारिश के लिए नहीं, क्रांति के लिए भी।" }
+        ]
+      },
+      {
+        "animation": "Portrait card of Suryakant Tripathi 'Nirala' with a bold flowing beard. Labels build: 'सूर्यकांत त्रिपाठी निराला (1899-1961)', 'जन्म: महिषादल, मेदिनीपुर (बंगाल)', 'मूल निवास: उन्नाव (उ.प्र.)', 'अनामिका, परिमल, गीतिका, कुकुरमुत्ता, नए पत्ते', 'छायावाद'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि हैं सूर्यकांत त्रिपाठी निराला। उनका जन्म सन 1899 में बंगाल के महिषादल में हुआ। मूल रूप से वे उत्तर प्रदेश के उन्नाव ज़िले के थे। निधन 1961 में हुआ।" },
+          { "speaker": "NEO", "text": "अनामिका, परिमल, गीतिका, कुकुरमुत्ता और नए पत्ते उनकी प्रमुख काव्य रचनाएँ हैं। वे छायावाद के प्रमुख कवियों में हैं और मुक्त छंद के लिए प्रसिद्ध हैं।" }
+        ]
+      },
+      {
+        "animation": "Storm clouds gather into a huge swirling shape; lightning bolts hide inside them like swords. On-screen text: 'बादल, गरजो! घेर घेर घोर गगन, धाराधर ओ!' The word 'आह्वान गीत' stamps onto the screen.",
+        "lines": [
+          { "speaker": "NEO", "text": "उत्साह एक आह्वान गीत है। कवि बादल से कहते हैं: बादल, गरजो! पूरे आकाश को घेर लो।" },
+          { "speaker": "NEO", "text": "बादल यहाँ दो रूपों में है। एक, पीड़ित प्यासे लोगों की इच्छा पूरी करने वाला। दो, नई कल्पना और क्रांति लाने वाला।" },
+          { "speaker": "NEO", "text": "कवि बादलों के काले घुँघराले बालों की कल्पना करते हैं, और कहते हैं कि तुम्हारे भीतर बिजली और वज्र छिपा है।" }
+        ]
+      },
+      {
+        "animation": "The town again: people lying restless in the heat. Rain begins; plants sprout, people smile and stand up. A poet's notebook fills with new glowing lines labelled 'नूतन कविता'. The clouds wear a small badge 'नवजीवन वाले'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "पर कवि बादल को कविता से क्यों जोड़ रहे हैं?" },
+          { "speaker": "NEO", "text": "क्योंकि कवि चाहते हैं कि बादल नई कविता भर दें, यानी समाज में नया जोश और नई सोच आए।" },
+          { "speaker": "NEO", "text": "वे कहते हैं कि दुनिया के सारे लोग गर्मी से बेचैन और उदास थे। तब अज्ञात दिशा से घने बादल आए। अब बादल बरसो और तपती धरती को फिर शीतल कर दो।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'कवि बादल से फुहार या रिमझिम के स्थान पर गरजने के लिए क्यों कहता है?' Answer bullets appear: 'गर्जन = क्रांति, बदलाव', 'समाज में जोश भरना', 'पीड़ितों की आशा पूरी करना'. 'BOARD TIP' sticker on 'नवजीवन'.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह सवाल बार-बार आता है: कवि बादल से फुहार या रिमझिम बरसने के बजाय गरजने को क्यों कहता है?" },
+          { "speaker": "NEO", "text": "उत्तर: कवि बदलाव चाहता है। गर्जन क्रांति और जोश का प्रतीक है। वह चाहता है कि बादल की तरह कविता भी समाज को झकझोर दे और लोगों में उत्साह भर दे।" },
+          { "speaker": "NEO", "text": "Board tip: 'नवजीवन वाले' शब्द पर भी सवाल आता है। इसका अर्थ है बादल, जो बरसकर धरती को नया जीवन देते हैं।" }
+        ]
+      },
+      {
+        "animation": "Recap board framed by lightning bolts. Points appear: '1. निराला, छायावाद, आह्वान गीत', '2. बादल = प्यास बुझाने वाला + क्रांति लाने वाला', '3. गरजना = बदलाव और उत्साह'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: उत्साह निराला का आह्वान गीत है।" },
+          { "speaker": "NEO", "text": "दो: बादल प्यासे लोगों को राहत देने वाला भी है और नई क्रांति लाने वाला भी।" },
+          { "speaker": "NEO", "text": "तीन: कवि बादल से गरजने को कहते हैं, क्योंकि वे समाज में बदलाव और उत्साह चाहते हैं।" },
+          { "speaker": "ZIPPY", "text": "मैं भी गरजूँगा: होमवर्क, खत्म हो जाओ!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 5,
+    "name": "अट नहीं रही है",
+    "scenes": [
+      {
+        "animation": "Zippy tries to stuff a giant bouquet of spring flowers into a small box; petals keep bursting out of the sides. The box lid pops open with a 'BOING'. Background: trees full of red and green leaves.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "नियो, ये फूल डिब्बे में समा ही नहीं रहे!" },
+          { "speaker": "NEO", "text": "बधाई हो, तुमने कविता का शीर्षक समझ लिया। अट नहीं रही है का मतलब है, समा नहीं रही है। निराला कहते हैं फागुन की सुंदरता कहीं समा नहीं रही।" }
+        ]
+      },
+      {
+        "animation": "A quick badge for Nirala slides in: 'निराला: छायावाद, मुक्त छंद'. Then a calendar page flips to 'फागुन' with a spring breeze sweeping across fields, trees and houses. Text: 'अट नहीं रही है आभा फागुन की तन'.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह कविता भी सूर्यकांत त्रिपाठी निराला की है, और यह फागुन के महीने की मस्ती पर है।" },
+          { "speaker": "NEO", "text": "कवि कहते हैं कि फागुन की आभा यानी चमक इतनी ज़्यादा है कि वह किसी एक जगह समा नहीं पा रही। हर तरफ़ से बाहर छलक रही है।" }
+        ]
+      },
+      {
+        "animation": "A playful wind character (Fagun) blows into every house, filling rooms with fragrance; it gives wings to birds and to people's thoughts, who float up into the sky. Trees change colour: some branches green, some red, with flower garlands on them.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि फागुन को एक इंसान की तरह देखते हैं। फागुन जब साँस लेता है, तो घर-घर खुशबू से भर जाता है।" },
+          { "speaker": "NEO", "text": "फागुन मन को इतना उमंग से भर देता है कि वह आकाश में उड़ने के लिए पंख फैलाने लगता है।" },
+          { "speaker": "NEO", "text": "पेड़ों की डालियाँ पत्तों से लदी हैं, कहीं हरी, कहीं लाल। ऐसा लगता है मानो पेड़ों के गले में मंद खुशबू वाले फूलों की माला पड़ी हो।" }
+        ]
+      },
+      {
+        "animation": "The poet tries to turn his head away from the beautiful scene, but his eyes keep sliding back, pulled like a magnet. Text: 'आँख हटाता हूँ तो हट नहीं रही है'. A 'मानवीकरण' label pops next to the Fagun character.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "और कवि इतने खुश क्यों हैं?" },
+          { "speaker": "NEO", "text": "क्योंकि यह नज़ारा इतना सुंदर है कि कवि आँख हटाना चाहते हैं, पर आँख हट ही नहीं रही।" },
+          { "speaker": "NEO", "text": "यहाँ फागुन का मानवीकरण हुआ है, यानी उसे इंसान की तरह साँस लेते और काम करते दिखाया गया है। यह अलंकार वाले प्रश्न में भी काम आएगा।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'फागुन में ऐसा क्या होता है जो बाकी ऋतुओं से भिन्न होता है?' Answer points pop up with icons: flowers, colourful leaves, fragrance, joyful people. 'BOARD TIP' sticker on the word 'मानवीकरण'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board का सवाल: फागुन में ऐसा क्या होता है जो बाकी ऋतुओं से अलग है?" },
+          { "speaker": "NEO", "text": "उत्तर: फागुन में प्रकृति अपने सबसे सुंदर रूप में होती है। पेड़ नए हरे और लाल पत्तों से लद जाते हैं, फूल खिलते हैं, हवा में खुशबू होती है और लोगों का मन भी उल्लास से भर जाता है।" },
+          { "speaker": "NEO", "text": "Board tip: उत्तर में फागुन के मानवीकरण का ज़िक्र करोगे तो अंक पक्के हैं।" }
+        ]
+      },
+      {
+        "animation": "Recap board decorated with spring flowers. Points appear: '1. अट नहीं रही = समा नहीं रही', '2. फागुन का मानवीकरण', '3. प्रकृति और मन दोनों उल्लास से भरे'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: अट नहीं रही है का अर्थ है समा नहीं रही है। फागुन की सुंदरता हर जगह छलक रही है।" },
+          { "speaker": "NEO", "text": "दो: कवि ने फागुन का मानवीकरण किया है, जो साँस लेता है और घर-घर खुशबू भरता है।" },
+          { "speaker": "NEO", "text": "तीन: इस ऋतु में प्रकृति और मनुष्य का मन, दोनों उल्लास से भर जाते हैं।" },
+          { "speaker": "ZIPPY", "text": "मेरी खुशी भी अट नहीं रही है, क्योंकि ये पाठ खत्म हो गया!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 6,
+    "name": "यह दंतुरित मुसकान",
+    "scenes": [
+      {
+        "animation": "A tired traveller with a dusty bag enters a village hut. A baby with two tiny new teeth looks at him and gives a huge toothy grin. The traveller's grey face instantly turns colourful, and flowers bloom around him.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "अरे वाह! बच्चे की एक मुस्कान से अंकल का पूरा मूड बदल गया!" },
+          { "speaker": "NEO", "text": "हाँ, और नागार्जुन कहते हैं कि यह दंतुरित मुसकान तो मरे हुए में भी जान डाल दे। दंतुरित यानी जिसमें नए-नए दाँत निकले हों।" }
+        ]
+      },
+      {
+        "animation": "Portrait card of Nagarjun with a simple cloth bag. Labels build: 'नागार्जुन (1911-1998)', 'जन्म: सतलखा गाँव, दरभंगा (बिहार)', 'मूल नाम: वैद्यनाथ मिश्र', 'मैथिली में उपनाम: यात्री', 'युगधारा, सतरंगे पंखों वाली, हज़ार-हज़ार बाँहों वाली'.",
+        "lines": [
+          { "speaker": "NEO", "text": "नागार्जुन का जन्म सन 1911 में बिहार के दरभंगा ज़िले के सतलखा गाँव में हुआ। उनका मूल नाम वैद्यनाथ मिश्र था, और मैथिली में वे यात्री नाम से लिखते थे। निधन 1998 में हुआ।" },
+          { "speaker": "NEO", "text": "युगधारा, सतरंगे पंखों वाली और हज़ार-हज़ार बाँहों वाली उनकी काव्य रचनाएँ हैं। बलचनमा और रतिनाथ की चाची उनके उपन्यास हैं। वे जनकवि कहलाते हैं।" }
+        ]
+      },
+      {
+        "animation": "Inside the hut the dusty baby smiles; lotus flowers appear to have left their pond and bloom inside the hut. A hard rock melts into water; a dry bamboo and a thorny babool tree suddenly shed shefalika flowers when the baby touches them.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि बहुत समय बाद घर लौटे हैं। धूल से सना बच्चा उन्हें ऐसा लगता है मानो तालाब छोड़कर कमल उनकी झोंपड़ी में खिल गए हों।" },
+          { "speaker": "NEO", "text": "बच्चे के स्पर्श से कठोर पत्थर भी पिघलकर जल बन गया होगा। कवि खुद को बाँस या बबूल जैसा रूखा मानते हैं, पर बच्चे के छूते ही उनसे शेफालिका के फूल झरने लगते हैं।" }
+        ]
+      },
+      {
+        "animation": "The baby stares at the stranger without recognising him. The mother steps in, feeding the child with her fingers; a label 'मधुपर्क' appears over her hand. The baby gives a sideways glance ('कनखी') and a shy smile; the poet laughs.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "पर बच्चा अपने पापा को पहचान क्यों नहीं रहा?" },
+          { "speaker": "NEO", "text": "क्योंकि कवि लंबे समय तक बाहर रहे। वे खुद को चिर प्रवासी, यानी पराया कहते हैं।" },
+          { "speaker": "NEO", "text": "वे माँ को धन्यवाद देते हैं, जिसकी उँगलियों ने बच्चे को मधुपर्क खिलाया, यानी प्यार से पाला। जब बच्चा कनखी मारकर मुस्कुराता है, तो वह मुस्कान कवि को और भी प्यारी लगती है।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'बच्चे की दंतुरित मुसकान का कवि के मन पर क्या प्रभाव पड़ा?' Answer lines appear with icons: a melting stone, a blooming lotus, flowers falling from a thorny tree. 'BOARD TIP' sticker on 'बाँस या बबूल'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board का सवाल: बच्चे की दंतुरित मुसकान का कवि के मन पर क्या असर हुआ?" },
+          { "speaker": "NEO", "text": "उत्तर: कवि का उदास और कठोर मन खुशी से भर गया। उन्हें लगा कि यह मुस्कान मृतक में भी जान डाल सकती है और पत्थर को भी पिघला सकती है।" },
+          { "speaker": "NEO", "text": "Board tip: 'बाँस था कि बबूल' पंक्ति का भाव ज़रूर लिखो। इसका अर्थ है कि कवि का रूखा मन भी कोमल हो गया।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a baby-smile sticker. Points appear: '1. नागार्जुन, जनकवि, यात्री', '2. बच्चे की मुस्कान = नया जीवन', '3. माँ के प्रति कृतज्ञता, कवि खुद को प्रवासी मानते हैं'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: यह दंतुरित मुसकान जनकवि नागार्जुन की कविता है।" },
+          { "speaker": "NEO", "text": "दो: बच्चे की मुस्कान कठोर मन को भी कोमल बना देती है और नया जीवन भर देती है।" },
+          { "speaker": "NEO", "text": "तीन: कवि खुद को प्रवासी मानते हैं और बच्चे को पालने वाली माँ के प्रति आभार जताते हैं।" },
+          { "speaker": "ZIPPY", "text": "मेरे तो दाँत भी नहीं हैं, फिर भी मेरी स्माइल सुपरहिट है!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 7,
+    "name": "फसल",
+    "scenes": [
+      {
+        "animation": "Zippy stands in a golden wheat field holding a single wheat stalk like a trophy. A 'Made by Zippy' tag hangs on it. Behind him, rivers, farmers, the sun and wind all raise their hands as if to object.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "देखो नियो, यह फसल मैंने उगाई है!" },
+          { "speaker": "NEO", "text": "अकेले? नागार्जुन की कविता फसल सुनकर तुम यह दावा वापस ले लोगे। फसल बनाने में तो पूरी प्रकृति और लाखों हाथ लगते हैं।" }
+        ]
+      },
+      {
+        "animation": "A small badge for Nagarjun: 'नागार्जुन, जनकवि'. Then many rivers flow from different directions and meet at one field. Text: 'एक के नहीं, दो के नहीं, ढेर सारी नदियों के पानी का जादू'.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह कविता भी जनकवि नागार्जुन की है। कवि कहते हैं कि फसल एक या दो नदियों के पानी से नहीं बनती, इसमें ढेर सारी नदियों के पानी का जादू है।" },
+          { "speaker": "NEO", "text": "कविता में बार-बार आता है, एक के नहीं, दो के नहीं। इससे पता चलता है कि फसल सामूहिक मेहनत का नतीजा है।" }
+        ]
+      },
+      {
+        "animation": "Close-ups of countless hands of farmers ploughing, sowing, watering and harvesting multiply across the screen into a crowd. Then soil in three colours appears in layers labelled 'भूरी', 'काली', 'संदली', each glowing as seeds sprout.",
+        "lines": [
+          { "speaker": "NEO", "text": "दूसरा तत्व है मनुष्य की मेहनत। कवि कहते हैं कि फसल में लाखों-करोड़ों हाथों के स्पर्श की गरिमा है।" },
+          { "speaker": "NEO", "text": "तीसरा तत्व है मिट्टी। हज़ारों खेतों की भूरी, काली और संदली मिट्टी का गुण-धर्म फसल में समाया है।" },
+          { "speaker": "ZIPPY", "text": "यानी मिट्टी भी टीम का हिस्सा है!" }
+        ]
+      },
+      {
+        "animation": "The sun's rays shrink and fold into a grain of wheat, glowing inside it. A playful breeze makes the crops dance. Text builds: 'सूरज की किरणों का रूपांतर', 'हवा की थिरकन का सिमटा हुआ संकोच'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि पूछते हैं: आखिर फसल क्या है? और खुद जवाब देते हैं कि यह नदियों के पानी का जादू है, हाथों के स्पर्श की महिमा है।" },
+          { "speaker": "NEO", "text": "फसल सूरज की किरणों का रूपांतर है, और हवा की थिरकन का सिमटा हुआ संकोच है। यानी धूप और हवा भी दाने में बंद हो गई हैं।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'कवि के अनुसार फसल क्या है?' Five icons line up: river, hands, soil, sun, wind, all feeding into a wheat stalk. A second card: 'मूल भाव: प्रकृति और मनुष्य का सहयोग'. 'BOARD TIP' sticker.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board में पूछा जाता है: कवि के अनुसार फसल क्या है?" },
+          { "speaker": "NEO", "text": "उत्तर पाँच चीज़ों से बनाओ: नदियों का पानी, किसानों की मेहनत, मिट्टी का गुण-धर्म, सूरज की किरणें और हवा की थिरकन। निष्कर्ष लिखो कि फसल प्रकृति और मनुष्य के सहयोग का परिणाम है।" },
+          { "speaker": "NEO", "text": "Board tip: कविता का संदेश भी लिखो कि हमें किसान की मेहनत और प्रकृति का सम्मान करना चाहिए।" }
+        ]
+      },
+      {
+        "animation": "Recap board with a wheat-sheaf border. Points appear: '1. फसल = सामूहिक प्रयास', '2. पानी, हाथ, मिट्टी, धूप, हवा', '3. प्रकृति और मनुष्य का सहयोग'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: फसल किसी एक का नहीं, सबका सामूहिक प्रयास है।" },
+          { "speaker": "NEO", "text": "दो: इसमें नदियों का पानी, लाखों हाथों की मेहनत, मिट्टी, सूरज की किरणें और हवा शामिल हैं।" },
+          { "speaker": "NEO", "text": "तीन: कविता प्रकृति और मनुष्य के सहयोग का सम्मान करना सिखाती है।" },
+          { "speaker": "ZIPPY", "text": "ठीक है, ट्रॉफी मैं किसानों को दे देता हूँ!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 1,
+    "chapter": "क्षितिज: काव्य खंड",
+    "topic_no": 8,
+    "name": "संगतकार",
+    "scenes": [
+      {
+        "animation": "A grand music concert. A spotlight falls on the main singer; behind him, a quiet singer sits in the shadows, softly joining the tune. The audience only claps for the main singer. Zippy squints at the back.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "नियो, पीछे वाले भैया कौन हैं? उन पर तो किसी का ध्यान ही नहीं है!" },
+          { "speaker": "NEO", "text": "वही इस कविता के हीरो हैं। उन्हें संगतकार कहते हैं, यानी मुख्य गायक का साथ देने वाला।" }
+        ]
+      },
+      {
+        "animation": "Portrait card of Manglesh Dabral with mountains of Garhwal behind. Labels build: 'मंगलेश डबराल (1948-2020)', 'जन्म: काफलपानी गाँव, टिहरी गढ़वाल (उत्तराखंड)', 'पहाड़ पर लालटेन, घर का रास्ता, हम जो देखते हैं, आवाज़ भी एक जगह है'.",
+        "lines": [
+          { "speaker": "NEO", "text": "कवि हैं मंगलेश डबराल। उनका जन्म सन 1948 में उत्तराखंड के टिहरी गढ़वाल ज़िले के काफलपानी गाँव में हुआ।" },
+          { "speaker": "NEO", "text": "पहाड़ पर लालटेन, घर का रास्ता, हम जो देखते हैं और आवाज़ भी एक जगह है उनके कविता संग्रह हैं। वे पत्रकारिता से भी जुड़े रहे।" }
+        ]
+      },
+      {
+        "animation": "The main singer's voice is drawn as a heavy rock; the accompanist's voice is a thin, trembling thread wrapped around it. Thought bubbles over the accompanist show three options: 'छोटा भाई?', 'शिष्य?', 'दूर का रिश्तेदार?'",
+        "lines": [
+          { "speaker": "NEO", "text": "मुख्य गायक का स्वर चट्टान जैसा भारी है, और संगतकार की आवाज़ सुंदर, कमज़ोर और काँपती हुई है।" },
+          { "speaker": "NEO", "text": "कवि कहते हैं कि संगतकार शायद मुख्य गायक का छोटा भाई है, या शिष्य, या पैदल चलकर सीखने आने वाला कोई दूर का रिश्तेदार।" }
+        ]
+      },
+      {
+        "animation": "The main singer drifts off into a complex taan, lost in a maze of notes; the accompanist gently holds the base note like an anchor rope and pulls him back. Later, the singer's throat strains on a high note; the accompanist's voice rises softly beside him. Text: 'हिचक = विफलता नहीं, मनुष्यता'.",
+        "lines": [
+          { "speaker": "NEO", "text": "जब मुख्य गायक अंतरे की जटिल तान में खो जाता है, तो संगतकार स्थायी को संभाले रहता है, जैसे कोई पीछे छूटा सामान समेट रहा हो।" },
+          { "speaker": "NEO", "text": "जब ऊँचे सुर पर गायक का गला बैठने लगता है, तब संगतकार की आवाज़ उसे ढाढ़स देती है कि वह अकेला नहीं है।" },
+          { "speaker": "ZIPPY", "text": "पर वो अपनी आवाज़ ऊँची क्यों नहीं करता?" },
+          { "speaker": "NEO", "text": "कवि कहते हैं कि अपने स्वर को ऊँचा न उठाने की उसकी कोशिश को विफलता नहीं, उसकी मनुष्यता समझना चाहिए।" }
+        ]
+      },
+      {
+        "animation": "A 'Board Question' card: 'संगतकार जैसे व्यक्ति संगीत के अलावा किन क्षेत्रों में दिखाई देते हैं?' Icons pop up: a film crew behind a hero, a support staff in a cricket team, a nurse beside a surgeon. 'BOARD TIP' sticker on 'मनुष्यता'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board का पक्का सवाल: संगतकार जैसे लोग और किन क्षेत्रों में दिखते हैं?" },
+          { "speaker": "NEO", "text": "उत्तर: फ़िल्म में हीरो के पीछे पूरी टीम, खेल में सपोर्ट स्टाफ़, राजनीति में कार्यकर्ता। ये लोग सफलता में बराबर योगदान देते हैं, पर नाम मुख्य व्यक्ति का होता है।" },
+          { "speaker": "NEO", "text": "Board tip: उत्तर में यह ज़रूर जोड़ो कि कवि इन सहयोगियों को सम्मान देने की बात करते हैं।" }
+        ]
+      },
+      {
+        "animation": "Recap board with the concert stage; this time the spotlight widens to include the accompanist. Points appear: '1. मंगलेश डबराल, संगतकार', '2. संगतकार मुख्य गायक को संभालता है', '3. स्वर ऊँचा न करना = मनुष्यता'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. एक: संगतकार मंगलेश डबराल की कविता है।" },
+          { "speaker": "NEO", "text": "दो: संगतकार मुख्य गायक को भटकने और थकने पर संभालता है, पर खुद आगे नहीं आता।" },
+          { "speaker": "NEO", "text": "तीन: उसका स्वर ऊँचा न करना उसकी कमज़ोरी नहीं, मनुष्यता है, और हमें ऐसे सहयोगियों का सम्मान करना चाहिए।" },
+          { "speaker": "ZIPPY", "text": "यानी मैं भी तुम्हारा संगतकार हूँ, नियो!" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,320 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "दीपकम्: पाठ (भाग 2)",
+    "topic_no": 1,
+    "name": "पश्यत कोणमैशान्यं भारतस्य मनोहरम्",
+    "scenes": [
+      {
+        "animation": "Zippy spins a globe and lands on the north-east corner of India's map. Tea gardens, misty hills, bamboo forests and a one-horned rhino pop out of the map like a pop-up book.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "नक्शे के इस कोने में इतनी हरियाली और गैंडा भी! यह कौन-सी जगह है?" },
+          { "speaker": "NEO", "text": "यह भारत का ईशान कोण है, यानी उत्तर-पूर्व दिशा। आज का पाठ इसी सुंदर कोने की सैर कराता है।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 8 — पश्यत कोणमैशान्यं भारतस्य मनोहरम्'. A compass rose highlights the north-east direction labelled 'ईशानः'. The words split: 'पश्यत = देखो', 'मनोहरम् = मन को हरने वाला'.",
+        "lines": [
+          { "speaker": "NEO", "text": "पाठ के नाम का अर्थ है: भारत के मन को मोह लेने वाले ईशान कोण को देखो।" },
+          { "speaker": "NEO", "text": "पश्यत यानी तुम सब देखो। मनोहरम् यानी जो मन को हर ले, यानी बहुत सुंदर।" },
+          { "speaker": "NEO", "text": "यह पाठ शिक्षक और छात्रों की बातचीत के रूप में है। छात्र सवाल पूछते हैं और शिक्षक पूर्वोत्तर के बारे में बताते हैं।" }
+        ]
+      },
+      {
+        "animation": "The north-east map builds state by state, each glowing as it is named: Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Tripura as seven sisters holding hands, then Sikkim as a brother joining them. Label: 'सप्तभगिन्यः एकः भ्राता च'.",
+        "lines": [
+          { "speaker": "NEO", "text": "यहाँ आठ राज्य हैं। अरुणाचल प्रदेश, असम, मणिपुर, मेघालय, मिज़ोरम, नागालैंड और त्रिपुरा को सात बहनें कहा जाता है।" },
+          { "speaker": "NEO", "text": "और सिक्किम को इनका एक भाई कहा जाता है। संस्कृत में: सप्तभगिन्यः एकः भ्राता च।" },
+          { "speaker": "ZIPPY", "text": "सात बहनें और एक भाई! राखी पर तो सिक्किम की कलाई भर जाती होगी!" }
+        ]
+      },
+      {
+        "animation": "A river animation: the mighty Brahmaputra flows across Assam, and the Barak river flows in the south. Then people in colourful traditional dress dance, with labels 'गारो', 'खासी', 'नागा', 'मिज़ो'. Bamboo baskets and handloom shawls pile up.",
+        "lines": [
+          { "speaker": "NEO", "text": "इस क्षेत्र में पहाड़, घाटियाँ और ब्रह्मपुत्र और बराक जैसी नदियाँ हैं।" },
+          { "speaker": "NEO", "text": "यहाँ गारो, खासी, नागा, मिज़ो जैसी अनेक जनजातियाँ रहती हैं। हर एक की अपनी भाषा, नृत्य और त्योहार हैं।" },
+          { "speaker": "NEO", "text": "बाँस से बनी चीज़ें और हाथ से बुने कपड़े यहाँ की ख़ास पहचान हैं।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' card shows the sandhi: 'कोणम् + ऐशान्यम् = कोणमैशान्यम्'. A small map quiz asks: 'भ्राता कः?' and the answer 'सिक्किमः' lights up.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: सात बहनों के नाम और भाई सिक्किम ज़रूर याद करो। यह प्रश्न बहुत आता है।" },
+          { "speaker": "NEO", "text": "कोणमैशान्यम् को तोड़ो तो बनता है कोणम् और ऐशान्यम्। ईशान दिशा से ही ऐशान्य शब्द बना है।" },
+          { "speaker": "ZIPPY", "text": "ईशान यानी उत्तर-पूर्व। अब कंपास में भी संस्कृत दिखेगी!" }
+        ]
+      },
+      {
+        "animation": "Zippy wears a bamboo hat and waves from a hilltop over tea gardens. Recap cards: '1. ईशान कोण = उत्तर-पूर्व', '2. सात बहनें + भाई सिक्किम', '3. नदियाँ, जनजातियाँ, बाँस-शिल्प'.",
+        "lines": [
+          { "speaker": "NEO", "text": "याद रखो। पहला, ईशान कोण यानी भारत का उत्तर-पूर्व। दूसरा, यहाँ सात बहन राज्य और उनका भाई सिक्किम है। तीसरा, यह क्षेत्र नदियों, जनजातियों और बाँस-शिल्प के लिए प्रसिद्ध है।" },
+          { "speaker": "ZIPPY", "text": "अगली छुट्टियों में मेरा टिकट पक्का, ईशान कोण की ओर!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "दीपकम्: पाठ (भाग 2)",
+    "topic_no": 2,
+    "name": "कोऽरुक्? कोऽरुक्? कोऽरुक्?",
+    "scenes": [
+      {
+        "animation": "A beautiful green parrot perches on a flowering tree outside a physician's house and repeats 'कोऽरुक्? कोऽरुक्?'. The physician inside shrugs and closes the window. Zippy scratches his head.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "यह तोता बार-बार क्या पूछ रहा है? कोऽरुक्? यह कौन-सी भाषा है?" },
+          { "speaker": "NEO", "text": "संस्कृत है! कोऽरुक् का अर्थ है, कौन रोगरहित है? यानी स्वस्थ कौन है?" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 9 — कोऽरुक्? कोऽरुक्? कोऽरुक्?'. The word splits: 'कः + अरुक्', and 'अरुक् = अ (नहीं) + रुक् (रोग)'. A glowing figure labelled 'धन्वन्तरिः' is revealed behind the parrot's shadow.",
+        "lines": [
+          { "speaker": "NEO", "text": "कोऽरुक् बना है कः और अरुक् से। रुक् यानी रोग, और अरुक् यानी जिसे रोग न हो।" },
+          { "speaker": "NEO", "text": "कहानी में यह तोता कोई साधारण पक्षी नहीं था। वह थे आयुर्वेद के देवता धन्वन्तरि, जो तोते का रूप लेकर वैद्यों की परीक्षा ले रहे थे।" }
+        ]
+      },
+      {
+        "animation": "The parrot flies from house to house of different physicians; each looks confused or ignores it. A map path traces the journey until it reaches a peaceful ashram labelled 'वाग्भटस्य आश्रमः'.",
+        "lines": [
+          { "speaker": "NEO", "text": "तोता कई प्रसिद्ध वैद्यों के घर गया और यही प्रश्न पूछा। पर किसी ने सही उत्तर नहीं दिया।" },
+          { "speaker": "ZIPPY", "text": "बड़े-बड़े डॉक्टर भी फ़ेल! फिर क्या हुआ?" },
+          { "speaker": "NEO", "text": "आख़िर में तोता वैद्य वाग्भट के आश्रम के पास पहुँचा और फिर पूछा, कोऽरुक्?" }
+        ]
+      },
+      {
+        "animation": "Vagbhata looks up and answers calmly. Three plates appear one by one: a plate of healthy food labelled 'हितभुक्', a small balanced portion labelled 'मितभुक्', and seasonal fruits with a calendar labelled 'ऋतभुक्'.",
+        "lines": [
+          { "speaker": "NEO", "text": "वाग्भट ने तुरंत उत्तर दिया: हितभुक्, मितभुक्, ऋतभुक्।" },
+          { "speaker": "NEO", "text": "हितभुक् यानी जो शरीर के लिए हितकारी भोजन करे। मितभुक् यानी जो सीमित मात्रा में खाए।" },
+          { "speaker": "NEO", "text": "ऋतभुक् यानी जो सही समय और ऋतु के अनुसार उचित भोजन करे। ऐसा व्यक्ति ही स्वस्थ रहता है।" },
+          { "speaker": "ZIPPY", "text": "मतलब तीन प्लेट समोसे खाने वाला मितभुक् नहीं है!" }
+        ]
+      },
+      {
+        "animation": "The parrot transforms back into Dhanvantari and blesses Vagbhata. An 'Exam Tip' card shows 'भुक् = खाने वाला' with three word-cards lined up.",
+        "lines": [
+          { "speaker": "NEO", "text": "सही उत्तर सुनकर धन्वन्तरि प्रसन्न हुए। वाग्भट की विद्या की परीक्षा पूरी हुई। यानी दवा से पहले सही भोजन ही सबसे बड़ा इलाज है।" },
+          { "speaker": "NEO", "text": "परीक्षा टिप: तीनों शब्दों में भुक् का अर्थ है खाने वाला। तीनों का अर्थ अलग-अलग लिखो, एक साथ मिलाकर नहीं।" }
+        ]
+      },
+      {
+        "animation": "Zippy sits at a canteen table with a balanced thali, drinking water. Recap cards: '1. कोऽरुक् = स्वस्थ कौन?', '2. प्रश्नकर्ता: धन्वन्तरि, उत्तर: वाग्भट', '3. हितभुक्, मितभुक्, ऋतभुक्'.",
+        "lines": [
+          { "speaker": "NEO", "text": "तीन बातें याद रखो। पहला, कोऽरुक् का अर्थ है, स्वस्थ कौन है? दूसरा, तोते के रूप में धन्वन्तरि ने पूछा और वाग्भट ने उत्तर दिया। तीसरा, हितकारी, सीमित और ऋतु के अनुसार भोजन ही स्वास्थ्य का रहस्य है।" },
+          { "speaker": "ZIPPY", "text": "आज से मैं भी अरुक् बनूँगा। एक समोसा, बस एक!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "दीपकम्: पाठ (भाग 2)",
+    "topic_no": 3,
+    "name": "सन्निमित्ते वरं त्यागः (क-भागः)",
+    "scenes": [
+      {
+        "animation": "A royal court. A tall warrior with a sword bows before a king and names a huge salary. Courtiers gasp and a minister whispers in the king's ear. Zippy's eyes widen at the number of gold coins.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "इतनी बड़ी तनख्वाह माँग ली? यह योद्धा है या करोड़पति?" },
+          { "speaker": "NEO", "text": "यह है वीरवर। और यह कहानी बताएगी कि वह हर एक सिक्के के लायक था।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 10 — सन्निमित्ते वरं त्यागः (क-भागः)'. A book labelled 'हितोपदेशः' opens. Character cards: 'राजा शूद्रकः', 'वीरवरः'.",
+        "lines": [
+          { "speaker": "NEO", "text": "यह कहानी हितोपदेश से है और दो भागों में है। आज पहला भाग, यानी क-भाग।" },
+          { "speaker": "NEO", "text": "राजा शूद्रक के दरबार में वीरवर नाम का एक राजपुत्र नौकरी माँगने आया।" },
+          { "speaker": "NEO", "text": "उसने बहुत अधिक वेतन माँगा। पहले राजा हिचकिचाए, पर मंत्री की सलाह पर उसे रख लिया गया।" }
+        ]
+      },
+      {
+        "animation": "A montage: Veeravara stands guard at the palace gate day and night with his sword, rain or shine. He hands part of his salary to temples and part to the poor, keeping only a little for his family.",
+        "lines": [
+          { "speaker": "NEO", "text": "वीरवर दिन-रात राजमहल के द्वार पर पहरा देता था।" },
+          { "speaker": "NEO", "text": "वह अपने वेतन का बड़ा हिस्सा देवताओं की पूजा और गरीबों की सहायता में लगा देता था।" },
+          { "speaker": "ZIPPY", "text": "तो बड़ी तनख्वाह अपने लिए नहीं, दूसरों के लिए माँगी थी!" }
+        ]
+      },
+      {
+        "animation": "Midnight. A faint sound of a woman weeping echoes through the dark palace. The king sends Veeravara to find out. Veeravara follows the sound and finds a glowing, sad woman labelled 'राजलक्ष्मीः'.",
+        "lines": [
+          { "speaker": "NEO", "text": "एक आधी रात को महल के बाहर किसी स्त्री के रोने की आवाज़ आई। राजा ने वीरवर को पता लगाने भेजा।" },
+          { "speaker": "NEO", "text": "वहाँ उसे एक स्त्री मिली। उसने बताया कि वह राजलक्ष्मी है।" },
+          { "speaker": "NEO", "text": "राजलक्ष्मी ने कहा कि तीन दिन बाद राजा की मृत्यु हो जाएगी, इसलिए वह रो रही है।" }
+        ]
+      },
+      {
+        "animation": "Veeravara kneels and asks 'क उपायः?'. Rajalakshmi points to a temple of goddess Sarvamangala. A question mark hangs over Veeravara's head. An 'Exam Tip' card reads 'कथा का स्रोत: हितोपदेशः'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "क्या राजा को बचाने का कोई उपाय है?" },
+          { "speaker": "NEO", "text": "राजलक्ष्मी ने उपाय बताया। अगर वीरवर अपनी सबसे प्रिय वस्तु देवी सर्वमङ्गला को भेंट कर दे, तो राजा बच सकते हैं और सौ वर्ष जी सकते हैं।" },
+          { "speaker": "NEO", "text": "परीक्षा टिप: पात्रों के नाम सही लिखो, राजा शूद्रक और वीरवर। और कथा का स्रोत हितोपदेश।" }
+        ]
+      },
+      {
+        "animation": "Veeravara walks home through the dark, thinking deeply, the moon above. Recap cards: '1. वीरवर — ईमानदार सेवक', '2. वेतन से दान और सेवा', '3. राजलक्ष्मी की भविष्यवाणी और उपाय'.",
+        "lines": [
+          { "speaker": "NEO", "text": "सार याद रखो। पहला, वीरवर राजा शूद्रक का ईमानदार सेवक था। दूसरा, वह अपने वेतन से दान और सेवा करता था। तीसरा, राजलक्ष्मी ने राजा की मृत्यु की बात और उसे टालने का कठिन उपाय बताया।" },
+          { "speaker": "ZIPPY", "text": "अब आगे क्या होगा? जल्दी ख-भाग दिखाओ!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "दीपकम्: पाठ (भाग 2)",
+    "topic_no": 4,
+    "name": "सन्निमित्ते वरं त्यागः (ख-भागः)",
+    "scenes": [
+      {
+        "animation": "Veeravara reaches home at night and wakes his family. His young son listens with shining eyes and stands up bravely. Zippy watches, biting his nails.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "वीरवर अपने परिवार को यह बात कैसे बताएगा? मुझे तो डर लग रहा है!" },
+          { "speaker": "NEO", "text": "यही इस भाग का सबसे भावुक क्षण है। चलो देखते हैं, उसका परिवार क्या कहता है।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 11 — सन्निमित्ते वरं त्यागः (ख-भागः)'. The son labelled 'शक्तिधरः' speaks to his father with folded hands.",
+        "lines": [
+          { "speaker": "NEO", "text": "वीरवर ने सारी बात अपने परिवार को बताई। उसका पुत्र शक्तिधर तुरंत बोला कि राजा के लिए वह अपना जीवन देने को तैयार है।" },
+          { "speaker": "NEO", "text": "परिवार के सभी लोग इस त्याग के लिए राज़ी हो गए। वे सब देवी सर्वमङ्गला के मंदिर पहुँचे।" }
+        ]
+      },
+      {
+        "animation": "Unseen by anyone, King Shudraka follows secretly with a hidden sword and watches from behind a pillar in the temple. Soft golden light surrounds the goddess's idol.",
+        "lines": [
+          { "speaker": "NEO", "text": "राजा शूद्रक चुपके से उनके पीछे-पीछे आए और छिपकर सब देखने लगे।" },
+          { "speaker": "ZIPPY", "text": "राजा ख़ुद जासूस बन गए!" },
+          { "speaker": "NEO", "text": "वीरवर का परिवार राजा के लिए सब कुछ त्यागने को तैयार था। अंत में वीरवर स्वयं भी अपना जीवन देने के लिए आगे बढ़ा।" }
+        ]
+      },
+      {
+        "animation": "A bright flash: the goddess Sarvamangala appears and stops Veeravara's hand. The family is safe and glowing. Next morning, the king places a crown on Veeravara's head; a map label reads 'कर्णाटराज्यम्'.",
+        "lines": [
+          { "speaker": "NEO", "text": "तभी देवी सर्वमङ्गला प्रकट हुईं और उसे रोक लिया। देवी ने प्रसन्न होकर राजा को लंबी आयु का वरदान दिया और परिवार सुरक्षित रहा।" },
+          { "speaker": "NEO", "text": "अगले दिन राजा ने दरबार में सबको वीरवर की कथा सुनाई। उन्होंने उसके त्याग से प्रसन्न होकर उसे कर्णाट राज्य दे दिया।" }
+        ]
+      },
+      {
+        "animation": "The key shloka glows on a scroll: 'धनानि जीवितं चैव परार्थे प्राज्ञ उत्सृजेत्। सन्निमित्ते वरं त्यागो विनाशे नियते सति॥' The word 'सन्निमित्ते' splits into 'सत् + निमित्ते'. An 'Exam Tip' sticker lands on it.",
+        "lines": [
+          { "speaker": "NEO", "text": "पाठ का श्लोक है: धनानि जीवितं चैव परार्थे प्राज्ञ उत्सृजेत्। सन्निमित्ते वरं त्यागो विनाशे नियते सति।" },
+          { "speaker": "NEO", "text": "अर्थ: बुद्धिमान व्यक्ति दूसरों के लिए धन और जीवन भी त्याग दे। जब नाश तो निश्चित ही है, तो अच्छे कारण के लिए त्याग करना श्रेष्ठ है।" },
+          { "speaker": "NEO", "text": "परीक्षा टिप: सन्निमित्ते का संधि-विच्छेद है सत् और निमित्ते, यानी अच्छे कारण के लिए। यह प्रश्न अक्सर आता है।" }
+        ]
+      },
+      {
+        "animation": "Veeravara, now a king, still bows respectfully to Shudraka. Recap cards: '1. पूरा परिवार त्याग को तैयार', '2. देवी प्रसन्न, राजा को दीर्घायु', '3. अच्छे कारण के लिए त्याग श्रेष्ठ'.",
+        "lines": [
+          { "speaker": "NEO", "text": "याद रखो। पहला, वीरवर का पूरा परिवार राजा के लिए त्याग को तैयार हुआ। दूसरा, देवी ने प्रसन्न होकर राजा को लंबी आयु दी और राजा ने वीरवर को राज्य दिया। तीसरा, अच्छे कारण के लिए किया गया त्याग सबसे श्रेष्ठ है।" },
+          { "speaker": "ZIPPY", "text": "मैं भी त्याग करूँगा। आज की आख़िरी चॉकलेट छोटे भाई को!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "दीपकम्: पाठ (भाग 2)",
+    "topic_no": 5,
+    "name": "सम्यग्वर्णप्रयोगेण ब्रह्मलोके महीयते",
+    "scenes": [
+      {
+        "animation": "Zippy reads aloud 'स्वजन' but says 'श्वजन'. A group of relatives on screen suddenly turns into a pack of barking cartoon dogs. Zippy freezes in shock.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "मैंने तो बस रिश्तेदारों को बुलाया था। ये कुत्ते कहाँ से आ गए?" },
+          { "speaker": "NEO", "text": "क्योंकि तुमने स की जगह श बोला! स्वजन यानी अपने लोग, और श्वजन यानी कुत्ते। एक वर्ण ने सब बदल दिया।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 12 — सम्यग्वर्णप्रयोगेण ब्रह्मलोके महीयते'. The title splits: 'सम्यक् = ठीक से', 'वर्णप्रयोगेण = वर्णों के प्रयोग से', 'महीयते = सम्मान पाता है'.",
+        "lines": [
+          { "speaker": "NEO", "text": "पाठ के नाम का अर्थ है: वर्णों का ठीक-ठीक प्रयोग करने वाला ब्रह्मलोक में भी सम्मान पाता है।" },
+          { "speaker": "NEO", "text": "यानी सही उच्चारण बहुत बड़ी बात है। संस्कृत में एक ध्वनि बदलने से अर्थ पूरी तरह बदल सकता है।" }
+        ]
+      },
+      {
+        "animation": "Word pairs flip like cards: 'सकलम् (पूरा) ↔ शकलम् (टुकड़ा)', 'सकृत् (एक बार) ↔ शकृत् (गोबर)'. Each wrong version shows a funny picture.",
+        "lines": [
+          { "speaker": "NEO", "text": "पाठ में एक प्रसिद्ध पंक्ति है: यदि स्वजन श्वजन न हो जाए, सकल शकल न हो जाए, और सकृत् शकृत् न हो जाए।" },
+          { "speaker": "NEO", "text": "सकल यानी पूरा और शकल यानी टुकड़ा। सकृत् यानी एक बार, और शकृत् यानी गोबर।" },
+          { "speaker": "ZIPPY", "text": "बाप रे! मैं आज से स और श पर पूरा ध्यान दूँगा!" }
+        ]
+      },
+      {
+        "animation": "A Vedic yajna scene: priests chant 'इन्द्रशत्रुर्वर्धस्व' while the demon Vritra waits hopefully. The accent mark shifts, and a glowing Indra grows stronger instead, defeating Vritra.",
+        "lines": [
+          { "speaker": "NEO", "text": "एक कथा भी है। वृत्र के लिए यज्ञ में मंत्र पढ़ा गया: इन्द्रशत्रुर्वर्धस्व, यानी इन्द्र का शत्रु बढ़े।" },
+          { "speaker": "NEO", "text": "पर स्वर के गलत उच्चारण से अर्थ बदल गया, और अर्थ हो गया, वह बढ़े जिसका शत्रु इन्द्र है। इसलिए अंत में इन्द्र ने ही वृत्र को हरा दिया।" }
+        ]
+      },
+      {
+        "animation": "A tigress gently carries her cub in her teeth without hurting it. Next to it, six qualities of a good reader appear on stars: 'माधुर्यम्', 'अक्षरव्यक्तिः', 'पदच्छेदः', 'सुस्वरः', 'धैर्यम्', 'लयसमर्थम्'.",
+        "lines": [
+          { "speaker": "NEO", "text": "उच्चारण कैसा हो? जैसे बाघिन अपने बच्चे को दाँतों में पकड़ती है, पर चोट नहीं पहुँचाती। वर्ण भी न बहुत ज़ोर से, न ढीले बोले जाएँ।" },
+          { "speaker": "NEO", "text": "अच्छे पाठक के छह गुण हैं: मधुरता, अक्षरों की स्पष्टता, पदों को ठीक से अलग करना, अच्छा स्वर, धैर्य और लय।" },
+          { "speaker": "NEO", "text": "परीक्षा टिप: पाठक के छह गुण क्रम से याद करो: माधुर्यम्, अक्षरव्यक्तिः, पदच्छेदः, सुस्वरः, धैर्यम्, लयसमर्थम्।" }
+        ]
+      },
+      {
+        "animation": "Zippy reads 'स्वजन' correctly and the dogs turn back into smiling relatives. Recap cards: '1. एक वर्ण = नया अर्थ', '2. इन्द्रशत्रु की कथा', '3. पाठक के छह गुण'.",
+        "lines": [
+          { "speaker": "NEO", "text": "सार यह है। पहला, एक वर्ण गलत बोलने से अर्थ बदल जाता है, जैसे स्वजन और श्वजन। दूसरा, इन्द्रशत्रु की कथा दिखाती है कि उच्चारण की गलती कितनी भारी पड़ सकती है। तीसरा, अच्छे पाठक के छह गुण याद रखो।" },
+          { "speaker": "ZIPPY", "text": "स्वजन वापस आ गए! अब मैं सम्यक् बोलूँगा!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "दीपकम्: पाठ (भाग 2)",
+    "topic_no": 6,
+    "name": "वर्णोच्चारण-शिक्षा १",
+    "scenes": [
+      {
+        "animation": "Zippy plays a bamboo flute, covering different holes; each hole makes a different note. The flute morphs into a cartoon cross-section of a human mouth and throat.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "एक ही बाँसुरी, एक ही हवा, फिर अलग-अलग सुर कैसे?" },
+          { "speaker": "NEO", "text": "क्योंकि हवा अलग-अलग छेदों से निकलती है। हमारा मुँह भी ऐसी ही बाँसुरी है। आज सीखेंगे वर्ण कहाँ से बोले जाते हैं।" }
+        ]
+      },
+      {
+        "animation": "Title card: 'पाठः 13 — वर्णोच्चारण-शिक्षा १'. An arrow shows air travelling: 'उदर (पेट) → फेफड़े → कण्ठ → मुख / नासिका'. Three labels appear: 'स्थानम्', 'करणम्', 'प्रयत्नः'.",
+        "lines": [
+          { "speaker": "NEO", "text": "बोलते समय हवा पेट और फेफड़ों से ऊपर आती है, गले से गुज़रती है, और मुँह या नाक से निकलती है।" },
+          { "speaker": "NEO", "text": "वर्ण बनने में तीन चीज़ें काम करती हैं: स्थान, करण और प्रयत्न। इस पाठ में हम स्थान और करण सीखेंगे।" }
+        ]
+      },
+      {
+        "animation": "A labelled mouth diagram lights up six places one by one: 'कण्ठः (गला)', 'तालु', 'मूर्धा', 'दन्ताः', 'ओष्ठौ', 'नासिका'. Beside each, its letters appear: कण्ठ — अ, क ख ग घ ङ, ह; तालु — इ, च छ ज झ ञ, य, श; मूर्धा — ऋ, ट ठ ड ढ ण, र, ष; दन्त — लृ, त थ द ध न, ल, स; ओष्ठ — उ, प फ ब भ म.",
+        "lines": [
+          { "speaker": "NEO", "text": "उच्चारण के मुख्य स्थान हैं: कण्ठ, तालु, मूर्धा, दाँत, होंठ और नासिका।" },
+          { "speaker": "NEO", "text": "अ, क-वर्ग और ह कण्ठ से बोले जाते हैं। इ, च-वर्ग, य और श तालु से।" },
+          { "speaker": "NEO", "text": "ऋ, ट-वर्ग, र और ष मूर्धा से। लृ, त-वर्ग, ल और स दाँतों से। और उ और प-वर्ग होंठों से।" },
+          { "speaker": "ZIPPY", "text": "रुको, मैं बोलकर देखता हूँ। क... हाँ! सच में गले से आया!" }
+        ]
+      },
+      {
+        "animation": "The nose lights up as 'ङ ञ ण न म' glow, each also linked to its own mouth position. Then a cartoon tongue labelled 'जिह्वा (करणम्)' touches the palate, the roof and the teeth in turn.",
+        "lines": [
+          { "speaker": "NEO", "text": "ङ, ञ, ण, न और म बोलते समय हवा नाक से भी निकलती है। इसलिए इन्हें नासिक्य वर्ण कहते हैं।" },
+          { "speaker": "NEO", "text": "अब करण। करण वह अंग है जो स्थान को छूकर ध्वनि बनाता है। तालु, मूर्धा और दाँतों वाले वर्णों में करण जीभ है।" },
+          { "speaker": "NEO", "text": "कण्ठ, होंठ और नाक वाले वर्णों में स्थान ही करण का काम भी करता है।" }
+        ]
+      },
+      {
+        "animation": "An 'Exam Tip' table appears with columns 'वर्ण' and 'स्थान'. Common confusions are highlighted: 'श — तालु', 'ष — मूर्धा', 'स — दन्त'.",
+        "lines": [
+          { "speaker": "NEO", "text": "परीक्षा टिप: श, ष और स का स्थान सबसे ज़्यादा पूछा जाता है। श तालु से, ष मूर्धा से, और स दाँतों से।" },
+          { "speaker": "ZIPPY", "text": "यह तो पिछले पाठ के स्वजन और श्वजन से भी जुड़ गया!" }
+        ]
+      },
+      {
+        "animation": "Zippy plays the flute again, now naming each note after a place of articulation. Recap cards: '1. स्थान, करण, प्रयत्न', '2. कण्ठ, तालु, मूर्धा, दन्त, ओष्ठ, नासिका', '3. श-तालु, ष-मूर्धा, स-दन्त'.",
+        "lines": [
+          { "speaker": "NEO", "text": "याद रखो। पहला, वर्ण बनने में स्थान, करण और प्रयत्न काम करते हैं। दूसरा, मुख्य स्थान हैं कण्ठ, तालु, मूर्धा, दाँत, होंठ और नासिका। तीसरा, श तालु से, ष मूर्धा से और स दाँतों से बोला जाता है।" },
+          { "speaker": "ZIPPY", "text": "मेरा मुँह अब बाँसुरी है। कण्ठ से क, होंठ से प, पप्पप!" }
+        ]
+      }
+    ]
+  }
+]

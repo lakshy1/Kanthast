@@ -1,0 +1,438 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "Acids, Bases and Salts",
+    "topic_no": 1,
+    "name": "Acids, Bases and Indicators",
+    "scenes": [
+      {
+        "animation": "Zippy spills dal curry on his white school shirt, leaving a yellow turmeric stain. He scrubs it with a soap bar and the stain turns reddish-brown; Zippy screams, and the soap bar screams too.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Help! The soap made the stain worse. It's turning red!" },
+          { "speaker": "NEO", "text": "Relax. Rinse it with plenty of water and it'll turn yellow again. The turmeric in your curry is acting as an indicator." }
+        ]
+      },
+      {
+        "animation": "A kitchen shelf: lemon, curd, vinegar and imli under a banner 'ACIDS: sour'; a baking soda box and a soap bar under 'BASES: bitter, soapy to touch'. As Zippy reaches for a lab bottle, a red 'Never taste lab chemicals!' sign slams down.",
+        "lines": [
+          { "speaker": "NEO", "text": "Acids taste sour, like lemon juice, curd and vinegar. Bases taste bitter and feel soapy." },
+          { "speaker": "ZIPPY", "text": "So I just lick things to check?" },
+          { "speaker": "NEO", "text": "Never! We use indicators. They tell us whether a substance is acidic or basic by a change in colour or smell." }
+        ]
+      },
+      {
+        "animation": "A cartoon lichen on a rock squeezes purple dye into a bottle labelled 'Litmus (from lichen, Thallophyta)'. A blue litmus strip dips into dilute HCl and turns red; a red litmus strip dips into NaOH solution and turns blue.",
+        "lines": [
+          { "speaker": "NEO", "text": "Litmus is a purple dye extracted from lichen, a plant of the division Thallophyta. In a neutral solution, it stays purple." },
+          { "speaker": "NEO", "text": "Acids turn blue litmus red. Bases turn red litmus blue." },
+          { "speaker": "NEO", "text": "Other natural indicators include turmeric, red cabbage leaves, and coloured petals of hydrangea, petunia and geranium." }
+        ]
+      },
+      {
+        "animation": "Two test tubes: dilute HCl and NaOH solution. Drops of methyl orange make the acid red and the base yellow; drops of phenolphthalein leave the acid colourless and turn the base pink. A colour chart fills in beside them, row by row.",
+        "lines": [
+          { "speaker": "NEO", "text": "Synthetic indicators like methyl orange and phenolphthalein are used in the lab." },
+          { "speaker": "NEO", "text": "Methyl orange turns red in an acid and yellow in a base. Phenolphthalein stays colourless in an acid and turns pink in a base." },
+          { "speaker": "ZIPPY", "text": "Pink means base. Got it." }
+        ]
+      },
+      {
+        "animation": "Chopped onions, a vanilla essence bottle and a clove oil vial stand on stage like singers, each with a smell cloud above. NaOH is added and the clouds vanish with a 'poof'; with HCl the clouds stay. A yellow 'BOARD TIP' card slides in with the indicator table.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Can an indicator work for someone who can't see colours?" },
+          { "speaker": "NEO", "text": "Yes. Olfactory indicators change their odour. Onion, vanilla essence and clove oil lose their smell in a basic solution, but keep it in an acid." },
+          { "speaker": "NEO", "text": "Board tip: learn the full indicator table, litmus, methyl orange, phenolphthalein, turmeric and the olfactory ones. One-mark questions come straight from it." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Acids: sour, blue litmus → red. Bases: bitter, soapy, red litmus → blue', '2. Methyl orange: red/yellow. Phenolphthalein: colourless/pink', '3. Olfactory: onion, vanilla, clove lose smell in base'. Zippy's shirt, now clean, waves on a clothesline.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: acids are sour and turn blue litmus red; bases are bitter, soapy and turn red litmus blue." },
+          { "speaker": "NEO", "text": "Two: methyl orange is red in acid and yellow in base; phenolphthalein is colourless in acid and pink in base." },
+          { "speaker": "NEO", "text": "Three: onion, vanilla and clove oil are olfactory indicators that lose their smell in a base." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Acids, Bases and Salts",
+    "topic_no": 2,
+    "name": "Reaction of Acids and Bases with Metals",
+    "scenes": [
+      {
+        "animation": "Zippy blows soap bubbles from a tube connected to a bubbling test tube; one bubble drifts near a burning candle and goes 'POP!' with a tiny flash. Zippy's eyes spin like pinwheels.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My bubble exploded! Did I just invent a new Diwali cracker?" },
+          { "speaker": "NEO", "text": "No, you just did the test for hydrogen. That gas came from zinc reacting with an acid." }
+        ]
+      },
+      {
+        "animation": "The apparatus builds step by step with labels: a test tube with 'Zinc granules', 'Dilute H2SO4' poured in, a delivery tube leading into 'Soap solution', and 'H2 bubbles' forming. A burning candle approaches a bubble: 'POP'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Put zinc granules in a test tube and add dilute sulphuric acid. Bubbles of gas form on the surface of the zinc." },
+          { "speaker": "NEO", "text": "Pass the gas through soap solution to trap it in bubbles. Bring a burning candle near a bubble and it burns with a pop sound. That pop confirms hydrogen." }
+        ]
+      },
+      {
+        "animation": "'Zn(s) + H2SO4(aq) → ZnSO4(aq) + H2(g)' assembles, then the general rule 'Acid + Metal → Salt + Hydrogen gas' appears in a gold frame. A swap card shows 'Zn + 2HCl → ZnCl2 + H2'; the salt part flashes while H2 stays fixed.",
+        "lines": [
+          { "speaker": "NEO", "text": "Zinc and sulphuric acid give zinc sulphate and hydrogen. In general, acid plus metal gives salt plus hydrogen gas." },
+          { "speaker": "ZIPPY", "text": "Does it work with hydrochloric acid too?" },
+          { "speaker": "NEO", "text": "Yes. Zinc with hydrochloric acid gives zinc chloride and hydrogen. The salt changes with the acid, but the gas is still hydrogen." }
+        ]
+      },
+      {
+        "animation": "A test tube of sodium hydroxide solution with zinc granules is warmed; bubbles rise and a bubble pops at the candle again. Equation: '2NaOH(aq) + Zn(s) → Na2ZnO2(s) + H2(g)' with 'Sodium zincate' tagged under Na2ZnO2.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Okay, but bases can't do this. They're too soapy and calm." },
+          { "speaker": "NEO", "text": "Surprise. Warm zinc with sodium hydroxide solution, and hydrogen bubbles out again. This time the salt formed is sodium zincate." },
+          { "speaker": "NEO", "text": "But careful: such reactions are not possible with all metals." }
+        ]
+      },
+      {
+        "animation": "A yellow 'BOARD TIP' card: 'Gas burns with a pop → H2'. Zippy practises writing 'Na2ZnO2' three times in a notebook; the third attempt gets a gold star.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: whenever a question says a gas burns with a pop sound, the answer is hydrogen." },
+          { "speaker": "NEO", "text": "And write sodium zincate correctly: N a two Z n O two. Students often get this formula wrong." },
+          { "speaker": "ZIPPY", "text": "N a two Z n O two. Got my gold star!" }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Acid + Metal → Salt + H2', '2. H2 test: burning candle → pop sound', '3. 2NaOH + Zn → Na2ZnO2 + H2'. A last soap bubble floats up and pops into confetti.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: acid plus metal gives salt plus hydrogen gas, like zinc with dilute sulphuric acid." },
+          { "speaker": "NEO", "text": "Two: hydrogen burns with a pop sound when a burning candle is brought near it." },
+          { "speaker": "NEO", "text": "Three: some metals, like zinc, also react with sodium hydroxide to give hydrogen and a salt, sodium zincate." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Acids, Bases and Salts",
+    "topic_no": 3,
+    "name": "Metal Carbonates, Metal Oxides and Neutralisation",
+    "scenes": [
+      {
+        "animation": "Zippy squeezes lemon over a pakora and a few drops land on the marble kitchen counter. The spot fizzes with tiny bubbles and the marble slab grows a frowning face.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "The counter is fizzing at me!" },
+          { "speaker": "NEO", "text": "Marble is calcium carbonate, and lemon juice is acidic. Acids and carbonates always fizz together, Zippy." }
+        ]
+      },
+      {
+        "animation": "Lab: dilute HCl is added to sodium carbonate in a test tube; the gas passes through a delivery tube into lime water, which turns milky. Labels: 'Na2CO3 + 2HCl → 2NaCl + H2O + CO2' and 'Ca(OH)2 + CO2 → CaCO3 + H2O (milky)'. A second card: 'NaHCO3 + HCl → NaCl + H2O + CO2'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Add dilute hydrochloric acid to sodium carbonate and it fizzes. Pass the gas through lime water and the lime water turns milky. That's carbon dioxide." },
+          { "speaker": "NEO", "text": "Sodium hydrogencarbonate does the same. Metal carbonate or hydrogencarbonate plus acid gives salt, carbon dioxide and water." }
+        ]
+      },
+      {
+        "animation": "More CO2 keeps bubbling into the milky lime water until it turns clear again; label 'Excess CO2: CaCO3 + H2O + CO2 → Ca(HCO3)2 (soluble)'. Side icons of limestone, chalk and marble all wear the same 'CaCO3' badge.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I kept bubbling, and the milkiness disappeared!" },
+          { "speaker": "NEO", "text": "Excess carbon dioxide forms calcium hydrogencarbonate, which is soluble in water. By the way, limestone, chalk and marble are all forms of calcium carbonate." }
+        ]
+      },
+      {
+        "animation": "A test tube of NaOH solution with two drops of phenolphthalein glows pink. Dilute HCl is added drop by drop until the pink suddenly vanishes; one drop of NaOH brings the pink back. Equation: 'NaOH(aq) + HCl(aq) → NaCl(aq) + H2O(l)' with 'Base + Acid → Salt + Water' beneath.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now take sodium hydroxide solution with phenolphthalein. It's pink. Add dilute hydrochloric acid drop by drop." },
+          { "speaker": "ZIPPY", "text": "It went colourless!" },
+          { "speaker": "NEO", "text": "The acid has cancelled the effect of the base. Add a drop of base and the pink returns. Base plus acid gives salt plus water. This is a neutralisation reaction." }
+        ]
+      },
+      {
+        "animation": "Black copper oxide powder in a beaker; dilute HCl is stirred in and the solution turns blue-green. Equation: 'CuO + 2HCl → CuCl2 + H2O' with a tag 'Metal oxide = basic'. A second card, 'Ca(OH)2 + CO2 → CaCO3 + H2O', is tagged 'Non-metal oxide = acidic'. A yellow 'BOARD TIP' note appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "Copper oxide dissolves in hydrochloric acid to give blue-green copper chloride and water. It reacts like a base, so metal oxides are called basic oxides." },
+          { "speaker": "NEO", "text": "Carbon dioxide reacts with a base, calcium hydroxide, to give salt and water. So non-metal oxides are acidic." },
+          { "speaker": "NEO", "text": "Board tip: the lime water test, and why it clears with excess carbon dioxide, is a classic. Write both equations." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Carbonate/hydrogencarbonate + acid → salt + CO2 + H2O', '2. Base + Acid → Salt + Water (neutralisation)', '3. Metal oxides basic, non-metal oxides acidic'. The marble counter smiles again.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: carbonates and hydrogencarbonates react with acids to give salt, water and carbon dioxide, which turns lime water milky." },
+          { "speaker": "NEO", "text": "Two: acid plus base gives salt plus water; that's neutralisation." },
+          { "speaker": "NEO", "text": "Three: metal oxides are basic, and non-metal oxides are acidic." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Acids, Bases and Salts",
+    "topic_no": 4,
+    "name": "What Acids and Bases Have in Common",
+    "scenes": [
+      {
+        "animation": "Zippy stands on a giant glucose molecule, counting its hydrogen atoms on his fingers. A banner 'C6H12O6: 12 hydrogens!' waves behind him and he crowns himself 'Acid King'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Glucose has twelve hydrogen atoms. That makes it the strongest acid ever!" },
+          { "speaker": "NEO", "text": "Nice try, Your Majesty. Having hydrogen isn't enough. Let's test it with a bulb." }
+        ]
+      },
+      {
+        "animation": "Setup builds step by step: two nails fixed in a rubber cork inside a beaker, wired through a bulb and switch to a 6 V battery. The beaker is filled in turn with glucose solution (bulb dark), alcohol solution (dark), then dilute HCl (bulb glows). Tiny 'H+' ions zip between the nails.",
+        "lines": [
+          { "speaker": "NEO", "text": "In glucose or alcohol solution, the bulb stays off. In dilute hydrochloric acid, it glows." },
+          { "speaker": "NEO", "text": "Acids produce hydrogen ions in solution, and these ions carry the current. Glucose and alcohol contain hydrogen but don't release hydrogen ions, so they aren't acids." }
+        ]
+      },
+      {
+        "animation": "Dry HCl gas passes over a strip of dry blue litmus: nothing happens. A water droplet lands on the strip and it turns red. An 'H+' ion hops onto a water molecule to become 'H3O+'. Equation: 'HCl + H2O → H3O+ + Cl−'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So hydrogen chloride gas is always acidic?" },
+          { "speaker": "NEO", "text": "Only with water. Dry HCl gas doesn't change the colour of dry litmus paper. Moist litmus turns red, because hydrogen ions form only in water." },
+          { "speaker": "NEO", "text": "Hydrogen ions can't exist alone. They combine with water molecules to form hydronium ions." }
+        ]
+      },
+      {
+        "animation": "Three base bottles release ions: 'NaOH → Na+ + OH−', 'KOH → K+ + OH−', 'Mg(OH)2 → Mg2+ + 2OH−'. A Venn diagram draws: a big circle 'Bases' with a smaller circle inside, 'Alkalis (soluble in water)'. Then 'H+ + OH− → H2O' shows two ions hugging into a water drop.",
+        "lines": [
+          { "speaker": "NEO", "text": "Bases produce hydroxide ions in water. Bases that are soluble in water are called alkalis." },
+          { "speaker": "NEO", "text": "So all alkalis are bases, but not all bases are alkalis. And in neutralisation, hydrogen ions and hydroxide ions combine to form water." }
+        ]
+      },
+      {
+        "animation": "Split screen. Left, green tick: acid is poured slowly into a large beaker of water while a glass rod stirs. Right, red cross: water is poured into concentrated acid, which splashes and the beaker cracks. A thermometer mascot sweats between them. A yellow 'BOARD TIP' banner reads 'Acid to water, never water to acid'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Diluting is easy. Just pour water into the acid, right?" },
+          { "speaker": "NEO", "text": "Dangerous! Mixing a concentrated acid with water is highly exothermic. Always add the acid slowly to water, with constant stirring." },
+          { "speaker": "NEO", "text": "Adding water to concentrated acid can make the mixture splash out and cause burns, and the glass container may break." },
+          { "speaker": "NEO", "text": "Dilution also lowers the concentration of hydronium or hydroxide ions per unit volume. Board tip: why acid must be added to water is a frequent reasoning question." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Acids give H+ (as H3O+) only in water; bases give OH−', '2. Alkalis = water-soluble bases', '3. Add acid to water slowly, with stirring'. Zippy hands his crown to a hydronium ion.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: acids produce hydrogen ions, as hydronium ions, only in water; bases produce hydroxide ions." },
+          { "speaker": "NEO", "text": "Two: bases that dissolve in water are alkalis. All alkalis are bases, but not all bases are alkalis." },
+          { "speaker": "NEO", "text": "Three: always add acid to water slowly while stirring, because the process is highly exothermic." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Acids, Bases and Salts",
+    "topic_no": 5,
+    "name": "The pH Scale and pH in Everyday Life",
+    "scenes": [
+      {
+        "animation": "A school picnic. A bee stings Zippy and he zooms around in frantic circles, leaving a zigzag trail. Neo calmly opens a box of baking soda.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Owww! A bee stung me! Am I going to explode?" },
+          { "speaker": "NEO", "text": "You're fine. A bee sting leaves methanoic acid, which causes the pain. Rubbing a mild base like baking soda on it helps." },
+          { "speaker": "ZIPPY", "text": "Wait, how acidic is acidic? Is there a score?" },
+          { "speaker": "NEO", "text": "There is. It's called pH." }
+        ]
+      },
+      {
+        "animation": "A long rainbow ruler slides across the screen, numbered 0 to 14: red at 0 labelled 'Very acidic', green at 7 'Neutral', violet at 14 'Very basic'. Drops of universal indicator land on lemon juice, water and soap solution and their colours match low, 7 and high positions on the ruler.",
+        "lines": [
+          { "speaker": "NEO", "text": "The pH scale runs from zero to fourteen. The p stands for 'potenz', German for power." },
+          { "speaker": "NEO", "text": "Seven is neutral. Below seven is acidic; above seven is basic. A universal indicator shows different colours along this scale." },
+          { "speaker": "ZIPPY", "text": "So a lower number means more acidic?" },
+          { "speaker": "NEO", "text": "Yes. The higher the hydrogen ion concentration, the lower the pH." }
+        ]
+      },
+      {
+        "animation": "Two acid bottles on a stage: a muscular 'Strong acid (HCl)' flinging handfuls of H+ ions, and a sleepy 'Weak acid (CH3COOH)' releasing only a few. The pH needle swings lower for the strong one.",
+        "lines": [
+          { "speaker": "NEO", "text": "Acids that give more hydrogen ions are strong acids. Acids that give fewer, like acetic acid, are weak acids." }
+        ]
+      },
+      {
+        "animation": "Montage: a human body silhouette with a gauge reading '7.0 – 7.8'; a rain cloud dripping 'pH < 5.6' into a river where cartoon fish look worried; a farmer testing soil with pH paper beside wheat plants.",
+        "lines": [
+          { "speaker": "NEO", "text": "Our body works within a narrow pH range of 7.0 to 7.8." },
+          { "speaker": "NEO", "text": "Rain with a pH less than 5.6 is acid rain. When it flows into rivers, it lowers their pH, and aquatic life finds it hard to survive." },
+          { "speaker": "NEO", "text": "Plants also grow best in soil of a particular pH." }
+        ]
+      },
+      {
+        "animation": "Inside a cartoon stomach, waves of excess acid crash around; a bottle labelled 'Milk of magnesia – Mg(OH)2' surfs in and calms them. Then a giant tooth with a shiny enamel shield; sugar-munching bacteria spit acid and a gauge drops below 5.5 as the shield cracks; toothpaste foam rushes in and the gauge rises. A yellow 'BOARD TIP' card flips.",
+        "lines": [
+          { "speaker": "NEO", "text": "Your stomach makes hydrochloric acid to help digestion. Too much causes pain and irritation, so we take antacids like milk of magnesia, a mild base." },
+          { "speaker": "NEO", "text": "Tooth enamel, calcium hydroxyapatite, is the hardest substance in the body. But tooth decay starts when the pH in the mouth falls below 5.5." },
+          { "speaker": "NEO", "text": "Bacteria make acids from leftover sugar and food. Toothpastes are basic, so they neutralise the excess acid." },
+          { "speaker": "NEO", "text": "Board tip: remember 5.5 for tooth decay and 5.6 for acid rain. Students often swap them." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. pH 0–14: 7 neutral, < 7 acidic, > 7 basic', '2. More H+ → lower pH; strong vs weak acids', '3. pH in life: body 7.0–7.8, antacids, toothpaste, acid rain, bee sting'. Zippy wears a small plaster, smiling.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the pH scale goes from zero to fourteen; seven is neutral, below is acidic and above is basic." },
+          { "speaker": "NEO", "text": "Two: strong acids give more hydrogen ions, so they have a lower pH." },
+          { "speaker": "NEO", "text": "Three: pH matters in daily life, from antacids and toothpaste to acid rain and bee stings." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Acids, Bases and Salts",
+    "topic_no": 6,
+    "name": "Salts and Their pH",
+    "scenes": [
+      {
+        "animation": "A cartoon courtroom. Zippy, in a judge's wig, bangs a gavel: 'All salts are neutral!' A jury of salt crystals whispers; a washing soda crystal raises its hand and turns a strip of pH paper blue. Neo stands up as the lawyer.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Salts are made by neutralisation, so every salt must be neutral. Pure logic!" },
+          { "speaker": "NEO", "text": "Objection, Your Honour. Let's test that with pH paper." }
+        ]
+      },
+      {
+        "animation": "A family tree: the 'Sodium family' branch holds NaCl, Na2SO4 and Na2CO3; the 'Chloride family' branch holds NaCl, KCl and NH4Cl. NaCl sits where the two branches cross, waving to both sides.",
+        "lines": [
+          { "speaker": "NEO", "text": "First, salts come in families. Salts with the same positive or negative radical belong to the same family." },
+          { "speaker": "NEO", "text": "Sodium chloride and sodium sulphate are in the sodium family. Sodium chloride and potassium chloride are in the chloride family." },
+          { "speaker": "ZIPPY", "text": "So sodium chloride has two families. Double the Diwali gifts!" }
+        ]
+      },
+      {
+        "animation": "A row of test tubes labelled NaCl, KNO3, NH4Cl, Na2CO3, NaHCO3 and CH3COONa. Neo dips pH paper in each; readings flash: green '7', green '7', orange '< 7', blue '> 7', blue '> 7', blue '> 7'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sodium chloride and potassium nitrate show pH seven. Ammonium chloride is below seven. Sodium carbonate, sodium hydrogencarbonate and sodium acetate are above seven." },
+          { "speaker": "ZIPPY", "text": "So salts can be acidic, neutral or basic. Objection sustained." }
+        ]
+      },
+      {
+        "animation": "Tug-of-war cartoons: 'HCl (strong acid) vs NaOH (strong base)' stays centred on 'pH 7 – NaCl'; 'HCl (strong acid) vs NH4OH (weak base)' slides toward 'Acidic – NH4Cl'; 'H2CO3 (weak acid) vs NaOH (strong base)' slides toward 'Basic – Na2CO3'.",
+        "lines": [
+          { "speaker": "NEO", "text": "It depends on the parents. Every salt comes from an acid and a base." },
+          { "speaker": "NEO", "text": "Sodium chloride comes from hydrochloric acid and sodium hydroxide, both strong. So it's neutral." },
+          { "speaker": "NEO", "text": "Ammonium chloride comes from a strong acid and a weak base, ammonium hydroxide, so it's acidic. Sodium carbonate comes from a weak acid, carbonic acid, and a strong base, so it's basic." },
+          { "speaker": "ZIPPY", "text": "The stronger parent wins the tug-of-war!" }
+        ]
+      },
+      {
+        "animation": "A yellow 'BOARD TIP' table fades in, row by row: 'Strong acid + Strong base → pH 7', 'Strong acid + Weak base → pH < 7', 'Weak acid + Strong base → pH > 7'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: when asked for the pH of a salt, first write its parent acid and base. Then decide which one is strong. That one step answers most questions." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Salt families share a positive or negative radical', '2. Strong acid + strong base → neutral (pH 7)', '3. Strong acid + weak base → acidic; weak acid + strong base → basic'. Zippy hangs up his judge's wig.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: salts with the same positive or negative radical belong to one family." },
+          { "speaker": "NEO", "text": "Two: salts of a strong acid and a strong base are neutral, with pH seven." },
+          { "speaker": "NEO", "text": "Three: a strong acid with a weak base gives an acidic salt; a weak acid with a strong base gives a basic salt." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Acids, Bases and Salts",
+    "topic_no": 7,
+    "name": "Chemicals from Common Salt",
+    "scenes": [
+      {
+        "animation": "Zippy flicks a single salt crystal off a pakora. The crystal swells into a tiny factory whose doors open, and out march NaOH, Cl2, bleaching powder, baking soda and washing soda like a band in a parade.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "It's just table salt. What's so special?" },
+          { "speaker": "NEO", "text": "That crystal is the raw material for sodium hydroxide, chlorine, bleaching powder, baking soda and washing soda." }
+        ]
+      },
+      {
+        "animation": "An electrolysis tank of brine builds step by step: anode on the left bubbling greenish 'Cl2', cathode on the right bubbling 'H2', and 'NaOH solution' forming near the cathode. Equation: '2NaCl(aq) + 2H2O(l) → 2NaOH(aq) + Cl2(g) + H2(g)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Pass electricity through brine, an aqueous solution of sodium chloride. It decomposes to form sodium hydroxide." },
+          { "speaker": "NEO", "text": "Chlorine gas is given off at the anode and hydrogen gas at the cathode. Sodium hydroxide forms near the cathode." },
+          { "speaker": "ZIPPY", "text": "Why is it called the chlor-alkali process?" },
+          { "speaker": "NEO", "text": "Chlor for chlorine, alkali for sodium hydroxide. Sodium hydroxide is used for soaps and paper; chlorine for water treatment and PVC." }
+        ]
+      },
+      {
+        "animation": "Chlorine gas swirls over a tray of dry slaked lime and a white powder forms: 'Ca(OH)2 + Cl2 → CaOCl2 + H2O'. Use icons pop up: a cotton sari getting whiter, a paper mill, a water tank with a 'disinfected' tick.",
+        "lines": [
+          { "speaker": "NEO", "text": "Chlorine acting on dry slaked lime gives bleaching powder." },
+          { "speaker": "NEO", "text": "It bleaches cotton and linen, wood pulp, and washed clothes. It's an oxidising agent in industry, and it makes drinking water free of germs." }
+        ]
+      },
+      {
+        "animation": "A mixing card: 'NaCl + H2O + CO2 + NH3 → NH4Cl + NaHCO3'. Then a heating card: '2NaHCO3 → Na2CO3 + H2O + CO2'. A cake in an oven rises as CO2 bubbles puff inside; label 'Baking powder = baking soda + tartaric acid'. Small icons: an antacid tablet and a soda-acid fire extinguisher.",
+        "lines": [
+          { "speaker": "NEO", "text": "Baking soda, sodium hydrogencarbonate, is made using sodium chloride, water, carbon dioxide and ammonia. It's a mild, non-corrosive base." },
+          { "speaker": "NEO", "text": "On heating, it gives sodium carbonate, water and carbon dioxide. Mixed with a mild edible acid like tartaric acid, it becomes baking powder. The carbon dioxide released makes cakes soft and spongy." },
+          { "speaker": "NEO", "text": "It's also used in antacids and in soda-acid fire extinguishers." }
+        ]
+      },
+      {
+        "animation": "Sodium carbonate from heated baking soda dissolves and recrystallises into large clear crystals labelled 'Na2CO3·10H2O (washing soda)'. Use icons: a glass bottle, a soap bar, a paper roll, a borax jar, and a hard-water tap with a tick. A yellow 'BOARD TIP' card flips.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recrystallise sodium carbonate and you get washing soda, with ten water molecules in its formula." },
+          { "speaker": "NEO", "text": "It's used in the glass, soap and paper industries, to make borax, as a household cleaner, and to remove permanent hardness of water." },
+          { "speaker": "NEO", "text": "Board tip: for bleaching powder, baking soda and washing soda, learn one equation and two uses each." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Chlor-alkali: brine → NaOH + Cl2 + H2', '2. Cl2 + dry slaked lime → bleaching powder', '3. Baking soda (NaHCO3) and washing soda (Na2CO3·10H2O)'. The parade band from scene 1 takes a bow.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the chlor-alkali process, electrolysis of brine, gives sodium hydroxide, chlorine and hydrogen." },
+          { "speaker": "NEO", "text": "Two: chlorine with dry slaked lime gives bleaching powder, a bleach and disinfectant." },
+          { "speaker": "NEO", "text": "Three: baking soda makes cakes rise and fights acidity, while washing soda cleans and removes permanent hardness of water." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Acids, Bases and Salts",
+    "topic_no": 8,
+    "name": "Water of Crystallisation and Plaster of Paris",
+    "scenes": [
+      {
+        "animation": "Zippy floats into the lab with a white plaster cast on one tiny arm, covered in cricket-team autographs. Neo taps the cast and it goes 'tok tok'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I dived for a catch and hurt my arm! The doctor wrapped it in this rock-hard stuff." },
+          { "speaker": "NEO", "text": "That's Plaster of Paris. To understand it, we first need to find the water hidden inside crystals." }
+        ]
+      },
+      {
+        "animation": "Blue copper sulphate crystals are heated in a dry boiling tube; water droplets form on the upper walls and the crystals fade to white. A dropper adds two or three drops of water and the white powder flushes back to blue with a sparkle.",
+        "lines": [
+          { "speaker": "NEO", "text": "Heat blue copper sulphate crystals in a dry boiling tube. Water droplets appear, and the crystals turn white." },
+          { "speaker": "ZIPPY", "text": "Where did the water come from? The crystals looked totally dry!" },
+          { "speaker": "NEO", "text": "The water was part of the crystal. Add a few drops of water back, and the blue colour returns." }
+        ]
+      },
+      {
+        "animation": "Zoom into a crystal: each 'CuSO4' unit holds hands with five tiny water molecules. Labels pop in: 'CuSO4·5H2O', 'Na2CO3·10H2O', 'CaSO4·2H2O (gypsum)'. Heading: 'Water of crystallisation = fixed number of water molecules in one formula unit of a salt'.",
+        "lines": [
+          { "speaker": "NEO", "text": "This is water of crystallisation: the fixed number of water molecules present in one formula unit of a salt." },
+          { "speaker": "NEO", "text": "Copper sulphate has five, washing soda has ten, and gypsum, which is calcium sulphate, has two." }
+        ]
+      },
+      {
+        "animation": "Gypsum heats in a pan with a thermometer reading '373 K'. Equation: 'CaSO4·2H2O → CaSO4·½H2O + 1½H2O' with 'Heat, 373 K' above the arrow. Two CaSO4 units share one water molecule between them, like two friends sharing one cutting chai.",
+        "lines": [
+          { "speaker": "NEO", "text": "Heat gypsum at 373 kelvin. It loses water and becomes calcium sulphate hemihydrate. That's Plaster of Paris, a white powder." },
+          { "speaker": "ZIPPY", "text": "Half a water molecule? Did someone cut it with a knife?" },
+          { "speaker": "NEO", "text": "No. Two formula units of calcium sulphate share one water molecule, so we write half a water molecule per unit." }
+        ]
+      },
+      {
+        "animation": "Plaster of Paris powder is mixed with water into a paste that hardens into a solid block; equation 'CaSO4·½H2O + 1½H2O → CaSO4·2H2O'. Use icons: a bone cast, a toy figurine, a ceiling decoration, a smooth wall. A yellow 'BOARD TIP' card shows an airtight, moisture-proof tin.",
+        "lines": [
+          { "speaker": "NEO", "text": "Mix Plaster of Paris with water and it changes back into gypsum, a hard solid mass. That's your cast." },
+          { "speaker": "NEO", "text": "Doctors use it to support fractured bones in the right position. It's also used for toys, decorative materials, and making surfaces smooth." },
+          { "speaker": "NEO", "text": "Board tip: Plaster of Paris must be stored in a moisture-proof container, because moisture turns it into hard gypsum. This is a common question." }
+        ]
+      },
+      {
+        "animation": "Recap board with three ticks: '1. Water of crystallisation: CuSO4·5H2O, Na2CO3·10H2O, CaSO4·2H2O', '2. Gypsum → (373 K) → Plaster of Paris, CaSO4·½H2O', '3. PoP + water → gypsum (casts, toys, decoration)'. Zippy's cast now has Neo's autograph too.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: water of crystallisation is the fixed number of water molecules in one formula unit of a salt, like five in copper sulphate." },
+          { "speaker": "NEO", "text": "Two: heating gypsum at 373 kelvin gives Plaster of Paris, calcium sulphate hemihydrate." },
+          { "speaker": "NEO", "text": "Three: with water, it sets back into hard gypsum, used for casts, toys and decoration." },
+          { "speaker": "ZIPPY", "text": "And for collecting autographs!" }
+        ]
+      }
+    ]
+  }
+]

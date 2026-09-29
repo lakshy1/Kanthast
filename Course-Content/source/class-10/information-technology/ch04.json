@@ -1,0 +1,333 @@
+[
+  {
+    "chapter_no": 4,
+    "chapter": "Database Management System",
+    "topic_no": 1,
+    "name": "Data, Databases and Data Models",
+    "scenes": [
+      {
+        "animation": "The school library. The librarian, a tired cartoon register named REGISTER, bursts with loose pages. Zippy asks for a book issued last year; REGISTER flips through 400 pages in a dust storm.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Who borrowed the Harry Potter book last March? Just asking." },
+          { "speaker": "REGISTER", "text": "Somewhere in my four hundred pages. Come back next week." },
+          { "speaker": "NEO", "text": "This is why we need a database. Let's start with data and information." }
+        ]
+      },
+      {
+        "animation": "Loose numbers '78, 92, 65' float in the air, labelled 'Data: raw facts'. They pass through a machine and come out as a card: 'Priya scored 92, the class topper'. Label: 'Information: processed, meaningful data'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Data is raw facts and figures, like 78, 92 and 65." },
+          { "speaker": "NEO", "text": "Information is processed data that has meaning, like 'Priya scored 92 and topped the class'." }
+        ]
+      },
+      {
+        "animation": "A neat digital cabinet labelled 'Database' fills with records. A robot arm labelled 'DBMS' opens drawers, adds, finds and locks records. Logos-free labels: 'LibreOffice Base', 'MySQL', 'Oracle'. Benefit badges pop: 'Less redundancy', 'Less inconsistency', 'Data sharing', 'Security', 'Backup and recovery'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A database is an organised collection of related data. A DBMS is software that creates and manages databases, such as LibreOffice Base or MySQL." },
+          { "speaker": "NEO", "text": "A DBMS reduces data redundancy and inconsistency, allows data sharing, keeps data secure, and supports backup and recovery." },
+          { "speaker": "ZIPPY", "text": "Redundancy means storing the same thing again and again, right?" },
+          { "speaker": "NEO", "text": "Right. And when those copies disagree, that is inconsistency." }
+        ]
+      },
+      {
+        "animation": "Three models build step by step. Hierarchical: an upside-down tree, 'School' at top branching to 'Classes' and then 'Students'. Network: nodes with criss-crossing arrows, a child record linked to two parents. Relational: neat tables with rows and columns.",
+        "lines": [
+          { "speaker": "NEO", "text": "Data models describe how data is organised. The hierarchical model arranges data like a tree, with parent and child records." },
+          { "speaker": "NEO", "text": "The network model is like a web, where a child record can have more than one parent." },
+          { "speaker": "NEO", "text": "The relational model stores data in tables of rows and columns. LibreOffice Base uses this model." }
+        ]
+      },
+      {
+        "animation": "A yellow 'BOARD TIP' card: 'Hierarchical = tree; Network = graph, many parents; Relational = tables'. REGISTER is replaced by a glowing Base window, and the Harry Potter record appears in one click.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: examiners often ask you to name the model from a diagram. A tree is hierarchical, a web is network, and tables are relational." },
+          { "speaker": "REGISTER", "text": "Fine. I'll retire to the museum." }
+        ]
+      },
+      {
+        "animation": "Recap board with a cabinet icon. Points appear: '1. Data = raw facts; Information = processed data', '2. DBMS: less redundancy, sharing, security, backup', '3. Models: hierarchical, network, relational'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: data is raw facts, and information is processed, meaningful data." },
+          { "speaker": "NEO", "text": "Two: a DBMS manages databases, reducing redundancy and improving sharing, security and backup." },
+          { "speaker": "NEO", "text": "Three: the three data models are hierarchical, network and relational." },
+          { "speaker": "ZIPPY", "text": "And the book was borrowed by me. I forgot." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Database Management System",
+    "topic_no": 2,
+    "name": "RDBMS Terms and Keys",
+    "scenes": [
+      {
+        "animation": "Two students named Rahul Sharma stand in the school office. The clerk gives one Rahul's report card to the wrong Rahul, who happily reads '98 in Maths'. The real Rahul gasps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Two Rahul Sharmas, one report card. How does a computer tell them apart?" },
+          { "speaker": "NEO", "text": "With a key. But first, let's learn the language of relational databases." }
+        ]
+      },
+      {
+        "animation": "A table named 'STUDENT' draws itself with columns AdmNo, AadhaarNo, Name, Class and three rows. Labels appear with arrows: 'Relation = table', 'Tuple = row / record', 'Attribute = column / field'. Counters show 'Degree = 4' over the columns and 'Cardinality = 3' beside the rows.",
+        "lines": [
+          { "speaker": "NEO", "text": "In an RDBMS, a table is called a relation. A row is a tuple, or record. A column is an attribute, or field." },
+          { "speaker": "NEO", "text": "The number of attributes is the degree. The number of tuples is the cardinality." },
+          { "speaker": "NEO", "text": "This table has four columns and three rows, so its degree is four and its cardinality is three." },
+          { "speaker": "NEO", "text": "The set of allowed values for an attribute is its domain." }
+        ]
+      },
+      {
+        "animation": "AdmNo and AadhaarNo columns glow gold, labelled 'Candidate keys'. AdmNo gets a crown 'Primary key'; AadhaarNo gets a silver badge 'Alternate key'. The two Rahuls now show different AdmNo values, 1021 and 1047.",
+        "lines": [
+          { "speaker": "NEO", "text": "A primary key uniquely identifies each record. It cannot repeat and cannot be empty." },
+          { "speaker": "NEO", "text": "Columns that could serve as the primary key are candidate keys. Here, AdmNo and AadhaarNo are candidate keys." },
+          { "speaker": "NEO", "text": "We choose AdmNo as primary key. The candidate key not chosen, AadhaarNo, becomes the alternate key." }
+        ]
+      },
+      {
+        "animation": "A second table 'FEES' appears with columns ReceiptNo, AdmNo, Amount. A glowing rope links FEES.AdmNo to STUDENT.AdmNo, labelled 'Foreign key'. Then a table 'MARKS' shows AdmNo and Subject combined in one bracket labelled 'Composite key'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A foreign key is a field in one table that refers to the primary key of another table. AdmNo in the Fees table is a foreign key." },
+          { "speaker": "NEO", "text": "When two or more fields together identify a record, they form a composite key, like AdmNo and Subject in a Marks table." },
+          { "speaker": "ZIPPY", "text": "So the keys are like name tags that never repeat!" }
+        ]
+      },
+      {
+        "animation": "Four icons in a row: 'Tables', 'Queries', 'Forms', 'Reports', each with a small animation: storing, asking, entering, printing. A yellow 'BOARD TIP' card: 'Degree = columns, Cardinality = rows'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The main objects of an RDBMS are tables to store data, queries to retrieve it, forms to enter it and reports to present it." },
+          { "speaker": "NEO", "text": "Board tip: students often swap degree and cardinality. Degree counts columns; cardinality counts rows." }
+        ]
+      },
+      {
+        "animation": "Recap board with a key-ring icon. Points appear: '1. Relation, tuple, attribute; degree = columns, cardinality = rows', '2. Primary, candidate, alternate, foreign, composite keys', '3. Objects: tables, queries, forms, reports'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a relation has tuples and attributes; degree counts columns and cardinality counts rows." },
+          { "speaker": "NEO", "text": "Two: the keys are primary, candidate, alternate, foreign and composite." },
+          { "speaker": "NEO", "text": "Three: the four objects are tables, queries, forms and reports." },
+          { "speaker": "ZIPPY", "text": "And the right Rahul finally got his ninety-eight." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Database Management System",
+    "topic_no": 3,
+    "name": "Starting with LibreOffice Base and Creating Tables",
+    "scenes": [
+      {
+        "animation": "Zippy wants to digitise the school library. He opens LibreOffice Base and stares at a blank wizard, nervously tapping the Next button.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Okay, Base is open. Now what do I click?" },
+          { "speaker": "NEO", "text": "We'll create a database, then build our first table step by step." }
+        ]
+      },
+      {
+        "animation": "Animated UI: 'File > New > Database' opens the Database Wizard. Step 1: 'Create a new database' with 'Embedded database' selected, Next. Step 2: 'Yes, register the database for me' and 'Open the database for editing' ticked, Finish. A Save dialog names it 'Library.odb'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Choose File, New, Database. In the Database Wizard, select Create a new database and click Next." },
+          { "speaker": "NEO", "text": "Keep register the database and open the database for editing ticked, then click Finish and save it. A Base file has the extension dot o d b." }
+        ]
+      },
+      {
+        "animation": "The Base main window: the left 'Database' pane highlights 'Tables, Queries, Forms, Reports'. The 'Tasks' pane shows 'Create Table in Design View', 'Use Wizard to Create Table', 'Create View'. A data-type shelf slides in with jars: 'Numeric: Integer, Decimal, Boolean', 'Alphanumeric: Char, Varchar, Memo', 'Date/Time: Date, Time, Timestamp', 'Binary: Image'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The main window lists the four objects on the left, and tasks on the right. You can create a table using the wizard or in Design View." },
+          { "speaker": "NEO", "text": "Every field needs a data type. Numbers use types like Integer and Decimal, text uses Varchar, dates use Date, and pictures use Image." }
+        ]
+      },
+      {
+        "animation": "'Create Table in Design View' opens a grid with columns 'Field Name', 'Field Type', 'Description'. Rows fill in: 'BookID, Integer', 'Title, Text [VARCHAR]', 'Author, Text [VARCHAR]', 'IssueDate, Date'. Field Properties below show 'Entry required', 'Length', 'Default value'. A right-click on BookID's row selector chooses 'Primary Key' and a key icon appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "In Design View, type each field name, choose its field type, and set properties like length and entry required below." },
+          { "speaker": "NEO", "text": "To set the primary key, right-click the grey box beside BookID and choose Primary Key. A key symbol appears." },
+          { "speaker": "ZIPPY", "text": "BookID is perfect. No two books share one." }
+        ]
+      },
+      {
+        "animation": "Ctrl+S saves the table as 'Books'. A pop-up is shown for the case without a key: 'No primary key has been defined... Should a primary key be created now?' with Yes / No. A 'MINI PRACTICAL' card and a yellow 'BOARD TIP' card follow.",
+        "lines": [
+          { "speaker": "NEO", "text": "Save the table and name it Books. If you forget the primary key, Base asks whether it should create one now." },
+          { "speaker": "NEO", "text": "Try it: create a Library database and a Books table with four fields and BookID as primary key." },
+          { "speaker": "NEO", "text": "Board tip: you may be asked to choose suitable data types. Use Varchar for names, Integer for whole numbers, Decimal for money, and Date for dates." }
+        ]
+      },
+      {
+        "animation": "Recap board with a book icon. Points appear: '1. File > New > Database; saved as .odb', '2. Create tables with the wizard or Design View; choose data types', '3. Right-click row selector > Primary Key; save'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: create a database with File, New, Database; it is saved as dot o d b." },
+          { "speaker": "NEO", "text": "Two: build tables with the wizard or in Design View, choosing a data type for each field." },
+          { "speaker": "NEO", "text": "Three: set a primary key, then save the table." },
+          { "speaker": "ZIPPY", "text": "My first table. I'm framing it." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Database Management System",
+    "topic_no": 4,
+    "name": "Working with Tables and Relationships",
+    "scenes": [
+      {
+        "animation": "Zippy has two tables open: 'Members' and 'Issues'. In Issues he types MemberID 999, a member who doesn't exist. A ghost member floats out of the screen holding three library books.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Oops. I issued three books to a member who doesn't exist." },
+          { "speaker": "NEO", "text": "That's a ghost record. Relationships and referential integrity stop ghosts. But first, entering data." }
+        ]
+      },
+      {
+        "animation": "Double-click on the Members table opens Datasheet view. Records are typed row by row. The navigation bar at the bottom highlights 'First, Previous, Next, Last, New Record'. A row is right-clicked and 'Delete Rows' is chosen. Then the 'Sort Ascending' and 'Sort Descending' buttons rearrange names A to Z.",
+        "lines": [
+          { "speaker": "NEO", "text": "Double-click a table to enter data. Type each record in a row and press Tab to move between fields." },
+          { "speaker": "NEO", "text": "Use the navigation buttons to move between records. To delete a record, right-click its row header and choose Delete Rows." },
+          { "speaker": "NEO", "text": "Sort data with the Sort Ascending and Sort Descending buttons." }
+        ]
+      },
+      {
+        "animation": "Three relationship diagrams animate: one person to one Aadhaar card '1:1'; one member to many issued books '1:n'; many students to many clubs 'n:m' through a middle table.",
+        "lines": [
+          { "speaker": "NEO", "text": "Tables can be related in three ways. One to one: one person, one Aadhaar number." },
+          { "speaker": "NEO", "text": "One to many: one member can issue many books. Many to many: many students join many clubs." },
+          { "speaker": "NEO", "text": "Relating tables avoids repeating data and keeps it consistent." }
+        ]
+      },
+      {
+        "animation": "Animated UI: 'Tools > Relationships' opens with an 'Add Tables' box; Members and Issues are added. MemberID in Members is dragged onto MemberID in Issues; a line appears with '1' and 'n'. Double-clicking the line opens 'Relations' with 'Update options' and 'Delete options': 'No action, Update cascade, Set null, Set default'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Close the tables, then choose Tools, Relationships. Add both tables." },
+          { "speaker": "NEO", "text": "Drag MemberID from Members onto MemberID in Issues. A line with one and n shows a one-to-many relationship." },
+          { "speaker": "NEO", "text": "Double-click the line to set update and delete options, such as cascade." }
+        ]
+      },
+      {
+        "animation": "Zippy tries again to type MemberID 999 in Issues; a red error box blocks it. A 'Referential integrity' shield glows over the relationship line. A 'MINI PRACTICAL' card and a yellow 'BOARD TIP' card follow.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now Base enforces referential integrity. A foreign key value must match an existing primary key value, so ghost members are rejected." },
+          { "speaker": "NEO", "text": "Try it: create Members and Issues tables, relate them on MemberID, and try entering a member who doesn't exist." },
+          { "speaker": "NEO", "text": "Board tip: be ready to define referential integrity and give an example of each relationship type." }
+        ]
+      },
+      {
+        "animation": "Recap board with a linked-chain icon. Points appear: '1. Enter, navigate, delete and sort records', '2. Relationships: 1:1, 1:n, n:m', '3. Tools > Relationships; referential integrity blocks invalid foreign keys'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: enter, navigate, delete and sort records in datasheet view." },
+          { "speaker": "NEO", "text": "Two: relationships can be one to one, one to many or many to many." },
+          { "speaker": "NEO", "text": "Three: create them with Tools, Relationships, and referential integrity keeps foreign keys valid." },
+          { "speaker": "ZIPPY", "text": "Ghost member: officially busted." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Database Management System",
+    "topic_no": 5,
+    "name": "Queries in Base",
+    "scenes": [
+      {
+        "animation": "The class teacher, a stern cartoon clipboard, asks Zippy: 'List students who scored above 80 in IT, alphabetically.' Zippy is buried under a scrolling table of 200 students with a magnifying glass.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Two hundred students! I'll be here till the board exams." },
+          { "speaker": "NEO", "text": "Ask the database with a query. It answers in a second." }
+        ]
+      },
+      {
+        "animation": "A definition card: 'Query = a request to retrieve data that meets given criteria'. Animated UI: the 'Queries' object is clicked, then 'Create Query in Design View'. The 'Add Table or Query' box adds 'Student'. Fields Name, English and IT are dragged into the grid. Grid rows are labelled: 'Field, Alias, Table, Sort, Visible, Function, Criterion, Or'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A query retrieves data that meets given conditions. Click Queries, then Create Query in Design View." },
+          { "speaker": "NEO", "text": "Add the Student table, and drag the fields you need into the grid." }
+        ]
+      },
+      {
+        "animation": "In the IT column, the Criterion row is filled with '> 80'; Sort for Name is set to 'ascending'. The Run Query button with key cap 'F5' is clicked; results show only students with IT above 80, sorted A to Z. Next, Criterion 'LIKE 'A*'' under Name shows names beginning with A.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the Criterion row under IT, type greater than 80. Set Sort to ascending under Name. Press F5 to run the query." },
+          { "speaker": "NEO", "text": "For patterns, use LIKE with a wildcard. LIKE A star finds all names starting with A." },
+          { "speaker": "NEO", "text": "Criteria on the same row must all be true. Criteria on the Or row mean either one can be true." }
+        ]
+      },
+      {
+        "animation": "A new grid column gets the Field '\"English\" + \"IT\"' and the Alias 'Total'. Running it shows Rahul: English 78, IT 90, Total 168. Working floats beside: '78 + 90 = 168'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Queries can calculate too. In an empty column, type English plus IT as the field, and Total as the alias." },
+          { "speaker": "NEO", "text": "Rahul scored 78 and 90, so his total shows 168." },
+          { "speaker": "ZIPPY", "text": "The database does maths now? Can it do my homework?" }
+        ]
+      },
+      {
+        "animation": "'Use Wizard to Create Query' shows its steps list: 'Field Selection, Sorting Order, Search Conditions, Detail or Summary, Aliases, Overview'. A saved query is right-clicked and 'Edit' is chosen, reopening Design View. A 'MINI PRACTICAL' card and a yellow 'BOARD TIP' card follow.",
+        "lines": [
+          { "speaker": "NEO", "text": "Beginners can use the Query Wizard, which guides you through fields, sorting and search conditions. To change a saved query, right-click it and choose Edit." },
+          { "speaker": "NEO", "text": "Try it: make a query showing students with IT above 80, sorted by name, with a Total column." },
+          { "speaker": "NEO", "text": "Board tip: in query questions, write the exact criterion, like greater than 80, and say which field it goes under." }
+        ]
+      },
+      {
+        "animation": "Recap board with a question-mark icon. Points appear: '1. Query = retrieve data by criteria', '2. Design View: fields, Sort, Criterion, Or; run with F5', '3. Calculated fields with alias; wizard; right-click > Edit'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a query retrieves data that meets your criteria." },
+          { "speaker": "NEO", "text": "Two: in Design View, add fields, sort and criteria, then run with F5." },
+          { "speaker": "NEO", "text": "Three: queries can calculate new fields, and can be made with a wizard and edited later." },
+          { "speaker": "ZIPPY", "text": "Clipboard teacher, your list is ready." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 4,
+    "chapter": "Database Management System",
+    "topic_no": 6,
+    "name": "Forms and Reports",
+    "scenes": [
+      {
+        "animation": "The school receptionist, a cheerful cartoon, stares at a Base datasheet full of tiny cells and scrolls sideways. She types an address into the phone-number column by mistake.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "She's not a database expert. How can she enter data safely?" },
+          { "speaker": "NEO", "text": "Give her a form. And give the principal a report. Let's make both." }
+        ]
+      },
+      {
+        "animation": "Animated UI: 'Forms > Use Wizard to Create Form'. The wizard's step list highlights one by one: 'Field selection' (Student table, fields moved with >>), 'Set up a subform', 'Arrange controls', 'Set data entry', 'Apply styles', 'Set name'. Finish with 'Work with the form'. A clean form with labelled boxes appears.",
+        "lines": [
+          { "speaker": "NEO", "text": "A form is a user-friendly screen for entering and viewing data, one record at a time." },
+          { "speaker": "NEO", "text": "Click Forms, then Use Wizard to Create Form. Choose the table and fields, arrange the controls, pick a style, name it, and click Finish." }
+        ]
+      },
+      {
+        "animation": "At the bottom of the form, the navigation bar highlights 'New Record', 'Delete Record' and the binoculars 'Find Record'. Zippy searches 'Priya' and jumps to her record.",
+        "lines": [
+          { "speaker": "NEO", "text": "In form view, use the navigation bar to add a new record, delete a record, or find a record with the search button." }
+        ]
+      },
+      {
+        "animation": "The form is right-clicked > 'Edit'. 'View > Toolbars > Form Controls' opens the toolbar with 'Design Mode', 'Label', 'Text Box', 'Check Box', 'List Box', 'Push Button'. A label is right-clicked > 'Control Properties', and its Label text changes from 'StdName' to 'Student Name'. The background turns light yellow.",
+        "lines": [
+          { "speaker": "NEO", "text": "To modify a form, right-click it and choose Edit. The Form Controls toolbar lets you add labels, text boxes, check boxes, list boxes and buttons." },
+          { "speaker": "NEO", "text": "Right-click a label and open Control Properties to change its text. You can also change the form's background colour." },
+          { "speaker": "ZIPPY", "text": "StdName becomes Student Name. Much friendlier!" }
+        ]
+      },
+      {
+        "animation": "'Reports > Use Wizard to Create Report' shows steps: 'Field Selection, Labeling Fields, Grouping, Sort Options, Choose Layout, Create Report' with 'Static report' and 'Dynamic report' options. A printable class list appears. In edit mode, a title 'Class X Results' is typed and 'Insert > Field > Date' adds today's date. A 'MINI PRACTICAL' card and a yellow 'BOARD TIP' card follow.",
+        "lines": [
+          { "speaker": "NEO", "text": "A report presents data in a printable format. Click Reports, then Use Wizard to Create Report, and follow the steps: fields, labels, grouping, sorting and layout." },
+          { "speaker": "NEO", "text": "A static report keeps the data as it was; a dynamic report updates with the table. You can edit it to add titles, headings, and the date and time." },
+          { "speaker": "NEO", "text": "Try it: make a form for the Student table, enter two records, then create a report grouped by class." },
+          { "speaker": "NEO", "text": "Board tip: remember the purpose of each object. Forms are for input; reports are for output." }
+        ]
+      },
+      {
+        "animation": "Recap board with a form icon and a printer icon. Points appear: '1. Form Wizard: user-friendly data entry', '2. Form Controls toolbar; Control Properties', '3. Report Wizard: printable output; static or dynamic'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: forms make data entry easy and are made with the Form Wizard." },
+          { "speaker": "NEO", "text": "Two: modify forms with the Form Controls toolbar and Control Properties." },
+          { "speaker": "NEO", "text": "Three: reports present data for printing, and can be static or dynamic." },
+          { "speaker": "ZIPPY", "text": "Receptionist happy, principal happy, Zippy very happy." }
+        ]
+      }
+    ]
+  }
+]

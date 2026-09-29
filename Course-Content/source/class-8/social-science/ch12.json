@@ -1,0 +1,283 @@
+[
+  {
+    "chapter_no": 12,
+    "chapter": "Citizenship: Rights and Duties",
+    "topic_no": 1,
+    "name": "Who Is a Citizen?",
+    "scenes": [
+      {
+        "animation": "School playground: new student Kruti stands alone while two kids giggle and mimic her accent. Sonali and Harshada march over, hands raised in a 'stop' gesture. Zippy watches from a badminton net.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Uh oh. They're teasing the new girl, Kruti, for her accent." },
+          { "speaker": "SONALI", "text": "Stop it. That's not fair." },
+          { "speaker": "HARSHADA", "text": "Kruti, want to join our badminton team?" },
+          { "speaker": "NEO", "text": "Sonali and Harshada just showed what a good citizen does. They stood up for someone, and made sure she felt included." }
+        ]
+      },
+      {
+        "animation": "An ID-card style badge labelled 'CITIZEN' appears with two halves: 'Legal identity: formally connected to the country' and 'Social responsibility: belonging, shared values'. Icons for voting, speaking and working safely float on the rights side; icons for obeying laws, paying taxes and helping others float on the duties side.",
+        "lines": [
+          { "speaker": "NEO", "text": "A citizen is someone who legally belongs to a country and is a member of its political community. That means they can take part in the country's decision-making." },
+          { "speaker": "NEO", "text": "In a democracy, citizenship gives rights like voting, free speech, and living and working safely. These rights have limits." },
+          { "speaker": "NEO", "text": "Citizens also have duties, like obeying the law, paying taxes, respecting others and helping keep society safe." },
+          { "speaker": "NEO", "text": "So citizenship is both a legal identity and a social responsibility." }
+        ]
+      },
+      {
+        "animation": "Split screen: on the left, a person living in India with a house icon labelled 'Resident'; on the right, the same kind of figure with a passport labelled 'Citizen'. A third figure holding an Indian passport waves from a city abroad, labelled 'Citizen living in another country'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "So anyone who lives in India is a citizen, right?" },
+          { "speaker": "NEO", "text": "Not quite. Living in a place makes you a resident. Citizenship is formal, legal membership of a country." },
+          { "speaker": "NEO", "text": "A person can be a resident without being a citizen, and a citizen can even live in another country." },
+          { "speaker": "NEO", "text": "Exam tip: this resident versus citizen difference is a favourite short question. Remember, citizenship is a legal membership." }
+        ]
+      },
+      {
+        "animation": "A document stack appears: 'Citizenship Act, 1955' and 'Citizenship (Amendment) Act, 2019', labelled 'Rules for gaining or losing citizenship'. Behind them, a crowd of people in varied regional dress stands on one equal platform labelled 'All citizens equal under the Constitution'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In India, all citizens are equal under the Constitution, whatever their language, religion or culture." },
+          { "speaker": "NEO", "text": "The Citizenship Act of 1955 and the Citizenship (Amendment) Act of 2019 set the rules for gaining or losing citizenship." },
+          { "speaker": "NEO", "text": "Citizenship also means active participation, including the power to question unfair practices and stand up for what is right." }
+        ]
+      },
+      {
+        "animation": "Four tiles flip over one by one: 'Rights: freedoms to live with dignity', 'Duties: responsibilities like obeying laws, keeping clean', 'Discrimination: unfair treatment based on identity', 'Inclusion: no one left out'. The first three get a small 'In the Constitution' tag.",
+        "lines": [
+          { "speaker": "NEO", "text": "We will explore four ideas. Rights are freedoms that let people live with dignity. Duties are responsibilities, like obeying laws and helping others." },
+          { "speaker": "NEO", "text": "Discrimination is unfair treatment based on identity. Inclusion means no one is left out because of language, religion, culture, ethnicity, caste or gender." },
+          { "speaker": "ZIPPY", "text": "Four big words. I'm ready!" }
+        ]
+      },
+      {
+        "animation": "Recap board shaped like a citizen badge. Points appear: '1. Citizen = legal member of the political community', '2. Resident is not always a citizen', '3. Citizenship = rights + duties; Citizenship Act 1955, Amendment 2019'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: a citizen legally belongs to a country and can take part in its decision-making." },
+          { "speaker": "NEO", "text": "Two: a resident is not always a citizen, and a citizen may live abroad." },
+          { "speaker": "NEO", "text": "Three: citizenship brings both rights and duties, and in India its rules come from the Citizenship Act of 1955 and its 2019 amendment." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Citizenship: Rights and Duties",
+    "topic_no": 2,
+    "name": "Rights: Equality and Freedom",
+    "scenes": [
+      {
+        "animation": "A colourful town festival with stalls. Four problems flash in speech bubbles: Meena blocked from the debate stage, Ravi turned away from the library stall, children sweeping instead of going to school, and Gaganjit's wheelchair stuck at stairs with no ramp.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This festival is a mess! Meena can't debate because she's a girl, Ravi can't enter the library stall, some children are cleaning instead of studying, and Gaganjit can't get in without a ramp!" },
+          { "speaker": "NEO", "text": "Each of these denies someone a right. Let's see how the children fixed it." }
+        ]
+      },
+      {
+        "animation": "The children talk to their teacher, then to the organisers. One by one the scenes fix themselves: Meena on stage, Ravi reading, a ramp sliding into place, the working children walking into a school. Everyone claps at the closing ceremony.",
+        "lines": [
+          { "speaker": "NEO", "text": "Their teacher explained that the Constitution gives every citizen fundamental rights, like equality, free speech, freedom of religion, life and dignity, and education. If these are denied, citizens can approach the courts." },
+          { "speaker": "NEO", "text": "The children spoke to the organisers, and slowly things changed." },
+          { "speaker": "NEO", "text": "Rights are what we need to live with dignity, safety and respect. But actions that harm ourselves or others cannot be rights. Rights are justified claims." }
+        ]
+      },
+      {
+        "animation": "A hexagon builds tile by tile with six Fundamental Rights: 'Equality (Art. 14-18)', 'Freedom (Art. 19-22)', 'Against exploitation (Art. 23-24)', 'Freedom of religion (Art. 25-28)', 'Cultural and educational (Art. 29-30)', 'Constitutional remedies (Art. 32)'. A shield labelled 'Enforceable in court' surrounds it.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Constitution lists six broad categories of Fundamental Rights. They can be enforced by law, so if they are violated, people can go to court." },
+          { "speaker": "NEO", "text": "They protect us from unfair treatment by others, and also from unfair actions by the government." },
+          { "speaker": "NEO", "text": "Exam tip: list all six. Equality, freedom, against exploitation, freedom of religion, cultural and educational rights, and constitutional remedies." }
+        ]
+      },
+      {
+        "animation": "Three children of different heights watch a cricket match over a fence. Panel one, 'Equality': each stands on one identical box; the shortest still cannot see. Panel two, 'Equity': the boxes are redistributed so all three can see. A 'Beti Bachao Beti Padhao' banner appears below.",
+        "lines": [
+          { "speaker": "NEO", "text": "The right to equality means everyone is equal before the law, with equal opportunities in jobs and education, and no discrimination because of religion, race, caste, gender or place of birth. It also ends untouchability and stops special titles, except military or academic honours." },
+          { "speaker": "NEO", "text": "But giving everyone the same thing does not always help equally. Equity means everyone gets the support they need, fairly. The Beti Bachao Beti Padhao campaign supported girls' education." },
+          { "speaker": "ZIPPY", "text": "Same box for everyone is equality. The right box for everyone is equity. Got it!" }
+        ]
+      },
+      {
+        "animation": "A hot Sports Day: a student in full uniform and shoes raises a hand at break time, asking about sports clothes. Classmates' speech bubbles show both sides, and a teacher points to a sign 'School rules'. Overlay: 'Freedom + reasonable restrictions'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The right to freedom lets people express themselves, move freely, and choose how to live and work." },
+          { "speaker": "NEO", "text": "But these freedoms are not unlimited. They come with reasonable restrictions, so they are not misused or harmful to others or the nation." }
+        ]
+      },
+      {
+        "animation": "Recap board shaped like a hexagon. Points appear: '1. Rights = justified claims for dignity', '2. Six Fundamental Rights, enforceable in court', '3. Equality vs equity; freedom with reasonable restrictions'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: rights are justified claims we need to live with dignity, and harmful actions are not rights." },
+          { "speaker": "NEO", "text": "Two: our Constitution lists six Fundamental Rights, and they can be enforced in court." },
+          { "speaker": "NEO", "text": "Three: equality treats all alike, equity gives each the support they need, and freedom has reasonable limits." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Citizenship: Rights and Duties",
+    "topic_no": 3,
+    "name": "Life, Exploitation, Religion, Culture and Remedies",
+    "scenes": [
+      {
+        "animation": "A dim embroidery workshop: small children bend over cloth. A phone lights up with '1098' and the digits count backwards '10, 9, 8'. A rescue team opens the door and light floods in.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Neo, why is that phone showing 1098?" },
+          { "speaker": "NEO", "text": "That is Childline, a helpline for children. Easy to remember: just count backwards from ten." }
+        ]
+      },
+      {
+        "animation": "A banner 'Right to life = life + dignity' unrolls; icons for livelihood, education, health, clean environment and fair treatment attach to it. A child in a school for the blind traces a tactile map with her fingers.",
+        "lines": [
+          { "speaker": "NEO", "text": "The right to life protects life and liberty. It means the right to live with dignity, including livelihood, education, health, a clean environment and fair treatment under the law." },
+          { "speaker": "NEO", "text": "It also ensures children with disabilities get the support they need to learn, play and take part on an equal basis. A tactile map in a school for the blind helps the right to education." }
+        ]
+      },
+      {
+        "animation": "Three warning cards flip: 'Bonded labour', 'Human trafficking', 'Child labour'. A red 'X' stamps over a factory, a mine and a restaurant kitchen with a child figure, labelled 'Below 14: not allowed'. A calendar marks 2015 as the Childline team rescues 20 children.",
+        "lines": [
+          { "speaker": "NEO", "text": "The right against exploitation makes it illegal to force anyone to work against their will or in unsafe conditions. It fights bonded labour, human trafficking and child labour." },
+          { "speaker": "NEO", "text": "Children below fourteen generally cannot be employed. Work in factories, mines or restaurants is banned for them." },
+          { "speaker": "NEO", "text": "In 2015, a concerned citizen called Childline about twenty children forced to work in an embroidery factory. A team rescued them, and the culprits were arrested." }
+        ]
+      },
+      {
+        "animation": "Teenagers of different faiths pray side by side in a park at sunrise. Then a government school building appears with a sign 'No promotion of any particular religion'. Next, children read in several scripts, and a minority-run school opens its gates.",
+        "lines": [
+          { "speaker": "NEO", "text": "The right to freedom of religion lets every person choose, practise and share their religion, while no one is forced to follow or fund a particular religion. State-run or government-aided schools cannot promote any one religion." },
+          { "speaker": "NEO", "text": "Cultural and educational rights let communities preserve their language, script and traditions. No one can be denied admission to a government institution because of religion, caste, race or language. Religious and linguistic minorities can set up and manage their own schools." }
+        ]
+      },
+      {
+        "animation": "A key labelled 'Article 32' unlocks a vault holding all the other rights. A portrait card of Dr. B.R. Ambedkar appears with the words 'the very soul of the Constitution and the very heart of it'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The right to constitutional remedies lets citizens approach the Supreme Court if their fundamental rights are violated. It makes rights real, not just promises on paper." },
+          { "speaker": "NEO", "text": "Dr. B.R. Ambedkar called it the very soul of the Constitution and the very heart of it." },
+          { "speaker": "NEO", "text": "Exam tip: when asked which right protects all the others, answer the right to constitutional remedies, Article 32." },
+          { "speaker": "ZIPPY", "text": "So it's the master key!" }
+        ]
+      },
+      {
+        "animation": "Recap board with a key icon. Points appear: '1. Right to life = living with dignity', '2. Against exploitation: no child labour below 14; Childline 1098', '3. Religion, culture and education rights; Art. 32 = heart of the Constitution'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the right to life means living with dignity, including education, health and a clean environment." },
+          { "speaker": "NEO", "text": "Two: the right against exploitation bans forced labour and child labour, and Childline 1098 helps children in danger." },
+          { "speaker": "NEO", "text": "Three: freedom of religion and cultural rights protect diversity, and constitutional remedies let us go to court to protect every right." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Citizenship: Rights and Duties",
+    "topic_no": 4,
+    "name": "Fundamental Duties",
+    "scenes": [
+      {
+        "animation": "Sunday morning in Green Park Colony: families with gloves and garbage bags clean a park, plant saplings and paint cheerful walls, while older students set down water bowls for street dogs. A reporter holds a mic to a sweaty little girl.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why are these kids cleaning on a Sunday instead of playing?" },
+          { "speaker": "GIRL", "text": "It's our duty to care for our neighbourhood." },
+          { "speaker": "NEO", "text": "A simple answer with a deep truth. Duties are our responsibility to family, community, country and even the environment." }
+        ]
+      },
+      {
+        "animation": "A timeline builds left to right: '1950: Constitution, no duties', '1976: 10 Fundamental Duties added, Article 51A (Part IV-A)', '2002: 11th duty added, education for children 6-14'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The Constitution also tells us what responsible citizens should do. These responsibilities are the Fundamental Duties." },
+          { "speaker": "NEO", "text": "When the Constitution came into effect in 1950, it had no Fundamental Duties. Ten duties were added in 1976, in Article 51A. In 2002, an eleventh duty was added: parents or guardians must ensure children aged six to fourteen get an education." },
+          { "speaker": "NEO", "text": "Exam tip: remember the three dates, 1950, 1976 and 2002." }
+        ]
+      },
+      {
+        "animation": "A checklist titled 'Article 51A' fills line by line with small icons: respect Constitution, Flag and Anthem; follow ideals of the freedom struggle; protect unity; defend the nation; promote harmony and respect women; preserve heritage; protect environment and animals; scientific temper; protect public property; strive for excellence; education for 6-14.",
+        "lines": [
+          { "speaker": "NEO", "text": "The duties include respecting the Constitution, the National Flag and the National Anthem, following the ideals of the freedom struggle, and protecting India's unity, integrity and sovereignty." },
+          { "speaker": "NEO", "text": "They also include defending the nation, promoting harmony and respecting women, preserving our heritage, and protecting the environment with compassion for animals." },
+          { "speaker": "NEO", "text": "Others are developing a scientific temper, protecting public property, avoiding violence, striving for excellence, and ensuring education for children aged six to fourteen." }
+        ]
+      },
+      {
+        "animation": "Quick school vignettes: a student stops a friend from writing on a fort wall; after a lost football match, boys stop others from breaking benches; NCC cadets hand out food in a flood-hit village. Each gets a green tick.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Like stopping a friend from scribbling on a fort wall? That's preserving heritage!" },
+          { "speaker": "NEO", "text": "Exactly. Or not breaking school benches after losing a match. That's protecting public property." }
+        ]
+      },
+      {
+        "animation": "A giant coin spins; one face reads 'RIGHTS: protected by law, can go to court', the other 'DUTIES: moral and social responsibilities'. Matching pairs slide in: 'Right to respect <-> Duty to respect others', 'Right to free speech <-> Duty to listen to others'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rights and duties are two sides of the same coin. Rights are protected by law, and if they are violated, even by the government, you can go to court." },
+          { "speaker": "NEO", "text": "Duties are moral and social responsibilities. Not following them may not always lead to legal action, but fulfilling them protects everyone's rights." },
+          { "speaker": "NEO", "text": "Every right has a matching duty. If I have the right to express my opinion, I have the duty to listen to others, even when I disagree." }
+        ]
+      },
+      {
+        "animation": "Recap board shaped like a two-sided coin. Points appear: '1. Fundamental Duties: Article 51A, added 1976', '2. 11th duty (2002): education for children 6-14', '3. Rights and duties go together'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: Fundamental Duties were added in 1976 in Article 51A." },
+          { "speaker": "NEO", "text": "Two: the eleventh duty, added in 2002, is to ensure education for children aged six to fourteen." },
+          { "speaker": "NEO", "text": "Three: rights are protected by law, duties are moral responsibilities, and every right has a matching duty." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 12,
+    "chapter": "Citizenship: Rights and Duties",
+    "topic_no": 5,
+    "name": "Discrimination and Inclusion",
+    "scenes": [
+      {
+        "animation": "School auditions: classmates whisper behind Sanya that she does not 'fit the image' of a lead. She walks on stage anyway and performs; the teachers' eyes widen and a script labelled 'Important role' lands in her hands.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "They said Sanya didn't look like a lead actor. And she just got a big role!" },
+          { "speaker": "NEO", "text": "Because talent and effort matter far more than looks. Judging her by appearance was a form of discrimination." }
+        ]
+      },
+      {
+        "animation": "A wall of bricks rises between a child and a row of doors labelled 'Education', 'Opportunities', 'Rights'. Each brick is labelled: caste, religion, ethnicity, disability, race, appearance, gender, economic background.",
+        "lines": [
+          { "speaker": "NEO", "text": "Discrimination is mistreating any person or group because of caste, religion, ethnicity, disability, race, physical appearance, gender, sexuality or economic background." },
+          { "speaker": "NEO", "text": "It is unethical and also legally prohibited. It creates a social barrier that stops people from enjoying their fundamental rights, and it harms society as a whole." }
+        ]
+      },
+      {
+        "animation": "Two caselets: Rohan is mocked and kept out of a football game; Mina is whispered about and ignored because her family cannot afford a school trip. A magnifying glass hovers over Mina's scene, where the discrimination is faint and hard to see, labelled 'Invisible discrimination'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Discrimination is not always visible. It can be indirect, like a jibe, or leaving someone out of a project because of their background or appearance." },
+          { "speaker": "NEO", "text": "Invisible discrimination is hard to prove, and so hard to penalise." },
+          { "speaker": "ZIPPY", "text": "So ignoring Mina because of money is discrimination too. Not cool." }
+        ]
+      },
+      {
+        "animation": "Sepia portraits: Savitribai Phule walks to her girls' school in the mid-19th century as mud is thrown, but keeps going; then Anandibai Joshi heads to the Woman's Medical College of Pennsylvania to become a doctor.",
+        "lines": [
+          { "speaker": "NEO", "text": "In the mid-19th century, Savitribai Phule set up a school for girls. People threw mud at her, but with Jyotiba Phule she kept working for education for all." },
+          { "speaker": "NEO", "text": "Anandibai Joshi fought discrimination and hardship to study medicine in Pennsylvania, so she could serve mothers and children." }
+        ]
+      },
+      {
+        "animation": "Smt. Amita's library reading club: at first only a few English readers sit in a circle. She adds regional-language books, storytelling and puppets, and the circle grows until every child joins. Then a school entrance gains a ramp, braille books and signs in many languages.",
+        "lines": [
+          { "speaker": "NEO", "text": "Inclusion means creating an environment where everyone feels welcomed, respected and valued, with equal access to opportunities." },
+          { "speaker": "NEO", "text": "When Smt. Amita added regional-language books to her reading club, all children began to take part. Inclusion also means braille books, ramps and classroom support for children with special needs." },
+          { "speaker": "NEO", "text": "Exam tip: inclusion goes beyond reservations. It means removing barriers so everyone feels accepted and supported." }
+        ]
+      },
+      {
+        "animation": "Recap board with a wall breaking into an open door. Points appear: '1. Discrimination: unfair treatment based on identity; legally prohibited', '2. It can be visible or invisible', '3. Inclusion: welcome everyone, remove barriers'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: discrimination is unfair treatment based on identity, and it is legally prohibited." },
+          { "speaker": "NEO", "text": "Two: it can be visible or invisible, and invisible discrimination is hard to prove." },
+          { "speaker": "NEO", "text": "Three: inclusion means making everyone feel welcome and removing barriers to participation." },
+          { "speaker": "ZIPPY", "text": "Starting with inviting everyone to our badminton team!" }
+        ]
+      }
+    ]
+  }
+]

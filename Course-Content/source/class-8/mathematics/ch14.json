@@ -1,0 +1,279 @@
+[
+  {
+    "chapter_no": 14,
+    "chapter": "Area",
+    "topic_no": 1,
+    "name": "Rectangles, and Why Perimeter Is Not Area",
+    "scenes": [
+      {
+        "animation": "A Diwali courtyard. Two rectangular rangoli outlines chalked on the floor: '7 cm × 4 cm' and '8 cm × 3 cm' (scaled up as giant tiles). Zippy holds one bag of rangoli powder and hesitates between them.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Which rangoli needs more powder? The 8 one is longer, so that one!" },
+          { "speaker": "NEO", "text": "Let's count unit squares instead of guessing." }
+        ]
+      },
+      {
+        "animation": "Both rectangles fill with 1 cm unit squares row by row: '7 × 4 = 28 squares' and '8 × 3 = 24 squares'. The 7 × 4 rectangle glows as the winner. A formula card: 'Area of rectangle = length × width'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Area is the number of unit squares that fit inside a region." },
+          { "speaker": "NEO", "text": "The 7 by 4 rectangle holds 28 unit squares. The 8 by 3 holds only 24. So the 7 by 4 needs more powder." },
+          { "speaker": "NEO", "text": "In general, the area of a rectangle is length times width." }
+        ]
+      },
+      {
+        "animation": "The 7 × 4 rectangle is cut along a diagonal into two congruent triangles that flip onto each other. Label: 'each triangle = 1/2 × 7 × 4 = 14 cm²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A diagonal splits a rectangle into two congruent triangles." },
+          { "speaker": "NEO", "text": "So each triangle has half the area: half of 28 is 14 square centimetres." }
+        ]
+      },
+      {
+        "animation": "Puzzle: a thread loop of length 20 units forms a thin 1 × 9 rectangle (area 9), then a 5 × 5 square (area 25). Then a 1 × 10 rectangle with perimeter 22 and area 10 sits beside the 5 × 5 square with perimeter 20 and area 25.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Why not just measure the boundary? Same perimeter, same area, right?" },
+          { "speaker": "NEO", "text": "Take a loop of thread 20 units long. Make a 1 by 9 rectangle, and the area is 9. Make a 5 by 5 square, and it's 25." },
+          { "speaker": "NEO", "text": "Even stranger: a 1 by 10 rectangle has perimeter 22 but area only 10. The 5 by 5 square has a smaller perimeter, 20, but a bigger area." }
+        ]
+      },
+      {
+        "animation": "A square divided into 4 equal parts, then each part's edges squash on one side and bulge on the other by the same amount, making four wavy but equal-area pieces. An 'Exam Tip' sticker: 'Area in square units: cm², m²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Here's a creative puzzle. Split a square into 4 equal parts, then push in one edge and push out another by the same amount. The areas stay equal!" },
+          { "speaker": "NEO", "text": "Exam tip: always write area in square units, like square centimetres, and perimeter in plain units." }
+        ]
+      },
+      {
+        "animation": "Recap board with the finished rangolis. Points: '1. Area = number of unit squares', '2. Rectangle = length × width; triangle on its diagonal = half', '3. Perimeter does not decide area'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: area counts the unit squares that fit inside a region." },
+          { "speaker": "NEO", "text": "Two: a rectangle's area is length times width, and the triangle cut by its diagonal is half of that." },
+          { "speaker": "NEO", "text": "Three: equal perimeters don't mean equal areas." },
+          { "speaker": "ZIPPY", "text": "28 squares of powder, coming up!" }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "Area",
+    "topic_no": 2,
+    "name": "Area of a Triangle",
+    "scenes": [
+      {
+        "animation": "Two identical rectangles ABCD. In one, a triangle XDC has its tip X near the left of the top edge; in the other, Y is near the right. Zippy bets the fatter-looking triangle is bigger.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "Both triangles sit on DC, but X is on the left and Y on the right. One must be bigger!" },
+          { "speaker": "NEO", "text": "Drop a line straight down from the tip, and you'll see." }
+        ]
+      },
+      {
+        "animation": "An altitude drops from X to the base, splitting the rectangle into two smaller rectangles. Each is cut in half by a side of the triangle; the shaded halves fill exactly half the rectangle. Formula: 'Area = 1/2 × base × height'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The altitude splits the rectangle into two smaller rectangles. The triangle takes exactly half of each." },
+          { "speaker": "NEO", "text": "So both triangles are exactly half the rectangle. Wherever the tip is on the top side, the area is the same." },
+          { "speaker": "NEO", "text": "That gives the rule: area of a triangle is half times base times height." }
+        ]
+      },
+      {
+        "animation": "An obtuse triangle ABC whose altitude from A falls outside, at D beyond B. Two right triangles ADC and ADB are shaded. Steps: '1/2 × h × DC − 1/2 × h × DB', '= 1/2 × h × (DC − DB)', '= 1/2 × h × BC'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "What if the height falls outside the triangle?" },
+          { "speaker": "NEO", "text": "Then take the big triangle ADC and subtract the small triangle ADB." },
+          { "speaker": "NEO", "text": "Half h times DC, minus half h times DB, is half h times BC. The same formula works!" }
+        ]
+      },
+      {
+        "animation": "Triangle ABC with base BC = 5 and height AX = 3, giving 'Area = 1/2 × 5 × 3 = 7.5'. Now side AC = 4 is used as the base with unknown altitude BY. Steps: '1/2 × 4 × BY = 7.5', '2 × BY = 7.5', 'BY = 3.75 units'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Puzzle. A triangle has base 5 and height 3, so its area is half of 15, which is 7.5." },
+          { "speaker": "NEO", "text": "Now use side AC, of length 4, as the base. Its altitude BY is unknown." },
+          { "speaker": "NEO", "text": "Half times 4 times BY is 7.5. So 2 BY is 7.5, and BY is 3.75 units." }
+        ]
+      },
+      {
+        "animation": "A triangle with a line from a vertex to the midpoint of the opposite side splits into two triangles; equal bases glow and the shared height glows. Label: 'equal areas'. An 'Exam Tip' sticker: 'Height must be perpendicular to the base you choose'.",
+        "lines": [
+          { "speaker": "NEO", "text": "One more fact. A line from a vertex to the midpoint of the opposite side splits a triangle into two equal areas, because they share the height and have equal bases." },
+          { "speaker": "NEO", "text": "Exam tip: always pair a base with the height perpendicular to it." }
+        ]
+      },
+      {
+        "animation": "Recap board with triangles inside rectangles. Points: '1. Area = 1/2 × base × height', '2. Works for all triangles, even obtuse ones', '3. Any side can be the base with its own height'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the area of a triangle is half times base times height." },
+          { "speaker": "NEO", "text": "Two: this works for every triangle, even when the height falls outside." },
+          { "speaker": "NEO", "text": "Three: any side can be the base, as long as you use its own perpendicular height." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "Area",
+    "topic_no": 3,
+    "name": "Parallelograms and Polygons by Dissection",
+    "scenes": [
+      {
+        "animation": "A tailor named MASTERJI holds a slanted parallelogram of cloth and big scissors. Zippy counts unit squares on it and gets confused by the slanted edges.",
+        "lines": [
+          { "speaker": "MASTERJI", "text": "This slanted cloth piece must be priced by area. But it won't sit in neat squares!" },
+          { "speaker": "NEO", "text": "Then let's cut and rearrange it into a rectangle. That's called dissection." }
+        ]
+      },
+      {
+        "animation": "Parallelogram ABCD. A perpendicular AX drops from A to DC. Triangle AXD is snipped off and slides to the right side, fitting exactly into triangle BYC, forming rectangle ABYX. Labels: 'BY = AX', 'right angles', 'BC = AD', 'RHS congruence'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Draw AX perpendicular to DC. Cut off triangle AXD." },
+          { "speaker": "NEO", "text": "Slide it to the other end. It fits exactly, because the two triangles are congruent by RHS." },
+          { "speaker": "NEO", "text": "Now we have a rectangle with the same area as the parallelogram. Nothing was added and nothing was lost." }
+        ]
+      },
+      {
+        "animation": "The rectangle ABYX shows width XY and height AX. 'DX = CY, so XY = DC'. Formula builds: 'Area of parallelogram = base × height'. Example: 'base 7 cm, height 4 cm → 28 cm²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "The rectangle's width equals the base DC, and its height is AX." },
+          { "speaker": "NEO", "text": "So the area of a parallelogram is base times height." },
+          { "speaker": "NEO", "text": "A parallelogram with base 7 centimetres and height 4 centimetres has area 28 square centimetres." }
+        ]
+      },
+      {
+        "animation": "A rectangle 5 × 4 and a parallelogram with sides 5 and 4, leaning over, sit on the same base. The parallelogram's height is visibly less than 4. Zippy's jaw drops.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A rectangle and a parallelogram both have sides 5 and 4. Same area?" },
+          { "speaker": "NEO", "text": "No. Put them on the same base. The parallelogram leans, so its height is less than 4. The rectangle has more area." }
+        ]
+      },
+      {
+        "animation": "A quadrilateral ABCD with diagonal AC = 22 cm and perpendiculars BM = 3 cm and DN = 3 cm onto AC. Steps: 'triangle ABC = 1/2 × 22 × 3 = 33', 'triangle ADC = 33', 'total = 66 cm²'. Then a pentagon splits into triangles. An 'Exam Tip' sticker: 'Height is perpendicular, not the slanted side'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Any polygon can be split into triangles. This quadrilateral has diagonal 22, with heights of 3 on each side." },
+          { "speaker": "NEO", "text": "Each triangle is half of 22 times 3, which is 33. Together, 66 square centimetres." },
+          { "speaker": "NEO", "text": "Exam tip: for a parallelogram, multiply the base by the perpendicular height, not by the slanted side." }
+        ]
+      },
+      {
+        "animation": "Recap board with Masterji's neatly rearranged cloth. Points: '1. Dissection: cut and rearrange, area unchanged', '2. Parallelogram = base × height', '3. Any polygon = sum of triangles'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: dissection cuts a shape and rearranges it without changing its area." },
+          { "speaker": "NEO", "text": "Two: the area of a parallelogram is base times height." },
+          { "speaker": "NEO", "text": "Three: any polygon's area is the sum of the triangles it splits into." },
+          { "speaker": "MASTERJI", "text": "Perfect. Now I can price every piece fairly." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "Area",
+    "topic_no": 4,
+    "name": "Area of a Rhombus and a Trapezium",
+    "scenes": [
+      {
+        "animation": "A kite-maker's stall with diamond-shaped kites. One kite's two sticks measure '20 cm' and '15 cm', crossing at right angles. Zippy asks how much paper it needs.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "This rhombus kite has sticks of 20 and 15 centimetres. How much paper covers it?" },
+          { "speaker": "NEO", "text": "The sticks are its diagonals. The Sulba-Sutras show a neat dissection for this." }
+        ]
+      },
+      {
+        "animation": "Rhombus ABCD splits along BD into two isosceles triangles. Each is cut and rearranged into a rectangle; the two rectangles join into WXYZ with sides 'AC' and 'BD/2'. Formula: 'Area = 1/2 × d₁ × d₂'. Example: '1/2 × 20 × 15 = 150 cm²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Split the rhombus into two isosceles triangles, turn each into a rectangle, and join them." },
+          { "speaker": "NEO", "text": "The big rectangle has one side equal to one diagonal, and the other equal to half the other diagonal." },
+          { "speaker": "NEO", "text": "So the area of a rhombus is half the product of its diagonals. Half of 20 times 15 is 150 square centimetres." }
+        ]
+      },
+      {
+        "animation": "Trapezium WXYZ with WX = a on top and ZY = b at the bottom, height h. Perpendiculars WM and XN cut it into a left triangle (base x), a middle rectangle (a × h) and a right triangle (base y). Steps: '1/2 hx + ha + 1/2 hy', '= 1/2 h(x + y + 2a)', 'x + y = b − a', '= 1/2 h(a + b)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Now a trapezium, with parallel sides a and b, and height h. Cut it into two triangles and a rectangle." },
+          { "speaker": "NEO", "text": "Adding them gives half h times x plus y plus 2a. And x plus y is b minus a." },
+          { "speaker": "NEO", "text": "So the area is half times height times the sum of the parallel sides." }
+        ]
+      },
+      {
+        "animation": "Two copies of the trapezium: one rotated 180° and joined along a slanted side, forming a parallelogram with base 'a + b' and height 'h'. Label: 'trapezium = 1/2 × h × (a + b)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Another way. Take two copies of the trapezium and rotate one. Together they make a parallelogram." },
+          { "speaker": "NEO", "text": "Its base is a plus b and its height is h. One trapezium is half of that." }
+        ]
+      },
+      {
+        "animation": "Worked example: 'parallel sides 10 m and 18 m, height 8 m'. Steps: '10 + 18 = 28', '1/2 × 8 × 28', '= 4 × 28 = 112 m²'. An 'Exam Tip' sticker: 'Add the parallel sides first, then multiply by half the height'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "A field is a trapezium with parallel sides 10 and 18 metres, 8 metres apart." },
+          { "speaker": "NEO", "text": "Add the parallel sides: 28. Half of 8 is 4. 4 times 28 is 112 square metres." },
+          { "speaker": "NEO", "text": "Exam tip: add the parallel sides first, then multiply by half the height. Don't use the slanted sides." }
+        ]
+      },
+      {
+        "animation": "Recap board with the kite and trapezium field. Points: '1. Rhombus = 1/2 × d₁ × d₂', '2. Trapezium = 1/2 × h × (a + b)', '3. Both come from dissection into rectangles and triangles'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: the area of a rhombus is half the product of its diagonals." },
+          { "speaker": "NEO", "text": "Two: the area of a trapezium is half times height times the sum of the parallel sides." },
+          { "speaker": "NEO", "text": "Three: both formulas come from cutting shapes into rectangles and triangles." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 14,
+    "chapter": "Area",
+    "topic_no": 5,
+    "name": "Areas in Real Life",
+    "scenes": [
+      {
+        "animation": "Zippy covers his school desk with A4 sheets like a quilt, counting them. His classmates watch, puzzled.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How big is my desk? I'm measuring it in A4 sheets!" },
+          { "speaker": "NEO", "text": "Fun, but let's find the area of one A4 sheet first. Then we can estimate bigger things, like your classroom." }
+        ]
+      },
+      {
+        "animation": "An A4 sheet with sides '21 cm' and '29.7 cm'. Steps: '21 × 29.7', '= 21 × 30 − 21 × 0.3', '= 630 − 6.3 = 623.7 cm²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "An A4 sheet is 21 centimetres by 29.7 centimetres." },
+          { "speaker": "NEO", "text": "21 times 30 is 630. Take away 21 times 0.3, which is 6.3. That leaves 623.7 square centimetres." }
+        ]
+      },
+      {
+        "animation": "A 1-inch square grows into a square labelled '2.54 cm' on each side. Steps: '1 in² = 2.54 × 2.54 = 6.4516 cm²'. Then '161.29 cm² ÷ 6.4516 = 25 in²', and a card '1 ft = 12 in → 1 ft² = 144 in²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Furniture is often measured in inches and feet. One inch is 2.54 centimetres." },
+          { "speaker": "NEO", "text": "So a square inch is 2.54 times 2.54, which is 6.4516 square centimetres." },
+          { "speaker": "NEO", "text": "Going back, 161.29 square centimetres divided by 6.4516 is exactly 25 square inches." }
+        ]
+      },
+      {
+        "animation": "A zoom-out montage: a classroom floor in 'ft²' or 'm²', a farm plot labelled '1 acre = 43,560 ft²', local signboards reading 'bigha', 'gaj', 'katha', 'cent', 'ankanam', and finally a city map in 'km²'. Card: '1 km² = 1000 m × 1000 m = 10,00,000 m²'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Rooms and houses are measured in square feet or square metres. Farmland is often measured in acres: one acre is 43,560 square feet." },
+          { "speaker": "NEO", "text": "Different regions of India also use local units like bigha, gaj, katha, cent and ankanam." },
+          { "speaker": "NEO", "text": "Cities are measured in square kilometres. One square kilometre is 1000 metres by 1000 metres, which is 10 lakh square metres." }
+        ]
+      },
+      {
+        "animation": "Zippy writes '1 ft² = 12 in²' and a red cross appears; it corrects to '12 × 12 = 144 in²'. An 'Exam Tip' sticker: 'Square the conversion factor for area units'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "One foot is 12 inches, so one square foot is 12 square inches." },
+          { "speaker": "NEO", "text": "Careful! A square foot is 12 inches by 12 inches. That's 144 square inches." },
+          { "speaker": "NEO", "text": "Exam tip: for area units, square the length conversion. Never just copy it." }
+        ]
+      },
+      {
+        "animation": "Recap board with the A4-covered desk. Points: '1. A4 sheet ≈ 623.7 cm²', '2. 1 in² = 6.4516 cm²; 1 ft² = 144 in²', '3. Acres, local units and km² for bigger areas'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap." },
+          { "speaker": "NEO", "text": "One: an A4 sheet is about 623.7 square centimetres." },
+          { "speaker": "NEO", "text": "Two: to convert area units, square the length conversion, so a square foot is 144 square inches." },
+          { "speaker": "NEO", "text": "Three: bigger areas use acres, local units, or square kilometres." },
+          { "speaker": "ZIPPY", "text": "My desk is about three A4 sheets. Official measurement!" }
+        ]
+      }
+    ]
+  }
+]

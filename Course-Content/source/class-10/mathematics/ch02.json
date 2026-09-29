@@ -1,0 +1,163 @@
+[
+  {
+    "chapter_no": 2,
+    "chapter": "Polynomials",
+    "topic_no": 1,
+    "name": "Geometrical Meaning of the Zeroes of a Polynomial",
+    "scenes": [
+      {
+        "animation": "A cricket ground at night. Zippy bowls a glowing ball that dips below the pitch line and bounces back up; its path freezes as a U-shaped curve crossing a white line labelled 'x-axis' at two points that flash like stumps.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "My ball crossed the pitch line twice. Is that a no-ball?" },
+          { "speaker": "NEO", "text": "No, it's a quadratic. And those two crossing points are its zeroes." }
+        ]
+      },
+      {
+        "animation": "A graph grid. The line y = 2x + 3 is drawn and meets the x-axis at (−3/2, 0), which pulses. A label writes: 'Linear ax + b: exactly one zero, x = −b/a'.",
+        "lines": [
+          { "speaker": "NEO", "text": "A real number k is a zero of p of x if p of k equals zero." },
+          { "speaker": "NEO", "text": "The graph of a linear polynomial, a x plus b, is a straight line. It cuts the x-axis at exactly one point, x equals minus b by a." },
+          { "speaker": "NEO", "text": "For 2x plus 3, that zero is minus 3 by 2." }
+        ]
+      },
+      {
+        "animation": "A table builds row by row for y = x² − 3x − 4: 'x = −2 → 6', '−1 → 0', '0 → −4', '1 → −6', '2 → −6', '3 → −4', '4 → 0', '5 → 6'. The points join into an upward parabola that meets the x-axis at (−1, 0) and (4, 0), both circled in green.",
+        "lines": [
+          { "speaker": "NEO", "text": "Let's graph x squared minus 3x minus 4. At x equals minus 1: 1 plus 3 minus 4 is zero." },
+          { "speaker": "NEO", "text": "At x equals 4: 16 minus 12 minus 4 is also zero. At x equals 0, y is minus 4." },
+          { "speaker": "NEO", "text": "Joining the points gives a parabola that cuts the x-axis at minus 1 and 4. Those are the zeroes." },
+          { "speaker": "ZIPPY", "text": "So the zeroes are just the x-coordinates where the graph meets the x-axis." }
+        ]
+      },
+      {
+        "animation": "Three mini-graphs side by side: a parabola cutting the x-axis twice ('two zeroes'), one touching it at a single point ('one zero'), and one floating entirely above it ('no zero'). A fourth panel shows a cubic snaking through the axis three times ('at most 3').",
+        "lines": [
+          { "speaker": "NEO", "text": "A quadratic's graph can cut the x-axis at two points, touch it at one point, or miss it completely. So it has at most two zeroes." },
+          { "speaker": "NEO", "text": "A cubic can meet the x-axis at most three times. In general, a polynomial of degree n has at most n zeroes." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: a graph with its curve cutting the x-axis at 3 points. The question 'Number of zeroes?' appears, and a finger counts only the x-axis crossings, ignoring the y-axis crossing, which is crossed out in red.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: when asked for the number of zeroes from a graph, count only where it meets the x-axis. Crossing the y-axis doesn't count." }
+        ]
+      },
+      {
+        "animation": "Recap board with a parabola icon. Points appear: '1. Zeroes = x-coordinates where y = p(x) meets the x-axis', '2. Linear: one zero, −b/a', '3. Degree n ⇒ at most n zeroes'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the zeroes of p of x are the x-coordinates where its graph meets the x-axis." },
+          { "speaker": "NEO", "text": "Two: a linear polynomial has exactly one zero, minus b by a." },
+          { "speaker": "NEO", "text": "Three: a polynomial of degree n has at most n zeroes." },
+          { "speaker": "ZIPPY", "text": "Not a no-ball. Just a parabola." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Polynomials",
+    "topic_no": 2,
+    "name": "Relationship Between Zeroes and Coefficients",
+    "scenes": [
+      {
+        "animation": "Zippy is locked out of a vault whose keypad reads 'x² + 7x + 10'. Neo whispers two numbers into the lock without solving anything on paper; the door swings open.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "How did you know the zeroes' sum and product just by looking?" },
+          { "speaker": "NEO", "text": "The coefficients spill the secret. Let me show you." }
+        ]
+      },
+      {
+        "animation": "The polynomial 'x² + 7x + 10' splits step by step: 'x² + 2x + 5x + 10', '= x(x + 2) + 5(x + 2)', '= (x + 2)(x + 5)', 'Zeroes: −2, −5'. Beside it: 'Sum = −7 = −(7)/1 ✓', 'Product = 10 = 10/1 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Split the middle term: x squared plus 2x plus 5x plus 10. That factorises to x plus 2, into x plus 5." },
+          { "speaker": "NEO", "text": "So the zeroes are minus 2 and minus 5." },
+          { "speaker": "NEO", "text": "Their sum is minus 7, which is minus b by a. Their product is 10, which is c by a." }
+        ]
+      },
+      {
+        "animation": "A golden formula card: 'For ax² + bx + c with zeroes α, β:', 'α + β = −b/a = −(coefficient of x)/(coefficient of x²)', 'αβ = c/a = (constant term)/(coefficient of x²)'.",
+        "lines": [
+          { "speaker": "NEO", "text": "In general, if alpha and beta are the zeroes of a x squared plus b x plus c, then alpha plus beta equals minus b by a." },
+          { "speaker": "NEO", "text": "And alpha into beta equals c by a." }
+        ]
+      },
+      {
+        "animation": "A second worked example builds line by line: '2x² − 8x + 6 = 2(x² − 4x + 3)', '= 2(x − 1)(x − 3)', 'Zeroes: 1, 3', 'Sum = 4; −b/a = −(−8)/2 = 4 ✓', 'Product = 3; c/a = 6/2 = 3 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Verify for 2x squared minus 8x plus 6. Take 2 common: 2 into x squared minus 4x plus 3, which is 2 into x minus 1, into x minus 3." },
+          { "speaker": "NEO", "text": "The zeroes are 1 and 3. Sum: 4. Minus b by a is minus of minus 8, by 2, which is 4. It matches." },
+          { "speaker": "NEO", "text": "Product: 3. And c by a is 6 by 2, which is 3. Verified." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: '−b/a' with the minus sign blinking red. Zippy's wrong answer 'Sum = −8/2 = −4' gets crossed out and corrected to '+4'.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I got the sum as minus 4. Where did I go wrong?" },
+          { "speaker": "NEO", "text": "You forgot the minus sign in minus b by a. Board tip: when b is negative, the sum becomes positive. Write the substitution in brackets to avoid this slip." }
+        ]
+      },
+      {
+        "animation": "Recap board with a vault icon. Points appear: '1. α + β = −b/a', '2. αβ = c/a', '3. Verify: find zeroes by factorising, then compare'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: the sum of the zeroes is minus b by a." },
+          { "speaker": "NEO", "text": "Two: the product of the zeroes is c by a." },
+          { "speaker": "NEO", "text": "Three: to verify, find the zeroes by factorising, then compare with the coefficients." },
+          { "speaker": "ZIPPY", "text": "Vault cracked. Sign intact." }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter_no": 2,
+    "chapter": "Polynomials",
+    "topic_no": 3,
+    "name": "Forming a Quadratic Polynomial from Its Zeroes",
+    "scenes": [
+      {
+        "animation": "Neo runs a cartoon 'Polynomial Tailor' shop. Zippy walks in holding two tags reading '2' and '−3' and says he wants a polynomial stitched to fit exactly.",
+        "lines": [
+          { "speaker": "ZIPPY", "text": "I have two zeroes, 2 and minus 3. Can you make me a polynomial that fits them?" },
+          { "speaker": "NEO", "text": "Easy. Tell me their sum and product, and I'll stitch it." }
+        ]
+      },
+      {
+        "animation": "A pattern card writes itself: 'Quadratic with zeroes α, β:', 'k[x² − (α + β)x + αβ], k ≠ 0 constant'. The '(α + β)' part glows blue and the 'αβ' part glows orange.",
+        "lines": [
+          { "speaker": "NEO", "text": "A quadratic polynomial with zeroes alpha and beta is k into x squared minus, sum of zeroes into x, plus product of zeroes." },
+          { "speaker": "NEO", "text": "Here k is any non-zero constant. So there are many such polynomials, all multiples of each other." }
+        ]
+      },
+      {
+        "animation": "Worked lines appear: 'α = 2, β = −3', 'Sum = 2 + (−3) = −1', 'Product = 2 × (−3) = −6', 'x² − (−1)x + (−6) = x² + x − 6'. A check line follows: '(x − 2)(x + 3) = x² + 3x − 2x − 6 = x² + x − 6 ✓'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sum of 2 and minus 3 is minus 1. Product is minus 6." },
+          { "speaker": "NEO", "text": "So we get x squared minus, minus 1 into x, plus minus 6. That's x squared plus x minus 6." },
+          { "speaker": "ZIPPY", "text": "Let me check by multiplying x minus 2 by x plus 3. x squared plus 3x minus 2x minus 6. That's x squared plus x minus 6!" }
+        ]
+      },
+      {
+        "animation": "A second card: 'Sum = 1/4, Product = −1'. Lines build: 'x² − (1/4)x − 1', '× 4 to clear fractions', '= 4x² − x − 4'. The fractions dissolve into confetti when multiplied by 4.",
+        "lines": [
+          { "speaker": "NEO", "text": "Sometimes the sum and product are given directly. Say the sum is one-fourth and the product is minus 1." },
+          { "speaker": "NEO", "text": "We get x squared minus one-fourth x minus 1. Choose k equal to 4 to clear the fraction. The answer is 4x squared minus x minus 4." },
+          { "speaker": "NEO", "text": "Check: minus b by a is 1 by 4, and c by a is minus 4 by 4, which is minus 1. Correct." }
+        ]
+      },
+      {
+        "animation": "A 'BOARD TIP' card: 'Watch the sign: x² − (sum)x + product'. The minus sign before '(sum)' flashes red three times.",
+        "lines": [
+          { "speaker": "NEO", "text": "Board tip: the middle term carries a minus sign before the sum. If the sum is negative, the x term becomes positive. Always verify with minus b by a." }
+        ]
+      },
+      {
+        "animation": "Recap board with a tailor's measuring tape. Points appear: '1. k[x² − (α + β)x + αβ]', '2. Find sum and product first', '3. Choose k to clear fractions, then verify'.",
+        "lines": [
+          { "speaker": "NEO", "text": "Recap. One: a quadratic with zeroes alpha and beta is k into x squared minus sum into x plus product." },
+          { "speaker": "NEO", "text": "Two: always find the sum and product first." },
+          { "speaker": "NEO", "text": "Three: pick k to clear fractions, and verify using the coefficients." },
+          { "speaker": "ZIPPY", "text": "Perfect fit. No alterations needed." }
+        ]
+      }
+    ]
+  }
+]
