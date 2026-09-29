@@ -533,7 +533,7 @@
 
   .hero {
     --u: calc(min(1vw, 19.2px) * 85 / 90);
-    min-height: calc(var(--u) * 47.22);
+    min-height: calc(var(--u) * 50.2);
   }
   .hero-inner {
     display: grid;
@@ -545,17 +545,17 @@
     padding: 0;
   }
   .hero-copy {
-    padding-top: calc(var(--u) * 6.3);
+    padding-top: calc(var(--u) * 8.9);
   }
   .hero-title {
     font-size: calc(var(--u) * 4.49);
-    line-height: 1.1;
+    line-height: 1.13;
     letter-spacing: -0.04em;
     white-space: nowrap;
   }
   .hero-title > span:last-child {
     font-size: 1.108em;
-    line-height: 1.06;
+    line-height: 1.12;
   }
   .hero-sub {
     margin-top: calc(var(--u) * 0.95);
@@ -598,7 +598,7 @@
     font-size: max(14px, calc(var(--u) * 0.99));
   }
   .hero-devices {
-    margin-top: calc(var(--u) * 0.39);
+    margin-top: calc(var(--u) * 3.3);
     padding-bottom: 0;
   }
   .hero-devices > .relative {
@@ -801,4 +801,47 @@
 @keyframes free-ping {
   0% { transform: scale(1); opacity: 0.45; }
   70%, 100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* Hero accent: types in, then a slow mint sheen sweeps across it. */
+.typed-accent { position: relative; display: inline-block; }
+.typed-accent-glyphs { white-space: pre; }
+.typed-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.12em);
+  transition: opacity 140ms ease-out, transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.typed-char.is-in { opacity: 1; transform: none; }
+/* Zero-width caret, so it never pushes the text. */
+.typed-caret { position: relative; display: inline-block; width: 0; }
+.typed-caret::after {
+  content: "";
+  position: absolute;
+  left: 0.05em;
+  bottom: -0.1em;
+  width: 0.07em;
+  height: 0.92em;
+  border-radius: 999px;
+  background: #6becc9;
+  box-shadow: 0 0 18px rgba(107, 236, 201, 0.7);
+  animation: typed-blink 900ms steps(1) infinite;
+}
+.typed-accent.is-done .typed-caret { opacity: 0; transition: opacity 400ms ease-out; }
+@keyframes typed-blink { 50% { opacity: 0; } }
+.typed-accent.is-done .typed-accent-glyphs {
+  background: linear-gradient(100deg, #6becc9 0%, #6becc9 38%, #e8fff8 50%, #6becc9 62%, #6becc9 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: typed-sheen 5.5s cubic-bezier(0.45, 0, 0.25, 1) 0.4s infinite;
+}
+.typed-accent.is-done .typed-char { color: transparent; }
+@keyframes typed-sheen {
+  0% { background-position: 100% 0; }
+  45%, 100% { background-position: 0% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .typed-char { opacity: 1; transform: none; transition: none; }
+  .typed-caret::after, .typed-accent.is-done .typed-accent-glyphs { animation: none; }
 }

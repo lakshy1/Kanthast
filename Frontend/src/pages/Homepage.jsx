@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { LuLaptop, LuSmartphone } from "react-icons/lu";
 import { useScroll, useTransform } from "framer-motion";
 import TourScreen from "../components/landing/TourScreen";
+import TypedAccent from "../components/landing/TypedAccent";
 import FaqStudent from "../components/landing/FaqStudent";
 import { HeroGlow, TiltFrame } from "../components/landing/CursorEffects";
 import DeviceShowcase, { MacbookFrame } from "../components/landing/DeviceShowcase";
@@ -390,7 +391,7 @@ const Homepage = () => {
             <div className="hero-copy">
               <h1 className="hero-title">
                 <span className="block">Medicine, explained</span>
-                <span className="hero-accent block">in motion.</span>
+                <span className="hero-accent block"><TypedAccent text="in motion." /></span>
               </h1>
               <p className="hero-sub">For NEET-PG, INI-CET and USMLE.</p>
               <p className="hero-desc">

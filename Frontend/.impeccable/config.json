@@ -19,6 +19,15 @@
         "rule": "overused-font",
         "value": "inter",
         "createdAt": "2026-09-29T07:59:46.817Z"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "src/index.css"
+        ],
+        "createdAt": "2026-09-29T15:31:29.417Z",
+        "reason": "User asked for motion graphics on the hero's 'in motion.'; the sweep is a moving sheen over solid mint text (typed-accent)"
       }
     ]
   }
