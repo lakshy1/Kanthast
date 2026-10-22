@@ -129,6 +129,7 @@ export default function Signup() {
         <title>{schoolMode ? "School Sign Up | Kanthast" : "Sign Up | Kanthast"}</title>
         <meta name="description" content={schoolMode ? "Create a Kanthast School account and choose a class from I-X." : "Create your free Kanthast account and start mastering USMLE, NEET PG, and INI CET through immersive 3D animations."} />
         <link rel="canonical" href="https://kanthast.in/signup" />
+        <meta name="robots" content="noindex, follow" />
       </Helmet>
       <motion.div
         animate={{ y: [0, -10, 0], opacity: [0.5, 0.72, 0.5] }}

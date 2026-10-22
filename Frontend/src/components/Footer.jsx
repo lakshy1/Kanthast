@@ -1,20 +1,29 @@
 import { FaLinkedinIn } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { isSchoolTrack } from "../utils/schoolTrack";
+import { getSelectedTrack, getStoredUser } from "../utils/schoolTrack";
+import { CONTEXTS, contextForPath } from "../utils/siteContext";
 
 const socialLinks = [
   { icon: <FaLinkedinIn />, label: "LinkedIn", href: "https://www.linkedin.com/company/kanthast/" },
 ];
 
+const BLURB = {
+  brand: "Animated visual learning for medical professionals and for school students in Classes 1 to 10.",
+  professional: "Visual learning platform designed to help you master complex medical concepts through immersive animation.",
+  school: "Visual learning for Classes 1 to 10: school subjects brought to life through immersive animation.",
+};
+const STRAP = {
+  brand: "Built for learners worldwide",
+  professional: "Built for medical learners worldwide",
+  school: "Built for school learners, Classes 1 to 10",
+};
+
 const Footer = () => {
   const location = useLocation();
-  // Same track precedence as Navbar: an explicit /school route wins, then a
-  // logged-in user's own account track, then the ambient last-visited flag
-  // for a signed-out visitor. Without this the footer's tagline and strap
-  // line stayed hardcoded to "medical concepts" / "medical learners" on
-  // every School-track page, including School's own homepage.
-  const schoolMode = location.pathname.startsWith("/school") || isSchoolTrack();
+  // Same map as the navbar: shared pages list both products and no single track's pricing.
+  const contextId = contextForPath(location.pathname, getStoredUser(), getSelectedTrack());
+  const pricingPath = contextId === "brand" ? null : CONTEXTS[contextId].pricing;
 
   return (
     <footer className="w-full kb-footer text-white">
@@ -25,11 +34,9 @@ const Footer = () => {
 
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <span className="text-xl font-black tracking-tight text-white">Kanthast</span>
+            <span className="text-xl font-black tracking-tight text-white">{contextId === "brand" ? "Kanthast" : CONTEXTS[contextId].name}</span>
             <p className="text-sm text-white/70 leading-relaxed max-w-xs">
-              {schoolMode
-                ? "Visual learning platform designed to help students master school subjects through immersive animation."
-                : "Visual learning platform designed to help you master complex medical concepts through immersive animation."}
+              {BLURB[contextId]}
             </p>
             <div className="flex flex-wrap gap-1 mt-1 -ml-2">
               {socialLinks.map(({ icon, label, href }) => (
@@ -51,7 +58,11 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-8 md:contents">
             <div className="flex flex-col gap-3">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70 mb-1">Company</p>
-              <HashLink smooth to={schoolMode ? "/school#pricing" : "/pricing"} className="text-sm text-white/70 hover:text-white transition">Pricing</HashLink>
+              <Link to="/professional" className="text-sm text-white/70 hover:text-white transition">Kanthast Professional</Link>
+              <Link to="/school" className="text-sm text-white/70 hover:text-white transition">Kanthast School</Link>
+              {pricingPath && (
+                <HashLink smooth to={pricingPath} className="text-sm text-white/70 hover:text-white transition">Pricing</HashLink>
+              )}
               <Link to="/about" className="text-sm text-white/70 hover:text-white transition">About</Link>
             </div>
 
@@ -69,7 +80,7 @@ const Footer = () => {
         <div className="mt-10 pt-6 border-t border-[#1d3249] flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/60">
           <span>&copy; 2026 Kanthast Inc. All rights reserved.</span>
           <span className="hidden sm:block">
-            {schoolMode ? "Built for school learners worldwide" : "Built for medical learners worldwide"}
+            {STRAP[contextId]}
           </span>
         </div>
       </div>

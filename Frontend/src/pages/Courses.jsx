@@ -55,7 +55,7 @@ export default function Courses() {
   const location = useLocation();
   // The route is the source of truth here, not ambient browsing history:
   // /school/courses always shows the School catalogue, /courses always
-  // shows Medical, regardless of which track page was visited previously
+  // shows Professional, regardless of which track page was visited previously
   // in this browser.
   if (location.pathname.startsWith("/school")) return <SchoolCourses navigate={navigate} />;
 
@@ -71,7 +71,7 @@ export default function Courses() {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
-          "name": "Kanthast Medical Courses",
+          "name": "Kanthast Professional Courses",
           "description": "Visual medical education courses for USMLE, NEET PG, and INI CET preparation.",
           "url": "https://kanthast.in/courses",
           "itemListElement": [

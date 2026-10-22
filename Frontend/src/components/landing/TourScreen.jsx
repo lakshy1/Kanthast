@@ -25,16 +25,22 @@ import SYLLABUS_SNAPSHOT from "../../data/syllabusSnapshot";
 const W = 1160;
 const H = 735;
 
+// Light mode, to match the Professional sky theme. `mint` is the accent slot
+// (now brand blue); the lecture slide and thumbnails stay dark as video.
 const C = {
-  bg: "#070F1C",
-  panel: "#0C1627",
-  raised: "#111D30",
-  line: "#1B2A40",
-  text: "#E3E9F1",
-  muted: "#93A3B8",
-  dim: "#5F7089",
-  mint: "#6BECC9",
-  mintSoft: "rgba(107,236,201,0.12)",
+  bg: "#F6F9FE",
+  panel: "#FFFFFF",
+  raised: "#EEF3FB",
+  line: "#E3EAF5",
+  text: "#0B1B33",
+  muted: "#586A86",
+  dim: "#9AABC4",
+  nav: "#3D4F6B",
+  mint: "#1D4ED8",
+  mintSoft: "rgba(29,78,216,0.08)",
+  onMint: "#FFFFFF",
+  track: "#DCE5F2",
+  current: "#EAF1FE",
   lock: "#F08A24",
 };
 
@@ -79,11 +85,11 @@ function AppBar() {
       className="absolute inset-x-0 top-0 flex items-center px-[28px]"
       style={{ height: 64, borderBottom: `1px solid ${C.line}` }}
     >
-      <span className="font-sans text-[21px] font-extrabold tracking-[-0.03em] text-white">Kanthast</span>
-      <span className="ml-[10px] flex items-center gap-[5px] text-[12px] font-medium" style={{ color: "#69ACE9" }}>
-        Medical <FaChevronDown className="text-[9px]" />
+      <span className="font-sans text-[21px] font-extrabold tracking-[-0.03em] text-[#0B1B33]">Kanthast</span>
+      <span className="ml-[10px] flex items-center gap-[5px] text-[12px] font-medium" style={{ color: C.mint }}>
+        Professional <FaChevronDown className="text-[9px]" />
       </span>
-      <span className="mx-auto flex items-center gap-[28px] pl-[70px] text-[13.5px]" style={{ color: "#C9D3E0" }}>
+      <span className="mx-auto flex items-center gap-[28px] pl-[70px] text-[13.5px]" style={{ color: C.nav }}>
         <span>Home</span>
         <span className="flex items-center gap-[5px]">
           Courses <FaChevronDown className="text-[9px]" />
@@ -93,8 +99,8 @@ function AppBar() {
         <span>About</span>
         <span>Contact</span>
       </span>
-      <FaMagnifyingGlass className="mr-[28px] text-[15px]" style={{ color: "#C9D3E0" }} />
-      <span className="grid h-[36px] w-[36px] place-items-center rounded-full text-[15px] font-semibold text-white" style={{ background: "#4A7FD9" }}>
+      <FaMagnifyingGlass className="mr-[28px] text-[15px]" style={{ color: C.nav }} />
+      <span className="grid h-[36px] w-[36px] place-items-center rounded-full text-[15px] font-semibold text-white" style={{ background: C.mint }}>
         A
       </span>
     </div>
@@ -152,8 +158,8 @@ function LibraryScene({ p }) {
   const scale = useRange(p, [0.32, 0.37], [1, 0.97]);
   const tabX = useRange(p, [0.035, 0.06], [TABS[0].x, TABS[2].x]);
   const tabW = useRange(p, [0.035, 0.06], [TABS[0].w, TABS[2].w]);
-  const biochemInk = useRange(p, [0.035, 0.06], ["#FFFFFF", C.muted]);
-  const pharmInk = useRange(p, [0.035, 0.06], [C.muted, "#FFFFFF"]);
+  const biochemInk = useRange(p, [0.035, 0.06], [C.text, C.muted]);
+  const pharmInk = useRange(p, [0.035, 0.06], [C.muted, C.text]);
   const biochemList = useRange(p, [0.05, 0.08], [1, 0]);
   const pharmList = useRange(p, [0.05, 0.08], [0, 1]);
   const jumpOpacity = useRange(p, [0.07, 0.09], [0, 1]);
@@ -251,9 +257,9 @@ function PlayerScene({ p }) {
   const point2 = useRange(p, [0.6, 0.63], [0, 1]);
   const points = [point0, point1, point2];
   const glowX = useRange(p, [0.38, 0.7], ["20%", "80%"]);
-  const glow = useTransform(glowX, (x) => `radial-gradient(60% 70% at ${x} 30%, rgba(74,127,217,0.35), transparent 70%)`);
-  const speed0Ink = useRange(p, [0.505, 0.53], ["#06111F", C.muted]);
-  const speed1Ink = useRange(p, [0.505, 0.53], [C.muted, "#06111F"]);
+  const glow = useTransform(glowX, (x) => `radial-gradient(60% 70% at ${x} 30%, rgba(74,127,217,0.18), transparent 70%)`);
+  const speed0Ink = useRange(p, [0.505, 0.53], [C.onMint, C.muted]);
+  const speed1Ink = useRange(p, [0.505, 0.53], [C.muted, C.onMint]);
   const lecture = LECTURES[ACTIVE_LECTURE];
 
   return (
@@ -263,10 +269,10 @@ function PlayerScene({ p }) {
         <FaChevronRight className="text-[8px]" /> {lecture.name}
       </p>
       <div className="absolute flex items-center gap-[14px]" style={{ left: 28, top: 108 }}>
-        <span className="grid h-[34px] w-[34px] place-items-center rounded-full border-2 border-white">
-          <FaPlay className="ml-[2px] text-[12px] text-white" />
+        <span className="grid h-[34px] w-[34px] place-items-center rounded-full border-2 border-[#0B1B33]">
+          <FaPlay className="ml-[2px] text-[12px] text-[#0B1B33]" />
         </span>
-        <span className="font-sans text-[26px] font-bold tracking-[-0.02em] text-white">{lecture.name}</span>
+        <span className="font-sans text-[26px] font-bold tracking-[-0.02em] text-[#0B1B33]">{lecture.name}</span>
       </div>
 
       <div className="absolute overflow-hidden rounded-[12px]" style={{ left: 28, top: 156, width: 740, height: 416, background: "#0F1D42" }}>
@@ -292,7 +298,7 @@ function PlayerScene({ p }) {
         </div>
       </div>
 
-      <div className="absolute h-[5px] rounded-full" style={{ left: 28, top: 592, width: 740, background: "#2A3446" }}>
+      <div className="absolute h-[5px] rounded-full" style={{ left: 28, top: 592, width: 740, background: C.track }}>
         <Motion.div className="absolute inset-y-0 left-0 rounded-full" style={{ width: fillWidth, background: C.mint }} />
         <Motion.span
           className="absolute top-1/2 h-[16px] w-[16px] -translate-x-1/2 -translate-y-1/2 rounded-full"
@@ -300,7 +306,7 @@ function PlayerScene({ p }) {
         />
       </div>
 
-      <div className="absolute flex items-center gap-[20px] text-[17px]" style={{ left: 28, top: 612, height: 28, color: "#D5DDE8" }}>
+      <div className="absolute flex items-center gap-[20px] text-[17px]" style={{ left: 28, top: 612, height: 28, color: C.nav }}>
         <FaPause />
         <FaVolumeHigh />
         <Motion.span className="text-[14px] tabular-nums">{time}</Motion.span>
@@ -321,7 +327,7 @@ function PlayerScene({ p }) {
           </Motion.span>
         ))}
       </div>
-      <div className="absolute flex h-[28px] items-center gap-[22px] text-[16px]" style={{ left: 704, top: 612, color: "#D5DDE8" }}>
+      <div className="absolute flex h-[28px] items-center gap-[22px] text-[16px]" style={{ left: 704, top: 612, color: C.nav }}>
         <FaGear />
         <FaExpand />
       </div>
@@ -343,13 +349,13 @@ function PlayerScene({ p }) {
               <li
                 key={item.name}
                 className="flex h-[64px] items-center gap-[14px] rounded-[10px] px-[12px]"
-                style={{ background: current ? "#152238" : "transparent" }}
+                style={{ background: current ? C.current : "transparent" }}
               >
                 <span
                   className="grid h-[28px] w-[28px] shrink-0 place-items-center rounded-full"
                   style={
                     current
-                      ? { background: C.mint, color: "#07111F" }
+                      ? { background: C.mint, color: C.onMint }
                       : i < ACTIVE_LECTURE
                         ? { background: C.mintSoft, color: C.mint }
                         : { border: `1.5px solid ${C.dim}`, color: C.muted }
@@ -389,7 +395,7 @@ function SubjectRow({ p, subject, watched, index }) {
       <span className="w-[150px] text-[13px]" style={{ color: C.muted }}>
         <Counter p={p} input={[start, start + 0.14]} to={watched} /> / {subject.lectures} watched
       </span>
-      <span className="relative h-[8px] flex-1 rounded-full" style={{ background: "#1E2A3C" }}>
+      <span className="relative h-[8px] flex-1 rounded-full" style={{ background: C.track }}>
         <Motion.span className="absolute inset-y-0 left-0 rounded-full" style={{ width, background: C.mint }} />
       </span>
       <Motion.span className="w-[48px] text-right text-[15px] font-bold tabular-nums" style={{ color: C.text }}>
@@ -408,7 +414,7 @@ function DashboardScene({ p }) {
 
   return (
     <Motion.div className="absolute inset-0" style={{ opacity }}>
-      <p className="absolute font-sans text-[28px] font-extrabold tracking-[-0.03em] text-white" style={{ left: 28, top: 84 }}>
+      <p className="absolute font-sans text-[28px] font-extrabold tracking-[-0.03em] text-[#0B1B33]" style={{ left: 28, top: 84 }}>
         Welcome back
       </p>
 
@@ -423,15 +429,15 @@ function DashboardScene({ p }) {
         </span>
         <span className="min-w-0 flex-1">
           <span className="block text-[12px] font-semibold uppercase tracking-[0.14em]" style={{ color: C.mint }}>Continue watching</span>
-          <span className="mt-[4px] block text-[21px] font-bold text-white">{lecture.name}</span>
+          <span className="mt-[4px] block text-[21px] font-bold text-[#0B1B33]">{lecture.name}</span>
           <span className="block text-[14px]" style={{ color: C.muted }}>
             {tourPreview.subject} — {tourPreview.chapter} · 1:12 remaining
           </span>
-          <span className="mt-[10px] block h-[6px] w-[520px] rounded-full" style={{ background: "#1E2A3C" }}>
+          <span className="mt-[10px] block h-[6px] w-[520px] rounded-full" style={{ background: C.track }}>
             <span className="block h-full w-[88%] rounded-full" style={{ background: C.mint }} />
           </span>
         </span>
-        <span className="flex items-center gap-[8px] rounded-[10px] px-[20px] py-[12px] text-[15px] font-semibold" style={{ background: C.mint, color: "#06111F" }}>
+        <span className="flex items-center gap-[8px] rounded-[10px] px-[20px] py-[12px] text-[15px] font-semibold" style={{ background: C.mint, color: C.onMint }}>
           <FaPlay className="text-[11px]" /> Resume
         </span>
       </Motion.div>
@@ -444,7 +450,7 @@ function DashboardScene({ p }) {
         ].map(([label, to, input]) => (
           <div key={label} className="h-[92px] flex-1 rounded-[14px] px-[22px] py-[16px]" style={{ background: C.panel, border: `1px solid ${C.line}` }}>
             <p className="text-[13px]" style={{ color: C.muted }}>{label}</p>
-            <p className="mt-[6px] font-sans text-[32px] font-extrabold tracking-[-0.02em] text-white">
+            <p className="mt-[6px] font-sans text-[32px] font-extrabold tracking-[-0.02em] text-[#0B1B33]">
               <Counter p={p} input={input} to={to} />
             </p>
           </div>

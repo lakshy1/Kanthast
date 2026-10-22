@@ -1,1069 +1,250 @@
-import { useEffect, useMemo, useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { motion as Motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import DemoVideoModal from "../components/DemoVideoModal";
-import { ClickSparkles } from "../components/landing/CursorEffects";
-import schoolHeroImage from "../assets/images/School-Hero-I.png";
-import demoVideo from "../../resources/Kanthast-demo.mp4";
-import {
-  FaArrowRight,
-  FaBarsProgress,
-  FaBookOpen,
-  FaChartLine,
-  FaCheck,
-  FaChevronLeft,
-  FaChevronRight,
-  FaChevronDown,
-  FaCirclePlay,
-  FaCubes,
-  FaLandmark,
-  FaMagnifyingGlassChart,
-  FaRegCircleCheck,
-  FaShieldHeart,
-  FaStar,
-  FaUserGraduate,
-} from "react-icons/fa6";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaChevronDown } from "react-icons/fa6";
+import Seo from "../components/Seo";
+import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
+import ScriptPage from "../components/landing/ScriptPage";
+import NeoZippy from "../components/landing/NeoZippy";
+import SCHOOL_CATALOG from "../data/schoolCatalog";
 
+const { classes: CLASSES, totals: TOTALS } = SCHOOL_CATALOG;
 
-
-const subjectStrip = [
-  { emoji: "SCI", name: "Science" },
-  { emoji: "MTH", name: "Mathematics" },
-  { emoji: "SST", name: "Social Studies" },
-  { emoji: "ENG", name: "English" },
-  { emoji: "PHY", name: "Physics" },
-  { emoji: "CHE", name: "Chemistry" },
-  { emoji: "BIO", name: "Biology" },
-  { emoji: "GEO", name: "Geometry" },
-  { emoji: "HIS", name: "History" },
-  { emoji: "LIF", name: "Life Science" },
+// The shape of every lesson, taken from the writers' brief. It is a real
+// sequence, so it is numbered.
+const LESSON_SHAPE = [
+  { title: "A hook", body: "Each lesson opens on a funny or surprising moment, like a bulb that seems to know you pressed the switch." },
+  { title: "The idea, drawn step by step", body: "Diagrams, maps, timelines and proofs are animated as they are built, the way the textbook expects students to draw them." },
+  { title: "An exam tip", body: "A common mistake, a frequently asked question or a marking-scheme point, where one fits." },
+  { title: "A three-point recap", body: "Neo closes every lesson with the three things to remember, shown on screen." },
 ];
-const howItWorks = [
+
+const FOR_PARENTS = [
+  { title: "Tied to the textbook", body: "Every lesson names its class, subject and chapter in the new NCERT books, so you can match it to schoolwork." },
+  { title: "No ads, no social feed", body: "Kanthast has nothing to scroll and nobody to follow. Time on it is time on a lesson." },
+  { title: "Made for phones", body: "Lessons are short enough for a bus ride and work on any modern phone or laptop." },
+];
+const PARENTS_NEXT = [
+  { title: "Questions after every lesson", body: "A few questions at the end, so a gap shows up while the idea is fresh." },
+  { title: "Progress you can see", body: "A view of what your child watched this week, chapter by chapter." },
+];
+
+const FAQS = [
   {
-    number: "01",
-    icon: FaBookOpen,
-    title: "Pick your subject",
-    description:
-      "Choose from Maths, Science, Social Studies and more. Aligned to your board and class.",
+    q: "Which classes and boards does Kanthast School cover?",
+    a: "Classes VIII, IX and X, following CBSE and the new NCERT textbooks introduced for 2025-26. Classes I to VII will follow. State boards are not covered yet.",
   },
   {
-    number: "02",
-    icon: FaCirclePlay,
-    title: "Watch it come alive",
-    description:
-      "3D animations break down every concept so it clicks visually, not just on paper.",
+    q: "Which subjects are included?",
+    a: "Mathematics, Science, Social Science, English and Hindi in all three classes, with Sanskrit in Class VIII and Information Technology in Classes IX and X.",
   },
   {
-    number: "03",
-    icon: FaRegCircleCheck,
-    title: "Test what you learned",
-    description:
-      "In-video questions and chapter quizzes that check real understanding, not rote recall.",
+    q: "Can my child watch lessons now?",
+    a: `Not yet. All ${TOTALS.lessons} lessons for Classes VIII to X are scripted and checked against the textbooks, and the animated videos are being produced now.`,
   },
   {
-    number: "04",
-    icon: FaChartLine,
-    title: "Track your progress",
-    description:
-      "Earn XP, maintain streaks, and watch your confidence grow concept by concept.",
+    q: "How long is each lesson?",
+    a: "Between 2 and 3.5 minutes. Each lesson covers one sub-topic of a chapter, so a chapter is a short series rather than one long video.",
+  },
+  {
+    q: "Are Hindi and Sanskrit lessons in English?",
+    a: "No. Language lessons are taught in their own language. Only the directions for the animation team are written in English.",
+  },
+  {
+    q: "How much does it cost?",
+    a: `${SCHOOL_CATALOG.price}. Payments open when the first lessons are released.`,
   },
 ];
 
-const tabData = {
-  Science: {
-    label: "Science - 3D Lab",
-    lessonTitle: "The Human Digestive System",
-    subtext: "Immersive concept walkthrough with chapter checkpoints and quiz bursts.",
-    previewStats: ["3D Animation", "12 Questions", "+150 XP"],
-    chapters: [
-      { title: "Light - Reflection & Refraction", classLevel: "Class 8" },
-      { title: "The Human Eye", classLevel: "Class 10" },
-      { title: "Photosynthesis", classLevel: "Class 7" },
-      { title: "Atoms & Molecules", classLevel: "Class 9" },
-      { title: "Electricity & Circuits", classLevel: "Class 10" },
-    ],
-    gradient: "from-[#172554] via-[#312E81] to-[#581C87]",
-  },
-  Mathematics: {
-    label: "Mathematics - Problem Solving",
-    lessonTitle: "Visual Geometry Proofs",
-    subtext: "Build pattern-recognition first so formulas feel obvious instead of memorised.",
-    previewStats: ["24 Practice Sets", "Skill Graph", "+110 XP"],
-    chapters: [
-      { title: "Linear Equations", classLevel: "Class 8" },
-      { title: "Surface Areas & Volumes", classLevel: "Class 9" },
-      { title: "Coordinate Geometry", classLevel: "Class 10" },
-      { title: "Triangles & Similarity", classLevel: "Class 10" },
-      { title: "Integers in Motion", classLevel: "Class 6" },
-    ],
-    gradient: "from-[#0F172A] via-[#1D4ED8] to-[#0EA5E9]",
-  },
-  "Social Studies": {
-    label: "Social Studies - Story Maps",
-    lessonTitle: "Monsoons, Maps and Civilisations",
-    subtext: "Animated timelines and interactive maps make people, places and events easier to retain.",
-    previewStats: ["Map Mode", "Story Cards", "+90 XP"],
-    chapters: [
-      { title: "The Water Cycle", classLevel: "Class 6" },
-      { title: "Delhi Sultanate", classLevel: "Class 7" },
-      { title: "Our Constitution", classLevel: "Class 8" },
-      { title: "Resources & Development", classLevel: "Class 10" },
-      { title: "Climate & Weather", classLevel: "Class 9" },
-    ],
-    gradient: "from-[#1E1B4B] via-[#166534] to-[#14532D]",
-  },
-  English: {
-    label: "English - Language Lab",
-    lessonTitle: "Grammar That Feels Natural",
-    subtext: "Stories, visuals and usage examples make writing and comprehension more intuitive.",
-    previewStats: ["Reading Lab", "Speaking Drills", "+80 XP"],
-    chapters: [
-      { title: "Tenses Made Simple", classLevel: "Class 7" },
-      { title: "Figures of Speech", classLevel: "Class 8" },
-      { title: "Reading Comprehension", classLevel: "Class 9" },
-      { title: "Writing Better Answers", classLevel: "Class 10" },
-      { title: "Vocabulary Builder", classLevel: "Class 6" },
-    ],
-    gradient: "from-[#3F1D2E] via-[#7C2D12] to-[#C2410C]",
-  },
-};
-const painSolutions = [
-  {
-    pain: "My child watches videos but forgets everything by exam time.",
-    solution:
-      "3D animations plus in-video questions force active recall, not passive watching. Concepts stick because they are understood, not memorised.",
-    visualTitle: "Memory shift",
-    visualBullets: ["Text-only learning", "3D visual memory", "Quiz checkpoint recall"],
-  },
-  {
-    pain: "Textbooks are confusing. My child just doesn't get it.",
-    solution:
-      "Visual-first learning shows every abstract concept in 3D before it is explained in words. See it, then read it.",
-    visualTitle: "See -> understand",
-    visualBullets: ["Concept snapshot", "Animated explanation", "Confidence unlock"],
-  },
-  {
-    pain: "We spend on tuition but marks aren't improving.",
-    solution:
-      "Chapter mastery quizzes identify exact weak spots so your child practices what matters, not everything randomly.",
-    visualTitle: "Target weak spots",
-    visualBullets: ["Quiz diagnosis", "Weak-topic highlight", "Focused revision plan"],
-  },
-  {
-    pain: "My child gets distracted on the phone.",
-    solution:
-      "Streaks, XP, and challenges make studying feel like a game. One more lesson always feels worth it.",
-    visualTitle: "Make learning rewarding",
-    visualBullets: ["7-day streak", "+150 XP", "Badge earned today"],
-  },
-];
-const stats = [
-  { Icon: FaUserGraduate, value: "50,000+", label: "Students learning" },
-  { Icon: FaCubes, value: "500+", label: "3D animated lessons" },
-  { Icon: FaLandmark, value: "20+", label: "Boards covered" },
-  { Icon: FaStar, value: "4.8/5", label: "Average rating" },
-];
-const testimonials = [
-  {
-    quote:
-      "Science used to be my worst subject. Now I actually look forward to it. The 3D models make everything so clear.",
-    author: "Arjun, Class 9, Delhi",
-  },
-  {
-    quote:
-      "My daughter went from 62% to 84% in her Science boards. Kanthast made the difference.",
-    author: "Parent, Bengaluru",
-  },
-  {
-    quote:
-      "The streak system kept me going even during holidays. Never missed a day in 3 weeks!",
-    author: "Priya, Class 8, Chennai",
-  },
-  {
-    quote:
-      "Finally a platform that explains WHY, not just what. My son loves it.",
-    author: "Parent, Pune",
-  },
-  {
-    quote:
-      "I understood the water cycle in one animation. My teacher had been explaining it for a week.",
-    author: "Rahul, Class 7, Hyderabad",
-  },
-  {
-    quote:
-      "The quiz feedback is incredible. It tells you exactly which part of the chapter you missed.",
-    author: "Sneha, Class 10, Jaipur",
-  },
-  {
-    quote:
-      "Worth every rupee. My child is self-studying now without me sitting next to her.",
-    author: "Parent, Mumbai",
-  },
-  {
-    quote:
-      "I scored 95 in Maths this term. Kanthast's geometry animations were everything.",
-    author: "Aditya, Class 10, Lucknow",
-  },
-];
-
-const parentFeatures = [
-  {
-    icon: FaBarsProgress,
-    title: "Weekly Progress Reports",
-    description:
-      "Get a detailed summary every Sunday: what your child studied, how they scored, and what needs attention.",
-  },
-  {
-    icon: FaMagnifyingGlassChart,
-    title: "Parent Dashboard",
-    description:
-      "See chapter completion, quiz scores, time spent, and streak history at a glance. Always know where your child stands.",
-  },
-  {
-    icon: FaShieldHeart,
-    title: "No distractions by design",
-    description:
-      "No social feed, no ads, no recommended videos. Every minute on the app is a learning minute.",
-  },
-];
-
-const pricingFeatures = {
-  free: [
-    "10 free animated lessons",
-    "2 subjects",
-    "Basic quizzes",
-    "Progress tracking",
-  ],
-  annual: [
-    "All subjects",
-    "All classes (I-X)",
-    "Unlimited 3D lessons",
-    "Quizzes & assessments",
-    "Weekly parent reports",
-    "AI doubt solving 24/7",
-    "Offline downloads",
-  ],
-};
-const comparisonRows = [
-  ["No. of subjects", "2", "All"],
-  ["Animated lessons", "10", "Unlimited"],
-  ["Quizzes", "Basic", "Full mastery suite"],
-  ["Parent reports", "-", "Weekly"],
-  ["AI doubt solving", "-", "Included"],
-];
-const faqItems = [
-  {
-    question: "Which boards does Kanthast School support?",
-    answer:
-      "CBSE, ICSE, and 20+ state boards including Maharashtra, Karnataka, Tamil Nadu, Rajasthan, UP and MP boards.",
-  },
-  {
-    question: "Is this suitable for all classes from I to X?",
-    answer:
-      "Yes. Content is available for all classes and each lesson is tagged by class and chapter so your child sees only what is relevant.",
-  },
-  {
-    question: "How is this different from YouTube or free videos?",
-    answer:
-      "Kanthast School keeps learning active with in-video questions, mastery quizzes, and XP systems instead of passive watching.",
-  },
-  {
-    question: "Does my child need a laptop or will a phone work?",
-    answer:
-      "The experience works well on Android and iOS smartphones, so a laptop is optional rather than required.",
-  },
-  {
-    question: "What subjects are covered?",
-    answer:
-      "Maths, Science, Social Studies, and English are the core focus, with more subjects being added over time.",
-  },
-  {
-    question: "Is there a free trial?",
-    answer:
-      "Yes. There is a 7-day free trial with no credit card needed, including access to 10 animated lessons across 2 subjects.",
-  },
-  {
-    question: "What happens to progress after the trial ends?",
-    answer:
-      "Progress is saved, so if you upgrade later your child continues right from where they left off.",
-  },
-];
-
-function SectionLabel({ children }) {
+function FaqList() {
+  const [open, setOpen] = useState(null);
   return (
-    <span className="inline-flex rounded-full border border-amber-400/25 bg-amber-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-amber-300">
-      {children}
-    </span>
-  );
-}
-
-// Spreads props. Without this the component could never receive an onClick,
-// so every "Start Learning Free" / "Get Full Access" CTA on the page was an
-// inert button — the whole conversion path did nothing.
-function PrimaryButton({ children, ...props }) {
-  return (
-    <button
-      type="button"
-      className="inline-flex min-h-touch items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-extrabold text-slate-950 shadow-glow-caution transition hover:-translate-y-0.5 hover:bg-orange-500"
-      {...props}
-    >
-      {children}
-    </button>
-  );
-}
-
-function GhostButton({ children, ...props }) {
-  return (
-    <button
-      type="button"
-      className="inline-flex min-h-touch items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-slate-50 transition hover:border-amber-300 hover:text-amber-300"
-      {...props}
-    >
-      {children}
-    </button>
-  );
-}
-
-function LessonPreviewCard({ label, title, subtext, statsList, gradient, compact = false }) {
-  return (
-    <Motion.div
-      whileHover={{ y: -8 }}
-      transition={{ duration: 0.25 }}
-      className={`relative overflow-hidden rounded-[28px] border border-amber-300/20 bg-[linear-gradient(180deg,rgba(26,36,56,0.98),rgba(17,24,39,0.98))] p-5 shadow-e4 ${compact ? "max-w-md" : ""}`}
-    >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.15),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.16),transparent_32%)]" />
-      <div className="relative z-10">
-        <div className="mb-4 flex items-center justify-between gap-3">
-          <span className="rounded-full border border-amber-300/20 bg-amber-400/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-amber-200">
-            {label}
-          </span>
-          <span className="text-xs text-slate-400">Preview lesson</span>
-        </div>
-
-        <div className={`relative h-56 overflow-hidden rounded-[22px] bg-gradient-to-br ${gradient}`}>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.22),transparent_24%),linear-gradient(180deg,rgba(11,17,32,0.05),rgba(11,17,32,0.6))]" />
-          <div className="absolute inset-x-6 top-6 h-12 rounded-2xl border border-white/15 bg-white/10 backdrop-blur-sm" />
-          <div className="absolute left-6 top-24 h-24 w-24 rounded-full border border-white/15 bg-white/8 backdrop-blur-sm" />
-          <div className="absolute right-8 top-24 h-3 w-32 rounded-full bg-white/25" />
-          <div className="absolute right-8 top-32 h-3 w-24 rounded-full bg-white/20" />
-          <div className="absolute right-8 top-40 h-3 w-20 rounded-full bg-white/15" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/14 shadow-glow-caution backdrop-blur-md">
-              <FaCirclePlay className="text-3xl text-white" />
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-5">
-          <h3 className="text-xl font-black text-slate-50">{title}</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-400">{subtext}</p>
-        </div>
-
-        <div className="mt-5">
-          <div className="mb-2 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
-            <span>Progress</span>
-            <span className="text-amber-300">62%</span>
-          </div>
-          <div className="h-2.5 rounded-full bg-slate-800">
-            <div className="h-full w-[62%] rounded-full bg-gradient-to-r from-amber-400 to-orange-500 shadow-glow-caution" />
-          </div>
-        </div>
-
-        <div className="mt-5 flex flex-wrap gap-2">
-          {statsList.map((stat) => (
-            <span
-              key={stat}
-              className="rounded-full border border-white/10 bg-white/6 px-3 py-1.5 text-xs font-medium text-slate-200"
-            >
-              {stat}
-            </span>
-          ))}
-        </div>
-      </div>
-    </Motion.div>
+    <div className="divide-y divide-line border-y border-line">
+      {FAQS.map((item, index) => (
+        <details
+          key={item.q}
+          open={open === index}
+          onToggle={(event) => {
+            if (event.currentTarget.open) setOpen(index);
+            else if (open === index) setOpen(null);
+          }}
+          className="group"
+        >
+          <summary className="flex min-h-touch cursor-pointer list-none items-center gap-4 py-5 [&::-webkit-details-marker]:hidden">
+            <span className="flex-1 text-lg font-semibold text-ink group-hover:text-[var(--school-ink)]">{item.q}</span>
+            <FaChevronDown aria-hidden="true" className="shrink-0 text-sm text-ink-subtle transition-transform group-open:rotate-180" />
+          </summary>
+          <p className="max-w-[65ch] pb-6 leading-relaxed text-ink-muted">{item.a}</p>
+        </details>
+      ))}
+    </div>
   );
 }
 
 export default function SchoolHomepage() {
-  const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState("Science");
-  const [openFaqIndex, setOpenFaqIndex] = useState(null);
-  const [activePainIndex, setActivePainIndex] = useState(0);
-  const [carouselPaused, setCarouselPaused] = useState(false);
-  const [carouselNonce, setCarouselNonce] = useState(0);
-  const [showDemoVideo, setShowDemoVideo] = useState(false);
-  const activeTabContent = tabData[activeTab];
-
-  const marqueeTestimonials = useMemo(
-    () => [...testimonials, ...testimonials],
-    []
-  );
-
-  // Auto-advance, but stoppable (WCAG 2.2.2: content that moves for more than
-  // 5s must be pausable). Halts while the user hovers or keyboard-focuses the
-  // carousel, when they take manual control, and whenever the OS asks for
-  // reduced motion. `carouselNonce` restarts the timer after a manual pick, so
-  // a click can't be overwritten 200ms later by an already-running tick.
-  useEffect(() => {
-    if (carouselPaused) return undefined;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return undefined;
-    }
-
-    const timer = window.setInterval(() => {
-      setActivePainIndex((current) => (current + 1) % painSolutions.length);
-    }, 4000);
-
-    return () => window.clearInterval(timer);
-  }, [carouselPaused, carouselNonce]);
-
-  const goToPainSlide = (index) => {
-    setActivePainIndex(index);
-    // Restart the dwell time so the slide the user chose gets its full 4s.
-    setCarouselNonce((n) => n + 1);
-  };
-
-  const showPreviousPainSlide = () => {
-    setActivePainIndex((current) => (current - 1 + painSolutions.length) % painSolutions.length);
-  };
-
-  const showNextPainSlide = () => {
-    setActivePainIndex((current) => (current + 1) % painSolutions.length);
-  };
-
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#0B1120] text-slate-50">
-      <ClickSparkles />
-      <Helmet>
-        <title>Kanthast School | Learning that actually sticks</title>
-        <meta
-          name="description"
-          content="Kanthast School brings Maths, Science, Social Studies and more alive through immersive 3D animations for Class I to Class X students."
-        />
-      </Helmet>
+    <div className="page-aurora brand-page school-page overflow-x-clip text-ink">
+      <Seo
+        title="Kanthast School | Animated NCERT lessons for Classes VIII, IX and X"
+        description={`Short animated lessons for the new NCERT books (2025-26), Classes VIII to X: Maths, Science, Social Science, English, Hindi and more. ${TOTALS.lessons} lessons across ${TOTALS.chapters} chapters, now in production.`}
+        path="/school"
+        jsonLd={[
+          ...CLASSES.map((cls) => ({
+            "@type": "Course",
+            "@id": `${SITE_URL}/school#${cls.id}`,
+            name: `Kanthast School: ${cls.name}`,
+            description: `${cls.lessons} short animated lessons across ${cls.chapters} chapters of the new NCERT books for ${cls.name}: ${cls.subjects.join(", ")}.`,
+            url: `${SITE_URL}/school#${cls.id}`,
+            inLanguage: ["en", "hi"],
+            educationalLevel: cls.name,
+            teaches: cls.subjects,
+            provider: { "@id": ORGANIZATION_ID },
+          })),
+          faqSchema(FAQS),
+          breadcrumbSchema([
+            { name: "Kanthast", path: "/" },
+            { name: "School", path: "/school" },
+          ]),
+        ]}
+      />
 
-      {/* Inter is loaded globally from index.html (one brand across tracks:
-          the School page shares the Medical type and differs by accent only), so the
-          duplicate font link here was removed. The eleven custom properties
-          that used to sit in this rule went too: "var(--" appeared zero times
-          in the file, so they were declared and never consumed, duplicating
-          the palette a third time alongside the global tokens and the inline
-          hex values below. */}
-      <style>{`
-        .school-page {
-          background:
-            radial-gradient(circle at 78% 18%, rgba(245,158,11,0.11), transparent 24%),
-            radial-gradient(circle at 14% 24%, rgba(16,185,129,0.08), transparent 26%),
-            linear-gradient(180deg, rgba(11,17,32,1), rgba(11,17,32,1));
-        }
-        .school-display {
-          letter-spacing: -0.02em;
-        }
-        .hero-dot-grid {
-          background-image:
-            radial-gradient(rgba(248,250,252,0.09) 0.8px, transparent 0.8px);
-          background-size: 22px 22px;
-        }
-        .subject-marquee {
-          animation: school-marquee 24s linear infinite;
-        }
-        .testimonial-marquee {
-          animation: school-marquee 34s linear infinite;
-        }
-        .subject-marquee:hover,
-        .testimonial-marquee:hover {
-          animation-play-state: paused;
-        }
-        @keyframes school-marquee {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .subject-marquee,
-          .testimonial-marquee {
-            animation: none !important;
-          }
-        }
-      `}</style>
-
-      <div className="school-page">
-        <section className="hero-dot-grid relative overflow-hidden border-b border-slate-800/70 pt-6 md:pt-8">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_50%,rgba(245,158,11,0.08)_0%,transparent_60%)]" />
-          <div className="mx-auto grid max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 gap-14 px-6 pb-16 pt-10 md:px-10 md:pb-20 md:pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-24 lg:pt-14">
-            <Motion.div
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="relative z-10"
-            >
-              <span className="inline-flex items-center gap-2 rounded-full border border-amber-300/20 bg-amber-400/12 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-200">
-                * Class I - X - CBSE & State Boards
-              </span>
-              <h1 className="school-display mt-6 text-4xl font-black leading-[1.02] text-slate-50 sm:text-5xl sm:leading-[0.95] md:text-6xl lg:text-7xl">
-                Learning that
-                <span className="block">actually sticks.</span>
-              </h1>
-              <p className="school-display mt-5 bg-gradient-to-r from-amber-300 via-amber-400 to-orange-500 bg-clip-text text-3xl font-extrabold text-transparent md:text-4xl lg:text-[2.65rem]">
-                Watch. Understand. Score.
-              </p>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
-                Kanthast School brings Maths, Science, Social Studies and more alive through
-                immersive 3D animations so your child does not just memorise, they truly understand.
-              </p>
-
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <PrimaryButton onClick={() => navigate("/signup")}>
-                  Start Learning Free <FaArrowRight aria-hidden="true" />
-                </PrimaryButton>
-                <GhostButton onClick={() => setShowDemoVideo(true)}>
-                  Watch Demo <FaCirclePlay />
-                </GhostButton>
-              </div>
-
-              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-slate-300">
-                {[
-                  "No credit card",
-                  "Free for 7 days",
-                  "CBSE & 20+ State Boards",
-                ].map((item) => (
-                  <span key={item} className="inline-flex items-center gap-2">
-                    <FaCheck className="text-emerald-400" />
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </Motion.div>
-
-            <Motion.div
-              initial={{ opacity: 0, y: 26, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.75, delay: 0.08 }}
-              className="relative z-10 mx-auto w-full max-w-[34rem] lg:max-w-[36rem]"
-            >
-              <div className="absolute -inset-6 rounded-[40px] bg-[radial-gradient(circle,rgba(245,158,11,0.18),transparent_55%)] blur-3xl" />
-              <div className="relative overflow-hidden rounded-[32px] border border-amber-300/20 shadow-e4">
-                <img
-                  src={schoolHeroImage}
-                  alt="Kanthast School lesson preview"
-                  className="block w-full object-cover"
-                />
-              </div>
-            </Motion.div>
+      <section className="site-container grid items-center gap-12 pb-16 pt-16 md:pb-24 md:pt-24 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+        <div>
+          <h1 className="brand-title max-w-[15ch]">Every chapter, as a short cartoon that explains it properly.</h1>
+          <p className="mt-6 max-w-[56ch] text-lg leading-relaxed text-ink-muted md:text-xl">
+            Kanthast School turns the new NCERT books for Classes VIII to X into animated lessons of{" "}
+            {SCHOOL_CATALOG.lessonLength}, guided by Neo the owl and Zippy the spark.
+          </p>
+          <p className="school-status mt-6">
+            All {TOTALS.lessons} lessons are scripted. The animated videos are being made now.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link to="/school/signup" className="door-cta door-cta-school">Create a School account</Link>
+            <a href="#classes" className="door-cta school-cta-ghost">See what is covered</a>
           </div>
-        </section>
+        </div>
+        <NeoZippy />
+      </section>
 
-        <section id="subjects" className="border-b border-slate-800/70 py-8">
-          <div className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 md:px-10">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-400">
-              Subjects covered
+      <section aria-labelledby="guides-heading" className="site-container py-16 md:py-20">
+        <h2 id="guides-heading" className="brand-h2">Two guides, in every lesson.</h2>
+        <div className="mt-10 grid gap-10 md:grid-cols-2">
+          <div className="guide">
+            <p className="guide-name guide-neo">Neo</p>
+            <p className="mt-2 max-w-[48ch] text-ink-muted">
+              A round, cheerful owl in a lab coat, goggles pushed up on his forehead. Calm and a little witty, he does
+              the explaining.
             </p>
-            <div className="relative overflow-hidden">
-              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#0B1120] to-transparent" />
-              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#0B1120] to-transparent" />
-              <div className="subject-marquee flex w-max gap-3 pr-3">
-                {[...subjectStrip, ...subjectStrip].map((subject, index) => (
-                  <div
-                    key={`${subject.name}-${index}`}
-                    className="flex items-center gap-2 rounded-full border border-[#1E2D45] bg-[#111827] px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-amber-400/50"
-                  >
-                    <span>{subject.emoji}</span>
-                    <span>{subject.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
-        </section>
-
-        <section id="how-it-works" className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 py-20 md:px-10">
-          <div className="max-w-3xl">
-            <SectionLabel>How Kanthast School works</SectionLabel>
-            <h2 className="school-display mt-5 w-full text-4xl font-black leading-tight text-slate-50 md:text-5xl">
-              From confused to confident - in 4 steps
-            </h2>
+          <div className="guide">
+            <p className="guide-name guide-zippy">Zippy</p>
+            <p className="mt-2 max-w-[48ch] text-ink-muted">
+              A small, bouncy electric-blue spark. He asks the questions a student would ask, and sometimes gets things
+              wrong so Neo can put them right.
+            </p>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {howItWorks.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <Motion.article
-                  key={step.number}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.2 }}
-                  transition={{ duration: 0.45, delay: index * 0.08 }}
-                  className="relative rounded-[24px] border border-[#1E2D45] bg-[#111827] p-6 shadow-e4"
-                >
-                  <span className="school-display text-5xl font-black text-amber-400/30">
-                    {step.number}
-                  </span>
-                  <div className="mt-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-400/14 text-amber-300">
-                    <Icon />
-                  </div>
-                  <h3 className="school-display mt-5 text-xl font-extrabold text-slate-50">
-                    {step.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-400">{step.description}</p>
-                  {index < howItWorks.length - 1 && (
-                    <div className="absolute -right-3 top-1/2 hidden -translate-y-1/2 xl:block">
-                      <FaArrowRight className="text-xl text-amber-400/40" />
-                    </div>
-                  )}
-                </Motion.article>
-              );
-            })}
-          </div>
-        </section>
-
-        <section className="border-y border-slate-800/70 bg-[linear-gradient(180deg,rgba(17,24,39,0.55),rgba(11,17,32,0.92))] py-20">
-          <div className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 md:px-10">
-            <div className="max-w-3xl">
-              <SectionLabel>Interactive subject deep dive</SectionLabel>
-              <h2 className="school-display mt-5 text-4xl font-black leading-tight text-slate-50 md:text-5xl">
-                Every subject. Every concept. Fully animated.
-              </h2>
-            </div>
-
-            <div className="mt-10 flex flex-wrap gap-3">
-              {Object.keys(tabData).map((tab) => (
-                <button
-                  key={tab}
-                  type="button"
-                  onClick={() => setActiveTab(tab)}
-                  className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition ${
-                    activeTab === tab
-                      ? "border-amber-300/50 bg-amber-400/14 text-amber-200"
-                      : "border-[#1E2D45] bg-[#111827] text-slate-300 hover:border-amber-300/30 hover:text-slate-50"
-                  }`}
-                >
-                  {tab}
-                </button>
-              ))}
-            </div>
-
-            <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.08fr]">
-              <div className="space-y-4">
-                {activeTabContent.chapters.map((chapter, index) => (
-                  <Motion.article
-                    key={chapter.title}
-                    initial={{ opacity: 0, x: -16 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.28, delay: index * 0.05 }}
-                    className="rounded-[22px] border border-[#1E2D45] bg-[#111827] p-5 transition hover:border-amber-400/35"
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <h3 className="school-display text-xl font-extrabold text-slate-50">
-                          {chapter.title}
-                        </h3>
-                        <span className="mt-3 inline-flex rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-300">
-                          {chapter.classLevel}
-                        </span>
-                      </div>
-                      <button
-                        type="button"
-                        onClick={() => setShowDemoVideo(true)}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-amber-300 transition hover:text-amber-200"
-                      >
-                        Watch Demo <FaArrowRight className="text-xs" />
-                      </button>
-                    </div>
-                  </Motion.article>
-                ))}
-              </div>
-
-              <LessonPreviewCard
-                label={activeTabContent.label}
-                title={activeTabContent.lessonTitle}
-                subtext={activeTabContent.subtext}
-                statsList={activeTabContent.previewStats}
-                gradient={activeTabContent.gradient}
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 py-20 md:px-10">
-          <div className="w-full">
-            <SectionLabel>Sound familiar?</SectionLabel>
-            <h2 className="school-display mt-5 w-full text-4xl font-black leading-tight text-slate-50 md:text-5xl">
-              The pain points parents keep describing - solved visually
-            </h2>
-          </div>
-
-          <div
-            className="mt-12"
-            role="region"
-            aria-roledescription="carousel"
-            aria-label="Common parent concerns, solved"
-            onMouseEnter={() => setCarouselPaused(true)}
-            onMouseLeave={() => setCarouselPaused(false)}
-            onFocusCapture={() => setCarouselPaused(true)}
-            onBlurCapture={() => setCarouselPaused(false)}
-          >
-            <Motion.div
-              key={activePainIndex}
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35 }}
-              className={`grid gap-6 rounded-[30px] border border-[#1E2D45] bg-[#111827] p-6 shadow-e4 lg:grid-cols-2 lg:p-8 ${
-                activePainIndex % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
-              }`}
-            >
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-rose-300">
-                  Pain point
-                </p>
-                <h3 className="school-display mt-4 text-3xl font-black leading-tight text-slate-50">
-                  "{painSolutions[activePainIndex].pain}"
-                </h3>
-                <p className="mt-6 text-sm font-semibold uppercase tracking-[0.22em] text-emerald-300">
-                  Kanthast solution
-                </p>
-                <p className="mt-4 text-base leading-8 text-slate-300">
-                  {painSolutions[activePainIndex].solution}
-                </p>
-              </div>
-
-              <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-[#1A2438] p-5">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.16),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.14),transparent_30%)]" />
-                <div className="relative z-10">
-                  <div className="mb-5 inline-flex rounded-full bg-white/8 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200">
-                    {painSolutions[activePainIndex].visualTitle}
-                  </div>
-                  <div className="grid gap-3">
-                    {painSolutions[activePainIndex].visualBullets.map((bullet, bulletIndex) => (
-                      <div
-                        key={bullet}
-                        className={`rounded-2xl border px-4 py-4 text-sm font-medium ${
-                          bulletIndex === 1
-                            ? "border-amber-300/30 bg-amber-400/10 text-amber-100"
-                            : "border-white/10 bg-white/5 text-slate-200"
-                        }`}
-                      >
-                        {bullet}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </Motion.div>
-
-            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex items-center gap-3">
-                <button
-                  type="button"
-                  onClick={showPreviousPainSlide}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition hover:border-amber-300/40 hover:text-amber-200"
-                  aria-label="Show previous pain point"
-                >
-                  <FaChevronLeft />
-                </button>
-                <button
-                  type="button"
-                  onClick={showNextPainSlide}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition hover:border-amber-300/40 hover:text-amber-200"
-                  aria-label="Show next pain point"
-                >
-                  <FaChevronRight />
-                </button>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-3">
-                {painSolutions.map((item, index) => (
-                  <button
-                    key={item.pain}
-                    type="button"
-                    onClick={() => goToPainSlide(index)}
-                    // Padding gives the 10px dot a 44px hit area without
-                    // changing how it looks.
-                    className="group inline-flex min-h-touch items-center gap-2 px-1 py-4"
-                    aria-label={`Go to slide ${index + 1} of ${painSolutions.length}`}
-                    aria-pressed={activePainIndex === index}
-                  >
-                    <span
-                      aria-hidden="true"
-                      className={`h-2.5 rounded-full transition-all ${
-                        activePainIndex === index
-                          ? "w-10 bg-amber-400"
-                          : "w-2.5 bg-slate-600 group-hover:bg-slate-500"
-                      }`}
-                    />
-                    <span className="hidden text-xs font-medium text-slate-400 md:inline">
-                      {index + 1}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="border-y border-slate-800/70 bg-[#111827] py-12">
-          <div className="mx-auto grid max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 gap-6 px-6 md:grid-cols-2 md:px-10 lg:grid-cols-4">
-            {stats.map(({ Icon, value, label }) => (
-              <div key={label} className="text-center">
-                <Icon className="mx-auto text-3xl text-amber-300" aria-hidden="true" />
-                <p className="school-display mt-3 text-4xl font-black text-amber-300">{value}</p>
-                <p className="mt-2 text-sm text-slate-400">{label}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="py-20">
-          <div className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 md:px-10">
-            <div className="max-w-3xl">
-              <SectionLabel>What students & parents say</SectionLabel>
-              <h2 className="school-display mt-5 text-4xl font-black leading-tight text-slate-50 md:text-5xl">
-                Loved by learners, trusted by parents
-              </h2>
-            </div>
-
-            <div className="relative mt-10 overflow-hidden">
-              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[#0B1120] to-transparent" />
-              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#0B1120] to-transparent" />
-              <div className="testimonial-marquee flex w-max gap-4 pr-4">
-                {marqueeTestimonials.map((testimonial, index) => (
-                  <article
-                    key={`${testimonial.author}-${index}`}
-                    className="w-[320px] shrink-0 rounded-[24px] border border-[#1E2D45] border-l-4 border-l-amber-400 bg-[#1A2438] p-5"
-                  >
-                    {/* The rating is information, not decoration — without a
-                        name it reached the AT tree as five unlabelled SVGs
-                        (×16 cards in the marquee). */}
-                    <div
-                      className="mb-4 flex gap-1 text-amber-300"
-                      role="img"
-                      aria-label="Rated 5 out of 5"
-                    >
-                      {Array.from({ length: 5 }).map((_, starIndex) => (
-                        <FaStar key={starIndex} aria-hidden="true" />
-                      ))}
-                    </div>
-                    <p className="text-sm leading-7 text-slate-100">{testimonial.quote}</p>
-                    <p className="mt-4 text-sm font-medium text-slate-400">{testimonial.author}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="pricing" className="border-y border-slate-800/70 bg-[linear-gradient(180deg,rgba(17,24,39,0.8),rgba(11,17,32,1))] py-20">
-          <div className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 md:px-10">
-            <div className="max-w-3xl">
-              <SectionLabel>Simple pricing</SectionLabel>
-              <h2 className="school-display mt-5 text-4xl font-black leading-tight text-slate-50 md:text-5xl">
-                Everything your child needs. One simple price.
-              </h2>
-            </div>
-
-            <div className="mt-12 grid gap-6 lg:grid-cols-2">
-              <div className="rounded-[28px] border border-[#1E2D45] bg-[#111827] p-7">
-                <span className="rounded-full border border-amber-300/20 bg-amber-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-amber-200">
-                  Start Here
-                </span>
-                <div className="mt-6 flex items-end gap-3">
-                  <span className="school-display text-4xl font-black text-slate-50 sm:text-5xl">Rs 0</span>
-                  <span className="pb-2 text-slate-400">for 7 days</span>
-                </div>
-                <div className="mt-6 space-y-3">
-                  {pricingFeatures.free.map((feature) => (
-                    <div key={feature} className="flex items-center gap-3 text-sm text-slate-300">
-                      <FaCheck className="text-emerald-400" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-8">
-                  <GhostButton onClick={() => navigate("/signup")}>
-                    Start Free Trial <FaArrowRight aria-hidden="true" />
-                  </GhostButton>
-                </div>
-              </div>
-
-              <div className="relative overflow-hidden rounded-[28px] border border-amber-300/30 bg-[#1A2438] p-7 shadow-glow-caution">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.14),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.12),transparent_30%)]" />
-                <div className="relative z-10">
-                  <span className="rounded-full bg-amber-400 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950">
-                    Most Popular
-                  </span>
-                  <div className="mt-6 flex items-end gap-3">
-                    <span className="school-display text-3xl font-black text-slate-50 sm:text-4xl md:text-5xl">Rs 5,000/year</span>
-                  </div>
-                  <div className="mt-2 flex items-center gap-3 text-sm">
-                    <span className="text-slate-400 line-through">Rs 5,999</span>
-                    <span className="font-semibold text-amber-200">Just Rs 8/day</span>
-                  </div>
-                  <div className="mt-6 space-y-3">
-                    {pricingFeatures.annual.map((feature) => (
-                      <div key={feature} className="flex items-center gap-3 text-sm text-slate-200">
-                        <FaCheck className="text-emerald-400" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-8">
-                    <PrimaryButton onClick={() => navigate("/subscription")}>
-                      Get Full Access <FaArrowRight />
-                    </PrimaryButton>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-10 overflow-hidden rounded-[24px] border border-[#1E2D45] bg-[#111827]">
-              <div className="grid grid-cols-3 border-b border-[#1E2D45] bg-white/5 px-5 py-4 text-sm font-semibold text-slate-300">
-                <span>Feature</span>
-                <span>Free</span>
-                <span>Annual</span>
-              </div>
-              {comparisonRows.map(([feature, free, annual]) => (
-                <div
-                  key={feature}
-                  className="grid grid-cols-3 border-b border-[#1E2D45] px-5 py-4 text-sm text-slate-300 last:border-b-0"
-                >
-                  <span className="font-medium text-slate-100">{feature}</span>
-                  <span>{free}</span>
-                  <span>{annual}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="parents" className="mx-auto max-w-7xl lg:max-w-none lg:w-[calc(var(--u)*85)] lg:px-0 px-6 py-20 md:px-10">
-          <div className="max-w-3xl">
-            <SectionLabel>For parents</SectionLabel>
-            <h2 className="school-display mt-5 text-4xl font-black leading-tight text-slate-50 md:text-5xl">
-              Built for students. Designed for parents' peace of mind.
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {parentFeatures.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <Motion.article
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 22 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.15 }}
-                  transition={{ duration: 0.4, delay: index * 0.08 }}
-                  className="rounded-[24px] border border-[#1E2D45] bg-[#111827] p-6"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-400/14 text-amber-300">
-                    <Icon />
-                  </div>
-                  <h3 className="school-display mt-5 text-2xl font-extrabold text-slate-50">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-400">{feature.description}</p>
-                </Motion.article>
-              );
-            })}
-          </div>
-        </section>
-
-        <section className="border-y border-slate-800/70 bg-[#111827] py-20">
-          <div className="mx-auto max-w-5xl px-6 md:px-10">
-            <div className="text-center">
-              <SectionLabel>Questions parents ask</SectionLabel>
-              <h2 className="school-display mt-5 text-4xl font-black leading-tight text-slate-50 md:text-5xl">
-                Clear answers before you commit
-              </h2>
-            </div>
-
-            <div className="mt-12 space-y-4">
-              {faqItems.map((faq, index) => {
-                const isOpen = openFaqIndex === index;
-                return (
-                  <div
-                    key={faq.question}
-                    className={`overflow-hidden rounded-[22px] border bg-[#0F172A] transition ${
-                      isOpen ? "border-amber-400/40" : "border-[#1E2D45]"
-                    }`}
-                  >
-                    <button
-                      type="button"
-                      onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left"
-                    >
-                      <span className="school-display text-xl font-extrabold text-slate-50">
-                        {faq.question}
-                      </span>
-                      <FaChevronDown
-                        className={`shrink-0 text-amber-300 transition-transform duration-200 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                    <Motion.div
-                      initial={false}
-                      animate={{
-                        height: isOpen ? "auto" : 0,
-                        opacity: isOpen ? 1 : 0,
-                      }}
-                      transition={{ duration: 0.25 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="border-t border-[#1E2D45] px-5 py-5 text-sm leading-7 text-slate-400">
-                        {faq.answer}
-                      </div>
-                    </Motion.div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden py-20">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.16),transparent_34%)]" />
-          <div className="mx-auto max-w-5xl px-6 text-center md:px-10">
-            <Motion.div
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.15 }}
-              transition={{ duration: 0.45 }}
-            >
-              <SectionLabel>Start now</SectionLabel>
-              <h2 className="school-display mt-5 text-4xl font-black leading-tight text-slate-50 md:text-6xl">
-                Your child's best school year starts here.
-              </h2>
-              <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-400">
-                Join 50,000+ students already learning with Kanthast School.
+      <section id="classes" aria-labelledby="classes-heading" className="site-container scroll-mt-28 py-16 md:py-20">
+        <h2 id="classes-heading" className="brand-h2">What is covered</h2>
+        <p className="mt-4 max-w-[60ch] text-lg text-ink-muted">
+          {TOTALS.lessons} lessons across {TOTALS.chapters} chapters, written for the NCERT books introduced in 2025-26.
+          Classes I to VII will follow.
+        </p>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {CLASSES.map((cls) => (
+            <article key={cls.id} id={cls.id} className="class-col scroll-mt-28">
+              <h3 className="class-name">{cls.name}</h3>
+              <p className="class-count">
+                <span className="tabular-nums">{cls.lessons}</span> lessons, <span className="tabular-nums">{cls.chapters}</span> chapters
               </p>
-
-              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <PrimaryButton onClick={() => navigate("/signup")}>
-                  Start Free for 7 Days <FaArrowRight aria-hidden="true" />
-                </PrimaryButton>
-                <GhostButton onClick={() => navigate("/contact")}>Talk to Us</GhostButton>
-              </div>
-
-              <div className="mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-sm text-slate-300">
-                {["No credit card", "Cancel anytime", "CBSE & State Boards"].map((item) => (
-                  <span key={item} className="inline-flex items-center gap-2">
-                    <FaCheck className="text-emerald-400" />
-                    {item}
-                  </span>
+              <p className="mt-4 text-sm font-semibold text-ink">Subjects</p>
+              <p className="mt-1 text-ink-muted">{cls.subjects.join(", ")}</p>
+              <p className="mt-4 text-sm font-semibold text-ink">Chapters include</p>
+              <ul className="mt-1 grid gap-1 text-ink-muted">
+                {cls.sample.map((chapter) => (
+                  <li key={chapter}>{chapter}</li>
                 ))}
-              </div>
-            </Motion.div>
-          </div>
-        </section>
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
 
-        <DemoVideoModal
-          open={showDemoVideo}
-          onClose={() => setShowDemoVideo(false)}
-          src={demoVideo}
-          ariaLabel="Kanthast School demo video"
-        />
-      </div>
+      <section aria-labelledby="shape-heading" className="site-container py-16 md:py-20">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+          <div>
+            <h2 id="shape-heading" className="brand-h2">How every lesson runs</h2>
+            <ol className="mt-8 grid gap-6">
+              {LESSON_SHAPE.map((step, index) => (
+                <li key={step.title} className="shape-step">
+                  <span className="shape-no" aria-hidden="true">{index + 1}</span>
+                  <div>
+                    <p className="font-semibold text-ink">{step.title}</p>
+                    <p className="mt-1 text-ink-muted">{step.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div>
+            <p className="mb-4 text-ink-muted">Here is the start of a real script, from Class X Science.</p>
+            <ScriptPage />
+          </div>
+        </div>
+      </section>
+
+      <section id="parents" aria-labelledby="parents-heading" className="site-container scroll-mt-28 py-16 md:py-20">
+        <h2 id="parents-heading" className="brand-h2">For parents</h2>
+        <div className="mt-10 grid gap-12 md:grid-cols-2">
+          <ul className="grid gap-6">
+            {FOR_PARENTS.map((item) => (
+              <li key={item.title} className="ai-item ai-item-school">
+                <p className="font-semibold text-ink">{item.title}</p>
+                <p className="mt-1 text-ink-muted">{item.body}</p>
+              </li>
+            ))}
+          </ul>
+          <ul className="grid content-start gap-6">
+            {PARENTS_NEXT.map((item) => (
+              <li key={item.title} className="ai-item ai-item-next">
+                <p className="flex flex-wrap items-center gap-2 font-semibold text-ink">
+                  {item.title}
+                  <span className="soon-badge">Coming soon</span>
+                </p>
+                <p className="mt-1 text-ink-muted">{item.body}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section id="pricing" aria-labelledby="pricing-heading" className="site-container scroll-mt-28 py-16 md:py-20">
+        <div className="school-price">
+          <div>
+            <h2 id="pricing-heading" className="brand-h2">{SCHOOL_CATALOG.price}</h2>
+            <p className="mt-3 max-w-[48ch] text-ink-muted">
+              One price for Kanthast School. Payments open when the first lessons are released; until then, creating an
+              account is free.
+            </p>
+          </div>
+          <Link to="/school/signup" className="door-cta door-cta-school">Create a School account</Link>
+        </div>
+      </section>
+
+      <section aria-labelledby="school-faq" className="site-container grid gap-10 py-16 md:py-20 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+        <h2 id="school-faq" className="brand-h2">Questions parents ask</h2>
+        <FaqList />
+      </section>
+
+      <section className="site-container flex flex-col items-start gap-6 py-16 md:flex-row md:items-center md:justify-between">
+        <p className="max-w-[52ch] text-ink-muted">
+          Preparing for NEET-PG, INI-CET or USMLE instead?{" "}
+          <Link to="/professional" className="font-semibold text-[var(--pro)] underline-offset-4 hover:underline">
+            See Kanthast Professional
+          </Link>
+        </p>
+      </section>
     </div>
   );
 }

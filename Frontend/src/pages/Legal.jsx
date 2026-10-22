@@ -122,6 +122,7 @@ export default function Legal({ doc }) {
     <div className="min-h-screen bg-surface text-ink">
       <Helmet>
         <title>{`${page.title} | Kanthast`}</title>
+        <link rel="canonical" href={`https://kanthast.in/${doc}`} />
       </Helmet>
       <article className="mx-auto max-w-3xl px-6 py-16 md:px-8 md:py-24">
         <h1 className="text-4xl font-bold tracking-tight md:text-5xl">{page.title}</h1>

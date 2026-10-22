@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaRegFileAlt, FaPlay, FaRegImage, FaChevronRight, FaLock, FaThList, FaTimes, FaChevronDown, FaSearch } from "react-icons/fa";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { getMedicineUsmleContent, getProfile } from "../utils/authApi";
 import { ListsPageSkeleton } from "../components/DataLoaderSkeletons";
 import { useAppSettings } from "../utils/settings";
@@ -62,7 +62,9 @@ function buildModulesFromApi(content) {
 
 export default function Lists() {
   const settings = useAppSettings();
-  const schoolMode = isSchoolTrack();
+  // The track libraries decide by URL; /lists (the signed-in library) follows the account.
+  const { pathname } = useLocation();
+  const schoolMode = pathname.startsWith("/school") ? true : pathname.startsWith("/professional") ? false : isSchoolTrack();
   const [selectedSchoolClass, setSelectedSchoolClassState] = useState(() => getSelectedSchoolClass());
   const selectedSchoolClassLabel = getSchoolClassLabel(selectedSchoolClass);
   const [activeTab, setActiveTab] = useState(schoolMode ? "Science" : "Biochemistry");

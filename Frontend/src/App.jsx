@@ -16,6 +16,7 @@ import { initCapacitorPlugins, setupBackButton } from "./utils/capacitor";
 const SHOW_COMING_SOON = false;
 
 const Homepage = lazy(() => import("./pages/Homepage"));
+const KanthastHome = lazy(() => import("./pages/KanthastHome"));
 const SchoolHomepage = lazy(() => import("./pages/SchoolHomepage"));
 const About = lazy(() => import("./pages/About"));
 const Pricing = lazy(() => import("./pages/Pricing"));
@@ -129,6 +130,8 @@ function App() {
   const isFirstRender = useRef(true);
   const isFirstEverVisit = useRef(!localStorage.getItem("kanthastVisited"));
   const isAdminRoute = location.pathname.startsWith("/admin");
+  // Every Kanthast page (brand, Professional, School) runs on the sky gradient; admin keeps its own look.
+  const isSkyTheme = !isAdminRoute;
   const isGatedRoute = SHOW_COMING_SOON && !isAdminRoute && location.pathname !== "/adminlogin";
   const settings = useAppSettings();
 
@@ -246,7 +249,8 @@ function App() {
     // toggle can still force it on. Passing "never" (the old default) actively
     // overrode a user's OS-level accessibility preference.
     <MotionConfig reducedMotion={settings.reduceMotion ? "always" : "user"}>
-      <div className="min-h-screen w-screen bg-surface-sunken text-ink">
+      <div className={`min-h-screen w-screen bg-surface-sunken text-ink${isSkyTheme ? " kb-sky" : ""}`}>
+        {isSkyTheme && <div aria-hidden="true" className="kb-sky-bg" />}
         {/* Keyboard users reach content without tabbing the whole navbar. */}
         <a
           href="#main-content"
@@ -285,7 +289,8 @@ function App() {
                 <ComingSoon />
               ) : (
                 <Routes>
-                  <Route path="/" element={<Homepage />} />
+                  <Route path="/" element={<KanthastHome />} />
+                  <Route path="/professional" element={<Homepage />} />
                   <Route path="/school" element={<SchoolHomepage />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/pricing" element={<Pricing />} />
@@ -302,7 +307,9 @@ function App() {
                   <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
                   <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
                   <Route path="/settings" element={<RequireAuth><Settings /></RequireAuth>} />
-                  <Route path="/lists" element={<Lists />} />
+                  <Route path="/lists" element={<Lists key="account" />} />
+                  <Route path="/professional/library" element={<Lists key="professional" />} />
+                  <Route path="/school/library" element={<Lists key="school" />} />
                   <Route path="/summary" element={<RequireAuth><SummaryPage /></RequireAuth>} />
                   <Route path="/video" element={<RequireAuth><VideoPage /></RequireAuth>} />
                   <Route path="/images" element={<RequireAuth><ImagesPage /></RequireAuth>} />
@@ -318,7 +325,7 @@ function App() {
 
           {/* Footer: hidden on mobile when logged in (bottom dock handles nav) */}
           {!isAdminRoute && !isGatedRoute && (
-            <div className={hasAuth() ? "hidden bg-[#060e1b] md:block md:pb-16 lg:pb-0" : "bg-[#060e1b] pb-16 lg:pb-0"}>
+            <div className={hasAuth() ? "footer-wrap hidden bg-[#060e1b] md:block md:pb-16 lg:pb-0" : "footer-wrap bg-[#060e1b] pb-16 lg:pb-0"}>
               <Footer />
             </div>
           )}

@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Helmet } from "react-helmet-async";
+import Seo from "../components/Seo";
+import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
 import { FaArrowRight, FaChevronDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { LuLaptop, LuSmartphone } from "react-icons/lu";
@@ -18,6 +19,7 @@ const EXAMS = [
   { label: "NEET-PG", to: "/courses#neet-pg" },
   { label: "INI-CET", to: "/courses#ini-cet" },
   { label: "USMLE", to: "/courses#medicine" },
+  { label: "NEET-UG", soon: true },
 ];
 
 const TOUR_STEPS = [
@@ -53,7 +55,7 @@ const FAQS = [
   },
   {
     q: "Which exams is Kanthast for?",
-    a: "NEET-PG, INI-CET and USMLE. All three draw on the same subject-by-subject medical library.",
+    a: "NEET-PG, INI-CET and USMLE today. All three draw on the same subject-by-subject medical library. NEET-UG is coming soon.",
   },
   {
     q: "What can I open without paying?",
@@ -146,7 +148,7 @@ function StepFrame({ step }) {
       <MacbookFrame alt={step.url} className="drop-shadow-[0_30px_50px_rgba(6,11,28,0.5)]">
         <TourScreen progress={progress} />
       </MacbookFrame>
-      {step.caption ? <p className="mt-4 text-sm text-white/65">{step.caption}</p> : null}
+      {step.caption ? <p className="mt-4 text-sm text-ink-muted">{step.caption}</p> : null}
     </div>
   );
 }
@@ -192,17 +194,17 @@ function ProductTour() {
               >
                 <div
                   className={`border-t pt-6 transition-colors duration-slow ease-brand ${
-                    index === active ? "border-brand" : "border-white/15 max-lg:border-white/25"
+                    index === active ? "border-brand" : "border-line-strong"
                   }`}
                 >
                   <h3
                     className={`[text-wrap:balance] text-2xl font-bold tracking-tight transition-colors duration-slow ease-brand md:text-3xl ${
-                      index === active ? "text-white" : "text-white lg:text-white/45"
+                      index === active ? "text-ink" : "text-ink lg:text-ink/45"
                     }`}
                   >
                     {item.title}
                   </h3>
-                  <p className="mt-3 max-w-md text-base leading-relaxed text-white/70">{item.body}</p>
+                  <p className="mt-3 max-w-md text-base leading-relaxed text-ink-muted">{item.body}</p>
                 </div>
                 <StepFrame step={item} />
               </li>
@@ -220,7 +222,7 @@ function ProductTour() {
                   <TourScreen progress={scrollYProgress} />
                 </MacbookFrame>
               </TiltFrame>
-              <p className="mt-6 text-center text-sm text-white/65" aria-live="polite">
+              <p className="mt-6 text-center text-sm text-ink-muted" aria-live="polite">
                 {TOUR_STEPS[active].caption || " "}
               </p>
             </div>
@@ -359,31 +361,32 @@ const Homepage = () => {
   const startLabel = loggedIn ? "Go to your dashboard" : "Get started free";
 
   return (
-    <div className="home-page overflow-x-clip bg-surface text-ink">
-        <Helmet>
-          <title>Kanthast | Animated medical lectures for NEET-PG, INI-CET and USMLE</title>
-          <meta
-            name="description"
-            content="Short animated medical lectures organised by subject and chapter, with resume and progress tracking, for NEET-PG, INI-CET and USMLE preparation."
-          />
-          <link rel="canonical" href="https://kanthast.in/" />
-          <meta property="og:title" content="Kanthast | Animated medical lectures for NEET-PG, INI-CET and USMLE" />
-          <meta
-            property="og:description"
-            content="Short animated medical lectures organised by subject and chapter, with resume and progress tracking."
-          />
-          <meta property="og:url" content="https://kanthast.in/" />
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "EducationalOrganization",
-              name: "Kanthast",
-              url: "https://kanthast.in",
+    <div className="home-page page-aurora overflow-x-clip text-ink">
+        <Seo
+          title="Kanthast Professional | Animated lectures for NEET-PG, INI-CET and USMLE"
+          description="Short animated medical lectures for NEET-PG, INI-CET and USMLE, laid out subject by subject with resume and progress tracking. NEET-UG is coming soon."
+          path="/professional"
+          jsonLd={[
+            {
+              "@type": "Course",
+              "@id": `${SITE_URL}/professional#course`,
+              name: "Kanthast Professional",
               description:
                 "Animated medical lectures for NEET-PG, INI-CET and USMLE preparation, organised by subject and chapter.",
-            })}
-          </script>
-        </Helmet>
+              url: `${SITE_URL}/professional`,
+              inLanguage: "en",
+              educationalLevel: "Postgraduate medical entrance",
+              teaches: subjects.map((subject) => subject.name),
+              provider: { "@id": ORGANIZATION_ID },
+              hasCourseInstance: { "@type": "CourseInstance", courseMode: "Online", courseWorkload: "PT7M" },
+            },
+            faqSchema(FAQS),
+            breadcrumbSchema([
+              { name: "Kanthast", path: "/" },
+              { name: "Professional", path: "/professional" },
+            ]),
+          ]}
+        />
 
         {/* Hero */}
         <section className="hero">
@@ -410,10 +413,17 @@ const Homepage = () => {
               <ul className="hero-exams" aria-label="Exams covered">
                 {EXAMS.map((exam) => (
                   <li key={exam.label}>
-                    <Link to={exam.to} className="hero-exam">
-                      {exam.label}
-                      <FaArrowRight aria-hidden="true" className="hero-exam-icon" />
-                    </Link>
+                    {exam.soon ? (
+                      <span className="hero-exam hero-exam-soon">
+                        {exam.label}
+                        <span className="hero-exam-badge">Coming soon</span>
+                      </span>
+                    ) : (
+                      <Link to={exam.to} className="hero-exam">
+                        {exam.label}
+                        <FaArrowRight aria-hidden="true" className="hero-exam-icon" />
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -441,7 +451,7 @@ const Homepage = () => {
         <ProductTour />
 
         {/* Syllabus coverage */}
-        <section aria-labelledby="syllabus-heading" className="border-t border-line bg-surface-sunken py-20 md:py-28">
+        <section aria-labelledby="syllabus-heading" className="aurora-band border-t border-line bg-surface-sunken py-20 md:py-28">
           <div className="site-container">
             <div className="grid gap-10 lg:grid-cols-12">
               <div className="lg:col-span-5">
@@ -480,7 +490,7 @@ const Homepage = () => {
         <FaqSection />
 
         {/* Close */}
-        <section className="relative overflow-hidden border-t border-line bg-surface text-ink">
+        <section className="aurora-close relative overflow-hidden border-t border-line bg-surface text-ink">
           <div aria-hidden="true" className="home-glow home-glow-close" />
           <div className="site-container relative flex flex-col items-start justify-between gap-8 py-20 md:flex-row md:items-center">
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-5xl">

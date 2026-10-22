@@ -375,11 +375,7 @@ export default function FaqStudent({ questions, openIndex }) {
               <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand">In short</p>
               <p className="mt-1 leading-relaxed text-ink">{firstSentence(questions[openIndex].a)}</p>
             </Motion.div>
-          ) : (
-            <Motion.p key="hint" {...swap} className="leading-relaxed text-ink-muted">
-              Open a question to clear the doubt.
-            </Motion.p>
-          )}
+          ) : null}
         </AnimatePresence>
       </div>
     </div>

@@ -29,7 +29,7 @@ export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
   // Route decides which login this is — /school/login always shows the
-  // School copy, /login always shows Medical, regardless of what track
+  // School copy, /login always shows Professional, regardless of what track
   // page was visited earlier in this browser.
   const schoolMode = location.pathname.startsWith("/school");
   const [form, setForm] = useState({ email: "", password: "" });
@@ -118,6 +118,7 @@ export default function Login() {
         <title>{schoolMode ? "School Login | Kanthast" : "Log In | Kanthast"}</title>
         <meta name="description" content={schoolMode ? "Log in to Kanthast School to continue class-wise visual learning." : "Log in to your Kanthast account to access your USMLE, NEET PG, and INI CET study materials."} />
         <link rel="canonical" href="https://kanthast.in/login" />
+        <meta name="robots" content="noindex, follow" />
       </Helmet>
       <Motion.div
         animate={{ y: [0, -10, 0], opacity: [0.52, 0.75, 0.52] }}

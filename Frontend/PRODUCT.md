@@ -8,6 +8,13 @@ web
 
 (The same React build ships to Android through Capacitor; its design language stays web. A separate Expo app in `../MobileApp` is out of scope and currently broken against the API.)
 
+## Structure (2026-10-22)
+
+- `/`: Kanthast brand page. It introduces the two products, shows a real lesson script, separates live AI features from "Coming soon" ones, and compares the products.
+- `/professional`: Kanthast Professional (formerly "Medical"): NEET-PG, INI-CET and USMLE now; NEET-UG listed as coming soon. The internal track value stays `medical`.
+- `/school`: Kanthast School: Classes VIII–X on the new NCERT books (2025-26). 923 lessons are scripted across 176 chapters; the animated videos are in production. Classes I–VII are planned. The unverified "50,000+ / 4.8/5" stats and testimonials were removed.
+- Unbuilt features (AI on the current frame, adaptive revision, end-of-lesson questions, parent progress view) may appear only under a "Coming soon" label.
+
 ## Users
 
 - **Primary: Indian MBBS students and interns preparing for NEET-PG and INI-CET.** They study long hours across the full MBBS syllabus under exam pressure, mostly on phones and on Indian mobile data, and they judge a platform on content depth, faculty credibility and price in INR.

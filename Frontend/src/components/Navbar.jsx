@@ -15,12 +15,25 @@ import {
   FaBookOpen,
   FaStar,
   FaEnvelope,
+  FaUserMd,
+  FaSchool,
+  FaInfoCircle,
 } from "react-icons/fa";
+import { CONTEXTS, contextForPath } from "../utils/siteContext";
 
 const TRACK_STORAGE_KEY = "kanthastTrack";
 const trackOptions = [
-  { value: "medical", label: "Medical", path: "/" },
-  { value: "school", label: "School", path: "/school" },
+  { value: "medical", label: "Professional", hint: CONTEXTS.professional.tagline, path: "/professional" },
+  { value: "school", label: "School", hint: CONTEXTS.school.tagline, path: "/school" },
+];
+
+// Shared Kanthast pages (home, About, Contact, legal): the two products, never one track.
+const brandDockItems = [
+  { to: "/", label: "Home", icon: FaHome, exact: true },
+  { to: "/professional", label: "Professional", icon: FaUserMd, exact: false },
+  { to: "/school", label: "School", icon: FaSchool, exact: false },
+  { to: "/about", label: "About", icon: FaInfoCircle, exact: false },
+  { to: "/contact", label: "Contact", icon: FaEnvelope, exact: false },
 ];
 
 const dockItems = [
@@ -45,6 +58,7 @@ const Navbar = () => {
   const [isDesktopUserOpen, setIsDesktopUserOpen] = useState(false);
   const [isMobileProfileOpen, setIsMobileProfileOpen] = useState(false);
   const [isTrackMenuOpen, setIsTrackMenuOpen] = useState(false);
+  const [isSignupMenuOpen, setIsSignupMenuOpen] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
   const [selectedTrack, setSelectedTrack] = useState(() => {
     try {
@@ -54,7 +68,7 @@ const Navbar = () => {
     }
   });
   // A visitor who has never touched the track switcher has had no chance to
-  // learn Kanthast serves two tracks (Medical and School) — the switcher is
+  // learn Kanthast serves two tracks (Professional and School) — the switcher is
   // deliberately small and quiet so it doesn't compete with the wordmark,
   // which means a first-timer can miss it entirely. A few pulses on that
   // first visit only (never again once acknowledged) close that gap without
@@ -86,29 +100,20 @@ const Navbar = () => {
   const isLoggedIn = Boolean(token && user);
   const hasSubscription = Boolean(user?.subscriptionPurchased);
 
-  // The route is the source of truth for the track on public pages, so
-  // derive it rather than mirroring it into state. The old effect read AND
-  // wrote `selectedTrack` with it in the deps, so it re-ran and rewrote
-  // localStorage on every pass.
-  const routeTrack = location.pathname.startsWith("/school")
-    ? "school"
-    : location.pathname === "/"
-      ? "medical"
-      : null;
-  // Shared authenticated routes (/dashboard, /lists, /settings, ...) have no
-  // /school prefix to read a route track from, so routeTrack is null there —
-  // without this, the badge fell back to the ambient `selectedTrack` flag
-  // (whichever public page was visited last in this browser) and could show
-  // "Medical" for a School-track account deep in their own authenticated
-  // pages. A logged-in user's own track is a fixed account fact and takes
-  // priority over both.
-  const effectiveTrack = routeTrack || user?.track || selectedTrack;
+  // One map decides the story each page tells (src/utils/siteContext.js): shared Kanthast
+  // pages show both products, Professional and School pages show only their own.
+  const contextId = contextForPath(location.pathname, isLoggedIn ? user : null, selectedTrack);
+  const ctx = CONTEXTS[contextId];
+  const isBrandRoute = contextId === "brand";
+  const isSchoolTrack = contextId === "school";
+  const routeTrack = isBrandRoute ? null : ctx.track;
+  // Every Kanthast page except admin paints the sky gradient, so the bar is light glass there.
+  const isAuroraRoute = !location.pathname.startsWith("/admin");
 
-  const isSchoolTrack = effectiveTrack === "school";
-  const homePath = isSchoolTrack ? "/school" : "/";
-  const loginPath = isSchoolTrack ? "/school/login" : "/login";
-  const signupPath = isSchoolTrack ? "/school/signup" : "/signup";
-  const displayTrack = isSchoolTrack ? "School" : "Medical";
+  const homePath = ctx.home;
+  const loginPath = isBrandRoute ? CONTEXTS.professional.login : ctx.login;
+  const signupPath = isBrandRoute ? CONTEXTS.professional.signup : ctx.signup;
+  const displayTrack = isBrandRoute ? "" : ctx.short;
 
   const initials =
     `${user?.firstName?.[0] || ""}${user?.lastName?.[0] || ""}`.toUpperCase() || "U";
@@ -119,16 +124,20 @@ const Navbar = () => {
   const dockHomeItems = dockItems.map((item) =>
     item.to === "/" ? { ...item, to: homePath } : item
   );
-  // Guests have no subscription page (it is behind login): Medical guests get
+  const signupChoices = [CONTEXTS.professional, CONTEXTS.school];
+  // Guests have no subscription page (it is behind login): Professional guests get
   // the /pricing page, School guests the pricing section of their landing page.
-  const pricingPath = isSchoolTrack ? `${homePath}#pricing` : "/pricing";
-  const coursesPath = isSchoolTrack ? "/school/courses" : "/courses";
-  const dockPublicItems = publicDockItems.map((item) => {
-    if (item.to === "/") return { ...item, to: homePath };
-    if (item.to === "/courses") return { ...item, to: coursesPath };
-    if (item.to === "/subscription") return { ...item, to: pricingPath };
-    return item;
-  });
+  const pricingPath = isBrandRoute ? CONTEXTS.professional.pricing : ctx.pricing;
+  const libraryPath = isBrandRoute ? CONTEXTS.professional.library : ctx.library;
+  const dockPublicItems = isBrandRoute
+    ? brandDockItems
+    : publicDockItems.map((item) => {
+        if (item.to === "/") return { ...item, to: homePath };
+        if (item.to === "/courses") return { ...item, to: ctx.courses };
+        if (item.to === "/lists") return { ...item, to: libraryPath };
+        if (item.to === "/subscription") return { ...item, to: pricingPath };
+        return item;
+      });
 
   useEffect(() => {
     const HIDE_THRESHOLD = 10;
@@ -191,6 +200,15 @@ const Navbar = () => {
   }, [isMobileProfileOpen]);
 
   useEffect(() => {
+    if (!isSignupMenuOpen) return;
+    const close = (event) => {
+      if (!event.target.closest?.("[data-signup-menu]")) setIsSignupMenuOpen(false);
+    };
+    document.addEventListener("mousedown", close);
+    return () => document.removeEventListener("mousedown", close);
+  }, [isSignupMenuOpen]);
+
+  useEffect(() => {
     if (!isTrackMenuOpen) return;
 
     const handler = (event) => {
@@ -208,7 +226,7 @@ const Navbar = () => {
   // display value from the route, so writing it back to state would only
   // trigger a second render for a value the first render already had.
   useEffect(() => {
-    if (!routeTrack) return;
+    if (!routeTrack || isLoggedIn) return;
     try {
       if (localStorage.getItem(TRACK_STORAGE_KEY) !== routeTrack) {
         localStorage.setItem(TRACK_STORAGE_KEY, routeTrack);
@@ -216,7 +234,7 @@ const Navbar = () => {
     } catch {
       // ignore storage write failures
     }
-  }, [routeTrack]);
+  }, [routeTrack, isLoggedIn]);
 
   // Stop the first-visit pulse on its own after a few cycles even if the
   // visitor never opens the menu — it's a one-time nudge, not a persistent
@@ -251,7 +269,7 @@ const Navbar = () => {
       // ignore storage write failures
     }
 
-    const nextPath = trackOptions.find((option) => option.value === nextTrack)?.path || "/";
+    const nextPath = trackOptions.find((option) => option.value === nextTrack)?.path || "/professional";
     navigate(nextPath);
   };
 
@@ -261,7 +279,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="fixed left-0 right-0 top-0 z-50 w-full border-b border-hairline/70 kb-bar will-change-transform"
+        className={`fixed left-0 right-0 top-0 z-50 w-full border-b border-hairline/70 kb-bar will-change-transform${isAuroraRoute ? " nav-aurora" : ""}`}
         style={{
           paddingTop: "env(safe-area-inset-top, 0px)",
           transform: navVisible ? "translateY(0)" : "translateY(-100%)",
@@ -271,12 +289,13 @@ const Navbar = () => {
         <div className="nav-shell mx-auto flex w-full items-center justify-between px-5 md:px-16 lg:w-[calc(var(--u)*85)] lg:max-w-none lg:px-0">
           <div className="flex min-w-0 items-center gap-3">
             <div className="nav-brand relative flex items-end gap-1.5">
-              <Link to={homePath} className="flex items-center focus-visible:outline-none">
+              <Link to="/" aria-label="Kanthast home" className="flex items-center focus-visible:outline-none">
                 <span className="nav-logo block font-display text-2xl font-extrabold leading-none tracking-tight text-softwhite md:text-[1.8rem]">
                   Kanthast
                 </span>
               </Link>
-              <div ref={trackMenuRef} className="relative flex translate-y-[0.3em] items-center">
+              {!isBrandRoute && (
+              <div ref={trackMenuRef} className={`relative flex translate-y-[0.3em] items-center${isSchoolTrack ? " nav-track-school" : ""}`}>
                 <button
                   type="button"
                   onClick={() => {
@@ -328,7 +347,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.96 }}
                       transition={{ duration: 0.16 }}
-                      className="absolute left-0 top-full z-50 w-48 overflow-hidden rounded-2xl border border-cyan-200/40 bg-slate-950/92 p-1.5 shadow-e4 backdrop-blur-xl"
+                      className="absolute left-0 top-full z-50 w-56 overflow-hidden rounded-2xl border border-cyan-200/40 bg-slate-950/92 p-1.5 shadow-e4 backdrop-blur-xl"
                     >
                       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.18),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(244,114,182,0.16),transparent_34%)]" />
                       <div className="relative z-10">
@@ -338,7 +357,7 @@ const Navbar = () => {
                           </p>
                         </div>
                         {trackOptions.map((option) => {
-                          const active = option.value === selectedTrack;
+                          const active = option.value === routeTrack;
                           return (
                             <button
                               key={option.value}
@@ -350,7 +369,10 @@ const Navbar = () => {
                                   : "text-white/95 hover:bg-white/8 hover:text-cyan-100"
                               }`}
                             >
-                              <span className="font-semibold tracking-[0.01em]">{option.label}</span>
+                              <span className="min-w-0">
+                                <span className="block font-semibold tracking-[0.01em]">{option.label}</span>
+                                <span className="block text-micro text-white/60">{option.hint}</span>
+                              </span>
                               <span
                                 className={`h-2 w-2 rounded-full ${
                                   active ? "bg-brand shadow-glow-brand" : "bg-white/35"
@@ -364,10 +386,36 @@ const Navbar = () => {
                   )}
                 </AnimatePresence>
               </div>
+              )}
             </div>
           </div>
 
           <div className="nav-links hidden lg:flex items-center">
+            {isBrandRoute ? (
+              <>
+                <NavLink to="/" end className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+                  Home
+                </NavLink>
+                <NavLink to="/professional" className={normalClass}>
+                  Professional
+                </NavLink>
+                <NavLink to="/school" className={normalClass}>
+                  School
+                </NavLink>
+                <NavLink to="/about" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+                  About
+                </NavLink>
+                <NavLink to="/contact" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+                  Contact
+                </NavLink>
+                {isLoggedIn && (
+                  <NavLink to="/dashboard" className={normalClass}>
+                    Dashboard
+                  </NavLink>
+                )}
+              </>
+            ) : (
+            <>
             <NavLink to={homePath} end className={({ isActive }) => (isActive ? activeClass : normalClass)}>
               Home
             </NavLink>
@@ -443,7 +491,7 @@ const Navbar = () => {
               </div>
             )}
 
-            <NavLink to="/lists" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+            <NavLink to={isLoggedIn ? "/lists" : libraryPath} className={({ isActive }) => (isActive ? activeClass : normalClass)}>
               Library
             </NavLink>
             {isLoggedIn && (
@@ -483,6 +531,8 @@ const Navbar = () => {
                 Contact
               </NavLink>
             )}
+            </>
+            )}
           </div>
 
           <div className="nav-actions hidden lg:flex items-center">
@@ -494,12 +544,22 @@ const Navbar = () => {
                 >
                   Log In
                 </Link>
+                {isBrandRoute ? (
+                  <SignupChooser
+                    open={isSignupMenuOpen}
+                    onToggle={() => setIsSignupMenuOpen((v) => !v)}
+                    onChoose={() => setIsSignupMenuOpen(false)}
+                    choices={signupChoices}
+                    className="nav-signup inline-flex items-center justify-center gap-1.5 bg-mint text-midnight transition duration-200 hover:brightness-95"
+                  />
+                ) : (
                 <Link
                   to={signupPath}
                   className="nav-signup inline-flex items-center justify-center bg-mint text-midnight transition duration-200 hover:brightness-95"
                 >
                   Sign Up
                 </Link>
+                )}
               </>
             ) : (
               <>
@@ -729,16 +789,26 @@ const Navbar = () => {
               <div className="flex items-center gap-2">
                 <Link
                   to={loginPath}
-                  className="inline-flex min-h-touch items-center whitespace-nowrap rounded-xl border border-hairline px-3 text-sm max-[379px]:hidden text-softwhite transition hover:bg-slatenavy"
+                  className="inline-flex min-h-touch items-center whitespace-nowrap nav-m-login rounded-xl border border-hairline px-3 text-sm max-[379px]:hidden text-softwhite transition hover:bg-slatenavy"
                 >
                   Log In
                 </Link>
+                {isBrandRoute ? (
+                  <SignupChooser
+                    open={isSignupMenuOpen}
+                    onToggle={() => setIsSignupMenuOpen((v) => !v)}
+                    onChoose={() => setIsSignupMenuOpen(false)}
+                    choices={signupChoices}
+                    className="inline-flex min-h-touch items-center gap-1.5 whitespace-nowrap nav-m-signup rounded-xl bg-mint px-3 text-sm font-semibold text-midnight transition hover:brightness-95"
+                  />
+                ) : (
                 <Link
                   to={signupPath}
-                  className="inline-flex min-h-touch items-center whitespace-nowrap rounded-xl bg-mint px-3 text-sm font-semibold text-midnight transition hover:brightness-95"
+                  className="inline-flex min-h-touch items-center whitespace-nowrap nav-m-signup rounded-xl bg-mint px-3 text-sm font-semibold text-midnight transition hover:brightness-95"
                 >
                   Sign Up
                 </Link>
+                )}
               </div>
             )}
           </div>
@@ -746,7 +816,7 @@ const Navbar = () => {
       </nav>
 
       <div
-        className="fixed bottom-0 left-0 right-0 z-40 lg:hidden"
+        className={`nav-dock fixed bottom-0 left-0 right-0 z-40 lg:hidden${isAuroraRoute ? " nav-aurora" : ""}`}
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
         {/* Fades whatever's scrolled underneath before the opaque bar starts,
@@ -754,9 +824,9 @@ const Navbar = () => {
             last row of content flush against its top edge. */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-full h-6 bg-gradient-to-t from-[#0b1220]/70 to-transparent"
+          className="nav-dock-fade pointer-events-none absolute inset-x-0 bottom-full h-6 bg-gradient-to-t from-[#0b1220]/70 to-transparent"
         />
-        <div className="border-t border-hairline/70 bg-[#0b1220]/95 backdrop-blur-xl">
+        <div className="nav-dock-bar border-t border-hairline/70 bg-[#0b1220]/95 backdrop-blur-xl">
           <div className={`grid h-16 ${isLoggedIn ? "grid-cols-4" : "grid-cols-5"}`}>
           {(isLoggedIn ? dockHomeItems : dockPublicItems).map(({ to, label, icon: Icon, exact }) => {
             const isActive = exact ? location.pathname === to : location.pathname.startsWith(to);
@@ -801,5 +871,42 @@ const Navbar = () => {
     </>
   );
 };
+
+/** Sign Up on shared Kanthast pages: the visitor picks Professional or School first. */
+function SignupChooser({ open, onToggle, onChoose, choices, className }) {
+  return (
+    <div className="relative" data-signup-menu onKeyDown={(e) => e.key === "Escape" && open && onToggle()}>
+      <button type="button" onClick={onToggle} aria-haspopup="menu" aria-expanded={open} className={className}>
+        Sign Up
+        <FaChevronDown aria-hidden="true" className={`text-micro transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+      </button>
+      <AnimatePresence>
+        {open && (
+          <Motion.div
+            role="menu"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            transition={{ duration: 0.15 }}
+            className="absolute right-0 z-50 mt-2 w-60 rounded-2xl border border-slate-100 bg-white p-1.5 shadow-2xl shadow-black/15"
+          >
+            {choices.map((c) => (
+              <Link
+                key={c.id}
+                role="menuitem"
+                to={c.signup}
+                onClick={onChoose}
+                className="block rounded-xl px-3 py-2.5 text-slate-700 transition hover:bg-slate-50"
+              >
+                <span className="block text-sm font-semibold text-slate-800">{c.name}</span>
+                <span className="block text-xs text-ink-subtle">{c.tagline}</span>
+              </Link>
+            ))}
+          </Motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export default Navbar;

@@ -70,7 +70,7 @@ export default function Contact() {
         kicker="Contact"
         title="Let's"
         accent="connect."
-        lead="Have questions about Kanthast Medical or Kanthast School? Share your requirements and our team will respond quickly."
+        lead="Have questions about Kanthast Professional or Kanthast School? Share your requirements and our team will respond quickly."
         aside={
           <motion.ul variants={stagger} initial="hidden" animate="show" className="grid gap-4">
             {[

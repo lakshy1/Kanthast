@@ -366,3 +366,26 @@ Recorded as of 2026-09-29, not yet repaired:
 - Navbar menus use white and slate fills, `rounded-2xl`, `shadow-2xl` and a 300ms Material curve, none of which are system values or theme-aware; the track menu adds glass blur, cyan and pink radial washes and an uppercase "Explore" kicker.
 - Product frame replicas and one Homepage element set text at 9 and 10px, and a replica uses a hard-coded player navy (#0F1D42).
 - The `theme-color` meta in index.html is still the retired flat navy #0B1120.
+
+## Kanthast Professional background: flowing sky (2026-10-22)
+
+Every Professional route (everything except `/school*` and `/admin*`) sits on one fixed, continuous background, `.kb-sky-bg`, which `App.jsx` renders when `isSkyTheme` is true. The background is **one tilted beam of light at 62°**. Cobalt `#2F63E3` pours in from the top-right corner and resolves through azure `#7FB4F4` and ice `#D9E8FB` into paper `#F7F9FD` at the bottom-left.
+
+- **Colour blending:** the stops share one blue hue and blend in OKLab (`linear-gradient(in oklab …)`, with an sRGB fallback), so the falloff stays luminous instead of going grey.
+- **Signature detail:** a soft white refracted sheen runs along the beam's edge.
+- **Grain:** desaturated fractal noise at 0.7 opacity in `overlay`. It textures the blue and disappears on white.
+- **Motion:** the light drifts 40s with no rotation, and stops under reduced motion.
+- **Contrast:** the deep blue is confined to the top-right corner so muted body text stays AA wherever it lands.
+
+- Page wrappers, sections and section dividers are transparent, so the sky never breaks into bands.
+- Cards keep solid `surface` fills and float on the sky.
+- The navbar, mobile dock and footer use frosted white glass (`nav-aurora`, `.kb-sky .kb-footer`).
+- `.home-page` (Home, About, Contact, Courses, Pricing) uses light tokens on the sky: ink `#0B1B33`, brand `#1D4ED8`. Product mockups keep their own dark hex palette.
+- The CSS lives in `src/index.css`, under "Kanthast Medical: flowing sky".
+
+## Brand and School pages (2026-10-22)
+
+- **Display type:** Bricolage Grotesque, now actually loaded (`tailwind.config.js` `display`, `index.html`). Body text stays in Inter.
+- **Track accents on the sky:** Professional is cobalt `--pro #1D4ED8`. School is marigold `--school #F2A007` for fills and `--school-ink #8A4B05` for text.
+- **Signature element:** `ScriptPage`, a real lesson script set as a screenplay, with direction and dialogue. Character names use caps because that is screenplay convention.
+- **SEO:** every landing page uses `components/Seo.jsx`, which sets the title, description, canonical, Open Graph, Twitter tags and JSON-LD. The schema builders are in `utils/seo.js`. `public/sitemap.xml` and `public/robots.txt` cover the public routes; login and signup are `noindex`.
