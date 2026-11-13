@@ -283,6 +283,7 @@ export default function Dashboard() {
           {/* Welcome row */}
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
             <div className="min-w-0">
+              <p className="kx-eyebrow mb-3">Your Dashboard</p>
               <h1 className="text-3xl md:text-4xl font-black tracking-tight text-ink">
                 Welcome back{firstName ? `, ${firstName}` : ""}
               </h1>

@@ -6,6 +6,8 @@ import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils
 import ScriptPage from "../components/landing/ScriptPage";
 import NeoZippy from "../components/landing/NeoZippy";
 import SCHOOL_CATALOG from "../data/schoolCatalog";
+import { Eyebrow, Accent } from "../components/ui/Brandmarks";
+import { FaArrowRight } from "react-icons/fa6";
 
 const { classes: CLASSES, totals: TOTALS } = SCHOOL_CATALOG;
 
@@ -108,7 +110,8 @@ export default function SchoolHomepage() {
 
       <section className="site-container grid items-center gap-12 pb-16 pt-16 md:pb-24 md:pt-24 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
         <div>
-          <h1 className="brand-title max-w-[15ch]">Every chapter, as a short cartoon that explains it properly.</h1>
+          <Eyebrow>Kanthast School · Classes VIII to X</Eyebrow>
+          <h1 className="brand-title kx-title mt-5 max-w-[15ch]">Every chapter, as a short cartoon that explains it <Accent>properly</Accent></h1>
           <p className="mt-6 max-w-[56ch] text-lg leading-relaxed text-ink-muted md:text-xl">
             Kanthast School turns the new NCERT books for Classes VIII to X into animated lessons of{" "}
             {SCHOOL_CATALOG.lessonLength}, guided by Neo the owl and Zippy the spark.
@@ -117,8 +120,8 @@ export default function SchoolHomepage() {
             All {TOTALS.lessons} lessons are scripted. The animated videos are being made now.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/signup" className="door-cta door-cta-school">Create a School account</Link>
-            <a href="#classes" className="door-cta school-cta-ghost">See what is covered</a>
+            <Link to="/signup" className="bh-btn bh-btn-amber">Create a School account <FaArrowRight aria-hidden="true" className="text-[0.8em]" /></Link>
+            <a href="#classes" className="bh-btn bh-btn-ghost">See what is covered</a>
           </div>
         </div>
         <NeoZippy />

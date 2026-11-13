@@ -158,7 +158,7 @@ export default function Profile() {
           className="rounded-3xl border border-slate-200 bg-white/90 backdrop-blur overflow-hidden shadow-e4"
         >
           {/* Banner with avatar + name + pills all inline */}
-          <div className="bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 relative px-4 sm:px-6 md:px-8 py-6">
+          <div className="bg-gradient-to-r from-blue-500 via-blue-500 to-indigo-500 relative px-4 sm:px-6 md:px-8 py-6">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_50%,rgba(255,255,255,0.14),transparent_55%)]" />
             <div className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="flex items-center gap-4">
@@ -224,7 +224,7 @@ export default function Profile() {
                   className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-semibold transition ${
                     isEditing
                       ? "border-slate-300 bg-slate-100 text-slate-600 hover:bg-slate-200"
-                      : "border-cyan-200 bg-cyan-50 text-cyan-700 hover:bg-cyan-100"
+                      : "border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100"
                   }`}
                 >
                   <FaPencilAlt className="text-xs" />
@@ -235,7 +235,7 @@ export default function Profile() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <FieldCard icon={<FaUserCircle />} iconBg="bg-blue-100" iconColor="text-blue-600" label="First Name" value={user?.firstName || "-"} />
                 <FieldCard icon={<FaUserCircle />} iconBg="bg-blue-100" iconColor="text-blue-600" label="Last Name" value={user?.lastName || "-"} />
-                <FieldCard icon={<FaEnvelope />} iconBg="bg-cyan-100" iconColor="text-cyan-600" label="Email Address" value={maskedEmail} />
+                <FieldCard icon={<FaEnvelope />} iconBg="bg-blue-100" iconColor="text-blue-600" label="Email Address" value={maskedEmail} />
                 <FieldCard
                   icon={<FaPhoneAlt />} iconBg="bg-slate-100" iconColor="text-slate-600"
                   label="Contact Number"
@@ -308,7 +308,7 @@ export default function Profile() {
                     onChange={(e) => setForm((prev) => ({ ...prev, about: e.target.value.slice(0, MAX_ABOUT) }))}
                     rows={8}
                     placeholder="Tell us about your goals, strengths, and learning style..."
-                    className="w-full flex-1 rounded-xl border border-slate-300 bg-slate-50 px-4 py-3 outline-none focus:ring-2 focus:ring-cyan-400 resize-none"
+                    className="w-full flex-1 rounded-xl border border-slate-300 bg-slate-50 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-400 resize-none"
                   />
                   <p className={`text-xs text-right mt-1 ${form.about.length >= MAX_ABOUT ? "text-red-500" : "text-ink-subtle"}`}>
                     {form.about.length}/{MAX_ABOUT}

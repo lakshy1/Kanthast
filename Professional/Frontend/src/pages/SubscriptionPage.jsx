@@ -214,13 +214,13 @@ export default function SubscriptionPage() {
         >
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">Subscription</p>
+              <p className="kx-eyebrow">Subscription</p>
               <h1 className="text-3xl md:text-4xl font-black text-ink mt-2">
                 Unlock USMLE / Medicine Content
               </h1>
               <p className="text-ink-muted mt-2">Get full access to every animated lesson, quiz, and progress tool.</p>
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-cyan-800 font-semibold">
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-blue-800 font-semibold">
               <FaStethoscope />
               USMLE / Medicine
             </div>
@@ -239,12 +239,12 @@ export default function SubscriptionPage() {
                 transition={{ duration: 0.22, ease: "easeOut" }}
                 className={`relative rounded-card border p-6 pt-8 ${
                   plan.highlight
-                    ? "border-cyan-300 bg-gradient-to-br from-cyan-50 to-blue-50"
+                    ? "border-blue-300 bg-gradient-to-br from-blue-50 to-blue-50"
                     : "border-line bg-surface"
                 }`}
               >
                 {plan.highlight && (
-                  <span className="absolute -top-3 left-5 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md tracking-wide">
+                  <span className="absolute -top-3 left-5 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md tracking-wide">
                     Recommended
                   </span>
                 )}
@@ -259,7 +259,7 @@ export default function SubscriptionPage() {
                   disabled={hasSubscription}
                   className={`btn-primary mt-6 w-full ${
                     plan.highlight
-                      ? "bg-cyan-600 text-white hover:bg-cyan-700"
+                      ? "bg-blue-600 text-white hover:bg-blue-700"
                       : ""
                   }`}
                 >
@@ -275,7 +275,7 @@ export default function SubscriptionPage() {
               Purchase unlocks all locked videos and images.
             </p>
             <p className="text-ink-muted text-sm mt-1">Need help before purchasing? Ask the chatbot.</p>
-            <Link to="/chatbot" className="inline-block mt-3 text-cyan-700 font-semibold hover:text-cyan-800">
+            <Link to="/chatbot" className="inline-block mt-3 text-blue-700 font-semibold hover:text-blue-800">
               Ask the Assistant
             </Link>
           </div>
@@ -301,7 +301,7 @@ export default function SubscriptionPage() {
             >
               <div className="flex items-start justify-between gap-3">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.14em] text-cyan-700 font-semibold">
+                  <p className="text-sm uppercase tracking-[0.14em] text-blue-700 font-semibold">
                     Secure Checkout
                   </p>
                   <h2 className="text-2xl font-black text-ink mt-1">{checkoutPlan.durationLabel}</h2>
@@ -327,8 +327,8 @@ export default function SubscriptionPage() {
                     {stepLabels.map((label, i) => (
                       <div key={label} className="flex items-center gap-1 flex-1">
                         <div className="flex flex-col items-center gap-1 flex-1">
-                          <div className={`h-1.5 w-full rounded-full transition-all duration-500 ${i <= stepIndex ? "bg-cyan-500" : "bg-line"}`} />
-                          <span className={`text-micro font-medium ${i <= stepIndex ? "text-cyan-700" : "text-ink-subtle"}`}>{label}</span>
+                          <div className={`h-1.5 w-full rounded-full transition-all duration-500 ${i <= stepIndex ? "bg-blue-500" : "bg-line"}`} />
+                          <span className={`text-micro font-medium ${i <= stepIndex ? "text-blue-700" : "text-ink-subtle"}`}>{label}</span>
                         </div>
                       </div>
                     ))}
@@ -338,7 +338,7 @@ export default function SubscriptionPage() {
 
               <div className="mt-3 rounded-control border border-line bg-surface-sunken px-4 py-3 flex items-center justify-between text-sm">
                 <span className="text-ink-muted flex items-center gap-2">
-                  <FaShieldAlt className="text-cyan-700" /> TLS encrypted payment form
+                  <FaShieldAlt className="text-blue-700" /> TLS encrypted payment form
                 </span>
                 <span className="font-semibold text-ink">USD {checkoutPlan.amountUsd}.00</span>
               </div>
@@ -402,7 +402,7 @@ export default function SubscriptionPage() {
 
               {checkoutStep === "otp" && (
                 <div className="mt-5 space-y-3">
-                  <div className="rounded-lg border border-cyan-200 bg-cyan-50 px-3 py-2 text-sm text-cyan-800">
+                  <div className="rounded-lg border border-blue-200 bg-blue-50 px-3 py-2 text-sm text-blue-800">
                     {otpNotice}
                   </div>
                   <Input

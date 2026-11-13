@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Eyebrow } from "../components/ui/Brandmarks";
 import { useLocation, Link } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import { FaArrowLeft, FaBookOpen, FaClock, FaLayerGroup, FaRegCheckCircle } from "react-icons/fa";
@@ -89,7 +90,7 @@ export default function SummaryPage() {
           transition={{ duration: 0.45, ease: "easeOut" }}
           className="mt-4 rounded-card border border-line bg-surface/90 backdrop-blur p-6 md:p-8 shadow-e4"
         >
-          <p className="text-sm uppercase tracking-[0.22em] text-cyan-700 font-semibold">Lecture Summary</p>
+          <Eyebrow>Lecture Summary</Eyebrow>
           <h1 className="mt-3 text-3xl md:text-5xl font-black text-ink leading-tight">{data.title}</h1>
 
           <div className="mt-5 flex flex-wrap gap-3">
@@ -163,16 +164,16 @@ export default function SummaryPage() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.16, duration: 0.45, ease: "easeOut" }}
-              className="rounded-card border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6 shadow-glow-brand"
+              className="rounded-card border border-blue-200 bg-gradient-to-br from-blue-50 to-blue-50 p-6 shadow-glow-brand"
             >
               <h3 className="text-xl font-bold text-ink">Quick Revision Sprint</h3>
               <p className="mt-3 text-ink-muted">
                 Use this mini plan right after watching to lock in retention.
               </p>
               <ol className="mt-5 space-y-3 text-ink-muted">
-                <li className="rounded-control bg-surface/80 border border-cyan-100 px-4 py-3">1. Read summary once.</li>
-                <li className="rounded-control bg-surface/80 border border-cyan-100 px-4 py-3">2. Say key points out loud.</li>
-                <li className="rounded-control bg-surface/80 border border-cyan-100 px-4 py-3">3. Test yourself in 2 minutes.</li>
+                <li className="rounded-control bg-surface/80 border border-blue-100 px-4 py-3">1. Read summary once.</li>
+                <li className="rounded-control bg-surface/80 border border-blue-100 px-4 py-3">2. Say key points out loud.</li>
+                <li className="rounded-control bg-surface/80 border border-blue-100 px-4 py-3">3. Test yourself in 2 minutes.</li>
               </ol>
             </motion.aside>
           </div>

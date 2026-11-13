@@ -5,9 +5,9 @@ import { FaCompass, FaHouse } from "react-icons/fa6";
 
 const NotFound = () => {
   return (
-    <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-[linear-gradient(180deg,#fbfdff_0%,#f5f9ff_52%,#edf5ff_100%)] px-4 py-16">
+    <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden px-4 py-16">
       <Helmet>
-        <title>Page Not Found | Kanthast</title>
+        <title>Page Not Found | Kanthast Professional</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.08)_1px,transparent_1px)] bg-[size:84px_84px] opacity-[0.16]" />
@@ -19,7 +19,7 @@ const NotFound = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
-          className="inline-flex items-center gap-2 rounded-full border border-[rgba(37,99,235,0.14)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(236,245,255,0.92))] px-4 py-2 text-micro font-semibold uppercase tracking-[0.2em] text-[#1d4ed8] shadow-glow-brand"
+          className="kx-eyebrow"
         >
           <FaCompass className="h-3.5 w-3.5" />
           404
@@ -29,10 +29,10 @@ const NotFound = () => {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.05 }}
-          className="mx-auto mt-6 text-balance text-[1.9rem] font-semibold leading-[0.98] tracking-[-0.075em] text-[#0d1d4d] sm:text-[2.35rem] lg:text-[2.85rem]"
+          className="mx-auto mt-6 text-balance text-[1.9rem] font-extrabold leading-[1.05] tracking-[-0.03em] text-ink sm:text-[2.35rem] lg:text-[2.85rem]"
         >
           This page went{" "}
-          <span className="text-[#2563eb]">off the map.</span>
+          <span className="kx-accent">off the map.</span>
         </motion.h1>
 
         <motion.p
@@ -53,14 +53,14 @@ const NotFound = () => {
         >
           <Link
             to="/"
-            className="inline-flex h-[2.75rem] items-center justify-center gap-2 rounded-[0.7rem] bg-[linear-gradient(135deg,#023e8a_0%,#00a6fb_100%)] px-6 text-mini font-semibold text-white shadow-glow-brand transition hover:brightness-110"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-brand px-6 text-sm font-semibold text-white shadow-glow-brand transition hover:bg-brand-hover"
           >
             <FaHouse className="h-4 w-4" />
             Back to Home
           </Link>
           <Link
             to="/contact"
-            className="inline-flex h-[2.75rem] items-center justify-center gap-2 rounded-[0.7rem] border border-[#e4eafb] bg-white px-6 text-mini font-semibold text-[#0d1d4d] shadow-e3 transition hover:bg-[#f5f9ff]"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-full border-[1.5px] border-line bg-white px-6 text-sm font-semibold text-ink transition hover:border-line-strong"
           >
             Contact Support
           </Link>

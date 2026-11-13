@@ -1,73 +1,95 @@
 import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
-import { SITE } from "../utils/siteContext";
 
-const socialLinks = [
-  { icon: <FaLinkedinIn />, label: "LinkedIn", href: "https://www.linkedin.com/company/kanthast/" },
+// Kanthast School footer, in the same design language as kanthast.in.
+// Links inside this app use the router (basename /school); the other apps are plain links.
+const COLUMNS = [
+  {
+    title: "Kanthast School",
+    links: [
+      { label: "Courses", to: "/courses" },
+      { label: "Library", to: "/library" },
+      { label: "Plans", to: "/subscription" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "Kanthast home", href: "/" },
+      { label: "Kanthast Professional", href: "/professional/" },
+      { label: "About", to: "/about" },
+      { label: "Contact Us", to: "/contact" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Terms of Use", to: "/terms" },
+      { label: "Privacy Policy", to: "/privacy" },
+      { label: "Refund Policy", to: "/refunds" },
+    ],
+  },
 ];
 
-const BLURB = "Visual learning for Classes 1 to 10: school subjects brought to life through immersive animation.";
-const STRAP = "Built for school learners, Classes 1 to 10";
-
-const Footer = () => {
+function KMark() {
   return (
-    <footer className="w-full kb-footer text-white">
-      <div className="site-container pt-12 pb-8">
+    <svg className="nav-k" viewBox="0 0 40 40" aria-hidden="true">
+      <defs>
+        <linearGradient id="foot-k-a" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#2563eb" />
+          <stop offset="1" stopColor="#1d4ed8" />
+        </linearGradient>
+        <linearGradient id="foot-k-b" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#60a5fa" />
+          <stop offset="1" stopColor="#3b82f6" />
+        </linearGradient>
+      </defs>
+      <rect x="4" y="3" width="10" height="34" rx="3.5" fill="url(#foot-k-a)" />
+      <path d="M17.5 21.5 L30 4.5 Q31.4 3 33.4 3 H37 Q38.6 3 37.6 4.4 L25 21.5 Z" fill="url(#foot-k-a)" />
+      <path d="M17.5 21.5 H25 L37.6 35.6 Q38.6 37 37 37 H33.4 Q31.4 37 30 35.5 Z" fill="url(#foot-k-b)" />
+    </svg>
+  );
+}
 
-        {/* Top: brand + columns */}
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-10 md:gap-16">
-
-          {/* Brand */}
-          <div className="flex flex-col gap-4">
-            <span className="text-xl font-black tracking-tight text-white">{SITE.name}</span>
-            <p className="text-sm text-white/70 leading-relaxed max-w-xs">
-              {BLURB}
-            </p>
-            <div className="flex flex-wrap gap-1 mt-1 -ml-2">
-              {socialLinks.map(({ icon, label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={label}
-                  className="btn-icon border border-white/15 bg-white/5 text-white/70 hover:text-white hover:border-white/40 hover:bg-white/10 text-sm"
-                >
-                  <span aria-hidden="true">{icon}</span>
-                </a>
-              ))}
-            </div>
+export default function Footer() {
+  return (
+    <footer className="kx-footer">
+      <div className="kx-footer-panel">
+        <div className="kx-footer-top">
+          <div className="kx-footer-brand">
+            <Link to="/" className="kx-footer-logo" aria-label="Kanthast School home">
+              <KMark />
+              <span>Kanthast <span className="kx-footer-track">School</span></span>
+            </Link>
+            <p>Short animated lessons for the new NCERT books, Classes VIII to X. Classes I to VII are planned.</p>
           </div>
-
-          {/* Company + Legal: side by side on mobile too */}
-          <div className="grid grid-cols-2 gap-8 md:contents">
-            <div className="flex flex-col gap-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70 mb-1">Company</p>
-              <HashLink smooth to={SITE.pricing} className="text-sm text-white/70 hover:text-white transition">Pricing</HashLink>
-              <Link to="/about" className="text-sm text-white/70 hover:text-white transition">About</Link>
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70 mb-1">Legal</p>
-              <Link to="/terms" className="text-sm text-white/70 hover:text-white transition">Terms of Use</Link>
-              <Link to="/privacy" className="text-sm text-white/70 hover:text-white transition">Privacy Policy</Link>
-              <Link to="/refunds" className="text-sm text-white/70 hover:text-white transition">Refund Policy</Link>
-              <Link to="/contact" className="text-sm text-white/70 hover:text-white transition">Contact Us</Link>
-            </div>
-          </div>
+          {COLUMNS.map((col) => (
+            <nav key={col.title} aria-label={col.title} className="kx-footer-col">
+              <p className="kx-footer-heading">{col.title}</p>
+              {col.links.map((l) =>
+                l.to ? (
+                  <Link key={l.label} to={l.to}>{l.label}</Link>
+                ) : (
+                  <a key={l.label} href={l.href}>{l.label}</a>
+                )
+              )}
+            </nav>
+          ))}
         </div>
-
-        {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-[#1d3249] flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/60">
-          <span>&copy; 2026 Kanthast Inc. All rights reserved.</span>
-          <span className="hidden sm:block">
-            {STRAP}
-          </span>
+        <div className="kx-footer-bottom">
+          <span className="kx-footer-copy">&copy; {new Date().getFullYear()} Kanthast. All rights reserved.</span>
+          <a
+            href="https://www.linkedin.com/company/kanthast/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Kanthast on LinkedIn"
+            className="kx-footer-social"
+          >
+            <FaLinkedinIn aria-hidden="true" />
+          </a>
+          <span className="kx-footer-strap">Made for learners in India and worldwide.</span>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Eyebrow, Accent } from "../components/ui/Brandmarks";
 import { Helmet } from "react-helmet-async";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
@@ -111,7 +112,7 @@ export default function Login() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)] px-4 py-12 flex items-center justify-center">
       <Helmet>
-        <title>School Login | Kanthast</title>
+        <title>Log In | Kanthast School</title>
         <meta name="description" content="Log in to Kanthast School to continue class-wise visual learning." />
         <link rel="canonical" href={`${SITE_URL}/login`} />
         <meta name="robots" content="noindex, follow" />
@@ -119,7 +120,7 @@ export default function Login() {
       <Motion.div
         animate={{ y: [0, -10, 0], opacity: [0.52, 0.75, 0.52] }}
         transition={{ duration: 5.6, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute -top-20 -left-16 h-72 w-72 rounded-full bg-cyan-300/25 blur-3xl"
+        className="pointer-events-none absolute -top-20 -left-16 h-72 w-72 rounded-full bg-blue-300/25 blur-3xl"
       />
       <Motion.div
         animate={{ y: [0, 12, 0], opacity: [0.4, 0.66, 0.4] }}
@@ -133,8 +134,8 @@ export default function Login() {
         className="relative z-10 w-full max-w-md rounded-3xl border border-white/60 bg-surface/70 p-7 md:p-9 backdrop-blur-2xl shadow-e5"
       >
         <Motion.div variants={itemVariants}>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">Welcome Back</p>
-          <h1 className="mt-2 text-3xl md:text-4xl font-black text-ink">Log In</h1>
+          <Eyebrow>Welcome Back</Eyebrow>
+          <h1 className="kx-title mt-4 text-4xl md:text-5xl">Log <Accent>In</Accent></h1>
           <p className="mt-2 text-sm md:text-base text-ink-muted">
             Continue your class-wise visual learning journey.
           </p>
@@ -185,7 +186,7 @@ export default function Login() {
 
           <Motion.p variants={itemVariants} className="text-center text-sm text-ink-muted">
             Don't have an account?{" "}
-            <Link to="/signup" className="font-semibold text-cyan-700 hover:text-cyan-800">
+            <Link to="/signup" className="font-semibold text-blue-700 hover:text-blue-800">
               Sign Up
             </Link>
           </Motion.p>

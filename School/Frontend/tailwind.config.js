@@ -12,7 +12,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
-        display: ["Bricolage Grotesque", "Plus Jakarta Sans", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Plus Jakarta Sans", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
 
       // ── Semantic color tokens ───────────────────────────────────────────
@@ -94,9 +94,9 @@ export default {
 
       // ── Radii: 3 roles, replacing 14 mixed values ───────────────────────
       borderRadius: {
-        control: "10px",
-        card: "16px",
-        sheet: "24px",
+        control: "14px",
+        card: "22px",
+        sheet: "28px",
       },
 
       // ── Motion: 3 durations + 1 curve ───────────────────────────────────
@@ -136,7 +136,7 @@ export default {
       // Colored glow as a drop-shadow (for SVG/icon glows, where box-shadow
       // does not apply). boxShadow keys do not generate drop-shadow-*.
       dropShadow: {
-        "glow-brand": "0 0 8px rgba(34, 211, 238, 0.6)",
+        "glow-brand": "0 0 8px rgba(29, 78, 216, 0.5)",
       },
 
       // Minimum comfortable touch target (WCAG 2.5.5 / Apple HIG).

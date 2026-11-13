@@ -33,7 +33,8 @@ const publicDockItems = [
   { to: "/contact", label: "Contact", icon: FaEnvelope, exact: false },
 ];
 
-const NAVBAR_H = "calc(var(--nav-bar-h, 4rem) + env(safe-area-inset-top, 0px))";
+// --nav-float-gap is the extra room the floating desktop bar needs (top offset + breathing space).
+const NAVBAR_H = "calc(var(--nav-bar-h, 4rem) + var(--nav-float-gap, 0px) + env(safe-area-inset-top, 0px))";
 const Navbar = () => {
   const [isDesktopUserOpen, setIsDesktopUserOpen] = useState(false);
   const [isMobileProfileOpen, setIsMobileProfileOpen] = useState(false);
@@ -161,7 +162,22 @@ const Navbar = () => {
         <div className="nav-shell mx-auto flex w-full items-center justify-between px-5 md:px-16 lg:w-[calc(var(--u)*85)] lg:max-w-none lg:px-0">
           <div className="flex min-w-0 items-center gap-3">
             <div className="nav-brand relative flex items-end gap-1.5">
-              <Link to="/" aria-label="Kanthast home" className="flex items-center focus-visible:outline-none">
+              <Link to="/" aria-label="Kanthast School home" className="flex items-center gap-2.5 focus-visible:outline-none">
+                <svg className="nav-k" viewBox="0 0 40 40" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="nav-k-a" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stopColor="#2563eb" />
+                      <stop offset="1" stopColor="#1d4ed8" />
+                    </linearGradient>
+                    <linearGradient id="nav-k-b" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stopColor="#60a5fa" />
+                      <stop offset="1" stopColor="#3b82f6" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="4" y="3" width="10" height="34" rx="3.5" fill="url(#nav-k-a)" />
+                  <path d="M17.5 21.5 L30 4.5 Q31.4 3 33.4 3 H37 Q38.6 3 37.6 4.4 L25 21.5 Z" fill="url(#nav-k-a)" />
+                  <path d="M17.5 21.5 H25 L37.6 35.6 Q38.6 37 37 37 H33.4 Q31.4 37 30 35.5 Z" fill="url(#nav-k-b)" />
+                </svg>
                 <span className="nav-logo block font-display text-2xl font-extrabold leading-none tracking-tight text-softwhite md:text-[1.8rem]">
                   Kanthast
                 </span>

@@ -58,12 +58,12 @@ export default function Contact() {
   return (
     <div className="home-page overflow-x-clip bg-surface text-ink">
       <Helmet>
-        <title>Contact Kanthast | Learning Support</title>
+        <title>Contact Kanthast Professional | NEET-PG, INI-CET and USMLE support</title>
         <meta name="description" content="Get in touch with the Kanthast team for support, partnerships, or questions about our medical learning platform." />
-        <link rel="canonical" href="https://kanthast.in/contact" />
-        <meta property="og:title" content="Contact Kanthast | Learning Support" />
+        <link rel="canonical" href="https://kanthast.in/professional/contact" />
+        <meta property="og:title" content="Contact Kanthast Professional | NEET-PG, INI-CET and USMLE support" />
         <meta property="og:description" content="Get in touch with the Kanthast team for support, partnerships, or questions about our medical learning platform." />
-        <meta property="og:url" content="https://kanthast.in/contact" />
+        <meta property="og:url" content="https://kanthast.in/professional/contact" />
       </Helmet>
 
       <PageHero

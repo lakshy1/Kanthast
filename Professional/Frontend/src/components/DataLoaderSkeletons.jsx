@@ -98,7 +98,7 @@ export function SummaryPageSkeleton() {
         </div>
       </article>
 
-      <aside className="rounded-card border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6 shadow-e2">
+      <aside className="rounded-card border border-blue-200 bg-gradient-to-br from-blue-50 to-blue-50 p-6 shadow-e2">
         <SkeletonBlock className="h-7 w-52" />
         <SkeletonBlock className="mt-4 h-4 w-full" />
         <div className="mt-5 space-y-3">

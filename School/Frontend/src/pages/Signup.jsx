@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Eyebrow, Accent } from "../components/ui/Brandmarks";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
@@ -123,7 +124,7 @@ export default function Signup() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_10%_10%,_#dbeafe,_#eff6ff_42%,_#ecfeff_100%)] px-4 py-12 flex items-center justify-center">
       <Helmet>
-        <title>School Sign Up | Kanthast</title>
+        <title>Sign Up | Kanthast School</title>
         <meta name="description" content="Create a Kanthast School account and choose a class from I-X." />
         <link rel="canonical" href={`${SITE_URL}/signup`} />
         <meta name="robots" content="noindex, follow" />
@@ -131,7 +132,7 @@ export default function Signup() {
       <motion.div
         animate={{ y: [0, -10, 0], opacity: [0.5, 0.72, 0.5] }}
         transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute -top-20 -left-16 h-72 w-72 rounded-full bg-cyan-300/25 blur-3xl"
+        className="pointer-events-none absolute -top-20 -left-16 h-72 w-72 rounded-full bg-blue-300/25 blur-3xl"
       />
       <motion.div
         animate={{ y: [0, 12, 0], opacity: [0.42, 0.68, 0.42] }}
@@ -146,8 +147,8 @@ export default function Signup() {
         className="relative z-10 w-full max-w-2xl rounded-3xl border border-white/60 bg-surface/70 p-7 md:p-9 backdrop-blur-2xl shadow-e5"
       >
         <motion.div variants={itemVariants} className="mb-7">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">Start Learning</p>
-          <h1 className="mt-2 text-3xl md:text-4xl font-black text-ink">Create Your Account</h1>
+          <Eyebrow>Start Learning</Eyebrow>
+          <h1 className="kx-title mt-4 text-3xl md:text-4xl">Create Your <Accent>Account</Accent></h1>
           <p className="mt-2 text-sm md:text-base text-ink-muted">
             Create a student account and choose the class to start with.
           </p>
@@ -294,7 +295,7 @@ export default function Signup() {
 
           <motion.p variants={itemVariants} className="text-center text-sm text-ink-muted">
             Already have an account?{" "}
-            <Link to="/login" className="font-semibold text-cyan-700 hover:text-cyan-800">
+            <Link to="/login" className="font-semibold text-blue-700 hover:text-blue-800">
               Log In
             </Link>
           </motion.p>

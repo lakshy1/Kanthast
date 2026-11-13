@@ -9,22 +9,24 @@
      Light is the default; dark redefines ONLY the values, so every component
      stays theme-agnostic and no color is defined solely inside a dark block. */
   :root {
+    /* Kanthast brand language (shared with the kanthast.in landing page):
+       light blue page, ink #0b1530, blue #1d4ed8, soft-blue shadows. */
     --surface: 255 255 255;
-    --surface-sunken: 248 250 252;
+    --surface-sunken: 238 243 253;   /* #eef3fd page background */
     --surface-raised: 255 255 255;
 
-    --ink: 15 23 42;
-    --ink-muted: 71 85 105;
-    --ink-subtle: 100 116 139;   /* 4.76:1 on white — the AA-safe body grey */
+    --ink: 11 21 48;                 /* #0b1530 */
+    --ink-muted: 60 74 99;           /* #3c4a63 */
+    --ink-subtle: 91 104 128;        /* #5b6880, 5.4:1 on white */
     --ink-inverse: 248 250 252;
 
-    --line: 226 232 240;
-    --line-strong: 203 213 225;
+    --line: 223 230 243;             /* #dfe6f3 */
+    --line-strong: 201 213 236;
 
-    --brand: 30 58 138;          /* navy blue #1E3A8A — 10.4:1 on white */
-    --brand-hover: 23 37 84;
-    --brand-soft: 238 242 255;
-    --brand-fg: 255 255 255;     /* 10.4:1 on brand fill */
+    --brand: 29 78 216;              /* #1d4ed8, 6.7:1 with white text */
+    --brand-hover: 30 64 175;
+    --brand-soft: 227 236 253;       /* #e3ecfd */
+    --brand-fg: 255 255 255;
 
     --positive: 5 150 105;
     --positive-soft: 236 253 245;
@@ -33,19 +35,16 @@
     --caution: 180 83 9;
     --caution-soft: 255 251 235;
 
-    /* Disabled buttons: a solid muted neutral, not a dimmed brand color —
-       opacity on `--brand` washes both fill and `--brand-fg` toward each
-       other and can drop well under AA contrast. */
     --disabled-bg: 226 232 240;
-    --disabled-fg: 100 116 139;   /* 4.6:1 on --disabled-bg */
+    --disabled-fg: 100 116 139;
 
-    --e1: 0 1px 2px rgba(15, 23, 42, .06);
-    --e2: 0 4px 12px -2px rgba(15, 23, 42, .08);
-    --e3: 0 12px 28px -6px rgba(15, 23, 42, .10);
-    --e4: 0 24px 60px -12px rgba(15, 23, 42, .14);
-    --e5: 0 40px 90px -20px rgba(15, 23, 42, .20);
+    --e1: 0 1px 2px rgba(30, 58, 138, .06);
+    --e2: 0 10px 24px -16px rgba(30, 58, 138, .35);
+    --e3: 0 18px 40px -28px rgba(30, 58, 138, .40);
+    --e4: 0 24px 50px -30px rgba(30, 58, 138, .45);
+    --e5: 0 30px 70px -40px rgba(30, 58, 138, .45);
 
-    --glow-brand: 0 14px 34px -10px rgba(30, 58, 138, .40);
+    --glow-brand: 0 10px 24px -10px rgba(29, 78, 216, .70);
     --glow-positive: 0 14px 34px -10px rgba(5, 150, 105, .40);
     --glow-caution: 0 14px 34px -10px rgba(180, 83, 9, .38);
   }
@@ -197,14 +196,14 @@
      Every one clears the 44px touch minimum. */
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-control
+    @apply inline-flex items-center justify-center gap-2 rounded-full
            font-semibold min-h-touch px-5 py-3 text-sm
            transition-colors duration-fast ease-brand
            disabled:cursor-not-allowed disabled:bg-disabled disabled:text-disabled-fg
            disabled:shadow-none disabled:hover:bg-disabled;
   }
   .btn-primary {
-    @apply btn bg-brand text-brand-fg shadow-e2 hover:bg-brand-hover;
+    @apply btn bg-brand text-brand-fg shadow-glow-brand hover:bg-brand-hover;
   }
   .btn-secondary {
     @apply btn border border-line-strong bg-surface text-ink hover:bg-surface-sunken;
@@ -235,7 +234,7 @@
   }
 
   .card {
-    @apply rounded-card border border-line bg-surface shadow-e2;
+    @apply rounded-card border border-[#edf1fa] bg-surface shadow-e3;
   }
 
   /* ── Kanthast navy: the brand stage ────────────────────────────────────
@@ -1057,3 +1056,149 @@
   --pro-hover: #1e40af;
 }
 
+
+/* ══ Kanthast brand language (matches the kanthast.in landing page) ══════════
+   One look across Brand, Professional and School: light blue page, Plus
+   Jakarta Sans 800 headings, eyebrow pills, white cards with soft blue
+   shadows, pill buttons, floating rounded navbar, 95% content width. */
+:root {
+  --kb-edge: 2.5vw;               /* content spans 95% of the screen width */
+  --kx-ink: #0b1530;
+  --kx-muted: #3c4a63;
+  --kx-blue: #1d4ed8;
+  --kx-soft: #e3ecfd;
+  --kx-line: #dfe6f3;
+  --kx-card-border: #edf1fa;
+}
+
+/* Page background: the landing page's calm light blue with one soft bloom,
+   replacing the animated cobalt beam and film grain. */
+body { background-color: #eef3fd; }
+.kb-sky-bg { background-color: #eef3fd; }
+.kb-sky-bg::before {
+  inset: 0;
+  background-image:
+    radial-gradient(55% 55% at 85% 8%, rgba(147, 180, 255, 0.35), transparent 70%),
+    radial-gradient(40% 40% at 0% 100%, rgba(191, 208, 243, 0.35), transparent 70%);
+  animation: none;
+}
+.kb-sky-bg::after { display: none; }
+
+/* Headings: Plus Jakarta Sans ExtraBold with tight tracking, everywhere. */
+main h1, main h2, main h3 {
+  font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+main h1, main h2 { font-weight: 800; }
+
+/* Eyebrow pill above page and section headings. */
+.kx-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content;
+  padding: 0.45rem 1rem; border-radius: 999px;
+  background: var(--kx-soft); color: var(--kx-blue);
+  font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 600; font-size: 0.9rem;
+  letter-spacing: 0; text-transform: none; line-height: 1.2;
+}
+.kx-eyebrow svg { font-size: 0.75em; }
+
+/* Accent word with the hand-drawn underline. */
+.kx-accent { color: var(--kx-blue); }
+.kx-u { position: relative; display: inline-block; white-space: nowrap; }
+.kx-u > svg {
+  position: absolute; left: -2%; bottom: -0.2em; width: 104%; height: 0.24em; overflow: visible;
+  fill: none; stroke: var(--kx-blue); stroke-width: 3.2; stroke-linecap: round;
+}
+
+/* 95% width everywhere. */
+.site-container { width: 100%; max-width: none; padding-left: var(--kb-edge); padding-right: var(--kb-edge); }
+@media (min-width: 640px) { .site-container { padding-left: var(--kb-edge); padding-right: var(--kb-edge); } }
+@media (min-width: 1024px) { .site-container { width: 100%; padding-left: var(--kb-edge); padding-right: var(--kb-edge); } }
+
+/* Fields: brand line colour and a blue focus ring. */
+.field { border-color: var(--kx-line); }
+.field:focus { border-color: var(--kx-blue); box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.14); outline: none; }
+
+/* ── Navbar: floating rounded bar on desktop, K mark, pill buttons ───────── */
+.nav-k { width: 2.4rem; height: 2.4rem; flex: none; }
+.kb-bar.nav-aurora .nav-logo { color: var(--kx-ink); font-family: "Plus Jakarta Sans", Inter, sans-serif; letter-spacing: -0.02em; }
+.kb-bar.nav-aurora .nav-link { color: #2a3d5c; }
+.kb-bar.nav-aurora .nav-login,
+.kb-bar.nav-aurora .nav-m-login {
+  border-radius: 999px; background: #fff; color: var(--kx-ink); border: 1.5px solid #cfd9ee;
+}
+.kb-bar.nav-aurora .nav-signup,
+.kb-bar.nav-aurora .nav-m-signup {
+  border-radius: 999px; background: var(--kx-blue); color: #fff; box-shadow: 0 10px 22px -12px rgba(29, 78, 216, 0.8);
+}
+.kb-bar.nav-aurora [aria-label="Account menu"] { border-color: var(--kx-line); background: #fff; }
+.kb-bar.nav-aurora [aria-label="Account menu"] svg { color: #5b6880; }
+.kb-bar.nav-aurora [aria-label="Assistant"] { border-color: var(--kx-line); background: var(--kx-soft); color: var(--kx-blue); }
+@media (min-width: 1024px) {
+  :root { --nav-offset: 1.75rem; }
+  nav.kb-bar.nav-aurora.fixed {
+    top: 12px; left: var(--kb-edge); right: var(--kb-edge); width: auto;
+    border: 1px solid rgba(223, 230, 243, 0.9); border-radius: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 16px 40px -24px rgba(30, 58, 138, 0.28);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  }
+  nav.kb-bar.nav-aurora.fixed .nav-shell { width: 100%; padding: 0 1.25rem 0 1.1rem; }
+  nav.kb-bar.nav-aurora .nav-login,
+  nav.kb-bar.nav-aurora .nav-signup { padding-inline: 1.5rem; }
+}
+/* Mobile dock: white glass with the brand blue for the active item. */
+.nav-dock.nav-aurora .nav-dock-bar { background-color: rgba(255, 255, 255, 0.92); border-color: var(--kx-line); }
+.nav-dock.nav-aurora .nav-dock-fade { background-image: linear-gradient(to top, rgba(238, 243, 253, 0.85), transparent); }
+
+/* ── Footer panel (same as the landing page) ─────────────────────────────── */
+.kb-sky .footer-wrap { background: transparent; }
+.kx-footer { padding: clamp(1.5rem, 3vw, 2.5rem) var(--kb-edge) clamp(1.25rem, 2.4vw, 2rem); color: var(--kx-ink); }
+.kx-footer-panel {
+  border-radius: 32px; background: #fff; border: 1px solid var(--kx-card-border); box-shadow: 0 30px 70px -44px rgba(30, 58, 138, 0.35);
+  padding: clamp(1.5rem, 3vw, 2.75rem) clamp(1.25rem, 3vw, 2.75rem) clamp(1.1rem, 2vw, 1.5rem);
+}
+.kx-footer-top { display: grid; gap: 2rem; }
+.kx-footer-logo { display: inline-flex; align-items: center; gap: 0.6rem; font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 800; font-size: 1.6rem; letter-spacing: -0.02em; color: var(--kx-ink); }
+.kx-footer-sub { font-size: 0.8rem; font-weight: 700; color: var(--kx-blue); letter-spacing: 0; }
+.kx-footer-brand p { margin-top: 0.9rem; max-width: 24rem; color: var(--kx-muted); line-height: 1.55; }
+.kx-footer-social {
+  display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 999px;
+  background: var(--kx-soft); color: var(--kx-blue); transition: background-color 150ms ease, color 150ms ease;
+}
+.kx-footer-social:hover { background: var(--kx-blue); color: #fff; }
+.kx-footer-col { display: grid; align-content: start; gap: 0.7rem; }
+.kx-footer-heading { font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--kx-ink); margin-bottom: 0.2rem; }
+.kx-footer-col a { color: var(--kx-muted); font-size: 0.95rem; transition: color 150ms ease; }
+.kx-footer-col a:hover { color: var(--kx-blue); }
+/* Bottom bar: copyright left, LinkedIn centred, strapline right; stacked on phones. */
+.kx-footer-bottom {
+  margin-top: 2rem; padding-top: 1.1rem; border-top: 1px solid var(--kx-line);
+  display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; align-items: center; gap: 0.75rem;
+  text-align: center; font-size: 0.85rem; color: #5b6880;
+}
+@media (min-width: 640px) {
+  .kx-footer-top { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kx-footer-brand { grid-column: 1 / -1; }
+  .kx-footer-bottom { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); text-align: left; }
+  .kx-footer-copy { justify-self: start; }
+  .kx-footer-strap { justify-self: end; text-align: right; }
+}
+@media (min-width: 1024px) {
+  .kx-footer-top { grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); }
+  .kx-footer-brand { grid-column: auto; }
+}
+@media (max-width: 1023px) { .kx-footer { padding-bottom: 5.5rem; } } /* clears the mobile bottom dock */
+
+/* Headings and hero controls that set Inter or square corners in their own rules. */
+.hero-title, .home-page h2, .home-page h3 {
+  font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+.hero-btn { border-radius: 999px; min-height: 48px; }
+.page-aurora .hero-btn-secondary { background-color: #fff; border: 1.5px solid var(--kx-line); }
+.hero .kx-eyebrow { margin-bottom: 1.25rem; }
+
+/* Homepage hero on the 95% grid (its own rule used 90 hero units). */
+@media (min-width: 1024px) {
+  .hero-inner { width: 100%; padding-left: var(--kb-edge); padding-right: var(--kb-edge); grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 2rem; }
+}

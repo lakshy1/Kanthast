@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -54,48 +54,58 @@
 
     <!-- Structured Data: Organization + WebSite + SiteNavigation -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebPage",
+      "@id": "https://kanthast.in/professional/#webpage",
+      "url": "https://kanthast.in/professional/",
+      "name": "Kanthast Professional",
+      "description": "Animated medical lectures for NEET-PG, INI-CET and USMLE, organised subject by subject and chapter by chapter.",
+      "isPartOf": {
+        "@id": "https://kanthast.in/#website"
+      },
+      "about": {
+        "@id": "https://kanthast.in/#organization"
+      },
+      "keywords": "NEET-PG, INI-CET, USMLE",
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kanthast.in/professional/#product",
+      "name": "Kanthast Professional",
+      "url": "https://kanthast.in/professional/",
+      "parentOrganization": {
+        "@id": "https://kanthast.in/#organization",
+        "name": "Kanthast",
+        "url": "https://kanthast.in/"
+      },
+      "logo": "https://kanthast.in/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/kanthast/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "Organization",
-          "@id": "https://kanthast.in/professional/#organization",
+          "@type": "ListItem",
+          "position": 1,
           "name": "Kanthast",
-          "url": "https://kanthast.in/professional",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://kanthast.in/professional/logo.png"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/company/kanthast/"
-          ]
+          "item": "https://kanthast.in/"
         },
         {
-          "@type": "WebSite",
-          "@id": "https://kanthast.in/professional/#website",
-          "url": "https://kanthast.in/professional",
-          "name": "Kanthast",
-          "publisher": { "@id": "https://kanthast.in/professional/#organization" },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://kanthast.in/professional/courses?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        },
-        {
-          "@type": "SiteNavigationElement",
-          "@id": "https://kanthast.in/professional/#navigation",
-          "name": ["Courses", "About", "Contact", "Log In", "Sign Up"],
-          "url": [
-            "https://kanthast.in/professional/courses",
-            "https://kanthast.in/professional/about",
-            "https://kanthast.in/professional/contact",
-            "https://kanthast.in/professional/login",
-            "https://kanthast.in/professional/signup"
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kanthast Professional",
+          "item": "https://kanthast.in/professional/"
         }
       ]
     }
+  ]
+}
     </script>
   </head>
   <body>

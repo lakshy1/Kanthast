@@ -56,12 +56,12 @@ export default function About() {
   return (
     <div className="home-page overflow-x-clip bg-surface text-ink">
       <Helmet>
-        <title>About Kanthast | Visual Learning That Sticks</title>
+        <title>About Kanthast Professional | Animated lectures for medical exams</title>
         <meta name="description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, NEET PG, and INI CET students." />
-        <link rel="canonical" href="https://kanthast.in/about" />
-        <meta property="og:title" content="About Kanthast | Visual Learning That Sticks" />
+        <link rel="canonical" href="https://kanthast.in/professional/about" />
+        <meta property="og:title" content="About Kanthast Professional | Animated lectures for medical exams" />
         <meta property="og:description" content="Learn about Kanthast's mission to transform medical education through immersive visual learning — built by educators for USMLE, NEET PG, and INI CET students." />
-        <meta property="og:url" content="https://kanthast.in/about" />
+        <meta property="og:url" content="https://kanthast.in/professional/about" />
       </Helmet>
 
       <PageHero

@@ -15,11 +15,11 @@ export default function PageLoader() {
         className="relative h-60 w-60 rounded-full border border-white/20 bg-white/10 shadow-e5 backdrop-blur-2xl"
       >
         <motion.div
-          className="absolute inset-3 rounded-full border border-cyan-200/35"
+          className="absolute inset-3 rounded-full border border-blue-200/35"
           animate={{ rotate: 360 }}
           transition={{ duration: 8, ease: "linear", repeat: Infinity }}
         >
-          <span className="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-cyan-300 shadow-glow-brand" />
+          <span className="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-blue-300 shadow-glow-brand" />
         </motion.div>
 
         <motion.div
@@ -40,7 +40,7 @@ export default function PageLoader() {
           <motion.div
             animate={{ scale: [0.95, 1.08, 0.95], opacity: [0.75, 1, 0.75] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-            className="grid h-24 w-24 place-items-center rounded-full border border-white/35 bg-gradient-to-br from-cyan-300/45 via-white/25 to-blue-300/40 text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-[inset_0_2px_10px_rgba(255,255,255,0.35)]"
+            className="grid h-24 w-24 place-items-center rounded-full border border-white/35 bg-gradient-to-br from-blue-300/45 via-white/25 to-blue-300/40 text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-[inset_0_2px_10px_rgba(255,255,255,0.35)]"
           >
             Loading
           </motion.div>
@@ -48,7 +48,7 @@ export default function PageLoader() {
       </motion.div>
 
       <motion.div
-        className="pointer-events-none absolute h-96 w-96 rounded-full bg-cyan-300/10 blur-3xl"
+        className="pointer-events-none absolute h-96 w-96 rounded-full bg-blue-300/10 blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.55, 0.3] }}
         transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -60,7 +60,7 @@ export default function PageLoader() {
       />
 
       <motion.div
-        className="pointer-events-none absolute left-[14%] bottom-[16%] h-32 w-32 rounded-full bg-cyan-200/15 blur-3xl"
+        className="pointer-events-none absolute left-[14%] bottom-[16%] h-32 w-32 rounded-full bg-blue-200/15 blur-3xl"
         animate={{ y: [0, 12, 0], x: [0, -10, 0] }}
         transition={{ duration: 4.6, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -69,7 +69,7 @@ export default function PageLoader() {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: [0.45, 0.85, 0.45], y: 0 }}
         transition={{ duration: 1.7, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-[14%] text-xs font-medium uppercase tracking-[0.3em] text-cyan-100/90"
+        className="absolute bottom-[14%] text-xs font-medium uppercase tracking-[0.3em] text-blue-100/90"
       >
         Kanthast
       </motion.p>

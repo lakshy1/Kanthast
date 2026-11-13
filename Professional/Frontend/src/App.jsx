@@ -2,6 +2,7 @@ import "./App.css";
 import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence, MotionConfig } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -118,6 +119,19 @@ function GlobalScrollbar() {
         style={{ top: 0 }}
       />
     </div>
+  );
+}
+
+// Account, player and admin pages are for signed-in users, not search results.
+const NOINDEX_PATH = /^\/(login|signup|dashboard|profile|settings|video|summary|images|chatbot|subscription|admin|adminlogin)(\/|$)/;
+
+function RouteRobots() {
+  const { pathname } = useLocation();
+  if (!NOINDEX_PATH.test(pathname)) return null;
+  return (
+    <Helmet>
+      <meta name="robots" content="noindex, follow" />
+    </Helmet>
   );
 }
 
@@ -259,6 +273,7 @@ function App() {
           Skip to main content
         </a>
         <GlobalScrollbar />
+        <RouteRobots />
         <OfflineBanner />
 
         {!isAdminRoute && !isGatedRoute && <Navbar />}
@@ -318,7 +333,7 @@ function App() {
 
           {/* Footer: hidden on mobile when logged in (bottom dock handles nav) */}
           {!isAdminRoute && !isGatedRoute && (
-            <div className={hasAuth() ? "footer-wrap hidden bg-[#060e1b] md:block md:pb-16 lg:pb-0" : "footer-wrap bg-[#060e1b] pb-16 lg:pb-0"}>
+            <div className={hasAuth() ? "footer-wrap hidden md:block" : "footer-wrap"}>
               <Footer />
             </div>
           )}

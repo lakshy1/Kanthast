@@ -388,6 +388,7 @@ const Homepage = () => {
         <section className="hero">
           <div className="hero-inner">
             <div className="hero-copy">
+              <p className="kx-eyebrow">Kanthast Professional</p>
               <h1 className="hero-title">
                 <span className="block">Medicine, explained</span>
                 <span className="hero-accent block"><TypedAccent text="in motion." /></span>

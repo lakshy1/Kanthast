@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { SITE_URL } from "../utils/seo";
+import { Eyebrow, Accent } from "../components/ui/Brandmarks";
 
 // Plain-language policy pages. Every statement describes what the product
 // does today (see PRODUCT.md and the backend models); nothing here invents a
@@ -120,13 +121,14 @@ export default function Legal({ doc }) {
   const page = DOCS[doc];
 
   return (
-    <div className="min-h-screen bg-surface text-ink">
+    <div className="min-h-screen text-ink">
       <Helmet>
-        <title>{`${page.title} | Kanthast`}</title>
+        <title>{`${page.title} | Kanthast School`}</title>
         <link rel="canonical" href={`${SITE_URL}/${doc}`} />
       </Helmet>
-      <article className="mx-auto max-w-3xl px-6 py-16 md:px-8 md:py-24">
-        <h1 className="text-4xl font-bold tracking-tight md:text-5xl">{page.title}</h1>
+      <article className="mx-auto my-10 max-w-3xl rounded-sheet border border-[#edf1fa] bg-surface px-6 py-10 shadow-e3 md:my-14 md:px-12 md:py-14">
+        <Eyebrow>Legal</Eyebrow>
+        <h1 className="kx-title mt-4 text-4xl md:text-5xl">{page.title}</h1>
         <p className="mt-3 text-sm text-ink-subtle">Last updated {UPDATED}</p>
         <p className="mt-6 text-lg leading-relaxed text-ink-muted">{page.intro}</p>
 

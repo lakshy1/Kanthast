@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Button, Field } from "../components/ui";
 import { adminLogin } from "../utils/authApi";
+import { Eyebrow, Accent } from "../components/ui/Brandmarks";
 
 export default function AdminLogin() {
   const navigate = useNavigate();
@@ -27,15 +28,15 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_#cffafe,_#e2e8f0_55%,_#f8fafc)] grid place-items-center px-4">
+    <div className="min-h-screen bg-[radial-gradient(60%_60%_at_75%_25%,rgba(147,180,255,0.35),transparent_70%),#eef3fd] grid place-items-center px-4">
       <motion.form
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         onSubmit={onSubmit}
-        className="w-full max-w-md rounded-3xl border border-line bg-surface p-7 shadow-e4"
+        className="w-full max-w-md rounded-sheet border border-[#edf1fa] bg-surface p-7 shadow-e5"
       >
-        <p className="text-xs font-semibold tracking-[0.18em] text-cyan-700 uppercase">Admin Access</p>
-        <h1 className="mt-2 text-3xl font-black text-ink">Admin Login</h1>
+        <Eyebrow>Admin Access</Eyebrow>
+        <h1 className="kx-title mt-4 text-3xl">Admin <Accent>Login</Accent></h1>
         <p className="text-sm text-ink-muted mt-1">Secure access to Kanthast control panel.</p>
 
         <Field

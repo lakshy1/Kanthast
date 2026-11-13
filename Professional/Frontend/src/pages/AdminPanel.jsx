@@ -595,7 +595,7 @@ export default function AdminPanel() {
         <div className="rounded-3xl border border-line bg-surface shadow-e4 overflow-hidden">
           <header className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white px-5 py-4 flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p className="text-xs uppercase tracking-[0.18em] text-cyan-300">Kanthast</p>
+              <p className="text-xs uppercase tracking-[0.18em] text-blue-300">Kanthast</p>
               <h1 className="text-2xl md:text-3xl font-black">Admin Panel</h1>
             </div>
             <div className="flex items-center gap-3">

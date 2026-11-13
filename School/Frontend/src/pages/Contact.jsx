@@ -59,10 +59,10 @@ export default function Contact() {
   return (
     <div className="home-page overflow-x-clip bg-surface text-ink">
       <Helmet>
-        <title>Contact Kanthast | Learning Support</title>
+        <title>Contact Kanthast School | Questions about classes and plans</title>
         <meta name="description" content="Get in touch with the Kanthast team for support, partnerships, or questions about Kanthast School." />
         <link rel="canonical" href={`${SITE_URL}/contact`} />
-        <meta property="og:title" content="Contact Kanthast | Learning Support" />
+        <meta property="og:title" content="Contact Kanthast School | Questions about classes and plans" />
         <meta property="og:description" content="Get in touch with the Kanthast team for support, partnerships, or questions about Kanthast School." />
         <meta property="og:url" content={`${SITE_URL}/contact`} />
       </Helmet>
@@ -80,7 +80,7 @@ export default function Contact() {
             ].map((item) => {
               const body = (
                 <>
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-control bg-brand-soft text-lg text-brand">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-brand-soft text-lg text-brand">
                     {item.icon}
                   </span>
                   <span>

@@ -36,7 +36,7 @@ export default function EdtechLoader() {
           </svg>
 
           <motion.div
-            className="absolute top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-cyan-200 shadow-glow-brand"
+            className="absolute top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-blue-200 shadow-glow-brand"
             animate={{ left: ["-2%", "102%"] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -50,7 +50,7 @@ export default function EdtechLoader() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: index * 0.06, duration: 0.3 }}
-                className="bg-gradient-to-r from-cyan-200 via-cyan-100 to-blue-200 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-blue-200 via-blue-100 to-blue-200 bg-clip-text text-transparent"
               >
                 {letter}
               </motion.span>

@@ -54,10 +54,10 @@ export default function About() {
   return (
     <div className="home-page overflow-x-clip bg-surface text-ink">
       <Helmet>
-        <title>About Kanthast School | Visual Learning That Sticks</title>
+        <title>About Kanthast School | Animated NCERT lessons for Classes VIII to X</title>
         <meta name="description" content="Learn about Kanthast School: short animated lessons for the new NCERT books, built to make school subjects visual and easy to follow." />
         <link rel="canonical" href={`${SITE_URL}/about`} />
-        <meta property="og:title" content="About Kanthast School | Visual Learning That Sticks" />
+        <meta property="og:title" content="About Kanthast School | Animated NCERT lessons for Classes VIII to X" />
         <meta property="og:description" content="Learn about Kanthast School: short animated lessons for the new NCERT books, built to make school subjects visual and easy to follow." />
         <meta property="og:url" content={`${SITE_URL}/about`} />
       </Helmet>

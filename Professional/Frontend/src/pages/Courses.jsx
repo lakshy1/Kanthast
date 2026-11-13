@@ -56,22 +56,22 @@ export default function Courses() {
   return (
     <div className="home-page overflow-x-clip bg-surface text-ink">
       <Helmet>
-        <title>Medical Courses | USMLE, NEET PG & INI CET Prep — Kanthast</title>
+        <title>Medical Courses for NEET-PG, INI-CET and USMLE | Kanthast Professional</title>
         <meta name="description" content="Explore Kanthast's visual medical courses for USMLE, NEET PG, and INI CET. 3D animations, clinical cases, and high-yield exam-focused preparation." />
-        <link rel="canonical" href="https://kanthast.in/courses" />
-        <meta property="og:title" content="Medical Courses | USMLE, NEET PG & INI CET Prep — Kanthast" />
+        <link rel="canonical" href="https://kanthast.in/professional/courses" />
+        <meta property="og:title" content="Medical Courses for NEET-PG, INI-CET and USMLE | Kanthast Professional" />
         <meta property="og:description" content="Explore Kanthast's visual medical courses for USMLE, NEET PG, and INI CET. 3D animations, clinical cases, and high-yield exam-focused preparation." />
-        <meta property="og:url" content="https://kanthast.in/courses" />
+        <meta property="og:url" content="https://kanthast.in/professional/courses" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
           "name": "Kanthast Professional Courses",
           "description": "Visual medical education courses for USMLE, NEET PG, and INI CET preparation.",
-          "url": "https://kanthast.in/courses",
+          "url": "https://kanthast.in/professional/courses",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Medicine / USMLE", "url": "https://kanthast.in/courses#medicine" },
-            { "@type": "ListItem", "position": 2, "name": "NEET PG", "url": "https://kanthast.in/courses#neet-pg" },
-            { "@type": "ListItem", "position": 3, "name": "INI CET", "url": "https://kanthast.in/courses#ini-cet" }
+            { "@type": "ListItem", "position": 1, "name": "Medicine / USMLE", "url": "https://kanthast.in/professional/courses#medicine" },
+            { "@type": "ListItem", "position": 2, "name": "NEET PG", "url": "https://kanthast.in/professional/courses#neet-pg" },
+            { "@type": "ListItem", "position": 3, "name": "INI CET", "url": "https://kanthast.in/professional/courses#ini-cet" }
           ]
         })}</script>
       </Helmet>

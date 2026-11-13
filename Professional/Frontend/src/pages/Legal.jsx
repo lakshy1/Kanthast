@@ -119,13 +119,14 @@ export default function Legal({ doc }) {
   const page = DOCS[doc];
 
   return (
-    <div className="min-h-screen bg-surface text-ink">
+    <div className="min-h-screen text-ink">
       <Helmet>
-        <title>{`${page.title} | Kanthast`}</title>
-        <link rel="canonical" href={`https://kanthast.in/${doc}`} />
+        <title>{`${page.title} | Kanthast Professional`}</title>
+        <link rel="canonical" href={`https://kanthast.in/professional/${doc}`} />
       </Helmet>
-      <article className="mx-auto max-w-3xl px-6 py-16 md:px-8 md:py-24">
-        <h1 className="text-4xl font-bold tracking-tight md:text-5xl">{page.title}</h1>
+      <article className="mx-auto my-10 max-w-3xl rounded-sheet border border-[#edf1fa] bg-surface px-6 py-10 shadow-e5 md:my-16 md:px-12 md:py-14">
+        <p className="kx-eyebrow">Legal</p>
+        <h1 className="mt-4 text-4xl font-extrabold md:text-5xl">{page.title}</h1>
         <p className="mt-3 text-sm text-ink-subtle">Last updated {UPDATED}</p>
         <p className="mt-6 text-lg leading-relaxed text-ink-muted">{page.intro}</p>
 

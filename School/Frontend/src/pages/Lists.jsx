@@ -13,6 +13,7 @@ import {
   setSelectedSchoolClass,
   schoolClassOptions,
 } from "../utils/schoolCatalogData";
+import { Eyebrow, Accent } from "../components/ui/Brandmarks";
 
 // Auto-generated school lecture titles all end in "... {chapter name}" (see
 // SUBJECT_TOPIC_PATTERNS in schoolCatalogData.js), which is redundant once the
@@ -392,8 +393,8 @@ export default function Lists() {
           >
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand">Kanthast School</p>
-                <h1 className="mt-2 text-2xl font-black text-ink md:text-3xl">Select class and explore subject-wise topics</h1>
+                <Eyebrow>Kanthast School Library</Eyebrow>
+                <h1 className="kx-title mt-3 text-2xl md:text-3xl">Select a class and explore <Accent>topics</Accent></h1>
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-muted">
                   Each subject opens chapter-wise topics with Notes and Video for every lesson.
                   Free accounts can open the first 10 topics — full access unlocks after subscription.

@@ -27,15 +27,15 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_#cffafe,_#e2e8f0_55%,_#f8fafc)] grid place-items-center px-4">
+    <div className="min-h-screen grid place-items-center px-4">
       <motion.form
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         onSubmit={onSubmit}
-        className="w-full max-w-md rounded-3xl border border-line bg-surface p-7 shadow-e4"
+        className="w-full max-w-md rounded-sheet border border-[#edf1fa] bg-surface p-7 shadow-e5"
       >
-        <p className="text-xs font-semibold tracking-[0.18em] text-cyan-700 uppercase">Admin Access</p>
-        <h1 className="mt-2 text-3xl font-black text-ink">Admin Login</h1>
+        <p className="kx-eyebrow">Admin Access</p>
+        <h1 className="mt-3 text-3xl font-black text-ink">Admin <span className="kx-u kx-accent">Login<svg viewBox="0 0 200 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 50 5, 120 3, 197 9" /></svg></span></h1>
         <p className="text-sm text-ink-muted mt-1">Secure access to Kanthast control panel.</p>
 
         <Field

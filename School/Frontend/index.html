@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -54,43 +54,58 @@
 
     <!-- Structured Data: Organization + WebSite + SiteNavigation -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebPage",
+      "@id": "https://kanthast.in/school/#webpage",
+      "url": "https://kanthast.in/school/",
+      "name": "Kanthast School",
+      "description": "Animated lessons for the new NCERT books for Classes VIII to X, guided by Neo the owl and Zippy the spark.",
+      "isPartOf": {
+        "@id": "https://kanthast.in/#website"
+      },
+      "about": {
+        "@id": "https://kanthast.in/#organization"
+      },
+      "keywords": "NCERT Class VIII, NCERT Class IX, NCERT Class X",
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kanthast.in/school/#product",
+      "name": "Kanthast School",
+      "url": "https://kanthast.in/school/",
+      "parentOrganization": {
+        "@id": "https://kanthast.in/#organization",
+        "name": "Kanthast",
+        "url": "https://kanthast.in/"
+      },
+      "logo": "https://kanthast.in/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/kanthast/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "Organization",
-          "@id": "https://kanthast.in/school/#organization",
+          "@type": "ListItem",
+          "position": 1,
           "name": "Kanthast",
-          "url": "https://kanthast.in/school",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://kanthast.in/school/logo.png"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/company/kanthast/"
-          ]
+          "item": "https://kanthast.in/"
         },
         {
-          "@type": "WebSite",
-          "@id": "https://kanthast.in/school/#website",
-          "url": "https://kanthast.in/school",
+          "@type": "ListItem",
+          "position": 2,
           "name": "Kanthast School",
-          "publisher": { "@id": "https://kanthast.in/school/#organization" }
-        },
-        {
-          "@type": "SiteNavigationElement",
-          "@id": "https://kanthast.in/school/#navigation",
-          "name": ["Courses", "About", "Contact", "Log In", "Sign Up"],
-          "url": [
-            "https://kanthast.in/school/courses",
-            "https://kanthast.in/school/about",
-            "https://kanthast.in/school/contact",
-            "https://kanthast.in/school/login",
-            "https://kanthast.in/school/signup"
-          ]
+          "item": "https://kanthast.in/school/"
         }
       ]
     }
+  ]
+}
     </script>
   </head>
   <body>

@@ -87,22 +87,23 @@ export default function Pricing() {
   return (
     <div className="home-page overflow-x-clip bg-surface text-ink">
       <Helmet>
-        <title>Pricing | Kanthast</title>
+        <title>Pricing | Kanthast Professional</title>
         <meta
           name="description"
           content="Kanthast plans for the Medicine library: start free, then unlock every lecture and image as it is released. Prices in USD."
         />
-        <link rel="canonical" href="https://kanthast.in/pricing" />
+        <link rel="canonical" href="https://kanthast.in/professional/pricing" />
       </Helmet>
 
       <section className="relative overflow-hidden pb-20 pt-12 md:pb-28 md:pt-16">
         <div aria-hidden="true" className="home-glow pricing-glow" />
         <div className="site-container relative">
-          <h1 className="font-sans text-4xl font-extrabold tracking-[-0.035em] md:text-6xl">Pricing</h1>
+          <p className="kx-eyebrow">Plans for Kanthast Professional</p>
+          <h1 className="mt-5 text-4xl font-extrabold md:text-6xl">Simple, Honest <span className="kx-u kx-accent">Pricing<svg viewBox="0 0 200 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 50 5, 120 3, 197 9" /></svg></span><span className="kx-accent">.</span></h1>
 
           <div className="mt-12 grid gap-10 xl:grid-cols-[minmax(0,1.55fr)_auto_minmax(0,1fr)] xl:gap-12">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand">With a plan</p>
+              <p className="kx-eyebrow">With a plan</p>
               <h2 className="mt-3 text-3xl md:text-4xl">Unlock the full library</h2>
             <ul className="mt-7 grid gap-6 md:grid-cols-2">
               {MEDICAL_PLANS.map((plan) => (
@@ -149,7 +150,7 @@ export default function Pricing() {
             </div>
 
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand">No plan needed</p>
+              <p className="kx-eyebrow">No plan needed</p>
               <h2 className="mt-3 text-3xl md:text-4xl">Explore the platform first</h2>
               <div className="mt-7">
                 <FreePreview />

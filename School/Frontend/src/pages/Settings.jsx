@@ -555,14 +555,14 @@ export default function Settings() {
     <div className="min-h-screen bg-surface-sunken px-4 py-8 md:px-8">
       <LiveRegion message={statusMessage} />
       <div className="page-frame">
-        <section className="overflow-hidden rounded-3xl border border-cyan-100 bg-gradient-to-br from-surface via-surface-sunken to-cyan-50/40 p-6 shadow-e3 md:p-8">
+        <section className="overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-surface via-surface-sunken to-blue-50/40 p-6 shadow-e3 md:p-8">
           <div className="flex flex-wrap items-center justify-between gap-5">
             <div className="flex items-center gap-4">
-              <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-cyan-600 to-blue-700 text-lg font-black text-white shadow-e3">
+              <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-lg font-black text-white shadow-e3">
                 {initials}
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700">Account settings</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700">Account settings</p>
                 <h1 className="mt-1 text-2xl font-black text-ink md:text-4xl">
                   {user?.firstName || "Your"} settings
                 </h1>
