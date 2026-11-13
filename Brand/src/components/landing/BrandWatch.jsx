@@ -2,7 +2,7 @@ import { FaPlay, FaArrowRight, FaBolt, FaBrain, FaHeart, FaQuoteLeft, FaStar } f
 import { MdOndemandVideo } from "react-icons/md";
 import playerArt from "../../assets/watch/player.jpg";
 import NeoZippy from "./NeoZippy";
-import TESTIMONIALS from "../../data/testimonials";
+import { VISIBLE_TESTIMONIALS as TESTIMONIALS } from "../../data/testimonials";
 import SCHOOL_CATALOG, { SAMPLE_SCRIPT } from "../../data/schoolCatalog";
 
 const POINTS = [
@@ -20,6 +20,9 @@ const lines = SAMPLE_SCRIPT.scenes.flatMap((scene) => scene.lines);
 const SCRIPT_QUOTES = lines
   .filter((l) => l.text)
   .map((l) => ({ ...l, view: l.speaker === "Zippy" ? ZIPPY_VIEW : NEO_VIEW }));
+
+const initials = (name) =>
+  name.split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join("");
 
 function Avatar({ view, name }) {
   return (
@@ -39,7 +42,12 @@ export default function BrandWatch() {
         name: t.name,
         role: t.role,
         rating: t.rating,
-        avatar: <img src={t.photo} alt="" className="bt-avatar bt-photo" />,
+        draft: !t.approved,
+        avatar: t.photo ? (
+          <img src={t.photo} alt="" className="bt-avatar bt-photo" />
+        ) : (
+          <span className="bt-avatar bt-initials" aria-hidden="true">{initials(t.name)}</span>
+        ),
       }))
     : SCRIPT_QUOTES.map((q, i) => ({
         key: `${q.speaker}-${i}`,
@@ -124,17 +132,25 @@ export default function BrandWatch() {
             </h2>
             <p className="bt-sub">
               {real
-                ? "What our learners say about studying with Kanthast."
+                ? "What our pilot testers say about learning with Kanthast."
                 : "Real lines from our lesson scripts, voiced by Neo and Zippy."}
             </p>
             <div className="bt-proof">
               <span className="bt-stack" aria-hidden="true">
-                <Avatar view={NEO_VIEW} name="Neo" />
-                <Avatar view={ZIPPY_VIEW} name="Zippy" />
-                <Avatar view={NEO_VIEW} name="Neo" />
-                <Avatar view={ZIPPY_VIEW} name="Zippy" />
+                {real
+                  ? cards.slice(0, 4).map((c) => <span key={c.key}>{c.avatar}</span>)
+                  : (
+                    <>
+                      <Avatar view={NEO_VIEW} name="Neo" />
+                      <Avatar view={ZIPPY_VIEW} name="Zippy" />
+                      <Avatar view={NEO_VIEW} name="Neo" />
+                      <Avatar view={ZIPPY_VIEW} name="Zippy" />
+                    </>
+                  )}
               </span>
-              <span className="bt-chip">{SCHOOL_CATALOG.totals.lessons} Lessons Scripted</span>
+              <span className="bt-chip">
+                {real ? `Reviewed by our pilot testers` : `${SCHOOL_CATALOG.totals.lessons} Lessons Scripted`}
+              </span>
             </div>
           </div>
 
@@ -146,7 +162,10 @@ export default function BrandWatch() {
                 <ul key={copy} className="bt-list" aria-hidden={copy === 1 || undefined}>
                   {cards.map((c) => (
                     <li key={c.key} className="bt-card">
-                      <FaQuoteLeft aria-hidden="true" className="bt-quote-mark" />
+                      <span className="bt-card-top">
+                        <FaQuoteLeft aria-hidden="true" className="bt-quote-mark" />
+                        {c.draft && <span className="bt-draft">Draft · not live</span>}
+                      </span>
                       <blockquote className="bt-quote">"{c.quote}"</blockquote>
                       <div className="bt-person">
                         {c.avatar}

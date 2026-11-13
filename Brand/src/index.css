@@ -1820,3 +1820,15 @@
   .bt-marquee { overflow-x: auto; }
   .bt-list[aria-hidden] { display: none; }
 }
+
+/* Review cards: initials avatar (until a real photo is added) and draft marker. */
+.bt-initials {
+  font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 700; font-size: 1.3rem; color: #fff;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+.bt-stack .bt-initials { font-size: 1rem; }
+.bt-stack > span { display: contents; }
+.bt-stack > span > .bt-avatar { width: 46px; height: 46px; margin-left: -10px; border: 2.5px solid #fff; }
+.bt-stack > span:first-child > .bt-avatar { margin-left: 0; }
+.bt-card-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.bt-draft { padding: 0.2rem 0.55rem; border-radius: 999px; background: #fff4db; color: #8a5a00; font-size: 0.7rem; font-weight: 700; }
