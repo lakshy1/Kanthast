@@ -2,7 +2,7 @@
   "services": {
     "brand": {
       "root": "Brand",
-      "buildCommand": "npm run build",
+      "framework": "vite",
       "outputDirectory": "dist"
     },
     "professional-web": {

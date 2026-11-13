@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://kanthast.in/professional/sitemap.xml
 Sitemap: https://kanthast.in/school/sitemap.xml
+Sitemap: https://kanthast.in/sitemap.xml
