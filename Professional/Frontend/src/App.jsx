@@ -3,6 +3,7 @@ import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from "re
 import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence, MotionConfig } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { SITE_URL } from "./utils/seo";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -119,6 +120,50 @@ function GlobalScrollbar() {
         style={{ top: 0 }}
       />
     </div>
+  );
+}
+
+// Default head tags for every route: canonical and og:url follow the current
+// path; pages with their own <Seo>/<Helmet> override title and description.
+const DEFAULT_TITLE = 'Kanthast Professional | Animated medical lectures for NEET-PG, INI-CET and USMLE';
+const DEFAULT_DESCRIPTION = 'Kanthast Professional teaches medicine one idea at a time through short animated lectures for NEET-PG, INI-CET and USMLE.';
+const SHARE_IMAGE = `${SITE_URL}/Banner.png`;
+
+function DefaultSeo() {
+  const { pathname } = useLocation();
+  const url = `${SITE_URL}${pathname === "/" ? "/" : pathname.replace(/\/+$/, "")}`;
+  return (
+    <Helmet>
+      <title>{DEFAULT_TITLE}</title>
+      <meta name="description" content={DEFAULT_DESCRIPTION} />
+      <link rel="canonical" href={url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Kanthast" />
+      <meta property="og:locale" content="en_IN" />
+      <meta property="og:title" content={DEFAULT_TITLE} />
+      <meta property="og:description" content={DEFAULT_DESCRIPTION} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={SHARE_IMAGE} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={DEFAULT_TITLE} />
+      <meta name="twitter:description" content={DEFAULT_DESCRIPTION} />
+      <meta name="twitter:image" content={SHARE_IMAGE} />
+    </Helmet>
+  );
+}
+
+function LibrarySeo() {
+  const title = 'Lecture Library | Kanthast Professional';
+  const description = 'Browse every Kanthast Professional subject, chapter and animated lecture for NEET-PG, INI-CET and USMLE, with what is published and what is coming next.';
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+    </Helmet>
   );
 }
 
@@ -273,6 +318,7 @@ function App() {
           Skip to main content
         </a>
         <GlobalScrollbar />
+        <DefaultSeo />
         <RouteRobots />
         <OfflineBanner />
 
@@ -316,7 +362,7 @@ function App() {
                   <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
                   <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
                   <Route path="/settings" element={<RequireAuth><Settings /></RequireAuth>} />
-                  <Route path="/library" element={<Lists />} />
+                  <Route path="/library" element={<><LibrarySeo /><Lists /></>} />
                   <Route path="/lists" element={<Navigate to="/library" replace />} />
                   <Route path="/summary" element={<RequireAuth><SummaryPage /></RequireAuth>} />
                   <Route path="/video" element={<RequireAuth><VideoPage /></RequireAuth>} />
