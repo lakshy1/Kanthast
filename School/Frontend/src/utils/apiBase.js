@@ -1,10 +1,8 @@
-const DEFAULT_API_BASE_URLS = [
-  // Same-origin path served by the Vite dev proxy (vite.config.js).
-  import.meta.env.DEV ? "/api/v1" : null,
-  import.meta.env.VITE_API_BASE_URLS,
-  import.meta.env.VITE_API_BASE_URL,
-  import.meta.env.DEV ? "http://localhost:4001/api/v1" : null,
-];
+// Production: this app's own API on the same domain (kanthast.in/school/api/v1).
+// Dev: the Vite proxy, then any override, then the local backend.
+const DEFAULT_API_BASE_URLS = import.meta.env.DEV
+  ? ["/api/v1", import.meta.env.VITE_API_BASE_URLS, import.meta.env.VITE_API_BASE_URL, "http://localhost:4001/api/v1"]
+  : [`${import.meta.env.BASE_URL}api/v1`];
 
 function normalizeBaseUrl(url) {
   return String(url).trim().replace(/\/+$/, "");

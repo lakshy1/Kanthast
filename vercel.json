@@ -1,0 +1,118 @@
+{
+  "services": {
+    "brand": {
+      "root": "Brand",
+      "framework": null,
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist"
+    },
+    "professional-web": {
+      "root": "Professional/Frontend",
+      "framework": "vite",
+      "outputDirectory": "dist",
+      "rewrites": [
+        {
+          "source": "/professional/(.*)",
+          "destination": "/professional/index.html"
+        },
+        {
+          "source": "/professional",
+          "destination": "/professional/index.html"
+        }
+      ]
+    },
+    "school-web": {
+      "root": "School/Frontend",
+      "framework": "vite",
+      "outputDirectory": "dist",
+      "rewrites": [
+        {
+          "source": "/school/(.*)",
+          "destination": "/school/index.html"
+        },
+        {
+          "source": "/school",
+          "destination": "/school/index.html"
+        }
+      ]
+    },
+    "professional-api": {
+      "root": "Professional/Backend",
+      "framework": "express",
+      "entrypoint": "server.js",
+      "rewrites": [
+        {
+          "source": "/professional/api/:path(.*)",
+          "destination": "/api/:path"
+        }
+      ]
+    },
+    "school-api": {
+      "root": "School/Backend",
+      "framework": "express",
+      "entrypoint": "server.js",
+      "functions": {
+        "server.js": {
+          "includeFiles": "assets/videos/**"
+        }
+      },
+      "rewrites": [
+        {
+          "source": "/school/api/:path(.*)",
+          "destination": "/api/:path"
+        }
+      ]
+    }
+  },
+  "redirects": [
+    {
+      "source": "/:path(courses|pricing|login|signup|dashboard|profile|settings|lists|library|summary|video|images|chatbot|subscription|admin|adminlogin|about|contact|terms|privacy|refunds)",
+      "destination": "/professional/:path",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/professional/api/(.*)",
+      "destination": {
+        "service": "professional-api"
+      }
+    },
+    {
+      "source": "/school/api/(.*)",
+      "destination": {
+        "service": "school-api"
+      }
+    },
+    {
+      "source": "/professional",
+      "destination": {
+        "service": "professional-web"
+      }
+    },
+    {
+      "source": "/professional/(.*)",
+      "destination": {
+        "service": "professional-web"
+      }
+    },
+    {
+      "source": "/school",
+      "destination": {
+        "service": "school-web"
+      }
+    },
+    {
+      "source": "/school/(.*)",
+      "destination": {
+        "service": "school-web"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "brand"
+      }
+    }
+  ]
+}
