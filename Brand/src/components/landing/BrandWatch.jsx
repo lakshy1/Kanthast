@@ -17,12 +17,9 @@ const ZIPPY_VIEW = "246 70 146 152";
 // Real lines from the Class X Electricity lesson script, shown until there are
 // at least three real testimonials in data/testimonials.js.
 const lines = SAMPLE_SCRIPT.scenes.flatMap((scene) => scene.lines);
-const pick = (speaker, index) => lines.filter((l) => l.speaker === speaker)[index];
-const SCRIPT_QUOTES = [
-  { ...pick("Zippy", 0), view: ZIPPY_VIEW },
-  { ...pick("Neo", 0), view: NEO_VIEW },
-  { ...pick("Neo", 2), view: NEO_VIEW },
-].filter((q) => q.text);
+const SCRIPT_QUOTES = lines
+  .filter((l) => l.text)
+  .map((l) => ({ ...l, view: l.speaker === "Zippy" ? ZIPPY_VIEW : NEO_VIEW }));
 
 function Avatar({ view, name }) {
   return (
@@ -34,7 +31,23 @@ function Avatar({ view, name }) {
 
 /** Third landing section: "Watch. Learn. Retain." and the quotes panel. */
 export default function BrandWatch() {
-  const real = TESTIMONIALS.length >= 3 ? TESTIMONIALS.slice(0, 3) : null;
+  const real = TESTIMONIALS.length >= 3 ? TESTIMONIALS : null;
+  const cards = real
+    ? real.map((t) => ({
+        key: t.name,
+        quote: t.quote,
+        name: t.name,
+        role: t.role,
+        rating: t.rating,
+        avatar: <img src={t.photo} alt="" className="bt-avatar bt-photo" />,
+      }))
+    : SCRIPT_QUOTES.map((q, i) => ({
+        key: `${q.speaker}-${i}`,
+        quote: q.text,
+        name: q.speaker,
+        role: `Class X · ${SAMPLE_SCRIPT.context.split(": ").pop()}`,
+        avatar: <Avatar view={q.view} name={q.speaker} />,
+      }));
 
   return (
     <>
@@ -125,40 +138,34 @@ export default function BrandWatch() {
             </div>
           </div>
 
-          <ul className="bt-grid">
-            {real
-              ? real.map((t) => (
-                  <li key={t.name} className="bt-card">
-                    <FaQuoteLeft aria-hidden="true" className="bt-quote-mark" />
-                    <blockquote className="bt-quote">"{t.quote}"</blockquote>
-                    <div className="bt-person">
-                      <img src={t.photo} alt="" className="bt-avatar bt-photo" />
-                      <span>
-                        <span className="bt-name">{t.name}</span>
-                        <span className="bt-role">{t.role}</span>
-                        {t.rating ? (
-                          <span className="bt-stars" aria-label={`${t.rating} out of 5`}>
-                            {Array.from({ length: t.rating }, (_, i) => <FaStar key={i} aria-hidden="true" />)}
-                          </span>
-                        ) : null}
-                      </span>
-                    </div>
-                  </li>
-                ))
-              : SCRIPT_QUOTES.map((q) => (
-                  <li key={q.text} className="bt-card">
-                    <FaQuoteLeft aria-hidden="true" className="bt-quote-mark" />
-                    <blockquote className="bt-quote">"{q.text}"</blockquote>
-                    <div className="bt-person">
-                      <Avatar view={q.view} name={q.speaker} />
-                      <span>
-                        <span className="bt-name">{q.speaker}</span>
-                        <span className="bt-role">Class X · {SAMPLE_SCRIPT.context.split(": ").pop()}</span>
-                      </span>
-                    </div>
-                  </li>
-                ))}
-          </ul>
+          {/* Infinite marquee: the list is rendered twice and slides by half its
+              width, so the loop is seamless. Pauses on hover and focus. */}
+          <div className="bt-marquee" aria-label={real ? "Student reviews" : "Lines from a Kanthast lesson"}>
+            <div className="bt-track" style={{ "--bt-duration": `${Math.max(cards.length, 4) * 7}s` }}>
+              {[0, 1].map((copy) => (
+                <ul key={copy} className="bt-list" aria-hidden={copy === 1 || undefined}>
+                  {cards.map((c) => (
+                    <li key={c.key} className="bt-card">
+                      <FaQuoteLeft aria-hidden="true" className="bt-quote-mark" />
+                      <blockquote className="bt-quote">"{c.quote}"</blockquote>
+                      <div className="bt-person">
+                        {c.avatar}
+                        <span>
+                          <span className="bt-name">{c.name}</span>
+                          <span className="bt-role">{c.role}</span>
+                          {c.rating ? (
+                            <span className="bt-stars" aria-label={`${c.rating} out of 5`}>
+                              {Array.from({ length: c.rating }, (_, i) => <FaStar key={i} aria-hidden="true" />)}
+                            </span>
+                          ) : null}
+                        </span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </>
