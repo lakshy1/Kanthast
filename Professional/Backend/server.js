@@ -25,16 +25,8 @@ const app = express();
 app.set("trust proxy", 1);
 const PORT = process.env.PORT || 4000;
 
-// Database connection
-(async () => {
-  try {
-    await connectDB();
-    console.log("✅ MongoDB connected successfully");
-  } catch (err) {
-    console.error("❌ MongoDB connection failed:", err.message);
-    process.exit(1);
-  }
-})();
+// Database connection: start early, and make every request wait for it.
+connectDB().catch(() => {});
 
 // Middlewares
 app.use(express.json({ limit: "15mb" }));
@@ -73,6 +65,15 @@ app.use(
 
 // Cloudinary connection
 cloudinaryConnect();
+
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch {
+    res.status(503).json({ success: false, message: "Database unavailable" });
+  }
+});
 
 // Routes
 app.use("/api/v1/auth", userRoutes);
