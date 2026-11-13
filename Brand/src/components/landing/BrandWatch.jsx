@@ -2,6 +2,7 @@ import { FaPlay, FaArrowRight, FaBolt, FaBrain, FaHeart, FaQuoteLeft, FaStar } f
 import { MdOndemandVideo } from "react-icons/md";
 import playerArt from "../../assets/watch/player.jpg";
 import NeoZippy from "./NeoZippy";
+import IllustratedAvatar from "./IllustratedAvatar";
 import { VISIBLE_TESTIMONIALS as TESTIMONIALS } from "../../data/testimonials";
 import SCHOOL_CATALOG, { SAMPLE_SCRIPT } from "../../data/schoolCatalog";
 
@@ -45,6 +46,8 @@ export default function BrandWatch() {
         draft: !t.approved,
         avatar: t.photo ? (
           <img src={t.photo} alt="" className="bt-avatar bt-photo" />
+        ) : t.avatar ? (
+          <span className="bt-avatar bt-drawn"><IllustratedAvatar config={t.avatar} className="bt-drawn-art" /></span>
         ) : (
           <span className="bt-avatar bt-initials" aria-hidden="true">{initials(t.name)}</span>
         ),
@@ -148,9 +151,7 @@ export default function BrandWatch() {
                     </>
                   )}
               </span>
-              <span className="bt-chip">
-                {real ? `Reviewed by our pilot testers` : `${SCHOOL_CATALOG.totals.lessons} Lessons Scripted`}
-              </span>
+              {!real && <span className="bt-chip">{SCHOOL_CATALOG.totals.lessons} Lessons Scripted</span>}
             </div>
           </div>
 
