@@ -2,9 +2,11 @@
   "name": "kanthast",
   "private": true,
   "scripts": {
-    "pro": "concurrently -n \"PRO-WEB,PRO-API\" -c \"bgBlue,bgYellow\" \"cd Professional/Frontend && npm run dev\" \"cd Professional/Backend && nodemon server.js\"",
-    "school": "concurrently -n \"SCH-WEB,SCH-API\" -c \"bgGreen,bgMagenta\" \"cd School/Frontend && npm run dev\" \"cd School/Backend && nodemon server.js\"",
-    "brand": "cd Brand && npx serve ."
+    "setup": "npm install && npm install --prefix Brand && npm install --prefix Professional/Frontend && npm install --prefix Professional/Backend && npm install --prefix School/Frontend && npm install --prefix School/Backend",
+    "dev": "concurrently -k -n \"SITE,PRO-WEB,PRO-API,SCH-WEB,SCH-API\" -c \"bgCyan,bgBlue,bgYellow,bgGreen,bgMagenta\" \"npm run dev --prefix Brand\" \"npm run dev --prefix Professional/Frontend\" \"npm run dev --prefix Professional/Backend\" \"npm run dev --prefix School/Frontend\" \"npm run dev --prefix School/Backend\"",
+    "pro": "concurrently -k -n \"PRO-WEB,PRO-API\" -c \"bgBlue,bgYellow\" \"npm run dev --prefix Professional/Frontend\" \"npm run dev --prefix Professional/Backend\"",
+    "school": "concurrently -k -n \"SCH-WEB,SCH-API\" -c \"bgGreen,bgMagenta\" \"npm run dev --prefix School/Frontend\" \"npm run dev --prefix School/Backend\"",
+    "build": "npm run build --prefix Brand && npm run build --prefix Professional/Frontend && npm run build --prefix School/Frontend"
   },
   "dependencies": {
     "concurrently": "^9.2.1"

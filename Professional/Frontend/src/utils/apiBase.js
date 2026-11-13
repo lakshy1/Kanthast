@@ -1,8 +1,11 @@
-// Production: this app's own API on the same domain (kanthast.in/professional/api/v1).
-// Dev: the Vite proxy, then any override, then the local backend.
-const DEFAULT_API_BASE_URLS = import.meta.env.DEV
-  ? ["/api/v1", import.meta.env.VITE_API_BASE_URLS, import.meta.env.VITE_API_BASE_URL, "http://localhost:4000/api/v1"]
-  : [`${import.meta.env.BASE_URL}api/v1`];
+// This app's own API on the same origin: kanthast.in/professional/api/v1 in production,
+// and in dev the Vite proxy forwards the same path to the local backend.
+// VITE_API_BASE_URL(S) can override it for a remote backend.
+const DEFAULT_API_BASE_URLS = [
+  import.meta.env.VITE_API_BASE_URLS,
+  import.meta.env.VITE_API_BASE_URL,
+  `${import.meta.env.BASE_URL}api/v1`,
+];
 
 function normalizeBaseUrl(url) {
   return String(url).trim().replace(/\/+$/, "");

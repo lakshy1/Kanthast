@@ -6,20 +6,17 @@ export default defineConfig({
     react(),
   ],
   base: '/professional/',
-  // Dev only: the browser calls /api on its own origin and Vite forwards it,
-  // so any local port works. The hosted backend's CORS list only allows
-  // :3000 and :5173, and rejects every other origin with a 500. The Origin
-  // header is dropped because the backend accepts requests without one.
+  // Dev: this app runs on :5173 under /professional/. Its API calls go to
+  // /professional/api/... (same paths as production) and are forwarded to the local
+  // Professional backend on :4010 with the /professional prefix removed.
   server: {
+    port: 5173,
+    strictPort: true,
     proxy: {
-      '/api': {
-        target: process.env.VITE_DEV_PROXY_TARGET || 'https://kanthast-backend-eutn.onrender.com',
+      '/professional/api': {
+        target: process.env.VITE_DEV_PROXY_TARGET || 'http://localhost:4010',
         changeOrigin: true,
-        secure: true,
-        cookieDomainRewrite: 'localhost',
-        configure: (proxy) => {
-          proxy.on('proxyReq', (proxyReq) => proxyReq.removeHeader('origin'));
-        },
+        rewrite: (path) => path.replace(/^\/professional/, ''),
       },
     },
   },

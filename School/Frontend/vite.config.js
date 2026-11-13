@@ -6,20 +6,17 @@ export default defineConfig({
     react(),
   ],
   base: '/school/',
-  // Dev only: the browser calls /api on its own origin and Vite forwards it to the
-  // School backend (port 4001). The Origin header is dropped because the backend
-  // accepts requests without one.
+  // Dev: this app runs on :5174 under /school/. Its API calls go to
+  // /school/api/... (same paths as production) and are forwarded to the local
+  // School backend on :4011 with the /school prefix removed.
   server: {
     port: 5174,
     strictPort: true,
     proxy: {
-      '/api': {
-        target: process.env.VITE_DEV_PROXY_TARGET || 'http://localhost:4001',
+      '/school/api': {
+        target: process.env.VITE_DEV_PROXY_TARGET || 'http://localhost:4011',
         changeOrigin: true,
-        cookieDomainRewrite: 'localhost',
-        configure: (proxy) => {
-          proxy.on('proxyReq', (proxyReq) => proxyReq.removeHeader('origin'));
-        },
+        rewrite: (path) => path.replace(/^\/school/, ''),
       },
     },
   },

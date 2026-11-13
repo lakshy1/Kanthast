@@ -23,7 +23,7 @@ dotenv.config();
 const app = express();
 // Behind Vercel/Render proxies: use the real protocol and client IP.
 app.set("trust proxy", 1);
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4011;
 
 // Database connection: start early, and make every request wait for it.
 connectDB().catch(() => {});
@@ -39,6 +39,7 @@ const allowedOrigins = [
   ...(process.env.CORS_ORIGINS
     ? process.env.CORS_ORIGINS.split(",").map((origin) => origin.trim())
     : []),
+  "http://localhost:5170",
   "http://localhost:5174",
 ].filter(Boolean);
 
