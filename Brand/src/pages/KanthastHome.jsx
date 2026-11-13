@@ -5,6 +5,7 @@ import Seo from "../components/Seo";
 import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
 import ScriptPage from "../components/landing/ScriptPage";
 import BrandHero from "../components/landing/BrandHero";
+import BrandPaths from "../components/landing/BrandPaths";
 import CircuitScene from "../components/landing/CircuitScene";
 import NeoZippy from "../components/landing/NeoZippy";
 import DeviceShowcase from "../components/landing/DeviceShowcase";
@@ -107,6 +108,7 @@ export default function KanthastHome() {
       />
 
       <BrandHero />
+      <BrandPaths />
 
       {/* The two products: identical structure, different accent. */}
       <section id="products" aria-label="Kanthast products" className="site-container grid gap-6 py-12 md:grid-cols-2">
