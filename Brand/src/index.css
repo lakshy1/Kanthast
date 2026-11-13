@@ -1417,7 +1417,7 @@
 /* Hero buttons: equal width, so the pair reads as a balanced choice. */
 .brand-hero .door-cta { min-width: 14.5rem; }
 
-:root { --kb-edge: clamp(1rem, 2.6vw, 40px); }
+:root { --kb-edge: 2.5vw; } /* content spans 95% of the screen width */
 
 /* ── Brand hero (kanthast.in) ─────────────────────────────────────────────
    Matches the approved mockup at a 1536px viewport and scales down from there.
@@ -1439,7 +1439,7 @@
 }
 .bh-inner {
   position: relative;
-  max-width: 1920px;
+  max-width: none;
   margin: 0 auto;
   padding: 0 var(--kb-edge);
   display: grid;
@@ -1516,7 +1516,7 @@
 }
 .bh-features {
   position: relative; z-index: 3;
-  max-width: 1840px;
+  max-width: none;
   margin: 1.5rem var(--kb-edge) 0;
   display: grid; grid-template-columns: repeat(1, minmax(0, 1fr));
   background: #fff; border-radius: 24px;
@@ -1557,7 +1557,7 @@
 @media (min-width: 1024px) {
   nav.kb-bar.fixed {
     top: 12px; left: var(--kb-edge); right: var(--kb-edge); width: auto;
-    max-width: 1840px; margin: 0 auto;
+    max-width: none; margin: 0 auto;
     border: 1px solid rgba(223, 230, 243, 0.9); border-radius: 24px;
     background: rgba(255, 255, 255, 0.92);
     box-shadow: 0 16px 40px -24px rgba(30, 58, 138, 0.28);
@@ -1580,7 +1580,7 @@
 /* ── Learning paths + Why Kanthast (second landing section, per mockup) ──── */
 .bp, .bw { --bh-ink: #0b1530; --bh-muted: #3c4a63; --bh-blue: #1d4ed8; --bh-blue-soft: #e3ecfd; --bh-line: #dfe6f3; color: var(--bh-ink); }
 .bp { position: relative; padding: clamp(1rem, 2vw, 1.75rem) 0 clamp(1rem, 2vw, 1.75rem); background: linear-gradient(180deg, #edf2fc 0%, #eef3fd 100%); overflow: hidden; }
-.bp-inner { max-width: 1920px; margin: 0 auto; padding: 0 var(--kb-edge); display: grid; gap: 2.5rem; }
+.bp-inner { max-width: none; margin: 0 auto; padding: 0 var(--kb-edge); display: grid; gap: 2.5rem; }
 .bp-title {
   margin-top: 1.4rem;
   font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 800;
@@ -1655,7 +1655,7 @@
 
 .bw { padding: 0 var(--kb-edge) clamp(2.5rem, 4vw, 4rem); background: #eef3fd; }
 .bw-panel {
-  max-width: 1840px; margin: 0 auto; display: grid; gap: 2rem; align-items: center;
+  max-width: none; margin: 0 auto; display: grid; gap: 2rem; align-items: center;
   padding: clamp(1.5rem, 3vw, 3rem) clamp(1rem, 2.2vw, 2.25rem);
   border-radius: 36px; background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(255, 255, 255, 0.95);
   box-shadow: 0 30px 70px -40px rgba(30, 58, 138, 0.35);
@@ -1692,7 +1692,7 @@
 @media (prefers-reduced-motion: reduce) { .bp-card, .bp-pill, .bp-dots span { transition: none; } }
 
 /* Landing page: one minimal side edge everywhere so content gets the width. */
-.site-container { width: 100%; max-width: 1920px; padding-left: var(--kb-edge); padding-right: var(--kb-edge); }
+.site-container { width: 100%; max-width: none; padding-left: var(--kb-edge); padding-right: var(--kb-edge); }
 @media (min-width: 1024px) {
   .site-container { width: 100%; padding-left: var(--kb-edge); padding-right: var(--kb-edge); }
 }
