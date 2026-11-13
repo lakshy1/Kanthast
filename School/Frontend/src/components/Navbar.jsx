@@ -162,7 +162,7 @@ const Navbar = () => {
         <div className="nav-shell mx-auto flex w-full items-center justify-between px-5 md:px-16 lg:w-[calc(var(--u)*85)] lg:max-w-none lg:px-0">
           <div className="flex min-w-0 items-center gap-3">
             <div className="nav-brand relative flex items-end gap-1.5">
-              <Link to="/" aria-label="Kanthast School home" className="flex items-center gap-2.5 focus-visible:outline-none">
+              <a href="/" aria-label="Kanthast home" className="flex items-center gap-2.5 focus-visible:outline-none">
                 <svg className="nav-k" viewBox="0 0 40 40" aria-hidden="true">
                   <defs>
                     <linearGradient id="nav-k-a" x1="0" y1="0" x2="1" y2="1">
@@ -181,10 +181,10 @@ const Navbar = () => {
                 <span className="nav-logo block font-display text-2xl font-extrabold leading-none tracking-tight text-softwhite md:text-[1.8rem]">
                   Kanthast
                 </span>
-              </Link>
-              <span className="nav-track-label translate-y-[0.3em] text-xs font-semibold leading-none tracking-[0.02em] text-amber-300">
+              </a>
+              <Link to="/" aria-label="Kanthast School home" className="nav-track-label translate-y-[0.3em] text-xs font-semibold leading-none tracking-[0.02em] text-amber-300 hover:underline">
                 {SITE.short}
-              </span>
+              </Link>
             </div>
           </div>
 
