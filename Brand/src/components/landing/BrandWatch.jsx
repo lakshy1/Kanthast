@@ -141,7 +141,7 @@ export default function BrandWatch() {
             <div className="bt-proof">
               <span className="bt-stack" aria-hidden="true">
                 {real
-                  ? cards.slice(0, 4).map((c) => <span key={c.key}>{c.avatar}</span>)
+                  ? cards.slice(0, 4).map((c) => <span key={c.key} className="bt-stack-item">{c.avatar}</span>)
                   : (
                     <>
                       <Avatar view={NEO_VIEW} name="Neo" />
