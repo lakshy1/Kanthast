@@ -43,8 +43,7 @@ export default function App() {
 
   return (
     <MotionConfig reducedMotion={settings.reduceMotion ? "always" : "user"}>
-      <div className="min-h-screen w-screen bg-surface-sunken text-ink kb-sky">
-        <div aria-hidden="true" className="kb-sky-bg" />
+      <div className="min-h-screen w-full text-ink" style={{ background: "#eef3fd" }}>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[10001]

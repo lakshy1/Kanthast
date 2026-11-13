@@ -1547,9 +1547,7 @@
     content: ""; position: absolute; left: 0; top: 22%; bottom: 22%; width: 1px; background: var(--bh-line);
   }
 }
-@media (min-width: 1920px) {
-  .bh-features { margin-left: auto; margin-right: auto; }
-}
+
 @media (prefers-reduced-motion: reduce) { .bh-btn { transition: none; } }
 
 /* ── Brand navbar: floating rounded bar, as in the approved mockup ───────── */
@@ -1701,16 +1699,6 @@
   .site-container { width: 100%; padding-left: var(--kb-edge); padding-right: var(--kb-edge); }
 }
 
-/* Hero art fills the hero height and runs down to the feature strip (desktop). */
-@media (min-width: 1024px) {
-  .bh-inner { align-items: stretch; }
-  .bh-art { display: flex; margin-bottom: -0.6rem; }
-  .bh-art img {
-    height: 100%; min-height: 100%; object-fit: cover; object-position: right top;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%);
-    mask-image: linear-gradient(90deg, transparent 0, #000 9%);
-  }
-}
 
 /* Why Kanthast: text left (30%), cards right (70%) on desktop. */
 @media (min-width: 1024px) {
@@ -2058,10 +2046,33 @@ a.kx-contact-card:hover { border-color: #c9d8fb; }
 
 /* Artwork stays inside the 85% content area, so left and right gaps match. */
 @media (min-width: 1024px) {
-  .bh-art img { border-radius: 0 28px 28px 0; }
   .bp-card { width: 280px; height: 380px; }
   .bp-card.is-left { transform: translate(-50%, -50%) translateX(-86%) scale(0.8) rotateY(14deg) rotateZ(-4deg); }
   .bp-card.is-right { transform: translate(-50%, -50%) translateX(84%) scale(0.78) rotateY(-14deg) rotateZ(4deg); }
   .bp-nav-prev { left: -6px; }
   .bp-nav-next { right: -6px; }
+}
+
+/* Hero, desktop: the one full-bleed section. Copy stays on the 85% grid; the
+   illustration runs to the right edge of the screen at its natural aspect
+   ratio (no cropping or zoom) and fades into the page on the left, top and
+   bottom, so there is no hard box. */
+@media (min-width: 1024px) {
+  .bh-inner {
+    padding-right: 0;
+    grid-template-columns: minmax(0, 46%) minmax(0, 1fr);
+    align-items: center; gap: 0; min-height: 0;
+  }
+  .bh-copy { padding-top: 0.5rem; }
+  .bh-art { margin: -1.5rem 0 0 -4rem; align-self: center; }
+  .bh-art img {
+    width: 100%; height: auto; object-fit: initial; border-radius: 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22%), linear-gradient(0deg, transparent 0, #000 14%, #000 88%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(90deg, transparent 0, #000 22%), linear-gradient(0deg, transparent 0, #000 14%, #000 88%, transparent 100%);
+    mask-composite: intersect;
+  }
+  .bh-features { margin: 1.25rem var(--kb-edge) 0; max-width: none; }
+  .bh-inner { align-items: center; }
+  .bh-art { margin-top: -2rem; margin-bottom: -3.5rem; }
 }
