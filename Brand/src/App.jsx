@@ -6,6 +6,8 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { useAppSettings } from "./utils/settings";
+import BootDone from "./components/BootDone";
+import TopProgress from "./components/TopProgress";
 
 const KanthastHome = lazy(() => import("./pages/KanthastHome"));
 const About = lazy(() => import("./pages/About"));
@@ -53,7 +55,8 @@ export default function App() {
         </a>
         <Navbar />
         <main id="main-content" tabIndex={-1} className="focus:outline-none" style={{ paddingTop: "var(--navbar-h, 4rem)" }}>
-          <Suspense fallback={<div className="min-h-screen bg-surface" />}>
+          <Suspense fallback={<TopProgress />}>
+            <BootDone />
             <ErrorBoundary>
               <Routes>
                 <Route path="/" element={<KanthastHome />} />

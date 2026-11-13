@@ -1,10 +1,12 @@
 import "./App.css";
 import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import { AnimatePresence, MotionConfig } from "framer-motion";
+import { MotionConfig } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "./utils/seo";
 import ErrorBoundary from "./components/ErrorBoundary";
+import BootDone from "./components/BootDone";
+import TopProgress from "./components/TopProgress";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import OfflineBanner from "./components/OfflineBanner";
@@ -17,7 +19,6 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Courses = lazy(() => import("./pages/Courses"));
 const Login = lazy(() => import("./pages/Login"));
 const Signup = lazy(() => import("./pages/Signup"));
-const EdtechLoader = lazy(() => import("./pages/EdtechLoader"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Profile = lazy(() => import("./pages/Profile"));
 const Settings = lazy(() => import("./pages/Settings"));
@@ -54,11 +55,6 @@ function AdminGuestOnly({ children }) {
   return hasAdminAuth() ? <Navigate to="/admin" replace /> : children;
 }
 
-// Minimal inline fallback — avoids a flash of the full EdtechLoader on first
-// lazy chunk fetch. EdtechLoader itself is used for page-transition animation.
-function ChunkFallback() {
-  return <div className="min-h-screen bg-surface" />;
-}
 
 // Fixed overlay scrollbar — replaces the native browser scrollbar globally.
 // Hidden at rest, fades in on scroll, auto-hides after 1.2 s of inactivity.
@@ -174,9 +170,6 @@ function RouteRobots() {
 
 function App() {
   const location = useLocation();
-  const [loading, setLoading] = useState(false);
-  const isFirstRender = useRef(true);
-  const isFirstEverVisit = useRef(!localStorage.getItem("kanthastSchoolVisited"));
   const isAdminRoute = location.pathname.startsWith("/admin");
   // Every Kanthast School page runs on the sky gradient; admin keeps its own look.
   const isSkyTheme = !isAdminRoute;
@@ -232,46 +225,6 @@ function App() {
     document.getElementById("main-content")?.focus({ preventScroll: true });
   }, [location.pathname]);
 
-  useLayoutEffect(() => {
-    const authRoutes = ["/login", "/signup"];
-    if (authRoutes.includes(location.pathname)) {
-      const timer = setTimeout(() => {
-        setLoading(false);
-        isFirstRender.current = false;
-      }, 0);
-      return () => clearTimeout(timer);
-    }
-
-    if (sessionStorage.getItem("kanthastSchoolSkipNextLoader") === "true") {
-      sessionStorage.removeItem("kanthastSchoolSkipNextLoader");
-      const timer = setTimeout(() => {
-        setLoading(false);
-        isFirstRender.current = false;
-      }, 0);
-      return () => clearTimeout(timer);
-    }
-
-    // Transition durations are kept short: the loader should mask real latency,
-    // not manufacture it. (Was 2500ms on first visit / 1100ms thereafter.)
-    let duration = 320;
-    if (isFirstRender.current) {
-      duration = isFirstEverVisit.current ? 900 : 600;
-      if (isFirstEverVisit.current) {
-        localStorage.setItem("kanthastSchoolVisited", "true");
-        isFirstEverVisit.current = false;
-      }
-    }
-
-    const startTimer = setTimeout(() => setLoading(true), 0);
-    const endTimer = setTimeout(() => setLoading(false), duration);
-
-    isFirstRender.current = false;
-
-    return () => {
-      clearTimeout(startTimer);
-      clearTimeout(endTimer);
-    };
-  }, [location.pathname, location.search, location.hash]);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -321,10 +274,8 @@ function App() {
             !isAdminRoute ? (hasAuth() ? "pb-16 md:pb-0" : "") : ""
           }`}
         >
-          <Suspense fallback={<ChunkFallback />}>
-            <AnimatePresence mode="wait">
-              {loading && <EdtechLoader />}
-            </AnimatePresence>
+          <Suspense fallback={<TopProgress />}>
+            <BootDone />
 
             <ErrorBoundary>
               <Routes>

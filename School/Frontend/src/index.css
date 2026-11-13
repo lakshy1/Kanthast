@@ -1416,7 +1416,7 @@
    Light blue page, Plus Jakarta Sans 800 headings with one accented, underlined
    word, eyebrow pills, white cards with soft blue shadows, pill buttons, and
    content at 95% of the screen width. Mirrors Brand/src/index.css. */
-:root { --kb-edge: 2.5vw; }
+:root { --kb-edge: 7.5vw; --kb-chrome-edge: 5vw; } /* content 85% of the width; navbar and footer 90% */
 .kb-sky, .kb-sky main { background-color: #eef3fd; }
 .site-container { width: 100%; max-width: none; padding-left: max(1rem, var(--kb-edge)); padding-right: max(1rem, var(--kb-edge)); }
 @media (min-width: 1024px) {
@@ -1461,7 +1461,7 @@
 @media (min-width: 1024px) {
   :root { --nav-float-gap: 2.2rem; }
   nav.kb-bar.fixed {
-    top: 12px; left: var(--kb-edge); right: var(--kb-edge); width: auto; margin: 0 auto;
+    top: 12px; left: var(--kb-chrome-edge); right: var(--kb-chrome-edge); width: auto; margin: 0 auto;
     border: 1px solid rgba(223, 230, 243, 0.9); border-radius: 24px;
     background: rgba(255, 255, 255, 0.92);
     box-shadow: 0 16px 40px -24px rgba(30, 58, 138, 0.28);
@@ -1474,7 +1474,7 @@
 
 /* Footer panel (same as kanthast.in) */
 .kb-sky .footer-wrap { background: #eef3fd; }
-.kx-footer { padding: 0 var(--kb-edge) clamp(1.25rem, 2.4vw, 2rem); background: #eef3fd; color: #0b1530; }
+.kx-footer { padding: 0 var(--kb-chrome-edge) clamp(1.25rem, 2.4vw, 2rem); background: #eef3fd; color: #0b1530; }
 .kx-footer-panel {
   border-radius: 32px; background: #fff; border: 1px solid #edf1fa; box-shadow: 0 30px 70px -44px rgba(30, 58, 138, 0.35);
   padding: clamp(1.5rem, 3vw, 2.75rem) clamp(1.25rem, 3vw, 2.75rem) clamp(1.1rem, 2vw, 1.5rem);
@@ -1520,3 +1520,33 @@
 }
 .door-cta, .school-cta-ghost, .showcase-cta { border-radius: 999px; }
 .school-status { border-radius: 999px; }
+
+/* Page-change progress bar (Suspense fallback after the boot loader is gone). */
+.top-progress { position: fixed; top: 0; left: 0; right: 0; z-index: 10002; height: 3px; overflow: hidden; background: rgba(29, 78, 216, 0.12); }
+.top-progress span {
+  position: absolute; inset: 0 auto 0 0; width: 35%; border-radius: 0 999px 999px 0;
+  background: linear-gradient(90deg, #60a5fa, #1d4ed8); box-shadow: 0 0 10px rgba(29, 78, 216, 0.5);
+  animation: top-progress 1.1s ease-in-out infinite;
+}
+@keyframes top-progress { 0% { transform: translateX(-100%); } 100% { transform: translateX(300%); } }
+@media (prefers-reduced-motion: reduce) { .top-progress span { animation: none; width: 100%; opacity: 0.6; } }
+
+/* In-app brand loader (matches the boot loader in index.html). */
+.app-loader { position: fixed; inset: 0; z-index: 10003; display: grid; place-items: center;
+  background: radial-gradient(60% 60% at 70% 28%, rgba(147, 180, 255, 0.35), transparent 70%), #eef3fd; }
+.app-loader-card { display: grid; justify-items: center; gap: 14px; }
+.app-loader-k { width: 68px; height: 68px; overflow: visible; animation: al-breathe 1.8s ease-in-out 0.9s infinite; }
+.app-loader-k * { transform-box: fill-box; }
+.al-stem { transform-origin: 50% 100%; transform: scaleY(0); animation: al-grow 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.al-up { opacity: 0; transform: translate(-7px, 7px); animation: al-arm 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards; }
+.al-down { opacity: 0; transform: translate(-7px, -7px); animation: al-arm 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.52s forwards; }
+.app-loader-word { display: flex; align-items: baseline; gap: 8px; font: 800 26px/1 "Plus Jakarta Sans", Inter, sans-serif; letter-spacing: -0.02em; color: #0b1530; }
+.app-loader-word span { font-weight: 700; font-size: 15px; letter-spacing: 0; }
+.app-loader-track { position: relative; width: 148px; height: 4px; margin-top: 6px; border-radius: 999px; overflow: hidden; background: #dbe5fb; }
+.app-loader-track span { position: absolute; inset: 0 auto 0 0; width: 40%; border-radius: inherit; background: linear-gradient(90deg, #3b82f6, #1d4ed8); animation: top-progress 1.2s ease-in-out infinite; }
+@keyframes al-grow { to { transform: scaleY(1); } }
+@keyframes al-arm { to { opacity: 1; transform: translate(0, 0); } }
+@keyframes al-breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@media (prefers-reduced-motion: reduce) {
+  .app-loader-k, .al-stem, .al-up, .al-down, .app-loader-track span { animation: none; opacity: 1; transform: none; }
+}
