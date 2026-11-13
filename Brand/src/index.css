@@ -1668,7 +1668,11 @@
   border: 1px solid #edf1fa; box-shadow: 0 18px 40px -28px rgba(30, 58, 138, 0.4);
 }
 .bw-soon { display: inline-block; margin-top: 0.5rem; }
-.bw-icon { display: block; width: auto; height: 120px; margin: 0 auto 0.6rem; }
+.bw-icon {
+  display: block; width: auto; height: 120px; margin: 0 auto 0.6rem; mix-blend-mode: multiply;
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at center, #000 70%, transparent 100%);
+  mask-image: radial-gradient(ellipse 50% 50% at center, #000 70%, transparent 100%);
+}
 .bw-card-title { font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--bh-ink); }
 .bw-card-text { margin-top: 0.45rem; font-size: 0.92rem; line-height: 1.5; color: var(--bh-muted); }
 
@@ -1695,4 +1699,25 @@
 .site-container { width: 100%; max-width: none; padding-left: var(--kb-edge); padding-right: var(--kb-edge); }
 @media (min-width: 1024px) {
   .site-container { width: 100%; padding-left: var(--kb-edge); padding-right: var(--kb-edge); }
+}
+
+/* Hero art fills the hero height and runs down to the feature strip (desktop). */
+@media (min-width: 1024px) {
+  .bh-inner { align-items: stretch; }
+  .bh-art { display: flex; margin-bottom: -0.6rem; }
+  .bh-art img {
+    height: 100%; min-height: 100%; object-fit: cover; object-position: right top;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 9%);
+  }
+}
+
+/* Why Kanthast: text left (30%), cards right (70%) on desktop. */
+@media (min-width: 1024px) {
+  .bw-panel { grid-template-columns: minmax(0, 3fr) minmax(0, 7fr); gap: 2.5rem; align-items: center; }
+  .bw-grid { gap: 1.1rem; }
+  .bw-card { padding: 1.4rem 1.5rem 1.75rem; }
+  .bw-icon { height: 140px; margin-bottom: 0.9rem; }
+  .bw-card-title { font-size: 1.25rem; }
+  .bw-card-text { font-size: 0.95rem; }
 }
