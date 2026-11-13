@@ -59,9 +59,7 @@ export default function App() {
               </Routes>
             </ErrorBoundary>
           </Suspense>
-          <div className="footer-wrap bg-[#060e1b] pb-16 lg:pb-0">
-            <Footer />
-          </div>
+          <Footer />
         </main>
       </div>
     </MotionConfig>

@@ -1,91 +1,87 @@
 import { FaLinkedinIn } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
-import { getSelectedTrack, getStoredUser } from "../utils/schoolTrack";
-import { CONTEXTS, contextForPath } from "../utils/siteContext";
 
-const socialLinks = [
-  { icon: <FaLinkedinIn />, label: "LinkedIn", href: "https://www.linkedin.com/company/kanthast/" },
+// Landing page footer, in the same design language as the sections above.
+// Every destination is a separate app on kanthast.in, so these are plain links.
+const COLUMNS = [
+  {
+    title: "Products",
+    links: [
+      { label: "Kanthast Professional", href: "/professional" },
+      { label: "Kanthast School", href: "/school" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Contact Us", href: "/contact" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Terms of Use", href: "/terms" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Refund Policy", href: "/refunds" },
+    ],
+  },
 ];
 
-const BLURB = {
-  brand: "Animated visual learning for medical professionals and for school students in Classes 1 to 10.",
-  professional: "Visual learning platform designed to help you master complex medical concepts through immersive animation.",
-  school: "Visual learning for Classes 1 to 10: school subjects brought to life through immersive animation.",
-};
-const STRAP = {
-  brand: "Built for learners worldwide",
-  professional: "Built for medical learners worldwide",
-  school: "Built for school learners, Classes 1 to 10",
-};
-
-const Footer = () => {
-  const location = useLocation();
-  // Same map as the navbar: shared pages list both products and no single track's pricing.
-  const contextId = contextForPath(location.pathname, getStoredUser(), getSelectedTrack());
-  const pricingPath = contextId === "brand" ? null : CONTEXTS[contextId].pricing;
-
+function KMark() {
   return (
-    <footer className="w-full kb-footer text-white">
-      <div className="site-container pt-12 pb-8">
+    <svg className="nav-k" viewBox="0 0 40 40" aria-hidden="true">
+      <defs>
+        <linearGradient id="foot-k-a" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#2563eb" />
+          <stop offset="1" stopColor="#1d4ed8" />
+        </linearGradient>
+        <linearGradient id="foot-k-b" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#60a5fa" />
+          <stop offset="1" stopColor="#3b82f6" />
+        </linearGradient>
+      </defs>
+      <rect x="4" y="3" width="10" height="34" rx="3.5" fill="url(#foot-k-a)" />
+      <path d="M17.5 21.5 L30 4.5 Q31.4 3 33.4 3 H37 Q38.6 3 37.6 4.4 L25 21.5 Z" fill="url(#foot-k-a)" />
+      <path d="M17.5 21.5 H25 L37.6 35.6 Q38.6 37 37 37 H33.4 Q31.4 37 30 35.5 Z" fill="url(#foot-k-b)" />
+    </svg>
+  );
+}
 
-        {/* Top: brand + columns */}
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-10 md:gap-16">
-
-          {/* Brand */}
-          <div className="flex flex-col gap-4">
-            <span className="text-xl font-black tracking-tight text-white">{contextId === "brand" ? "Kanthast" : CONTEXTS[contextId].name}</span>
-            <p className="text-sm text-white/70 leading-relaxed max-w-xs">
-              {BLURB[contextId]}
-            </p>
-            <div className="flex flex-wrap gap-1 mt-1 -ml-2">
-              {socialLinks.map(({ icon, label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={label}
-                  className="btn-icon border border-white/15 bg-white/5 text-white/70 hover:text-white hover:border-white/40 hover:bg-white/10 text-sm"
-                >
-                  <span aria-hidden="true">{icon}</span>
-                </a>
+export default function Footer() {
+  return (
+    <footer className="kx-footer">
+      <div className="kx-footer-panel">
+        <div className="kx-footer-top">
+          <div className="kx-footer-brand">
+            <a href="/" className="kx-footer-logo" aria-label="Kanthast home">
+              <KMark />
+              <span>Kanthast</span>
+            </a>
+            <p>Short animated lessons with AI help, for medical entrance exams and for school.</p>
+            <a
+              href="https://www.linkedin.com/company/kanthast/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Kanthast on LinkedIn"
+              className="kx-footer-social"
+            >
+              <FaLinkedinIn aria-hidden="true" />
+            </a>
+          </div>
+          {COLUMNS.map((col) => (
+            <nav key={col.title} aria-label={col.title} className="kx-footer-col">
+              <p className="kx-footer-heading">{col.title}</p>
+              {col.links.map((l) => (
+                <a key={l.href} href={l.href}>{l.label}</a>
               ))}
-            </div>
-          </div>
-
-          {/* Company + Legal: side by side on mobile too */}
-          <div className="grid grid-cols-2 gap-8 md:contents">
-            <div className="flex flex-col gap-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70 mb-1">Company</p>
-              <Link to="/professional" className="text-sm text-white/70 hover:text-white transition">Kanthast Professional</Link>
-              <Link to="/school" className="text-sm text-white/70 hover:text-white transition">Kanthast School</Link>
-              {pricingPath && (
-                <HashLink smooth to={pricingPath} className="text-sm text-white/70 hover:text-white transition">Pricing</HashLink>
-              )}
-              <Link to="/about" className="text-sm text-white/70 hover:text-white transition">About</Link>
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70 mb-1">Legal</p>
-              <Link to="/terms" className="text-sm text-white/70 hover:text-white transition">Terms of Use</Link>
-              <Link to="/privacy" className="text-sm text-white/70 hover:text-white transition">Privacy Policy</Link>
-              <Link to="/refunds" className="text-sm text-white/70 hover:text-white transition">Refund Policy</Link>
-              <Link to="/contact" className="text-sm text-white/70 hover:text-white transition">Contact Us</Link>
-            </div>
-          </div>
+            </nav>
+          ))}
         </div>
-
-        {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-[#1d3249] flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/60">
-          <span>&copy; 2026 Kanthast Inc. All rights reserved.</span>
-          <span className="hidden sm:block">
-            {STRAP[contextId]}
-          </span>
+        <div className="kx-footer-bottom">
+          <span>&copy; {new Date().getFullYear()} Kanthast. All rights reserved.</span>
+          <span>Made for learners in India and worldwide.</span>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

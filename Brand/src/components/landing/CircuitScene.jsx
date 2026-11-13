@@ -4,7 +4,11 @@
 // rests in the lit state.
 const LOOP = "M80 70 H320 V210 H80 Z";
 
-export default function CircuitScene() {
+export default function CircuitScene({ light = false }) {
+  // Light: matches the airy landing palette. Dark: the original navy stage.
+  const c = light
+    ? { bg: "#f2f6fe", wire: "#9db8ee", ink: "#1d4ed8", text: "#0b1530", electron: "#3b82f6", cap: "#c3d2ee" }
+    : { bg: "#0e1f44", wire: "#5b7fc4", ink: "#e6eefb", text: "#e6eefb", electron: "#7fb4f4", cap: "#9aabc4" };
   return (
     <svg viewBox="0 0 400 280" role="img" aria-labelledby="circuit-title" className="circuit-scene">
       <title id="circuit-title">
@@ -21,8 +25,8 @@ export default function CircuitScene() {
         </linearGradient>
       </defs>
 
-      <rect x="0" y="0" width="400" height="280" rx="22" fill="#0e1f44" />
-      <path d={LOOP} fill="none" stroke="#5b7fc4" strokeWidth="5" strokeLinejoin="round" />
+      <rect x="0" y="0" width="400" height="280" rx="22" fill={c.bg} />
+      <path d={LOOP} fill="none" stroke={c.wire} strokeWidth="5" strokeLinejoin="round" />
 
       {/* Cell on the left wire */}
       <rect x="62" y="118" width="36" height="52" rx="6" fill="url(#cell)" stroke="#bcd4f5" strokeWidth="2" />
@@ -31,24 +35,24 @@ export default function CircuitScene() {
 
       {/* Bulb on the top wire */}
       <circle className="circuit-glow" cx="200" cy="52" r="58" fill="url(#bulb-glow)" />
-      <circle cx="200" cy="52" r="22" className="circuit-bulb" stroke="#e6eefb" strokeWidth="3" />
-      <rect x="190" y="70" width="20" height="10" rx="2" fill="#9aabc4" />
+      <circle cx="200" cy="52" r="22" className="circuit-bulb" stroke={light ? "#c3d2ee" : "#e6eefb"} strokeWidth="3" />
+      <rect x="190" y="70" width="20" height="10" rx="2" fill={c.cap} />
 
       {/* Switch on the right wire */}
-      <circle cx="320" cy="120" r="5" fill="#e6eefb" />
-      <circle cx="320" cy="170" r="5" fill="#e6eefb" />
-      <line className="circuit-switch" x1="320" y1="170" x2="320" y2="122" stroke="#e6eefb" strokeWidth="5" strokeLinecap="round" />
+      <circle cx="320" cy="120" r="5" fill={c.ink} />
+      <circle cx="320" cy="170" r="5" fill={c.ink} />
+      <line className="circuit-switch" x1="320" y1="170" x2="320" y2="122" stroke={c.ink} strokeWidth="5" strokeLinecap="round" />
 
       {/* Electrons: a queue that moves when the switch is closed */}
       <g className="circuit-electrons">
         {Array.from({ length: 10 }, (_, i) => (
-          <circle key={i} r="6" fill="#7fb4f4" stroke="#ffffff" strokeWidth="1.5">
+          <circle key={i} r="6" fill={c.electron} stroke="#ffffff" strokeWidth="1.5">
             <animateMotion dur="6s" repeatCount="indefinite" begin={`${-i * 0.6}s`} path={LOOP} />
           </circle>
         ))}
       </g>
 
-      <text x="200" y="252" textAnchor="middle" fontSize="15" fontWeight="600" fill="#e6eefb">
+      <text x="200" y="252" textAnchor="middle" fontSize="15" fontWeight="700" fill={c.text}>
         I = Q / t
       </text>
     </svg>

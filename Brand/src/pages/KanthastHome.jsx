@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaChevronDown, FaRobot, FaClockRotateLeft, FaChartColumn, FaCrosshairs, FaArrowsRotate, FaListCheck } from "react-icons/fa6";
+import { FaChevronDown, FaRobot, FaClockRotateLeft, FaChartColumn, FaCrosshairs, FaArrowsRotate, FaListCheck, FaArrowRight, FaStethoscope, FaGraduationCap, FaPlay, FaWandMagicSparkles, FaCircleQuestion } from "react-icons/fa6";
 import Seo from "../components/Seo";
 import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
 import ScriptPage from "../components/landing/ScriptPage";
@@ -40,7 +39,7 @@ const FAQS = [
   },
   {
     q: "Which one should I choose?",
-    a: "If you are preparing for NEET-PG, INI-CET or USMLE, choose Kanthast Professional. If you are in Class VIII, IX or X, or buying for a child who is, choose Kanthast School. One account works across both.",
+    a: "If you are preparing for NEET-PG, INI-CET or USMLE, choose Kanthast Professional. If you are in Class VIII, IX or X, or buying for a child who is, choose Kanthast School. Each product has its own account, so sign up for the one you need.",
   },
   {
     q: "Can I watch Kanthast School lessons now?",
@@ -52,10 +51,43 @@ const FAQS = [
   },
 ];
 
-function FaqList() {
-  const [open, setOpen] = useState(null);
+// Section heading in the landing design language: eyebrow pill, left-aligned
+// heading with one accented, underlined word, and an optional side note.
+function SectionHead({ id, eyebrow, icon: Icon = FaPlay, before, accent, after = ".", note, children }) {
   return (
-    <div className="divide-y divide-line border-y border-line">
+    <div className="kx-head">
+      <div>
+        <p className="bh-eyebrow">
+          <Icon aria-hidden="true" className="bh-eyebrow-icon" />
+          {eyebrow}
+        </p>
+        <h2 id={id} className="bp-title kx-title">
+          {before}{" "}
+          <span className="bh-nowrap">
+            <span className="bh-click bh-accent">
+              {accent}
+              <svg className="bh-underline" viewBox="0 0 200 18" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M3 13 C 50 5, 120 3, 197 9" />
+              </svg>
+            </span>
+            <span className="bh-accent">{after}</span>
+          </span>
+        </h2>
+      </div>
+      {(note || children) && (
+        <div className="kx-note">
+          {note && <p>{note}</p>}
+          {children}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function FaqList() {
+  const [open, setOpen] = useState(0);
+  return (
+    <div className="kx-faq">
       {FAQS.map((item, index) => (
         <details
           key={item.q}
@@ -64,13 +96,13 @@ function FaqList() {
             if (event.currentTarget.open) setOpen(index);
             else if (open === index) setOpen(null);
           }}
-          className="group"
+          className="kx-faq-item"
         >
-          <summary className="flex min-h-touch cursor-pointer list-none items-center gap-4 py-5 [&::-webkit-details-marker]:hidden">
-            <span className="flex-1 text-lg font-semibold text-ink group-hover:text-brand">{item.q}</span>
-            <FaChevronDown aria-hidden="true" className="shrink-0 text-sm text-ink-subtle transition-transform group-open:rotate-180" />
+          <summary className="kx-faq-q">
+            <span>{item.q}</span>
+            <span className="kx-faq-toggle" aria-hidden="true"><FaChevronDown /></span>
           </summary>
-          <p className="max-w-[65ch] pb-6 leading-relaxed text-ink-muted">{item.a}</p>
+          <p className="kx-faq-a">{item.a}</p>
         </details>
       ))}
     </div>
@@ -113,103 +145,140 @@ export default function KanthastHome() {
       <BrandWatch />
 
       {/* The two products: identical structure, different accent. */}
-      <section id="products" aria-label="Kanthast products" className="site-container grid gap-6 py-12 md:grid-cols-2">
-        {[
-          {
-            id: "pro",
-            to: "/professional",
-            name: "Kanthast Professional",
-            purpose: "Animated lectures for medical entrance exams.",
-            chips: EXAMS.map((e) => ({ label: e.label, soon: e.soon })),
-            chipsLabel: "Exams",
-            stage: (
-              <DeviceShowcase
-                desktopSrc="/device-macbook-screen.png"
-                mobileSrc="/device-iphone-screen.png"
-                desktopAlt="The Kanthast Professional lecture player on a laptop."
-                mobileAlt="The Kanthast Professional home screen on a phone."
-              />
-            ),
-            stat: `${PRO.subjects} subjects, ${PRO.chapters} chapters mapped`,
-            cta: "Explore Professional",
-          },
-          {
-            id: "school",
-            to: "/school",
-            name: "Kanthast School",
-            purpose: "Animated lessons for the new NCERT books.",
-            chips: SCHOOL_CATALOG.classes.map((c) => ({ label: c.name })),
-            chipsLabel: "Classes",
-            stage: (
-              <>
-                <NeoZippy className="showcase-cast" />
-                {CHAPTER_CHIPS.map((chapter, i) => (
-                  <span key={chapter} className={`float-chip float-chip-${i + 1}`} aria-hidden="true">
-                    {chapter}
-                  </span>
-                ))}
-              </>
-            ),
-            stat: `${SCHOOL.lessons} lessons scripted, animation in production`,
-            cta: "Explore School",
-          },
-        ].map((card) => (
-          <Link key={card.id} to={card.to} className={`showcase showcase-${card.id}`} aria-labelledby={`sc-${card.id}`}>
-            <div className="showcase-text">
-              <h2 id={`sc-${card.id}`} className="door-name">{card.name}</h2>
-              <p className="text-ink-muted">{card.purpose}</p>
-              <ul className="chip-row" aria-label={card.chipsLabel}>
+      <section id="products" aria-labelledby="products-heading" className="kx-section">
+        <SectionHead
+          id="products-heading"
+          eyebrow="Two Products, One Kanthast"
+          before="Choose Your"
+          accent="Kanthast"
+          note="Two separate apps with their own accounts: one for medical entrance exams, one for school."
+        />
+        <div className="kx-products">
+          {[
+            {
+              id: "pro",
+              href: "/professional",
+              icon: FaStethoscope,
+              name: "Kanthast Professional",
+              purpose: "Animated lectures for medical entrance exams.",
+              chips: EXAMS.map((e) => ({ label: e.label, soon: e.soon })),
+              chipsLabel: "Exams",
+              stage: (
+                <DeviceShowcase
+                  desktopSrc="/device-macbook-screen.png"
+                  mobileSrc="/device-iphone-screen.png"
+                  desktopAlt="The Kanthast Professional lecture player on a laptop."
+                  mobileAlt="The Kanthast Professional home screen on a phone."
+                />
+              ),
+              stat: `${PRO.subjects} subjects, ${PRO.chapters} chapters mapped`,
+              cta: "Explore Professional",
+            },
+            {
+              id: "school",
+              href: "/school",
+              icon: FaGraduationCap,
+              name: "Kanthast School",
+              purpose: "Animated lessons for the new NCERT books.",
+              chips: SCHOOL_CATALOG.classes.map((c) => ({ label: c.name })),
+              chipsLabel: "Classes",
+              stage: (
+                <>
+                  <NeoZippy className="showcase-cast" />
+                  {CHAPTER_CHIPS.map((chapter, i) => (
+                    <span key={chapter} className={`float-chip float-chip-${i + 1}`} aria-hidden="true">
+                      {chapter}
+                    </span>
+                  ))}
+                </>
+              ),
+              stat: `${SCHOOL.lessons} lessons scripted, animation in production`,
+              cta: "Explore School",
+            },
+          ].map(({ icon: Icon, ...card }) => (
+            <a key={card.id} href={card.href} className={`kx-product kx-product-${card.id}`} aria-labelledby={`sc-${card.id}`}>
+              <div className="kx-product-head">
+                <span className="kx-badge" aria-hidden="true"><Icon /></span>
+                <div>
+                  <h3 id={`sc-${card.id}`} className="kx-product-name">{card.name}</h3>
+                  <p className="kx-product-purpose">{card.purpose}</p>
+                </div>
+              </div>
+              <ul className="kx-chips" aria-label={card.chipsLabel}>
                 {card.chips.map((chip) => (
-                  <li key={chip.label} className={`chip chip-${card.id}${chip.soon ? " chip-soon" : ""}`}>
+                  <li key={chip.label} className={`kx-chip${chip.soon ? " kx-chip-soon" : ""}`}>
                     {chip.label}
-                    {chip.soon && <span className="sr-only"> (coming soon)</span>}
+                    {chip.soon && <span className="kx-chip-flag">soon</span>}
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className={`showcase-stage showcase-stage-${card.id}`}>{card.stage}</div>
-            <div className="showcase-foot">
-              <span>{card.stat}</span>
-              <span className={`showcase-cta showcase-cta-${card.id}`}>{card.cta}</span>
-            </div>
-          </Link>
-        ))}
-      </section>
-
-      {/* Signature: the script, and the scene it becomes. */}
-      <section aria-labelledby="made-heading" className="site-container py-16 md:py-24">
-        <h2 id="made-heading" className="brand-h2 mx-auto max-w-[18ch] text-center">Every lesson starts as a script, then comes to life.</h2>
-        <div className="script-to-scene mt-10">
-          <ScriptPage scenes={2} compact />
-          <div className="script-arrow" aria-hidden="true">
-            <span />
-          </div>
-          <CircuitScene />
+              <div className={`kx-stage showcase-stage showcase-stage-${card.id}`}>{card.stage}</div>
+              <div className="kx-product-foot">
+                <span>{card.stat}</span>
+                <span className="bh-btn bh-btn-primary kx-product-cta">
+                  {card.cta}
+                  <FaArrowRight aria-hidden="true" className="text-[0.8em]" />
+                </span>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
 
-      {/* AI, as tiles: live ones solid, planned ones marked. */}
-      <section aria-labelledby="ai-heading" className="site-container py-16 md:py-24">
-        <h2 id="ai-heading" className="brand-h2 mx-auto max-w-[20ch] text-center">AI that helps you learn.</h2>
-        <ul className="ai-grid mt-10">
+      {/* Signature: the script, and the scene it becomes. */}
+      <section aria-labelledby="made-heading" className="kx-section">
+        <SectionHead
+          id="made-heading"
+          eyebrow="How Lessons Are Made"
+          before="From Script to"
+          accent="Scene"
+          note="Every lesson starts as a script, then comes to life as animation. This is a real one, from Class X Science."
+        />
+        <div className="kx-panel kx-made">
+          <ScriptPage scenes={2} compact />
+          <div className="kx-made-arrow" aria-hidden="true"><FaArrowRight /></div>
+          <div className="kx-made-scene">
+            <span className="kx-made-label"><FaPlay aria-hidden="true" /> The scene it becomes</span>
+            <CircuitScene light />
+          </div>
+        </div>
+      </section>
+
+      {/* AI, as cards: live ones first, planned ones marked. */}
+      <section aria-labelledby="ai-heading" className="kx-section">
+        <SectionHead
+          id="ai-heading"
+          eyebrow="AI-Powered Help"
+          icon={FaWandMagicSparkles}
+          before="AI That Helps You"
+          accent="Learn"
+          note="What works today, and what is being built. Anything not ready yet is marked."
+        />
+        <ul className="kx-ai">
           {AI.map(({ icon: Icon, title, body, live }) => (
-            <li key={title} className={`ai-tile${live ? "" : " ai-tile-next"}`}>
-              <span className="ai-icon" aria-hidden="true">
-                <Icon />
+            <li key={title} className={`kx-ai-card${live ? "" : " is-soon"}`}>
+              <span className="kx-badge" aria-hidden="true"><Icon /></span>
+              <span className="kx-ai-text">
+                <span className="kx-ai-title">
+                  {title}
+                  {live ? <span className="kx-live">Live</span> : <span className="bp-soon">Coming soon</span>}
+                </span>
+                <span className="kx-ai-body">{body}</span>
               </span>
-              <p className="mt-4 flex flex-wrap items-center gap-2 font-semibold text-ink">
-                {title}
-                {!live && <span className="soon-badge">Coming soon</span>}
-              </p>
-              <p className="mt-1 text-sm text-ink-muted">{body}</p>
             </li>
           ))}
         </ul>
       </section>
 
-      <section aria-labelledby="brand-faq" className="site-container py-16 md:py-24">
-        <h2 id="brand-faq" className="brand-h2 text-center">Questions</h2>
-        <div className="mx-auto mt-10 max-w-3xl">
+      <section aria-labelledby="brand-faq" className="kx-section kx-section-last">
+        <div className="kx-panel kx-faq-wrap">
+          <SectionHead id="brand-faq" eyebrow="FAQ" icon={FaCircleQuestion} before="Got" accent="Questions" after="?">
+            <p>Short answers about both products. Still unsure? Write to us.</p>
+            <a href="/contact" className="bh-btn bh-btn-primary kx-faq-cta">
+              Contact Us
+              <FaArrowRight aria-hidden="true" className="text-[0.8em]" />
+            </a>
+          </SectionHead>
           <FaqList />
         </div>
       </section>
