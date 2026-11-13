@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-  base: '/',
+  base: '/school/',
   // Dev only: the browser calls /api on its own origin and Vite forwards it to the
   // School backend (port 4001). The Origin header is dropped because the backend
   // accepts requests without one.
@@ -24,7 +24,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist',
+    outDir: 'dist/school',
     rollupOptions: {
       output: {
         manualChunks: {

@@ -2,6 +2,6 @@
   "name": "kanthast-brand",
   "private": true,
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && cp index.html logo.png favicon.png google7c62ffefd539f3a0.html dist/"
+    "build": "rm -rf dist && mkdir dist && cp index.html logo.png favicon.png robots.txt google7c62ffefd539f3a0.html dist/"
   }
 }

@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pro.kanthast.in/</loc>
+    <loc>https://kanthast.in/professional/</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pro.kanthast.in/courses</loc>
+    <loc>https://kanthast.in/professional/courses</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pro.kanthast.in/pricing</loc>
+    <loc>https://kanthast.in/professional/pricing</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pro.kanthast.in/library</loc>
+    <loc>https://kanthast.in/professional/library</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pro.kanthast.in/about</loc>
+    <loc>https://kanthast.in/professional/about</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pro.kanthast.in/contact</loc>
+    <loc>https://kanthast.in/professional/contact</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pro.kanthast.in/terms</loc>
+    <loc>https://kanthast.in/professional/terms</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://pro.kanthast.in/privacy</loc>
+    <loc>https://kanthast.in/professional/privacy</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://pro.kanthast.in/refunds</loc>
+    <loc>https://kanthast.in/professional/refunds</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

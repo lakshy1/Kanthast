@@ -1,12 +1,15 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/professional/api/:path*", "destination": "https://kanthast-professional-api.vercel.app/api/:path*" },
+    { "source": "/school/api/:path*", "destination": "https://kanthast-school-api.vercel.app/api/:path*" },
+    { "source": "/professional", "destination": "https://kanthast-professional.vercel.app/professional/" },
+    { "source": "/professional/:path*", "destination": "https://kanthast-professional.vercel.app/professional/:path*" },
+    { "source": "/school", "destination": "https://kanthast-school.vercel.app/school/" },
+    { "source": "/school/:path*", "destination": "https://kanthast-school.vercel.app/school/:path*" }
+  ],
   "redirects": [
-    { "source": "/school", "destination": "https://school.kanthast.in/", "permanent": true },
-    { "source": "/school/library", "destination": "https://school.kanthast.in/library", "permanent": true },
-    { "source": "/school/:path*", "destination": "https://school.kanthast.in/:path*", "permanent": true },
-    { "source": "/professional", "destination": "https://pro.kanthast.in/", "permanent": true },
-    { "source": "/professional/library", "destination": "https://pro.kanthast.in/library", "permanent": true },
-    { "source": "/:path(courses|pricing|login|signup|dashboard|profile|settings|lists|library|summary|video|images|chatbot|subscription|admin|adminlogin|about|contact|terms|privacy|refunds)", "destination": "https://pro.kanthast.in/:path", "permanent": false }
+    { "source": "/:path(courses|pricing|login|signup|dashboard|profile|settings|lists|library|summary|video|images|chatbot|subscription|admin|adminlogin|about|contact|terms|privacy|refunds)", "destination": "/professional/:path", "permanent": false }
   ]
 }

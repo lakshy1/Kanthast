@@ -1,8 +1,15 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/"
+      "source": "/school/:path*",
+      "destination": "/school/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/school/",
+      "permanent": false
     }
   ]
 }

@@ -44,11 +44,11 @@ function handleUnauthorized(path) {
   if (path.includes("/admin")) {
     localStorage.removeItem("kanthastAdminToken");
     localStorage.removeItem("kanthastAdminUser");
-    window.location.replace("/adminlogin");
+    window.location.replace(`${import.meta.env.BASE_URL}adminlogin`);
   } else {
     localStorage.removeItem("kanthastToken");
     localStorage.removeItem("kanthastUser");
-    window.location.replace("/login");
+    window.location.replace(`${import.meta.env.BASE_URL}login`);
   }
 }
 

@@ -1,8 +1,15 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/"
+      "source": "/professional/:path*",
+      "destination": "/professional/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/professional/",
+      "permanent": false
     }
   ]
 }

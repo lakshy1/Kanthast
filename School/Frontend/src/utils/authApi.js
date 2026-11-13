@@ -13,11 +13,11 @@ function handleUnauthorized(path) {
   if (path.includes("/admin")) {
     localStorage.removeItem("kanthastSchoolAdminToken");
     localStorage.removeItem("kanthastSchoolAdminUser");
-    window.location.replace("/adminlogin");
+    window.location.replace(`${import.meta.env.BASE_URL}adminlogin`);
   } else {
     localStorage.removeItem("kanthastSchoolToken");
     localStorage.removeItem("kanthastSchoolUser");
-    window.location.replace("/login");
+    window.location.replace(`${import.meta.env.BASE_URL}login`);
   }
 }
 

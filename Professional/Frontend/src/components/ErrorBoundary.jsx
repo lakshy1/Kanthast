@@ -61,7 +61,7 @@ export default class ErrorBoundary extends Component {
                 Try again
               </button>
               <button
-                onClick={() => window.location.replace("/")}
+                onClick={() => window.location.replace(`${import.meta.env.BASE_URL}`)}
                 className="rounded-xl bg-slate-900 px-5 py-2.5 font-semibold text-white hover:bg-slate-800"
               >
                 Go home

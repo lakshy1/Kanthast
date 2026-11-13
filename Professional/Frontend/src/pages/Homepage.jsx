@@ -428,8 +428,8 @@ const Homepage = () => {
             <div className="hero-devices">
               <HeroGlow className="hero-glow" />
               <DeviceShowcase
-                desktopSrc="/device-macbook-screen.png"
-                mobileSrc="/device-iphone-screen.png"
+                desktopSrc={`${import.meta.env.BASE_URL}device-macbook-screen.png`}
+                mobileSrc={`${import.meta.env.BASE_URL}device-iphone-screen.png`}
                 desktopAlt="The Kanthast lecture player on a laptop, with the chapter's lectures listed beside the video."
                 mobileAlt="The Kanthast home screen on a phone, with the lecture to resume and progress by subject."
               />

@@ -1,5 +1,5 @@
 // Shared SEO constants and schema.org builders, used with components/Seo.jsx.
-export const SITE_URL = "https://pro.kanthast.in";
+export const SITE_URL = "https://kanthast.in/professional";
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 
 /** schema.org FAQPage from [{ q, a }] pairs that are shown on the page. */

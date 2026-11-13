@@ -9,7 +9,7 @@ import { HelmetProvider } from "react-helmet-async";
 
 createRoot(document.getElementById('root')).render(
   <HelmetProvider>
-  <BrowserRouter>
+  <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
     <App />
     <ToastContainer
       position="top-right"

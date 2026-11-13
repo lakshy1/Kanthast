@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-  base: '/',
+  base: '/professional/',
   // Dev only: the browser calls /api on its own origin and Vite forwards it,
   // so any local port works. The hosted backend's CORS list only allows
   // :3000 and :5173, and rejects every other origin with a 500. The Origin
@@ -24,7 +24,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist',
+    outDir: 'dist/professional',
     rollupOptions: {
       output: {
         manualChunks: {
