@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Pinch-zoom intentionally NOT disabled: students read dense text
+         for long sessions and must be able to magnify it (WCAG 1.4.4). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-visual" />
+    <!-- PWA / mobile web app meta -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Kanthast" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Kanthast School | Animated lessons with AI help for Classes VIII to X</title>
+    <meta name="description" content="Kanthast School teaches one idea at a time through short animated lessons for the new NCERT books, Classes VIII to X, with AI help." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://school.kanthast.in/" />
+
+    <!-- SEO -->
+    <meta name="google-site-verification" 
+    content="pt2_giWqmJ_J086kdvsFNyI9VaNS4pJODhsz7rvf9fk" />
+
+    <!-- Brand typefaces. Loaded app-wide so the product renders identically on
+         Windows, macOS, iOS and Android instead of falling back to the OS face. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/logo.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <meta name="theme-color" content="#F7F9FD" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kanthast" />
+    <meta property="og:title" content="Kanthast School | Animated lessons with AI help for Classes VIII to X" />
+    <meta property="og:description" content="Short animated lessons for the new NCERT books, one idea at a time, for Classes VIII to X." />
+    <meta property="og:url" content="https://school.kanthast.in/" />
+    <meta property="og:image" content="https://school.kanthast.in/Banner.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kanthast School | Animated lessons with AI help for Classes VIII to X" />
+    <meta name="twitter:description" content="Short animated lessons for the new NCERT books, one idea at a time, for Classes VIII to X." />
+    <meta name="twitter:image" content="https://school.kanthast.in/Banner.png" />
+
+    <!-- Structured Data: Organization + WebSite + SiteNavigation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://school.kanthast.in/#organization",
+          "name": "Kanthast",
+          "url": "https://school.kanthast.in",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://school.kanthast.in/logo.png"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/kanthast/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://school.kanthast.in/#website",
+          "url": "https://school.kanthast.in",
+          "name": "Kanthast School",
+          "publisher": { "@id": "https://school.kanthast.in/#organization" }
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "@id": "https://school.kanthast.in/#navigation",
+          "name": ["Courses", "About", "Contact", "Log In", "Sign Up"],
+          "url": [
+            "https://school.kanthast.in/courses",
+            "https://school.kanthast.in/about",
+            "https://school.kanthast.in/contact",
+            "https://school.kanthast.in/login",
+            "https://school.kanthast.in/signup"
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

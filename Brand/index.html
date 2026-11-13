@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kanthast</title>
+<meta name="description" content="Kanthast makes animated lessons. Choose School (Classes VIII–X) or Professional (NEET PG, INI CET, USMLE).">
+<link rel="icon" href="favicon.png">
+<style>
+  :root{--bg:#f6f7fb;--ink:#0f1a30;--muted:#55607a;--card:#fff;--line:#e2e6f0;--brand:#1e3a8a}
+  @media (prefers-color-scheme:dark){:root{--bg:#0b1120;--ink:#eef1f8;--muted:#9aa5bf;--card:#121a2e;--line:#243050;--brand:#8fb0ff}}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  main{width:100%;max-width:760px;padding:32px 16px}
+  img{height:40px;width:auto}
+  h1{font-size:clamp(1.75rem,5vw,2.5rem);line-height:1.15;margin:24px 0 8px}
+  p.lead{color:var(--muted);margin:0 0 32px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  a.card{display:block;padding:24px;background:var(--card);border:1px solid var(--line);border-radius:16px;color:inherit;text-decoration:none;transition:border-color .15s}
+  a.card:hover,a.card:focus-visible{border-color:var(--brand);outline:none}
+  a.card h2{margin:0 0 4px;font-size:1.25rem}
+  a.card span{color:var(--muted);font-size:.95rem}
+  a.card b{display:block;margin-top:16px;color:var(--brand);font-weight:600}
+  footer{margin-top:40px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+  <img src="logo.png" alt="Kanthast">
+  <h1>Animated lessons, built for how you learn.</h1>
+  <p class="lead">Kanthast has two separate products. Pick yours.</p>
+  <div class="grid">
+    <a class="card" id="school" href="https://school.kanthast.in">
+      <h2>Kanthast School</h2>
+      <span>Classes VIII–X, NCERT 2025-26. For students and parents.</span>
+      <b>Go to School →</b>
+    </a>
+    <a class="card" id="professional" href="https://pro.kanthast.in">
+      <h2>Kanthast Professional</h2>
+      <span>NEET PG, INI CET and USMLE. For medical students.</span>
+      <b>Go to Professional →</b>
+    </a>
+  </div>
+  <footer>Lessons are being released in stages. Each product has its own account.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,1412 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ── Design tokens ──────────────────────────────────────────────────────
+     Channel triplets (no rgb() wrapper) so Tailwind's <alpha-value> works:
+     `bg-surface/80`, `text-ink/60`, etc.
+     Light is the default; dark redefines ONLY the values, so every component
+     stays theme-agnostic and no color is defined solely inside a dark block. */
+  :root {
+    --surface: 255 255 255;
+    --surface-sunken: 248 250 252;
+    --surface-raised: 255 255 255;
+
+    --ink: 15 23 42;
+    --ink-muted: 71 85 105;
+    --ink-subtle: 100 116 139;   /* 4.76:1 on white — the AA-safe body grey */
+    --ink-inverse: 248 250 252;
+
+    --line: 226 232 240;
+    --line-strong: 203 213 225;
+
+    --brand: 30 58 138;          /* navy blue #1E3A8A — 10.4:1 on white */
+    --brand-hover: 23 37 84;
+    --brand-soft: 238 242 255;
+    --brand-fg: 255 255 255;     /* 10.4:1 on brand fill */
+
+    --positive: 5 150 105;
+    --positive-soft: 236 253 245;
+    --critical: 190 24 60;
+    --critical-soft: 255 241 242;
+    --caution: 180 83 9;
+    --caution-soft: 255 251 235;
+
+    /* Disabled buttons: a solid muted neutral, not a dimmed brand color —
+       opacity on `--brand` washes both fill and `--brand-fg` toward each
+       other and can drop well under AA contrast. */
+    --disabled-bg: 226 232 240;
+    --disabled-fg: 100 116 139;   /* 4.6:1 on --disabled-bg */
+
+    --e1: 0 1px 2px rgba(15, 23, 42, .06);
+    --e2: 0 4px 12px -2px rgba(15, 23, 42, .08);
+    --e3: 0 12px 28px -6px rgba(15, 23, 42, .10);
+    --e4: 0 24px 60px -12px rgba(15, 23, 42, .14);
+    --e5: 0 40px 90px -20px rgba(15, 23, 42, .20);
+
+    --glow-brand: 0 14px 34px -10px rgba(30, 58, 138, .40);
+    --glow-positive: 0 14px 34px -10px rgba(5, 150, 105, .40);
+    --glow-caution: 0 14px 34px -10px rgba(180, 83, 9, .38);
+  }
+
+  /* Dark is opt-in via the Appearance setting (data-theme="dark"). */
+  :root[data-theme="dark"] {
+    --surface: 20 25 34;
+    --surface-sunken: 13 16 23;
+    --surface-raised: 26 32 43;
+
+    --ink: 238 241 246;
+    --ink-muted: 185 193 207;
+    --ink-subtle: 148 163 184;   /* 7.2:1 on dark surface */
+    --ink-inverse: 15 23 42;
+
+    --line: 41 49 63;
+    --line-strong: 60 70 88;
+
+    --brand: 147 197 253;        /* blue-300, lifted for dark grounds — 10.1:1 */
+    --brand-hover: 191 219 254;
+    --brand-soft: 23 37 84;
+    --brand-fg: 2 6 23;          /* 8.0:1 on brand fill */
+
+    --positive: 71 205 137;
+    --positive-soft: 12 43 30;
+    --critical: 253 138 138;
+    --critical-soft: 51 21 15;
+    --caution: 243 135 68;
+    --caution-soft: 46 26 12;
+
+    --disabled-bg: 41 49 63;
+    --disabled-fg: 148 163 184;   /* 7.2:1 on --disabled-bg */
+
+    --e1: 0 1px 2px rgba(0, 0, 0, .40);
+    --e2: 0 4px 12px -2px rgba(0, 0, 0, .50);
+    --e3: 0 12px 28px -6px rgba(0, 0, 0, .55);
+    --e4: 0 24px 60px -12px rgba(0, 0, 0, .60);
+    --e5: 0 40px 90px -20px rgba(0, 0, 0, .70);
+
+    --glow-brand: 0 14px 34px -10px rgba(147, 197, 253, .35);
+    --glow-positive: 0 14px 34px -10px rgba(71, 205, 137, .35);
+    --glow-caution: 0 14px 34px -10px rgba(243, 135, 68, .35);
+  }
+
+  /* "System" appearance follows the OS, without needing a dark: variant. */
+  @media (prefers-color-scheme: dark) {
+    :root[data-theme="system"] {
+      --surface: 20 25 34;
+      --surface-sunken: 13 16 23;
+      --surface-raised: 26 32 43;
+
+      --ink: 238 241 246;
+      --ink-muted: 185 193 207;
+      --ink-subtle: 148 163 184;
+      --ink-inverse: 15 23 42;
+
+      --line: 41 49 63;
+      --line-strong: 60 70 88;
+
+      --brand: 147 197 253;
+      --brand-hover: 191 219 254;
+      --brand-soft: 23 37 84;
+      --brand-fg: 2 6 23;
+
+      --positive: 71 205 137;
+      --positive-soft: 12 43 30;
+      --critical: 253 138 138;
+      --critical-soft: 51 21 15;
+      --caution: 243 135 68;
+      --caution-soft: 46 26 12;
+
+      --disabled-bg: 41 49 63;
+      --disabled-fg: 148 163 184;
+
+      --e1: 0 1px 2px rgba(0, 0, 0, .40);
+      --e2: 0 4px 12px -2px rgba(0, 0, 0, .50);
+      --e3: 0 12px 28px -6px rgba(0, 0, 0, .55);
+      --e4: 0 24px 60px -12px rgba(0, 0, 0, .60);
+      --e5: 0 40px 90px -20px rgba(0, 0, 0, .70);
+
+      --glow-brand: 0 14px 34px -10px rgba(147, 197, 253, .35);
+      --glow-positive: 0 14px 34px -10px rgba(71, 205, 137, .35);
+      --glow-caution: 0 14px 34px -10px rgba(243, 135, 68, .35);
+    }
+  }
+
+  /* clip, not hidden: `hidden` turns <body> into a scroll container that never
+     scrolls, which silently breaks every position: sticky element on the site. */
+  html, body {
+    overflow-x: clip;
+  }
+
+  body {
+    font-family: theme("fontFamily.sans");
+  }
+
+  /* Display face for headings: Bricolage Grotesque, one brand across tracks. */
+  h1, h2, h3 {
+    font-family: theme("fontFamily.display");
+    font-optical-sizing: auto;
+  }
+
+  /* ── Global focus ring ────────────────────────────────────────────────
+     AUDIT FIX (blocking, WCAG 2.4.7): 126 of 129 interactive elements had no
+     focus indicator. One rule covers every control, including any added later.
+     :focus-visible keeps mouse clicks clean, so no component needs to opt out
+     with outline-none.
+
+     NOTE ON SPECIFICITY: Tailwind's `.outline-none` utility sets
+     `outline: 2px solid transparent` and is emitted in the utilities layer,
+     AFTER this base layer. At equal specificity the later rule wins, so a
+     plain `:focus-visible` selector is silently defeated on every element
+     that still carries `outline-none`. Doubling the pseudo-class raises
+     specificity above a single utility class, so this rule stays
+     authoritative no matter what a call site does. */
+  :focus-visible:focus-visible {
+    outline: 2px solid rgb(var(--brand)) !important;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Inputs sit tighter to their border. */
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline-offset: 1px;
+  }
+
+  /* ── OS-level reduced motion ──────────────────────────────────────────
+     AUDIT FIX: prefers-reduced-motion was never consulted outside
+     SchoolHomepage. Framer is handled via MotionConfig in App.jsx; this
+     catches every CSS animation (animate-pulse/spin/bounce, marquees). */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* ── Shared primitives ────────────────────────────────────────────────
+     AUDIT FIX: 7 primary-button treatments and 5 input styles collapse to
+     these. Used via className so existing markup can adopt them incrementally.
+     Every one clears the 44px touch minimum. */
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-control
+           font-semibold min-h-touch px-5 py-3 text-sm
+           transition-colors duration-fast ease-brand
+           disabled:cursor-not-allowed disabled:bg-disabled disabled:text-disabled-fg
+           disabled:shadow-none disabled:hover:bg-disabled;
+  }
+  .btn-primary {
+    @apply btn bg-brand text-brand-fg shadow-e2 hover:bg-brand-hover;
+  }
+  .btn-secondary {
+    @apply btn border border-line-strong bg-surface text-ink hover:bg-surface-sunken;
+  }
+  .btn-ghost {
+    @apply btn text-ink-muted hover:bg-surface-sunken hover:text-ink;
+  }
+  .btn-danger {
+    @apply btn bg-critical text-white hover:opacity-90;
+  }
+
+  /* Icon-only button — 44px square floor at every breakpoint. */
+  .btn-icon {
+    @apply inline-flex items-center justify-center rounded-full
+           h-touch w-touch shrink-0
+           transition-colors duration-fast ease-brand
+           disabled:cursor-not-allowed disabled:bg-disabled disabled:text-disabled-fg;
+  }
+
+  .field {
+    @apply w-full rounded-control border border-line bg-surface
+           px-4 py-3 min-h-touch text-ink placeholder:text-ink-subtle
+           transition-colors duration-fast ease-brand
+           focus:border-brand;
+  }
+  .field-error {
+    @apply border-critical bg-critical-soft focus:border-critical;
+  }
+
+  .card {
+    @apply rounded-card border border-line bg-surface shadow-e2;
+  }
+
+  /* ── Kanthast navy: the brand stage ────────────────────────────────────
+     Deep navy lit by soft white light, opening to white toward the bottom.
+     Text sits in the dark upper region (white on #0B1638 is 16:1). Used by
+     the navbar, footer and the homepage bands. */
+  .kb-stage {
+    background-color: #0b1638;
+    background-image:
+      radial-gradient(ellipse 55% 45% at 85% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(226, 232, 240, 0.08) 45%, transparent 75%),
+      radial-gradient(ellipse 40% 35% at 0% 0%, rgba(148, 163, 184, 0.16) 0%, transparent 70%),
+      radial-gradient(ellipse 95% 50% at 55% 120%, rgba(255, 255, 255, 0.95) 0%, rgba(226, 232, 240, 0.55) 38%, transparent 72%),
+      linear-gradient(172deg, #060b1c 0%, #0b1638 48%, #1a2650 80%, #cfd8ea 100%);
+  }
+  .kb-deep {
+    background-color: #0a1330;
+    background-image:
+      radial-gradient(ellipse 50% 40% at 92% 10%, rgba(255, 255, 255, 0.10) 0%, transparent 70%),
+      radial-gradient(ellipse 45% 45% at 0% 90%, rgba(148, 163, 184, 0.12) 0%, transparent 70%),
+      linear-gradient(180deg, #0b1638 0%, #080f28 60%, #060b1c 100%);
+  }
+  .kb-bar {
+    background-color: #091322;
+  }
+  .kb-footer {
+    background-color: #060b1c;
+    background-image:
+      radial-gradient(ellipse 45% 60% at 100% 0%, rgba(255, 255, 255, 0.07) 0%, transparent 70%),
+      linear-gradient(160deg, #0b1638 0%, #060b1c 70%);
+  }
+  /* White pill on the navy stage, with navy as ink. */
+  .btn-onblue {
+    @apply btn bg-white text-[#0b1638] shadow-e3 hover:bg-slate-100;
+  }
+
+
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted;
+  }
+}
+
+/* ── Homepage header + hero ──────────────────────────────────────────────
+   Unlayered so these win over Tailwind utilities on the same elements.
+   Desktop sizes are the approved mockup's pixels at a 1672px viewport,
+   expressed in --u (1u = 1vw, capped at 19.2px ≈ a 1920px viewport), so the
+   composition scales as one piece. Small text keeps a readable floor. */
+:root {
+  --u: min(1vw, 19.2px);
+  --nav-bar-h: 4rem;
+}
+
+.nav-shell {
+  height: var(--nav-bar-h);
+}
+
+/* Header colours live here, not only in Tailwind classes, so a dev server
+   that hasn't reloaded tailwind.config.js still paints them correctly. */
+.kb-bar .nav-logo {
+  color: #f4f7fb;
+}
+.kb-bar .nav-link {
+  color: #dce6f2;
+}
+.kb-bar .nav-link-active {
+  color: #6fe9c7;
+}
+.kb-bar .nav-link-active::after {
+  background-color: #6fe9c7;
+}
+.kb-bar .nav-login {
+  border-color: #2f4869;
+  color: #f4f7fb;
+}
+.kb-bar .nav-signup {
+  background-color: #6becc9;
+  color: #06111f;
+}
+.hero-accent {
+  color: #6becc9;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-color: #091322;
+  color: #f4f7fb;
+}
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.75rem 1.25rem 4rem;
+}
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+.hero-title {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2.5rem, 9vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.07;
+  letter-spacing: -0.04em;
+}
+.hero-sub {
+  margin-top: 1.25rem;
+  font-size: clamp(1.2rem, 3.6vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #e7edf5;
+}
+.hero-desc {
+  margin-top: 1rem;
+  max-width: 36rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #b3bfcf;
+}
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3.25rem;
+  padding: 0 1.75rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 180ms ease, filter 180ms ease, border-color 180ms ease;
+}
+.hero-btn-primary {
+  background-color: #6becc9;
+  color: #06111f;
+}
+.hero-btn-primary:hover {
+  filter: brightness(0.94);
+}
+.hero-btn-secondary {
+  border: 1px solid #334f73;
+  color: #f4f7fb;
+  font-weight: 400;
+}
+.hero-btn-secondary:hover {
+  background-color: #111d30;
+  border-color: #3f5f88;
+}
+.hero-btn-icon {
+  font-size: 0.85em;
+}
+.hero-exams {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.75rem;
+}
+.hero-exam {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #f4f7fb;
+  text-underline-offset: 4px;
+  transition: color 180ms ease;
+}
+.hero-exam:hover {
+  color: #6becc9;
+}
+.hero-exam-icon {
+  font-size: 0.8em;
+}
+.hero-devices {
+  position: relative;
+  min-width: 0;
+  padding-bottom: 9%;
+}
+.hero-devices > .relative {
+  width: 95%;
+}
+.hero-glow {
+  pointer-events: none;
+  position: absolute;
+  left: 0%;
+  top: -30%;
+  width: 90%;
+  height: 90%;
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, rgba(34, 98, 150, 0.5), rgba(22, 64, 108, 0.22) 55%, transparent 100%);
+  filter: blur(24px);
+}
+.hero-caption {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  font-size: 0.875rem;
+  color: #aabfda;
+}
+.hero-caption-icons {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.2rem;
+  color: #a0b3d5;
+  font-size: 1.35rem;
+}
+.hero-caption-icons > svg:last-child {
+  font-size: 0.8em;
+}
+
+@media (min-width: 640px) {
+  .hero-inner {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .hero-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nav-bar-h: calc(var(--u) * 4.904);
+  }
+  .kb-bar .nav-logo {
+    font-size: calc(var(--u) * 2.12);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .kb-bar .nav-track-label {
+    margin-left: 0;
+    font-size: max(13px, calc(var(--u) * 0.93));
+    font-weight: 500;
+  }
+  .kb-bar .nav-chev {
+    width: max(16px, calc(var(--u) * 1.15));
+    height: max(16px, calc(var(--u) * 1.15));
+    border: 0;
+    background-color: #1a2d47;
+  }
+  .kb-bar .nav-links {
+    column-gap: calc(var(--u) * 2.25);
+    font-size: max(14px, calc(var(--u) * 1.13));
+  }
+  .kb-bar .nav-link {
+    font-weight: 400;
+    color: #dce6f2;
+  }
+  .kb-bar .nav-link:hover {
+    color: #ffffff;
+  }
+  .kb-bar .nav-link-active,
+  .kb-bar .nav-link-active:hover {
+    color: #6fe9c7;
+  }
+  .kb-bar .nav-link-active::after {
+    bottom: calc(var(--u) * -0.96);
+    background-color: #6fe9c7;
+  }
+  .kb-bar .nav-courses-chev {
+    margin-left: calc(var(--u) * 0.3);
+    color: #dce6f2;
+  }
+  .kb-bar .nav-actions {
+    column-gap: calc(var(--u) * 1.02);
+  }
+  .kb-bar .nav-login,
+  .kb-bar .nav-signup {
+    height: calc(var(--u) * 2.95);
+    min-height: 36px;
+    border-radius: calc(var(--u) * 0.6);
+    font-size: max(14px, calc(var(--u) * 1.06));
+  }
+  .kb-bar .nav-login {
+    padding: 0 calc(var(--u) * 1.55);
+    border-color: #2f4869;
+    font-weight: 500;
+  }
+  .kb-bar .nav-signup {
+    padding: 0 calc(var(--u) * 1.6);
+    background-color: #6becc9;
+    color: #06111f;
+    font-size: max(15px, calc(var(--u) * 1.18));
+    font-weight: 600;
+  }
+
+  .hero {
+    --u: calc(min(1vw, 19.2px) * 85 / 90);
+    min-height: calc(var(--u) * 50.2);
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: calc(var(--u) * 38.72) calc(var(--u) * 52.12);
+    gap: 0;
+    /* 90 hero units = 85% of the viewport (the hero unit is scaled by 85/90). */
+    width: calc(var(--u) * 90);
+    margin: 0 auto;
+    padding: 0;
+  }
+  .hero-copy {
+    padding-top: calc(var(--u) * 8.9);
+  }
+  .hero-title {
+    font-size: calc(var(--u) * 4.49);
+    line-height: 1.13;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+  }
+  .hero-title > span:last-child {
+    font-size: 1.108em;
+    line-height: 1.12;
+  }
+  .hero-sub {
+    margin-top: calc(var(--u) * 0.95);
+    font-size: calc(var(--u) * 2.135);
+  }
+  .hero-desc {
+    margin-top: calc(var(--u) * 1.62);
+    max-width: max(calc(var(--u) * 38.9), 27rem);
+    font-size: max(15px, calc(var(--u) * 1.39));
+    line-height: 1.55;
+  }
+  .hero-actions {
+    margin-top: calc(var(--u) * 2.64);
+    gap: calc(var(--u) * 0.96);
+  }
+  .hero-btn {
+    height: calc(var(--u) * 3.95);
+    min-height: 44px;
+    padding: 0 calc(var(--u) * 2.6);
+    border-radius: calc(var(--u) * 0.6);
+    font-size: max(15px, calc(var(--u) * 1.196));
+    gap: calc(var(--u) * 0.75);
+  }
+  .hero-btn-primary {
+    padding: 0 calc(var(--u) * 2.12);
+    font-size: max(16px, calc(var(--u) * 1.345));
+  }
+  .hero-btn-secondary {
+    padding: 0 calc(var(--u) * 2.3);
+  }
+  .hero-btn-icon {
+    font-size: 1.05em;
+  }
+  .hero-exams {
+    margin-top: calc(var(--u) * 3.06);
+    column-gap: calc(var(--u) * 2.75);
+  }
+  .hero-exam {
+    gap: calc(var(--u) * 0.9);
+    font-size: max(14px, calc(var(--u) * 0.99));
+  }
+  .hero-devices {
+    margin-top: calc(var(--u) * 3.3);
+    padding-bottom: 0;
+  }
+  .hero-devices > .relative {
+    width: 100%;
+  }
+  .hero-glow {
+    left: 8%;
+    top: -34%;
+    width: 78%;
+    height: 82%;
+  }
+  .hero-caption {
+    position: absolute;
+    top: calc(var(--u) * 39.95);
+    left: 47.9%;
+    transform: translateX(-50%);
+    margin: 0;
+    gap: calc(var(--u) * 1.45);
+    white-space: nowrap;
+    font-size: max(13px, calc(var(--u) * 0.95));
+  }
+  .hero-caption-icons {
+    font-size: calc(var(--u) * 1.6);
+  }
+}
+
+/* ── Whole homepage on the navy + mint identity ───────────────────────────
+   Remapping the semantic tokens on the page wrapper recolours every section
+   (and the live product screens in the tour) without per-class edits. */
+.home-page {
+  --surface: 9 19 34;          /* #091322 */
+  --surface-sunken: 12 24 41;  /* #0C1829 */
+  --surface-raised: 17 29 48;  /* #111D30 */
+  --ink: 244 247 251;
+  --ink-muted: 182 194 210;    /* #B6C2D2 */
+  --ink-subtle: 143 160 184;
+  --ink-inverse: 9 19 34;
+  --line: 29 50 73;            /* #1D3249 */
+  --line-strong: 51 79 115;    /* #334F73 */
+  --brand: 107 236 201;        /* mint #6BECC9 */
+  --brand-hover: 92 222 187;
+  --brand-soft: 16 52 56;
+  --brand-fg: 6 17 31;
+  --e1: 0 1px 2px rgba(0, 0, 0, .4);
+  --e2: 0 6px 16px -4px rgba(0, 0, 0, .5);
+  --e3: 0 14px 32px -8px rgba(0, 0, 0, .55);
+  --e4: 0 24px 60px -12px rgba(0, 0, 0, .6);
+  --e5: 0 40px 90px -20px rgba(0, 0, 0, .7);
+  --glow-brand: 0 14px 34px -10px rgba(107, 236, 201, .35);
+}
+.home-page h2 {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+.home-page h3 {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.site-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+@media (min-width: 640px) {
+  .site-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .site-container {
+    width: calc(var(--u) * 85);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.kb-footer {
+  background-color: #060e1b;
+  background-image: none;
+  border-top: 1px solid #1d3249;
+}
+
+/* Flare glows: a blue bloom behind device art, with a faint mint lift. */
+.hero-glow {
+  left: -10%;
+  top: -35%;
+  width: 115%;
+  height: 120%;
+  background:
+    radial-gradient(closest-side at 45% 42%, rgba(56, 142, 214, 0.75), rgba(34, 98, 168, 0.34) 48%, transparent 100%),
+    radial-gradient(closest-side at 88% 78%, rgba(107, 236, 201, 0.22), transparent 100%);
+  filter: blur(40px);
+}
+@media (min-width: 1024px) {
+  .hero-glow {
+    left: -8%;
+    top: -38%;
+    width: 112%;
+    height: 125%;
+  }
+}
+.home-glow {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  left: -12%;
+  top: -22%;
+  width: 124%;
+  height: 130%;
+  border-radius: 9999px;
+  background:
+    radial-gradient(closest-side at 50% 42%, rgba(56, 142, 214, 0.6), rgba(34, 98, 168, 0.26) 50%, transparent 100%),
+    radial-gradient(closest-side at 82% 80%, rgba(107, 236, 201, 0.16), transparent 100%);
+  filter: blur(44px);
+}
+.home-glow + * {
+  position: relative;
+  z-index: 1;
+}
+.home-glow-close {
+  left: auto;
+  right: -10%;
+  top: -60%;
+  width: 60%;
+  height: 220%;
+}
+
+.pricing-glow {
+  left: 20%;
+  top: -20%;
+  width: 80%;
+  height: 120%;
+}
+
+.page-hero-glow {
+  left: auto;
+  right: -18%;
+  top: -45%;
+  width: 75%;
+  height: 170%;
+}
+
+/* FAQ student: small idle loops, stopped by the global reduced-motion rule
+   and only attached while the section is on screen. */
+.faq-student text,
+.faq-student g {
+  transform-box: fill-box;
+}
+.faq-mark {
+  transform-origin: center;
+  animation: faq-mark 3.3s ease-in-out infinite;
+}
+@keyframes faq-mark {
+  0% { opacity: 0; transform: translateY(10px) rotate(-8deg); }
+  25% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-16px) rotate(6deg); }
+}
+.faq-blink {
+  transform-origin: center;
+  animation: faq-blink 5s infinite;
+}
+@keyframes faq-blink {
+  0%, 94%, 100% { transform: scaleY(1); }
+  97% { transform: scaleY(0.12); }
+}
+.faq-steam {
+  animation: faq-steam 2.8s ease-in-out infinite;
+}
+@keyframes faq-steam {
+  0% { opacity: 0; transform: translateY(6px); }
+  40% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* App pages: the same 85% frame as the navbar and marketing pages on wide
+   screens; a comfortable cap below that. */
+.page-frame {
+  width: 100%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1024px) {
+  .page-frame {
+    max-width: none;
+    width: calc(var(--u) * 85);
+  }
+}
+
+/* Pricing: soft pulse on the free lectures' play buttons. */
+.free-ping {
+  animation: free-ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes free-ping {
+  0% { transform: scale(1); opacity: 0.45; }
+  70%, 100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* Hero accent: types in, then a slow mint sheen sweeps across it. */
+.typed-accent { position: relative; display: inline-block; }
+.typed-accent-glyphs { white-space: pre; }
+.typed-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.12em);
+  transition: opacity 140ms ease-out, transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.typed-char.is-in { opacity: 1; transform: none; }
+/* Zero-width caret, so it never pushes the text. */
+.typed-caret { position: relative; display: inline-block; width: 0; }
+.typed-caret::after {
+  content: "";
+  position: absolute;
+  left: 0.05em;
+  bottom: -0.1em;
+  width: 0.07em;
+  height: 0.92em;
+  border-radius: 999px;
+  background: #6becc9;
+  box-shadow: 0 0 18px rgba(107, 236, 201, 0.7);
+  animation: typed-blink 900ms steps(1) infinite;
+}
+.typed-accent.is-done .typed-caret { opacity: 0; transition: opacity 400ms ease-out; }
+@keyframes typed-blink { 50% { opacity: 0; } }
+.typed-accent.is-done .typed-accent-glyphs {
+  background: linear-gradient(100deg, #6becc9 0%, #6becc9 38%, #e8fff8 50%, #6becc9 62%, #6becc9 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: typed-sheen 5.5s cubic-bezier(0.45, 0, 0.25, 1) 0.4s infinite;
+}
+.typed-accent.is-done .typed-char { color: transparent; }
+@keyframes typed-sheen {
+  0% { background-position: 100% 0; }
+  45%, 100% { background-position: 0% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .typed-char { opacity: 1; transform: none; transition: none; }
+  .typed-caret::after, .typed-accent.is-done .typed-accent-glyphs { animation: none; }
+}
+
+/* ── Kanthast School: flowing sky ───────────────────────────────────────
+   One continuous, tilted blue-to-white gradient fixed behind every page
+   page (App.jsx adds `kb-sky` + `.kb-sky-bg`), slowly flowing, with a film
+   grain on top. Pages and sections are transparent so it never breaks into
+   bands; cards keep their solid surfaces and float on it. */
+.kb-sky { background: transparent; }
+/* One tilted beam of light: cobalt pours in from the top-right and resolves
+   into cool paper-white at the bottom-left. Stops sit on one blue hue
+   (oklch ~255–262) and blend in OKLab, so the falloff stays luminous
+   instead of greying out the way sRGB blue-to-white does. */
+:root {
+  --sky-paper: #f7f9fd;   /* oklch(0.98 0.006 250) */
+  --sky-ice:   #d9e8fb;   /* oklch(0.92 0.035 245) */
+  --sky-azure: #7fb4f4;   /* oklch(0.76 0.11 248) */
+  --sky-cobalt:#2f63e3;   /* oklch(0.56 0.19 262) */
+}
+.kb-sky-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background-color: var(--sky-paper);
+}
+.kb-sky-bg::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  /* sRGB fallback first; browsers with color-interpolation take the OKLab one.
+     Deep cobalt stays in the top-right corner; the body of the page sits on
+     paper and ice so muted text keeps AA contrast wherever it lands. */
+  background-image:
+    radial-gradient(55% 50% at 100% 0%, rgb(47 99 227 / 0.6), transparent 72%),
+    linear-gradient(62deg, var(--sky-paper) 0%, var(--sky-paper) 36%, var(--sky-ice) 62%, var(--sky-azure) 86%, var(--sky-cobalt) 100%);
+  background-image:
+    /* The one signature detail: a soft refracted sheen along the beam's edge. */
+    linear-gradient(in oklab 62deg, transparent 54%, rgb(255 255 255 / 0.5) 60%, transparent 67%),
+    radial-gradient(in oklab 24% 32% at 4% 100%, rgb(127 180 244 / 0.2), transparent),
+    radial-gradient(in oklab 55% 50% at 100% 0%, rgb(47 99 227 / 0.6), transparent 72%),
+    linear-gradient(in oklab 62deg, var(--sky-paper) 0%, var(--sky-paper) 36%, var(--sky-ice) 62%, var(--sky-azure) 86%, var(--sky-cobalt) 100%);
+  animation: kb-sky-light 40s ease-in-out infinite alternate;
+  will-change: transform;
+}
+/* Film grain in overlay: mid-grey noise vanishes on white and textures the
+   blue, so the paper stays clean and the light looks photographed. */
+.kb-sky-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 240px;
+  opacity: 0.7;
+  mix-blend-mode: overlay;
+}
+/* The light drifts; it never rotates. */
+@keyframes kb-sky-light {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-5%, 4%, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kb-sky-bg::before { animation: none; }
+}
+
+/* Every page wrapper lets the sky through (page-level backgrounds were
+   painted on the min-h-screen wrapper of each route). */
+.kb-sky main .min-h-screen,
+.kb-sky main section {
+  background-color: transparent;
+  background-image: none;
+}
+
+/* Footer: frosted glass on the sky instead of a navy slab. */
+.kb-sky .footer-wrap { background-color: transparent; }
+.kb-sky .kb-footer {
+  background-color: rgb(255 255 255 / 0.45);
+  background-image: none;
+  border-top: 1px solid rgb(11 27 51 / 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #0b1b33;
+}
+.kb-sky .kb-footer .text-white { color: #0b1b33; }
+.kb-sky .kb-footer [class*="text-white/"] { color: #3d4f6b; }
+.kb-sky .kb-footer a:hover { color: #1d4ed8; }
+.kb-sky .kb-footer [class*="border-white"],
+.kb-sky .kb-footer [class*="border-[#1d3249]"] { border-color: rgb(11 27 51 / 0.12); }
+.kb-sky .kb-footer [class*="bg-white/"] { background-color: rgb(255 255 255 / 0.6); }
+
+/* Homepage and the marketing pages (About, Contact, Courses, Pricing share
+   `.home-page`) on the sky: light tokens over the old navy ones. */
+.kb-sky .home-page,
+.page-aurora {
+  position: relative;
+  color: #0b1b33;
+  --surface: 255 255 255;
+  --surface-sunken: 241 246 253;
+  --surface-raised: 255 255 255;
+  --ink: 11 27 51;             /* #0B1B33 */
+  --ink-muted: 61 79 107;      /* #3D4F6B, 8.3:1 on white */
+  --ink-subtle: 88 106 134;    /* #586A86, 5.4:1 on white */
+  --ink-inverse: 255 255 255;
+  --line: 205 220 240;
+  --line-strong: 176 198 228;
+  --brand: 29 78 216;          /* #1D4ED8, 6.7:1 on white */
+  --brand-hover: 30 64 175;
+  --brand-soft: 232 240 254;
+  --brand-fg: 255 255 255;
+  --e1: 0 1px 2px rgba(15, 40, 90, .06);
+  --e2: 0 6px 16px -4px rgba(15, 40, 90, .10);
+  --e3: 0 14px 32px -8px rgba(15, 40, 90, .14);
+  --e4: 0 24px 60px -12px rgba(15, 40, 90, .18);
+  --e5: 0 40px 90px -20px rgba(15, 40, 90, .24);
+  --glow-brand: 0 14px 34px -10px rgba(29, 78, 216, .45);
+  color-scheme: light;
+}
+.page-aurora .hero { background-color: transparent; color: #0b1b33; }
+.page-aurora .hero-accent { color: #1d4ed8; }
+.page-aurora .hero-sub { color: #142a4d; }
+.page-aurora .hero-desc { color: #3d4f6b; }
+.page-aurora .hero-btn-primary { background-color: #1d4ed8; color: #ffffff; box-shadow: 0 10px 24px -10px rgba(29, 78, 216, 0.6); }
+.page-aurora .hero-btn-primary:hover { background-color: #1e40af; filter: none; }
+.page-aurora .hero-btn-secondary { background-color: rgb(255 255 255 / 0.6); border-color: rgb(11 27 51 / 0.14); color: #0b1b33; font-weight: 500; backdrop-filter: blur(8px); }
+.page-aurora .hero-btn-secondary:hover { background-color: rgb(255 255 255 / 0.9); border-color: rgb(11 27 51 / 0.24); }
+.page-aurora .hero-exam { color: #0b1b33; }
+.page-aurora .hero-exam:hover { color: #1d4ed8; }
+.page-aurora .hero-caption { color: #2a4366; }
+.page-aurora .hero-glow,
+.kb-sky .home-glow { display: none; }
+.page-aurora .typed-caret::after { background: #1d4ed8; box-shadow: 0 0 14px rgba(29, 78, 216, 0.5); }
+.page-aurora .typed-accent.is-done .typed-accent-glyphs {
+  background-image: linear-gradient(100deg, #1d4ed8 0%, #1d4ed8 38%, #60a5fa 50%, #1d4ed8 62%, #1d4ed8 100%);
+}
+/* No section bands: borders become faint hairlines so the sky reads as one surface. */
+.page-aurora .aurora-band,
+.page-aurora .aurora-close { border-top-color: transparent; }
+.page-aurora .border-line { border-color: rgb(var(--line)); }
+
+/* Navbar on Kanthast School: frosted white glass over the wash. */
+.kb-bar.nav-aurora {
+  background-color: rgb(245 248 253 / 0.62);
+  border-color: rgb(11 27 51 / 0.07);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+}
+.kb-bar.nav-aurora .nav-logo { color: #0b1b33; }
+.kb-bar.nav-aurora .nav-track-label { color: #1d4ed8; }
+.kb-bar.nav-aurora .nav-chev { background-color: rgb(29 78 216 / 0.1); border-color: transparent; }
+.kb-bar.nav-aurora .nav-chev svg { color: #1d4ed8; }
+.kb-bar.nav-aurora .nav-link { color: #2a3d5c; }
+.kb-bar.nav-aurora .nav-link:hover { color: #0b1b33; }
+.kb-bar.nav-aurora .nav-link-active,
+.kb-bar.nav-aurora .nav-link-active:hover { color: #1d4ed8; }
+.kb-bar.nav-aurora .nav-link-active::after { background-color: #1d4ed8; }
+.kb-bar.nav-aurora .nav-courses-chev { color: #2a3d5c; }
+.kb-bar.nav-aurora .nav-login,
+.kb-bar.nav-aurora .nav-m-login { background-color: rgb(255 255 255 / 0.55); border-color: rgb(11 27 51 / 0.14); color: #0b1b33; }
+.kb-bar.nav-aurora .nav-login:hover,
+.kb-bar.nav-aurora .nav-m-login:hover { background-color: rgb(255 255 255 / 0.9); }
+.kb-bar.nav-aurora .nav-signup,
+.kb-bar.nav-aurora .nav-m-signup { background-color: #1d4ed8; color: #ffffff; }
+.kb-bar.nav-aurora .nav-signup:hover,
+.kb-bar.nav-aurora .nav-m-signup:hover { background-color: #1e40af; filter: none; }
+
+/* Mobile dock on Kanthast School. */
+.nav-dock.nav-aurora .nav-dock-fade { background-image: linear-gradient(to top, rgb(245 248 253 / 0.8), transparent); }
+.nav-dock.nav-aurora .nav-dock-bar { background-color: rgb(245 248 253 / 0.82); border-color: rgb(11 27 51 / 0.08); }
+.nav-dock.nav-aurora .nav-dock-bar a,
+.nav-dock.nav-aurora .nav-dock-bar a span { color: #3d4f6b; }
+.nav-dock.nav-aurora .nav-dock-bar a.text-mint,
+.nav-dock.nav-aurora .nav-dock-bar a.text-mint span { color: #1d4ed8; }
+
+/* FAQ illustration on the sky: no card, no box. The scene, speech bubble
+   and hint sit straight on the gradient. */
+.kb-sky .faq-student {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+.kb-sky .faq-student > .border-t { border-top-color: transparent; padding-left: 0; padding-right: 0; }
+.kb-sky .faq-student svg > circle:first-of-type { opacity: 0.35; }
+
+/* Marketing page wrappers and section dividers: no fills, no seams. */
+.kb-sky .home-page { background-color: transparent; }
+.kb-sky main section.border-t { border-top-color: transparent; }
+.kb-sky main section.border-b { border-bottom-color: transparent; }
+
+/* On narrow phones the track chevron would touch Log In, so drop it there. */
+@media (max-width: 420px) {
+  .kb-bar .nav-chev { display: none; }
+  .kb-bar .nav-track-label { font-size: 11px; }
+}
+
+/* Hero badge: a feature that is announced but not live yet. */
+.hero-exam-soon { cursor: default; color: rgb(var(--ink-subtle)); }
+.hero-exam-badge {
+  border-radius: 9999px;
+  background-color: rgb(var(--brand-soft));
+  padding: 0.15rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgb(var(--brand));
+}
+.kb-bar.nav-aurora .nav-track-school .nav-track-label { color: #b45309; }
+
+/* ── Kanthast School pages ─────────────────────────────────────────
+   One brand on the sky. Accents: cobalt for UI chrome,
+   marigold for School highlights. Display type is Bricolage Grotesque. */
+:root {
+  --brand-blue: #1d4ed8;
+  --brand-blue-hover: #1e40af;
+  --school: #f2a007;        /* marigold fill */
+  --school-ink: #8a4b05;    /* marigold text, 7.4:1 on white */
+  --school-soft: #fff4dc;
+}
+.brand-title {
+  font-family: theme("fontFamily.display");
+  font-size: clamp(2.6rem, 6vw, 5.2rem);
+  font-weight: 720;
+  line-height: 1.0;
+  letter-spacing: -0.022em;
+  font-variation-settings: "opsz" 72;
+  text-wrap: balance;
+  color: rgb(var(--ink));
+}
+.brand-h2 {
+  font-family: theme("fontFamily.display");
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  font-weight: 750;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  color: rgb(var(--ink));
+}
+
+/* Product doors: two panels with different contents, not a card grid. */
+.door {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+  padding: clamp(1.25rem, 2.6vw, 2rem);
+  border-radius: 28px;
+  background: rgb(255 255 255 / 0.72);
+  border: 1px solid rgb(11 27 51 / 0.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 30px 60px -36px rgba(15, 40, 90, 0.35);
+}
+.door-school { border-top: 4px solid var(--school); }
+.door-name {
+  font-family: theme("fontFamily.display");
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  color: rgb(var(--ink));
+}
+.door-shot {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgb(11 27 51 / 0.08);
+  box-shadow: 0 18px 40px -24px rgba(15, 40, 90, 0.45);
+}
+.door-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-height: 48px;
+  padding: 0 1.4rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background-color 160ms ease, box-shadow 160ms ease;
+}
+.door-cta-school { background: var(--school); color: #2b1600; box-shadow: 0 10px 24px -12px rgba(242, 160, 7, 0.7); }
+.door-cta-school:hover { background: #e09405; }
+
+/* Screenplay page: direction on the left, dialogue on the right. */
+.script-page {
+  min-width: 0;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgb(11 27 51 / 0.08);
+  box-shadow: 0 24px 50px -30px rgba(15, 40, 90, 0.4);
+  padding: clamp(1rem, 2.4vw, 1.75rem);
+}
+.script-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.25rem 1rem; padding-bottom: 0.9rem; border-bottom: 1px dashed rgb(11 27 51 / 0.15); }
+.script-title { font-family: theme("fontFamily.display"); font-weight: 700; font-size: 1.15rem; color: rgb(var(--ink)); }
+.script-context { font-size: 0.85rem; color: rgb(var(--ink-subtle)); }
+.script-scenes { display: grid; gap: 1.25rem; margin-top: 1.1rem; }
+.script-scene { display: grid; gap: 0.6rem 1.5rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) {
+  .script-page:not(.script-page-compact) .script-scene { grid-template-columns: 5.5rem minmax(0, 1fr) minmax(0, 1.1fr); }
+}
+.script-scene-no { font-size: 0.8rem; font-weight: 600; color: var(--school-ink); }
+.script-direction { font-size: 0.9rem; line-height: 1.55; font-style: italic; color: rgb(var(--ink-muted)); }
+.script-lines { display: grid; gap: 0.5rem; }
+.script-line { display: grid; gap: 0.1rem; }
+.script-speaker { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.script-speaker-neo { color: var(--brand-blue); }
+.script-speaker-zippy { color: var(--school-ink); }
+.script-text { font-size: 0.98rem; line-height: 1.5; color: rgb(var(--ink)); }
+.script-page-compact .script-direction { font-size: 0.85rem; }
+
+/* AI lists: live items solid, planned items dashed so the difference reads at a glance. */
+.ai-item { padding-left: 1rem; border-left: 3px solid; }
+.ai-item-live { border-left-color: var(--brand-blue); }
+.ai-item-next { border-left-color: rgb(11 27 51 / 0.2); border-left-style: dashed; }
+.soon-badge {
+  display: inline-flex;
+  border-radius: 9999px;
+  background: var(--school-soft);
+  padding: 0.1rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--school-ink);
+}
+
+/* Comparison table. */
+.compare-wrap { overflow-x: auto; border-radius: 20px; background: rgb(255 255 255 / 0.72); border: 1px solid rgb(11 27 51 / 0.07); backdrop-filter: blur(12px); }
+.compare { width: 100%; min-width: 640px; border-collapse: collapse; text-align: left; }
+.compare th, .compare td { padding: 1rem 1.25rem; vertical-align: top; border-top: 1px solid rgb(11 27 51 / 0.07); }
+.compare thead th, .compare thead td { border-top: 0; font-family: theme("fontFamily.display"); font-size: 1.15rem; font-weight: 700; }
+.compare tbody th { width: 22%; font-weight: 600; color: rgb(var(--ink)); }
+.compare tbody td { color: rgb(var(--ink-muted)); }
+.compare-school a { color: var(--school-ink); }
+.compare a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* School page specifics (marigold accent). */
+.school-page { --brand: 138 75 5; --brand-soft: 255 244 220; }
+.school-cast { width: 100%; max-width: 460px; height: auto; justify-self: center; }
+.school-cast-zippy { transform-origin: 318px 148px; animation: zippy-bob 3.2s ease-in-out infinite; }
+@keyframes zippy-bob { 50% { transform: translateY(-8px) rotate(6deg); } }
+@media (prefers-reduced-motion: reduce) { .school-cast-zippy { animation: none; } }
+.school-status {
+  display: inline-flex;
+  border-radius: 12px;
+  background: var(--school-soft);
+  padding: 0.55rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--school-ink);
+}
+.school-cta-ghost { background: rgb(255 255 255 / 0.7); border: 1px solid rgb(11 27 51 / 0.14); color: rgb(var(--ink)); }
+.school-cta-ghost:hover { background: #ffffff; }
+.guide { padding-top: 1rem; border-top: 3px solid var(--school); }
+.guide-name { font-family: theme("fontFamily.display"); font-size: 1.6rem; font-weight: 750; letter-spacing: -0.02em; }
+.guide-neo { color: #5c4331; }
+.guide-zippy { color: #1d4ed8; }
+.class-col {
+  min-width: 0;
+  padding: 1.5rem;
+  border-radius: 22px;
+  background: rgb(255 255 255 / 0.75);
+  border: 1px solid rgb(11 27 51 / 0.07);
+  backdrop-filter: blur(12px);
+}
+.class-name { font-family: theme("fontFamily.display"); font-size: 1.7rem; font-weight: 750; letter-spacing: -0.02em; color: rgb(var(--ink)); }
+.class-count { margin-top: 0.25rem; font-weight: 600; color: var(--school-ink); }
+.shape-step { display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); gap: 1rem; align-items: start; }
+.shape-no {
+  display: grid; place-items: center;
+  width: 2.25rem; height: 2.25rem; border-radius: 9999px;
+  background: var(--school); color: #2b1600;
+  font-family: theme("fontFamily.display"); font-weight: 750;
+}
+.ai-item-school { border-left-color: var(--school); }
+.school-price {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 28px;
+  background: rgb(255 255 255 / 0.75);
+  border: 1px solid rgb(11 27 51 / 0.07);
+  border-top: 4px solid var(--school);
+  backdrop-filter: blur(14px);
+}
+
+.kb-bar.nav-aurora .nav-track .bg-mint\/50 { background-color: rgb(29 78 216 / 0.18); }
+
+/* ── Brand page, visual-first ─────────────────────────────────────────── */
+.hero3d { position: relative; min-width: 0; height: clamp(320px, 52vw, 560px); }
+.hero3d-canvas, .hero3d-canvas canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
+.hero3d-fallback {
+  position: absolute; inset: 10%;
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, rgb(127 180 244 / 0.45), transparent);
+  filter: blur(20px);
+}
+
+/* Product showcases: big visual panels, the whole panel is the link. */
+.showcase {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+  min-width: 0;
+  overflow: hidden;
+  padding: clamp(1.25rem, 2.6vw, 2rem);
+  border-radius: 30px;
+  background: rgb(255 255 255 / 0.62);
+  border: 1px solid rgb(255 255 255 / 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 40px 80px -48px rgba(15, 40, 90, 0.45);
+  transition: transform 300ms cubic-bezier(.2,.7,.2,1), box-shadow 300ms ease;
+}
+.showcase:hover { transform: translateY(-4px); box-shadow: 0 50px 90px -46px rgba(15, 40, 90, 0.55); }
+.showcase:focus-visible { outline: 3px solid var(--brand-blue); outline-offset: 4px; }
+.showcase-pro { background-image: radial-gradient(70% 60% at 100% 0%, rgb(127 180 244 / 0.35), transparent 70%); }
+.showcase-school { background-image: radial-gradient(70% 60% at 0% 100%, rgb(242 160 7 / 0.18), transparent 70%); }
+.showcase-text { display: grid; gap: 0.8rem; }
+.showcase-stage { position: relative; min-height: 260px; display: grid; place-items: center; perspective: 1200px; }
+.showcase-stage-pro > div {
+  width: 92%;
+  transform: rotateX(10deg) rotateY(-16deg) rotateZ(1deg);
+  transform-style: preserve-3d;
+  transition: transform 600ms cubic-bezier(.2,.7,.2,1);
+}
+.showcase-pro:hover .showcase-stage-pro > div { transform: rotateX(4deg) rotateY(-6deg); }
+.showcase-cast { max-width: 360px; }
+.showcase-foot { font-size: 0.9rem; font-weight: 500; color: rgb(var(--ink-muted)); }
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip {
+  border-radius: 9999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgb(29 78 216 / 0.09);
+  color: var(--brand-blue);
+}
+.chip-soon { background: var(--school-soft); color: var(--school-ink); }
+.chip-soon::after { content: " soon"; font-weight: 500; }
+.chip-school { background: var(--school-soft); color: var(--school-ink); }
+
+/* Floating chapter chips around Neo and Zippy. */
+.float-chip {
+  position: absolute;
+  border-radius: 12px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: rgb(var(--ink));
+  background: #ffffff;
+  box-shadow: 0 12px 24px -14px rgba(15, 40, 90, 0.45);
+  animation: chip-float 6s ease-in-out infinite;
+}
+.float-chip-1 { top: 6%; left: 2%; animation-delay: -1s; }
+.float-chip-2 { top: 10%; right: 4%; animation-delay: -3s; }
+.float-chip-3 { bottom: 18%; left: 0; animation-delay: -2s; }
+.float-chip-4 { bottom: 8%; right: 2%; animation-delay: -4s; }
+.float-chip-5 { top: 44%; right: -2%; animation-delay: -5s; }
+@keyframes chip-float { 50% { transform: translateY(-10px) rotate(-1.5deg); } }
+@media (max-width: 520px) { .float-chip-3, .float-chip-5 { display: none; } }
+
+/* Script → scene. */
+.script-to-scene { display: grid; gap: 1.5rem; align-items: start; }
+@media (min-width: 1024px) { .script-to-scene .circuit-scene { position: sticky; top: 7rem; } .script-arrow { align-self: center; } }
+@media (min-width: 1024px) { .script-to-scene { grid-template-columns: minmax(0, 1fr) 4rem minmax(0, 1fr); } }
+.script-arrow { display: grid; place-items: center; }
+.script-arrow span {
+  width: 3rem; height: 3rem; border-radius: 9999px;
+  background: var(--brand-blue);
+  box-shadow: 0 10px 24px -10px rgba(29, 78, 216, 0.7);
+  -webkit-mask: none;
+  position: relative;
+}
+.script-arrow span::after {
+  content: ""; position: absolute; inset: 0; margin: auto;
+  width: 0.7rem; height: 0.7rem;
+  border-top: 3px solid #fff; border-right: 3px solid #fff;
+  transform: translateX(-2px) rotate(45deg);
+}
+@media (max-width: 1023px) { .script-arrow span::after { transform: translateY(-2px) rotate(135deg); } }
+.circuit-scene { width: 100%; height: auto; border-radius: 22px; box-shadow: 0 30px 60px -30px rgba(15, 40, 90, 0.6); }
+
+/* Circuit cycle (6s): switch open and bulb dark, then closed and lit. */
+.circuit-switch { transform-origin: 320px 170px; animation: switch-close 6s ease-in-out infinite; }
+.circuit-bulb { fill: #3a4b6b; animation: bulb-on 6s ease-in-out infinite; }
+.circuit-glow { opacity: 0; animation: glow-on 6s ease-in-out infinite; }
+.circuit-electrons { animation: electrons-on 6s ease-in-out infinite; }
+@keyframes switch-close { 0%, 18% { transform: rotate(-38deg); } 26%, 92% { transform: rotate(0); } 100% { transform: rotate(-38deg); } }
+@keyframes bulb-on { 0%, 24% { fill: #3a4b6b; } 30%, 92% { fill: #ffd56a; } 100% { fill: #3a4b6b; } }
+@keyframes glow-on { 0%, 24% { opacity: 0; } 32%, 90% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes electrons-on { 0%, 22% { opacity: 0.25; } 28%, 92% { opacity: 1; } 100% { opacity: 0.25; } }
+@media (prefers-reduced-motion: reduce) {
+  .circuit-switch, .circuit-bulb, .circuit-glow, .circuit-electrons, .float-chip { animation: none; }
+  .circuit-bulb { fill: #ffd56a; }
+  .circuit-glow { opacity: 1; }
+}
+
+/* AI tiles. */
+.ai-grid { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .ai-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .ai-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.ai-tile {
+  padding: 1.4rem;
+  border-radius: 22px;
+  background: rgb(255 255 255 / 0.72);
+  border: 1px solid rgb(255 255 255 / 0.85);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px -32px rgba(15, 40, 90, 0.45);
+}
+.ai-tile-next { background: rgb(255 255 255 / 0.4); border-style: dashed; border-color: rgb(11 27 51 / 0.14); }
+.ai-icon {
+  display: grid; place-items: center;
+  width: 3rem; height: 3rem; border-radius: 14px;
+  font-size: 1.25rem; color: #fff;
+  background: linear-gradient(140deg, #7fb4f4, #1d4ed8);
+  box-shadow: 0 12px 22px -10px rgba(29, 78, 216, 0.7), inset 0 1px 0 rgb(255 255 255 / 0.5);
+  transform: perspective(300px) rotateX(12deg) rotateY(-12deg);
+}
+.ai-tile-next .ai-icon { background: linear-gradient(140deg, #ffd27a, #f2a007); box-shadow: 0 12px 22px -10px rgba(242, 160, 7, 0.7), inset 0 1px 0 rgb(255 255 255 / 0.5); }
+
+/* ── Symmetric brand layout ─────────────────────────────────────────────── */
+.brand-hero { position: relative; display: flex; flex-direction: column; text-align: center; }
+.brand-hero-copy { position: relative; z-index: 1; padding-top: clamp(3rem, 7vw, 6rem); }
+.brand-hero .hero3d { order: 2; height: 320px; }
+@media (min-width: 1024px) {
+  .brand-hero { min-height: 620px; justify-content: center; }
+  .brand-hero .hero3d { position: absolute; inset: 0; height: auto; order: 0; }
+  .brand-hero-copy { padding-block: 4rem; }
+}
+
+/* Product cards: same skeleton, same stage size, accent is the only difference. */
+.showcase { grid-template-rows: auto 1fr auto; text-align: left; }
+.showcase:hover { transform: translateY(-4px); }
+.showcase-pro { border-top: 4px solid var(--brand-blue); background-image: radial-gradient(80% 60% at 100% 0%, rgb(127 180 244 / 0.28), transparent 70%); }
+.showcase-school { border-top: 4px solid var(--school); background-image: radial-gradient(80% 60% at 0% 0%, rgb(242 160 7 / 0.16), transparent 70%); }
+.showcase-stage { aspect-ratio: 16 / 10; min-height: 0; width: 100%; }
+.showcase-stage-pro > div,
+.showcase-pro:hover .showcase-stage-pro > div { width: 86%; transform: none; }
+.showcase-cast { width: 70%; max-width: 340px; }
+.showcase-foot {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(11 27 51 / 0.08);
+}
+.showcase-cta {
+  border-radius: 10px;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 160ms ease;
+}
+.showcase-cta-pro { background: var(--brand-blue); color: #fff; }
+.showcase-cta-school { background: var(--school); color: #2b1600; }
+.showcase-pro:hover .showcase-cta-pro { background: var(--brand-blue-hover); }
+.showcase-school:hover .showcase-cta-school { background: #e09405; }
+.chip-school { background: var(--school-soft); color: var(--school-ink); }
+.showcase-school:focus-visible { outline-color: var(--school); }
+
+/* Chapter chips: two either side, mirrored. */
+.float-chip-1 { top: 8%; left: 0; right: auto; bottom: auto; }
+.float-chip-2 { top: 8%; right: 0; left: auto; bottom: auto; }
+.float-chip-3 { bottom: 10%; left: 0; right: auto; top: auto; display: inline-block; }
+.float-chip-4 { bottom: 10%; right: 0; left: auto; top: auto; }
+@media (max-width: 520px) { .float-chip-3, .float-chip-4 { display: none; } }
+/* Hero buttons: equal width, so the pair reads as a balanced choice. */
+.brand-hero .door-cta { min-width: 14.5rem; }

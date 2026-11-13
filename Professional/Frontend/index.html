@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Pinch-zoom intentionally NOT disabled: students read dense medical text
+         for long sessions and must be able to magnify it (WCAG 1.4.4). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-visual" />
+    <!-- PWA / Capacitor mobile app meta -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Kanthast" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Kanthast Professional | Animated medical lectures for NEET-PG, INI-CET and USMLE</title>
+    <meta name="description" content="Kanthast Professional teaches medicine one idea at a time through short animated lectures for NEET-PG, INI-CET and USMLE." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://pro.kanthast.in/" />
+
+    <!-- SEO -->
+    <meta name="google-site-verification" 
+    content="pt2_giWqmJ_J086kdvsFNyI9VaNS4pJODhsz7rvf9fk" />
+
+    <!-- Brand typefaces. Loaded app-wide so the product renders identically on
+         Windows, macOS, iOS and Android instead of falling back to the OS face. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/logo.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <meta name="theme-color" content="#F7F9FD" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kanthast" />
+    <meta property="og:title" content="Kanthast Professional | Animated medical lectures for NEET-PG, INI-CET and USMLE" />
+    <meta property="og:description" content="Short animated medical lectures, one idea at a time, for NEET-PG, INI-CET and USMLE." />
+    <meta property="og:url" content="https://pro.kanthast.in/" />
+    <meta property="og:image" content="https://pro.kanthast.in/Banner.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kanthast Professional | Animated medical lectures for NEET-PG, INI-CET and USMLE" />
+    <meta name="twitter:description" content="Short animated medical lectures, one idea at a time, for NEET-PG, INI-CET and USMLE." />
+    <meta name="twitter:image" content="https://pro.kanthast.in/Banner.png" />
+
+    <!-- Structured Data: Organization + WebSite + SiteNavigation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://pro.kanthast.in/#organization",
+          "name": "Kanthast",
+          "url": "https://pro.kanthast.in",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://pro.kanthast.in/logo.png"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/kanthast/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pro.kanthast.in/#website",
+          "url": "https://pro.kanthast.in",
+          "name": "Kanthast",
+          "publisher": { "@id": "https://pro.kanthast.in/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://pro.kanthast.in/courses?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "@id": "https://pro.kanthast.in/#navigation",
+          "name": ["Courses", "About", "Contact", "Log In", "Sign Up"],
+          "url": [
+            "https://pro.kanthast.in/courses",
+            "https://pro.kanthast.in/about",
+            "https://pro.kanthast.in/contact",
+            "https://pro.kanthast.in/login",
+            "https://pro.kanthast.in/signup"
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

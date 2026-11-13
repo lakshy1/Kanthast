@@ -1,11 +1,10 @@
 {
-  "name": "edulearn",
-  "version": "1.0.0",
+  "name": "kanthast",
   "private": true,
   "scripts": {
-    "client": "cd Frontend && npm run dev",
-    "server": "cd Backend && nodemon server.js",
-    "dev": "concurrently -n \"CLIENT,SERVER\" -c \"bgBlue,bgYellow\" \"npm run client\" \"npm run server\""
+    "pro": "concurrently -n \"PRO-WEB,PRO-API\" -c \"bgBlue,bgYellow\" \"cd Professional/Frontend && npm run dev\" \"cd Professional/Backend && nodemon server.js\"",
+    "school": "concurrently -n \"SCH-WEB,SCH-API\" -c \"bgGreen,bgMagenta\" \"cd School/Frontend && npm run dev\" \"cd School/Backend && nodemon server.js\"",
+    "brand": "cd Brand && npx serve ."
   },
   "dependencies": {
     "concurrently": "^9.2.1"

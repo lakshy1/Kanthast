@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-29T12:00:00Z",
+  "title": "Design System: Kanthast",
+  "extensions": {
+    "colorMeta": {
+      "stage-navy": { "role": "neutral", "displayName": "Stage Navy", "canonical": "#0B1638 (base of .kb-stage; also the ink of the white stage pill)", "darkValue": "#0B1638", "tonalRamp": ["#060B1C", "#0A1330", "#0B1638", "#16224A", "#1A2650", "#46557F", "#8E9BBD", "#CFD8EA"] },
+      "stage-deep": { "role": "neutral", "displayName": "Stage Deep", "canonical": "#0A1330 (base of .kb-deep)", "darkValue": "#0A1330", "tonalRamp": ["#060B1C", "#080F28", "#0A1330", "#0B1638", "#1A2650", "#46557F", "#8E9BBD", "#CFD8EA"] },
+      "stage-night": { "role": "neutral", "displayName": "Stage Night", "canonical": "#060B1C (darkest stage stop; base of .kb-footer)", "darkValue": "#060B1C", "tonalRamp": ["#060B1C", "#080F28", "#0A1330", "#0B1638", "#1A2650", "#46557F", "#8E9BBD", "#CFD8EA"] },
+      "stage-dusk": { "role": "neutral", "displayName": "Stage Dusk", "canonical": "#1A2650 (80% stop of the lit stage)", "darkValue": "#1A2650", "tonalRamp": ["#060B1C", "#0A1330", "#0B1638", "#16224A", "#1A2650", "#46557F", "#8E9BBD", "#CFD8EA"] },
+      "stage-mist": { "role": "neutral", "displayName": "Stage Mist", "canonical": "#CFD8EA (foot of the lit stage, where it opens to white)", "darkValue": "#CFD8EA", "tonalRamp": ["#060B1C", "#0B1638", "#1A2650", "#46557F", "#8E9BBD", "#CFD8EA", "#E2E8F0", "#FFFFFF"] },
+      "brand": { "role": "primary", "displayName": "Study Navy", "canonical": "rgb(var(--brand)) = 30 58 138", "darkValue": "#93C5FD", "tonalRamp": ["#172554", "#1E3A8A", "#1E40AF", "#1D4ED8", "#2563EB", "#60A5FA", "#BFDBFE", "#EFF6FF"] },
+      "brand-hover": { "role": "primary", "displayName": "Midnight Navy", "canonical": "rgb(var(--brand-hover)) = 23 37 84", "darkValue": "#BFDBFE", "tonalRamp": ["#172554", "#1E3A8A", "#1E40AF", "#1D4ED8", "#2563EB", "#60A5FA", "#BFDBFE", "#EFF6FF"] },
+      "brand-soft": { "role": "primary", "displayName": "Navy Wash", "canonical": "rgb(var(--brand-soft)) = 238 242 255", "darkValue": "#172554", "tonalRamp": ["#172554", "#1E3A8A", "#1E40AF", "#1D4ED8", "#2563EB", "#60A5FA", "#C7D2FE", "#EEF2FF"] },
+      "brand-fg": { "role": "primary", "displayName": "On Brand", "canonical": "rgb(var(--brand-fg)) = 255 255 255", "darkValue": "#020617", "tonalRamp": ["#020617", "#0F172A", "#1E293B", "#334155", "#94A3B8", "#CBD5E1", "#F1F5F9", "#FFFFFF"] },
+      "school-accent-on-navy": { "role": "secondary", "displayName": "School Amber", "canonical": "#FCD34D (Tailwind amber-300; raw class, not tokenized)", "tonalRamp": ["#78350F", "#92400E", "#B45309", "#D97706", "#F59E0B", "#FBBF24", "#FCD34D", "#FEF3C7"] },
+      "surface": { "role": "neutral", "displayName": "Paper", "canonical": "rgb(var(--surface)) = 255 255 255", "darkValue": "#141922", "tonalRamp": ["#0F172A", "#1E293B", "#334155", "#475569", "#94A3B8", "#E2E8F0", "#F8FAFC", "#FFFFFF"] },
+      "surface-sunken": { "role": "neutral", "displayName": "Slate Paper", "canonical": "rgb(var(--surface-sunken)) = 248 250 252", "darkValue": "#0D1017", "tonalRamp": ["#0F172A", "#1E293B", "#334155", "#475569", "#94A3B8", "#E2E8F0", "#F1F5F9", "#F8FAFC"] },
+      "surface-raised": { "role": "neutral", "displayName": "Raised", "canonical": "rgb(var(--surface-raised)) = 255 255 255", "darkValue": "#1A202B", "tonalRamp": ["#0F172A", "#1E293B", "#334155", "#475569", "#94A3B8", "#E2E8F0", "#F8FAFC", "#FFFFFF"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "rgb(var(--ink)) = 15 23 42", "darkValue": "#EEF1F6", "tonalRamp": ["#0F172A", "#1E293B", "#334155", "#475569", "#64748B", "#94A3B8", "#CBD5E1", "#F1F5F9"] },
+      "ink-muted": { "role": "neutral", "displayName": "Muted Ink", "canonical": "rgb(var(--ink-muted)) = 71 85 105", "darkValue": "#B9C1CF", "tonalRamp": ["#0F172A", "#1E293B", "#334155", "#475569", "#64748B", "#94A3B8", "#CBD5E1", "#F1F5F9"] },
+      "ink-subtle": { "role": "neutral", "displayName": "Subtle Ink", "canonical": "rgb(var(--ink-subtle)) = 100 116 139", "darkValue": "#94A3B8", "tonalRamp": ["#0F172A", "#1E293B", "#334155", "#475569", "#64748B", "#94A3B8", "#CBD5E1", "#F1F5F9"] },
+      "ink-inverse": { "role": "neutral", "displayName": "Inverse Ink", "canonical": "rgb(var(--ink-inverse)) = 248 250 252", "darkValue": "#0F172A", "tonalRamp": ["#0F172A", "#1E293B", "#334155", "#475569", "#64748B", "#94A3B8", "#CBD5E1", "#F8FAFC"] },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "rgb(var(--line)) = 226 232 240", "darkValue": "#29313F", "tonalRamp": ["#0F172A", "#1E293B", "#334155", "#475569", "#64748B", "#94A3B8", "#CBD5E1", "#E2E8F0"] },
+      "line-strong": { "role": "neutral", "displayName": "Rule", "canonical": "rgb(var(--line-strong)) = 203 213 225", "darkValue": "#3C4658", "tonalRamp": ["#0F172A", "#1E293B", "#334155", "#475569", "#64748B", "#94A3B8", "#CBD5E1", "#E2E8F0"] },
+      "positive": { "role": "status", "displayName": "Positive", "canonical": "rgb(var(--positive)) = 5 150 105", "darkValue": "#47CD89", "tonalRamp": ["#064E3B", "#065F46", "#047857", "#059669", "#10B981", "#34D399", "#6EE7B7", "#D1FAE5"] },
+      "positive-soft": { "role": "status", "displayName": "Positive Wash", "canonical": "rgb(var(--positive-soft)) = 236 253 245", "darkValue": "#0C2B1E", "tonalRamp": ["#064E3B", "#065F46", "#047857", "#059669", "#10B981", "#34D399", "#A7F3D0", "#ECFDF5"] },
+      "critical": { "role": "status", "displayName": "Critical", "canonical": "rgb(var(--critical)) = 190 24 60", "darkValue": "#FD8A8A", "tonalRamp": ["#881337", "#9F1239", "#BE123C", "#E11D48", "#F43F5E", "#FB7185", "#FDA4AF", "#FFE4E6"] },
+      "critical-soft": { "role": "status", "displayName": "Critical Wash", "canonical": "rgb(var(--critical-soft)) = 255 241 242", "darkValue": "#33150F", "tonalRamp": ["#881337", "#9F1239", "#BE123C", "#E11D48", "#F43F5E", "#FB7185", "#FECDD3", "#FFF1F2"] },
+      "caution": { "role": "status", "displayName": "Caution", "canonical": "rgb(var(--caution)) = 180 83 9", "darkValue": "#F38744", "tonalRamp": ["#78350F", "#92400E", "#B45309", "#D97706", "#F59E0B", "#FBBF24", "#FCD34D", "#FEF3C7"] },
+      "caution-soft": { "role": "status", "displayName": "Caution Wash", "canonical": "rgb(var(--caution-soft)) = 255 251 235", "darkValue": "#2E1A0C", "tonalRamp": ["#78350F", "#92400E", "#B45309", "#D97706", "#F59E0B", "#FBBF24", "#FDE68A", "#FFFBEB"] },
+      "disabled-bg": { "role": "neutral", "displayName": "Disabled Fill", "canonical": "rgb(var(--disabled-bg)) = 226 232 240", "darkValue": "#29313F", "tonalRamp": ["#0F172A", "#1E293B", "#334155", "#475569", "#64748B", "#94A3B8", "#CBD5E1", "#E2E8F0"] },
+      "disabled-fg": { "role": "neutral", "displayName": "Disabled Text", "canonical": "rgb(var(--disabled-fg)) = 100 116 139", "darkValue": "#94A3B8", "tonalRamp": ["#0F172A", "#1E293B", "#334155", "#475569", "#64748B", "#94A3B8", "#CBD5E1", "#F1F5F9"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The single page H1 in Bricolage Grotesque; 36px mobile, 60px sm, 72px lg." },
+      "display-sub": { "displayName": "Display sub-line", "purpose": "Exam-naming line inside the H1, slate-200 on the stage." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s in Bricolage Grotesque; 30px mobile, 48px md." },
+      "title": { "displayName": "Title", "purpose": "H3s in Bricolage Grotesque: tour step titles (24 to 30px) and card or plan titles (20px)." },
+      "figure": { "displayName": "Figure", "purpose": "Prices and stats in Inter black weight with tabular numerals." },
+      "body-lead": { "displayName": "Body lead", "purpose": "The sentence under a headline, max width 32 to 36rem." },
+      "body": { "displayName": "Body", "purpose": "Descriptions and answers." },
+      "label": { "displayName": "Label", "purpose": "Buttons and list item names." },
+      "mini": { "displayName": "Mini", "purpose": "Captions and chips (12px)." },
+      "micro": { "displayName": "Micro", "purpose": "The 11px floor: URL bars, dock labels, metadata." }
+    },
+    "fonts": [
+      { "name": "Bricolage Grotesque", "source": "Google Fonts, opsz 12..96, wght 500..800", "applied": "h1, h2, h3 via base rule with font-optical-sizing: auto (Tailwind font-display)" },
+      { "name": "Inter", "source": "Google Fonts, wght 400..900", "applied": "body and all UI (Tailwind font-sans)" }
+    ],
+    "stages": [
+      { "name": "lit-stage", "class": "kb-stage", "use": "Hero", "value": "background-color: #0b1638; background-image: radial-gradient(ellipse 55% 45% at 85% 0%, rgba(255,255,255,0.22) 0%, rgba(226,232,240,0.08) 45%, transparent 75%), radial-gradient(ellipse 40% 35% at 0% 0%, rgba(148,163,184,0.16) 0%, transparent 70%), radial-gradient(ellipse 95% 50% at 55% 120%, rgba(255,255,255,0.95) 0%, rgba(226,232,240,0.55) 38%, transparent 72%), linear-gradient(172deg, #060b1c 0%, #0b1638 48%, #1a2650 80%, #cfd8ea 100%);" },
+      { "name": "deep-stage", "class": "kb-deep", "use": "Product tour and closing call", "value": "background-color: #0a1330; background-image: radial-gradient(ellipse 50% 40% at 92% 10%, rgba(255,255,255,0.10) 0%, transparent 70%), radial-gradient(ellipse 45% 45% at 0% 90%, rgba(148,163,184,0.12) 0%, transparent 70%), linear-gradient(180deg, #0b1638 0%, #080f28 60%, #060b1c 100%);" },
+      { "name": "bar", "class": "kb-bar", "use": "Navbar", "value": "background-image: linear-gradient(90deg, #060b1c 0%, #0b1638 60%, #16224a 100%);" },
+      { "name": "footer", "class": "kb-footer", "use": "Footer", "value": "background-color: #060b1c; background-image: radial-gradient(ellipse 45% 60% at 100% 0%, rgba(255,255,255,0.07) 0%, transparent 70%), linear-gradient(160deg, #0b1638 0%, #060b1c 70%);" }
+    ],
+    "shadows": [
+      { "name": "e1", "value": "0 1px 2px rgba(15, 23, 42, .06)", "dark": "0 1px 2px rgba(0, 0, 0, .40)", "purpose": "Resting lift for small controls." },
+      { "name": "e2", "value": "0 4px 12px -2px rgba(15, 23, 42, .08)", "dark": "0 4px 12px -2px rgba(0, 0, 0, .50)", "purpose": "Default cards, panels, primary buttons, selected tab." },
+      { "name": "e3", "value": "0 12px 28px -6px rgba(15, 23, 42, .10)", "dark": "0 12px 28px -6px rgba(0, 0, 0, .55)", "purpose": "The recommended pricing card and the white stage pill." },
+      { "name": "e4", "value": "0 24px 60px -12px rgba(15, 23, 42, .14)", "dark": "0 24px 60px -12px rgba(0, 0, 0, .60)", "purpose": "Product browser frames and floating menus." },
+      { "name": "e5", "value": "0 40px 90px -20px rgba(15, 23, 42, .20)", "dark": "0 40px 90px -20px rgba(0, 0, 0, .70)", "purpose": "Sheets and modals." },
+      { "name": "glow-brand", "value": "0 14px 34px -10px rgba(30, 58, 138, .40)", "dark": "0 14px 34px -10px rgba(147, 197, 253, .35)", "purpose": "Active-state indicator only." },
+      { "name": "glow-positive", "value": "0 14px 34px -10px rgba(5, 150, 105, .40)", "dark": "0 14px 34px -10px rgba(71, 205, 137, .35)", "purpose": "Active positive state only." },
+      { "name": "glow-caution", "value": "0 14px 34px -10px rgba(180, 83, 9, .38)", "dark": "0 14px 34px -10px rgba(243, 135, 68, .35)", "purpose": "Active caution state only." },
+      { "name": "focus-ring", "value": "outline: 2px solid rgb(var(--brand)); outline-offset: 2px (1px on fields)", "purpose": "Global :focus-visible ring on every control." }
+    ],
+    "motion": [
+      { "name": "ease-brand", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "The one easing curve for state and reveal transitions." },
+      { "name": "duration-fast", "value": "150ms", "purpose": "Button and field colour changes." },
+      { "name": "duration-base", "value": "250ms", "purpose": "Disclosure chevrons and small state changes." },
+      { "name": "duration-slow", "value": "400ms", "purpose": "Tour step emphasis (rule and title colour)." },
+      { "name": "tour-reveal", "value": "clip-path 550ms cubic-bezier(0.22, 1, 0.36, 1); covered screens hide after 550ms", "purpose": "Product tour screens wiping in from the top; removed under reduced motion." },
+      { "name": "nav-hide", "value": "translateY(-100%) on scroll down, phones only (<768px); returns after an 80px scroll up", "purpose": "Frees vertical space on phones; the bar stays pinned from md." },
+      { "name": "reduced-motion", "value": "all animation and transition durations 0.01ms", "purpose": "Global OS-level reduced-motion override." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one main action in a region on paper grounds; navy fill with white text (pale blue with near-black text in dark).",
+      "html": "<button class=\"ds-btn-primary\">Get started free <svg width=\"14\" height=\"14\" viewBox=\"0 0 448 512\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 12px 20px; border: none; border-radius: 10px; background: rgb(var(--brand, 30 58 138)); color: rgb(var(--brand-fg, 255 255 255)); font: 600 14px/1.25 Inter, ui-sans-serif, system-ui, sans-serif; box-shadow: var(--e2, 0 4px 12px -2px rgba(15,23,42,.08)); cursor: pointer; transition: background-color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary:hover { background: rgb(var(--brand-hover, 23 37 84)); } .ds-btn-primary:focus-visible { outline: 2px solid rgb(var(--brand, 30 58 138)); outline-offset: 2px; } .ds-btn-primary:disabled { background: rgb(var(--disabled-bg, 226 232 240)); color: rgb(var(--disabled-fg, 100 116 139)); box-shadow: none; cursor: not-allowed; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Supporting action on paper grounds.",
+      "html": "<button class=\"ds-btn-secondary\">Browse the library</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 12px 20px; border: 1px solid rgb(var(--line-strong, 203 213 225)); border-radius: 10px; background: rgb(var(--surface, 255 255 255)); color: rgb(var(--ink, 15 23 42)); font: 600 14px/1.25 Inter, ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background-color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-secondary:hover { background: rgb(var(--surface-sunken, 248 250 252)); } .ds-btn-secondary:focus-visible { outline: 2px solid rgb(var(--brand, 30 58 138)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Low-emphasis action inside app surfaces.",
+      "html": "<button class=\"ds-btn-ghost\">Cancel</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 12px 20px; border: none; border-radius: 10px; background: transparent; color: rgb(var(--ink-muted, 71 85 105)); font: 600 14px/1.25 Inter, ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background-color 150ms cubic-bezier(0.22, 1, 0.36, 1), color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-ghost:hover { background: rgb(var(--surface-sunken, 248 250 252)); color: rgb(var(--ink, 15 23 42)); } .ds-btn-ghost:focus-visible { outline: 2px solid rgb(var(--brand, 30 58 138)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Stage Buttons",
+      "kind": "button",
+      "refersTo": "button-on-stage",
+      "description": "On the navy stage: the white pill with navy ink is the main action (hero, close, navbar Sign Up); the translucent outline is the secondary.",
+      "html": "<div class=\"ds-stage\"><a href=\"#\" class=\"ds-btn-onblue\">Start free <svg width=\"14\" height=\"14\" viewBox=\"0 0 448 512\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z\"/></svg></a><a href=\"#pricing\" class=\"ds-btn-outline-stage\">See pricing</a></div>",
+      "css": ".ds-stage { display: flex; flex-wrap: wrap; gap: 12px; padding: 32px 24px; background-color: #0a1330; background-image: radial-gradient(ellipse 50% 40% at 92% 10%, rgba(255,255,255,0.10) 0%, transparent 70%), linear-gradient(180deg, #0b1638 0%, #080f28 60%, #060b1c 100%); } .ds-btn-onblue, .ds-btn-outline-stage { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 12px 28px; border-radius: 10px; text-decoration: none; font: 600 16px/1.25 Inter, ui-sans-serif, system-ui, sans-serif; transition: background-color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-onblue { background: #fff; color: #0b1638; box-shadow: var(--e3, 0 12px 28px -6px rgba(15,23,42,.10)); } .ds-btn-onblue:hover { background: #f1f5f9; } .ds-btn-outline-stage { border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.10); color: #fff; backdrop-filter: blur(4px); } .ds-btn-outline-stage:hover { background: rgba(255,255,255,.20); } .ds-btn-onblue:focus-visible, .ds-btn-outline-stage:focus-visible { outline: 2px solid rgb(var(--brand, 30 58 138)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Text input with label; brand border on focus, critical wash on error.",
+      "html": "<label class=\"ds-label\" for=\"ds-email\">Email</label><input id=\"ds-email\" class=\"ds-field\" placeholder=\"you@college.edu\">",
+      "css": ".ds-label { display: block; margin-bottom: 6px; font: 600 12px/1.3 Inter, ui-sans-serif, system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.12em; color: rgb(var(--ink-muted, 71 85 105)); } .ds-field { width: 100%; min-height: 44px; padding: 12px 16px; border: 1px solid rgb(var(--line, 226 232 240)); border-radius: 10px; background: rgb(var(--surface, 255 255 255)); color: rgb(var(--ink, 15 23 42)); font: 400 16px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; transition: border-color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-field::placeholder { color: rgb(var(--ink-subtle, 100 116 139)); } .ds-field:focus { border-color: rgb(var(--brand, 30 58 138)); } .ds-field:focus-visible { outline: 2px solid rgb(var(--brand, 30 58 138)); outline-offset: 1px; } .ds-field[aria-invalid=\"true\"] { border-color: rgb(var(--critical, 190 24 60)); background: rgb(var(--critical-soft, 255 241 242)); }"
+    },
+    {
+      "name": "Pricing Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Card with figure price; the recommended plan takes a 2px brand border and e3.",
+      "html": "<div class=\"ds-card ds-card--pick\"><div class=\"ds-card-head\"><h3>2 Year Plan</h3><span class=\"ds-chip\">Best value</span></div><p class=\"ds-card-price\">$200</p><p class=\"ds-card-body\">A full preparation cycle, including lectures as they are released.</p></div>",
+      "css": ".ds-card { display: flex; flex-direction: column; max-width: 360px; padding: 32px; border: 1px solid rgb(var(--line, 226 232 240)); border-radius: 16px; background: rgb(var(--surface, 255 255 255)); box-shadow: var(--e2, 0 4px 12px -2px rgba(15,23,42,.08)); font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: rgb(var(--ink, 15 23 42)); } .ds-card--pick { border: 2px solid rgb(var(--brand, 30 58 138)); box-shadow: var(--e3, 0 12px 28px -6px rgba(15,23,42,.10)); } .ds-card-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; } .ds-card-head h3 { margin: 0; font-family: 'Bricolage Grotesque', Inter, ui-sans-serif, system-ui, sans-serif; font-optical-sizing: auto; font-size: 20px; font-weight: 700; } .ds-card-price { margin: 24px 0 0; font-size: 48px; font-weight: 900; letter-spacing: -0.025em; line-height: 1; font-variant-numeric: tabular-nums; } .ds-card-body { margin: 16px 0 0; line-height: 1.625; color: rgb(var(--ink-muted, 71 85 105)); } .ds-chip { border-radius: 9999px; padding: 4px 12px; background: rgb(var(--brand-soft, 238 242 255)); color: rgb(var(--brand, 30 58 138)); font-size: 12px; line-height: 18px; font-weight: 600; }"
+    },
+    {
+      "name": "Brand Chip",
+      "kind": "chip",
+      "refersTo": "chip-brand",
+      "description": "Pill notice or selected toggle; brand wash by default, brand fill when selected.",
+      "html": "<span class=\"ds-chip-soft\">Resumed from 3:12</span> <button class=\"ds-chip-toggle\">1×</button> <button class=\"ds-chip-toggle\" aria-pressed=\"true\">1.25×</button>",
+      "css": ".ds-chip-soft { display: inline-block; border-radius: 9999px; padding: 4px 12px; background: rgb(var(--brand-soft, 238 242 255)); color: rgb(var(--brand, 30 58 138)); font: 600 12px/18px Inter, ui-sans-serif, system-ui, sans-serif; } .ds-chip-toggle { border: none; border-radius: 9999px; padding: 4px 10px; background: rgb(var(--surface-sunken, 248 250 252)); color: rgb(var(--ink-muted, 71 85 105)); font: 600 12px/18px Inter, ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background-color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-chip-toggle[aria-pressed=\"true\"] { background: rgb(var(--brand, 30 58 138)); color: rgb(var(--brand-fg, 255 255 255)); } .ds-chip-toggle:focus-visible { outline: 2px solid rgb(var(--brand, 30 58 138)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "The stage bar: wordmark, inline track switcher, links, a translucent Log In and the white stage pill for Sign Up. Pinned from 768px.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-mark\">Kanthast</span><button class=\"ds-nav-track\">Medical <svg width=\"10\" height=\"10\" viewBox=\"0 0 512 512\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z\"/></svg></button><span class=\"ds-nav-links\"><a class=\"is-active\" href=\"#\">Home</a><a href=\"#\">Lists</a><a href=\"#\">Pricing</a></span><a class=\"ds-nav-login\" href=\"#\">Log In</a><a class=\"ds-nav-signup\" href=\"#\">Sign Up</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 16px; height: 64px; padding: 0 24px; background-image: linear-gradient(90deg, #060b1c 0%, #0b1638 60%, #16224a 100%); border-bottom: 1px solid rgba(255,255,255,.08); font-family: Inter, ui-sans-serif, system-ui, sans-serif; } .ds-nav-mark { font-size: 24px; font-weight: 900; letter-spacing: -0.025em; color: #fff; } .ds-nav-track { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 8px; border: none; border-radius: 9999px; background: transparent; color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; } .ds-nav-links { display: flex; gap: 28px; margin-left: auto; } .ds-nav-links a { color: rgba(255,255,255,.6); text-decoration: none; font-size: 18px; transition: color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-nav-links a:hover { color: #fff; } .ds-nav-links a.is-active { color: #fff; font-weight: 600; } .ds-nav-login { padding: 8px 16px; border: 1px solid rgba(255,255,255,.1); border-radius: 10px; background: rgba(255,255,255,.08); color: rgba(255,255,255,.7); text-decoration: none; } .ds-nav-signup { padding: 8px 16px; border-radius: 10px; background: #fff; color: #0b1638; font-weight: 600; text-decoration: none; transition: background-color 150ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-nav-signup:hover { background: #f1f5f9; } .ds-nav a:focus-visible, .ds-nav button:focus-visible { outline: 2px solid rgb(var(--brand, 30 58 138)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Browser Frame",
+      "kind": "custom",
+      "refersTo": "browser-frame",
+      "description": "Signature: a real app screen in thin browser chrome with e4 lift, captioned once on the deep stage.",
+      "html": "<figure class=\"ds-frame-wrap\"><div class=\"ds-frame\" aria-hidden=\"true\"><div class=\"ds-frame-bar\"><span class=\"ds-dots\"><i></i><i></i><i></i></span><span class=\"ds-url\">kanthast.in/lists</span></div><div class=\"ds-frame-body\"><div class=\"ds-panel\"><p class=\"ds-panel-title\">Metabolic Disorders</p><div class=\"ds-row\"><span>Albinism</span><span class=\"ds-dur\">06:38</span></div><div class=\"ds-row\"><span>G6PD Deficiency</span><span class=\"ds-dur\">13:07</span></div></div></div></div><figcaption class=\"ds-cap\">The real library layout with real syllabus entries.</figcaption></figure>",
+      "css": ".ds-frame-wrap { margin: 0; padding: 24px; background-color: #0a1330; background-image: linear-gradient(180deg, #0b1638 0%, #080f28 60%, #060b1c 100%); font-family: Inter, ui-sans-serif, system-ui, sans-serif; } .ds-frame { overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 16px; background: rgb(var(--surface, 255 255 255)); box-shadow: var(--e4, 0 24px 60px -12px rgba(15,23,42,.14)); } .ds-frame-bar { display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-bottom: 1px solid rgb(var(--line, 226 232 240)); background: rgb(var(--surface-sunken, 248 250 252)); } .ds-dots { display: flex; gap: 6px; } .ds-dots i { width: 10px; height: 10px; border-radius: 9999px; background: rgb(var(--line-strong, 203 213 225)); } .ds-url { flex: 1; padding: 4px 12px; border-radius: 9999px; background: rgb(var(--surface, 255 255 255)); text-align: center; font-size: 11px; line-height: 16px; letter-spacing: 0.01em; color: rgb(var(--ink-subtle, 100 116 139)); } .ds-frame-body { padding: 20px; background: rgb(var(--surface-sunken, 248 250 252)); } .ds-panel { padding: 16px; border: 1px solid rgb(var(--line, 226 232 240)); border-radius: 16px; background: rgb(var(--surface, 255 255 255)); box-shadow: var(--e2, 0 4px 12px -2px rgba(15,23,42,.08)); } .ds-panel-title { margin: 0 0 8px; font-size: 14px; font-weight: 700; color: rgb(var(--ink, 15 23 42)); } .ds-row { display: flex; justify-content: space-between; padding: 8px 0; border-top: 1px solid rgb(var(--line, 226 232 240)); font-size: 12px; font-weight: 600; color: rgb(var(--ink, 15 23 42)); } .ds-dur { font-weight: 400; font-variant-numeric: tabular-nums; color: rgb(var(--ink-subtle, 100 116 139)); } .ds-cap { margin-top: 12px; font-size: 12px; line-height: 18px; color: rgba(255,255,255,.65); }"
+    },
+    {
+      "name": "Divided List",
+      "kind": "custom",
+      "refersTo": "divided-list",
+      "description": "Subjects and FAQ rows between hairlines, not cards.",
+      "html": "<ul class=\"ds-list\"><li><p class=\"ds-list-name\">Biochemistry <span>23 chapters</span></p><p class=\"ds-list-meta\">Vitamins · Biochemical Pathways · Metabolic Disorders …</p></li><li><p class=\"ds-list-name\">Immunology <span>11 chapters</span></p><p class=\"ds-list-meta\">Immunoglobulins · Complement · Other Cell Types …</p></li></ul>",
+      "css": ".ds-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgb(var(--line, 226 232 240)); border-bottom: 1px solid rgb(var(--line, 226 232 240)); font-family: Inter, ui-sans-serif, system-ui, sans-serif; } .ds-list li { display: grid; grid-template-columns: 12rem 1fr; gap: 24px; padding: 20px 0; } .ds-list li + li { border-top: 1px solid rgb(var(--line, 226 232 240)); } .ds-list p { margin: 0; } .ds-list-name { font-weight: 700; color: rgb(var(--ink, 15 23 42)); } .ds-list-name span { margin-left: 8px; font-size: 14px; font-weight: 500; font-variant-numeric: tabular-nums; color: rgb(var(--ink-subtle, 100 116 139)); } .ds-list-meta { color: rgb(var(--ink-muted, 71 85 105)); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Lit Study Desk",
+    "overview": "Kanthast is a calm, exam-serious study tool shown under a single desk lamp: a deep navy stage, lit by soft white light that opens to white toward its lower edge, holds the real product, and plain white and slate grounds hold everything a student reads closely (syllabus, prices, answers). One navy-blue accent marks what can be acted on. Nothing is decorative; the product screens themselves are the imagery, fed by the real syllabus, framed in a thin browser chrome and lifted on the deepest ambient shadow.\n\nDensity is generous on marketing surfaces (80 to 112px section rhythm, a 5/7 split on a 12-column grid) and compact inside the app, where lists of chapters and lectures run as divided rows. Headings (h1 to h3) are set in Bricolage Grotesque, bold and tightly tracked; Inter carries body text, controls, labels and numbers. Colour is semantic: every surface, ink and line resolves through RGB-triplet custom properties, so one class works in light, dark and system themes without a `dark:` variant. Light is the default appearance.\n\nMedical and School are one brand. A track is told apart by its accent only (amber marks School), never by a second typeface, palette or layout language.",
+    "keyCharacteristics": [
+      "A lit navy stage for hero, product tour, closing call, navbar and footer; white and slate-50 grounds for reading sections.",
+      "Real product screens in browser frames as the only imagery; no illustration, stock or AI art.",
+      "Bricolage Grotesque for headings, Inter for everything else, tabular figures for every number.",
+      "One navy-blue accent with white text on its fills in light; it lifts to pale blue with near-black text in dark.",
+      "White pills with navy ink are the primary action on the stage.",
+      "Five ambient elevation steps; colored glows exist only as active-state accents.",
+      "Three radius roles (10 / 16 / 24px) plus pills.",
+      "44px touch floor on every control; visible brand focus ring everywhere."
+    ],
+    "rules": [
+      { "name": "The On Brand Rule", "body": "Text on a brand fill is always `brand-fg`: white on Study Navy in light, near-black on pale blue in dark. Never hard-code either.", "section": "colors" },
+      { "name": "The Named Stage Rule", "body": "The navy stage comes only from the four stage backgrounds (lit stage, deep stage, bar, footer). No new flat navy hex, no new gradient recipe. Its light is white and slate, never a hue.", "section": "colors" },
+      { "name": "The Token Only Rule", "body": "New work on paper grounds colours through `surface`, `ink`, `line`, `brand` and the status tokens, never raw palette classes or hex. That is what makes dark mode free.", "section": "colors" },
+      { "name": "The Solid Disabled Rule", "body": "Disabled controls use the disabled pair, never an opacity-dimmed brand fill; opacity pulls fill and text toward each other and drops below AA.", "section": "colors" },
+      { "name": "The Accent Only Rule", "body": "A track differs from another only by its accent hue. Same type, same greys, same shapes.", "section": "colors" },
+      { "name": "The Heading Face Rule", "body": "Bricolage Grotesque is applied by the base rule to h1, h2 and h3 with optical sizing on; everything else is Inter. Use real heading elements to get the display face, and never set body, labels or numbers in Bricolage.", "section": "typography" },
+      { "name": "The Micro Floor Rule", "body": "11px (`micro`) is the smallest text allowed. Nothing ships at 9 or 10px.", "section": "typography" },
+      { "name": "The Tabular Figures Rule", "body": "Every price, duration, count and percentage uses tabular numerals.", "section": "typography" },
+      { "name": "The Five Steps Rule", "body": "Shadows come from e1 to e5 only. No one-off shadow values.", "section": "elevation" },
+      { "name": "The Glow Means Active Rule", "body": "A glow marks the one thing currently selected. Marketing sections carry no glow shadows; the stage's light lives in its background, not on elements.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** put the hero on the lit stage and the product tour and closing call on the deep stage, and reading content (syllabus, pricing, FAQ) on `surface` or `surface-sunken`.",
+      "**Do** use the white stage pill for the main action on navy and the brand fill for the main action on paper.",
+      "**Do** show the product through browser frames built from real app screens and real data.",
+      "**Do** colour with semantic tokens so the same class works in light, dark and system themes.",
+      "**Do** use `brand-fg` on every brand fill.",
+      "**Do** set headings as real h1 / h2 / h3 elements so they take Bricolage Grotesque.",
+      "**Do** keep every control at least 44px and rely on the global brand focus ring.",
+      "**Do** animate with the brand curve (`cubic-bezier(0.22, 1, 0.36, 1)`) at 150 / 250 / 400ms and honour reduced motion.",
+      "**Do** set every number in tabular figures."
+    ],
+    "donts": [
+      "**Don't** use AI-generated, stock or illustrative imagery in place of the product.",
+      "**Don't** use gradient text, eyebrow or kicker labels above headings, numbered circles, or coloured decorative glows; the stage's white and slate light is the only atmospheric gradient.",
+      "**Don't** invent a new navy or a new stage gradient; use the four stage backgrounds.",
+      "**Don't** give the School track its own typeface, palette or shape language; change the accent only.",
+      "**Don't** set text below 11px.",
+      "**Don't** dim a brand button with opacity to disable it.",
+      "**Don't** add shadow values outside e1 to e5, or radii outside 10 / 16 / 24px and pills.",
+      "**Don't** use opacity modifiers outside the registered scale (6, 8, 12, 14, 15, 18, 35, 45, 55, 62, 65, 85, 92 plus Tailwind's defaults); off-scale modifiers emit no CSS and the element renders unstyled."
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/school", "destination": "https://school.kanthast.in/", "permanent": true },
+    { "source": "/school/library", "destination": "https://school.kanthast.in/library", "permanent": true },
+    { "source": "/school/:path*", "destination": "https://school.kanthast.in/:path*", "permanent": true },
+    { "source": "/professional", "destination": "https://pro.kanthast.in/", "permanent": true },
+    { "source": "/professional/library", "destination": "https://pro.kanthast.in/library", "permanent": true },
+    { "source": "/:path(courses|pricing|login|signup|dashboard|profile|settings|lists|library|summary|video|images|chatbot|subscription|admin|adminlogin|about|contact|terms|privacy|refunds)", "destination": "https://pro.kanthast.in/:path", "permanent": false }
+  ]
+}

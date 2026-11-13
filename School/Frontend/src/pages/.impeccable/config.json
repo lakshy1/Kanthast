@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gray-on-color",
+        "value": "*",
+        "files": [
+          "Frontend/src/pages/Courses.jsx"
+        ],
+        "createdAt": "2026-09-28T00:30:35.645Z",
+        "reason": "text-slate-950 on bg-cyan-500 is near-black on bright color, not gray-on-color; verified 918-Custom Solutions passes contrast, false positive from heuristic"
+      }
+    ]
+  }
+}
