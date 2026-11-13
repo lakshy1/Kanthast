@@ -1416,3 +1416,161 @@
 @media (max-width: 520px) { .float-chip-3, .float-chip-4 { display: none; } }
 /* Hero buttons: equal width, so the pair reads as a balanced choice. */
 .brand-hero .door-cta { min-width: 14.5rem; }
+
+/* ── Brand hero (kanthast.in) ─────────────────────────────────────────────
+   Matches the approved mockup at a 1536px viewport and scales down from there.
+   The illustration is a light raster, so the hero keeps its light palette in
+   both themes. */
+.bh {
+  --bh-ink: #0b1530;
+  --bh-muted: #3c4a63;
+  --bh-blue: #1d4ed8;
+  --bh-blue-soft: #e3ecfd;
+  --bh-line: #dfe6f3;
+  position: relative;
+  color: var(--bh-ink);
+  background:
+    radial-gradient(60% 70% at 78% 30%, rgba(147, 180, 255, 0.35), transparent 70%),
+    linear-gradient(180deg, #f3f6fd 0%, #edf2fc 100%);
+  padding: clamp(1.25rem, 2.6vw, 2.5rem) 0 clamp(2rem, 4vw, 3.5rem);
+  overflow: hidden;
+}
+.bh-inner {
+  position: relative;
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 6.2vw, 95px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+.bh-copy { position: relative; z-index: 2; max-width: 560px; }
+.bh-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: var(--bh-blue-soft);
+  color: var(--bh-blue);
+  font-family: "Plus Jakarta Sans", Inter, sans-serif;
+  font-weight: 600; font-size: 0.95rem;
+}
+.bh-eyebrow-icon { font-size: 0.8rem; }
+.bh-title {
+  position: relative;
+  margin-top: 1.25rem;
+  font-family: "Plus Jakarta Sans", Inter, sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.6rem, 5.15vw, 4.95rem);
+  line-height: 0.99;
+  letter-spacing: -0.028em;
+  color: var(--bh-ink);
+}
+.bh-accent { color: var(--bh-blue); }
+.bh-click-wrap { position: relative; display: inline-block; white-space: nowrap; }
+.bh-click { position: relative; display: inline-block; }
+.bh-underline {
+  position: absolute; left: -2%; bottom: -0.22em; width: 104%; height: 0.24em;
+  fill: none; stroke: var(--bh-blue); stroke-width: 3.2; stroke-linecap: round;
+}
+.bh-spark {
+  position: absolute; right: -0.55em; top: 0.16em; width: 0.45em; height: 0.45em;
+  fill: none; stroke: var(--bh-blue); stroke-width: 3.6; stroke-linecap: round;
+}
+.bh-sub {
+  margin-top: 1.7rem; max-width: 33rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem); line-height: 1.45; color: var(--bh-muted);
+}
+.bh-ctas { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+.bh-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.7rem;
+  min-height: 48px; padding: 0 1.75rem; border-radius: 999px;
+  font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 600; font-size: 1rem;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+.bh-btn:focus-visible { outline: 3px solid rgba(29, 78, 216, 0.4); outline-offset: 3px; }
+.bh-btn-primary { background: var(--bh-blue); color: #fff; box-shadow: 0 10px 24px -10px rgba(29, 78, 216, 0.7); }
+.bh-btn-primary:hover { background: #1e40af; transform: translateY(-1px); }
+.bh-btn-ghost { background: rgba(255, 255, 255, 0.85); color: var(--bh-ink); border: 1.5px solid var(--bh-line); }
+.bh-btn-ghost:hover { border-color: #b9c8ea; transform: translateY(-1px); }
+.bh-proof {
+  margin-top: 2rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem;
+  font-size: 0.85rem; color: var(--bh-muted);
+}
+.bh-proof-stack { display: flex; }
+.bh-proof-stack span {
+  display: grid; place-items: center; width: 30px; height: 30px; margin-left: -8px;
+  border-radius: 999px; border: 2px solid #fff; background: var(--bh-blue-soft); color: var(--bh-blue); font-size: 0.75rem;
+}
+.bh-proof-stack span:first-child { margin-left: 0; }
+.bh-proof-text strong { color: var(--bh-ink); font-weight: 600; }
+.bh-proof-divider { width: 1px; height: 26px; background: var(--bh-line); }
+.bh-art { position: relative; z-index: 1; }
+.bh-art img {
+  display: block; width: 100%; height: auto;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%), linear-gradient(0deg, transparent 0, #000 8%, #000 94%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0, #000 9%), linear-gradient(0deg, transparent 0, #000 8%, #000 94%, transparent 100%);
+  mask-composite: intersect;
+}
+.bh-features {
+  position: relative; z-index: 3;
+  max-width: 1386px;
+  margin: 1.5rem clamp(1rem, 4.9vw, 75px) 0;
+  display: grid; grid-template-columns: repeat(1, minmax(0, 1fr));
+  background: #fff; border-radius: 24px;
+  box-shadow: 0 20px 50px -24px rgba(30, 58, 138, 0.25), 0 0 0 1px rgba(223, 230, 243, 0.8);
+}
+.bh-feature { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.4rem; }
+.bh-feature + .bh-feature { border-top: 1px solid var(--bh-line); }
+.bh-feature-icon {
+  flex: none; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 999px;
+  background: radial-gradient(circle at 35% 30%, #f1f5ff, #dfe8fb); color: var(--bh-blue); font-size: 1.6rem;
+}
+.bh-feature-title { display: block; font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--bh-ink); }
+.bh-feature-text { display: block; margin-top: 0.3rem; font-size: 0.92rem; line-height: 1.55; color: var(--bh-muted); max-width: 15.5rem; }
+
+@media (min-width: 640px) {
+  .bh-features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bh-feature + .bh-feature { border-top: 0; }
+  .bh-feature:nth-child(n + 3) { border-top: 1px solid var(--bh-line); }
+}
+@media (min-width: 1024px) {
+  .bh-inner { grid-template-columns: minmax(0, 545px) minmax(0, 1fr); align-items: start; min-height: 500px; }
+  .bh-copy { padding-top: 1.1rem; }
+  .bh-art { margin-right: calc(-1 * clamp(1rem, 6.2vw, 95px)); margin-left: -3rem; margin-top: -2.4rem; }
+  .bh-features { margin-top: 0.6rem; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .bh-feature:nth-child(n + 3) { border-top: 0; }
+  .bh-feature { padding: 1.35rem 1.2rem 1.35rem 2rem; position: relative; }
+  .bh-feature + .bh-feature::before {
+    content: ""; position: absolute; left: 0; top: 22%; bottom: 22%; width: 1px; background: var(--bh-line);
+  }
+}
+@media (min-width: 1536px) {
+  .bh-features { margin-left: auto; margin-right: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .bh-btn { transition: none; } }
+
+/* ── Brand navbar: floating rounded bar, as in the approved mockup ───────── */
+.nav-k { width: 2.4rem; height: 2.4rem; flex: none; }
+@media (min-width: 1024px) {
+  nav.kb-bar.fixed {
+    top: 15px; left: clamp(1rem, 4.9vw, 75px); right: clamp(1rem, 4.9vw, 75px); width: auto;
+    max-width: 1386px; margin: 0 auto;
+    border: 1px solid rgba(223, 230, 243, 0.9); border-radius: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 16px 40px -24px rgba(30, 58, 138, 0.28);
+    backdrop-filter: blur(14px);
+  }
+  nav.kb-bar.fixed .nav-shell { width: 100%; padding: 0 1.9rem 0 1.8rem; }
+  nav.kb-bar.fixed .nav-logo { color: #0b1530; font-family: "Plus Jakarta Sans", Inter, sans-serif; font-size: 1.75rem; letter-spacing: -0.02em; }
+  nav.kb-bar.fixed .nav-login {
+    border-radius: 999px; background: #fff; color: #0b1530; border: 1.5px solid #cfd9ee; padding-inline: 1.5rem;
+  }
+  nav.kb-bar.fixed .nav-login:hover { background: #f5f8ff; }
+  nav.kb-bar.fixed .nav-signup {
+    border-radius: 999px; background: #1d4ed8; color: #fff; padding-inline: 1.5rem;
+    box-shadow: 0 10px 22px -12px rgba(29, 78, 216, 0.8);
+  }
+  :root { --navbar-h: 6.2rem; }
+}
+@media (max-width: 639px) { .bh-proof-divider { display: none; } .bh-proof { row-gap: 0.6rem; } }

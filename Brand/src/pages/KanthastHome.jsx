@@ -4,7 +4,7 @@ import { FaChevronDown, FaRobot, FaClockRotateLeft, FaChartColumn, FaCrosshairs,
 import Seo from "../components/Seo";
 import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
 import ScriptPage from "../components/landing/ScriptPage";
-import Hero3D from "../components/landing/Hero3D";
+import BrandHero from "../components/landing/BrandHero";
 import CircuitScene from "../components/landing/CircuitScene";
 import NeoZippy from "../components/landing/NeoZippy";
 import DeviceShowcase from "../components/landing/DeviceShowcase";
@@ -106,23 +106,10 @@ export default function KanthastHome() {
         ]}
       />
 
-      {/* Hero: a centred promise, flanked by the 3D helix and atom. */}
-      <section className="brand-hero">
-        <Hero3D fallback={<div className="hero3d-fallback" />} />
-        <div className="brand-hero-copy site-container">
-          <h1 className="brand-title mx-auto max-w-[14ch]">Hard ideas, animated until they click.</h1>
-          <p className="mx-auto mt-6 max-w-[44ch] text-lg leading-relaxed text-ink-muted md:text-xl">
-            Short animated lessons with AI help, for medical exams and for school.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link to="/professional" className="door-cta door-cta-pro">Kanthast Professional</Link>
-            <Link to="/school" className="door-cta door-cta-school">Kanthast School</Link>
-          </div>
-        </div>
-      </section>
+      <BrandHero />
 
       {/* The two products: identical structure, different accent. */}
-      <section aria-label="Kanthast products" className="site-container grid gap-6 py-12 md:grid-cols-2">
+      <section id="products" aria-label="Kanthast products" className="site-container grid gap-6 py-12 md:grid-cols-2">
         {[
           {
             id: "pro",
