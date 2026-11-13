@@ -1,8 +1,8 @@
 // Neo, the owl in a lab coat with goggles pushed up, and Zippy, the
 // electric-blue spark. Drawn with simple shapes so they read at any size.
-export default function NeoZippy({ className = "" }) {
+export default function NeoZippy({ className = "", viewBox = "0 0 420 300", label }) {
   return (
-    <svg viewBox="0 0 420 300" role="img" aria-label="Neo the owl and Zippy the spark, the two guides in every Kanthast School lesson." className={`school-cast ${className}`}>
+    <svg viewBox={viewBox} role="img" aria-label={label || "Neo the owl and Zippy the spark, the two guides in every Kanthast School lesson."} className={`school-cast ${className}`}>
       <ellipse cx="210" cy="282" rx="170" ry="12" fill="#0b1b33" opacity="0.08" />
       {/* Neo */}
       <g>
