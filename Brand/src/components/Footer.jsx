@@ -58,15 +58,6 @@ export default function Footer() {
               <span>Kanthast</span>
             </a>
             <p>Short animated lessons with AI help, for medical entrance exams and for school.</p>
-            <a
-              href="https://www.linkedin.com/company/kanthast/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Kanthast on LinkedIn"
-              className="kx-footer-social"
-            >
-              <FaLinkedinIn aria-hidden="true" />
-            </a>
           </div>
           {COLUMNS.map((col) => (
             <nav key={col.title} aria-label={col.title} className="kx-footer-col">
@@ -78,8 +69,17 @@ export default function Footer() {
           ))}
         </div>
         <div className="kx-footer-bottom">
-          <span>&copy; {new Date().getFullYear()} Kanthast. All rights reserved.</span>
-          <span>Made for learners in India and worldwide.</span>
+          <span className="kx-footer-copy">&copy; {new Date().getFullYear()} Kanthast. All rights reserved.</span>
+          <a
+            href="https://www.linkedin.com/company/kanthast/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Kanthast on LinkedIn"
+            className="kx-footer-social"
+          >
+            <FaLinkedinIn aria-hidden="true" />
+          </a>
+          <span className="kx-footer-strap">Made for learners in India and worldwide.</span>
         </div>
       </div>
     </footer>

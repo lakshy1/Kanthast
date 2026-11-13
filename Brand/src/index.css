@@ -1997,3 +1997,12 @@
 .kx-made .circuit-scene { box-shadow: none; border: 0; background: none; border-radius: 18px; max-width: none; }
 .kx-faq-wrap .kx-head { align-content: start; }
 .kx-product-pro .kx-stage { margin-bottom: 2.4rem; }
+
+/* Footer bottom bar: copyright left, LinkedIn centred, strapline right. */
+.kx-footer-bottom { display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; align-items: center; gap: 0.75rem; text-align: center; }
+.kx-footer-bottom .kx-footer-social { margin-top: 0; }
+@media (min-width: 640px) {
+  .kx-footer-bottom { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); text-align: left; }
+  .kx-footer-copy { justify-self: start; }
+  .kx-footer-strap { justify-self: end; text-align: right; }
+}
