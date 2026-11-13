@@ -3,7 +3,17 @@
     "brand": {
       "root": "Brand",
       "framework": "vite",
-      "outputDirectory": "dist"
+      "outputDirectory": "dist",
+      "routes": [
+        {
+          "handle": "filesystem"
+        },
+        {
+          "src": "/(.*)",
+          "dest": "/404.html",
+          "status": 404
+        }
+      ]
     },
     "professional-web": {
       "root": "Professional/Frontend",
