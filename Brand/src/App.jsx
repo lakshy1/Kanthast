@@ -8,8 +8,10 @@ import Footer from "./components/Footer";
 import { useAppSettings } from "./utils/settings";
 
 const KanthastHome = lazy(() => import("./pages/KanthastHome"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
 
-// kanthast.in is three apps on one domain: this landing page, /professional
+// kanthast.in is three apps on one domain: this landing site (/, /about, /contact), /professional
 // and /school. Any link that leaves "/" must be a full page load so Vercel
 // routes it to the right app, not a client-side route inside this one.
 function LeaveForOtherApp() {
@@ -55,6 +57,8 @@ export default function App() {
             <ErrorBoundary>
               <Routes>
                 <Route path="/" element={<KanthastHome />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<LeaveForOtherApp />} />
               </Routes>
             </ErrorBoundary>

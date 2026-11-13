@@ -2006,3 +2006,42 @@
   .kx-footer-copy { justify-self: start; }
   .kx-footer-strap { justify-self: end; text-align: right; }
 }
+
+/* ── Brand About / Contact pages ───────────────────────────────────────── */
+.kx-page-hero { padding-top: clamp(1.5rem, 3vw, 2.75rem); }
+.kx-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.kx-fact {
+  display: grid; gap: 0.3rem; padding: 1.4rem 1.5rem; border-radius: 22px; background: #fff;
+  border: 1px solid #edf1fa; box-shadow: 0 18px 40px -28px rgba(30, 58, 138, 0.4);
+}
+.kx-fact-value { font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 800; font-size: clamp(2rem, 3.4vw, 3rem); letter-spacing: -0.03em; color: var(--bh-blue); line-height: 1; }
+.kx-fact-label { color: var(--bh-muted); font-size: 0.95rem; }
+.kx-story { display: grid; gap: 1.5rem; align-items: start; }
+.kx-story-text { display: grid; gap: 1rem; font-size: 1.08rem; line-height: 1.7; color: var(--bh-muted); max-width: 62ch; }
+.kx-products-compact .kx-product { gap: 1.4rem; }
+.kx-contact { display: grid; gap: 1.25rem; align-items: start; }
+.kx-contact-side { display: grid; gap: 1rem; }
+.kx-contact-card { align-items: center; color: inherit; }
+a.kx-contact-card:hover { border-color: #c9d8fb; }
+.kx-contact-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.bh-btn-ghost { background: #fff; color: #0b1530; border: 1.5px solid #dfe6f3; }
+.bh-btn-ghost:hover { border-color: #b9c8ea; }
+.kx-contact-form { display: grid; gap: 1rem; }
+.kx-form-title { font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 800; font-size: 1.5rem; letter-spacing: -0.02em; }
+.kx-form-row { display: grid; gap: 1rem; }
+.kx-field { display: grid; gap: 0.4rem; font-weight: 600; font-size: 0.9rem; color: #0b1530; }
+.kx-field input, .kx-field select, .kx-field textarea {
+  width: 100%; min-height: 48px; padding: 0.75rem 1rem; border-radius: 14px; border: 1.5px solid #dfe6f3; background: #fff;
+  font: inherit; font-weight: 400; color: #0b1530; transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.kx-field textarea { resize: vertical; min-height: 140px; }
+.kx-field input:focus, .kx-field select:focus, .kx-field textarea:focus { outline: none; border-color: #1d4ed8; box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.15); }
+.kx-form-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.kx-form-status { color: #3c4a63; font-size: 0.95rem; }
+.bh-btn:disabled { opacity: 0.7; cursor: progress; }
+@media (min-width: 640px) { .kx-form-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) {
+  .kx-facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .kx-story { grid-template-columns: minmax(0, 3fr) minmax(0, 7fr); gap: 2.5rem; }
+  .kx-contact { grid-template-columns: minmax(0, 3fr) minmax(0, 7fr); gap: 2.5rem; }
+}

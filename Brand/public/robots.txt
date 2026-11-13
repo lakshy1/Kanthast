@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /professional/api/
+Disallow: /school/api/
 
-Sitemap: https://kanthast.in/professional/sitemap.xml
-Sitemap: https://kanthast.in/school/sitemap.xml
 Sitemap: https://kanthast.in/sitemap.xml

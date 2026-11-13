@@ -52,46 +52,44 @@
     <meta name="twitter:description" content="Short animated lessons, one idea at a time, for medical entrance exams and for school." />
     <meta name="twitter:image" content="https://kanthast.in/Banner.png" />
 
-    <!-- Structured Data: Organization + WebSite + SiteNavigation -->
+    <!-- Structured data: the Kanthast organisation, the site, and its main sections in order -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
+          "@type": "EducationalOrganization",
           "@id": "https://kanthast.in/#organization",
           "name": "Kanthast",
-          "url": "https://kanthast.in",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://kanthast.in/logo.png"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/company/kanthast/"
+          "url": "https://kanthast.in/",
+          "logo": { "@type": "ImageObject", "url": "https://kanthast.in/logo.png" },
+          "description": "Short animated lessons with AI help, for medical entrance exams and for school.",
+          "email": "support@kanthast.in",
+          "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "IN" },
+          "sameAs": ["https://www.linkedin.com/company/kanthast/"],
+          "subOrganization": [
+            { "@type": "Organization", "name": "Kanthast Professional", "url": "https://kanthast.in/professional/" },
+            { "@type": "Organization", "name": "Kanthast School", "url": "https://kanthast.in/school/" }
           ]
         },
         {
           "@type": "WebSite",
           "@id": "https://kanthast.in/#website",
-          "url": "https://kanthast.in",
+          "url": "https://kanthast.in/",
           "name": "Kanthast",
-          "publisher": { "@id": "https://kanthast.in/#organization" },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://kanthast.in/courses?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
+          "alternateName": ["Kanthast Professional", "Kanthast School"],
+          "inLanguage": "en-IN",
+          "publisher": { "@id": "https://kanthast.in/#organization" }
         },
         {
-          "@type": "SiteNavigationElement",
-          "@id": "https://kanthast.in/#navigation",
-          "name": ["Courses", "About", "Contact", "Log In", "Sign Up"],
-          "url": [
-            "https://kanthast.in/courses",
-            "https://kanthast.in/about",
-            "https://kanthast.in/contact",
-            "https://kanthast.in/login",
-            "https://kanthast.in/signup"
+          "@type": "ItemList",
+          "@id": "https://kanthast.in/#sections",
+          "name": "Kanthast",
+          "itemListElement": [
+            { "@type": "SiteNavigationElement", "position": 1, "name": "Kanthast Professional", "url": "https://kanthast.in/professional/" },
+            { "@type": "SiteNavigationElement", "position": 2, "name": "Kanthast School", "url": "https://kanthast.in/school/" },
+            { "@type": "SiteNavigationElement", "position": 3, "name": "About", "url": "https://kanthast.in/about" },
+            { "@type": "SiteNavigationElement", "position": 4, "name": "Contact", "url": "https://kanthast.in/contact" }
           ]
         }
       ]
