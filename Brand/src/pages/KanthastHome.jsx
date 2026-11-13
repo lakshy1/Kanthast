@@ -85,7 +85,7 @@ function SectionHead({ id, eyebrow, icon: Icon = FaPlay, before, accent, after =
 }
 
 function FaqList() {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(null);
   return (
     <div className="kx-faq">
       {FAQS.map((item, index) => (
