@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { createElement, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaPlay } from "react-icons/fa";
+import { FaPlay, FaArrowRight, FaFire, FaCircleCheck, FaLayerGroup, FaLightbulb, FaClock, FaFlask, FaShieldVirus, FaPills, FaBacterium, FaBrain, FaBookMedical, FaCirclePlay } from "react-icons/fa6";
 import { getMedicineUsmleContent, getProfile } from "../utils/authApi";
 import { useAppSettings } from "../utils/settings";
 import { getLastWatched, formatRemaining } from "../utils/progress";
@@ -130,6 +130,19 @@ function buildSubjects(content) {
       chapterCount: (subject.chapters || []).length,
       lectureIds: videos.map((v) => v._id).filter(Boolean),
       publishedIds: videos.filter((v) => v.videoLink).map((v) => v._id).filter(Boolean),
+      published: (subject.chapters || []).flatMap((chapter) =>
+        (chapter.videos || [])
+          .filter((v) => v.videoLink && v._id)
+          .map((v) => ({
+            videoId: v._id,
+            title: v.name?.trim() || "Untitled lecture",
+            duration: v.duration || "",
+            subjectId: subject._id,
+            chapterId: chapter._id,
+            subject: subject?.name?.trim() || "",
+            chapter: chapter?.name?.trim() || "",
+          }))
+      ),
     };
   });
 }
@@ -191,6 +204,39 @@ function resumeProgress(target) {
 
 const plural = (n, one, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
 
+// ─── Helpers for the page ──────────────────────────────────────────────────
+
+const SUBJECT_ICONS = [
+  [/bio ?chem/i, FaFlask],
+  [/immun/i, FaShieldVirus],
+  [/pharma/i, FaPills],
+  [/micro/i, FaBacterium],
+  [/neuro|anatom/i, FaBrain],
+];
+const iconFor = (name) => SUBJECT_ICONS.find(([re]) => re.test(name))?.[1] || FaBookMedical;
+
+function greeting() {
+  const h = new Date().getHours();
+  return h < 5 ? "Burning the midnight oil" : h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening";
+}
+
+const lectureHref = (l) => {
+  const params = new URLSearchParams({ module: l.subject, section: l.chapter, title: l.title, duration: l.duration });
+  params.set("subjectId", l.subjectId);
+  params.set("chapterId", l.chapterId);
+  params.set("videoId", l.videoId);
+  return `/video?${params.toString()}`;
+};
+
+function Accent({ children }) {
+  return (
+    <span className="kx-u kx-accent">
+      {children}
+      <svg viewBox="0 0 200 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 50 5, 120 3, 197 9" /></svg>
+    </span>
+  );
+}
+
 // ─── Page ──────────────────────────────────────────────────────────────────
 
 export default function Dashboard() {
@@ -201,37 +247,29 @@ export default function Dashboard() {
   const [contentError, setContentError] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
   const [profileVersion, setProfileVersion] = useState(0);
-  // Lecture to offer as "Continue watching" (null once it is completed).
   const [resumeTarget] = useState(() => getLastWatched());
   const resume = useMemo(() => resumeProgress(resumeTarget), [resumeTarget]);
   const watched = useMemo(readWatched, []);
 
-  // Re-read after the profile refresh below rewrites it.
   const user = useMemo(() => {
     try { return JSON.parse(localStorage.getItem("kanthastUser") || "null"); }
     catch { return null; }
   }, [profileVersion]); // eslint-disable-line react-hooks/exhaustive-deps
   const firstName = user?.firstName || user?.name?.trim().split(/\s+/)[0] || "";
-
-  const dailyQuoteIndex = useMemo(getDailyIndex, []);
-  const dailyQuote = QUOTES[dailyQuoteIndex];
+  const dailyQuote = QUOTES[useMemo(getDailyIndex, [])];
 
   useEffect(() => {
     const token = localStorage.getItem("kanthastToken");
     if (!token) return;
-
     let mounted = true;
     getProfile(token)
       .then((data) => {
         if (!mounted || !data.user) return;
         localStorage.setItem("kanthastUser", JSON.stringify(data.user));
-        setProfileVersion((version) => version + 1);
+        setProfileVersion((v) => v + 1);
       })
       .catch(() => {});
-
-    return () => {
-      mounted = false;
-    };
+    return () => { mounted = false; };
   }, []);
 
   useEffect(() => {
@@ -240,12 +278,9 @@ export default function Dashboard() {
       setContentError(false);
       try {
         const data = await getMedicineUsmleContent();
-        if (!mounted) return;
-        setSubjects(buildSubjects(data.content));
+        if (mounted) setSubjects(buildSubjects(data.content));
       } catch {
         if (!mounted) return;
-        // A failed fetch is not an empty catalog: say so and offer a retry
-        // instead of the "subjects are on the way" empty state.
         setSubjects([]);
         setContentError(true);
       } finally {
@@ -255,270 +290,288 @@ export default function Dashboard() {
     return () => { mounted = false; };
   }, [profileVersion, reloadKey]);
 
-  function retry() {
-    setContentLoading(true);
-    setReloadKey((key) => key + 1);
-  }
+  const retry = () => { setContentLoading(true); setReloadKey((k) => k + 1); };
 
-  const { publishedCount, watchedCount } = useMemo(() => {
-    const allIds = subjects.flatMap((s) => s.lectureIds);
+  const stats = useMemo(() => {
+    const published = subjects.flatMap((s) => s.published);
     return {
-      publishedCount: subjects.reduce((n, s) => n + s.publishedIds.length, 0),
-      watchedCount: allIds.filter((id) => watched[id]).length,
+      published,
+      planned: subjects.reduce((n, s) => n + s.lectureIds.length, 0),
+      watchedCount: published.filter((l) => watched[l.videoId]).length,
+      nextUp: published.find((l) => !watched[l.videoId]) || null,
     };
   }, [subjects, watched]);
 
   const streak = getStreak();
   const compact = settings.compactLayout;
-  const showProgressPercent = settings.showProgressPercent;
-  const statsUnknown = contentError;
+  const showPercent = settings.showProgressPercent;
+  const sortedSubjects = useMemo(
+    () => [...subjects].sort((a, b) => (b.published.length > 0) - (a.published.length > 0)),
+    [subjects]
+  );
+
+  // The one thing to do next: resume > first unwatched published lecture > all caught up.
+  let upNext;
+  if (resumeTarget) {
+    upNext = {
+      kind: "resume",
+      label: "Continue watching",
+      title: resumeTarget.title || "Your last lecture",
+      meta: [resumeTarget.module, resumeTarget.section].filter(Boolean).join(" · "),
+      extra: resume?.remaining ? formatRemaining(resume.remaining) : "",
+      percent: resume?.percent ?? null,
+      cta: "Resume",
+      href: buildResumeHref(resumeTarget),
+    };
+  } else if (stats.nextUp) {
+    upNext = {
+      kind: "start",
+      label: stats.watchedCount ? "Up next" : "Start here",
+      title: stats.nextUp.title,
+      meta: [stats.nextUp.subject, stats.nextUp.chapter].filter(Boolean).join(" · "),
+      extra: stats.nextUp.duration ? `${stats.nextUp.duration} min` : "",
+      percent: null,
+      cta: stats.watchedCount ? "Play next" : "Start lecture",
+      href: lectureHref(stats.nextUp),
+    };
+  } else if (!contentLoading && !contentError && stats.published.length > 0) {
+    upNext = { kind: "done", label: "All caught up", title: "You've watched every published lecture.", meta: "New lectures are released subject by subject.", cta: "Open library", href: "/library" };
+  }
+
+  const subline = resumeTarget
+    ? "Pick up right where you stopped."
+    : stats.watchedCount
+      ? "Nice work so far. Here is what to watch next."
+      : stats.published.length
+        ? `${stats.published.length} lectures are ready to watch. Start with the first one.`
+        : "Your lectures will appear here as they are released.";
 
   return (
-    <div className={`min-h-screen bg-surface-sunken ${compact ? "px-3 md:px-4 py-6 md:py-8" : "px-4 md:px-6 py-8 md:py-10"}`}>
-      <div className="page-frame">
-
-        {/* ── Top card ── */}
-        <div className={`rounded-sheet border border-line bg-surface shadow-e2 ${compact ? "p-5 md:p-6" : "p-6 md:p-8"}`}>
-
-          {/* Welcome row */}
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
-            <div className="min-w-0">
-              <p className="kx-eyebrow mb-3">Your Dashboard</p>
-              <h1 className="text-3xl md:text-4xl font-black tracking-tight text-ink">
-                Welcome back{firstName ? `, ${firstName}` : ""}
-              </h1>
-              <p className="text-ink-muted mt-1.5 text-sm">
-                Build discipline daily. Your consistency compounds every session.
-              </p>
-            </div>
-
-            {/* Stats — one row, three at most. */}
-            <dl className={`grid grid-cols-3 ${compact ? "gap-2" : "gap-3"} w-full lg:w-auto lg:min-w-[440px]`}>
-              {contentLoading ? (
-                Array.from({ length: 3 }).map((_, i) => <StatCardSkeleton key={i} />)
-              ) : (
-                <>
-                  <StatCard
-                    title="Published lectures"
-                    value={statsUnknown ? "–" : publishedCount}
-                  />
-                  <StatCard title="Watched" value={statsUnknown ? "–" : watchedCount} />
-                  <StatCard title="Day streak" value={streak} />
-                </>
-              )}
-            </dl>
-          </div>
-
-          {/* ── Continue watching ──
-              The highest-value action in a course product: resume where the
-              student stopped instead of making them find it in Lists. */}
-          {resumeTarget ? (
-            <div className="mt-8 rounded-card border border-line bg-surface-sunken p-5 md:p-6">
-              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                <div className="min-w-0">
-                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
-                    Continue watching
-                  </span>
-                  <h2 className="mt-2 line-clamp-2 text-xl font-bold tracking-tight text-ink md:text-2xl">
-                    {resumeTarget.title || "Your last lecture"}
-                  </h2>
-                  <p className="mt-1 text-sm text-ink-subtle tabular-nums">
-                    {[resumeTarget.module, resumeTarget.section]
-                      .filter(Boolean)
-                      .join(" — ")}
-                    {resume?.remaining
-                      ? ` · ${formatRemaining(resume.remaining)}`
-                      : ""}
-                  </p>
-
-                  {resume ? (
-                    <div
-                      className="mt-3 h-1.5 w-full max-w-md overflow-hidden rounded-full bg-line"
-                      role="progressbar"
-                      aria-valuenow={resume.percent}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                      aria-label="Lecture progress"
-                    >
-                      <div
-                        className="h-full rounded-full bg-brand transition-[width] duration-slow ease-brand"
-                        style={{ width: `${resume.percent}%` }}
-                      />
-                    </div>
-                  ) : null}
-                </div>
-
-                <button
-                  type="button"
-                  onClick={() => navigate(buildResumeHref(resumeTarget))}
-                  className="btn-primary shrink-0"
-                >
-                  <FaPlay size={12} aria-hidden="true" />
-                  Resume
-                </button>
-              </div>
-            </div>
-          ) : null}
-
-          {/* Daily quote — a quiet footer line. */}
-          <p className="mt-6 border-t border-line pt-5 text-sm italic text-ink-subtle">
-            &ldquo;{dailyQuote}&rdquo;
+    <div className={`db ${compact ? "db-compact" : ""}`}>
+      {/* ── Header: greeting + the next lecture ── */}
+      <section className="db-hero" aria-labelledby="db-title">
+        <div className="db-hello">
+          <p className="kx-eyebrow">
+            <FaCirclePlay aria-hidden="true" />
+            Your Dashboard
+          </p>
+          <h1 id="db-title" className="db-title">
+            {greeting()}{firstName ? ", " : ""}
+            {firstName ? <Accent>{firstName}</Accent> : null}
+            <span className="kx-accent">.</span>
+          </h1>
+          <p className="db-sub">{subline}</p>
+          <p className="db-quote">
+            <span className="db-quote-icon" aria-hidden="true"><FaLightbulb /></span>
+            <span>&ldquo;{dailyQuote}&rdquo;</span>
           </p>
         </div>
 
-        {/* ── Subjects ── */}
-        <section className="mt-10" aria-labelledby="dash-subjects">
-          <div className="mb-5 flex flex-wrap items-end justify-between gap-2">
-            <div>
-              <h2 id="dash-subjects" className="text-2xl md:text-3xl font-bold tracking-tight text-ink">
-                Your subjects
-              </h2>
-              {!contentLoading && !contentError && subjects.length > 0 ? (
-                <p className="mt-1 text-sm text-ink-muted">
-                  Lectures are being released subject by subject. Progress counts published lectures only.
-                </p>
-              ) : null}
+        <div className="db-next" aria-live="polite">
+          {contentLoading && !resumeTarget ? (
+            <div className="db-next-card is-loading" aria-hidden="true">
+              <span className="db-skel w-24" /><span className="db-skel h-7 w-4/5 mt-4" /><span className="db-skel w-1/2 mt-3" /><span className="db-skel h-12 w-40 mt-8 rounded-full" />
             </div>
-          </div>
-
-          {contentLoading ? (
-            <div className={`grid sm:grid-cols-2 lg:grid-cols-3 ${compact ? "gap-3" : "gap-4"}`}>
-              {Array.from({ length: 3 }).map((_, i) => (
-                <div key={i} className="card p-5 animate-pulse" aria-hidden="true">
-                  <div className="flex items-center gap-4">
-                    <div className="h-12 w-12 rounded-control bg-surface-sunken" />
-                    <div className="flex-1">
-                      <div className="h-4 w-32 rounded bg-surface-sunken" />
-                      <div className="mt-2 h-3 w-44 rounded bg-surface-sunken" />
-                    </div>
-                  </div>
-                  <div className="mt-8 h-1.5 rounded-full bg-surface-sunken" />
-                </div>
-              ))}
-            </div>
-          ) : contentError ? (
-            <div className="card p-8 text-center" role="alert">
-              <h3 className="text-lg font-bold text-ink">We couldn&apos;t load your subjects</h3>
-              <p className="mx-auto mt-2 max-w-md text-sm text-ink-muted">
-                Check your connection and try again. Your progress is saved on this device and isn&apos;t affected.
+          ) : upNext ? (
+            <div className={`db-next-card is-${upNext.kind}`}>
+              <span className="db-next-glow" aria-hidden="true" />
+              <span className="db-pill">{upNext.kind === "done" ? <FaCircleCheck aria-hidden="true" /> : <FaPlay aria-hidden="true" />}{upNext.label}</span>
+              <h2 className="db-next-title">{upNext.title}</h2>
+              <p className="db-next-meta">
+                {upNext.meta}
+                {upNext.extra ? <span className="db-next-extra"><FaClock aria-hidden="true" />{upNext.extra}</span> : null}
               </p>
-              <button type="button" onClick={retry} className="btn-secondary mt-5">
-                Retry
+              {upNext.percent != null ? (
+                <div className="db-bar" role="progressbar" aria-valuenow={upNext.percent} aria-valuemin={0} aria-valuemax={100} aria-label="Lecture progress">
+                  <span style={{ width: `${upNext.percent}%` }} />
+                </div>
+              ) : null}
+              <button type="button" className="db-btn" onClick={() => navigate(upNext.href)}>
+                {upNext.kind === "done" ? null : <FaPlay aria-hidden="true" className="text-[0.75em]" />}
+                {upNext.cta}
+                <FaArrowRight aria-hidden="true" className="text-[0.8em]" />
               </button>
             </div>
-          ) : subjects.length === 0 ? (
-            <div className="card p-8 text-center text-ink-muted">
-              <div>
-                <h3 className="text-xl font-bold text-ink">Your subjects are on the way</h3>
-                <p className="mx-auto mt-2 max-w-md text-sm">
-                  Course content hasn&apos;t been published to your account yet.
-                  Browse the catalog to see what&apos;s coming, or check back shortly.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => navigate("/courses")}
-                  className="btn-secondary mt-5"
-                >
-                  Browse courses
-                </button>
-              </div>
+          ) : contentError ? (
+            <div className="db-next-card">
+              <span className="db-pill">Offline?</span>
+              <h2 className="db-next-title">We couldn&apos;t load your lectures.</h2>
+              <p className="db-next-meta">Check your connection and try again.</p>
+              <button type="button" className="db-btn" onClick={retry}>Retry</button>
             </div>
-          ) : (
-            <ul className={`grid sm:grid-cols-2 lg:grid-cols-3 ${compact ? "gap-3" : "gap-4"}`}>
-              {subjects.map((subject) => (
-                <li key={subject.subjectId || subject.name} className="flex">
-                  <SubjectCard
-                    subject={subject}
-                    watched={watched}
-                    compact={compact}
-                    showProgressPercent={showProgressPercent}
-                    onClick={() => navigate(`/library?subject=${encodeURIComponent(subject.name)}`)}
-                  />
-                </li>
-              ))}
-            </ul>
-          )}
-        </section>
-      </div>
-    </div>
-  );
-}
-
-// ─── Subject card ──────────────────────────────────────────────────────────
-
-function SubjectCard({ subject, watched, compact, showProgressPercent, onClick }) {
-  const published = subject.publishedIds.length;
-  const done = subject.publishedIds.filter((id) => watched[id]).length;
-  const percent = published > 0 ? Math.round((done / published) * 100) : 0;
-  const meta = `${plural(subject.chapterCount, "chapter")} · ${plural(subject.lectureIds.length, "lecture")} planned`;
-  const status = published > 0
-    ? `${done} of ${plural(published, "published lecture")} watched`
-    : "Lectures in production";
-
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-label={`${subject.name}: ${meta}. ${status}.`}
-      className={`card group flex w-full flex-col text-left transition-colors duration-fast ease-brand hover:border-brand ${compact ? "p-4" : "p-5"}`}
-    >
-      <div className="flex items-center gap-4">
-        <span
-          aria-hidden="true"
-          className="grid h-12 w-12 shrink-0 place-items-center rounded-control bg-brand-soft text-xl font-black text-brand"
-        >
-          {subject.name.charAt(0).toUpperCase()}
-        </span>
-        <div className="min-w-0">
-          <h3 className="truncate text-lg font-bold tracking-tight text-ink group-hover:text-brand transition-colors duration-fast ease-brand">
-            {subject.name}
-          </h3>
-          <p className="mt-0.5 text-sm text-ink-muted tabular-nums">{meta}</p>
-        </div>
-      </div>
-
-      <div className={`mt-auto ${compact ? "pt-4" : "pt-6"}`}>
-        <div className="flex items-baseline justify-between gap-3 text-sm">
-          <span className={published > 0 ? "text-ink-muted tabular-nums" : "text-ink-subtle"}>{status}</span>
-          {published > 0 && showProgressPercent ? (
-            <span className="font-semibold text-ink tabular-nums">{percent}%</span>
           ) : null}
         </div>
-        <div
-          className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-surface-sunken"
-          role={published > 0 ? "progressbar" : undefined}
-          aria-hidden={published > 0 ? undefined : "true"}
-          aria-valuenow={published > 0 ? percent : undefined}
-          aria-valuemin={published > 0 ? 0 : undefined}
-          aria-valuemax={published > 0 ? 100 : undefined}
-          aria-label={published > 0 ? `${subject.name} lecture progress` : undefined}
-        >
-          <div
-            className="h-full rounded-full bg-brand transition-[width] duration-slow ease-brand"
-            style={{ width: `${percent}%` }}
-          />
+      </section>
+
+      {/* ── Progress at a glance ── */}
+      <dl className="db-stats">
+        <Stat
+          icon={FaCircleCheck}
+          label="Lectures watched"
+          value={contentLoading ? "–" : stats.watchedCount}
+          suffix={contentLoading || contentError ? "" : `of ${stats.published.length}`}
+          note={stats.watchedCount ? "Every one counts." : "Your first one is a click away."}
+          progress={stats.published.length ? stats.watchedCount / stats.published.length : 0}
+        />
+        <Stat
+          icon={FaFire}
+          tone="warm"
+          label="Day streak"
+          value={streak}
+          suffix={streak === 1 ? "day" : "days"}
+          note={streak ? "Come back tomorrow to keep it going." : "Watch a lecture today to start one."}
+        />
+        <Stat
+          icon={FaLayerGroup}
+          label="Lectures released"
+          value={contentLoading ? "–" : stats.published.length}
+          suffix={contentLoading || contentError ? "" : `of ${stats.planned}`}
+          note="New lectures are added subject by subject."
+          progress={stats.planned ? stats.published.length / stats.planned : 0}
+        />
+      </dl>
+
+      {/* ── Ready to watch ── */}
+      {stats.published.length > 0 ? (
+        <section className="db-section" aria-labelledby="db-ready">
+          <div className="db-head">
+            <div>
+              <p className="kx-eyebrow"><FaPlay aria-hidden="true" />Ready Now</p>
+              <h2 id="db-ready" className="db-h2">Ready to <Accent>Watch</Accent><span className="kx-accent">.</span></h2>
+            </div>
+            <button type="button" className="db-link" onClick={() => navigate("/library")}>
+              Open library <FaArrowRight aria-hidden="true" />
+            </button>
+          </div>
+          <ul className="db-lectures">
+            {stats.published.slice(0, 6).map((l, i) => {
+              const done = Boolean(watched[l.videoId]);
+              const inProgress = !done && resumeTarget?.videoId === l.videoId;
+              return (
+                <li key={l.videoId}>
+                  <button type="button" className="db-lecture" onClick={() => navigate(lectureHref(l))}>
+                    <span className={`db-lecture-play ${done ? "is-done" : ""}`} aria-hidden="true">
+                      {done ? <FaCircleCheck /> : <FaPlay />}
+                    </span>
+                    <span className="db-lecture-text">
+                      <span className="db-lecture-title">{l.title}</span>
+                      <span className="db-lecture-meta">{l.subject} · {l.chapter}</span>
+                    </span>
+                    <span className="db-lecture-side">
+                      {l.duration ? <span className="db-lecture-time"><FaClock aria-hidden="true" />{l.duration}</span> : null}
+                      <span className={`db-tag ${done ? "is-done" : inProgress ? "is-progress" : i === 0 && !stats.watchedCount && !resumeTarget ? "is-new" : ""}`}>
+                        {done ? "Watched" : inProgress ? "In progress" : i === 0 && !stats.watchedCount && !resumeTarget ? "Start here" : "New"}
+                      </span>
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ) : null}
+
+      {/* ── Subjects ── */}
+      <section className="db-section" aria-labelledby="db-subjects">
+        <div className="db-head">
+          <div>
+            <p className="kx-eyebrow"><FaLayerGroup aria-hidden="true" />Syllabus</p>
+            <h2 id="db-subjects" className="db-h2">Your <Accent>Subjects</Accent><span className="kx-accent">.</span></h2>
+          </div>
+          <p className="db-head-note">Lectures are released subject by subject. Progress counts published lectures only.</p>
         </div>
+
+        {contentLoading ? (
+          <ul className="db-subjects">
+            {Array.from({ length: 3 }).map((_, i) => (
+              <li key={i} className="db-subject is-loading" aria-hidden="true">
+                <span className="db-skel h-14 w-14 rounded-full" /><span className="db-skel h-5 w-32 mt-5" /><span className="db-skel w-44 mt-3" />
+              </li>
+            ))}
+          </ul>
+        ) : contentError ? (
+          <div className="db-empty" role="alert">
+            <h3>We couldn&apos;t load your subjects</h3>
+            <p>Check your connection and try again. Your progress is saved on this device and isn&apos;t affected.</p>
+            <button type="button" className="db-btn" onClick={retry}>Retry</button>
+          </div>
+        ) : subjects.length === 0 ? (
+          <div className="db-empty">
+            <h3>Your subjects are on the way</h3>
+            <p>Course content hasn&apos;t been published yet. Browse the catalog to see what&apos;s coming.</p>
+            <button type="button" className="db-btn" onClick={() => navigate("/courses")}>Browse courses</button>
+          </div>
+        ) : (
+          <ul className="db-subjects">
+            {sortedSubjects.map((subject) => (
+              <li key={subject.subjectId || subject.name} className="flex">
+                <SubjectCard
+                  subject={subject}
+                  watched={watched}
+                  showPercent={showPercent}
+                  onClick={() => navigate(`/library?subject=${encodeURIComponent(subject.name)}`)}
+                />
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+    </div>
+  );
+}
+
+// ─── Pieces ────────────────────────────────────────────────────────────────
+
+function Stat({ icon, tone, label, value, suffix, note, progress }) {
+  return (
+    <div className={`db-stat ${tone ? `is-${tone}` : ""}`}>
+      <span className="db-stat-icon" aria-hidden="true">{createElement(icon)}</span>
+      <div className="db-stat-body">
+        <dt className="db-stat-label">{label}</dt>
+        <dd className="db-stat-value">
+          <span className="tabular-nums">{value}</span>
+          {suffix ? <span className="db-stat-suffix">{suffix}</span> : null}
+        </dd>
+        {progress != null ? (
+          <div className="db-bar db-bar-thin" aria-hidden="true"><span style={{ width: `${Math.round(progress * 100)}%` }} /></div>
+        ) : null}
+        <p className="db-stat-note">{note}</p>
       </div>
+    </div>
+  );
+}
+
+function SubjectCard({ subject, watched, showPercent, onClick }) {
+  const published = subject.published.length;
+  const done = subject.published.filter((l) => watched[l.videoId]).length;
+  const percent = published ? Math.round((done / published) * 100) : 0;
+  const meta = `${plural(subject.chapterCount, "chapter")} · ${plural(subject.lectureIds.length, "lecture")}`;
+  const status = published ? `${done} of ${published} watched` : "Coming soon";
+
+  return (
+    <button type="button" onClick={onClick} aria-label={`${subject.name}: ${meta}. ${status}.`} className={`db-subject ${published ? "is-live" : "is-soon"}`}>
+      <span className="db-subject-top">
+        <span className="db-subject-icon" aria-hidden="true">{createElement(iconFor(subject.name))}</span>
+        {published ? <span className="db-tag is-live">{published} ready</span> : <span className="db-tag is-soon">Coming soon</span>}
+      </span>
+      <span className="db-subject-name">{subject.name}</span>
+      <span className="db-subject-meta">{meta}</span>
+      <span className="db-subject-foot">
+        {published ? (
+          <>
+            <span className="db-subject-progress">
+              <span>{status}</span>
+              {showPercent ? <span className="font-semibold text-ink">{percent}%</span> : null}
+            </span>
+            <span className="db-bar" role="progressbar" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100} aria-label={`${subject.name} progress`}>
+              <span style={{ width: `${Math.max(percent, 2)}%` }} />
+            </span>
+          </>
+        ) : (
+          <span className="db-subject-soon">Lectures are in production. Browse the chapter list now.</span>
+        )}
+        <span className="db-subject-go" aria-hidden="true"><FaArrowRight /></span>
+      </span>
     </button>
-  );
-}
-
-// ─── Stat card ─────────────────────────────────────────────────────────────
-
-function StatCard({ title, value }) {
-  return (
-    <div className="flex flex-col-reverse justify-end rounded-control border border-line bg-surface-sunken px-3 py-2.5">
-      <dt className="mt-1 text-xs text-ink-muted leading-tight">{title}</dt>
-      <dd className="text-xl md:text-2xl font-black text-ink tabular-nums leading-none">{value}</dd>
-    </div>
-  );
-}
-
-function StatCardSkeleton() {
-  return (
-    <div className="rounded-control border border-line bg-surface-sunken px-3 py-2.5 animate-pulse" aria-hidden="true">
-      <div className="h-5 w-8 rounded bg-line" />
-      <div className="mt-1.5 h-2.5 w-16 rounded bg-line" />
-    </div>
   );
 }
