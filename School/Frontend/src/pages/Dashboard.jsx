@@ -1,11 +1,13 @@
-import { useEffect, useMemo, useState } from "react";
+import { createElement, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaPlay } from "react-icons/fa";
+import { FaPlay, FaArrowRight, FaFire, FaCircleCheck, FaLayerGroup, FaLightbulb, FaClock, FaFlask, FaSquareRootVariable, FaEarthAsia, FaBookOpen, FaLanguage, FaScroll, FaLaptopCode, FaGraduationCap, FaPenNib, FaCirclePlay } from "react-icons/fa6";
+import { Eyebrow, Accent } from "../components/ui/Brandmarks";
+import { SCRIPT_COUNTS } from "../data/schoolCatalog";
 import { getProfile } from "../utils/authApi";
 import { useAppSettings } from "../utils/settings";
 import { getLastWatched, formatRemaining } from "../utils/progress";
 import {
-  buildSchoolModules,
+  getSchoolCourseContent,
   getSchoolClassLabel,
   getSelectedSchoolClass,
   hasPaidForSchoolClass,
@@ -16,21 +18,6 @@ import {
 // artifacts, and School cards used per-subject hex gradients that ignored the
 // theme. Name, counts and progress are the card; nothing else is needed.
 
-// Lessons are generated per class; every lesson in the plan counts.
-function buildSchoolSubjectsFromModules(modules) {
-  return Object.entries(modules).map(([subjectName, subject]) => {
-    const ids = subject.sections
-      .flatMap((section) => section.lectures.map((lecture) => lecture.videoId))
-      .filter(Boolean);
-    return {
-      name: subjectName,
-      subjectId: subjectName.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
-      chapterCount: subject.sections.length,
-      lectureIds: ids,
-      publishedIds: ids,
-    };
-  });
-}
 
 // A streak only counts if the last watched day is today or yesterday;
 // VideoPage writes the count but never decays it, so a lapsed streak would
@@ -89,265 +76,318 @@ function resumeProgress(target) {
 
 const plural = (n, one, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
 
+// ─── Helpers for the page ──────────────────────────────────────────────────
+
+const SUBJECT_ICONS = [
+  [/math/i, FaSquareRootVariable],
+  [/social/i, FaEarthAsia],
+  [/science/i, FaFlask],
+  [/english/i, FaBookOpen],
+  [/hindi/i, FaLanguage],
+  [/sanskrit/i, FaScroll],
+  [/information|computer|\bit\b/i, FaLaptopCode],
+];
+const iconFor = (name) => SUBJECT_ICONS.find(([re]) => re.test(name))?.[1] || FaGraduationCap;
+
+function greeting() {
+  const h = new Date().getHours();
+  return h < 5 ? "Up late" : h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening";
+}
+
+// Subjects with their chapters and lessons for the selected class. Only lessons with a
+// video count as watchable; the rest are scripted and in production.
+function buildSchoolSubjects(classValue) {
+  return (getSchoolCourseContent(classValue).subjects || []).map((subject) => {
+    const lessons = subject.chapters.flatMap((chapter) =>
+      chapter.videos.map((v) => ({
+        videoId: v._id,
+        title: v.name,
+        duration: v.duration || "",
+        hasVideo: Boolean(v.videoLink),
+        subjectId: subject._id,
+        chapterId: chapter._id,
+        subject: subject.name,
+        chapter: chapter.name,
+      }))
+    );
+    const real = SCRIPT_COUNTS[classValue]?.[subject.name];
+    return {
+      name: subject.name,
+      subjectId: subject._id,
+      chapters: subject.chapters,
+      lessons,
+      videos: lessons.filter((l) => l.hasVideo),
+      scriptedChapters: real?.chapters ?? null,
+      scriptedLessons: real?.lessons ?? null,
+    };
+  });
+}
+
+const lessonHref = (l) => {
+  const params = new URLSearchParams({ module: l.subject, section: l.chapter, title: l.title, duration: l.duration });
+  params.set("subjectId", l.subjectId);
+  params.set("chapterId", l.chapterId);
+  params.set("videoId", l.videoId);
+  return `/video?${params.toString()}`;
+};
+
 // ─── Page ──────────────────────────────────────────────────────────────────
 
 export default function Dashboard() {
   const navigate = useNavigate();
   const settings = useAppSettings();
-  const selectedSchoolClass = getSelectedSchoolClass();
-  const selectedSchoolClassLabel = getSchoolClassLabel(selectedSchoolClass);
+  const classValue = getSelectedSchoolClass();
+  const classLabel = getSchoolClassLabel(classValue);
   const [profileVersion, setProfileVersion] = useState(0);
-  // Lecture to offer as "Continue watching" (null once it is completed).
   const [resumeTarget] = useState(() => getLastWatched());
   const resume = useMemo(() => resumeProgress(resumeTarget), [resumeTarget]);
   const watched = useMemo(readWatched, []);
 
-  // Re-read after the profile refresh below rewrites it.
   const user = useMemo(() => {
     try { return JSON.parse(localStorage.getItem("kanthastSchoolUser") || "null"); }
     catch { return null; }
   }, [profileVersion]); // eslint-disable-line react-hooks/exhaustive-deps
   const firstName = user?.firstName || user?.name?.trim().split(/\s+/)[0] || "";
 
-  const dailyQuote = "Small visual wins every day turn hard chapters into confident answers.";
-
   useEffect(() => {
     const token = localStorage.getItem("kanthastSchoolToken");
     if (!token) return;
-
     let mounted = true;
     getProfile(token)
       .then((data) => {
         if (!mounted || !data.user) return;
         localStorage.setItem("kanthastSchoolUser", JSON.stringify(data.user));
-        setProfileVersion((version) => version + 1);
+        setProfileVersion((v) => v + 1);
       })
       .catch(() => {});
-
-    return () => {
-      mounted = false;
-    };
+    return () => { mounted = false; };
   }, []);
 
-  // The class catalog is built in the browser; only a paid class shows subjects here.
+  const paid = hasPaidForSchoolClass();
   const subjects = useMemo(
-    () => (hasPaidForSchoolClass() ? buildSchoolSubjectsFromModules(buildSchoolModules(selectedSchoolClass)) : []),
+    () => (paid ? buildSchoolSubjects(classValue) : []),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [selectedSchoolClass, profileVersion]
+    [classValue, profileVersion, paid]
   );
 
-  const { publishedCount, watchedCount } = useMemo(() => {
-    const allIds = subjects.flatMap((s) => s.lectureIds);
+  const stats = useMemo(() => {
+    const lessons = subjects.flatMap((s) => s.lessons);
+    const videos = subjects.flatMap((s) => s.videos);
+    const real = Object.values(SCRIPT_COUNTS[classValue] || {});
     return {
-      publishedCount: subjects.reduce((n, s) => n + s.publishedIds.length, 0),
-      watchedCount: allIds.filter((id) => watched[id]).length,
+      lessons: real.reduce((n, x) => n + x.lessons, 0),
+      chapters: real.reduce((n, x) => n + x.chapters, 0),
+      videos,
+      watchedCount: videos.filter((l) => watched[l.videoId]).length,
+      nextVideo: videos.find((l) => !watched[l.videoId]) || null,
+      firstLesson: lessons[0] || null,
     };
-  }, [subjects, watched]);
+  }, [subjects, watched, classValue]);
 
   const streak = getStreak();
   const compact = settings.compactLayout;
-  const showProgressPercent = settings.showProgressPercent;
+  const showPercent = settings.showProgressPercent;
+
+  let upNext;
+  if (!paid) {
+    upNext = { kind: "plan", label: "Get started", title: "Choose your class plan", meta: "Pick Class VIII, IX or X to unlock its subjects, chapters and lessons.", cta: "Choose a class", href: "/subscription" };
+  } else if (resumeTarget) {
+    upNext = {
+      kind: "resume", label: "Continue watching", title: resumeTarget.title || "Your last lesson",
+      meta: [resumeTarget.module, resumeTarget.section].filter(Boolean).join(" · "),
+      extra: resume?.remaining ? formatRemaining(resume.remaining) : "", percent: resume?.percent ?? null,
+      cta: "Resume", href: buildResumeHref(resumeTarget), play: true,
+    };
+  } else if (stats.nextVideo) {
+    upNext = {
+      kind: "start", label: stats.watchedCount ? "Up next" : "Start here", title: stats.nextVideo.title,
+      meta: [stats.nextVideo.subject, stats.nextVideo.chapter].filter(Boolean).join(" · "),
+      extra: stats.nextVideo.duration ? `${stats.nextVideo.duration} min` : "",
+      cta: stats.watchedCount ? "Play next" : "Start lesson", href: lessonHref(stats.nextVideo), play: true,
+    };
+  } else if (stats.firstLesson) {
+    upNext = {
+      kind: "explore", label: `${classLabel} syllabus`, title: `${stats.firstLesson.subject}: ${stats.firstLesson.chapter}`,
+      meta: `All ${stats.lessons} lessons for ${classLabel} are scripted. The animated videos are being made now.`,
+      cta: "Explore chapters", href: `/library?subject=${encodeURIComponent(stats.firstLesson.subject)}`,
+    };
+  }
+
+  const subline = !paid
+    ? "Pick your class to set up your dashboard."
+    : resumeTarget
+      ? "Pick up right where you stopped."
+      : stats.videos.length
+        ? `${stats.videos.length} lessons are ready to watch in ${classLabel}.`
+        : `Your ${classLabel} dashboard. Lessons appear here as their videos are released.`;
 
   return (
-    <div className={`min-h-screen bg-surface-sunken ${compact ? "px-3 md:px-4 py-6 md:py-8" : "px-4 md:px-6 py-8 md:py-10"}`}>
-      <div className="page-frame">
-
-        {/* ── Top card ── */}
-        <div className={`rounded-sheet border border-line bg-surface shadow-e2 ${compact ? "p-5 md:p-6" : "p-6 md:p-8"}`}>
-
-          {/* Welcome row */}
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
-            <div className="min-w-0">
-              <h1 className="text-3xl md:text-4xl font-black tracking-tight text-ink">
-                Welcome back{firstName ? `, ${firstName}` : ""}
-              </h1>
-              <p className="text-ink-muted mt-1.5 text-sm">
-                {hasPaidForSchoolClass()
-                  ? `${selectedSchoolClassLabel} learning dashboard. Keep the next chapter moving.`
-                  : "Choose and activate a class plan to start your School dashboard."}
-              </p>
-            </div>
-
-            {/* Stats — one row, three at most. */}
-            <dl className={`grid grid-cols-3 ${compact ? "gap-2" : "gap-3"} w-full lg:w-auto lg:min-w-[440px]`}>
-              <StatCard title="Lessons" value={publishedCount} />
-              <StatCard title="Watched" value={watchedCount} />
-              <StatCard title="Day streak" value={streak} />
-            </dl>
+    <div className={`db is-school ${compact ? "db-compact" : ""}`}>
+      <section className="db-hero" aria-labelledby="db-title">
+        <div className="db-hello">
+          <div className="db-eyebrows">
+            <Eyebrow icon={FaCirclePlay}>Your Dashboard</Eyebrow>
+            {paid && classLabel ? <span className="db-class-pill">{classLabel}</span> : null}
           </div>
-
-          {/* ── Continue watching ──
-              The highest-value action in a course product: resume where the
-              student stopped instead of making them find it in Lists. */}
-          {resumeTarget ? (
-            <div className="mt-8 rounded-card border border-line bg-surface-sunken p-5 md:p-6">
-              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                <div className="min-w-0">
-                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
-                    Continue watching
-                  </span>
-                  <h2 className="mt-2 line-clamp-2 text-xl font-bold tracking-tight text-ink md:text-2xl">
-                    {resumeTarget.title || "Your last lecture"}
-                  </h2>
-                  <p className="mt-1 text-sm text-ink-subtle tabular-nums">
-                    {[resumeTarget.module, resumeTarget.section]
-                      .filter(Boolean)
-                      .join(" — ")}
-                    {resume?.remaining
-                      ? ` · ${formatRemaining(resume.remaining)}`
-                      : ""}
-                  </p>
-
-                  {resume ? (
-                    <div
-                      className="mt-3 h-1.5 w-full max-w-md overflow-hidden rounded-full bg-line"
-                      role="progressbar"
-                      aria-valuenow={resume.percent}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                      aria-label="Lecture progress"
-                    >
-                      <div
-                        className="h-full rounded-full bg-brand transition-[width] duration-slow ease-brand"
-                        style={{ width: `${resume.percent}%` }}
-                      />
-                    </div>
-                  ) : null}
-                </div>
-
-                <button
-                  type="button"
-                  onClick={() => navigate(buildResumeHref(resumeTarget))}
-                  className="btn-primary shrink-0"
-                >
-                  <FaPlay size={12} aria-hidden="true" />
-                  Resume
-                </button>
-              </div>
-            </div>
-          ) : null}
-
-          {/* Daily quote — a quiet footer line. */}
-          <p className="mt-6 border-t border-line pt-5 text-sm italic text-ink-subtle">
-            &ldquo;{dailyQuote}&rdquo;
+          <h1 id="db-title" className="db-title">
+            {greeting()}
+            {firstName ? <>, <Accent>{firstName}</Accent></> : <span className="bh-accent">.</span>}
+          </h1>
+          <p className="db-sub">{subline}</p>
+          <p className="db-quote">
+            <span className="db-quote-icon" aria-hidden="true"><FaLightbulb /></span>
+            <span>Small visual wins every day turn hard chapters into confident answers.</span>
           </p>
         </div>
 
-        {/* ── Subjects ── */}
-        <section className="mt-10" aria-labelledby="dash-subjects">
-          <div className="mb-5 flex flex-wrap items-end justify-between gap-2">
-            <div>
-              <h2 id="dash-subjects" className="text-2xl md:text-3xl font-bold tracking-tight text-ink">
-                Your subjects
-              </h2>
-            </div>
-          </div>
-
-          {subjects.length === 0 ? (
-            <div className="card p-8 text-center text-ink-muted">
-                <div>
-                  <h3 className="text-xl font-bold text-ink">Activate a class to see your dashboard</h3>
-                  <p className="mx-auto mt-2 max-w-xl text-sm">
-                    The School dashboard shows only the class the student has paid for. Choose a class plan to unlock
-                    subjects, chapters, and progress tracking.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => navigate("/subscription")}
-                    className="btn-primary mt-5"
-                  >
-                    Choose Class and Subscribe
-                  </button>
+        <div className="db-next">
+          {upNext ? (
+            <div className={`db-next-card is-${upNext.kind}`}>
+              <span className="db-next-glow" aria-hidden="true" />
+              <span className="db-pill">{upNext.play ? <FaPlay aria-hidden="true" /> : <FaPenNib aria-hidden="true" />}{upNext.label}</span>
+              <h2 className="db-next-title">{upNext.title}</h2>
+              <p className="db-next-meta">
+                {upNext.meta}
+                {upNext.extra ? <span className="db-next-extra"><FaClock aria-hidden="true" />{upNext.extra}</span> : null}
+              </p>
+              {upNext.percent != null ? (
+                <div className="db-bar" role="progressbar" aria-valuenow={upNext.percent} aria-valuemin={0} aria-valuemax={100} aria-label="Lesson progress">
+                  <span style={{ width: `${upNext.percent}%` }} />
                 </div>
+              ) : null}
+              <button type="button" className="db-btn" onClick={() => navigate(upNext.href)}>
+                {upNext.play ? <FaPlay aria-hidden="true" className="text-[0.75em]" /> : null}
+                {upNext.cta}
+                <FaArrowRight aria-hidden="true" className="text-[0.8em]" />
+              </button>
             </div>
-          ) : (
-            <ul className={`grid sm:grid-cols-2 lg:grid-cols-3 ${compact ? "gap-3" : "gap-4"}`}>
-              {subjects.map((subject) => (
-                <li key={subject.subjectId || subject.name} className="flex">
-                  <SubjectCard
-                    subject={subject}
-                    watched={watched}
-                    compact={compact}
-                    showProgressPercent={showProgressPercent}
-                    onClick={() => navigate(`/library?subject=${encodeURIComponent(subject.name)}`)}
-                  />
-                </li>
-              ))}
-            </ul>
-          )}
-        </section>
-      </div>
-    </div>
-  );
-}
-
-// ─── Subject card ──────────────────────────────────────────────────────────
-
-function SubjectCard({ subject, watched, compact, showProgressPercent, onClick }) {
-  const published = subject.publishedIds.length;
-  const done = subject.publishedIds.filter((id) => watched[id]).length;
-  const percent = published > 0 ? Math.round((done / published) * 100) : 0;
-  const unit = "lesson";
-  const meta = `${plural(subject.chapterCount, "chapter")} · ${plural(subject.lectureIds.length, "lesson")}`;
-  const status = published > 0
-    ? `${done} of ${plural(published, "lesson")} watched`
-    : "Lessons in production";
-
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-label={`${subject.name}: ${meta}. ${status}.`}
-      className={`card group flex w-full flex-col text-left transition-colors duration-fast ease-brand hover:border-brand ${compact ? "p-4" : "p-5"}`}
-    >
-      <div className="flex items-center gap-4">
-        <span
-          aria-hidden="true"
-          className="grid h-12 w-12 shrink-0 place-items-center rounded-control bg-brand-soft text-xl font-black text-brand"
-        >
-          {subject.name.charAt(0).toUpperCase()}
-        </span>
-        <div className="min-w-0">
-          <h3 className="truncate text-lg font-bold tracking-tight text-ink group-hover:text-brand transition-colors duration-fast ease-brand">
-            {subject.name}
-          </h3>
-          <p className="mt-0.5 text-sm text-ink-muted tabular-nums">{meta}</p>
-        </div>
-      </div>
-
-      <div className={`mt-auto ${compact ? "pt-4" : "pt-6"}`}>
-        <div className="flex items-baseline justify-between gap-3 text-sm">
-          <span className={published > 0 ? "text-ink-muted tabular-nums" : "text-ink-subtle"}>{status}</span>
-          {published > 0 && showProgressPercent ? (
-            <span className="font-semibold text-ink tabular-nums">{percent}%</span>
           ) : null}
         </div>
-        <div
-          className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-surface-sunken"
-          role={published > 0 ? "progressbar" : undefined}
-          aria-hidden={published > 0 ? undefined : "true"}
-          aria-valuenow={published > 0 ? percent : undefined}
-          aria-valuemin={published > 0 ? 0 : undefined}
-          aria-valuemax={published > 0 ? 100 : undefined}
-          aria-label={published > 0 ? `${subject.name} ${unit} progress` : undefined}
-        >
-          <div
-            className="h-full rounded-full bg-brand transition-[width] duration-slow ease-brand"
-            style={{ width: `${percent}%` }}
+      </section>
+
+      {paid ? (
+        <dl className="db-stats">
+          <Stat icon={FaLayerGroup} label="Lessons scripted" value={stats.lessons} suffix={`in ${stats.chapters} chapters`} note={`Every chapter of ${classLabel}, written scene by scene.`} />
+          <Stat
+            icon={FaCirclePlay}
+            label="Videos released"
+            value={stats.videos.length}
+            suffix={`of ${stats.lessons}`}
+            note={stats.videos.length ? `${stats.watchedCount} watched so far.` : "Animation is in production."}
+            progress={stats.lessons ? stats.videos.length / stats.lessons : 0}
           />
+          <Stat icon={FaFire} tone="warm" label="Day streak" value={streak} suffix={streak === 1 ? "day" : "days"} note={streak ? "Come back tomorrow to keep it going." : "Watch a lesson to start one."} />
+        </dl>
+      ) : null}
+
+      {stats.videos.length > 0 ? (
+        <section className="db-section" aria-labelledby="db-ready">
+          <div className="db-head">
+            <div>
+              <Eyebrow>Ready Now</Eyebrow>
+              <h2 id="db-ready" className="db-h2">Ready to <Accent>Watch</Accent></h2>
+            </div>
+            <button type="button" className="db-link" onClick={() => navigate("/library")}>Open library <FaArrowRight aria-hidden="true" /></button>
+          </div>
+          <ul className="db-lectures">
+            {stats.videos.slice(0, 6).map((l) => {
+              const done = Boolean(watched[l.videoId]);
+              return (
+                <li key={l.videoId}>
+                  <button type="button" className="db-lecture" onClick={() => navigate(lessonHref(l))}>
+                    <span className={`db-lecture-play ${done ? "is-done" : ""}`} aria-hidden="true">{done ? <FaCircleCheck /> : <FaPlay />}</span>
+                    <span className="db-lecture-text">
+                      <span className="db-lecture-title">{l.title}</span>
+                      <span className="db-lecture-meta">{l.subject} · {l.chapter}</span>
+                    </span>
+                    <span className="db-lecture-side">
+                      {l.duration ? <span className="db-lecture-time"><FaClock aria-hidden="true" />{l.duration}</span> : null}
+                      <span className={`db-tag ${done ? "is-done" : ""}`}>{done ? "Watched" : "New"}</span>
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ) : null}
+
+      <section className="db-section" aria-labelledby="db-subjects">
+        <div className="db-head">
+          <div>
+            <Eyebrow icon={FaLayerGroup}>{paid ? `${classLabel} Syllabus` : "Syllabus"}</Eyebrow>
+            <h2 id="db-subjects" className="db-h2">Your <Accent>Subjects</Accent></h2>
+          </div>
+          {paid ? <p className="db-head-note">Open a subject to see its chapters and lessons. Videos are released chapter by chapter.</p> : null}
         </div>
-      </div>
-    </button>
+
+        {!paid ? (
+          <div className="db-empty">
+            <h3>Activate a class to see your subjects</h3>
+            <p>Your dashboard shows the class you have chosen. Pick Class VIII, IX or X to unlock its subjects, chapters and progress.</p>
+            <button type="button" className="db-btn" onClick={() => navigate("/subscription")}>Choose a class</button>
+          </div>
+        ) : (
+          <ul className="db-subjects">
+            {subjects.map((subject) => (
+              <li key={subject.subjectId} className="flex">
+                <SubjectCard subject={subject} watched={watched} showPercent={showPercent} onClick={() => navigate(`/library?subject=${encodeURIComponent(subject.name)}`)} />
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+    </div>
   );
 }
 
-// ─── Stat card ─────────────────────────────────────────────────────────────
+// ─── Pieces ────────────────────────────────────────────────────────────────
 
-function StatCard({ title, value }) {
+function Stat({ icon, tone, label, value, suffix, note, progress }) {
   return (
-    <div className="flex flex-col-reverse justify-end rounded-control border border-line bg-surface-sunken px-3 py-2.5">
-      <dt className="mt-1 text-xs text-ink-muted leading-tight">{title}</dt>
-      <dd className="text-xl md:text-2xl font-black text-ink tabular-nums leading-none">{value}</dd>
+    <div className={`db-stat ${tone ? `is-${tone}` : ""}`}>
+      <span className="db-stat-icon" aria-hidden="true">{createElement(icon)}</span>
+      <div className="db-stat-body">
+        <dt className="db-stat-label">{label}</dt>
+        <dd className="db-stat-value">
+          <span className="tabular-nums">{value}</span>
+          {suffix ? <span className="db-stat-suffix">{suffix}</span> : null}
+        </dd>
+        {progress != null ? <div className="db-bar db-bar-thin" aria-hidden="true"><span style={{ width: `${Math.max(Math.round(progress * 100), progress ? 2 : 0)}%` }} /></div> : null}
+        <p className="db-stat-note">{note}</p>
+      </div>
     </div>
+  );
+}
+
+function SubjectCard({ subject, watched, showPercent, onClick }) {
+  const ready = subject.videos.length;
+  const done = subject.videos.filter((l) => watched[l.videoId]).length;
+  const percent = ready ? Math.round((done / ready) * 100) : 0;
+  const meta = subject.scriptedLessons != null
+    ? `${plural(subject.scriptedChapters, "chapter")} · ${plural(subject.scriptedLessons, "lesson")} scripted`
+    : plural(subject.chapters.length, "chapter");
+  const status = ready ? `${done} of ${ready} watched` : "Videos coming soon";
+
+  return (
+    <button type="button" onClick={onClick} aria-label={`${subject.name}: ${meta}. ${status}.`} className={`db-subject ${ready ? "is-live" : ""}`}>
+      <span className="db-subject-top">
+        <span className="db-subject-icon" aria-hidden="true">{createElement(iconFor(subject.name))}</span>
+        {ready ? <span className="db-tag is-live">{ready} ready</span> : <span className="db-tag is-soon">Scripted</span>}
+      </span>
+      <span className="db-subject-name">{subject.name}</span>
+      <span className="db-subject-meta">{meta}</span>
+      <span className="db-subject-foot">
+        {ready ? (
+          <>
+            <span className="db-subject-progress"><span>{status}</span>{showPercent ? <span className="font-semibold">{percent}%</span> : null}</span>
+            <span className="db-bar" role="progressbar" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100} aria-label={`${subject.name} progress`}><span style={{ width: `${Math.max(percent, 2)}%` }} /></span>
+          </>
+        ) : (
+          <span className="db-subject-soon">All lessons are scripted. Videos are in production; browse the chapters now.</span>
+        )}
+        <span className="db-subject-go" aria-hidden="true"><FaArrowRight /></span>
+      </span>
+    </button>
   );
 }

@@ -67,3 +67,86 @@ export const SAMPLE_SCRIPT = {
 };
 
 export default SCHOOL_CATALOG;
+
+// Real counts per class and subject, counted from Course-Content/source
+// (one JSON per chapter, one entry per lesson). Recount when scripts change.
+export const SCRIPT_COUNTS = {
+  "8": {
+    "English": {
+      "chapters": 6,
+      "lessons": 22
+    },
+    "Hindi": {
+      "chapters": 2,
+      "lessons": 16
+    },
+    "Mathematics": {
+      "chapters": 14,
+      "lessons": 66
+    },
+    "Sanskrit": {
+      "chapters": 2,
+      "lessons": 13
+    },
+    "Science": {
+      "chapters": 13,
+      "lessons": 74
+    },
+    "Social Science": {
+      "chapters": 15,
+      "lessons": 75
+    }
+  },
+  "9": {
+    "English": {
+      "chapters": 5,
+      "lessons": 39
+    },
+    "Hindi": {
+      "chapters": 5,
+      "lessons": 28
+    },
+    "Information Technology": {
+      "chapters": 6,
+      "lessons": 32
+    },
+    "Mathematics": {
+      "chapters": 12,
+      "lessons": 47
+    },
+    "Science": {
+      "chapters": 12,
+      "lessons": 90
+    },
+    "Social Science": {
+      "chapters": 20,
+      "lessons": 87
+    }
+  },
+  "10": {
+    "English": {
+      "chapters": 5,
+      "lessons": 44
+    },
+    "Hindi": {
+      "chapters": 5,
+      "lessons": 28
+    },
+    "Information Technology": {
+      "chapters": 5,
+      "lessons": 28
+    },
+    "Mathematics": {
+      "chapters": 14,
+      "lessons": 41
+    },
+    "Science": {
+      "chapters": 13,
+      "lessons": 91
+    },
+    "Social Science": {
+      "chapters": 22,
+      "lessons": 102
+    }
+  }
+};
