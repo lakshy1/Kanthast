@@ -1675,5 +1675,106 @@
 .db-eyebrows { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
 .db-eyebrows .bh-eyebrow { margin: 0; }
 .db-class-pill { padding: 0.45rem 0.9rem; border-radius: 999px; background: #fff4db; color: #8a5a00; font-weight: 700; font-size: 0.85rem; }
+/* Text that sits straight on the light .db page (not inside a card). The page
+   stays light in dark appearance, so it reads the scope's own ink rather than
+   the theme's text-ink* utilities, which flip to light text. */
+.db-ink { color: var(--db-ink); }
+.db-muted { color: var(--db-muted); }
+.db-subtle { color: var(--db-subtle); }
+a.db-muted:hover, button.db-muted:hover { color: var(--db-ink); }
 .db-hello .bh-eyebrow { align-self: flex-start; }
 .db-head .bh-eyebrow { display: inline-flex; }
+
+/* Doubts in dark appearance: a field inside a card (parent approval, the
+   composer and report dialogs, the answer form) is otherwise the card's own
+   colour with a faint line, so its edges vanish. Sit it on the sunken surface
+   with the strong line; focus, an open Select and errors keep their colours.
+   Light appearance is unchanged. */
+:root[data-theme="dark"] .doubts .card .field {
+  background-color: rgb(var(--surface-sunken));
+  border-color: rgb(var(--line-strong));
+}
+:root[data-theme="dark"] .doubts .card .field:focus,
+:root[data-theme="dark"] .doubts .card .field[aria-expanded="true"] {
+  border-color: rgb(var(--brand));
+}
+:root[data-theme="dark"] .doubts .card .field-error {
+  background-color: rgb(var(--critical-soft));
+  border-color: rgb(var(--critical));
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="system"] .doubts .card .field {
+    background-color: rgb(var(--surface-sunken));
+    border-color: rgb(var(--line-strong));
+  }
+  :root[data-theme="system"] .doubts .card .field:focus,
+  :root[data-theme="system"] .doubts .card .field[aria-expanded="true"] {
+    border-color: rgb(var(--brand));
+  }
+  :root[data-theme="system"] .doubts .card .field-error {
+    background-color: rgb(var(--critical-soft));
+    border-color: rgb(var(--critical));
+  }
+}
+
+/* ── Doubts shell ─────────────────────────────────────────────────────────
+   One layout for Class feed, Ask AI, My doubts and a thread: a compact page
+   header, a row of underline tabs on a hairline, then the section. Everything
+   above the section is the same size on every page, so nothing moves when
+   switching sections. The header and tabs sit on the light page in both
+   appearances, so they read the .db scope's own ink; panels use the theme's
+   surface tokens. */
+.dbs { padding-bottom: clamp(2rem, 4vw, 3rem); }
+.dbs-head { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem 1.5rem; min-height: 44px; }
+.dbs-heading { display: flex; align-items: center; gap: 0.75rem; min-width: 0; }
+.dbs-title { font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight: 800; font-size: 1.5rem; line-height: 1.2; letter-spacing: -0.025em; color: var(--db-ink); }
+.dbs-class { flex: none; padding: 0.15rem 0.6rem; border-radius: 999px; border: 1px solid var(--db-line); background: rgb(255 255 255 / 0.7);
+  font-size: 0.75rem; font-weight: 600; line-height: 1.25rem; color: var(--db-muted); white-space: nowrap; }
+.dbs-action { display: flex; align-items: center; gap: 1rem; flex: none; }
+.dbs-count { font-size: 0.8125rem; color: var(--db-subtle); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.dbs-tabs { margin-top: 1.125rem; border-bottom: 1px solid var(--db-line); }
+.dbs-tabs ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.dbs-tab { position: relative; display: flex; align-items: center; justify-content: center; height: 44px; padding: 0 0.25rem;
+  font-size: 0.875rem; font-weight: 600; color: var(--db-subtle); white-space: nowrap; transition: color 150ms ease; }
+.dbs-tab:hover { color: var(--db-ink); }
+.dbs-tab[aria-current] { color: var(--db-ink); }
+.dbs-tab[aria-current]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; border-radius: 2px 2px 0 0; background: var(--db-blue); }
+.dbs-tab:focus-visible:focus-visible { outline-offset: -3px; }
+
+.dbs-body { margin-top: 1.25rem; }
+.dbs-note { font-size: 0.875rem; color: var(--db-muted); }
+
+/* Panels: one family for list, chat, thread and gates. A hairline and the
+   lightest elevation instead of the app's floating-card shadow. Dialogs keep
+   their own look. */
+.doubts .dbs-body .card:not([role="dialog"]) { border-radius: 16px; border-color: rgb(var(--line)); box-shadow: var(--e1); }
+
+.dbs-subject { display: inline-flex; align-items: center; padding: 0.0625rem 0.5rem; border-radius: 6px; background: rgb(var(--brand-soft)); color: rgb(var(--brand));
+  font-size: 0.75rem; font-weight: 600; line-height: 1.25rem; white-space: nowrap; }
+.dbs-row { display: block; padding: 1rem 1.25rem; transition: background-color 150ms ease; }
+.dbs-row:hover { background-color: rgb(var(--surface-sunken) / 0.55); }
+.dbs-row:focus-visible:focus-visible { outline-offset: -2px; border-radius: 0; }
+.dbs-list > li + li { border-top: 1px solid rgb(var(--line)); }
+.dbs-list > li:first-child .dbs-row { border-top-left-radius: 15px; border-top-right-radius: 15px; }
+.dbs-list > li:last-child .dbs-row { border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; }
+.dbs-dot::before { content: "·"; margin: 0 0.4rem; color: rgb(var(--ink-subtle) / 0.7); }
+
+@media (min-width: 640px) {
+  .dbs-title { font-size: 1.875rem; }
+  .dbs-tabs ul { display: flex; gap: 1.75rem; }
+  .dbs-tab { padding: 0; }
+  .dbs-row { padding: 1.125rem 1.5rem; }
+}
+@media (max-width: 639px) {
+  .dbs-count { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dbs-tab, .dbs-row { transition: none; }
+}
+.doubts .dbs-body .card.is-accepted { border-color: rgb(var(--positive) / 0.55); }
+
+/* <main> takes focus on navigation (App.jsx) so screen readers announce the
+   new page; it is a landing point, not a control, so it draws no ring. Pages
+   no longer end in the footer, so on a short page the ring was visible. */
+#main-content:focus { outline: none !important; }

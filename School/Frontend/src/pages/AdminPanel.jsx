@@ -1,15 +1,18 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion as Motion } from "framer-motion";
-import { FaChartLine, FaCrown, FaEdit, FaSignOutAlt, FaTrash, FaUsers } from "react-icons/fa";
+import { FaChartLine, FaCrown, FaEdit, FaFlag, FaSignOutAlt, FaTrash, FaUsers } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { deleteAdminUser, getAdminUsers, updateAdminUser } from "../utils/authApi";
 import { Button, EmptyState, Field, LiveRegion, Modal, Select, Toggle } from "../components/ui";
+import DoubtsModeration from "../components/admin/DoubtsModeration";
+import { getModerationCounts } from "../utils/adminDoubtsApi";
 
 const tabs = [
   { id: "overview", label: "Overview", icon: <FaChartLine /> },
   { id: "users", label: "Users", icon: <FaUsers /> },
   { id: "subscriptions", label: "Subscriptions", icon: <FaCrown /> },
+  { id: "doubts", label: "Doubts moderation", icon: <FaFlag /> },
 ];
 
 export default function AdminPanel() {
@@ -33,6 +36,8 @@ export default function AdminPanel() {
   const [editUserId, setEditUserId] = useState("");
   const [editForm, setEditForm] = useState({});
   const [saving, setSaving] = useState(false);
+  // Open items in the Doubts moderation queue, for the tab's badge.
+  const [doubtsOpen, setDoubtsOpen] = useState(null);
 
   useEffect(() => {
     if (!token) {
@@ -40,6 +45,9 @@ export default function AdminPanel() {
       return;
     }
     loadUsers();
+    getModerationCounts()
+      .then((data) => setDoubtsOpen(data.counts?.open ?? 0))
+      .catch(() => {});
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
 
@@ -173,6 +181,16 @@ export default function AdminPanel() {
               >
                 {tab.icon}
                 {tab.label}
+                {tab.id === "doubts" && doubtsOpen > 0 && (
+                  <span
+                    className={`min-w-[1.5rem] rounded-full px-1.5 text-center text-xs tabular-nums ${
+                      activeTab === tab.id ? "bg-white/20 text-white" : "bg-critical text-white"
+                    }`}
+                  >
+                    <span className="sr-only">, open items: </span>
+                    {doubtsOpen}
+                  </span>
+                )}
               </button>
             ))}
           </nav>
@@ -346,6 +364,8 @@ export default function AdminPanel() {
                     )}
                   </div>
                 )}
+
+                {activeTab === "doubts" && <DoubtsModeration openCount={doubtsOpen ?? undefined} onCountsChange={setDoubtsOpen} />}
 
                 {activeTab === "subscriptions" && (
                   <div className="space-y-4">

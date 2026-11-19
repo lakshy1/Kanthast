@@ -76,6 +76,13 @@ const chatMessageSchema = new mongoose.Schema(
             required: true,
             trim: true,
         },
+        // Assistant messages only: "ai" (a full model answer), "ai_hint" (a hint-mode nudge) or
+        // "system" (a fixed or error reply). Missing on older messages, which count as "system".
+        // Only "ai" may be carried into a class post. Server-side only: left out of JSON.
+        source: {
+            type: String,
+            enum: ["ai", "ai_hint", "system"],
+        },
         mediaType: {
             type: String,
             enum: ["", "video/mp4", "video"],
@@ -112,7 +119,15 @@ const chatMessageSchema = new mongoose.Schema(
             default: Date.now,
         },
     },
-    { _id: false }
+    {
+        _id: false,
+        toJSON: {
+            transform: (doc, ret) => {
+                delete ret.source;
+                return ret;
+            },
+        },
+    }
 );
 
 const chatSessionSchema = new mongoose.Schema(
@@ -127,12 +142,31 @@ const chatSessionSchema = new mongoose.Schema(
             trim: true,
         },
         messages: [chatMessageSchema],
+        // The doubt this chat's answer was carried into. One chat, one doubt (see controllers/Doubts.js).
+        postedDoubt: {
+            type: mongoose.Schema.Types.ObjectId,
+            default: null,
+        },
         lastMessageAt: {
             type: Date,
             default: Date.now,
         },
     },
     { _id: false, timestamps: true }
+);
+
+const doubtsMuteSchema = new mongoose.Schema(
+    {
+        // Muted while permanent is true or until is in the future. Expiry needs no job.
+        until: { type: Date, default: null },
+        permanent: { type: Boolean, default: false },
+        reason: { type: String, default: "", maxlength: 300 },
+        mutedBy: { type: mongoose.Schema.Types.ObjectId, default: null },
+        mutedAt: { type: Date, default: null },
+        // Bumped by every mute and unmute, so two admins at once cannot both apply theirs.
+        version: { type: Number, default: 0 },
+    },
+    { _id: false }
 );
 
 const userSchema = new mongoose.Schema({
@@ -235,6 +269,14 @@ const userSchema = new mongoose.Schema({
         chatMessageSchema,
     ],
     chatSessions: [chatSessionSchema],
+    // Doubts moderation: a muted student can read and use Ask AI but cannot post, reply or ask
+    // for an AI answer in a thread. Checked against the time of each request (middleware/Doubts.js).
+    // No default on purpose: a default would be written by any later user.save() (the chat saves the
+    // user after a slow AI call) and could overwrite a mute set by an admin in the meantime.
+    doubtsMute: {
+        type: doubtsMuteSchema,
+        default: undefined,
+    },
 
 }, { timestamps: true });
 

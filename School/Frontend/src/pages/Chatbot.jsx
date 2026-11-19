@@ -1,23 +1,20 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion as Motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Markdown from "../components/Markdown";
 import { Modal, Button } from "../components/ui";
-import { useNetwork } from "../hooks/useNetwork";
 import {
   FaBars,
   FaCheckCircle,
+  FaComments,
   FaExclamationTriangle,
   FaPlay,
   FaPaperPlane,
   FaPaperclip,
   FaPlus,
   FaRedo,
-  FaRegCircle,
-  FaRobot,
   FaTimes,
   FaTrash,
-  FaUser,
 } from "react-icons/fa";
 import {
   createChatSession,
@@ -26,6 +23,7 @@ import {
   sendChatMessage,
   uploadChatFile,
 } from "../utils/authApi";
+import { DRAFT_KEY, draftFromChat, getAiQuota } from "../utils/doubtsApi";
 
 // The assistant answers school-subject questions AND platform questions, so the
 // starters lead with study prompts and keep one account/playback prompt.
@@ -35,6 +33,24 @@ const SUGGESTIONS = [
   { label: "Causes of the French Revolution", text: "Summarise the main causes of the French Revolution." },
   { label: "Why is a lesson locked?", text: "My lesson is locked. What subscription is needed?" },
 ];
+
+// "hint" nudges the student toward the answer; "full" explains it. Sent with
+// every message and remembered on this device.
+const MODE_KEY = "kanthastChatMode";
+const MODES = [
+  { value: "hint", label: "Hint" },
+  { value: "full", label: "Full answer" },
+];
+function readMode() {
+  try {
+    return localStorage.getItem(MODE_KEY) === "hint" ? "hint" : "full";
+  } catch {
+    return "full";
+  }
+}
+
+// Same words as the server's 429, for when the allowance alone says none are left.
+const AI_LIMIT_MESSAGE = "You have used today's AI messages. They reset at midnight.";
 
 const NETWORK_MESSAGE = "We couldn't reach the assistant. Check your connection and try again.";
 const RATE_LIMIT_MESSAGE = "You're sending messages quickly — wait a few seconds and try again.";
@@ -56,26 +72,11 @@ function describeError(err, fallback) {
   return { kind: "server", text: fallback };
 }
 
-const CONNECTION = {
-  idle: {
-    label: "Ready",
-    short: "Ready",
-    Icon: FaRegCircle,
-    className: "text-ink-muted bg-surface-sunken border-line",
-  },
-  online: {
-    label: "Online",
-    short: "Online",
-    Icon: FaCheckCircle,
-    className: "text-positive bg-positive-soft border-positive/35",
-  },
-  down: {
-    label: "Can't reach the assistant",
-    short: "Can't connect",
-    Icon: FaExclamationTriangle,
-    className: "text-critical bg-critical-soft border-critical/35",
-  },
-};
+// Ask AI panel sizing (see the measuring effect in Chatbot).
+const MIN_PANEL = 420;
+const PANEL_GAP_DESKTOP = 24;
+const PANEL_GAP_PHONE = 12;
+const DOCK_PX = 64; // the phone bottom dock, 4rem (the CSS adds the safe area)
 
 const formatTime = (value) => {
   if (!value) return "";
@@ -126,13 +127,13 @@ function VideoMessageCard({ msg }) {
 // the sr-only text carries the meaning.
 function TypingDots() {
   return (
-    <div className="flex justify-start px-4 md:px-6 py-1" role="status" aria-live="polite">
-      <div className="flex items-center gap-1.5 bg-surface border border-line shadow-e1 rounded-card rounded-tl-sm px-4 py-3">
+    <div className="mx-auto w-full max-w-3xl px-4 py-2 md:px-6" role="status" aria-live="polite">
+      <div className="flex items-center gap-1.5 py-2">
         {[0, 300, 600].map((delay) => (
           <span
             key={delay}
             aria-hidden="true"
-            className="w-2 h-2 rounded-full bg-ink-subtle animate-pulse motion-reduce:animate-none"
+            className="h-1.5 w-1.5 rounded-full bg-ink-subtle animate-pulse motion-reduce:animate-none"
             style={{ animationDelay: `${delay}ms`, animationDuration: "1.6s" }}
           />
         ))}
@@ -142,77 +143,67 @@ function TypingDots() {
   );
 }
 
-// ─── Sidebar content (shared between desktop and mobile drawer) ────────────
-// The history rail is a navy stage in both themes, so it keeps its on-navy
-// white-alpha palette; only the brand mark moves to tokens.
-function SidebarContent({ sessions, activeSessionId, onLoad, onNew, onDelete, onClose }) {
+// ─── Conversation rail (desktop) and drawer (phone and tablet) ────────────
+// A light rail inside the Ask AI panel: New chat, then recent chats, each with
+// its delete button. The same content fills the drawer below lg.
+function ConversationRail({ sessions, activeSessionId, onLoad, onNew, onDelete, onClose }) {
   return (
-    <div className="flex flex-col h-full">
-      {/* Brand + close (mobile) */}
-      <div className="flex items-center justify-between p-4 pb-3 flex-shrink-0">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-control bg-brand flex items-center justify-center">
-            <FaRobot className="text-brand-fg text-sm" aria-hidden="true" />
-          </div>
-          <span className="text-white font-bold text-sm tracking-tight">Kanthast Assistant</span>
-        </div>
+    <div className="flex h-full flex-col">
+      <div className="flex flex-shrink-0 items-center gap-2 p-3">
+        <button
+          type="button"
+          onClick={onNew}
+          className="inline-flex min-h-touch flex-1 items-center gap-2 rounded-control border border-line bg-surface px-3.5 text-sm font-semibold text-ink transition-colors duration-fast ease-brand hover:border-line-strong"
+        >
+          <FaPlus size={10} className="text-ink-subtle" aria-hidden="true" />
+          New chat
+        </button>
         {onClose && (
           <button
+            type="button"
             onClick={onClose}
-            className="h-touch w-touch rounded-control text-slate-400 hover:text-white hover:bg-white/10 flex items-center justify-center transition"
-            aria-label="Close sidebar"
+            className="flex h-touch w-touch flex-shrink-0 items-center justify-center rounded-control text-ink-subtle transition-colors duration-fast hover:bg-surface-sunken hover:text-ink"
+            aria-label="Close chats"
           >
-            <FaTimes size={14} />
+            <FaTimes size={13} />
           </button>
         )}
       </div>
 
-      {/* New chat */}
-      <div className="px-3 pb-4 flex-shrink-0">
-        <button
-          onClick={onNew}
-          className="w-full min-h-touch flex items-center gap-2 px-4 py-2.5 rounded-control bg-white/10 hover:bg-white/18 border border-white/10 text-white/90 text-sm font-medium transition group"
-        >
-          <FaPlus size={11} className="group-hover:rotate-90 transition-transform duration-200" aria-hidden="true" />
-          New conversation
-        </button>
-      </div>
+      <p className="flex-shrink-0 px-4 pb-1.5 pt-1 text-micro font-semibold uppercase tracking-[0.1em] text-ink-subtle">Recent</p>
 
-      <div className="px-4 pb-2 flex-shrink-0">
-        <p className="text-micro font-semibold uppercase tracking-[0.12em] text-slate-400">Recent</p>
-      </div>
-
-      {/* Session list */}
-      <div className="flex-1 overflow-y-auto px-2 pb-4 space-y-0.5" style={{ scrollbarWidth: "none" }}>
-        {sessions.length === 0 && (
-          <p className="text-slate-400 text-xs px-3 py-2">No conversations yet.</p>
-        )}
+      <div className="no-scrollbar flex-1 space-y-0.5 overflow-y-auto px-2 pb-3">
+        {sessions.length === 0 && <p className="px-2 py-2 text-xs text-ink-subtle">No chats yet.</p>}
         {sessions.map((session) => {
           const active = activeSessionId === session.sessionId;
           return (
             <div
               key={session.sessionId}
-              className={`group relative rounded-control transition-all duration-150 ${
-                active ? "bg-white/15" : "hover:bg-white/8"
+              className={`group relative rounded-control transition-colors duration-fast ${
+                active ? "bg-surface ring-1 ring-inset ring-line" : "hover:bg-surface/70"
               }`}
             >
               <button
+                type="button"
                 onClick={() => onLoad(session.sessionId)}
                 aria-current={active ? "true" : undefined}
-                className="w-full text-left px-3 py-2.5 pr-12 rounded-control"
+                className="w-full rounded-control px-3 py-2.5 pr-11 text-left"
               >
-                <p className={`text-sm truncate font-medium leading-snug ${active ? "text-white" : "text-slate-300"}`}>
-                  {session.title || "New Chat"}
+                <p className={`truncate text-sm leading-snug ${active ? "font-semibold text-ink" : "font-medium text-ink-muted"}`}>
+                  {!session.title || session.title === "New Chat" ? "New chat" : session.title}
                 </p>
-                <p className="text-micro text-slate-400 mt-0.5 truncate">
+                <p className="mt-0.5 truncate text-micro text-ink-subtle">
                   {session.preview || formatTime(session.lastMessageAt) || "No messages yet"}
                 </p>
               </button>
               <button
+                type="button"
                 onClick={(e) => { e.stopPropagation(); onDelete(session.sessionId); }}
-                className="absolute right-0 top-1/2 -translate-y-1/2 h-touch w-touch rounded-control text-slate-400 hover:text-red-300 hover:bg-red-400/10 flex items-center justify-center transition"
+                className={`absolute right-0 top-1/2 flex h-touch w-touch -translate-y-1/2 items-center justify-center rounded-control text-ink-subtle transition duration-fast hover:bg-critical-soft hover:text-critical focus-visible:opacity-100 ${
+                  active ? "" : "lg:opacity-0 lg:group-hover:opacity-100"
+                }`}
                 title="Delete conversation"
-                aria-label={`Delete conversation ${session.title || "New Chat"}`}
+                aria-label={`Delete conversation ${session.title || "New chat"}`}
               >
                 <FaTrash size={10} />
               </button>
@@ -269,28 +260,35 @@ function useCustomScrollbar(elRef) {
 }
 
 // ─── Main page ─────────────────────────────────────────────────────────────
-export default function Chatbot() {
+// Ask AI, rendered by the Doubts page inside its shell (header and tabs).
+// `onDraftReady` tells that page a class draft was stored, so its composer
+// opens with it.
+export default function Chatbot({ onDraftReady }) {
   const token = localStorage.getItem("kanthastSchoolToken");
   const location = useLocation();
+  const navigate = useNavigate();
   const [sessions, setSessions] = useState([]);
   const [activeSessionId, setActiveSessionId] = useState("");
   const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
+  // "Ask the AI about this" on a doubt arrives with the question prefilled (not sent).
+  const [input, setInput] = useState(() => String(location.state?.prefill || "").slice(0, 4000));
+  const [mode, setMode] = useState(readMode);
+  // { limit, used, left, paid } from GET /doubts/ai-quota; null until known.
+  const [aiQuota, setAiQuota] = useState(null);
+  // Set when the server refuses a send with 429 ai_daily_limit: { message, paid }.
+  // The allowance (left === 0) gives the same state without a refused send; see `limit`.
+  const [limitHit, setLimitHit] = useState(null);
+  const [drafting, setDrafting] = useState(false);
   // { text, kind, retry? } — kind drives nothing visual beyond the copy; retry
   // is the action behind the "Try again" button when one makes sense.
   const [error, setError] = useState(null);
   const [status, setStatus] = useState("loading");
-  // Result of the last request: "idle" before any, "online" after a success,
-  // "down" after a network failure. The pill used to read "Online" whatever
-  // happened, including while every request was failing to fetch.
-  const [connection, setConnection] = useState("idle");
   // Bumped by "Try again" on a failed initial load to re-run the loader.
   const [reloadKey, setReloadKey] = useState(0);
   // True when a reply arrived while the user was scrolled up reading history.
   const [hasUnreadBelow, setHasUnreadBelow] = useState(false);
   // Session id staged for deletion; drives the confirmation Modal.
   const [pendingDelete, setPendingDelete] = useState(null);
-  const { offline } = useNetwork();
   const [uploading, setUploading] = useState(false);
   const [attachment, setAttachment] = useState(null);
   const [uploadNotice, setUploadNotice] = useState(null);
@@ -303,14 +301,45 @@ export default function Chatbot() {
 
   const { thumbRef, visible: scrollbarVisible } = useCustomScrollbar(listRef);
 
-  // Records the outcome of a request for the header status pill. Only an
-  // unreachable server counts as "down": a rate limit or a server error still
-  // proves the assistant answered.
-  const noteSuccess = () => setConnection("online");
+  // Read after every send rather than counting locally: the server does not
+  // charge for an empty message or for fixed replies (plans, support and so on).
+  const refreshQuota = useCallback(() => {
+    getAiQuota()
+      .then((data) => {
+        const ai = data.ai || null;
+        setAiQuota(ai);
+        // Messages are available again (a new day, or a plan was bought).
+        if (ai && typeof ai.left === "number" && ai.left > 0) setLimitHit(null);
+      })
+      .catch(() => {});
+  }, []);
+  useEffect(() => {
+    refreshQuota();
+  }, [refreshQuota]);
+
+  // Use the prefill once: drop it from history so a reload doesn't bring it back.
+  const hadPrefill = Boolean(location.state?.prefill);
+  useEffect(() => {
+    if (!hadPrefill) return;
+    navigate(`${location.pathname}${location.search}`, { replace: true, state: null });
+    textareaRef.current?.focus();
+    // Run once on arrival only.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hadPrefill]);
+
+  const chooseMode = (value) => {
+    setMode(value);
+    try {
+      localStorage.setItem(MODE_KEY, value);
+    } catch {
+      // Storage blocked: the choice still holds for this visit.
+    }
+  };
+
+  // Turns a failed request into the alert under the input, with a retry
+  // where one makes sense.
   const noteFailure = (err, fallback, retry = null) => {
     const described = describeError(err, fallback);
-    if (described.kind === "network") setConnection("down");
-    else setConnection("online");
     setError({ ...described, retry: described.kind === "auth" ? null : retry });
     return described;
   };
@@ -329,12 +358,43 @@ export default function Chatbot() {
     return () => el.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Prevent the page from scrolling behind the chatbot (fixes keyboard-scroll on mobile)
+  // The panel fills the viewport below the Doubts header and tabs, so the
+  // message list scrolls inside it and the input stays pinned. Its top is
+  // measured (the header above it is the same on every Doubts page); the
+  // height CSS subtracts that, a bottom gap and, below md, the bottom dock.
+  // When the viewport is too short for MIN_PANEL the panel keeps that height
+  // and the page scrolls instead.
+  const panelRef = useRef(null);
+  const [panelTop, setPanelTop] = useState(null);
+  const [panelFits, setPanelFits] = useState(true);
+  useLayoutEffect(() => {
+    const measure = () => {
+      const el = panelRef.current;
+      if (!el) return;
+      const top = Math.round(el.getBoundingClientRect().top + window.scrollY);
+      const desktop = window.matchMedia("(min-width: 768px)").matches;
+      const room = window.innerHeight - top - (desktop ? PANEL_GAP_DESKTOP : PANEL_GAP_PHONE + DOCK_PX);
+      setPanelTop(top);
+      setPanelFits(room >= MIN_PANEL);
+    };
+    measure();
+    // The navbar settles its height after first paint; measure again then.
+    const timer = setTimeout(measure, 350);
+    window.addEventListener("resize", measure);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", measure);
+    };
+  }, []);
+
+  // Keep the page still behind the chat (fixes keyboard-scroll on mobile),
+  // unless the viewport is too short and the page has to scroll to the input.
   useEffect(() => {
+    if (!panelFits) return undefined;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = prev; };
-  }, []);
+  }, [panelFits]);
 
   // Auto-grow textarea
   useEffect(() => {
@@ -362,12 +422,10 @@ export default function Chatbot() {
         setActiveSessionId(data.currentSessionId || "");
         setStatus("ready");
         setError(null);
-        setConnection("online");
       } catch (err) {
         if (!mounted) return;
         setStatus("error");
         const described = describeError(err, "We couldn't load your conversations. Try again in a moment.");
-        setConnection(described.kind === "network" ? "down" : "online");
         setError({
           ...described,
           retry: described.kind === "auth" ? null : () => {
@@ -400,10 +458,32 @@ export default function Chatbot() {
 
   useEffect(() => () => { if (noticeTimer.current) clearTimeout(noticeTimer.current); }, []);
 
+  // Today's AI messages are used up, from a refused send or from the allowance
+  // itself (on load, after a reload, after a send). Free users get "See plans".
+  const limit = useMemo(() => {
+    if (limitHit) return limitHit;
+    if (aiQuota && typeof aiQuota.left === "number" && aiQuota.left <= 0) {
+      return { message: AI_LIMIT_MESSAGE, paid: Boolean(aiQuota.paid) };
+    }
+    return null;
+  }, [limitHit, aiQuota]);
+  const limitShown = Boolean(limit);
+
+  // The used-up alert renders below the last message (and the unsent one). The
+  // effect above only follows new messages, so bring the alert into view
+  // whenever it appears or a conversation finishes loading under it.
+  const listIdle = status === "ready";
+  useEffect(() => {
+    if (!limitShown || !listIdle) return;
+    const el = listRef.current;
+    if (!el) return;
+    el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
+  }, [limitShown, listIdle]);
+
   const displayedSessions = useMemo(() => [...sessions].reverse(), [sessions]);
   const canSend = useMemo(
-    () => input.trim().length > 0 && status !== "sending" && !uploading,
-    [input, status, uploading]
+    () => input.trim().length > 0 && status !== "sending" && !uploading && !limitShown,
+    [input, status, uploading, limitShown]
   );
 
   const showNotice = (type, message) => {
@@ -425,7 +505,6 @@ export default function Chatbot() {
       if (fileInputRef.current) fileInputRef.current.value = "";
       setStatus("ready");
       setSidebarOpen(false);
-      noteSuccess();
     } catch (err) {
       setStatus("ready");
       noteFailure(err, "We couldn't open that conversation. Try again in a moment.", () => loadSession(sessionId));
@@ -445,7 +524,6 @@ export default function Chatbot() {
       if (fileInputRef.current) fileInputRef.current.value = "";
       setSidebarOpen(false);
       setStatus("ready");
-      noteSuccess();
     } catch (err) {
       noteFailure(err, "We couldn't start a new conversation. Try again in a moment.", handleNewChat);
     }
@@ -467,7 +545,6 @@ export default function Chatbot() {
         setAttachment(null);
         if (fileInputRef.current) fileInputRef.current.value = "";
       }
-      noteSuccess();
     } catch (err) {
       noteFailure(err, "We couldn't delete that conversation. Try again in a moment.", () => handleDeleteSession(sessionId));
     }
@@ -477,7 +554,7 @@ export default function Chatbot() {
   // "Not sent") instead of appending a duplicate.
   const sendMessage = async (overrideText = "", { retry = false } = {}) => {
     const text = (overrideText || input).trim();
-    if (!text || !token || status === "sending") return;
+    if (!text || !token || status === "sending" || limit) return;
     setStatus("sending");
     setError(null);
     if (retry) {
@@ -494,6 +571,7 @@ export default function Chatbot() {
       const data = await sendChatMessage(token, {
         message: text, fileUrl: attachment?.fileUrl || "",
         fileName: attachment?.fileName || "", sessionId: activeSessionId,
+        mode,
       });
       setSessions(data.sessions || []);
       setMessages(data.messages || []);
@@ -501,9 +579,10 @@ export default function Chatbot() {
       setAttachment(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
       setStatus("ready");
-      noteSuccess();
+      refreshQuota();
     } catch (err) {
       setStatus("ready");
+      refreshQuota();
       // Mark the optimistic bubble so it doesn't pose as delivered.
       setMessages((prev) => {
         const next = [...prev];
@@ -512,11 +591,57 @@ export default function Chatbot() {
         }
         return next;
       });
+      if (err?.code === "ai_daily_limit") {
+        if (err.data?.ai) setAiQuota(err.data.ai);
+        setLimitHit({
+          message: err.message,
+          paid: Boolean(err.data?.ai?.paid ?? aiQuota?.paid),
+        });
+        return;
+      }
       noteFailure(
         err,
         "The assistant couldn't answer just now. Try again in a moment.",
         () => sendMessage(text, { retry: true })
       );
+    }
+  };
+
+  // "Still confused? Ask your class": the server drafts a doubt from this
+  // conversation; the class composer opens with it (sessionStorage carries it
+  // past the class and parent-approval steps if they come first).
+  const askClass = async () => {
+    if (!activeSessionId || drafting) return;
+    setDrafting(true);
+    setError(null);
+    try {
+      const data = await draftFromChat(activeSessionId);
+      try {
+        // Kept until the student posts it or discards it (see Doubts.jsx).
+        sessionStorage.setItem(
+          DRAFT_KEY,
+          JSON.stringify({
+            ...data.draft,
+            sessionId: activeSessionId,
+            hasAiAnswer: data.hasAiAnswer === true,
+            open: true,
+            savedAt: Date.now(),
+          })
+        );
+      } catch {
+        // Storage blocked: the composer opens empty instead.
+      }
+      onDraftReady?.();
+      navigate("/doubts/class");
+    } catch (err) {
+      if (err.code === "ai_daily_limit") {
+        if (err.data?.ai) setAiQuota(err.data.ai);
+        setLimitHit({ message: err.message, paid: Boolean(err.data?.ai?.paid ?? aiQuota?.paid) });
+      } else {
+        setError({ kind: "server", text: err.message, retry: null });
+      }
+    } finally {
+      setDrafting(false);
     }
   };
 
@@ -530,7 +655,6 @@ export default function Chatbot() {
       const data = await uploadChatFile(token, file);
       setAttachment({ fileUrl: data.fileUrl, fileName: data.fileName });
       showNotice("success", `Attached: ${data.fileName || file.name}`);
-      noteSuccess();
     } catch (err) {
       const described = noteFailure(err, "That file didn't upload. Try again, or pick a smaller file.");
       showNotice("error", described.text);
@@ -540,309 +664,361 @@ export default function Chatbot() {
   };
 
   const isIdle = status !== "loading" && status !== "loadingSession";
-  const conn = CONNECTION[offline ? "down" : connection];
-  const ConnIcon = conn.Icon;
+  const hasAnswer = messages.some((m) => m.role !== "user");
+  const quotaLine =
+    aiQuota && typeof aiQuota.left === "number" && typeof aiQuota.limit === "number"
+      ? aiQuota.left <= 0
+        ? "No AI messages left today"
+        : `${aiQuota.left} of ${aiQuota.limit} AI messages left today`
+      : "";
+  // Phone: the short form fits on one row beside the Hint / Full answer switch.
+  const quotaShort =
+    aiQuota && typeof aiQuota.left === "number" && aiQuota.left > 0 && typeof aiQuota.limit === "number"
+      ? `${aiQuota.left} of ${aiQuota.limit} left today`
+      : "";
+  const railProps = {
+    sessions: displayedSessions,
+    activeSessionId,
+    onLoad: loadSession,
+    onNew: handleNewChat,
+    onDelete: (id) => setPendingDelete(id),
+  };
 
   return (
-    // Height fills the viewport below the navbar. On phones the fixed bottom
-    // dock takes another 4rem; from md there is no dock, so --chat-dock drops
-    // to 0. (This used an inline height that overrode the md: class, leaving a
-    // 4rem gap on desktop through which the site footer showed.)
+    // One panel, the same family as the feed list and thread cards: the rail
+    // at left from lg, the conversation at right.
+    // A div with role="region", not <section>: the sky theme clears every
+    // <section> background inside <main>.
     <div
-      className="flex bg-surface-sunken overflow-hidden md:[--chat-dock:0px]"
+      ref={panelRef}
+      role="region"
+      aria-label="Ask AI"
+      className="card flex overflow-hidden [--ask-gap:12px] [--ask-dock:calc(4rem+env(safe-area-inset-bottom))] md:[--ask-dock:0px] md:[--ask-gap:24px]"
       style={{
         height:
-          "calc(100dvh - var(--navbar-h, 4rem) - var(--chat-dock, calc(4rem + env(safe-area-inset-bottom))))",
+          panelTop === null
+            ? `${MIN_PANEL}px`
+            : `max(${MIN_PANEL}px, calc(100dvh - ${panelTop}px - var(--ask-gap) - var(--ask-dock)))`,
       }}
     >
-      {/* ── Desktop sidebar ── */}
-      <div className="hidden lg:flex w-64 xl:w-72 flex-col bg-slate-950 border-r border-slate-800 flex-shrink-0">
-        <SidebarContent
-          sessions={displayedSessions}
-          activeSessionId={activeSessionId}
-          onLoad={loadSession}
-          onNew={handleNewChat}
-          onDelete={(id) => setPendingDelete(id)}
-        />
-      </div>
+      {/* ── Rail (lg and up) ── */}
+      <aside aria-label="Your chats" className="hidden w-[260px] flex-shrink-0 flex-col border-r border-line bg-surface-sunken/60 lg:flex">
+        <ConversationRail {...railProps} />
+      </aside>
 
-      {/* ── Main chat area ── */}
-      <div className="flex-1 flex flex-col min-w-0 bg-surface-sunken">
-
-        {/* Header */}
-        <div className="flex items-center gap-3 px-4 md:px-6 py-3 border-b border-line bg-surface flex-shrink-0">
+      {/* ── Conversation ── */}
+      <div className="flex min-w-0 flex-1 flex-col">
+        {/* Below lg the rail is a drawer, opened from the panel's own header. */}
+        <div className="flex flex-shrink-0 items-center justify-between gap-2 border-b border-line px-1.5 lg:hidden">
           <button
+            type="button"
             onClick={() => setSidebarOpen(true)}
-            className="lg:hidden h-touch w-touch -ml-2 rounded-control text-ink-muted hover:text-ink hover:bg-surface-sunken flex items-center justify-center transition flex-shrink-0"
-            aria-label="Open conversation history"
+            className="inline-flex min-h-touch items-center gap-2 rounded-control px-2.5 text-sm font-semibold text-ink-muted transition-colors duration-fast hover:text-ink"
+            aria-label="Open your chats"
           >
-            <FaBars size={16} />
+            <FaBars size={13} aria-hidden="true" />
+            Chats
           </button>
-
-          <div className="flex items-center gap-2.5 flex-1 min-w-0">
-            <div className="w-8 h-8 rounded-control bg-brand flex items-center justify-center flex-shrink-0">
-              <FaRobot className="text-brand-fg text-xs" aria-hidden="true" />
-            </div>
-            <div className="min-w-0">
-              <h1 className="font-bold text-ink text-sm md:text-base leading-tight truncate">Kanthast Assistant</h1>
-              <p className="text-micro text-ink-subtle leading-tight truncate">
-                Ask about a school topic or about using Kanthast.
-              </p>
-            </div>
-          </div>
-
-          {/* Reflects the outcome of the last request (and device offline
-              state), with an icon and words so it isn't colour-only. */}
-          <div
-            role="status"
-            aria-live="polite"
-            className={`flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-full font-medium flex-shrink-0 border ${conn.className}`}
+          <button
+            type="button"
+            onClick={handleNewChat}
+            className="inline-flex min-h-touch items-center gap-2 rounded-control px-2.5 text-sm font-semibold text-ink-muted transition-colors duration-fast hover:text-ink"
           >
-            <ConnIcon aria-hidden="true" size={11} />
-            <span className="sm:hidden">{conn.short}</span>
-            <span className="hidden sm:inline">{conn.label}</span>
-          </div>
+            <FaPlus size={10} aria-hidden="true" />
+            New chat
+          </button>
         </div>
 
         {/* Messages */}
-        <div className="relative flex-1 min-h-0">
-        <div
-          ref={listRef}
-          className="h-full overflow-y-auto py-6 space-y-1 no-scrollbar"
-        >
-          {(status === "loading" || status === "loadingSession") && (
-            <div className="flex items-center justify-center h-full gap-3 text-ink-muted" role="status">
-              <span className="w-5 h-5 rounded-full border-2 border-line-strong border-t-brand animate-spin" aria-hidden="true" />
-              <span className="text-sm">{status === "loading" ? "Loading conversations…" : "Loading messages…"}</span>
-            </div>
-          )}
-
-          {/* Empty state */}
-          {messages.length === 0 && isIdle && (
-            <Motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="flex flex-col items-center justify-center h-full px-6 text-center"
-            >
-              <div className="mb-5 w-16 h-16 rounded-card bg-brand-soft border border-brand/20 flex items-center justify-center">
-                <FaRobot className="text-brand text-2xl" aria-hidden="true" />
+        <div className="relative min-h-0 flex-1">
+          <div ref={listRef} className="no-scrollbar h-full overflow-y-auto py-5 md:py-6">
+            {(status === "loading" || status === "loadingSession") && (
+              <div className="flex h-full items-center justify-center gap-3 text-ink-muted" role="status">
+                <span className="h-4 w-4 animate-spin rounded-full border-2 border-line-strong border-t-brand" aria-hidden="true" />
+                <span className="text-sm">{status === "loading" ? "Loading your chats…" : "Loading messages…"}</span>
               </div>
+            )}
 
-              <h2 className="text-2xl md:text-3xl font-bold text-ink mb-2 tracking-tight">How can I help?</h2>
-              <p className="text-ink-muted text-sm max-w-sm leading-relaxed">
-                Ask me to explain a mechanism, check a mnemonic or compare two
-                conditions — or for help with your account and videos.
-              </p>
-            </Motion.div>
-          )}
-
-          {/* Message list */}
-          {messages.map((msg, idx) => {
-            const isUser = msg.role === "user";
-            // Pass the assistant's RAW text through — <Markdown> parses it.
-            // This used to run renderContent() first, which stripped the very
-            // syntax the renderer needs, so headings/bold/code never rendered.
-            const content = msg.content;
-            return (
+            {/* Empty state: centred, like the other Doubts empty states. */}
+            {messages.length === 0 && isIdle && (
               <Motion.div
-                key={`${msg.createdAt || idx}-${idx}`}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.2 }}
-                className={`flex gap-3 px-4 md:px-6 py-1 ${isUser ? "flex-row-reverse" : "flex-row"}`}
+                transition={{ duration: 0.3 }}
+                className="flex min-h-full flex-col items-center justify-center px-5 text-center"
               >
-                {/* Avatar */}
-                <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-1 text-xs ${
-                  isUser ? "bg-ink text-ink-inverse" : "bg-brand text-brand-fg"
-                }`} aria-hidden="true">
-                  {isUser ? <FaUser size={10} /> : <FaRobot size={10} />}
+                <h2 className="font-display text-xl font-bold text-ink sm:text-2xl">What are you stuck on?</h2>
+                <p className="mt-1.5 max-w-sm text-sm leading-relaxed text-ink-muted">
+                  Ask about anything in your syllabus.
+                  <span className="hidden sm:inline"> Choose Hint to work it out yourself, or Full answer to see it explained.</span>
+                </p>
+                <div role="group" aria-label="Suggested questions" className="mt-5 flex sm:mt-6 max-w-xl flex-wrap justify-center gap-2">
+                  {SUGGESTIONS.map((s) => (
+                    <button
+                      key={s.text}
+                      type="button"
+                      onClick={() => sendMessage(s.text)}
+                      disabled={limitShown}
+                      className="inline-flex min-h-touch items-center rounded-full border border-line bg-surface px-4 text-[0.8125rem] font-medium text-ink-muted transition-colors duration-fast ease-brand hover:border-line-strong hover:text-ink disabled:cursor-not-allowed disabled:opacity-60"
+                    >
+                      {s.label}
+                    </button>
+                  ))}
                 </div>
+              </Motion.div>
+            )}
 
-                {/* Bubble */}
-                <div className={`max-w-[78%] md:max-w-[70%] ${isUser ? "items-end" : "items-start"} flex flex-col gap-1`}>
-                  {/* Hierarchy: the assistant's ANSWER carries the visual
-                      weight (raised surface + shadow); the user's own message
-                      sits quieter on a sunken fill. */}
-                  <div className={`px-4 py-3 rounded-card text-sm leading-relaxed ${
-                    isUser
-                      ? `bg-surface text-ink border rounded-tr-sm ${msg.failed ? "border-critical/35" : "border-line"}`
-                      : "bg-surface text-ink border border-line shadow-e2 rounded-tl-sm"
-                  }`}>
-                    {!isUser && isVideoMessage(msg) ? (
-                      <VideoMessageCard msg={msg} />
-                    ) : isUser ? (
-                      <span className="whitespace-pre-wrap">{content}</span>
-                    ) : (
-                      <Markdown>{content}</Markdown>
-                    )}
-                    {msg.fileUrl && (
-                      <a
-                        href={msg.fileUrl} target="_blank" rel="noreferrer"
-                        className="text-xs mt-2 flex items-center gap-1.5 underline underline-offset-2 text-brand"
-                      >
-                        <FaPaperclip size={10} aria-hidden="true" />
-                        {msg.fileName || "Attachment"}
-                      </a>
-                    )}
+            {/* Message list: the student's words in a soft bubble at right;
+                the answer as plain text at left, where it is easiest to read. */}
+            {messages.map((msg, idx) => {
+              const isUser = msg.role === "user";
+              const content = msg.content;
+              return (
+                <Motion.div
+                  key={`${msg.createdAt || idx}-${idx}`}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="mx-auto w-full max-w-3xl px-4 py-2 md:px-6"
+                >
+                  <div className={`flex flex-col gap-1 ${isUser ? "ml-auto max-w-[85%] items-end md:max-w-[75%]" : "items-start"}`}>
+                    <div
+                      className={
+                        isUser
+                          ? `rounded-control rounded-br-md bg-surface-sunken px-4 py-2.5 text-sm leading-relaxed text-ink ${
+                              msg.failed ? "ring-1 ring-inset ring-critical/45" : ""
+                            }`
+                          : "w-full text-sm leading-relaxed text-ink"
+                      }
+                    >
+                      {!isUser && isVideoMessage(msg) ? (
+                        <VideoMessageCard msg={msg} />
+                      ) : isUser ? (
+                        <span className="whitespace-pre-wrap">{content}</span>
+                      ) : (
+                        <Markdown>{content}</Markdown>
+                      )}
+                      {msg.fileUrl && (
+                        <a
+                          href={msg.fileUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="mt-2 flex items-center gap-1.5 text-xs text-brand underline underline-offset-2"
+                        >
+                          <FaPaperclip size={10} aria-hidden="true" />
+                          {msg.fileName || "Attachment"}
+                        </a>
+                      )}
+                    </div>
+                    <p className="px-0.5 text-micro text-ink-subtle">
+                      {isUser ? "You" : "Kanthast AI"} · {formatTime(msg.createdAt)}
+                      {msg.failed && <span className="font-semibold text-critical"> · Not sent</span>}
+                    </p>
                   </div>
-                  <p className="text-micro text-ink-subtle px-1">
-                    {isUser ? "You" : "Assistant"} · {formatTime(msg.createdAt)}
-                    {msg.failed && (
-                      <span className="text-critical font-semibold"> · Not sent</span>
+                </Motion.div>
+              );
+            })}
+
+            {/* Today's AI messages are used up: said where the answer would appear,
+                scrolled into view and announced (role="alert") when it appears. */}
+            {limit && (
+              <div className="mx-auto w-full max-w-3xl px-4 py-2 md:px-6">
+                <div
+                  role="alert"
+                  className="flex items-start gap-2 rounded-control border border-critical/35 bg-critical-soft px-3 py-2.5 text-sm text-critical"
+                >
+                  <FaExclamationTriangle size={12} className="mt-1 flex-shrink-0" aria-hidden="true" />
+                  <p className="flex-1 leading-snug">
+                    {limit.message}
+                    {!limit.paid && (
+                      <>
+                        {" "}
+                        <Link to="/subscription" className="font-semibold underline underline-offset-2">
+                          See plans
+                        </Link>
+                      </>
                     )}
                   </p>
                 </div>
-              </Motion.div>
-            );
-          })}
+              </div>
+            )}
 
-          {/* Typing indicator */}
-          {status === "sending" && <TypingDots />}
-        </div>
+            {status === "sending" && <TypingDots />}
+          </div>
 
-        {/* Jump to latest — shown only when a reply landed off-screen, so the
-            user is never stranded above a new answer. */}
-        {hasUnreadBelow && (
-          <button
-            type="button"
-            onClick={() => {
-              listRef.current?.scrollTo({
-                top: listRef.current.scrollHeight,
-                behavior: "smooth",
-              });
-              setHasUnreadBelow(false);
-            }}
-            className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 inline-flex items-center gap-2
-                       rounded-full bg-brand px-4 py-2.5 text-sm font-semibold text-brand-fg shadow-glow-brand
-                       transition-colors duration-fast ease-brand hover:bg-brand-hover"
+          {/* Jump to latest: only when a reply landed off-screen. */}
+          {hasUnreadBelow && (
+            <button
+              type="button"
+              onClick={() => {
+                listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
+                setHasUnreadBelow(false);
+              }}
+              className="absolute bottom-3 left-1/2 z-10 inline-flex min-h-touch -translate-x-1/2 items-center gap-2 rounded-full border border-line bg-surface px-4 text-sm font-semibold text-ink shadow-e2 transition-colors duration-fast ease-brand hover:border-line-strong"
+            >
+              New message
+              <span aria-hidden="true">↓</span>
+            </button>
+          )}
+
+          {/* Custom scrollbar overlay */}
+          <div
+            className="pointer-events-none absolute bottom-2 right-1 top-2 w-1.5 rounded-full transition-opacity duration-300"
+            style={{ opacity: scrollbarVisible ? 1 : 0 }}
           >
-            New message
-            <span aria-hidden="true">↓</span>
-          </button>
-        )}
-
-        {/* Custom scrollbar overlay */}
-        <div
-          className="absolute right-1 top-2 bottom-2 w-1.5 rounded-full pointer-events-none transition-opacity duration-300"
-          style={{ opacity: scrollbarVisible ? 1 : 0 }}
-        >
-          <div ref={thumbRef} className="absolute w-full rounded-full bg-ink-subtle/45" />
-        </div>
+            <div ref={thumbRef} className="absolute w-full rounded-full bg-ink-subtle/45" />
+          </div>
         </div>
 
         {/* Input area */}
-        <div className="flex-shrink-0 border-t border-line bg-surface px-4 md:px-6 pt-3 pb-7 md:pb-4">
-
-          {/* Quick suggestion pills — shown only on empty chat */}
-          {messages.length === 0 && isIdle && (
-            <div className="flex gap-2 mb-3 w-full overflow-x-auto no-scrollbar" aria-label="Suggested questions">
-              {SUGGESTIONS.map((s) => (
+        <div className="flex-shrink-0 border-t border-line px-3 pb-3 pt-3 md:px-6 md:pb-4">
+          <div className="mx-auto w-full max-w-3xl">
+            {/* After an answer: take what is still unclear to the class. */}
+            {hasAnswer && isIdle && activeSessionId && (
+              <div className="mb-2">
                 <button
-                  key={s.text}
                   type="button"
-                  onClick={() => sendMessage(s.text)}
-                  className="flex-shrink-0 min-h-touch flex items-center justify-center px-4 py-2 rounded-full border border-line bg-surface text-xs font-medium text-ink-muted whitespace-nowrap transition-colors duration-fast ease-brand hover:border-brand/45 hover:bg-brand-soft hover:text-ink"
+                  onClick={askClass}
+                  disabled={drafting || status === "sending"}
+                  aria-busy={drafting || undefined}
+                  className="-ml-1 inline-flex min-h-touch items-center gap-2 rounded-control px-1 text-[0.8125rem] font-semibold text-ink-muted transition-colors duration-fast ease-brand hover:text-brand disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  {s.label}
+                  {drafting ? (
+                    <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent" aria-hidden="true" />
+                  ) : (
+                    <FaComments aria-hidden="true" className="text-brand" />
+                  )}
+                  {drafting ? "Writing your doubt…" : "Still confused? Ask your class"}
                 </button>
-              ))}
-            </div>
-          )}
+              </div>
+            )}
 
-          {/* Attachment preview */}
-          {attachment && (
-            <div className="mb-3 flex items-center gap-2 bg-brand-soft border border-brand/35 rounded-control pl-3 text-sm text-ink">
-              <FaPaperclip size={12} className="text-brand flex-shrink-0" aria-hidden="true" />
-              <span className="flex-1 truncate font-medium">{attachment.fileName}</span>
+            {/* Attachment preview */}
+            {attachment && (
+              <div className="mb-2 flex items-center gap-2 rounded-control border border-line bg-surface-sunken pl-3 text-sm text-ink">
+                <FaPaperclip size={12} className="flex-shrink-0 text-brand" aria-hidden="true" />
+                <span className="flex-1 truncate font-medium">{attachment.fileName}</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setAttachment(null);
+                    if (fileInputRef.current) fileInputRef.current.value = "";
+                    showNotice("success", "Attachment removed");
+                  }}
+                  className="flex h-touch w-touch items-center justify-center rounded-control text-ink-muted transition hover:bg-surface hover:text-ink"
+                  aria-label={`Remove attachment ${attachment.fileName}`}
+                >
+                  <FaTimes size={11} />
+                </button>
+              </div>
+            )}
+
+            {uploading && (
+              <div className="mb-2 flex items-center gap-2 rounded-control border border-line bg-surface-sunken px-3 py-2 text-sm text-ink-muted" role="status">
+                <span className="h-4 w-4 flex-shrink-0 animate-spin rounded-full border-2 border-brand border-t-transparent" aria-hidden="true" />
+                Uploading file…
+              </div>
+            )}
+
+            {/* Input box */}
+            <div className="relative flex items-end gap-1 rounded-control border border-line-strong bg-surface transition-colors duration-fast focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/20">
               <button
                 type="button"
-                onClick={() => {
-                  setAttachment(null);
-                  if (fileInputRef.current) fileInputRef.current.value = "";
-                  showNotice("success", "Attachment removed");
-                }}
-                className="h-touch w-touch rounded-control text-ink-muted hover:text-ink hover:bg-brand/15 flex items-center justify-center transition"
-                aria-label={`Remove attachment ${attachment.fileName}`}
+                onClick={() => fileInputRef.current?.click()}
+                disabled={uploading}
+                className="m-0.5 flex h-touch w-touch flex-shrink-0 items-center justify-center self-end rounded-control text-ink-subtle transition hover:bg-surface-sunken hover:text-ink disabled:cursor-not-allowed"
+                aria-label="Attach a file"
               >
-                <FaTimes size={11} />
+                <FaPaperclip size={14} className={uploading ? "animate-pulse" : ""} />
+              </button>
+              <input ref={fileInputRef} type="file" className="hidden" onChange={onFileChange} tabIndex={-1} />
+
+              <textarea
+                ref={textareaRef}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                  }
+                }}
+                placeholder={limitShown ? "You can ask the AI again tomorrow" : "Ask a question"}
+                aria-label="Message the assistant"
+                disabled={limitShown}
+                className="flex-1 resize-none bg-transparent py-3 text-sm leading-relaxed text-ink outline-none placeholder:text-ink-subtle focus-visible:!outline-none disabled:cursor-not-allowed"
+                rows={1}
+                style={{ maxHeight: 180, overflowY: "auto" }}
+              />
+
+              <button
+                type="button"
+                onClick={() => sendMessage()}
+                disabled={!canSend}
+                className="m-0.5 flex h-touch w-touch flex-shrink-0 items-center justify-center self-end rounded-[11px] bg-brand text-brand-fg transition-colors duration-fast ease-brand hover:bg-brand-hover disabled:cursor-not-allowed disabled:bg-disabled disabled:text-disabled-fg"
+                aria-label="Send message"
+                title="Send"
+              >
+                <FaPaperPlane size={12} />
               </button>
             </div>
-          )}
 
-          {uploading && (
-            <div className="mb-3 flex items-center gap-2 bg-surface-sunken border border-line rounded-control px-3 py-2 text-sm text-ink-muted" role="status">
-              <span className="w-4 h-4 rounded-full border-2 border-brand border-t-transparent animate-spin flex-shrink-0" aria-hidden="true" />
-              Uploading file…
-            </div>
-          )}
-
-          {/* Input box */}
-          <div className="relative flex items-end gap-1 bg-surface border border-line-strong rounded-card focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/20 transition-colors duration-fast">
-            <button
-              type="button"
-              onClick={() => fileInputRef.current?.click()}
-              disabled={uploading}
-              className="flex-shrink-0 h-touch w-touch m-0.5 self-end rounded-control text-ink-subtle hover:text-ink hover:bg-surface-sunken flex items-center justify-center transition disabled:cursor-not-allowed"
-              aria-label="Attach a file"
-            >
-              <FaPaperclip size={15} className={uploading ? "animate-pulse" : ""} />
-            </button>
-            <input ref={fileInputRef} type="file" className="hidden" onChange={onFileChange} tabIndex={-1} />
-
-            <textarea
-              ref={textareaRef}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && !e.shiftKey) {
-                  e.preventDefault();
-                  sendMessage();
-                }
-              }}
-              placeholder="Ask the Kanthast Assistant"
-              aria-label="Message the assistant"
-              className="flex-1 bg-transparent text-ink placeholder:text-ink-subtle text-sm py-3 outline-none focus-visible:!outline-none resize-none leading-relaxed"
-              rows={1}
-              style={{ maxHeight: 180, overflowY: "auto" }}
-            />
-
-            <button
-              type="button"
-              onClick={() => sendMessage()}
-              disabled={!canSend}
-              className="flex-shrink-0 h-touch w-touch rounded-control bg-brand text-brand-fg flex items-center justify-center hover:bg-brand-hover transition-colors duration-fast ease-brand self-end m-0.5 disabled:bg-disabled disabled:text-disabled-fg disabled:cursor-not-allowed"
-              aria-label="Send message"
-              title="Send"
-            >
-              <FaPaperPlane size={12} />
-            </button>
-          </div>
-
-          {error && (
-            <div
-              role="alert"
-              className="mt-2 flex items-center gap-2 rounded-control border border-critical/35 bg-critical-soft pl-3 text-sm text-critical"
-            >
-              <FaExclamationTriangle size={12} className="flex-shrink-0" aria-hidden="true" />
-              <p className="flex-1 py-2.5 leading-snug">{error.text}</p>
-              {error.retry && (
-                <button
-                  type="button"
-                  onClick={error.retry}
-                  disabled={status === "sending"}
-                  className="flex-shrink-0 min-h-touch inline-flex items-center gap-1.5 rounded-control px-3 font-semibold text-critical hover:bg-critical/12 transition-colors duration-fast disabled:cursor-not-allowed"
-                >
-                  <FaRedo size={10} aria-hidden="true" />
-                  Try again
-                </button>
+            {/* Answer style and today's allowance. */}
+            <div className="mt-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+              <div role="group" aria-label="How the AI answers" className="inline-flex h-11 items-center rounded-full bg-surface-sunken p-1 ring-1 ring-inset ring-line">
+                {MODES.map((option) => (
+                  <button
+                    key={option.value}
+                    type="button"
+                    aria-pressed={mode === option.value}
+                    onClick={() => chooseMode(option.value)}
+                    className={`h-full rounded-full px-3.5 text-xs font-semibold transition-colors duration-fast ease-brand ${
+                      mode === option.value ? "bg-surface text-ink shadow-e1 ring-1 ring-inset ring-line" : "text-ink-muted hover:text-ink"
+                    }`}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+              {quotaLine && (
+                <p className="text-xs tabular-nums text-ink-subtle" aria-live="polite">
+                  {quotaShort ? (
+                    <>
+                      <span className="sm:hidden">{quotaShort}</span>
+                      <span className="hidden sm:inline">{quotaLine}</span>
+                    </>
+                  ) : (
+                    quotaLine
+                  )}
+                </p>
               )}
             </div>
-          )}
+
+            {error && (
+              <div
+                role="alert"
+                className="mt-2 flex items-center gap-2 rounded-control border border-critical/35 bg-critical-soft pl-3 text-sm text-critical"
+              >
+                <FaExclamationTriangle size={12} className="flex-shrink-0" aria-hidden="true" />
+                <p className="flex-1 py-2.5 leading-snug">{error.text}</p>
+                {error.retry && (
+                  <button
+                    type="button"
+                    onClick={error.retry}
+                    disabled={status === "sending"}
+                    className="inline-flex min-h-touch flex-shrink-0 items-center gap-1.5 rounded-control px-3 font-semibold text-critical transition-colors duration-fast hover:bg-critical/12 disabled:cursor-not-allowed"
+                  >
+                    <FaRedo size={10} aria-hidden="true" />
+                    Try again
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
-      {/* ── Mobile sidebar drawer ── */}
+      {/* ── Drawer (below lg) ── */}
       <AnimatePresence>
         {sidebarOpen && (
           <Motion.div
@@ -853,23 +1029,19 @@ export default function Chatbot() {
             className="fixed inset-0 z-50 lg:hidden"
             onClick={() => setSidebarOpen(false)}
           >
-            <div className="absolute inset-0 bg-slate-950/70 backdrop-blur-sm" />
+            <div className="absolute inset-0 bg-slate-950/45 backdrop-blur-[2px]" />
             <Motion.div
+              role="dialog"
+              aria-modal="true"
+              aria-label="Your chats"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 28, stiffness: 280 }}
-              className="absolute left-0 top-0 h-full w-72 bg-slate-950 shadow-e5"
+              className="absolute left-0 top-0 h-full w-72 max-w-[85vw] border-r border-line bg-surface shadow-e5"
               onClick={(e) => e.stopPropagation()}
             >
-              <SidebarContent
-                sessions={displayedSessions}
-                activeSessionId={activeSessionId}
-                onLoad={loadSession}
-                onNew={handleNewChat}
-                onDelete={(id) => setPendingDelete(id)}
-                onClose={() => setSidebarOpen(false)}
-              />
+              <ConversationRail {...railProps} onClose={() => setSidebarOpen(false)} />
             </Motion.div>
           </Motion.div>
         )}
@@ -883,16 +1055,16 @@ export default function Chatbot() {
             initial={{ opacity: 0, y: 16, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.96 }}
-            className={`fixed bottom-24 md:bottom-6 right-4 md:right-5 z-[60] rounded-card border px-4 py-3 text-sm font-medium shadow-e4 flex items-center gap-2 ${
+            className={`fixed bottom-24 right-4 z-[60] flex items-center gap-2 rounded-card border px-4 py-3 text-sm font-medium shadow-e4 md:bottom-6 md:right-5 ${
               uploadNotice.type === "success"
-                ? "bg-positive-soft text-positive border-positive/35"
+                ? "border-positive/35 bg-positive-soft text-positive"
                 : uploadNotice.type === "error"
-                ? "bg-critical-soft text-critical border-critical/35"
-                : "bg-surface-raised text-ink-muted border-line"
+                ? "border-critical/35 bg-critical-soft text-critical"
+                : "border-line bg-surface-raised text-ink-muted"
             }`}
           >
             {uploadNotice.type === "loading" && (
-              <span className="w-4 h-4 rounded-full border-2 border-line-strong border-t-transparent animate-spin" aria-hidden="true" />
+              <span className="h-4 w-4 animate-spin rounded-full border-2 border-line-strong border-t-transparent" aria-hidden="true" />
             )}
             {uploadNotice.type === "success" && <FaCheckCircle size={12} aria-hidden="true" />}
             {uploadNotice.type === "error" && <FaExclamationTriangle size={12} aria-hidden="true" />}
