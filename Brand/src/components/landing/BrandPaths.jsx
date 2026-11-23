@@ -11,7 +11,7 @@ import iconProgress from "../../assets/paths/icon-progress.png";
 const PATHS = [
   { id: "medical", label: "Medical", icon: FaStethoscope, title: ["Understand", "Complex Topics"], href: "/professional", art: medicalArt, alt: "A doctor studying an animated heart on a tablet." },
   { id: "school", label: "School", icon: FaGraduationCap, title: ["Learn Better,", "Score Higher"], href: "/school", art: schoolArt, alt: "A student learning about the atom on a tablet." },
-  { id: "concept", label: "Concept Library", icon: FaBookOpen, title: ["Discover", "Concepts Easily"], href: null, art: conceptArt, alt: "A glowing light bulb above a stack of books." },
+  { id: "concept", label: "Corporate", icon: FaBookOpen, title: ["Discover", "Concepts Easily"], href: null, art: conceptArt, alt: "A glowing light bulb above a stack of books." },
 ];
 
 // Order of the switch pills, as in the mockup.
