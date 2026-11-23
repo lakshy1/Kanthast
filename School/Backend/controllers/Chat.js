@@ -2,6 +2,9 @@ import mongoose from "mongoose";
 import User from "../models/User.js";
 import SupportQuery from "../models/SupportQuery.js";
 import { uploadImageToCloudinary } from "../utils/imageUploader.js";
+import { geminiBaseUrl } from "../services/aiJson.js";
+import { chatMode, withTutorInstructions } from "../services/doubtAi.js";
+import { textField } from "../utils/textInput.js";
 
 const CHAT_HISTORY_LIMIT = 300;
 const SUPPORT_SNAPSHOT_LIMIT = 20;
@@ -170,6 +173,20 @@ const buildSupportSnapshot = (messages = []) =>
   }));
 
 const GEMINI_API_VERSIONS = ["v1", "v1beta"];
+// Each Gemini request gets this long. A hung call must not hold the request (and the
+// student's reserved AI message) forever; a timeout counts as a failed attempt.
+const GEMINI_ATTEMPT_TIMEOUT_MS = 20000;
+
+// fetch with a deadline that also covers reading the body (read inside `use`).
+const fetchWithTimeout = async (url, options, use) => {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), GEMINI_ATTEMPT_TIMEOUT_MS);
+  try {
+    return await use(await fetch(url, { ...options, signal: controller.signal }));
+  } finally {
+    clearTimeout(timer);
+  }
+};
 
 const normalizeModelName = (modelName = "") => modelName.replace(/^models\//, "").trim();
 
@@ -184,11 +201,8 @@ const staticGeminiCandidateModels = [
   .map(normalizeModelName);
 
 const listGeminiModels = async ({ apiKey, apiVersion }) => {
-  const endpoint = `https://generativelanguage.googleapis.com/${apiVersion}/models?key=${apiKey}`;
-  const response = await fetch(endpoint);
-  if (!response.ok) return [];
-
-  const data = await response.json();
+  const endpoint = `${geminiBaseUrl()}/${apiVersion}/models?key=${apiKey}`;
+  const data = await fetchWithTimeout(endpoint, {}, (response) => (response.ok ? response.json() : {}));
   const models = data?.models || [];
 
   return models
@@ -223,8 +237,8 @@ const getStaticGeminiCandidates = () => {
 };
 
 const callGeminiModel = async ({ apiKey, model, prompt, context, apiVersion }) => {
-  const endpoint = `https://generativelanguage.googleapis.com/${apiVersion}/models/${model}:generateContent?key=${apiKey}`;
-  const response = await fetch(endpoint, {
+  const endpoint = `${geminiBaseUrl()}/${apiVersion}/models/${model}:generateContent?key=${apiKey}`;
+  const { response, data } = await fetchWithTimeout(endpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -245,9 +259,7 @@ const callGeminiModel = async ({ apiKey, model, prompt, context, apiVersion }) =
         maxOutputTokens: 700,
       },
     }),
-  });
-
-  const data = await response.json();
+  }, async (response) => ({ response, data: await response.json() }));
   const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
 
   if (!response.ok || !text) {
@@ -339,8 +351,11 @@ const generateAssistantReply = async ({ prompt, context }) => {
     });
   }
 
-  return "AI provider key missing. Add GEMINI_API_KEY or OPENAI_API_KEY in backend .env to enable live assistant responses.";
+  return null; // no provider: the caller answers with PROVIDER_MISSING_REPLY
 };
+
+const PROVIDER_MISSING_REPLY =
+  "AI provider key missing. Add GEMINI_API_KEY or OPENAI_API_KEY in backend .env to enable live assistant responses.";
 
 const buildSessionTitle = (text = "") => {
   const clean = text.trim().replace(/\s+/g, " ");
@@ -536,9 +551,11 @@ export const getChatHistory = async (req, res) => {
 
 export const sendChatMessage = async (req, res) => {
   try {
-    const { message, fileUrl = "", fileName = "", sessionId = "" } = req.body;
-    const cleanMessage = (message || "").trim();
-    const cleanSessionId = (sessionId || "").trim();
+    // textField: a non-string (5, {}, []) counts as empty instead of throwing.
+    const cleanMessage = textField(req.body?.message);
+    const cleanSessionId = textField(req.body?.sessionId);
+    const fileUrl = textField(req.body?.fileUrl);
+    const fileName = textField(req.body?.fileName);
 
     if (!cleanMessage) {
       return res.status(400).json({ success: false, message: "Message is required" });
@@ -578,6 +595,9 @@ export const sendChatMessage = async (req, res) => {
     const lockedVideoQuestion = isLockedVideoQuestion(cleanMessage);
     const subscriptionStatus = getSubscriptionStatusForUser(user);
     let assistantReply = supportAcknowledgement;
+    // Where the stored reply came from. Only "ai" (a full model answer) may later be carried
+    // into a class post; fixed replies and hints are "system" / "ai_hint".
+    let source = "system";
 
     if (lockedVideoQuestion) {
       if (subscriptionStatus.status === "active" || subscriptionStatus.status === "active_no_date") {
@@ -590,16 +610,33 @@ export const sendChatMessage = async (req, res) => {
     } else if (subscriptionQuestion) {
       assistantReply = `${subscriptionReplyWithLink}\n${subscriptionStatus.line}`;
     } else if (!interfaceIssueReported) {
+      // The context ends with the student's message as typed; the copy sent as the prompt
+      // carries this reply's instructions (English, class level, hint or full). Only the
+      // original is stored.
       const context = getRecentContext(activeSession.messages, 12);
-      assistantReply = await generateAssistantReply({
-        prompt: cleanMessage,
+      const mode = chatMode(textField(req.body?.mode));
+      const modelReply = await generateAssistantReply({
+        prompt: withTutorInstructions({
+          message: cleanMessage,
+          mode,
+          schoolClass: user.schoolClass,
+        }),
         context,
       });
+      if (modelReply) {
+        assistantReply = modelReply;
+        source = mode === "hint" ? "ai_hint" : "ai";
+      } else {
+        assistantReply = PROVIDER_MISSING_REPLY;
+      }
     }
+    // No model call: the AI allowance middleware gives this message back.
+    if (source === "system") res.locals.aiNotUsed = true;
 
     activeSession.messages.push({
       role: "assistant",
       content: assistantReply,
+      source,
       fileUrl: "",
       fileName: "",
       createdAt: new Date(),

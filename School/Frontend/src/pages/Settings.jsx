@@ -13,6 +13,7 @@ import {
   FaSignOutAlt,
   FaTrash,
   FaUserCircle,
+  FaUserShield,
 } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -29,6 +30,7 @@ import {
 } from "../utils/authApi";
 import { defaultSettings, readStoredSettings, trackAnalyticsEvent, writeStoredSettings } from "../utils/settings";
 import { Button, Field, LiveRegion, Modal, Select, Toggle } from "../components/ui";
+import ParentApproval from "../components/doubts/ParentApproval";
 
 const emptyAccountForm = {
   firstName: "",
@@ -588,11 +590,11 @@ export default function Settings() {
                 Subscription
               </Link>
               <Link
-                to="/chatbot"
+                to="/doubts/ask"
                 className="inline-flex min-h-touch items-center gap-2 rounded-xl border border-line bg-surface-sunken px-4 py-2.5 text-sm text-ink-muted transition-colors duration-fast ease-brand hover:bg-surface"
               >
                 <FaRobot />
-                Assistant
+                Ask the AI
               </Link>
             </div>
           </div>
@@ -937,6 +939,15 @@ export default function Settings() {
 
           {activeTab === "privacy" && (
             <>
+              <SectionCard
+                accent="emerald"
+                icon={<FaUserShield />}
+                title="Parent approval for Doubts"
+                description="A parent or guardian must approve before the class feed in Doubts can be used."
+              >
+                <ParentApproval compact />
+              </SectionCard>
+
               <SectionCard
                 accent="emerald"
                 icon={<FaDatabase />}

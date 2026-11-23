@@ -4,7 +4,6 @@ import { HashLink } from "react-router-hash-link";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import {
   FaChevronDown,
-  FaRobot,
   FaUserCircle,
   FaCog,
   FaTachometerAlt,
@@ -15,6 +14,7 @@ import {
   FaBookOpen,
   FaStar,
   FaEnvelope,
+  FaComments,
 } from "react-icons/fa";
 import { SITE } from "../utils/siteContext";
 
@@ -22,7 +22,7 @@ const dockItems = [
   { to: "/", label: "Home", icon: FaHome, exact: true },
   { to: "/dashboard", label: "Dashboard", icon: FaTachometerAlt, exact: false },
   { to: "/library", label: "Library", icon: FaList, exact: false },
-  { to: "/chatbot", label: "Assistant", icon: FaRobot, exact: false },
+  { to: "/doubts", label: "Doubts", icon: FaComments, exact: false },
 ];
 
 const publicDockItems = [
@@ -210,6 +210,11 @@ const Navbar = () => {
                 Dashboard
               </NavLink>
             )}
+            {isLoggedIn && (
+              <NavLink to="/doubts" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+                Doubts
+              </NavLink>
+            )}
             {!isLoggedIn && (
               <HashLink smooth to={SITE.pricing} className={normalClass}>
                 Pricing
@@ -253,14 +258,6 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <button
-                  onClick={() => navigate("/chatbot")}
-                  className="flex h-touch w-touch items-center justify-center rounded-full border border-mint/30 bg-mint/15 text-mint transition hover:bg-mint/25"
-                  aria-label="Assistant"
-                >
-                  <FaRobot className="text-sm" />
-                </button>
-
                 <div
                   className="relative"
                   onMouseEnter={() => setIsDesktopUserOpen(true)}
@@ -507,6 +504,7 @@ const Navbar = () => {
           className="nav-dock-fade pointer-events-none absolute inset-x-0 bottom-full h-6 bg-gradient-to-t from-[#0b1220]/70 to-transparent"
         />
         <div className="nav-dock-bar border-t border-hairline/70 bg-[#0b1220]/95 backdrop-blur-xl">
+          {/* Signed in: Home, Dashboard, Library, Doubts. Signed out: five items. */}
           <div className={`grid h-16 ${isLoggedIn ? "grid-cols-4" : "grid-cols-5"}`}>
           {(isLoggedIn ? dockHomeItems : dockPublicItems).map(({ to, label, icon: Icon, exact }) => {
             const isActive = exact ? location.pathname === to : location.pathname.startsWith(to);

@@ -25,7 +25,7 @@ const Settings = lazy(() => import("./pages/Settings"));
 const Lists = lazy(() => import("./pages/Lists"));
 const SummaryPage = lazy(() => import("./pages/SummaryPage"));
 const VideoPage = lazy(() => import("./pages/VideoPage"));
-const Chatbot = lazy(() => import("./pages/Chatbot"));
+const Doubts = lazy(() => import("./pages/Doubts"));
 const SubscriptionPage = lazy(() => import("./pages/SubscriptionPage"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const AdminPanel = lazy(() => import("./pages/AdminPanel"));
@@ -38,6 +38,12 @@ const hasAuth = () =>
 
 function RequireAuth({ children }) {
   return hasAuth() ? children : <Navigate to="/login" replace />;
+}
+
+// The old Assistant address. Keeps ?sessionId=… so links into a chat still work.
+function ChatbotRedirect() {
+  const { search } = useLocation();
+  return <Navigate to={`/doubts/ask${search}`} replace />;
 }
 
 function GuestOnly({ children }) {
@@ -156,7 +162,7 @@ function LibrarySeo() {
 }
 
 // Account, player and admin pages are for signed-in users, not search results.
-const NOINDEX_PATH = /^\/(login|signup|dashboard|profile|settings|video|summary|images|chatbot|subscription|admin|adminlogin)(\/|$)/;
+const NOINDEX_PATH = /^\/(login|signup|dashboard|profile|settings|video|summary|images|chatbot|doubts|subscription|admin|adminlogin)(\/|$)/;
 
 function RouteRobots() {
   const { pathname } = useLocation();
@@ -296,7 +302,15 @@ function App() {
                 <Route path="/lists" element={<Navigate to="/library" replace />} />
                 <Route path="/summary" element={<RequireAuth><SummaryPage /></RequireAuth>} />
                 <Route path="/video" element={<RequireAuth><VideoPage /></RequireAuth>} />
-                <Route path="/chatbot" element={<RequireAuth><Chatbot /></RequireAuth>} />
+                <Route path="/chatbot" element={<ChatbotRedirect />} />
+                {/* Doubts opens on the class feed. All four routes render the same
+                    Doubts element, so its shell (header, tabs, composer) stays
+                    mounted and does not move when switching sections. */}
+                <Route path="/doubts" element={<Navigate to="/doubts/class" replace />} />
+                <Route path="/doubts/ask" element={<RequireAuth><Doubts section="ask" /></RequireAuth>} />
+                <Route path="/doubts/class" element={<RequireAuth><Doubts section="class" /></RequireAuth>} />
+                <Route path="/doubts/mine" element={<RequireAuth><Doubts section="mine" /></RequireAuth>} />
+                <Route path="/doubts/:id" element={<RequireAuth><Doubts /></RequireAuth>} />
                 <Route path="/subscription" element={<RequireAuth><SubscriptionPage /></RequireAuth>} />
                 <Route path="/adminlogin" element={<AdminGuestOnly><AdminLogin /></AdminGuestOnly>} />
                 <Route path="/admin" element={<RequireAdmin><AdminPanel /></RequireAdmin>} />
@@ -305,9 +319,12 @@ function App() {
             </ErrorBoundary>
           </Suspense>
 
-          {/* Footer: hidden on mobile when logged in (bottom dock handles nav) */}
-          {!isAdminRoute && (
-            <div className={hasAuth() ? "footer-wrap hidden md:block" : "footer-wrap"}>
+          {/* Footer: logged-out pages only. Signed-in pages are the app itself;
+              the navbar (and the bottom dock on phones) carries the links.
+              hasAuth() reads localStorage synchronously, so a signed-in user
+              never sees it flash in. */}
+          {!isAdminRoute && !hasAuth() && (
+            <div className="footer-wrap">
               <Footer />
             </div>
           )}

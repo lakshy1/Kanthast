@@ -59,7 +59,7 @@ export const isInstructor = (req, res, next) => {
 
 export const isAdmin = (req, res, next) => {
   if (req.user.accountType !== "Admin") {
-    return res.status(403).json({ success: false, message: "Access denied: Admins only" });
+    return res.status(403).json({ success: false, code: "forbidden", message: "Access denied: Admins only" });
   }
   next();
 };

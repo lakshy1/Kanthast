@@ -1558,7 +1558,7 @@ function LecturePage() {
                       <div className="mt-4 flex flex-wrap gap-3">
                         <button
                           type="button"
-                          onClick={() => navigate(`/chatbot?sessionId=${encodeURIComponent(lectureResult.sessionId || lectureJob?.sessionId || "")}`)}
+                          onClick={() => navigate(`/doubts/ask?sessionId=${encodeURIComponent(lectureResult.sessionId || lectureJob?.sessionId || "")}`)}
                           className="btn-primary"
                         >
                           Open chat thread

@@ -433,7 +433,13 @@ export async function sendChatMessage(token, payload) {
 
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.success) {
-    throw new Error(data.message || "Failed to send message");
+    // status and code let the page tell the daily AI limit ("ai_daily_limit")
+    // apart from the short-burst rate limiter, which also answers 429.
+    const error = new Error(data.message || "Failed to send message");
+    error.status = response.status;
+    error.code = data.code || "";
+    error.data = data;
+    throw error;
   }
   return data;
 }
