@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, BookOpenText, CaretDown, DeviceMobile, Pause, PencilSimpleLine, Play, Prohibit, Quotes, Timer } from "@phosphor-icons/react";
 import Seo from "../components/Seo";
 import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
-import ScriptPage from "../components/landing/ScriptPage";
 import Reveal from "../components/home/Reveal";
 import SnapRow from "../components/home/SnapRow";
 import FocusCarousel from "../components/home/FocusCarousel";
@@ -11,7 +10,7 @@ import ScrollTagline from "../components/home/ScrollTagline";
 import LessonStage from "../components/home/LessonStage";
 import usePrefersReducedMotion from "../components/home/usePrefersReducedMotion";
 import { NeoSolo, ZippySolo } from "../components/home/Characters";
-import SCHOOL_CATALOG, { SAMPLE_SCRIPT } from "../data/schoolCatalog";
+import SCHOOL_CATALOG from "../data/schoolCatalog";
 import { PILOT_TESTERS } from "../data/pilotTesters";
 import "../styles/school-home.css";
 
@@ -317,8 +316,6 @@ function ClassPicker() {
 }
 
 export default function SchoolHomepage() {
-  const [scriptOpen, setScriptOpen] = useState(false);
-
   return (
     <div className="school-home school-page overflow-x-clip text-ink">
       <Seo
@@ -413,21 +410,6 @@ export default function SchoolHomepage() {
           <p className="title-1 mt-4 max-w-[680px] text-ink-muted">Scroll through the four moments of a lesson. This circuit comes from a real Class X Science script.</p>
         </Reveal>
         <LessonScrolly />
-        <Reveal className="mx-auto mt-12 max-w-[760px] md:mt-16" delay={80}>
-          <p className="body-2 mb-3 text-ink-muted">And here is the start of that script, as the animation team reads it.</p>
-          <div className={`${scriptOpen ? "" : "max-md:max-h-96 max-md:overflow-hidden"}`}>
-            <ScriptPage />
-          </div>
-          <button
-            type="button"
-            onClick={() => setScriptOpen((v) => !v)}
-            aria-expanded={scriptOpen}
-            className="button-md mt-3 inline-flex min-h-touch items-center gap-2 rounded-xl border-2 border-line-strong px-4 py-2 text-ink transition-colors duration-300 hover:bg-surface md:hidden"
-          >
-            {scriptOpen ? "Show less" : "Read the full script"}
-            <CaretDown aria-hidden="true" weight="bold" className={`transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${scriptOpen ? "rotate-180" : ""}`} />
-          </button>
-        </Reveal>
       </section>
 
       {/* 5. The two guides */}
