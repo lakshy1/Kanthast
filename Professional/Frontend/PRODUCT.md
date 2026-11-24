@@ -18,7 +18,7 @@ web
 ## Users
 
 - **Primary: Indian MBBS students and interns preparing for NEET-PG and INI-CET.** They study long hours across the full MBBS syllabus under exam pressure, mostly on phones and on Indian mobile data, and they judge a platform on content depth, faculty credibility and price in INR.
-- **Secondary: USMLE aspirants** (Indian IMGs and international students), served by the same Medicine/USMLE library; current paid plans are priced in USD for this track.
+- **Secondary: USMLE aspirants** (Indian IMGs and international students), served by the same Medicine library as NEET PG and INI CET.
 - **Separate track: School (Class I–X, CBSE and state boards)**, bought by parents for children. Shares the account system and navbar; has its own landing page at `/school`.
 
 ## Product Purpose
@@ -47,7 +47,7 @@ Visual, animation-first explanations of medical concepts in short units (median 
 - **Lecture status (owner, 2026-09-29):** original Kanthast lectures are **still in production**. The owner chose to keep "Get started" plus visible pricing as the landing page's primary path. Copy must say plainly that lectures are being released, and must not imply a complete library.
 - **Programs advertised:** Medicine/USMLE, NEET-PG and INI-CET all draw on the same library today. There are no separate NEET-PG/INI-CET plans yet.
 - **Not built:** question bank, quizzes, spaced repetition, notes, transcripts, search, and cross-device progress sync (progress is stored per device). Copy must not claim these.
-- **Pricing on record:** Medicine/USMLE is 110 USD for 1 year or 200 USD for 2 years; School is Rs 5,000. INR pricing for NEET-PG/INI-CET is **undecided**.
+- **Pricing on record:** one Medicine library for NEET PG, INI CET and USMLE, priced in rupees: Rs 10,000 for 1 year or Rs 18,000 for 2 years. School is Rs 5,000. Payments are not open yet.
 - **Terminology:** subject → chapter → lecture. The "Lists" route is the lecture library.
 
 ## Brand Commitments

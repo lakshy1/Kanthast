@@ -63,7 +63,7 @@ function Device({ frameSrc, screen, screenAlt, inset, radius, frameAlt, classNam
 export function MacbookFrame({ children, alt = "", className = "" }) {
   return (
     <Device
-      frameSrc={`${import.meta.env.BASE_URL}Macbook transparent.png`}
+      frameSrc={`${import.meta.env.BASE_URL}Macbook transparent.webp`}
       frameAlt={alt}
       screen={children}
       inset={MACBOOK_SCREEN}
@@ -83,7 +83,7 @@ export default function DeviceShowcase({ desktopSrc, mobileSrc, desktopAlt, mobi
   return (
     <div className={`relative w-full drop-shadow-[0_30px_50px_rgba(3,8,18,0.55)] ${className}`}>
       <Device
-        frameSrc={`${import.meta.env.BASE_URL}Macbook transparent.png`}
+        frameSrc={`${import.meta.env.BASE_URL}Macbook transparent.webp`}
         frameAlt={desktopAlt}
         screen={desktopSrc}
         screenAlt=""
@@ -92,7 +92,7 @@ export default function DeviceShowcase({ desktopSrc, mobileSrc, desktopAlt, mobi
       />
       <div className="absolute" style={{ left: "78.3%", top: "32.3%", width: "26.3%" }}>
         <Device
-          frameSrc={`${import.meta.env.BASE_URL}Iphone transparent.png`}
+          frameSrc={`${import.meta.env.BASE_URL}Iphone transparent.webp`}
           frameAlt={mobileAlt}
           screen={mobileSrc}
           screenAlt=""

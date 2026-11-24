@@ -11,15 +11,18 @@ import FaqStudent from "../components/landing/FaqStudent";
 import { HeroGlow, TiltFrame } from "../components/landing/CursorEffects";
 import DeviceShowcase, { MacbookFrame } from "../components/landing/DeviceShowcase";
 import SYLLABUS_SNAPSHOT from "../data/syllabusSnapshot";
+import MEDICAL_PLANS from "../data/medicalPlans";
+import TaglineReveal from "../components/landing/TaglineReveal";
+import "../styles/pro-home.css";
 import LANDING_PROOF from "../data/landingProof";
 import { getMedicineUsmleContent } from "../utils/authApi";
 
 
 const EXAMS = [
-  { label: "NEET-PG", to: "/courses#neet-pg" },
-  { label: "INI-CET", to: "/courses#ini-cet" },
-  { label: "USMLE", to: "/courses#medicine" },
-  { label: "NEET-UG", soon: true },
+  { label: "NEET PG" },
+  { label: "INI CET" },
+  { label: "USMLE" },
+  { label: "NEET UG", soon: true },
 ];
 
 const TOUR_STEPS = [
@@ -43,7 +46,7 @@ const TOUR_STEPS = [
     title: "See how far through each subject you are",
     body: "Your dashboard keeps the lecture to resume on top and counts what you have watched, subject by subject.",
     url: "kanthast.in/dashboard",
-    caption: "Sample progress shown. Totals count planned lectures.",
+    caption: "Sample progress shown. Totals are the planned lectures in each subject.",
     range: [0.72, 1],
   },
 ];
@@ -51,11 +54,15 @@ const TOUR_STEPS = [
 const FAQS = [
   {
     q: "Are the lectures available to watch?",
-    a: "Yes, and more are added all the time. New animated lectures go live regularly, subject by subject. Every planned lecture is already listed, so you can see what is coming, and each one opens the moment its video is published.",
+    a: "Some are live now, and more open as each video is published, subject by subject. Every planned lecture is already listed, so you can see what is coming, and each one opens the moment its video is published.",
   },
   {
     q: "Which exams is Kanthast for?",
-    a: "NEET-PG, INI-CET and USMLE today. All three draw on the same subject-by-subject medical library. NEET-UG is coming soon.",
+    a: "NEET PG, INI CET and USMLE. All three draw on one medical library, which today maps the five subjects shown on this page. NEET UG is coming soon.",
+  },
+  {
+    q: "How much does it cost?",
+    a: "Rs 10,000 for one year, or Rs 18,000 for two years. Payments are not open yet, and we will tell you before anything is charged. A free account works in the meantime.",
   },
   {
     q: "What can I open without paying?",
@@ -75,7 +82,7 @@ const FAQS = [
   },
   {
     q: "Can I ask questions while I study?",
-    a: "Yes. Signed-in students can ask the Kanthast Assistant about a topic or about using the platform.",
+    a: "Yes. Signed in students can ask the Kanthast Assistant about a topic or about using the platform.",
   },
   {
     q: "Does it work on my phone?",
@@ -361,7 +368,7 @@ const Homepage = () => {
   const startLabel = loggedIn ? "Go to your dashboard" : "Get started free";
 
   return (
-    <div className="home-page page-aurora overflow-x-clip text-ink">
+    <div className="home-page pro-home page-aurora overflow-x-clip text-ink">
         <Seo
           title="Kanthast Professional | Animated lectures for NEET-PG, INI-CET and USMLE"
           description="Short animated medical lectures for NEET-PG, INI-CET and USMLE, laid out subject by subject with resume and progress tracking. NEET-UG is coming soon."
@@ -393,7 +400,7 @@ const Homepage = () => {
                 <span className="block">Medicine, explained</span>
                 <span className="hero-accent block"><TypedAccent text="in motion." /></span>
               </h1>
-              <p className="hero-sub">For NEET-PG, INI-CET and USMLE.</p>
+              <p className="hero-sub">One library for NEET&nbsp;PG, INI&nbsp;CET and&nbsp;USMLE.</p>
               <p className="hero-desc">
                 Short animated lectures laid out subject by subject and chapter by chapter, with
                 your place saved in every lecture.
@@ -403,24 +410,17 @@ const Homepage = () => {
                   {startLabel}
                   <FaArrowRight aria-hidden="true" className="hero-btn-icon" />
                 </Link>
-                <Link to="/pricing" className="hero-btn hero-btn-secondary">
-                  See pricing
-                </Link>
               </div>
+              <p className="mt-3 text-sm text-ink-muted">
+                Free to start. The first two lectures in every section are open with a free account.
+              </p>
               <ul className="hero-exams" aria-label="Exams covered">
                 {EXAMS.map((exam) => (
                   <li key={exam.label}>
-                    {exam.soon ? (
-                      <span className="hero-exam hero-exam-soon">
-                        {exam.label}
-                        <span className="hero-exam-badge">Coming soon</span>
-                      </span>
-                    ) : (
-                      <Link to={exam.to} className="hero-exam">
-                        {exam.label}
-                        <FaArrowRight aria-hidden="true" className="hero-exam-icon" />
-                      </Link>
-                    )}
+                    <span className={`hero-exam${exam.soon ? " hero-exam-soon" : ""}`}>
+                      {exam.label}
+                      {exam.soon && <span className="hero-exam-badge">Coming soon</span>}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -429,8 +429,8 @@ const Homepage = () => {
             <div className="hero-devices">
               <HeroGlow className="hero-glow" />
               <DeviceShowcase
-                desktopSrc={`${import.meta.env.BASE_URL}device-macbook-screen.png`}
-                mobileSrc={`${import.meta.env.BASE_URL}device-iphone-screen.png`}
+                desktopSrc={`${import.meta.env.BASE_URL}device-macbook-screen.webp`}
+                mobileSrc={`${import.meta.env.BASE_URL}device-iphone-screen.webp`}
                 desktopAlt="The Kanthast lecture player on a laptop, with the chapter's lectures listed beside the video."
                 mobileAlt="The Kanthast home screen on a phone, with the lecture to resume and progress by subject."
               />
@@ -445,6 +445,12 @@ const Homepage = () => {
           </div>
         </section>
 
+        <div className="pro-band-night">
+          <section aria-label="What Kanthast Professional is for" className="site-container py-16 md:py-24">
+            <TaglineReveal lines={["Hard ideas, animated until they click.", "Short lectures, your place saved, every subject mapped."]} />
+          </section>
+        </div>
+
         <ProductTour />
 
         {/* Syllabus coverage */}
@@ -452,12 +458,12 @@ const Homepage = () => {
           <div className="site-container">
             <div className="grid gap-10 lg:grid-cols-12">
               <div className="lg:col-span-5">
-                <h2 id="syllabus-heading" className="text-3xl font-bold tracking-tight text-ink md:text-5xl">
-                  The syllabus is mapped. The lectures are on their way.
+                <h2 id="syllabus-heading" className="text-3xl font-bold text-ink md:text-5xl">
+                  {totals.subjects} subjects mapped. Lectures open as they are published.
                 </h2>
                 <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-muted">
-                  {totals.subjects} subjects and {totals.chapters} chapters are laid out today. Lectures
-                  are being produced and released subject by subject.
+                  {totals.subjects} subjects and {totals.chapters} chapters are laid out today. Some lectures are live,
+                  and the rest open as each video is published.
                 </p>
                 <Link to="/library" className="btn-secondary mt-8">
                   Browse the library
@@ -482,6 +488,37 @@ const Homepage = () => {
           </div>
         </section>
 
+        <section id="pricing" aria-labelledby="home-pricing-heading" className="border-t border-line bg-surface py-20 md:py-28">
+          <div className="site-container">
+            <h2 id="home-pricing-heading" className="max-w-2xl text-3xl md:text-5xl">One library. Two plans, in rupees.</h2>
+            <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-muted">
+              The same Medicine library serves NEET PG, INI CET and USMLE. Payments are not open yet, so start with a free account.
+            </p>
+            <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:max-w-4xl">
+              {MEDICAL_PLANS.map((plan) => (
+                <li key={plan.id} className={`pro-plan flex flex-col p-8 ${plan.highlight ? "pro-plan-best" : ""}`}>
+                  <p className="flex items-center gap-3 text-xl font-bold text-ink">
+                    {plan.durationLabel}
+                    {plan.highlight && <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-bold text-brand">Best value</span>}
+                  </p>
+                  <p className="mt-6 text-5xl font-bold tabular-nums text-ink">{plan.priceLabel}</p>
+                  <p className="mt-4 flex-1 leading-relaxed text-ink-muted">{plan.desc}</p>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <Link to={startHref} className="btn-primary px-7 text-base">
+                {startLabel}
+                <FaArrowRight aria-hidden="true" />
+              </Link>
+              <Link to="/pricing" className="font-semibold text-brand underline-offset-4 hover:underline">
+                What every plan includes
+              </Link>
+            </div>
+            <p className="mt-3 text-sm text-ink-muted">Free to start. The first two lectures in every section are open with a free account.</p>
+          </div>
+        </section>
+
         <ProofSections />
 
         <FaqSection />
@@ -491,7 +528,7 @@ const Homepage = () => {
           <div aria-hidden="true" className="home-glow home-glow-close" />
           <div className="site-container relative flex flex-col items-start justify-between gap-8 py-20 md:flex-row md:items-center">
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-5xl">
-              Open the library and start with the first lecture.
+              Start with a free account.
             </h2>
             <Link to={startHref} className="btn-primary shrink-0 px-7 text-base">
               {startLabel}

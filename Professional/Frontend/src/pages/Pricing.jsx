@@ -90,7 +90,7 @@ export default function Pricing() {
         <title>Pricing | Kanthast Professional</title>
         <meta
           name="description"
-          content="Kanthast plans for the Medicine library: start free, then unlock every lecture and image as it is released. Prices in USD."
+          content="Kanthast plans for the Medicine library: start free, then unlock every lecture and image as it is released. Prices in rupees."
         />
         <link rel="canonical" href="https://kanthast.in/professional/pricing" />
       </Helmet>
@@ -119,7 +119,7 @@ export default function Pricing() {
                     </span>
                   )}
                   <h3 className="pr-16 text-xl font-bold text-ink">{plan.durationLabel}</h3>
-                  <p className="mt-6 text-5xl font-black tabular-nums tracking-tight text-ink">${plan.amountUsd}</p>
+                  <p className="mt-6 text-5xl font-black tabular-nums tracking-tight text-ink">{plan.priceLabel}</p>
                   <p className="mt-4 flex-1 leading-relaxed text-ink-muted">{plan.desc}</p>
                   <Link to={planHref} className={`${plan.highlight ? "btn-primary" : "btn-secondary"} mt-8 w-full`}>
                     {loggedIn ? `Choose the ${plan.durationLabel.toLowerCase()}` : "Sign up, then choose this plan"}

@@ -63,7 +63,7 @@ const SPEEDS = [
   { label: "1.5×", x: 566 },
   { label: "2×", x: 612 },
 ];
-const WATCHED = [62, 31, 58, 24, 40];
+const WATCHED = [6, 3, 9, 2, 4];
 const LECTURE_POINTS = [
   "Blocks cholesterol absorption in the small intestine (NPC1L1)",
   "Lowers LDL cholesterol",
@@ -446,7 +446,7 @@ function DashboardScene({ p }) {
         {[
           ["Lectures watched", totalWatched, [0.74, 0.86]],
           ["Subjects started", SUBJECTS.length, [0.74, 0.8]],
-          ["Watched this week", 18, [0.76, 0.86]],
+          ["Watched this week", 7, [0.76, 0.86]],
         ].map(([label, to, input]) => (
           <div key={label} className="h-[92px] flex-1 rounded-[14px] px-[22px] py-[16px]" style={{ background: C.panel, border: `1px solid ${C.line}` }}>
             <p className="text-[13px]" style={{ color: C.muted }}>{label}</p>

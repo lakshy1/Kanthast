@@ -167,7 +167,7 @@ const Navbar = () => {
                 Kanthast
               </span>
             </Link>
-            <span aria-hidden="true" className="nav-medical translate-y-[0.3em] text-xs font-semibold leading-none tracking-[0.02em] text-[#69ACE9]">
+            <span aria-hidden="true" className="nav-medical max-[430px]:hidden translate-y-[0.3em] text-xs font-semibold leading-none tracking-[0.02em] text-[#69ACE9]">
               Professional
             </span>
           </div>

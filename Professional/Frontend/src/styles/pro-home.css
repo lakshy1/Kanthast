@@ -1,0 +1,31 @@
+/* Kanthast Professional homepage typography and bands.
+   Manrope for headings (clean geometric, weights 600 to 700) and Geist for body. */
+.pro-home {
+  --pro-heading: "Manrope", "Geist", ui-sans-serif, system-ui, sans-serif;
+  --pro-body: "Geist", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --pro-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: var(--pro-body);
+}
+.pro-home :is(h1, h2, h3) { font-family: var(--pro-heading); font-weight: 700; letter-spacing: -0.015em; text-wrap: balance; }
+.pro-home p { text-wrap: pretty; }
+
+/* Hero heading snaps to the Tailwind scale (36 on phones, 48 from tablets up) and gets room below */
+.pro-home .hero-title { font-weight: 700; letter-spacing: -0.025em; font-size: 2.25rem; line-height: 1.1; }
+@media (min-width: 768px) { .pro-home .hero-title { font-size: 3rem; } }
+@media (min-width: 1024px) {
+  .pro-home .hero-title { white-space: normal; letter-spacing: -0.03em; }
+  .pro-home .hero-inner { padding-bottom: 4rem; }
+}
+
+.pro-home .pro-band-night { background-color: #0b1220; color: #ffffff; }
+
+.pro-home .pro-tagline { font-family: var(--pro-heading); letter-spacing: -0.015em; text-wrap: balance; }
+.pro-home .pro-tagline-word { opacity: 0.3; transition: opacity 500ms var(--pro-ease); }
+.pro-home .pro-tagline-word.is-on { opacity: 1; }
+
+.pro-home .pro-plan { background: rgb(var(--surface)); border: 1px solid rgb(var(--line-strong)); border-radius: 1rem; }
+.pro-home .pro-plan-best { border: 2px solid rgb(var(--brand)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pro-home .pro-tagline-word { opacity: 1; transition: none; }
+}
