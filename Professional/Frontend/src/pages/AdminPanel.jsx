@@ -20,7 +20,7 @@ import {
   deleteMedicineVideo,
   deleteAdminUser,
   getAdminUsers,
-  getMedicineUsmleContent,
+  getMedicineUsmleContentAdmin,
   updateMedicineChapter,
   updateMedicineSubject,
   updateMedicineVideo,
@@ -152,7 +152,7 @@ export default function AdminPanel() {
     setContentLoading(true);
     setContentError("");
     try {
-      const data = await getMedicineUsmleContent();
+      const data = await getMedicineUsmleContentAdmin(token);
       const content = data.content || null;
       syncCourseState(content);
     } catch (error) {

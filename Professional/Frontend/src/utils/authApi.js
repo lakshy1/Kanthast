@@ -600,6 +600,7 @@ export async function getMedicineUsmleContent() {
   return data;
 }
 
+// The real video link and images are only sent to a signed in student the server says may open the lecture.
 export async function getMedicineUsmleVideoDetails({ subjectId, chapterId, videoId }) {
   const query = new URLSearchParams({
     subjectId,
@@ -609,12 +610,38 @@ export async function getMedicineUsmleVideoDetails({ subjectId, chapterId, video
 
   const response = await apiFetch(`/medicine-usmle/video?${query.toString()}`, {
     method: "GET",
+    headers: { ...getAuthHeaders(localStorage.getItem("kanthastToken")) },
     credentials: "include",
   });
 
   const data = await readResponseBody(response);
+  if (response.status === 401) {
+    handleUnauthorized("/medicine-usmle/video");
+    throw new Error("Log in to open this lecture.");
+  }
   if (!response.ok || !data.success) {
-    throw new Error(data.message || `Failed to fetch lecture details (${response.status})`);
+    const error = new Error(data.message || `Failed to fetch lecture details (${response.status})`);
+    error.code = data.code || "";
+    error.status = response.status;
+    throw error;
+  }
+  return data;
+}
+
+// Admin only: the full library including real links, for the admin editor.
+export async function getMedicineUsmleContentAdmin(token) {
+  const response = await apiFetch("/medicine-usmle/admin", {
+    method: "GET",
+    headers: { ...getAuthHeaders(token) },
+    credentials: "include",
+  });
+  const data = await readResponseBody(response);
+  if (response.status === 401) {
+    handleUnauthorized("/admin/medicine-usmle");
+    throw new Error("Session expired. Please log in again.");
+  }
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || `Failed to fetch course content (${response.status})`);
   }
   return data;
 }

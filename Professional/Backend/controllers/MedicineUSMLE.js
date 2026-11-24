@@ -1,4 +1,5 @@
 import MedicineUSMLE from "../models/MedicineUSMLE.js";
+import { lectureDecision, publicLibrary } from "../services/lectureAccess.js";
 
 const DEFAULT_SUBJECTS = [
   "Biochemistry",
@@ -127,10 +128,21 @@ export const getMedicineUsmleContent = async (req, res) => {
   try {
     const content = await getOrCreateMedicineUsmle();
 
+    // Anyone may see the structure. Real video and image links are never part of this response.
     return res.status(200).json({
       success: true,
-      content: sortHierarchy(content),
+      content: publicLibrary(sortHierarchy(content)),
     });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+// Admin only: the full library including real links, for the admin panel's editor.
+export const getMedicineUsmleContentForAdmin = async (req, res) => {
+  try {
+    const content = await getOrCreateMedicineUsmle();
+    return res.status(200).json({ success: true, content: sortHierarchy(content) });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
   }
@@ -162,6 +174,22 @@ export const getMedicineUsmleVideoDetails = async (req, res) => {
     const video = chapter.videos.id(videoId);
     if (!video) {
       return res.status(404).json({ success: false, message: "Video not found" });
+    }
+
+    // The lecture's position in its chapter decides whether it is free. This route runs behind login.
+    const ordered = [...chapter.videos].sort((a, b) => (a.order || 0) - (b.order || 0));
+    const decision = lectureDecision(req.user, ordered.findIndex((v) => String(v._id) === String(video._id)));
+    if (!decision.allowed) {
+      return res.status(decision.reason === "login" ? 401 : decision.reason === "coming_soon" ? 404 : 403).json({
+        success: false,
+        code: decision.reason,
+        message:
+          decision.reason === "login"
+            ? "Log in to open this lecture."
+            : decision.reason === "coming_soon"
+              ? "Lectures are coming soon."
+              : "This lecture needs an active plan.",
+      });
     }
 
     return res.status(200).json({

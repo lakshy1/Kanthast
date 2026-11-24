@@ -1,3 +1,4 @@
+import { PAYMENTS_OPEN } from "../config/launch";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaRegFileAlt, FaPlay, FaRegImage, FaChevronRight, FaLock, FaThList, FaTimes, FaChevronDown, FaSearch } from "react-icons/fa";
@@ -274,9 +275,10 @@ export default function Lists() {
     navigate(`/${resourceType}?${params.toString()}`);
   };
 
+  // Before payments open there is nothing to buy: the server only asks students to sign in (the lecture page does that).
   const getLectureAccess = (sectionId, lecture, lectureIndex) => ({
     notesLocked: false,
-    videoLocked: !hasSubscription && lectureIndex >= 2,
+    videoLocked: PAYMENTS_OPEN && !hasSubscription && lectureIndex >= 2,
     lockedTarget: "/subscription",
     lockedMessage: "Subscribe to access all the content",
     lockBadge: "Premium",
@@ -523,7 +525,9 @@ export default function Lists() {
                     const ready = all.filter((lecture) => lecture.videoLink).length;
                     return (
                       <p className="mt-3 text-sm text-ink-muted">
-                        {ready} of {all.length} lectures have video today. The rest are in production and open as they are released.
+                        {ready > 0
+                          ? `${ready} of ${all.length} lectures have video today. The rest are in production and open as they are released.`
+                          : "Lectures are coming soon. Every planned lecture is listed so you can see what is on the way."}
                       </p>
                     );
                   })()}

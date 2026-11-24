@@ -183,6 +183,8 @@ function parseVideoUrl(rawUrl) {
 }
 
 function hasPlayableLink(video) {
+  // The public library sends "secure:<id>" for a lecture that has a video; the real link comes from the lecture call.
+  if (String(video?.videoLink || "").startsWith("secure:")) return true;
   return parseVideoUrl(video?.videoLink).type !== "none";
 }
 

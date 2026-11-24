@@ -8,6 +8,7 @@ import {
   deleteSubject,
   deleteVideo,
   getMedicineUsmleContent,
+  getMedicineUsmleContentForAdmin,
   getMedicineUsmleVideoDetails,
   updateChapter,
   updateSubject,
@@ -18,7 +19,8 @@ import {
 const router = express.Router();
 
 router.get("/", getMedicineUsmleContent);
-router.get("/video", getMedicineUsmleVideoDetails);
+router.get("/video", auth, getMedicineUsmleVideoDetails);
+router.get("/admin", auth, isAdmin, getMedicineUsmleContentForAdmin);
 router.put("/admin", auth, isAdmin, upsertMedicineUsmleContent);
 router.post("/admin/subjects", auth, isAdmin, createSubject);
 router.patch("/admin/subjects/:subjectId", auth, isAdmin, updateSubject);

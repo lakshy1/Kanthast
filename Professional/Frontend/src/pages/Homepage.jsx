@@ -55,7 +55,7 @@ const TOUR_STEPS = [
 const FAQS = [
   {
     q: "Are the lectures available to watch?",
-    a: "Some are live now, and more open as each video is published, subject by subject. Every planned lecture is already listed, so you can see what is coming, and each one opens the moment its video is published.",
+    a: "Not yet. Lectures are coming soon. Every planned lecture is already listed, so you can see what is on the way, and each one opens the moment its video is published.",
   },
   {
     q: "Which exams is Kanthast for?",
@@ -67,7 +67,7 @@ const FAQS = [
   },
   {
     q: "What can I open without paying?",
-    a: "With a free account, the first two lectures in every section are open once they are published. A plan unlocks the rest of the lectures and images as they are released.",
+    a: "Once lectures are released, every lecture is free with an account until payments open. After that, the first two lectures in every section stay free and a plan unlocks the rest as they are released.",
   },
   {
     q: "Will it remember where I stopped?",
@@ -413,7 +413,7 @@ const Homepage = () => {
                 </Link>
               </div>
               <p className="mt-3 text-sm text-ink-muted">
-                Free to start. The first two lectures in every section are open with a free account.
+                Free to start. Lectures are coming soon, so create a free account to be ready.
               </p>
               <ul className="hero-exams" aria-label="Exams covered">
                 {EXAMS.map((exam) => (
@@ -467,8 +467,8 @@ const Homepage = () => {
                   {totals.subjects} subjects mapped. Lectures open as they are published.
                 </h2>
                 <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-muted">
-                  {totals.subjects} subjects and {totals.chapters} chapters are laid out today. Some lectures are live,
-                  and the rest open as each video is published.
+                  {totals.subjects} subjects and {totals.chapters} chapters are laid out today. Lectures are coming soon
+                  and open as each video is published.
                 </p>
                 <Link to="/library" className="btn-secondary mt-8">
                   Browse the library
@@ -522,7 +522,7 @@ const Homepage = () => {
                 What every plan includes
               </Link>
             </div>
-            <p className="mt-3 text-sm text-ink-muted">Free to start. The first two lectures in every section are open with a free account.</p>
+            <p className="mt-3 text-sm text-ink-muted">Free to start. Lectures are coming soon, so create a free account to be ready.</p>
           </div>
         </section>
 
