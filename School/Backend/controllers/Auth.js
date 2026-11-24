@@ -10,6 +10,7 @@ import {
   createSession,
   newSessionId,
   revokeAllActiveSessions,
+  revokeSessionById,
 } from "../utils/sessionManager.js";
 
 // Admin credentials live in this app's .env, never in code, and differ per product.
@@ -527,6 +528,20 @@ export const deleteUserByAdmin = async (req, res) => {
       success: true,
       message: "User deleted successfully",
     });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+// ====================== LOGOUT (current session) ======================
+export const logout = async (req, res) => {
+  try {
+    const userId = req.user?._id || req.user?.id;
+    const sessionId = req.authTokenId || req.session?.sessionId || req.session?.tokenId;
+    if (userId && sessionId) {
+      await revokeSessionById(userId, sessionId, "logout");
+    }
+    return res.status(200).json({ success: true, message: "Logged out" });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
   }

@@ -88,6 +88,22 @@ export function resetPassword(token, newPassword) {
   return post("/auth/reset-password", { token, newPassword });
 }
 
+// Ends the session on the server so the token stops working everywhere. Best
+// effort: a dead network or an already-expired session must never trap the user
+// in a signed-in UI, so failures are swallowed and the caller clears local state.
+export async function logout(token) {
+  if (!token) return;
+  try {
+    await apiFetch("/auth/logout", {
+      method: "POST",
+      headers: { ...getAuthHeaders(token) },
+      credentials: "include",
+    });
+  } catch {
+    // ignore
+  }
+}
+
 export function adminLogin(payload) {
   return post("/auth/admin-login", payload);
 }

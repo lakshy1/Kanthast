@@ -6,6 +6,7 @@ import {
   deleteUserByAdmin,
   getAllUsersForAdmin,
   login,
+  logout,
   sendOTP,
   signUp,
   updateUserByAdmin,
@@ -20,6 +21,7 @@ const router = express.Router();
 router.post("/sendotp", emailLimiter, sendOTP);
 router.post("/signup", signupLimiter, signUp);
 router.post("/login", loginLimiter, login);
+router.post("/logout", auth, logout);
 router.post("/admin-login", loginLimiter, adminLogin);
 router.post("/change-password", auth, changePassword);
 router.put("/subscription/deactivate", auth, isAdmin, deactivateUserSubscription);

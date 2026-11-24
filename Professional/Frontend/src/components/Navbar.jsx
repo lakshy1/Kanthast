@@ -1,20 +1,22 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { NavLink, Link, useLocation, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import {
   FaChevronDown,
   FaRobot,
-  FaUserCircle,
-  FaCog,
   FaTachometerAlt,
   FaList,
-  FaSignOutAlt,
-  FaCrown,
   FaHome,
   FaBookOpen,
   FaStar,
 } from "react-icons/fa";
+import AccountMenu from "./AccountMenu";
+import { logout as logoutApi } from "../utils/authApi";
+
+const TOKEN_KEY = "kanthastToken";
+const USER_KEY = "kanthastUser";
+
 const dockItems = [
   { to: "/", label: "Home", icon: FaHome, exact: true },
   { to: "/dashboard", label: "Dashboard", icon: FaTachometerAlt, exact: false },
@@ -30,74 +32,77 @@ const publicDockItems = [
   { to: "/pricing", label: "Plans", icon: FaStar, exact: false },
 ];
 
+const courseLinks = [
+  { to: "/courses#medicine", label: "Medicine / USMLE" },
+  { to: "/courses#neet-pg", label: "NEET PG" },
+  { to: "/courses#ini-cet", label: "INI CET" },
+];
+
 // --nav-offset adds the floating bar's top gap and breathing room on desktop (index.css).
 const NAVBAR_H = "calc(var(--nav-bar-h, 4rem) + var(--nav-offset, 0px) + env(safe-area-inset-top, 0px))";
+
+const activeClass =
+  "nav-link nav-link-active relative font-medium text-mint after:absolute after:inset-x-0 after:-bottom-[16px] after:h-0.5 after:rounded-full after:bg-mint";
+const normalClass = "nav-link font-medium text-softwhite/75 hover:text-softwhite transition duration-200";
+
+// Re-renders when the session changes in this tab or any other, so a logout
+// elsewhere never leaves a signed-in bar behind.
+const subscribeToSession = (callback) => {
+  window.addEventListener("storage", callback);
+  window.addEventListener("kanthast-session", callback);
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener("kanthast-session", callback);
+  };
+};
+const readSession = () => `${localStorage.getItem(TOKEN_KEY) || ""}\u0000${localStorage.getItem(USER_KEY) || ""}`;
+
+function useSession() {
+  const snapshot = useSyncExternalStore(subscribeToSession, readSession, () => "\u0000");
+  return useMemo(() => {
+    const [token, rawUser] = snapshot.split("\u0000");
+    try {
+      const user = rawUser ? JSON.parse(rawUser) : null;
+      return { token, user, isLoggedIn: Boolean(token && user) };
+    } catch {
+      return { token, user: null, isLoggedIn: false };
+    }
+  }, [snapshot]);
+}
+
 const Navbar = () => {
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
-  const [isDesktopUserOpen, setIsDesktopUserOpen] = useState(false);
-  const [isMobileProfileOpen, setIsMobileProfileOpen] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
-  const mobileProfileRef = useRef(null);
-  const lastScrollY = useRef(0);
+  const coursesRef = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
 
-  const token = localStorage.getItem("kanthastToken");
-  const rawUser = localStorage.getItem("kanthastUser");
-  const user = useMemo(() => {
-    try {
-      return rawUser ? JSON.parse(rawUser) : null;
-    } catch {
-      return null;
-    }
-  }, [rawUser]);
-
-  const isLoggedIn = Boolean(token && user);
+  const { token, user, isLoggedIn } = useSession();
   const hasSubscription = Boolean(user?.subscriptionPurchased);
 
   // Every Kanthast page except admin paints the sky gradient, so the bar is light glass there.
   const isAuroraRoute = !location.pathname.startsWith("/admin");
 
-
-  const initials =
-    `${user?.firstName?.[0] || ""}${user?.lastName?.[0] || ""}`.toUpperCase() || "U";
-  const avatarColors = ["#0ea5e9", "#14b8a6", "#f59e0b", "#ef4444", "#8b5cf6", "#22c55e"];
-  const colorSeed = initials.charCodeAt(0) + (initials.charCodeAt(1) || 0);
-  const avatarBg = avatarColors[colorSeed % avatarColors.length];
-
-  const dockHomeItems = dockItems;
-  const dockPublicItems = publicDockItems;
-
   useEffect(() => {
     const HIDE_THRESHOLD = 10;
-    // Re-showing needs a more deliberate upward scroll than hiding does.
-    // At the old symmetric ±10px threshold, ordinary scroll jitter (trackpad
-    // momentum, mouse-wheel micro-reversals) flickered the nav back on top
-    // of whatever full-bleed image happened to be mid-viewport at the time.
+    // Re-showing needs a more deliberate upward scroll than hiding does, so
+    // trackpad momentum doesn't flicker the bar over full-bleed images.
     const SHOW_THRESHOLD = 80;
-    // Hide-on-scroll is a phone affordance (it frees vertical space for the
-    // content). On laptops and desktops the nav stays pinned.
+    let lastY = 0;
+    // Hide-on-scroll is a phone affordance; on laptops and desktops the bar stays pinned.
     const desktopQuery = window.matchMedia("(min-width: 768px)");
     const onScroll = () => {
       const y = window.scrollY;
-      if (desktopQuery.matches) {
+      if (desktopQuery.matches || y < 60) {
         setNavVisible(true);
-        lastScrollY.current = y;
-        return;
-      }
-      if (y < 60) {
-        setNavVisible(true);
-      } else if (y > lastScrollY.current + HIDE_THRESHOLD) {
+      } else if (y > lastY + HIDE_THRESHOLD) {
         setNavVisible(false);
         setIsCoursesOpen(false);
-        setIsDesktopUserOpen(false);
-        setIsMobileProfileOpen(false);
-      } else if (y < lastScrollY.current - SHOW_THRESHOLD) {
+      } else if (y < lastY - SHOW_THRESHOLD) {
         setNavVisible(true);
       }
-      lastScrollY.current = y;
+      lastY = y;
     };
-
     window.addEventListener("scroll", onScroll, { passive: true });
     desktopQuery.addEventListener("change", onScroll);
     return () => {
@@ -111,36 +116,28 @@ const Navbar = () => {
   }, [navVisible]);
 
   useEffect(() => {
-    document.documentElement.style.setProperty("--navbar-h", NAVBAR_H);
-  }, []);
-
-  useEffect(() => {
-    if (!isMobileProfileOpen) return;
-
-    const handler = (event) => {
-      if (mobileProfileRef.current && !mobileProfileRef.current.contains(event.target)) {
-        setIsMobileProfileOpen(false);
-      }
+    if (!isCoursesOpen) return;
+    const onPointer = (event) => {
+      if (coursesRef.current && !coursesRef.current.contains(event.target)) setIsCoursesOpen(false);
     };
+    document.addEventListener("mousedown", onPointer);
+    return () => document.removeEventListener("mousedown", onPointer);
+  }, [isCoursesOpen]);
 
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, [isMobileProfileOpen]);
-
-  const handleLogout = () => {
-    localStorage.removeItem("kanthastToken");
-    localStorage.removeItem("kanthastUser");
-    setIsMobileProfileOpen(false);
-    setIsDesktopUserOpen(false);
+  const handleLogout = async () => {
+    // End the session on the server first, so the token stops working everywhere,
+    // then clear this browser. A failed request must not keep the user signed in.
+    await logoutApi(token);
+    localStorage.removeItem(TOKEN_KEY);
+    localStorage.removeItem(USER_KEY);
+    window.dispatchEvent(new Event("kanthast-session"));
     navigate("/login");
   };
-
-  const activeClass = "nav-link nav-link-active relative font-medium text-mint after:absolute after:inset-x-0 after:-bottom-[16px] after:h-0.5 after:rounded-full after:bg-mint";
-  const normalClass = "nav-link font-medium text-softwhite/75 hover:text-softwhite transition duration-200";
 
   return (
     <>
       <nav
+        aria-label="Main"
         className={`fixed left-0 right-0 top-0 z-50 w-full border-b border-hairline/70 kb-bar will-change-transform${isAuroraRoute ? " nav-aurora" : ""}`}
         style={{
           paddingTop: "env(safe-area-inset-top, 0px)",
@@ -149,30 +146,30 @@ const Navbar = () => {
         }}
       >
         <div className="nav-shell mx-auto flex w-full items-center justify-between px-5 md:px-16 lg:w-[calc(var(--u)*85)] lg:max-w-none lg:px-0">
-          <div className="flex min-w-0 items-center gap-3">
-            <div className="nav-brand relative flex items-end gap-1.5">
-              <Link to="/" aria-label="Kanthast Professional home" className="flex items-center gap-2.5 focus-visible:outline-none">
-                <svg className="nav-k" viewBox="0 0 40 40" aria-hidden="true">
-                  <defs>
-                    <linearGradient id="nav-k-a" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0" stopColor="#2563eb" />
-                      <stop offset="1" stopColor="#1d4ed8" />
-                    </linearGradient>
-                    <linearGradient id="nav-k-b" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0" stopColor="#60a5fa" />
-                      <stop offset="1" stopColor="#3b82f6" />
-                    </linearGradient>
-                  </defs>
-                  <rect x="4" y="3" width="10" height="34" rx="3.5" fill="url(#nav-k-a)" />
-                  <path d="M17.5 21.5 L30 4.5 Q31.4 3 33.4 3 H37 Q38.6 3 37.6 4.4 L25 21.5 Z" fill="url(#nav-k-a)" />
-                  <path d="M17.5 21.5 H25 L37.6 35.6 Q38.6 37 37 37 H33.4 Q31.4 37 30 35.5 Z" fill="url(#nav-k-b)" />
-                </svg>
-                <span className="nav-logo block font-display text-2xl font-extrabold leading-none tracking-tight text-softwhite md:text-[1.8rem]">
-                  Kanthast
-                </span>
-              </Link>
-              <span className="nav-medical translate-y-[0.3em] text-xs font-semibold leading-none tracking-[0.02em] text-[#69ACE9]">Professional</span>
-            </div>
+          <div className="nav-brand relative flex min-w-0 items-end gap-1.5">
+            <Link to="/" aria-label="Kanthast Professional home" className="flex items-center gap-2.5 focus-visible:outline-none">
+              <svg className="nav-k" viewBox="0 0 40 40" aria-hidden="true">
+                <defs>
+                  <linearGradient id="nav-k-a" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stopColor="#2563eb" />
+                    <stop offset="1" stopColor="#1d4ed8" />
+                  </linearGradient>
+                  <linearGradient id="nav-k-b" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stopColor="#60a5fa" />
+                    <stop offset="1" stopColor="#3b82f6" />
+                  </linearGradient>
+                </defs>
+                <rect x="4" y="3" width="10" height="34" rx="3.5" fill="url(#nav-k-a)" />
+                <path d="M17.5 21.5 L30 4.5 Q31.4 3 33.4 3 H37 Q38.6 3 37.6 4.4 L25 21.5 Z" fill="url(#nav-k-a)" />
+                <path d="M17.5 21.5 H25 L37.6 35.6 Q38.6 37 37 37 H33.4 Q31.4 37 30 35.5 Z" fill="url(#nav-k-b)" />
+              </svg>
+              <span className="nav-logo block font-display text-2xl font-extrabold leading-none tracking-tight text-softwhite md:text-[1.8rem]">
+                Kanthast
+              </span>
+            </Link>
+            <span aria-hidden="true" className="nav-medical translate-y-[0.3em] text-xs font-semibold leading-none tracking-[0.02em] text-[#69ACE9]">
+              Professional
+            </span>
           </div>
 
           <div className="nav-links hidden lg:flex items-center">
@@ -182,28 +179,19 @@ const Navbar = () => {
 
             {!isLoggedIn && (
               <div
+                ref={coursesRef}
                 className="relative"
-                onMouseEnter={() => setIsCoursesOpen(true)}
-                onMouseLeave={() => setIsCoursesOpen(false)}
                 onKeyDown={(e) => {
                   if (e.key === "Escape") setIsCoursesOpen(false);
                 }}
                 onBlur={(e) => {
-                  if (!e.currentTarget.contains(e.relatedTarget)) {
-                    setIsCoursesOpen(false);
-                  }
+                  if (!e.currentTarget.contains(e.relatedTarget)) setIsCoursesOpen(false);
                 }}
               >
                 <div className="flex items-center gap-1">
-                  <NavLink
-                    to="/courses"
-                    className={location.pathname === "/courses" ? activeClass : normalClass}
-                  >
+                  <NavLink to="/courses" end className={({ isActive }) => (isActive ? activeClass : normalClass)}>
                     Courses
                   </NavLink>
-                  {/* Was a <span>: it looked clickable (cursor-pointer) but was
-                      not focusable and had no handler, so the whole submenu
-                      was hover-only — unreachable by keyboard and on touch. */}
                   <Motion.button
                     type="button"
                     onClick={() => setIsCoursesOpen((prev) => !prev)}
@@ -220,20 +208,20 @@ const Navbar = () => {
                 <AnimatePresence>
                   {isCoursesOpen && (
                     <Motion.div
+                      role="menu"
+                      aria-label="Course tracks"
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.15 }}
                       className="absolute left-0 mt-3 w-52 rounded-2xl border border-slate-100 bg-white p-1.5 shadow-2xl shadow-black/20"
                     >
-                      {[
-                        { to: "/courses#medicine", label: "Medicine / USMLE" },
-                        { to: "/courses#neet-pg", label: "NEET PG" },
-                        { to: "/courses#ini-cet", label: "INI CET" },
-                      ].map(({ to, label }) => (
+                      {courseLinks.map(({ to, label }) => (
                         <HashLink
                           key={to}
+                          role="menuitem"
                           to={to}
+                          onClick={() => setIsCoursesOpen(false)}
                           className="block rounded-xl px-4 py-2.5 text-sm text-slate-700 transition hover:bg-slate-50"
                         >
                           {label}
@@ -249,10 +237,7 @@ const Navbar = () => {
               Library
             </NavLink>
             {isLoggedIn && (
-              <NavLink
-                to="/dashboard"
-                className={({ isActive }) => (isActive ? activeClass : normalClass)}
-              >
+              <NavLink to="/dashboard" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
                 Dashboard
               </NavLink>
             )}
@@ -262,10 +247,7 @@ const Navbar = () => {
               </NavLink>
             )}
             {isLoggedIn && !hasSubscription && (
-              <NavLink
-                to="/subscription"
-                className={({ isActive }) => (isActive ? activeClass : normalClass)}
-              >
+              <NavLink to="/subscription" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
                 Subscription
               </NavLink>
             )}
@@ -290,227 +272,21 @@ const Navbar = () => {
             ) : (
               <>
                 <button
+                  type="button"
                   onClick={() => navigate("/chatbot")}
                   className="flex h-touch w-touch items-center justify-center rounded-full border border-mint/30 bg-mint/15 text-mint transition hover:bg-mint/25"
                   aria-label="Assistant"
                 >
-                  <FaRobot className="text-sm" />
+                  <FaRobot aria-hidden="true" className="text-sm" />
                 </button>
-
-                <div
-                  className="relative"
-                  onMouseEnter={() => setIsDesktopUserOpen(true)}
-                  onMouseLeave={() => setIsDesktopUserOpen(false)}
-                  // Close on Escape and when focus leaves the whole widget —
-                  // hover alone left this menu unreachable by keyboard, and
-                  // Logout/Profile/Settings live inside it.
-                  onKeyDown={(e) => {
-                    if (e.key === "Escape") setIsDesktopUserOpen(false);
-                  }}
-                  onBlur={(e) => {
-                    if (!e.currentTarget.contains(e.relatedTarget)) {
-                      setIsDesktopUserOpen(false);
-                    }
-                  }}
-                >
-                  <button
-                    type="button"
-                    onClick={() => setIsDesktopUserOpen((prev) => !prev)}
-                    aria-haspopup="menu"
-                    aria-expanded={isDesktopUserOpen}
-                    aria-label="Account menu"
-                    className="flex min-h-touch items-center gap-2 rounded-full border border-white/15 bg-white/8 px-2 py-1"
-                  >
-                    <div
-                      className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
-                      style={{ backgroundColor: avatarBg }}
-                      aria-hidden="true"
-                    >
-                      {initials}
-                    </div>
-                    <FaChevronDown
-                      aria-hidden="true"
-                      className={`text-micro text-white/60 transition-transform duration-200 ${
-                        isDesktopUserOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-
-                  <AnimatePresence>
-                    {isDesktopUserOpen && (
-                      <Motion.div
-                        initial={{ opacity: 0, y: 8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 8 }}
-                        transition={{ duration: 0.15 }}
-                        className="absolute right-0 mt-2 w-60 rounded-2xl border border-slate-100 bg-white p-1.5 shadow-2xl shadow-black/15"
-                      >
-                        <div className="mb-1 border-b border-slate-100 px-3 py-2.5">
-                          <p className="truncate text-sm font-semibold text-slate-800">
-                            {user?.firstName} {user?.lastName}
-                          </p>
-                          <p className="truncate text-xs text-ink-subtle">{user?.email}</p>
-                          {hasSubscription ? (
-                            <div className="mt-1.5 flex items-center gap-1.5">
-                              <FaCrown className="shrink-0 text-micro text-amber-400" />
-                              <span className="text-micro font-semibold text-emerald-600">
-                                Pro Active
-                              </span>
-                              <span className="text-micro text-ink-subtle">·</span>
-                              <span className="text-micro text-ink-subtle">
-                                Till{" "}
-                                {new Date(user?.subscriptionValidTill).toLocaleDateString("en-IN", {
-                                  day: "2-digit",
-                                  month: "short",
-                                  year: "numeric",
-                                })}
-                              </span>
-                            </div>
-                          ) : (
-                            <div className="mt-1.5 flex items-center gap-1.5">
-                              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300" />
-                              <span className="text-micro text-ink-subtle">No active plan</span>
-                            </div>
-                          )}
-                        </div>
-                        <Link
-                          to="/profile"
-                          className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-slate-700 transition hover:bg-slate-50"
-                        >
-                          <FaUserCircle className="text-xs text-ink-subtle" /> My Profile
-                        </Link>
-                        <Link
-                          to="/settings"
-                          className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-slate-700 transition hover:bg-slate-50"
-                        >
-                          <FaCog className="text-xs text-ink-subtle" /> Settings
-                        </Link>
-                        {!hasSubscription && (
-                          <Link
-                            to="/subscription"
-                            className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-slate-700 transition hover:bg-slate-50"
-                          >
-                            <FaCrown className="text-xs text-amber-400" /> Subscription
-                          </Link>
-                        )}
-                        <div className="my-1 border-t border-slate-100" />
-                        <button
-                          onClick={handleLogout}
-                          className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-red-500 transition hover:bg-red-50"
-                        >
-                          <FaSignOutAlt className="text-xs" /> Logout
-                        </button>
-                      </Motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                <AccountMenu user={user} hasSubscription={hasSubscription} onLogout={handleLogout} />
               </>
             )}
           </div>
 
           <div className="lg:hidden">
             {isLoggedIn ? (
-              <div className="flex items-center gap-2">
-                <div ref={mobileProfileRef} className="relative">
-                  <button
-                    onClick={() => setIsMobileProfileOpen((prev) => !prev)}
-                    className="flex min-h-touch items-center gap-1.5 rounded-full border border-white/15 bg-white/8 px-2 py-1"
-                    aria-label="Profile menu"
-                  >
-                    <div
-                      className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
-                      style={{ backgroundColor: avatarBg }}
-                    >
-                      {initials}
-                    </div>
-                    <FaChevronDown
-                      className={`text-micro text-white/40 transition-transform duration-200 ${
-                        isMobileProfileOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-
-                  <AnimatePresence>
-                    {isMobileProfileOpen && (
-                      <Motion.div
-                        initial={{ opacity: 0, y: 8, scale: 0.97 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 8, scale: 0.97 }}
-                        transition={{ duration: 0.15 }}
-                        className="absolute right-0 z-50 mt-2 w-52 rounded-2xl border border-slate-100 bg-white p-1.5 shadow-2xl shadow-black/20"
-                      >
-                        <div className="mb-1 flex items-start gap-3 border-b border-slate-100 px-3 py-3">
-                          <div
-                            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
-                            style={{ backgroundColor: avatarBg }}
-                          >
-                            {initials}
-                          </div>
-                          <div className="min-w-0">
-                            <p className="truncate text-sm font-semibold text-slate-800">
-                              {user?.firstName} {user?.lastName}
-                            </p>
-                            <p className="truncate text-xs text-ink-subtle">{user?.email}</p>
-                            {hasSubscription ? (
-                              <div className="mt-1.5 flex items-center gap-1.5">
-                                <FaCrown className="shrink-0 text-micro text-amber-400" />
-                                <span className="text-micro font-semibold text-emerald-600">
-                                  Pro Active
-                                </span>
-                                <span className="text-micro text-ink-subtle">·</span>
-                                <span className="text-micro text-ink-subtle">
-                                  Till{" "}
-                                  {new Date(user?.subscriptionValidTill).toLocaleDateString("en-IN", {
-                                    day: "2-digit",
-                                    month: "short",
-                                    year: "numeric",
-                                  })}
-                                </span>
-                              </div>
-                            ) : (
-                              <div className="mt-1.5 flex items-center gap-1.5">
-                                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300" />
-                                <span className="text-micro text-ink-subtle">No active plan</span>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-
-                        <Link
-                          to="/profile"
-                          onClick={() => setIsMobileProfileOpen(false)}
-                          className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-slate-700 transition hover:bg-slate-50"
-                        >
-                          <FaUserCircle className="text-xs text-ink-subtle" /> My Profile
-                        </Link>
-                        <Link
-                          to="/settings"
-                          onClick={() => setIsMobileProfileOpen(false)}
-                          className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-slate-700 transition hover:bg-slate-50"
-                        >
-                          <FaCog className="text-xs text-ink-subtle" /> Settings
-                        </Link>
-                        {!hasSubscription && (
-                          <Link
-                            to="/subscription"
-                            onClick={() => setIsMobileProfileOpen(false)}
-                            className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-slate-700 transition hover:bg-slate-50"
-                          >
-                            <FaCrown className="text-xs text-amber-400" /> Subscription
-                          </Link>
-                        )}
-                        <div className="my-1 border-t border-slate-100" />
-                        <button
-                          onClick={handleLogout}
-                          className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm text-red-500 transition hover:bg-red-50"
-                        >
-                          <FaSignOutAlt className="text-xs" /> Logout
-                        </button>
-                      </Motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </div>
+              <AccountMenu user={user} hasSubscription={hasSubscription} onLogout={handleLogout} wide={false} />
             ) : (
               <div className="flex items-center gap-2">
                 <Link
@@ -531,59 +307,48 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div
+      <nav
+        aria-label="Quick links"
         className={`nav-dock fixed bottom-0 left-0 right-0 z-40 lg:hidden${isAuroraRoute ? " nav-aurora" : ""}`}
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
-        {/* Fades whatever's scrolled underneath before the opaque bar starts,
-            so the dock reads as a deliberate overlay instead of clipping the
-            last row of content flush against its top edge. */}
+        {/* Fades whatever is scrolled underneath before the opaque bar starts. */}
         <div
           aria-hidden="true"
           className="nav-dock-fade pointer-events-none absolute inset-x-0 bottom-full h-6 bg-gradient-to-t from-[#0b1220]/70 to-transparent"
         />
         <div className="nav-dock-bar border-t border-hairline/70 bg-[#0b1220]/95 backdrop-blur-xl">
           <div className="grid h-16 grid-cols-4">
-          {(isLoggedIn ? dockHomeItems : dockPublicItems).map(({ to, label, icon: Icon, exact }) => {
-            const isActive = exact ? location.pathname === to : location.pathname.startsWith(to);
-            return (
-              <HashLink
-                smooth
-                key={to}
-                to={to}
-                className={`relative flex flex-col items-center justify-center gap-1 transition-colors ${
-                  isActive ? "text-mint" : "text-softwhite/60 hover:text-softwhite"
-                }`}
-              >
-                <Motion.div
-                  animate={{ scale: isActive ? 1.15 : 1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                >
-                  <Icon
-                    className={`text-lg ${
-                      isActive ? "drop-shadow-glow-brand" : ""
-                    }`}
-                  />
-                </Motion.div>
-                <span
-                  className={`text-micro font-medium tracking-wide ${
-                    isActive ? "text-mint" : "text-softwhite/60"
+            {(isLoggedIn ? dockItems : publicDockItems).map(({ to, label, icon: DockIcon, exact }) => {
+              const isActive = exact ? location.pathname === to : location.pathname.startsWith(to);
+              return (
+                <HashLink
+                  smooth
+                  key={to}
+                  to={to}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`relative flex flex-col items-center justify-center gap-1 transition-colors ${
+                    isActive ? "text-mint" : "text-softwhite/60 hover:text-softwhite"
                   }`}
                 >
-                  {label}
-                </span>
-                {isActive && (
                   <Motion.div
-                    layoutId="dockIndicator"
-                    className="absolute top-0 h-0.5 w-8 rounded-full bg-mint"
-                  />
-                )}
-              </HashLink>
-            );
-          })}
+                    animate={{ scale: isActive ? 1.15 : 1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                  >
+                    <DockIcon aria-hidden="true" className={`text-lg ${isActive ? "drop-shadow-glow-brand" : ""}`} />
+                  </Motion.div>
+                  <span className={`text-micro font-medium tracking-wide ${isActive ? "text-mint" : "text-softwhite/60"}`}>
+                    {label}
+                  </span>
+                  {isActive && (
+                    <Motion.div layoutId="dockIndicator" className="absolute top-0 h-0.5 w-8 rounded-full bg-mint" />
+                  )}
+                </HashLink>
+              );
+            })}
           </div>
         </div>
-      </div>
+      </nav>
     </>
   );
 };

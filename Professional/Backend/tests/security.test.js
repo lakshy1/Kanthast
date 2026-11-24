@@ -55,3 +55,11 @@ test("password reset rejects malformed tokens and weak passwords before touching
   await resetPassword({ body: { token: "a".repeat(64), newPassword: "short" } }, res);
   assert.equal(res.statusCode, 400);
 });
+
+test("logout without an active session still answers 200 and never touches the database", async () => {
+  const { logout } = await import("../controllers/Auth.js");
+  const res = makeRes();
+  await logout({ user: undefined, authTokenId: "" }, res);
+  assert.equal(res.statusCode, 200);
+  assert.equal(res.body.success, true);
+});
