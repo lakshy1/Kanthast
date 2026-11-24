@@ -1,3 +1,5 @@
+import { PAYMENTS_OPEN } from "../config/launch";
+import useLiveVideos from "../utils/useLiveVideos";
 import { createElement, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaPlay, FaArrowRight, FaFire, FaCircleCheck, FaLayerGroup, FaLightbulb, FaClock, FaFlask, FaSquareRootVariable, FaEarthAsia, FaBookOpen, FaLanguage, FaScroll, FaLaptopCode, FaGraduationCap, FaPenNib, FaCirclePlay } from "react-icons/fa6";
@@ -163,11 +165,13 @@ export default function Dashboard() {
     return () => { mounted = false; };
   }, []);
 
-  const paid = hasPaidForSchoolClass();
+  // Until payments open every signed in student sees the full dashboard, as there is nothing to pay for.
+  const paid = hasPaidForSchoolClass() || !PAYMENTS_OPEN;
+  const liveVersion = useLiveVideos();
   const subjects = useMemo(
     () => (paid ? buildSchoolSubjects(classValue) : []),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [classValue, profileVersion, paid]
+    [classValue, profileVersion, paid, liveVersion]
   );
 
   const stats = useMemo(() => {

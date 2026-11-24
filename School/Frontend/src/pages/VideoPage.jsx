@@ -17,7 +17,9 @@ import {
 } from "../utils/authApi";
 import { VideoMetaSkeleton, VideoPageSkeleton } from "../components/DataLoaderSkeletons";
 import { getPlaybackRate, trackAnalyticsEvent, useAppSettings } from "../utils/settings";
-import { getSchoolCourseContent, getSchoolLectureDetails, getStoredUser } from "../utils/schoolCatalogData";
+import { ensureLiveVideos, getSchoolCourseContent, getSchoolLectureDetails, getStoredUser } from "../utils/schoolCatalogData";
+import { API_BASE_URL } from "../utils/apiBase";
+import SecureWatermark from "../components/SecureWatermark";
 import {
   getResumeSeconds,
   saveProgress,
@@ -143,6 +145,11 @@ function parseVideoUrl(rawUrl) {
   if (typeof rawUrl !== "string") return { type: "none" };
   const url = rawUrl.trim();
   if (!url) return { type: "none" };
+
+  // An encrypted lesson: only the lesson id is stored. The player asks the server for the stream,
+  // which checks who is watching every time.
+  const secure = /^secure:(c(?:8|9|10)-[a-z]+(?:-[a-z]+)*-ch\d{2}-t\d{2})$/.exec(url);
+  if (secure) return { type: "file", secure: true, lessonId: secure[1], url: `${API_BASE_URL}/playback/${secure[1]}/master.m3u8` };
 
   // Same-origin path to a self-hosted file ("/media/lecture.mp4").
   if (url.startsWith("/") && !url.startsWith("//")) {
@@ -761,6 +768,8 @@ function LecturePage() {
   const activeRateRef = useRef(activeRate);
   const [buffering, setBuffering] = useState(false);
   const [mediaError, setMediaError] = useState("");
+  const [secureRetry, setSecureRetry] = useState(0);
+  const playerBoxRef = useRef(null);
   const [resumedFrom, setResumedFrom] = useState(0);
   const [shortcutFlash, setShortcutFlash] = useState("");
   const [hintDismissed, setHintDismissed] = useState(() => {
@@ -968,6 +977,9 @@ function LecturePage() {
       // The catalog only feeds the chapter rail and next-lecture lookup, so
       // its failure must never block the lecture itself.
       try {
+        // Which lessons have a video is decided by the server; wait for that (cached answer is used on failure).
+        await ensureLiveVideos();
+        if (!mounted) return;
         const response = await getSchoolLectureDetails({
           subjectId: data.subjectId,
           chapterId: data.chapterId,
@@ -994,6 +1006,76 @@ function LecturePage() {
 
   // One source of truth for the native player's speed: the buttons and the
   // keyboard shortcuts both only set state.
+  // Encrypted lessons play through hls.js. Requests to our own server carry the student's login;
+  // the segment links are already signed, so they must not get that header.
+  useEffect(() => {
+    if (!parsed.secure || !videoRef.current) return undefined;
+    let hls;
+    let heartbeatTimer;
+    let cancelled = false;
+    (async () => {
+      const { default: Hls } = await import("hls.js");
+      if (cancelled || !videoRef.current) return;
+      if (!Hls.isSupported()) {
+        setMediaError("This browser cannot play protected lessons. Try Chrome, Edge, Firefox or the latest Safari.");
+        return;
+      }
+      const token = localStorage.getItem("kanthastSchoolToken") || "";
+      // Each start gets its own id. A newer start (here or on another device) replaces it, and this one is told to stop.
+      const streamId = crypto.randomUUID();
+      const anotherDevice = "This account started watching on another device. Press Try again to continue here.";
+      hls = new Hls({
+        capLevelToPlayerSize: true,
+        xhrSetup: (xhr, url) => {
+          if (url.includes("/playback/")) {
+            xhr.setRequestHeader("Authorization", `Bearer ${token}`);
+            xhr.setRequestHeader("X-Stream-Id", streamId);
+          }
+        },
+      });
+      // Report in every 25 seconds while playing: it keeps the watch log and finds out if we were replaced.
+      let watchedSeconds = 0;
+      heartbeatTimer = setInterval(async () => {
+        const el = videoRef.current;
+        if (!el || el.paused) return;
+        watchedSeconds += 25;
+        try {
+          const response = await fetch(`${API_BASE_URL}/playback/heartbeat`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+            body: JSON.stringify({ streamId, lessonId: parsed.lessonId, watchedSeconds }),
+          });
+          if (response.status === 409) {
+            el.pause();
+            setMediaError(anotherDevice);
+          }
+        } catch {
+          // offline: the next beat will try again
+        }
+      }, 25000);
+      hls.on(Hls.Events.ERROR, (_event, details) => {
+        if (!details.fatal) return;
+        const code = details.response?.code;
+        setMediaError(
+          code === 401
+            ? "Log in to watch this lesson."
+            : code === 409
+              ? anotherDevice
+              : code === 403
+              ? "This lesson needs an active plan for your class."
+              : "This lecture could not be loaded. Check your connection and try again."
+        );
+      });
+      hls.loadSource(parsed.url);
+      hls.attachMedia(videoRef.current);
+    })();
+    return () => {
+      cancelled = true;
+      clearInterval(heartbeatTimer);
+      hls?.destroy();
+    };
+  }, [parsed.secure, parsed.url, parsed.lessonId, secureRetry]);
+
   useEffect(() => {
     activeRateRef.current = activeRate;
     if (parsed.type !== "file" || !videoRef.current) return;
@@ -1120,13 +1202,21 @@ function LecturePage() {
     );
   } else if (parsed.type === "file") {
     player = (
-      <div className="relative overflow-hidden rounded-card border border-line bg-black">
+      <div ref={playerBoxRef} className="relative overflow-hidden rounded-card border border-line bg-black">
         <video
           controls
           playsInline
           preload="metadata"
           className="w-full aspect-video"
-          src={parsed.url}
+          src={parsed.secure ? undefined : parsed.url}
+          {...(parsed.secure
+            ? {
+                // Fullscreen goes through our own button so the watermark stays on screen.
+                controlsList: "nodownload nofullscreen",
+                disablePictureInPicture: true,
+                onContextMenu: (event) => event.preventDefault(),
+              }
+            : {})}
           ref={videoRef}
           aria-label={displayTitle}
           onLoadedMetadata={() => {
@@ -1185,6 +1275,27 @@ function LecturePage() {
           </div>
         )}
 
+        {parsed.secure && (
+          <>
+            <SecureWatermark user={getStoredUser()} />
+            {typeof document !== "undefined" && document.fullscreenEnabled && (
+              <button
+                type="button"
+                onClick={() => {
+                  const box = playerBoxRef.current;
+                  if (!box) return;
+                  if (document.fullscreenElement) document.exitFullscreen();
+                  else box.requestFullscreen?.();
+                }}
+                aria-label="Toggle fullscreen"
+                className="absolute bottom-14 right-3 z-10 rounded-full bg-black/60 px-3 py-1 text-xs font-semibold text-white transition-colors hover:bg-black/80"
+              >
+                Fullscreen
+              </button>
+            )}
+          </>
+        )}
+
         <div
           className="pointer-events-none absolute inset-x-0 top-4 flex justify-center"
           role="status"
@@ -1208,7 +1319,8 @@ function LecturePage() {
                 type="button"
                 onClick={() => {
                   setMediaError("");
-                  videoRef.current?.load();
+                  if (parsed.secure) setSecureRetry((n) => n + 1);
+                  else videoRef.current?.load();
                 }}
                 className="btn-secondary mt-4"
               >

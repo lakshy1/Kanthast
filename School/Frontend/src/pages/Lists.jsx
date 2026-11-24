@@ -1,3 +1,5 @@
+import { PAYMENTS_OPEN } from "../config/launch";
+import useLiveVideos from "../utils/useLiveVideos";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaRegFileAlt, FaPlay, FaChevronRight, FaLock, FaThList, FaTimes, FaChevronDown, FaSearch } from "react-icons/fa";
@@ -58,7 +60,8 @@ export default function Lists() {
   const MotionButton = motion.button;
   const MotionSection = motion.section;
   const isLoggedIn = Boolean(localStorage.getItem("kanthastSchoolToken"));
-  const schoolFreeAccessLimit = 10;
+  // The first two lessons of every chapter are free for any signed in student.
+  const FREE_LESSONS_PER_CHAPTER = 2;
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const hasSubscription = useMemo(() => hasPaidForSchoolClass(), [profileVersion]);
@@ -93,9 +96,12 @@ export default function Lists() {
   }, []);
 
   // The catalog is built in the browser from the class curriculum, so it is never "loading".
+  const liveVersion = useLiveVideos();
   const dbModules = useMemo(
     () => buildSchoolModules(selectedSchoolClass),
-    [selectedSchoolClass]
+    // liveVersion: rebuild when the server says which lessons have video
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [selectedSchoolClass, liveVersion]
   );
 
   const trimmedQuery = query.trim();
@@ -139,30 +145,6 @@ export default function Lists() {
     return sec?.title ?? "Chapters";
   }, [activeModule.sections, activeSection]);
 
-  const schoolFreeAccessKeys = useMemo(() => {
-    const subjectNames = Object.keys(dbModules);
-    if (!subjectNames.length) return new Set();
-
-    const perSubjectLimit = Math.floor(schoolFreeAccessLimit / subjectNames.length);
-    const remainder = schoolFreeAccessLimit % subjectNames.length;
-    const unlockedKeys = new Set();
-
-    subjectNames.forEach((subjectName, subjectIndex) => {
-      const subject = dbModules[subjectName];
-      const subjectKeys = [];
-
-      for (const section of subject?.sections || []) {
-        for (const lecture of section.lectures || []) {
-          subjectKeys.push(`${section.id}:${lecture.videoId || lecture.title}`);
-        }
-      }
-
-      const subjectLimit = perSubjectLimit + (subjectIndex < remainder ? 1 : 0);
-      subjectKeys.slice(0, subjectLimit).forEach((key) => unlockedKeys.add(key));
-    });
-
-    return unlockedKeys;
-  }, [dbModules]);
 
   useEffect(() => {
     if (!tabs.length) return;
@@ -271,7 +253,18 @@ export default function Lists() {
     setSelectedSchoolClassState(nextClass);
   };
 
-  const getLectureAccess = (sectionId, lecture) => {
+  const getLectureAccess = (sectionId, lecture, lectureIndex) => {
+    // Before payments open there is nothing to buy: signing in is the only gate.
+    if (!PAYMENTS_OPEN && !hasSubscription) {
+      return {
+        notesLocked: !isLoggedIn,
+        videoLocked: !isLoggedIn,
+        lockedTarget: "/login",
+        lockedMessage: "Log in to watch. Every lesson is free until payments open.",
+        lockBadge: "Log in to open",
+        lockReason: "locked, log in required",
+      };
+    }
     if (hasSubscription) {
       return {
         notesLocked: false,
@@ -283,12 +276,11 @@ export default function Lists() {
       };
     }
 
-    const accessKey = `${sectionId}:${lecture.videoId || lecture.title}`;
-    const isWithinFreeLimit = schoolFreeAccessKeys.has(accessKey);
+    const isWithinFreeLimit = lectureIndex < FREE_LESSONS_PER_CHAPTER;
     const lockedTarget = isLoggedIn ? "/subscription" : "/login";
     const lockedMessage = isLoggedIn
-      ? "Free users can open only the first 10 topics. Subscribe to unlock the rest."
-      : "Log in to open the first 10 free topics.";
+      ? "Free access covers the first two lessons of every chapter. Subscribe to unlock the rest."
+      : "Log in to open the first two lessons of every chapter.";
 
     return {
       notesLocked: !isLoggedIn || !isWithinFreeLimit,
@@ -305,7 +297,7 @@ export default function Lists() {
   // buttons sit above it (z-10) as siblings — no nested interactive elements,
   // and every control stays in the tab order.
   const renderLectureRow = (moduleName, sec, lecture, lectureIndex) => {
-    const access = getLectureAccess(sec.id, lecture);
+    const access = getLectureAccess(sec.id, lecture, lectureIndex);
     const title = displayLectureTitle(lecture.title, sec.title);
     const comingSoon = !lecture.videoLink;
     const metaId = `lecture-meta-${sec.id}-${lectureIndex}`.replace(/[^a-zA-Z0-9_-]/g, "-");
@@ -324,7 +316,23 @@ export default function Lists() {
         className="relative rounded-card px-4 py-3 transition-colors duration-base ease-brand hover:bg-surface-sunken"
       >
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-          <div className="min-w-0 pr-2">
+          <div className="flex min-w-0 items-center gap-3 pr-2">
+            {!comingSoon && (
+              // A single frame from the lesson. Decorative: the title next to it says what the lesson is.
+              <img
+                src={`${import.meta.env.BASE_URL}lesson-thumbs/${lecture.videoId}.webp`}
+                alt=""
+                width="96"
+                height="54"
+                loading="lazy"
+                decoding="async"
+                onError={(event) => {
+                  event.currentTarget.style.display = "none";
+                }}
+                className="hidden aspect-video w-24 shrink-0 rounded-lg bg-surface-sunken object-cover sm:block"
+              />
+            )}
+            <div className="min-w-0">
             <button
               type="button"
               onClick={openVideo}
@@ -348,6 +356,7 @@ export default function Lists() {
                 </span>
               )}
             </p>
+            </div>
           </div>
           <div className="relative z-10 flex items-center gap-1.5 md:gap-2 shrink-0">
             <ActionButton

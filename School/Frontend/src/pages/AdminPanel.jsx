@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion as Motion } from "framer-motion";
-import { FaChartLine, FaCrown, FaEdit, FaFlag, FaSignOutAlt, FaTrash, FaUsers } from "react-icons/fa";
+import { FaChartLine, FaCrown, FaEdit, FaEnvelopeOpenText, FaFlag, FaSignOutAlt, FaTrash, FaUsers, FaVideo } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { deleteAdminUser, getAdminUsers, updateAdminUser } from "../utils/authApi";
 import { Button, EmptyState, Field, LiveRegion, Modal, Select, Toggle } from "../components/ui";
 import DoubtsModeration from "../components/admin/DoubtsModeration";
+import VideosPanel from "../components/admin/VideosPanel";
+import WaitlistPanel from "../components/admin/WaitlistPanel";
 import { getModerationCounts } from "../utils/adminDoubtsApi";
 
 const tabs = [
@@ -13,6 +15,8 @@ const tabs = [
   { id: "users", label: "Users", icon: <FaUsers /> },
   { id: "subscriptions", label: "Subscriptions", icon: <FaCrown /> },
   { id: "doubts", label: "Doubts moderation", icon: <FaFlag /> },
+  { id: "videos", label: "Videos", icon: <FaVideo /> },
+  { id: "waitlist", label: "Waitlist", icon: <FaEnvelopeOpenText /> },
 ];
 
 export default function AdminPanel() {
@@ -366,6 +370,8 @@ export default function AdminPanel() {
                 )}
 
                 {activeTab === "doubts" && <DoubtsModeration openCount={doubtsOpen ?? undefined} onCountsChange={setDoubtsOpen} />}
+                {activeTab === "videos" && <VideosPanel />}
+                {activeTab === "waitlist" && <WaitlistPanel />}
 
                 {activeTab === "subscriptions" && (
                   <div className="space-y-4">

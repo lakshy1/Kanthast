@@ -19,6 +19,9 @@ import chatRoutes from "./routes/Chat.js";
 import contactRoutes from "./routes/Contact.js";
 import doubtRoutes from "./routes/Doubts.js";
 import doubtAdminRoutes from "./routes/DoubtsAdmin.js";
+import playbackRoutes from "./routes/Playback.js";
+import playbackAdminRoutes from "./routes/PlaybackAdmin.js";
+import waitlistRoutes from "./routes/Waitlist.js";
 
 dotenv.config();
 
@@ -86,6 +89,9 @@ app.use("/api/v1/chat", chatRoutes);
 app.use("/api/v1/contact", contactRoutes);
 app.use("/api/v1/doubts", doubtRoutes);
 app.use("/api/v1/admin/doubts", doubtAdminRoutes);
+app.use("/api/v1/playback", playbackRoutes);
+app.use("/api/v1/admin/playback", playbackAdminRoutes);
+app.use("/api/v1/waitlist", waitlistRoutes);
 
 // Health check — DB ping included, used by Render and frontend
 app.get(["/health", "/api/v1/health"], async (req, res) => {

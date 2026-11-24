@@ -1,3 +1,6 @@
+import REAL_LESSONS from "../data/schoolLessons.json";
+import { API_BASE_URL } from "./apiBase";
+
 export const SCHOOL_CLASS_KEY = "kanthastSchoolSelectedClass";
 
 export const schoolClassOptions = [
@@ -753,7 +756,90 @@ export function getSchoolSubjectsForClass(classValue = getSelectedSchoolClass())
   return SCHOOL_CURRICULUM[String(classValue)] || SCHOOL_CURRICULUM["8"];
 }
 
+// Which lessons have a video comes from the server (GET /playback/available), so a new video appears as soon as
+// it is registered, with no new deploy. The last answer is cached so the library is right on first paint.
+// (The seconds baked into schoolLessons.json are ignored on purpose: the server is the source of truth.)
+const LIVE_CACHE_KEY = "kanthastSchoolLiveVideos";
+let live = (() => {
+  try {
+    return new Map(JSON.parse(localStorage.getItem(LIVE_CACHE_KEY) || "[]"));
+  } catch {
+    return new Map();
+  }
+})();
+let liveVersion = 0;
+let livePromise = null;
+const liveListeners = new Set();
+
+export const subscribeLiveVideos = (callback) => {
+  liveListeners.add(callback);
+  return () => liveListeners.delete(callback);
+};
+export const getLiveVideosVersion = () => liveVersion;
+
+/** Loads the list of lessons with video once per page load. Never rejects: on failure the cached list stays. */
+export function ensureLiveVideos() {
+  if (!livePromise) {
+    livePromise = fetch(`${API_BASE_URL}/playback/available`)
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data) => {
+        if (!data?.success || !Array.isArray(data.lessons)) return;
+        live = new Map(data.lessons);
+        try {
+          localStorage.setItem(LIVE_CACHE_KEY, JSON.stringify(data.lessons));
+        } catch {
+          // storage unavailable: fine
+        }
+        liveVersion += 1;
+        liveListeners.forEach((listener) => listener());
+      })
+      .catch(() => {});
+  }
+  return livePromise;
+}
+
+// "02:05" from seconds; lessons without a finished video show "--:--".
+const clock = (seconds) => (seconds ? `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}` : "--:--");
+const lessonCount = (n) => `${n} ${n === 1 ? "lesson" : "lessons"}`;
+
+// Classes VIII to X come from the real scripted lessons (Course-Content). A lesson with a finished video
+// gets `secure:<lessonId>`, an id only: the player asks the server for the stream, so no link ships here.
+function buildRealModules(classValue) {
+  return Object.fromEntries(
+    REAL_LESSONS[classValue].map((subject, subjectIndex) => {
+      const subjectId = `school-${classValue}-${subjectIndex}`;
+      const total = subject.chapters.reduce((sum, chapter) => sum + chapter.topics.length, 0);
+      return [
+        subject.name,
+        {
+          totalDuration: lessonCount(total),
+          sections: subject.chapters.map((chapter, chapterIndex) => ({
+            title: chapter.title,
+            total: lessonCount(chapter.topics.length),
+            id: `c${classValue}-${subject.slug}-ch${String(chapter.no).padStart(2, "0")}`,
+            lectures: chapter.topics.map(([topicNo, title]) => {
+              const lessonId = `c${classValue}-${subject.slug}-ch${String(chapter.no).padStart(2, "0")}-t${String(topicNo).padStart(2, "0")}`;
+              const seconds = live.get(lessonId) || 0;
+              return {
+                title,
+                duration: clock(seconds),
+                summary: `${chapter.title}: ${title}`,
+                videoLink: seconds ? `secure:${lessonId}` : "",
+                photos: [],
+                videoId: lessonId,
+                chapterId: `${subjectId}-${chapterIndex}`,
+                subjectId,
+              };
+            }),
+          })),
+        },
+      ];
+    })
+  );
+}
+
 export function buildSchoolModules(classValue = getSelectedSchoolClass()) {
+  if (REAL_LESSONS[String(classValue)]) return buildRealModules(String(classValue));
   const subjects = getSchoolSubjectsForClass(classValue);
   return Object.fromEntries(
     subjects.map((subject, subjectIndex) => [
@@ -787,6 +873,16 @@ export function buildSchoolModules(classValue = getSelectedSchoolClass()) {
  * catalog; returns `{ video }` so callers read it the same way they would an API reply.
  */
 export function getSchoolLectureDetails({ videoId } = {}) {
+  const real = /^c(8|9|10)-/.exec(String(videoId || ""));
+  if (real) {
+    for (const module of Object.values(buildRealModules(real[1]))) {
+      for (const section of module.sections) {
+        const lecture = section.lectures.find((l) => l.videoId === videoId);
+        if (lecture) return { video: { ...lecture, name: lecture.title } };
+      }
+    }
+    throw new Error("Lesson not found");
+  }
   const match = /^school-(\d+)-(\d+)-(\d+)-(\d+)$/.exec(String(videoId || ""));
   if (!match) throw new Error("Lesson not found");
   const [, classValue, subjectIndex, chapterIndex, topicIndex] = match;
@@ -822,4 +918,15 @@ export function getSchoolCourseContent(classValue = getSelectedSchoolClass()) {
       })),
     })),
   };
+}
+
+/** "Class VIII · Science · Ch 1 · From Wonder to Investigation" for a lesson id, for admin screens and logs. */
+export function lessonLabel(lessonId) {
+  const m = /^c(8|9|10)-(.+)-ch(\d+)-t(\d+)$/.exec(String(lessonId || ""));
+  if (!m) return String(lessonId || "");
+  const subject = REAL_LESSONS[m[1]]?.find((x) => x.slug === m[2]);
+  const chapter = subject?.chapters.find((c) => c.no === Number(m[3]));
+  const topic = chapter?.topics.find((t) => t[0] === Number(m[4]));
+  const cls = { 8: "VIII", 9: "IX", 10: "X" }[m[1]];
+  return [`Class ${cls}`, subject?.name, `Ch ${Number(m[3])}`, topic?.[1]].filter(Boolean).join(" · ");
 }
