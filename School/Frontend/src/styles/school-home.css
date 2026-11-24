@@ -34,10 +34,11 @@
   @apply text-lg font-semibold inline-flex min-h-touch items-center justify-center gap-2 rounded-xl px-6 py-2;
   background-color: var(--school);
   color: #2b1600;
-  transition: transform 300ms var(--ease), filter 300ms var(--ease);
+  box-shadow: 0 4px 0 #b57400;
+  transition: transform 300ms var(--ease), box-shadow 300ms var(--ease), filter 300ms var(--ease);
 }
-.school-home .sh-btn:hover { filter: brightness(0.95); transform: translateY(-1px); }
-.school-home .sh-btn:active { transform: scale(0.98); }
+.school-home .sh-btn:hover { filter: brightness(1.04); transform: translateY(-1px); box-shadow: 0 5px 0 #b57400; }
+.school-home .sh-btn:active { transform: translateY(4px); box-shadow: 0 0 0 #b57400; }
 .school-home .sh-btn:focus-visible { outline: 2px solid #2b1600; outline-offset: 2px; }
 
 /* Scroll reveal: rise 32px and fade, once */
@@ -61,3 +62,80 @@
   .school-home .sh-btn { transition: none; }
   .school-home .sh-btn:hover, .school-home .sh-btn:active { transform: none; }
 }
+
+/* ---------- Chunky cards: a darker bottom edge, like a pressed tile ---------- */
+.school-home .sh-card {
+  background-color: rgb(var(--surface));
+  border: 2px solid rgb(var(--line-strong));
+  box-shadow: 0 4px 0 rgb(var(--line-strong));
+  border-radius: 1rem;
+}
+
+/* ---------- Colour bands: flat pastel and deep navy, never white ---------- */
+.school-home .band-sun { background-color: #fff4dc; }
+.school-home .band-mint { background-color: #e3f6ee; }
+.school-home .band-sky { background-color: #e4ecff; }
+.school-home .band-night { background-color: #0b1b33; color: #ffffff; }
+
+/* ---------- The lesson stage ---------- */
+.school-home .sh-stage {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  --ex: 0px;
+  --ey: 0px;
+}
+.school-home .sh-stage svg { display: block; width: 100%; height: auto; }
+.school-home .sh-stage .pupil { transform: translate(var(--ex), var(--ey)); transition: transform 180ms var(--ease); }
+.school-home .sh-stage .neo-eyes { transform-box: fill-box; transform-origin: center; animation: sh-blink 5.5s infinite; }
+.school-home .sh-stage .zippy-wrap .zippy { transform-box: fill-box; transform-origin: 50% 100%; animation: sh-bob 2.6s var(--ease) infinite; }
+
+.school-home .sh-stage .wire-live { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1400ms var(--ease); }
+.school-home .sh-stage[data-step="1"] .wire-live,
+.school-home .sh-stage[data-step="2"] .wire-live,
+.school-home .sh-stage[data-step="3"] .wire-live { stroke-dashoffset: 0; }
+
+.school-home .sh-stage .lever { transform-box: fill-box; transform-origin: 0 50%; transition: transform 500ms var(--ease); }
+.school-home .sh-stage[data-step="0"] .lever { animation: sh-lever 1.6s var(--ease) both; }
+
+.school-home .sh-stage .bulb-glow { opacity: 0.85; transition: opacity 500ms var(--ease); }
+.school-home .sh-stage[data-step="0"] .bulb-glow { animation: sh-glow 1.6s var(--ease) both; }
+
+.school-home .sh-stage .dark-room { opacity: 0; transition: opacity 500ms var(--ease); }
+.school-home .sh-stage[data-step="0"] .dark-room { animation: sh-lift 1.8s var(--ease) both; }
+
+.school-home .sh-stage .electrons { opacity: 0; transition: opacity 500ms var(--ease); }
+.school-home .sh-stage[data-step="1"] .electrons,
+.school-home .sh-stage[data-step="2"] .electrons,
+.school-home .sh-stage[data-step="3"] .electrons { opacity: 1; }
+
+.school-home .sh-stage .tip,
+.school-home .sh-stage .recap { opacity: 0; transform: translateY(12px); transition: opacity 500ms var(--ease), transform 500ms var(--ease); }
+.school-home .sh-stage .tip { transform-box: fill-box; }
+.school-home .sh-stage[data-step="2"] .tip,
+.school-home .sh-stage[data-step="3"] .recap { opacity: 1; transform: none; }
+.school-home .sh-stage[data-step="2"] .electrons,
+.school-home .sh-stage[data-step="3"] .electrons { opacity: 0.25; }
+
+@keyframes sh-blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(0.1); } }
+@keyframes sh-bob { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-8px) rotate(3deg); } }
+@keyframes sh-lever { 0% { transform: rotate(-38deg); } 45% { transform: rotate(-38deg); } 70%, 100% { transform: rotate(0deg); } }
+@keyframes sh-glow { 0%, 55% { opacity: 0; } 70% { opacity: 1; } 100% { opacity: 0.85; } }
+@keyframes sh-lift { 0%, 40% { opacity: 0.6; } 100% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .school-home .sh-stage .neo-eyes,
+  .school-home .sh-stage .zippy-wrap .zippy { animation: none; }
+  .school-home .sh-stage .wire-live { transition: none; }
+  .school-home .sh-stage .lever,
+  .school-home .sh-stage .bulb-glow,
+  .school-home .sh-stage .dark-room { animation: none !important; transition: none; }
+  .school-home .sh-stage .tip,
+  .school-home .sh-stage .recap { transition: opacity 300ms linear; transform: none; }
+}
+
+/* The hero band runs up behind the floating navbar, so no seam shows above it */
+.school-home .band-hero { margin-top: calc(var(--navbar-h, 0px) * -1); padding-top: var(--navbar-h, 0px); }
+
+/* The sample script uses this page's faces */
+.school-home .script-page, .school-home .script-page * { font-family: var(--font-body); }
+.school-home .script-page .script-title { font-family: var(--font-heading); font-weight: 600; }

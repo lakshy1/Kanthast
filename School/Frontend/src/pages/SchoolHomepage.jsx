@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, CaretDown } from "@phosphor-icons/react";
+import { ArrowRight, BookOpenText, CaretDown, DeviceMobile, Pause, PencilSimpleLine, Play, Prohibit, Timer } from "@phosphor-icons/react";
 import Seo from "../components/Seo";
 import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
 import ScriptPage from "../components/landing/ScriptPage";
-import NeoZippy from "../components/landing/NeoZippy";
 import Reveal from "../components/home/Reveal";
 import SnapRow from "../components/home/SnapRow";
 import TaglineReveal from "../components/home/TaglineReveal";
+import LessonStage from "../components/home/LessonStage";
+import usePrefersReducedMotion from "../components/home/usePrefersReducedMotion";
+import { NeoSolo, ZippySolo } from "../components/home/Characters";
 import SCHOOL_CATALOG, { SAMPLE_SCRIPT } from "../data/schoolCatalog";
 import { PILOT_TESTERS } from "../data/pilotTesters";
 import "../styles/school-home.css";
@@ -21,14 +23,17 @@ const CTA_LABEL = "Create a free account";
 
 const BENEFITS = [
   {
+    icon: Timer,
     title: "One idea per lesson",
     body: `Each lesson covers one sub topic in ${SCHOOL_CATALOG.lessonLength}, so a long chapter becomes a short series your child can finish in a sitting.`,
   },
   {
+    icon: PencilSimpleLine,
     title: "Drawn as it is built",
     body: "Diagrams, maps, timelines and proofs animate step by step, the way the textbook expects students to draw them.",
   },
   {
+    icon: BookOpenText,
     title: "Matched to the textbook",
     body: "Every lesson names its class, subject and chapter in the new NCERT books, so you can line it up with schoolwork.",
   },
@@ -44,20 +49,26 @@ const LESSON_SHAPE = [
 const GUIDES = [
   {
     name: "Neo",
+    role: "The explainer",
+    Art: NeoSolo,
+    panel: "bg-white",
     tone: "text-[var(--school-ink)]",
     body: "A round, cheerful owl in a lab coat, goggles pushed up on his forehead. Calm and a little witty, he does the explaining.",
   },
   {
     name: "Zippy",
+    role: "The question asker",
+    Art: ZippySolo,
+    panel: "bg-white",
     tone: "text-brand",
     body: "A small, bouncy electric blue spark. He asks the questions a student would ask, and sometimes gets things wrong so Neo can put them right.",
   },
 ];
 
 const FOR_PARENTS = [
-  { title: "Tied to the textbook", body: "Every lesson names its class, subject and chapter, so you can match it to what is being taught in school." },
-  { title: "No ads, no social feed", body: "Kanthast has nothing to scroll and nobody to follow. Time on it is time on a lesson." },
-  { title: "Made for phones", body: "Lessons are short enough for a bus ride and work on any modern phone or laptop." },
+  { icon: BookOpenText, title: "Tied to the textbook", body: "Every lesson names its class, subject and chapter, so you can match it to what is being taught in school." },
+  { icon: Prohibit, title: "No ads, no social feed", body: "Kanthast has nothing to scroll and nobody to follow. Time on it is time on a lesson." },
+  { icon: DeviceMobile, title: "Made for phones", body: "Lessons are short enough for a bus ride and work on any modern phone or laptop." },
 ];
 const COMING_NEXT = [
   { title: "Questions after every lesson", body: "A few questions at the end, so a gap shows up while the idea is fresh." },
@@ -130,21 +141,196 @@ function FaqList() {
   );
 }
 
-function CtaBlock({ align = "start" }) {
+function CtaBlock({ align = "start", onDark = false }) {
   return (
     <div className={align === "center" ? "text-center" : ""}>
       <Link to="/signup" className="sh-btn">
         {CTA_LABEL}
         <ArrowRight aria-hidden="true" weight="bold" />
       </Link>
-      <p className="caption-1 mt-3 text-ink-muted">Free to join. Nothing is charged today.</p>
+      <p className={`caption-1 mt-4 ${onDark ? "text-white/70" : "text-ink-muted"}`}>Free to join. Nothing is charged today.</p>
+    </div>
+  );
+}
+
+function StepDots({ step, onPick, playing, onToggle }) {
+  return (
+    <div className="flex items-center justify-between gap-3 px-2 pb-2 pt-3">
+      <div className="flex items-center gap-1" role="group" aria-label="Lesson moments">
+        {LESSON_SHAPE.map((item, index) => (
+          <button
+            key={item.title}
+            type="button"
+            onClick={() => onPick(index)}
+            aria-label={`Show step ${index + 1}: ${item.title}`}
+            aria-current={step === index ? "true" : undefined}
+            className="grid h-6 w-6 place-items-center rounded-full"
+          >
+            <span className={`block h-2 rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${step === index ? "w-6 bg-[var(--school-ink)]" : "w-2 bg-line-strong"}`} />
+          </button>
+        ))}
+      </div>
+      {onToggle && (
+        <button
+          type="button"
+          onClick={onToggle}
+          aria-label={playing ? "Pause the animation" : "Play the animation"}
+          className="grid h-8 w-8 place-items-center rounded-full border-2 border-line-strong text-ink transition-colors duration-300 hover:bg-surface-sunken"
+        >
+          {playing ? <Pause aria-hidden="true" weight="fill" /> : <Play aria-hidden="true" weight="fill" />}
+        </button>
+      )}
+    </div>
+  );
+}
+
+/* The hero stage plays through the four moments of a lesson on its own, only while it is on screen. */
+function HeroStage() {
+  const reduce = usePrefersReducedMotion();
+  const wrapRef = useRef(null);
+  const [step, setStep] = useState(0);
+  // With reduced motion there is no hook animation to play, so open on the drawn circuit.
+  const shownStep = reduce && step === 0 ? 1 : step;
+  const [playing, setPlaying] = useState(true);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    if (!wrapRef.current || typeof IntersectionObserver === "undefined") return undefined;
+    const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting), { threshold: 0.3 });
+    observer.observe(wrapRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (reduce || !playing || !visible) return undefined;
+    const timer = setInterval(() => setStep((current) => (current + 1) % LESSON_SHAPE.length), 4200);
+    return () => clearInterval(timer);
+  }, [reduce, playing, visible]);
+
+  return (
+    <figure ref={wrapRef} className="sh-card p-2">
+      <LessonStage step={shownStep} interactive />
+      <StepDots step={shownStep} onPick={(i) => { setStep(i); setPlaying(false); }} playing={playing} onToggle={reduce ? undefined : () => setPlaying((v) => !v)} />
+      <figcaption className="px-2 pb-2">
+        <p className="caption-3 text-[var(--school-ink)]">Step {shownStep + 1} · {LESSON_SHAPE[shownStep].title}</p>
+        <p className="body-3 mt-1 text-ink-muted">Illustrated from the {SAMPLE_SCRIPT.context} script. Finished lessons open on {FIRST_LESSONS}.</p>
+      </figcaption>
+    </figure>
+  );
+}
+
+/* Desktop: the stage stays put while the four steps scroll past it. Phones: the stage sits above a swipe row. */
+function LessonScrolly() {
+  const [step, setStep] = useState(0);
+  const blockRefs = useRef([]);
+
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") return undefined;
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((entry) => entry.isIntersecting && setStep(Number(entry.target.dataset.step))),
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+    );
+    blockRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:gap-16">
+      <div className="min-w-0 lg:sticky lg:top-28 lg:self-start">
+        <div className="sh-card p-2">
+          <LessonStage step={step} />
+          <p className="caption-3 px-2 pb-2 pt-3 text-[var(--school-ink)]">Step {step + 1} · {LESSON_SHAPE[step].title}</p>
+        </div>
+
+        <div className="mt-6 lg:hidden">
+          <SnapRow label="Lesson steps" columns="md:grid-cols-2" itemWidth="w-[85%]" onActiveChange={setStep}>
+            {LESSON_SHAPE.map((item, index) => (
+              <article key={item.title} className="sh-card h-full p-6">
+                <p className="caption-3 text-[var(--school-ink)]">Step {index + 1}</p>
+                <h3 className="title-card mt-1 text-ink">{item.title}</h3>
+                <p className="body-3 mt-2 text-ink-muted">{item.body}</p>
+              </article>
+            ))}
+          </SnapRow>
+        </div>
+      </div>
+
+      <ol className="hidden lg:grid lg:gap-8">
+        {LESSON_SHAPE.map((item, index) => (
+          <li
+            key={item.title}
+            ref={(el) => (blockRefs.current[index] = el)}
+            data-step={index}
+            className={`flex min-h-[44vh] flex-col justify-center transition-opacity duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${step === index ? "opacity-100" : "opacity-40"}`}
+          >
+            <p className="caption-3 text-[var(--school-ink)]">Step {index + 1}</p>
+            <h3 className="heading-3 mt-1 text-ink">{item.title}</h3>
+            <p className="title-2 mt-3 max-w-[44ch] text-ink-muted">{item.body}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+function ClassPicker() {
+  const [selected, setSelected] = useState(CLASSES[CLASSES.length - 1].id);
+  const cls = CLASSES.find((c) => c.id === selected);
+  return (
+    <div className="mt-10">
+      <div role="tablist" aria-label="Choose a class" className="flex gap-2">
+        {CLASSES.map((c) => (
+          <button
+            key={c.id}
+            type="button"
+            role="tab"
+            id={`tab-${c.id}`}
+            aria-selected={selected === c.id}
+            aria-controls="class-panel"
+            onClick={() => setSelected(c.id)}
+            className={`button-md min-h-touch flex-1 rounded-xl border-2 px-4 py-2 transition-colors duration-300 md:flex-none md:px-8 ${
+              selected === c.id ? "border-[var(--school-ink)] bg-[var(--school)] text-[#2b1600]" : "border-line-strong bg-surface text-ink hover:bg-surface-sunken"
+            }`}
+          >
+            {c.name}
+          </button>
+        ))}
+      </div>
+
+      <div id="class-panel" role="tabpanel" aria-labelledby={`tab-${cls.id}`} className="sh-card mt-6 grid gap-8 p-6 md:grid-cols-2 md:p-10">
+        <div>
+          <h3 className="heading-3 text-ink">{cls.name}</h3>
+          <p className="body-1 mt-1 text-[var(--school-ink)]">
+            <span className="tabular-nums">{cls.lessons}</span> lessons, <span className="tabular-nums">{cls.chapters}</span> chapters
+          </p>
+          <p className="caption-1 mt-6 text-ink">Subjects</p>
+          <ul className="mt-2 flex flex-wrap gap-2">
+            {cls.subjects.map((subject) => (
+              <li key={subject} className="caption-1 rounded-full bg-[var(--school-soft)] px-3 py-1 text-[var(--school-ink)]">{subject}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <p className="caption-1 text-ink">Chapters include</p>
+          <ol className="mt-4 grid gap-0">
+            {cls.sample.map((chapter, index) => (
+              <li key={chapter} className="flex items-stretch gap-4">
+                <span className="flex flex-col items-center" aria-hidden="true">
+                  <span className="grid h-8 w-8 place-items-center rounded-full bg-[var(--school)] text-sm font-semibold text-[#2b1600]">{index + 1}</span>
+                  {index < cls.sample.length - 1 && <span className="my-1 w-0.5 flex-1 bg-line-strong" />}
+                </span>
+                <span className="body-2 pb-6 pt-1 text-ink">{chapter}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default function SchoolHomepage() {
   const [scriptOpen, setScriptOpen] = useState(false);
-  const firstScene = SAMPLE_SCRIPT.scenes[0];
 
   return (
     <div className="school-home school-page overflow-x-clip text-ink">
@@ -169,46 +355,42 @@ export default function SchoolHomepage() {
         ]}
       />
 
-      {/* 1. Hero: one offer, one audience, one action */}
-      <section className="site-container grid items-center gap-12 pb-12 pt-12 md:pb-20 md:pt-16 lg:grid-cols-2">
-        <div>
-          <p className="caption-3 inline-flex rounded-full bg-[var(--school-soft)] px-3 py-1 text-[var(--school-ink)]">
-            Kanthast School · Classes VIII to X
-          </p>
-          <h1 className="heading-1 mt-4 max-w-[680px] text-ink">Every NCERT chapter, explained in a three&nbsp;minute cartoon</h1>
-          <p className="title-1 mt-6 max-w-[680px] text-ink-muted">
-            Neo the owl and Zippy the spark walk your child through each chapter of the new NCERT books, one short lesson at a time.
-          </p>
-          <div className="mt-8">
-            <CtaBlock />
+      {/* 1. Hero: one offer, one action, and the product shown working */}
+      <div className="band-sky band-hero">
+        <section className="site-container grid items-center gap-10 pb-12 pt-12 md:pb-20 md:pt-16 lg:grid-cols-2 lg:gap-12">
+          <div>
+            <p className="caption-3 inline-flex rounded-full bg-[var(--school-soft)] px-3 py-1 text-[var(--school-ink)]">
+              Kanthast School · Classes VIII to X
+            </p>
+            <h1 className="heading-1 mt-4 max-w-[680px] text-ink">Every NCERT chapter, explained in a three&nbsp;minute cartoon</h1>
+            <p className="title-1 mt-6 max-w-[680px] text-ink-muted">
+              Neo the owl and Zippy the spark walk your child through each chapter of the new NCERT books, one short lesson at a time.
+            </p>
+            <div className="mt-8">
+              <CtaBlock />
+            </div>
+            <p className="body-2 mt-8 max-w-[56ch] text-ink">
+              {TOTALS.lessons} lessons scripted and checked against the textbooks. First lessons open on {FIRST_LESSONS}.
+            </p>
           </div>
-          <p className="body-2 mt-8 max-w-[56ch] text-ink">
-            {TOTALS.lessons} lessons scripted and checked against the textbooks. First lessons open on {FIRST_LESSONS}.
-          </p>
-        </div>
+          <HeroStage />
+        </section>
+      </div>
 
-        <figure className="rounded-2xl border border-line bg-surface p-2">
-          <div className="grid aspect-[4/3] place-items-center rounded-lg bg-brand-soft p-6">
-            <NeoZippy className="h-full w-full max-w-[420px]" />
-          </div>
-          <figcaption className="p-4">
-            <p className="caption-3 text-[var(--school-ink)]">From the script · {SAMPLE_SCRIPT.context}</p>
-            <p className="body-3 mt-1 line-clamp-3 text-ink-muted">{firstScene.animation}</p>
-          </figcaption>
-        </figure>
-      </section>
-
-      {/* 2. Why it works: outcomes, three cards, swipeable on phones */}
+      {/* 2. Why it works */}
       <section aria-labelledby="why-heading" className="site-container py-12 md:py-16">
         <Reveal>
           <h2 id="why-heading" className="heading-2 max-w-[680px]">A chapter is long. A lesson should be short.</h2>
         </Reveal>
         <Reveal className="mt-10" delay={80}>
           <SnapRow label="Benefits">
-            {BENEFITS.map((item) => (
-              <article key={item.title} className="h-full rounded-2xl border border-line bg-surface p-6">
-                <h3 className="title-card text-ink">{item.title}</h3>
-                <p className="body-3 mt-2 text-ink-muted">{item.body}</p>
+            {BENEFITS.map(({ icon: Icon, title, body }) => (
+              <article key={title} className="sh-card h-full p-6">
+                <span className="grid h-12 w-12 place-items-center rounded-full bg-[var(--school-soft)] text-2xl text-[var(--school-ink)]">
+                  <Icon aria-hidden="true" weight="duotone" />
+                </span>
+                <h3 className="title-card mt-4 text-ink">{title}</h3>
+                <p className="body-3 mt-2 text-ink-muted">{body}</p>
               </article>
             ))}
           </SnapRow>
@@ -216,63 +398,60 @@ export default function SchoolHomepage() {
       </section>
 
       {/* 3. Tagline reveal */}
-      <section aria-label="What Kanthast School is for" className="site-container py-12 md:py-16">
-        <TaglineReveal lines={["Every chapter, drawn out step by step.", "So the idea sticks before the exam does."]} />
-      </section>
+      <div className="band-night">
+        <section aria-label="What Kanthast School is for" className="site-container py-16 md:py-24">
+          <TaglineReveal lines={["Every chapter, drawn out step by step.", "So the idea sticks before the exam does."]} />
+        </section>
+      </div>
 
-      {/* 4. How a lesson runs, with a real script as proof */}
+      {/* 4. How a lesson runs: scroll-driven, with a real script as proof */}
       <section aria-labelledby="shape-heading" className="site-container py-12 md:py-16">
         <Reveal>
           <h2 id="shape-heading" className="heading-2 max-w-[680px]">How every lesson runs</h2>
+          <p className="title-1 mt-4 max-w-[680px] text-ink-muted">Scroll through the four moments of a lesson. This circuit comes from a real Class X Science script.</p>
         </Reveal>
-        <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <Reveal className="min-w-0">
-            <SnapRow label="Lesson steps" columns="md:grid-cols-2" itemWidth="w-[80%]">
-              {LESSON_SHAPE.map((step, index) => (
-                <article key={step.title} className="h-full rounded-2xl border border-line bg-surface p-6">
-                  <p className="caption-3 text-[var(--school-ink)]">Step {index + 1}</p>
-                  <h3 className="title-card mt-1 text-ink">{step.title}</h3>
-                  <p className="body-3 mt-2 text-ink-muted">{step.body}</p>
+        <LessonScrolly />
+        <Reveal className="mx-auto mt-12 max-w-[760px] md:mt-16" delay={80}>
+          <p className="body-2 mb-3 text-ink-muted">And here is the start of that script, as the animation team reads it.</p>
+          <div className={`${scriptOpen ? "" : "max-md:max-h-96 max-md:overflow-hidden"}`}>
+            <ScriptPage />
+          </div>
+          <button
+            type="button"
+            onClick={() => setScriptOpen((v) => !v)}
+            aria-expanded={scriptOpen}
+            className="button-md mt-3 inline-flex min-h-touch items-center gap-2 rounded-xl border-2 border-line-strong px-4 py-2 text-ink transition-colors duration-300 hover:bg-surface md:hidden"
+          >
+            {scriptOpen ? "Show less" : "Read the full script"}
+            <CaretDown aria-hidden="true" weight="bold" className={`transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${scriptOpen ? "rotate-180" : ""}`} />
+          </button>
+        </Reveal>
+      </section>
+
+      {/* 5. The two guides */}
+      <div className="band-sun">
+        <section aria-labelledby="guides-heading" className="site-container py-12 md:py-16">
+          <Reveal>
+            <h2 id="guides-heading" className="heading-2 max-w-[680px]">Two guides, in every lesson</h2>
+          </Reveal>
+          <Reveal className="mt-10" delay={80}>
+            <SnapRow label="Guides" columns="md:grid-cols-2">
+              {GUIDES.map(({ name, role, Art, tone, body }) => (
+                <article key={name} className="sh-card flex h-full flex-col gap-4 p-6 md:flex-row md:items-center">
+                  <Art className="h-40 w-40 shrink-0 self-center" />
+                  <div>
+                    <p className="caption-3 text-ink-muted">{role}</p>
+                    <h3 className={`heading-3 ${tone}`}>{name}</h3>
+                    <p className="body-3 mt-2 text-ink-muted">{body}</p>
+                  </div>
                 </article>
               ))}
             </SnapRow>
           </Reveal>
-          <Reveal delay={80} className="min-w-0">
-            <p className="body-2 mb-3 text-ink-muted">Here is the start of a real script, from {SAMPLE_SCRIPT.context}.</p>
-            <div className={`${scriptOpen ? "" : "max-md:max-h-96 max-md:overflow-hidden"}`}>
-              <ScriptPage />
-            </div>
-            <button
-              type="button"
-              onClick={() => setScriptOpen((v) => !v)}
-              aria-expanded={scriptOpen}
-              className="button-md mt-3 inline-flex min-h-touch items-center gap-2 rounded-xl border border-line-strong px-4 py-2 text-ink transition-colors duration-300 hover:bg-surface md:hidden"
-            >
-              {scriptOpen ? "Show less" : "Read the full script"}
-              <CaretDown aria-hidden="true" weight="bold" className={`transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${scriptOpen ? "rotate-180" : ""}`} />
-            </button>
-          </Reveal>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      {/* 5. The two guides */}
-      <section aria-labelledby="guides-heading" className="site-container py-12 md:py-16">
-        <Reveal>
-          <h2 id="guides-heading" className="heading-2 max-w-[680px]">Two guides, in every lesson</h2>
-        </Reveal>
-        <Reveal className="mt-10" delay={80}>
-          <SnapRow label="Guides" columns="md:grid-cols-2">
-            {GUIDES.map((guide) => (
-              <article key={guide.name} className="h-full rounded-2xl border border-line bg-surface p-6">
-                <h3 className={`title-card ${guide.tone}`}>{guide.name}</h3>
-                <p className="body-3 mt-2 max-w-[48ch] text-ink-muted">{guide.body}</p>
-              </article>
-            ))}
-          </SnapRow>
-        </Reveal>
-      </section>
-
-      {/* 6. Coverage */}
+      {/* 6. Coverage: pick a class */}
       <section id="classes" aria-labelledby="classes-heading" className="site-container scroll-mt-28 py-12 md:py-16">
         <Reveal>
           <h2 id="classes-heading" className="heading-2 max-w-[680px]">What is covered</h2>
@@ -280,84 +459,78 @@ export default function SchoolHomepage() {
             {TOTALS.lessons} lessons across {TOTALS.chapters} chapters of the new NCERT books for the 2025 to 2026 session. Classes I to VII will follow.
           </p>
         </Reveal>
-        <Reveal className="mt-10" delay={80}>
-          <SnapRow label="Classes">
-            {CLASSES.map((cls) => (
-              <article key={cls.id} id={cls.id} className="h-full scroll-mt-28 rounded-2xl border border-line bg-surface p-6">
-                <h3 className="heading-3 text-ink">{cls.name}</h3>
-                <p className="body-1 mt-1 text-[var(--school-ink)]">
-                  <span className="tabular-nums">{cls.lessons}</span> lessons, <span className="tabular-nums">{cls.chapters}</span> chapters
-                </p>
-                <p className="caption-1 mt-6 text-ink">Subjects</p>
-                <p className="body-3 mt-1 text-ink-muted">{cls.subjects.join(", ")}</p>
-                <p className="caption-1 mt-6 text-ink">Chapters include</p>
-                <ul className="body-3 mt-1 grid gap-1 text-ink-muted">
-                  {cls.sample.map((chapter) => (
-                    <li key={chapter}>{chapter}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </SnapRow>
+        <Reveal delay={80}>
+          <ClassPicker />
         </Reveal>
       </section>
 
       {/* 7. Pilot testers: appears only once real, consented names are added to data/pilotTesters.js */}
       {PILOT_TESTERS.length > 0 && (
-        <section aria-labelledby="pilot-heading" className="site-container py-12 md:py-16">
-          <Reveal>
-            <h2 id="pilot-heading" className="heading-2 max-w-[680px]">Tried by our pilot testers</h2>
-          </Reveal>
-          <Reveal className="mt-10" delay={80}>
-            <SnapRow label="Pilot testers">
-              {PILOT_TESTERS.map((person) => (
-                <figure key={person.name} className="h-full rounded-2xl border border-line bg-surface p-6">
-                  <blockquote className="body-3 text-ink">{person.quote}</blockquote>
-                  <figcaption className="mt-4">
-                    <p className="body-1 text-ink">{person.name}</p>
-                    <p className="caption-1 text-ink-muted">{person.role}</p>
-                  </figcaption>
-                </figure>
-              ))}
-            </SnapRow>
-          </Reveal>
-        </section>
+        <div className="band-mint">
+          <section aria-labelledby="pilot-heading" className="site-container py-12 md:py-16">
+            <Reveal>
+              <h2 id="pilot-heading" className="heading-2 max-w-[680px]">Tried by our pilot testers</h2>
+            </Reveal>
+            <Reveal className="mt-10" delay={80}>
+              <SnapRow label="Pilot testers">
+                {PILOT_TESTERS.map((person) => (
+                  <figure key={person.name} className="sh-card h-full p-6">
+                    <blockquote className="body-3 text-ink">{person.quote}</blockquote>
+                    <figcaption className="mt-4">
+                      <p className="body-1 text-ink">{person.name}</p>
+                      <p className="caption-1 text-ink-muted">{person.role}</p>
+                    </figcaption>
+                  </figure>
+                ))}
+              </SnapRow>
+            </Reveal>
+          </section>
+        </div>
       )}
 
       {/* 8. For parents */}
-      <section id="parents" aria-labelledby="parents-heading" className="site-container scroll-mt-28 py-12 md:py-16">
-        <Reveal>
-          <h2 id="parents-heading" className="heading-2 max-w-[680px]">For parents</h2>
-        </Reveal>
-        <Reveal className="mt-10" delay={80}>
-          <SnapRow label="Parent benefits">
-            {FOR_PARENTS.map((item) => (
-              <article key={item.title} className="h-full rounded-2xl border border-line bg-surface p-6">
-                <h3 className="title-card text-ink">{item.title}</h3>
-                <p className="body-3 mt-2 text-ink-muted">{item.body}</p>
-              </article>
-            ))}
-          </SnapRow>
-        </Reveal>
-        <Reveal className="mt-8" delay={120}>
-          <h3 className="caption-1 text-ink-muted">Coming next</h3>
-          <ul className="mt-3 grid gap-3 md:grid-cols-2">
-            {COMING_NEXT.map((item) => (
-              <li key={item.title} className="rounded-2xl border border-dashed border-line-strong p-4">
-                <p className="body-1 flex flex-wrap items-center gap-2 text-ink">
-                  {item.title}
-                  <span className="caption-3 rounded-full bg-[var(--school-soft)] px-2 py-0.5 text-[var(--school-ink)]">Coming soon</span>
-                </p>
-                <p className="body-3 mt-1 text-ink-muted">{item.body}</p>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
-      </section>
+      <div className="band-mint">
+        <section id="parents" aria-labelledby="parents-heading" className="site-container scroll-mt-28 py-12 md:py-16">
+          <Reveal>
+            <h2 id="parents-heading" className="heading-2 max-w-[680px]">For parents</h2>
+          </Reveal>
+          <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-12">
+            <Reveal delay={80}>
+              <ul className="grid gap-4">
+                {FOR_PARENTS.map(({ icon: Icon, title, body }) => (
+                  <li key={title} className="sh-card flex items-start gap-4 p-6">
+                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#e3f6ee] text-2xl text-[#0b6b4a]">
+                      <Icon aria-hidden="true" weight="duotone" />
+                    </span>
+                    <div>
+                      <h3 className="title-card text-ink">{title}</h3>
+                      <p className="body-3 mt-1 text-ink-muted">{body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+            <Reveal delay={160}>
+              <h3 className="caption-1 text-ink-muted">Coming next</h3>
+              <ul className="mt-3 grid gap-4">
+                {COMING_NEXT.map((item) => (
+                  <li key={item.title} className="rounded-2xl border-2 border-dashed border-[#0b6b4a]/40 p-4">
+                    <p className="body-1 flex flex-wrap items-center gap-2 text-ink">
+                      {item.title}
+                      <span className="caption-3 rounded-full bg-white px-2 py-0.5 text-[#0b6b4a]">Coming soon</span>
+                    </p>
+                    <p className="body-3 mt-1 text-ink-muted">{item.body}</p>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
+        </section>
+      </div>
 
       {/* 9. Launch plan and price */}
       <section id="pricing" aria-labelledby="pricing-heading" className="site-container scroll-mt-28 py-12 md:py-16">
-        <Reveal className="rounded-2xl border border-line bg-surface p-6 md:p-10">
+        <Reveal className="sh-card p-6 md:p-10">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
               <p className="caption-3 text-[var(--school-ink)]">Price</p>
@@ -370,10 +543,13 @@ export default function SchoolHomepage() {
               </div>
             </div>
             <ol className="grid gap-6">
-              {TIMELINE.map((step) => (
-                <li key={step.when} className="grid gap-1 border-b border-line pb-6 last:border-b-0 last:pb-0">
-                  <p className="body-1 text-ink">{step.when}</p>
-                  <p className="body-3 text-ink-muted">{step.what}</p>
+              {TIMELINE.map((step, index) => (
+                <li key={step.when} className="flex gap-4">
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[var(--school)] text-sm font-semibold text-[#2b1600]" aria-hidden="true">{index + 1}</span>
+                  <div>
+                    <p className="body-1 text-ink">{step.when}</p>
+                    <p className="body-3 text-ink-muted">{step.what}</p>
+                  </div>
                 </li>
               ))}
             </ol>
@@ -392,17 +568,19 @@ export default function SchoolHomepage() {
       </section>
 
       {/* 11. Final CTA, identical to the top */}
-      <section aria-labelledby="final-heading" className="site-container pb-20 pt-12 text-center md:pb-24 md:pt-16">
-        <Reveal>
-          <h2 id="final-heading" className="heading-2 mx-auto max-w-[680px]">Be ready for {FIRST_LESSONS}</h2>
-          <p className="title-1 mx-auto mt-4 max-w-[680px] text-ink-muted">
-            Set up your account and your child's class today, so the first lesson is one tap away.
-          </p>
-          <div className="mt-8">
-            <CtaBlock align="center" />
-          </div>
-        </Reveal>
-      </section>
+      <div className="band-night">
+        <section aria-labelledby="final-heading" className="site-container py-16 text-center md:py-24">
+          <Reveal>
+            <h2 id="final-heading" className="heading-2 mx-auto max-w-[680px] text-white">Be ready for {FIRST_LESSONS}</h2>
+            <p className="title-1 mx-auto mt-4 max-w-[680px] text-white/75">
+              Set up your account and your child's class today, so the first lesson is one tap away.
+            </p>
+            <div className="mt-8">
+              <CtaBlock align="center" onDark />
+            </div>
+          </Reveal>
+        </section>
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { Children, useEffect, useRef, useState } from "react";
  * row that snaps one card at a time, with the next card peeking in and dots
  * underneath. Tracks the visible card with IntersectionObserver.
  */
-export default function SnapRow({ children, label, columns = "md:grid-cols-3", itemWidth = "w-[85%]" }) {
+export default function SnapRow({ children, label, columns = "md:grid-cols-3", itemWidth = "w-[85%]", onActiveChange }) {
   const trackRef = useRef(null);
   const itemRefs = useRef([]);
   const [active, setActive] = useState(0);
@@ -17,14 +17,18 @@ export default function SnapRow({ children, label, columns = "md:grid-cols-3", i
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(Number(entry.target.dataset.index));
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.dataset.index);
+            setActive(index);
+            onActiveChange?.(index);
+          }
         });
       },
       { root: track, threshold: 0.6 }
     );
     itemRefs.current.forEach((el) => el && observer.observe(el));
     return () => observer.disconnect();
-  }, [items.length]);
+  }, [items.length, onActiveChange]);
 
   const goTo = (index) => {
     const el = itemRefs.current[index];

@@ -31,7 +31,7 @@ export default function TaglineReveal({ lines }) {
   }, []);
 
   return (
-    <p ref={rootRef} className="sh-tagline heading-2 max-w-[680px]">
+    <p ref={rootRef} className="sh-tagline heading-2 max-w-[680px] text-white">
       {lines.map((line, lineIndex) => (
         <span key={lineIndex} className="block">
           {line.split(" ").map((word, i) => (
