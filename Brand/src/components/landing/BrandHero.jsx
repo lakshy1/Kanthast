@@ -47,15 +47,15 @@ export default function BrandHero() {
           <p className="bh-sub">Short animated lessons with AI help, for medical exams and for school.</p>
 
           <div className="bh-ctas">
-            <a href="#products" className="bh-btn bh-btn-primary">
+            <a href="#waitlist" className="bh-btn bh-btn-primary">
               <FaPlay aria-hidden="true" className="text-[0.8em]" />
-              Start Learning
+              Join the waitlist
               <FaArrowRight aria-hidden="true" className="text-[0.8em]" />
             </a>
-            <Link to="/courses" className="bh-btn bh-btn-ghost">
+            <a href="#products" className="bh-btn bh-btn-ghost">
               <FaGraduationCap aria-hidden="true" className="text-[1.1em] text-[#1d4ed8]" />
-              Explore Courses
-            </Link>
+              See the two products
+            </a>
           </div>
 
           {/* Same layout as a "trusted by" row, but only true facts. */}

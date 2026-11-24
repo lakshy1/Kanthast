@@ -7,6 +7,7 @@ import SectionHead from "../components/landing/SectionHead";
 import BrandHero from "../components/landing/BrandHero";
 import BrandPaths from "../components/landing/BrandPaths";
 import BrandWatch from "../components/landing/BrandWatch";
+import WaitlistSection from "../components/landing/WaitlistSection";
 import CircuitScene from "../components/landing/CircuitScene";
 import NeoZippy from "../components/landing/NeoZippy";
 import DeviceShowcase from "../components/landing/DeviceShowcase";
@@ -237,6 +238,8 @@ export default function KanthastHome() {
           ))}
         </ul>
       </section>
+
+      <WaitlistSection />
 
       <section aria-labelledby="brand-faq" className="kx-section kx-section-last">
         <div className="kx-panel kx-faq-wrap">
