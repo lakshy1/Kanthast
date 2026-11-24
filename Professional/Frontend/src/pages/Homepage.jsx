@@ -453,6 +453,16 @@ const Homepage = () => {
             accent="#77E0C0"
             glow="119 224 192"
             textClass="text-3xl font-semibold md:text-4xl lg:text-5xl"
+            badge="Medicine library"
+            video={`${import.meta.env.BASE_URL}tagline-bg.mp4`}
+            poster={`${import.meta.env.BASE_URL}tagline-bg.webp`}
+            chips={[
+              { label: "NEET PG", x: "7%", y: "18%", depth: 0.7, at: 0.05 },
+              { label: "INI CET", r: "10%", y: "12%", depth: 1.2, at: 0.15 },
+              { label: "USMLE", r: "8%", y: "62%", depth: 0.9, at: 0.3 },
+              { label: "Resume where you stopped", x: "4%", y: "64%", depth: 1.1, at: 0.4 },
+              { label: "5 subjects mapped", r: "20%", y: "80%", depth: 0.6, at: 0.55 },
+            ]}
           />
         </div>
 

@@ -19,8 +19,9 @@ function parseLine(line) {
   });
 }
 
-export default function ScrollTagline({ lines, label, accent = "#f2a007", glow = "255 214 102", textClass = "" }) {
+export default function ScrollTagline({ lines, label, accent = "#f2a007", glow = "255 214 102", textClass = "", badge, chips = [], video, poster }) {
   const rootRef = useRef(null);
+  const videoRef = useRef(null);
   const plain = lines.join(" ").replace(/\*/g, "");
 
   let index = 0;
@@ -30,6 +31,17 @@ export default function ScrollTagline({ lines, label, accent = "#f2a007", glow =
     )
   );
   const total = index;
+
+  // The background video plays only while the section is near the screen, and never under reduced motion.
+  useEffect(() => {
+    const el = videoRef.current;
+    const root = rootRef.current;
+    if (!el || !root || typeof IntersectionObserver === "undefined") return undefined;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    const observer = new IntersectionObserver(([entry]) => (entry.isIntersecting ? el.play().catch(() => {}) : el.pause()), { rootMargin: "20% 0px" });
+    observer.observe(root);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const root = rootRef.current;
@@ -80,7 +92,22 @@ export default function ScrollTagline({ lines, label, accent = "#f2a007", glow =
   return (
     <section ref={rootRef} aria-label={label} className="stag" style={{ "--n": total, "--accent": accent, "--glow": glow }}>
       <div className="stag-pin">
+        {video && (
+          <video ref={videoRef} className="stag-video" src={video} poster={poster} muted loop playsInline preload="none" aria-hidden="true" tabIndex={-1} />
+        )}
+        <div className="stag-grain" aria-hidden="true" />
         <div className="stag-orb" aria-hidden="true" />
+        {chips.map((chip, chipIndex) => (
+          <span key={chip.label} className="stag-chip" data-extra={chipIndex >= 3} aria-hidden="true" style={{ ...(chip.r ? { right: chip.r } : { left: chip.x }), top: chip.y, "--depth": chip.depth ?? 1, "--at": chip.at ?? 0.1 }}>
+            {chip.label}
+          </span>
+        ))}
+        {badge && (
+          <span className="stag-badge" aria-hidden="true">
+            <svg width="18" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2.6C12.55 2.6 12.88 3.15 13.08 4.7c.62 4.7 1.52 5.6 6.22 6.22 1.55.2 2.1.53 2.1 1.08s-.55.88-2.1 1.08c-4.7.62-5.6 1.52-6.22 6.22-.2 1.55-.53 2.1-1.08 2.1s-.88-.55-1.08-2.1c-.62-4.7-1.52-5.6-6.22-6.22C3.15 12.88 2.6 12.55 2.6 12s.55-.88 2.1-1.08c4.7-.62 5.6-1.52 6.22-6.22C11.12 3.15 11.45 2.6 12 2.6Z" /></svg>
+            {badge}
+          </span>
+        )}
         <p className={`stag-text ${textClass}`}>
           <span className="sr-only">{plain}</span>
           <span aria-hidden="true">

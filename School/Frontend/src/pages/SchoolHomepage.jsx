@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, BookOpenText, CaretDown, DeviceMobile, Pause, PencilSimpleLine, Play, Prohibit, Timer } from "@phosphor-icons/react";
+import { ArrowRight, BookOpenText, CaretDown, DeviceMobile, Pause, PencilSimpleLine, Play, Prohibit, Quotes, Timer } from "@phosphor-icons/react";
 import Seo from "../components/Seo";
 import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
 import ScriptPage from "../components/landing/ScriptPage";
 import Reveal from "../components/home/Reveal";
 import SnapRow from "../components/home/SnapRow";
+import FocusCarousel from "../components/home/FocusCarousel";
 import ScrollTagline from "../components/home/ScrollTagline";
 import LessonStage from "../components/home/LessonStage";
 import usePrefersReducedMotion from "../components/home/usePrefersReducedMotion";
@@ -398,6 +399,16 @@ export default function SchoolHomepage() {
           accent="#f2a007"
           glow="255 214 102"
           textClass="heading-2"
+          badge="Classes VIII to X"
+          video={`${import.meta.env.BASE_URL}tagline-bg.mp4`}
+          poster={`${import.meta.env.BASE_URL}tagline-bg.webp`}
+          chips={[
+            { label: "2 to 3.5 minute lessons", x: "6%", y: "17%", depth: 0.7, at: 0.05 },
+            { label: "Neo and Zippy", r: "12%", y: "13%", depth: 1.2, at: 0.15 },
+            { label: "New NCERT books", r: "6%", y: "62%", depth: 0.9, at: 0.3 },
+            { label: "923 lessons scripted", x: "5%", y: "64%", depth: 1.1, at: 0.4 },
+            { label: "Classes VIII to X", r: "20%", y: "80%", depth: 0.6, at: 0.55 },
+          ]}
         />
       </div>
 
@@ -463,65 +474,60 @@ export default function SchoolHomepage() {
 
       {/* 7. Pilot testers: appears only once real, consented names are added to data/pilotTesters.js */}
       {PILOT_TESTERS.length > 0 && (
-        <div className="band-mint">
+        <div className="band-sky">
           <section aria-labelledby="pilot-heading" className="site-container py-12 md:py-16">
             <Reveal>
               <h2 id="pilot-heading" className="heading-2 max-w-[680px]">Tried by our pilot testers</h2>
             </Reveal>
-            <Reveal className="mt-10" delay={80}>
-              <SnapRow label="Pilot testers">
+            <Reveal className="mt-8" delay={80}>
+              <FocusCarousel label="Pilot tester reviews" autoplayMs={7000} slideWidth="min(80vw, 460px)">
                 {PILOT_TESTERS.map((person) => (
-                  <figure key={person.name} className="sh-card h-full p-6">
-                    <blockquote className="body-3 text-ink">{person.quote}</blockquote>
-                    <figcaption className="mt-4">
-                      <p className="body-1 text-ink">{person.name}</p>
-                      <p className="caption-1 text-ink-muted">{person.role}</p>
+                  <figure key={person.name} className="sh-card flex h-full flex-col gap-6 p-6 md:p-8">
+                    <Quotes aria-hidden="true" weight="fill" className="text-4xl text-[var(--school)]" />
+                    <blockquote className="title-1 text-ink">{person.quote}</blockquote>
+                    <figcaption className="mt-auto flex items-center gap-3">
+                      <span aria-hidden="true" className="grid h-11 w-11 place-items-center rounded-full bg-[var(--school-soft)] text-lg font-semibold text-[var(--school-ink)]" style={{ fontFamily: "var(--font-heading)" }}>
+                        {person.name[0]}
+                      </span>
+                      <span>
+                        <span className="body-1 block text-ink">{person.name}</span>
+                        <span className="caption-1 block text-ink-muted">{person.role}</span>
+                      </span>
                     </figcaption>
                   </figure>
                 ))}
-              </SnapRow>
+              </FocusCarousel>
             </Reveal>
           </section>
         </div>
       )}
 
-      {/* 8. For parents */}
+      {/* 8. For parents: three benefits, then what is coming next, as one carousel */}
       <div className="band-mint">
         <section id="parents" aria-labelledby="parents-heading" className="site-container scroll-mt-28 py-12 md:py-16">
           <Reveal>
             <h2 id="parents-heading" className="heading-2 max-w-[680px]">For parents</h2>
           </Reveal>
-          <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-12">
-            <Reveal delay={80}>
-              <ul className="grid gap-4">
-                {FOR_PARENTS.map(({ icon: Icon, title, body }) => (
-                  <li key={title} className="sh-card flex items-start gap-4 p-6">
-                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#e3f6ee] text-2xl text-[#0b6b4a]">
-                      <Icon aria-hidden="true" weight="duotone" />
-                    </span>
-                    <div>
-                      <h3 className="title-card text-ink">{title}</h3>
-                      <p className="body-3 mt-1 text-ink-muted">{body}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-            <Reveal delay={160}>
-              <h3 className="caption-1 text-ink-muted">Coming next</h3>
-              <ul className="mt-3 grid gap-4">
-                {COMING_NEXT.map((item) => (
-                  <li key={item.title} className="rounded-2xl border-2 border-dashed border-[#0b6b4a]/40 p-4">
-                    <p className="body-1 flex flex-wrap items-center gap-2 text-ink">
-                      {item.title}
-                      <span className="caption-3 rounded-full bg-white px-2 py-0.5 text-[#0b6b4a]">Coming soon</span>
-                    </p>
-                    <p className="body-3 mt-1 text-ink-muted">{item.body}</p>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-          </div>
+          <Reveal className="mt-8" delay={80}>
+            <FocusCarousel label="What parents get" slideWidth="min(78vw, 380px)">
+              {FOR_PARENTS.map(({ icon: Icon, title, body }) => (
+                <article key={title} className="sh-card h-full p-6 md:p-8">
+                  <span className="grid h-12 w-12 place-items-center rounded-full bg-[#e3f6ee] text-2xl text-[#0b6b4a]">
+                    <Icon aria-hidden="true" weight="duotone" />
+                  </span>
+                  <h3 className="title-card mt-5 text-ink">{title}</h3>
+                  <p className="body-3 mt-2 text-ink-muted">{body}</p>
+                </article>
+              ))}
+              {COMING_NEXT.map((item) => (
+                <article key={item.title} className="h-full rounded-2xl border-2 border-dashed border-[#0b6b4a]/45 bg-white/50 p-6 md:p-8">
+                  <span className="caption-3 inline-flex rounded-full bg-white px-3 py-1 text-[#0b6b4a]">Coming soon</span>
+                  <h3 className="title-card mt-5 text-ink">{item.title}</h3>
+                  <p className="body-3 mt-2 text-ink-muted">{item.body}</p>
+                </article>
+              ))}
+            </FocusCarousel>
+          </Reveal>
         </section>
       </div>
 
