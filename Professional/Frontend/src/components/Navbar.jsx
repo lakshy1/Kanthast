@@ -14,7 +14,6 @@ import {
   FaHome,
   FaBookOpen,
   FaStar,
-  FaEnvelope,
 } from "react-icons/fa";
 const dockItems = [
   { to: "/", label: "Home", icon: FaHome, exact: true },
@@ -27,8 +26,8 @@ const publicDockItems = [
   { to: "/", label: "Home", icon: FaHome, exact: true },
   { to: "/courses", label: "Courses", icon: FaBookOpen, exact: false },
   { to: "/library", label: "Library", icon: FaList, exact: false },
-  { to: "/subscription", label: "Plans", icon: FaStar, exact: false },
-  { to: "/contact", label: "Contact", icon: FaEnvelope, exact: false },
+  // Guests have no subscription page (it is behind login), so Plans is the public pricing page.
+  { to: "/pricing", label: "Plans", icon: FaStar, exact: false },
 ];
 
 // --nav-offset adds the floating bar's top gap and breathing room on desktop (index.css).
@@ -152,7 +151,7 @@ const Navbar = () => {
         <div className="nav-shell mx-auto flex w-full items-center justify-between px-5 md:px-16 lg:w-[calc(var(--u)*85)] lg:max-w-none lg:px-0">
           <div className="flex min-w-0 items-center gap-3">
             <div className="nav-brand relative flex items-end gap-1.5">
-              <a href="/" aria-label="Kanthast home" className="flex items-center gap-2.5 focus-visible:outline-none">
+              <Link to="/" aria-label="Kanthast Professional home" className="flex items-center gap-2.5 focus-visible:outline-none">
                 <svg className="nav-k" viewBox="0 0 40 40" aria-hidden="true">
                   <defs>
                     <linearGradient id="nav-k-a" x1="0" y1="0" x2="1" y2="1">
@@ -171,8 +170,8 @@ const Navbar = () => {
                 <span className="nav-logo block font-display text-2xl font-extrabold leading-none tracking-tight text-softwhite md:text-[1.8rem]">
                   Kanthast
                 </span>
-              </a>
-              <Link to="/" aria-label="Kanthast Professional home" className="nav-medical translate-y-[0.3em] text-xs font-semibold leading-none tracking-[0.02em] text-[#69ACE9] hover:underline">Professional</Link>
+              </Link>
+              <span className="nav-medical translate-y-[0.3em] text-xs font-semibold leading-none tracking-[0.02em] text-[#69ACE9]">Professional</span>
             </div>
           </div>
 
@@ -268,16 +267,6 @@ const Navbar = () => {
                 className={({ isActive }) => (isActive ? activeClass : normalClass)}
               >
                 Subscription
-              </NavLink>
-            )}
-            {!isLoggedIn && (
-              <NavLink to="/about" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
-                About
-              </NavLink>
-            )}
-            {!isLoggedIn && (
-              <NavLink to="/contact" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
-                Contact
               </NavLink>
             )}
           </div>
@@ -554,7 +543,7 @@ const Navbar = () => {
           className="nav-dock-fade pointer-events-none absolute inset-x-0 bottom-full h-6 bg-gradient-to-t from-[#0b1220]/70 to-transparent"
         />
         <div className="nav-dock-bar border-t border-hairline/70 bg-[#0b1220]/95 backdrop-blur-xl">
-          <div className={`grid h-16 ${isLoggedIn ? "grid-cols-4" : "grid-cols-5"}`}>
+          <div className="grid h-16 grid-cols-4">
           {(isLoggedIn ? dockHomeItems : dockPublicItems).map(({ to, label, icon: Icon, exact }) => {
             const isActive = exact ? location.pathname === to : location.pathname.startsWith(to);
             return (

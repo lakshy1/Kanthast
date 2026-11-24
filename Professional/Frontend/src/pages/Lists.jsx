@@ -318,12 +318,6 @@ export default function Lists() {
             </button>
             <p id={metaId} className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-ink-subtle tabular-nums">
               <span>{lecture.duration}</span>
-              {comingSoon && (
-                <>
-                  <span aria-hidden="true">·</span>
-                  <span>Coming soon</span>
-                </>
-              )}
               {access.videoLocked && (
                 <span className="inline-flex items-center gap-1 rounded-full bg-caution-soft px-2 py-0.5 text-mini font-semibold text-caution">
                   <FaLock aria-hidden="true" className="text-micro" />
@@ -524,6 +518,15 @@ export default function Lists() {
                     {activeTab}{" "}
                     <span className="text-2xl md:text-4xl text-ink-subtle font-medium tabular-nums">({activeModule.totalDuration})</span>
                   </h1>
+                  {(() => {
+                    const all = activeModule.sections.flatMap((sec) => sec.lectures);
+                    const ready = all.filter((lecture) => lecture.videoLink).length;
+                    return (
+                      <p className="mt-3 text-sm text-ink-muted">
+                        {ready} of {all.length} lectures have video today. The rest are in production and open as they are released.
+                      </p>
+                    );
+                  })()}
                 </div>
 
                 {activeModule.sections.map((sec, sectionIndex) => (
@@ -540,9 +543,36 @@ export default function Lists() {
                         {sec.title} <span className={`${compact ? "text-sm" : "text-base"} text-ink-subtle font-medium tabular-nums`}>({sec.total})</span>
                       </h2>
 
-                      <div className="mt-6 space-y-2">
-                        {sec.lectures.map((lecture, lectureIndex) => renderLectureRow(activeTab, sec, lecture, lectureIndex))}
-                      </div>
+                      {(() => {
+                        const indexed = sec.lectures.map((lecture, lectureIndex) => ({ lecture, lectureIndex }));
+                        const available = indexed.filter(({ lecture }) => lecture.videoLink);
+                        const inProduction = indexed.filter(({ lecture }) => !lecture.videoLink);
+                        return (
+                          <>
+                            {available.length > 0 && (
+                              <div className="mt-6">
+                                <p className="px-4 text-xs font-bold uppercase tracking-[0.12em] text-ink-muted">
+                                  Available now ({available.length})
+                                </p>
+                                <div className="mt-2 space-y-2">
+                                  {available.map(({ lecture, lectureIndex }) => renderLectureRow(activeTab, sec, lecture, lectureIndex))}
+                                </div>
+                              </div>
+                            )}
+                            {inProduction.length > 0 && (
+                              <details className="group mt-6" open={available.length === 0 && inProduction.length <= 5}>
+                                <summary className="flex min-h-touch cursor-pointer list-none items-center justify-between rounded-control px-4 text-xs font-bold uppercase tracking-[0.12em] text-ink-muted hover:bg-surface-sunken [&::-webkit-details-marker]:hidden">
+                                  <span>In production ({inProduction.length}) · video coming soon</span>
+                                  <FaChevronDown aria-hidden="true" className="text-xs transition group-open:rotate-180" />
+                                </summary>
+                                <div className="mt-2 space-y-2">
+                                  {inProduction.map(({ lecture, lectureIndex }) => renderLectureRow(activeTab, sec, lecture, lectureIndex))}
+                                </div>
+                              </details>
+                            )}
+                          </>
+                        );
+                      })()}
                     </div>
                   </MotionSection>
                 ))}
