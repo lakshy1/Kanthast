@@ -6,6 +6,8 @@ import SectionHead from "../components/landing/SectionHead";
 import BrandHero from "../components/landing/BrandHero";
 import BrandPaths from "../components/landing/BrandPaths";
 import BrandWatch from "../components/landing/BrandWatch";
+import FocusCarousel from "../components/landing/FocusCarousel";
+import "../styles/brand-carousel.css";
 import Reveal from "../components/landing/Reveal";
 import ScrollTagline from "../components/landing/ScrollTagline";
 import "../styles/brand-tagline.css";
@@ -226,20 +228,19 @@ export default function KanthastHome() {
           accent="Learn"
           note="What works today, and what is being built. Anything not ready yet is marked."
         />
-        <ul className="kx-ai">
-          {AI.map(({ icon: Icon, title, body, live }) => (
-            <li key={title} className={`kx-ai-card${live ? "" : " is-soon"}`}>
-              <span className="kx-badge" aria-hidden="true"><Icon /></span>
-              <span className="kx-ai-text">
-                <span className="kx-ai-title">
-                  {title}
-                  {live ? <span className="kx-live">Live</span> : <span className="bp-soon">Coming soon</span>}
-                </span>
-                <span className="kx-ai-body">{body}</span>
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div className="mt-8">
+          <FocusCarousel label="AI help, live and planned" autoplayMs={2000} slideWidth="min(82vw, 400px)">
+            {AI.map(({ icon: Icon, title, body, live }, index) => (
+              <article key={title} className={`ai-card${live ? "" : " is-soon"}`}>
+                <span className="ai-num" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                <span className="ai-icon" aria-hidden="true"><Icon /></span>
+                <h3 className="ai-title">{title}</h3>
+                <p className="ai-body">{body}</p>
+                <span className="ai-status">{live ? "Live now" : "Coming soon"}</span>
+              </article>
+            ))}
+          </FocusCarousel>
+        </div>
       </section>
       </Reveal>
 

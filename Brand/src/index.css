@@ -2247,3 +2247,7 @@ nav.kb-bar.fixed.nav-aurora { background: rgb(255 255 255 / 0.82); -webkit-backd
 }
 .bwa { padding-block: clamp(2.5rem, 5vw, 4.5rem); }
 @media (min-width: 1024px) { .bwa-spark { display: none; } }
+
+/* Every section ends with room to breathe before the next one (the products cards used to touch the dark band) */
+.kx-section { padding-bottom: clamp(3.5rem, 6vw, 6rem); }
+#products { padding-bottom: clamp(4.5rem, 8vw, 7rem); }

@@ -157,10 +157,6 @@ export default function BrandPaths() {
               </span>
             </h2>
             <p className="bp-sub">A complete animated learning platform for students, learners and professionals.</p>
-            <a href="#products" className="bh-btn bh-btn-primary bw-cta">
-              Explore Features
-              <FaArrowRight aria-hidden="true" className="text-[0.8em]" />
-            </a>
           </div>
           <ul className="bw-grid">
             {FEATURES.map((f) => (
