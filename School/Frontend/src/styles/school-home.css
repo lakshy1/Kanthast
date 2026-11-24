@@ -269,3 +269,34 @@
   .school-home .stag-badge { opacity: 1; transform: none; }
   .school-home .stag-video { opacity: 0.22; }
 }
+
+/* Accent colour: the grayscale ribbon takes the page's accent (colour blend keeps the video's light and dark), with a warmer glow behind the text */
+.school-home .stag-tint {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: rgb(var(--glow)); mix-blend-mode: color; opacity: 0.95;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+.school-home .stag-video { opacity: calc(0.14 + 0.3 * var(--p)); }
+.school-home .stag-orb { background: radial-gradient(closest-side, rgb(var(--glow) / 0.26), transparent); }
+.school-home .stag-chip, .school-home .stag-badge { border-color: rgb(var(--glow) / 0.3); color: rgb(255 255 255 / 0.74); }
+.school-home .stag-badge svg { filter: drop-shadow(0 0 4px rgb(var(--glow) / 0.7)); }
+@media (prefers-reduced-motion: reduce) { .school-home .stag-video { opacity: 0.3; } }
+
+.school-home .stag-pin { background: #000; }
+
+/* Subtle and minimal: a faint accent wash, not a spotlight */
+.school-home .stag-video { opacity: calc(0.06 + 0.1 * var(--p)); }
+.school-home .stag-tint { opacity: 0.7; }
+.school-home .stag-orb { background: radial-gradient(closest-side, rgb(var(--glow) / 0.1), transparent); }
+.school-home .stag-grain { opacity: 0.1; }
+@media (prefers-reduced-motion: reduce) { .school-home .stag-video { opacity: 0.14; } }
+
+/* Hero clip card: a soft floating look with a quiet frosted tag */
+.school-home .sh-clip { transition: transform 500ms var(--ease), box-shadow 500ms var(--ease); box-shadow: 0 4px 0 rgb(var(--line-strong)), 0 24px 48px -24px rgb(11 27 51 / 0.35); }
+.school-home .sh-clip-frame { cursor: pointer; }
+.school-home .sh-clip-frame:focus-visible { outline: 2px solid var(--school-ink); outline-offset: 3px; }
+@media (hover: hover) {
+  .school-home .sh-clip:hover { transform: translateY(-4px); box-shadow: 0 4px 0 rgb(var(--line-strong)), 0 32px 56px -24px rgb(11 27 51 / 0.45); }
+}
+@media (prefers-reduced-motion: reduce) { .school-home .sh-clip { transition: none; } .school-home .sh-clip:hover { transform: none; } }

@@ -181,8 +181,15 @@ function HeroClip() {
   }, [playing]);
 
   return (
-    <figure className="sh-card p-2">
-      <div className="aspect-video overflow-hidden rounded-lg bg-black">
+    <figure className="sh-clip sh-card p-2">
+      {/* No visible controls: the clip is a short silent loop. Clicking or pressing Enter pauses or resumes it. */}
+      <button
+        type="button"
+        onClick={() => setChoice(!wantsPlay)}
+        aria-label={playing ? "Pause the clip" : "Play the clip"}
+        aria-pressed={!playing}
+        className="sh-clip-frame relative block aspect-video w-full overflow-hidden rounded-lg bg-black"
+      >
         <video
           ref={videoRef}
           muted
@@ -194,21 +201,7 @@ function HeroClip() {
           aria-label="A short clip from the Class VIII Science lesson From Wonder to Investigation, with Neo the owl and Zippy the spark."
           className="h-full w-full object-cover"
         />
-      </div>
-      <figcaption className="flex items-start justify-between gap-3 p-4">
-        <div>
-          <p className="caption-3 text-[var(--school-ink)]">A real clip · Class VIII Science</p>
-          <p className="body-3 mt-1 text-ink-muted">From the lesson "From Wonder to Investigation". The first lessons open on {FIRST_LESSONS}.</p>
-        </div>
-        <button
-          type="button"
-          onClick={() => setChoice(!wantsPlay)}
-          aria-label={playing ? "Pause the clip" : "Play the clip"}
-          className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-line-strong text-ink transition-colors duration-300 hover:bg-surface-sunken"
-        >
-          {playing ? <Pause aria-hidden="true" weight="fill" /> : <Play aria-hidden="true" weight="fill" />}
-        </button>
-      </figcaption>
+      </button>
     </figure>
   );
 }

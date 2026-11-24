@@ -129,3 +129,25 @@
   .pro-home .stag-badge { opacity: 1; transform: none; }
   .pro-home .stag-video { opacity: 0.22; }
 }
+
+/* Accent colour: the grayscale ribbon takes the page's accent (colour blend keeps the video's light and dark), with a warmer glow behind the text */
+.pro-home .stag-tint {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: rgb(var(--glow)); mix-blend-mode: color; opacity: 0.95;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+.pro-home .stag-video { opacity: calc(0.14 + 0.3 * var(--p)); }
+.pro-home .stag-orb { background: radial-gradient(closest-side, rgb(var(--glow) / 0.26), transparent); }
+.pro-home .stag-chip, .pro-home .stag-badge { border-color: rgb(var(--glow) / 0.3); color: rgb(255 255 255 / 0.74); }
+.pro-home .stag-badge svg { filter: drop-shadow(0 0 4px rgb(var(--glow) / 0.7)); }
+@media (prefers-reduced-motion: reduce) { .pro-home .stag-video { opacity: 0.3; } }
+
+.pro-home .stag-pin { background: #000; }
+
+/* Subtle and minimal: a faint accent wash, not a spotlight */
+.pro-home .stag-video { opacity: calc(0.06 + 0.1 * var(--p)); }
+.pro-home .stag-tint { opacity: 0.7; }
+.pro-home .stag-orb { background: radial-gradient(closest-side, rgb(var(--glow) / 0.1), transparent); }
+.pro-home .stag-grain { opacity: 0.1; }
+@media (prefers-reduced-motion: reduce) { .pro-home .stag-video { opacity: 0.14; } }

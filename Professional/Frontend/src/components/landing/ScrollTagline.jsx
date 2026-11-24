@@ -95,6 +95,7 @@ export default function ScrollTagline({ lines, label, accent = "#f2a007", glow =
         {video && (
           <video ref={videoRef} className="stag-video" src={video} poster={poster} muted loop playsInline preload="none" aria-hidden="true" tabIndex={-1} />
         )}
+        {video && <div className="stag-tint" aria-hidden="true" />}
         <div className="stag-grain" aria-hidden="true" />
         <div className="stag-orb" aria-hidden="true" />
         {chips.map((chip, chipIndex) => (
