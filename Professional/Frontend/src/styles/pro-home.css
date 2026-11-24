@@ -151,3 +151,9 @@
 .pro-home .stag-orb { background: radial-gradient(closest-side, rgb(var(--glow) / 0.1), transparent); }
 .pro-home .stag-grain { opacity: 0.1; }
 @media (prefers-reduced-motion: reduce) { .pro-home .stag-video { opacity: 0.14; } }
+
+/* The tour's heading stays put as a quiet frosted strip while the steps scroll beneath it */
+.pro-home .tour-heading-bar {
+  background: transparent;
+}
+@media (prefers-reduced-transparency: reduce) { .pro-home .tour-heading-bar { background: rgb(var(--surface)); -webkit-backdrop-filter: none; backdrop-filter: none; } }

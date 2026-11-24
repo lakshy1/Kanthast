@@ -28,14 +28,7 @@ export default function FaqStudent({ questions, openIndex }) {
   const ref = useRef(null);
   const inView = useInView(ref, { amount: 0.3 });
   const reduce = useReducedMotion();
-  const [idleIndex, setIdleIndex] = useState(0);
   const answered = openIndex !== null && openIndex !== undefined;
-
-  useEffect(() => {
-    if (answered || !inView || reduce) return undefined;
-    const id = setInterval(() => setIdleIndex((i) => (i + 1) % questions.length), 3200);
-    return () => clearInterval(id);
-  }, [answered, inView, reduce, questions.length]);
 
   // Cursor tracking (fine pointers only): -1..1 offsets of the pointer from
   // the head, sprung so the head eases toward it instead of snapping.
@@ -80,30 +73,12 @@ export default function FaqStudent({ questions, openIndex }) {
   const neckX = useTransform(sx, (v) => v * 3.2);
   const neckY = useTransform(sy, (v) => v * 1.5);
 
-  const shown = answered ? openIndex : idleIndex;
   const idle = !answered && inView && !reduce;
   const swap = { initial: { opacity: 0, y: 6 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0, y: -6 }, transition: { duration: 0.25 } };
 
   return (
     <div ref={ref} aria-hidden="true" className="faq-student overflow-hidden rounded-card border border-line bg-surface-raised">
       <div className="relative">
-        <div className="absolute left-[5%] top-[5%] z-10 w-[56%]">
-          <div className="relative rounded-2xl border border-line-strong bg-surface px-4 py-3 shadow-e3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-subtle">
-              {answered ? "Asked" : "Wondering…"}
-            </p>
-            <div className="relative mt-1 min-h-[2.8em] text-sm font-semibold leading-snug text-ink sm:text-[15px]">
-              <AnimatePresence mode="wait" initial={false}>
-                <Motion.p key={shown} {...swap}>
-                  {questions[shown].q}
-                </Motion.p>
-              </AnimatePresence>
-            </div>
-            <span className="absolute -bottom-[7px] right-[22%] h-3 w-3 rotate-45 border-b border-r border-line-strong bg-surface" />
-          </div>
-          <span className="absolute -bottom-6 right-[16%] h-2.5 w-2.5 rounded-full border border-line-strong bg-surface" />
-        </div>
-
         <svg ref={svgRef} viewBox="0 0 520 430" className="block w-full" role="presentation">
           <defs>
             <radialGradient id="faq-glow" cx="50%" cy="45%" r="55%">

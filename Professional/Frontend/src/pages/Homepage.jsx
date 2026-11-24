@@ -185,12 +185,15 @@ function ProductTour() {
   return (
     <section aria-labelledby="tour-heading" className="relative bg-surface pb-24 pt-16 text-ink md:pb-32 md:pt-24">
       <div className="site-container">
-        <h2 id="tour-heading" className="max-w-2xl text-3xl font-bold tracking-tight md:text-5xl">
-          One place for the whole loop: find, watch, keep going.
-        </h2>
+        {/* Phones: the heading stays pinned on its own */}
+        <div className="tour-heading-bar sticky z-20 -mx-5 px-5 py-3 text-center md:-mx-8 md:px-8 lg:hidden" style={{ top: "calc(var(--navbar-h, 4rem) - 1px)" }}>
+          <h2 id="tour-heading" className="mx-auto text-xl font-bold tracking-tight md:whitespace-nowrap">
+            One place for the whole loop: find, watch, keep going.
+          </h2>
+        </div>
 
-        <div className="mt-14 lg:grid lg:grid-cols-12 lg:gap-16">
-          <ol ref={stepsRef} className="min-w-0 lg:col-span-5">
+        <div className="mt-10 lg:mt-0 lg:grid lg:grid-cols-12 lg:gap-x-16">
+          <ol ref={stepsRef} className="relative z-10 min-w-0 lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:pt-28">
             {TOUR_STEPS.map((item, index) => (
               <li
                 key={item.id}
@@ -219,20 +222,26 @@ function ProductTour() {
             ))}
           </ol>
 
-          <div className="hidden lg:col-span-7 lg:block">
-            <div className="sticky top-[max(7rem,calc(50vh-17rem))]">
+          {/* Desktop: heading and laptop are ONE pinned layer, so they hold their places together and leave together */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none sticky hidden self-start lg:col-span-12 lg:col-start-1 lg:row-start-1 lg:block"
+            style={{ top: "calc(var(--navbar-h, 4rem) - 1px)" }}
+          >
+            <p className="py-3 text-center text-[clamp(1.5rem,3.4vw,2.25rem)] font-bold tracking-tight whitespace-nowrap">
+              One place for the whole loop: find, watch, keep going.
+            </p>
+            <div className="ml-[calc(41.6667%+2rem)] mt-10 pointer-events-auto">
               <div aria-hidden="true" className="home-glow" />
               <TiltFrame>
                 <MacbookFrame
-                  alt="The Kanthast library, lecture player and progress dashboard, shown in turn as you scroll."
+                  alt=""
                   className="drop-shadow-[0_45px_80px_rgba(6,11,28,0.55)]"
                 >
                   <TourScreen progress={scrollYProgress} />
                 </MacbookFrame>
               </TiltFrame>
-              <p className="mt-6 text-center text-sm text-ink-muted" aria-live="polite">
-                {TOUR_STEPS[active].caption || " "}
-              </p>
+              <p className="mt-6 text-center text-sm text-ink-muted">{TOUR_STEPS[active].caption || " "}</p>
             </div>
           </div>
         </div>

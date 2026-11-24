@@ -1,17 +1,8 @@
 import { Link } from "react-router-dom";
-import { FaPlay, FaArrowRight, FaGraduationCap, FaStethoscope, FaSchool, FaHeart } from "react-icons/fa6";
-import { HiSparkles } from "react-icons/hi2";
-import { IoStatsChart } from "react-icons/io5";
+import { FaPlay, FaArrowRight, FaGraduationCap, FaStethoscope, FaSchool } from "react-icons/fa6";
 import heroIllustration from "../../assets/hero/hero-illustration.jpg";
 
-const FEATURES = [
-  { icon: FaPlay, title: "Animated Learning", text: "Complex topics, made simple with engaging animations." },
-  { icon: HiSparkles, title: "AI-Powered Support", text: "Get instant help with doubts while you learn." },
-  { icon: IoStatsChart, title: "Track Your Progress", text: "Resume lessons and see what you have watched." },
-  { icon: FaHeart, title: "For Everyone", text: "Medical aspirants, school students and lifelong learners." },
-];
-
-/** Landing hero: copy and CTAs on the left, illustration on the right, feature strip below. */
+/** Landing hero: copy and CTAs on the left, illustration on the right. Fills the first screen. */
 export default function BrandHero() {
   return (
     <section className="bh" aria-labelledby="bh-title">
@@ -86,17 +77,6 @@ export default function BrandHero() {
         </div>
       </div>
 
-      <ul className="bh-features" aria-label="What Kanthast offers">
-        {FEATURES.map(({ icon: Icon, title, text }) => (
-          <li key={title} className="bh-feature">
-            <span className="bh-feature-icon" aria-hidden="true"><Icon /></span>
-            <span>
-              <span className="bh-feature-title">{title}</span>
-              <span className="bh-feature-text">{text}</span>
-            </span>
-          </li>
-        ))}
-      </ul>
     </section>
   );
 }

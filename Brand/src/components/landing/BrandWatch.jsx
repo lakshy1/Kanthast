@@ -1,4 +1,4 @@
-import { FaPlay, FaArrowRight, FaBolt, FaBrain, FaHeart, FaQuoteLeft, FaStar } from "react-icons/fa6";
+import { FaPlay, FaArrowRight, FaBrain, FaHeart, FaQuoteLeft, FaStar } from "react-icons/fa6";
 import { MdOndemandVideo } from "react-icons/md";
 import playerArt from "../../assets/watch/player.jpg";
 import NeoZippy from "./NeoZippy";
@@ -8,7 +8,6 @@ import SCHOOL_CATALOG, { SAMPLE_SCRIPT } from "../../data/schoolCatalog";
 
 const POINTS = [
   { icon: MdOndemandVideo, label: ["Engaging", "Animations"] },
-  { icon: FaBolt, label: ["Interactive", "Learning"] },
   { icon: FaBrain, label: ["Smart AI", "Assistance"] },
 ];
 
@@ -108,6 +107,7 @@ export default function BrandWatch() {
               height="588"
               loading="lazy"
             />
+            <p className="bwa-caption">Illustration of a lesson with the AI helper.</p>
           </div>
         </div>
       </section>
@@ -120,12 +120,12 @@ export default function BrandWatch() {
               {real ? "Why Students Love Kanthast" : "Inside a Kanthast Lesson"}
             </p>
             <h2 id="bt-title" className="bt-title">
-              Learn Smarter.
+              {real ? "Straight from" : "Inside a"}
               <br />
-              Achieve{" "}
+              {real ? "our pilot " : "real "}
               <span className="bh-nowrap">
                 <span className="bh-click bh-accent">
-                  More
+                  {real ? "testers" : "lesson"}
                   <svg className="bh-underline" viewBox="0 0 200 18" preserveAspectRatio="none" aria-hidden="true">
                     <path d="M3 13 C 50 5, 120 3, 197 9" />
                   </svg>

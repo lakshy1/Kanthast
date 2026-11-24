@@ -1,0 +1,107 @@
+/* ---------- Scroll tagline: centred, pinned, character by character ---------- */
+.brand-page .stag { --p: 0; position: relative; height: 220vh; }
+@media (max-width: 767px) {
+  .brand-page .stag { height: 170vh; }
+}
+.brand-page .stag-pin { position: sticky; top: 0; height: 100vh; display: grid; place-items: center; align-content: center; justify-items: center; gap: 2rem; overflow: hidden; padding: 0 1.25rem; }
+.brand-page .stag-text { position: relative; max-width: 780px; text-align: center; color: #ffffff; text-wrap: balance; }
+.brand-page .stag-line { display: block; }
+.brand-page .stag-word { display: inline-block; white-space: nowrap; }
+.brand-page .stag-char {
+  --t: clamp(0, calc((var(--p) * (var(--n) + 10) - var(--i)) / 10), 1);
+  display: inline-block;
+  opacity: calc(0.16 + 0.84 * var(--t));
+  transform: translateY(calc((1 - var(--t)) * 8px));
+  /* a soft glow that is strongest while the letter is lighting up, then fades */
+  text-shadow: 0 0 18px rgb(var(--glow) / calc(0.5 * 4 * var(--t) * (1 - var(--t))));
+}
+.brand-page .stag-accent { color: color-mix(in srgb, var(--accent) calc(var(--t) * 100%), #ffffff); }
+/* faint light behind the text that grows as the statement fills in */
+.brand-page .stag-orb {
+  position: absolute; width: min(80vw, 720px); aspect-ratio: 1; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, rgb(var(--glow) / 0.14), transparent);
+  opacity: calc(0.15 + 0.85 * var(--p));
+  transform: scale(calc(0.8 + 0.25 * var(--p)));
+}
+.brand-page .stag-rule { display: block; width: 72px; height: 2px; border-radius: 2px; background: rgb(var(--glow) / 0.7); transform: scaleX(var(--p)); }
+@media (prefers-reduced-motion: reduce) {
+  .brand-page .stag { --p: 1; height: auto; padding: 6rem 0; }
+  .brand-page .stag-pin { position: static; height: auto; }
+  .brand-page .stag-char { opacity: 1; transform: none; text-shadow: none; }
+  .brand-page .stag-accent { color: var(--accent); }
+}
+.brand-page .stag-text { font-family: inherit; letter-spacing: -0.015em; }
+/* ---------- Scroll tagline: black stage with film grain, video, floating glass chips and a sparkle badge ---------- */
+.brand-page .stag { background: #000; }
+.brand-page .stag-pin > * { position: relative; z-index: 3; }
+.brand-page .stag-pin > .stag-video, .brand-page .stag-pin > .stag-grain, .brand-page .stag-pin > .stag-orb, .brand-page .stag-pin > .stag-chip { position: absolute; }
+.brand-page .stag-video {
+  inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none;
+  /* stretched a little so the ribbon runs off both edges: full width, no empty sides */
+  transform: scale(1.32, 1.06);
+  opacity: calc(0.08 + 0.2 * var(--p));
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+.brand-page .stag-orb { z-index: 1; }
+.brand-page .stag-grain {
+  inset: 0; z-index: 2; pointer-events: none; opacity: 0.16;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+/* liquid metal chips: they drift upward at different speeds as the statement fills in */
+.brand-page .stag-chip {
+  z-index: 2; display: inline-flex; align-items: center; height: 34px; padding: 0 15px; border-radius: 999px; overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.14); color: rgb(255 255 255 / 0.62); font-size: 13px; font-weight: 400; letter-spacing: -0.01em; white-space: nowrap;
+  background: rgb(255 255 255 / 0.05);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  opacity: clamp(0, calc((var(--p) - var(--at)) * 5), 0.7);
+  transform: translate3d(0, calc(var(--p) * -50px * var(--depth)), 0);
+  pointer-events: none;
+}
+.brand-page .stag-chip::before { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 30%, rgb(255 255 255 / 0.08) 50%, transparent 70%); transform: translateX(-120%); animation: stag-shine 9s ease-in-out infinite; }
+@keyframes stag-shine { 0%, 55% { transform: translateX(-120%); } 85%, 100% { transform: translateX(120%); } }
+.brand-page .stag-badge {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; color: rgb(255 255 255 / 0.72); font-size: 12.5px; font-weight: 400; letter-spacing: -0.01em;
+  border: 1px solid rgb(255 255 255 / 0.14); background: rgb(255 255 255 / 0.06);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  opacity: clamp(0, calc(var(--p) * 12), 0.85); transform: translateY(calc((1 - clamp(0, var(--p) * 12, 1)) * 12px));
+}
+.brand-page .stag-badge svg { opacity: 0.8; filter: drop-shadow(0 0 3px rgb(255 255 255 / 0.3)); }
+@media (max-width: 767px) {
+  .brand-page .stag-chip[data-extra="true"] { display: none; }
+  .brand-page .stag-chip { height: 30px; padding: 0 12px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-page .stag-chip { opacity: 0.55; transform: none; }
+  .brand-page .stag-chip::before { animation: none; }
+  .brand-page .stag-badge { opacity: 1; transform: none; }
+  .brand-page .stag-video { opacity: 0.22; }
+}
+/* Accent colour: the grayscale ribbon takes the page's accent (colour blend keeps the video's light and dark), with a warmer glow behind the text */
+.brand-page .stag-tint {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: rgb(var(--glow)); mix-blend-mode: color; opacity: 0.95;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+.brand-page .stag-video { opacity: calc(0.14 + 0.3 * var(--p)); }
+.brand-page .stag-orb { background: radial-gradient(closest-side, rgb(var(--glow) / 0.26), transparent); }
+.brand-page .stag-chip, .brand-page .stag-badge { border-color: rgb(var(--glow) / 0.3); color: rgb(255 255 255 / 0.74); }
+.brand-page .stag-badge svg { filter: drop-shadow(0 0 4px rgb(var(--glow) / 0.7)); }
+@media (prefers-reduced-motion: reduce) {
+  .brand-page .stag-video { opacity: 0.3; }
+}
+.brand-page .stag-pin { background: #000; }
+/* Subtle and minimal: a faint accent wash, not a spotlight */
+.brand-page .stag-video { opacity: calc(0.06 + 0.1 * var(--p)); }
+.brand-page .stag-tint { opacity: 0.7; }
+.brand-page .stag-orb { background: radial-gradient(closest-side, rgb(var(--glow) / 0.1), transparent); }
+.brand-page .stag-grain { opacity: 0.1; }
+@media (prefers-reduced-motion: reduce) {
+  .brand-page .stag-video { opacity: 0.14; }
+}
+/* ---------- Scroll reveal: rise 32px and fade, once ---------- */
+.brand-page .bk-reveal { opacity: 0; transform: translateY(32px); transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1); }
+.brand-page .bk-reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .brand-page .bk-reveal { transform: none; transition: opacity 300ms linear; } }
+.brand-page .bwa-caption { margin-top: 0.5rem; text-align: center; font-size: 0.75rem; line-height: 1rem; color: rgb(var(--ink-subtle, 90 104 128)); }

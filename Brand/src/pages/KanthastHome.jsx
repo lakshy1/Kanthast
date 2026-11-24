@@ -1,14 +1,15 @@
 import { useState } from "react";
-import { FaChevronDown, FaRobot, FaClockRotateLeft, FaChartColumn, FaCrosshairs, FaArrowsRotate, FaListCheck, FaArrowRight, FaStethoscope, FaGraduationCap, FaPlay, FaWandMagicSparkles, FaCircleQuestion } from "react-icons/fa6";
+import { FaChevronDown, FaRobot, FaClockRotateLeft, FaChartColumn, FaCrosshairs, FaArrowsRotate, FaListCheck, FaArrowRight, FaStethoscope, FaGraduationCap, FaWandMagicSparkles, FaCircleQuestion } from "react-icons/fa6";
 import Seo from "../components/Seo";
 import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
-import ScriptPage from "../components/landing/ScriptPage";
 import SectionHead from "../components/landing/SectionHead";
 import BrandHero from "../components/landing/BrandHero";
 import BrandPaths from "../components/landing/BrandPaths";
 import BrandWatch from "../components/landing/BrandWatch";
+import Reveal from "../components/landing/Reveal";
+import ScrollTagline from "../components/landing/ScrollTagline";
+import "../styles/brand-tagline.css";
 import WaitlistSection from "../components/landing/WaitlistSection";
-import CircuitScene from "../components/landing/CircuitScene";
 import NeoZippy from "../components/landing/NeoZippy";
 import DeviceShowcase from "../components/landing/DeviceShowcase";
 import SYLLABUS_SNAPSHOT from "../data/syllabusSnapshot";
@@ -110,10 +111,11 @@ export default function KanthastHome() {
       />
 
       <BrandHero />
-      <BrandPaths />
-      <BrandWatch />
+      <Reveal><BrandPaths /></Reveal>
+      <Reveal><BrandWatch /></Reveal>
 
       {/* The two products: identical structure, different accent. */}
+      <Reveal>
       <section id="products" aria-labelledby="products-heading" className="kx-section">
         <SectionHead
           id="products-heading"
@@ -193,27 +195,28 @@ export default function KanthastHome() {
           ))}
         </div>
       </section>
+      </Reveal>
 
-      {/* Signature: the script, and the scene it becomes. */}
-      <section aria-labelledby="made-heading" className="kx-section">
-        <SectionHead
-          id="made-heading"
-          eyebrow="How Lessons Are Made"
-          before="From Script to"
-          accent="Scene"
-          note="Every lesson starts as a script, then comes to life as animation. This is a real one, from Class X Science."
-        />
-        <div className="kx-panel kx-made">
-          <ScriptPage scenes={2} compact />
-          <div className="kx-made-arrow" aria-hidden="true"><FaArrowRight /></div>
-          <div className="kx-made-scene">
-            <span className="kx-made-label"><FaPlay aria-hidden="true" /> The scene it becomes</span>
-            <CircuitScene light />
-          </div>
-        </div>
-      </section>
+      {/* One quiet statement, lit up character by character as you scroll. */}
+      <ScrollTagline
+        label="What Kanthast is for"
+        lines={["Hard ideas, animated until they *click*.", "One idea at a time, for medical exams and for school."]}
+        accent="#60a5fa"
+        glow="96 165 250"
+        textClass="text-3xl font-semibold md:text-4xl lg:text-5xl"
+        badge="Kanthast"
+        video={`${import.meta.env.BASE_URL}tagline-bg.mp4`}
+        poster={`${import.meta.env.BASE_URL}tagline-bg.webp`}
+        chips={[
+          { label: "NEET PG", x: "6%", y: "15%", depth: 0.7, at: 0.05 },
+          { label: "Classes VIII to X", r: "6%", y: "18%", depth: 0.9, at: 0.2 },
+          { label: "INI CET", x: "4%", y: "62%", depth: 1.1, at: 0.4 },
+          { label: "NCERT 2025-26", r: "5%", y: "66%", depth: 0.6, at: 0.55 },
+        ]}
+      />
 
       {/* AI, as cards: live ones first, planned ones marked. */}
+      <Reveal>
       <section aria-labelledby="ai-heading" className="kx-section">
         <SectionHead
           id="ai-heading"
@@ -238,10 +241,10 @@ export default function KanthastHome() {
           ))}
         </ul>
       </section>
+      </Reveal>
 
-      <WaitlistSection />
-
-      <section aria-labelledby="brand-faq" className="kx-section kx-section-last">
+      <Reveal>
+      <section aria-labelledby="brand-faq" className="kx-section">
         <div className="kx-panel kx-faq-wrap">
           <SectionHead id="brand-faq" eyebrow="FAQ" icon={FaCircleQuestion} before="Got" accent="Questions" after="?">
             <p>Short answers about both products. Still unsure? Write to us.</p>
@@ -253,6 +256,9 @@ export default function KanthastHome() {
           <FaqList />
         </div>
       </section>
+      </Reveal>
+
+      <Reveal><WaitlistSection /></Reveal>
     </div>
   );
 }

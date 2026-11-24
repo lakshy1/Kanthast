@@ -6,6 +6,7 @@ import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils
 import Reveal from "../components/home/Reveal";
 import SnapRow from "../components/home/SnapRow";
 import FocusCarousel from "../components/home/FocusCarousel";
+import FaqChild from "../components/home/FaqChild";
 import ScrollTagline from "../components/home/ScrollTagline";
 import LessonStage from "../components/home/LessonStage";
 import usePrefersReducedMotion from "../components/home/usePrefersReducedMotion";
@@ -116,8 +117,7 @@ const FAQS = [
   },
 ];
 
-function FaqList() {
-  const [open, setOpen] = useState(null);
+function FaqList({ open, setOpen }) {
   return (
     <div className="divide-y divide-line border-y border-line">
       {FAQS.map((item, index) => (
@@ -316,6 +316,7 @@ function ClassPicker() {
 }
 
 export default function SchoolHomepage() {
+  const [faqOpen, setFaqOpen] = useState(null);
   return (
     <div className="school-home school-page overflow-x-clip text-ink">
       <Seo
@@ -538,11 +539,16 @@ export default function SchoolHomepage() {
 
       {/* 10. FAQ */}
       <section aria-labelledby="school-faq" className="site-container grid gap-10 py-12 md:py-16 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
-        <Reveal>
-          <h2 id="school-faq" className="heading-2">Questions parents ask</h2>
-        </Reveal>
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <Reveal>
+            <h2 id="school-faq" className="heading-2">Questions parents ask</h2>
+          </Reveal>
+          <Reveal delay={80} className="mt-6">
+            <FaqChild questions={FAQS} openIndex={faqOpen} />
+          </Reveal>
+        </div>
         <Reveal delay={80}>
-          <FaqList />
+          <FaqList open={faqOpen} setOpen={setFaqOpen} />
         </Reveal>
       </section>
 

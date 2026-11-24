@@ -6,7 +6,6 @@ import conceptArt from "../../assets/paths/concept.png";
 import iconVideo from "../../assets/paths/icon-video.png";
 import iconAi from "../../assets/paths/icon-ai.png";
 import iconQuiz from "../../assets/paths/icon-quiz.png";
-import iconProgress from "../../assets/paths/icon-progress.png";
 
 const PATHS = [
   { id: "medical", label: "Medical", icon: FaStethoscope, title: ["Understand", "Complex Topics"], href: "/professional", art: medicalArt, alt: "A doctor studying an animated heart on a tablet." },
@@ -21,7 +20,6 @@ const FEATURES = [
   { title: "Animated Videos", text: "Engaging animated lessons to visualize complex topics.", icon: iconVideo },
   { title: "AI Doubt Helper", text: "Get instant answers to your doubts while you learn.", icon: iconAi },
   { title: "Interactive Quizzes", text: "Test your knowledge with quizzes after each lesson.", icon: iconQuiz, soon: true },
-  { title: "Track Progress", text: "Resume lessons and see what you have watched.", icon: iconProgress },
 ];
 
 function slotFor(index, active) {

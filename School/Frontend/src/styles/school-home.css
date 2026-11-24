@@ -300,3 +300,11 @@
   .school-home .sh-clip:hover { transform: translateY(-4px); box-shadow: 0 4px 0 rgb(var(--line-strong)), 0 32px 56px -24px rgb(11 27 51 / 0.45); }
 }
 @media (prefers-reduced-motion: reduce) { .school-home .sh-clip { transition: none; } .school-home .sh-clip:hover { transform: none; } }
+
+/* FAQ child: gentle bobbing for the question marks and the spark */
+.school-home .faq-q { animation: faq-bob 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.school-home .faq-q2 { animation-delay: -1s; }
+.school-home .faq-q3 { animation-delay: -2s; }
+.school-home .faq-spark { animation: faq-bob 3.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes faq-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@media (prefers-reduced-motion: reduce) { .school-home .faq-q, .school-home .faq-spark { animation: none; } }
