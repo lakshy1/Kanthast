@@ -112,7 +112,7 @@ const FAQS = [
   },
   {
     q: "How much does it cost?",
-    a: `${SCHOOL_CATALOG.price} for one class for one academic year. Payments are not open yet, and we will tell you before anything is charged.`,
+    a: `${SCHOOL_CATALOG.price} for one class for one academic year, once payments open. Until then every available lesson is free with an account, and we will tell you before anything is charged.`,
   },
 ];
 
@@ -153,67 +153,60 @@ function CtaBlock({ align = "start", onDark = false }) {
   );
 }
 
-function StepDots({ step, onPick, playing, onToggle }) {
-  return (
-    <div className="flex items-center justify-between gap-3 px-2 pb-2 pt-3">
-      <div className="flex items-center gap-1" role="group" aria-label="Lesson moments">
-        {LESSON_SHAPE.map((item, index) => (
-          <button
-            key={item.title}
-            type="button"
-            onClick={() => onPick(index)}
-            aria-label={`Show step ${index + 1}: ${item.title}`}
-            aria-current={step === index ? "true" : undefined}
-            className="grid h-6 w-6 place-items-center rounded-full"
-          >
-            <span className={`block h-2 rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${step === index ? "w-6 bg-[var(--school-ink)]" : "w-2 bg-line-strong"}`} />
-          </button>
-        ))}
-      </div>
-      {onToggle && (
-        <button
-          type="button"
-          onClick={onToggle}
-          aria-label={playing ? "Pause the animation" : "Play the animation"}
-          className="grid h-8 w-8 place-items-center rounded-full border-2 border-line-strong text-ink transition-colors duration-300 hover:bg-surface-sunken"
-        >
-          {playing ? <Pause aria-hidden="true" weight="fill" /> : <Play aria-hidden="true" weight="fill" />}
-        </button>
-      )}
-    </div>
-  );
-}
-
-/* The hero stage plays through the four moments of a lesson on its own, only while it is on screen. */
-function HeroStage() {
+/* The hero shows a real clip from a finished lesson: silent, looping, and only playing while it is on screen. */
+function HeroClip() {
   const reduce = usePrefersReducedMotion();
-  const wrapRef = useRef(null);
-  const [step, setStep] = useState(0);
-  // With reduced motion there is no hook animation to play, so open on the drawn circuit.
-  const shownStep = reduce && step === 0 ? 1 : step;
-  const [playing, setPlaying] = useState(true);
+  const videoRef = useRef(null);
+  // Plays by default, paused by default for people who prefer reduced motion; their own choice always wins.
+  const [choice, setChoice] = useState(null);
   const [visible, setVisible] = useState(true);
+  const wantsPlay = choice ?? !reduce;
+  const playing = wantsPlay && visible;
+  const base = import.meta.env.BASE_URL;
 
   useEffect(() => {
-    if (!wrapRef.current || typeof IntersectionObserver === "undefined") return undefined;
+    const el = videoRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return undefined;
     const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting), { threshold: 0.3 });
-    observer.observe(wrapRef.current);
+    observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    if (reduce || !playing || !visible) return undefined;
-    const timer = setInterval(() => setStep((current) => (current + 1) % LESSON_SHAPE.length), 4200);
-    return () => clearInterval(timer);
-  }, [reduce, playing, visible]);
+    const el = videoRef.current;
+    if (!el) return;
+    if (playing) el.play().catch(() => {});
+    else el.pause();
+  }, [playing]);
 
   return (
-    <figure ref={wrapRef} className="sh-card p-2">
-      <LessonStage step={shownStep} interactive />
-      <StepDots step={shownStep} onPick={(i) => { setStep(i); setPlaying(false); }} playing={playing} onToggle={reduce ? undefined : () => setPlaying((v) => !v)} />
-      <figcaption className="px-2 pb-2">
-        <p className="caption-3 text-[var(--school-ink)]">Step {shownStep + 1} · {LESSON_SHAPE[shownStep].title}</p>
-        <p className="body-3 mt-1 text-ink-muted">Illustrated from the {SAMPLE_SCRIPT.context} script. Finished lessons open on {FIRST_LESSONS}.</p>
+    <figure className="sh-card p-2">
+      <div className="aspect-video overflow-hidden rounded-lg bg-black">
+        <video
+          ref={videoRef}
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={`${base}hero-lesson.webp`}
+          src={`${base}hero-lesson.mp4`}
+          aria-label="A short clip from the Class VIII Science lesson From Wonder to Investigation, with Neo the owl and Zippy the spark."
+          className="h-full w-full object-cover"
+        />
+      </div>
+      <figcaption className="flex items-start justify-between gap-3 p-4">
+        <div>
+          <p className="caption-3 text-[var(--school-ink)]">A real clip · Class VIII Science</p>
+          <p className="body-3 mt-1 text-ink-muted">From the lesson "From Wonder to Investigation". The first lessons open on {FIRST_LESSONS}.</p>
+        </div>
+        <button
+          type="button"
+          onClick={() => setChoice(!wantsPlay)}
+          aria-label={playing ? "Pause the clip" : "Play the clip"}
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-line-strong text-ink transition-colors duration-300 hover:bg-surface-sunken"
+        >
+          {playing ? <Pause aria-hidden="true" weight="fill" /> : <Play aria-hidden="true" weight="fill" />}
+        </button>
       </figcaption>
     </figure>
   );
@@ -373,7 +366,7 @@ export default function SchoolHomepage() {
               {TOTALS.lessons} lessons scripted and checked against the textbooks. First lessons open on {FIRST_LESSONS}.
             </p>
           </div>
-          <HeroStage />
+          <HeroClip />
         </section>
       </div>
 
