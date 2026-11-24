@@ -457,11 +457,12 @@ const Homepage = () => {
             video={`${import.meta.env.BASE_URL}tagline-bg.mp4`}
             poster={`${import.meta.env.BASE_URL}tagline-bg.webp`}
             chips={[
-              { label: "NEET PG", x: "7%", y: "18%", depth: 0.7, at: 0.05 },
-              { label: "INI CET", r: "10%", y: "12%", depth: 1.2, at: 0.15 },
-              { label: "USMLE", r: "8%", y: "62%", depth: 0.9, at: 0.3 },
-              { label: "Resume where you stopped", x: "4%", y: "64%", depth: 1.1, at: 0.4 },
-              { label: "5 subjects mapped", r: "20%", y: "80%", depth: 0.6, at: 0.55 },
+              { label: "NEET PG", x: "6%", y: "15%", depth: 0.7, at: 0.05 },
+              { label: "Lectures coming soon", x: "37%", y: "9%", depth: 1.2, at: 0.15 },
+              { label: "INI CET", r: "6%", y: "18%", depth: 0.9, at: 0.28 },
+              { label: "Resume where you stopped", x: "3%", y: "58%", depth: 1.1, at: 0.4 },
+              { label: "USMLE", r: "5%", y: "66%", depth: 0.6, at: 0.55 },
+              { label: "5 subjects mapped", x: "38%", y: "82%", depth: 0.8, at: 0.7 },
             ]}
           />
         </div>

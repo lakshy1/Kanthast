@@ -403,11 +403,12 @@ export default function SchoolHomepage() {
           video={`${import.meta.env.BASE_URL}tagline-bg.mp4`}
           poster={`${import.meta.env.BASE_URL}tagline-bg.webp`}
           chips={[
-            { label: "2 to 3.5 minute lessons", x: "6%", y: "17%", depth: 0.7, at: 0.05 },
-            { label: "Neo and Zippy", r: "12%", y: "13%", depth: 1.2, at: 0.15 },
-            { label: "New NCERT books", r: "6%", y: "62%", depth: 0.9, at: 0.3 },
-            { label: "923 lessons scripted", x: "5%", y: "64%", depth: 1.1, at: 0.4 },
-            { label: "Classes VIII to X", r: "20%", y: "80%", depth: 0.6, at: 0.55 },
+            { label: "2 to 3.5 minute lessons", x: "5%", y: "15%", depth: 0.7, at: 0.05 },
+            { label: "Neo and Zippy", x: "38%", y: "9%", depth: 1.2, at: 0.15 },
+            { label: "New NCERT books", r: "5%", y: "18%", depth: 0.9, at: 0.28 },
+            { label: "923 lessons scripted", x: "3%", y: "58%", depth: 1.1, at: 0.4 },
+            { label: "Maths, Science, English and more", r: "4%", y: "66%", depth: 0.6, at: 0.55 },
+            { label: "Free until payments open", x: "36%", y: "82%", depth: 0.8, at: 0.7 },
           ]}
         />
       </div>
