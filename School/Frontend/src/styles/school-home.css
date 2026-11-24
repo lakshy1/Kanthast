@@ -139,3 +139,36 @@
 /* The sample script uses this page's faces */
 .school-home .script-page, .school-home .script-page * { font-family: var(--font-body); }
 .school-home .script-page .script-title { font-family: var(--font-heading); font-weight: 600; }
+
+/* ---------- Scroll tagline: centred, pinned, character by character ---------- */
+.school-home .stag { --p: 0; position: relative; height: 220vh; }
+@media (max-width: 767px) { .school-home .stag { height: 170vh; } }
+.school-home .stag-pin { position: sticky; top: 0; height: 100vh; display: grid; place-items: center; align-content: center; justify-items: center; gap: 2rem; overflow: hidden; padding: 0 1.25rem; }
+.school-home .stag-text { position: relative; max-width: 780px; text-align: center; color: #ffffff; text-wrap: balance; }
+.school-home .stag-line { display: block; }
+.school-home .stag-word { display: inline-block; white-space: nowrap; }
+.school-home .stag-char {
+  --t: clamp(0, calc((var(--p) * (var(--n) + 10) - var(--i)) / 10), 1);
+  display: inline-block;
+  opacity: calc(0.16 + 0.84 * var(--t));
+  transform: translateY(calc((1 - var(--t)) * 8px));
+  /* a soft glow that is strongest while the letter is lighting up, then fades */
+  text-shadow: 0 0 18px rgb(var(--glow) / calc(0.5 * 4 * var(--t) * (1 - var(--t))));
+}
+.school-home .stag-accent { color: color-mix(in srgb, var(--accent) calc(var(--t) * 100%), #ffffff); }
+
+/* faint light behind the text that grows as the statement fills in */
+.school-home .stag-orb {
+  position: absolute; width: min(80vw, 720px); aspect-ratio: 1; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, rgb(var(--glow) / 0.14), transparent);
+  opacity: calc(0.15 + 0.85 * var(--p));
+  transform: scale(calc(0.8 + 0.25 * var(--p)));
+}
+.school-home .stag-rule { display: block; width: 72px; height: 2px; border-radius: 2px; background: rgb(var(--glow) / 0.7); transform: scaleX(var(--p)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .school-home .stag { --p: 1; height: auto; padding: 6rem 0; }
+  .school-home .stag-pin { position: static; height: auto; }
+  .school-home .stag-char { opacity: 1; transform: none; text-shadow: none; }
+  .school-home .stag-accent { color: var(--accent); }
+}

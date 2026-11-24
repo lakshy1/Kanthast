@@ -6,7 +6,7 @@ import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils
 import ScriptPage from "../components/landing/ScriptPage";
 import Reveal from "../components/home/Reveal";
 import SnapRow from "../components/home/SnapRow";
-import TaglineReveal from "../components/home/TaglineReveal";
+import ScrollTagline from "../components/home/ScrollTagline";
 import LessonStage from "../components/home/LessonStage";
 import usePrefersReducedMotion from "../components/home/usePrefersReducedMotion";
 import { NeoSolo, ZippySolo } from "../components/home/Characters";
@@ -399,9 +399,13 @@ export default function SchoolHomepage() {
 
       {/* 3. Tagline reveal */}
       <div className="band-night">
-        <section aria-label="What Kanthast School is for" className="site-container py-16 md:py-24">
-          <TaglineReveal lines={["Every chapter, drawn out step by step.", "So the idea sticks before the exam does."]} />
-        </section>
+        <ScrollTagline
+          label="What Kanthast School is for"
+          lines={["Every chapter, drawn out step by step.", "So the idea *sticks* before the exam does."]}
+          accent="#f2a007"
+          glow="255 214 102"
+          textClass="heading-2"
+        />
       </div>
 
       {/* 4. How a lesson runs: scroll-driven, with a real script as proof */}

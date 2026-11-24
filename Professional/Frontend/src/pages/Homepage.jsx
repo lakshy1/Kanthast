@@ -12,7 +12,8 @@ import { HeroGlow, TiltFrame } from "../components/landing/CursorEffects";
 import DeviceShowcase, { MacbookFrame } from "../components/landing/DeviceShowcase";
 import SYLLABUS_SNAPSHOT from "../data/syllabusSnapshot";
 import MEDICAL_PLANS from "../data/medicalPlans";
-import TaglineReveal from "../components/landing/TaglineReveal";
+import ScrollTagline from "../components/landing/ScrollTagline";
+import Reveal from "../components/landing/Reveal";
 import "../styles/pro-home.css";
 import LANDING_PROOF from "../data/landingProof";
 import { getMedicineUsmleContent } from "../utils/authApi";
@@ -446,9 +447,13 @@ const Homepage = () => {
         </section>
 
         <div className="pro-band-night">
-          <section aria-label="What Kanthast Professional is for" className="site-container py-16 md:py-24">
-            <TaglineReveal lines={["Hard ideas, animated until they click.", "Short lectures, your place saved, every subject mapped."]} />
-          </section>
+          <ScrollTagline
+            label="What Kanthast Professional is for"
+            lines={["Hard ideas, animated until they *click*.", "Short lectures, your place saved, every subject mapped."]}
+            accent="#77E0C0"
+            glow="119 224 192"
+            textClass="text-3xl font-semibold md:text-4xl lg:text-5xl"
+          />
         </div>
 
         <ProductTour />
@@ -472,8 +477,8 @@ const Homepage = () => {
               </div>
 
               <ul className="divide-y divide-line border-y border-line lg:col-span-7">
-                {subjects.map((subject) => (
-                  <li key={subject.name} className="grid gap-1 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6">
+                {subjects.map((subject, subjectIndex) => (
+                  <Reveal as="li" delay={subjectIndex * 70} key={subject.name} className="grid gap-1 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6">
                     <p className="font-bold text-ink">
                       {subject.name}
                       <span className="ml-2 text-sm font-medium tabular-nums text-ink-subtle">
@@ -481,7 +486,7 @@ const Homepage = () => {
                       </span>
                     </p>
                     <p className="text-ink-muted">{subject.sampleChapters.join(" · ")} …</p>
-                  </li>
+                  </Reveal>
                 ))}
               </ul>
             </div>
@@ -490,20 +495,22 @@ const Homepage = () => {
 
         <section id="pricing" aria-labelledby="home-pricing-heading" className="border-t border-line bg-surface py-20 md:py-28">
           <div className="site-container">
-            <h2 id="home-pricing-heading" className="max-w-2xl text-3xl md:text-5xl">One library. Two plans, in rupees.</h2>
-            <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-muted">
-              The same Medicine library serves NEET PG, INI CET and USMLE. Payments are not open yet, so start with a free account.
-            </p>
+            <Reveal>
+              <h2 id="home-pricing-heading" className="max-w-2xl text-3xl md:text-5xl">One library. Two plans, in rupees.</h2>
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-muted">
+                The same Medicine library serves NEET PG, INI CET and USMLE. Payments are not open yet, so start with a free account.
+              </p>
+            </Reveal>
             <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:max-w-4xl">
-              {MEDICAL_PLANS.map((plan) => (
-                <li key={plan.id} className={`pro-plan flex flex-col p-8 ${plan.highlight ? "pro-plan-best" : ""}`}>
+              {MEDICAL_PLANS.map((plan, planIndex) => (
+                <Reveal as="li" delay={planIndex * 120} key={plan.id} className={`pro-plan flex flex-col p-8 ${plan.highlight ? "pro-plan-best" : ""}`}>
                   <p className="flex items-center gap-3 text-xl font-bold text-ink">
                     {plan.durationLabel}
                     {plan.highlight && <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-bold text-brand">Best value</span>}
                   </p>
                   <p className="mt-6 text-5xl font-bold tabular-nums text-ink">{plan.priceLabel}</p>
                   <p className="mt-4 flex-1 leading-relaxed text-ink-muted">{plan.desc}</p>
-                </li>
+                </Reveal>
               ))}
             </ul>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
