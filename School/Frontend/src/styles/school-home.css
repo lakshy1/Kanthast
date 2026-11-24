@@ -1,0 +1,63 @@
+/* Kanthast School homepage.
+   Faces: Baloo 2 (headings, card titles) and Hind (everything else), both with real Devanagari.
+   Text goes through the named styles below, each one a Tailwind scale step. */
+
+.school-home {
+  --font-heading: "Baloo 2", "Hind", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Hind", ui-sans-serif, system-ui, sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: var(--font-body);
+  background-color: rgb(var(--surface-sunken));
+}
+
+/* Heading 1 to 3 */
+.school-home .heading-1 { @apply text-4xl font-semibold md:text-5xl lg:text-6xl; font-family: var(--font-heading); text-wrap: balance; }
+.school-home .heading-2 { @apply text-3xl font-semibold md:text-4xl lg:text-5xl; font-family: var(--font-heading); text-wrap: balance; }
+.school-home .heading-3 { @apply text-2xl font-semibold md:text-3xl; font-family: var(--font-heading); text-wrap: balance; }
+/* Title 1 and 2: card titles and lead lines */
+.school-home .title-1 { @apply text-xl font-medium; text-wrap: pretty; }
+.school-home .title-2 { @apply text-lg font-medium; text-wrap: pretty; }
+.school-home .title-card { @apply text-xl font-semibold; font-family: var(--font-heading); text-wrap: balance; }
+/* Body 1 to 3 */
+.school-home .body-1 { @apply text-base font-semibold; text-wrap: pretty; }
+.school-home .body-2 { @apply text-base font-medium; text-wrap: pretty; }
+.school-home .body-3 { @apply text-base font-normal; text-wrap: pretty; }
+/* Caption 1 and 3 */
+.school-home .caption-1 { @apply text-sm font-medium; text-wrap: pretty; }
+.school-home .caption-3 { @apply text-xs font-semibold; }
+/* Buttons */
+.school-home .button-lg { @apply text-lg font-semibold; }
+.school-home .button-md { @apply text-base font-semibold; }
+
+/* Primary button: marigold, with every state */
+.school-home .sh-btn {
+  @apply text-lg font-semibold inline-flex min-h-touch items-center justify-center gap-2 rounded-xl px-6 py-2;
+  background-color: var(--school);
+  color: #2b1600;
+  transition: transform 300ms var(--ease), filter 300ms var(--ease);
+}
+.school-home .sh-btn:hover { filter: brightness(0.95); transform: translateY(-1px); }
+.school-home .sh-btn:active { transform: scale(0.98); }
+.school-home .sh-btn:focus-visible { outline: 2px solid #2b1600; outline-offset: 2px; }
+
+/* Scroll reveal: rise 32px and fade, once */
+.school-home .sh-reveal { opacity: 0; transform: translateY(32px); transition: opacity 700ms var(--ease), transform 700ms var(--ease); }
+.school-home .sh-reveal.is-in { opacity: 1; transform: none; }
+
+/* Word by word tagline */
+.school-home .sh-tagline-word { opacity: 0.3; transition: opacity 500ms var(--ease); }
+.school-home .sh-tagline-word.is-on { opacity: 1; }
+
+/* Hide the scrollbar on swipe rows; the dots show position */
+.school-home .sh-snap { scrollbar-width: none; -ms-overflow-style: none; }
+.school-home .sh-snap::-webkit-scrollbar { display: none; }
+
+/* The sample script: upright type, not italic */
+.school-home .script-page, .school-home .script-page * { font-style: normal; }
+
+@media (prefers-reduced-motion: reduce) {
+  .school-home .sh-reveal { transform: none; transition: opacity 300ms linear; }
+  .school-home .sh-tagline-word { opacity: 1; transition: none; }
+  .school-home .sh-btn { transition: none; }
+  .school-home .sh-btn:hover, .school-home .sh-btn:active { transform: none; }
+}
