@@ -25,6 +25,8 @@ const Pricing = lazy(() => import("./pages/Pricing"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Courses = lazy(() => import("./pages/Courses"));
 const Login = lazy(() => import("./pages/Login"));
+const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
+const ResetPassword = lazy(() => import("./pages/ResetPassword"));
 const Signup = lazy(() => import("./pages/Signup"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Profile = lazy(() => import("./pages/Profile"));
@@ -164,7 +166,7 @@ function LibrarySeo() {
 }
 
 // Account, player and admin pages are for signed-in users, not search results.
-const NOINDEX_PATH = /^\/(login|signup|dashboard|profile|settings|video|summary|images|chatbot|subscription|admin|adminlogin)(\/|$)/;
+const NOINDEX_PATH = /^\/(login|forgot-password|reset-password|signup|dashboard|profile|settings|video|summary|images|chatbot|subscription|admin|adminlogin)(\/|$)/;
 
 function RouteRobots() {
   const { pathname } = useLocation();
@@ -309,6 +311,8 @@ function App() {
                   <Route path="/refunds" element={<Legal doc="refunds" />} />
                   <Route path="/courses" element={<Courses />} />
                   <Route path="/login" element={<GuestOnly><Login /></GuestOnly>} />
+                  <Route path="/forgot-password" element={<GuestOnly><ForgotPassword /></GuestOnly>} />
+                  <Route path="/reset-password/:token" element={<ResetPassword />} />
                   <Route path="/signup" element={<GuestOnly><Signup /></GuestOnly>} />
                   <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
                   <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />

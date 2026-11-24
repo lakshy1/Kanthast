@@ -1,6 +1,7 @@
 import express from "express";
 import { auth } from "../middleware/Auth.js";
 import { chatRateLimit } from "../middleware/ChatRateLimit.js";
+import { uploadLimiter } from "../middleware/RateLimit.js";
 import {
   createChatSession,
   deleteChatSession,
@@ -15,6 +16,6 @@ router.get("/history", auth, getChatHistory);
 router.post("/session/new", auth, createChatSession);
 router.delete("/session/:sessionId", auth, deleteChatSession);
 router.post("/send", auth, chatRateLimit, sendChatMessage);
-router.post("/upload", auth, uploadChatFile);
+router.post("/upload", auth, uploadLimiter, uploadChatFile);
 
 export default router;

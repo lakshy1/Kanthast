@@ -169,6 +169,12 @@ export default function Login() {
             />
           </Motion.div>
 
+          <Motion.p variants={itemVariants} className="-mt-1 text-right text-sm">
+            <Link to="/forgot-password" className="font-semibold text-blue-700 hover:text-blue-800">
+              Forgot password?
+            </Link>
+          </Motion.p>
+
           <Motion.div variants={itemVariants}>
             <Button
               type="submit"

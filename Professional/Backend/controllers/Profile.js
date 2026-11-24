@@ -154,6 +154,14 @@ export const getProfile = async (req, res) => {
 };
 
 export const purchaseSubscription = async (req, res) => {
+  // Payments are not live yet. This endpoint used to trust a client-supplied
+  // "dummyPaymentStatus", which let any logged-in user activate a plan for free.
+  // Re-enable only after the Razorpay order is created and verified server-side.
+  return res.status(503).json({
+    success: false,
+    message: "Payments are coming soon. Subscriptions cannot be purchased yet.",
+  });
+  // eslint-disable-next-line no-unreachable
   try {
     const userId = req.user.id;
     const { planDurationYears, dummyPaymentStatus, dummyPaymentId } = req.body;

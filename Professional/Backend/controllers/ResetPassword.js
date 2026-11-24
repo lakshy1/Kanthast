@@ -21,8 +21,11 @@ export const resetPasswordToken = async (req, res) => {
 
     // Check if user exists
     const user = await User.findOne({ email: normalizedEmail, track: { $ne: "school" } }).setOptions({ strictQuery: false });
+    // Same answer whether or not the account exists, so this cannot be used
+    // to find out which emails are registered.
+    const GENERIC = { success: true, message: "If that email has an account, a reset link has been sent." };
     if (!user) {
-      return res.status(404).json({ success: false, message: "User not found" });
+      return res.status(200).json(GENERIC);
     }
 
     // Generate secure token
@@ -34,7 +37,8 @@ export const resetPasswordToken = async (req, res) => {
     await user.save();
 
     // Send reset link via email
-    const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${token}`;
+    const appUrl = (process.env.CLIENT_URL || process.env.FRONTEND_URL || "").replace(/\/$/, "");
+    const resetUrl = `${appUrl}/reset-password/${token}`;
     await mailSender(
       user.email,
       "Password Reset Request",
@@ -43,7 +47,7 @@ export const resetPasswordToken = async (req, res) => {
        This link will expire in 1 hour.</p>`
     );
 
-    return res.status(200).json({ success: true, message: "Password reset link sent to email" });
+    return res.status(200).json(GENERIC);
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
   }

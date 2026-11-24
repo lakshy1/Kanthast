@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { purchaseSubscriptionPlan } from "../utils/authApi";
-import { trackAnalyticsEvent } from "../utils/settings";
 import {
   getSchoolClassLabel,
   getSelectedSchoolClass,
@@ -12,8 +10,7 @@ import {
 import { Eyebrow, Accent } from "../components/ui/Brandmarks";
 
 export default function SubscriptionPage() {
-  const token = localStorage.getItem("kanthastSchoolToken");
-  const [user, setUser] = useState(() => {
+  const [user] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem("kanthastSchoolUser") || "null");
     } catch {
@@ -22,10 +19,6 @@ export default function SubscriptionPage() {
   });
 
   const [selectedClass, setSelectedClass] = useState(getSelectedSchoolClass());
-  const [status, setStatus] = useState("idle");
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
-  const [receipt, setReceipt] = useState(null);
   const classLabel = getSchoolClassLabel(selectedClass);
   const activeClass = user?.schoolClass || "";
   const hasClassSubscription = Boolean(
@@ -35,54 +28,6 @@ export default function SubscriptionPage() {
   const selectClass = (value) => {
     setSelectedClass(value);
     setSelectedSchoolClass(value);
-    setMessage("");
-    setError("");
-  };
-
-  const purchaseSchoolPlan = async () => {
-    if (!token) {
-      setError("Please log in before purchasing a class plan.");
-      return;
-    }
-
-    setStatus("loading");
-    setError("");
-    setMessage("");
-
-    try {
-      const generatedPaymentId = `SCHOOL_${selectedClass}_${Date.now()}`;
-      const data = await purchaseSubscriptionPlan(token, {
-        schoolClass: selectedClass,
-        planDurationYears: 1,
-        dummyPaymentStatus: "success",
-        dummyPaymentId: generatedPaymentId,
-      });
-
-      setSelectedSchoolClass(selectedClass);
-      const mergedUser = {
-        ...(user || {}),
-        ...(data.user || {}),
-        subscriptionPurchased: true,
-      };
-      localStorage.setItem("kanthastSchoolUser", JSON.stringify(mergedUser));
-      setUser(mergedUser);
-      trackAnalyticsEvent("school_subscription_purchased", {
-        classLevel: selectedClass,
-        amountInr: 5000,
-        paymentId: generatedPaymentId,
-      });
-      setReceipt({
-        paymentId: generatedPaymentId,
-        classLabel,
-        amount: "Rs 5,000",
-        time: new Date().toLocaleString("en-IN"),
-      });
-      setMessage(`${classLabel} course activated successfully.`);
-    } catch (err) {
-      setError(err.message || "Unable to activate school subscription.");
-    } finally {
-      setStatus("idle");
-    }
   };
 
   return (
@@ -148,31 +93,18 @@ export default function SubscriptionPage() {
               <p className="mt-3 text-sm leading-6 text-ink-muted">
                 Unlocks all subjects and class-specific chapters for one academic year.
               </p>
-              <button
-                type="button"
-                onClick={purchaseSchoolPlan}
-                disabled={status === "loading"}
-                className="btn-primary w-full mt-6 font-bold"
-              >
-                {status === "loading" ? "Activating..." : "Pay Rs 5,000 and Activate"}
+              <button type="button" disabled className="btn-primary mt-6 w-full cursor-not-allowed font-bold opacity-60">
+                Coming soon
               </button>
+              <p className="mt-3 text-center text-xs text-ink-subtle">
+                Online payments open soon. Nothing is charged today.
+              </p>
               <Link to="/courses" className="mt-3 block text-center text-sm font-semibold text-brand hover:text-brand-hover">
                 Review all classes
               </Link>
             </aside>
           </div>
 
-          {message && <p className="mt-5 font-semibold text-emerald-700">{message}</p>}
-          {error && <p className="mt-5 font-semibold text-red-600">{error}</p>}
-          {receipt && (
-            <div className="mt-6 rounded-card border border-emerald-200 bg-emerald-50 p-4 text-sm text-ink-muted">
-              <p className="font-bold text-emerald-800">Payment receipt</p>
-              <p className="mt-2">Class: {receipt.classLabel}</p>
-              <p>Amount: {receipt.amount}</p>
-              <p>Transaction: {receipt.paymentId}</p>
-              <p>Time: {receipt.time}</p>
-            </div>
-          )}
         </section>
       </div>
     </div>

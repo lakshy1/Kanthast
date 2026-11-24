@@ -11,21 +11,22 @@ import {
   updateUserByAdmin,
 } from "../controllers/Auth.js";
 import { auth, isAdmin } from "../middleware/Auth.js";
+import { emailLimiter, loginLimiter, resetLimiter, signupLimiter } from "../middleware/RateLimit.js";
 import { resetPassword, resetPasswordToken } from "../controllers/ResetPassword.js";
 
 const router = express.Router();
 
 // Example routes
-router.post("/sendotp", sendOTP);
-router.post("/signup", signUp);
-router.post("/login", login);
-router.post("/admin-login", adminLogin);
+router.post("/sendotp", emailLimiter, sendOTP);
+router.post("/signup", signupLimiter, signUp);
+router.post("/login", loginLimiter, login);
+router.post("/admin-login", loginLimiter, adminLogin);
 router.post("/change-password", auth, changePassword);
 router.put("/subscription/deactivate", auth, isAdmin, deactivateUserSubscription);
 router.get("/admin/users", auth, isAdmin, getAllUsersForAdmin);
 router.put("/admin/users/:userId", auth, isAdmin, updateUserByAdmin);
 router.delete("/admin/users/:userId", auth, isAdmin, deleteUserByAdmin);
-router.post("/reset-password-token", resetPasswordToken);
-router.post("/reset-password", resetPassword);
+router.post("/reset-password-token", emailLimiter, resetPasswordToken);
+router.post("/reset-password", resetLimiter, resetPassword);
 
 export default router;

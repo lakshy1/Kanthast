@@ -111,6 +111,14 @@ export function login(payload) {
   return post("/auth/login", payload);
 }
 
+export function requestPasswordReset(email) {
+  return post("/auth/reset-password-token", { email });
+}
+
+export function resetPassword(token, newPassword) {
+  return post("/auth/reset-password", { token, newPassword });
+}
+
 export function adminLogin(payload) {
   return post("/auth/admin-login", payload);
 }
