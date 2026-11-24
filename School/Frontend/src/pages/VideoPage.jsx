@@ -19,7 +19,7 @@ import { VideoMetaSkeleton, VideoPageSkeleton } from "../components/DataLoaderSk
 import { getPlaybackRate, trackAnalyticsEvent, useAppSettings } from "../utils/settings";
 import { ensureLiveVideos, getSchoolCourseContent, getSchoolLectureDetails, getStoredUser } from "../utils/schoolCatalogData";
 import { API_BASE_URL } from "../utils/apiBase";
-import SecureWatermark from "../components/SecureWatermark";
+import SecurePlayer from "../components/player/SecurePlayer";
 import {
   getResumeSeconds,
   saveProgress,
@@ -768,8 +768,6 @@ function LecturePage() {
   const activeRateRef = useRef(activeRate);
   const [buffering, setBuffering] = useState(false);
   const [mediaError, setMediaError] = useState("");
-  const [secureRetry, setSecureRetry] = useState(0);
-  const playerBoxRef = useRef(null);
   const [resumedFrom, setResumedFrom] = useState(0);
   const [shortcutFlash, setShortcutFlash] = useState("");
   const [hintDismissed, setHintDismissed] = useState(() => {
@@ -1006,75 +1004,6 @@ function LecturePage() {
 
   // One source of truth for the native player's speed: the buttons and the
   // keyboard shortcuts both only set state.
-  // Encrypted lessons play through hls.js. Requests to our own server carry the student's login;
-  // the segment links are already signed, so they must not get that header.
-  useEffect(() => {
-    if (!parsed.secure || !videoRef.current) return undefined;
-    let hls;
-    let heartbeatTimer;
-    let cancelled = false;
-    (async () => {
-      const { default: Hls } = await import("hls.js");
-      if (cancelled || !videoRef.current) return;
-      if (!Hls.isSupported()) {
-        setMediaError("This browser cannot play protected lessons. Try Chrome, Edge, Firefox or the latest Safari.");
-        return;
-      }
-      const token = localStorage.getItem("kanthastSchoolToken") || "";
-      // Each start gets its own id. A newer start (here or on another device) replaces it, and this one is told to stop.
-      const streamId = crypto.randomUUID();
-      const anotherDevice = "This account started watching on another device. Press Try again to continue here.";
-      hls = new Hls({
-        capLevelToPlayerSize: true,
-        xhrSetup: (xhr, url) => {
-          if (url.includes("/playback/")) {
-            xhr.setRequestHeader("Authorization", `Bearer ${token}`);
-            xhr.setRequestHeader("X-Stream-Id", streamId);
-          }
-        },
-      });
-      // Report in every 25 seconds while playing: it keeps the watch log and finds out if we were replaced.
-      let watchedSeconds = 0;
-      heartbeatTimer = setInterval(async () => {
-        const el = videoRef.current;
-        if (!el || el.paused) return;
-        watchedSeconds += 25;
-        try {
-          const response = await fetch(`${API_BASE_URL}/playback/heartbeat`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
-            body: JSON.stringify({ streamId, lessonId: parsed.lessonId, watchedSeconds }),
-          });
-          if (response.status === 409) {
-            el.pause();
-            setMediaError(anotherDevice);
-          }
-        } catch {
-          // offline: the next beat will try again
-        }
-      }, 25000);
-      hls.on(Hls.Events.ERROR, (_event, details) => {
-        if (!details.fatal) return;
-        const code = details.response?.code;
-        setMediaError(
-          code === 401
-            ? "Log in to watch this lesson."
-            : code === 409
-              ? anotherDevice
-              : code === 403
-              ? "This lesson needs an active plan for your class."
-              : "This lecture could not be loaded. Check your connection and try again."
-        );
-      });
-      hls.loadSource(parsed.url);
-      hls.attachMedia(videoRef.current);
-    })();
-    return () => {
-      cancelled = true;
-      clearInterval(heartbeatTimer);
-      hls?.destroy();
-    };
-  }, [parsed.secure, parsed.url, parsed.lessonId, secureRetry]);
 
   useEffect(() => {
     activeRateRef.current = activeRate;
@@ -1200,23 +1129,58 @@ function LecturePage() {
         <p>Check your connection and try again. Your progress is saved on this device.</p>
       </PlayerStatusPanel>
     );
+  } else if (parsed.type === "file" && parsed.secure) {
+    player = (
+      <SecurePlayer
+        src={parsed.url}
+        lessonId={parsed.lessonId}
+        title={displayTitle}
+        user={getStoredUser()}
+        videoRef={videoRef}
+        rate={activeRate}
+        onRate={(next) => {
+          activeRateRef.current = next;
+          setActiveRate(next);
+        }}
+        flash={shortcutFlash}
+        nextTitle={nextLecture?.title}
+        autoplayNext={settings.autoplayNextLecture}
+        onPlayNext={() => {
+          sessionStorage.setItem("kanthastSchoolSkipNextLoader", "true");
+          navigate(buildLectureHref(nextLecture), { replace: true });
+        }}
+        onLoaded={(el) => {
+          // Resume where the student left off.
+          const resumeAt = getResumeSeconds(data.videoId);
+          if (resumeAt > 0 && resumeAt < el.duration) {
+            el.currentTime = resumeAt;
+            setResumedFrom(resumeAt);
+          }
+          setMediaError("");
+        }}
+        onProgress={(el) => {
+          if (!el.duration || !shouldPersist(el.currentTime)) return;
+          saveProgress(data.videoId, el.currentTime, el.duration, {
+            title: displayTitle,
+            module: subjectName,
+            section: chapterName,
+            subjectId: data.subjectId,
+            chapterId: data.chapterId,
+            durationLabel: displayDuration,
+          });
+        }}
+        onEnded={handleWatched}
+      />
+    );
   } else if (parsed.type === "file") {
     player = (
-      <div ref={playerBoxRef} className="relative overflow-hidden rounded-card border border-line bg-black">
+      <div className="relative overflow-hidden rounded-card border border-line bg-black">
         <video
           controls
           playsInline
           preload="metadata"
           className="w-full aspect-video"
-          src={parsed.secure ? undefined : parsed.url}
-          {...(parsed.secure
-            ? {
-                // Fullscreen goes through our own button so the watermark stays on screen.
-                controlsList: "nodownload nofullscreen",
-                disablePictureInPicture: true,
-                onContextMenu: (event) => event.preventDefault(),
-              }
-            : {})}
+          src={parsed.url}
           ref={videoRef}
           aria-label={displayTitle}
           onLoadedMetadata={() => {
@@ -1275,27 +1239,6 @@ function LecturePage() {
           </div>
         )}
 
-        {parsed.secure && (
-          <>
-            <SecureWatermark user={getStoredUser()} />
-            {typeof document !== "undefined" && document.fullscreenEnabled && (
-              <button
-                type="button"
-                onClick={() => {
-                  const box = playerBoxRef.current;
-                  if (!box) return;
-                  if (document.fullscreenElement) document.exitFullscreen();
-                  else box.requestFullscreen?.();
-                }}
-                aria-label="Toggle fullscreen"
-                className="absolute bottom-14 right-3 z-10 rounded-full bg-black/60 px-3 py-1 text-xs font-semibold text-white transition-colors hover:bg-black/80"
-              >
-                Fullscreen
-              </button>
-            )}
-          </>
-        )}
-
         <div
           className="pointer-events-none absolute inset-x-0 top-4 flex justify-center"
           role="status"
@@ -1319,8 +1262,7 @@ function LecturePage() {
                 type="button"
                 onClick={() => {
                   setMediaError("");
-                  if (parsed.secure) setSecureRetry((n) => n + 1);
-                  else videoRef.current?.load();
+                  videoRef.current?.load();
                 }}
                 className="btn-secondary mt-4"
               >
@@ -1499,7 +1441,7 @@ function LecturePage() {
 
                   {/* In-player speed control, native player only; YouTube
                       and Vimeo expose their own. */}
-                  {parsed.type === "file" && (
+                  {parsed.type === "file" && !parsed.secure && (
                     <div className="flex flex-wrap items-center gap-2">
                       <span id="speed-label" className="text-sm text-ink-subtle">
                         Speed
@@ -1539,7 +1481,7 @@ function LecturePage() {
                     <span className="font-semibold text-ink-muted">Keyboard:</span>{" "}
                     <Kbd>Space</Kbd> or <Kbd>K</Kbd> play/pause · <Kbd>J</Kbd> <Kbd>L</Kbd> back/forward 10s ·{" "}
                     <Kbd>←</Kbd> <Kbd>→</Kbd> 5s · <Kbd>Shift</Kbd>+<Kbd>&lt;</Kbd> <Kbd>&gt;</Kbd> slower/faster ·{" "}
-                    <Kbd>M</Kbd> mute
+                    <Kbd>M</Kbd> mute · <Kbd>F</Kbd> fullscreen
                   </p>
                   <button
                     type="button"

@@ -1,0 +1,93 @@
+/* Kanthast lesson player. Minimal: the picture comes first, controls appear when needed. */
+.sp {
+  --sp-accent: #f2a007;
+  --sp-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: "Hind", ui-sans-serif, system-ui, sans-serif;
+}
+.sp:fullscreen { aspect-ratio: auto; border-radius: 0; }
+.sp video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; }
+.sp[data-idle="true"] { cursor: none; }
+
+/* a soft shade behind the controls so they stay legible over any picture */
+.sp-bar {
+  position: absolute; inset-inline: 0; bottom: 0; z-index: 8;
+  padding: 1.25rem 0.75rem 0.5rem;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.72), rgb(0 0 0 / 0.38) 55%, transparent);
+  opacity: 0; transform: translateY(6px); pointer-events: none;
+  transition: opacity 200ms var(--sp-ease), transform 200ms var(--sp-ease);
+}
+.sp[data-controls="true"] .sp-bar { opacity: 1; transform: none; }
+/* The bar's shade must never catch taps meant for the picture or the big play button: only the controls do. */
+.sp[data-controls="true"] .sp-seek, .sp[data-controls="true"] .sp-row { pointer-events: auto; }
+
+.sp-row { display: flex; align-items: center; gap: 0.25rem; }
+.sp-btn {
+  display: grid; place-items: center; min-width: 40px; height: 40px; padding: 0 0.5rem;
+  border-radius: 10px; color: #fff; font-size: 1.25rem; font-weight: 600;
+  transition: background-color 150ms linear, transform 150ms var(--sp-ease);
+}
+.sp-btn:hover { background: rgb(255 255 255 / 0.16); }
+.sp-btn:active { transform: scale(0.94); }
+.sp-btn:focus-visible, .sp-range:focus-visible, .sp-item:focus-visible { outline: 2px solid var(--sp-accent); outline-offset: 2px; }
+.sp-text { font-size: 0.875rem; font-weight: 600; font-variant-numeric: tabular-nums; padding: 0 0.5rem; white-space: nowrap; }
+.sp-spacer { flex: 1; }
+
+/* progress: thin, grows on hover or focus; buffered range, played fill, thumb, time tooltip */
+.sp-seek { position: relative; height: 24px; display: flex; align-items: center; }
+.sp-track { position: absolute; inset-inline: 0; height: 4px; border-radius: 4px; background: rgb(255 255 255 / 0.28); overflow: hidden; transition: height 150ms var(--sp-ease); }
+.sp-seek:hover .sp-track, .sp-seek:focus-within .sp-track, .sp-seek[data-drag="true"] .sp-track { height: 8px; }
+.sp-buffer, .sp-played { position: absolute; inset: 0; transform-origin: left; transform: scaleX(0); }
+.sp-buffer { background: rgb(255 255 255 / 0.4); }
+.sp-played { background: var(--sp-accent); }
+.sp-thumb { position: absolute; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--sp-accent); box-shadow: 0 0 0 3px rgb(0 0 0 / 0.25); transform: scale(0); transition: transform 150ms var(--sp-ease); pointer-events: none; }
+.sp-seek:hover .sp-thumb, .sp-seek:focus-within .sp-thumb, .sp-seek[data-drag="true"] .sp-thumb { transform: scale(1); }
+.sp-range { position: absolute; inset-inline: -7px; width: calc(100% + 14px); height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.sp-seek:focus-within { outline: none; }
+.sp-tip { position: absolute; bottom: 26px; transform: translateX(-50%); padding: 2px 8px; border-radius: 6px; background: rgb(0 0 0 / 0.85); font-size: 0.75rem; font-weight: 600; font-variant-numeric: tabular-nums; pointer-events: none; opacity: 0; transition: opacity 120ms linear; }
+.sp-seek:hover .sp-tip, .sp-seek[data-drag="true"] .sp-tip { opacity: 1; }
+
+/* volume (hidden on phones, where the device buttons do it) */
+.sp-vol { display: none; align-items: center; }
+@media (min-width: 640px) { .sp-vol { display: flex; } }
+.sp-vol input[type="range"] { width: 0; opacity: 0; accent-color: var(--sp-accent); transition: width 180ms var(--sp-ease), opacity 180ms linear; }
+.sp-vol:hover input[type="range"], .sp-vol:focus-within input[type="range"] { width: 72px; opacity: 1; margin-right: 0.5rem; }
+
+/* menus */
+.sp-menu { position: absolute; bottom: 52px; right: 0.5rem; min-width: 140px; padding: 6px; border-radius: 12px; background: rgb(18 18 18 / 0.96); box-shadow: 0 12px 32px rgb(0 0 0 / 0.5); z-index: 12; }
+.sp-item { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 0.75rem; min-height: 40px; padding: 0 12px; border-radius: 8px; font-size: 0.875rem; font-weight: 600; text-align: left; color: #fff; }
+.sp-item:hover { background: rgb(255 255 255 / 0.12); }
+.sp-item[aria-checked="true"] { color: var(--sp-accent); }
+
+/* centre: big play, spinner, seek ripples, status text */
+.sp-center { position: absolute; inset: 0; z-index: 6; display: grid; place-items: center; pointer-events: none; }
+.sp-bigplay { pointer-events: auto; display: grid; place-items: center; width: 72px; height: 72px; border-radius: 50%; background: rgb(0 0 0 / 0.55); color: #fff; font-size: 2rem; transition: transform 200ms var(--sp-ease), background-color 150ms linear; }
+.sp-bigplay:hover { transform: scale(1.06); background: rgb(0 0 0 / 0.7); }
+.sp-bigplay:focus-visible { outline: 2px solid var(--sp-accent); outline-offset: 3px; }
+.sp-spin { width: 44px; height: 44px; border-radius: 50%; border: 3px solid rgb(255 255 255 / 0.35); border-top-color: #fff; animation: sp-rot 800ms linear infinite; }
+@keyframes sp-rot { to { transform: rotate(360deg); } }
+.sp-ripple { position: absolute; top: 50%; transform: translateY(-50%); padding: 14px 18px; border-radius: 999px; background: rgb(0 0 0 / 0.55); font-weight: 700; font-size: 0.95rem; animation: sp-pop 600ms var(--sp-ease) both; }
+.sp-flash { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); padding: 4px 12px; border-radius: 999px; background: rgb(0 0 0 / 0.65); font-size: 0.875rem; font-weight: 700; font-variant-numeric: tabular-nums; z-index: 9; pointer-events: none; }
+@keyframes sp-pop { from { opacity: 0; transform: translateY(-50%) scale(0.85); } 25% { opacity: 1; } to { opacity: 0; transform: translateY(-50%) scale(1); } }
+
+/* end of lesson */
+.sp-end { position: absolute; inset: 0; z-index: 10; display: grid; place-items: center; background: rgb(0 0 0 / 0.72); padding: 1rem; text-align: center; }
+.sp-end p { margin: 0; }
+.sp-pill { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 44px; padding: 0 1.25rem; border-radius: 999px; font-weight: 700; }
+.sp-pill-main { background: var(--sp-accent); color: #2b1600; }
+.sp-pill-ghost { border: 2px solid rgb(255 255 255 / 0.55); color: #fff; }
+.sp-pill:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+@media (hover: none) { .sp-btn { min-width: 44px; height: 44px; } }
+@media (prefers-reduced-motion: reduce) {
+  .sp-bar, .sp-track, .sp-thumb, .sp-bigplay, .sp-vol input[type="range"] { transition: opacity 120ms linear; transform: none; }
+  .sp-ripple { animation: none; opacity: 1; }
+  .sp-spin { animation-duration: 2s; }
+}
