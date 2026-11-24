@@ -1,6 +1,6 @@
 import { lazy, Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import { FaCheck, FaRobot } from "react-icons/fa";
+import { FaCheck, FaChevronLeft, FaChevronRight, FaHeart, FaRegCommentDots, FaRegHeart, FaRobot } from "react-icons/fa";
 import Seo from "../components/Seo";
 import { Button, EmptyState, Field, Modal, Select } from "../components/ui";
 import ParentApproval from "../components/doubts/ParentApproval";
@@ -19,6 +19,7 @@ import {
   readMute,
   setDoubtsClass,
   timeAgo,
+  toggleDoubtHelpful,
 } from "../utils/doubtsApi";
 import {
   getSchoolClassLabel,
@@ -358,42 +359,144 @@ function Composer({ open, onClose, onPosted, onDiscard, onMuted, quota, draft })
 
 const STATUS_LABEL = { pending: "Being checked", removed: "Hidden" };
 
-function DoubtRow({ doubt, from }) {
-  const answers = `${doubt.replyCount} ${doubt.replyCount === 1 ? "answer" : "answers"}`;
+const AVATAR_TONES = 5;
+const avatarTone = (name) => [...String(name)].reduce((sum, ch) => sum + ch.charCodeAt(0), 0) % AVATAR_TONES;
+
+function DoubtCard({ doubt, from }) {
+  const [helped, setHelped] = useState(Boolean(doubt.helpedByMe));
+  const [helpfulCount, setHelpfulCount] = useState(doubt.helpfulCount || 0);
+  const [busy, setBusy] = useState(false);
+  const [helpError, setHelpError] = useState("");
+
   const removed = doubt.status === "removed";
+  const name = doubt.mine ? "You" : doubt.author?.firstName || "A classmate";
   const statusLabel = doubt.removedByModerator
     ? "Removed by a moderator"
     : doubt.status && doubt.status !== "live"
       ? STATUS_LABEL[doubt.status] || doubt.status
       : "";
-  // A removed doubt (only ever shown to its author, in My doubts) has no thread to open.
-  const Row = removed ? "div" : Link;
-  const rowProps = removed ? { "aria-disabled": "true" } : { to: `/doubts/${doubt.id}`, state: { from } };
+  const answers = `${doubt.replyCount} ${doubt.replyCount === 1 ? "answer" : "answers"}`;
+
+  const toggleHelped = async () => {
+    setBusy(true);
+    setHelpError("");
+    try {
+      const data = await toggleDoubtHelpful(doubt.id);
+      setHelped(Boolean(data.helpedByMe));
+      setHelpfulCount(data.helpfulCount || 0);
+    } catch (err) {
+      setHelpError(err.message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
   return (
-    <li>
-      <Row {...rowProps} className={`dbs-row ${removed ? "cursor-default opacity-75" : ""}`}>
-        <div className="flex min-w-0 items-center gap-2 text-xs">
-          <span className="dbs-subject">{doubt.subject}</span>
-          {doubt.chapter && <span className="truncate text-ink-subtle">{doubt.chapter}</span>}
+    <li className="dbc-slide">
+      <article className={`dbc-card ${removed ? "is-removed" : ""}`}>
+        <header className="dbc-head">
+          <span className={`dbc-avatar dbc-tone-${avatarTone(doubt.author?.firstName || name)}`} aria-hidden="true">
+            {name.charAt(0).toUpperCase()}
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block truncate text-sm font-bold text-ink">{name}</span>
+            <span className="block truncate text-xs text-ink-subtle">
+              {doubt.subject}{doubt.chapter ? ` · ${doubt.chapter}` : ""}
+            </span>
+          </span>
           {statusLabel ? (
-            <span className="ml-auto shrink-0 rounded-md bg-caution-soft px-2 py-0.5 font-semibold text-caution">{statusLabel}</span>
+            <span className="shrink-0 rounded-md bg-caution-soft px-2 py-0.5 text-xs font-semibold text-caution">{statusLabel}</span>
           ) : doubt.acceptedReply ? (
-            <span className="ml-auto inline-flex shrink-0 items-center gap-1 font-semibold text-positive">
+            <span className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-positive">
               <FaCheck aria-hidden="true" className="text-[0.625rem]" /> Answered
             </span>
           ) : doubt.hasAiAnswer ? (
-            <span className="ml-auto shrink-0 font-medium text-ink-subtle">AI answered</span>
+            <span className="shrink-0 text-xs font-medium text-ink-subtle">AI answered</span>
           ) : null}
+        </header>
+
+        <div className="dbc-copy">
+          <h3 className="font-display text-base font-bold leading-snug text-ink">
+            {/* A removed doubt (only shown to its author) has no thread to open. */}
+            {removed ? doubt.title : (
+              <Link to={`/doubts/${doubt.id}`} state={{ from }} className="dbc-open">{doubt.title}</Link>
+            )}
+          </h3>
+          {doubt.body && <p className="mt-1.5 line-clamp-3 text-sm leading-relaxed text-ink-muted">{doubt.body}</p>}
         </div>
-        <h3 className="mt-2 font-display text-[0.9375rem] font-bold leading-snug text-ink sm:text-base">{doubt.title}</h3>
-        {doubt.body && <p className="mt-1 line-clamp-2 max-w-[72ch] text-sm leading-relaxed text-ink-muted">{doubt.body}</p>}
-        <p className="mt-2.5 flex flex-wrap items-center text-[0.8125rem] text-ink-subtle">
-          <span>{doubt.mine ? "You" : doubt.author?.firstName || "A classmate"}</span>
-          <span className="dbs-dot">{timeAgo(doubt.createdAt)}</span>
-          <span className="dbs-dot">{answers}</span>
-        </p>
-      </Row>
+
+        <footer className="dbc-foot">
+          <button
+            type="button"
+            className={`dbc-chip ${helped ? "is-on" : ""}`}
+            onClick={toggleHelped}
+            disabled={busy || doubt.mine || removed}
+            aria-pressed={helped}
+            aria-label={`This helped me, ${helpfulCount} so far`}
+            title={doubt.mine ? "You can't mark your own doubt" : "This helped me"}
+          >
+            {helped ? <FaHeart aria-hidden="true" /> : <FaRegHeart aria-hidden="true" />}
+            <span className="tabular-nums">{helpfulCount}</span>
+          </button>
+          <span className="text-xs text-ink-subtle">{timeAgo(doubt.createdAt)}</span>
+          <span className="dbc-replies" aria-label={answers}>
+            <FaRegCommentDots aria-hidden="true" />
+            <span className="tabular-nums">{doubt.replyCount}</span>
+          </span>
+        </footer>
+        {helpError && <p role="alert" className="dbc-error">{helpError}</p>}
+      </article>
     </li>
+  );
+}
+
+// Laptop: a two-column grid. Phone: one card at a time, swiped sideways.
+function DoubtDeck({ doubts, from, hasMore, loadingMore, onLoadMore }) {
+  const deckRef = useRef(null);
+  const [index, setIndex] = useState(0);
+  const last = doubts.length - 1;
+  const current = Math.min(index, last);
+
+  const onScroll = () => {
+    const deck = deckRef.current;
+    if (!deck?.clientWidth) return;
+    setIndex(Math.round(deck.scrollLeft / deck.clientWidth));
+  };
+
+  const goTo = (next) => {
+    const deck = deckRef.current;
+    if (!deck) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    deck.scrollTo({ left: next * deck.clientWidth, behavior: reduce ? "auto" : "smooth" });
+  };
+
+  // Reaching the last card on a phone fetches the next page.
+  useEffect(() => {
+    const swiping = window.matchMedia("(max-width: 767px)").matches;
+    if (swiping && hasMore && !loadingMore && current === last) onLoadMore();
+  }, [current, last, hasMore, loadingMore, onLoadMore]);
+
+  return (
+    <>
+      <ul ref={deckRef} className="dbc-deck" onScroll={onScroll} tabIndex={0} aria-label="Doubts">
+        {doubts.map((doubt) => (
+          <DoubtCard key={doubt.id} doubt={doubt} from={from} />
+        ))}
+      </ul>
+      {doubts.length > 1 && (
+        <div className="dbc-pager">
+          <button type="button" className="dbc-arrow" onClick={() => goTo(current - 1)} disabled={current === 0} aria-label="Previous doubt">
+            <FaChevronLeft aria-hidden="true" />
+          </button>
+          <span className="text-[0.8125rem] font-semibold tabular-nums text-ink-muted" aria-live="polite">
+            {current + 1} of {doubts.length}{hasMore ? "+" : ""}
+          </span>
+          <button type="button" className="dbc-arrow" onClick={() => goTo(current + 1)} disabled={current === last} aria-label="Next doubt">
+            <FaChevronRight aria-hidden="true" />
+          </button>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -437,18 +540,20 @@ function DoubtList({ tab, reloadKey, classLabel }) {
     load();
   }, [load, reloadKey]);
 
-  const loadMore = async () => {
+  const loadMore = useCallback(async () => {
     setLoadingMore(true);
     try {
       const data = await getFeed({ subject: subject === ALL ? "" : subject, before: nextBefore });
       setDoubts((prev) => [...prev, ...(data.doubts || [])]);
       setNextBefore(data.nextBefore || null);
     } catch (err) {
+      // Stop automatic loading on a phone, so a failure cannot retry in a loop.
+      setNextBefore(null);
       setError(err.message);
     } finally {
       setLoadingMore(false);
     }
-  };
+  }, [subject, nextBefore]);
 
   const filtered = subject !== ALL;
   const countLine = !loading && !error && doubts.length > 0
@@ -491,13 +596,15 @@ function DoubtList({ tab, reloadKey, classLabel }) {
         )
       ) : (
         <>
-          <ul className="card dbs-list">
-            {doubts.map((doubt) => (
-              <DoubtRow key={doubt.id} doubt={doubt} from={tab} />
-            ))}
-          </ul>
+          <DoubtDeck
+            doubts={doubts}
+            from={tab}
+            hasMore={tab === "class" && Boolean(nextBefore)}
+            loadingMore={loadingMore}
+            onLoadMore={loadMore}
+          />
           {tab === "class" && nextBefore && (
-            <div className="mt-4">
+            <div className="mt-4 hidden justify-center md:flex">
               <Button variant="secondary" onClick={loadMore} loading={loadingMore}>
                 Show more
               </Button>

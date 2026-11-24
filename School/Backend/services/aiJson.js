@@ -2,7 +2,7 @@
 // geminiText returns plain text (AI answers). They share the model fallback and the timeout.
 // The chat assistant keeps its own caller in controllers/Chat.js.
 
-const FALLBACK_MODELS = ["gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash"];
+const FALLBACK_MODELS = ["gemini-2.5-flash", "gemini-flash-latest", "gemini-flash-lite-latest"];
 
 let discoveredModel = "";
 
