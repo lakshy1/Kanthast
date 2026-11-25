@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 // One line with the student's name, the last four digits of their phone and the session code. It drifts across
 // the whole picture all the time, bouncing off the edges on a path that keeps bending, so there is no still spot
@@ -28,7 +28,9 @@ function Mark({ text, config }) {
     if (ref.current) ref.current.style.cssText = BASE_STYLE;
   }, []);
 
-  useEffect(() => {
+  // A layout effect, so its cleanup runs before React removes the player from the page. Everything below stops
+  // at that moment: nothing may keep reacting to a mark that has been taken off the page.
+  useLayoutEffect(() => {
     const node = ref.current;
     const parent = node?.parentElement;
     if (!node || !parent) return undefined;
@@ -44,9 +46,35 @@ function Mark({ text, config }) {
     let x = config.start[0] * Math.max(0, box.w - box.nw);
     let y = config.start[1] * Math.max(0, box.h - box.nh);
 
+    // Put it back if it is removed, hidden or made see-through. The check looks at how it renders, not at the
+    // style text (browsers rewrite that text). The observer only raises a flag; the repair itself happens at most
+    // once a frame, so a repair that cannot succeed can never spin the page in a loop.
+    let dirty = false;
+    let stopped = false;
+    const tampered = () => {
+      const css = getComputedStyle(node);
+      return css.display === "none" || css.visibility === "hidden" || css.position !== "absolute" || Number(css.opacity) < 0.3 || node.hidden;
+    };
+    const guard = new MutationObserver(() => { dirty = true; });
+    guard.observe(parent, { childList: true });
+    guard.observe(node, { attributes: true, attributeFilter: ["style", "class", "hidden"] });
+    const resize = new ResizeObserver(measure);
+    resize.observe(parent);
+
     let last = performance.now();
     let frame = 0;
     const tick = (now) => {
+      if (stopped) return;
+      if (!parent.isConnected) return; // the player has left the page: stop, do not touch anything
+      if (dirty) {
+        dirty = false;
+        if (!parent.contains(node)) parent.appendChild(node);
+        if (tampered()) {
+          node.hidden = false;
+          node.style.cssText = BASE_STYLE;
+          measure();
+        }
+      }
       const dt = Math.min(0.1, (now - last) / 1000);
       last = now;
       const maxX = Math.max(0, box.w - box.nw);
@@ -61,31 +89,13 @@ function Mark({ text, config }) {
       if (y <= 0) { y = 0; vy = Math.abs(vy); } else if (y >= maxY) { y = maxY; vy = -Math.abs(vy); }
       heading = Math.atan2(vy, vx);
       node.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0)`;
+      guard.takeRecords(); // our own move is not tampering
       frame = requestAnimationFrame(tick);
     };
     frame = requestAnimationFrame(tick);
 
-    const resize = new ResizeObserver(measure);
-    resize.observe(parent);
-
-    // Put it back if it is removed, hidden or made see-through. The check looks at how it renders, not at
-    // the style text (browsers rewrite that text), and only repairs when something is actually wrong, so
-    // the repair cannot trigger itself. The motion loop rewrites the transform on the next frame.
-    const tampered = () => {
-      const css = getComputedStyle(node);
-      return css.display === "none" || css.visibility === "hidden" || css.position !== "absolute" || Number(css.opacity) < 0.3 || node.hidden;
-    };
-    const guard = new MutationObserver(() => {
-      if (!parent.contains(node)) parent.appendChild(node);
-      if (tampered()) {
-        node.hidden = false;
-        node.style.cssText = BASE_STYLE;
-        measure();
-      }
-    });
-    guard.observe(parent, { childList: true });
-    guard.observe(node, { attributes: true, attributeFilter: ["style", "class", "hidden"] });
     return () => {
+      stopped = true;
       cancelAnimationFrame(frame);
       resize.disconnect();
       guard.disconnect();
