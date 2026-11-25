@@ -1,0 +1,551 @@
+<title>Kanthast Roadmap</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a working tool. Compact header, then one wide timeline with a sliding week window; notes below. Hairlines, no cards. */
+:root{
+  --bg:#f7f7f5; --surface:#ffffff; --ink:#1b1a17; --muted:#69665f; --line:#e3e1da; --soft:#eeece6;
+  --accent:#a8540a; --bar:#b9b5aa; --ok:#2f7d55; --warn:#b06a00; --bad:#b3372e;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#151513; --surface:#1d1c1a; --ink:#edebe6; --muted:#a09c93; --line:#32302c; --soft:#262522;
+    --accent:#f0b35a; --bar:#5d5a52; --ok:#5fbf8c; --warn:#e3a53f; --bad:#ee7b70; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151513; --surface:#1d1c1a; --ink:#edebe6; --muted:#a09c93; --line:#32302c; --soft:#262522;
+  --accent:#f0b35a; --bar:#5d5a52; --ok:#5fbf8c; --warn:#e3a53f; --bad:#ee7b70; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 72px}
+#app{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+header{display:flex;flex-direction:column;gap:10px}
+.eyebrow{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+h1{font-size:24px;line-height:1.25;font-weight:600;letter-spacing:-.02em;margin:0}
+h2{font-size:16px;font-weight:600;margin:0}
+p{margin:0}
+.lede{max-width:78ch;color:var(--ink)}
+.muted{color:var(--muted)}
+section{display:flex;flex-direction:column;gap:12px}
+.stats{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:13px;color:var(--muted);align-items:center}
+.stats b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.meter{width:140px;height:6px;border-radius:3px;background:var(--soft);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--ok)}
+.bar-row{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.grp{display:flex;gap:4px;align-items:center}
+.btn{font:inherit;font-size:13px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:5px 10px;cursor:pointer;line-height:1.3}
+.btn:hover{border-color:var(--muted)}
+.btn.ink{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.sm{padding:3px 8px;font-size:12px}
+.btn.danger{color:var(--bad)}
+button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+select,input,textarea{font:inherit;font-size:13px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:4px 8px}
+textarea{width:100%;min-width:220px;resize:vertical}
+label.chk{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
+.gscroll{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.gantt{min-width:820px}
+.grow{display:grid;grid-template-columns:300px 1fr;border-bottom:1px solid var(--line)}
+.grow:last-child{border-bottom:0}
+.ghead{position:sticky;top:0}
+.ghead .weeks{display:flex}
+.ghead .weeks span{flex:1;min-width:0;font-family:var(--mono);font-size:10.5px;color:var(--muted);padding:6px 0 6px 4px;border-left:1px solid var(--line);white-space:nowrap;overflow:hidden}
+.lane{grid-column:1/-1;padding:9px 12px 7px;background:var(--bg);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:500;display:flex;gap:10px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.rowbtn{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:8px;padding:7px 10px 7px 12px;min-width:0;width:100%;align-items:flex-start}
+.rowbtn:hover{background:var(--soft)}
+.rowbtn:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.caret{font-family:var(--mono);font-size:11px;color:var(--muted);width:10px;flex:none;padding-top:2px}
+.rt{min-width:0;display:flex;flex-direction:column;gap:1px}
+.rt b{font-weight:500;font-size:13px;overflow-wrap:anywhere}
+.rt small{font-size:12px;color:var(--muted);display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.chip{font-size:11px;border-radius:4px;padding:0 5px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.chip.doing{color:var(--ink);border-color:var(--ink)}
+.chip.done{color:var(--ok);border-color:var(--ok)}
+.chip.blocked{color:var(--bad);border-color:var(--bad)}
+.chip.late{color:var(--warn);border-color:var(--warn)}
+.track{position:relative;overflow:hidden;min-height:38px;border-left:1px solid var(--line);
+  background-image:linear-gradient(to right,var(--line) 1px,transparent 1px);background-size:calc(100% / var(--span)) 100%;background-position:-1px 0}
+.track::after{content:"";position:absolute;top:0;bottom:0;left:var(--today);width:2px;background:var(--accent);opacity:.8}
+.gbar{position:absolute;top:11px;height:16px;border-radius:4px;background:var(--bar)}
+.gbar.doing{background:var(--ink)}
+.gbar.done{background:var(--ok)}
+.gbar.blocked{background:var(--bad)}
+.gbar.late{outline:2px dashed var(--warn);outline-offset:1px}
+.gms{position:absolute;top:12px;width:13px;height:13px;margin-left:-6px;transform:rotate(45deg);background:var(--surface);border:2px solid var(--ink);border-radius:2px}
+.gms.done{background:var(--ok);border-color:var(--ok)}
+.gms.late{border-color:var(--warn)}
+.off{position:absolute;top:9px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.detail{grid-column:1/-1;padding:12px 14px 14px 30px;background:var(--bg);border-top:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px 24px}
+.f{display:flex;flex-direction:column;gap:1px;min-width:0}
+.f.wide{grid-column:1/-1}
+.f>span.k{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.ed{position:relative;display:inline-flex;align-items:baseline;gap:6px;max-width:100%;min-width:0}
+.ed.blk{display:flex}
+.edv{min-width:0;overflow-wrap:anywhere;white-space:pre-wrap}
+.edv.ph{color:var(--muted)}
+.pen{all:unset;position:relative;cursor:pointer;flex:none;color:var(--muted);opacity:0;display:inline-flex;padding:2px;border-radius:4px;align-self:center}
+.ed:hover>.pen,.pen:focus-visible{opacity:1}
+.pen:hover{color:var(--ink);background:var(--soft)}
+.pen:focus-visible{outline:2px solid var(--accent)}
+.pen:hover::after,.pen:focus-visible::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 5px);left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);font-size:11px;line-height:1.4;padding:2px 7px;border-radius:4px;white-space:nowrap;pointer-events:none;z-index:5}
+@media (hover:none){.pen{opacity:.6}}
+.edf{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start;width:100%}
+.edf input[type=text]{flex:1;min-width:160px}
+.eda{display:flex;gap:4px}
+.list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.list li{display:flex;gap:8px;align-items:flex-start;justify-content:space-between;padding:8px 12px;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.x{all:unset;cursor:pointer;color:var(--muted);font-size:15px;line-height:1;padding:2px 5px;border-radius:4px;opacity:0;flex:none}
+.list li:hover .x,.x:focus-visible{opacity:1}
+.x:hover{color:var(--bad);background:var(--soft)}
+.x:focus-visible{outline:2px solid var(--accent)}
+@media (hover:none){.x{opacity:.6}}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.cols section{min-width:0}
+.sync{font-size:12px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12px;color:var(--muted)}
+.legend i{display:inline-block;width:14px;height:8px;border-radius:2px;margin-right:5px}
+@media (max-width:640px){.grow{grid-template-columns:200px 1fr}.detail{padding-left:14px}}
+</style>
+
+<div id="app"></div>
+
+<script>
+(function(){
+"use strict";
+var DAY=864e5, LS="kanthast-roadmap-v1", LSUI="kanthast-roadmap-ui-v1", BASE="2026-11-23";
+function P(s){return Date.parse(s+"T00:00:00Z")}
+function iso(ms){return new Date(ms).toISOString().slice(0,10)}
+function addDays(s,n){return iso(P(s)+n*DAY)}
+function diff(a,b){return Math.round((P(a)-P(b))/DAY)}
+function todayIso(){var d=new Date();return iso(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()))}
+function mondayOf(s){var dow=new Date(P(s)).getUTCDay();return addDays(s,-((dow+6)%7))}
+function fmt(s,short){return new Date(P(s)).toLocaleDateString("en-GB",short?{day:"numeric",month:"short",timeZone:"UTC"}:{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"})}
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function wk(n){return addDays(BASE,(n-1)*7)}
+function I(id,lane,title,owner,w,weeks,note,ms){return {id:id,lane:lane,title:title,owner:owner,start:wk(w),weeks:ms?0:weeks,status:"todo",ms:!!ms,note:note||"",done:""}}
+
+/* The starting plan. It is shown until someone edits; after that the saved copy is used. */
+var SEED={v:1,updatedAt:0,
+ title:"Kanthast product roadmap",
+ summary:"A one-year development plan for kanthast.in, from Monday 23 November 2026 to 21 November 2027. It covers the landing page, Kanthast Professional, Kanthast School, the apps and the new Doubts section with AI video. Launch blockers come first, then Doubts, then the Professional learning features. Video creation runs the whole year in four-week batches, so new content is always being added.",
+ lanes:[
+  {id:"trust",name:"Trust and launch blockers"},
+  {id:"platform",name:"Platform and code quality"},
+  {id:"doubts",name:"School: Doubts forum"},
+  {id:"video",name:"AI video generation"},
+  {id:"vc",name:"Video creation (always running)"},
+  {id:"pro",name:"Professional: learning features"},
+  {id:"apps",name:"Design and apps"},
+  {id:"content",name:"Content and decisions"}
+ ],
+ items:[
+  I("t1","trust","Real checkout with Razorpay in both apps","Dev A",1,2,"Professional's checkout page is labelled a demo. Both backends already create Razorpay orders and check signatures, but that code is built around an older course model. Remove the demo card form."),
+  I("t2","trust","INR prices for NEET PG and INI CET, plus a few free lectures","Dev A",3,1,"Needs the price decision first."),
+  I("t3","trust","Launch-blocker sweep","Dev A",4,1,"Add the forgot-password link (neither Login page has one). Remove the watermarked and misspelled videos and images. Re-check every public claim. Archive the broken Expo app in MobileApp/."),
+  I("m1","trust","Paid checkout live","Dev A",4,0,"",true),
+  I("p1","platform","Safety net: tests, automatic checks, request limits, security review","Dev A",5,2,"The repo has no test files and no automatic checks on push. Only chat routes have a request limit, and it is counted in memory. Cover login and payments first."),
+  I("p2","platform","Error monitoring and usage analytics","Dev B",14,1,"No monitoring or analytics script was found in the three apps."),
+  I("p3","platform","Split the 1,000+ line pages","Dev A",21,2,"VideoPage (1,618 lines in School), AdminPanel and Settings."),
+  I("d0","doubts","Groundwork: parent approval, class picker, login check on video links","Dev A",7,1,"See the Doubts plan for detail."),
+  I("d1","doubts","Backend: collections, daily limits, moderation, English check, routes","Dev A",8,2,"Daily limits are stored in the database, not in memory."),
+  I("d2","doubts","Forum screens: Doubts tab, class feed, composer, threads","Dev A",10,2,""),
+  I("d3","doubts","AI merge: Assistant moves into Ask, Answer using AI, hint mode","Dev A",12,1,""),
+  I("d4","doubts","Admin moderation queue and action log","Dev A",13,1,""),
+  I("d5","doubts","Beta with one class","Dev A",14,2,"Needs the starter doubts from the content lane."),
+  I("m2","doubts","Doubts forum live for all classes","Dev A",16,0,"",true),
+  I("v0","video","Model test and house style","Dev B",1,2,"About 20 test clips per candidate model. Decide the model, clip length, voice service and worker hosting."),
+  I("v1","video","Video pipeline with whole-video reuse","Dev B",3,4,"Script, clip generation, voice, assembly, background worker, quality check."),
+  I("m3","video","First real generated video","Dev B",7,0,"",true),
+  I("v2","video","Scene library and matching","Dev B",7,3,"Scenes stored silent with descriptions. Search by meaning, then a fit check."),
+  I("v3","video","Code-drawn scenes for maths steps and diagrams","Dev B",10,2,""),
+  I("v4","video","Make-a-video button in Doubts threads, allowances, spending cap","Dev B",16,2,"Needs the forum beta to be finished."),
+  I("m4","video","Video explainers live in Doubts","Dev B",18,0,"",true),
+  I("v5","video","Pilot: produce one Class VIII Science chapter with the pipeline","Dev B",18,4,"A test of whether the same pipeline can produce the 923 scripted School lessons. Decide after the pilot."),
+  I("r1","pro","Quiz at the end of each lecture","Dev A",16,2,"The first step toward a question bank, which competitors lead with."),
+  I("r2","pro","Search across the library","Dev A",18,1,""),
+  I("r3","pro","Honest library: Available now and In production groups, Notify me, release tools in admin","Dev A",19,2,""),
+  I("r4","pro","Progress synced across devices, both apps","Dev B",22,1,"Progress is stored per device today, according to the repo's product notes."),
+  I("r5","pro","Question bank, first version","Dev A",23,2,""),
+  I("a1","apps","Design tokens and dark mode in both apps","Dev B",12,2,"Replace hardcoded colours with the design tokens so both themes work."),
+  I("a2","apps","Android release on the Play Store","Dev B",15,1,"Both apps have a Capacitor Android project."),
+  I("a3","apps","Parent progress view in School","Dev B",23,2,"Listed as coming soon in the product notes."),
+  I("a4","apps","Buffer and review","Dev A",25,2,"Room for slips. Review what moved and re-plan the next half."),
+  I("m5","vc","First original lectures live, YouTube embeds removed","Video team",13,0,"The library lists about 917 lectures and only 3 play, all third-party YouTube videos.",true),
+  I("c2","content","Legal review: parent approval wording and updated terms","Founder",6,2,"Must finish before the Doubts beta."),
+  I("c3","content","School: starter doubts for the beta class","Content",12,2,"20 to 30 per subject."),
+  I("c4","content","Decide scope and budget for Classes I to VII","Founder",20,1,""),
+  I("m6","apps","Half-year review","Dev A",27,0,"Review what moved in the first half and re-plan weeks 27 to 52.",true),
+  I("h1","pro","Revision reminders for watched lectures","Dev A",27,2,"Adaptive revision is listed as coming soon in the product notes."),
+  I("h2","pro","Notes and transcripts under each lecture","Dev A",29,2,""),
+  I("h3","pro","Question bank, second version: timed tests and explanations","Dev A",31,2,""),
+  I("h4","doubts","Doubts, second version: helper points, badges, thread summaries","Dev A",33,2,""),
+  I("h5","trust","Subscriptions: renewals, invoices, refunds","Dev A",35,2,""),
+  I("h6","platform","Admin reports: watch-through and drop-off per lecture","Dev A",37,2,"Tells the video team which lectures to redo."),
+  I("h7","apps","Buffer","Dev A",39,1,""),
+  I("h8","pro","NEET UG track","Dev A",40,3,"Listed as coming soon on the site."),
+  I("h9","platform","Speed pass for phones on mobile data","Dev A",43,2,""),
+  I("h10","apps","Classes I to VII in the School app","Dev A",45,2,"Depends on the scope and budget decision."),
+  I("h11","platform","Second security review and dependency updates","Dev A",47,2,""),
+  I("h12","apps","Buffer","Dev A",49,2,""),
+  I("h13","apps","Plan the next year","Dev A",51,2,""),
+  I("g1","video","Buffer and video quality review","Dev B",25,2,""),
+  I("g2","video","Lesson production at scale: batch runner, review queue, publish to library","Dev B",27,4,"Only if the Class VIII pilot passes. This is what lets the video team add School lessons in every batch."),
+  I("g3","video","Video cost and quality report for admins","Dev B",31,2,""),
+  I("g4","pro","Ask the AI about what is on screen in a lecture","Dev B",33,2,"Listed as coming soon in the product notes."),
+  I("g5","apps","iOS release on the App Store","Dev B",35,2,""),
+  I("g6","apps","Offline downloads in the Android apps","Dev B",37,2,""),
+  I("g7","apps","Buffer","Dev B",39,1,""),
+  I("g8","video","Scene library, second style version: redo the lowest-rated scenes","Dev B",40,3,""),
+  I("g9","apps","End-of-lesson questions in School","Dev B",43,2,"Listed as coming soon in the product notes."),
+  I("g10","apps","Weekly progress summary for parents","Dev B",45,2,""),
+  I("g11","apps","Reminders and push notifications","Dev B",47,2,""),
+  I("g12","apps","Buffer","Dev B",49,2,""),
+  I("g13","apps","Plan the next year","Dev B",51,2,""),
+  I("m7","apps","Year review","Dev A",53,0,"",true)
+ ],
+ notes:{
+  today:[
+   "kanthast.in is one Vercel project with three apps: the landing page, Professional (NEET PG, INI CET, USMLE) and School (Classes VIII to X). Professional and School have separate databases and logins.",
+   "Professional lists about 917 lectures. Only 3 play, and they are third-party YouTube videos.",
+   "School has 923 lessons scripted across 176 chapters. No lesson videos are produced yet.",
+   "Checkout is not real yet. Professional's page is labelled a demo. Razorpay order and signature code exists in both backends.",
+   "There are no automated tests and no automatic checks on push. Only chat routes have a request limit.",
+   "The AI assistant (Gemini) is live in both apps. School's video generation matches a topic to a few stored clips.",
+   "Both web apps have a Capacitor Android project. The separate Expo app in MobileApp/ is broken against the API.",
+   "Work from September to November 2026 went into the design system, accessibility, SEO, the landing page and both dashboards."
+  ],
+  assumptions:[
+   "Two developers, Dev A and Dev B. Each works on one item at a time.",
+   "Content production and Founder decisions run alongside and are not developer time.",
+   "Weeks start on Monday. Holidays are not accounted for.",
+   "Every length is an estimate. Move items as real progress comes in.",
+   "Video creation never stops. It runs as 13 four-week batches by the video team, separate from developer work. Set each batch's target before it starts.",
+   "Weeks 27 to 52 are a first sketch. Re-plan them at the half-year review."
+  ],
+  decisions:[
+   "INR prices for NEET PG and INI CET.",
+   "Video model, voice service and worker hosting. Decided by the model test.",
+   "How many videos and AI messages each plan gets.",
+   "Whether the database is on MongoDB Atlas. This decides how scene search is built.",
+   "Whether the video pipeline should also produce the scripted School lessons. Decide after the pilot.",
+   "Scope and budget for Classes I to VII."
+  ]
+ }};
+
+/* Video creation: one four-week batch after another for the whole year. */
+(function(){
+  var focus=["Professional, first subject","Professional, first subject","Professional, first subject","Professional, second subject","Professional, second subject","Professional, plus School Class VIII Science if the pilot passes"];
+  for(var b=1;b<=13;b++){
+    var f=focus[b-1]||"Professional and School";
+    var note=b<=3?"Batches 1 to 3 together: 20 to 30 original lectures in one subject.":"Set the number of videos for this batch before it starts.";
+    SEED.items.push(I("vc"+b,"vc","Video batch "+b+": "+f,"Video team",(b-1)*4+1,4,note));
+  }
+})();
+
+var STATUS=[["todo","Not started"],["doing","In progress"],["done","Done"],["blocked","Blocked"]];
+function sLabel(v){for(var i=0;i<STATUS.length;i++)if(STATUS[i][0]===v)return STATUS[i][1];return v}
+var PEN='<svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.2 2.3l2.5 2.5L5.5 13H3v-2.5z"/><path d="M9.7 3.8l2.5 2.5"/></svg>';
+
+function valid(s){return s&&s.v===1&&Array.isArray(s.items)&&Array.isArray(s.lanes)&&s.notes}
+function lsGet(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+var saved=lsGet(LS);
+var state=valid(saved)?saved:clone(SEED);
+var TODAY=todayIso();
+var ui=Object.assign({win:mondayOf(TODAY),span:12,owner:"",hideDone:false,cascade:true,open:{}},lsGet(LSUI)||{});
+if(!ui.open)ui.open={};
+var editing=0,pending=null,syncText="Saved in this browser",confirmDel="",confirmReset=false,dataBox="";
+
+/* Saving: this browser always; the shared copy when the page runs as a published artifact. */
+var docRef=null,writing=false,dirty=false,reconciled=false;
+function setSync(t){syncText=t;var e=document.getElementById("sync");if(e)e.textContent=t}
+function pushRemote(){
+  if(!docRef)return;
+  if(writing){dirty=true;return}
+  writing=true;setSync("Saving…");
+  docRef.set(clone(state)).then(function(){setSync("Saved. Changes are kept with this page.")},function(e){
+    setSync(e&&e.code==="invalid_argument"?"Saved in this browser only. You have view-only access to the shared copy.":"Saved in this browser. The shared copy could not be reached.");
+  }).then(function(){writing=false;if(dirty){dirty=false;pushRemote()}});
+}
+function commit(){state.updatedAt=Date.now();lsSet(LS,state);pushRemote();render()}
+function saveUi(){lsSet(LSUI,ui)}
+function flushPending(){if(editing<=0&&pending){state=pending;pending=null;lsSet(LS,state);render()}}
+function connect(){
+  if(!(window.claude&&window.claude.use))return;
+  window.claude.use("db").then(function(db){
+    if(!db)return;
+    docRef=db.doc("roadmap/state");
+    var timer=setTimeout(function(){setSync("Saved in this browser. The shared copy has not answered yet.")},10000);
+    docRef.onSnapshot(function(snap){
+      if(!snap.metadata.fromCache)clearTimeout(timer);
+      var d=snap.exists?snap.data():null;
+      if(d&&valid(d)&&(d.updatedAt||0)>(state.updatedAt||0)){pending=clone(d);flushPending()}
+      else if(!snap.metadata.fromCache&&!reconciled&&(state.updatedAt||0)>((d&&d.updatedAt)||0)){pushRemote()}
+      if(!snap.metadata.fromCache){reconciled=true;if(!writing)setSync("Saved. Changes are kept with this page.")}
+    },function(){clearTimeout(timer);docRef=null;setSync("Saved in this browser")});
+  },function(){});
+}
+
+function h(t,a){
+  var e=document.createElement(t),k;
+  for(k in (a||{})){var v=a[k];
+    if(k==="class")e.className=v;else if(k==="html")e.innerHTML=v;else if(k.slice(0,2)==="on")e[k]=v;
+    else if(v!==false&&v!=null)e.setAttribute(k,v===true?"":v)}
+  for(var i=2;i<arguments.length;i++){var c=arguments[i];
+    if(Array.isArray(c))c.forEach(function(x){if(x!=null&&x!==false)e.append(x)});
+    else if(c!=null&&c!==false)e.append(c)}
+  return e;
+}
+
+/* Inline editing: hover shows a pencil; the pencil opens a field with Save and Discard. */
+function ed(val,save,o){
+  o=o||{};
+  var w=h("span",{class:"ed"+(o.block?" blk":"")});
+  function show(){
+    var text=o.fmt?o.fmt(val):(val===""||val==null?(o.ph||"Add"):String(val));
+    var pen=h("button",{class:"pen",type:"button","aria-label":"Edit "+(o.label||""),"data-tip":"Edit",html:PEN,onclick:function(e){e.stopPropagation();edit()}});
+    w.replaceChildren(h("span",{class:"edv"+((val===""||val==null)?" ph":"")},text),pen);
+  }
+  function edit(){
+    editing++;
+    var inp;
+    if(o.type==="select"){inp=h("select");o.options.forEach(function(op){var el=h("option",{value:op[0]},op[1]);if(op[0]===val)el.selected=true;inp.append(el)})}
+    else if(o.multi){inp=h("textarea",{rows:3});inp.value=val||""}
+    else{inp=h("input",{type:o.type||"text"});inp.value=val==null?"":val;if(o.type==="number"){inp.min=o.min||1;inp.style.width="80px"}}
+    inp.id="ed-"+(o.id||"field");inp.setAttribute("aria-label",o.label||"Edit");
+    function end(){editing=Math.max(0,editing-1)}
+    function doSave(){
+      var v=inp.value;
+      if(o.type==="number"){v=Math.max(o.min||1,parseInt(v,10)||(o.min||1))}else{v=String(v).trim()}
+      end();
+      if((o.type==="date"||o.required)&&!v){show();flushPending();return}
+      if(v!==val){save(v);commit()}else{show();flushPending()}
+    }
+    function doDiscard(){end();show();flushPending()}
+    inp.onkeydown=function(e){
+      if(e.key==="Escape"){e.preventDefault();doDiscard()}
+      else if(e.key==="Enter"&&(!o.multi||e.metaKey||e.ctrlKey)){e.preventDefault();doSave()}
+    };
+    w.replaceChildren(h("span",{class:"edf"},inp,h("span",{class:"eda"},
+      h("button",{class:"btn ink sm",type:"button",onclick:doSave},"Save"),
+      h("button",{class:"btn sm",type:"button",onclick:doDiscard},"Discard"))));
+    inp.focus();
+  }
+  show();return w;
+}
+
+function endOf(it){return it.ms?it.start:addDays(it.start,it.weeks*7)}
+function isLate(it){return it.status!=="done"&&(it.ms?it.start<TODAY:endOf(it)<=TODAY)}
+function later(it,oldEnd){return state.items.filter(function(o){return o!==it&&o.owner===it.owner&&o.status!=="done"&&o.start>=oldEnd})}
+function moveStart(it,days){
+  var L=ui.cascade?later(it,endOf(it)):[];
+  it.start=addDays(it.start,days);L.forEach(function(o){o.start=addDays(o.start,days)});
+}
+function setWeeks(it,w,force){
+  w=Math.max(1,w);
+  var L=(ui.cascade||force)?later(it,endOf(it)):[],d=(w-it.weeks)*7;
+  it.weeks=w;L.forEach(function(o){o.start=addDays(o.start,d)});
+}
+function weeksEarly(it){
+  if(it.ms||it.status!=="done"||!it.done)return 0;
+  return Math.min(it.weeks-1,Math.floor(diff(endOf(it),it.done)/7));
+}
+function byId(id){for(var i=0;i<state.items.length;i++)if(state.items[i].id===id)return state.items[i];return null}
+function newId(){return "i"+Date.now().toString(36)+Math.floor(Math.random()*1e4).toString(36)}
+
+function render(){
+  editing=0;TODAY=todayIso();
+  var app=document.getElementById("app");
+  var old=app.querySelector(".gscroll"),sl=old?old.scrollLeft:0;
+  app.replaceChildren(header(),tracker(),notes(),dataTools());
+  var g=app.querySelector(".gscroll");if(g)g.scrollLeft=sl;
+}
+
+function header(){
+  var work=state.items.filter(function(i){return !i.ms});
+  var n=function(f){return work.filter(f).length};
+  var tw=0,dw=0;work.forEach(function(i){tw+=i.weeks;if(i.status==="done")dw+=i.weeks});
+  var pct=tw?Math.round(dw/tw*100):0;
+  var first=state.items.reduce(function(a,i){return i.start<a?i.start:a},"9999"),last=state.items.reduce(function(a,i){var e=endOf(i);return e>a?e:a},"0000");
+  return h("header",null,
+    h("div",{class:"eyebrow"},"Kanthast · Development roadmap · "+(state.items.length?fmt(first)+" to "+fmt(addDays(last,-1)):"")),
+    h("h1",null,ed(state.title,function(v){state.title=v},{label:"title",id:"title",required:true})),
+    h("p",{class:"lede"},ed(state.summary,function(v){state.summary=v},{label:"summary",id:"summary",multi:true,block:true})),
+    h("div",{class:"stats"},
+      h("span",null,h("b",null,String(pct)+"%")," of planned work done"),
+      h("span",{class:"meter","aria-hidden":"true"},h("i",{style:"width:"+pct+"%"})),
+      h("span",null,h("b",null,String(n(function(i){return i.status==="done"})))," done"),
+      h("span",null,h("b",null,String(n(function(i){return i.status==="doing"})))," in progress"),
+      h("span",null,h("b",null,String(n(isLate)))," late"),
+      h("span",null,h("b",null,String(n(function(i){return i.status==="blocked"})))," blocked"),
+      h("span",null,h("b",null,String(work.length))," items")),
+    h("div",{class:"sync",id:"sync"},syncText));
+}
+
+function tracker(){
+  var span=ui.span,days=span*7,win=ui.win;
+  function pos(d){return diff(d,win)/days*100}
+  function nav(n){return function(){ui.win=addDays(ui.win,n*7);saveUi();render()}}
+  var owners=[];state.items.forEach(function(i){if(i.owner&&owners.indexOf(i.owner)<0)owners.push(i.owner)});owners.sort();
+  var first=state.items.reduce(function(a,i){return i.start<a?i.start:a},"9999");
+  var ownerSel=h("select",{id:"f-owner","aria-label":"Show owner",onchange:function(){ui.owner=this.value;saveUi();render()}},
+    h("option",{value:""},"Everyone"),owners.map(function(o){var e=h("option",{value:o},o);if(o===ui.owner)e.selected=true;return e}));
+  var spanSel=h("select",{id:"f-span","aria-label":"Weeks shown",onchange:function(){ui.span=parseInt(this.value,10);saveUi();render()}},
+    [8,12,16,26,52].map(function(s){var e=h("option",{value:s},s+" weeks");if(s===span)e.selected=true;return e}));
+  var controls=h("div",{class:"bar-row"},
+    h("div",{class:"grp"},
+      h("button",{class:"btn",type:"button",id:"w-b4",onclick:nav(-4),"aria-label":"Back 4 weeks"},"« 4 wk"),
+      h("button",{class:"btn",type:"button",id:"w-b1",onclick:nav(-1),"aria-label":"Back 1 week"},"‹ 1 wk"),
+      h("button",{class:"btn",type:"button",id:"w-today",onclick:function(){ui.win=addDays(mondayOf(TODAY),-7);saveUi();render()}},"Today"),
+      h("button",{class:"btn",type:"button",id:"w-start",onclick:function(){if(first!=="9999"){ui.win=mondayOf(first);saveUi();render()}}},"Plan start"),
+      h("button",{class:"btn",type:"button",id:"w-f1",onclick:nav(1),"aria-label":"Forward 1 week"},"1 wk ›"),
+      h("button",{class:"btn",type:"button",id:"w-f4",onclick:nav(4),"aria-label":"Forward 4 weeks"},"4 wk »")),
+    h("span",{class:"muted"},fmt(win)+" to "+fmt(addDays(win,days-1))),
+    spanSel,ownerSel,
+    h("label",{class:"chk"},h("input",{type:"checkbox",id:"f-hide",checked:ui.hideDone,onchange:function(){ui.hideDone=this.checked;saveUi();render()}}),"Hide done"),
+    h("label",{class:"chk"},h("input",{type:"checkbox",id:"f-cascade",checked:ui.cascade,onchange:function(){ui.cascade=this.checked;saveUi()}}),"Moving an item also moves the same owner's later items"));
+
+  var tp=pos(TODAY)+ (1/days*50);
+  var gantt=h("div",{class:"gantt",style:"--span:"+span+";--today:"+((tp<0||tp>100)?"-50%":tp+"%")});
+  var weeks=h("div",{class:"weeks"});
+  for(var i=0;i<span;i++){var step=span>26?4:span>16?2:1;weeks.append(h("span",null,(i%step)?"":fmt(addDays(win,i*7),true)))}
+  gantt.append(h("div",{class:"grow ghead"},h("div",{style:"padding:6px 12px;font-size:11px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase"},"Item"),weeks));
+
+  state.lanes.forEach(function(lane){
+    var items=state.items.filter(function(i){return i.lane===lane.id&&(!ui.owner||i.owner===ui.owner)&&!(ui.hideDone&&i.status==="done")})
+      .sort(function(a,b){return a.start<b.start?-1:a.start>b.start?1:(a.ms?1:0)-(b.ms?1:0)});
+    gantt.append(h("div",{class:"grow"},h("div",{class:"lane"},
+      ed(lane.name,function(v){lane.name=v},{label:"workstream name",id:"lane-"+lane.id,required:true}),
+      h("button",{class:"btn sm",type:"button",onclick:function(){
+        var it={id:newId(),lane:lane.id,title:"New item",owner:ui.owner||"Dev A",start:mondayOf(TODAY<win?win:TODAY),weeks:1,status:"todo",ms:false,note:"",done:""};
+        state.items.push(it);ui.open[it.id]=true;saveUi();commit()}},"Add item"))));
+    items.forEach(function(it){gantt.append(row(it,pos))});
+  });
+  gantt.append(h("div",{class:"grow"},h("div",{class:"lane",style:"border-bottom:0"},h("span",null,""),
+    h("button",{class:"btn sm",type:"button",onclick:function(){state.lanes.push({id:newId(),name:"New workstream"});commit()}},"Add workstream"))));
+
+  var legend=h("div",{class:"legend"},
+    h("span",null,h("i",{style:"background:var(--bar)"}),"Not started"),
+    h("span",null,h("i",{style:"background:var(--ink)"}),"In progress"),
+    h("span",null,h("i",{style:"background:var(--ok)"}),"Done"),
+    h("span",null,h("i",{style:"background:var(--bad)"}),"Blocked"),
+    h("span",null,h("i",{style:"outline:2px dashed var(--warn);background:none"}),"Late"),
+    h("span",null,h("i",{style:"width:9px;height:9px;transform:rotate(45deg);border:2px solid var(--ink);background:none"}),"Milestone"),
+    h("span",null,h("i",{style:"width:2px;height:12px;background:var(--accent)"}),"Today"),
+    h("span",null,"Click an item to see and edit its details."));
+  return h("section",null,h("h2",null,"Timeline"),controls,h("div",{class:"gscroll"},gantt),legend);
+}
+
+function row(it,pos){
+  var open=!!ui.open[it.id],late=isLate(it),end=endOf(it);
+  var btn=h("button",{class:"rowbtn",type:"button","aria-expanded":open?"true":"false",onclick:function(){ui.open[it.id]=!open;saveUi();render()}},
+    h("span",{class:"caret"},open?"▾":"▸"),
+    h("span",{class:"rt"},h("b",null,it.title),
+      h("small",null,it.owner||"No owner",h("span",{class:"chip "+it.status},it.ms?(it.status==="done"?"Reached":"Milestone"):sLabel(it.status)),late?h("span",{class:"chip late"},"Late"):null)));
+  var track=h("div",{class:"track"});
+  if(it.ms){
+    var p=pos(it.start);
+    if(p>=0&&p<=100)track.append(h("span",{class:"gms "+(it.status==="done"?"done":"")+(late?" late":""),style:"left:"+p+"%",title:it.title+" · "+fmt(it.start)}));
+    else track.append(h("span",{class:"off",style:p<0?"left:6px":"right:6px"},p<0?"‹":"›"));
+  }else{
+    var a=pos(it.start),b=pos(end);
+    if(b<=0)track.append(h("span",{class:"off",style:"left:6px"},"‹"));
+    else if(a>=100)track.append(h("span",{class:"off",style:"right:6px"},"›"));
+    else{a=Math.max(0,a);b=Math.min(100,b);
+      track.append(h("span",{class:"gbar "+it.status+(late?" late":""),style:"left:calc("+a+"% + 2px);width:calc("+(b-a)+"% - 4px)",title:it.title+" · "+fmt(it.start)+" to "+fmt(addDays(end,-1))}))}
+  }
+  var r=h("div",{class:"grow"},btn,track);
+  if(open)r.append(detail(it,late));
+  return r;
+}
+
+function field(k,node,wide){return h("div",{class:"f"+(wide?" wide":"")},h("span",{class:"k"},k),node)}
+function detail(it,late){
+  var id=it.id,early=weeksEarly(it);
+  var fields=h("div",{class:"fields"},
+    field("Title",ed(it.title,function(v){it.title=v},{label:"title",id:id+"-title",required:true,block:true}),true),
+    field("Owner",ed(it.owner,function(v){it.owner=v},{label:"owner",id:id+"-owner",ph:"Add an owner"})),
+    field("Status",ed(it.status,function(v){it.status=v;it.done=v==="done"?TODAY:""},{label:"status",id:id+"-status",type:"select",options:STATUS,fmt:sLabel})),
+    field(it.ms?"Date":"Starts",ed(it.start,function(v){moveStart(it,diff(v,it.start))},{label:"start date",id:id+"-start",type:"date",fmt:function(v){return fmt(v)}})),
+    it.ms?null:field("Length",ed(it.weeks,function(v){setWeeks(it,v)},{label:"length in weeks",id:id+"-weeks",type:"number",min:1,fmt:function(v){return v+(v===1?" week":" weeks")}})),
+    it.ms?null:field("Ends",h("span",null,fmt(addDays(endOf(it),-1)))),
+    it.done?field("Marked done",h("span",null,fmt(it.done))):null,
+    field("Workstream",ed(it.lane,function(v){it.lane=v},{label:"workstream",id:id+"-lane",type:"select",options:state.lanes.map(function(l){return [l.id,l.name]}),fmt:function(v){var l=state.lanes.filter(function(x){return x.id===v})[0];return l?l.name:v}})),
+    field("Notes",ed(it.note,function(v){it.note=v},{label:"notes",id:id+"-note",multi:true,block:true,ph:"Add a note"}),true));
+  function act(label,fn){return h("button",{class:"btn sm",type:"button",onclick:function(){fn();commit()}},label)}
+  var moves=h("div",{class:"bar-row"},
+    act("Start 1 wk earlier",function(){moveStart(it,-7)}),
+    act("Start 1 wk later",function(){moveStart(it,7)}),
+    it.ms?null:act("1 wk shorter",function(){setWeeks(it,it.weeks-1)}),
+    it.ms?null:act("1 wk longer",function(){setWeeks(it,it.weeks+1)}),
+    it.status!=="done"?act(it.ms?"Mark reached":"Mark done",function(){it.status="done";it.done=TODAY}):null,
+    act(it.ms?"Make it a work item":"Make it a milestone",function(){it.ms=!it.ms;it.weeks=it.ms?0:1}),
+    confirmDel===id
+      ?h("span",{class:"grp"},h("span",{class:"muted"},"Delete this item?"),
+          h("button",{class:"btn sm danger",type:"button",onclick:function(){state.items=state.items.filter(function(o){return o!==it});delete ui.open[id];confirmDel="";saveUi();commit()}},"Delete"),
+          h("button",{class:"btn sm",type:"button",onclick:function(){confirmDel="";render()}},"Keep"))
+      :h("button",{class:"btn sm danger",type:"button",onclick:function(){confirmDel=id;render()}},"Delete"));
+  var hints=[];
+  if(late)hints.push(h("p",{class:"muted"},(it.ms?"This milestone date has passed.":"This item was due to finish by "+fmt(addDays(endOf(it),-1))+".")+" Move it, make it longer, or mark it done."));
+  if(early>0)hints.push(h("div",{class:"bar-row"},h("span",{class:"muted"},"Finished "+early+(early===1?" week":" weeks")+" early."),
+    h("button",{class:"btn sm ink",type:"button",onclick:function(){setWeeks(it,it.weeks-early,true);commit()}},"Pull "+(it.owner||"this owner")+"'s later items "+early+" wk earlier")));
+  return h("div",{class:"detail"},fields,hints,moves);
+}
+
+function noteList(key,title,hint){
+  var arr=state.notes[key]||(state.notes[key]=[]);
+  var ul=h("ul",{class:"list"},arr.map(function(t,i){
+    return h("li",null,
+      ed(t,function(v){arr[i]=v},{label:title+" point",id:key+"-"+i,multi:true,block:true,ph:"Write here"}),
+      h("button",{class:"x",type:"button","aria-label":"Remove this point",title:"Remove",onclick:function(){arr.splice(i,1);commit()}},"×"));
+  }));
+  return h("section",null,h("h2",null,title),hint?h("p",{class:"muted"},hint):null,arr.length?ul:null,
+    h("div",null,h("button",{class:"btn sm",type:"button",onclick:function(){arr.push("");commit()}},"Add a point")));
+}
+function notes(){
+  return h("div",{class:"cols"},
+    noteList("today","Where the product stands","From a read of the repository on 18 November 2026."),
+    noteList("assumptions","Assumptions behind the dates",""),
+    noteList("decisions","Decisions still open",""));
+}
+
+function dataTools(){
+  var box=null;
+  if(dataBox){
+    var ta=h("textarea",{id:"data-text",rows:6,"aria-label":"Roadmap data"});
+    ta.value=dataBox==="copy"?JSON.stringify(state):"";
+    box=h("div",{style:"display:flex;flex-direction:column;gap:8px"},
+      h("p",{class:"muted"},dataBox==="copy"?"Copy this text and keep it somewhere safe.":"Paste a saved copy below, then choose Load."),ta,
+      h("div",{class:"grp"},
+        dataBox==="load"?h("button",{class:"btn sm ink",type:"button",onclick:function(){
+          var d=null;try{d=JSON.parse(ta.value)}catch(e){}
+          if(!valid(d)){ta.setCustomValidity("x");ta.style.borderColor="var(--bad)";return}
+          state=d;dataBox="";commit()}},"Load"):null,
+        h("button",{class:"btn sm",type:"button",onclick:function(){dataBox="";render()}},"Close")));
+    if(dataBox==="copy")setTimeout(function(){ta.focus();ta.select()},0);
+  }
+  return h("section",null,h("h2",null,"Your data"),
+    h("p",{class:"muted",style:"max-width:78ch"},"Every edit is saved as you make it. On the published page the plan is kept with the page. Opened as a file, it is kept in this browser only, so keep a copy if it matters."),
+    h("div",{class:"bar-row"},
+      h("button",{class:"btn",type:"button",onclick:function(){
+        var t=JSON.stringify(state);
+        var fail=function(){dataBox="copy";render()};
+        try{navigator.clipboard.writeText(t).then(function(){setSync("Copied the roadmap data to the clipboard.")},fail)}catch(e){fail()}}},"Copy a backup"),
+      h("button",{class:"btn",type:"button",onclick:function(){dataBox="load";render()}},"Load a backup"),
+      confirmReset
+        ?h("span",{class:"grp"},h("span",{class:"muted"},"Replace everything with the starting plan?"),
+            h("button",{class:"btn danger",type:"button",onclick:function(){state=clone(SEED);confirmReset=false;commit()}},"Reset"),
+            h("button",{class:"btn",type:"button",onclick:function(){confirmReset=false;render()}},"Keep my changes"))
+        :h("button",{class:"btn danger",type:"button",onclick:function(){confirmReset=true;render()}},"Reset to the starting plan")),
+    box);
+}
+
+render();
+connect();
+})();
+</script>

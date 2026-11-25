@@ -1,0 +1,168 @@
+<title>Kanthast Progress Report</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: a status report read top to bottom, with state shown by labelled pills. Colours follow Kanthast navy and mint. */
+:root{--bg:#f6f8fc;--surface:#fff;--fg:#17213a;--muted:#59647c;--line:#dce2ee;--brand:#1e3a8a;--good:#11694f;--good-bg:#def5ec;--warn:#855000;--warn-bg:#fdf0d5;--bad:#a42828;--bad-bg:#fde6e4;--idle:#3f4c68;--idle-bg:#e8ecf4;--display:"Plus Jakarta Sans",system-ui,sans-serif;--body:Inter,system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--surface:#161e33;--fg:#e9eefa;--muted:#a3aec6;--line:#2a3550;--brand:#9db6ff;--good:#74e0bd;--good-bg:#123b32;--warn:#f6c66e;--warn-bg:#3d2f12;--bad:#ff9f98;--bad-bg:#472020;--idle:#c3cde2;--idle-bg:#27314a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1424;--surface:#161e33;--fg:#e9eefa;--muted:#a3aec6;--line:#2a3550;--brand:#9db6ff;--good:#74e0bd;--good-bg:#123b32;--warn:#f6c66e;--warn-bg:#3d2f12;--bad:#ff9f98;--bad-bg:#472020;--idle:#c3cde2;--idle-bg:#27314a;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:400 15px/1.6 var(--body);padding-block:48px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:980px;margin:auto;display:grid;gap:44px}
+main>*{min-width:0}
+h1,h2,h3{font-family:var(--display);line-height:1.2;margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5vw,44px);font-weight:800;color:var(--brand)}
+h2{font-size:23px;font-weight:700}
+h3{font-size:15px;font-weight:700}
+p{margin:0;max-width:70ch}
+header,section{display:grid;gap:16px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.lead{font-size:18px;line-height:1.5}
+.sub{color:var(--muted)}
+.counts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.counts div{background:var(--surface);padding:16px;display:grid;gap:2px}
+.counts b{font:800 26px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.counts span{font-size:13px;color:var(--muted);line-height:1.35}
+.wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+table{width:100%;min-width:680px;border-collapse:collapse}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-size:12px;color:var(--muted);font-weight:600}
+td:first-child{font-weight:600}
+.pill{display:inline-block;white-space:nowrap;border-radius:99px;padding:2px 9px;font-size:12px;font-weight:600}
+.good{color:var(--good);background:var(--good-bg)}.warn{color:var(--warn);background:var(--warn-bg)}.bad{color:var(--bad);background:var(--bad-bg)}.idle{color:var(--idle);background:var(--idle-bg)}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.cols>div{display:grid;gap:8px;align-content:start;min-width:0}
+ul,ol{margin:0;padding-left:20px;display:grid;gap:6px}
+.phases{display:grid;gap:0;border-top:1px solid var(--line)}
+.phase{display:grid;grid-template-columns:190px minmax(0,1fr);gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.phase h3{font-size:16px}
+.phase small{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:3px}
+.note{font-size:13px;color:var(--muted)}
+@media(max-width:720px){.counts{grid-template-columns:repeat(2,minmax(0,1fr))}.cols,.phase{grid-template-columns:minmax(0,1fr)}.phase{gap:8px}body{padding-block:28px 48px}}
+</style>
+
+<main>
+<header>
+  <div class="eyebrow">Status as of 23 November 2026</div>
+  <h1>Kanthast Progress Report</h1>
+  <p class="lead">The platform, both learning apps and the landing site are live. Kanthast is not ready for paid users yet, because payments are simulated, most lessons have no video, and several security and child-safety gaps remain open.</p>
+  <div class="counts" aria-label="Key figures">
+    <div><b>3 of 917</b><span>Professional lectures playable</span></div>
+    <div><b>0 of 923</b><span>School lessons with video</span></div>
+    <div><b>176</b><span>School chapters fully scripted</span></div>
+    <div><b>65</b><span>known dependency issues, 6 critical</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>Where each part stands</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Part</th><th>Status</th><th>Working now</th><th>Main gap</th></tr></thead>
+    <tbody>
+      <tr><td>Landing site</td><td><span class="pill good">Live</span></td><td>Home, About, Contact, 404, SEO, pilot reviews</td><td>Corporate card needs its own copy, image and link. School legal links are missing.</td></tr>
+      <tr><td>Professional</td><td><span class="pill warn">Live, not sale-ready</span></td><td>Accounts, library, player, AI chat, admin, dashboard</td><td>Original lectures, real checkout, server-side paywall</td></tr>
+      <tr><td>School</td><td><span class="pill warn">Live, not sale-ready</span></td><td>Accounts with class, AI assistant, catalogue, admin, dashboard</td><td>Lesson videos, real checkout, children's data protections</td></tr>
+      <tr><td>Doubts forum</td><td><span class="pill idle">Built, not released</span></td><td>Feed, replies, Ask AI, parent approval, moderation on its own branch</td><td>Posting not yet confirmed end to end. AI key needs checking.</td></tr>
+      <tr><td>Course content</td><td><span class="pill good">Scripts complete</span></td><td>Classes VIII, IX and X across 176 chapters</td><td>Not connected to the app. Class VIII Hindi and Sanskrit look thin.</td></tr>
+      <tr><td>Android app</td><td><span class="pill idle">In progress</span></td><td>Capacitor wrapper for Professional</td><td>Release build and School app. The older Expo app is abandoned.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Done and implemented</h2>
+  <div class="cols">
+    <div><h3>Platform and landing site</h3><ul>
+      <li>One domain serving three separate apps on Vercel</li>
+      <li>Separate databases, accounts and admin logins for Professional and School</li>
+      <li>Landing, About, Contact and branded 404 pages</li>
+      <li>SEO pass with canonical URLs, sitemaps and structured data</li>
+    </ul></div>
+    <div><h3>Professional</h3><ul>
+      <li>Email OTP signup, login and device session management</li>
+      <li>Library, video player, summaries and images</li>
+      <li>AI support chat with file upload</li>
+      <li>Admin panel for users and content</li>
+      <li>Dashboard redesigned around the next lecture</li>
+    </ul></div>
+    <div><h3>School</h3><ul>
+      <li>Signup with class selection, login and settings</li>
+      <li>AI study assistant</li>
+      <li>Class catalogue and lecture player</li>
+      <li>Admin panel and redesigned dashboard</li>
+    </ul></div>
+    <div><h3>Shipped on 23 November</h3><ul>
+      <li>Password reset security fix, live and confirmed on both production APIs</li>
+      <li>Reset tokens now stored hashed, with all devices signed out after a reset</li>
+      <li>Landing page “Concept Library” renamed to “Corporate” (deployed, visual check pending)</li>
+      <li>Full project audit across all apps</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>Open risks</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Issue</th><th>Severity</th><th>Why it matters</th></tr></thead>
+    <tbody>
+      <tr><td>Paid plans can be activated without payment</td><td><span class="pill bad">Critical</span></td><td>Checkout is still a demo, and the server trusts it.</td></tr>
+      <tr><td>Professional content is not protected by the server</td><td><span class="pill bad">Critical</span></td><td>Locked lessons are enforced only in the browser.</td></tr>
+      <tr><td>Parent approval can be self-approved</td><td><span class="pill bad">Critical for Doubts</span></td><td>Must be fixed before the forum opens to children.</td></tr>
+      <tr><td>Deleted accounts leave children's data behind</td><td><span class="pill bad">High</span></td><td>Posts, parent details and uploads are retained. Needs legal review.</td></tr>
+      <tr><td>Password reset cannot be completed</td><td><span class="pill bad">High</span></td><td>The emailed link has no page to open.</td></tr>
+      <tr><td>No shared rate limits on login and OTP</td><td><span class="pill bad">High</span></td><td>Accounts and email quota are open to automated abuse.</td></tr>
+      <tr><td>Possible past misuse of the reset flaw</td><td><span class="pill warn">Needs review</span></td><td>Check recent password changes and rotate admin credentials.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>What needs to be done next</h2>
+  <div class="phases">
+    <div class="phase"><h3>Now<small>Close the open doors</small></h3><ol>
+      <li>Remove the demo payment route from both apps</li>
+      <li>Add login and subscription checks to paid content</li>
+      <li>Build the reset password page in both apps</li>
+      <li>Review recent password changes and rotate admin credentials</li>
+    </ol></div>
+    <div class="phase"><h3>This week<small>Basic protection</small></h3><ol>
+      <li>Add shared rate limits for login, OTP, contact and chat</li>
+      <li>Limit upload size and file types</li>
+      <li>Update vulnerable dependencies</li>
+      <li>Add login and payment tests with automatic checks on push</li>
+      <li>Give the Corporate card its own copy, image and link</li>
+    </ol></div>
+    <div class="phase"><h3>Before Doubts launches<small>Keep students safe</small></h3><ol>
+      <li>Test posting end to end and verify the production AI key</li>
+      <li>Rebuild parent approval so a child cannot approve themselves</li>
+      <li>Complete account deletion and set data retention</li>
+      <li>Tighten moderation, including self-harm handling</li>
+      <li>Update School privacy terms and complete legal review</li>
+    </ol></div>
+    <div class="phase"><h3>Before selling<small>Make the product real</small></h3><ol>
+      <li>Build real Razorpay checkout with verified payments</li>
+      <li>Set INR prices for NEET PG and INI CET</li>
+      <li>Publish original lectures and remove third-party embeds</li>
+      <li>Produce a pilot School chapter, starting with Class VIII Science</li>
+    </ol></div>
+    <div class="phase"><h3>After launch<small>Retention and reach</small></h3><ol>
+      <li>Quizzes, question bank and library search</li>
+      <li>Progress sync across devices</li>
+      <li>Parent progress view</li>
+      <li>Play Store release</li>
+    </ol></div>
+  </div>
+</section>
+
+<section>
+  <h2>Decisions needed</h2>
+  <ul>
+    <li>What is Kanthast Corporate, who is it for, and where should its card link?</li>
+    <li>What are the INR prices for NEET PG and INI CET?</li>
+    <li>Which product gets video production first, Professional or School?</li>
+    <li>What are the scope and budget for Classes I to VII?</li>
+  </ul>
+  <p class="note">Based on a code review, offline tests and live checks of the password reset on 23 November 2026. Production data was not inspected, and the Doubts forum has not been run end to end.</p>
+</section>
+</main>

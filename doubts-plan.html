@@ -1,0 +1,478 @@
+<title>Kanthast Doubts Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, hairline structure, diagrams and tables allowed to scroll sideways in their own box. */
+:root{
+  --bg:#f7f7f5; --surface:#ffffff; --ink:#1b1a17; --muted:#69665f; --line:#e3e1da;
+  --accent:#a8540a; --accent-soft:#f6e9d8; --track:#33312c; --track-soft:#e9e7e1;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#151513; --surface:#1d1c1a; --ink:#edebe6; --muted:#a09c93; --line:#32302c;
+    --accent:#f0b35a; --accent-soft:#3a2c17; --track:#d9d6cf; --track-soft:#2b2a26; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151513; --surface:#1d1c1a; --ink:#edebe6; --muted:#a09c93; --line:#32302c;
+  --accent:#f0b35a; --accent-soft:#3a2c17; --track:#d9d6cf; --track-soft:#2b2a26; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 80px}
+.page{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+header{display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+h1{font-size:30px;line-height:1.2;font-weight:600;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h2{font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0;text-wrap:balance}
+h3{font-size:15px;font-weight:600;margin:0}
+p{margin:0;max-width:68ch}
+section{display:flex;flex-direction:column;gap:18px}
+.sub{display:flex;flex-direction:column;gap:10px}
+.lede{font-size:16px;color:var(--ink)}
+.muted{color:var(--muted)}
+a{color:inherit}
+nav{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:12px}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover,nav a:focus-visible{color:var(--ink);text-decoration:underline}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.facts div{padding:14px 16px;border-right:1px solid var(--line);min-width:0}
+.facts div:last-child{border-right:0}
+.facts b{display:block;font-size:18px;font-weight:600;font-variant-numeric:tabular-nums}
+.facts span{font-size:13px;color:var(--muted)}
+ul,ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:68ch}
+code{font-family:var(--mono);font-size:12.5px;background:var(--track-soft);padding:1px 5px;border-radius:4px}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px solid var(--line)}
+th{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:500;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:500;min-width:150px}
+pre{margin:0;font-family:var(--mono);font-size:12.5px;line-height:1.7;padding:14px 16px;white-space:pre}
+figure{margin:0;display:flex;flex-direction:column;gap:8px}
+figure .scroll{padding:12px}
+figcaption{font-size:13px;color:var(--muted);max-width:68ch}
+svg{display:block;max-width:100%;height:auto;min-width:640px;font-family:var(--sans)}
+.bx{fill:var(--surface);stroke:var(--track);stroke-width:1.2}
+.bx-new{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.2}
+.t1{fill:var(--ink);font-size:13px;font-weight:600}
+.t2{fill:var(--muted);font-size:11px}
+.ln{stroke:var(--muted);stroke-width:1.2;fill:none}
+.ah{fill:var(--muted)}
+.steps{counter-reset:s;list-style:none;padding:0;gap:0;border:1px solid var(--line);border-radius:6px;background:var(--surface);max-width:none}
+.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:4px 8px;padding:11px 14px;border-bottom:1px solid var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps li::before{content:counter(s);font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:3px}
+.steps b{font-weight:600}
+.steps span{display:block;color:var(--muted);font-size:14px}
+.steps div{min-width:0}
+.gantt{display:grid;grid-template-columns:200px repeat(12,minmax(34px,1fr));min-width:700px;font-size:13px;row-gap:6px;padding:14px}
+.gantt .wk{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;border-left:1px solid var(--line);padding-bottom:6px}
+.gantt .lab{padding-right:10px;align-self:center}
+.gantt .grp{grid-column:1/-1;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:500;padding-top:10px}
+.bar{height:22px;border-radius:4px;background:var(--track);align-self:center}
+.bar.v{background:var(--accent)}
+.bar.beta{background:repeating-linear-gradient(135deg,var(--track) 0 6px,var(--track-soft) 6px 10px)}
+.bar.ms{background:none;border:1.5px solid var(--ink);border-radius:4px}
+.key{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted)}
+.key i{display:inline-block;width:14px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.note{border-left:2px solid var(--accent);padding:2px 0 2px 14px;max-width:68ch}
+</style>
+
+<div class="page">
+
+<header>
+  <div class="eyebrow">Kanthast School · Build plan · 18 November 2026</div>
+  <h1>Doubts: class forum, AI help and video explainers</h1>
+  <p class="lede">Doubts is a new logged-in section of the School app. A student asks the AI first. If that does not settle it, they post the doubt to their own class, where classmates or the AI can answer. Any doubt can be turned into a one-minute explainer video built from reusable 12-second scenes.</p>
+  <div class="facts">
+    <div><b>12 weeks</b><span>whole plan, with two developers</span></div>
+    <div><b>Week 10</b><span>forum live for all classes</span></div>
+    <div><b>Week 12</b><span>video explainers live in threads</span></div>
+    <div><b>1 / 5</b><span>posts a day, free / paid</span></div>
+  </div>
+  <nav aria-label="Sections">
+    <a href="#decisions">Decisions</a><a href="#product">How it works</a><a href="#architecture">Architecture</a><a href="#posting">Posting checks</a><a href="#data">Data</a><a href="#api">API</a><a href="#parent">Parent approval</a><a href="#video">Video generation</a><a href="#timeline">Timeline</a><a href="#risks">Risks</a><a href="#measures">Measures</a><a href="#open">Still open</a>
+  </nav>
+</header>
+
+<section id="decisions">
+  <h2>Decisions already made</h2>
+  <div class="scroll"><table>
+    <tr><th>Topic</th><th>Decision</th></tr>
+    <tr><td>Name and place</td><td>A navbar tab called <b>Doubts</b> at <code>/doubts</code>. It replaces the Assistant tab, so the logged-in navbar stays at four tabs.</td></tr>
+    <tr><td>Access</td><td>Logged-in users only. All classes, 1 to 10, get full access.</td></tr>
+    <tr><td>Class scope</td><td>A student sees and posts only in their own class. The class comes from <code>User.schoolClass</code> on the server.</td></tr>
+    <tr><td>Daily posts</td><td>Free: 1 post a day. Paid: 5 posts a day. Replies are unlimited. The count resets at midnight IST.</td></tr>
+    <tr><td>Who answers</td><td>Classmates, plus an <b>Answer using AI</b> button on every doubt.</td></tr>
+    <tr><td>Language</td><td>English only for posts, replies, AI answers and videos.</td></tr>
+    <tr><td>Video</td><td>Real generation, with a library of reusable scenes. A one-minute video is 5 scenes of 12 seconds.</td></tr>
+    <tr><td>Parents</td><td>A parent must approve before a student can use the class feed. Approval is shown and managed in Settings.</td></tr>
+  </table></div>
+</section>
+
+<section id="product">
+  <h2>How Doubts works</h2>
+  <div class="sub">
+    <h3>Three sections on one page</h3>
+    <div class="scroll"><table>
+      <tr><th>Section</th><th>What it is</th><th>Who sees it</th></tr>
+      <tr><td>Ask</td><td>Private AI chat. This is today's Assistant, moved here with its history, file upload and suggestions. It is the default view.</td><td>Only the student</td></tr>
+      <tr><td>Class feed</td><td>Doubts posted by classmates, with filters for subject and chapter.</td><td>The student's class</td></tr>
+      <tr><td>Mine</td><td>The student's own doubts, replies to them, and their videos.</td><td>Only the student</td></tr>
+    </table></div>
+  </div>
+  <div class="sub">
+    <h3>The main flow</h3>
+    <ol class="steps">
+      <li><div><b>Ask the AI.</b><span>The student types a doubt in Ask and gets a private answer in seconds. A toggle switches between a hint and a full solution.</span></div></li>
+      <li><div><b>Solved? Stop here.</b><span>Nothing is posted. Easy questions never reach the feed.</span></div></li>
+      <li><div><b>Still confused? Post to the class.</b><span>The AI turns the chat into a short post with subject and chapter filled in. The student edits it and posts. This uses one of the day's posts.</span></div></li>
+      <li><div><b>Similar doubts appear while typing.</b><span>If classmates already asked the same thing, the student can open those answers instead of posting.</span></div></li>
+      <li><div><b>Classmates answer.</b><span>Anyone in the class can write an answer, or press Answer using AI to add one labelled AI answer to the thread.</span></div></li>
+      <li><div><b>Make a video.</b><span>A button on the doubt creates a one-minute explainer. It is attached to the thread, so the next student with the same doubt gets it at no cost.</span></div></li>
+      <li><div><b>Mark the answer that helped.</b><span>Only the student who asked can do this. That answer moves to the top.</span></div></li>
+    </ol>
+  </div>
+  <div class="sub">
+    <h3>Rules</h3>
+    <ul>
+      <li><b>AI answers are always labelled.</b> One AI answer per thread. The student who pressed the button earns no helper points for it.</li>
+      <li><b>No private messages.</b> All talk stays in class threads.</li>
+      <li><b>Names are limited.</b> Students appear as first name, class and an avatar. No photos, surnames or school names.</li>
+      <li><b>Reactions are positive only.</b> There is a "This helped me" button and no downvote.</li>
+      <li><b>Helper points and badges</b> go to students whose answers help. A weekly list shows top helpers per class.</li>
+      <li><b>English help, not an error.</b> If a student writes in Hindi or Hinglish, the AI shows an English version to check and post. It does not count against the daily limit until posted.</li>
+      <li><b>Search engines are kept out.</b> The pages are marked so student content never appears on Google.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="architecture">
+  <h2>System architecture</h2>
+  <p>Most of the forum runs on what the School app already has. The video side needs three new parts: a job queue, a worker that can run for several minutes, and outside services for video and voice.</p>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 860 400" role="img" aria-label="The browser talks to the existing API. The API uses MongoDB, Gemini and Cloudinary, and hands video jobs to a new queue and worker, which call a video model and a voice service.">
+      <defs><marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="ah" d="M0 0L10 5L0 10z"/></marker></defs>
+      <rect class="bx" x="20" y="70" width="180" height="60" rx="5"/>
+      <text class="t1" x="34" y="95">Student's browser</text><text class="t2" x="34" y="113">School web app, Doubts tab</text>
+      <line class="ln" x1="200" y1="100" x2="278" y2="100" marker-end="url(#arw)"/>
+      <text class="t2" x="239" y="90" text-anchor="middle">login token</text>
+      <rect class="bx" x="280" y="70" width="180" height="60" rx="5"/>
+      <text class="t1" x="294" y="95">School API</text><text class="t2" x="294" y="113">Express on Vercel</text>
+      <line class="ln" x1="370" y1="130" x2="370" y2="213" marker-end="url(#arw)"/>
+      <text class="t2" x="380" y="176">creates video job</text>
+      <rect class="bx-new" x="280" y="215" width="180" height="50" rx="5" stroke-dasharray="5 3"/>
+      <text class="t1" x="294" y="237">Video job queue</text><text class="t2" x="294" y="254">holds jobs until picked up</text>
+      <line class="ln" x1="370" y1="265" x2="370" y2="308" marker-end="url(#arw)"/>
+      <text class="t2" x="380" y="291">picks up job</text>
+      <rect class="bx-new" x="280" y="310" width="180" height="60" rx="5" stroke-dasharray="5 3"/>
+      <text class="t1" x="294" y="335">Video worker</text><text class="t2" x="294" y="353">script, clips, voice, assembly</text>
+      <line class="ln" x1="460" y1="92" x2="598" y2="44" marker-end="url(#arw)"/>
+      <line class="ln" x1="460" y1="100" x2="598" y2="110" marker-end="url(#arw)"/>
+      <line class="ln" x1="460" y1="110" x2="598" y2="178" marker-end="url(#arw)"/>
+      <line class="ln" x1="460" y1="326" x2="598" y2="198" marker-end="url(#arw)"/>
+      <line class="ln" x1="460" y1="338" x2="598" y2="278" marker-end="url(#arw)"/>
+      <line class="ln" x1="460" y1="350" x2="598" y2="346" marker-end="url(#arw)"/>
+      <rect class="bx" x="600" y="18" width="240" height="48" rx="5"/>
+      <text class="t1" x="614" y="39">MongoDB</text><text class="t2" x="614" y="56">doubts, replies, limits, scenes, jobs</text>
+      <rect class="bx" x="600" y="86" width="240" height="48" rx="5"/>
+      <text class="t1" x="614" y="107">Gemini</text><text class="t2" x="614" y="124">answers, moderation, tags, scripts</text>
+      <rect class="bx" x="600" y="164" width="240" height="48" rx="5"/>
+      <text class="t1" x="614" y="185">Cloudinary</text><text class="t2" x="614" y="202">images, scene clips, final videos</text>
+      <rect class="bx-new" x="600" y="254" width="240" height="48" rx="5" stroke-dasharray="5 3"/>
+      <text class="t1" x="614" y="275">Video model</text><text class="t2" x="614" y="292">makes each new 12-second clip</text>
+      <rect class="bx-new" x="600" y="322" width="240" height="48" rx="5" stroke-dasharray="5 3"/>
+      <text class="t1" x="614" y="343">Voice service</text><text class="t2" x="614" y="360">English narration per scene</text>
+      <rect class="bx" x="20" y="330" width="14" height="10" rx="2"/><text class="t2" x="42" y="339">already in the app</text>
+      <rect class="bx-new" x="20" y="352" width="14" height="10" rx="2" stroke-dasharray="3 2"/><text class="t2" x="42" y="361">new for this plan</text>
+    </svg>
+    </div>
+    <figcaption>The browser only ever talks to the API. The API never makes a video itself. It records a job, and the worker does the slow work. The worker also reads and writes MongoDB and calls Gemini. Those two lines are left out to keep the drawing readable.</figcaption>
+  </figure>
+  <div class="sub">
+    <h3>What the codebase already gives us</h3>
+    <div class="scroll"><table>
+      <tr><th>Found in the code</th><th>Effect on the plan</th></tr>
+      <tr><td>Gemini is called directly in <code>controllers/Chat.js</code></td><td>The same call serves answers, tagging, moderation and summaries. No new AI provider for text.</td></tr>
+      <tr><td><code>ChatRateLimit.js</code> counts in memory</td><td>On Vercel each server copy keeps its own count, so daily limits must be stored in MongoDB. The in-memory limiter stays as per-minute spam protection.</td></tr>
+      <tr><td>Login is a token in the request header</td><td>Image and video tags cannot send it. Media is served through short-lived signed links.</td></tr>
+      <tr><td>AI chat history lives inside the User record</td><td>Doubts and replies get their own collections, so the User record does not grow without limit.</td></tr>
+      <tr><td><code>schoolClass</code> can be empty</td><td>Users pick a class before entering Doubts.</td></tr>
+      <tr><td><code>VideoGeneration</code> has status and progress, and the app polls for it</td><td>The waiting screen for videos already works. Only what happens behind it changes.</td></tr>
+      <tr><td>Video media and thumbnail routes have no login check</td><td>Fixed in the first week, before videos appear in threads.</td></tr>
+      <tr><td>OTP and email sending already exist</td><td>Reused for the parent approval code.</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="posting">
+  <h2>Checks every post goes through</h2>
+  <p>These run on the server, in this order, before a post or reply is visible to anyone. The app's screens show the same rules, but the server is what enforces them.</p>
+  <ol class="steps">
+    <li><div><b>Login</b><span>No valid token, no access.</span></div></li>
+    <li><div><b>Class</b><span>Taken from the student's account. Any class sent in the request is ignored.</span></div></li>
+    <li><div><b>Parent approval</b><span>Must be approved for the class feed. Ask works without it.</span></div></li>
+    <li><div><b>Daily limit</b><span>Checked and counted in one database step, so two posts sent at the same moment cannot both pass. Posts only, not replies.</span></div></li>
+    <li><div><b>English check</b><span>If the text is not English, the student gets an English version to confirm.</span></div></li>
+    <li><div><b>Pattern check</b><span>Blocks phone numbers, email addresses, links and social media handles.</span></div></li>
+    <li><div><b>AI moderation</b><span>Gemini checks for abuse, bullying and personal details. Unclear cases are held for an admin.</span></div></li>
+    <li><div><b>Saved and live</b><span>A post blocked at any step does not use up the daily limit.</span></div></li>
+  </ol>
+</section>
+
+<section id="data">
+  <h2>Data</h2>
+  <div class="scroll"><table>
+    <tr><th>Collection</th><th>Main fields</th><th>Purpose</th></tr>
+    <tr><td><code>Doubt</code></td><td>author, schoolClass, subject, chapter, title, body, images, status, acceptedReply, aiReply, videoJob, helpfulCount, replyCount, sourceChatSession</td><td>One posted doubt. Indexed by class then newest first, plus a text index for similar-doubt search.</td></tr>
+    <tr><td><code>Reply</code></td><td>doubt, author, isAI, body, images, helpfulCount, status</td><td>One answer. AI answers have no author.</td></tr>
+    <tr><td><code>Reaction</code></td><td>user, target</td><td>One "helped me" per student per item.</td></tr>
+    <tr><td><code>Report</code></td><td>reporter, target, reason, status, action taken</td><td>Feeds the admin moderation queue and keeps a record of each action.</td></tr>
+    <tr><td><code>DailyUsage</code></td><td>user, IST date, posts, aiMessages, videos</td><td>One record per user per day. Source of truth for all limits.</td></tr>
+    <tr><td><code>ParentConsent</code></td><td>user, parentName, contact, status, approvedAt, termsVersion, withdrawnAt</td><td>Proof of approval.</td></tr>
+    <tr><td><code>Scene</code></td><td>description, searchVector, type, subject, classBand, styleVersion, clipUrl, source (generated or rendered), quality, useCount, status</td><td>One reusable silent 12-second clip.</td></tr>
+    <tr><td><code>VideoGeneration</code> (extended)</td><td>adds classBand, doubt, scenes list (scene, order, narration, audioUrl, reused), captionsUrl</td><td>One finished video and the scenes it is built from.</td></tr>
+  </table></div>
+</section>
+
+<section id="api">
+  <h2>API</h2>
+  <p>All routes sit under <code>/api/v1</code> and require login.</p>
+  <div class="scroll"><pre>
+Forum
+GET    /doubts/feed?subject&amp;chapter&amp;cursor   class feed, newest first
+GET    /doubts/similar?q=                     similar doubts while typing
+GET    /doubts/quota                          posts left today
+POST   /doubts                                new doubt (all posting checks)
+POST   /doubts/from-chat/:sessionId           draft a post from an AI chat
+GET    /doubts/:id                            one thread with replies
+DELETE /doubts/:id                            delete own doubt
+POST   /doubts/:id/replies                    write an answer
+POST   /doubts/:id/ai-answer                  Answer using AI, once per thread
+POST   /doubts/:id/helpful                    "This helped me"
+POST   /doubts/replies/:id/helpful
+POST   /doubts/:id/accept/:replyId            asker marks the answer
+POST   /doubts/report                         report a post or reply
+GET    /doubts/media/:key?sig=                signed image and video links
+
+Video
+POST   /doubts/:id/video                      start a video for this doubt
+GET    /chat/video/status/:jobId              progress (exists today)
+
+Parent approval
+POST   /consent/request                       send code to the parent
+POST   /consent/verify                        parent enters the code
+POST   /consent/withdraw
+
+Admin
+GET    /admin/doubts/queue                    reported and held items
+PATCH  /admin/doubts/:id                      approve, remove, mute user
+GET    /admin/scenes   PATCH /admin/scenes/:id   review or remove scenes</pre></div>
+</section>
+
+<section id="parent">
+  <h2>Parent approval</h2>
+  <ol class="steps">
+    <li><div><b>Disclaimer</b><span>The first time a student opens the class feed, a short notice explains what Doubts is and that a parent must approve.</span></div></li>
+    <li><div><b>Parent details</b><span>The student enters the parent's name and the parent's email or phone number.</span></div></li>
+    <li><div><b>Code to the parent</b><span>The parent receives a one-time code and a plain summary of what they are approving.</span></div></li>
+    <li><div><b>Approval recorded</b><span>The app stores the parent's name, contact, time and the version of the terms.</span></div></li>
+    <li><div><b>Settings</b><span>A Parent approval section shows the status. The parent can withdraw at any time, which locks the class feed again.</span></div></li>
+  </ol>
+  <p class="note">A typed parent name on its own is not enough, because a child can type anything. The code sent to the parent is what makes the approval checkable. India's data protection law asks for verifiable parental consent for children, so a lawyer should confirm the wording before launch.</p>
+</section>
+
+<section id="video">
+  <h2>Video generation</h2>
+  <p>A video is one minute long: 5 scenes of 12 seconds. Each scene is stored on its own with a text description, so a later video can fetch a scene that fits and generate only the rest.</p>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 800 150" role="img" aria-label="A 60-second video made of five 12-second scenes. Scene 1 is fetched from the library and scenes 2 to 5 are newly generated. Narration and captions run across all five.">
+      <rect class="bx" x="25" y="14" width="150" height="54" rx="4"/>
+      <text class="t1" x="37" y="37">Scene 1</text><text class="t2" x="37" y="54">fetched from library</text>
+      <rect class="bx-new" x="175" y="14" width="150" height="54" rx="4"/>
+      <text class="t1" x="187" y="37">Scene 2</text><text class="t2" x="187" y="54">generated, then stored</text>
+      <rect class="bx-new" x="325" y="14" width="150" height="54" rx="4"/>
+      <text class="t1" x="337" y="37">Scene 3</text><text class="t2" x="337" y="54">generated, then stored</text>
+      <rect class="bx-new" x="475" y="14" width="150" height="54" rx="4"/>
+      <text class="t1" x="487" y="37">Scene 4</text><text class="t2" x="487" y="54">generated, then stored</text>
+      <rect class="bx-new" x="625" y="14" width="150" height="54" rx="4"/>
+      <text class="t1" x="637" y="37">Scene 5</text><text class="t2" x="637" y="54">generated, then stored</text>
+      <rect class="bx" x="25" y="76" width="750" height="24" rx="4"/>
+      <text class="t2" x="37" y="92">English narration and captions, made fresh for every video and laid over the silent clips</text>
+      <line class="ln" x1="25" y1="116" x2="775" y2="116"/>
+      <g class="ln"><line x1="25" y1="112" x2="25" y2="120"/><line x1="175" y1="112" x2="175" y2="120"/><line x1="325" y1="112" x2="325" y2="120"/><line x1="475" y1="112" x2="475" y2="120"/><line x1="625" y1="112" x2="625" y2="120"/><line x1="775" y1="112" x2="775" y2="120"/></g>
+      <text class="t2" x="25" y="136" text-anchor="middle">0 s</text><text class="t2" x="175" y="136" text-anchor="middle">12 s</text><text class="t2" x="325" y="136" text-anchor="middle">24 s</text><text class="t2" x="475" y="136" text-anchor="middle">36 s</text><text class="t2" x="625" y="136" text-anchor="middle">48 s</text><text class="t2" x="775" y="136" text-anchor="middle">60 s</text>
+    </svg>
+    </div>
+    <figcaption>The example from the brief: one scene fetched, four generated. The four new scenes join the library, so the next video on a nearby topic can fetch more and generate fewer.</figcaption>
+  </figure>
+
+  <div class="sub">
+    <h3>Three rules that make reuse possible</h3>
+    <ul>
+      <li><b>Scenes are stored silent, with no text in the picture.</b> Narration differs for every video, so a clip with a voice or words baked in cannot be reused.</li>
+      <li><b>One house style.</b> Every scene shares the same art style, recurring characters, size, frame rate and length. Each scene carries a style version, and scenes are only matched within the same version.</li>
+      <li><b>Every scene stands alone.</b> No action carries over from one scene to the next, so any scene can sit beside any other.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>How one video is built</h3>
+    <ol class="steps">
+      <li><div><b>Whole-video check</b><span>If the same topic was already made for the same class band, that video is reused and nothing is generated.</span></div></li>
+      <li><div><b>Script</b><span>Gemini writes 5 scenes. Each has narration of about 25 words, a description of what is seen, and a scene type.</span></div></li>
+      <li><div><b>Library search, per scene</b><span>The description is compared by meaning with stored scenes of the same style, class band and type. A second Gemini check confirms the clip really fits this script.</span></div></li>
+      <li><div><b>Fill the gaps</b><span>Scenes with no match are generated by the video model, or drawn by code for exact content like maths steps.</span></div></li>
+      <li><div><b>Quality check</b><span>Gemini looks at frames from each new clip: does it match the description, is it child-safe, is there garbled text? A failed clip is retried once, then replaced with a code-drawn scene.</span></div></li>
+      <li><div><b>Voice</b><span>Each scene's narration is turned into English audio with one fixed narrator voice. If the audio runs over 12 seconds, the line is shortened and redone.</span></div></li>
+      <li><div><b>Assembly</b><span>The worker joins the 5 clips, lays the audio over them and adds a separate captions file. The result goes to Cloudinary.</span></div></li>
+      <li><div><b>Store and attach</b><span>New scenes enter the library. The video is attached to the doubt. If the job fails, the student's video allowance is not used.</span></div></li>
+    </ol>
+  </div>
+
+  <div class="sub">
+    <h3>Scene types</h3>
+    <div class="scroll"><table>
+      <tr><th>Type</th><th>Example</th><th>Made by</th><th>Reuse</th></tr>
+      <tr><td>Generic</td><td>A student walking to school, a classroom, a teacher at the board</td><td>Video model</td><td>High, across subjects</td></tr>
+      <tr><td>Concept</td><td>An ice cube floating in a glass of water</td><td>Video model</td><td>Only for the same concept</td></tr>
+      <tr><td>Specific</td><td>"Solve 2x + 6 = 14" worked step by step</td><td>Drawn by code</td><td>None, made fresh each time</td></tr>
+    </table></div>
+    <p>Class bands for matching are 1–3, 4–5, 6–8 and 9–10, so a scene made for young children is not placed in a Class 10 video.</p>
+  </div>
+
+  <div class="sub">
+    <h3>The parts and how each is possible</h3>
+    <div class="scroll"><table>
+      <tr><th>Part</th><th>How it is built</th></tr>
+      <tr><td>Script writer</td><td>Gemini, already in the app, asked to return the 5 scenes in a fixed structure. <code>videoLectureService.js</code> already writes scripts this way.</td></tr>
+      <tr><td>Scene search</td><td>Each description is stored with a list of numbers that captures its meaning, produced by Gemini's embedding model. Search finds the closest ones. MongoDB Atlas has this search built in. If the database is not on Atlas, the comparison runs in code while the library is small.</td></tr>
+      <tr><td>Clip generator</td><td>A video model called over its API with the house-style instructions and reference pictures of the recurring characters. Google's Veo is the first candidate because the app already uses Gemini.</td></tr>
+      <tr><td>Code-drawn scenes</td><td>Animated slides produced by a program, using a tool such as Remotion or Manim. Text and numbers are always exact, and the cost per scene is close to zero.</td></tr>
+      <tr><td>Voice</td><td>A text-to-speech service with one fixed English voice.</td></tr>
+      <tr><td>Assembly</td><td>ffmpeg, a standard free tool for joining video and audio.</td></tr>
+      <tr><td>Worker</td><td>A background job runner that can work for several minutes. A normal web request on Vercel ends long before a video is ready. Options are Vercel's long-running workflows or one small separate server.</td></tr>
+      <tr><td>Progress screen</td><td>Already exists. The app polls the job status and shows progress.</td></tr>
+    </table></div>
+  </div>
+
+  <div class="sub">
+    <h3>What to expect</h3>
+    <ul>
+      <li><b>Scene reuse starts low.</b> The library begins empty. Early savings come from the whole-video check. Scene reuse grows as the library fills, mostly for Generic scenes.</li>
+      <li><b>Clip length depends on the model.</b> Some video models cap a single clip at about 8 seconds. The week 1–2 test must confirm 12-second clips are possible. If not, the scene length changes to fit the model, and the rest of the design stays the same.</li>
+      <li><b>Keeping a character identical across clips is hard</b> for today's models. Reference pictures help. Scenes that show objects, hands and settings reuse more safely than scenes built around one face.</li>
+      <li><b>AI video is poor at exact diagrams and text.</b> That is why Specific scenes are drawn by code and why no scene has text in the picture.</li>
+      <li><b>A video takes minutes.</b> The student sees progress and can leave the page. The video appears in Mine when ready.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Keeping cost under control</h3>
+    <p>Cost of one video = new scenes × clip length × the model's price per second, plus voice and a small amount of Gemini text. Reused scenes and reused videos cost nothing to generate.</p>
+    <ul>
+      <li>Whole-video reuse first, then scene reuse.</li>
+      <li>Video generation for paid users only, with a monthly allowance per user.</li>
+      <li>A daily spending cap for the whole app, with a switch that pauses generation when it is reached.</li>
+      <li>Watching an existing video is free for everyone in the class.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2>Timeline</h2>
+  <p>Twelve weeks, assuming two developers working in parallel: one on the forum, one on video. With one developer the same work runs one track after the other and takes about 18 to 20 weeks. These are estimates and will move once the video model test is done.</p>
+  <div class="scroll">
+    <div class="gantt">
+      <div></div>
+      <div class="wk">1</div><div class="wk">2</div><div class="wk">3</div><div class="wk">4</div><div class="wk">5</div><div class="wk">6</div><div class="wk">7</div><div class="wk">8</div><div class="wk">9</div><div class="wk">10</div><div class="wk">11</div><div class="wk">12</div>
+      <div class="grp">Forum track</div>
+      <div class="lab">Groundwork</div><div class="bar" style="grid-column:2/3"></div>
+      <div class="lab">Backend core</div><div class="bar" style="grid-column:3/5"></div>
+      <div class="lab">Forum screens</div><div class="bar" style="grid-column:5/7"></div>
+      <div class="lab">AI merge</div><div class="bar" style="grid-column:7/8"></div>
+      <div class="lab">Admin and safety</div><div class="bar" style="grid-column:8/9"></div>
+      <div class="lab">Beta with one class</div><div class="bar beta" style="grid-column:9/11"></div>
+      <div class="lab">Live for all classes</div><div class="bar ms" style="grid-column:11/12"></div>
+      <div class="grp">Video track</div>
+      <div class="lab">Model test, house style</div><div class="bar v" style="grid-column:2/4"></div>
+      <div class="lab">Pipeline, whole-video reuse</div><div class="bar v" style="grid-column:4/8"></div>
+      <div class="lab">Scene library, matching</div><div class="bar v" style="grid-column:8/11"></div>
+      <div class="lab">Code-drawn scenes</div><div class="bar v" style="grid-column:11/13"></div>
+      <div class="lab">Video live in threads</div><div class="bar ms" style="grid-column:13/14"></div>
+    </div>
+  </div>
+  <div class="key">
+    <span><i style="background:var(--track)"></i>Forum work</span>
+    <span><i style="background:var(--accent)"></i>Video work</span>
+    <span><i style="background:repeating-linear-gradient(135deg,var(--track) 0 6px,var(--track-soft) 6px 10px)"></i>Beta</span>
+    <span><i style="border:1.5px solid var(--ink)"></i>Launch</span>
+  </div>
+
+  <div class="sub">
+    <h3>What each step delivers</h3>
+    <div class="scroll"><table>
+      <tr><th>Weeks</th><th>Step</th><th>Delivered</th></tr>
+      <tr><td>1</td><td>Groundwork</td><td>Login check on video links. Class picker for users with no class. Parent approval flow and Settings section. Updated terms text.</td></tr>
+      <tr><td>2–3</td><td>Backend core</td><td>New collections. Daily limit stored in MongoDB. Pattern and AI moderation. English check. Forum routes. Tests for limits, class isolation and moderation.</td></tr>
+      <tr><td>4–5</td><td>Forum screens</td><td>Doubts tab and routes. Class feed with filters. Composer with posts-left counter and similar doubts. Thread view with replies, helped-me, mark as answer and report.</td></tr>
+      <tr><td>6</td><td>AI merge</td><td>Assistant moved into Ask and the old tab removed. "Still confused? Post to class". Answer using AI. Hint mode. Shared AI allowance.</td></tr>
+      <tr><td>7</td><td>Admin and safety</td><td>Moderation queue in the admin panel. Approve, remove, mute. Record of every action.</td></tr>
+      <tr><td>8–9</td><td>Beta</td><td>One class, with starter doubts written in advance. Fixes from real use.</td></tr>
+      <tr><td>10</td><td>Forum launch</td><td>All classes. Helper points and weekly top helpers.</td></tr>
+      <tr><td>1–2</td><td>Model test</td><td>About 20 test clips per candidate model. Decision on model, clip length, voice and worker hosting. House style guide and character reference pictures.</td></tr>
+      <tr><td>3–6</td><td>Video pipeline</td><td>Script, clip generation, voice, assembly, worker, quality check. Whole-video reuse. First real generated video by the end of week 6.</td></tr>
+      <tr><td>7–9</td><td>Scene library</td><td>Scenes stored with descriptions. Search and fit check. Admin review of scenes. First video built with a fetched scene by the end of week 9.</td></tr>
+      <tr><td>10–11</td><td>Code-drawn scenes</td><td>Templates for maths steps, formulas and labelled diagrams.</td></tr>
+      <tr><td>12</td><td>Video launch</td><td>"Make a video" button on threads. Allowances and the daily spending cap switched on.</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="risks">
+  <h2>Risks</h2>
+  <div class="scroll"><table>
+    <tr><th>Risk</th><th>How the plan handles it</th></tr>
+    <tr><td>A child-safety incident</td><td>Every post is checked before it is visible. No private messages. Limited names. Parent approval. Report button and admin queue. None of these are optional for launch.</td></tr>
+    <tr><td>An empty feed at launch</td><td>Starter doubts per subject. Answer using AI means no doubt stays unanswered. Neighbouring classes can be combined if a class is quiet.</td></tr>
+    <tr><td>Video cost runs away</td><td>Paid only, monthly allowance, daily spending cap, and reuse at two levels.</td></tr>
+    <tr><td>Reused scenes look out of place</td><td>House style with version tags, standalone scenes, and a fit check before any scene is reused.</td></tr>
+    <tr><td>A video teaches something wrong</td><td>Exact content is drawn by code. Thumbs-down lowers a scene's rank. Admins can remove a scene and see which videos used it.</td></tr>
+    <tr><td>Students get around the daily limit</td><td>Counts are stored in MongoDB and checked in one step. Deleting a post does not give the post back.</td></tr>
+    <tr><td>English-only pushes students away</td><td>The AI offers an English version instead of rejecting the post.</td></tr>
+    <tr><td>The video model cannot do what is needed</td><td>Tested in weeks 1–2, before any pipeline work depends on it. The forum track does not depend on video at all.</td></tr>
+  </table></div>
+</section>
+
+<section id="measures">
+  <h2>How to tell it is working</h2>
+  <div class="scroll"><table>
+    <tr><th>Measure</th><th>What it shows</th></tr>
+    <tr><td>Share of AI chats that never become posts</td><td>How much the AI settles on its own</td></tr>
+    <tr><td>Share of doubts with a marked answer</td><td>Whether the class is helping each other</td></tr>
+    <tr><td>Time to the first classmate reply</td><td>Whether the feed feels alive</td></tr>
+    <tr><td>Reports per 100 posts, and wrongly blocked posts</td><td>Whether moderation is set right</td></tr>
+    <tr><td>Share of videos served without generating</td><td>Whether whole-video reuse is paying off</td></tr>
+    <tr><td>Average fetched scenes per new video</td><td>Whether the scene library is paying off</td></tr>
+    <tr><td>Upgrades from the "limit reached" screen</td><td>Whether the 1 / 5 limit drives paid plans</td></tr>
+  </table></div>
+</section>
+
+<section id="open">
+  <h2>Still open</h2>
+  <ul>
+    <li><b>Video and AI allowances.</b> How many videos a month a paid user gets, and how many AI messages a day free and paid users get.</li>
+    <li><b>Video model, voice service and worker hosting.</b> Decided by the test in weeks 1–2. Prices have not been checked yet.</li>
+    <li><b>Is the database on MongoDB Atlas?</b> This decides how scene search is built.</li>
+    <li><b>Answer using AI.</b> The plan assumes it posts one labelled AI answer per thread. The other reading is that the AI drafts a reply for the student to edit and post as their own.</li>
+    <li><b>Legal review</b> of the parent approval wording and the updated terms.</li>
+    <li><b>Team size.</b> The 12-week timeline assumes two developers.</li>
+  </ul>
+</section>
+
+</div>
