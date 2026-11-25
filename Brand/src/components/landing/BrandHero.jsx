@@ -45,7 +45,7 @@ export default function BrandHero() {
             </a>
             <a href="#products" className="bh-btn bh-btn-ghost">
               <FaGraduationCap aria-hidden="true" className="text-[1.1em] text-[#1d4ed8]" />
-              See the two products
+              See the products
             </a>
           </div>
 

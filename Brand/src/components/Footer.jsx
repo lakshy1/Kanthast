@@ -1,7 +1,15 @@
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
+import "../styles/footer-dark.css";
 
 // Landing page footer, in the same design language as the sections above.
 // Every destination is a separate app on kanthast.in, so these are plain links.
+// Add the Instagram and YouTube URLs here when the accounts exist; until then those buttons show as "coming soon".
+const SOCIALS = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/kanthast/", Icon: FaLinkedinIn },
+  { label: "Instagram", href: "", Icon: FaInstagram },
+  { label: "YouTube", href: "", Icon: FaYoutube },
+];
+
 const COLUMNS = [
   {
     title: "Products",
@@ -70,15 +78,19 @@ export default function Footer() {
         </div>
         <div className="kx-footer-bottom">
           <span className="kx-footer-copy">&copy; {new Date().getFullYear()} Kanthast. All rights reserved.</span>
-          <a
-            href="https://www.linkedin.com/company/kanthast/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Kanthast on LinkedIn"
-            className="kx-footer-social"
-          >
-            <FaLinkedinIn aria-hidden="true" />
-          </a>
+          <div className="kx-socials">
+            {SOCIALS.map(({ label, href, Icon }) =>
+              href ? (
+                <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={`Kanthast on ${label}`} className="kx-footer-social">
+                  <Icon aria-hidden="true" />
+                </a>
+              ) : (
+                <span key={label} role="img" aria-label={`${label}, coming soon`} title="Coming soon" className="kx-footer-social is-soon">
+                  <Icon aria-hidden="true" />
+                </span>
+              )
+            )}
+          </div>
           <span className="kx-footer-strap">Made for learners in India and worldwide.</span>
         </div>
       </div>

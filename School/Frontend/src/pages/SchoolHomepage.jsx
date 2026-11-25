@@ -21,6 +21,14 @@ const { classes: CLASSES, totals: TOTALS } = SCHOOL_CATALOG;
 // what is scripted (all of it) and what is animated (added as it is produced).
 const FIRST_LESSONS = "1\u00a0December\u00a02026";
 const CTA_LABEL = "Create a free account";
+// Rs 5,000 a year, spread over twelve months, rounded.
+const PER_MONTH = "about Rs 417 a month";
+// What a plan covers, in words that stay true while lessons are still being released.
+const PLAN_INCLUDES = [
+  "Every lesson for one class, as each is released",
+  "Kanthast Assistant for questions about a topic",
+  "Resume where you stopped, and progress by chapter",
+];
 
 const BENEFITS = [
   {
@@ -68,8 +76,13 @@ const GUIDES = [
 
 const FOR_PARENTS = [
   { icon: BookOpenText, title: "Tied to the textbook", body: "Every lesson names its class, subject and chapter, so you can match it to what is being taught in school." },
-  { icon: Prohibit, title: "No ads, no social feed", body: "Kanthast has nothing to scroll and nobody to follow. Time on it is time on a lesson." },
+  { icon: Prohibit, title: "No ads, no public feed", body: "Kanthast shows no ads and has no public profiles. Class questions stay inside your child's class, need a parent's approval and are moderated." },
   { icon: DeviceMobile, title: "Made for phones", body: "Lessons are short enough for a bus ride and work on any modern phone or laptop." },
+];
+const DATA_POINTS = [
+  { title: "What we ask for", body: "Your child's name, email, phone number and class, to set up the account and show the right lessons." },
+  { title: "Who sees questions", body: "Questions posted to the class feed go to your child's class only. A parent or guardian must first approve, using a code sent to their email, and posts are moderated." },
+  { title: "No ads", body: "Kanthast shows no advertising to students." },
 ];
 const COMING_NEXT = [
   { title: "Questions after every lesson", body: "A few questions at the end, so a gap shows up while the idea is fresh." },
@@ -347,9 +360,9 @@ export default function SchoolHomepage() {
             <p className="caption-3 inline-flex rounded-full bg-[var(--school-soft)] px-3 py-1 text-[var(--school-ink)]">
               Kanthast School · Classes VIII to X
             </p>
-            <h1 className="heading-1 mt-4 max-w-[680px] text-ink">Every NCERT chapter, explained in a three&nbsp;minute cartoon</h1>
+            <h1 className="heading-1 mt-4 max-w-[680px] text-ink">NCERT chapters for Classes VIII to X, explained in short animated&nbsp;lessons</h1>
             <p className="title-1 mt-6 max-w-[680px] text-ink-muted">
-              Neo the owl and Zippy the spark walk your child through each chapter of the new NCERT books, one short lesson at a time.
+              Neo the owl and Zippy the spark walk your child through each chapter of the new NCERT books, one lesson of {SCHOOL_CATALOG.lessonLength} at a time.
             </p>
             <div className="mt-8">
               <CtaBlock />
@@ -455,6 +468,7 @@ export default function SchoolHomepage() {
           <section aria-labelledby="pilot-heading" className="site-container py-12 md:py-16">
             <Reveal>
               <h2 id="pilot-heading" className="heading-2 max-w-[680px]">Tried by our pilot testers</h2>
+              <p className="title-1 mt-4 max-w-[680px] text-ink-muted">Reviews from people who tried Kanthast during our pilot, shown with their permission.</p>
             </Reveal>
             <Reveal className="mt-8" delay={80}>
               <FocusCarousel label="Pilot tester reviews" autoplayMs={7000} slideWidth="min(80vw, 460px)">
@@ -508,6 +522,28 @@ export default function SchoolHomepage() {
         </section>
       </div>
 
+      {/* Your child's data. Facts only, taken from how signup and class questions work today.
+          LEGAL REVIEW NEEDED before launch: DPDP Act consent wording and the Privacy Policy link. */}
+      <section id="privacy" aria-labelledby="privacy-heading" className="site-container scroll-mt-28 py-12 md:py-16">
+        <Reveal>
+          <h2 id="privacy-heading" className="heading-2 max-w-[680px]">Your child's data</h2>
+          <p className="title-1 mt-4 max-w-[680px] text-ink-muted">Plainly, what Kanthast asks for and who can see what.</p>
+        </Reveal>
+        <Reveal className="mt-8" delay={80}>
+          <ul className="grid gap-4 md:grid-cols-3">
+            {DATA_POINTS.map((item) => (
+              <li key={item.title} className="sh-card p-6">
+                <h3 className="title-card text-ink">{item.title}</h3>
+                <p className="body-3 mt-2 text-ink-muted">{item.body}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="body-3 mt-6 text-ink-muted">
+            Read the full <Link to="/privacy" className="font-semibold text-[var(--school-ink)] underline underline-offset-4">Privacy Policy</Link>, or ask us anything through <Link to="/contact" className="font-semibold text-[var(--school-ink)] underline underline-offset-4">Contact</Link>.
+          </p>
+        </Reveal>
+      </section>
+
       {/* 9. Launch plan and price */}
       <section id="pricing" aria-labelledby="pricing-heading" className="site-container scroll-mt-28 py-12 md:py-16">
         <Reveal className="sh-card p-6 md:p-10">
@@ -516,7 +552,15 @@ export default function SchoolHomepage() {
               <p className="caption-3 text-[var(--school-ink)]">Price</p>
               <h2 id="pricing-heading" className="heading-2 mt-1">{SCHOOL_CATALOG.price}</h2>
               <p className="body-3 mt-2 max-w-[48ch] text-ink-muted">
-                For one class, for one academic year. Creating an account is free, and payments are not open yet.
+                For one class, for one academic year, {PER_MONTH}. Creating an account is free, and payments are not open yet.
+              </p>
+              <ul className="mt-5 grid gap-2">
+                {PLAN_INCLUDES.map((item) => (
+                  <li key={item} className="body-3 flex gap-2 text-ink"><span aria-hidden="true" className="text-[var(--school-ink)]">&#10003;</span>{item}</li>
+                ))}
+              </ul>
+              <p className="caption-1 mt-4 max-w-[48ch] text-ink-muted">
+                Refund terms will be published before payments open. See the <Link to="/refunds" className="underline underline-offset-4">Refund Policy</Link>.
               </p>
               <div className="mt-6">
                 <CtaBlock />

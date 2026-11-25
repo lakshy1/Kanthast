@@ -16,6 +16,8 @@ import ScrollTagline from "../components/landing/ScrollTagline";
 import Reveal from "../components/landing/Reveal";
 import "../styles/pro-home.css";
 import LANDING_PROOF from "../data/landingProof";
+import { PILOT_TESTERS } from "../data/pilotTesters";
+import ProWaitlist from "../components/landing/ProWaitlist";
 import { getMedicineUsmleContent } from "../utils/authApi";
 
 
@@ -59,7 +61,11 @@ const FAQS = [
   },
   {
     q: "Which exams is Kanthast for?",
-    a: "NEET PG, INI CET and USMLE. All three draw on one medical library, which today maps the five subjects shown on this page. NEET UG is coming soon.",
+    a: "NEET PG, INI CET and USMLE. The library is organised by subject and chapter, not by exam, so one lecture serves whichever exam you are preparing for. It does not yet mark which topics each exam weighs most; we will say so here when it does. Today it maps the five subjects shown on this page. NEET UG is coming soon.",
+  },
+  {
+    q: "Is there a question bank or mock tests?",
+    a: "Not yet. Today Kanthast Professional is animated lectures with written notes, an images page, progress tracking and the Kanthast Assistant. A question bank, previous year questions and mock tests are not included.",
   },
   {
     q: "How much does it cost?",
@@ -395,7 +401,7 @@ const Homepage = () => {
               educationalLevel: "Postgraduate medical entrance",
               teaches: subjects.map((subject) => subject.name),
               provider: { "@id": ORGANIZATION_ID },
-              hasCourseInstance: { "@type": "CourseInstance", courseMode: "Online", courseWorkload: "PT7M" },
+              hasCourseInstance: { "@type": "CourseInstance", courseMode: "Online" },
             },
             faqSchema(FAQS),
           ]}
@@ -410,7 +416,7 @@ const Homepage = () => {
                 <span className="block">Medicine, explained</span>
                 <span className="hero-accent block"><TypedAccent text="in motion." /></span>
               </h1>
-              <p className="hero-sub">One library for NEET&nbsp;PG, INI&nbsp;CET and&nbsp;USMLE.</p>
+              <p className="hero-sub">Medical lectures for NEET&nbsp;PG, INI&nbsp;CET and&nbsp;USMLE, organised by subject.</p>
               <p className="hero-desc">
                 Short animated lectures laid out subject by subject and chapter by chapter, with
                 your place saved in every lecture.
@@ -513,40 +519,45 @@ const Homepage = () => {
           </div>
         </section>
 
-        <section id="pricing" aria-labelledby="home-pricing-heading" className="border-t border-line bg-surface py-20 md:py-28">
+        {/* Lectures are not playable yet, so the call to action here is the waitlist, not a purchase. */}
+        <section id="waitlist" aria-labelledby="home-waitlist-heading" className="border-t border-line bg-surface py-20 md:py-28">
           <div className="site-container">
             <Reveal>
-              <h2 id="home-pricing-heading" className="max-w-2xl text-3xl md:text-5xl">One library. Two plans, in rupees.</h2>
+              <h2 id="home-waitlist-heading" className="max-w-2xl text-3xl md:text-5xl">Be first when lectures open.</h2>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-muted">
-                The same Medicine library serves NEET PG, INI CET and USMLE. Payments are not open yet, so start with a free account.
+                Leave your email and we will tell you when the first lectures are published. Payments are not open, and we will tell you before anything is charged.
               </p>
             </Reveal>
-            <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:max-w-4xl">
-              {MEDICAL_PLANS.map((plan, planIndex) => (
-                <Reveal as="li" delay={planIndex * 120} key={plan.id} className={`pro-plan flex flex-col p-8 ${plan.highlight ? "pro-plan-best" : ""}`}>
-                  <p className="flex items-center gap-3 text-xl font-bold text-ink">
-                    {plan.durationLabel}
-                    {plan.highlight && <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-bold text-brand">Best value</span>}
-                  </p>
-                  <p className="mt-6 text-5xl font-bold tabular-nums text-ink">{plan.priceLabel}</p>
-                  <p className="mt-4 flex-1 leading-relaxed text-ink-muted">{plan.desc}</p>
-                </Reveal>
-              ))}
-            </ul>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-              <Link to={startHref} className="btn-primary px-7 text-base">
-                {startLabel}
-                <FaArrowRight aria-hidden="true" />
-              </Link>
-              <Link to="/pricing" className="font-semibold text-brand underline-offset-4 hover:underline">
-                What every plan includes
-              </Link>
-            </div>
-            <p className="mt-3 text-sm text-ink-muted">Free to start. Lectures are coming soon, so create a free account to be ready.</p>
+            <ProWaitlist />
+            <p className="mt-8 max-w-xl text-sm leading-relaxed text-ink-muted">
+              Planned plans, in rupees: {MEDICAL_PLANS.map((plan) => `${plan.durationLabel.replace(" Plan", "")} ${plan.priceLabel}`).join(", ")}.{" "}
+              <Link to="/pricing" className="font-semibold text-brand underline-offset-4 hover:underline">What every plan includes</Link>
+            </p>
+            <p className="mt-3 text-sm text-ink-muted">
+              Want to look around now? <Link to={startHref} className="font-semibold text-brand underline-offset-4 hover:underline">{startLabel}</Link>.
+            </p>
           </div>
         </section>
 
         <ProofSections />
+
+        {PILOT_TESTERS.length > 0 && (
+          <section aria-labelledby="pilot-heading" className="border-t border-line bg-surface py-20 md:py-28">
+            <div className="site-container">
+              <h2 id="pilot-heading" className="text-3xl font-bold tracking-tight md:text-4xl">Tried by our pilot testers</h2>
+              <p className="mt-3 max-w-xl text-ink-muted">Reviews from people who tried Kanthast during our pilot, shown with their permission.</p>
+              <ul className="mt-10 grid gap-10 md:grid-cols-3">
+                {PILOT_TESTERS.map((person) => (
+                  <li key={person.name}>
+                    <blockquote className="text-lg leading-relaxed">&ldquo;{person.quote}&rdquo;</blockquote>
+                    <p className="mt-4 font-semibold">{person.name}</p>
+                    <p className="text-sm text-ink-muted">{person.role}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         <FaqSection />
 

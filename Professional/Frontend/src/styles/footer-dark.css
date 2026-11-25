@@ -1,0 +1,30 @@
+/* Footer: full-width dark gradient band, shared by all three Kanthast apps.
+   Keep this file identical in Brand, Professional/Frontend and School/Frontend. */
+.kb-sky .footer-wrap,
+.kx-footer { background: #070d20; color: #c9d3ea; padding-inline: 0; }
+.kx-footer .kx-footer-panel {
+  border-radius: 0; border: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none;
+  background:
+    radial-gradient(60% 90% at 12% 0%, rgb(59 110 230 / 0.28), transparent 70%),
+    linear-gradient(180deg, #0f1d44 0%, #0b1530 55%, #070d20 100%);
+  padding-inline: max(1.25rem, calc((100% - 1200px) / 2));
+  padding-top: clamp(2.25rem, 4vw, 3.5rem);
+}
+.kx-footer .kx-footer-logo,
+.kx-footer .kx-footer-heading { color: #fff; }
+.kx-footer .kx-footer-sub,
+.kx-footer .kx-footer-track { color: #8fb0ff; }
+.kx-footer .kx-footer-brand p { color: #a9b6d3; }
+.kx-footer .kx-footer-col a { color: #c9d3ea; }
+.kx-footer .kx-footer-col a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+.kx-footer .kx-footer-bottom { border-top: 1px solid rgb(255 255 255 / 0.12); color: #93a2c4; }
+.kx-socials { display: inline-flex; gap: 0.6rem; margin: 0; }
+.kx-footer .kx-footer-social {
+  margin: 0; width: 42px; height: 42px; border-radius: 999px; display: inline-grid; place-items: center;
+  background: rgb(255 255 255 / 0.08); color: #e8eeff; border: 1px solid rgb(255 255 255 / 0.14);
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+.kx-footer a.kx-footer-social:hover { background: #fff; color: #0b1530; border-color: #fff; }
+.kx-footer a.kx-footer-social:focus-visible { outline: 2px solid #8fb0ff; outline-offset: 3px; }
+.kx-footer .kx-footer-social.is-soon { opacity: 0.45; cursor: not-allowed; }
+@media (forced-colors: active) { .kx-footer .kx-footer-panel { background: Canvas; } }

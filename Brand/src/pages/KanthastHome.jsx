@@ -1,21 +1,19 @@
 import { useState } from "react";
-import { FaChevronDown, FaRobot, FaClockRotateLeft, FaChartColumn, FaCrosshairs, FaArrowsRotate, FaListCheck, FaArrowRight, FaStethoscope, FaGraduationCap, FaWandMagicSparkles, FaCircleQuestion } from "react-icons/fa6";
+import { FaChevronDown, FaRobot, FaClockRotateLeft, FaChartColumn, FaCrosshairs, FaArrowsRotate, FaListCheck, FaArrowRight, FaStethoscope, FaGraduationCap, FaWandMagicSparkles, FaCircleQuestion, FaBuilding } from "react-icons/fa6";
 import Seo from "../components/Seo";
 import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
 import SectionHead from "../components/landing/SectionHead";
 import BrandHero from "../components/landing/BrandHero";
-import BrandPaths from "../components/landing/BrandPaths";
 import BrandWatch from "../components/landing/BrandWatch";
 import FocusCarousel from "../components/landing/FocusCarousel";
 import "../styles/brand-carousel.css";
 import Reveal from "../components/landing/Reveal";
-import ScrollTagline from "../components/landing/ScrollTagline";
-import "../styles/brand-tagline.css";
 import WaitlistSection from "../components/landing/WaitlistSection";
 import NeoZippy from "../components/landing/NeoZippy";
 import DeviceShowcase from "../components/landing/DeviceShowcase";
 import SYLLABUS_SNAPSHOT from "../data/syllabusSnapshot";
 import SCHOOL_CATALOG from "../data/schoolCatalog";
+import conceptArt from "../assets/paths/concept.png";
 
 const PRO = {
   subjects: SYLLABUS_SNAPSHOT.subjects.length,
@@ -40,11 +38,11 @@ const AI = [
 const FAQS = [
   {
     q: "What is Kanthast?",
-    a: "Kanthast teaches through short animated lessons, one idea at a time, with AI help for when you get stuck. It has two products: Kanthast Professional for medical entrance exams and Kanthast School for Classes VIII to X.",
+    a: "Kanthast teaches through short animated lessons, one idea at a time, with AI help for when you get stuck. Kanthast Professional is for medical entrance exams and Kanthast School is for Classes VIII to X. Kanthast Corporate, for teams, is planned.",
   },
   {
     q: "Which one should I choose?",
-    a: "If you are preparing for NEET-PG, INI-CET or USMLE, choose Kanthast Professional. If you are in Class VIII, IX or X, or buying for a child who is, choose Kanthast School. Each product has its own account, so sign up for the one you need.",
+    a: "If you are preparing for NEET-PG, INI-CET or USMLE, choose Kanthast Professional. If you are in Class VIII, IX or X, or buying for a child who is, choose Kanthast School. Each product has its own account, so sign up for the one you need. Corporate is not open yet.",
   },
   {
     q: "Can I watch Kanthast School lessons now?",
@@ -113,40 +111,20 @@ export default function KanthastHome() {
       />
 
       <BrandHero />
-      <Reveal><BrandPaths /></Reveal>
-      <Reveal><BrandWatch /></Reveal>
+            <Reveal><BrandWatch /></Reveal>
 
       {/* The two products: identical structure, different accent. */}
       <Reveal>
       <section id="products" aria-labelledby="products-heading" className="kx-section">
         <SectionHead
           id="products-heading"
-          eyebrow="Two Products, One Kanthast"
+          eyebrow="Three Ways to Learn"
           before="Choose Your"
           accent="Kanthast"
-          note="Two separate apps with their own accounts: one for medical entrance exams, one for school."
+          note="Medical exams and school are live to join today. Corporate is planned. Each has its own account."
         />
-        <div className="kx-products">
+        <div className="kx-products kx-products-stack">
           {[
-            {
-              id: "pro",
-              href: "/professional",
-              icon: FaStethoscope,
-              name: "Kanthast Professional",
-              purpose: "Animated lectures for medical entrance exams.",
-              chips: EXAMS.map((e) => ({ label: e.label, soon: e.soon })),
-              chipsLabel: "Exams",
-              stage: (
-                <DeviceShowcase
-                  desktopSrc="/device-macbook-screen.png"
-                  mobileSrc="/device-iphone-screen.png"
-                  desktopAlt="The Kanthast Professional lecture player on a laptop."
-                  mobileAlt="The Kanthast Professional home screen on a phone."
-                />
-              ),
-              stat: `${PRO.subjects} subjects, ${PRO.chapters} chapters mapped`,
-              cta: "Explore Professional",
-            },
             {
               id: "school",
               href: "/school",
@@ -168,54 +146,81 @@ export default function KanthastHome() {
               stat: `${SCHOOL.lessons} lessons scripted, animation in production`,
               cta: "Explore School",
             },
-          ].map(({ icon: Icon, ...card }) => (
-            <a key={card.id} href={card.href} className={`kx-product kx-product-${card.id}`} aria-labelledby={`sc-${card.id}`}>
-              <div className="kx-product-head">
-                <span className="kx-badge" aria-hidden="true"><Icon /></span>
-                <div>
-                  <h3 id={`sc-${card.id}`} className="kx-product-name">{card.name}</h3>
-                  <p className="kx-product-purpose">{card.purpose}</p>
+            {
+              id: "pro",
+              href: "/professional",
+              icon: FaStethoscope,
+              name: "Kanthast Professional",
+              purpose: "Animated lectures for medical entrance exams.",
+              chips: EXAMS.map((e) => ({ label: e.label, soon: e.soon })),
+              chipsLabel: "Exams",
+              stage: (
+                <DeviceShowcase
+                  desktopSrc="/device-macbook-screen.png"
+                  mobileSrc="/device-iphone-screen.png"
+                  desktopAlt="The Kanthast Professional lecture player on a laptop."
+                  mobileAlt="The Kanthast Professional home screen on a phone."
+                />
+              ),
+              stat: `${PRO.subjects} subjects, ${PRO.chapters} chapters mapped`,
+              cta: "Explore Professional",
+            },
+            {
+              id: "corporate",
+              icon: FaBuilding,
+              name: "Kanthast Corporate",
+              purpose: "Animated lessons for teams and workplaces.",
+              chips: [],
+              chipsLabel: "",
+              stage: <img src={conceptArt} alt="A glowing light bulb above a stack of books." className="kx-stage-art" loading="lazy" />,
+              stat: "Planned. We will announce it here first.",
+              cta: "Coming soon",
+            },
+          ].map(({ icon: Icon, ...card }) => {
+            const body = (
+              <>
+                <div className="kx-product-copy">
+                  <div className="kx-product-head">
+                    <span className="kx-badge" aria-hidden="true"><Icon /></span>
+                    <div>
+                      <h3 id={`sc-${card.id}`} className="kx-product-name">{card.name}</h3>
+                      <p className="kx-product-purpose">{card.purpose}</p>
+                    </div>
+                  </div>
+                  {card.chips.length > 0 && (
+                    <ul className="kx-chips" aria-label={card.chipsLabel}>
+                      {card.chips.map((chip) => (
+                        <li key={chip.label} className={`kx-chip${chip.soon ? " kx-chip-soon" : ""}`}>
+                          {chip.label}
+                          {chip.soon && <span className="kx-chip-flag">soon</span>}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <div className="kx-product-foot">
+                    <span>{card.stat}</span>
+                    {card.href ? (
+                      <span className="bh-btn bh-btn-primary kx-product-cta">
+                        {card.cta}
+                        <FaArrowRight aria-hidden="true" className="text-[0.8em]" />
+                      </span>
+                    ) : (
+                      <span className="kx-soon-pill">{card.cta}</span>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <ul className="kx-chips" aria-label={card.chipsLabel}>
-                {card.chips.map((chip) => (
-                  <li key={chip.label} className={`kx-chip${chip.soon ? " kx-chip-soon" : ""}`}>
-                    {chip.label}
-                    {chip.soon && <span className="kx-chip-flag">soon</span>}
-                  </li>
-                ))}
-              </ul>
-              <div className={`kx-stage showcase-stage showcase-stage-${card.id}`}>{card.stage}</div>
-              <div className="kx-product-foot">
-                <span>{card.stat}</span>
-                <span className="bh-btn bh-btn-primary kx-product-cta">
-                  {card.cta}
-                  <FaArrowRight aria-hidden="true" className="text-[0.8em]" />
-                </span>
-              </div>
-            </a>
-          ))}
+                <div className={`kx-stage showcase-stage showcase-stage-${card.id}`}>{card.stage}</div>
+              </>
+            );
+            return card.href ? (
+              <a key={card.id} href={card.href} className={`kx-product kx-product-${card.id}`} aria-labelledby={`sc-${card.id}`}>{body}</a>
+            ) : (
+              <div key={card.id} className={`kx-product kx-product-${card.id} is-planned`} role="group" aria-labelledby={`sc-${card.id}`}>{body}</div>
+            );
+          })}
         </div>
       </section>
       </Reveal>
-
-      {/* One quiet statement, lit up character by character as you scroll. */}
-      <ScrollTagline
-        label="What Kanthast is for"
-        lines={["Hard ideas, animated until they *click*.", "One idea at a time, for medical exams and for school."]}
-        accent="#60a5fa"
-        glow="96 165 250"
-        textClass="text-3xl font-semibold md:text-4xl lg:text-5xl"
-        badge="Kanthast"
-        video={`${import.meta.env.BASE_URL}tagline-bg.mp4`}
-        poster={`${import.meta.env.BASE_URL}tagline-bg.webp`}
-        chips={[
-          { label: "NEET PG", x: "6%", y: "15%", depth: 0.7, at: 0.05 },
-          { label: "Classes VIII to X", r: "6%", y: "18%", depth: 0.9, at: 0.2 },
-          { label: "INI CET", x: "4%", y: "62%", depth: 1.1, at: 0.4 },
-          { label: "NCERT 2025-26", r: "5%", y: "66%", depth: 0.6, at: 0.55 },
-        ]}
-      />
 
       {/* AI, as cards: live ones first, planned ones marked. */}
       <Reveal>

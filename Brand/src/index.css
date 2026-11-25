@@ -2251,3 +2251,61 @@ nav.kb-bar.fixed.nav-aurora { background: rgb(255 255 255 / 0.82); -webkit-backd
 /* Every section ends with room to breathe before the next one (the products cards used to touch the dark band) */
 .kx-section { padding-bottom: clamp(3.5rem, 6vw, 6rem); }
 #products { padding-bottom: clamp(4.5rem, 8vw, 7rem); }
+
+/* ===== Large desktops (24in+ / 2K / 4K / ultrawide) =====
+   Below 1920px nothing changes. From 1920px up the root size grows smoothly (16px at 1920 → 24px
+   at 3200+), so every rem-based size (type, nav, buttons, footer, hero) scales with the screen
+   instead of staying phone-sized in a sea of whitespace. Navbar, hero and footer then share one
+   container edge, so the three line up. */
+@media (min-width: 1920px) {
+  html { font-size: clamp(16px, calc(16px + (100vw - 1920px) * 0.00625), 24px); }
+}
+@media (min-width: 1536px) {
+  /* content stays 85% wide up to 1920, then follows the scaled root */
+  :root { --kb-edge: max(7.5vw, calc((100vw - 102rem) / 2)); --kb-chrome-edge: var(--kb-edge); }
+
+  /* navbar: glass runs edge to edge, contents sit on the same edge as the page */
+  nav.kb-bar.fixed.nav-aurora .nav-shell { max-width: calc(100vw - 2 * var(--kb-edge) + 6rem); padding-inline: 3rem; }
+  :root { --nav-bar-h: 4.75rem; }
+  nav.kb-bar.fixed .nav-k { width: 2.25rem; height: 2.25rem; }
+  nav.kb-bar.fixed .nav-link { height: 2.75rem; padding: 0 1.25rem; }
+  nav.kb-bar.fixed .nav-link-active::after { left: 1.25rem; right: 1.25rem; bottom: -1.0625rem; }
+  nav.kb-bar.fixed .nav-login, nav.kb-bar.fixed .nav-signup { height: 2.75rem; padding: 0 1.5rem; }
+
+  /* hero: copy column and illustration scale together */
+  .bh-inner { grid-template-columns: minmax(0, 37.5rem) minmax(0, 1fr); min-height: 31rem; }
+  .bh-copy { max-width: 35rem; }
+
+  /* footer: same edge as the nav and page */
+  .kx-footer-panel { padding-inline: var(--kb-edge); }
+}
+
+/* Hero container: .bh is a flex column, so without an explicit width the grid shrank to its content and drifted off the page edge on wide screens */
+.bh-inner { width: 100%; box-sizing: border-box; }
+#waitlist .bh-btn, #waitlist button[type="submit"] { white-space: nowrap; }
+@media (min-width: 1536px) {
+  /* hero art stays inside the page edge on big screens instead of bleeding off the right */
+  .bh-inner { padding-right: var(--kb-edge); grid-template-columns: minmax(0, 37.5rem) minmax(0, 1fr); }
+  .bh-art { margin-left: -2rem; }
+}
+
+/* Choose your Kanthast: three cards stacked vertically; copy left, stage right on wide screens */
+.kx-products-stack { grid-template-columns: minmax(0, 1fr) !important; gap: 1.5rem; }
+.kx-products-stack .kx-product { gap: 1.5rem; }
+.kx-product-copy { position: relative; display: flex; flex-direction: column; gap: 1.1rem; min-width: 0; }
+.kx-product-copy .kx-product-foot { margin-top: auto; }
+.kx-stage-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 1rem; }
+.kx-product-corporate .kx-badge { background: radial-gradient(circle at 35% 30%, #f4fbf8, #d7f1e8); color: #0f766e; box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.25); }
+.kx-product-corporate::before { background: radial-gradient(70% 60% at 100% 0%, rgba(15, 118, 110, 0.12), transparent 70%); }
+.kx-product-corporate .kx-stage { background: linear-gradient(180deg, #f3fbf8, #e8f5f1); }
+.kx-product.is-planned:hover { transform: none; box-shadow: 0 24px 50px -32px rgba(30, 58, 138, 0.45); }
+.kx-soon-pill { display: inline-flex; padding: 0.5rem 1.1rem; border-radius: 999px; background: #e8f5f1; color: #0f766e; font-weight: 700; font-size: 0.9rem; }
+@media (min-width: 1024px) {
+  .kx-products-stack .kx-product { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: stretch; }
+  .kx-products-stack .kx-stage { min-height: 300px; margin-bottom: 0; }
+  .kx-products-stack .kx-product-corporate .kx-stage { min-height: 240px; }
+}
+.kx-products-stack .kx-product-copy { justify-content: center; gap: 1.25rem; }
+.kx-products-stack .kx-product-copy .kx-product-foot { margin-top: 0.5rem; }
+.kx-stage-art { inset: 1rem; width: calc(100% - 2rem); height: calc(100% - 2rem); padding: 0; border-radius: 18px; }
+.kx-products-stack .kx-product-pro .kx-stage { margin-bottom: 0; }
