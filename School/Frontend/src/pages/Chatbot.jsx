@@ -3,6 +3,11 @@ import { AnimatePresence, motion as Motion } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Markdown from "../components/Markdown";
 import { Modal, Button } from "../components/ui";
+import { Accent } from "../components/ui/Brandmarks";
+import {
+  FiCpu, FiArrowUpRight, FiSearch, FiCopy, FiCheck,
+  FiVolume2, FiVolumeX, FiX, FiSidebar
+} from "react-icons/fi";
 import {
   FaBars,
   FaCheckCircle,
@@ -24,15 +29,32 @@ import {
   uploadChatFile,
 } from "../utils/authApi";
 import { DRAFT_KEY, draftFromChat, getAiQuota } from "../utils/doubtsApi";
+import {
+  STALE_MS,
+  dedupeRequest,
+  getAskCache,
+  isFresh,
+  patchAskCache,
+  setAskSessionMessages,
+} from "../utils/doubtsStore";
 
 // The assistant answers school-subject questions AND platform questions, so the
 // starters lead with study prompts and keep one account/playback prompt.
 const SUGGESTIONS = [
-  { label: "Explain Ohm's law simply", text: "Explain Ohm's law in simple words with an example." },
-  { label: "Steps to solve a quadratic equation", text: "What are the steps to solve a quadratic equation?" },
-  { label: "Causes of the French Revolution", text: "Summarise the main causes of the French Revolution." },
-  { label: "Why is a lesson locked?", text: "My lesson is locked. What subscription is needed?" },
+  { tag: "Physics", label: "Explain Ohm's law simply", text: "Explain Ohm's law in simple words with an example." },
+  { tag: "Maths", label: "Solve a quadratic equation", text: "What are the steps to solve a quadratic equation?" },
+  { tag: "History", label: "Causes of the French Revolution", text: "Summarise the main causes of the French Revolution." },
+  { tag: "Help", label: "Why is a lesson locked?", text: "My lesson is locked. What subscription is needed?" },
 ];
+
+const RAIL_KEY = "kanthastChatRail";
+function readRailOpen() {
+  try {
+    return localStorage.getItem(RAIL_KEY) !== "0";
+  } catch {
+    return true;
+  }
+}
 
 // "hint" nudges the student toward the answer; "full" explains it. Sent with
 // every message and remembered on this device.
@@ -74,7 +96,7 @@ function describeError(err, fallback) {
 
 // Ask AI panel sizing (see the measuring effect in Chatbot).
 const MIN_PANEL = 420;
-const PANEL_GAP_DESKTOP = 24;
+const PANEL_GAP_DESKTOP = 12;
 const PANEL_GAP_PHONE = 12;
 const DOCK_PX = 64; // the phone bottom dock, 4rem (the CSS adds the safe area)
 
@@ -144,52 +166,96 @@ function TypingDots() {
 }
 
 // ─── Conversation rail (desktop) and drawer (phone and tablet) ────────────
-// A light rail inside the Ask AI panel: New chat, then recent chats, each with
-// its delete button. The same content fills the drawer below lg.
-function ConversationRail({ sessions, activeSessionId, onLoad, onNew, onDelete, onClose }) {
+function ConversationRail({ sessions, activeSessionId, onLoad, onNew, onDelete, onClose, onCollapse }) {
+  const [query, setQuery] = useState("");
+  const filteredSessions = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return sessions;
+    return sessions.filter((s) =>
+      `${s.title || ""} ${s.preview || ""}`.toLowerCase().includes(q)
+    );
+  }, [sessions, query]);
+
   return (
     <div className="flex h-full flex-col">
-      <div className="flex flex-shrink-0 items-center gap-2 p-3">
+      <div className="flex flex-shrink-0 items-center gap-1.5 p-3 pb-2">
         <button
           type="button"
           onClick={onNew}
-          className="inline-flex min-h-touch flex-1 items-center gap-2 rounded-control border border-line bg-surface px-3.5 text-sm font-semibold text-ink transition-colors duration-fast ease-brand hover:border-line-strong"
+          className="inline-flex min-h-[38px] flex-1 items-center gap-2 rounded-control border border-line bg-surface px-3 text-xs font-bold text-ink shadow-e1 transition-all duration-fast ease-brand hover:border-brand/40 active:scale-[0.98]"
         >
-          <FaPlus size={10} className="text-ink-subtle" aria-hidden="true" />
+          <FaPlus size={10} className="text-brand" aria-hidden="true" />
           New chat
         </button>
-        {onClose && (
+        {(onClose || onCollapse) && (
           <button
             type="button"
-            onClick={onClose}
-            className="flex h-touch w-touch flex-shrink-0 items-center justify-center rounded-control text-ink-subtle transition-colors duration-fast hover:bg-surface-sunken hover:text-ink"
-            aria-label="Close chats"
+            onClick={onClose || onCollapse}
+            className="flex h-[38px] w-[38px] flex-shrink-0 items-center justify-center rounded-control text-ink-subtle transition-colors duration-fast hover:bg-surface hover:text-ink"
+            aria-label={onClose ? "Close chats" : "Collapse sidebar"}
+            title={onClose ? "Close chats" : "Collapse sidebar"}
           >
-            <FaTimes size={13} />
+            {onClose ? <FaTimes size={13} /> : <FiSidebar size={15} />}
           </button>
         )}
       </div>
 
-      <p className="flex-shrink-0 px-4 pb-1.5 pt-1 text-micro font-semibold uppercase tracking-[0.1em] text-ink-subtle">Recent</p>
+      {/* Search Chats */}
+      {sessions.length > 0 && (
+        <div className="px-3 pb-2">
+          <div className="relative">
+            <FiSearch size={13} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-subtle" />
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search chats…"
+              aria-label="Search past chats"
+              className="h-8 w-full rounded-full border border-line bg-surface pl-8 pr-7 text-xs text-ink placeholder:text-ink-subtle focus:border-brand focus:outline-none"
+            />
+            {query && (
+              <button
+                type="button"
+                onClick={() => setQuery("")}
+                aria-label="Clear chat search"
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-ink-subtle hover:text-ink"
+              >
+                <FiX size={12} />
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
+      <p className="flex-shrink-0 px-4 pb-1.5 pt-1 text-micro font-bold uppercase tracking-[0.1em] text-ink-subtle">
+        Recent {filteredSessions.length > 0 ? `(${filteredSessions.length})` : ""}
+      </p>
 
       <div className="no-scrollbar flex-1 space-y-0.5 overflow-y-auto px-2 pb-3">
-        {sessions.length === 0 && <p className="px-2 py-2 text-xs text-ink-subtle">No chats yet.</p>}
-        {sessions.map((session) => {
+        {filteredSessions.length === 0 && (
+          <p className="px-2 py-3 text-xs text-ink-subtle">
+            {query ? "No matching chats." : "No chats yet."}
+          </p>
+        )}
+        {filteredSessions.map((session) => {
           const active = activeSessionId === session.sessionId;
           return (
             <div
               key={session.sessionId}
               className={`group relative rounded-control transition-colors duration-fast ${
-                active ? "bg-surface ring-1 ring-inset ring-line" : "hover:bg-surface/70"
+                active ? "bg-surface shadow-e1 ring-1 ring-inset ring-brand/25" : "hover:bg-surface/70"
               }`}
             >
+              {active && (
+                <span aria-hidden="true" className="absolute left-0 top-2 bottom-2 w-0.5 rounded-r bg-brand" />
+              )}
               <button
                 type="button"
                 onClick={() => onLoad(session.sessionId)}
                 aria-current={active ? "true" : undefined}
-                className="w-full rounded-control px-3 py-2.5 pr-11 text-left"
+                className="w-full rounded-control px-3 py-2.5 pr-10 text-left"
               >
-                <p className={`truncate text-sm leading-snug ${active ? "font-semibold text-ink" : "font-medium text-ink-muted"}`}>
+                <p className={`truncate text-sm leading-snug ${active ? "font-bold text-ink" : "font-medium text-ink-muted"}`}>
                   {!session.title || session.title === "New Chat" ? "New chat" : session.title}
                 </p>
                 <p className="mt-0.5 truncate text-micro text-ink-subtle">
@@ -199,7 +265,7 @@ function ConversationRail({ sessions, activeSessionId, onLoad, onNew, onDelete, 
               <button
                 type="button"
                 onClick={(e) => { e.stopPropagation(); onDelete(session.sessionId); }}
-                className={`absolute right-0 top-1/2 flex h-touch w-touch -translate-y-1/2 items-center justify-center rounded-control text-ink-subtle transition duration-fast hover:bg-critical-soft hover:text-critical focus-visible:opacity-100 ${
+                className={`absolute right-0 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-control text-ink-subtle transition duration-fast hover:bg-critical-soft hover:text-critical focus-visible:opacity-100 ${
                   active ? "" : "lg:opacity-0 lg:group-hover:opacity-100"
                 }`}
                 title="Delete conversation"
@@ -267,22 +333,36 @@ export default function Chatbot({ onDraftReady }) {
   const token = localStorage.getItem("kanthastSchoolToken");
   const location = useLocation();
   const navigate = useNavigate();
-  const [sessions, setSessions] = useState([]);
-  const [activeSessionId, setActiveSessionId] = useState("");
-  const [messages, setMessages] = useState([]);
-  // "Ask the AI about this" on a doubt arrives with the question prefilled (not sent).
-  const [input, setInput] = useState(() => String(location.state?.prefill || "").slice(0, 4000));
+
+  const initialAsk = getAskCache();
+  const initialQuerySid = new URLSearchParams(location.search).get("sessionId") || "";
+  const initialSid = initialQuerySid || initialAsk.activeSessionId || "";
+  const initialMsgs = initialSid ? initialAsk.messagesBySession?.[initialSid] : null;
+  const hasInitialCache = Boolean(token && initialAsk.sessions && Array.isArray(initialMsgs));
+
+  const [sessions, setSessions] = useState(() => initialAsk.sessions || []);
+  const [activeSessionId, setActiveSessionId] = useState(() => initialSid);
+  const [messages, setMessages] = useState(() => initialMsgs || []);
+  // "Ask the AI about this" on a doubt arrives with the question prefilled (not sent);
+  // otherwise keep the student's in-progress prompt across module switches.
+  const [input, setInput] = useState(() =>
+    location.state?.prefill
+      ? String(location.state.prefill).slice(0, 4000)
+      : String(initialAsk.input || "")
+  );
   const [mode, setMode] = useState(readMode);
   // { limit, used, left, paid } from GET /doubts/ai-quota; null until known.
-  const [aiQuota, setAiQuota] = useState(null);
+  const [aiQuota, setAiQuota] = useState(() => initialAsk.aiQuota ?? null);
   // Set when the server refuses a send with 429 ai_daily_limit: { message, paid }.
   // The allowance (left === 0) gives the same state without a refused send; see `limit`.
-  const [limitHit, setLimitHit] = useState(null);
+  const [limitHit, setLimitHit] = useState(() => initialAsk.limitHit ?? null);
   const [drafting, setDrafting] = useState(false);
   // { text, kind, retry? } — kind drives nothing visual beyond the copy; retry
   // is the action behind the "Try again" button when one makes sense.
-  const [error, setError] = useState(null);
-  const [status, setStatus] = useState("loading");
+  const [error, setError] = useState(() =>
+    token ? null : { kind: "auth", text: "Log in to use the assistant.", retry: null }
+  );
+  const [status, setStatus] = useState(() => (!token ? "error" : hasInitialCache ? "ready" : "loading"));
   // Bumped by "Try again" on a failed initial load to re-run the loader.
   const [reloadKey, setReloadKey] = useState(0);
   // True when a reply arrived while the user was scrolled up reading history.
@@ -290,30 +370,42 @@ export default function Chatbot({ onDraftReady }) {
   // Session id staged for deletion; drives the confirmation Modal.
   const [pendingDelete, setPendingDelete] = useState(null);
   const [uploading, setUploading] = useState(false);
-  const [attachment, setAttachment] = useState(null);
+  const [attachment, setAttachment] = useState(() => initialAsk.attachment ?? null);
   const [uploadNotice, setUploadNotice] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [railOpen, setRailOpen] = useState(readRailOpen);
+  const [copiedIdx, setCopiedIdx] = useState(null);
+  const [speakingIdx, setSpeakingIdx] = useState(null);
 
   const fileInputRef = useRef(null);
   const listRef = useRef(null);
   const textareaRef = useRef(null);
   const noticeTimer = useRef(null);
+  const firstScrollRef = useRef(true);
 
   const { thumbRef, visible: scrollbarVisible } = useCustomScrollbar(listRef);
+
+  // Retain in-progress draft text and pending attachment across module switches.
+  useEffect(() => {
+    patchAskCache({ input, attachment });
+  }, [input, attachment]);
 
   // Read after every send rather than counting locally: the server does not
   // charge for an empty message or for fixed replies (plans, support and so on).
   const refreshQuota = useCallback(() => {
-    getAiQuota()
+    dedupeRequest("ai-quota", getAiQuota)
       .then((data) => {
         const ai = data.ai || null;
         setAiQuota(ai);
-        // Messages are available again (a new day, or a plan was bought).
-        if (ai && typeof ai.left === "number" && ai.left > 0) setLimitHit(null);
+        const cleared = ai && typeof ai.left === "number" && ai.left > 0;
+        if (cleared) setLimitHit(null);
+        patchAskCache({ aiQuota: ai, ...(cleared ? { limitHit: null } : {}) });
       })
       .catch(() => {});
   }, []);
   useEffect(() => {
+    const cached = getAskCache();
+    if (cached.aiQuota && isFresh(cached.fetchedAt, STALE_MS.ask)) return;
     refreshQuota();
   }, [refreshQuota]);
 
@@ -404,26 +496,47 @@ export default function Chatbot({ onDraftReady }) {
     el.style.height = Math.min(el.scrollHeight, 180) + "px";
   }, [input]);
 
-  // Load initial chat
+  // Load initial chat (or silently revalidate cached chat in background).
   useEffect(() => {
     let mounted = true;
     if (!token) {
-      setStatus("error");
-      setError({ kind: "auth", text: "Log in to use the assistant.", retry: null });
       return undefined;
     }
     const querySessionId = new URLSearchParams(location.search).get("sessionId") || "";
+    const cached = getAskCache();
+    const targetSid = querySessionId || cached.activeSessionId || "";
+    const hasCachedMsgs = Boolean(
+      cached.sessions && targetSid && Array.isArray(cached.messagesBySession?.[targetSid])
+    );
+
+    if (reloadKey === 0 && hasCachedMsgs && isFresh(cached.fetchedAt, STALE_MS.ask)) {
+      return undefined;
+    }
+
     (async () => {
       try {
-        const data = await getChatHistory(token, querySessionId);
+        const reqKey = `chat:${querySessionId || cached.activeSessionId || "latest"}`;
+        const data = await dedupeRequest(reqKey, () =>
+          getChatHistory(token, querySessionId || cached.activeSessionId || "")
+        );
         if (!mounted) return;
-        setSessions(data.sessions || []);
-        setMessages(data.messages || []);
-        setActiveSessionId(data.currentSessionId || "");
+        const nextSessions = data.sessions || [];
+        const nextSid = data.currentSessionId || "";
+        const nextMsgs = data.messages || [];
+        setSessions(nextSessions);
+        setMessages(nextMsgs);
+        setActiveSessionId(nextSid);
         setStatus("ready");
         setError(null);
+        patchAskCache({
+          sessions: nextSessions,
+          activeSessionId: nextSid,
+          fetchedAt: Date.now(),
+        });
+        if (nextSid) setAskSessionMessages(nextSid, nextMsgs);
       } catch (err) {
         if (!mounted) return;
+        if (hasCachedMsgs) return; // Keep cached conversation visible on transient error.
         setStatus("error");
         const described = describeError(err, "We couldn't load your conversations. Try again in a moment.");
         setError({
@@ -439,12 +552,17 @@ export default function Chatbot({ onDraftReady }) {
     return () => { mounted = false; };
   }, [token, location.search, reloadKey]);
 
-  // Scroll to bottom on new message — but only if the user is already near the
-  // bottom. Previously this fired unconditionally, so scrolling up to re-read
-  // an earlier answer yanked you back down on every status change.
+  // Scroll to bottom on new message — snaps instantly on cached re-entry so returning
+  // to Ask AI never replays a scroll animation; smoothly follows live replies.
   useEffect(() => {
     const el = listRef.current;
     if (!el) return;
+
+    if (firstScrollRef.current) {
+      firstScrollRef.current = false;
+      el.scrollTop = el.scrollHeight;
+      return;
+    }
 
     const distanceFromBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
     const isNearBottom = distanceFromBottom < 120;
@@ -494,20 +612,37 @@ export default function Chatbot({ onDraftReady }) {
 
   const loadSession = async (sessionId) => {
     if (!token || !sessionId) return;
-    setStatus("loadingSession");
+    const cachedMsgs = getAskCache().messagesBySession?.[sessionId];
     setError(null);
-    try {
-      const data = await getChatHistory(token, sessionId);
-      setSessions(data.sessions || []);
-      setMessages(data.messages || []);
-      setActiveSessionId(data.currentSessionId || sessionId);
-      setAttachment(null);
-      if (fileInputRef.current) fileInputRef.current.value = "";
+    setSidebarOpen(false);
+    setActiveSessionId(sessionId);
+    setAttachment(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+
+    if (Array.isArray(cachedMsgs)) {
+      setMessages(cachedMsgs);
       setStatus("ready");
-      setSidebarOpen(false);
+      patchAskCache({ activeSessionId: sessionId });
+    } else {
+      setStatus("loadingSession");
+    }
+
+    try {
+      const data = await dedupeRequest(`chat:${sessionId}`, () => getChatHistory(token, sessionId));
+      const nextSessions = data.sessions || [];
+      const nextSid = data.currentSessionId || sessionId;
+      const nextMsgs = data.messages || [];
+      setSessions(nextSessions);
+      setMessages(nextMsgs);
+      setActiveSessionId(nextSid);
+      setStatus("ready");
+      patchAskCache({ sessions: nextSessions, activeSessionId: nextSid, fetchedAt: Date.now() });
+      setAskSessionMessages(nextSid, nextMsgs);
     } catch (err) {
       setStatus("ready");
-      noteFailure(err, "We couldn't open that conversation. Try again in a moment.", () => loadSession(sessionId));
+      if (!Array.isArray(cachedMsgs)) {
+        noteFailure(err, "We couldn't open that conversation. Try again in a moment.", () => loadSession(sessionId));
+      }
     }
   };
 
@@ -516,14 +651,19 @@ export default function Chatbot({ onDraftReady }) {
     setError(null);
     try {
       const data = await createChatSession(token);
-      setSessions(data.sessions || []);
-      setActiveSessionId(data.currentSessionId || data.session?.sessionId || "");
-      setMessages(data.messages || []);
+      const nextSessions = data.sessions || [];
+      const nextSid = data.currentSessionId || data.session?.sessionId || "";
+      const nextMsgs = data.messages || [];
+      setSessions(nextSessions);
+      setActiveSessionId(nextSid);
+      setMessages(nextMsgs);
       setAttachment(null);
       setInput("");
       if (fileInputRef.current) fileInputRef.current.value = "";
       setSidebarOpen(false);
       setStatus("ready");
+      patchAskCache({ sessions: nextSessions, activeSessionId: nextSid, input: "", attachment: null, fetchedAt: Date.now() });
+      if (nextSid) setAskSessionMessages(nextSid, nextMsgs);
     } catch (err) {
       noteFailure(err, "We couldn't start a new conversation. Try again in a moment.", handleNewChat);
     }
@@ -538,13 +678,25 @@ export default function Chatbot({ onDraftReady }) {
     setError(null);
     try {
       const data = await deleteChatSession(token, sessionId, activeSessionId);
-      setSessions(data.sessions || []);
-      setActiveSessionId(data.currentSessionId || "");
-      setMessages(data.messages || []);
+      const nextSessions = data.sessions || [];
+      const nextSid = data.currentSessionId || "";
+      const nextMsgs = data.messages || [];
+      setSessions(nextSessions);
+      setActiveSessionId(nextSid);
+      setMessages(nextMsgs);
       if (activeSessionId === sessionId) {
         setAttachment(null);
         if (fileInputRef.current) fileInputRef.current.value = "";
       }
+      const nextBySession = { ...(getAskCache().messagesBySession || {}) };
+      delete nextBySession[sessionId];
+      if (nextSid) nextBySession[nextSid] = nextMsgs;
+      patchAskCache({
+        sessions: nextSessions,
+        activeSessionId: nextSid,
+        messagesBySession: nextBySession,
+        fetchedAt: Date.now(),
+      });
     } catch (err) {
       noteFailure(err, "We couldn't delete that conversation. Try again in a moment.", () => handleDeleteSession(sessionId));
     }
@@ -573,12 +725,22 @@ export default function Chatbot({ onDraftReady }) {
         fileName: attachment?.fileName || "", sessionId: activeSessionId,
         mode,
       });
-      setSessions(data.sessions || []);
-      setMessages(data.messages || []);
-      setActiveSessionId(data.currentSessionId || data.sessionId || activeSessionId);
+      const nextSessions = data.sessions || [];
+      const nextMsgs = data.messages || [];
+      const nextSid = data.currentSessionId || data.sessionId || activeSessionId;
+      setSessions(nextSessions);
+      setMessages(nextMsgs);
+      setActiveSessionId(nextSid);
       setAttachment(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
       setStatus("ready");
+      patchAskCache({
+        sessions: nextSessions,
+        activeSessionId: nextSid,
+        attachment: null,
+        fetchedAt: Date.now(),
+      });
+      if (nextSid) setAskSessionMessages(nextSid, nextMsgs);
       refreshQuota();
     } catch (err) {
       setStatus("ready");
@@ -605,6 +767,45 @@ export default function Chatbot({ onDraftReady }) {
         () => sendMessage(text, { retry: true })
       );
     }
+  };
+
+  useEffect(() => () => {
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
+  }, []);
+
+  const copyMessage = async (idx, text) => {
+    if (!text) return;
+    try {
+      await navigator.clipboard?.writeText(text);
+      setCopiedIdx(idx);
+      setTimeout(() => {
+        setCopiedIdx((curr) => (curr === idx ? null : curr));
+      }, 1800);
+    } catch {
+      showNotice("error", "Could not copy to clipboard");
+    }
+  };
+
+  const toggleSpeak = (idx, text) => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window) || !text) return;
+    window.speechSynthesis.cancel();
+    if (speakingIdx === idx) {
+      setSpeakingIdx(null);
+      return;
+    }
+    const plain = text
+      .replace(/```[\s\S]*?```/g, " code snippet ")
+      .replace(/[#*_`>~]/g, "")
+      .trim();
+    if (!plain) return;
+    const utterance = new SpeechSynthesisUtterance(plain);
+    utterance.rate = 1;
+    utterance.onend = () => setSpeakingIdx((curr) => (curr === idx ? null : curr));
+    utterance.onerror = () => setSpeakingIdx((curr) => (curr === idx ? null : curr));
+    setSpeakingIdx(idx);
+    window.speechSynthesis.speak(utterance);
   };
 
   // "Still confused? Ask your class": the server drafts a doubt from this
@@ -676,6 +877,22 @@ export default function Chatbot({ onDraftReady }) {
     aiQuota && typeof aiQuota.left === "number" && aiQuota.left > 0 && typeof aiQuota.limit === "number"
       ? `${aiQuota.left} of ${aiQuota.limit} left today`
       : "";
+  const toggleRail = () => {
+    setRailOpen((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem(RAIL_KEY, next ? "1" : "0");
+      } catch {
+        // Storage blocked: preference stays in memory for this visit.
+      }
+      return next;
+    });
+  };
+
+  const activeSession = sessions.find((s) => s.sessionId === activeSessionId);
+  const activeTitle = activeSession?.title || "New conversation";
+  const showCenteredEmpty = messages.length === 0 && isIdle && !limitShown && !error;
+
   const railProps = {
     sessions: displayedSessions,
     activeSessionId,
@@ -684,16 +901,119 @@ export default function Chatbot({ onDraftReady }) {
     onDelete: (id) => setPendingDelete(id),
   };
 
+  const composerCard = (
+    <div className="w-full rounded-2xl border border-line-strong bg-surface shadow-e1 transition-all duration-fast focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/15">
+      {attachment && (
+        <div className="mx-2.5 mt-2.5 flex items-center gap-2 rounded-xl border border-line bg-surface-sunken pl-3 text-xs text-ink">
+          <FaPaperclip size={11} className="flex-shrink-0 text-brand" aria-hidden="true" />
+          <span className="flex-1 truncate font-medium">{attachment.fileName}</span>
+          <button
+            type="button"
+            onClick={() => {
+              setAttachment(null);
+              if (fileInputRef.current) fileInputRef.current.value = "";
+              showNotice("success", "Attachment removed");
+            }}
+            className="flex h-8 w-8 items-center justify-center rounded-lg text-ink-muted transition hover:bg-surface hover:text-ink"
+            aria-label={`Remove attachment ${attachment.fileName}`}
+          >
+            <FaTimes size={10} />
+          </button>
+        </div>
+      )}
+
+      {uploading && (
+        <div className="mx-2.5 mt-2.5 flex items-center gap-2 rounded-xl border border-line bg-surface-sunken px-3 py-2 text-xs text-ink-muted" role="status">
+          <span className="h-3.5 w-3.5 flex-shrink-0 animate-spin rounded-full border-2 border-brand border-t-transparent" aria-hidden="true" />
+          Uploading file…
+        </div>
+      )}
+
+      <textarea
+        ref={textareaRef}
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+          }
+        }}
+        placeholder={limitShown ? "You can ask the AI again tomorrow" : "Ask anything from your syllabus…"}
+        aria-label="Message the assistant"
+        disabled={limitShown}
+        className="w-full resize-none bg-transparent px-4 pt-3.5 pb-2 text-sm leading-relaxed text-ink outline-none placeholder:text-ink-subtle focus-visible:!outline-none disabled:cursor-not-allowed"
+        rows={showCenteredEmpty ? 2 : 1}
+        style={{ maxHeight: 180, overflowY: "auto" }}
+      />
+
+      <div className="flex flex-wrap items-center justify-between gap-2 border-t border-line/60 px-2.5 py-2">
+        <div className="flex items-center gap-1.5">
+          <button
+            type="button"
+            onClick={() => fileInputRef.current?.click()}
+            disabled={uploading}
+            className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl text-ink-muted transition hover:bg-surface-sunken hover:text-ink disabled:cursor-not-allowed"
+            aria-label="Attach a file"
+            title="Attach file"
+          >
+            <FaPaperclip size={13} className={uploading ? "animate-pulse" : ""} />
+          </button>
+          <input ref={fileInputRef} type="file" className="hidden" onChange={onFileChange} tabIndex={-1} />
+
+          <div role="group" aria-label="How the AI answers" className="inline-flex h-9 items-center rounded-full bg-surface-sunken p-0.5 ring-1 ring-inset ring-line">
+            {MODES.map((option) => (
+              <button
+                key={option.value}
+                type="button"
+                aria-pressed={mode === option.value}
+                onClick={() => chooseMode(option.value)}
+                className={`h-full rounded-full px-3 text-xs font-semibold transition-colors duration-fast ease-brand ${
+                  mode === option.value ? "bg-surface text-ink shadow-e1 ring-1 ring-inset ring-line" : "text-ink-muted hover:text-ink"
+                }`}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2.5">
+          {quotaLine && (
+            <p className="text-[0.6875rem] tabular-nums text-ink-subtle" aria-live="polite">
+              {quotaShort ? (
+                <>
+                  <span className="sm:hidden">{quotaShort}</span>
+                  <span className="hidden sm:inline">{quotaLine}</span>
+                </>
+              ) : (
+                quotaLine
+              )}
+            </p>
+          )}
+          <button
+            type="button"
+            onClick={() => sendMessage()}
+            disabled={!canSend}
+            className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-brand text-brand-fg transition-all duration-fast ease-brand hover:bg-brand-hover active:scale-[0.96] disabled:cursor-not-allowed disabled:bg-disabled disabled:text-disabled-fg"
+            aria-label="Send message"
+            title="Send"
+          >
+            <FaPaperPlane size={12} />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
-    // One panel, the same family as the feed list and thread cards: the rail
-    // at left from lg, the conversation at right.
-    // A div with role="region", not <section>: the sky theme clears every
-    // <section> background inside <main>.
+    // One full-viewport workspace panel: collapsible history rail on the left,
+    // spacious reading & tutoring canvas on the right.
     <div
       ref={panelRef}
       role="region"
       aria-label="Ask AI"
-      className="card flex overflow-hidden [--ask-gap:12px] [--ask-dock:calc(4rem+env(safe-area-inset-bottom))] md:[--ask-dock:0px] md:[--ask-gap:24px]"
+      className="card flex overflow-hidden [--ask-gap:8px] [--ask-dock:calc(4rem+env(safe-area-inset-bottom))] md:[--ask-dock:0px] md:[--ask-gap:12px]"
       style={{
         height:
           panelTop === null
@@ -701,37 +1021,56 @@ export default function Chatbot({ onDraftReady }) {
             : `max(${MIN_PANEL}px, calc(100dvh - ${panelTop}px - var(--ask-gap) - var(--ask-dock)))`,
       }}
     >
-      {/* ── Rail (lg and up) ── */}
-      <aside aria-label="Your chats" className="hidden w-[260px] flex-shrink-0 flex-col border-r border-line bg-surface-sunken/60 lg:flex">
-        <ConversationRail {...railProps} />
-      </aside>
+      {/* ── Collapsible Rail (lg and up) ── */}
+      {railOpen && (
+        <aside aria-label="Your chats" className="hidden w-[248px] flex-shrink-0 flex-col border-r border-line bg-surface-sunken/60 lg:flex">
+          <ConversationRail {...railProps} onCollapse={toggleRail} />
+        </aside>
+      )}
 
-      {/* ── Conversation ── */}
+      {/* ── Conversation Canvas ── */}
       <div className="flex min-w-0 flex-1 flex-col">
-        {/* Below lg the rail is a drawer, opened from the panel's own header. */}
-        <div className="flex flex-shrink-0 items-center justify-between gap-2 border-b border-line px-1.5 lg:hidden">
-          <button
-            type="button"
-            onClick={() => setSidebarOpen(true)}
-            className="inline-flex min-h-touch items-center gap-2 rounded-control px-2.5 text-sm font-semibold text-ink-muted transition-colors duration-fast hover:text-ink"
-            aria-label="Open your chats"
-          >
-            <FaBars size={13} aria-hidden="true" />
-            Chats
-          </button>
+        {/* Compact 42px subheader bar: rail toggle + current chat title + new chat */}
+        <div className={`flex h-[42px] flex-shrink-0 items-center justify-between gap-2 border-b border-line/70 px-2.5 md:px-4 ${railOpen && messages.length === 0 ? "lg:hidden" : ""}`}>
+          <div className="flex min-w-0 items-center gap-1.5">
+            <button
+              type="button"
+              onClick={() => setSidebarOpen(true)}
+              className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-ink-muted transition-colors duration-fast hover:bg-surface-sunken hover:text-ink lg:hidden"
+              aria-label="Open your chats"
+              title="Open chats"
+            >
+              <FaBars size={13} aria-hidden="true" />
+            </button>
+            {!railOpen && (
+              <button
+                type="button"
+                onClick={toggleRail}
+                className="hidden lg:inline-flex h-8 w-8 items-center justify-center rounded-lg text-ink-muted transition-colors duration-fast hover:bg-surface-sunken hover:text-ink"
+                aria-label="Show chat history"
+                title="Show chat history"
+              >
+                <FiSidebar size={15} aria-hidden="true" />
+              </button>
+            )}
+            <span className="truncate text-xs font-semibold text-ink-muted">
+              {activeTitle}
+            </span>
+          </div>
+
           <button
             type="button"
             onClick={handleNewChat}
-            className="inline-flex min-h-touch items-center gap-2 rounded-control px-2.5 text-sm font-semibold text-ink-muted transition-colors duration-fast hover:text-ink"
+            className={`inline-flex h-8 items-center gap-1.5 rounded-lg px-2.5 text-xs font-semibold text-ink-muted transition-colors duration-fast hover:bg-surface-sunken hover:text-ink ${railOpen ? "lg:hidden" : ""}`}
           >
-            <FaPlus size={10} aria-hidden="true" />
+            <FaPlus size={10} className="text-brand" aria-hidden="true" />
             New chat
           </button>
         </div>
 
         {/* Messages */}
         <div className="relative min-h-0 flex-1">
-          <div ref={listRef} className="no-scrollbar h-full overflow-y-auto py-5 md:py-6">
+          <div ref={listRef} className="no-scrollbar h-full overflow-y-auto py-4 md:py-5">
             {(status === "loading" || status === "loadingSession") && (
               <div className="flex h-full items-center justify-center gap-3 text-ink-muted" role="status">
                 <span className="h-4 w-4 animate-spin rounded-full border-2 border-line-strong border-t-brand" aria-hidden="true" />
@@ -739,82 +1078,166 @@ export default function Chatbot({ onDraftReady }) {
               </div>
             )}
 
-            {/* Empty state: centred, like the other Doubts empty states. */}
-            {messages.length === 0 && isIdle && (
+            {/* Empty state (Claude + Perplexity spatial pattern): centered heading +
+                embedded composer + subject starter chips with zero dead void. */}
+            {showCenteredEmpty && (
               <Motion.div
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                className="flex min-h-full flex-col items-center justify-center px-5 text-center"
+                transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
+                className="flex min-h-full flex-col items-center justify-center px-4 py-6"
               >
-                <h2 className="font-display text-xl font-bold text-ink sm:text-2xl">What are you stuck on?</h2>
-                <p className="mt-1.5 max-w-sm text-sm leading-relaxed text-ink-muted">
-                  Ask about anything in your syllabus.
-                  <span className="hidden sm:inline"> Choose Hint to work it out yourself, or Full answer to see it explained.</span>
-                </p>
-                <div role="group" aria-label="Suggested questions" className="mt-5 flex sm:mt-6 max-w-xl flex-wrap justify-center gap-2">
+                <div className="w-full max-w-2xl text-center">
+                  <h2 className="font-display text-2xl font-extrabold tracking-tight text-ink sm:text-[1.875rem]">
+                    What are you <Accent after="?">stuck on</Accent>
+                  </h2>
+                  <p className="mt-1.5 text-sm text-ink-muted">
+                    Ask anything from your syllabus — pick <strong>Hint</strong> to reason through it or <strong>Full answer</strong> for steps.
+                  </p>
+                </div>
+
+                <div className="mt-5 w-full max-w-2xl">
+                  {composerCard}
+                </div>
+
+                <div role="group" aria-label="Suggested questions" className="mt-3.5 flex w-full max-w-2xl flex-wrap items-center justify-center gap-2">
                   {SUGGESTIONS.map((s) => (
                     <button
                       key={s.text}
                       type="button"
                       onClick={() => sendMessage(s.text)}
                       disabled={limitShown}
-                      className="inline-flex min-h-touch items-center rounded-full border border-line bg-surface px-4 text-[0.8125rem] font-medium text-ink-muted transition-colors duration-fast ease-brand hover:border-line-strong hover:text-ink disabled:cursor-not-allowed disabled:opacity-60"
+                      className="group inline-flex items-center gap-2 rounded-full border border-line bg-surface-sunken/70 px-3.5 py-1.5 text-xs font-medium text-ink transition-all duration-fast ease-brand hover:border-brand/45 hover:bg-surface hover:shadow-e1 active:scale-[0.985] disabled:cursor-not-allowed disabled:opacity-60"
                     >
-                      {s.label}
+                      <span className="font-bold text-brand">{s.tag}</span>
+                      <span className="text-ink-muted group-hover:text-ink">{s.label}</span>
+                      <FiArrowUpRight size={12} className="text-ink-subtle group-hover:text-brand" aria-hidden="true" />
                     </button>
                   ))}
                 </div>
               </Motion.div>
             )}
 
-            {/* Message list: the student's words in a soft bubble at right;
-                the answer as plain text at left, where it is easiest to read. */}
+            {/* Message list: student prompts as compact right-aligned cards;
+                tutor replies as full-width editorial prose with actions & follow-ups. */}
             {messages.map((msg, idx) => {
               const isUser = msg.role === "user";
               const content = msg.content;
+              const isLastAi = !isUser && idx === messages.length - 1;
+              const isVideo = !isUser && isVideoMessage(msg);
+              const isCopied = copiedIdx === idx;
+              const isSpeaking = speakingIdx === idx;
+              const followUps = [
+                { label: "Give an example", prompt: "Can you give a concrete everyday example of this?" },
+                { label: "Quiz me on this", prompt: "Ask me 1 quick practice question on this topic to test my understanding." },
+                { label: "Explain simpler", prompt: "Explain this again in simpler words step by step." },
+              ];
               return (
                 <Motion.div
                   key={`${msg.createdAt || idx}-${idx}`}
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
-                  className="mx-auto w-full max-w-3xl px-4 py-2 md:px-6"
+                  className="mx-auto w-full max-w-3xl px-4 py-2.5 md:px-6"
                 >
-                  <div className={`flex flex-col gap-1 ${isUser ? "ml-auto max-w-[85%] items-end md:max-w-[75%]" : "items-start"}`}>
-                    <div
-                      className={
-                        isUser
-                          ? `rounded-control rounded-br-md bg-surface-sunken px-4 py-2.5 text-sm leading-relaxed text-ink ${
-                              msg.failed ? "ring-1 ring-inset ring-critical/45" : ""
-                            }`
-                          : "w-full text-sm leading-relaxed text-ink"
-                      }
-                    >
-                      {!isUser && isVideoMessage(msg) ? (
-                        <VideoMessageCard msg={msg} />
-                      ) : isUser ? (
+                  {isUser ? (
+                    <div className="ml-auto flex max-w-[85%] flex-col items-end gap-1 md:max-w-[75%]">
+                      <div
+                        className={`rounded-2xl rounded-br-sm border border-line bg-surface-sunken px-4 py-2.5 text-sm leading-relaxed text-ink ${
+                          msg.failed ? "ring-1 ring-inset ring-critical/45" : ""
+                        }`}
+                      >
                         <span className="whitespace-pre-wrap">{content}</span>
-                      ) : (
-                        <Markdown>{content}</Markdown>
-                      )}
-                      {msg.fileUrl && (
-                        <a
-                          href={msg.fileUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="mt-2 flex items-center gap-1.5 text-xs text-brand underline underline-offset-2"
-                        >
-                          <FaPaperclip size={10} aria-hidden="true" />
-                          {msg.fileName || "Attachment"}
-                        </a>
-                      )}
+                        {msg.fileUrl && (
+                          <a
+                            href={msg.fileUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-2 flex items-center gap-1.5 text-xs text-brand underline underline-offset-2"
+                          >
+                            <FaPaperclip size={10} aria-hidden="true" />
+                            {msg.fileName || "Attachment"}
+                          </a>
+                        )}
+                      </div>
+                      <p className="px-0.5 text-micro text-ink-subtle">
+                        You · {formatTime(msg.createdAt)}
+                        {msg.failed && <span className="font-semibold text-critical"> · Not sent</span>}
+                      </p>
                     </div>
-                    <p className="px-0.5 text-micro text-ink-subtle">
-                      {isUser ? "You" : "Kanthast AI"} · {formatTime(msg.createdAt)}
-                      {msg.failed && <span className="font-semibold text-critical"> · Not sent</span>}
-                    </p>
-                  </div>
+                  ) : (
+                    <div className="flex flex-col items-start gap-2">
+                      <div className="flex items-center gap-2">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-soft text-brand ring-1 ring-brand/20" aria-hidden="true">
+                          <FiCpu size={12} />
+                        </span>
+                        <span className="text-xs font-semibold text-ink">Kanthast AI</span>
+                        <span className="text-micro text-ink-subtle">· {formatTime(msg.createdAt)}</span>
+                      </div>
+
+                      <div className="w-full text-[0.9375rem] leading-[1.68] text-ink sm:pl-8" aria-live={isLastAi ? "polite" : undefined}>
+                        {isVideo ? (
+                          <VideoMessageCard msg={msg} />
+                        ) : (
+                          <Markdown>{content}</Markdown>
+                        )}
+                        {msg.fileUrl && (
+                          <a
+                            href={msg.fileUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-2 flex items-center gap-1.5 text-xs text-brand underline underline-offset-2"
+                          >
+                            <FaPaperclip size={10} aria-hidden="true" />
+                            {msg.fileName || "Attachment"}
+                          </a>
+                        )}
+
+                        {!isVideo && typeof content === "string" && content.trim().length > 0 && (
+                          <div className="mt-2.5 flex flex-wrap items-center gap-1">
+                            <button
+                              type="button"
+                              onClick={() => copyMessage(idx, content)}
+                              className="inline-flex items-center gap-1.5 rounded-lg px-2 py-1 text-xs font-medium text-ink-subtle transition-colors duration-fast hover:bg-surface-sunken hover:text-ink"
+                              aria-label={isCopied ? "Copied answer" : "Copy answer"}
+                            >
+                              {isCopied ? <FiCheck size={13} className="text-positive" aria-hidden="true" /> : <FiCopy size={13} aria-hidden="true" />}
+                              <span>{isCopied ? "Copied" : "Copy"}</span>
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => toggleSpeak(idx, content)}
+                              className={`inline-flex items-center gap-1.5 rounded-lg px-2 py-1 text-xs font-medium transition-colors duration-fast ${
+                                isSpeaking
+                                  ? "bg-brand-soft text-brand"
+                                  : "text-ink-subtle hover:bg-surface-sunken hover:text-ink"
+                              }`}
+                              aria-label={isSpeaking ? "Stop reading aloud" : "Listen to answer"}
+                            >
+                              {isSpeaking ? <FiVolumeX size={13} aria-hidden="true" /> : <FiVolume2 size={13} aria-hidden="true" />}
+                              <span>{isSpeaking ? "Stop" : "Listen"}</span>
+                            </button>
+                          </div>
+                        )}
+
+                        {isLastAi && isIdle && !limitShown && !isVideo && (
+                          <div className="mt-3 flex flex-wrap gap-1.5" role="group" aria-label="Follow-up prompts">
+                            {followUps.map((chip) => (
+                              <button
+                                key={chip.label}
+                                type="button"
+                                onClick={() => sendMessage(chip.prompt)}
+                                className="inline-flex items-center gap-1 rounded-full border border-line bg-surface-sunken/70 px-3 py-1.5 text-xs font-medium text-ink-muted transition-all duration-fast hover:border-brand/40 hover:bg-surface hover:text-ink active:scale-[0.98]"
+                              >
+                                <span>{chip.label}</span>
+                                <FiArrowUpRight size={11} className="text-ink-subtle" aria-hidden="true" />
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
                 </Motion.div>
               );
             })}
@@ -870,152 +1293,55 @@ export default function Chatbot({ onDraftReady }) {
           </div>
         </div>
 
-        {/* Input area */}
-        <div className="flex-shrink-0 border-t border-line px-3 pb-3 pt-3 md:px-6 md:pb-4">
-          <div className="mx-auto w-full max-w-3xl">
-            {/* After an answer: take what is still unclear to the class. */}
-            {hasAnswer && isIdle && activeSessionId && (
-              <div className="mb-2">
-                <button
-                  type="button"
-                  onClick={askClass}
-                  disabled={drafting || status === "sending"}
-                  aria-busy={drafting || undefined}
-                  className="-ml-1 inline-flex min-h-touch items-center gap-2 rounded-control px-1 text-[0.8125rem] font-semibold text-ink-muted transition-colors duration-fast ease-brand hover:text-brand disabled:cursor-not-allowed disabled:opacity-60"
-                >
-                  {drafting ? (
-                    <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent" aria-hidden="true" />
-                  ) : (
-                    <FaComments aria-hidden="true" className="text-brand" />
-                  )}
-                  {drafting ? "Writing your doubt…" : "Still confused? Ask your class"}
-                </button>
-              </div>
-            )}
-
-            {/* Attachment preview */}
-            {attachment && (
-              <div className="mb-2 flex items-center gap-2 rounded-control border border-line bg-surface-sunken pl-3 text-sm text-ink">
-                <FaPaperclip size={12} className="flex-shrink-0 text-brand" aria-hidden="true" />
-                <span className="flex-1 truncate font-medium">{attachment.fileName}</span>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setAttachment(null);
-                    if (fileInputRef.current) fileInputRef.current.value = "";
-                    showNotice("success", "Attachment removed");
-                  }}
-                  className="flex h-touch w-touch items-center justify-center rounded-control text-ink-muted transition hover:bg-surface hover:text-ink"
-                  aria-label={`Remove attachment ${attachment.fileName}`}
-                >
-                  <FaTimes size={11} />
-                </button>
-              </div>
-            )}
-
-            {uploading && (
-              <div className="mb-2 flex items-center gap-2 rounded-control border border-line bg-surface-sunken px-3 py-2 text-sm text-ink-muted" role="status">
-                <span className="h-4 w-4 flex-shrink-0 animate-spin rounded-full border-2 border-brand border-t-transparent" aria-hidden="true" />
-                Uploading file…
-              </div>
-            )}
-
-            {/* Input box */}
-            <div className="relative flex items-end gap-1 rounded-control border border-line-strong bg-surface transition-colors duration-fast focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/20">
-              <button
-                type="button"
-                onClick={() => fileInputRef.current?.click()}
-                disabled={uploading}
-                className="m-0.5 flex h-touch w-touch flex-shrink-0 items-center justify-center self-end rounded-control text-ink-subtle transition hover:bg-surface-sunken hover:text-ink disabled:cursor-not-allowed"
-                aria-label="Attach a file"
-              >
-                <FaPaperclip size={14} className={uploading ? "animate-pulse" : ""} />
-              </button>
-              <input ref={fileInputRef} type="file" className="hidden" onChange={onFileChange} tabIndex={-1} />
-
-              <textarea
-                ref={textareaRef}
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" && !e.shiftKey) {
-                    e.preventDefault();
-                    sendMessage();
-                  }
-                }}
-                placeholder={limitShown ? "You can ask the AI again tomorrow" : "Ask a question"}
-                aria-label="Message the assistant"
-                disabled={limitShown}
-                className="flex-1 resize-none bg-transparent py-3 text-sm leading-relaxed text-ink outline-none placeholder:text-ink-subtle focus-visible:!outline-none disabled:cursor-not-allowed"
-                rows={1}
-                style={{ maxHeight: 180, overflowY: "auto" }}
-              />
-
-              <button
-                type="button"
-                onClick={() => sendMessage()}
-                disabled={!canSend}
-                className="m-0.5 flex h-touch w-touch flex-shrink-0 items-center justify-center self-end rounded-[11px] bg-brand text-brand-fg transition-colors duration-fast ease-brand hover:bg-brand-hover disabled:cursor-not-allowed disabled:bg-disabled disabled:text-disabled-fg"
-                aria-label="Send message"
-                title="Send"
-              >
-                <FaPaperPlane size={12} />
-              </button>
-            </div>
-
-            {/* Answer style and today's allowance. */}
-            <div className="mt-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
-              <div role="group" aria-label="How the AI answers" className="inline-flex h-11 items-center rounded-full bg-surface-sunken p-1 ring-1 ring-inset ring-line">
-                {MODES.map((option) => (
+        {/* Unified composer dock (shown when conversation has messages or alert) */}
+        {!showCenteredEmpty && (
+          <div className="flex-shrink-0 border-t border-line/70 bg-surface/95 px-3 pb-3 pt-2.5 backdrop-blur-sm md:px-6 md:pb-3.5">
+            <div className="mx-auto w-full max-w-3xl">
+              {/* After an answer: take what is still unclear to the class. */}
+              {hasAnswer && isIdle && activeSessionId && (
+                <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
                   <button
-                    key={option.value}
                     type="button"
-                    aria-pressed={mode === option.value}
-                    onClick={() => chooseMode(option.value)}
-                    className={`h-full rounded-full px-3.5 text-xs font-semibold transition-colors duration-fast ease-brand ${
-                      mode === option.value ? "bg-surface text-ink shadow-e1 ring-1 ring-inset ring-line" : "text-ink-muted hover:text-ink"
-                    }`}
+                    onClick={askClass}
+                    disabled={drafting || status === "sending"}
+                    aria-busy={drafting || undefined}
+                    className="inline-flex min-h-9 items-center gap-2 rounded-full border border-brand/25 bg-brand-soft/60 px-3 py-1 text-xs font-semibold text-brand transition-colors duration-fast ease-brand hover:bg-brand-soft disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {option.label}
+                    {drafting ? (
+                      <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent" aria-hidden="true" />
+                    ) : (
+                      <FaComments aria-hidden="true" />
+                    )}
+                    {drafting ? "Writing your doubt…" : "Still confused? Ask your class"}
                   </button>
-                ))}
-              </div>
-              {quotaLine && (
-                <p className="text-xs tabular-nums text-ink-subtle" aria-live="polite">
-                  {quotaShort ? (
-                    <>
-                      <span className="sm:hidden">{quotaShort}</span>
-                      <span className="hidden sm:inline">{quotaLine}</span>
-                    </>
-                  ) : (
-                    quotaLine
+                </div>
+              )}
+
+              {composerCard}
+
+              {error && (
+                <div
+                  role="alert"
+                  className="mt-2 flex items-center gap-2 rounded-control border border-critical/35 bg-critical-soft pl-3 text-sm text-critical"
+                >
+                  <FaExclamationTriangle size={12} className="flex-shrink-0" aria-hidden="true" />
+                  <p className="flex-1 py-2.5 leading-snug">{error.text}</p>
+                  {error.retry && (
+                    <button
+                      type="button"
+                      onClick={error.retry}
+                      disabled={status === "sending"}
+                      className="inline-flex min-h-touch flex-shrink-0 items-center gap-1.5 rounded-control px-3 font-semibold text-critical transition-colors duration-fast hover:bg-critical/12 disabled:cursor-not-allowed"
+                    >
+                      <FaRedo size={10} aria-hidden="true" />
+                      Try again
+                    </button>
                   )}
-                </p>
+                </div>
               )}
             </div>
-
-            {error && (
-              <div
-                role="alert"
-                className="mt-2 flex items-center gap-2 rounded-control border border-critical/35 bg-critical-soft pl-3 text-sm text-critical"
-              >
-                <FaExclamationTriangle size={12} className="flex-shrink-0" aria-hidden="true" />
-                <p className="flex-1 py-2.5 leading-snug">{error.text}</p>
-                {error.retry && (
-                  <button
-                    type="button"
-                    onClick={error.retry}
-                    disabled={status === "sending"}
-                    className="inline-flex min-h-touch flex-shrink-0 items-center gap-1.5 rounded-control px-3 font-semibold text-critical transition-colors duration-fast hover:bg-critical/12 disabled:cursor-not-allowed"
-                  >
-                    <FaRedo size={10} aria-hidden="true" />
-                    Try again
-                  </button>
-                )}
-              </div>
-            )}
           </div>
-        </div>
+        )}
       </div>
 
       {/* ── Drawer (below lg) ── */}

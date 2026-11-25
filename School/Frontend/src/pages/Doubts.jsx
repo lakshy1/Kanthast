@@ -1,11 +1,13 @@
-import { lazy, Suspense, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { FaCheck, FaChevronLeft, FaChevronRight, FaHeart, FaRegCommentDots, FaRegHeart, FaRobot } from "react-icons/fa";
+import { FiSearch, FiX } from "react-icons/fi";
 import Seo from "../components/Seo";
 import { Button, EmptyState, Field, Modal, Select } from "../components/ui";
 import ParentApproval from "../components/doubts/ParentApproval";
 import DoubtThread from "../components/doubts/DoubtThread";
 import DoubtsShell from "../components/doubts/DoubtsShell";
+import Chatbot from "./Chatbot";
 import {
   DOUBT_SUBJECTS,
   DRAFT_KEY,
@@ -21,6 +23,21 @@ import {
   timeAgo,
   toggleDoubtHelpful,
 } from "../utils/doubtsApi";
+import {
+  STALE_MS,
+  dedupeRequest,
+  getFeedCache,
+  getGateCache,
+  getTabUi,
+  invalidateFeedCaches,
+  isFresh,
+  patchDoubtInCaches,
+  patchTabUi,
+  setConsentCache,
+  setFeedCache,
+  setLastDoubtsSection,
+  setQuotaCache,
+} from "../utils/doubtsStore";
 import {
   getSchoolClassLabel,
   getStoredUser,
@@ -240,32 +257,65 @@ function Composer({ open, onClose, onPosted, onDiscard, onMuted, quota, draft })
       size="lg"
     >
       <form onSubmit={submit} className="space-y-4">
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Select id="doubt-subject" label="Subject" value={subject} onChange={setSubject} options={DOUBT_SUBJECTS} placeholder="Choose a subject" />
-          <Field id="doubt-chapter" label="Chapter (optional)" value={chapter} onChange={(e) => setChapter(e.target.value)} maxLength={120} />
+        {/* Quick Subject Chips */}
+        <div>
+          <span className="label">Subject</span>
+          <div className="flex flex-wrap gap-1.5 mb-2">
+            {DOUBT_SUBJECTS.map((subj) => {
+              const active = subject === subj;
+              return (
+                <button
+                  key={subj}
+                  type="button"
+                  onClick={() => setSubject(subj)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-bold border transition-all active:scale-95 ${
+                    active
+                      ? "bg-brand text-brand-fg border-brand shadow-e1"
+                      : "bg-surface-sunken text-ink-muted border-line hover:border-line-strong hover:text-ink"
+                  }`}
+                >
+                  {subj}
+                </button>
+              );
+            })}
+          </div>
+          <Field id="doubt-chapter" label="Chapter (optional)" value={chapter} onChange={(e) => setChapter(e.target.value)} maxLength={120} placeholder="e.g. Ch 1: Chemical Reactions" />
         </div>
-        <Field
-          id="doubt-title"
-          label="Your question"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          maxLength={150}
-          placeholder="Why does ice float on water?"
-          required
-        />
+
+        <div>
+          <div className="flex items-center justify-between mb-1.5">
+            <label htmlFor="doubt-title" className="label mb-0">
+              Your question
+            </label>
+            <span className="text-micro font-medium text-ink-subtle tabular-nums">
+              {title.length} / 150
+            </span>
+          </div>
+          <input
+            id="doubt-title"
+            className="field"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            maxLength={150}
+            placeholder="Why does ice float on water?"
+            required
+          />
+        </div>
 
         {similar.length > 0 && (
-          <div className="rounded-control border border-line bg-surface-sunken p-4">
-            <p className="text-sm font-semibold text-ink">Already asked in your class</p>
-            <ul className="mt-2 space-y-1.5">
+          <div className="rounded-control border border-brand/25 bg-brand-soft/35 p-4">
+            <p className="text-xs font-extrabold uppercase tracking-wider text-brand">
+              Already asked in your class
+            </p>
+            <ul className="mt-2.5 space-y-2">
               {similar.map((item) => (
-                <li key={item.id}>
-                  <Link to={`/doubts/${item.id}`} onClick={close} className="text-sm text-brand underline-offset-2 hover:underline">
+                <li key={item.id} className="flex items-center justify-between gap-2 text-sm">
+                  <Link to={`/doubts/${item.id}`} onClick={close} className="font-semibold text-ink hover:text-brand underline-offset-2 hover:underline truncate">
                     {item.title}
                   </Link>
-                  <span className="ml-2 text-xs text-ink-subtle">
-                    {item.replyCount} {item.replyCount === 1 ? "answer" : "answers"}
-                    {item.answered ? " · answered" : ""}
+                  <span className="shrink-0 text-micro font-semibold text-ink-subtle tabular-nums">
+                    {item.replyCount} {item.replyCount === 1 ? "reply" : "replies"}
+                    {item.answered ? " · Resolved" : ""}
                   </span>
                 </li>
               ))}
@@ -274,14 +324,25 @@ function Composer({ open, onClose, onPosted, onDiscard, onMuted, quota, draft })
         )}
 
         <div>
-          <label htmlFor="doubt-body" className="label">
-            Details (optional)
-          </label>
+          <div className="flex items-center justify-between mb-1.5">
+            <label htmlFor="doubt-body" className="label mb-0">
+              Details (optional)
+            </label>
+            <span className="text-micro font-medium text-ink-subtle tabular-nums">
+              {body.length} / 4000
+            </span>
+          </div>
           <textarea
             id="doubt-body"
-            className="field min-h-[130px]"
+            className="field min-h-[120px]"
             value={body}
             onChange={(e) => setBody(e.target.value)}
+            onKeyDown={(e) => {
+              if ((e.metaKey || e.ctrlKey) && e.key === "Enter" && subject && title.trim().length >= 8 && left !== 0) {
+                e.preventDefault();
+                submit(e);
+              }
+            }}
             maxLength={4000}
             placeholder="What have you tried? Where did you get stuck?"
           />
@@ -363,10 +424,12 @@ const AVATAR_TONES = 5;
 const avatarTone = (name) => [...String(name)].reduce((sum, ch) => sum + ch.charCodeAt(0), 0) % AVATAR_TONES;
 
 function DoubtCard({ doubt, from }) {
-  const [helped, setHelped] = useState(Boolean(doubt.helpedByMe));
-  const [helpfulCount, setHelpfulCount] = useState(doubt.helpfulCount || 0);
+  const [helpOverride, setHelpOverride] = useState(null);
   const [busy, setBusy] = useState(false);
   const [helpError, setHelpError] = useState("");
+
+  const helped = helpOverride ? helpOverride.helped : Boolean(doubt.helpedByMe);
+  const helpfulCount = helpOverride ? helpOverride.helpfulCount : doubt.helpfulCount || 0;
 
   const removed = doubt.status === "removed";
   const name = doubt.mine ? "You" : doubt.author?.firstName || "A classmate";
@@ -382,8 +445,13 @@ function DoubtCard({ doubt, from }) {
     setHelpError("");
     try {
       const data = await toggleDoubtHelpful(doubt.id);
-      setHelped(Boolean(data.helpedByMe));
-      setHelpfulCount(data.helpfulCount || 0);
+      const next = { helped: Boolean(data.helpedByMe), helpfulCount: data.helpfulCount || 0 };
+      setHelpOverride(next);
+      patchDoubtInCaches(doubt.id, (prev) => ({
+        ...prev,
+        helpedByMe: next.helped,
+        helpfulCount: next.helpfulCount,
+      }));
     } catch (err) {
       setHelpError(err.message);
     } finally {
@@ -405,24 +473,30 @@ function DoubtCard({ doubt, from }) {
             </span>
           </span>
           {statusLabel ? (
-            <span className="shrink-0 rounded-md bg-caution-soft px-2 py-0.5 text-xs font-semibold text-caution">{statusLabel}</span>
+            <span className="shrink-0 rounded-full bg-caution-soft px-2.5 py-0.5 text-micro font-bold text-caution">{statusLabel}</span>
           ) : doubt.acceptedReply ? (
-            <span className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-positive">
-              <FaCheck aria-hidden="true" className="text-[0.625rem]" /> Answered
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-positive-soft px-2.5 py-0.5 text-micro font-bold text-positive">
+              <FaCheck aria-hidden="true" className="text-[0.6rem]" /> Resolved
             </span>
           ) : doubt.hasAiAnswer ? (
-            <span className="shrink-0 text-xs font-medium text-ink-subtle">AI answered</span>
-          ) : null}
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-brand-soft px-2.5 py-0.5 text-micro font-bold text-brand">
+              <FaRobot aria-hidden="true" className="text-[0.65rem]" /> AI answered
+            </span>
+          ) : (
+            <span className="shrink-0 rounded-full border border-line bg-surface-sunken px-2.5 py-0.5 text-micro font-semibold text-ink-subtle">
+              Open
+            </span>
+          )}
         </header>
 
         <div className="dbc-copy">
-          <h3 className="font-display text-base font-bold leading-snug text-ink">
+          <h3 className="font-display text-[1.0625rem] font-extrabold leading-snug tracking-tight text-ink">
             {/* A removed doubt (only shown to its author) has no thread to open. */}
             {removed ? doubt.title : (
               <Link to={`/doubts/${doubt.id}`} state={{ from }} className="dbc-open">{doubt.title}</Link>
             )}
           </h3>
-          {doubt.body && <p className="mt-1.5 line-clamp-3 text-sm leading-relaxed text-ink-muted">{doubt.body}</p>}
+          {doubt.body && <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-ink-muted">{doubt.body}</p>}
         </div>
 
         <footer className="dbc-foot">
@@ -441,7 +515,7 @@ function DoubtCard({ doubt, from }) {
           <span className="text-xs text-ink-subtle">{timeAgo(doubt.createdAt)}</span>
           <span className="dbc-replies" aria-label={answers}>
             <FaRegCommentDots aria-hidden="true" />
-            <span className="tabular-nums">{doubt.replyCount}</span>
+            <span className="tabular-nums">{answers}</span>
           </span>
         </footer>
         {helpError && <p role="alert" className="dbc-error">{helpError}</p>}
@@ -453,14 +527,24 @@ function DoubtCard({ doubt, from }) {
 // Laptop: a two-column grid. Phone: one card at a time, swiped sideways.
 function DoubtDeck({ doubts, from, hasMore, loadingMore, onLoadMore }) {
   const deckRef = useRef(null);
-  const [index, setIndex] = useState(0);
-  const last = doubts.length - 1;
+  const [index, setIndex] = useState(() => getTabUi(from)?.deckIndex || 0);
+  const last = Math.max(0, doubts.length - 1);
   const current = Math.min(index, last);
+
+  useEffect(() => {
+    const deck = deckRef.current;
+    if (!deck?.clientWidth || current <= 0) return;
+    deck.scrollTo({ left: current * deck.clientWidth, behavior: "auto" });
+    // Restore horizontal card position on mount only.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const onScroll = () => {
     const deck = deckRef.current;
     if (!deck?.clientWidth) return;
-    setIndex(Math.round(deck.scrollLeft / deck.clientWidth));
+    const nextIdx = Math.round(deck.scrollLeft / deck.clientWidth);
+    setIndex(nextIdx);
+    patchTabUi(from, { deckIndex: nextIdx });
   };
 
   const goTo = (next) => {
@@ -511,84 +595,268 @@ function QuietEmpty({ title, children }) {
   );
 }
 
+function DoubtFeedSkeleton() {
+  return (
+    <div className="grid gap-4 md:grid-cols-2" aria-hidden="true">
+      {[0, 1, 2, 3].map((idx) => (
+        <div key={idx} className="dbc-card animate-pulse motion-reduce:animate-none">
+          <div className="flex items-center gap-2.5">
+            <div className="h-9 w-9 rounded-full bg-surface-sunken" />
+            <div className="flex-1 space-y-1.5">
+              <div className="h-3.5 w-24 rounded bg-surface-sunken" />
+              <div className="h-3 w-36 rounded bg-surface-sunken" />
+            </div>
+            <div className="h-5 w-16 rounded-full bg-surface-sunken" />
+          </div>
+          <div className="space-y-2 pt-1">
+            <div className="h-4 w-5/6 rounded bg-surface-sunken" />
+            <div className="h-3.5 w-2/3 rounded bg-surface-sunken" />
+          </div>
+          <div className="mt-auto flex items-center justify-between border-t border-line pt-3">
+            <div className="h-7 w-16 rounded-full bg-surface-sunken" />
+            <div className="h-4 w-12 rounded bg-surface-sunken" />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function computeSubjectCounts(doubts) {
+  const map = { [ALL]: doubts.length };
+  for (const d of doubts) {
+    if (d.subject) map[d.subject] = (map[d.subject] || 0) + 1;
+  }
+  return map;
+}
+
 function DoubtList({ tab, reloadKey, classLabel }) {
-  const [subject, setSubject] = useState(ALL);
-  const [doubts, setDoubts] = useState([]);
-  const [nextBefore, setNextBefore] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const savedUi = getTabUi(tab);
+  const initialSubject = tab === "class" ? savedUi?.subject || ALL : ALL;
+  const initialFeed = getFeedCache(tab, initialSubject === ALL ? "" : initialSubject);
+
+  const [subject, setSubject] = useState(() => initialSubject);
+  const [statusFilter, setStatusFilter] = useState(() => savedUi?.statusFilter || "all"); // all | answered | open
+  const [searchQuery, setSearchQuery] = useState(() => savedUi?.searchQuery || "");
+  const [doubts, setDoubts] = useState(() => initialFeed?.doubts || []);
+  const [nextBefore, setNextBefore] = useState(() => initialFeed?.nextBefore || null);
+  const [loading, setLoading] = useState(() => !initialFeed);
   const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState("");
+  const [subjectCounts, setSubjectCounts] = useState(() => {
+    if (savedUi?.subjectCounts) return savedUi.subjectCounts;
+    if (initialSubject === ALL && initialFeed?.doubts) return computeSubjectCounts(initialFeed.doubts);
+    return {};
+  });
   const requestId = useRef(0);
+  const lastReloadKey = useRef(reloadKey);
 
-  const load = useCallback(async () => {
+  const load = useCallback(async ({ targetSubject = subject, quiet = false } = {}) => {
     const id = ++requestId.current;
-    setLoading(true);
+    const subjParam = tab === "class" && targetSubject !== ALL ? targetSubject : "";
+    if (!quiet) setLoading(true);
     setError("");
     try {
-      const data = tab === "mine" ? await getMyDoubts() : await getFeed({ subject: subject === ALL ? "" : subject });
+      const reqKey = `feed:${tab}:${subjParam || "__all__"}`;
+      const data = await dedupeRequest(reqKey, () =>
+        tab === "mine" ? getMyDoubts() : getFeed({ subject: subjParam })
+      );
       if (id !== requestId.current) return;
-      setDoubts(data.doubts || []);
-      setNextBefore(data.nextBefore || null);
+      const list = data.doubts || [];
+      const cursor = data.nextBefore || null;
+      setDoubts(list);
+      setNextBefore(cursor);
+      setFeedCache(tab, subjParam, { doubts: list, nextBefore: cursor });
+      if (tab === "class" && !subjParam) {
+        const counts = computeSubjectCounts(list);
+        setSubjectCounts(counts);
+        patchTabUi(tab, { subjectCounts: counts });
+      }
     } catch (err) {
-      if (id === requestId.current) setError(err.message);
+      if (id === requestId.current && !quiet) setError(err.message);
     } finally {
       if (id === requestId.current) setLoading(false);
     }
   }, [tab, subject]);
 
   useEffect(() => {
-    load();
-  }, [load, reloadKey]);
+    const forced = reloadKey !== lastReloadKey.current;
+    lastReloadKey.current = reloadKey;
+    const subjParam = tab === "class" && subject !== ALL ? subject : "";
+    const cached = getFeedCache(tab, subjParam);
+    if (forced || !cached) {
+      load({ targetSubject: subject, quiet: Boolean(cached) });
+    } else if (!isFresh(cached.fetchedAt, STALE_MS.feed)) {
+      load({ targetSubject: subject, quiet: true });
+    }
+  }, [load, reloadKey, tab, subject]);
+
+  const selectSubject = (nextSubj) => {
+    setSubject(nextSubj);
+    patchTabUi(tab, { subject: nextSubj, deckIndex: 0 });
+    const subjParam = nextSubj === ALL ? "" : nextSubj;
+    const hit = getFeedCache(tab, subjParam);
+    if (hit) {
+      setDoubts(hit.doubts || []);
+      setNextBefore(hit.nextBefore || null);
+      setLoading(false);
+      setError("");
+      if (!isFresh(hit.fetchedAt, STALE_MS.feed)) {
+        load({ targetSubject: nextSubj, quiet: true });
+      }
+    } else {
+      load({ targetSubject: nextSubj, quiet: false });
+    }
+  };
+
+  const selectStatus = (nextStatus) => {
+    setStatusFilter(nextStatus);
+    patchTabUi(tab, { statusFilter: nextStatus, deckIndex: 0 });
+  };
+
+  const changeSearch = (nextQuery) => {
+    setSearchQuery(nextQuery);
+    patchTabUi(tab, { searchQuery: nextQuery, deckIndex: 0 });
+  };
 
   const loadMore = useCallback(async () => {
     setLoadingMore(true);
     try {
-      const data = await getFeed({ subject: subject === ALL ? "" : subject, before: nextBefore });
-      setDoubts((prev) => [...prev, ...(data.doubts || [])]);
-      setNextBefore(data.nextBefore || null);
+      const subjParam = subject === ALL ? "" : subject;
+      const data = await getFeed({ subject: subjParam, before: nextBefore });
+      const merged = [...doubts, ...(data.doubts || [])];
+      const cursor = data.nextBefore || null;
+      setDoubts(merged);
+      setNextBefore(cursor);
+      setFeedCache(tab, subjParam, { doubts: merged, nextBefore: cursor });
     } catch (err) {
-      // Stop automatic loading on a phone, so a failure cannot retry in a loop.
       setNextBefore(null);
       setError(err.message);
     } finally {
       setLoadingMore(false);
     }
-  }, [subject, nextBefore]);
+  }, [tab, subject, nextBefore, doubts]);
 
-  const filtered = subject !== ALL;
-  const countLine = !loading && !error && doubts.length > 0
-    ? `${doubts.length}${nextBefore ? "+" : ""} ${doubts.length === 1 ? "doubt" : "doubts"}`
-    : "";
+  const statusCounts = useMemo(() => {
+    let answered = 0;
+    let open = 0;
+    for (const d of doubts) {
+      if (d.acceptedReply || d.hasAiAnswer || (d.replyCount || 0) > 0) answered++;
+      else open++;
+    }
+    return { all: doubts.length, answered, open };
+  }, [doubts]);
+
+  const visibleDoubts = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    return doubts.filter((d) => {
+      if (statusFilter === "answered" && !d.acceptedReply && !d.hasAiAnswer && (d.replyCount || 0) === 0) {
+        return false;
+      }
+      if (statusFilter === "open" && (d.acceptedReply || (d.replyCount || 0) > 0)) {
+        return false;
+      }
+      if (q) {
+        const hay = `${d.title || ""} ${d.body || ""} ${d.chapter || ""} ${d.subject || ""}`.toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+  }, [doubts, statusFilter, searchQuery]);
+
+  const filtered = subject !== ALL || statusFilter !== "all" || searchQuery.trim().length > 0;
 
   return (
-    <>
-      {tab === "class" && (
-        // Slim filter row: the subject at left, how many at right.
-        <div className="mb-3 flex items-center justify-between gap-3">
-          <div className="w-48 sm:w-52">
-            <Select
-              id="doubts-subject-filter"
-              value={subject}
-              onChange={setSubject}
-              options={[ALL, ...DOUBT_SUBJECTS]}
-              triggerClassName="min-h-[40px] py-2 text-sm font-semibold"
+    <div className="space-y-4">
+      {/* Ed Discussion / Linear Toolbar: Search + Status Pills + Subject Filter Pills */}
+      <div className="space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          {/* Search Input */}
+          <div className="relative flex-1 max-w-md">
+            <FiSearch size={15} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-subtle" />
+            <input
+              type="search"
+              value={searchQuery}
+              onChange={(e) => changeSearch(e.target.value)}
+              placeholder="Search questions or chapters…"
+              aria-label="Search doubts"
+              className="w-full h-10 pl-10 pr-8 rounded-full border border-line bg-surface text-sm text-ink placeholder:text-ink-subtle focus:outline-none focus:border-brand"
             />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => changeSearch("")}
+                aria-label="Clear search"
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-ink-subtle hover:text-ink"
+              >
+                <FiX size={13} />
+              </button>
+            )}
           </div>
-          {countLine && <span className="db-subtle text-[0.8125rem] tabular-nums">{countLine}</span>}
+
+          {/* Status Segmented Toggle with Counts */}
+          <div className="flex items-center justify-end">
+            <div className="inline-flex items-center rounded-full border border-line bg-surface p-0.5">
+              {[
+                { id: "all", label: "All", n: statusCounts.all },
+                { id: "answered", label: "Answered", n: statusCounts.answered },
+                { id: "open", label: "Unanswered", n: statusCounts.open },
+              ].map((st) => (
+                <button
+                  key={st.id}
+                  type="button"
+                  onClick={() => selectStatus(st.id)}
+                  className={`px-3 py-1 rounded-full text-xs font-bold tabular-nums transition-colors ${
+                    statusFilter === st.id
+                      ? "bg-brand text-brand-fg"
+                      : "text-ink-muted hover:text-ink"
+                  }`}
+                >
+                  {st.label}{!loading && st.n > 0 ? ` (${st.n})` : ""}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
-      )}
+
+        {/* Horizontal Subject Pills with Counts (Class feed) */}
+        {tab === "class" && (
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar">
+            {[ALL, ...DOUBT_SUBJECTS].map((subj) => {
+              const active = subject === subj;
+              const n = subjectCounts[subj];
+              return (
+                <button
+                  key={subj}
+                  type="button"
+                  onClick={() => selectSubject(subj)}
+                  className={`shrink-0 px-3.5 py-1.5 rounded-full text-xs font-bold border tabular-nums transition-all active:scale-95 ${
+                    active
+                      ? "bg-brand text-brand-fg border-brand shadow-e1"
+                      : "bg-surface text-ink-muted border-line hover:border-line-strong hover:text-ink"
+                  }`}
+                >
+                  {subj}{typeof n === "number" && n > 0 ? ` (${n})` : ""}
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
 
       {loading ? (
-        <p className="db-subtle py-2 text-sm">Loading doubts…</p>
+        <DoubtFeedSkeleton />
       ) : error ? (
         <EmptyState variant="error" title="We couldn't load doubts" description={error} action="Try again" onAction={load} />
-      ) : doubts.length === 0 ? (
-        tab === "mine" ? (
+      ) : visibleDoubts.length === 0 ? (
+        tab === "mine" && !filtered ? (
           <QuietEmpty title="You haven't asked anything yet">
             Doubts you post to your class appear here, with their answers.
           </QuietEmpty>
         ) : filtered ? (
-          <QuietEmpty title={`No ${subject} doubts yet`}>Try another subject, or ask this one yourself.</QuietEmpty>
+          <QuietEmpty title="No matching doubts found">
+            Try clearing your search or switching subject/status filters.
+          </QuietEmpty>
         ) : (
           <QuietEmpty title={`No doubts in ${classLabel || "your class"} yet`}>
             Be the first to ask. If you want an answer right now, try Ask AI first.
@@ -597,7 +865,7 @@ function DoubtList({ tab, reloadKey, classLabel }) {
       ) : (
         <>
           <DoubtDeck
-            doubts={doubts}
+            doubts={visibleDoubts}
             from={tab}
             hasMore={tab === "class" && Boolean(nextBefore)}
             loadingMore={loadingMore}
@@ -612,7 +880,7 @@ function DoubtList({ tab, reloadKey, classLabel }) {
           )}
         </>
       )}
-    </>
+    </div>
   );
 }
 
@@ -624,8 +892,6 @@ function GateLoading() {
 
 // ─── Page ──────────────────────────────────────────────────────────────────
 
-const Chatbot = lazy(() => import("./Chatbot"));
-
 export default function Doubts({ section = "class" }) {
   const { id } = useParams();
   const location = useLocation();
@@ -634,17 +900,32 @@ export default function Doubts({ section = "class" }) {
   // On a thread, the tab marked is the list the student came from.
   const from = location.state?.from === "mine" ? "mine" : "class";
 
+  useEffect(() => {
+    if (current !== "thread") setLastDoubtsSection(current);
+  }, [current]);
+
+  const initialGate = getGateCache();
   const [schoolClass, setSchoolClass] = useState(() => getStoredUser()?.schoolClass || "");
-  const [consent, setConsent] = useState("loading"); // loading | approved | needed | error
+  const [consent, setConsent] = useState(() => initialGate.consent || "loading"); // loading | approved | needed | error
   const [error, setError] = useState("");
   const [attempt, setAttempt] = useState(0);
 
   useEffect(() => {
+    const cachedGate = getGateCache();
+    if (attempt === 0 && cachedGate.consent && isFresh(cachedGate.consentFetchedAt, STALE_MS.consent)) {
+      return undefined;
+    }
     let alive = true;
-    getConsent()
-      .then((data) => alive && setConsent(data.consent?.status === "approved" ? "approved" : "needed"))
+    dedupeRequest("consent", getConsent)
+      .then((data) => {
+        const status = data.consent?.status === "approved" ? "approved" : "needed";
+        setConsentCache(status);
+        if (alive) setConsent(status);
+      })
       .catch((err) => {
         if (!alive) return;
+        // Keep previously verified consent if a background revalidation fails.
+        if (getGateCache().consent === "approved") return;
         setError(err.message);
         setConsent("error");
       });
@@ -659,17 +940,25 @@ export default function Doubts({ section = "class" }) {
   const ready = Boolean(schoolClass) && consent === "approved";
 
   // Posts left today, shown beside "Ask your class" on every page.
-  const [quota, setQuota] = useState(null);
+  const [quota, setQuota] = useState(() => initialGate.quota ?? null);
   // A moderator's mute: reading and Ask AI still work, posting, replying and AI answers do not.
-  const [mute, setMute] = useState(() => readMute(null));
+  const [mute, setMute] = useState(() => initialGate.mute ?? readMute(null));
   useEffect(() => {
     if (!ready) return;
-    getQuota()
+    if (isFresh(getGateCache().quotaFetchedAt, STALE_MS.quota) && getGateCache().quota) return;
+    let alive = true;
+    dedupeRequest("quota", getQuota)
       .then((data) => {
+        const nextMute = readMute(data.mute);
+        setQuotaCache({ quota: data.quota, mute: nextMute });
+        if (!alive) return;
         setQuota(data.quota);
-        setMute(readMute(data.mute));
+        setMute(nextMute);
       })
       .catch(() => {});
+    return () => {
+      alive = false;
+    };
   }, [ready]);
 
   // The composer lives here, so "Ask your class" is the same on all four
@@ -680,7 +969,9 @@ export default function Doubts({ section = "class" }) {
   const [draftKey, setDraftKey] = useState(0);
   const [composing, setComposing] = useState(() => Boolean(draft && draft.open !== false));
   const onMuted = useCallback((data) => {
-    setMute(readMute(data));
+    const nextMute = readMute(data);
+    setMute(nextMute);
+    setQuotaCache({ mute: nextMute });
     setComposing(false);
   }, []);
   const [notice, setNotice] = useState(null); // { text, section }
@@ -715,7 +1006,10 @@ export default function Doubts({ section = "class" }) {
   const onPosted = (data) => {
     dropDraft();
     setComposing(false);
-    setQuota(data.quota || quota);
+    const nextQuota = data.quota || quota;
+    setQuota(nextQuota);
+    setQuotaCache({ quota: nextQuota });
+    invalidateFeedCaches();
     const target = current === "mine" ? "mine" : "class";
     setNotice({ text: data.message || "Posted to your class.", section: target });
     setReloadKey((k) => k + 1);
@@ -736,11 +1030,7 @@ export default function Doubts({ section = "class" }) {
 
   let content;
   if (current === "ask") {
-    content = (
-      <Suspense fallback={<GateLoading />}>
-        <Chatbot onDraftReady={pickUpDraft} />
-      </Suspense>
-    );
+    content = <Chatbot onDraftReady={pickUpDraft} />;
   } else if (!schoolClass) {
     content = <ClassPicker onDone={(value) => setSchoolClass(value || getStoredUser()?.schoolClass || "set")} />;
   } else if (consent === "loading") {
@@ -753,13 +1043,17 @@ export default function Doubts({ section = "class" }) {
         <h2 className="font-display text-lg font-bold text-ink">Ask a parent to approve</h2>
         <p className="mt-1 text-sm text-ink-muted">Class feed and My doubts open once a parent approves. Ask AI works now.</p>
         <div className="mt-5">
-          <ParentApproval onApproved={() => setConsent("approved")} />
+          <ParentApproval onApproved={() => {
+            setConsentCache("approved");
+            setConsent("approved");
+          }} />
         </div>
       </div>
     );
   } else if (current === "thread") {
     content = (
       <DoubtThread
+        key={id}
         id={id}
         mute={mute}
         onMuted={onMuted}
@@ -793,7 +1087,7 @@ export default function Doubts({ section = "class" }) {
       exact={current !== "thread"}
       count={count}
       action={
-        <Button className="min-h-[44px] px-5 py-2 shadow-none" onClick={openComposer} disabled={muted || (hasLeft && left === 0)}>
+        <Button className="min-h-[42px] whitespace-nowrap rounded-full px-5 py-2 text-sm font-bold shadow-e1" onClick={openComposer} disabled={muted || (hasLeft && left === 0)}>
           Ask your class
         </Button>
       }

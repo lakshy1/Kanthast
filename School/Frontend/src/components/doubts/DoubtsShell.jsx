@@ -1,26 +1,42 @@
+import { FiMessageSquare } from "react-icons/fi";
+import { Eyebrow, Accent } from "../ui/Brandmarks";
 import DoubtsSections from "./DoubtsSections";
 
 /**
- * The one layout for every Doubts page (Class feed, Ask AI, My doubts and a
- * thread). Top to bottom:
- *
- *   header   "Doubts" + the class chip at left; the page's single primary
- *            action ("Ask your class" and the posts-left count) at right
- *   tabs     Class feed / Ask AI / My doubts on a hairline
- *   body     the section (or the class / parent-approval step)
- *
- * The header and tabs have fixed heights and sit at the content edge
- * (--kb-edge, from .db), so they are pixel-identical on all four pages and
- * nothing above the body moves when the student switches section. The Doubts
- * page renders this once for all four routes, so it also stays mounted.
+ * The persistent editorial shell for every Doubts page (Class feed, Ask AI,
+ * My doubts and Thread detail). Keeps header and tabs anchored across routes.
  */
 export default function DoubtsShell({ classLabel = "", current, exact = true, count = null, action = null, children }) {
+  const isWorkspace = current === "ask" && exact;
+
+  if (isWorkspace) {
+    return (
+      <div className="db is-school doubts dbs is-ask">
+        <header className="dbs-workspace-bar">
+          <div className="hidden sm:flex items-center gap-2.5 min-w-0">
+            <h1 className="font-display text-[1.0625rem] font-extrabold tracking-tight text-ink whitespace-nowrap">
+              Class <Accent after=".">Doubts</Accent>
+            </h1>
+            {classLabel ? <span className="dbs-class">{classLabel}</span> : null}
+          </div>
+          <DoubtsSections current={current} exact={exact} inline />
+        </header>
+        <div className="dbs-body">{children}</div>
+      </div>
+    );
+  }
+
   return (
     <div className="db is-school doubts dbs">
       <header className="dbs-head">
         <div className="dbs-heading">
-          <h1 className="dbs-title">Doubts</h1>
-          {classLabel ? <span className="dbs-class">{classLabel}</span> : null}
+          <Eyebrow icon={FiMessageSquare}>Peer &amp; AI Q&amp;A</Eyebrow>
+          <div className="dbs-title-row">
+            <h1 className="dbs-title">
+              Class <Accent after=".">Doubts</Accent>
+            </h1>
+            {classLabel ? <span className="dbs-class">{classLabel}</span> : null}
+          </div>
         </div>
         <div className="dbs-action">
           {count ? (

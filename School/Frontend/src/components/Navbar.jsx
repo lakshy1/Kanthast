@@ -3,6 +3,7 @@ import { NavLink, Link, useLocation, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { motion as Motion } from "framer-motion";
 import { FaTachometerAlt, FaList, FaHome, FaBookOpen, FaStar, FaComments } from "react-icons/fa";
+import { FiZap } from "react-icons/fi";
 import AccountMenu from "./AccountMenu";
 import { logout as logoutApi } from "../utils/authApi";
 import { SITE } from "../utils/siteContext";
@@ -15,6 +16,7 @@ const dockItems = [
   { to: "/dashboard", label: "Dashboard", icon: FaTachometerAlt, exact: false },
   { to: "/library", label: "Library", icon: FaList, exact: false },
   { to: "/doubts", label: "Doubts", icon: FaComments, exact: false },
+  { to: "/practice", label: "Practice", icon: FiZap, exact: false },
 ];
 
 const publicDockItems = [
@@ -129,7 +131,7 @@ const Navbar = () => {
       >
         <div className="nav-shell mx-auto flex w-full items-center justify-between px-5 md:px-16 lg:w-[calc(var(--u)*85)] lg:max-w-none lg:px-0">
           <div className="nav-brand relative flex min-w-0 items-end gap-1.5">
-            <Link to="/" aria-label="Kanthast School home" className="flex items-center gap-2.5 focus-visible:outline-none">
+            <a href="/" aria-label="Kanthast home" className="flex items-center gap-2.5 focus-visible:outline-none">
               <svg className="nav-k" viewBox="0 0 40 40" aria-hidden="true">
                 <defs>
                   <linearGradient id="nav-k-a" x1="0" y1="0" x2="1" y2="1">
@@ -148,7 +150,7 @@ const Navbar = () => {
               <span className="nav-logo block font-display text-2xl font-extrabold leading-none tracking-tight text-softwhite md:text-[1.8rem]">
                 Kanthast
               </span>
-            </Link>
+            </a>
             <span aria-hidden="true" className="nav-track-label translate-y-[0.3em] text-xs font-semibold leading-none tracking-[0.02em] text-amber-300">
               {SITE.short}
             </span>
@@ -174,6 +176,11 @@ const Navbar = () => {
             {isLoggedIn && (
               <NavLink to="/doubts" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
                 Doubts
+              </NavLink>
+            )}
+            {isLoggedIn && (
+              <NavLink to="/practice" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+                Practice Studio
               </NavLink>
             )}
             {!isLoggedIn && (
@@ -243,7 +250,7 @@ const Navbar = () => {
           className="nav-dock-fade pointer-events-none absolute inset-x-0 bottom-full h-6 bg-gradient-to-t from-[#0b1220]/70 to-transparent"
         />
         <div className="nav-dock-bar border-t border-hairline/70 bg-[#0b1220]/95 backdrop-blur-xl">
-          <div className="grid h-16 grid-cols-4">
+          <div className="grid h-16 grid-cols-5">
             {(isLoggedIn ? dockHomeItems : dockPublicItems).map(({ to, label, icon: DockIcon, exact }) => {
               const isActive = exact ? location.pathname === to : location.pathname.startsWith(to);
               return (

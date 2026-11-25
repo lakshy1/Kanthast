@@ -22,6 +22,9 @@ import doubtAdminRoutes from "./routes/DoubtsAdmin.js";
 import playbackRoutes from "./routes/Playback.js";
 import playbackAdminRoutes from "./routes/PlaybackAdmin.js";
 import waitlistRoutes from "./routes/Waitlist.js";
+import mcqRoutes from "./routes/Mcq.js";
+import flashcardRoutes from "./routes/Flashcard.js";
+import vivaRoutes from "./routes/Viva.js";
 
 dotenv.config();
 
@@ -92,6 +95,9 @@ app.use("/api/v1/admin/doubts", doubtAdminRoutes);
 app.use("/api/v1/playback", playbackRoutes);
 app.use("/api/v1/admin/playback", playbackAdminRoutes);
 app.use("/api/v1/waitlist", waitlistRoutes);
+app.use("/api/v1/mcq", mcqRoutes);
+app.use("/api/v1/flashcards", flashcardRoutes);
+app.use("/api/v1/viva", vivaRoutes);
 
 // Health check — DB ping included, used by Render and frontend
 app.get(["/health", "/api/v1/health"], async (req, res) => {

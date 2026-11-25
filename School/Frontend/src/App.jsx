@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import OfflineBanner from "./components/OfflineBanner";
 import { warmupBackend } from "./utils/warmup";
 import { useAppSettings } from "./utils/settings";
+import { getLastDoubtsPath } from "./utils/doubtsStore";
 
 const SchoolHomepage = lazy(() => import("./pages/SchoolHomepage"));
 const About = lazy(() => import("./pages/About"));
@@ -34,6 +35,10 @@ const AdminPanel = lazy(() => import("./pages/AdminPanel"));
 const PageLoader = lazy(() => import("./pages/PageLoader"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Legal = lazy(() => import("./pages/Legal"));
+const PracticeStudio = lazy(() => import("./pages/PracticeStudio"));
+const McqPractice = lazy(() => import("./pages/McqPractice"));
+const FlashcardPractice = lazy(() => import("./pages/FlashcardPractice"));
+const VivaPractice = lazy(() => import("./pages/VivaPractice"));
 
 const hasAuth = () =>
   Boolean(localStorage.getItem("kanthastSchoolToken") && localStorage.getItem("kanthastSchoolUser"));
@@ -46,6 +51,10 @@ function RequireAuth({ children }) {
 function ChatbotRedirect() {
   const { search } = useLocation();
   return <Navigate to={`/doubts/ask${search}`} replace />;
+}
+
+function DoubtsIndexRedirect() {
+  return <Navigate to={getLastDoubtsPath()} replace />;
 }
 
 function GuestOnly({ children }) {
@@ -164,7 +173,7 @@ function LibrarySeo() {
 }
 
 // Account, player and admin pages are for signed-in users, not search results.
-const NOINDEX_PATH = /^\/(login|forgot-password|reset-password|signup|dashboard|profile|settings|video|summary|images|chatbot|doubts|subscription|admin|adminlogin)(\/|$)/;
+const NOINDEX_PATH = /^\/(login|forgot-password|reset-password|signup|dashboard|profile|settings|video|summary|images|chatbot|doubts|practice|subscription|admin|adminlogin)(\/|$)/;
 
 function RouteRobots() {
   const { pathname } = useLocation();
@@ -307,14 +316,18 @@ function App() {
                 <Route path="/summary" element={<RequireAuth><SummaryPage /></RequireAuth>} />
                 <Route path="/video" element={<RequireAuth><VideoPage /></RequireAuth>} />
                 <Route path="/chatbot" element={<ChatbotRedirect />} />
-                {/* Doubts opens on the class feed. All four routes render the same
-                    Doubts element, so its shell (header, tabs, composer) stays
-                    mounted and does not move when switching sections. */}
-                <Route path="/doubts" element={<Navigate to="/doubts/class" replace />} />
+                {/* Doubts remembers the student's active sub-module across top-level
+                    navigation switches instead of resetting back to the feed. */}
+                <Route path="/doubts" element={<DoubtsIndexRedirect />} />
                 <Route path="/doubts/ask" element={<RequireAuth><Doubts section="ask" /></RequireAuth>} />
                 <Route path="/doubts/class" element={<RequireAuth><Doubts section="class" /></RequireAuth>} />
                 <Route path="/doubts/mine" element={<RequireAuth><Doubts section="mine" /></RequireAuth>} />
                 <Route path="/doubts/:id" element={<RequireAuth><Doubts /></RequireAuth>} />
+                <Route path="/practice" element={<RequireAuth><PracticeStudio /></RequireAuth>} />
+                <Route path="/practice/mcq" element={<RequireAuth><McqPractice /></RequireAuth>} />
+                <Route path="/practice/flashcards" element={<RequireAuth><FlashcardPractice /></RequireAuth>} />
+                <Route path="/practice/voice" element={<RequireAuth><VivaPractice /></RequireAuth>} />
+                <Route path="/practice/viva" element={<RequireAuth><VivaPractice /></RequireAuth>} />
                 <Route path="/subscription" element={<RequireAuth><SubscriptionPage /></RequireAuth>} />
                 <Route path="/adminlogin" element={<AdminGuestOnly><AdminLogin /></AdminGuestOnly>} />
                 <Route path="/admin" element={<RequireAdmin><AdminPanel /></RequireAdmin>} />

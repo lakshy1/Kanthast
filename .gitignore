@@ -41,3 +41,5 @@ coverage/
 
 *.txt
 Enhancements.txt
+.vercel
+.env*

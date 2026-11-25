@@ -1,0 +1,1311 @@
+/* practice-studio.css — Practice Studio module styles
+   Kanthast editorial craft + Emil Kowalski / Apple fluid motion tokens.
+   Unlayered so they win over Tailwind utilities on the same elements. */
+
+:root {
+  --ps-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ps-ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* ── Studio Editorial Card & Controls ──────────────────────────────────────── */
+.ps-card {
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid rgb(var(--line));
+  background: rgb(var(--surface));
+  box-shadow: var(--e1);
+  transition:
+    transform 180ms var(--ps-ease-out),
+    border-color 180ms var(--ps-ease-out),
+    box-shadow 200ms var(--ps-ease-out),
+    background-color 180ms var(--ps-ease-out);
+}
+
+.ps-card-interactive {
+  cursor: pointer;
+}
+
+.ps-card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: rgb(var(--line-strong));
+  box-shadow: var(--e2);
+}
+
+.ps-card-interactive:active {
+  transform: scale(0.985);
+}
+
+.ps-card-selected {
+  border-color: rgb(var(--brand)) !important;
+  background: rgb(var(--brand-soft) / 0.35) !important;
+  box-shadow: var(--e2);
+}
+
+/* Sculpted circular icon well matching Dashboard.jsx */
+.ps-icon-well {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 30%, rgb(var(--surface)), rgb(var(--brand-soft)));
+  color: rgb(var(--brand));
+  border: 1px solid rgb(var(--line));
+  flex-shrink: 0;
+  transition: transform 180ms var(--ps-ease-out), background-color 180ms ease;
+}
+
+.ps-icon-well.is-positive {
+  background: radial-gradient(circle at 35% 30%, rgb(var(--surface)), rgb(var(--positive-soft)));
+  color: rgb(var(--positive));
+}
+
+.ps-icon-well.is-caution {
+  background: radial-gradient(circle at 35% 30%, rgb(var(--surface)), rgb(var(--caution-soft)));
+  color: rgb(var(--caution));
+}
+
+.ps-go-pill {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: rgb(var(--brand-soft));
+  color: rgb(var(--brand));
+  transition:
+    transform 180ms var(--ps-ease-out),
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.group:hover .ps-go-pill {
+  background: rgb(var(--brand));
+  color: rgb(var(--brand-fg));
+  transform: translateX(2px);
+}
+
+.ps-pressable {
+  transition:
+    transform 140ms var(--ps-ease-out),
+    border-color 150ms ease,
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.ps-pressable:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+/* ── MCQ Option Cards ───────────────────────────────────────────────────────── */
+.mcq-option {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 0.8125rem 1rem;
+  border: 1.5px solid rgb(var(--line));
+  border-radius: 12px;
+  background: rgb(var(--surface));
+  cursor: pointer;
+  transition:
+    border-color 150ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 150ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 150ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 150ms cubic-bezier(0.22, 1, 0.36, 1);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.mcq-option:hover:not([data-state]) {
+  border-color: rgb(var(--brand));
+  background: rgb(var(--brand-soft));
+  box-shadow: var(--e2);
+}
+
+.mcq-option:active:not([data-state]) {
+  transform: scale(0.985);
+}
+
+.mcq-option[data-state="selected"] {
+  border-color: rgb(var(--brand));
+  background: rgb(var(--brand-soft));
+  box-shadow: var(--e2);
+}
+
+.mcq-option[data-state="correct"] {
+  border-color: rgb(var(--positive));
+  background: rgb(var(--positive-soft));
+  box-shadow: var(--glow-positive);
+}
+
+.mcq-option[data-state="incorrect"] {
+  border-color: rgb(var(--critical));
+  background: rgb(var(--critical-soft));
+}
+
+.mcq-option[data-state="correct-unselected"] {
+  border-color: rgb(var(--positive));
+  background: rgb(var(--positive-soft));
+}
+
+.mcq-option[data-state="locked"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.mcq-option:focus-visible:focus-visible {
+  outline: 2px solid rgb(var(--brand)) !important;
+  outline-offset: 2px !important;
+}
+
+/* Option letter badge */
+.mcq-letter {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  background: rgb(var(--surface-sunken));
+  color: rgb(var(--ink-muted));
+  border: 1.5px solid rgb(var(--line));
+  transition: background-color 150ms cubic-bezier(0.22, 1, 0.36, 1), color 150ms;
+}
+
+.mcq-option[data-state="selected"] .mcq-letter,
+.mcq-option[data-state="correct"] .mcq-letter,
+.mcq-option[data-state="correct-unselected"] .mcq-letter {
+  background: rgb(var(--brand));
+  color: rgb(var(--brand-fg));
+  border-color: rgb(var(--brand));
+}
+
+.mcq-option[data-state="correct"] .mcq-letter,
+.mcq-option[data-state="correct-unselected"] .mcq-letter {
+  background: rgb(var(--positive));
+  border-color: rgb(var(--positive));
+  color: #fff;
+}
+
+.mcq-option[data-state="incorrect"] .mcq-letter {
+  background: rgb(var(--critical));
+  border-color: rgb(var(--critical));
+  color: #fff;
+}
+
+/* ── Progress bar ───────────────────────────────────────────────────────────── */
+.practice-progress-bar {
+  height: 4px;
+  border-radius: 9999px;
+  background: rgb(var(--line));
+  overflow: hidden;
+}
+
+.practice-progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background: rgb(var(--brand));
+  transition: width 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── Score ring ─────────────────────────────────────────────────────────────── */
+.score-ring-track {
+  fill: none;
+  stroke: rgb(var(--line));
+  stroke-width: 8;
+}
+
+.score-ring-fill {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+
+/* ── Explanation card ───────────────────────────────────────────────────────── */
+.explanation-card {
+  border-radius: 16px;
+  padding: 1.125rem 1.25rem;
+  animation: slideUpFade 300ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Streak badge ───────────────────────────────────────────────────────────── */
+.streak-pop {
+  animation: streakBurst 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes streakBurst {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+
+  60% {
+    transform: scale(1.18);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Shake for incorrect ────────────────────────────────────────────────────── */
+.mcq-shake {
+  animation: shake 400ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(4px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-6px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(6px, 0, 0);
+  }
+}
+
+/* ── Question card ──────────────────────────────────────────────────────────── */
+.mcq-question-enter {
+  animation: questionSlide 350ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes questionSlide {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Difficulty pip ─────────────────────────────────────────────────────────── */
+.diff-easy {
+  color: rgb(var(--positive));
+}
+
+.diff-medium {
+  color: rgb(var(--caution));
+}
+
+.diff-hard {
+  color: rgb(var(--critical));
+}
+
+/* ── Tactile 3D Buttons ──────────────────────────────────────────────────────── */
+.btn-3d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.375rem;
+  border-radius: 14px;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(0);
+  transition:
+    transform 120ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 120ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 120ms;
+}
+
+.btn-3d:active:not(:disabled) {
+  transform: translateY(4px);
+}
+
+.btn-3d:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Primary 3D Button (Mint / Brand) */
+.btn-3d-primary {
+  background: rgb(var(--brand));
+  color: rgb(var(--brand-fg));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 4px 0 rgba(14, 165, 233, 0.75),
+    0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.btn-3d-primary:hover:not(:disabled) {
+  filter: brightness(1.06);
+}
+
+.btn-3d-primary:active:not(:disabled) {
+  box-shadow:
+    0 0 0 rgba(14, 165, 233, 0.75),
+    0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary 3D Button (Surface / Slate) */
+.btn-3d-secondary {
+  background: rgb(var(--surface));
+  color: rgb(var(--ink));
+  border: 1.5px solid rgb(var(--line));
+  box-shadow:
+    0 4px 0 rgb(var(--line)),
+    0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn-3d-secondary:hover:not(:disabled) {
+  background: rgb(var(--surface-sunken));
+  border-color: rgb(var(--brand));
+}
+
+.btn-3d-secondary:active:not(:disabled) {
+  box-shadow:
+    0 0 0 rgb(var(--line)),
+    0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ── 3D Perspective Card Container ─────────────────────────────────────────── */
+.perspective-container {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+/* ── Flank Arrow Buttons (Left & Right of Question Container) ──────────────── */
+.flank-arrow-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgb(var(--surface));
+  color: rgb(var(--ink));
+  border: 1.5px solid rgb(var(--line));
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(0) scale(1);
+  box-shadow:
+    0 3px 0 rgb(var(--line)),
+    0 6px 14px rgba(11, 18, 32, 0.1);
+  transition:
+    transform 160ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 160ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 160ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 160ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 160ms;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .flank-arrow-btn {
+    width: 3.375rem;
+    height: 3.375rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .flank-arrow-btn {
+    width: 3.625rem;
+    height: 3.625rem;
+  }
+}
+
+.flank-arrow-btn:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.06);
+  border-color: rgb(var(--brand));
+  color: rgb(var(--brand));
+  box-shadow:
+    0 6px 0 rgb(var(--line)),
+    0 12px 24px rgba(11, 18, 32, 0.18);
+}
+
+.flank-arrow-btn:active:not(:disabled) {
+  transform: translateY(4px) scale(0.96);
+  box-shadow:
+    0 0 0 rgb(var(--line)),
+    0 2px 6px rgba(11, 18, 32, 0.15);
+}
+
+.flank-arrow-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: 0 2px 0 rgb(var(--line)) !important;
+}
+
+/* Active Glowing State for Right Flank Arrow */
+.flank-arrow-btn.flank-arrow-active {
+  background: rgb(var(--brand));
+  color: rgb(var(--brand-fg));
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 4px 0 rgba(14, 165, 233, 0.75),
+    0 10px 24px -4px rgba(29, 78, 216, 0.5);
+  animation: pulseSubtle 2s infinite cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.flank-arrow-btn.flank-arrow-active:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.08);
+  filter: brightness(1.08);
+  box-shadow:
+    0 6px 0 rgba(14, 165, 233, 0.75),
+    0 14px 30px -4px rgba(29, 78, 216, 0.65);
+}
+
+.flank-arrow-btn.flank-arrow-active:active:not(:disabled) {
+  transform: translateY(4px) scale(0.96);
+  box-shadow:
+    0 0 0 rgba(14, 165, 233, 0.75),
+    0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulseSubtle {
+
+  0%,
+  100% {
+    box-shadow:
+      0 4px 0 rgba(14, 165, 233, 0.75),
+      0 10px 24px -4px rgba(29, 78, 216, 0.4);
+  }
+
+  50% {
+    box-shadow:
+      0 4px 0 rgba(14, 165, 233, 0.75),
+      0 14px 32px 2px rgba(29, 78, 216, 0.65);
+  }
+}
+
+/* ── Practice hub card ──────────────────────────────────────────────────────── */
+.practice-hub-card {
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid rgb(var(--line));
+  background: rgb(var(--surface));
+  box-shadow: var(--e1);
+  transition:
+    box-shadow 200ms var(--ps-ease-out),
+    border-color 180ms var(--ps-ease-out),
+    transform 180ms var(--ps-ease-out);
+  overflow: hidden;
+}
+
+.practice-hub-card:hover {
+  box-shadow: var(--e2);
+  border-color: rgb(var(--brand) / 0.45);
+  transform: translateY(-2px);
+}
+
+.practice-hub-card:active {
+  transform: scale(0.985);
+}
+
+.practice-hub-card.disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* ── Pop-in Right Option Badge ─────────────────────────────────────────────── */
+@keyframes popInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(18px) scale(0.92);
+  }
+
+  65% {
+    opacity: 1;
+    transform: translateX(-2px) scale(1.04);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.correct-pop-badge {
+  animation: popInRight 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Auto-advance Countdown Bar ────────────────────────────────────────────── */
+@keyframes autoAdvanceTimer {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+.auto-advance-fill {
+  height: 3px;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: autoAdvanceTimer 3s linear forwards;
+}
+
+.auto-advance-fill.paused {
+  animation-play-state: paused;
+}
+
+/* ── Interactive Results Cards ─────────────────────────────────────────────── */
+.clickable-stat-card {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  transition:
+    transform 160ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 160ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 160ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.clickable-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--e3);
+}
+
+.clickable-stat-card:active {
+  transform: scale(0.98);
+}
+
+.clickable-stat-card:focus-visible {
+  outline: 2px solid rgb(var(--brand));
+  outline-offset: 2px;
+}
+
+/* ── Review Questions Modal ────────────────────────────────────────────────── */
+.review-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(11, 18, 32, 0.76);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.review-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 52rem;
+  max-height: 88vh;
+  background: rgb(var(--surface));
+  border: 1px solid rgb(var(--line));
+  border-radius: 28px;
+  box-shadow: 0 25px 60px -15px rgba(11, 18, 32, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalPop 260ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Custom sleek scrollbar for modal content */
+.review-modal-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.review-modal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.review-modal-scroll::-webkit-scrollbar-thumb {
+  background: rgb(var(--line));
+  border-radius: 9999px;
+}
+
+.review-modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--line-strong));
+}
+
+/* ── Flashcard 3D Stage & Flip Physics ──────────────────────────────────────── */
+.flashcard-stage {
+  perspective: 1600px;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.flashcard-flipper {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  height: clamp(500px, 62vh, 650px);
+  transform-style: preserve-3d;
+  transition: transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+}
+
+@media (max-width: 640px) {
+  .flashcard-flipper {
+    min-height: 440px;
+    height: clamp(440px, 66vh, 540px);
+  }
+}
+
+.flashcard-flipper.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  border: 1.5px solid rgb(var(--line));
+  background: rgb(var(--surface));
+  box-shadow:
+    0 16px 36px -10px rgba(11, 18, 32, 0.24),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 250ms ease, border-color 250ms ease;
+}
+
+.flashcard-face:hover {
+  box-shadow:
+    0 20px 44px -10px rgba(11, 18, 32, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+  border-color: rgb(var(--brand));
+}
+
+.flashcard-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.flashcard-flipper.is-flipped .flashcard-front {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.flashcard-flipper.is-flipped .flashcard-back {
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* Enable smooth mouse wheel scrolling on card scroll container */
+.flashcard-scroll-body {
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  cursor: pointer;
+}
+
+.flashcard-scroll-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.flashcard-scroll-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.flashcard-scroll-body::-webkit-scrollbar-thumb {
+  background: rgb(var(--line-strong));
+  border-radius: 9999px;
+}
+
+.flashcard-scroll-body::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--ink-subtle));
+}
+
+/* Subtle corner accent glow on cards */
+.flashcard-face::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(119, 224, 192, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Flip badge prompt */
+.flip-prompt-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  background: rgb(var(--surface-sunken));
+  border: 1px solid rgb(var(--line));
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgb(var(--ink-muted));
+  transition: all 180ms ease;
+}
+
+.flashcard-face:hover .flip-prompt-pill {
+  border-color: rgb(var(--brand));
+  color: rgb(var(--brand));
+  background: rgb(var(--brand-soft));
+}
+
+/* Memory aid / Mnemonic Box */
+.flashcard-mnemonic-box {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 16px;
+  padding: 0.875rem 1rem;
+}
+
+/* Formula Highlight Box */
+.flashcard-formula-box {
+  background: rgb(var(--surface-sunken));
+  border: 1px dashed rgb(var(--line-strong));
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* ── Spaced Repetition 4-Tier Rating Buttons ────────────────────────────────── */
+.rating-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.625rem;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .rating-grid {
+    gap: 0.375rem;
+  }
+}
+
+.btn-rating {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  padding: 0.625rem 0.5rem;
+  min-height: 3.5rem;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    transform 120ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 120ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 120ms;
+}
+
+.btn-rating:active {
+  transform: translateY(3px) scale(0.98);
+}
+
+/* 1: Again (Red) */
+.btn-rating-again {
+  background: #ef4444;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 4px 0 #b91c1c,
+    0 8px 16px rgba(239, 68, 68, 0.3);
+}
+
+.btn-rating-again:hover {
+  filter: brightness(1.08);
+}
+
+.btn-rating-again:active {
+  box-shadow: 0 0 0 #b91c1c;
+}
+
+/* 2: Hard (Amber) */
+.btn-rating-hard {
+  background: #f59e0b;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 4px 0 #b45309,
+    0 8px 16px rgba(245, 158, 11, 0.3);
+}
+
+.btn-rating-hard:hover {
+  filter: brightness(1.08);
+}
+
+.btn-rating-hard:active {
+  box-shadow: 0 0 0 #b45309;
+}
+
+/* 3: Good (Blue) */
+.btn-rating-good {
+  background: #3b82f6;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 4px 0 #1d4ed8,
+    0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.btn-rating-good:hover {
+  filter: brightness(1.08);
+}
+
+.btn-rating-good:active {
+  box-shadow: 0 0 0 #1d4ed8;
+}
+
+/* 4: Easy (Emerald) */
+.btn-rating-easy {
+  background: #10b981;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 4px 0 #047857,
+    0 8px 16px rgba(16, 185, 129, 0.3);
+}
+
+.btn-rating-easy:hover {
+  filter: brightness(1.08);
+}
+
+.btn-rating-easy:active {
+  box-shadow: 0 0 0 #047857;
+}
+
+/* Keyboard hint chip on rating button */
+.rating-key-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Interval time indicator */
+.rating-interval-text {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* ── Sleek Minimal Rating Pills ────────────────────────────────────────────── */
+.btn-rating-compact {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  height: 2.375rem;
+  padding: 0 0.75rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    transform 120ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 120ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 120ms;
+}
+
+.btn-rating-compact:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+.btn-rating-again-compact {
+  background: #ef4444;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 0 #b91c1c, 0 4px 10px rgba(239, 68, 68, 0.25);
+}
+
+.btn-rating-again-compact:hover {
+  filter: brightness(1.08);
+}
+
+.btn-rating-again-compact:active {
+  box-shadow: 0 0 0 #b91c1c;
+}
+
+.btn-rating-hard-compact {
+  background: #f59e0b;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 0 #b45309, 0 4px 10px rgba(245, 158, 11, 0.25);
+}
+
+.btn-rating-hard-compact:hover {
+  filter: brightness(1.08);
+}
+
+.btn-rating-hard-compact:active {
+  box-shadow: 0 0 0 #b45309;
+}
+
+.btn-rating-good-compact {
+  background: #3b82f6;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 0 #1d4ed8, 0 4px 10px rgba(59, 130, 246, 0.25);
+}
+
+.btn-rating-good-compact:hover {
+  filter: brightness(1.08);
+}
+
+.btn-rating-good-compact:active {
+  box-shadow: 0 0 0 #1d4ed8;
+}
+
+.btn-rating-easy-compact {
+  background: #10b981;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 0 #047857, 0 4px 10px rgba(16, 185, 129, 0.25);
+}
+
+.btn-rating-easy-compact:hover {
+  filter: brightness(1.08);
+}
+
+.btn-rating-easy-compact:active {
+  box-shadow: 0 0 0 #047857;
+}
+
+.rating-compact-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 0.625rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.rating-compact-interval {
+  font-size: 0.6875rem;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+/* ── Viva Coach Stage & Voice UI ───────────────────────────────────────────── */
+.viva-stage-card {
+  width: 100%;
+  height: clamp(500px, 65vh, 660px);
+  border-radius: 24px;
+  border: 1.5px solid rgb(var(--line));
+  background: rgb(var(--surface));
+  box-shadow:
+    0 18px 40px -12px rgba(11, 18, 32, 0.24),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  .viva-stage-card {
+    height: clamp(440px, 66vh, 560px);
+  }
+  .flank-arrow-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.viva-mic-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 150ms ease;
+}
+
+.viva-mic-btn:hover {
+  transform: translateY(-1px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.45);
+}
+
+.viva-mic-btn:active {
+  transform: scale(0.96);
+}
+
+.viva-mic-btn.is-listening {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.65);
+  animation: vivaPulseRing 1.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@keyframes vivaPulseRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.viva-wave-bar {
+  width: 3px;
+  border-radius: 9999px;
+  background: #7c3aed;
+  animation: vivaWave 0.9s ease-in-out infinite alternate;
+}
+
+@keyframes vivaWave {
+  0% {
+    height: 6px;
+    opacity: 0.5;
+  }
+  100% {
+    height: 22px;
+    opacity: 1;
+  }
+}
+
+/* ── 60/40 Voice Viva Studio ───────────────────────────────────────────────── */
+.viva-split-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  height: calc(100dvh - var(--navbar-h, 4rem) - 5.25rem);
+  min-height: 500px;
+  max-height: 760px;
+}
+
+@media (min-width: 1024px) {
+  .viva-split-grid {
+    grid-template-columns: 3fr 2fr; /* Exact 60 / 40 split */
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .viva-split-grid {
+    height: auto;
+    max-height: none;
+  }
+}
+
+.viva-voice-stage {
+  border-radius: 24px;
+  border: 1px solid rgb(var(--line));
+  background: rgb(var(--surface));
+  box-shadow: var(--e2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.viva-chat-panel {
+  border-radius: 24px;
+  border: 1px solid rgb(var(--line));
+  background: rgb(var(--surface));
+  box-shadow: var(--e1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 360px;
+}
+
+/* Elena AI Fluid Acoustic Presence */
+.elena-orb-wrap {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elena-orb-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 1.5px solid rgb(var(--brand) / 0.22);
+  transition: transform 240ms var(--ps-ease-out), opacity 240ms ease, border-color 240ms ease;
+}
+
+.elena-orb-core {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 32% 28%, rgb(var(--brand-hover)), rgb(var(--brand)));
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 12px 28px -8px rgb(var(--brand) / 0.45),
+    inset 0 2px 6px rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--brand-fg));
+  transition: transform 200ms var(--ps-ease-out), box-shadow 200ms ease;
+}
+
+.elena-orb-wrap.is-speaking .elena-orb-core {
+  animation: elenaSpeakCore 1.15s ease-in-out infinite alternate;
+  box-shadow:
+    0 14px 36px -6px rgb(var(--brand) / 0.6),
+    inset 0 2px 8px rgba(255, 255, 255, 0.45);
+}
+
+.elena-orb-wrap.is-speaking .elena-orb-ring-1 {
+  animation: elenaRipple 1.7s var(--ps-ease-out) infinite;
+  border-color: rgb(var(--brand) / 0.45);
+}
+
+.elena-orb-wrap.is-speaking .elena-orb-ring-2 {
+  animation: elenaRipple 1.7s var(--ps-ease-out) 0.6s infinite;
+  border-color: rgb(var(--brand) / 0.3);
+}
+
+.elena-orb-wrap.is-listening .elena-orb-core {
+  background: radial-gradient(circle at 32% 28%, rgb(var(--positive)), #047857);
+  color: #ffffff;
+  box-shadow:
+    0 12px 30px -6px rgb(var(--positive) / 0.48),
+    inset 0 2px 6px rgba(255, 255, 255, 0.35);
+}
+
+.elena-orb-wrap.is-listening .elena-orb-ring-1 {
+  border-color: rgb(var(--positive) / 0.45);
+  animation: elenaRipple 2.2s var(--ps-ease-out) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ps-card,
+  .ps-card-interactive,
+  .practice-hub-card,
+  .ps-go-pill,
+  .ps-pressable,
+  .elena-orb-core,
+  .elena-orb-ring {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+@keyframes elenaSpeakCore {
+  0% {
+    transform: scale(0.96);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1.01);
+  }
+}
+
+@keyframes elenaRipple {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1.42);
+    opacity: 0;
+  }
+}
+
+/* Candidate Voice Equalizer Bars */
+.candidate-eq-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 36px;
+}
+
+.candidate-eq-bar {
+  width: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #10b981 0%, #06b6d4 100%);
+  transition: height 90ms ease-out, opacity 120ms ease;
+}
