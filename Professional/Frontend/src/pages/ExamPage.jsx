@@ -4,6 +4,7 @@ import Seo from "../components/Seo";
 import ProWaitlist from "../components/landing/ProWaitlist";
 import SYLLABUS_SNAPSHOT from "../data/syllabusSnapshot";
 import { EXAMS, examBySlug } from "../data/exams";
+import { LESSONS_OPEN } from "../config/launch";
 import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
 
 // What Kanthast Professional has today, and what it does not. Keep in step with the homepage FAQ.
@@ -25,7 +26,7 @@ export default function ExamPage({ slug }) {
   const chapters = subjects.reduce((sum, s) => sum + s.chapters, 0);
   const faqs = [
     ...exam.faqs,
-    { q: "Are the lectures available to watch?", a: "Not yet. Lectures are coming soon and open as each video is published. Join the waitlist and we will email you when the first ones are live." },
+    { q: "Are the lectures available to watch?", a: LESSONS_OPEN ? "Yes, the lectures that are published. Each one opens the moment its video is published." : "Not yet. Lectures are coming soon and open as each video is published. Join the waitlist and we will email you when the first ones are live." },
   ];
 
   return (
@@ -55,13 +56,21 @@ export default function ExamPage({ slug }) {
         <p className="kx-eyebrow">Kanthast Professional</p>
         <h1 className="mt-4 max-w-3xl text-4xl font-extrabold tracking-tight md:text-6xl">Animated medical lectures for {exam.name}</h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-muted">
-          Short lectures laid out by subject and chapter, with your place saved. Lectures are coming soon and open as each video is published.
+          Short lectures laid out by subject and chapter, with your place saved.{" "}
+          {LESSONS_OPEN ? "Lectures open as each video is published." : "Lectures are coming soon and open as each video is published."}
         </p>
         <div className="mt-8">
-          <a href="#waitlist" className="btn-primary px-7 text-base">
-            Join the waitlist
-            <FaArrowRight aria-hidden="true" />
-          </a>
+          {LESSONS_OPEN ? (
+            <Link to="/signup" className="btn-primary px-7 text-base">
+              Create a free account
+              <FaArrowRight aria-hidden="true" />
+            </Link>
+          ) : (
+            <a href="#waitlist" className="btn-primary px-7 text-base">
+              Join the waitlist
+              <FaArrowRight aria-hidden="true" />
+            </a>
+          )}
         </div>
       </section>
 
@@ -114,6 +123,7 @@ export default function ExamPage({ slug }) {
         </div>
       </section>
 
+      {!LESSONS_OPEN && (
       <section id="waitlist" aria-labelledby="exam-waitlist" className="border-t border-line bg-surface py-14 md:py-20">
         <div className="site-container">
           <h2 id="exam-waitlist" className="max-w-2xl text-3xl font-bold md:text-5xl">Be first when lectures open.</h2>
@@ -123,6 +133,7 @@ export default function ExamPage({ slug }) {
           <ProWaitlist />
         </div>
       </section>
+      )}
 
       <section aria-labelledby="exam-faq" className="border-t border-line bg-surface-sunken py-14 md:py-20">
         <div className="site-container">

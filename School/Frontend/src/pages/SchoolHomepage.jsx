@@ -14,6 +14,7 @@ import { NeoSolo, ZippySolo } from "../components/home/Characters";
 import SCHOOL_CATALOG from "../data/schoolCatalog";
 import { PILOT_TESTERS } from "../data/pilotTesters";
 import "../styles/school-home.css";
+import { LESSONS_OPEN, PAYMENTS_OPEN } from "../config/launch";
 
 const { classes: CLASSES, totals: TOTALS } = SCHOOL_CATALOG;
 
@@ -91,7 +92,9 @@ const COMING_NEXT = [
 
 const TIMELINE = [
   { when: "Today", what: "Create a free account and choose your child's class." },
-  { when: FIRST_LESSONS, what: "The first animated lessons open." },
+  LESSONS_OPEN
+    ? { when: "Now", what: "The first animated lessons are open." }
+    : { when: FIRST_LESSONS, what: "The first animated lessons open." },
   { when: "After that", what: "More lessons are added as they are produced. We will tell you before anything is charged." },
 ];
 
@@ -106,7 +109,9 @@ const FAQS = [
   },
   {
     q: "Can my child watch lessons now?",
-    a: `Not yet. The first lessons open on ${FIRST_LESSONS}. All ${TOTALS.lessons} lessons for Classes VIII to X are scripted and checked against the textbooks, and the rest of the animated videos are added as they are produced.`,
+    a: LESSONS_OPEN
+      ? `Yes, the lessons that are finished. All ${TOTALS.lessons} lessons for Classes VIII to X are scripted and checked against the textbooks, and the animated videos open as they are produced.`
+      : `Not yet. The first lessons open on ${FIRST_LESSONS}. All ${TOTALS.lessons} lessons for Classes VIII to X are scripted and checked against the textbooks, and the rest of the animated videos are added as they are produced.`,
   },
   {
     q: "Why create an account before the lessons open?",
@@ -161,7 +166,7 @@ function CtaBlock({ align = "start", onDark = false }) {
         {CTA_LABEL}
         <ArrowRight aria-hidden="true" weight="bold" />
       </Link>
-      <p className={`caption-1 mt-4 ${onDark ? "text-white/70" : "text-ink-muted"}`}>Free to join. Nothing is charged today.</p>
+      <p className={`caption-1 mt-4 ${onDark ? "text-white/70" : "text-ink-muted"}`}>{PAYMENTS_OPEN ? "Free to join." : "Free to join. Nothing is charged today."}</p>
     </div>
   );
 }
@@ -368,7 +373,8 @@ export default function SchoolHomepage() {
               <CtaBlock />
             </div>
             <p className="body-2 mt-8 max-w-[56ch] text-ink">
-              {TOTALS.lessons} lessons scripted and checked against the textbooks. First lessons open on {FIRST_LESSONS}.
+              {TOTALS.lessons} lessons scripted and checked against the textbooks.{" "}
+              {LESSONS_OPEN ? "Lessons open as each animation is finished." : `First lessons open on ${FIRST_LESSONS}.`}
             </p>
           </div>
           <HeroClip />
@@ -412,7 +418,7 @@ export default function SchoolHomepage() {
             { label: "New NCERT books", r: "5%", y: "18%", depth: 0.9, at: 0.28 },
             { label: "923 lessons scripted", x: "3%", y: "58%", depth: 1.1, at: 0.4 },
             { label: "Maths, Science, English and more", r: "4%", y: "66%", depth: 0.6, at: 0.55 },
-            { label: "Free until payments open", x: "36%", y: "82%", depth: 0.8, at: 0.7 },
+            { label: PAYMENTS_OPEN ? "Rs 5,000 a year" : "Free until payments open", x: "36%", y: "82%", depth: 0.8, at: 0.7 },
           ]}
         />
       </div>
@@ -552,7 +558,7 @@ export default function SchoolHomepage() {
               <p className="caption-3 text-[var(--school-ink)]">Price</p>
               <h2 id="pricing-heading" className="heading-2 mt-1">{SCHOOL_CATALOG.price}</h2>
               <p className="body-3 mt-2 max-w-[48ch] text-ink-muted">
-                For one class, for one academic year, {PER_MONTH}. Creating an account is free, and payments are not open yet.
+                For one class, for one academic year, {PER_MONTH}. Creating an account is free.{PAYMENTS_OPEN ? "" : " Payments are not open yet."}
               </p>
               <ul className="mt-5 grid gap-2">
                 {PLAN_INCLUDES.map((item) => (
@@ -560,7 +566,7 @@ export default function SchoolHomepage() {
                 ))}
               </ul>
               <p className="caption-1 mt-4 max-w-[48ch] text-ink-muted">
-                Refund terms will be published before payments open. See the <Link to="/refunds" className="underline underline-offset-4">Refund Policy</Link>.
+                {PAYMENTS_OPEN ? "" : "Refund terms will be published before payments open. "}See the <Link to="/refunds" className="underline underline-offset-4">Refund Policy</Link>.
               </p>
               <div className="mt-6">
                 <CtaBlock />
@@ -600,9 +606,9 @@ export default function SchoolHomepage() {
       <div className="band-night">
         <section aria-labelledby="final-heading" className="site-container py-16 text-center md:py-24">
           <Reveal>
-            <h2 id="final-heading" className="heading-2 mx-auto max-w-[680px] text-white">Be ready for {FIRST_LESSONS}</h2>
+            <h2 id="final-heading" className="heading-2 mx-auto max-w-[680px] text-white">{LESSONS_OPEN ? "Start your first lesson" : `Be ready for ${FIRST_LESSONS}`}</h2>
             <p className="title-1 mx-auto mt-4 max-w-[680px] text-white/75">
-              Set up your account and your child's class today, so the first lesson is one tap away.
+              {LESSONS_OPEN ? "Create your account and choose your child's class to start watching." : "Set up your account and your child's class today, so the first lesson is one tap away."}
             </p>
             <div className="mt-8">
               <CtaBlock align="center" onDark />

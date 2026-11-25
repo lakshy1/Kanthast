@@ -19,6 +19,7 @@ import LANDING_PROOF from "../data/landingProof";
 import { HOME_FAQS } from "../data/faqs";
 import { PILOT_TESTERS } from "../data/pilotTesters";
 import ProWaitlist from "../components/landing/ProWaitlist";
+import { LESSONS_OPEN, PAYMENTS_OPEN } from "../config/launch";
 import { getMedicineUsmleContent } from "../utils/authApi";
 
 
@@ -384,7 +385,7 @@ const Homepage = () => {
                 </Link>
               </div>
               <p className="mt-3 text-sm text-ink-muted">
-                Free to start. Lectures are coming soon, so create a free account to be ready.
+                {LESSONS_OPEN ? "Free to start. Create an account and open your first lecture." : "Free to start. Lectures are coming soon, so create a free account to be ready."}
               </p>
               <ul className="hero-exams" aria-label="Exams covered">
                 {EXAMS.map((exam) => (
@@ -433,7 +434,7 @@ const Homepage = () => {
             poster={`${import.meta.env.BASE_URL}tagline-bg.webp`}
             chips={[
               { label: "NEET PG", x: "6%", y: "15%", depth: 0.7, at: 0.05 },
-              { label: "Lectures coming soon", x: "37%", y: "9%", depth: 1.2, at: 0.15 },
+              { label: LESSONS_OPEN ? "Lectures open" : "Lectures coming soon", x: "37%", y: "9%", depth: 1.2, at: 0.15 },
               { label: "INI CET", r: "6%", y: "18%", depth: 0.9, at: 0.28 },
               { label: "Resume where you stopped", x: "3%", y: "58%", depth: 1.1, at: 0.4 },
               { label: "USMLE", r: "5%", y: "66%", depth: 0.6, at: 0.55 },
@@ -453,8 +454,8 @@ const Homepage = () => {
                   {totals.subjects} subjects mapped. Lectures open as they are published.
                 </h2>
                 <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-muted">
-                  {totals.subjects} subjects and {totals.chapters} chapters are laid out today. Lectures are coming soon
-                  and open as each video is published.
+                  {totals.subjects} subjects and {totals.chapters} chapters are laid out today.{" "}
+                  {LESSONS_OPEN ? "Lectures open as each video is published." : "Lectures are coming soon and open as each video is published."}
                 </p>
                 <Link to="/library" className="btn-secondary mt-8">
                   Browse the library
@@ -480,6 +481,7 @@ const Homepage = () => {
         </section>
 
         {/* Lectures are not playable yet, so the call to action here is the waitlist, not a purchase. */}
+        {!LESSONS_OPEN && (
         <section id="waitlist" aria-labelledby="home-waitlist-heading" className="border-t border-line bg-surface py-20 md:py-28">
           <div className="site-container">
             <Reveal>
@@ -498,6 +500,42 @@ const Homepage = () => {
             </p>
           </div>
         </section>
+        )}
+
+        {PAYMENTS_OPEN && (
+        <section id="pricing" aria-labelledby="home-pricing-heading" className="border-t border-line bg-surface py-20 md:py-28">
+          <div className="site-container">
+            <Reveal>
+              <h2 id="home-pricing-heading" className="max-w-2xl text-3xl md:text-5xl">One library. Two plans, in rupees.</h2>
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-muted">
+                The same Medicine library serves NEET PG, INI CET and USMLE. Start with a free account.
+              </p>
+            </Reveal>
+            <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:max-w-4xl">
+              {MEDICAL_PLANS.map((plan, planIndex) => (
+                <Reveal as="li" delay={planIndex * 120} key={plan.id} className={`pro-plan flex flex-col p-8 ${plan.highlight ? "pro-plan-best" : ""}`}>
+                  <p className="flex items-center gap-3 text-xl font-bold text-ink">
+                    {plan.durationLabel}
+                    {plan.highlight && <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-bold text-brand">Best value</span>}
+                  </p>
+                  <p className="mt-6 text-5xl font-bold tabular-nums text-ink">{plan.priceLabel}</p>
+                  <p className="mt-4 flex-1 leading-relaxed text-ink-muted">{plan.desc}</p>
+                </Reveal>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <Link to={startHref} className="btn-primary px-7 text-base">
+                {startLabel}
+                <FaArrowRight aria-hidden="true" />
+              </Link>
+              <Link to="/pricing" className="font-semibold text-brand underline-offset-4 hover:underline">
+                What every plan includes
+              </Link>
+            </div>
+            <p className="mt-3 text-sm text-ink-muted">Free to start. Lectures are coming soon, so create a free account to be ready.</p>
+          </div>
+        </section>
+        )}
 
         <ProofSections />
 

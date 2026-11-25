@@ -1,9 +1,13 @@
+import { LESSONS_OPEN, PAYMENTS_OPEN } from "../config/launch";
+
 // Every FAQ for Kanthast Professional. `home: true` ones also show on the homepage; /help shows all.
 export const FAQS = [
   {
     q: "Are the lectures available to watch?",
     home: true,
-    a: "Not yet. Lectures are coming soon. Every planned lecture is already listed, so you can see what is on the way, and each one opens the moment its video is published.",
+    a: LESSONS_OPEN
+      ? "Yes, the lectures that are published. Every planned lecture is listed, and each one opens the moment its video is published."
+      : "Not yet. Lectures are coming soon. Every planned lecture is already listed, so you can see what is on the way, and each one opens the moment its video is published.",
   },
   {
     q: "Which exams is Kanthast for?",
@@ -18,7 +22,9 @@ export const FAQS = [
   {
     q: "How much does it cost?",
     home: true,
-    a: "Rs 10,000 for one year, or Rs 18,000 for two years. Payments are not open yet, and we will tell you before anything is charged. A free account works in the meantime.",
+    a: PAYMENTS_OPEN
+      ? "Rs 10,000 for one year, or Rs 18,000 for two years."
+      : "Rs 10,000 for one year, or Rs 18,000 for two years. Payments are not open yet, and we will tell you before anything is charged. A free account works in the meantime.",
   },
   {
     q: "What can I open without paying?",

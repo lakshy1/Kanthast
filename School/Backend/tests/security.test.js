@@ -63,3 +63,29 @@ test("logout without an active session still answers 200 and never touches the d
   assert.equal(res.statusCode, 200);
   assert.equal(res.body.success, true);
 });
+
+test("payment routes are disabled: capture and verify answer 503 and never reach Razorpay", async () => {
+  const { default: express } = await import("express");
+  const { default: paymentRoutes } = await import("../routes/Payments.js");
+  const app = express();
+  app.use(express.json());
+  app.use("/api/v1/payments", paymentRoutes);
+  const server = app.listen(0);
+  try {
+    const { port } = server.address();
+    for (const path of ["capture", "verify", "anything-else"]) {
+      for (const method of ["POST", "GET"]) {
+        const response = await fetch(`http://127.0.0.1:${port}/api/v1/payments/${path}`, {
+          method,
+          headers: { "Content-Type": "application/json" },
+          body: method === "POST" ? JSON.stringify({ courseId: "x", razorpay_payment_id: "p", razorpay_order_id: "o", razorpay_signature: "s" }) : undefined,
+        });
+        assert.equal(response.status, 503, `${method} ${path}`);
+        const body = await response.json();
+        assert.equal(body.success, false);
+      }
+    }
+  } finally {
+    server.close();
+  }
+});
