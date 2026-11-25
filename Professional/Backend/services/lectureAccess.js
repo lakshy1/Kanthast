@@ -27,22 +27,32 @@ export function lectureDecision(user, index, now = Date.now()) {
   return { allowed: false, reason: "plan" };
 }
 
+/** Legacy: lectures pasted in as YouTube, Vimeo or file links. Their raw link reaches the student, so it is off unless allowed. */
+export const externalLinksAllowed = () => String(process.env.ALLOW_EXTERNAL_VIDEO_LINKS || "").trim().toLowerCase() === "true";
+
 /**
  * The public version of the library: names, lengths and structure, but never a real video link or image link.
- * A lecture that has a video carries the marker "secure:<id>" so the app can show it as available.
+ * A lecture that has a video carries the marker "secure:<id>" so the app can show it as available. That is either
+ * an encrypted lecture registered in LectureVideo (`liveIds`), or, only when ALLOW_EXTERNAL_VIDEO_LINKS is on, an
+ * old pasted link.
  */
-export function publicLibrary(content) {
+export function publicLibrary(content, liveIds = new Set()) {
+  const external = externalLinksAllowed();
   return {
     ...content,
     subjects: (content.subjects || []).map((subject) => ({
       ...subject,
       chapters: (subject.chapters || []).map((chapter) => ({
         ...chapter,
-        videos: (chapter.videos || []).map((video) => ({
-          ...video,
-          videoLink: lecturesLive() && String(video.videoLink || "").trim() ? `secure:${video._id}` : "",
-          photos: [],
-        })),
+        videos: (chapter.videos || []).map((video) => {
+          const id = String(video._id || "").toLowerCase();
+          const playable = liveIds.has(id) || (external && String(video.videoLink || "").trim());
+          return {
+            ...video,
+            videoLink: lecturesLive() && playable ? `secure:${video._id}` : "",
+            photos: [],
+          };
+        }),
       })),
     })),
   };

@@ -1,0 +1,8 @@
+{
+  "name": "kanthast-professional-video-tools",
+  "private": true,
+  "description": "Local tools for encoding lectures. Kept out of the backend's own dependencies so deployments do not download ffmpeg.",
+  "devDependencies": {
+    "ffmpeg-static": "^5.2.0"
+  }
+}

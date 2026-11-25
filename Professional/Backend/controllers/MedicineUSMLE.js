@@ -1,5 +1,9 @@
 import MedicineUSMLE from "../models/MedicineUSMLE.js";
-import { lectureDecision, publicLibrary } from "../services/lectureAccess.js";
+import { externalLinksAllowed, lectureDecision, publicLibrary } from "../services/lectureAccess.js";
+import LectureVideo from "../models/LectureVideo.js";
+
+const liveLectureIds = async () =>
+  new Set((await LectureVideo.find({ status: "live" }).select("lectureId -_id").lean()).map((row) => String(row.lectureId).toLowerCase()));
 
 const DEFAULT_SUBJECTS = [
   "Biochemistry",
@@ -131,7 +135,7 @@ export const getMedicineUsmleContent = async (req, res) => {
     // Anyone may see the structure. Real video and image links are never part of this response.
     return res.status(200).json({
       success: true,
-      content: publicLibrary(sortHierarchy(content)),
+      content: publicLibrary(sortHierarchy(content), await liveLectureIds()),
     });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
@@ -192,10 +196,16 @@ export const getMedicineUsmleVideoDetails = async (req, res) => {
       });
     }
 
+    // An encrypted lecture is played through the playback routes, so no real link is ever sent. A raw pasted link
+    // is only sent when ALLOW_EXTERNAL_VIDEO_LINKS is on; otherwise it is withheld.
+    const secureLive = Boolean(await LectureVideo.exists({ lectureId: String(video._id).toLowerCase(), status: "live" }));
+    const sentLink = secureLive ? `secure:${video._id}` : externalLinksAllowed() ? video.videoLink : "";
+
     return res.status(200).json({
       success: true,
       video: {
         ...video.toObject(),
+        videoLink: sentLink,
         subject: {
           _id: subject._id,
           name: subject.name,

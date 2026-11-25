@@ -49,19 +49,38 @@ test("once payments are open: two free lectures per chapter, then a plan is need
   assert.equal(withPayments(() => lectureDecision({ subscriptionPurchased: true, subscriptionValidTill: past }, 5)).allowed, false, "expired plan");
 });
 
+const sample = () => ({
+  courseTitle: "X",
+  subjects: [{ name: "S", chapters: [{ name: "C", videos: [
+    { _id: "aaaaaaaaaaaaaaaaaaaaaaaa", name: "Encrypted", videoLink: "", photos: [{ imageLink: "https://img.example/a.png" }] },
+    { _id: "bbbbbbbbbbbbbbbbbbbbbbbb", name: "Old pasted link", videoLink: "https://www.youtube.com/watch?v=abcdefghijk", photos: [] },
+    { _id: "cccccccccccccccccccccccc", name: "No video", videoLink: "  ", photos: [] },
+  ] }] }],
+});
+const videosOf = (library) => library.subjects[0].chapters[0].videos;
+
 test("the public library never contains a real video link or image link", () => {
-  process.env.LECTURES_LIVE = "true";
-  const library = publicLibrary({
-    courseTitle: "X",
-    subjects: [{ name: "S", chapters: [{ name: "C", videos: [
-      { _id: "v1", name: "With video", videoLink: "https://www.youtube.com/watch?v=abcdefghijk", photos: [{ imageLink: "https://img.example/a.png" }] },
-      { _id: "v2", name: "No video", videoLink: "  ", photos: [] },
-    ] }] }],
-  });
-  const [withVideo, without] = library.subjects[0].chapters[0].videos;
-  assert.equal(withVideo.videoLink, "secure:v1");
-  assert.deepEqual(withVideo.photos, []);
-  assert.equal(without.videoLink, "");
+  const library = whenLive(() => publicLibrary(sample(), new Set(["aaaaaaaaaaaaaaaaaaaaaaaa"])));
+  const [encrypted, oldLink, none] = videosOf(library);
+  assert.equal(encrypted.videoLink, "secure:aaaaaaaaaaaaaaaaaaaaaaaa");
+  assert.deepEqual(encrypted.photos, []);
+  assert.equal(oldLink.videoLink, "", "a pasted YouTube link is not offered unless external links are allowed");
+  assert.equal(none.videoLink, "");
   assert.doesNotMatch(JSON.stringify(library), /youtube|img\.example/);
-  delete process.env.LECTURES_LIVE;
+});
+
+test("old pasted links are only offered when ALLOW_EXTERNAL_VIDEO_LINKS is on, and still never leak", () => {
+  process.env.ALLOW_EXTERNAL_VIDEO_LINKS = "true";
+  try {
+    const library = whenLive(() => publicLibrary(sample(), new Set()));
+    assert.equal(videosOf(library)[1].videoLink, "secure:bbbbbbbbbbbbbbbbbbbbbbbb");
+    assert.doesNotMatch(JSON.stringify(library), /youtube/);
+  } finally {
+    delete process.env.ALLOW_EXTERNAL_VIDEO_LINKS;
+  }
+});
+
+test("nothing is marked playable while lectures are not live", () => {
+  const library = publicLibrary(sample(), new Set(["aaaaaaaaaaaaaaaaaaaaaaaa"]));
+  assert.ok(videosOf(library).every((v) => v.videoLink === ""));
 });

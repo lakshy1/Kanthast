@@ -16,6 +16,8 @@ import {
 } from "../utils/authApi";
 import { VideoMetaSkeleton, VideoPageSkeleton } from "../components/DataLoaderSkeletons";
 import { getPlaybackRate, trackAnalyticsEvent, useAppSettings } from "../utils/settings";
+import { API_BASE_URL } from "../utils/apiBase";
+import SecurePlayer from "../components/player/SecurePlayer";
 import {
   getResumeSeconds,
   saveProgress,
@@ -68,6 +70,14 @@ function unmarkWatched(videoId) {
     localStorage.setItem(WATCHED_KEY, JSON.stringify(watched));
   } catch {
     return;
+  }
+}
+
+function readStoredUser() {
+  try {
+    return JSON.parse(localStorage.getItem("kanthastUser") || "null");
+  } catch {
+    return null;
   }
 }
 
@@ -141,6 +151,12 @@ function parseVideoUrl(rawUrl) {
   if (typeof rawUrl !== "string") return { type: "none" };
   const url = rawUrl.trim();
   if (!url) return { type: "none" };
+
+  // An encrypted lecture: played by the protected player through our own playback routes, never by a raw link.
+  const secure = /^secure:([a-f0-9]{24})$/i.exec(url);
+  if (secure) {
+    return { type: "file", secure: true, lectureId: secure[1].toLowerCase(), url: `${API_BASE_URL}/playback/${secure[1].toLowerCase()}/master.m3u8` };
+  }
 
   // Same-origin path to a self-hosted file ("/media/lecture.mp4").
   if (url.startsWith("/") && !url.startsWith("//")) {
@@ -827,6 +843,49 @@ function LecturePage() {
         <p>Check your connection and try again. Your progress is saved on this device.</p>
       </PlayerStatusPanel>
     );
+  } else if (parsed.type === "file" && parsed.secure) {
+    player = (
+      <SecurePlayer
+        src={parsed.url}
+        lectureId={parsed.lectureId}
+        title={displayTitle}
+        user={readStoredUser()}
+        videoRef={videoRef}
+        rate={activeRate}
+        onRate={(next) => {
+          activeRateRef.current = next;
+          setActiveRate(next);
+        }}
+        flash={shortcutFlash}
+        nextTitle={nextLecture?.title}
+        autoplayNext={settings.autoplayNextLecture}
+        onPlayNext={() => {
+          sessionStorage.setItem("kanthastSkipNextLoader", "true");
+          navigate(buildLectureHref(nextLecture), { replace: true });
+        }}
+        onLoaded={(el) => {
+          // Resume where the student left off.
+          const resumeAt = getResumeSeconds(data.videoId);
+          if (resumeAt > 0 && resumeAt < el.duration) {
+            el.currentTime = resumeAt;
+            setResumedFrom(resumeAt);
+          }
+          setMediaError("");
+        }}
+        onProgress={(el) => {
+          if (!el.duration || !shouldPersist(el.currentTime)) return;
+          saveProgress(data.videoId, el.currentTime, el.duration, {
+            title: displayTitle,
+            module: subjectName,
+            section: chapterName,
+            subjectId: data.subjectId,
+            chapterId: data.chapterId,
+            durationLabel: displayDuration,
+          });
+        }}
+        onEnded={handleEnded}
+      />
+    );
   } else if (parsed.type === "file") {
     player = (
       <div className="relative overflow-hidden rounded-card border border-line bg-black">
@@ -1080,7 +1139,7 @@ function LecturePage() {
 
                   {/* In-player speed control, native player only; YouTube
                       and Vimeo expose their own. */}
-                  {parsed.type === "file" && (
+                  {parsed.type === "file" && !parsed.secure && (
                     <div className="flex flex-wrap items-center gap-2">
                       <span id="speed-label" className="text-sm text-ink-subtle">
                         Speed
@@ -1114,7 +1173,7 @@ function LecturePage() {
                 </div>
               )}
 
-              {parsed.type === "file" && !loadError && !hintDismissed && (
+              {parsed.type === "file" && !parsed.secure && !loadError && !hintDismissed && (
                 <div className="mt-3 hidden items-center justify-between gap-3 border-t border-line pt-3 md:flex">
                   <p className="text-mini text-ink-subtle">
                     <span className="font-semibold text-ink-muted">Keyboard:</span>{" "}

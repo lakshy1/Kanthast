@@ -14,6 +14,8 @@ import { cloudinaryConnect } from "./config/cloudinary.js";
 import userRoutes from "./routes/User.js";
 import profileRoutes from "./routes/Profile.js";
 import paymentRoutes from "./routes/Payments.js";
+import playbackRoutes from "./routes/Playback.js";
+import playbackAdminRoutes from "./routes/PlaybackAdmin.js";
 import courseRoutes from "./routes/Course.js";
 import chatRoutes from "./routes/Chat.js";
 import medicineUsmleRoutes from "./routes/MedicineUSMLE.js";
@@ -80,6 +82,8 @@ app.use(async (req, res, next) => {
 app.use("/api/v1/auth", userRoutes);
 app.use("/api/v1/profile", profileRoutes);
 app.use("/api/v1/payments", paymentRoutes);
+app.use("/api/v1/playback", playbackRoutes);
+app.use("/api/v1/admin/playback", playbackAdminRoutes);
 app.use("/api/v1/courses", courseRoutes);
 app.use("/api/v1/chat", chatRoutes);
 app.use("/api/v1/medicine-usmle", medicineUsmleRoutes);
