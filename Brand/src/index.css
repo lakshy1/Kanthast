@@ -2309,3 +2309,4 @@ nav.kb-bar.fixed.nav-aurora { background: rgb(255 255 255 / 0.82); -webkit-backd
 .kx-products-stack .kx-product-copy .kx-product-foot { margin-top: 0.5rem; }
 .kx-stage-art { inset: 1rem; width: calc(100% - 2rem); height: calc(100% - 2rem); padding: 0; border-radius: 18px; }
 .kx-products-stack .kx-product-pro .kx-stage { margin-bottom: 0; }
+.bwa-clip { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 22px; background: #000; object-fit: cover; }

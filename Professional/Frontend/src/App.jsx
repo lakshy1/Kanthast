@@ -22,6 +22,8 @@ const SHOW_COMING_SOON = false;
 const Homepage = lazy(() => import("./pages/Homepage"));
 const About = lazy(() => import("./pages/About"));
 const Pricing = lazy(() => import("./pages/Pricing"));
+const ExamPage = lazy(() => import("./pages/ExamPage"));
+const Help = lazy(() => import("./pages/Help"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Courses = lazy(() => import("./pages/Courses"));
 const Login = lazy(() => import("./pages/Login"));
@@ -305,6 +307,10 @@ function App() {
                   <Route path="/professional" element={<Navigate to="/" replace />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/pricing" element={<Pricing />} />
+                  <Route path="/neet-pg" element={<ExamPage slug="neet-pg" />} />
+                  <Route path="/ini-cet" element={<ExamPage slug="ini-cet" />} />
+                  <Route path="/usmle" element={<ExamPage slug="usmle" />} />
+                  <Route path="/help" element={<Help />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/terms" element={<Legal doc="terms" />} />
                   <Route path="/privacy" element={<Legal doc="privacy" />} />

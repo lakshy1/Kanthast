@@ -16,15 +16,16 @@ import ScrollTagline from "../components/landing/ScrollTagline";
 import Reveal from "../components/landing/Reveal";
 import "../styles/pro-home.css";
 import LANDING_PROOF from "../data/landingProof";
+import { HOME_FAQS } from "../data/faqs";
 import { PILOT_TESTERS } from "../data/pilotTesters";
 import ProWaitlist from "../components/landing/ProWaitlist";
 import { getMedicineUsmleContent } from "../utils/authApi";
 
 
 const EXAMS = [
-  { label: "NEET PG" },
-  { label: "INI CET" },
-  { label: "USMLE" },
+  { label: "NEET PG", path: "/neet-pg" },
+  { label: "INI CET", path: "/ini-cet" },
+  { label: "USMLE", path: "/usmle" },
   { label: "NEET UG", soon: true },
 ];
 
@@ -54,52 +55,7 @@ const TOUR_STEPS = [
   },
 ];
 
-const FAQS = [
-  {
-    q: "Are the lectures available to watch?",
-    a: "Not yet. Lectures are coming soon. Every planned lecture is already listed, so you can see what is on the way, and each one opens the moment its video is published.",
-  },
-  {
-    q: "Which exams is Kanthast for?",
-    a: "NEET PG, INI CET and USMLE. The library is organised by subject and chapter, not by exam, so one lecture serves whichever exam you are preparing for. It does not yet mark which topics each exam weighs most; we will say so here when it does. Today it maps the five subjects shown on this page. NEET UG is coming soon.",
-  },
-  {
-    q: "Is there a question bank or mock tests?",
-    a: "Not yet. Today Kanthast Professional is animated lectures with written notes, an images page, progress tracking and the Kanthast Assistant. A question bank, previous year questions and mock tests are not included.",
-  },
-  {
-    q: "How much does it cost?",
-    a: "Rs 10,000 for one year, or Rs 18,000 for two years. Payments are not open yet, and we will tell you before anything is charged. A free account works in the meantime.",
-  },
-  {
-    q: "What can I open without paying?",
-    a: "Once lectures are released, every lecture is free with an account until payments open. After that, the first two lectures in every section stay free and a plan unlocks the rest as they are released.",
-  },
-  {
-    q: "Will it remember where I stopped?",
-    a: "Yes. Leave a lecture halfway and your next visit resumes at the same second, at the playback speed you prefer.",
-  },
-  {
-    q: "Is there more than the video?",
-    a: "Yes. Lectures come with written notes and an images page, so you can revise a topic without rewatching it.",
-  },
-  {
-    q: "How do I track my progress?",
-    a: "Your dashboard keeps the lecture to resume on top and counts what you have watched, subject by subject.",
-  },
-  {
-    q: "Can I ask questions while I study?",
-    a: "Yes. Signed in students can ask the Kanthast Assistant about a topic or about using the platform.",
-  },
-  {
-    q: "Does it work on my phone?",
-    a: "Yes. The whole site is built for phones, including the library, the player and resume.",
-  },
-  {
-    q: "Can I get a refund?",
-    a: "Refunds follow our Refund Policy, linked in the footer of every page. For anything it does not cover, contact us and we will help.",
-  },
-];
+const FAQS = HOME_FAQS;
 
 const cleanName = (name = "") => name.replace(/\s*\(New\)\s*$/, "");
 
@@ -322,7 +278,7 @@ function FaqSection() {
             FAQ
           </h2>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-muted">
-            The questions students ask first, before they open a single lecture.
+            The questions students ask first, before they open a single lecture. More on the <Link to="/help" className="font-semibold text-brand underline-offset-4 hover:underline">Help page</Link>.
           </p>
         </div>
 
@@ -433,10 +389,14 @@ const Homepage = () => {
               <ul className="hero-exams" aria-label="Exams covered">
                 {EXAMS.map((exam) => (
                   <li key={exam.label}>
-                    <span className={`hero-exam${exam.soon ? " hero-exam-soon" : ""}`}>
-                      {exam.label}
-                      {exam.soon && <span className="hero-exam-badge">Coming soon</span>}
-                    </span>
+                    {exam.path ? (
+                      <Link to={exam.path} className="hero-exam">{exam.label}</Link>
+                    ) : (
+                      <span className={`hero-exam${exam.soon ? " hero-exam-soon" : ""}`}>
+                        {exam.label}
+                        {exam.soon && <span className="hero-exam-badge">Coming soon</span>}
+                      </span>
+                    )}
                   </li>
                 ))}
               </ul>

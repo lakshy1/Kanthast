@@ -1,6 +1,5 @@
 import { FaPlay, FaArrowRight, FaBrain, FaHeart, FaQuoteLeft, FaStar } from "react-icons/fa6";
 import { MdOndemandVideo } from "react-icons/md";
-import playerArt from "../../assets/watch/player.jpg";
 import NeoZippy from "./NeoZippy";
 import IllustratedAvatar from "./IllustratedAvatar";
 import { VISIBLE_TESTIMONIALS as TESTIMONIALS } from "../../data/testimonials";
@@ -100,14 +99,20 @@ export default function BrandWatch() {
             </a>
           </div>
           <div className="bwa-art">
-            <img
-              src={playerArt}
-              alt="An animated lesson on the human heart playing beside the Kanthast AI tutor, which answers a question about the left ventricle."
+            <video
+              className="bwa-clip"
+              controls
+              muted
+              loop
+              playsInline
+              preload="none"
+              poster={`${import.meta.env.BASE_URL}hero-lesson.webp`}
+              src={`${import.meta.env.BASE_URL}hero-lesson.mp4`}
+              aria-label="A short clip from the Kanthast School Class VIII Science lesson From Wonder to Investigation, with Neo the owl and Zippy the spark."
               width="932"
-              height="588"
-              loading="lazy"
+              height="524"
             />
-            <p className="bwa-caption">Illustration of a lesson with the AI helper.</p>
+            <p className="bwa-caption">A real clip from Kanthast School, Class VIII Science.</p>
           </div>
         </div>
       </section>

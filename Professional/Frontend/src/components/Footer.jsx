@@ -19,6 +19,10 @@ const COLUMNS = [
       { label: "Courses", to: "/courses" },
       { label: "Library", to: "/library" },
       { label: "Pricing", to: "/pricing" },
+      { label: "NEET PG", to: "/neet-pg" },
+      { label: "INI CET", to: "/ini-cet" },
+      { label: "USMLE", to: "/usmle" },
+      { label: "Help", to: "/help" },
     ],
   },
   {
