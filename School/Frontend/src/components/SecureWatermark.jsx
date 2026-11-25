@@ -1,8 +1,8 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
 
-// Two lines with the student's name, the last four digits of their phone and the session code. They drift across
-// the picture all the time, bouncing off the edges at different speeds, so there is no still spot to crop out.
-// If the page's own code or devtools remove or restyle them, they put themselves back.
+// One line with the student's name, the last four digits of their phone and the session code. It drifts across
+// the whole picture all the time, bouncing off the edges on a path that keeps bending, so there is no still spot
+// to crop out and no straight line to track. If the page's own code or devtools remove or restyle it, it puts itself back.
 // It is a deterrent: it makes a recording traceable to an account and a session, it cannot stop recording.
 
 function watermarkText(user) {
@@ -14,14 +14,11 @@ function watermarkText(user) {
 
 const BASE_STYLE =
   "position:absolute;top:0;left:0;z-index:5;pointer-events:none;user-select:none;white-space:nowrap;" +
-  "font:700 15px/1 system-ui,sans-serif;color:#fff;opacity:.62;padding:5px 10px;border-radius:8px;" +
+  "font:700 16px/1 system-ui,sans-serif;color:#fff;opacity:.68;padding:5px 10px;border-radius:8px;" +
   "background:rgba(0,0,0,.32);text-shadow:0 1px 2px rgba(0,0,0,.8),0 0 6px rgba(0,0,0,.5);will-change:transform;";
 
-// Pixels per second, and the direction of each mark. Different speeds keep the two marks out of step.
-const MARKS = [
-  { speed: 46, angle: 28, start: [0.08, 0.12] },
-  { speed: 31, angle: 205, start: [0.62, 0.7] },
-];
+// Pixels per second and the starting direction (degrees).
+const MARK = { speed: 44, angle: 28, start: [0.1, 0.15] };
 
 function Mark({ text, config }) {
   const ref = useRef(null);
@@ -38,9 +35,7 @@ function Mark({ text, config }) {
 
     const reduce = typeof matchMedia === "function" && matchMedia("(prefers-reduced-motion: reduce)").matches;
     const speed = config.speed * (reduce ? 0.35 : 1); // slower for people who prefer less motion, never off
-    const rad = (config.angle * Math.PI) / 180;
-    let vx = Math.cos(rad) * speed;
-    let vy = Math.sin(rad) * speed;
+    let heading = (config.angle * Math.PI) / 180;
     let box = { w: 0, h: 0, nw: 0, nh: 0 };
     const measure = () => {
       box = { w: parent.clientWidth, h: parent.clientHeight, nw: node.offsetWidth, nh: node.offsetHeight };
@@ -56,10 +51,15 @@ function Mark({ text, config }) {
       last = now;
       const maxX = Math.max(0, box.w - box.nw);
       const maxY = Math.max(0, box.h - box.nh);
+      // The path keeps bending a little, so it is never a straight line to follow.
+      heading += 0.45 * dt * Math.sin(now / 1700);
+      let vx = Math.cos(heading) * speed;
+      let vy = Math.sin(heading) * speed;
       x += vx * dt;
       y += vy * dt;
       if (x <= 0) { x = 0; vx = Math.abs(vx); } else if (x >= maxX) { x = maxX; vx = -Math.abs(vx); }
       if (y <= 0) { y = 0; vy = Math.abs(vy); } else if (y >= maxY) { y = maxY; vy = -Math.abs(vy); }
+      heading = Math.atan2(vy, vx);
       node.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0)`;
       frame = requestAnimationFrame(tick);
     };
@@ -98,11 +98,5 @@ function Mark({ text, config }) {
 export default function SecureWatermark({ user, code = "" }) {
   // The session code names this one viewing session, so a recording can be traced to the account and the moment.
   const text = code ? `${watermarkText(user)}  ·  #${code}` : watermarkText(user);
-  return (
-    <>
-      {MARKS.map((config, index) => (
-        <Mark key={index} text={text} config={config} />
-      ))}
-    </>
-  );
+  return <Mark text={text} config={MARK} />;
 }
