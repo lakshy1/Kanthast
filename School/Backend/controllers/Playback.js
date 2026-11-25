@@ -4,7 +4,7 @@ import { r2, r2Config } from "../config/r2.js";
 import { lessonKey } from "../utils/videoKeys.js";
 import { parseLessonId, playbackDecision } from "../services/lessonAccess.js";
 import { rewriteMediaPlaylist } from "../services/playlist.js";
-import { clampSeconds, isCurrentStream, streamIdFrom } from "../services/streams.js";
+import { askedForKeyTooOften, clampSeconds, isCurrentStream, startedTooMany, streamIdFrom } from "../services/streams.js";
 import PlaybackStream from "../models/PlaybackStream.js";
 import PlaybackLog from "../models/PlaybackLog.js";
 import LessonVideo from "../models/LessonVideo.js";
@@ -68,11 +68,22 @@ export const getMasterPlaylist = async (req, res) => {
   const streamId = streamIdFrom(req.header("X-Stream-Id"));
   if (!streamId) return res.status(400).json({ success: false, message: "Missing stream id." });
   try {
+    // Pulling the whole catalogue needs hundreds of starts; a student never does. Refuse and say why.
+    const hourAgo = new Date(Date.now() - 60 * 60 * 1000);
+    const dayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
+    const [hour, day] = await Promise.all([
+      PlaybackLog.distinct("lessonId", { user: req.user._id, startedAt: { $gte: hourAgo } }),
+      PlaybackLog.distinct("lessonId", { user: req.user._id, startedAt: { $gte: dayAgo } }),
+    ]);
+    if (startedTooMany({ lastHour: hour.length, lastDay: day.length })) {
+      res.set("Retry-After", "3600");
+      return res.status(429).json({ success: false, message: "You have started a lot of lessons very quickly. Please take a break and try again later." });
+    }
     const text = await readText(`lessons/${lesson.id}/master.m3u8`);
     const now = new Date();
     await PlaybackStream.findOneAndUpdate(
       { user: req.user._id },
-      { $set: { streamId, lessonId: lesson.id, startedAt: now, lastSeenAt: now } },
+      { $set: { streamId, lessonId: lesson.id, startedAt: now, lastSeenAt: now, keyFetches: 0 } },
       { upsert: true }
     );
     await PlaybackLog.create({
@@ -120,7 +131,14 @@ export const getLessonKey = async (req, res) => {
   const lesson = authorise(req, res);
   if (!lesson) return undefined;
   try {
-    if (!(await requireCurrentStream(req, res))) return undefined;
+    const streamId = streamIdFrom(req.header("X-Stream-Id"));
+    const current = streamId
+      ? await PlaybackStream.findOneAndUpdate({ user: req.user._id, streamId }, { $inc: { keyFetches: 1 } }, { new: true }).lean()
+      : null;
+    if (!isCurrentStream(current, streamId)) return anotherDevice(res);
+    if (askedForKeyTooOften(current.keyFetches)) {
+      return res.status(429).json({ success: false, message: "Too many requests for this lesson. Reload the page to start again." });
+    }
     noStore(res);
     return res.type("application/octet-stream").send(lessonKey(process.env.VIDEO_KEY_SECRET, lesson.id));
   } catch {

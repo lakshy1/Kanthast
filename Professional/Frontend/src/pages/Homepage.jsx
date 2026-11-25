@@ -18,7 +18,9 @@ import "../styles/pro-home.css";
 import LANDING_PROOF from "../data/landingProof";
 import { HOME_FAQS } from "../data/faqs";
 import { PILOT_TESTERS } from "../data/pilotTesters";
-import ProWaitlist from "../components/landing/ProWaitlist";
+import SyllabusSection from "../components/landing/SyllabusSection";
+import WaitlistSection from "../components/landing/WaitlistSection";
+import PilotSection from "../components/landing/PilotSection";
 import { LESSONS_OPEN, PAYMENTS_OPEN } from "../config/launch";
 import { getMedicineUsmleContent } from "../utils/authApi";
 
@@ -34,14 +36,14 @@ const TOUR_STEPS = [
   {
     id: "find",
     title: "Find it where your syllabus puts it",
-    body: "Pick a subject, jump to a chapter, and every lecture is listed with its length. No hunting through playlists.",
+    body: "Pick a subject, jump to a chapter. Every lecture is listed with its length, so there is no hunting through playlists.",
     url: "kanthast.in/library",
     range: [0, 0.31],
   },
   {
     id: "watch",
     title: "Watch short, pick up where you stopped",
-    body: "Lectures are planned at around seven minutes each. Leave halfway and the next visit resumes at the same second, at the speed you prefer.",
+    body: "Lectures are planned at about seven minutes. Leave halfway and your next visit resumes at the same second, at the speed you prefer.",
     url: "kanthast.in/video",
     caption: "Sample playback state shown.",
     range: [0.4, 0.66],
@@ -49,7 +51,7 @@ const TOUR_STEPS = [
   {
     id: "track",
     title: "See how far through each subject you are",
-    body: "Your dashboard keeps the lecture to resume on top and counts what you have watched, subject by subject.",
+    body: "Your dashboard keeps the lecture to resume on top and counts what you have watched in each subject.",
     url: "kanthast.in/dashboard",
     caption: "Sample progress shown. Totals are the planned lectures in each subject.",
     range: [0.72, 1],
@@ -171,6 +173,9 @@ function ProductTour() {
                     index === active ? "border-brand" : "border-line-strong"
                   }`}
                 >
+                  <p className={`mb-3 text-xs font-semibold uppercase tracking-wide tabular-nums transition-colors duration-slow ease-brand ${index === active ? "text-brand" : "text-ink-subtle"}`}>
+                    Step {index + 1} of {TOUR_STEPS.length}
+                  </p>
                   <h3
                     className={`[text-wrap:balance] text-2xl font-bold tracking-tight transition-colors duration-slow ease-brand md:text-3xl ${
                       index === active ? "text-ink" : "text-ink lg:text-ink/45"
@@ -179,6 +184,12 @@ function ProductTour() {
                     {item.title}
                   </h3>
                   <p className="mt-3 max-w-md text-base leading-relaxed text-ink-muted">{item.body}</p>
+                  {index === TOUR_STEPS.length - 1 && (
+                    <Link to={LESSONS_OPEN ? "/signup" : "#waitlist"} className="btn-primary mt-8 inline-flex px-6">
+                      {LESSONS_OPEN ? "Create a free account" : "Join the waitlist"}
+                      <FaArrowRight aria-hidden="true" />
+                    </Link>
+                  )}
                 </div>
                 <StepFrame step={item} />
               </li>
@@ -445,61 +456,14 @@ const Homepage = () => {
 
         <ProductTour />
 
-        {/* Syllabus coverage */}
-        <section aria-labelledby="syllabus-heading" className="aurora-band border-t border-line bg-surface-sunken py-20 md:py-28">
-          <div className="site-container">
-            <div className="grid gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-5">
-                <h2 id="syllabus-heading" className="text-3xl font-bold text-ink md:text-5xl">
-                  {totals.subjects} subjects mapped. Lectures open as they are published.
-                </h2>
-                <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-muted">
-                  {totals.subjects} subjects and {totals.chapters} chapters are laid out today.{" "}
-                  {LESSONS_OPEN ? "Lectures open as each video is published." : "Lectures are coming soon and open as each video is published."}
-                </p>
-                <Link to="/library" className="btn-secondary mt-8">
-                  Browse the library
-                  <FaArrowRight aria-hidden="true" />
-                </Link>
-              </div>
+        <SyllabusSection subjects={subjects} totals={totals} />
 
-              <ul className="divide-y divide-line border-y border-line lg:col-span-7">
-                {subjects.map((subject, subjectIndex) => (
-                  <Reveal as="li" delay={subjectIndex * 70} key={subject.name} className="grid gap-1 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6">
-                    <p className="font-bold text-ink">
-                      {subject.name}
-                      <span className="ml-2 text-sm font-medium tabular-nums text-ink-subtle">
-                        {subject.chapters} chapters
-                      </span>
-                    </p>
-                    <p className="text-ink-muted">{subject.sampleChapters.join(" · ")} …</p>
-                  </Reveal>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Lectures are not playable yet, so the call to action here is the waitlist, not a purchase. */}
         {!LESSONS_OPEN && (
-        <section id="waitlist" aria-labelledby="home-waitlist-heading" className="border-t border-line bg-surface py-20 md:py-28">
-          <div className="site-container">
-            <Reveal>
-              <h2 id="home-waitlist-heading" className="max-w-2xl text-3xl md:text-5xl">Be first when lectures open.</h2>
-              <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-muted">
-                Leave your email and we will tell you when the first lectures are published. Payments are not open, and we will tell you before anything is charged.
-              </p>
-            </Reveal>
-            <ProWaitlist />
-            <p className="mt-8 max-w-xl text-sm leading-relaxed text-ink-muted">
-              Planned plans, in rupees: {MEDICAL_PLANS.map((plan) => `${plan.durationLabel.replace(" Plan", "")} ${plan.priceLabel}`).join(", ")}.{" "}
-              <Link to="/pricing" className="font-semibold text-brand underline-offset-4 hover:underline">What every plan includes</Link>
-            </p>
-            <p className="mt-3 text-sm text-ink-muted">
-              Want to look around now? <Link to={startHref} className="font-semibold text-brand underline-offset-4 hover:underline">{startLabel}</Link>.
-            </p>
-          </div>
-        </section>
+          <WaitlistSection
+            plansLine={MEDICAL_PLANS.map((plan) => `${plan.durationLabel.replace(" Plan", "")} ${plan.priceLabel}`).join(", ")}
+            startHref={startHref}
+            startLabel={startLabel}
+          />
         )}
 
         {PAYMENTS_OPEN && (
@@ -539,23 +503,7 @@ const Homepage = () => {
 
         <ProofSections />
 
-        {PILOT_TESTERS.length > 0 && (
-          <section aria-labelledby="pilot-heading" className="border-t border-line bg-surface py-20 md:py-28">
-            <div className="site-container">
-              <h2 id="pilot-heading" className="text-3xl font-bold tracking-tight md:text-4xl">Tried by our pilot testers</h2>
-              <p className="mt-3 max-w-xl text-ink-muted">Reviews from people who tried Kanthast during our pilot, shown with their permission.</p>
-              <ul className="mt-10 grid gap-10 md:grid-cols-3">
-                {PILOT_TESTERS.map((person) => (
-                  <li key={person.name}>
-                    <blockquote className="text-lg leading-relaxed">&ldquo;{person.quote}&rdquo;</blockquote>
-                    <p className="mt-4 font-semibold">{person.name}</p>
-                    <p className="text-sm text-ink-muted">{person.role}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-        )}
+        <PilotSection people={PILOT_TESTERS} />
 
         <FaqSection />
 

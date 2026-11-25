@@ -26,9 +26,10 @@ const BASE_STYLE =
   "font:600 13px/1 Hind,system-ui,sans-serif;color:#fff;opacity:.28;text-shadow:0 1px 2px rgba(0,0,0,.55);" +
   "transition:top 1.6s cubic-bezier(.22,1,.36,1),left 1.6s cubic-bezier(.22,1,.36,1);";
 
-export default function SecureWatermark({ user }) {
+export default function SecureWatermark({ user, code = "" }) {
   const ref = useRef(null);
-  const text = watermarkText(user);
+  // The session code names this one viewing session, so a recording can be traced to the account and the moment.
+  const text = code ? `${watermarkText(user)}  ·  #${code}` : watermarkText(user);
 
   // Set before first paint so it never flashes unstyled. (Not via the style prop: React rejects cssText.)
   useLayoutEffect(() => {

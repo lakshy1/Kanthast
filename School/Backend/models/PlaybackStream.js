@@ -9,6 +9,7 @@ const playbackStreamSchema = new mongoose.Schema(
     lessonId: { type: String, required: true },
     startedAt: { type: Date, default: Date.now },
     lastSeenAt: { type: Date, default: Date.now },
+    keyFetches: { type: Number, default: 0 },
   },
   { timestamps: true }
 );

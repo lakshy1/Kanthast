@@ -12,6 +12,7 @@ const playbackDecision = (...args) => {
   }
 };
 import { rewriteMediaPlaylist } from "../services/playlist.js";
+import { askedForKeyTooOften, startedTooMany, streamTag, MAX_LESSONS_PER_HOUR, MAX_LESSONS_PER_DAY, MAX_KEY_FETCHES_PER_STREAM } from "../services/streams.js";
 import { lessonKey, lessonIv } from "../utils/videoKeys.js";
 
 const SECRET = "x".repeat(48);
@@ -98,4 +99,23 @@ test("waitlist emails are cleaned and bad ones rejected", () => {
   for (const bad of [{}, { email: "" }, { email: "no-at-sign" }, { email: "a@b" }, { email: 123 }, { email: "a@" + "b".repeat(260) + ".com" }]) {
     assert.equal(normalizeWaitlist(bad).ok, false, JSON.stringify(bad).slice(0, 40));
   }
+});
+
+test("bulk starting lessons is refused, normal use is not", () => {
+  assert.equal(startedTooMany({ lastHour: 12, lastDay: 30 }), false);
+  assert.equal(startedTooMany({ lastHour: MAX_LESSONS_PER_HOUR, lastDay: 40 }), false);
+  assert.equal(startedTooMany({ lastHour: MAX_LESSONS_PER_HOUR + 1, lastDay: 41 }), true);
+  assert.equal(startedTooMany({ lastHour: 5, lastDay: MAX_LESSONS_PER_DAY + 1 }), true);
+});
+
+test("a stream that keeps asking for the key is refused", () => {
+  assert.equal(askedForKeyTooOften(3), false);
+  assert.equal(askedForKeyTooOften(MAX_KEY_FETCHES_PER_STREAM), false);
+  assert.equal(askedForKeyTooOften(MAX_KEY_FETCHES_PER_STREAM + 1), true);
+});
+
+test("the watermark session tag comes from the stream id and is short", () => {
+  assert.equal(streamTag("a1b2c3d4-e5f6-4789-aabb-ccddeeff0011"), "A1B2");
+  assert.equal(streamTag(""), "");
+  assert.equal(streamTag(null), "");
 });

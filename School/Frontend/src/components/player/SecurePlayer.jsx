@@ -58,6 +58,7 @@ export default function SecurePlayer({
   const [ended, setEnded] = useState(false);
   const [buffering, setBuffering] = useState(true);
   const [error, setError] = useState("");
+  const [sessionCode, setSessionCode] = useState("");
   const [duration, setDuration] = useState(0);
   const [clockNow, setClockNow] = useState(0);
   const [muted, setMuted] = useState(false);
@@ -110,6 +111,7 @@ export default function SecurePlayer({
       const token = localStorage.getItem("kanthastSchoolToken") || "";
       // Each start gets its own id. A newer start (here or on another device) replaces it and this one is told to stop.
       const streamId = crypto.randomUUID();
+      setSessionCode(streamId.replace(/[^a-f0-9]/gi, "").slice(0, 4).toUpperCase());
       hls = new Hls({
         capLevelToPlayerSize: true,
         xhrSetup: (xhr, url) => {
@@ -334,7 +336,7 @@ export default function SecurePlayer({
         onEnded={() => { setEnded(true); setPlaying(false); cb.current.onEnded?.(); }}
       />
 
-      <SecureWatermark user={user} />
+      <SecureWatermark user={user} code={sessionCode} />
 
       {/* tap / click surface */}
       <div className="absolute inset-0 z-[5]" onPointerUp={onSurfacePointerUp} onClick={onSurfaceClick} onDoubleClick={(e) => { if (e.pointerType !== "touch" && fullscreenOk) toggleFullscreen(); }} />
