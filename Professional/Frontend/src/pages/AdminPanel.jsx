@@ -1015,18 +1015,26 @@ export default function AdminPanel() {
                           <option value="Instructor">Instructor</option>
                           <option value="Admin">Admin</option>
                         </select>
-                        <Field
-                          label="Search users"
-                          type="search"
-                          value={search}
-                          onChange={(e) => { setSearch(e.target.value); setPage(1); }}
-                          placeholder="Search name, email, phone..."
-                          containerClassName="w-full sm:w-64"
-                        />
-                        <Button type="button" variant="secondary" onClick={exportCsv} disabled={filteredUsers.length === 0}>
-                          <FaDownload aria-hidden="true" />
-                          CSV
-                        </Button>
+                        <div className="relative w-full sm:w-64">
+                          <FaSearch size={12} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-subtle" aria-hidden="true" />
+                          <input
+                            type="search"
+                            aria-label="Search users"
+                            value={search}
+                            onChange={(e) => { setSearch(e.target.value); setPage(1); }}
+                            placeholder="Search name, email, phone..."
+                            className="h-9 w-full rounded-lg border border-line bg-surface pl-8 pr-3 text-xs text-ink placeholder:text-ink-subtle focus:border-brand focus:outline-none"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          onClick={exportCsv}
+                          disabled={filteredUsers.length === 0}
+                          className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-line bg-surface px-3 text-xs font-semibold text-ink transition-colors hover:bg-surface-sunken disabled:cursor-not-allowed disabled:opacity-50"
+                        >
+                          <FaDownload size={11} aria-hidden="true" />
+                          <span>Export CSV</span>
+                        </button>
                       </div>
                     </div>
                     {loading ? (
@@ -1084,27 +1092,48 @@ export default function AdminPanel() {
                                       className="h-4 w-4 rounded border-line accent-brand"
                                     />
                                   </td>
-                                  <td className="px-4 py-3">
-                                    <p className="font-semibold text-ink">{user.firstName} {user.lastName}</p>
-                                    <p className="text-xs text-ink-muted">{user.email}</p>
+                                  <td className="px-4 py-2.5">
+                                    <div className="flex items-center gap-2.5">
+                                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-surface-sunken text-xs font-bold text-ink-muted">
+                                        {(user.firstName || user.email || "?").charAt(0).toUpperCase()}
+                                      </span>
+                                      <div className="min-w-0">
+                                        <p className="truncate font-semibold text-ink">{user.firstName} {user.lastName}</p>
+                                        <p className="truncate text-xs text-ink-muted">{user.email}</p>
+                                      </div>
+                                    </div>
                                   </td>
-                                  <td className="px-4 py-3 text-xs font-medium text-ink-muted">{user.accountType || "Student"}</td>
-                                  <td className="px-4 py-3 text-xs text-ink-muted tabular-nums">{user.contactNumber || "—"}</td>
-                                  <td className="px-4 py-3 text-xs">
+                                  <td className="px-4 py-2.5">
+                                    <span className="inline-flex rounded-md bg-surface-sunken px-2 py-0.5 text-[11px] font-medium text-ink-muted">
+                                      {user.accountType || "Student"}
+                                    </span>
+                                  </td>
+                                  <td className="px-4 py-2.5 text-xs text-ink-muted tabular-nums">{user.contactNumber || "—"}</td>
+                                  <td className="px-4 py-2.5 text-xs">
                                     <span className={`inline-flex items-center gap-1.5 font-semibold ${user.subscriptionPurchased ? "text-positive" : "text-ink-subtle"}`}>
                                       <span className={`h-1.5 w-1.5 rounded-full ${user.subscriptionPurchased ? "bg-positive" : "bg-ink-subtle/40"}`} />
                                       {user.subscriptionPurchased ? "Active" : "Free"}
                                     </span>
                                   </td>
-                                  <td className="px-4 py-3 text-right">
+                                  <td className="px-4 py-2.5 text-right">
                                     <div className="inline-flex items-center gap-1.5">
-                                      <Button type="button" variant="secondary" className="px-2.5 py-1 text-xs" onClick={() => onEdit(user)}>
-                                        <FaEdit aria-hidden="true" />
-                                        Edit
-                                      </Button>
-                                      <Button type="button" variant="danger" className="px-2.5 py-1 text-xs" onClick={() => onDelete(user)}>
-                                        <FaTrash aria-hidden="true" />
-                                      </Button>
+                                      <button
+                                        type="button"
+                                        onClick={() => onEdit(user)}
+                                        className="inline-flex h-8 items-center gap-1.5 rounded-lg border border-line bg-surface px-2.5 text-xs font-semibold text-ink transition-colors hover:border-line-strong hover:bg-surface-sunken"
+                                      >
+                                        <FaEdit size={11} aria-hidden="true" />
+                                        <span>Edit</span>
+                                      </button>
+                                      <button
+                                        type="button"
+                                        onClick={() => onDelete(user)}
+                                        aria-label={`Delete ${user.firstName || user.email}`}
+                                        title="Delete user"
+                                        className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-ink-subtle transition-colors hover:bg-critical-soft hover:text-critical"
+                                      >
+                                        <FaTrash size={12} aria-hidden="true" />
+                                      </button>
                                     </div>
                                   </td>
                                 </tr>
