@@ -2,6 +2,7 @@ import { PAYMENTS_OPEN } from "../config/launch";
 import useLiveVideos from "../utils/useLiveVideos";
 import { createElement, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import { FaPlay, FaArrowRight, FaFire, FaCircleCheck, FaLayerGroup, FaLightbulb, FaClock, FaFlask, FaSquareRootVariable, FaEarthAsia, FaBookOpen, FaLanguage, FaScroll, FaLaptopCode, FaGraduationCap, FaPenNib, FaCirclePlay } from "react-icons/fa6";
 import { Eyebrow, Accent } from "../components/ui/Brandmarks";
 import { SCRIPT_COUNTS } from "../data/schoolCatalog";
@@ -140,38 +141,36 @@ export default function Dashboard() {
   const settings = useAppSettings();
   const classValue = getSelectedSchoolClass();
   const classLabel = getSchoolClassLabel(classValue);
-  const [profileVersion, setProfileVersion] = useState(0);
+  const token = localStorage.getItem("kanthastSchoolToken") || "";
   const [resumeTarget] = useState(() => getLastWatched());
   const resume = useMemo(() => resumeProgress(resumeTarget), [resumeTarget]);
-  const watched = useMemo(readWatched, []);
+  const watched = useMemo(() => readWatched(), []);
 
-  const user = useMemo(() => {
-    try { return JSON.parse(localStorage.getItem("kanthastSchoolUser") || "null"); }
-    catch { return null; }
-  }, [profileVersion]); // eslint-disable-line react-hooks/exhaustive-deps
-  const firstName = user?.firstName || user?.name?.trim().split(/\s+/)[0] || "";
+  const { data: profileData } = useQuery({
+    queryKey: ["profile", token],
+    queryFn: () => getProfile(token),
+    enabled: Boolean(token),
+  });
 
   useEffect(() => {
-    const token = localStorage.getItem("kanthastSchoolToken");
-    if (!token) return;
-    let mounted = true;
-    getProfile(token)
-      .then((data) => {
-        if (!mounted || !data.user) return;
-        localStorage.setItem("kanthastSchoolUser", JSON.stringify(data.user));
-        setProfileVersion((v) => v + 1);
-      })
-      .catch(() => {});
-    return () => { mounted = false; };
-  }, []);
+    if (profileData?.user) {
+      localStorage.setItem("kanthastSchoolUser", JSON.stringify(profileData.user));
+    }
+  }, [profileData]);
+
+  const user = useMemo(() => {
+    if (profileData?.user) return profileData.user;
+    try { return JSON.parse(localStorage.getItem("kanthastSchoolUser") || "null"); }
+    catch { return null; }
+  }, [profileData]);
+  const firstName = user?.firstName || user?.name?.trim().split(/\s+/)[0] || "";
 
   // Until payments open every signed in student sees the full dashboard, as there is nothing to pay for.
   const paid = hasPaidForSchoolClass() || !PAYMENTS_OPEN;
   const liveVersion = useLiveVideos();
   const subjects = useMemo(
     () => (paid ? buildSchoolSubjects(classValue) : []),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [classValue, profileVersion, paid, liveVersion]
+    [classValue, paid, liveVersion]
   );
 
   const stats = useMemo(() => {

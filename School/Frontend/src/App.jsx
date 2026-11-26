@@ -3,7 +3,9 @@ import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from "re
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { SITE_URL } from "./utils/seo";
+import { idbPersister, queryClient } from "./utils/queryClient";
 import ErrorBoundary from "./components/ErrorBoundary";
 import BootDone from "./components/BootDone";
 import TopProgress from "./components/TopProgress";
@@ -255,9 +257,7 @@ function App() {
   }, [settings.appearance, settings.compactLayout, settings.reduceMotion]);
 
   return (
-    // "user" defers to the OS prefers-reduced-motion setting; the in-app
-    // toggle can still force it on. Passing "never" (the old default) actively
-    // overrode a user's OS-level accessibility preference.
+    <PersistQueryClientProvider client={queryClient} persistOptions={{ persister: idbPersister }}>
     <MotionConfig reducedMotion={settings.reduceMotion ? "always" : "user"}>
       <div className={`min-h-screen w-screen bg-surface-sunken text-ink${isSkyTheme ? " kb-sky" : ""}`}>
         {isSkyTheme && <div aria-hidden="true" className="kb-sky-bg" />}
@@ -274,6 +274,7 @@ function App() {
         <DefaultSeo />
         <RouteRobots />
         <OfflineBanner />
+        <TopProgress routeFallback={false} />
 
         {!isAdminRoute && <Navbar />}
 
@@ -348,6 +349,7 @@ function App() {
         </main>
       </div>
     </MotionConfig>
+    </PersistQueryClientProvider>
   );
 }
 

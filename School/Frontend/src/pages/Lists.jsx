@@ -1,6 +1,7 @@
 import { PAYMENTS_OPEN } from "../config/launch";
 import useLiveVideos from "../utils/useLiveVideos";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaRegFileAlt, FaPlay, FaChevronRight, FaLock, FaThList, FaTimes, FaChevronDown, FaSearch } from "react-icons/fa";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -41,7 +42,17 @@ export default function Lists() {
   const [colHeight, setColHeight] = useState(null);
   const [isSectionsOpen, setIsSectionsOpen] = useState(false);
   const [isSubjectsOpen, setIsSubjectsOpen] = useState(false);
-  const [profileVersion, setProfileVersion] = useState(0);
+  const token = localStorage.getItem("kanthastSchoolToken") || "";
+  const { data: profileData } = useQuery({
+    queryKey: ["profile", token],
+    queryFn: () => getProfile(token),
+    enabled: Boolean(token),
+  });
+  useEffect(() => {
+    if (profileData?.user) {
+      localStorage.setItem("kanthastSchoolUser", JSON.stringify(profileData.user));
+    }
+  }, [profileData]);
   const [watched, setWatched] = useState(() => {
     try { return JSON.parse(localStorage.getItem("kanthastSchoolWatched") || "{}"); }
     catch { return {}; }
@@ -63,26 +74,7 @@ export default function Lists() {
   // The first two lessons of every chapter are free for any signed in student.
   const FREE_LESSONS_PER_CHAPTER = 2;
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const hasSubscription = useMemo(() => hasPaidForSchoolClass(), [profileVersion]);
-
-  useEffect(() => {
-    const token = localStorage.getItem("kanthastSchoolToken");
-    if (!token) return;
-
-    let mounted = true;
-    getProfile(token)
-      .then((data) => {
-        if (!mounted || !data.user) return;
-        localStorage.setItem("kanthastSchoolUser", JSON.stringify(data.user));
-        setProfileVersion((version) => version + 1);
-      })
-      .catch(() => {});
-
-    return () => {
-      mounted = false;
-    };
-  }, []);
+  const hasSubscription = useMemo(() => hasPaidForSchoolClass(), [profileData]);
 
   useEffect(() => {
     function syncWatched() {
@@ -132,7 +124,7 @@ export default function Lists() {
 
   useEffect(() => {
     setSelectedSchoolClassState(getSelectedSchoolClass());
-  }, [profileVersion]);
+  }, [profileData]);
 
   const tabs = useMemo(() => Object.keys(dbModules), [dbModules]);
   const activeModule = useMemo(

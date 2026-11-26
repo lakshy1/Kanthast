@@ -2,6 +2,8 @@
 // Practice Studio hub — Kanthast editorial atelier uniting MCQ Practice, Flashcards, and Viva Coach.
 import { createElement, useEffect, useState, useMemo } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { fetchPracticeStudioData } from "../utils/queryClient";
 import { motion as Motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import {
@@ -9,14 +11,7 @@ import {
   FiClock, FiCheckCircle, FiStar, FiActivity, FiPlay, FiCompass
 } from "react-icons/fi";
 import { Eyebrow, Accent } from "../components/ui/Brandmarks";
-import {
-  getMcqHistory,
-  getMcqStats,
-  getFlashcardHistory,
-  getFlashcardStats,
-  getVivaHistory,
-  getVivaStats,
-} from "../utils/practiceApi";
+import useDelayedLoading from "../hooks/useDelayedLoading";
 import "../styles/practice-studio.css";
 
 const hasAuth = () =>
@@ -205,41 +200,27 @@ export default function PracticeStudio() {
   const user = getUser();
   const navigate = useNavigate();
   const firstName = user?.firstName || user?.name?.trim().split(/\s+/)[0] || "";
-
-  const [mcqHistory, setMcqHistory] = useState([]);
-  const [mcqStats, setMcqStats] = useState([]);
-  const [flashcardHistory, setFlashcardHistory] = useState([]);
-  const [flashcardStats, setFlashcardStats] = useState(null);
-  const [vivaHistory, setVivaHistory] = useState([]);
-  const [vivaStats, setVivaStats] = useState(null);
+  const token = localStorage.getItem("kanthastSchoolToken") || "";
   const [historyFilter, setHistoryFilter] = useState("all");
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!hasAuth()) {
-      navigate("/login", { replace: true });
-      return;
-    }
-
-    Promise.all([
-      getMcqHistory().catch(() => ({ sessions: [] })),
-      getMcqStats().catch(() => ({ stats: [] })),
-      getFlashcardHistory().catch(() => ({ history: [] })),
-      getFlashcardStats().catch(() => null),
-      getVivaHistory().catch(() => ({ sessions: [] })),
-      getVivaStats().catch(() => null),
-    ])
-      .then(([mh, ms, fh, fs, vh, vs]) => {
-        setMcqHistory(mh.sessions || []);
-        setMcqStats(ms.stats || []);
-        setFlashcardHistory(fh.history || []);
-        if (fs && fs.success) setFlashcardStats(fs);
-        setVivaHistory(vh.sessions || []);
-        if (vs && vs.success) setVivaStats(vs);
-      })
-      .catch(() => {})
-      .finally(() => setLoading(false));
+    if (!hasAuth()) navigate("/login", { replace: true });
   }, [navigate]);
+
+  const { data: studioData, isLoading: rawLoading } = useQuery({
+    queryKey: ["practiceStudio", token],
+    queryFn: fetchPracticeStudioData,
+    enabled: hasAuth(),
+    staleTime: 60 * 1000,
+  });
+  const loading = useDelayedLoading(rawLoading, 200);
+
+  const mcqHistory = useMemo(() => studioData?.mcqHistory || [], [studioData]);
+  const mcqStats = useMemo(() => studioData?.mcqStats || [], [studioData]);
+  const flashcardHistory = useMemo(() => studioData?.flashcardHistory || [], [studioData]);
+  const flashcardStats = studioData?.flashcardStats || null;
+  const vivaHistory = useMemo(() => studioData?.vivaHistory || [], [studioData]);
+  const vivaStats = studioData?.vivaStats || null;
 
   const unifiedHistory = useMemo(() => {
     const items = [];

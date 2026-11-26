@@ -7,6 +7,7 @@ import { FiZap } from "react-icons/fi";
 import AccountMenu from "./AccountMenu";
 import { logout as logoutApi } from "../utils/authApi";
 import { SITE } from "../utils/siteContext";
+import { prefetchRouteData } from "../utils/queryClient";
 
 const TOKEN_KEY = "kanthastSchoolToken";
 const USER_KEY = "kanthastSchoolUser";
@@ -166,11 +167,21 @@ const Navbar = () => {
                 Courses
               </NavLink>
             )}
-            <NavLink to="/library" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+            <NavLink
+              to="/library"
+              onMouseEnter={() => prefetchRouteData("/library")}
+              onFocus={() => prefetchRouteData("/library")}
+              className={({ isActive }) => (isActive ? activeClass : normalClass)}
+            >
               Library
             </NavLink>
             {isLoggedIn && (
-              <NavLink to="/dashboard" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+              <NavLink
+                to="/dashboard"
+                onMouseEnter={() => prefetchRouteData("/dashboard")}
+                onFocus={() => prefetchRouteData("/dashboard")}
+                className={({ isActive }) => (isActive ? activeClass : normalClass)}
+              >
                 Dashboard
               </NavLink>
             )}
@@ -180,7 +191,12 @@ const Navbar = () => {
               </NavLink>
             )}
             {isLoggedIn && (
-              <NavLink to="/practice" className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+              <NavLink
+                to="/practice"
+                onMouseEnter={() => prefetchRouteData("/practice")}
+                onFocus={() => prefetchRouteData("/practice")}
+                className={({ isActive }) => (isActive ? activeClass : normalClass)}
+              >
                 Practice Studio
               </NavLink>
             )}

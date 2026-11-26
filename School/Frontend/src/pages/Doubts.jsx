@@ -4,6 +4,7 @@ import { AnimatePresence, motion as Motion } from "framer-motion";
 import { FaCheck, FaHeart, FaPlus, FaRegCommentDots, FaRegHeart, FaRobot, FaSlidersH, FaTimes } from "react-icons/fa";
 import { FiSearch, FiSidebar, FiX } from "react-icons/fi";
 import Seo from "../components/Seo";
+import useDelayedLoading from "../hooks/useDelayedLoading";
 import { Button, EmptyState, Field, Modal, Select } from "../components/ui";
 import ParentApproval from "../components/doubts/ParentApproval";
 import DoubtThread from "../components/doubts/DoubtThread";
@@ -769,6 +770,7 @@ function DoubtList({ tab, reloadKey, classLabel, onAsk, askDisabled, countText, 
   const [doubts, setDoubts] = useState(() => initialFeed?.doubts || []);
   const [nextBefore, setNextBefore] = useState(() => initialFeed?.nextBefore || null);
   const [loading, setLoading] = useState(() => !initialFeed);
+  const showSkeleton = useDelayedLoading(loading, 200);
   const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState("");
   const [railOpen, setRailOpen] = useState(readDoubtsRailOpen);
@@ -1083,7 +1085,7 @@ function DoubtList({ tab, reloadKey, classLabel, onAsk, askDisabled, countText, 
           )}
 
           {loading ? (
-            <DoubtFeedSkeleton />
+            showSkeleton ? <DoubtFeedSkeleton /> : null
           ) : error ? (
             <div className="p-6">
               <EmptyState variant="error" title="We couldn't load doubts" description={error} action="Try again" onAction={() => load()} />
