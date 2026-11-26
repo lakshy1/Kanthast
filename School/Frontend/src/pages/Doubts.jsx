@@ -477,81 +477,111 @@ function DoubtRow({ doubt, from }) {
   };
 
   return (
-    <li className={`dbw-row group relative ${removed ? "opacity-75" : ""}`}>
-      <div className="flex items-start gap-3 sm:gap-3.5">
-        <span className={`dbc-avatar mt-0.5 ${avatarTone(doubt.author?.firstName || name) !== undefined ? `dbc-tone-${avatarTone(doubt.author?.firstName || name)}` : "dbc-tone-0"}`} aria-hidden="true">
-          {name.charAt(0).toUpperCase()}
-        </span>
-
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
-            <span className="font-bold text-ink">{name}</span>
-            <span className="dbs-subject">{doubt.subject}</span>
-            {doubt.chapter && (
-              <span className="max-w-[16rem] truncate text-ink-subtle font-medium">
-                {doubt.chapter}
+    <li className={`group relative rounded-xl border border-line/80 bg-surface p-5 transition-all duration-150 hover:border-line-strong hover:shadow-e1 ${removed ? "opacity-75" : ""}`}>
+      <div className="flex h-full flex-col justify-between gap-3.5">
+        <div>
+          {/* Top row: compact avatar + author · time + single quiet status pill */}
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex min-w-0 items-center gap-2.5">
+              <span
+                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white ${
+                  avatarTone(doubt.author?.firstName || name) !== undefined
+                    ? `dbc-tone-${avatarTone(doubt.author?.firstName || name)}`
+                    : "dbc-tone-0"
+                }`}
+                aria-hidden="true"
+              >
+                {name.charAt(0).toUpperCase()}
               </span>
-            )}
-            <span className="text-ink-subtle">· {timeAgo(doubt.createdAt)}</span>
-            <span className="ml-auto sm:ml-1">
+              <div className="flex min-w-0 items-center gap-1.5 text-xs">
+                <span className="truncate font-semibold text-ink">{name}</span>
+                <span className="text-ink-subtle/60">·</span>
+                <span className="shrink-0 text-ink-subtle">{timeAgo(doubt.createdAt)}</span>
+              </div>
+            </div>
+
+            <span className="shrink-0">
               {statusLabel ? (
-                <span className="inline-flex rounded-full bg-caution-soft px-2 py-0.5 text-micro font-bold text-caution">{statusLabel}</span>
+                <span className="inline-flex rounded-md bg-caution-soft px-2 py-0.5 text-[11px] font-semibold text-caution">
+                  {statusLabel}
+                </span>
               ) : doubt.acceptedReply ? (
-                <span className="inline-flex items-center gap-1 rounded-full bg-positive-soft px-2 py-0.5 text-micro font-bold text-positive">
+                <span className="inline-flex items-center gap-1 rounded-md bg-positive-soft px-2 py-0.5 text-[11px] font-semibold text-positive">
                   <FaCheck aria-hidden="true" className="text-[0.55rem]" /> Resolved
                 </span>
               ) : doubt.hasAiAnswer ? (
-                <span className="inline-flex items-center gap-1 rounded-full bg-brand-soft px-2 py-0.5 text-micro font-bold text-brand">
+                <span className="inline-flex items-center gap-1 rounded-md bg-brand-soft px-2 py-0.5 text-[11px] font-semibold text-brand">
                   <FaRobot aria-hidden="true" className="text-[0.6rem]" /> AI answered
                 </span>
               ) : (
-                <span className="inline-flex rounded-full border border-line bg-surface-sunken px-2 py-0.5 text-micro font-semibold text-ink-subtle">
+                <span className="inline-flex rounded-md bg-surface-sunken px-2 py-0.5 text-[11px] font-medium text-ink-subtle">
                   Open
                 </span>
               )}
             </span>
           </div>
 
-          <h3 className="mt-1.5 font-display text-[0.9875rem] font-extrabold leading-snug tracking-tight text-ink group-hover:text-brand transition-colors">
-            {removed ? (
-              doubt.title
-            ) : (
-              <Link to={`/doubts/${doubt.id}`} state={{ from }} className="dbc-open">
-                {doubt.title}
-              </Link>
+          {/* Content: clean weight contrast */}
+          <div className="mt-3 space-y-1.5">
+            <h3 className="text-[0.9375rem] font-semibold leading-snug tracking-tight text-ink transition-colors group-hover:text-brand">
+              {removed ? (
+                doubt.title
+              ) : (
+                <Link to={`/doubts/${doubt.id}`} state={{ from }} className="dbc-open">
+                  {doubt.title}
+                </Link>
+              )}
+            </h3>
+
+            {doubt.body && (
+              <p className="line-clamp-2 text-[0.8125rem] leading-relaxed text-ink-muted">
+                {doubt.body}
+              </p>
             )}
-          </h3>
-
-          {doubt.body && (
-            <p className="mt-1 line-clamp-1 sm:line-clamp-2 text-[0.8125rem] leading-relaxed text-ink-muted">
-              {doubt.body}
-            </p>
-          )}
-
-          {helpError && <p role="alert" className="relative z-[1] mt-1.5 text-xs text-critical">{helpError}</p>}
+          </div>
         </div>
 
-        <div className="relative z-[1] flex shrink-0 items-center gap-2 self-center pl-1">
-          <button
-            type="button"
-            className={`dbc-chip ${helped ? "is-on" : ""}`}
-            onClick={toggleHelped}
-            disabled={busy || doubt.mine || removed}
-            aria-pressed={helped}
-            aria-label={`This helped me, ${helpfulCount} so far`}
-            title={doubt.mine ? "You can't mark your own doubt" : "This helped me"}
-          >
-            {helped ? <FaHeart aria-hidden="true" /> : <FaRegHeart aria-hidden="true" />}
-            <span className="tabular-nums">{helpfulCount}</span>
-          </button>
-          <span
-            className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-line bg-surface-sunken/70 px-2.5 py-1.5 text-xs font-semibold text-ink-muted tabular-nums"
-            aria-label={`${replyCount} ${replyCount === 1 ? "answer" : "answers"}`}
-          >
-            <FaRegCommentDots aria-hidden="true" />
-            <span>{replyCount}</span>
-          </span>
+        {/* Footer: quiet category tag + subtle metric pills */}
+        <div className="relative z-[1] flex items-center justify-between gap-2 pt-1">
+          <div className="flex min-w-0 items-center gap-1.5">
+            <span className="inline-flex shrink-0 items-center rounded-md bg-surface-sunken px-2 py-0.5 text-[11px] font-medium text-ink-muted">
+              {doubt.subject}
+            </span>
+            {doubt.chapter && (
+              <span className="truncate text-[11px] font-medium text-ink-subtle">
+                {doubt.chapter}
+              </span>
+            )}
+          </div>
+
+          <div className="flex shrink-0 items-center gap-1.5">
+            <button
+              type="button"
+              onClick={toggleHelped}
+              disabled={busy || doubt.mine || removed}
+              aria-pressed={helped}
+              aria-label={`This helped me, ${helpfulCount} so far`}
+              title={doubt.mine ? "You can't mark your own doubt" : "This helped me"}
+              className={`inline-flex h-7 items-center gap-1 rounded-md border px-2 text-[11px] font-medium tabular-nums transition-colors disabled:cursor-default disabled:opacity-70 ${
+                helped
+                  ? "border-critical/25 bg-critical-soft text-critical"
+                  : "border-line/70 bg-surface-sunken/60 text-ink-muted hover:border-line-strong hover:text-ink"
+              }`}
+            >
+              {helped ? <FaHeart aria-hidden="true" className="text-[10px]" /> : <FaRegHeart aria-hidden="true" className="text-[10px]" />}
+              <span>{helpfulCount}</span>
+            </button>
+            <span
+              className="inline-flex h-7 items-center gap-1 rounded-md border border-line/70 bg-surface-sunken/60 px-2 text-[11px] font-medium text-ink-muted tabular-nums"
+              aria-label={`${replyCount} ${replyCount === 1 ? "answer" : "answers"}`}
+            >
+              <FaRegCommentDots aria-hidden="true" className="text-[10px]" />
+              <span>{replyCount}</span>
+            </span>
+          </div>
         </div>
+
+        {helpError && <p role="alert" className="relative z-[1] text-xs text-critical">{helpError}</p>}
       </div>
     </li>
   );
@@ -1051,7 +1081,7 @@ function DoubtList({ tab, reloadKey, classLabel, onAsk, askDisabled, countText, 
         </div>
 
         {/* Scrollable Feed Area */}
-        <div className="no-scrollbar relative min-h-0 flex-1 overflow-y-auto">
+        <div className="no-scrollbar relative min-h-0 flex-1 overflow-y-auto bg-surface-sunken/35">
           {statusBanner && (
             <div className="border-b border-line bg-surface-sunken/60 px-5 py-2.5 text-xs font-medium text-ink-muted">
               {statusBanner}
@@ -1101,13 +1131,13 @@ function DoubtList({ tab, reloadKey, classLabel, onAsk, askDisabled, countText, 
             )
           ) : (
             <>
-              <ul className="divide-y divide-line" aria-label="Doubts">
+              <ul className="grid grid-cols-1 gap-3 p-3 sm:p-4 xl:grid-cols-2" aria-label="Doubts">
                 {visibleDoubts.map((doubt) => (
                   <DoubtRow key={doubt.id} doubt={doubt} from={tab} />
                 ))}
               </ul>
               {tab === "class" && nextBefore && (
-                <div className="flex justify-center border-t border-line py-4">
+                <div className="flex justify-center pb-5 pt-1">
                   <Button variant="secondary" onClick={loadMore} loading={loadingMore}>
                     Show more
                   </Button>

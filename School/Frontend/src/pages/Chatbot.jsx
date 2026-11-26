@@ -891,7 +891,6 @@ export default function Chatbot({ onDraftReady }) {
 
   const activeSession = sessions.find((s) => s.sessionId === activeSessionId);
   const activeTitle = activeSession?.title || "New conversation";
-  const showCenteredEmpty = messages.length === 0 && isIdle && !limitShown && !error;
 
   const railProps = {
     sessions: displayedSessions,
@@ -943,7 +942,7 @@ export default function Chatbot({ onDraftReady }) {
         aria-label="Message the assistant"
         disabled={limitShown}
         className="w-full resize-none bg-transparent px-4 pt-3.5 pb-2 text-sm leading-relaxed text-ink outline-none placeholder:text-ink-subtle focus-visible:!outline-none disabled:cursor-not-allowed"
-        rows={showCenteredEmpty ? 2 : 1}
+        rows={1}
         style={{ maxHeight: 180, overflowY: "auto" }}
       />
 
@@ -1078,9 +1077,8 @@ export default function Chatbot({ onDraftReady }) {
               </div>
             )}
 
-            {/* Empty state (Claude + Perplexity spatial pattern): centered heading +
-                embedded composer + subject starter chips with zero dead void. */}
-            {showCenteredEmpty && (
+            {/* Empty state: centered heading + subject starter chips above the bottom composer. */}
+            {messages.length === 0 && isIdle && (
               <Motion.div
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1091,16 +1089,9 @@ export default function Chatbot({ onDraftReady }) {
                   <h2 className="font-display text-2xl font-extrabold tracking-tight text-ink sm:text-[1.875rem]">
                     What are you <Accent after="?">stuck on</Accent>
                   </h2>
-                  <p className="mt-1.5 text-sm text-ink-muted">
-                    Ask anything from your syllabus — pick <strong>Hint</strong> to reason through it or <strong>Full answer</strong> for steps.
-                  </p>
                 </div>
 
-                <div className="mt-5 w-full max-w-2xl">
-                  {composerCard}
-                </div>
-
-                <div role="group" aria-label="Suggested questions" className="mt-3.5 flex w-full max-w-2xl flex-wrap items-center justify-center gap-2">
+                <div role="group" aria-label="Suggested questions" className="mt-5 flex w-full max-w-2xl flex-wrap items-center justify-center gap-2">
                   {SUGGESTIONS.map((s) => (
                     <button
                       key={s.text}
@@ -1293,55 +1284,53 @@ export default function Chatbot({ onDraftReady }) {
           </div>
         </div>
 
-        {/* Unified composer dock (shown when conversation has messages or alert) */}
-        {!showCenteredEmpty && (
-          <div className="flex-shrink-0 border-t border-line/70 bg-surface/95 px-3 pb-3 pt-2.5 backdrop-blur-sm md:px-6 md:pb-3.5">
-            <div className="mx-auto w-full max-w-3xl">
-              {/* After an answer: take what is still unclear to the class. */}
-              {hasAnswer && isIdle && activeSessionId && (
-                <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+        {/* Unified composer dock */}
+        <div className="flex-shrink-0 border-t border-line/70 bg-surface/95 px-3 pb-3 pt-2.5 backdrop-blur-sm md:px-6 md:pb-3.5">
+          <div className="mx-auto w-full max-w-3xl">
+            {/* After an answer: take what is still unclear to the class. */}
+            {hasAnswer && isIdle && activeSessionId && (
+              <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                <button
+                  type="button"
+                  onClick={askClass}
+                  disabled={drafting || status === "sending"}
+                  aria-busy={drafting || undefined}
+                  className="inline-flex min-h-9 items-center gap-2 rounded-full border border-brand/25 bg-brand-soft/60 px-3 py-1 text-xs font-semibold text-brand transition-colors duration-fast ease-brand hover:bg-brand-soft disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {drafting ? (
+                    <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent" aria-hidden="true" />
+                  ) : (
+                    <FaComments aria-hidden="true" />
+                  )}
+                  {drafting ? "Writing your doubt…" : "Still confused? Ask your class"}
+                </button>
+              </div>
+            )}
+
+            {composerCard}
+
+            {error && (
+              <div
+                role="alert"
+                className="mt-2 flex items-center gap-2 rounded-control border border-critical/35 bg-critical-soft pl-3 text-sm text-critical"
+              >
+                <FaExclamationTriangle size={12} className="flex-shrink-0" aria-hidden="true" />
+                <p className="flex-1 py-2.5 leading-snug">{error.text}</p>
+                {error.retry && (
                   <button
                     type="button"
-                    onClick={askClass}
-                    disabled={drafting || status === "sending"}
-                    aria-busy={drafting || undefined}
-                    className="inline-flex min-h-9 items-center gap-2 rounded-full border border-brand/25 bg-brand-soft/60 px-3 py-1 text-xs font-semibold text-brand transition-colors duration-fast ease-brand hover:bg-brand-soft disabled:cursor-not-allowed disabled:opacity-60"
+                    onClick={error.retry}
+                    disabled={status === "sending"}
+                    className="inline-flex min-h-touch flex-shrink-0 items-center gap-1.5 rounded-control px-3 font-semibold text-critical transition-colors duration-fast hover:bg-critical/12 disabled:cursor-not-allowed"
                   >
-                    {drafting ? (
-                      <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent" aria-hidden="true" />
-                    ) : (
-                      <FaComments aria-hidden="true" />
-                    )}
-                    {drafting ? "Writing your doubt…" : "Still confused? Ask your class"}
+                    <FaRedo size={10} aria-hidden="true" />
+                    Try again
                   </button>
-                </div>
-              )}
-
-              {composerCard}
-
-              {error && (
-                <div
-                  role="alert"
-                  className="mt-2 flex items-center gap-2 rounded-control border border-critical/35 bg-critical-soft pl-3 text-sm text-critical"
-                >
-                  <FaExclamationTriangle size={12} className="flex-shrink-0" aria-hidden="true" />
-                  <p className="flex-1 py-2.5 leading-snug">{error.text}</p>
-                  {error.retry && (
-                    <button
-                      type="button"
-                      onClick={error.retry}
-                      disabled={status === "sending"}
-                      className="inline-flex min-h-touch flex-shrink-0 items-center gap-1.5 rounded-control px-3 font-semibold text-critical transition-colors duration-fast hover:bg-critical/12 disabled:cursor-not-allowed"
-                    >
-                      <FaRedo size={10} aria-hidden="true" />
-                      Try again
-                    </button>
-                  )}
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
 
       {/* ── Drawer (below lg) ── */}
