@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { AnimatePresence, motion as Motion } from "framer-motion";
+import useDelayedLoading from "../hooks/useDelayedLoading";
 import { FaChartLine, FaCrown, FaDownload, FaEdit, FaEnvelopeOpenText, FaFlag, FaHistory, FaSearch, FaSignOutAlt, FaTrash, FaUsers, FaVideo } from "react-icons/fa";
 import { FiSidebar } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
@@ -32,6 +34,7 @@ function readAuditLog() {
 
 export default function AdminPanel() {
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
   const token = localStorage.getItem("kanthastSchoolAdminToken");
   const adminUser = useMemo(() => {
     try {
@@ -42,9 +45,6 @@ export default function AdminPanel() {
   }, []);
 
   const [activeTab, setActiveTab] = useState("overview");
-  const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [usersError, setUsersError] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
   const [pendingAction, setPendingAction] = useState(null);
   const [search, setSearch] = useState("");
@@ -61,8 +61,7 @@ export default function AdminPanel() {
   const [selectedIds, setSelectedIds] = useState([]);
   const [bulkBusy, setBulkBusy] = useState(false);
   const [auditLogs, setAuditLogs] = useState(readAuditLog);
-  // Open items in the Doubts moderation queue, for the tab's badge.
-  const [doubtsOpen, setDoubtsOpen] = useState(null);
+  const [doubtsOpenOverride, setDoubtsOpenOverride] = useState(null);
 
   const recordAudit = useCallback((action, target, details = "") => {
     const entry = {
@@ -104,34 +103,44 @@ export default function AdminPanel() {
   }, [navigate]);
 
   useEffect(() => {
-    if (!token) {
-      navigate("/adminlogin");
-      return;
-    }
-    loadUsers();
-    getModerationCounts()
-      .then((data) => setDoubtsOpen(data.counts?.open ?? 0))
-      .catch(() => {});
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [token]);
+    if (!token) navigate("/adminlogin");
+  }, [token, navigate]);
 
-  const loadUsers = async () => {
-    if (!token) return;
-    setLoading(true);
-    setUsersError("");
-    try {
-      const data = await getAdminUsers(token);
-      setUsers(data.users || []);
-    } catch (error) {
-      if (handleAuthError(error)) return;
-      const message = error.message || "Failed to load users";
-      setUsersError(message);
-      setStatusMessage(message);
-      toast.error(message);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const {
+    data: usersData,
+    isLoading: rawLoading,
+    error: usersQueryError,
+    refetch: loadUsers,
+  } = useQuery({
+    queryKey: ["schoolAdminUsers", token],
+    queryFn: () => getAdminUsers(token),
+    enabled: Boolean(token),
+    staleTime: 60 * 1000,
+  });
+
+  const loading = useDelayedLoading(rawLoading, 200);
+  const users = useMemo(() => usersData?.users || [], [usersData]);
+  const usersError = usersQueryError?.message || "";
+
+  const setUsers = useCallback(
+    (updater) => {
+      queryClient.setQueryData(["schoolAdminUsers", token], (old) => {
+        const prev = old?.users || [];
+        const next = typeof updater === "function" ? updater(prev) : updater;
+        return { ...(old || {}), users: next };
+      });
+    },
+    [queryClient, token]
+  );
+
+  const { data: modCountsData } = useQuery({
+    queryKey: ["schoolAdminModerationCounts", token],
+    queryFn: getModerationCounts,
+    enabled: Boolean(token),
+    staleTime: 30 * 1000,
+  });
+  const doubtsOpen = doubtsOpenOverride ?? modCountsData?.counts?.open ?? null;
+  const setDoubtsOpen = setDoubtsOpenOverride;
 
   const filteredUsers = useMemo(() => {
     const query = search.trim().toLowerCase();

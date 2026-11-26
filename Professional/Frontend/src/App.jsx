@@ -3,6 +3,8 @@ import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from "re
 import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
+import { idbPersister, queryClient } from "./utils/queryClient";
 import { SITE_URL } from "./utils/seo";
 import ErrorBoundary from "./components/ErrorBoundary";
 import BootDone from "./components/BootDone";
@@ -262,6 +264,7 @@ function App() {
     // "user" defers to the OS prefers-reduced-motion setting; the in-app
     // toggle can still force it on. Passing "never" (the old default) actively
     // overrode a user's OS-level accessibility preference.
+    <PersistQueryClientProvider client={queryClient} persistOptions={{ persister: idbPersister }}>
     <MotionConfig reducedMotion={settings.reduceMotion ? "always" : "user"}>
       <div className={`min-h-screen w-screen bg-surface-sunken text-ink${isSkyTheme ? " kb-sky" : ""}`}>
         {isSkyTheme && <div aria-hidden="true" className="kb-sky-bg" />}
@@ -347,6 +350,7 @@ function App() {
         </main>
       </div>
     </MotionConfig>
+    </PersistQueryClientProvider>
   );
 }
 

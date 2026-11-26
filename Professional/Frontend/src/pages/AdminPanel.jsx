@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { AnimatePresence, motion as Motion } from "framer-motion";
 import {
   FaBookMedical,
@@ -79,6 +80,7 @@ const buildSeedPayloadFromLegacyModules = () => {
 
 export default function AdminPanel() {
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
   const token = localStorage.getItem("kanthastAdminToken");
   const adminUser = useMemo(() => {
     try {
@@ -89,9 +91,6 @@ export default function AdminPanel() {
   }, []);
 
   const [activeTab, setActiveTab] = useState("overview");
-  const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [usersError, setUsersError] = useState("");
   const [contentError, setContentError] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
   // What a destructive action is waiting on confirmation for. Shape:
@@ -174,10 +173,35 @@ export default function AdminPanel() {
       navigate("/adminlogin");
       return;
     }
-    loadUsers();
     loadCourseContent();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
+
+  const {
+    data: usersData,
+    isLoading: loading,
+    error: usersQueryError,
+    refetch: loadUsers,
+  } = useQuery({
+    queryKey: ["proAdminUsers", token],
+    queryFn: () => getAdminUsers(token),
+    enabled: Boolean(token),
+    staleTime: 60 * 1000,
+  });
+
+  const users = useMemo(() => usersData?.users || [], [usersData]);
+  const usersError = usersQueryError?.message || "";
+
+  const setUsers = useCallback(
+    (updater) => {
+      queryClient.setQueryData(["proAdminUsers", token], (old) => {
+        const prev = old?.users || [];
+        const next = typeof updater === "function" ? updater(prev) : updater;
+        return { ...(old || {}), users: next };
+      });
+    },
+    [queryClient, token]
+  );
 
   const syncCourseState = (content) => {
     const nextContent = content || null;
@@ -194,24 +218,6 @@ export default function AdminPanel() {
     setSelectedSubjectId((prev) => prev || nextSubjectId);
     setSelectedChapterId((prev) => prev || nextChapterId);
     setSelectedVideoId((prev) => prev || nextVideoId);
-  };
-
-  const loadUsers = async () => {
-    if (!token) return;
-    setLoading(true);
-    setUsersError("");
-    try {
-      const data = await getAdminUsers(token);
-      setUsers(data.users || []);
-    } catch (error) {
-      if (handleAuthError(error)) return;
-      const message = error.message || "Failed to load users";
-      setUsersError(message);
-      setStatusMessage(message);
-      toast.error(message);
-    } finally {
-      setLoading(false);
-    }
   };
 
   const loadCourseContent = async () => {
