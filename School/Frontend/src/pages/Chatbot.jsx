@@ -242,13 +242,10 @@ function ConversationRail({ sessions, activeSessionId, onLoad, onNew, onDelete, 
           return (
             <div
               key={session.sessionId}
-              className={`group relative rounded-control transition-colors duration-fast ${
-                active ? "bg-surface shadow-e1 ring-1 ring-inset ring-brand/25" : "hover:bg-surface/70"
+              className={`group relative rounded-lg transition-colors duration-fast ${
+                active ? "bg-surface text-ink font-semibold" : "hover:bg-surface/60"
               }`}
             >
-              {active && (
-                <span aria-hidden="true" className="absolute left-0 top-2 bottom-2 w-0.5 rounded-r bg-brand" />
-              )}
               <button
                 type="button"
                 onClick={() => onLoad(session.sessionId)}

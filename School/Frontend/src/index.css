@@ -1725,7 +1725,7 @@ a.db-muted:hover, button.db-muted:hover { color: var(--db-ink); }
    appearances, so they read the .db scope's own ink; panels use the theme's
    surface tokens. */
 .dbs { padding-top: clamp(0.9rem, 1.8vw, 1.5rem); padding-bottom: clamp(1.5rem, 3vw, 2.5rem); }
-.dbs.is-workspace, .dbs.is-ask { padding: 0.5rem clamp(0.75rem, 1.6vw, 1.5rem) 0.5rem; }
+.dbs.is-workspace, .dbs.is-ask { padding: clamp(0.65rem, 1.2vw, 1rem) var(--kb-edge) 0.75rem; }
 .dbs-workspace-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--db-line); }
 .dbs-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem 1.5rem; min-height: 44px; flex-wrap: wrap; }
 .dbs-heading { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }

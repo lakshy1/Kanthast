@@ -12,7 +12,6 @@ const TOKEN_KEY = "kanthastSchoolToken";
 const USER_KEY = "kanthastSchoolUser";
 
 const dockItems = [
-  { to: "/", label: "Home", icon: FaHome, exact: true },
   { to: "/dashboard", label: "Dashboard", icon: FaTachometerAlt, exact: false },
   { to: "/library", label: "Library", icon: FaList, exact: false },
   { to: "/doubts", label: "Doubts", icon: FaComments, exact: false },
@@ -157,9 +156,11 @@ const Navbar = () => {
           </div>
 
           <div className="nav-links hidden lg:flex items-center">
-            <NavLink to={SITE.home} end className={({ isActive }) => (isActive ? activeClass : normalClass)}>
-              Home
-            </NavLink>
+            {!isLoggedIn && (
+              <NavLink to={SITE.home} end className={({ isActive }) => (isActive ? activeClass : normalClass)}>
+                Home
+              </NavLink>
+            )}
             {!isLoggedIn && (
               <NavLink to={SITE.courses} className={({ isActive }) => (isActive ? activeClass : normalClass)}>
                 Courses
@@ -250,7 +251,7 @@ const Navbar = () => {
           className="nav-dock-fade pointer-events-none absolute inset-x-0 bottom-full h-6 bg-gradient-to-t from-[#0b1220]/70 to-transparent"
         />
         <div className="nav-dock-bar border-t border-hairline/70 bg-[#0b1220]/95 backdrop-blur-xl">
-          <div className="grid h-16 grid-cols-5">
+          <div className="grid h-16 grid-cols-4">
             {(isLoggedIn ? dockHomeItems : dockPublicItems).map(({ to, label, icon: DockIcon, exact }) => {
               const isActive = exact ? location.pathname === to : location.pathname.startsWith(to);
               return (
