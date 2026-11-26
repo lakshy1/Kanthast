@@ -1725,7 +1725,7 @@ a.db-muted:hover, button.db-muted:hover { color: var(--db-ink); }
    appearances, so they read the .db scope's own ink; panels use the theme's
    surface tokens. */
 .dbs { padding-top: clamp(0.9rem, 1.8vw, 1.5rem); padding-bottom: clamp(1.5rem, 3vw, 2.5rem); }
-.dbs.is-ask { padding: 0.5rem clamp(0.75rem, 1.6vw, 1.5rem) 0.5rem; }
+.dbs.is-workspace, .dbs.is-ask { padding: 0.5rem clamp(0.75rem, 1.6vw, 1.5rem) 0.5rem; }
 .dbs-workspace-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--db-line); }
 .dbs-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem 1.5rem; min-height: 44px; flex-wrap: wrap; }
 .dbs-heading { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
@@ -1747,7 +1747,10 @@ a.db-muted:hover, button.db-muted:hover { color: var(--db-ink); }
 .dbs-tab:focus-visible:focus-visible { outline-offset: -3px; }
 
 .dbs-body { margin-top: 1rem; }
-.dbs.is-ask .dbs-body { margin-top: 0.625rem; }
+.dbs.is-workspace .dbs-body, .dbs.is-ask .dbs-body { margin-top: 0.625rem; }
+.dbw-row { padding: 0.95rem 1.25rem; transition: background-color 140ms ease; }
+@media (min-width: 640px) { .dbw-row { padding: 1.05rem 1.5rem; } }
+.dbw-row:hover { background-color: rgb(var(--surface-sunken) / 0.48); }
 .dbs-note { font-size: 0.875rem; color: var(--db-muted); }
 
 /* Panels: one family for list, chat, thread and gates. A hairline and crisp elevation. */

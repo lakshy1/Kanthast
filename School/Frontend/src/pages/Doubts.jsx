@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import { FaCheck, FaChevronLeft, FaChevronRight, FaHeart, FaRegCommentDots, FaRegHeart, FaRobot } from "react-icons/fa";
-import { FiSearch, FiX } from "react-icons/fi";
+import { AnimatePresence, motion as Motion } from "framer-motion";
+import { FaCheck, FaHeart, FaPlus, FaRegCommentDots, FaRegHeart, FaRobot, FaSlidersH, FaTimes } from "react-icons/fa";
+import { FiSearch, FiSidebar, FiX } from "react-icons/fi";
 import Seo from "../components/Seo";
 import { Button, EmptyState, Field, Modal, Select } from "../components/ui";
 import ParentApproval from "../components/doubts/ParentApproval";
@@ -423,7 +424,21 @@ const STATUS_LABEL = { pending: "Being checked", removed: "Hidden" };
 const AVATAR_TONES = 5;
 const avatarTone = (name) => [...String(name)].reduce((sum, ch) => sum + ch.charCodeAt(0), 0) % AVATAR_TONES;
 
-function DoubtCard({ doubt, from }) {
+const DOUBTS_RAIL_KEY = "kanthastDoubtsRail";
+function readDoubtsRailOpen() {
+  try {
+    return localStorage.getItem(DOUBTS_RAIL_KEY) !== "0";
+  } catch {
+    return true;
+  }
+}
+
+const MIN_PANEL = 420;
+const PANEL_GAP_DESKTOP = 12;
+const PANEL_GAP_PHONE = 12;
+const DOCK_PX = 64;
+
+function DoubtRow({ doubt, from }) {
   const [helpOverride, setHelpOverride] = useState(null);
   const [busy, setBusy] = useState(false);
   const [helpError, setHelpError] = useState("");
@@ -438,9 +453,11 @@ function DoubtCard({ doubt, from }) {
     : doubt.status && doubt.status !== "live"
       ? STATUS_LABEL[doubt.status] || doubt.status
       : "";
-  const answers = `${doubt.replyCount} ${doubt.replyCount === 1 ? "answer" : "answers"}`;
+  const replyCount = doubt.replyCount || 0;
 
-  const toggleHelped = async () => {
+  const toggleHelped = async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     setBusy(true);
     setHelpError("");
     try {
@@ -460,46 +477,61 @@ function DoubtCard({ doubt, from }) {
   };
 
   return (
-    <li className="dbc-slide">
-      <article className={`dbc-card ${removed ? "is-removed" : ""}`}>
-        <header className="dbc-head">
-          <span className={`dbc-avatar dbc-tone-${avatarTone(doubt.author?.firstName || name)}`} aria-hidden="true">
-            {name.charAt(0).toUpperCase()}
-          </span>
-          <span className="min-w-0 flex-1">
-            <span className="block truncate text-sm font-bold text-ink">{name}</span>
-            <span className="block truncate text-xs text-ink-subtle">
-              {doubt.subject}{doubt.chapter ? ` · ${doubt.chapter}` : ""}
-            </span>
-          </span>
-          {statusLabel ? (
-            <span className="shrink-0 rounded-full bg-caution-soft px-2.5 py-0.5 text-micro font-bold text-caution">{statusLabel}</span>
-          ) : doubt.acceptedReply ? (
-            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-positive-soft px-2.5 py-0.5 text-micro font-bold text-positive">
-              <FaCheck aria-hidden="true" className="text-[0.6rem]" /> Resolved
-            </span>
-          ) : doubt.hasAiAnswer ? (
-            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-brand-soft px-2.5 py-0.5 text-micro font-bold text-brand">
-              <FaRobot aria-hidden="true" className="text-[0.65rem]" /> AI answered
-            </span>
-          ) : (
-            <span className="shrink-0 rounded-full border border-line bg-surface-sunken px-2.5 py-0.5 text-micro font-semibold text-ink-subtle">
-              Open
-            </span>
-          )}
-        </header>
+    <li className={`dbw-row group relative ${removed ? "opacity-75" : ""}`}>
+      <div className="flex items-start gap-3 sm:gap-3.5">
+        <span className={`dbc-avatar mt-0.5 ${avatarTone(doubt.author?.firstName || name) !== undefined ? `dbc-tone-${avatarTone(doubt.author?.firstName || name)}` : "dbc-tone-0"}`} aria-hidden="true">
+          {name.charAt(0).toUpperCase()}
+        </span>
 
-        <div className="dbc-copy">
-          <h3 className="font-display text-[1.0625rem] font-extrabold leading-snug tracking-tight text-ink">
-            {/* A removed doubt (only shown to its author) has no thread to open. */}
-            {removed ? doubt.title : (
-              <Link to={`/doubts/${doubt.id}`} state={{ from }} className="dbc-open">{doubt.title}</Link>
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
+            <span className="font-bold text-ink">{name}</span>
+            <span className="dbs-subject">{doubt.subject}</span>
+            {doubt.chapter && (
+              <span className="max-w-[16rem] truncate text-ink-subtle font-medium">
+                {doubt.chapter}
+              </span>
+            )}
+            <span className="text-ink-subtle">· {timeAgo(doubt.createdAt)}</span>
+            <span className="ml-auto sm:ml-1">
+              {statusLabel ? (
+                <span className="inline-flex rounded-full bg-caution-soft px-2 py-0.5 text-micro font-bold text-caution">{statusLabel}</span>
+              ) : doubt.acceptedReply ? (
+                <span className="inline-flex items-center gap-1 rounded-full bg-positive-soft px-2 py-0.5 text-micro font-bold text-positive">
+                  <FaCheck aria-hidden="true" className="text-[0.55rem]" /> Resolved
+                </span>
+              ) : doubt.hasAiAnswer ? (
+                <span className="inline-flex items-center gap-1 rounded-full bg-brand-soft px-2 py-0.5 text-micro font-bold text-brand">
+                  <FaRobot aria-hidden="true" className="text-[0.6rem]" /> AI answered
+                </span>
+              ) : (
+                <span className="inline-flex rounded-full border border-line bg-surface-sunken px-2 py-0.5 text-micro font-semibold text-ink-subtle">
+                  Open
+                </span>
+              )}
+            </span>
+          </div>
+
+          <h3 className="mt-1.5 font-display text-[0.9875rem] font-extrabold leading-snug tracking-tight text-ink group-hover:text-brand transition-colors">
+            {removed ? (
+              doubt.title
+            ) : (
+              <Link to={`/doubts/${doubt.id}`} state={{ from }} className="dbc-open">
+                {doubt.title}
+              </Link>
             )}
           </h3>
-          {doubt.body && <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-ink-muted">{doubt.body}</p>}
+
+          {doubt.body && (
+            <p className="mt-1 line-clamp-1 sm:line-clamp-2 text-[0.8125rem] leading-relaxed text-ink-muted">
+              {doubt.body}
+            </p>
+          )}
+
+          {helpError && <p role="alert" className="relative z-[1] mt-1.5 text-xs text-critical">{helpError}</p>}
         </div>
 
-        <footer className="dbc-foot">
+        <div className="relative z-[1] flex shrink-0 items-center gap-2 self-center pl-1">
           <button
             type="button"
             className={`dbc-chip ${helped ? "is-on" : ""}`}
@@ -512,112 +544,184 @@ function DoubtCard({ doubt, from }) {
             {helped ? <FaHeart aria-hidden="true" /> : <FaRegHeart aria-hidden="true" />}
             <span className="tabular-nums">{helpfulCount}</span>
           </button>
-          <span className="text-xs text-ink-subtle">{timeAgo(doubt.createdAt)}</span>
-          <span className="dbc-replies" aria-label={answers}>
+          <span
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-line bg-surface-sunken/70 px-2.5 py-1.5 text-xs font-semibold text-ink-muted tabular-nums"
+            aria-label={`${replyCount} ${replyCount === 1 ? "answer" : "answers"}`}
+          >
             <FaRegCommentDots aria-hidden="true" />
-            <span className="tabular-nums">{answers}</span>
+            <span>{replyCount}</span>
           </span>
-        </footer>
-        {helpError && <p role="alert" className="dbc-error">{helpError}</p>}
-      </article>
+        </div>
+      </div>
     </li>
   );
 }
 
-// Laptop: a two-column grid. Phone: one card at a time, swiped sideways.
-function DoubtDeck({ doubts, from, hasMore, loadingMore, onLoadMore }) {
-  const deckRef = useRef(null);
-  const [index, setIndex] = useState(() => getTabUi(from)?.deckIndex || 0);
-  const last = Math.max(0, doubts.length - 1);
-  const current = Math.min(index, last);
-
-  useEffect(() => {
-    const deck = deckRef.current;
-    if (!deck?.clientWidth || current <= 0) return;
-    deck.scrollTo({ left: current * deck.clientWidth, behavior: "auto" });
-    // Restore horizontal card position on mount only.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const onScroll = () => {
-    const deck = deckRef.current;
-    if (!deck?.clientWidth) return;
-    const nextIdx = Math.round(deck.scrollLeft / deck.clientWidth);
-    setIndex(nextIdx);
-    patchTabUi(from, { deckIndex: nextIdx });
-  };
-
-  const goTo = (next) => {
-    const deck = deckRef.current;
-    if (!deck) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    deck.scrollTo({ left: next * deck.clientWidth, behavior: reduce ? "auto" : "smooth" });
-  };
-
-  // Reaching the last card on a phone fetches the next page.
-  useEffect(() => {
-    const swiping = window.matchMedia("(max-width: 767px)").matches;
-    if (swiping && hasMore && !loadingMore && current === last) onLoadMore();
-  }, [current, last, hasMore, loadingMore, onLoadMore]);
-
+// Centered inside the right feed pane when there are no doubts or matches.
+function QuietEmpty({ title, action = null, children }) {
   return (
-    <>
-      <ul ref={deckRef} className="dbc-deck" onScroll={onScroll} tabIndex={0} aria-label="Doubts">
-        {doubts.map((doubt) => (
-          <DoubtCard key={doubt.id} doubt={doubt} from={from} />
-        ))}
-      </ul>
-      {doubts.length > 1 && (
-        <div className="dbc-pager">
-          <button type="button" className="dbc-arrow" onClick={() => goTo(current - 1)} disabled={current === 0} aria-label="Previous doubt">
-            <FaChevronLeft aria-hidden="true" />
-          </button>
-          <span className="text-[0.8125rem] font-semibold tabular-nums text-ink-muted" aria-live="polite">
-            {current + 1} of {doubts.length}{hasMore ? "+" : ""}
-          </span>
-          <button type="button" className="dbc-arrow" onClick={() => goTo(current + 1)} disabled={current === last} aria-label="Next doubt">
-            <FaChevronRight aria-hidden="true" />
-          </button>
-        </div>
-      )}
-    </>
-  );
-}
-
-// A calm, centred message inside the list panel. Same shape for "nothing yet"
-// in every section (Ask AI's empty chat is centred the same way).
-function QuietEmpty({ title, children }) {
-  return (
-    <div className="card px-6 py-14 text-center">
-      <h2 className="font-display text-base font-bold text-ink">{title}</h2>
+    <div className="flex min-h-full flex-col items-center justify-center px-6 py-12 text-center">
+      <h2 className="font-display text-lg font-extrabold tracking-tight text-ink">{title}</h2>
       {children && <p className="mx-auto mt-1.5 max-w-sm text-sm leading-relaxed text-ink-muted">{children}</p>}
+      {action && <div className="mt-4">{action}</div>}
     </div>
   );
 }
 
 function DoubtFeedSkeleton() {
   return (
-    <div className="grid gap-4 md:grid-cols-2" aria-hidden="true">
-      {[0, 1, 2, 3].map((idx) => (
-        <div key={idx} className="dbc-card animate-pulse motion-reduce:animate-none">
-          <div className="flex items-center gap-2.5">
-            <div className="h-9 w-9 rounded-full bg-surface-sunken" />
-            <div className="flex-1 space-y-1.5">
-              <div className="h-3.5 w-24 rounded bg-surface-sunken" />
-              <div className="h-3 w-36 rounded bg-surface-sunken" />
+    <div className="divide-y divide-line" aria-hidden="true">
+      {[0, 1, 2, 3, 4].map((idx) => (
+        <div key={idx} className="px-5 py-4 animate-pulse motion-reduce:animate-none">
+          <div className="flex items-start gap-3.5">
+            <div className="h-9 w-9 shrink-0 rounded-full bg-surface-sunken" />
+            <div className="flex-1 space-y-2">
+              <div className="flex items-center gap-2">
+                <div className="h-3.5 w-20 rounded bg-surface-sunken" />
+                <div className="h-4 w-24 rounded-full bg-surface-sunken" />
+                <div className="h-3 w-16 rounded bg-surface-sunken" />
+              </div>
+              <div className="h-4 w-3/4 rounded bg-surface-sunken" />
+              <div className="h-3.5 w-1/2 rounded bg-surface-sunken" />
             </div>
-            <div className="h-5 w-16 rounded-full bg-surface-sunken" />
-          </div>
-          <div className="space-y-2 pt-1">
-            <div className="h-4 w-5/6 rounded bg-surface-sunken" />
-            <div className="h-3.5 w-2/3 rounded bg-surface-sunken" />
-          </div>
-          <div className="mt-auto flex items-center justify-between border-t border-line pt-3">
-            <div className="h-7 w-16 rounded-full bg-surface-sunken" />
-            <div className="h-4 w-12 rounded bg-surface-sunken" />
+            <div className="h-8 w-14 shrink-0 rounded-full bg-surface-sunken" />
           </div>
         </div>
       ))}
+    </div>
+  );
+}
+
+function DoubtFilterRail({
+  tab,
+  subject,
+  statusFilter,
+  statusCounts,
+  subjectCounts,
+  onSelectSubject,
+  onSelectStatus,
+  onAsk,
+  askDisabled,
+  countText,
+  loading,
+  onClose,
+  onCollapse,
+}) {
+  const statusItems = [
+    { id: "all", label: "All doubts", n: statusCounts.all },
+    { id: "answered", label: "Answered", n: statusCounts.answered },
+    { id: "open", label: "Unanswered", n: statusCounts.open },
+  ];
+
+  return (
+    <div className="flex h-full flex-col">
+      <div className="flex flex-shrink-0 items-center gap-1.5 p-3 pb-2">
+        <button
+          type="button"
+          onClick={() => {
+            onClose?.();
+            onAsk?.();
+          }}
+          disabled={askDisabled}
+          className="inline-flex min-h-[38px] flex-1 items-center gap-2 rounded-control border border-line bg-surface px-3 text-xs font-bold text-ink shadow-e1 transition-all duration-fast ease-brand hover:border-brand/40 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-55"
+        >
+          <FaPlus size={10} className="text-brand" aria-hidden="true" />
+          Ask your class
+        </button>
+        {(onClose || onCollapse) && (
+          <button
+            type="button"
+            onClick={onClose || onCollapse}
+            className="flex h-[38px] w-[38px] flex-shrink-0 items-center justify-center rounded-control text-ink-subtle transition-colors duration-fast hover:bg-surface hover:text-ink"
+            aria-label={onClose ? "Close filters" : "Collapse sidebar"}
+            title={onClose ? "Close filters" : "Collapse sidebar"}
+          >
+            {onClose ? <FaTimes size={13} /> : <FiSidebar size={15} />}
+          </button>
+        )}
+      </div>
+
+      <div className="no-scrollbar flex-1 space-y-4 overflow-y-auto px-2.5 py-2">
+        <div>
+          <p className="px-2 pb-1.5 text-micro font-bold uppercase tracking-[0.1em] text-ink-subtle">
+            Status
+          </p>
+          <div className="space-y-0.5">
+            {statusItems.map((st) => {
+              const active = statusFilter === st.id;
+              return (
+                <button
+                  key={st.id}
+                  type="button"
+                  onClick={() => {
+                    onSelectStatus(st.id);
+                    onClose?.();
+                  }}
+                  aria-current={active ? "true" : undefined}
+                  className={`relative flex w-full items-center justify-between rounded-control px-3 py-2 text-left text-xs font-semibold transition-colors duration-fast ${
+                    active
+                      ? "bg-surface text-ink shadow-e1 ring-1 ring-inset ring-brand/25"
+                      : "text-ink-muted hover:bg-surface/70 hover:text-ink"
+                  }`}
+                >
+                  {active && <span aria-hidden="true" className="absolute left-0 top-1.5 bottom-1.5 w-0.5 rounded-r bg-brand" />}
+                  <span>{st.label}</span>
+                  {!loading && st.n > 0 && (
+                    <span className={`tabular-nums text-[0.6875rem] ${active ? "font-bold text-brand" : "text-ink-subtle"}`}>
+                      {st.n}
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div>
+          <p className="px-2 pb-1.5 text-micro font-bold uppercase tracking-[0.1em] text-ink-subtle">
+            {tab === "mine" ? "My subjects" : "Subjects"}
+          </p>
+          <div className="space-y-0.5">
+            {[ALL, ...DOUBT_SUBJECTS].map((subj) => {
+              const active = subject === subj;
+              const n = subjectCounts[subj];
+              if (tab === "mine" && subj !== ALL && !n) return null;
+              return (
+                <button
+                  key={subj}
+                  type="button"
+                  onClick={() => {
+                    onSelectSubject(subj);
+                    onClose?.();
+                  }}
+                  aria-current={active ? "true" : undefined}
+                  className={`relative flex w-full items-center justify-between gap-2 rounded-control px-3 py-2 text-left text-xs font-semibold transition-colors duration-fast ${
+                    active
+                      ? "bg-surface text-ink shadow-e1 ring-1 ring-inset ring-brand/25"
+                      : "text-ink-muted hover:bg-surface/70 hover:text-ink"
+                  }`}
+                >
+                  {active && <span aria-hidden="true" className="absolute left-0 top-1.5 bottom-1.5 w-0.5 rounded-r bg-brand" />}
+                  <span className="truncate">{subj}</span>
+                  {typeof n === "number" && n > 0 && (
+                    <span className={`tabular-nums text-[0.6875rem] ${active ? "font-bold text-brand" : "text-ink-subtle"}`}>
+                      {n}
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="flex-shrink-0 border-t border-line px-3.5 py-2.5 text-[0.6875rem] text-ink-subtle space-y-1">
+        {countText && <p className="font-medium tabular-nums">{countText}</p>}
+        <Link to="/doubts/ask" className="inline-flex items-center gap-1.5 font-semibold text-brand hover:underline">
+          <FaRobot size={11} aria-hidden="true" />
+          Prefer instant help? Try Ask AI
+        </Link>
+      </div>
     </div>
   );
 }
@@ -630,10 +734,10 @@ function computeSubjectCounts(doubts) {
   return map;
 }
 
-function DoubtList({ tab, reloadKey, classLabel }) {
+function DoubtList({ tab, reloadKey, classLabel, onAsk, askDisabled, countText, statusBanner }) {
   const savedUi = getTabUi(tab);
-  const initialSubject = tab === "class" ? savedUi?.subject || ALL : ALL;
-  const initialFeed = getFeedCache(tab, initialSubject === ALL ? "" : initialSubject);
+  const initialSubject = savedUi?.subject || ALL;
+  const initialFeed = getFeedCache(tab, tab === "class" && initialSubject !== ALL ? initialSubject : "");
 
   const [subject, setSubject] = useState(() => initialSubject);
   const [statusFilter, setStatusFilter] = useState(() => savedUi?.statusFilter || "all"); // all | answered | open
@@ -643,13 +747,60 @@ function DoubtList({ tab, reloadKey, classLabel }) {
   const [loading, setLoading] = useState(() => !initialFeed);
   const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState("");
+  const [railOpen, setRailOpen] = useState(readDoubtsRailOpen);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [subjectCounts, setSubjectCounts] = useState(() => {
     if (savedUi?.subjectCounts) return savedUi.subjectCounts;
-    if (initialSubject === ALL && initialFeed?.doubts) return computeSubjectCounts(initialFeed.doubts);
+    if ((tab === "mine" || initialSubject === ALL) && initialFeed?.doubts) {
+      return computeSubjectCounts(initialFeed.doubts);
+    }
     return {};
   });
   const requestId = useRef(0);
   const lastReloadKey = useRef(reloadKey);
+  const panelRef = useRef(null);
+  const [panelTop, setPanelTop] = useState(null);
+  const [panelFits, setPanelFits] = useState(true);
+
+  useLayoutEffect(() => {
+    const measure = () => {
+      const el = panelRef.current;
+      if (!el) return;
+      const top = Math.round(el.getBoundingClientRect().top + window.scrollY);
+      const desktop = window.matchMedia("(min-width: 768px)").matches;
+      const room = window.innerHeight - top - (desktop ? PANEL_GAP_DESKTOP : PANEL_GAP_PHONE + DOCK_PX);
+      setPanelTop(top);
+      setPanelFits(room >= MIN_PANEL);
+    };
+    measure();
+    const timer = setTimeout(measure, 350);
+    window.addEventListener("resize", measure);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", measure);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!panelFits) return undefined;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [panelFits]);
+
+  const toggleRail = () => {
+    setRailOpen((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem(DOUBTS_RAIL_KEY, next ? "1" : "0");
+      } catch {
+        // Storage blocked: preference holds for this visit.
+      }
+      return next;
+    });
+  };
 
   const load = useCallback(async ({ targetSubject = subject, quiet = false } = {}) => {
     const id = ++requestId.current;
@@ -667,7 +818,7 @@ function DoubtList({ tab, reloadKey, classLabel }) {
       setDoubts(list);
       setNextBefore(cursor);
       setFeedCache(tab, subjParam, { doubts: list, nextBefore: cursor });
-      if (tab === "class" && !subjParam) {
+      if (tab === "mine" || !subjParam) {
         const counts = computeSubjectCounts(list);
         setSubjectCounts(counts);
         patchTabUi(tab, { subjectCounts: counts });
@@ -694,6 +845,7 @@ function DoubtList({ tab, reloadKey, classLabel }) {
   const selectSubject = (nextSubj) => {
     setSubject(nextSubj);
     patchTabUi(tab, { subject: nextSubj, deckIndex: 0 });
+    if (tab === "mine") return;
     const subjParam = nextSubj === ALL ? "" : nextSubj;
     const hit = getFeedCache(tab, subjParam);
     if (hit) {
@@ -719,6 +871,13 @@ function DoubtList({ tab, reloadKey, classLabel }) {
     patchTabUi(tab, { searchQuery: nextQuery, deckIndex: 0 });
   };
 
+  const clearFilters = () => {
+    setStatusFilter("all");
+    setSearchQuery("");
+    patchTabUi(tab, { subject: ALL, statusFilter: "all", searchQuery: "", deckIndex: 0 });
+    selectSubject(ALL);
+  };
+
   const loadMore = useCallback(async () => {
     setLoadingMore(true);
     try {
@@ -737,19 +896,24 @@ function DoubtList({ tab, reloadKey, classLabel }) {
     }
   }, [tab, subject, nextBefore, doubts]);
 
+  const subjectScopedDoubts = useMemo(() => {
+    if (tab !== "mine" || subject === ALL) return doubts;
+    return doubts.filter((d) => d.subject === subject);
+  }, [doubts, tab, subject]);
+
   const statusCounts = useMemo(() => {
     let answered = 0;
     let open = 0;
-    for (const d of doubts) {
+    for (const d of subjectScopedDoubts) {
       if (d.acceptedReply || d.hasAiAnswer || (d.replyCount || 0) > 0) answered++;
       else open++;
     }
-    return { all: doubts.length, answered, open };
-  }, [doubts]);
+    return { all: subjectScopedDoubts.length, answered, open };
+  }, [subjectScopedDoubts]);
 
   const visibleDoubts = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
-    return doubts.filter((d) => {
+    return subjectScopedDoubts.filter((d) => {
       if (statusFilter === "answered" && !d.acceptedReply && !d.hasAiAnswer && (d.replyCount || 0) === 0) {
         return false;
       }
@@ -762,124 +926,226 @@ function DoubtList({ tab, reloadKey, classLabel }) {
       }
       return true;
     });
-  }, [doubts, statusFilter, searchQuery]);
+  }, [subjectScopedDoubts, statusFilter, searchQuery]);
 
   const filtered = subject !== ALL || statusFilter !== "all" || searchQuery.trim().length > 0;
+  const activeScopeLabel = [
+    tab === "mine" ? "My doubts" : classLabel || "Your class",
+    subject !== ALL ? subject : null,
+    statusFilter === "answered" ? "Answered" : statusFilter === "open" ? "Unanswered" : null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+
+  const railProps = {
+    tab,
+    subject,
+    statusFilter,
+    statusCounts,
+    subjectCounts,
+    onSelectSubject: selectSubject,
+    onSelectStatus: selectStatus,
+    onAsk,
+    askDisabled,
+    countText,
+    loading,
+  };
 
   return (
-    <div className="space-y-4">
-      {/* Ed Discussion / Linear Toolbar: Search + Status Pills + Subject Filter Pills */}
-      <div className="space-y-3">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-          {/* Search Input */}
-          <div className="relative flex-1 max-w-md">
-            <FiSearch size={15} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-subtle" />
-            <input
-              type="search"
-              value={searchQuery}
-              onChange={(e) => changeSearch(e.target.value)}
-              placeholder="Search questions or chapters…"
-              aria-label="Search doubts"
-              className="w-full h-10 pl-10 pr-8 rounded-full border border-line bg-surface text-sm text-ink placeholder:text-ink-subtle focus:outline-none focus:border-brand"
-            />
-            {searchQuery && (
+    <div
+      ref={panelRef}
+      role="region"
+      aria-label={tab === "mine" ? "My doubts workspace" : "Class feed workspace"}
+      className="card flex overflow-hidden [--feed-gap:8px] [--feed-dock:calc(4rem+env(safe-area-inset-bottom))] md:[--feed-dock:0px] md:[--feed-gap:12px]"
+      style={{
+        height:
+          panelTop === null
+            ? `${MIN_PANEL}px`
+            : `max(${MIN_PANEL}px, calc(100dvh - ${panelTop}px - var(--feed-gap) - var(--feed-dock)))`,
+      }}
+    >
+      {/* ── Collapsible Filter Rail (lg and up) ── */}
+      {railOpen && (
+        <aside aria-label="Doubt filters" className="hidden w-[248px] flex-shrink-0 flex-col border-r border-line bg-surface-sunken/60 lg:flex">
+          <DoubtFilterRail {...railProps} onCollapse={toggleRail} />
+        </aside>
+      )}
+
+      {/* ── Main Feed Canvas ── */}
+      <div className="flex min-w-0 flex-1 flex-col">
+        {/* Compact Subheader Toolbar (matches Ask AI 42px strip) */}
+        <div className="flex h-[46px] flex-shrink-0 items-center justify-between gap-2 border-b border-line/70 px-2.5 md:px-4">
+          <div className="flex min-w-0 items-center gap-1.5">
+            <button
+              type="button"
+              onClick={() => setDrawerOpen(true)}
+              className="inline-flex h-8 items-center gap-1.5 rounded-lg px-2 text-xs font-semibold text-ink-muted transition-colors duration-fast hover:bg-surface-sunken hover:text-ink lg:hidden"
+              aria-label="Open filters"
+            >
+              <FaSlidersH size={12} aria-hidden="true" />
+              <span>Filters</span>
+            </button>
+            {!railOpen && (
               <button
                 type="button"
-                onClick={() => changeSearch("")}
-                aria-label="Clear search"
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-ink-subtle hover:text-ink"
+                onClick={toggleRail}
+                className="hidden lg:inline-flex h-8 w-8 items-center justify-center rounded-lg text-ink-muted transition-colors duration-fast hover:bg-surface-sunken hover:text-ink"
+                aria-label="Show filters sidebar"
+                title="Show filters sidebar"
               >
-                <FiX size={13} />
+                <FiSidebar size={15} aria-hidden="true" />
+              </button>
+            )}
+            <span className="truncate text-xs font-semibold text-ink-muted">
+              {activeScopeLabel}
+            </span>
+            {!loading && (
+              <span className="hidden sm:inline text-micro font-semibold text-ink-subtle tabular-nums">
+                ({visibleDoubts.length})
+              </span>
+            )}
+            {filtered && (
+              <button
+                type="button"
+                onClick={clearFilters}
+                className="hidden sm:inline-flex rounded-full px-2 py-0.5 text-micro font-bold text-brand hover:bg-brand-soft transition-colors"
+              >
+                Reset
               </button>
             )}
           </div>
 
-          {/* Status Segmented Toggle with Counts */}
-          <div className="flex items-center justify-end">
-            <div className="inline-flex items-center rounded-full border border-line bg-surface p-0.5">
-              {[
-                { id: "all", label: "All", n: statusCounts.all },
-                { id: "answered", label: "Answered", n: statusCounts.answered },
-                { id: "open", label: "Unanswered", n: statusCounts.open },
-              ].map((st) => (
+          <div className="flex items-center gap-2">
+            <div className="relative w-40 sm:w-64">
+              <FiSearch size={13} className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-ink-subtle" />
+              <input
+                type="search"
+                value={searchQuery}
+                onChange={(e) => changeSearch(e.target.value)}
+                placeholder="Search doubts…"
+                aria-label="Search doubts"
+                className="h-8 w-full rounded-full border border-line bg-surface-sunken/70 pl-8 pr-7 text-xs text-ink placeholder:text-ink-subtle focus:border-brand focus:bg-surface focus:outline-none"
+              />
+              {searchQuery && (
                 <button
-                  key={st.id}
                   type="button"
-                  onClick={() => selectStatus(st.id)}
-                  className={`px-3 py-1 rounded-full text-xs font-bold tabular-nums transition-colors ${
-                    statusFilter === st.id
-                      ? "bg-brand text-brand-fg"
-                      : "text-ink-muted hover:text-ink"
-                  }`}
+                  onClick={() => changeSearch("")}
+                  aria-label="Clear search"
+                  className="absolute right-2 top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full text-ink-subtle hover:text-ink"
                 >
-                  {st.label}{!loading && st.n > 0 ? ` (${st.n})` : ""}
+                  <FiX size={12} />
                 </button>
-              ))}
+              )}
             </div>
+
+            <button
+              type="button"
+              onClick={onAsk}
+              disabled={askDisabled}
+              className="inline-flex h-8 items-center gap-1.5 rounded-full bg-brand px-3 text-xs font-bold text-brand-fg shadow-e1 transition-colors hover:bg-brand-hover disabled:cursor-not-allowed disabled:opacity-55 md:hidden"
+            >
+              <FaPlus size={9} aria-hidden="true" />
+              Ask
+            </button>
           </div>
         </div>
 
-        {/* Horizontal Subject Pills with Counts (Class feed) */}
-        {tab === "class" && (
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar">
-            {[ALL, ...DOUBT_SUBJECTS].map((subj) => {
-              const active = subject === subj;
-              const n = subjectCounts[subj];
-              return (
-                <button
-                  key={subj}
-                  type="button"
-                  onClick={() => selectSubject(subj)}
-                  className={`shrink-0 px-3.5 py-1.5 rounded-full text-xs font-bold border tabular-nums transition-all active:scale-95 ${
-                    active
-                      ? "bg-brand text-brand-fg border-brand shadow-e1"
-                      : "bg-surface text-ink-muted border-line hover:border-line-strong hover:text-ink"
-                  }`}
-                >
-                  {subj}{typeof n === "number" && n > 0 ? ` (${n})` : ""}
-                </button>
-              );
-            })}
-          </div>
-        )}
-      </div>
-
-      {loading ? (
-        <DoubtFeedSkeleton />
-      ) : error ? (
-        <EmptyState variant="error" title="We couldn't load doubts" description={error} action="Try again" onAction={load} />
-      ) : visibleDoubts.length === 0 ? (
-        tab === "mine" && !filtered ? (
-          <QuietEmpty title="You haven't asked anything yet">
-            Doubts you post to your class appear here, with their answers.
-          </QuietEmpty>
-        ) : filtered ? (
-          <QuietEmpty title="No matching doubts found">
-            Try clearing your search or switching subject/status filters.
-          </QuietEmpty>
-        ) : (
-          <QuietEmpty title={`No doubts in ${classLabel || "your class"} yet`}>
-            Be the first to ask. If you want an answer right now, try Ask AI first.
-          </QuietEmpty>
-        )
-      ) : (
-        <>
-          <DoubtDeck
-            doubts={visibleDoubts}
-            from={tab}
-            hasMore={tab === "class" && Boolean(nextBefore)}
-            loadingMore={loadingMore}
-            onLoadMore={loadMore}
-          />
-          {tab === "class" && nextBefore && (
-            <div className="mt-4 hidden justify-center md:flex">
-              <Button variant="secondary" onClick={loadMore} loading={loadingMore}>
-                Show more
-              </Button>
+        {/* Scrollable Feed Area */}
+        <div className="no-scrollbar relative min-h-0 flex-1 overflow-y-auto">
+          {statusBanner && (
+            <div className="border-b border-line bg-surface-sunken/60 px-5 py-2.5 text-xs font-medium text-ink-muted">
+              {statusBanner}
             </div>
           )}
-        </>
-      )}
+
+          {loading ? (
+            <DoubtFeedSkeleton />
+          ) : error ? (
+            <div className="p-6">
+              <EmptyState variant="error" title="We couldn't load doubts" description={error} action="Try again" onAction={() => load()} />
+            </div>
+          ) : visibleDoubts.length === 0 ? (
+            tab === "mine" && !filtered ? (
+              <QuietEmpty
+                title="You haven't asked anything yet"
+                action={
+                  <Button onClick={onAsk} disabled={askDisabled} className="rounded-full px-5">
+                    Ask your class
+                  </Button>
+                }
+              >
+                Doubts you post to your class appear here, with their answers.
+              </QuietEmpty>
+            ) : filtered ? (
+              <QuietEmpty
+                title="No matching doubts found"
+                action={
+                  <Button variant="secondary" onClick={clearFilters} className="rounded-full px-5">
+                    Clear filters
+                  </Button>
+                }
+              >
+                Try clearing your search or switching subject/status filters.
+              </QuietEmpty>
+            ) : (
+              <QuietEmpty
+                title={`No doubts in ${classLabel || "your class"} yet`}
+                action={
+                  <Button onClick={onAsk} disabled={askDisabled} className="rounded-full px-5">
+                    Ask your class
+                  </Button>
+                }
+              >
+                Be the first to ask, or try Ask AI for an instant explanation.
+              </QuietEmpty>
+            )
+          ) : (
+            <>
+              <ul className="divide-y divide-line" aria-label="Doubts">
+                {visibleDoubts.map((doubt) => (
+                  <DoubtRow key={doubt.id} doubt={doubt} from={tab} />
+                ))}
+              </ul>
+              {tab === "class" && nextBefore && (
+                <div className="flex justify-center border-t border-line py-4">
+                  <Button variant="secondary" onClick={loadMore} loading={loadingMore}>
+                    Show more
+                  </Button>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+
+      {/* ── Mobile Filter Drawer (below lg) ── */}
+      <AnimatePresence>
+        {drawerOpen && (
+          <Motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 lg:hidden"
+            onClick={() => setDrawerOpen(false)}
+          >
+            <div className="absolute inset-0 bg-slate-950/45 backdrop-blur-[2px]" />
+            <Motion.div
+              role="dialog"
+              aria-modal="true"
+              aria-label="Filter doubts"
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "spring", damping: 28, stiffness: 280 }}
+              className="absolute left-0 top-0 h-full w-72 max-w-[85vw] border-r border-line bg-surface shadow-e5"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <DoubtFilterRail {...railProps} onClose={() => setDrawerOpen(false)} />
+            </Motion.div>
+          </Motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -1061,19 +1327,27 @@ export default function Doubts({ section = "class" }) {
       />
     );
   } else {
-    content = (
+    const statusBanner = muted ? (
       <>
-        {muted ? (
-          <p className="dbs-note mb-3">
-            {muteLabel(mute)}. You can still read the class feed and use Ask AI.
-          </p>
-        ) : left === 0 && (
-          <p className="dbs-note mb-3">
-            You can post again tomorrow. You can still use Ask AI{quota?.paid ? "." : ", and a plan gives you 5 posts a day."}
-          </p>
-        )}
-        <DoubtList key={current} tab={current} reloadKey={reloadKey} classLabel={classLabel} />
+        {muteLabel(mute)}. You can still read the class feed and use Ask AI.
       </>
+    ) : left === 0 ? (
+      <>
+        You can post again tomorrow. You can still use Ask AI{quota?.paid ? "." : ", and a plan gives you 5 posts a day."}
+      </>
+    ) : null;
+
+    content = (
+      <DoubtList
+        key={current}
+        tab={current}
+        reloadKey={reloadKey}
+        classLabel={classLabel}
+        onAsk={openComposer}
+        askDisabled={muted || (hasLeft && left === 0)}
+        countText={count}
+        statusBanner={statusBanner}
+      />
     );
   }
 
@@ -1087,7 +1361,7 @@ export default function Doubts({ section = "class" }) {
       exact={current !== "thread"}
       count={count}
       action={
-        <Button className="min-h-[42px] whitespace-nowrap rounded-full px-5 py-2 text-sm font-bold shadow-e1" onClick={openComposer} disabled={muted || (hasLeft && left === 0)}>
+        <Button className="min-h-[36px] whitespace-nowrap rounded-full px-4 py-1.5 text-xs font-bold shadow-e1" onClick={openComposer} disabled={muted || (hasLeft && left === 0)}>
           Ask your class
         </Button>
       }
