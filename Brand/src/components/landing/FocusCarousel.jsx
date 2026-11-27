@@ -88,10 +88,30 @@ export default function FocusCarousel({ label, children, autoplayMs = 0, slideWi
     return () => observer.disconnect();
   }, []);
 
+  const remainingMsRef = useRef(autoplayMs);
+  const startedAtRef = useRef(0);
+
+  useEffect(() => {
+    remainingMsRef.current = autoplayMs;
+  }, [active, autoplayMs]);
+
   useEffect(() => {
     if (!running) return undefined;
-    const timer = setTimeout(() => latest.current.goTo((active + 1) % items.length), autoplayMs);
-    return () => clearTimeout(timer);
+    startedAtRef.current = performance.now();
+    const delay = Math.max(0, remainingMsRef.current);
+    const timer = setTimeout(() => {
+      startedAtRef.current = 0;
+      remainingMsRef.current = autoplayMs;
+      latest.current.goTo((active + 1) % items.length);
+    }, delay);
+    return () => {
+      clearTimeout(timer);
+      if (startedAtRef.current > 0) {
+        const elapsed = performance.now() - startedAtRef.current;
+        remainingMsRef.current = Math.max(0, remainingMsRef.current - elapsed);
+        startedAtRef.current = 0;
+      }
+    };
   }, [running, active, autoplayMs, items.length]);
 
   const onKeyDown = (event) => {
