@@ -688,21 +688,21 @@ export default function VivaPractice() {
       const armSilenceTimer = (currentText) => {
         clearSilenceTimers();
         const cleaned = stripFillers(currentText);
-        // Only arm the 3-second auto-capture countdown once there is real non-filler speech
+        // Only arm the 1.5-second auto-capture countdown once there is real non-filler speech
         const minLen = targetPhase === "listening_consent" ? 2 : 4;
         if (cleaned.length < minLen) return;
 
-        let remaining = 3;
+        let remaining = 1.5;
         setSilenceCountdown(remaining);
         countdownIntervalRef.current = setInterval(() => {
-          remaining -= 1;
+          remaining = Number((remaining - 0.5).toFixed(1));
           if (remaining > 0) {
             setSilenceCountdown(remaining);
           } else {
             clearInterval(countdownIntervalRef.current);
             countdownIntervalRef.current = null;
           }
-        }, 1000);
+        }, 500);
 
         silenceTimerRef.current = setTimeout(() => {
           clearSilenceTimers();
@@ -710,7 +710,7 @@ export default function VivaPractice() {
           if (finalClean && handleTurnSubmittedRef.current) {
             handleTurnSubmittedRef.current(finalClean, "voice");
           }
-        }, 3200);
+        }, 1500);
       };
 
       rec.onresult = (event) => {
