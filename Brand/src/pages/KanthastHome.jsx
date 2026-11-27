@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaChevronDown, FaRobot, FaClockRotateLeft, FaChartColumn, FaCrosshairs, FaArrowsRotate, FaListCheck, FaArrowRight, FaStethoscope, FaGraduationCap, FaWandMagicSparkles, FaCircleQuestion, FaBuilding } from "react-icons/fa6";
+import { FaChevronDown, FaRobot, FaClockRotateLeft, FaChartColumn, FaCrosshairs, FaArrowsRotate, FaListCheck, FaArrowRight, FaStethoscope, FaGraduationCap, FaWandMagicSparkles, FaCircleQuestion } from "react-icons/fa6";
 import Seo from "../components/Seo";
 import { ORGANIZATION_ID, SITE_URL, breadcrumbSchema, faqSchema } from "../utils/seo";
 import SectionHead from "../components/landing/SectionHead";
@@ -13,7 +13,6 @@ import NeoZippy from "../components/landing/NeoZippy";
 import DeviceShowcase from "../components/landing/DeviceShowcase";
 import SYLLABUS_SNAPSHOT from "../data/syllabusSnapshot";
 import SCHOOL_CATALOG from "../data/schoolCatalog";
-import conceptArt from "../assets/paths/concept.png";
 
 const PRO = {
   subjects: SYLLABUS_SNAPSHOT.subjects.length,
@@ -164,17 +163,6 @@ export default function KanthastHome() {
               ),
               stat: `${PRO.subjects} subjects, ${PRO.chapters} chapters mapped`,
               cta: "Explore Professional",
-            },
-            {
-              id: "corporate",
-              icon: FaBuilding,
-              name: "Kanthast Corporate",
-              purpose: "Animated lessons for teams and workplaces.",
-              chips: [],
-              chipsLabel: "",
-              stage: <img src={conceptArt} alt="A glowing light bulb above a stack of books." className="kx-stage-art" loading="lazy" />,
-              stat: "Planned. We will announce it here first.",
-              cta: "Coming soon",
             },
           ].map(({ icon: Icon, ...card }) => {
             const body = (
