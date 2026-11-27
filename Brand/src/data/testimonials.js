@@ -17,7 +17,7 @@
 const TESTIMONIALS = [
   {
     name: "Karan",
-    avatar: { hair: "short", skin: "#c98e63", hairColor: "#1f1610", shirt: "#2563eb", glasses: true, bg: ["#e8efff", "#c7d7fb"] },
+    avatar: { hair: "short", skin: "#c98e63", hairColor: "#1f1610", shirt: "#2563eb", glasses: true, stubble: true, bg: ["#e8efff", "#c7d7fb"] },
     role: "Pilot tester",
     quote: "The animations make tough concepts click much faster than reading the textbook.",
     approved: true,

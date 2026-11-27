@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
-import { FaPlay, FaArrowRight, FaGraduationCap, FaStethoscope, FaSchool } from "react-icons/fa6";
+// eslint-disable-next-line no-unused-vars
+import { motion, useReducedMotion } from "framer-motion";
+import { FaPlay, FaArrowRight, FaGraduationCap, FaStethoscope, FaSchool, FaBolt } from "react-icons/fa6";
 import heroIllustration from "../../assets/hero/hero-illustration.jpg";
 
 /** Landing hero: copy and CTAs on the left, illustration on the right. Fills the first screen. */
 export default function BrandHero() {
+  const reduce = useReducedMotion();
   return (
     <section className="bh" aria-labelledby="bh-title">
       <div className="bh-inner">
@@ -38,15 +40,26 @@ export default function BrandHero() {
           <p className="bh-sub">Short animated lessons with AI help, for medical exams and for school.</p>
 
           <div className="bh-ctas">
-            <a href="#waitlist" className="bh-btn bh-btn-primary">
-              <FaPlay aria-hidden="true" className="text-[0.8em]" />
-              Join the waitlist
+            <motion.a
+              href="#products"
+              className="bh-btn bh-btn-primary"
+              whileHover={reduce ? undefined : { y: -2 }}
+              whileTap={reduce ? undefined : { scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 420, damping: 24 }}
+            >
+              <FaGraduationCap aria-hidden="true" className="text-[1.05em]" />
+              Explore products
               <FaArrowRight aria-hidden="true" className="text-[0.8em]" />
-            </a>
-            <a href="#products" className="bh-btn bh-btn-ghost">
-              <FaGraduationCap aria-hidden="true" className="text-[1.1em] text-[#1d4ed8]" />
-              See the products
-            </a>
+            </motion.a>
+            <motion.a
+              href="#teaser-heading"
+              className="bh-btn bh-btn-ghost"
+              whileHover={reduce ? undefined : { y: -1 }}
+              whileTap={reduce ? undefined : { scale: 0.98 }}
+            >
+              <FaBolt aria-hidden="true" className="text-[0.95em] text-[#1d4ed8]" />
+              Try 10-sec demo
+            </motion.a>
           </div>
 
           {/* Same layout as a "trusted by" row, but only true facts. */}
@@ -66,7 +79,11 @@ export default function BrandHero() {
           </div>
         </div>
 
-        <div className="bh-art">
+        <motion.div
+          className="bh-art"
+          animate={reduce ? undefined : { y: [0, -6, 0] }}
+          transition={reduce ? undefined : { duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        >
           <img
             src={heroIllustration}
             alt="A student in headphones watching an animated Kanthast lesson about the heart on a laptop."
@@ -74,7 +91,7 @@ export default function BrandHero() {
             height="526"
             fetchpriority="high"
           />
-        </div>
+        </motion.div>
       </div>
 
     </section>

@@ -1,5 +1,5 @@
 import { Children, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from "react-icons/fa6";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 function usePrefersReducedMotion() {
   const [reduce, setReduce] = useState(false);
@@ -189,12 +189,6 @@ export default function FocusCarousel({ label, children, autoplayMs = 0, slideWi
         <button type="button" className="fc-arrow" onClick={() => goTo(Math.min(active + 1, items.length - 1), { fromUser: true })} disabled={active === items.length - 1} aria-label="Next slide">
           <FaChevronRight aria-hidden="true" />
         </button>
-
-        {autoplayMs > 0 && !reduce && (
-          <button type="button" className="fc-arrow fc-pause" onClick={() => setStopped((v) => !v)} aria-label={stopped ? "Start automatic slides" : "Pause automatic slides"}>
-            {stopped ? <FaPlay aria-hidden="true" /> : <FaPause aria-hidden="true" />}
-          </button>
-        )}
       </div>
     </div>
   );

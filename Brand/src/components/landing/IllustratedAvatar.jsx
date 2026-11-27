@@ -83,6 +83,28 @@ export default function IllustratedAvatar({ config = {}, className = "", title }
         <ellipse cx="68.5" cy="47" rx="3.6" ry="5" fill={c.skin} />
         <ellipse cx="50" cy="45" rx="19" ry="22" fill={c.skin} />
         <FrontHair hair={c.hair} color={c.hairColor} />
+        {/* subtle eyelashes for long/ponytail avatars */}
+        {(c.hair === "long" || c.hair === "ponytail") && (
+          <g stroke="#1b1b2a" strokeWidth="1.2" strokeLinecap="round">
+            <path d="M40.3 44.5 L39.2 43.3" />
+            <path d="M59.7 44.5 L60.8 43.3" />
+          </g>
+        )}
+        {/* small stud earrings for long/ponytail avatars */}
+        {(c.hair === "long" || c.hair === "ponytail") && (
+          <g fill="#f59e0b">
+            <circle cx="31.5" cy="51.2" r="1.4" />
+            <circle cx="68.5" cy="51.2" r="1.4" />
+          </g>
+        )}
+        {/* light stubble for short/sidepart/curly male avatars when requested */}
+        {c.stubble && (
+          <path
+            d="M36 53 C38 64 62 64 64 53 C61 60 39 60 36 53 Z"
+            fill={skinShadow}
+            opacity="0.32"
+          />
+        )}
         {/* brows, eyes, cheeks, smile */}
         <path d="M39 40 Q43 37.5 47 40 M53 40 Q57 37.5 61 40" stroke={shade(c.hairColor, 10)} strokeWidth="1.8" fill="none" strokeLinecap="round" />
         <ellipse cx="43" cy="46.5" rx="2.3" ry="2.7" fill="#1b1b2a" />
