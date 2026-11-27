@@ -71,7 +71,9 @@ function FaqList() {
         return (
           <div
             key={item.q}
-            className={`kx-faq-item transition-colors duration-200 ${isOpen ? "bg-white/70" : ""}`}
+            className={`kx-faq-item transition-all duration-200 ${
+              isOpen ? "bg-white/90 shadow-sm border-l-2 border-l-blue-600" : "hover:bg-white/50"
+            }`}
           >
             <button
               type="button"
@@ -80,7 +82,12 @@ function FaqList() {
               onClick={() => setOpen(isOpen ? null : index)}
               className="kx-faq-q w-full text-left"
             >
-              <span>{item.q}</span>
+              <span className="flex items-center gap-3">
+                <span className="text-xs font-semibold tabular-nums text-ink/40">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span>{item.q}</span>
+              </span>
               <motion.span
                 className="kx-faq-toggle"
                 aria-hidden="true"
@@ -312,7 +319,10 @@ export default function KanthastHome() {
                 <span className="ai-icon" aria-hidden="true"><Icon /></span>
                 <h3 className="ai-title">{title}</h3>
                 <p className="ai-body">{body}</p>
-                <span className="ai-status">{live ? "Live now" : "Coming soon"}</span>
+                <span className="ai-status inline-flex items-center gap-1.5">
+                  {live && <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />}
+                  {live ? "Live now" : "Coming soon"}
+                </span>
               </article>
             ))}
           </FocusCarousel>

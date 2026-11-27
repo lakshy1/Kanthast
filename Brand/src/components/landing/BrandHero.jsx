@@ -80,9 +80,18 @@ export default function BrandHero() {
         </div>
 
         <motion.div
-          className="bh-art"
-          animate={reduce ? undefined : { y: [0, -6, 0] }}
-          transition={reduce ? undefined : { duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          className="bh-art relative"
+          initial={reduce ? false : { opacity: 0, y: 14, scale: 0.98 }}
+          animate={{ opacity: 1, y: reduce ? 0 : [0, -6, 0], scale: 1 }}
+          transition={
+            reduce
+              ? { duration: 0 }
+              : {
+                  opacity: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+                  scale: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+                  y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
+                }
+          }
         >
           <img
             src={heroIllustration}
@@ -90,7 +99,12 @@ export default function BrandHero() {
             width="911"
             height="526"
             fetchpriority="high"
+            className="rounded-3xl shadow-[0_24px_60px_-18px_rgba(15,23,42,0.22)]"
           />
+          <div className="pointer-events-none absolute bottom-3 left-3 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-ink shadow-md backdrop-blur-md">
+            <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+            2m 40s · One idea at a time
+          </div>
         </motion.div>
       </div>
 
